@@ -1,0 +1,327 @@
+{
+  "version": 2,
+  "language": "ar",
+  "direction": "rtl",
+  "subject_code": "math",
+  "chapter_code": "seq_definition_notation_methods",
+  "tag": "seq_definition_notation_methods",
+  "title": "تمارين مباشرة: مفهوم المتتالية والترميز وطرق التعريف",
+  "source_file": "bac_sequence_scientifique(5).pdf",
+  "question_count": 4,
+  "years": [
+    2009,
+    2015,
+    2017,
+    2018
+  ],
+  "questions": [
+    {
+      "id": "bac_2009_p2_exercise_1_1",
+      "year": 2009,
+      "source_file": "bac_sequence_scientifique(5).pdf",
+      "source_page": 2,
+      "exercise": "exercise_1",
+      "number": "1",
+      "text": "لتكن المتتاليتان \\((u_n)\\) و\\((v_n)\\) معرفتين بـ: \\(u_0=1\\)، \\(u_1=2\\)، \\(u_{n+2}=\\frac{4}{3}u_{n+1}-\\frac{1}{3}u_n\\)، و\\(v_n=u_{n+1}-u_n\\). احسب \\(v_0\\) و\\(v_1\\).",
+      "context": "",
+      "tag": "seq_definition_notation_methods",
+      "axis": "المتتالية العددية: التعريف والترميز وطرق التعريف",
+      "secondary_tags": [],
+      "skill": "حساب حدود",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمت كتابة السؤال من الوثيقة المصورة مع توحيد الترميز الرياضي بصيغة LaTeX.",
+      "solution": {
+        "strategy": "نبدأ من تعريف \\(v_n\\). لحساب \\(v_0\\) نحتاج \\(u_0,u_1\\)، ولحساب \\(v_1\\) نحتاج \\(u_1,u_2\\). لذلك نحسب \\(u_2\\) أولًا.",
+        "detailed_explanation": "هذا السؤال يجمع بين علاقتين: علاقة تراجعية لحساب حدود \\((u_n)\\)، وتعريف مباشر للمتتالية \\((v_n)\\). ننتبه جيدًا إلى الدليل المستعمل في كل مرة.",
+        "lesson_rule_used": "في العلاقة \\(u_{n+2}\\)، نحصل على \\(u_2\\) بوضع \\(n=0\\). وفي التعريف \\(v_n=u_{n+1}-u_n\\)، نعوض مباشرة بقيمة \\(n\\).",
+        "steps": [
+          {
+            "order": 1,
+            "title": "كتابة تعريف \\(v_0\\)",
+            "explanation": "لدينا \\(v_n=u_{n+1}-u_n\\). نعوض \\(n=0\\).",
+            "calculation": "\\(v_0=u_1-u_0=2-1\\)",
+            "result": "\\(v_0=1\\)"
+          },
+          {
+            "order": 2,
+            "title": "تحديد ما نحتاجه لحساب \\(v_1\\)",
+            "explanation": "عند \\(n=1\\) نحصل على \\(v_1=u_2-u_1\\). القيمة \\(u_2\\) غير معطاة، لذا يجب حسابها.",
+            "calculation": "\\(v_1=u_2-u_1\\)",
+            "result": "نحتاج أولًا إلى حساب \\(u_2\\)."
+          },
+          {
+            "order": 3,
+            "title": "حساب \\(u_2\\)",
+            "explanation": "العلاقة هي \\(u_{n+2}=\\frac43u_{n+1}-\\frac13u_n\\). للحصول على \\(u_2\\) نضع \\(n=0\\).",
+            "calculation": "\\(u_2=\\frac43u_1-\\frac13u_0=\\frac43\\times2-\\frac13\\times1=\\frac83-\\frac13=\\frac73\\)",
+            "result": "\\(u_2=\\frac73\\)"
+          },
+          {
+            "order": 4,
+            "title": "حساب \\(v_1\\)",
+            "explanation": "نعوض الآن بالقيمتين \\(u_2=\\frac73\\) و\\(u_1=2\\).",
+            "calculation": "\\(v_1=\\frac73-2=\\frac73-\\frac63\\)",
+            "result": "\\(v_1=\\frac13\\)"
+          }
+        ],
+        "final_answer": "\\(v_0=1\\) و\\(v_1=\\frac13\\).",
+        "verification": "بالتعويض المباشر في تعريف \\(v_n\\): الفرق الأول هو \\(2-1=1\\)، والفرق الثاني هو \\(\\frac73-2=\\frac13\\).",
+        "common_mistakes": [
+          {
+            "mistake": "كتابة \\(v_1=u_1-u_0\\).",
+            "correction": "عند \\(n=1\\): \\(v_1=u_2-u_1\\)."
+          },
+          {
+            "mistake": "وضع \\(n=1\\) لحساب \\(u_2\\).",
+            "correction": "في العلاقة \\(u_{n+2}\\)، للحصول على \\(u_2\\) نضع \\(n=0\\)."
+          }
+        ],
+        "hints": [
+          "ابدأ من التعريف \\(v_n=u_{n+1}-u_n\\).",
+          "لحساب \\(v_1\\) ستحتاج إلى \\(u_2\\).",
+          "لحساب \\(u_2\\) ضع \\(n=0\\) في العلاقة التراجعية."
+        ],
+        "alternative_method": "",
+        "is_complete": true
+      }
+    },
+    {
+      "id": "bac_2015_p8_exercise_3_1",
+      "year": 2015,
+      "source_file": "bac_sequence_scientifique(5).pdf",
+      "source_page": 8,
+      "exercise": "exercise_3",
+      "number": "1",
+      "text": "لتكن المتتالية \\((u_n)\\) معرفة بـ \\(u_0=e^2-1\\) و\\(u_{n+1}=(1+u_n)e^{-2}-1\\). احسب \\(u_1\\)، \\(u_2\\) و\\(u_3\\).",
+      "context": "",
+      "tag": "seq_definition_notation_methods",
+      "axis": "المتتالية العددية: التعريف والترميز وطرق التعريف",
+      "secondary_tags": [],
+      "skill": "حساب حدود",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمت كتابة السؤال من الوثيقة المصورة مع توحيد الترميز الرياضي بصيغة LaTeX.",
+      "solution": {
+        "strategy": "نحسب الحدود بالترتيب: \\(u_1\\) انطلاقًا من \\(u_0\\)، ثم \\(u_2\\) انطلاقًا من \\(u_1\\)، ثم \\(u_3\\) انطلاقًا من \\(u_2\\).",
+        "detailed_explanation": "بما أن المتتالية معرفة بعلاقة تراجعية، فلا يمكن حساب \\(u_3\\) مباشرة. يجب المرور عبر الحدود السابقة. وفي كل مرة نبسط أولًا العبارة \\(1+u_n\\).",
+        "lesson_rule_used": "في العلاقة التراجعية \\(u_{n+1}=f(u_n)\\)، نحسب الحدود واحدًا بعد الآخر، ابتداءً من الحد الأول المعطى.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "حساب \\(u_1\\)",
+            "explanation": "لحساب \\(u_1\\) نضع \\(n=0\\) ثم نعوض \\(u_0=e^2-1\\).",
+            "calculation": "\\(u_1=(1+e^2-1)e^{-2}-1=e^2e^{-2}-1=e^0-1\\)",
+            "result": "\\(u_1=0\\)"
+          },
+          {
+            "order": 2,
+            "title": "حساب \\(u_2\\)",
+            "explanation": "نستعمل الآن القيمة \\(u_1=0\\).",
+            "calculation": "\\(u_2=(1+0)e^{-2}-1\\)",
+            "result": "\\(u_2=e^{-2}-1\\)"
+          },
+          {
+            "order": 3,
+            "title": "حساب \\(u_3\\)",
+            "explanation": "نعوض \\(u_2=e^{-2}-1\\)، فنحصل على \\(1+u_2=e^{-2}\\).",
+            "calculation": "\\(u_3=(1+e^{-2}-1)e^{-2}-1=e^{-2}e^{-2}-1=e^{-4}-1\\)",
+            "result": "\\(u_3=e^{-4}-1\\)"
+          }
+        ],
+        "final_answer": "\\(u_1=0\\)، \\(u_2=e^{-2}-1\\)، و\\(u_3=e^{-4}-1\\).",
+        "verification": "نعيد التحقق باستعمال قاعدة القوى: \\(e^ae^b=e^{a+b}\\). لذلك \\(e^2e^{-2}=e^0=1\\)، و\\(e^{-2}e^{-2}=e^{-4}\\).",
+        "common_mistakes": [
+          {
+            "mistake": "الخلط بين \\(e^2e^{-2}\\) و\\(e^{-4}\\).",
+            "correction": "عند الضرب نجمع الأسس: \\(2+(-2)=0\\)، إذن النتيجة \\(e^0=1\\)."
+          },
+          {
+            "mistake": "حساب \\(u_2\\) باستعمال \\(u_0\\).",
+            "correction": "كل حد يحسب من الحد السابق مباشرة: \\(u_2\\) يحسب من \\(u_1\\)."
+          }
+        ],
+        "hints": [
+          "ابدأ بحساب \\(1+u_0\\).",
+          "استعمل \\(e^ae^b=e^{a+b}\\).",
+          "بعد إيجاد كل حد استعمله لحساب الحد الموالي."
+        ],
+        "alternative_method": "",
+        "is_complete": true
+      }
+    },
+    {
+      "id": "bac_2017_p12_exercise_1_1",
+      "year": 2017,
+      "source_file": "bac_sequence_scientifique(5).pdf",
+      "source_page": 12,
+      "exercise": "exercise_1",
+      "number": "1",
+      "text": "لتكن المتتاليتان \\((u_n)\\) و\\((v_n)\\) معرفتين بـ \\(u_0=1\\)، \\(u_{n+1}=\\frac34u_n+1\\)، و\\(v_0=6\\)، \\(v_{n+1}=\\frac34v_n+1\\). احسب \\(u_1\\) و\\(v_1\\).",
+      "context": "",
+      "tag": "seq_definition_notation_methods",
+      "axis": "المتتالية العددية: التعريف والترميز وطرق التعريف",
+      "secondary_tags": [],
+      "skill": "حساب حدود",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمت كتابة السؤال من الوثيقة المصورة مع توحيد الترميز الرياضي بصيغة LaTeX.",
+      "solution": {
+        "strategy": "لحساب الحد الذي دليله 1 من علاقة على الشكل \\(u_{n+1}\\)، نضع \\(n=0\\). نطبق ذلك على كل متتالية باستعمال حدها الابتدائي.",
+        "detailed_explanation": "لدينا متتاليتان لهما نفس شكل العلاقة، لكن لكل واحدة قيمة ابتدائية مختلفة. لذلك نحسب كل حد على حدة ولا نخلط بين \\(u_0\\) و\\(v_0\\).",
+        "lesson_rule_used": "في العلاقة \\(u_{n+1}=f(u_n)\\)، لحساب \\(u_1\\) نضع \\(n=0\\).",
+        "steps": [
+          {
+            "order": 1,
+            "title": "حساب \\(u_1\\)",
+            "explanation": "نضع \\(n=0\\) في علاقة \\((u_n)\\)، ثم نعوض \\(u_0=1\\).",
+            "calculation": "\\(u_1=\\frac34u_0+1=\\frac34\\times1+1=\\frac34+\\frac44\\)",
+            "result": "\\(u_1=\\frac74\\)"
+          },
+          {
+            "order": 2,
+            "title": "حساب \\(v_1\\)",
+            "explanation": "نضع \\(n=0\\) في علاقة \\((v_n)\\)، ثم نعوض \\(v_0=6\\).",
+            "calculation": "\\(v_1=\\frac34v_0+1=\\frac34\\times6+1=\\frac{18}{4}+1=\\frac92+1\\)",
+            "result": "\\(v_1=\\frac{11}{2}\\)"
+          }
+        ],
+        "final_answer": "\\(u_1=\\frac74\\) و\\(v_1=\\frac{11}{2}\\).",
+        "verification": "بالتقريب: \\(u_1=1.75\\) و\\(v_1=5.5\\)، وهما ناتجان مباشرة عن التعويض في العلاقتين.",
+        "common_mistakes": [
+          {
+            "mistake": "وضع \\(n=1\\) لحساب الحد الأول.",
+            "correction": "وضع \\(n=1\\) يعطي \\(u_2\\) أو \\(v_2\\). لحساب الحد ذي الدليل 1 نضع \\(n=0\\)."
+          },
+          {
+            "mistake": "استعمال \\(u_0=1\\) عند حساب \\(v_1\\).",
+            "correction": "المتتالية \\((v_n)\\) تبدأ من \\(v_0=6\\)."
+          }
+        ],
+        "hints": [
+          "لحساب \\(u_1\\) ضع \\(n=0\\).",
+          "استعمل القيمة الابتدائية الخاصة بكل متتالية.",
+          "لا تنس العدد \\(+1\\) في نهاية العلاقة."
+        ],
+        "alternative_method": "",
+        "is_complete": true
+      }
+    },
+    {
+      "id": "bac_2018_p13_exercise_1b_1",
+      "year": 2018,
+      "source_file": "bac_sequence_scientifique(5).pdf",
+      "source_page": 13,
+      "exercise": "exercise_1b",
+      "number": "1",
+      "text": "لتكن المتتالية \\((u_n)\\) معرفة بـ \\(u_0=0\\) و\\(u_{n+1}=u_n+\\ln\\left(\\frac{2n+3}{2n+1}\\right)\\). احسب \\(u_1\\)، \\(u_2\\) و\\(u_3\\).",
+      "context": "",
+      "tag": "seq_definition_notation_methods",
+      "axis": "المتتالية العددية: التعريف والترميز وطرق التعريف",
+      "secondary_tags": [],
+      "skill": "حساب حدود",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمت كتابة السؤال من الوثيقة المصورة مع توحيد الترميز الرياضي بصيغة LaTeX.",
+      "solution": {
+        "strategy": "نحسب الحدود بالتتابع، وفي كل خطوة نعوض بقيمة \\(n\\) المناسبة ثم نستعمل الخاصية \\(\\ln(a)+\\ln(b)=\\ln(ab)\\).",
+        "detailed_explanation": "العلاقة تراجعية، لذلك نبدأ من \\(u_0\\). بعد كل تعويض نجمع اللوغاريتمات على شكل لوغاريتم جداء، ثم نبسط الجداء.",
+        "lesson_rule_used": "في العلاقة \\(u_{n+1}\\)، نختار \\(n=p-1\\) لحساب \\(u_p\\).",
+        "steps": [
+          {
+            "order": 1,
+            "title": "حساب \\(u_1\\)",
+            "explanation": "للحصول على \\(u_1\\) نضع \\(n=0\\).",
+            "calculation": "\\(u_1=u_0+\\ln\\left(\\frac{2\\times0+3}{2\\times0+1}\\right)=0+\\ln\\left(\\frac31\\right)\\)",
+            "result": "\\(u_1=\\ln3\\)"
+          },
+          {
+            "order": 2,
+            "title": "حساب \\(u_2\\)",
+            "explanation": "للحصول على \\(u_2\\) نضع \\(n=1\\)، ثم نعوض \\(u_1=\\ln3\\).",
+            "calculation": "\\(u_2=\\ln3+\\ln\\left(\\frac53\\right)=\\ln\\left(3\\times\\frac53\\right)=\\ln5\\)",
+            "result": "\\(u_2=\\ln5\\)"
+          },
+          {
+            "order": 3,
+            "title": "حساب \\(u_3\\)",
+            "explanation": "للحصول على \\(u_3\\) نضع \\(n=2\\)، ثم نعوض \\(u_2=\\ln5\\).",
+            "calculation": "\\(u_3=\\ln5+\\ln\\left(\\frac75\\right)=\\ln\\left(5\\times\\frac75\\right)=\\ln7\\)",
+            "result": "\\(u_3=\\ln7\\)"
+          }
+        ],
+        "final_answer": "\\(u_1=\\ln3\\)، \\(u_2=\\ln5\\)، و\\(u_3=\\ln7\\).",
+        "verification": "نلاحظ أن النتائج توافق النمط \\(u_n=\\ln(2n+1)\\) للحدود المحسوبة: عند \\(n=1,2,3\\) نحصل على \\(\\ln3,\\ln5,\\ln7\\).",
+        "common_mistakes": [
+          {
+            "mistake": "كتابة \\(\\ln a+\\ln b=\\ln(a+b)\\).",
+            "correction": "الصحيح هو \\(\\ln a+\\ln b=\\ln(ab)\\)."
+          },
+          {
+            "mistake": "وضع \\(n=1\\) لحساب \\(u_1\\).",
+            "correction": "في \\(u_{n+1}\\)، لحساب \\(u_1\\) نضع \\(n=0\\)."
+          }
+        ],
+        "hints": [
+          "ابدأ بوضع \\(n=0\\) لحساب \\(u_1\\).",
+          "استعمل \\(\\ln a+\\ln b=\\ln(ab)\\).",
+          "ستختصر العوامل \\(3\\) ثم \\(5\\) داخل الجداء."
+        ],
+        "alternative_method": "",
+        "is_complete": true
+      }
+    }
+  ],
+  "solution_schema": {
+    "strategy": "الفكرة العامة للحل",
+    "detailed_explanation": "شرح تربوي",
+    "steps": "خطوات مرتبة",
+    "final_answer": "الجواب النهائي",
+    "verification": "التحقق من النتيجة",
+    "common_mistakes": "الأخطاء الشائعة",
+    "hints": "تلميحات متدرجة",
+    "alternative_method": "طريقة بديلة إن وجدت",
+    "is_complete": "هل الحل مكتمل"
+  },
+  "filtering_report": {
+    "lesson_tag": "seq_definition_notation_methods",
+    "kept_count": 4,
+    "removed_count": 4,
+    "kept_reason": "الأسئلة المحتفظ بها تختبر مباشرة حساب حدود متتالية معرفة بعلاقة تراجعية، وفهم اختيار الدليل المناسب، والتمييز بين الحدود.",
+    "removed_questions": [
+      {
+        "id": "bac_2009_p2_exercise_3_2-a",
+        "reason": "يتطلب خصائص المتتالية الهندسية وإيجاد الأساس، وهو من محور المتتالية الهندسية."
+      },
+      {
+        "id": "bac_2020_p15_exercise_3b_1",
+        "reason": "يتضمن تخمين اتجاه التغير، وهو من محور اتجاه تغير المتتالية."
+      },
+      {
+        "id": "bac_2025_p20_exercise_3_2-a",
+        "reason": "يتضمن تخمين اتجاه التغير، وهو من محور اتجاه تغير المتتالية."
+      },
+      {
+        "id": "bac_2026_p21_exercise_3a_2-a",
+        "reason": "يتضمن تخمين اتجاه التغير، وهو من محور اتجاه تغير المتتالية."
+      }
+    ]
+  },
+  "lesson_alignment": {
+    "lesson_file": "axis_01_sequence_definition_notation_methods(1).json",
+    "covered_learning_outcomes": [
+      "حساب الحدود الأولى لمتتالية معرفة بعلاقة تراجعية.",
+      "اختيار قيمة الدليل الصحيحة عند حساب حد من الشكل u_{n+1} أو u_{n+2}.",
+      "فهم أن حساب حد تراجعي قد يتطلب حساب حدود سابقة.",
+      "التمييز بين متتاليتين لهما علاقات متشابهة وقيم ابتدائية مختلفة."
+    ]
+  }
+}

@@ -1,0 +1,526 @@
+{
+  "version": 2,
+  "language": "ar",
+  "direction": "rtl",
+  "subject_code": "math",
+  "chapter_code": "seq_definition_notation_methods",
+  "tag": "seq_definition_notation_methods",
+  "title": "المتتالية العددية: التعريف والترميز وطرق التعريف",
+  "source_file": "bac_sequence_scientifique(5).pdf",
+  "question_count": 8,
+  "years": [
+    2009,
+    2015,
+    2017,
+    2018,
+    2020,
+    2025,
+    2026
+  ],
+  "questions": [
+    {
+      "id": "bac_2009_p2_exercise_1_1",
+      "year": 2009,
+      "source_file": "bac_sequence_scientifique(5).pdf",
+      "source_page": 2,
+      "exercise": "exercise_1",
+      "number": "1",
+      "text": "احسب \\(v_0\\) و\\(v_1\\).",
+      "context": "\\(u_0=1\\)، \\(u_1=2\\)، \\(u_{n+2}=\\frac43u_{n+1}-\\frac13u_n\\)، و\\(v_n=u_{n+1}-u_n\\).",
+      "tag": "seq_definition_notation_methods",
+      "axis": "المتتالية العددية: التعريف والترميز وطرق التعريف",
+      "secondary_tags": [],
+      "skill": "حساب حدود",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمت كتابة السؤال من الوثيقة المصورة مع توحيد الترميز الرياضي بصيغة LaTeX.",
+      "solution": {
+        "strategy": "نحسب حدود المتتالية المساعدة مباشرة من تعريفها، مع حساب الحد الناقص u_2 أولًا.",
+        "detailed_explanation": "لدينا v_n=u_{n+1}-u_n، لذلك نعوض بقيم u المتتالية حسب رتبة الحد المطلوب.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "حساب v_0",
+            "explanation": "عند n=0 نحصل على v_0=u_1-u_0.",
+            "calculation": "\\(v_0=2-1\\)",
+            "result": "\\(v_0=1\\)"
+          },
+          {
+            "order": 2,
+            "title": "حساب u_2",
+            "explanation": "نستعمل العلاقة التراجعية عند n=0.",
+            "calculation": "\\(u_2=\\frac43u_1-\\frac13u_0=\\frac43\\times2-\\frac13\\times1=\\frac83-\\frac13\\)",
+            "result": "\\(u_2=\\frac73\\)"
+          },
+          {
+            "order": 3,
+            "title": "حساب v_1",
+            "explanation": "عند n=1 يكون v_1=u_2-u_1.",
+            "calculation": "\\(v_1=\\frac73-2=\\frac73-\\frac63\\)",
+            "result": "\\(v_1=\\frac13\\)"
+          }
+        ],
+        "final_answer": "\\(v_0=1\\) و\\(v_1=\\frac13\\).",
+        "verification": "بما أن u_2=7/3 أكبر من u_1=2، فإن الفرق v_1 موجب، وهو منسجم مع النتيجة.",
+        "common_mistakes": [
+          {
+            "mistake": "حساب v_1 باستعمال u_1-u_0.",
+            "correction": "حسب التعريف v_1=u_2-u_1، لذلك يجب أولًا حساب u_2."
+          }
+        ],
+        "hints": [
+          "اكتب تعريف v_n عند n=0 ثم عند n=1.",
+          "لحساب v_1 تحتاج إلى u_2."
+        ],
+        "alternative_method": "",
+        "is_complete": true
+      }
+    },
+    {
+      "id": "bac_2009_p2_exercise_3_2-a",
+      "year": 2009,
+      "source_file": "bac_sequence_scientifique(5).pdf",
+      "source_page": 2,
+      "exercise": "exercise_3",
+      "number": "2-a",
+      "text": "إذا كانت \\(v_1=2\\) و\\(v_{n+1}=\\frac32v_n+u_n\\)، احسب \\(v_2,v_3\\).",
+      "context": "\\((u_n)\\) هندسية متزايدة تمامًا، وتحقق \\(u_1+2u_2+u_3=32\\) و\\(u_1u_2u_3=216\\).",
+      "tag": "seq_definition_notation_methods",
+      "axis": "المتتالية العددية: التعريف والترميز وطرق التعريف",
+      "secondary_tags": [],
+      "skill": "حساب حدود",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمت كتابة السؤال من الوثيقة المصورة مع توحيد الترميز الرياضي بصيغة LaTeX.",
+      "solution": {
+        "strategy": "نحدد أولًا حدود المتتالية الهندسية u_n باستعمال الجداء والمجموع، ثم نعوض في علاقة v_n.",
+        "detailed_explanation": "في ثلاث حدود متتالية لمتتالية هندسية لدينا u_1u_2u_3=u_2^3. بعد إيجاد u_2 نحدد الأساس q، ونختار القيمة التي تجعل المتتالية متزايدة تمامًا.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "إيجاد u_2",
+            "explanation": "لأن u_1,u_2,u_3 حدود هندسية متتالية، فإن حاصل ضربها يساوي مكعب الحد الأوسط.",
+            "calculation": "\\(u_1u_2u_3=u_2^3=216\\)",
+            "result": "\\(u_2=6\\)"
+          },
+          {
+            "order": 2,
+            "title": "إيجاد الأساس q",
+            "explanation": "نكتب u_1=6/q وu_3=6q، ثم نستعمل شرط المجموع.",
+            "calculation": "\\(\\frac6q+2\\times6+6q=32\\Rightarrow q+\\frac1q=\\frac{10}{3}\\Rightarrow 3q^2-10q+3=0\\)",
+            "result": "\\(q=3\\) أو \\(q=\\frac13\\)"
+          },
+          {
+            "order": 3,
+            "title": "اختيار الأساس الصحيح",
+            "explanation": "المتتالية متزايدة تمامًا، لذلك نأخذ q>1.",
+            "calculation": "\\(q=3\\)",
+            "result": "\\(u_1=2,\\ u_2=6,\\ u_3=18\\)"
+          },
+          {
+            "order": 4,
+            "title": "حساب v_2",
+            "explanation": "نستعمل العلاقة عند n=1.",
+            "calculation": "\\(v_2=\\frac32v_1+u_1=\\frac32\\times2+2\\)",
+            "result": "\\(v_2=5\\)"
+          },
+          {
+            "order": 5,
+            "title": "حساب v_3",
+            "explanation": "نستعمل العلاقة عند n=2.",
+            "calculation": "\\(v_3=\\frac32v_2+u_2=\\frac32\\times5+6\\)",
+            "result": "\\(v_3=\\frac{27}{2}\\)"
+          }
+        ],
+        "final_answer": "\\(v_2=5\\) و\\(v_3=\\frac{27}{2}\\).",
+        "verification": "نتحقق من شروط u: 2×6×18=216 و2+2×6+18=32.",
+        "common_mistakes": [
+          {
+            "mistake": "اختيار q=1/3.",
+            "correction": "هذا الاختيار يجعل المتتالية متناقصة، بينما المعطى يقول إنها متزايدة تمامًا."
+          }
+        ],
+        "hints": [
+          "استعمل الخاصية u_1u_2u_3=u_2^3.",
+          "بعد إيجاد q راعِ أن المتتالية متزايدة."
+        ],
+        "alternative_method": "",
+        "is_complete": true
+      }
+    },
+    {
+      "id": "bac_2015_p8_exercise_3_1",
+      "year": 2015,
+      "source_file": "bac_sequence_scientifique(5).pdf",
+      "source_page": 8,
+      "exercise": "exercise_3",
+      "number": "1",
+      "text": "احسب \\(u_1,u_2,u_3\\).",
+      "context": "\\(u_0=e^2-1\\)، \\(u_{n+1}=(1+u_n)e^{-2}-1\\).",
+      "tag": "seq_definition_notation_methods",
+      "axis": "المتتالية العددية: التعريف والترميز وطرق التعريف",
+      "secondary_tags": [],
+      "skill": "حساب حدود",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمت كتابة السؤال من الوثيقة المصورة مع توحيد الترميز الرياضي بصيغة LaTeX.",
+      "solution": {
+        "strategy": "نعوض تباعًا في العلاقة التراجعية مع تبسيط 1+u_n قبل الضرب في e^{-2}.",
+        "detailed_explanation": "كل حد يعتمد على الحد السابق. التبسيط الأساسي هو أن 1+(e^a-1)=e^a.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "حساب u_1",
+            "explanation": "نعوض u_0=e^2-1.",
+            "calculation": "\\(u_1=(1+e^2-1)e^{-2}-1=e^2e^{-2}-1\\)",
+            "result": "\\(u_1=0\\)"
+          },
+          {
+            "order": 2,
+            "title": "حساب u_2",
+            "explanation": "نعوض u_1=0.",
+            "calculation": "\\(u_2=(1+0)e^{-2}-1\\)",
+            "result": "\\(u_2=e^{-2}-1\\)"
+          },
+          {
+            "order": 3,
+            "title": "حساب u_3",
+            "explanation": "لدينا 1+u_2=e^{-2}.",
+            "calculation": "\\(u_3=e^{-2}e^{-2}-1\\)",
+            "result": "\\(u_3=e^{-4}-1\\)"
+          }
+        ],
+        "final_answer": "\\(u_1=0\\)، \\(u_2=e^{-2}-1\\)، \\(u_3=e^{-4}-1\\).",
+        "verification": "النمط الناتج بعد الحد الأول هو u_n=e^{-2(n-1)}-1 للرتب n≥1، وهو يعطي فعلًا u_1=0.",
+        "common_mistakes": [
+          {
+            "mistake": "اعتبار e^2e^{-2}=e^{-4}.",
+            "correction": "عند ضرب قوتين لهما نفس الأساس نجمع الأسس: e^{2-2}=e^0=1."
+          }
+        ],
+        "hints": [
+          "بسّط أولًا 1+u_0.",
+          "استعمل e^ae^b=e^{a+b}."
+        ],
+        "alternative_method": "",
+        "is_complete": true
+      }
+    },
+    {
+      "id": "bac_2017_p12_exercise_1_1",
+      "year": 2017,
+      "source_file": "bac_sequence_scientifique(5).pdf",
+      "source_page": 12,
+      "exercise": "exercise_1",
+      "number": "1",
+      "text": "احسب \\(u_1\\) و\\(v_1\\).",
+      "context": "\\(u_0=1\\)، \\(u_{n+1}=\\frac34u_n+1\\)، و\\(v_0=6\\)، \\(v_{n+1}=\\frac34v_n+1\\).",
+      "tag": "seq_definition_notation_methods",
+      "axis": "المتتالية العددية: التعريف والترميز وطرق التعريف",
+      "secondary_tags": [],
+      "skill": "حساب حدود",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمت كتابة السؤال من الوثيقة المصورة مع توحيد الترميز الرياضي بصيغة LaTeX.",
+      "solution": {
+        "strategy": "نعوض n=0 في كل علاقة تراجعية.",
+        "detailed_explanation": "الحد الأول بعد الحد الابتدائي يُحسب بوضع n=0، لأن العلاقة تعطي u_{n+1} وv_{n+1}.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "حساب u_1",
+            "explanation": "نعوض n=0 وu_0=1.",
+            "calculation": "\\(u_1=\\frac34u_0+1=\\frac34\\times1+1\\)",
+            "result": "\\(u_1=\\frac74\\)"
+          },
+          {
+            "order": 2,
+            "title": "حساب v_1",
+            "explanation": "نعوض n=0 وv_0=6.",
+            "calculation": "\\(v_1=\\frac34v_0+1=\\frac34\\times6+1=\\frac92+1\\)",
+            "result": "\\(v_1=\\frac{11}{2}\\)"
+          }
+        ],
+        "final_answer": "\\(u_1=\\frac74\\) و\\(v_1=\\frac{11}{2}\\).",
+        "verification": "u_1=1.75 وv_1=5.5، وهما نتيجتان مباشرتان من التعويض.",
+        "common_mistakes": [
+          {
+            "mistake": "نسيان إضافة العدد 1.",
+            "correction": "العلاقة هي ثلاثة أرباع الحد السابق زائد 1."
+          }
+        ],
+        "hints": [
+          "ضع n=0 في العلاقتين.",
+          "استعمل القيمتين الابتدائيتين المختلفتين u_0 وv_0."
+        ],
+        "alternative_method": "",
+        "is_complete": true
+      }
+    },
+    {
+      "id": "bac_2018_p13_exercise_1b_1",
+      "year": 2018,
+      "source_file": "bac_sequence_scientifique(5).pdf",
+      "source_page": 13,
+      "exercise": "exercise_1b",
+      "number": "1",
+      "text": "احسب \\(u_1,u_2,u_3\\).",
+      "context": "\\(u_0=0\\)، \\(u_{n+1}=u_n+\\ln\\left(\\frac{2n+3}{2n+1}\\right)\\)، و\\(v_n=2n+1\\).",
+      "tag": "seq_definition_notation_methods",
+      "axis": "المتتالية العددية: التعريف والترميز وطرق التعريف",
+      "secondary_tags": [],
+      "skill": "حساب حدود",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمت كتابة السؤال من الوثيقة المصورة مع توحيد الترميز الرياضي بصيغة LaTeX.",
+      "solution": {
+        "strategy": "نحسب الحدود واحدًا بعد الآخر، ثم نستعمل خاصية جمع اللوغاريتمات لتبسيط النتائج.",
+        "detailed_explanation": "العلاقة تراجعية، ولذلك نحسب u_1 ثم u_2 ثم u_3. نستعمل ln(a)+ln(b)=ln(ab).",
+        "steps": [
+          {
+            "order": 1,
+            "title": "حساب u_1",
+            "explanation": "نعوض n=0 وu_0=0.",
+            "calculation": "\\(u_1=0+\\ln\\left(\\frac3{1}\\right)\\)",
+            "result": "\\(u_1=\\ln3\\)"
+          },
+          {
+            "order": 2,
+            "title": "حساب u_2",
+            "explanation": "نعوض n=1 ثم نجمع اللوغاريتمين.",
+            "calculation": "\\(u_2=\\ln3+\\ln\\left(\\frac53\\right)=\\ln\\left(3\\times\\frac53\\right)\\)",
+            "result": "\\(u_2=\\ln5\\)"
+          },
+          {
+            "order": 3,
+            "title": "حساب u_3",
+            "explanation": "نعوض n=2.",
+            "calculation": "\\(u_3=\\ln5+\\ln\\left(\\frac75\\right)=\\ln\\left(5\\times\\frac75\\right)\\)",
+            "result": "\\(u_3=\\ln7\\)"
+          }
+        ],
+        "final_answer": "\\(u_1=\\ln3\\)، \\(u_2=\\ln5\\)، \\(u_3=\\ln7\\).",
+        "verification": "النتائج تتبع النمط u_n=ln(2n+1): عند n=1,2,3 نحصل على ln3,ln5,ln7.",
+        "common_mistakes": [
+          {
+            "mistake": "كتابة ln(a)+ln(b)=ln(a+b).",
+            "correction": "الصحيح هو ln(a)+ln(b)=ln(ab)."
+          }
+        ],
+        "hints": [
+          "احسب أولًا u_1 عند n=0.",
+          "اختصر الكسور داخل حاصل الضرب بعد جمع اللوغاريتمات."
+        ],
+        "alternative_method": "يمكن ملاحظة أن الزيادات تتداخل على شكل جداء متسلسل، ما يقود إلى u_n=ln(2n+1).",
+        "is_complete": true
+      }
+    },
+    {
+      "id": "bac_2020_p15_exercise_3b_1",
+      "year": 2020,
+      "source_file": "bac_sequence_scientifique(5).pdf",
+      "source_page": 15,
+      "exercise": "exercise_3b",
+      "number": "1",
+      "text": "احسب \\(u_1,u_2\\)، ثم خمن اتجاه التغير.",
+      "context": "\\(u_0=0\\)، \\(u_{n+1}=3u_n-2n+3\\)، و\\(v_n=u_n-n+1\\).",
+      "tag": "seq_definition_notation_methods",
+      "axis": "المتتالية العددية: التعريف والترميز وطرق التعريف",
+      "secondary_tags": [
+        "sequence_monotonicity"
+      ],
+      "skill": "حساب وتخمين",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمت كتابة السؤال من الوثيقة المصورة مع توحيد الترميز الرياضي بصيغة LaTeX.",
+      "solution": {
+        "strategy": "نحسب u_1 وu_2 بالتعويض، ثم نقارن الحدود الأولى لتكوين تخمين فقط.",
+        "detailed_explanation": "المطلوب هو التخمين وليس البرهان. بعد حساب الحدود نلاحظ إن كانت القيم ترتفع أو تنخفض.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "حساب u_1",
+            "explanation": "نعوض n=0 وu_0=0.",
+            "calculation": "\\(u_1=3u_0-2\\times0+3=3\\times0+3\\)",
+            "result": "\\(u_1=3\\)"
+          },
+          {
+            "order": 2,
+            "title": "حساب u_2",
+            "explanation": "نعوض n=1 وu_1=3.",
+            "calculation": "\\(u_2=3u_1-2\\times1+3=9-2+3\\)",
+            "result": "\\(u_2=10\\)"
+          },
+          {
+            "order": 3,
+            "title": "التخمين",
+            "explanation": "نقارن u_0=0 وu_1=3 وu_2=10.",
+            "calculation": "\\(0<3<10\\)",
+            "result": "نخمن أن المتتالية متزايدة."
+          }
+        ],
+        "final_answer": "\\(u_1=3\\)، \\(u_2=10\\)، والتخمين أن \\((u_n)\\) متزايدة.",
+        "verification": "هذا استنتاج أولي من الحدود الأولى، ولا يُعد برهانًا عامًا على التزايد.",
+        "common_mistakes": [
+          {
+            "mistake": "اعتبار مقارنة ثلاثة حدود برهانًا نهائيًا.",
+            "correction": "السؤال يطلب التخمين فقط؛ البرهان يحتاج دراسة u_{n+1}-u_n أو طريقة أخرى."
+          }
+        ],
+        "hints": [
+          "في u_1 ضع n=0.",
+          "قارن u_0 وu_1 وu_2 بعد الحساب."
+        ],
+        "alternative_method": "",
+        "is_complete": true
+      }
+    },
+    {
+      "id": "bac_2025_p20_exercise_3_2-a",
+      "year": 2025,
+      "source_file": "bac_sequence_scientifique(5).pdf",
+      "source_page": 20,
+      "exercise": "exercise_3",
+      "number": "2-a",
+      "text": "احسب \\(u_1,u_2\\)، ثم خمن اتجاه التغير.",
+      "context": "\\(u_0=3\\)، \\(u_{n+1}=\\frac{5u_n}{2u_n+1}\\).",
+      "tag": "seq_definition_notation_methods",
+      "axis": "المتتالية العددية: التعريف والترميز وطرق التعريف",
+      "secondary_tags": [
+        "sequence_monotonicity"
+      ],
+      "skill": "حساب وتخمين",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمت كتابة السؤال من الوثيقة المصورة مع توحيد الترميز الرياضي بصيغة LaTeX.",
+      "solution": {
+        "strategy": "نحسب حدين متتاليين من العلاقة الكسرية ثم نقارنهما بالحد الابتدائي.",
+        "detailed_explanation": "يجب الانتباه إلى وضع كامل المقام بين قوسين عند التعويض.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "حساب u_1",
+            "explanation": "نعوض u_0=3.",
+            "calculation": "\\(u_1=\\frac{5\\times3}{2\\times3+1}=\\frac{15}{7}\\)",
+            "result": "\\(u_1=\\frac{15}{7}\\)"
+          },
+          {
+            "order": 2,
+            "title": "حساب u_2",
+            "explanation": "نعوض u_1=15/7 ونوحّد المقام.",
+            "calculation": "\\(u_2=\\frac{5\\times\\frac{15}{7}}{2\\times\\frac{15}{7}+1}=\\frac{\\frac{75}{7}}{\\frac{30}{7}+\\frac77}=\\frac{\\frac{75}{7}}{\\frac{37}{7}}\\)",
+            "result": "\\(u_2=\\frac{75}{37}\\)"
+          },
+          {
+            "order": 3,
+            "title": "التخمين",
+            "explanation": "نقارن القيم: 3، ثم نحو 2.143، ثم نحو 2.027.",
+            "calculation": "\\(3>\\frac{15}{7}>\\frac{75}{37}\\)",
+            "result": "نخمن أن المتتالية متناقصة."
+          }
+        ],
+        "final_answer": "\\(u_1=\\frac{15}{7}\\)، \\(u_2=\\frac{75}{37}\\)، والتخمين أن \\((u_n)\\) متناقصة.",
+        "verification": "15/7≈2.143 و75/37≈2.027، وكلاهما أصغر من الحد السابق.",
+        "common_mistakes": [
+          {
+            "mistake": "قسمة 75/7 على 37/7 بطريقة خاطئة.",
+            "correction": "نضرب في المقلوب: (75/7)×(7/37)=75/37."
+          }
+        ],
+        "hints": [
+          "احسب المقام 2u_0+1 بعناية.",
+          "عند قسمة كسر على كسر اضرب في المقلوب."
+        ],
+        "alternative_method": "",
+        "is_complete": true
+      }
+    },
+    {
+      "id": "bac_2026_p21_exercise_3a_2-a",
+      "year": 2026,
+      "source_file": "bac_sequence_scientifique(5).pdf",
+      "source_page": 21,
+      "exercise": "exercise_3a",
+      "number": "2-a",
+      "text": "احسب \\(u_1,u_2\\)، ثم خمن اتجاه التغير.",
+      "context": "\\(u_0=4\\)، \\(u_{n+1}=\\frac{4u_n}{u_n+2}\\)، و\\(v_n=\\frac{u_n-2}{u_n}\\).",
+      "tag": "seq_definition_notation_methods",
+      "axis": "المتتالية العددية: التعريف والترميز وطرق التعريف",
+      "secondary_tags": [
+        "sequence_monotonicity"
+      ],
+      "skill": "حساب وتخمين",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمت كتابة السؤال من الوثيقة المصورة مع توحيد الترميز الرياضي بصيغة LaTeX.",
+      "solution": {
+        "strategy": "نحسب u_1 ثم u_2 مباشرة، وبعدها نقارن الحدود الثلاثة لتخمين اتجاه التغير.",
+        "detailed_explanation": "العلاقة كسرية؛ لذلك نعوض قيمة الحد السابق في البسط والمقام معًا.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "حساب u_1",
+            "explanation": "نعوض u_0=4.",
+            "calculation": "\\(u_1=\\frac{4\\times4}{4+2}=\\frac{16}{6}\\)",
+            "result": "\\(u_1=\\frac83\\)"
+          },
+          {
+            "order": 2,
+            "title": "حساب u_2",
+            "explanation": "نعوض u_1=8/3.",
+            "calculation": "\\(u_2=\\frac{4\\times\\frac83}{\\frac83+2}=\\frac{\\frac{32}{3}}{\\frac83+\\frac63}=\\frac{\\frac{32}{3}}{\\frac{14}{3}}\\)",
+            "result": "\\(u_2=\\frac{16}{7}\\)"
+          },
+          {
+            "order": 3,
+            "title": "التخمين",
+            "explanation": "نقارن القيم: 4، ثم 2.667 تقريبًا، ثم 2.286 تقريبًا.",
+            "calculation": "\\(4>\\frac83>\\frac{16}{7}\\)",
+            "result": "نخمن أن المتتالية متناقصة."
+          }
+        ],
+        "final_answer": "\\(u_1=\\frac83\\)، \\(u_2=\\frac{16}{7}\\)، والتخمين أن \\((u_n)\\) متناقصة.",
+        "verification": "8/3≈2.667 و16/7≈2.286، فتظهر الحدود الأولى تناقصًا نحو 2.",
+        "common_mistakes": [
+          {
+            "mistake": "نسيان أن 2=6/3 عند جمع المقام.",
+            "correction": "نوحّد المقام: 8/3+2=8/3+6/3=14/3."
+          }
+        ],
+        "hints": [
+          "عوّض u_0 في البسط والمقام.",
+          "حوّل العدد 2 إلى كسر مقامه 3 عند حساب u_2."
+        ],
+        "alternative_method": "",
+        "is_complete": true
+      }
+    }
+  ],
+  "solution_schema": {
+    "strategy": "الفكرة العامة للحل",
+    "detailed_explanation": "شرح تربوي",
+    "steps": "خطوات مرتبة",
+    "final_answer": "الجواب النهائي",
+    "verification": "التحقق من النتيجة",
+    "common_mistakes": "الأخطاء الشائعة",
+    "hints": "تلميحات متدرجة",
+    "alternative_method": "طريقة بديلة إن وجدت",
+    "is_complete": "هل الحل مكتمل"
+  }
+}

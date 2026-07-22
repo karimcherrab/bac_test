@@ -1,0 +1,207 @@
+{
+  "schema_version": "2.0",
+  "language": "ar",
+  "direction": "rtl",
+  "year": 2009,
+  "exercise_number": 1,
+  "source_page": 2,
+  "source_reference": "النص منقول كما ورد في ملف PDF، صفحة 2.",
+  "title": "التمرين الأول (03.5 نقطة)",
+  "axis_tags": [
+    "geometric_sequences",
+    "sequence_limits"
+  ],
+  "statement": "\\((u_n)\\) متتالية معرفة على \\(\\mathbb N\\) كما يلي: \\[u_0=1,\\quad u_1=2,\\quad u_{n+2}=\\frac43u_{n+1}-\\frac13u_n.\\] المتتالية \\((v_n)\\) معرفة على \\(\\mathbb N\\) كما يلي: \\[v_n=u_{n+1}-u_n.\\]",
+  "questions": [
+    {
+      "id": "2009_ex1_q1",
+      "text": "1) أحسب \\(v_0\\) و \\(v_1\\).",
+      "axis_tags": [
+        "seq_definition_notation_methods"
+      ],
+      "solution": {
+        "strategy": "نستعمل تعريف \\(v_n\\)، ونحسب أولا \\(u_2\\) من العلاقة التراجعية.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب \\(v_0\\)",
+            "explanation": "",
+            "latex": "v_0=u_1-u_0=2-1=1"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب \\(u_2\\)",
+            "explanation": "نعوض \\(n=0\\).",
+            "latex": "u_2=\\frac43u_1-\\frac13u_0=\\frac83-\\frac13=\\frac73"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب \\(v_1\\)",
+            "explanation": "",
+            "latex": "v_1=u_2-u_1=\\frac73-2=\\frac13"
+          }
+        ],
+        "final_answer": "\\(v_0=1\\) و\\(v_1=\\frac13\\).",
+        "verification": "",
+        "common_mistakes": [],
+        "hints": [],
+        "graph_data": null,
+        "table_data": null
+      }
+    },
+    {
+      "id": "2009_ex1_q2",
+      "text": "2) برهن أن \\((v_n)\\) متتالية هندسية يطلب تعيين أساسها.",
+      "axis_tags": [
+        "geometric_sequences"
+      ],
+      "solution": {
+        "strategy": "نحسب \\(v_{n+1}\\) ونستعمل علاقة \\(u_{n+2}\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "كتابة الحد الموالي",
+            "explanation": "",
+            "latex": "v_{n+1}=u_{n+2}-u_{n+1}"
+          },
+          {
+            "step_number": 2,
+            "title": "التعويض",
+            "explanation": "",
+            "latex": "v_{n+1}=\\frac43u_{n+1}-\\frac13u_n-u_{n+1}"
+          },
+          {
+            "step_number": 3,
+            "title": "التبسيط",
+            "explanation": "",
+            "latex": "v_{n+1}=\\frac13(u_{n+1}-u_n)=\\frac13v_n"
+          },
+          {
+            "step_number": 4,
+            "title": "الاستنتاج",
+            "explanation": "إذن \\((v_n)\\) هندسية أساسها \\(q=\\frac13\\)."
+          }
+        ],
+        "final_answer": "\\((v_n)\\) هندسية أساسها \\(\\frac13\\)، ومنه \\(v_n=(\\frac13)^n\\).",
+        "verification": "",
+        "common_mistakes": [],
+        "hints": [],
+        "graph_data": null,
+        "table_data": null
+      }
+    },
+    {
+      "id": "2009_ex1_q3a",
+      "text": "3) أ) أحسب بدلالة \\(n\\) المجموع \\(S_n\\): \\[S_n=v_0+v_1+\\cdots+v_{n-1}.\\]",
+      "axis_tags": [
+        "geometric_sequences"
+      ],
+      "solution": {
+        "strategy": "المجموع هو مجموع أول \\(n\\) حدود لمتتالية هندسية أساسها \\(\\frac13\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "كتابة المجموع",
+            "explanation": "",
+            "latex": "S_n=\\sum_{k=0}^{n-1}\\left(\\frac13\\right)^k"
+          },
+          {
+            "step_number": 2,
+            "title": "تطبيق قانون المجموع",
+            "explanation": "",
+            "latex": "S_n=\\frac{1-(\\frac13)^n}{1-\\frac13}"
+          },
+          {
+            "step_number": 3,
+            "title": "التبسيط",
+            "explanation": "",
+            "latex": "S_n=\\frac32\\left(1-\\left(\\frac13\\right)^n\\right)"
+          }
+        ],
+        "final_answer": "\\(\\displaystyle S_n=\\frac32\\left(1-(\\frac13)^n\\right)\\).",
+        "verification": "",
+        "common_mistakes": [],
+        "hints": [],
+        "graph_data": null,
+        "table_data": null
+      }
+    },
+    {
+      "id": "2009_ex1_q3b",
+      "text": "ب) برهن أنه من أجل كل عدد طبيعي \\(n\\): \\[u_n=\\frac32\\left(1-\\left(\\frac13\\right)^n\\right)+1.\\]",
+      "axis_tags": [
+        "geometric_sequences"
+      ],
+      "solution": {
+        "strategy": "نستعمل خاصية المجموع المتسلسل للفروق.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "كتابة مجموع الفروق",
+            "explanation": "",
+            "latex": "S_n=(u_1-u_0)+(u_2-u_1)+\\cdots+(u_n-u_{n-1})"
+          },
+          {
+            "step_number": 2,
+            "title": "الاختزال",
+            "explanation": "تختزل الحدود المتقابلة، فيبقى:",
+            "latex": "S_n=u_n-u_0"
+          },
+          {
+            "step_number": 3,
+            "title": "استخراج \\(u_n\\)",
+            "explanation": "بما أن \\(u_0=1\\)، فإن:",
+            "latex": "u_n=S_n+1"
+          },
+          {
+            "step_number": 4,
+            "title": "التعويض",
+            "explanation": "",
+            "latex": "u_n=\\frac32\\left(1-\\left(\\frac13\\right)^n\\right)+1"
+          }
+        ],
+        "final_answer": "\\(\\displaystyle u_n=\\frac32(1-(\\frac13)^n)+1\\).",
+        "verification": "",
+        "common_mistakes": [],
+        "hints": [],
+        "graph_data": null,
+        "table_data": null
+      }
+    },
+    {
+      "id": "2009_ex1_q3c",
+      "text": "ج) بيّن أن \\((u_n)\\) متقاربة.",
+      "axis_tags": [
+        "sequence_limits"
+      ],
+      "solution": {
+        "strategy": "نحسب نهاية العبارة الصريحة لـ\\(u_n\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "نهاية القوة",
+            "explanation": "لأن \\(|\\frac13|<1\\):",
+            "latex": "\\left(\\frac13\\right)^n\\to0"
+          },
+          {
+            "step_number": 2,
+            "title": "نهاية المتتالية",
+            "explanation": "",
+            "latex": "u_n\\to\\frac32(1-0)+1=\\frac52"
+          },
+          {
+            "step_number": 3,
+            "title": "الاستنتاج",
+            "explanation": "بما أن للمتتالية نهاية حقيقية، فهي متقاربة."
+          }
+        ],
+        "final_answer": "\\((u_n)\\) متقاربة و\\(\\displaystyle\\lim u_n=\\frac52\\).",
+        "verification": "",
+        "common_mistakes": [],
+        "hints": [],
+        "graph_data": null,
+        "table_data": null
+      }
+    }
+  ]
+}

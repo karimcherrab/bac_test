@@ -1,0 +1,2682 @@
+{
+  "version": 7,
+  "language": "ar",
+  "direction": "rtl",
+  "subject_code": "math",
+  "chapter_code": "numerical_sequences",
+  "tag": "seq_monotonicity",
+  "title": "اتجاه تغير المتتالية",
+  "source_file": "bac_sequence_scientifique(9).pdf",
+  "question_count": 28,
+  "years": [
+    2008,
+    2010,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+  ],
+  "questions": [
+    {
+      "id": "bac_2008_p1_exercise_3_2-b",
+      "year": 2008,
+      "source_file": "bac_sequence_scientifique(5).pdf",
+      "source_page": 1,
+      "exercise": "exercise_3",
+      "number": "2-b",
+      "text": "نعتبر المتتالية \\((u_n)\\) المعرفة على \\(\\mathbb{N}\\) بـ:\n\\[\nu_0=\\frac32,\\qquad u_{n+1}=\\frac{u_n+2}{4-u_n}.\n\\]\n\nحتى يكون السؤال مستقلاً، أجب بالترتيب الآتي:\n1) أثبت بالتراجع أن \\(1\\le u_n\\le2\\) لكل \\(n\\in\\mathbb{N}\\).\n2) احسب \\(u_{n+1}-u_n\\)، ثم ادرس إشارته.\n3) استنتج اتجاه تغير المتتالية \\((u_n)\\)، ثم بيّن أنها متقاربة.",
+      "context": "\\(u_0=\\frac32\\), \\(u_{n+1}=\\frac{u_n+2}{-u_n+4}\\), و\\(I=[1,2]\\).",
+      "tag": "seq_monotonicity",
+      "axis": "اتجاه تغير المتتالية",
+      "secondary_tags": [
+        "sequence_limits_convergence_divergence",
+        "bounded_sequences"
+      ],
+      "skill": "الرتابة والتقارب",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمت كتابة السؤال من الوثيقة المصورة مع توحيد الترميز الرياضي بصيغة LaTeX.",
+      "solution": {
+        "strategy": "نثبت أولًا أن جميع الحدود تبقى داخل المجال [1,2]، لأن هذا الحصر هو المفتاح لمعرفة إشارة الفرق. بعد ذلك نحسب الفرق ونستنتج الرتابة والتقارب.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "التحقق من بداية التراجع",
+            "explanation": "نبدأ بالحد الأول، لأن برهان التراجع لا يصح من دون التحقق من الخاصية عند البداية.",
+            "calculation": "\\(u_0=\\frac32\\)، ومنه \\(1\\le\\frac32\\le2\\).",
+            "result": "الخاصية صحيحة عند \\(n=0\\)."
+          },
+          {
+            "order": 2,
+            "title": "فرضية التراجع",
+            "explanation": "نفترض أن حدًا ما \\(u_n\\) يقع بين 1 و2، ثم نثبت أن الحد الموالي يقع في المجال نفسه.",
+            "calculation": "\\(1\\le u_n\\le2\\).",
+            "result": "سنستعمل هذا الحصر في حساب \\(u_{n+1}\\)."
+          },
+          {
+            "order": 3,
+            "title": "إثبات الحصر للحد الموالي",
+            "explanation": "بما أن \\(1\\le u_n\\le2\\)، فإن \\(2\\le4-u_n\\le3\\)، وبالتالي المقام موجب. نثبت الحدين السفلي والعلوي كل واحد على حدة.",
+            "calculation": "\\(u_{n+1}-1=\\frac{2(u_n-1)}{4-u_n}\\ge0\\)، و\\(2-u_{n+1}=\\frac{3(2-u_n)}{4-u_n}\\ge0\\).",
+            "result": "إذن \\(1\\le u_{n+1}\\le2\\)، وبالتراجع \\(1\\le u_n\\le2\\) لكل \\(n\\)."
+          },
+          {
+            "order": 4,
+            "title": "حساب الفرق بين حدين متتاليين",
+            "explanation": "لدراسة اتجاه التغير نحسب الفرق \\(u_{n+1}-u_n\\).",
+            "calculation": "\\(u_{n+1}-u_n=\\frac{u_n+2}{4-u_n}-u_n=\\frac{(u_n-1)(u_n-2)}{4-u_n}\\).",
+            "result": "حصلنا على عبارة مفككة يسهل تحديد إشارتها."
+          },
+          {
+            "order": 5,
+            "title": "دراسة إشارة الفرق",
+            "explanation": "لدينا \\(u_n-1\\ge0\\)، و\\(u_n-2\\le0\\)، و\\(4-u_n>0\\). إذن البسط غير موجب والمقام موجب.",
+            "calculation": "\\(u_{n+1}-u_n\\le0\\).",
+            "result": "المتتالية \\((u_n)\\) متناقصة."
+          },
+          {
+            "order": 6,
+            "title": "إثبات التقارب",
+            "explanation": "المتتالية متناقصة، ومن الحصر السابق فهي محدودة من الأسفل بالعدد 1. كل متتالية متناقصة ومحدودة من الأسفل متقاربة.",
+            "calculation": "\\(u_n\\ge1\\).",
+            "result": "المتتالية \\((u_n)\\) متقاربة."
+          }
+        ],
+        "final_answer": "المتتالية \\((u_n)\\) متناقصة ومحدودة من الأسفل بالعدد \\(1\\)، ولذلك فهي متقاربة.",
+        "hints": [
+          "ابدأ بإثبات الحصر أو العبارة المساعدة الموجودة في الجزء الأول.",
+          "بعد ذلك احسب الفرق بين حدين متتاليين أو النسبة بينهما.",
+          "حدّد إشارة كل عامل قبل كتابة النتيجة."
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "استعمال نتيجة من سؤال سابق من دون كتابتها أو إثباتها.",
+            "correction": "في النسخة المستقلة أُضيفت النتيجة المطلوبة إلى نص السؤال وأُثبتت داخل الحل قبل استعمالها."
+          },
+          {
+            "mistake": "الحكم على إشارة كسر من دون التأكد من إشارة المقام.",
+            "correction": "يجب تحديد إشارة البسط والمقام كل واحد على حدة."
+          }
+        ],
+        "dependency_handling": {
+          "was_dependent_in_original_exam": true,
+          "previous_result_reused": [
+            "أثبت أولًا، أو استعمل داخل الحل، أن \\(1\\le u_n\\le2\\) لكل \\(n\\)."
+          ],
+          "how_made_standalone": "أعيدت صياغة السؤال ليحتوي على كل المعطيات والنتائج المساعدة المطلوبة، ثم أُعيد بناء الحل من الصفر بحيث تُثبت كل نتيجة قبل استعمالها."
+        },
+        "presentation": {
+          "style": "clear_concise_student_friendly",
+          "one_idea_per_step": true,
+          "avoid_repetition": true,
+          "prove_before_use": true
+        }
+      },
+      "original_text": "ادرس اتجاه تغير \\((u_n)\\)، ثم استنتج أنها متقاربة.",
+      "standalone_text": "نعتبر المتتالية \\((u_n)\\) المعرفة على \\(\\mathbb{N}\\) بـ:\n\\[\nu_0=\\frac32,\\qquad u_{n+1}=\\frac{u_n+2}{4-u_n}.\n\\]\n\nحتى يكون السؤال مستقلاً، أجب بالترتيب الآتي:\n1) أثبت بالتراجع أن \\(1\\le u_n\\le2\\) لكل \\(n\\in\\mathbb{N}\\).\n2) احسب \\(u_{n+1}-u_n\\)، ثم ادرس إشارته.\n3) استنتج اتجاه تغير المتتالية \\((u_n)\\)، ثم بيّن أنها متقاربة.",
+      "standalone_support": {
+        "requires_previous_question": false,
+        "all_information_is_in_question": true,
+        "integrated_subquestions": [
+          "1) أثبت بالتراجع أن \\(1\\le u_n\\le2\\) لكل \\(n\\in\\mathbb{N}\\).",
+          "2) احسب \\(u_{n+1}-u_n\\)، ثم ادرس إشارته.",
+          "3) استنتج اتجاه تغير المتتالية \\((u_n)\\)، ثم بيّن أنها متقاربة."
+        ]
+      }
+    },
+    {
+      "id": "bac_2008_p1_exercise_4_2-b",
+      "year": 2008,
+      "source_file": "bac_sequence_scientifique(5).pdf",
+      "source_page": 1,
+      "exercise": "exercise_4",
+      "number": "2-b",
+      "text": "نعتبر المتتالية \\((u_n)\\) المعرفة بـ:\n\\[\nu_0=\\frac52,\\qquad u_{n+1}=\\frac23u_n+2.\n\\]\nأثبت أن \\(u_n<6\\) لكل \\(n\\)، ثم استنتج أن المتتالية \\((u_n)\\) متزايدة تمامًا.",
+      "context": "\\(u_0=\\frac52\\)، \\(u_{n+1}=\\frac23u_n+2\\).",
+      "tag": "seq_monotonicity",
+      "axis": "اتجاه تغير المتتالية",
+      "secondary_tags": [],
+      "skill": "الرتابة",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمت كتابة السؤال من الوثيقة المصورة مع توحيد الترميز الرياضي بصيغة LaTeX.",
+      "solution": {
+        "strategy": "نقارن الحدود بالعدد 6، لأنه نقطة تثبيت للعلاقة، ثم نحسب الفرق.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "تحديد العدد المرجعي",
+            "explanation": "نبحث عن عدد ثابت \\(L\\) لا يتغير عند تطبيق العلاقة.",
+            "calculation": "\\(L=\\frac23L+2\\Longrightarrow L=6\\).",
+            "result": "سنقارن جميع الحدود بالعدد 6."
+          },
+          {
+            "order": 2,
+            "title": "التحقق عند البداية",
+            "explanation": "نثبت أولًا أن الحد الأول أصغر من 6.",
+            "calculation": "\\(u_0=\\frac52<6\\).",
+            "result": "الحصر صحيح عند البداية."
+          },
+          {
+            "order": 3,
+            "title": "إثبات الحصر بالتراجع",
+            "explanation": "إذا افترضنا \\(u_n<6\\)، فإن ضرب المتراجحة في \\(\\frac23>0\\) ثم إضافة 2 يحافظ على اتجاهها.",
+            "calculation": "\\(u_{n+1}=\\frac23u_n+2<\\frac23\\cdot6+2=6\\).",
+            "result": "إذن \\(u_n<6\\) لكل \\(n\\)."
+          },
+          {
+            "order": 4,
+            "title": "حساب الفرق",
+            "explanation": "نطرح \\(u_n\\) من \\(u_{n+1}\\).",
+            "calculation": "\\(u_{n+1}-u_n=\\frac{6-u_n}{3}\\).",
+            "result": "بما أن \\(u_n<6\\)، فالفرق موجب."
+          },
+          {
+            "order": 5,
+            "title": "النتيجة",
+            "explanation": "الفرق موجب تمامًا لكل \\(n\\).",
+            "calculation": "\\(u_{n+1}>u_n\\).",
+            "result": "المتتالية \\((u_n)\\) متزايدة تمامًا."
+          }
+        ],
+        "final_answer": "\\boxed{(u_n)\text{ متزايدة تمامًا}}",
+        "hints": [
+          "ابدأ بإثبات الحصر أو العبارة المساعدة الموجودة في الجزء الأول.",
+          "بعد ذلك احسب الفرق بين حدين متتاليين أو النسبة بينهما.",
+          "حدّد إشارة كل عامل قبل كتابة النتيجة."
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "استعمال نتيجة من سؤال سابق من دون كتابتها أو إثباتها.",
+            "correction": "في النسخة المستقلة أُضيفت النتيجة المطلوبة إلى نص السؤال وأُثبتت داخل الحل قبل استعمالها."
+          },
+          {
+            "mistake": "الحكم على إشارة كسر من دون التأكد من إشارة المقام.",
+            "correction": "يجب تحديد إشارة البسط والمقام كل واحد على حدة."
+          }
+        ],
+        "dependency_handling": {
+          "was_dependent_in_original_exam": false,
+          "previous_result_reused": [],
+          "how_made_standalone": "أعيدت صياغة السؤال ليحتوي على كل المعطيات والنتائج المساعدة المطلوبة، ثم أُعيد بناء الحل من الصفر بحيث تُثبت كل نتيجة قبل استعمالها."
+        },
+        "presentation": {
+          "style": "clear_concise_student_friendly",
+          "one_idea_per_step": true,
+          "avoid_repetition": true,
+          "prove_before_use": true
+        }
+      },
+      "original_text": "تحقق أن \\((u_n)\\) متزايدة.",
+      "standalone_text": "نعتبر المتتالية \\((u_n)\\) المعرفة بـ:\n\\[\nu_0=\\frac52,\\qquad u_{n+1}=\\frac23u_n+2.\n\\]\nأثبت أن \\(u_n<6\\) لكل \\(n\\)، ثم استنتج أن المتتالية \\((u_n)\\) متزايدة تمامًا.",
+      "standalone_support": {
+        "requires_previous_question": false,
+        "all_information_is_in_question": true,
+        "integrated_subquestions": []
+      }
+    },
+    {
+      "id": "bac_2010_p3_exercise_1_2-b",
+      "year": 2010,
+      "source_file": "bac_sequence_scientifique(5).pdf",
+      "source_page": 3,
+      "exercise": "exercise_1",
+      "number": "2-b",
+      "text": "نعتبر المتتالية \\((u_n)\\) المعرفة بـ:\n\\[\nu_0=6,\\qquad u_{n+1}=\\frac12u_n+\\frac13.\n\\]\n1) أثبت بالتراجع أن \\(u_n>\\frac23\\) لكل \\(n\\).\n2) ادرس اتجاه تغير المتتالية \\((u_n)\\).",
+      "context": "\\(u_0=6\\)، \\(u_{n+1}=\\frac12u_n+\\frac13\\).",
+      "tag": "seq_monotonicity",
+      "axis": "اتجاه تغير المتتالية",
+      "secondary_tags": [],
+      "skill": "الرتابة",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمت كتابة السؤال من الوثيقة المصورة مع توحيد الترميز الرياضي بصيغة LaTeX.",
+      "solution": {
+        "strategy": "نثبت أن الحدود تبقى فوق نقطة التثبيت \\(\\frac23\\)، ثم نستعمل هذا الحصر لتحديد إشارة الفرق.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "التحقق عند البداية",
+            "explanation": "نقارن الحد الأول بالعدد \\(\\frac23\\).",
+            "calculation": "\\(u_0=6>\\frac23\\).",
+            "result": "الخاصية صحيحة عند \\(n=0\\)."
+          },
+          {
+            "order": 2,
+            "title": "خطوة التراجع",
+            "explanation": "نفترض \\(u_n>\\frac23\\)، ثم نطرح \\(\\frac23\\) من \\(u_{n+1}\\).",
+            "calculation": "\\(u_{n+1}-\\frac23=\\frac12\\left(u_n-\\frac23\\right)>0\\).",
+            "result": "إذن \\(u_{n+1}>\\frac23\\)، وبالتالي \\(u_n>\\frac23\\) لكل \\(n\\)."
+          },
+          {
+            "order": 3,
+            "title": "حساب الفرق",
+            "explanation": "نحسب الفرق بين حدين متتاليين.",
+            "calculation": "\\(u_{n+1}-u_n=-\\frac12\\left(u_n-\\frac23\\right)\\).",
+            "result": "الكمية بين القوسين موجبة."
+          },
+          {
+            "order": 4,
+            "title": "استخلاص الإشارة",
+            "explanation": "لأن \\(u_n-\\frac23>0\\)، فإن ضربها في \\(-\\frac12\\) يعطي عددًا سالبًا.",
+            "calculation": "\\(u_{n+1}-u_n<0\\).",
+            "result": "المتتالية \\((u_n)\\) متناقصة تمامًا."
+          }
+        ],
+        "final_answer": "\\boxed{(u_n)\text{ متناقصة تمامًا}}",
+        "hints": [
+          "ابدأ بإثبات الحصر أو العبارة المساعدة الموجودة في الجزء الأول.",
+          "بعد ذلك احسب الفرق بين حدين متتاليين أو النسبة بينهما.",
+          "حدّد إشارة كل عامل قبل كتابة النتيجة."
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "استعمال نتيجة من سؤال سابق من دون كتابتها أو إثباتها.",
+            "correction": "في النسخة المستقلة أُضيفت النتيجة المطلوبة إلى نص السؤال وأُثبتت داخل الحل قبل استعمالها."
+          },
+          {
+            "mistake": "الحكم على إشارة كسر من دون التأكد من إشارة المقام.",
+            "correction": "يجب تحديد إشارة البسط والمقام كل واحد على حدة."
+          }
+        ],
+        "dependency_handling": {
+          "was_dependent_in_original_exam": true,
+          "previous_result_reused": [
+            "أثبت داخل الحل أن \\(u_n>\\frac23\\) لكل \\(n\\)."
+          ],
+          "how_made_standalone": "أعيدت صياغة السؤال ليحتوي على كل المعطيات والنتائج المساعدة المطلوبة، ثم أُعيد بناء الحل من الصفر بحيث تُثبت كل نتيجة قبل استعمالها."
+        },
+        "presentation": {
+          "style": "clear_concise_student_friendly",
+          "one_idea_per_step": true,
+          "avoid_repetition": true,
+          "prove_before_use": true
+        }
+      },
+      "original_text": "استنتج اتجاه تغير \\((u_n)\\).",
+      "standalone_text": "نعتبر المتتالية \\((u_n)\\) المعرفة بـ:\n\\[\nu_0=6,\\qquad u_{n+1}=\\frac12u_n+\\frac13.\n\\]\n1) أثبت بالتراجع أن \\(u_n>\\frac23\\) لكل \\(n\\).\n2) ادرس اتجاه تغير المتتالية \\((u_n)\\).",
+      "standalone_support": {
+        "requires_previous_question": false,
+        "all_information_is_in_question": true,
+        "integrated_subquestions": [
+          "1) أثبت بالتراجع أن \\(u_n>\\frac23\\) لكل \\(n\\).",
+          "2) ادرس اتجاه تغير المتتالية \\((u_n)\\)."
+        ]
+      }
+    },
+    {
+      "id": "bac_2012_p5_exercise_1_3-a",
+      "year": 2012,
+      "source_file": "bac_sequence_scientifique(5).pdf",
+      "source_page": 5,
+      "exercise": "exercise_1",
+      "number": "3-a",
+      "text": "نعتبر المتتالية \\((u_n)\\) المعرفة بـ:\n\\[\nu_0=1,\\qquad u_{n+1}=\\sqrt{2u_n+3}.\n\\]\n1) أثبت بالتراجع أن \\(0<u_n<3\\) لكل \\(n\\).\n2) احسب \\(u_{n+1}-u_n\\) باستعمال المرافق، ثم استنتج اتجاه تغير \\((u_n)\\).",
+      "context": "\\(u_0=1\\)، \\(u_{n+1}=\\sqrt{2u_n+3}\\).",
+      "tag": "seq_monotonicity",
+      "axis": "اتجاه تغير المتتالية",
+      "secondary_tags": [],
+      "skill": "الرتابة",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمت كتابة السؤال من الوثيقة المصورة مع توحيد الترميز الرياضي بصيغة LaTeX.",
+      "solution": {
+        "strategy": "نثبت الحصر أولًا، ثم نستعمل المرافق لإزالة الجذر من فرق حدين متتاليين.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "التحقق عند البداية",
+            "explanation": "الحد الأول موجب وأصغر من 3.",
+            "calculation": "\\(0<u_0=1<3\\).",
+            "result": "الحصر صحيح عند البداية."
+          },
+          {
+            "order": 2,
+            "title": "إثبات الحصر بالتراجع",
+            "explanation": "نفترض \\(0<u_n<3\\). عندئذ \\(3<2u_n+3<9\\)، والجذر دالة متزايدة.",
+            "calculation": "\\(0<\\sqrt{2u_n+3}<3\\).",
+            "result": "إذن \\(0<u_{n+1}<3\\)، وبالتراجع يتحقق الحصر لكل \\(n\\)."
+          },
+          {
+            "order": 3,
+            "title": "استعمال المرافق",
+            "explanation": "نضرب ونقسم على مجموع الحدين لإزالة الجذر.",
+            "calculation": "\\(u_{n+1}-u_n=\\frac{2u_n+3-u_n^2}{\\sqrt{2u_n+3}+u_n}=\\frac{(3-u_n)(u_n+1)}{\\sqrt{2u_n+3}+u_n}\\).",
+            "result": "أصبحت إشارة الفرق واضحة من الحصر."
+          },
+          {
+            "order": 4,
+            "title": "دراسة الإشارة",
+            "explanation": "لدينا \\(3-u_n>0\\)، و\\(u_n+1>0\\)، والمقام موجب.",
+            "calculation": "\\(u_{n+1}-u_n>0\\).",
+            "result": "المتتالية \\((u_n)\\) متزايدة تمامًا."
+          }
+        ],
+        "final_answer": "المتتالية \\((u_n)\\) متزايدة تمامًا ومحدودة من الأعلى بالعدد \\(3\\).",
+        "hints": [
+          "ابدأ بإثبات الحصر أو العبارة المساعدة الموجودة في الجزء الأول.",
+          "بعد ذلك احسب الفرق بين حدين متتاليين أو النسبة بينهما.",
+          "حدّد إشارة كل عامل قبل كتابة النتيجة."
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "استعمال نتيجة من سؤال سابق من دون كتابتها أو إثباتها.",
+            "correction": "في النسخة المستقلة أُضيفت النتيجة المطلوبة إلى نص السؤال وأُثبتت داخل الحل قبل استعمالها."
+          },
+          {
+            "mistake": "الحكم على إشارة كسر من دون التأكد من إشارة المقام.",
+            "correction": "يجب تحديد إشارة البسط والمقام كل واحد على حدة."
+          }
+        ],
+        "dependency_handling": {
+          "was_dependent_in_original_exam": true,
+          "previous_result_reused": [
+            "أثبت داخل الحل أن \\(0<u_n<3\\) لكل \\(n\\)."
+          ],
+          "how_made_standalone": "أعيدت صياغة السؤال ليحتوي على كل المعطيات والنتائج المساعدة المطلوبة، ثم أُعيد بناء الحل من الصفر بحيث تُثبت كل نتيجة قبل استعمالها."
+        },
+        "presentation": {
+          "style": "clear_concise_student_friendly",
+          "one_idea_per_step": true,
+          "avoid_repetition": true,
+          "prove_before_use": true
+        }
+      },
+      "original_text": "ادرس اتجاه تغير \\((u_n)\\).",
+      "standalone_text": "نعتبر المتتالية \\((u_n)\\) المعرفة بـ:\n\\[\nu_0=1,\\qquad u_{n+1}=\\sqrt{2u_n+3}.\n\\]\n1) أثبت بالتراجع أن \\(0<u_n<3\\) لكل \\(n\\).\n2) احسب \\(u_{n+1}-u_n\\) باستعمال المرافق، ثم استنتج اتجاه تغير \\((u_n)\\).",
+      "standalone_support": {
+        "requires_previous_question": false,
+        "all_information_is_in_question": true,
+        "integrated_subquestions": [
+          "1) أثبت بالتراجع أن \\(0<u_n<3\\) لكل \\(n\\).",
+          "2) احسب \\(u_{n+1}-u_n\\) باستعمال المرافق، ثم استنتج اتجاه تغير \\((u_n)\\)."
+        ]
+      }
+    },
+    {
+      "id": "bac_2012_p5_exercise_2_2",
+      "year": 2012,
+      "source_file": "bac_sequence_scientifique(5).pdf",
+      "source_page": 5,
+      "exercise": "exercise_2",
+      "number": "2",
+      "text": "نعتبر المتتالية \\((u_n)\\) المعرفة بـ:\n\\[\nu_0=\\frac{13}{4},\\qquad u_{n+1}=3+\\sqrt{u_n-3}.\n\\]\n1) أثبت بالتراجع أن \\(3<u_n<4\\) لكل \\(n\\).\n2) أثبت أن\n\\[\nu_{n+1}-u_n=\n\\frac{-u_n^2+7u_n-12}{\\sqrt{u_n-3}+u_n-3},\n\\]\nثم استنتج أن المتتالية \\((u_n)\\) متزايدة تمامًا.",
+      "context": "\\(u_0=\\frac{13}{4}\\)، \\(u_{n+1}=3+\\sqrt{u_n-3}\\).",
+      "tag": "seq_monotonicity",
+      "axis": "اتجاه تغير المتتالية",
+      "secondary_tags": [],
+      "skill": "الرتابة",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمت كتابة السؤال من الوثيقة المصورة مع توحيد الترميز الرياضي بصيغة LaTeX.",
+      "solution": {
+        "strategy": "نثبت أن \\(u_n-3\\) يبقى بين 0 و1، ثم نحسب الفرق ونستعمل تفكيك البسط.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "التحقق عند البداية",
+            "explanation": "نقارن \\(\\frac{13}{4}\\) بالعددين 3 و4.",
+            "calculation": "\\(3<\\frac{13}{4}<4\\).",
+            "result": "الحصر صحيح عند \\(n=0\\)."
+          },
+          {
+            "order": 2,
+            "title": "خطوة التراجع",
+            "explanation": "نفترض \\(3<u_n<4\\). إذن \\(0<u_n-3<1\\)، ومن ثم \\(0<\\sqrt{u_n-3}<1\\).",
+            "calculation": "\\(3<u_{n+1}=3+\\sqrt{u_n-3}<4\\).",
+            "result": "إذن \\(3<u_n<4\\) لكل \\(n\\)."
+          },
+          {
+            "order": 3,
+            "title": "حساب الفرق بالمرافق",
+            "explanation": "نكتب \\(u_{n+1}-u_n=\\sqrt{u_n-3}-(u_n-3)\\)، ثم نضرب في المرافق.",
+            "calculation": "\\(u_{n+1}-u_n=\\frac{u_n-3-(u_n-3)^2}{\\sqrt{u_n-3}+u_n-3}=\\frac{-u_n^2+7u_n-12}{\\sqrt{u_n-3}+u_n-3}\\).",
+            "result": "ثبتت الصيغة المطلوبة."
+          },
+          {
+            "order": 4,
+            "title": "تفكيك البسط",
+            "explanation": "نفكك كثير الحدود في البسط.",
+            "calculation": "\\(-u_n^2+7u_n-12=(u_n-3)(4-u_n)\\).",
+            "result": "العاملان موجبان لأن \\(3<u_n<4\\)."
+          },
+          {
+            "order": 5,
+            "title": "النتيجة",
+            "explanation": "المقام موجب أيضًا، لذلك الفرق موجب تمامًا.",
+            "calculation": "\\(u_{n+1}-u_n>0\\).",
+            "result": "المتتالية \\((u_n)\\) متزايدة تمامًا."
+          }
+        ],
+        "final_answer": "\\boxed{(u_n)\text{ متزايدة تمامًا}}",
+        "hints": [
+          "ابدأ بإثبات الحصر أو العبارة المساعدة الموجودة في الجزء الأول.",
+          "بعد ذلك احسب الفرق بين حدين متتاليين أو النسبة بينهما.",
+          "حدّد إشارة كل عامل قبل كتابة النتيجة."
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "استعمال نتيجة من سؤال سابق من دون كتابتها أو إثباتها.",
+            "correction": "في النسخة المستقلة أُضيفت النتيجة المطلوبة إلى نص السؤال وأُثبتت داخل الحل قبل استعمالها."
+          },
+          {
+            "mistake": "الحكم على إشارة كسر من دون التأكد من إشارة المقام.",
+            "correction": "يجب تحديد إشارة البسط والمقام كل واحد على حدة."
+          }
+        ],
+        "dependency_handling": {
+          "was_dependent_in_original_exam": true,
+          "previous_result_reused": [
+            "أثبت داخل الحل أن \\(3<u_n<4\\) لكل \\(n\\)."
+          ],
+          "how_made_standalone": "أعيدت صياغة السؤال ليحتوي على كل المعطيات والنتائج المساعدة المطلوبة، ثم أُعيد بناء الحل من الصفر بحيث تُثبت كل نتيجة قبل استعمالها."
+        },
+        "presentation": {
+          "style": "clear_concise_student_friendly",
+          "one_idea_per_step": true,
+          "avoid_repetition": true,
+          "prove_before_use": true
+        }
+      },
+      "original_text": "بين صيغة \\(u_{n+1}-u_n\\) المعطاة، ثم استنتج أن \\((u_n)\\) متزايدة تمامًا.",
+      "standalone_text": "نعتبر المتتالية \\((u_n)\\) المعرفة بـ:\n\\[\nu_0=\\frac{13}{4},\\qquad u_{n+1}=3+\\sqrt{u_n-3}.\n\\]\n1) أثبت بالتراجع أن \\(3<u_n<4\\) لكل \\(n\\).\n2) أثبت أن\n\\[\nu_{n+1}-u_n=\n\\frac{-u_n^2+7u_n-12}{\\sqrt{u_n-3}+u_n-3},\n\\]\nثم استنتج أن المتتالية \\((u_n)\\) متزايدة تمامًا.",
+      "standalone_support": {
+        "requires_previous_question": false,
+        "all_information_is_in_question": true,
+        "integrated_subquestions": [
+          "1) أثبت بالتراجع أن \\(3<u_n<4\\) لكل \\(n\\).",
+          "2) أثبت أن"
+        ]
+      }
+    },
+    {
+      "id": "bac_2013_p6_exercise_2_II_2",
+      "year": 2013,
+      "source_file": "bac_sequence_scientifique(5).pdf",
+      "source_page": 6,
+      "exercise": "exercise_2_II",
+      "number": "2",
+      "text": "نعتبر المتتالية \\((u_n)\\) المعرفة بـ:\n\\[\nu_0=1,\\qquad u_{n+1}=\\sqrt{5u_n+6}.\n\\]\n1) أثبت بالتراجع أن \\(1\\le u_n<6\\) لكل \\(n\\).\n2) ادرس اتجاه تغير المتتالية \\((u_n)\\).",
+      "context": "\\(u_0=1\\)، \\(u_{n+1}=\\sqrt{5u_n+6}\\).",
+      "tag": "seq_monotonicity",
+      "axis": "اتجاه تغير المتتالية",
+      "secondary_tags": [],
+      "skill": "الرتابة",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمت كتابة السؤال من الوثيقة المصورة مع توحيد الترميز الرياضي بصيغة LaTeX.",
+      "solution": {
+        "strategy": "نثبت الحصر بين 1 و6، ثم نستعمل المرافق في فرق حدين متتاليين.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "التحقق عند البداية",
+            "explanation": "لدينا مباشرة \\(1\\le u_0<6\\).",
+            "calculation": "\\(1\\le1<6\\).",
+            "result": "الحصر صحيح عند البداية."
+          },
+          {
+            "order": 2,
+            "title": "إثبات الحد السفلي",
+            "explanation": "إذا كان \\(u_n\\ge1\\)، فإن \\(5u_n+6\\ge11>1\\).",
+            "calculation": "\\(u_{n+1}=\\sqrt{5u_n+6}>1\\).",
+            "result": "الحد الموالي أكبر من 1."
+          },
+          {
+            "order": 3,
+            "title": "إثبات الحد العلوي",
+            "explanation": "إذا كان \\(u_n<6\\)، فإن \\(5u_n+6<36\\).",
+            "calculation": "\\(u_{n+1}<\\sqrt{36}=6\\).",
+            "result": "بالتراجع \\(1\\le u_n<6\\) لكل \\(n\\)."
+          },
+          {
+            "order": 4,
+            "title": "حساب الفرق",
+            "explanation": "نستعمل المرافق لإزالة الجذر.",
+            "calculation": "\\(u_{n+1}-u_n=\\frac{5u_n+6-u_n^2}{\\sqrt{5u_n+6}+u_n}=\\frac{(6-u_n)(u_n+1)}{\\sqrt{5u_n+6}+u_n}\\).",
+            "result": "كل عوامل البسط والمقام موجبة."
+          },
+          {
+            "order": 5,
+            "title": "النتيجة",
+            "explanation": "إذن الفرق موجب تمامًا.",
+            "calculation": "\\(u_{n+1}>u_n\\).",
+            "result": "المتتالية \\((u_n)\\) متزايدة تمامًا."
+          }
+        ],
+        "final_answer": "المتتالية \\((u_n)\\) متزايدة تمامًا ومحدودة من الأعلى بالعدد \\(6\\).",
+        "hints": [
+          "ابدأ بإثبات الحصر أو العبارة المساعدة الموجودة في الجزء الأول.",
+          "بعد ذلك احسب الفرق بين حدين متتاليين أو النسبة بينهما.",
+          "حدّد إشارة كل عامل قبل كتابة النتيجة."
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "استعمال نتيجة من سؤال سابق من دون كتابتها أو إثباتها.",
+            "correction": "في النسخة المستقلة أُضيفت النتيجة المطلوبة إلى نص السؤال وأُثبتت داخل الحل قبل استعمالها."
+          },
+          {
+            "mistake": "الحكم على إشارة كسر من دون التأكد من إشارة المقام.",
+            "correction": "يجب تحديد إشارة البسط والمقام كل واحد على حدة."
+          }
+        ],
+        "dependency_handling": {
+          "was_dependent_in_original_exam": true,
+          "previous_result_reused": [
+            "أثبت داخل الحل أن \\(1\\le u_n<6\\) لكل \\(n\\)."
+          ],
+          "how_made_standalone": "أعيدت صياغة السؤال ليحتوي على كل المعطيات والنتائج المساعدة المطلوبة، ثم أُعيد بناء الحل من الصفر بحيث تُثبت كل نتيجة قبل استعمالها."
+        },
+        "presentation": {
+          "style": "clear_concise_student_friendly",
+          "one_idea_per_step": true,
+          "avoid_repetition": true,
+          "prove_before_use": true
+        }
+      },
+      "original_text": "ادرس اتجاه تغير \\((u_n)\\).",
+      "standalone_text": "نعتبر المتتالية \\((u_n)\\) المعرفة بـ:\n\\[\nu_0=1,\\qquad u_{n+1}=\\sqrt{5u_n+6}.\n\\]\n1) أثبت بالتراجع أن \\(1\\le u_n<6\\) لكل \\(n\\).\n2) ادرس اتجاه تغير المتتالية \\((u_n)\\).",
+      "standalone_support": {
+        "requires_previous_question": false,
+        "all_information_is_in_question": true,
+        "integrated_subquestions": [
+          "1) أثبت بالتراجع أن \\(1\\le u_n<6\\) لكل \\(n\\).",
+          "2) ادرس اتجاه تغير المتتالية \\((u_n)\\)."
+        ]
+      }
+    },
+    {
+      "id": "bac_2013_p6_exercise_graph_2-c",
+      "year": 2013,
+      "source_file": "bac_sequence_scientifique(5).pdf",
+      "source_page": 6,
+      "exercise": "exercise_graph",
+      "number": "2-c",
+      "text": "نعتبر المتتالية \\((u_n)\\) المعرفة بـ:\n\\[\nu_0=\\frac12,\\qquad u_{n+1}=\\frac{2u_n}{u_n+1}.\n\\]\n1) أثبت بالتراجع أن \\(0<u_n<1\\) لكل \\(n\\).\n2) ادرس اتجاه تغير \\((u_n)\\).",
+      "context": "\\(u_0=\\frac12\\)، \\(u_{n+1}=\\frac{2u_n}{u_n+1}\\).",
+      "tag": "seq_monotonicity",
+      "axis": "اتجاه تغير المتتالية",
+      "secondary_tags": [],
+      "skill": "الرتابة",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمت كتابة السؤال من الوثيقة المصورة مع توحيد الترميز الرياضي بصيغة LaTeX.",
+      "solution": {
+        "strategy": "نثبت أن الحدود موجبة وأصغر من 1، ثم نحسب الفرق.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "التحقق عند البداية",
+            "explanation": "الحد الأول بين 0 و1.",
+            "calculation": "\\(0<\\frac12<1\\).",
+            "result": "الحصر صحيح عند البداية."
+          },
+          {
+            "order": 2,
+            "title": "إثبات الحصر بالتراجع",
+            "explanation": "نفترض \\(0<u_n<1\\). المقام \\(u_n+1\\) موجب، فيكون \\(u_{n+1}>0\\). ولإثبات أنه أصغر من 1 نقارن البسط بالمقام.",
+            "calculation": "\\(2u_n<u_n+1\\Longleftrightarrow u_n<1\\).",
+            "result": "إذن \\(0<u_{n+1}<1\\)، وبالتراجع يتحقق الحصر لكل \\(n\\)."
+          },
+          {
+            "order": 3,
+            "title": "حساب الفرق",
+            "explanation": "نوحد المقام.",
+            "calculation": "\\(u_{n+1}-u_n=\\frac{2u_n-u_n(u_n+1)}{u_n+1}=\\frac{u_n(1-u_n)}{u_n+1}\\).",
+            "result": "البسط والمقام موجبان."
+          },
+          {
+            "order": 4,
+            "title": "النتيجة",
+            "explanation": "الفرق موجب تمامًا.",
+            "calculation": "\\(u_{n+1}-u_n>0\\).",
+            "result": "المتتالية \\((u_n)\\) متزايدة تمامًا."
+          }
+        ],
+        "final_answer": "المتتالية \\((u_n)\\) متزايدة تمامًا ومحدودة من الأعلى بالعدد \\(1\\).",
+        "hints": [
+          "ابدأ بإثبات الحصر أو العبارة المساعدة الموجودة في الجزء الأول.",
+          "بعد ذلك احسب الفرق بين حدين متتاليين أو النسبة بينهما.",
+          "حدّد إشارة كل عامل قبل كتابة النتيجة."
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "استعمال نتيجة من سؤال سابق من دون كتابتها أو إثباتها.",
+            "correction": "في النسخة المستقلة أُضيفت النتيجة المطلوبة إلى نص السؤال وأُثبتت داخل الحل قبل استعمالها."
+          },
+          {
+            "mistake": "الحكم على إشارة كسر من دون التأكد من إشارة المقام.",
+            "correction": "يجب تحديد إشارة البسط والمقام كل واحد على حدة."
+          }
+        ],
+        "dependency_handling": {
+          "was_dependent_in_original_exam": true,
+          "previous_result_reused": [
+            "أثبت داخل الحل أن \\(0<u_n<1\\) لكل \\(n\\)."
+          ],
+          "how_made_standalone": "أعيدت صياغة السؤال ليحتوي على كل المعطيات والنتائج المساعدة المطلوبة، ثم أُعيد بناء الحل من الصفر بحيث تُثبت كل نتيجة قبل استعمالها."
+        },
+        "presentation": {
+          "style": "clear_concise_student_friendly",
+          "one_idea_per_step": true,
+          "avoid_repetition": true,
+          "prove_before_use": true
+        }
+      },
+      "original_text": "ادرس اتجاه تغير \\((u_n)\\).",
+      "standalone_text": "نعتبر المتتالية \\((u_n)\\) المعرفة بـ:\n\\[\nu_0=\\frac12,\\qquad u_{n+1}=\\frac{2u_n}{u_n+1}.\n\\]\n1) أثبت بالتراجع أن \\(0<u_n<1\\) لكل \\(n\\).\n2) ادرس اتجاه تغير \\((u_n)\\).",
+      "standalone_support": {
+        "requires_previous_question": false,
+        "all_information_is_in_question": true,
+        "integrated_subquestions": [
+          "1) أثبت بالتراجع أن \\(0<u_n<1\\) لكل \\(n\\).",
+          "2) ادرس اتجاه تغير \\((u_n)\\)."
+        ]
+      }
+    },
+    {
+      "id": "bac_2014_p7_exercise_1_3",
+      "year": 2014,
+      "source_file": "bac_sequence_scientifique(5).pdf",
+      "source_page": 7,
+      "exercise": "exercise_1",
+      "number": "3",
+      "text": "نعتبر المتتالية \\((u_n)\\) المعرفة بـ:\n\\[\nu_0=1,\\qquad u_{n+1}=\\frac23u_n-\\frac43.\n\\]\nونضع \\(v_n=u_n+4\\).\n\n1) أثبت أن \\((v_n)\\) متتالية هندسية، ثم اكتب \\(v_n\\) و\\(u_n\\) بدلالة \\(n\\).\n2) استنتج اتجاه تغير المتتالية \\((u_n)\\).",
+      "context": "\\(u_0=1\\)، \\(u_{n+1}=\\frac23u_n-\\frac43\\)، و\\(v_n=u_n+4\\).",
+      "tag": "seq_monotonicity",
+      "axis": "اتجاه تغير المتتالية",
+      "secondary_tags": [],
+      "skill": "الرتابة",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمت كتابة السؤال من الوثيقة المصورة مع توحيد الترميز الرياضي بصيغة LaTeX.",
+      "solution": {
+        "strategy": "نحوّل المتتالية إلى متتالية هندسية، ثم نستعمل عبارتها الصريحة لدراسة الرتابة.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "إيجاد علاقة \\(v_{n+1}\\)",
+            "explanation": "نعوض تعريف \\(v_n\\) في العلاقة التراجعية.",
+            "calculation": "\\(v_{n+1}=u_{n+1}+4=\\frac23u_n-\\frac43+4=\\frac23(u_n+4)=\\frac23v_n\\).",
+            "result": "\\((v_n)\\) هندسية أساسها \\(\\frac23\\)."
+          },
+          {
+            "order": 2,
+            "title": "حساب الحد الأول",
+            "explanation": "نحسب \\(v_0\\).",
+            "calculation": "\\(v_0=u_0+4=5\\).",
+            "result": "إذن \\(v_n=5\\left(\\frac23\right)^n\\)."
+          },
+          {
+            "order": 3,
+            "title": "الرجوع إلى \\(u_n\\)",
+            "explanation": "من \\(v_n=u_n+4\\) نحصل على \\(u_n=v_n-4\\).",
+            "calculation": "\\(u_n=5\\left(\\frac23\\right)^n-4\\).",
+            "result": "لدينا عبارة صريحة للمتتالية."
+          },
+          {
+            "order": 4,
+            "title": "دراسة الاتجاه",
+            "explanation": "بما أن \\(0<\\frac23<1\\)، فإن \\(\\left(\\frac23\right)^n\\) متناقصة تمامًا. الضرب في 5 ثم طرح 4 لا يغير اتجاه التغير.",
+            "calculation": "\\(u_{n+1}-u_n=-\\frac53\\left(\\frac23\\right)^n<0\\).",
+            "result": "المتتالية \\((u_n)\\) متناقصة تمامًا."
+          }
+        ],
+        "final_answer": "\\boxed{(u_n)\text{ متناقصة تمامًا}}",
+        "hints": [
+          "ابدأ بإثبات الحصر أو العبارة المساعدة الموجودة في الجزء الأول.",
+          "بعد ذلك احسب الفرق بين حدين متتاليين أو النسبة بينهما.",
+          "حدّد إشارة كل عامل قبل كتابة النتيجة."
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "استعمال نتيجة من سؤال سابق من دون كتابتها أو إثباتها.",
+            "correction": "في النسخة المستقلة أُضيفت النتيجة المطلوبة إلى نص السؤال وأُثبتت داخل الحل قبل استعمالها."
+          },
+          {
+            "mistake": "الحكم على إشارة كسر من دون التأكد من إشارة المقام.",
+            "correction": "يجب تحديد إشارة البسط والمقام كل واحد على حدة."
+          }
+        ],
+        "dependency_handling": {
+          "was_dependent_in_original_exam": true,
+          "previous_result_reused": [
+            "أعد إثبات أن \\((v_n)\\) هندسية، ثم استخرج عبارتها قبل دراسة \\((u_n)\\)."
+          ],
+          "how_made_standalone": "أعيدت صياغة السؤال ليحتوي على كل المعطيات والنتائج المساعدة المطلوبة، ثم أُعيد بناء الحل من الصفر بحيث تُثبت كل نتيجة قبل استعمالها."
+        },
+        "presentation": {
+          "style": "clear_concise_student_friendly",
+          "one_idea_per_step": true,
+          "avoid_repetition": true,
+          "prove_before_use": true
+        }
+      },
+      "original_text": "ادرس اتجاه تغير \\((u_n)\\).",
+      "standalone_text": "نعتبر المتتالية \\((u_n)\\) المعرفة بـ:\n\\[\nu_0=1,\\qquad u_{n+1}=\\frac23u_n-\\frac43.\n\\]\nونضع \\(v_n=u_n+4\\).\n\n1) أثبت أن \\((v_n)\\) متتالية هندسية، ثم اكتب \\(v_n\\) و\\(u_n\\) بدلالة \\(n\\).\n2) استنتج اتجاه تغير المتتالية \\((u_n)\\).",
+      "standalone_support": {
+        "requires_previous_question": false,
+        "all_information_is_in_question": true,
+        "integrated_subquestions": [
+          "1) أثبت أن \\((v_n)\\) متتالية هندسية، ثم اكتب \\(v_n\\) و\\(u_n\\) بدلالة \\(n\\).",
+          "2) استنتج اتجاه تغير المتتالية \\((u_n)\\)."
+        ]
+      }
+    },
+    {
+      "id": "bac_2014_p7_exercise_1_5-a",
+      "year": 2014,
+      "source_file": "bac_sequence_scientifique(5).pdf",
+      "source_page": 7,
+      "exercise": "exercise_1",
+      "number": "5-a",
+      "text": "لتكن المتتالية \\((v_n)\\) معرفة، لكل \\(n\\in\\mathbb{N}\\)، بـ:\n\\[\nv_n=5\\left(\\frac23\\right)^n.\n\\]\nونعرّف المتتالية \\((w_n)\\) بـ:\n\\[\nw_n=5\\left(\\frac1{v_n+5}-1\\right).\n\\]\nأثبت أن المتتالية \\((w_n)\\) متزايدة تمامًا.",
+      "context": "\\(v_n=5\\left(\\frac23\\right)^n\\) و\\(w_n=5\\left(\\frac1{v_n+5}-1\\right)\\).",
+      "tag": "seq_monotonicity",
+      "axis": "اتجاه تغير المتتالية",
+      "secondary_tags": [],
+      "skill": "رتابة مركبة",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمت كتابة السؤال من الوثيقة المصورة مع توحيد الترميز الرياضي بصيغة LaTeX.",
+      "solution": {
+        "strategy": "نلاحظ أولًا أن \\((v_n)\\) متناقصة وموجبة. ثم نحسب \\(w_{n+1}-w_n\\) ونحدد إشارته.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "نحدد اتجاه تغير \\((v_n)\\)",
+            "explanation": "لدينا \\(v_n=5\\left(\\frac23\\right)^n\\). وبما أن \\(0<\\frac23<1\\)، فإن قوى \\(\\frac23\\) تتناقص عندما يزداد \\(n\\).",
+            "calculation": "\\[\nv_{n+1}=5\\left(\\frac23\\right)^{n+1}=\\frac23v_n<v_n.\n\\]",
+            "result": "إذن \\((v_n)\\) متناقصة تمامًا، كما أن \\(v_n>0\\)."
+          },
+          {
+            "order": 2,
+            "title": "نحسب الفرق \\(w_{n+1}-w_n\\)",
+            "explanation": "لمعرفة اتجاه تغير \\((w_n)\\)، نقارن حدين متتاليين بحساب الفرق بينهما.",
+            "calculation": "\\[\nw_{n+1}-w_n=5\\left(\\frac1{v_{n+1}+5}-\\frac1{v_n+5}\\right).\n\\]",
+            "result": "نوحد المقام حتى تظهر إشارة الفرق بوضوح."
+          },
+          {
+            "order": 3,
+            "title": "نوحد المقام",
+            "explanation": "عند طرح كسرين، نضرب تبادليًا. البسط الناتج هو \\(v_n-v_{n+1}\\).",
+            "calculation": "\\[\nw_{n+1}-w_n=\\frac{5\\left(v_n-v_{n+1}\\right)}{(v_{n+1}+5)(v_n+5)}.\n\\]",
+            "result": "لدينا \\(v_n-v_{n+1}>0\\)، والمقام موجب لأن \\(v_n>0\\) و\\(v_{n+1}>0\\)."
+          },
+          {
+            "order": 4,
+            "title": "نستنتج اتجاه التغير",
+            "explanation": "بما أن البسط موجب والمقام موجب، فإن الفرق موجب.",
+            "calculation": "\\[\nw_{n+1}-w_n>0.\n\\]",
+            "result": "إذن المتتالية \\((w_n)\\) متزايدة تمامًا."
+          }
+        ],
+        "final_answer": "\\boxed{\\text{المتتالية }(w_n)\\text{ متزايدة تمامًا}}",
+        "hints": [
+          "ابدأ بمقارنة \\(v_{n+1}\\) و\\(v_n\\).",
+          "احسب الفرق \\(w_{n+1}-w_n\\)، ثم وحّد المقام."
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "استعمال المتتالية \\((u_n)\\) رغم أنها غير معرفة داخل هذا السؤال المستقل.",
+            "correction": "الحل يعتمد فقط على المتتاليتين المعرفتين في السؤال: \\((v_n)\\) و\\((w_n)\\)."
+          },
+          {
+            "mistake": "القول إن مقلوب متتالية متناقصة متناقص.",
+            "correction": "إذا كانت الحدود موجبة وتتناقص، فإن مقلوبها يزداد. ويمكن تجنب الحفظ بحساب الفرق مباشرة."
+          }
+        ],
+        "dependency_handling": {
+          "was_dependent_in_original_exam": true,
+          "previous_result_reused": [
+            "\\(v_n=5\\left(\\frac23\\right)^n\\)."
+          ],
+          "how_made_standalone": "أضيف تعريف \\((v_n)\\) صراحة إلى نص السؤال، ولم يعد الحل يستعمل \\((u_n)\\) أو أي نتيجة غير مذكورة."
+        },
+        "presentation": {
+          "style": "clear_concise_student_friendly",
+          "one_idea_per_step": true,
+          "avoid_repetition": true,
+          "prove_before_use": true
+        }
+      },
+      "original_text": "لتكن \\(w_n=5(\\frac1{v_n+5}-1)\\). بين أن \\((w_n)\\) متزايدة تمامًا.",
+      "standalone_text": "لتكن المتتالية \\((v_n)\\) معرفة، لكل \\(n\\in\\mathbb{N}\\)، بـ:\n\\[\nv_n=5\\left(\\frac23\\right)^n.\n\\]\nونعرّف المتتالية \\((w_n)\\) بـ:\n\\[\nw_n=5\\left(\\frac1{v_n+5}-1\\right).\n\\]\nأثبت أن المتتالية \\((w_n)\\) متزايدة تمامًا.",
+      "standalone_support": {
+        "requires_previous_question": false,
+        "all_information_is_in_question": true,
+        "integrated_subquestions": []
+      }
+    },
+    {
+      "id": "bac_2015_p8_exercise_3_3",
+      "year": 2015,
+      "source_file": "bac_sequence_scientifique(5).pdf",
+      "source_page": 8,
+      "exercise": "exercise_3",
+      "number": "3",
+      "text": "نعتبر المتتالية \\((u_n)\\) المعرفة بـ:\n\\[\nu_0=e^2-1,\\qquad u_{n+1}=(1+u_n)e^{-2}-1.\n\\]\nأثبت أن \\((u_n)\\) متناقصة تمامًا، ثم احسب نهايتها.",
+      "context": "\\(u_0=e^2-1\\)، \\(u_{n+1}=(1+u_n)e^{-2}-1\\).",
+      "tag": "seq_monotonicity",
+      "axis": "اتجاه تغير المتتالية",
+      "secondary_tags": [
+        "sequence_limits_convergence_divergence"
+      ],
+      "skill": "الرتابة والتقارب",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمت كتابة السؤال من الوثيقة المصورة مع توحيد الترميز الرياضي بصيغة LaTeX.",
+      "solution": {
+        "strategy": "نضيف 1 إلى طرفي العلاقة، فنحصل على متتالية هندسية بسيطة.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "تحويل العلاقة",
+            "explanation": "نضيف 1 إلى طرفي العلاقة التراجعية.",
+            "calculation": "\\(1+u_{n+1}=e^{-2}(1+u_n)\\).",
+            "result": "المتتالية \\((1+u_n)\\) هندسية أساسها \\(e^{-2}\\)."
+          },
+          {
+            "order": 2,
+            "title": "كتابة الحد العام",
+            "explanation": "لدينا \\(1+u_0=e^2\\).",
+            "calculation": "\\(1+u_n=e^2(e^{-2})^n=e^{2-2n}\\).",
+            "result": "إذن \\(u_n=e^{2-2n}-1\\)."
+          },
+          {
+            "order": 3,
+            "title": "دراسة الرتابة",
+            "explanation": "بما أن \\(0<e^{-2}<1\\)، فإن \\(e^{2-2n}\\) متناقصة تمامًا.",
+            "calculation": "\\(u_{n+1}-u_n=e^{2-2n}(e^{-2}-1)<0\\).",
+            "result": "المتتالية \\((u_n)\\) متناقصة تمامًا."
+          },
+          {
+            "order": 4,
+            "title": "حساب النهاية",
+            "explanation": "عندما \\(n\to+\\infty\\)، فإن \\(e^{2-2n}\to0\\).",
+            "calculation": "\\(\\lim_{n\\to+\\infty}u_n=0-1=-1\\).",
+            "result": "المتتالية متقاربة نحو \\(-1\\)."
+          }
+        ],
+        "final_answer": "المتتالية \\((u_n)\\) متناقصة تمامًا و\\(\\displaystyle\\lim_{n\to+\\infty}u_n=-1\\).",
+        "hints": [
+          "ابدأ بإثبات الحصر أو العبارة المساعدة الموجودة في الجزء الأول.",
+          "بعد ذلك احسب الفرق بين حدين متتاليين أو النسبة بينهما.",
+          "حدّد إشارة كل عامل قبل كتابة النتيجة."
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "استعمال نتيجة من سؤال سابق من دون كتابتها أو إثباتها.",
+            "correction": "في النسخة المستقلة أُضيفت النتيجة المطلوبة إلى نص السؤال وأُثبتت داخل الحل قبل استعمالها."
+          },
+          {
+            "mistake": "الحكم على إشارة كسر من دون التأكد من إشارة المقام.",
+            "correction": "يجب تحديد إشارة البسط والمقام كل واحد على حدة."
+          }
+        ],
+        "dependency_handling": {
+          "was_dependent_in_original_exam": false,
+          "previous_result_reused": [],
+          "how_made_standalone": "أعيدت صياغة السؤال ليحتوي على كل المعطيات والنتائج المساعدة المطلوبة، ثم أُعيد بناء الحل من الصفر بحيث تُثبت كل نتيجة قبل استعمالها."
+        },
+        "presentation": {
+          "style": "clear_concise_student_friendly",
+          "one_idea_per_step": true,
+          "avoid_repetition": true,
+          "prove_before_use": true
+        }
+      },
+      "original_text": "بين أن \\((u_n)\\) متناقصة، وادرس تقاربها.",
+      "standalone_text": "نعتبر المتتالية \\((u_n)\\) المعرفة بـ:\n\\[\nu_0=e^2-1,\\qquad u_{n+1}=(1+u_n)e^{-2}-1.\n\\]\nأثبت أن \\((u_n)\\) متناقصة تمامًا، ثم احسب نهايتها.",
+      "standalone_support": {
+        "requires_previous_question": false,
+        "all_information_is_in_question": true,
+        "integrated_subquestions": []
+      }
+    },
+    {
+      "id": "bac_2016_p9_exercise_2_II-4-a",
+      "year": 2016,
+      "source_file": "bac_sequence_scientifique(5).pdf",
+      "source_page": 9,
+      "exercise": "exercise_2",
+      "number": "II-4-a",
+      "text": "نعتبر المتتالية \\((u_n)\\) المعرفة بـ:\n\\[\nu_0=0,\\qquad u_{n+1}=\\sqrt{2u_n+8}.\n\\]\n1) أثبت بالتراجع أن \\(0\\le u_n<4\\) لكل \\(n\\).\n2) ادرس اتجاه تغير المتتالية \\((u_n)\\).",
+      "context": "\\(u_0=0\\)، \\(u_{n+1}=\\sqrt{2u_n+8}\\).",
+      "tag": "seq_monotonicity",
+      "axis": "اتجاه تغير المتتالية",
+      "secondary_tags": [],
+      "skill": "الرتابة",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمت كتابة السؤال من الوثيقة المصورة مع توحيد الترميز الرياضي بصيغة LaTeX.",
+      "solution": {
+        "strategy": "نثبت الحصر، ثم نستعمل المرافق عند حساب الفرق.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "التحقق عند البداية",
+            "explanation": "لدينا \\(0\\le u_0<4\\).",
+            "calculation": "\\(0\\le0<4\\).",
+            "result": "الحصر صحيح عند البداية."
+          },
+          {
+            "order": 2,
+            "title": "إثبات الحصر بالتراجع",
+            "explanation": "نفترض \\(0\\le u_n<4\\). عندئذ \\(8\\le2u_n+8<16\\).",
+            "calculation": "\\(0<u_{n+1}=\\sqrt{2u_n+8}<4\\).",
+            "result": "إذن \\(0\\le u_n<4\\) لكل \\(n\\)."
+          },
+          {
+            "order": 3,
+            "title": "حساب الفرق",
+            "explanation": "نستعمل المرافق.",
+            "calculation": "\\(u_{n+1}-u_n=\\frac{2u_n+8-u_n^2}{\\sqrt{2u_n+8}+u_n}=\\frac{(4-u_n)(u_n+2)}{\\sqrt{2u_n+8}+u_n}\\).",
+            "result": "كل العوامل موجبة."
+          },
+          {
+            "order": 4,
+            "title": "النتيجة",
+            "explanation": "إذن الفرق موجب تمامًا.",
+            "calculation": "\\(u_{n+1}>u_n\\).",
+            "result": "المتتالية \\((u_n)\\) متزايدة تمامًا."
+          }
+        ],
+        "final_answer": "المتتالية \\((u_n)\\) متزايدة تمامًا ومحدودة من الأعلى بالعدد \\(4\\).",
+        "hints": [
+          "ابدأ بإثبات الحصر أو العبارة المساعدة الموجودة في الجزء الأول.",
+          "بعد ذلك احسب الفرق بين حدين متتاليين أو النسبة بينهما.",
+          "حدّد إشارة كل عامل قبل كتابة النتيجة."
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "استعمال نتيجة من سؤال سابق من دون كتابتها أو إثباتها.",
+            "correction": "في النسخة المستقلة أُضيفت النتيجة المطلوبة إلى نص السؤال وأُثبتت داخل الحل قبل استعمالها."
+          },
+          {
+            "mistake": "الحكم على إشارة كسر من دون التأكد من إشارة المقام.",
+            "correction": "يجب تحديد إشارة البسط والمقام كل واحد على حدة."
+          }
+        ],
+        "dependency_handling": {
+          "was_dependent_in_original_exam": true,
+          "previous_result_reused": [
+            "أثبت داخل الحل أن \\(0\\le u_n<4\\) لكل \\(n\\)."
+          ],
+          "how_made_standalone": "أعيدت صياغة السؤال ليحتوي على كل المعطيات والنتائج المساعدة المطلوبة، ثم أُعيد بناء الحل من الصفر بحيث تُثبت كل نتيجة قبل استعمالها."
+        },
+        "presentation": {
+          "style": "clear_concise_student_friendly",
+          "one_idea_per_step": true,
+          "avoid_repetition": true,
+          "prove_before_use": true
+        }
+      },
+      "original_text": "ادرس اتجاه تغير \\((u_n)\\).",
+      "standalone_text": "نعتبر المتتالية \\((u_n)\\) المعرفة بـ:\n\\[\nu_0=0,\\qquad u_{n+1}=\\sqrt{2u_n+8}.\n\\]\n1) أثبت بالتراجع أن \\(0\\le u_n<4\\) لكل \\(n\\).\n2) ادرس اتجاه تغير المتتالية \\((u_n)\\).",
+      "standalone_support": {
+        "requires_previous_question": false,
+        "all_information_is_in_question": true,
+        "integrated_subquestions": [
+          "1) أثبت بالتراجع أن \\(0\\le u_n<4\\) لكل \\(n\\).",
+          "2) ادرس اتجاه تغير المتتالية \\((u_n)\\)."
+        ]
+      }
+    },
+    {
+      "id": "bac_2016_p9_exercise_3_II-1-b",
+      "year": 2016,
+      "source_file": "bac_sequence_scientifique(5).pdf",
+      "source_page": 9,
+      "exercise": "exercise_3",
+      "number": "II-1-b",
+      "text": "نعتبر المتتالية \\((u_n)\\) المعرفة بـ:\n\\[\nu_0=1,\\qquad u_{n+1}=\\frac{5u_n}{u_n+2}.\n\\]\n1) أثبت بالتراجع أن \\(0<u_n<3\\) لكل \\(n\\).\n2) ادرس اتجاه تغير \\((u_n)\\)، ثم استنتج أنها متقاربة.",
+      "context": "\\(u_0=1\\)، \\(u_{n+1}=\\frac{5u_n}{u_n+2}\\)، و\\(v_n=1-\\frac3{u_n}\\).",
+      "tag": "seq_monotonicity",
+      "axis": "اتجاه تغير المتتالية",
+      "secondary_tags": [
+        "sequence_limits_convergence_divergence"
+      ],
+      "skill": "الرتابة والتقارب",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمت كتابة السؤال من الوثيقة المصورة مع توحيد الترميز الرياضي بصيغة LaTeX.",
+      "solution": {
+        "strategy": "نثبت بقاء الحدود بين 0 و3، ثم نحسب الفرق.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "التحقق عند البداية",
+            "explanation": "الحد الأول موجب وأصغر من 3.",
+            "calculation": "\\(0<u_0=1<3\\).",
+            "result": "الحصر صحيح عند البداية."
+          },
+          {
+            "order": 2,
+            "title": "إثبات الحصر بالتراجع",
+            "explanation": "نفترض \\(0<u_n<3\\). المقام \\(u_n+2\\) موجب، لذا \\(u_{n+1}>0\\). ولإثبات الحد العلوي نقارن بالكسر 3.",
+            "calculation": "\\(u_{n+1}<3\\Longleftrightarrow 5u_n<3u_n+6\\Longleftrightarrow u_n<3\\).",
+            "result": "إذن \\(0<u_n<3\\) لكل \\(n\\)."
+          },
+          {
+            "order": 3,
+            "title": "حساب الفرق",
+            "explanation": "نوحد المقام.",
+            "calculation": "\\(u_{n+1}-u_n=\\frac{u_n(3-u_n)}{u_n+2}\\).",
+            "result": "العوامل الثلاثة موجبة."
+          },
+          {
+            "order": 4,
+            "title": "الرتابة والتقارب",
+            "explanation": "إذن المتتالية متزايدة، وهي محدودة من الأعلى بالعدد 3.",
+            "calculation": "\\(u_{n+1}>u_n\\quad\\text{و}\\quad u_n<3\\).",
+            "result": "كل متتالية متزايدة ومحدودة من الأعلى متقاربة."
+          }
+        ],
+        "final_answer": "المتتالية \\((u_n)\\) متزايدة تمامًا ومحدودة من الأعلى بالعدد \\(3\\)، ولذلك فهي متقاربة.",
+        "hints": [
+          "ابدأ بإثبات الحصر أو العبارة المساعدة الموجودة في الجزء الأول.",
+          "بعد ذلك احسب الفرق بين حدين متتاليين أو النسبة بينهما.",
+          "حدّد إشارة كل عامل قبل كتابة النتيجة."
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "استعمال نتيجة من سؤال سابق من دون كتابتها أو إثباتها.",
+            "correction": "في النسخة المستقلة أُضيفت النتيجة المطلوبة إلى نص السؤال وأُثبتت داخل الحل قبل استعمالها."
+          },
+          {
+            "mistake": "الحكم على إشارة كسر من دون التأكد من إشارة المقام.",
+            "correction": "يجب تحديد إشارة البسط والمقام كل واحد على حدة."
+          }
+        ],
+        "dependency_handling": {
+          "was_dependent_in_original_exam": true,
+          "previous_result_reused": [
+            "أثبت داخل الحل أن \\(0<u_n<3\\) لكل \\(n\\)."
+          ],
+          "how_made_standalone": "أعيدت صياغة السؤال ليحتوي على كل المعطيات والنتائج المساعدة المطلوبة، ثم أُعيد بناء الحل من الصفر بحيث تُثبت كل نتيجة قبل استعمالها."
+        },
+        "presentation": {
+          "style": "clear_concise_student_friendly",
+          "one_idea_per_step": true,
+          "avoid_repetition": true,
+          "prove_before_use": true
+        }
+      },
+      "original_text": "ادرس اتجاه تغير \\((u_n)\\)، ثم استنتج أنها متقاربة.",
+      "standalone_text": "نعتبر المتتالية \\((u_n)\\) المعرفة بـ:\n\\[\nu_0=1,\\qquad u_{n+1}=\\frac{5u_n}{u_n+2}.\n\\]\n1) أثبت بالتراجع أن \\(0<u_n<3\\) لكل \\(n\\).\n2) ادرس اتجاه تغير \\((u_n)\\)، ثم استنتج أنها متقاربة.",
+      "standalone_support": {
+        "requires_previous_question": false,
+        "all_information_is_in_question": true,
+        "integrated_subquestions": [
+          "1) أثبت بالتراجع أن \\(0<u_n<3\\) لكل \\(n\\).",
+          "2) ادرس اتجاه تغير \\((u_n)\\)، ثم استنتج أنها متقاربة."
+        ]
+      }
+    },
+    {
+      "id": "bac_2016_p10_exercise_3a_2-b",
+      "year": 2016,
+      "source_file": "bac_sequence_scientifique(5).pdf",
+      "source_page": 10,
+      "exercise": "exercise_3a",
+      "number": "2-b",
+      "text": "نعتبر المتتالية \\((u_n)\\) المعرفة بـ:\n\\[\nu_0=4,\\qquad u_{n+1}=\\frac{13u_n}{9u_n+13}.\n\\]\n1) أثبت بالتراجع أن \\(u_n>0\\) لكل \\(n\\).\n2) ادرس اتجاه تغير \\((u_n)\\)، ثم استنتج أنها متقاربة.",
+      "context": "\\(u_0=4\\)، \\(u_{n+1}=\\frac{13u_n}{9u_n+13}\\)، و\\(v_n=2+\\frac{13}{u_n}\\).",
+      "tag": "seq_monotonicity",
+      "axis": "اتجاه تغير المتتالية",
+      "secondary_tags": [
+        "sequence_limits_convergence_divergence"
+      ],
+      "skill": "الرتابة والتقارب",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمت كتابة السؤال من الوثيقة المصورة مع توحيد الترميز الرياضي بصيغة LaTeX.",
+      "solution": {
+        "strategy": "الإيجابية تكفي لجعل المقام موجبًا، وبعدها تكون إشارة الفرق واضحة.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "التحقق عند البداية",
+            "explanation": "لدينا \\(u_0=4>0\\).",
+            "calculation": "\\(u_0>0\\).",
+            "result": "الخاصية صحيحة عند البداية."
+          },
+          {
+            "order": 2,
+            "title": "إثبات الإيجابية بالتراجع",
+            "explanation": "نفترض \\(u_n>0\\). عندئذ البسط والمقام موجبان.",
+            "calculation": "\\(13u_n>0,\\quad 9u_n+13>0\\Longrightarrow u_{n+1}>0\\).",
+            "result": "إذن \\(u_n>0\\) لكل \\(n\\)."
+          },
+          {
+            "order": 3,
+            "title": "حساب الفرق",
+            "explanation": "نوحد المقام.",
+            "calculation": "\\(u_{n+1}-u_n=\\frac{13u_n-u_n(9u_n+13)}{9u_n+13}=-\\frac{9u_n^2}{9u_n+13}<0\\).",
+            "result": "المتتالية متناقصة تمامًا."
+          },
+          {
+            "order": 4,
+            "title": "إثبات التقارب",
+            "explanation": "المتتالية متناقصة ومحدودة من الأسفل بالعدد 0.",
+            "calculation": "\\(u_n>0\\).",
+            "result": "إذن المتتالية متقاربة."
+          }
+        ],
+        "final_answer": "المتتالية \\((u_n)\\) متناقصة تمامًا ومحدودة من الأسفل بالعدد \\(0\\)، ولذلك فهي متقاربة.",
+        "hints": [
+          "ابدأ بإثبات الحصر أو العبارة المساعدة الموجودة في الجزء الأول.",
+          "بعد ذلك احسب الفرق بين حدين متتاليين أو النسبة بينهما.",
+          "حدّد إشارة كل عامل قبل كتابة النتيجة."
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "استعمال نتيجة من سؤال سابق من دون كتابتها أو إثباتها.",
+            "correction": "في النسخة المستقلة أُضيفت النتيجة المطلوبة إلى نص السؤال وأُثبتت داخل الحل قبل استعمالها."
+          },
+          {
+            "mistake": "الحكم على إشارة كسر من دون التأكد من إشارة المقام.",
+            "correction": "يجب تحديد إشارة البسط والمقام كل واحد على حدة."
+          }
+        ],
+        "dependency_handling": {
+          "was_dependent_in_original_exam": true,
+          "previous_result_reused": [
+            "أثبت داخل الحل أن \\(u_n>0\\) لكل \\(n\\)."
+          ],
+          "how_made_standalone": "أعيدت صياغة السؤال ليحتوي على كل المعطيات والنتائج المساعدة المطلوبة، ثم أُعيد بناء الحل من الصفر بحيث تُثبت كل نتيجة قبل استعمالها."
+        },
+        "presentation": {
+          "style": "clear_concise_student_friendly",
+          "one_idea_per_step": true,
+          "avoid_repetition": true,
+          "prove_before_use": true
+        }
+      },
+      "original_text": "ادرس اتجاه تغير \\((u_n)\\)، ثم استنتج أنها متقاربة.",
+      "standalone_text": "نعتبر المتتالية \\((u_n)\\) المعرفة بـ:\n\\[\nu_0=4,\\qquad u_{n+1}=\\frac{13u_n}{9u_n+13}.\n\\]\n1) أثبت بالتراجع أن \\(u_n>0\\) لكل \\(n\\).\n2) ادرس اتجاه تغير \\((u_n)\\)، ثم استنتج أنها متقاربة.",
+      "standalone_support": {
+        "requires_previous_question": false,
+        "all_information_is_in_question": true,
+        "integrated_subquestions": [
+          "1) أثبت بالتراجع أن \\(u_n>0\\) لكل \\(n\\).",
+          "2) ادرس اتجاه تغير \\((u_n)\\)، ثم استنتج أنها متقاربة."
+        ]
+      }
+    },
+    {
+      "id": "bac_2017_p11_exercise_2_1-b",
+      "year": 2017,
+      "source_file": "bac_sequence_scientifique(5).pdf",
+      "source_page": 11,
+      "exercise": "exercise_2",
+      "number": "1-b",
+      "text": "نعتبر المتتالية \\((u_n)\\) المعرفة بـ:\n\\[\nu_0=\\frac14,\\qquad u_{n+1}=3-\\frac{10}{u_n+4}.\n\\]\n1) أثبت بالتراجع أن \\(0<u_n<1\\) لكل \\(n\\).\n2) أثبت أن \\((u_n)\\) متزايدة تمامًا، ثم استنتج أنها متقاربة.",
+      "context": "\\(u_0=\\frac14\\)، \\(u_{n+1}=3-\\frac{10}{u_n+4}\\)، و\\(v_n=\\frac{u_n+2}{1-u_n}\\).",
+      "tag": "seq_monotonicity",
+      "axis": "اتجاه تغير المتتالية",
+      "secondary_tags": [
+        "sequence_limits_convergence_divergence"
+      ],
+      "skill": "الرتابة والتقارب",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمت كتابة السؤال من الوثيقة المصورة مع توحيد الترميز الرياضي بصيغة LaTeX.",
+      "solution": {
+        "strategy": "نثبت الحصر بين 0 و1، ثم نحسب الفرق ونستعمل هذا الحصر.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "التحقق عند البداية",
+            "explanation": "لدينا \\(0<\\frac14<1\\).",
+            "calculation": "\\(0<u_0<1\\).",
+            "result": "الحصر صحيح عند البداية."
+          },
+          {
+            "order": 2,
+            "title": "إثبات الحد السفلي",
+            "explanation": "نفترض \\(0<u_n<1\\). عندئذ \\(4<u_n+4<5\\)، ولذلك \\(\\frac{10}{u_n+4}<\\frac{10}{4}=\\frac52<3\\).",
+            "calculation": "\\(u_{n+1}=3-\\frac{10}{u_n+4}>0\\).",
+            "result": "الحد الموالي موجب."
+          },
+          {
+            "order": 3,
+            "title": "إثبات الحد العلوي",
+            "explanation": "من \\(u_n<1\\) نحصل على \\(u_n+4<5\\)، وبالتالي \\(\\frac{10}{u_n+4}>2\\).",
+            "calculation": "\\(u_{n+1}=3-\\frac{10}{u_n+4}<1\\).",
+            "result": "إذن \\(0<u_n<1\\) لكل \\(n\\)."
+          },
+          {
+            "order": 4,
+            "title": "حساب الفرق",
+            "explanation": "نوحد المقام.",
+            "calculation": "\\(u_{n+1}-u_n=\\frac{(1-u_n)(u_n+2)}{u_n+4}\\).",
+            "result": "كل العوامل موجبة."
+          },
+          {
+            "order": 5,
+            "title": "الرتابة والتقارب",
+            "explanation": "الفرق موجب، والمتتالية محدودة من الأعلى بالعدد 1.",
+            "calculation": "\\(u_{n+1}>u_n,\\quad u_n<1\\).",
+            "result": "المتتالية متزايدة تمامًا ومتقاربة."
+          }
+        ],
+        "final_answer": "المتتالية \\((u_n)\\) متزايدة تمامًا ومحدودة من الأعلى بالعدد \\(1\\)، ولذلك فهي متقاربة.",
+        "hints": [
+          "ابدأ بإثبات الحصر أو العبارة المساعدة الموجودة في الجزء الأول.",
+          "بعد ذلك احسب الفرق بين حدين متتاليين أو النسبة بينهما.",
+          "حدّد إشارة كل عامل قبل كتابة النتيجة."
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "استعمال نتيجة من سؤال سابق من دون كتابتها أو إثباتها.",
+            "correction": "في النسخة المستقلة أُضيفت النتيجة المطلوبة إلى نص السؤال وأُثبتت داخل الحل قبل استعمالها."
+          },
+          {
+            "mistake": "الحكم على إشارة كسر من دون التأكد من إشارة المقام.",
+            "correction": "يجب تحديد إشارة البسط والمقام كل واحد على حدة."
+          }
+        ],
+        "dependency_handling": {
+          "was_dependent_in_original_exam": true,
+          "previous_result_reused": [
+            "أثبت داخل الحل أن \\(0<u_n<1\\) لكل \\(n\\)."
+          ],
+          "how_made_standalone": "أعيدت صياغة السؤال ليحتوي على كل المعطيات والنتائج المساعدة المطلوبة، ثم أُعيد بناء الحل من الصفر بحيث تُثبت كل نتيجة قبل استعمالها."
+        },
+        "presentation": {
+          "style": "clear_concise_student_friendly",
+          "one_idea_per_step": true,
+          "avoid_repetition": true,
+          "prove_before_use": true
+        }
+      },
+      "original_text": "بين أن \\((u_n)\\) متزايدة تمامًا، ثم استنتج أنها متقاربة.",
+      "standalone_text": "نعتبر المتتالية \\((u_n)\\) المعرفة بـ:\n\\[\nu_0=\\frac14,\\qquad u_{n+1}=3-\\frac{10}{u_n+4}.\n\\]\n1) أثبت بالتراجع أن \\(0<u_n<1\\) لكل \\(n\\).\n2) أثبت أن \\((u_n)\\) متزايدة تمامًا، ثم استنتج أنها متقاربة.",
+      "standalone_support": {
+        "requires_previous_question": false,
+        "all_information_is_in_question": true,
+        "integrated_subquestions": [
+          "1) أثبت بالتراجع أن \\(0<u_n<1\\) لكل \\(n\\).",
+          "2) أثبت أن \\((u_n)\\) متزايدة تمامًا، ثم استنتج أنها متقاربة."
+        ]
+      }
+    },
+    {
+      "id": "bac_2017_p12_exercise_1_2-a",
+      "year": 2017,
+      "source_file": "bac_sequence_scientifique(5).pdf",
+      "source_page": 12,
+      "exercise": "exercise_1",
+      "number": "2-a",
+      "text": "نعتبر المتتالية \\((u_n)\\) المعرفة بـ:\n\\[\nu_0=1,\\qquad u_{n+1}=\\frac34u_n+1.\n\\]\nاكتب \\(u_{n+2}-u_{n+1}\\) بدلالة \\(u_{n+1}-u_n\\).",
+      "context": "\\(u_0=1\\)، \\(u_{n+1}=\\frac34u_n+1\\)، و\\(v_0=6\\)، \\(v_{n+1}=\\frac34v_n+1\\).",
+      "tag": "seq_monotonicity",
+      "axis": "اتجاه تغير المتتالية",
+      "secondary_tags": [],
+      "skill": "فرق الفروق",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمت كتابة السؤال من الوثيقة المصورة مع توحيد الترميز الرياضي بصيغة LaTeX.",
+      "solution": {
+        "strategy": "نكتب العلاقة نفسها عند الرتبتين \\(n\\) و\\(n+1\\)، ثم نطرح.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "كتابة العلاقة عند الرتبة \\(n+1\\)",
+            "explanation": "نعوض \\(n\\) بـ \\(n+1\\).",
+            "calculation": "\\(u_{n+2}=\\frac34u_{n+1}+1\\).",
+            "result": "لدينا عبارتا \\(u_{n+2}\\) و\\(u_{n+1}\\)."
+          },
+          {
+            "order": 2,
+            "title": "طرح العلاقتين",
+            "explanation": "نطرح العلاقة الأصلية من العلاقة الجديدة.",
+            "calculation": "\\(u_{n+2}-u_{n+1}=\\left(\\frac34u_{n+1}+1\\right)-\\left(\\frac34u_n+1\\right)\\).",
+            "result": "العددان \\(+1\\) يختفيان."
+          },
+          {
+            "order": 3,
+            "title": "التبسيط",
+            "explanation": "نستخرج العامل \\(\\frac34\\).",
+            "calculation": "\\(u_{n+2}-u_{n+1}=\\frac34\\left(u_{n+1}-u_n\\right)\\).",
+            "result": "هذه هي العلاقة المطلوبة."
+          }
+        ],
+        "final_answer": "\\boxed{u_{n+2}-u_{n+1}=\\frac34\\left(u_{n+1}-u_n\right)}",
+        "hints": [
+          "ابدأ بإثبات الحصر أو العبارة المساعدة الموجودة في الجزء الأول.",
+          "بعد ذلك احسب الفرق بين حدين متتاليين أو النسبة بينهما.",
+          "حدّد إشارة كل عامل قبل كتابة النتيجة."
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "استعمال نتيجة من سؤال سابق من دون كتابتها أو إثباتها.",
+            "correction": "في النسخة المستقلة أُضيفت النتيجة المطلوبة إلى نص السؤال وأُثبتت داخل الحل قبل استعمالها."
+          },
+          {
+            "mistake": "الحكم على إشارة كسر من دون التأكد من إشارة المقام.",
+            "correction": "يجب تحديد إشارة البسط والمقام كل واحد على حدة."
+          }
+        ],
+        "dependency_handling": {
+          "was_dependent_in_original_exam": false,
+          "previous_result_reused": [],
+          "how_made_standalone": "أعيدت صياغة السؤال ليحتوي على كل المعطيات والنتائج المساعدة المطلوبة، ثم أُعيد بناء الحل من الصفر بحيث تُثبت كل نتيجة قبل استعمالها."
+        },
+        "presentation": {
+          "style": "clear_concise_student_friendly",
+          "one_idea_per_step": true,
+          "avoid_repetition": true,
+          "prove_before_use": true
+        }
+      },
+      "original_text": "اكتب \\(u_{n+2}-u_{n+1}\\) بدلالة \\(u_{n+1}-u_n\\).",
+      "standalone_text": "نعتبر المتتالية \\((u_n)\\) المعرفة بـ:\n\\[\nu_0=1,\\qquad u_{n+1}=\\frac34u_n+1.\n\\]\nاكتب \\(u_{n+2}-u_{n+1}\\) بدلالة \\(u_{n+1}-u_n\\).",
+      "standalone_support": {
+        "requires_previous_question": false,
+        "all_information_is_in_question": true,
+        "integrated_subquestions": []
+      }
+    },
+    {
+      "id": "bac_2018_p13_exercise_1a_1-b",
+      "year": 2018,
+      "source_file": "bac_sequence_scientifique(5).pdf",
+      "source_page": 13,
+      "exercise": "exercise_1a",
+      "number": "1-b",
+      "text": "نعتبر المتتالية \\((u_n)\\) المعرفة بـ:\n\\[\nu_0=1,\\qquad u_{n+1}=1-\\frac9{u_n+5}.\n\\]\n1) أثبت بالتراجع أن \\(u_n>-2\\) لكل \\(n\\).\n2) أثبت أن \\((u_n)\\) متناقصة تمامًا، ثم استنتج أنها متقاربة.",
+      "context": "\\(u_0=1\\)، \\(u_{n+1}=1-\\frac9{u_n+5}\\)، و\\(v_n=\\frac1{u_n+2}\\).",
+      "tag": "seq_monotonicity",
+      "axis": "اتجاه تغير المتتالية",
+      "secondary_tags": [
+        "sequence_limits_convergence_divergence"
+      ],
+      "skill": "الرتابة والتقارب",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمت كتابة السؤال من الوثيقة المصورة مع توحيد الترميز الرياضي بصيغة LaTeX.",
+      "solution": {
+        "strategy": "نثبت أن الحدود تبقى فوق \\(-2\\)، ثم نحسب الفرق الذي يظهر على شكل مربع سالب.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "التحقق عند البداية",
+            "explanation": "لدينا \\(u_0=1>-2\\).",
+            "calculation": "\\(u_0>-2\\).",
+            "result": "الخاصية صحيحة عند البداية."
+          },
+          {
+            "order": 2,
+            "title": "خطوة التراجع",
+            "explanation": "نفترض \\(u_n>-2\\). عندئذ \\(u_n+5>3>0\\).",
+            "calculation": "\\(u_{n+1}+2=3-\\frac9{u_n+5}=\\frac{3(u_n+2)}{u_n+5}>0\\).",
+            "result": "إذن \\(u_{n+1}>-2\\)، وبالتراجع \\(u_n>-2\\) لكل \\(n\\)."
+          },
+          {
+            "order": 3,
+            "title": "حساب الفرق",
+            "explanation": "نوحد المقام بعناية.",
+            "calculation": "\\(u_{n+1}-u_n=1-\\frac9{u_n+5}-u_n=-\\frac{(u_n+2)^2}{u_n+5}\\).",
+            "result": "المقام موجب والمربع موجب تمامًا لأن \\(u_n>-2\\)."
+          },
+          {
+            "order": 4,
+            "title": "الرتابة والتقارب",
+            "explanation": "الفرق سالب تمامًا، والمتتالية محدودة من الأسفل بالعدد \\(-2\\).",
+            "calculation": "\\(u_{n+1}<u_n,\\quad u_n>-2\\).",
+            "result": "المتتالية متناقصة تمامًا ومتقاربة."
+          }
+        ],
+        "final_answer": "المتتالية \\((u_n)\\) متناقصة تمامًا ومحدودة من الأسفل بالعدد \\(-2\\)، ولذلك فهي متقاربة.",
+        "hints": [
+          "ابدأ بإثبات الحصر أو العبارة المساعدة الموجودة في الجزء الأول.",
+          "بعد ذلك احسب الفرق بين حدين متتاليين أو النسبة بينهما.",
+          "حدّد إشارة كل عامل قبل كتابة النتيجة."
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "استعمال نتيجة من سؤال سابق من دون كتابتها أو إثباتها.",
+            "correction": "في النسخة المستقلة أُضيفت النتيجة المطلوبة إلى نص السؤال وأُثبتت داخل الحل قبل استعمالها."
+          },
+          {
+            "mistake": "الحكم على إشارة كسر من دون التأكد من إشارة المقام.",
+            "correction": "يجب تحديد إشارة البسط والمقام كل واحد على حدة."
+          }
+        ],
+        "dependency_handling": {
+          "was_dependent_in_original_exam": true,
+          "previous_result_reused": [
+            "أثبت داخل الحل أن \\(u_n>-2\\) لكل \\(n\\)."
+          ],
+          "how_made_standalone": "أعيدت صياغة السؤال ليحتوي على كل المعطيات والنتائج المساعدة المطلوبة، ثم أُعيد بناء الحل من الصفر بحيث تُثبت كل نتيجة قبل استعمالها."
+        },
+        "presentation": {
+          "style": "clear_concise_student_friendly",
+          "one_idea_per_step": true,
+          "avoid_repetition": true,
+          "prove_before_use": true
+        }
+      },
+      "original_text": "بين أن \\((u_n)\\) متناقصة تمامًا، ثم استنتج أنها متقاربة.",
+      "standalone_text": "نعتبر المتتالية \\((u_n)\\) المعرفة بـ:\n\\[\nu_0=1,\\qquad u_{n+1}=1-\\frac9{u_n+5}.\n\\]\n1) أثبت بالتراجع أن \\(u_n>-2\\) لكل \\(n\\).\n2) أثبت أن \\((u_n)\\) متناقصة تمامًا، ثم استنتج أنها متقاربة.",
+      "standalone_support": {
+        "requires_previous_question": false,
+        "all_information_is_in_question": true,
+        "integrated_subquestions": [
+          "1) أثبت بالتراجع أن \\(u_n>-2\\) لكل \\(n\\).",
+          "2) أثبت أن \\((u_n)\\) متناقصة تمامًا، ثم استنتج أنها متقاربة."
+        ]
+      }
+    },
+    {
+      "id": "bac_2018_p13_exercise_1b_2",
+      "year": 2018,
+      "source_file": "bac_sequence_scientifique(5).pdf",
+      "source_page": 13,
+      "exercise": "exercise_1b",
+      "number": "2",
+      "text": "نعتبر المتتالية \\((u_n)\\) المعرفة بـ:\n\\[\nu_0=0,\\qquad\nu_{n+1}=u_n+\\ln\\left(\\frac{2n+3}{2n+1}\\right).\n\\]\nأثبت أن \\(\\frac{2n+3}{2n+1}>1\\) لكل \\(n\\in\\mathbb{N}\\)، ثم استنتج اتجاه تغير \\((u_n)\\).",
+      "context": "\\(u_0=0\\)، \\(u_{n+1}=u_n+\\ln\\left(\\frac{2n+3}{2n+1}\\right)\\)، و\\(v_n=2n+1\\).",
+      "tag": "seq_monotonicity",
+      "axis": "اتجاه تغير المتتالية",
+      "secondary_tags": [],
+      "skill": "رتابة",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمت كتابة السؤال من الوثيقة المصورة مع توحيد الترميز الرياضي بصيغة LaTeX.",
+      "solution": {
+        "strategy": "نقارن الكسر بالعدد 1، ثم نستعمل أن اللوغاريتم دالة متزايدة وأن \\(\\ln(1)=0\\).",
+        "steps": [
+          {
+            "order": 1,
+            "title": "التحقق من إشارة المقام",
+            "explanation": "لأن \\(n\\ge0\\)، فإن \\(2n+1>0\\).",
+            "calculation": "\\(2n+1>0\\).",
+            "result": "يمكننا مقارنة البسط بالمقام دون تغيير اتجاه المتراجحة."
+          },
+          {
+            "order": 2,
+            "title": "مقارنة البسط والمقام",
+            "explanation": "البسط أكبر من المقام بمقدار 2.",
+            "calculation": "\\((2n+3)-(2n+1)=2>0\\).",
+            "result": "إذن \\(\\frac{2n+3}{2n+1}>1\\)."
+          },
+          {
+            "order": 3,
+            "title": "استعمال اللوغاريتم",
+            "explanation": "بما أن اللوغاريتم متزايد و\\(\\ln(1)=0\\)، فإن لوغاريتم عدد أكبر من 1 موجب.",
+            "calculation": "\\(\\ln\\left(\\frac{2n+3}{2n+1}\\right)>0\\).",
+            "result": "الحد المضاف موجب."
+          },
+          {
+            "order": 4,
+            "title": "حساب الفرق",
+            "explanation": "من العلاقة التراجعية مباشرة.",
+            "calculation": "\\(u_{n+1}-u_n=\\ln\\left(\\frac{2n+3}{2n+1}\\right)>0\\).",
+            "result": "المتتالية \\((u_n)\\) متزايدة تمامًا."
+          }
+        ],
+        "final_answer": "\\boxed{(u_n)\text{ متزايدة تمامًا}}",
+        "hints": [
+          "ابدأ بإثبات الحصر أو العبارة المساعدة الموجودة في الجزء الأول.",
+          "بعد ذلك احسب الفرق بين حدين متتاليين أو النسبة بينهما.",
+          "حدّد إشارة كل عامل قبل كتابة النتيجة."
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "استعمال نتيجة من سؤال سابق من دون كتابتها أو إثباتها.",
+            "correction": "في النسخة المستقلة أُضيفت النتيجة المطلوبة إلى نص السؤال وأُثبتت داخل الحل قبل استعمالها."
+          },
+          {
+            "mistake": "الحكم على إشارة كسر من دون التأكد من إشارة المقام.",
+            "correction": "يجب تحديد إشارة البسط والمقام كل واحد على حدة."
+          }
+        ],
+        "dependency_handling": {
+          "was_dependent_in_original_exam": false,
+          "previous_result_reused": [],
+          "how_made_standalone": "أعيدت صياغة السؤال ليحتوي على كل المعطيات والنتائج المساعدة المطلوبة، ثم أُعيد بناء الحل من الصفر بحيث تُثبت كل نتيجة قبل استعمالها."
+        },
+        "presentation": {
+          "style": "clear_concise_student_friendly",
+          "one_idea_per_step": true,
+          "avoid_repetition": true,
+          "prove_before_use": true
+        }
+      },
+      "original_text": "بين أن \\(\\frac{2n+3}{2n+1}>1\\)، ثم استنتج اتجاه تغير \\((u_n)\\).",
+      "standalone_text": "نعتبر المتتالية \\((u_n)\\) المعرفة بـ:\n\\[\nu_0=0,\\qquad\nu_{n+1}=u_n+\\ln\\left(\\frac{2n+3}{2n+1}\\right).\n\\]\nأثبت أن \\(\\frac{2n+3}{2n+1}>1\\) لكل \\(n\\in\\mathbb{N}\\)، ثم استنتج اتجاه تغير \\((u_n)\\).",
+      "standalone_support": {
+        "requires_previous_question": false,
+        "all_information_is_in_question": true,
+        "integrated_subquestions": []
+      }
+    },
+    {
+      "id": "bac_2019_p14_exercise_1_1-b",
+      "year": 2019,
+      "source_file": "bac_sequence_scientifique(5).pdf",
+      "source_page": 14,
+      "exercise": "exercise_1",
+      "number": "1-b",
+      "text": "نعتبر المتتالية \\((u_n)\\) المعرفة بـ:\n\\[\nu_0=13,\\qquad u_{n+1}=\\frac15u_n+\\frac45.\n\\]\n1) أثبت بالتراجع أن \\(u_n>1\\) لكل \\(n\\).\n2) ادرس اتجاه تغير \\((u_n)\\)، ثم بيّن أنها متقاربة واحسب نهايتها.",
+      "context": "\\(u_0=13\\)، \\(u_{n+1}=\\frac15u_n+\\frac45\\).",
+      "tag": "seq_monotonicity",
+      "axis": "اتجاه تغير المتتالية",
+      "secondary_tags": [
+        "sequence_limits_convergence_divergence"
+      ],
+      "skill": "الرتابة والتقارب",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمت كتابة السؤال من الوثيقة المصورة مع توحيد الترميز الرياضي بصيغة LaTeX.",
+      "solution": {
+        "strategy": "نقارن الحدود بنقطة التثبيت 1، ثم نحسب الفرق ونستنتج النهاية.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "التحقق عند البداية",
+            "explanation": "الحد الأول أكبر من 1.",
+            "calculation": "\\(u_0=13>1\\).",
+            "result": "الخاصية صحيحة عند البداية."
+          },
+          {
+            "order": 2,
+            "title": "خطوة التراجع",
+            "explanation": "نفترض \\(u_n>1\\). نطرح 1 من العلاقة.",
+            "calculation": "\\(u_{n+1}-1=\\frac15(u_n-1)>0\\).",
+            "result": "إذن \\(u_n>1\\) لكل \\(n\\)."
+          },
+          {
+            "order": 3,
+            "title": "حساب الفرق",
+            "explanation": "نستعمل الحصر السابق.",
+            "calculation": "\\(u_{n+1}-u_n=-\\frac45(u_n-1)<0\\).",
+            "result": "المتتالية متناقصة تمامًا."
+          },
+          {
+            "order": 4,
+            "title": "إثبات التقارب",
+            "explanation": "المتتالية متناقصة ومحدودة من الأسفل بالعدد 1.",
+            "calculation": "\\(u_n>1\\).",
+            "result": "إذن لها نهاية حقيقية \\(L\\)."
+          },
+          {
+            "order": 5,
+            "title": "حساب النهاية",
+            "explanation": "نمر إلى النهاية في العلاقة التراجعية.",
+            "calculation": "\\(L=\\frac15L+\\frac45\\Longrightarrow L=1\\).",
+            "result": "المتتالية متقاربة نحو 1."
+          }
+        ],
+        "final_answer": "المتتالية \\((u_n)\\) متناقصة تمامًا و\\(\\displaystyle\\lim_{n\to+\\infty}u_n=1\\).",
+        "hints": [
+          "ابدأ بإثبات الحصر أو العبارة المساعدة الموجودة في الجزء الأول.",
+          "بعد ذلك احسب الفرق بين حدين متتاليين أو النسبة بينهما.",
+          "حدّد إشارة كل عامل قبل كتابة النتيجة."
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "استعمال نتيجة من سؤال سابق من دون كتابتها أو إثباتها.",
+            "correction": "في النسخة المستقلة أُضيفت النتيجة المطلوبة إلى نص السؤال وأُثبتت داخل الحل قبل استعمالها."
+          },
+          {
+            "mistake": "الحكم على إشارة كسر من دون التأكد من إشارة المقام.",
+            "correction": "يجب تحديد إشارة البسط والمقام كل واحد على حدة."
+          }
+        ],
+        "dependency_handling": {
+          "was_dependent_in_original_exam": true,
+          "previous_result_reused": [
+            "أثبت داخل الحل أن \\(u_n>1\\) لكل \\(n\\)."
+          ],
+          "how_made_standalone": "أعيدت صياغة السؤال ليحتوي على كل المعطيات والنتائج المساعدة المطلوبة، ثم أُعيد بناء الحل من الصفر بحيث تُثبت كل نتيجة قبل استعمالها."
+        },
+        "presentation": {
+          "style": "clear_concise_student_friendly",
+          "one_idea_per_step": true,
+          "avoid_repetition": true,
+          "prove_before_use": true
+        }
+      },
+      "original_text": "ادرس اتجاه تغير \\((u_n)\\)، ثم استنتج أنها متقاربة.",
+      "standalone_text": "نعتبر المتتالية \\((u_n)\\) المعرفة بـ:\n\\[\nu_0=13,\\qquad u_{n+1}=\\frac15u_n+\\frac45.\n\\]\n1) أثبت بالتراجع أن \\(u_n>1\\) لكل \\(n\\).\n2) ادرس اتجاه تغير \\((u_n)\\)، ثم بيّن أنها متقاربة واحسب نهايتها.",
+      "standalone_support": {
+        "requires_previous_question": false,
+        "all_information_is_in_question": true,
+        "integrated_subquestions": [
+          "1) أثبت بالتراجع أن \\(u_n>1\\) لكل \\(n\\).",
+          "2) ادرس اتجاه تغير \\((u_n)\\)، ثم بيّن أنها متقاربة واحسب نهايتها."
+        ]
+      }
+    },
+    {
+      "id": "bac_2019_p14_exercise_2_3-b",
+      "year": 2019,
+      "source_file": "bac_sequence_scientifique(5).pdf",
+      "source_page": 14,
+      "exercise": "exercise_2",
+      "number": "3-b",
+      "text": "نعتبر المتتالية \\((u_n)\\) المعرفة بـ:\n\\[\nu_0=4,\\qquad u_{n+1}=4+\\sqrt{u_n+2}.\n\\]\n1) أثبت بالتراجع أن \\(4\\le u_n<7\\) لكل \\(n\\).\n2) ادرس اتجاه تغير \\((u_n)\\)، ثم بيّن أنها متقاربة واحسب نهايتها.",
+      "context": "\\(u_0=4\\)، \\(u_{n+1}=\\sqrt{u_n+2}+4\\).",
+      "tag": "seq_monotonicity",
+      "axis": "اتجاه تغير المتتالية",
+      "secondary_tags": [
+        "sequence_limits_convergence_divergence"
+      ],
+      "skill": "الرتابة والتقارب",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمت كتابة السؤال من الوثيقة المصورة مع توحيد الترميز الرياضي بصيغة LaTeX.",
+      "solution": {
+        "strategy": "نثبت الحصر، ثم نقارن \\(\\sqrt{u_n+2}\\) بالعدد \\(u_n-4\\) باستعمال المربعات.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "التحقق عند البداية",
+            "explanation": "لدينا \\(4\\le u_0<7\\).",
+            "calculation": "\\(4\\le4<7\\).",
+            "result": "الحصر صحيح عند البداية."
+          },
+          {
+            "order": 2,
+            "title": "إثبات الحصر بالتراجع",
+            "explanation": "نفترض \\(4\\le u_n<7\\). عندئذ \\(6\\le u_n+2<9\\)، وبالتالي \\(0<\\sqrt{u_n+2}<3\\).",
+            "calculation": "\\(4<u_{n+1}=4+\\sqrt{u_n+2}<7\\).",
+            "result": "إذن \\(4\\le u_n<7\\) لكل \\(n\\)."
+          },
+          {
+            "order": 3,
+            "title": "كتابة الفرق",
+            "explanation": "نكتب الفرق بطريقة تسمح بالمقارنة.",
+            "calculation": "\\(u_{n+1}-u_n=\\sqrt{u_n+2}-(u_n-4)\\).",
+            "result": "الحدان غير سالبين لأن \\(u_n\\ge4\\)."
+          },
+          {
+            "order": 4,
+            "title": "مقارنة الحدين",
+            "explanation": "بما أن الحدين غير سالبين، نقارن مربعيهما.",
+            "calculation": "\\(u_n+2-(u_n-4)^2=(7-u_n)(u_n-2)>0\\).",
+            "result": "إذن \\(\\sqrt{u_n+2}>u_n-4\\)، ومنه \\(u_{n+1}-u_n>0\\)."
+          },
+          {
+            "order": 5,
+            "title": "التقارب والنهاية",
+            "explanation": "المتتالية متزايدة ومحدودة من الأعلى بالعدد 7، إذن متقاربة. إذا كانت نهايتها \\(L\\)، فإن \\(L=4+\\sqrt{L+2}\\).",
+            "calculation": "\\((L-4)^2=L+2\\Longrightarrow (L-7)(L-2)=0\\).",
+            "result": "بما أن \\(L\\in[4,7]\\)، فإن \\(L=7\\)."
+          }
+        ],
+        "final_answer": "المتتالية \\((u_n)\\) متزايدة تمامًا و\\(\\displaystyle\\lim_{n\to+\\infty}u_n=7\\).",
+        "hints": [
+          "ابدأ بإثبات الحصر أو العبارة المساعدة الموجودة في الجزء الأول.",
+          "بعد ذلك احسب الفرق بين حدين متتاليين أو النسبة بينهما.",
+          "حدّد إشارة كل عامل قبل كتابة النتيجة."
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "استعمال نتيجة من سؤال سابق من دون كتابتها أو إثباتها.",
+            "correction": "في النسخة المستقلة أُضيفت النتيجة المطلوبة إلى نص السؤال وأُثبتت داخل الحل قبل استعمالها."
+          },
+          {
+            "mistake": "الحكم على إشارة كسر من دون التأكد من إشارة المقام.",
+            "correction": "يجب تحديد إشارة البسط والمقام كل واحد على حدة."
+          }
+        ],
+        "dependency_handling": {
+          "was_dependent_in_original_exam": true,
+          "previous_result_reused": [
+            "أثبت داخل الحل أن \\(4\\le u_n<7\\) لكل \\(n\\)."
+          ],
+          "how_made_standalone": "أعيدت صياغة السؤال ليحتوي على كل المعطيات والنتائج المساعدة المطلوبة، ثم أُعيد بناء الحل من الصفر بحيث تُثبت كل نتيجة قبل استعمالها."
+        },
+        "presentation": {
+          "style": "clear_concise_student_friendly",
+          "one_idea_per_step": true,
+          "avoid_repetition": true,
+          "prove_before_use": true
+        }
+      },
+      "original_text": "استنتج اتجاه تغير المتتالية، ثم بين أنها متقاربة.",
+      "standalone_text": "نعتبر المتتالية \\((u_n)\\) المعرفة بـ:\n\\[\nu_0=4,\\qquad u_{n+1}=4+\\sqrt{u_n+2}.\n\\]\n1) أثبت بالتراجع أن \\(4\\le u_n<7\\) لكل \\(n\\).\n2) ادرس اتجاه تغير \\((u_n)\\)، ثم بيّن أنها متقاربة واحسب نهايتها.",
+      "standalone_support": {
+        "requires_previous_question": false,
+        "all_information_is_in_question": true,
+        "integrated_subquestions": [
+          "1) أثبت بالتراجع أن \\(4\\le u_n<7\\) لكل \\(n\\).",
+          "2) ادرس اتجاه تغير \\((u_n)\\)، ثم بيّن أنها متقاربة واحسب نهايتها."
+        ]
+      }
+    },
+    {
+      "id": "bac_2020_p15_exercise_3b_2-c",
+      "year": 2020,
+      "source_file": "bac_sequence_scientifique(5).pdf",
+      "source_page": 15,
+      "exercise": "exercise_3b",
+      "number": "2-c",
+      "text": "نعتبر المتتالية \\((u_n)\\) المعرفة بـ:\n\\[\nu_0=0,\\qquad u_{n+1}=3u_n-2n+3.\n\\]\nونضع \\(v_n=u_n-n+1\\).\n\n1) أثبت أن \\((v_n)\\) هندسية، ثم اكتب \\(u_n\\) بدلالة \\(n\\).\n2) استنتج اتجاه تغير المتتالية \\((u_n)\\).",
+      "context": "\\(u_0=0\\)، \\(u_{n+1}=3u_n-2n+3\\)، و\\(v_n=u_n-n+1\\).",
+      "tag": "seq_monotonicity",
+      "axis": "اتجاه تغير المتتالية",
+      "secondary_tags": [],
+      "skill": "الرتابة",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمت كتابة السؤال من الوثيقة المصورة مع توحيد الترميز الرياضي بصيغة LaTeX.",
+      "solution": {
+        "strategy": "نحوّل العلاقة غير المتجانسة إلى متتالية هندسية، ثم نستعمل العبارة الصريحة.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "حساب \\(v_{n+1}\\)",
+            "explanation": "نعوض تعريف \\(v_n\\) والعلاقة التراجعية.",
+            "calculation": "\\(v_{n+1}=u_{n+1}-(n+1)+1=3u_n-3n+3=3(u_n-n+1)=3v_n\\).",
+            "result": "\\((v_n)\\) هندسية أساسها 3."
+          },
+          {
+            "order": 2,
+            "title": "الحد العام لـ \\(v_n\\)",
+            "explanation": "نحسب الحد الأول.",
+            "calculation": "\\(v_0=u_0-0+1=1\\Longrightarrow v_n=3^n\\).",
+            "result": "لدينا عبارة \\(v_n\\)."
+          },
+          {
+            "order": 3,
+            "title": "استخراج \\(u_n\\)",
+            "explanation": "من \\(v_n=u_n-n+1\\).",
+            "calculation": "\\(u_n=v_n+n-1=3^n+n-1\\).",
+            "result": "لدينا عبارة صريحة لـ \\(u_n\\)."
+          },
+          {
+            "order": 4,
+            "title": "دراسة الفرق",
+            "explanation": "نحسب الفرق باستعمال العبارة الصريحة.",
+            "calculation": "\\(u_{n+1}-u_n=3^{n+1}+n-(3^n+n-1)=2\\cdot3^n+1>0\\).",
+            "result": "المتتالية \\((u_n)\\) متزايدة تمامًا."
+          }
+        ],
+        "final_answer": "\\boxed{(u_n)\text{ متزايدة تمامًا}}",
+        "hints": [
+          "ابدأ بإثبات الحصر أو العبارة المساعدة الموجودة في الجزء الأول.",
+          "بعد ذلك احسب الفرق بين حدين متتاليين أو النسبة بينهما.",
+          "حدّد إشارة كل عامل قبل كتابة النتيجة."
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "استعمال نتيجة من سؤال سابق من دون كتابتها أو إثباتها.",
+            "correction": "في النسخة المستقلة أُضيفت النتيجة المطلوبة إلى نص السؤال وأُثبتت داخل الحل قبل استعمالها."
+          },
+          {
+            "mistake": "الحكم على إشارة كسر من دون التأكد من إشارة المقام.",
+            "correction": "يجب تحديد إشارة البسط والمقام كل واحد على حدة."
+          }
+        ],
+        "dependency_handling": {
+          "was_dependent_in_original_exam": true,
+          "previous_result_reused": [
+            "أعد إثبات أن \\((v_n)\\) هندسية، ثم استخرج عبارة \\(u_n\\) قبل دراسة اتجاه التغير."
+          ],
+          "how_made_standalone": "أعيدت صياغة السؤال ليحتوي على كل المعطيات والنتائج المساعدة المطلوبة، ثم أُعيد بناء الحل من الصفر بحيث تُثبت كل نتيجة قبل استعمالها."
+        },
+        "presentation": {
+          "style": "clear_concise_student_friendly",
+          "one_idea_per_step": true,
+          "avoid_repetition": true,
+          "prove_before_use": true
+        }
+      },
+      "original_text": "ادرس اتجاه تغير \\((u_n)\\).",
+      "standalone_text": "نعتبر المتتالية \\((u_n)\\) المعرفة بـ:\n\\[\nu_0=0,\\qquad u_{n+1}=3u_n-2n+3.\n\\]\nونضع \\(v_n=u_n-n+1\\).\n\n1) أثبت أن \\((v_n)\\) هندسية، ثم اكتب \\(u_n\\) بدلالة \\(n\\).\n2) استنتج اتجاه تغير المتتالية \\((u_n)\\).",
+      "standalone_support": {
+        "requires_previous_question": false,
+        "all_information_is_in_question": true,
+        "integrated_subquestions": [
+          "1) أثبت أن \\((v_n)\\) هندسية، ثم اكتب \\(u_n\\) بدلالة \\(n\\).",
+          "2) استنتج اتجاه تغير المتتالية \\((u_n)\\)."
+        ]
+      }
+    },
+    {
+      "id": "bac_2021_p16_exercise_3b_2",
+      "year": 2021,
+      "source_file": "bac_sequence_scientifique(5).pdf",
+      "source_page": 16,
+      "exercise": "exercise_3b",
+      "number": "2",
+      "text": "نعتبر المتتالية \\((u_n)\\) المعرفة بـ:\n\\[\nu_0=0,\\qquad u_{n+1}=\\frac38(u_n+5).\n\\]\n1) أثبت بالتراجع أن \\(0\\le u_n<3\\) لكل \\(n\\).\n2) أثبت أن \\((u_n)\\) متزايدة تمامًا، ثم احسب نهايتها.",
+      "context": "\\(u_0=0\\)، \\(u_{n+1}=\\frac38(u_n+5)\\).",
+      "tag": "seq_monotonicity",
+      "axis": "اتجاه تغير المتتالية",
+      "secondary_tags": [
+        "sequence_limits_convergence_divergence"
+      ],
+      "skill": "الرتابة والتقارب",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمت كتابة السؤال من الوثيقة المصورة مع توحيد الترميز الرياضي بصيغة LaTeX.",
+      "solution": {
+        "strategy": "نثبت الحصر بين 0 و3، ثم نحسب الفرق ونمر إلى النهاية.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "التحقق عند البداية",
+            "explanation": "لدينا \\(0\\le u_0<3\\).",
+            "calculation": "\\(0\\le0<3\\).",
+            "result": "الحصر صحيح عند البداية."
+          },
+          {
+            "order": 2,
+            "title": "إثبات الحصر بالتراجع",
+            "explanation": "نفترض \\(0\\le u_n<3\\). عندئذ \\(5\\le u_n+5<8\\).",
+            "calculation": "\\(0<u_{n+1}=\\frac38(u_n+5)<3\\).",
+            "result": "إذن \\(0\\le u_n<3\\) لكل \\(n\\)."
+          },
+          {
+            "order": 3,
+            "title": "حساب الفرق",
+            "explanation": "نبسط مباشرة.",
+            "calculation": "\\(u_{n+1}-u_n=\\frac38(u_n+5)-u_n=\\frac58(3-u_n)>0\\).",
+            "result": "المتتالية متزايدة تمامًا."
+          },
+          {
+            "order": 4,
+            "title": "التقارب",
+            "explanation": "المتتالية متزايدة ومحدودة من الأعلى بالعدد 3.",
+            "calculation": "\\(u_n<3\\).",
+            "result": "إذن لها نهاية \\(L\\)."
+          },
+          {
+            "order": 5,
+            "title": "حساب النهاية",
+            "explanation": "نمر إلى النهاية في العلاقة.",
+            "calculation": "\\(L=\\frac38(L+5)\\Longrightarrow 8L=3L+15\\Longrightarrow L=3\\).",
+            "result": "المتتالية متقاربة نحو 3."
+          }
+        ],
+        "final_answer": "المتتالية \\((u_n)\\) متزايدة تمامًا و\\(\\displaystyle\\lim_{n\to+\\infty}u_n=3\\).",
+        "hints": [
+          "ابدأ بإثبات الحصر أو العبارة المساعدة الموجودة في الجزء الأول.",
+          "بعد ذلك احسب الفرق بين حدين متتاليين أو النسبة بينهما.",
+          "حدّد إشارة كل عامل قبل كتابة النتيجة."
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "استعمال نتيجة من سؤال سابق من دون كتابتها أو إثباتها.",
+            "correction": "في النسخة المستقلة أُضيفت النتيجة المطلوبة إلى نص السؤال وأُثبتت داخل الحل قبل استعمالها."
+          },
+          {
+            "mistake": "الحكم على إشارة كسر من دون التأكد من إشارة المقام.",
+            "correction": "يجب تحديد إشارة البسط والمقام كل واحد على حدة."
+          }
+        ],
+        "dependency_handling": {
+          "was_dependent_in_original_exam": true,
+          "previous_result_reused": [
+            "أثبت داخل الحل أن \\(0\\le u_n<3\\) لكل \\(n\\)."
+          ],
+          "how_made_standalone": "أعيدت صياغة السؤال ليحتوي على كل المعطيات والنتائج المساعدة المطلوبة، ثم أُعيد بناء الحل من الصفر بحيث تُثبت كل نتيجة قبل استعمالها."
+        },
+        "presentation": {
+          "style": "clear_concise_student_friendly",
+          "one_idea_per_step": true,
+          "avoid_repetition": true,
+          "prove_before_use": true
+        }
+      },
+      "original_text": "بين أن \\((u_n)\\) متزايدة تمامًا، ثم استنتج أنها متقاربة.",
+      "standalone_text": "نعتبر المتتالية \\((u_n)\\) المعرفة بـ:\n\\[\nu_0=0,\\qquad u_{n+1}=\\frac38(u_n+5).\n\\]\n1) أثبت بالتراجع أن \\(0\\le u_n<3\\) لكل \\(n\\).\n2) أثبت أن \\((u_n)\\) متزايدة تمامًا، ثم احسب نهايتها.",
+      "standalone_support": {
+        "requires_previous_question": false,
+        "all_information_is_in_question": true,
+        "integrated_subquestions": [
+          "1) أثبت بالتراجع أن \\(0\\le u_n<3\\) لكل \\(n\\).",
+          "2) أثبت أن \\((u_n)\\) متزايدة تمامًا، ثم احسب نهايتها."
+        ]
+      }
+    },
+    {
+      "id": "bac_2022_p17_exercise_3a_2-a",
+      "year": 2022,
+      "source_file": "bac_sequence_scientifique(5).pdf",
+      "source_page": 17,
+      "exercise": "exercise_3a",
+      "number": "2-a",
+      "text": "نعتبر المتتالية \\((u_n)\\) المعرفة بـ:\n\\[\nu_0=-4,\\qquad u_{n+1}=-\\frac12u_n+1.\n\\]\nاحسب \\(u_1\\)، و\\(u_2\\)، و\\(u_3\\)، ثم أثبت أن المتتالية \\((u_n)\\) ليست رتيبة.",
+      "context": "\\(u_0=-4\\)، \\(u_{n+1}=-\\frac12u_n+1\\).",
+      "tag": "seq_monotonicity",
+      "axis": "اتجاه تغير المتتالية",
+      "secondary_tags": [],
+      "skill": "عدم الرتابة",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمت كتابة السؤال من الوثيقة المصورة مع توحيد الترميز الرياضي بصيغة LaTeX.",
+      "solution": {
+        "strategy": "نحسب الحدود واحدًا بعد الآخر، ثم نلاحظ أن اتجاه المقارنة يتغير.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "حساب \\(u_1\\)",
+            "explanation": "نعوض \\(u_0=-4\\) في العلاقة.",
+            "calculation": "\\(u_1=-\\frac12(-4)+1=3\\).",
+            "result": "\\(u_1=3\\)."
+          },
+          {
+            "order": 2,
+            "title": "حساب \\(u_2\\)",
+            "explanation": "نعوض \\(u_1=3\\).",
+            "calculation": "\\(u_2=-\\frac12\\cdot3+1=-\\frac12\\).",
+            "result": "\\(u_2=-\\frac12\\)."
+          },
+          {
+            "order": 3,
+            "title": "حساب \\(u_3\\)",
+            "explanation": "نعوض \\(u_2=-\\frac12\\).",
+            "calculation": "\\(u_3=-\\frac12\\left(-\\frac12\\right)+1=\\frac54\\).",
+            "result": "\\(u_3=\\frac54\\)."
+          },
+          {
+            "order": 4,
+            "title": "إثبات عدم الرتابة",
+            "explanation": "للمتتالية الرتيبة يجب أن تسير المقارنات دائمًا في الاتجاه نفسه. هنا ترتفع ثم تنخفض ثم ترتفع.",
+            "calculation": "\\(u_0<u_1,\\qquad u_1>u_2,\\qquad u_2<u_3\\).",
+            "result": "المتتالية \\((u_n)\\) ليست متزايدة وليست متناقصة، أي إنها غير رتيبة."
+          }
+        ],
+        "final_answer": "\\(u_1=3\\)، و\\(u_2=-\\frac12\\)، و\\(u_3=\\frac54\\)، والمتتالية \\((u_n)\\) غير رتيبة.",
+        "hints": [
+          "ابدأ بإثبات الحصر أو العبارة المساعدة الموجودة في الجزء الأول.",
+          "بعد ذلك احسب الفرق بين حدين متتاليين أو النسبة بينهما.",
+          "حدّد إشارة كل عامل قبل كتابة النتيجة."
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "استعمال نتيجة من سؤال سابق من دون كتابتها أو إثباتها.",
+            "correction": "في النسخة المستقلة أُضيفت النتيجة المطلوبة إلى نص السؤال وأُثبتت داخل الحل قبل استعمالها."
+          },
+          {
+            "mistake": "الحكم على إشارة كسر من دون التأكد من إشارة المقام.",
+            "correction": "يجب تحديد إشارة البسط والمقام كل واحد على حدة."
+          }
+        ],
+        "dependency_handling": {
+          "was_dependent_in_original_exam": false,
+          "previous_result_reused": [],
+          "how_made_standalone": "أعيدت صياغة السؤال ليحتوي على كل المعطيات والنتائج المساعدة المطلوبة، ثم أُعيد بناء الحل من الصفر بحيث تُثبت كل نتيجة قبل استعمالها."
+        },
+        "presentation": {
+          "style": "clear_concise_student_friendly",
+          "one_idea_per_step": true,
+          "avoid_repetition": true,
+          "prove_before_use": true
+        }
+      },
+      "original_text": "احسب \\(u_1,u_2,u_3\\)، ثم بين أنها غير رتيبة.",
+      "standalone_text": "نعتبر المتتالية \\((u_n)\\) المعرفة بـ:\n\\[\nu_0=-4,\\qquad u_{n+1}=-\\frac12u_n+1.\n\\]\nاحسب \\(u_1\\)، و\\(u_2\\)، و\\(u_3\\)، ثم أثبت أن المتتالية \\((u_n)\\) ليست رتيبة.",
+      "standalone_support": {
+        "requires_previous_question": false,
+        "all_information_is_in_question": true,
+        "integrated_subquestions": []
+      }
+    },
+    {
+      "id": "bac_2023_p18_exercise_3a_1-b",
+      "year": 2023,
+      "source_file": "bac_sequence_scientifique(5).pdf",
+      "source_page": 18,
+      "exercise": "exercise_3a",
+      "number": "1-b",
+      "text": "نعتبر المتتالية \\((u_n)\\) المعرفة بـ:\n\\[\nu_0=\\frac12,\\qquad u_{n+1}=-1+\\frac2{2-u_n}.\n\\]\n1) أثبت بالتراجع أن \\(0<u_n<1\\) لكل \\(n\\).\n2) أثبت أن المتتالية \\((u_n)\\) متناقصة تمامًا.",
+      "context": "\\(u_0=\\frac12\\)، \\(u_{n+1}=-1+\\frac2{2-u_n}\\)، و\\(v_n=\\frac1{u_n}-1\\).",
+      "tag": "seq_monotonicity",
+      "axis": "اتجاه تغير المتتالية",
+      "secondary_tags": [],
+      "skill": "الرتابة",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمت كتابة السؤال من الوثيقة المصورة مع توحيد الترميز الرياضي بصيغة LaTeX.",
+      "solution": {
+        "strategy": "نثبت أن الحدود تبقى بين 0 و1، ثم نحسب الفرق.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "التحقق عند البداية",
+            "explanation": "لدينا \\(0<\\frac12<1\\).",
+            "calculation": "\\(0<u_0<1\\).",
+            "result": "الحصر صحيح عند البداية."
+          },
+          {
+            "order": 2,
+            "title": "إثبات الحصر بالتراجع",
+            "explanation": "نفترض \\(0<u_n<1\\)، فيكون \\(1<2-u_n<2\\). ومنه \\(1<\\frac2{2-u_n}<2\\).",
+            "calculation": "\\(0<-1+\\frac2{2-u_n}<1\\).",
+            "result": "إذن \\(0<u_{n+1}<1\\)، وبالتراجع يتحقق الحصر لكل \\(n\\)."
+          },
+          {
+            "order": 3,
+            "title": "حساب الفرق",
+            "explanation": "نوحد المقام.",
+            "calculation": "\\(u_{n+1}-u_n=-1+\\frac2{2-u_n}-u_n=\\frac{u_n(u_n-1)}{2-u_n}\\).",
+            "result": "لدينا \\(u_n>0\\)، و\\(u_n-1<0\\)، و\\(2-u_n>0\\)."
+          },
+          {
+            "order": 4,
+            "title": "النتيجة",
+            "explanation": "البسط سالب والمقام موجب.",
+            "calculation": "\\(u_{n+1}-u_n<0\\).",
+            "result": "المتتالية \\((u_n)\\) متناقصة تمامًا."
+          }
+        ],
+        "final_answer": "\\boxed{(u_n)\text{ متناقصة تمامًا}}",
+        "hints": [
+          "ابدأ بإثبات الحصر أو العبارة المساعدة الموجودة في الجزء الأول.",
+          "بعد ذلك احسب الفرق بين حدين متتاليين أو النسبة بينهما.",
+          "حدّد إشارة كل عامل قبل كتابة النتيجة."
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "استعمال نتيجة من سؤال سابق من دون كتابتها أو إثباتها.",
+            "correction": "في النسخة المستقلة أُضيفت النتيجة المطلوبة إلى نص السؤال وأُثبتت داخل الحل قبل استعمالها."
+          },
+          {
+            "mistake": "الحكم على إشارة كسر من دون التأكد من إشارة المقام.",
+            "correction": "يجب تحديد إشارة البسط والمقام كل واحد على حدة."
+          }
+        ],
+        "dependency_handling": {
+          "was_dependent_in_original_exam": true,
+          "previous_result_reused": [
+            "أثبت داخل الحل أن \\(0<u_n<1\\) لكل \\(n\\)."
+          ],
+          "how_made_standalone": "أعيدت صياغة السؤال ليحتوي على كل المعطيات والنتائج المساعدة المطلوبة، ثم أُعيد بناء الحل من الصفر بحيث تُثبت كل نتيجة قبل استعمالها."
+        },
+        "presentation": {
+          "style": "clear_concise_student_friendly",
+          "one_idea_per_step": true,
+          "avoid_repetition": true,
+          "prove_before_use": true
+        }
+      },
+      "original_text": "بين أن \\((u_n)\\) متناقصة تمامًا.",
+      "standalone_text": "نعتبر المتتالية \\((u_n)\\) المعرفة بـ:\n\\[\nu_0=\\frac12,\\qquad u_{n+1}=-1+\\frac2{2-u_n}.\n\\]\n1) أثبت بالتراجع أن \\(0<u_n<1\\) لكل \\(n\\).\n2) أثبت أن المتتالية \\((u_n)\\) متناقصة تمامًا.",
+      "standalone_support": {
+        "requires_previous_question": false,
+        "all_information_is_in_question": true,
+        "integrated_subquestions": [
+          "1) أثبت بالتراجع أن \\(0<u_n<1\\) لكل \\(n\\).",
+          "2) أثبت أن المتتالية \\((u_n)\\) متناقصة تمامًا."
+        ]
+      }
+    },
+    {
+      "id": "bac_2023_p18_exercise_3b_1-b",
+      "year": 2023,
+      "source_file": "bac_sequence_scientifique(5).pdf",
+      "source_page": 18,
+      "exercise": "exercise_3b",
+      "number": "1-b",
+      "text": "نعتبر المتتالية \\((u_n)\\) المعرفة بـ:\n\\[\nu_0=0,\\qquad u_{n+1}=\\frac45u_n+1.\n\\]\n1) أثبت بالتراجع أن \\(u_n<5\\) لكل \\(n\\).\n2) أثبت أن المتتالية \\((u_n)\\) متزايدة تمامًا.",
+      "context": "\\(u_0=0\\)، \\(u_{n+1}=\\frac45u_n+1\\)، و\\(v_n=u_n-5\\).",
+      "tag": "seq_monotonicity",
+      "axis": "اتجاه تغير المتتالية",
+      "secondary_tags": [],
+      "skill": "الرتابة",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمت كتابة السؤال من الوثيقة المصورة مع توحيد الترميز الرياضي بصيغة LaTeX.",
+      "solution": {
+        "strategy": "نقارن الحدود بنقطة التثبيت 5، ثم نحسب الفرق.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "التحقق عند البداية",
+            "explanation": "لدينا \\(u_0=0<5\\).",
+            "calculation": "\\(u_0<5\\).",
+            "result": "الحصر صحيح عند البداية."
+          },
+          {
+            "order": 2,
+            "title": "خطوة التراجع",
+            "explanation": "نفترض \\(u_n<5\\).",
+            "calculation": "\\(u_{n+1}=\\frac45u_n+1<\\frac45\\cdot5+1=5\\).",
+            "result": "إذن \\(u_n<5\\) لكل \\(n\\)."
+          },
+          {
+            "order": 3,
+            "title": "حساب الفرق",
+            "explanation": "نطرح \\(u_n\\).",
+            "calculation": "\\(u_{n+1}-u_n=1-\\frac15u_n=\\frac{5-u_n}{5}\\).",
+            "result": "بما أن \\(u_n<5\\)، فالفرق موجب."
+          },
+          {
+            "order": 4,
+            "title": "النتيجة",
+            "explanation": "الفرق موجب تمامًا لكل \\(n\\).",
+            "calculation": "\\(u_{n+1}>u_n\\).",
+            "result": "المتتالية \\((u_n)\\) متزايدة تمامًا."
+          }
+        ],
+        "final_answer": "\\boxed{(u_n)\text{ متزايدة تمامًا}}",
+        "hints": [
+          "ابدأ بإثبات الحصر أو العبارة المساعدة الموجودة في الجزء الأول.",
+          "بعد ذلك احسب الفرق بين حدين متتاليين أو النسبة بينهما.",
+          "حدّد إشارة كل عامل قبل كتابة النتيجة."
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "استعمال نتيجة من سؤال سابق من دون كتابتها أو إثباتها.",
+            "correction": "في النسخة المستقلة أُضيفت النتيجة المطلوبة إلى نص السؤال وأُثبتت داخل الحل قبل استعمالها."
+          },
+          {
+            "mistake": "الحكم على إشارة كسر من دون التأكد من إشارة المقام.",
+            "correction": "يجب تحديد إشارة البسط والمقام كل واحد على حدة."
+          }
+        ],
+        "dependency_handling": {
+          "was_dependent_in_original_exam": true,
+          "previous_result_reused": [
+            "أثبت داخل الحل أن \\(u_n<5\\) لكل \\(n\\)."
+          ],
+          "how_made_standalone": "أعيدت صياغة السؤال ليحتوي على كل المعطيات والنتائج المساعدة المطلوبة، ثم أُعيد بناء الحل من الصفر بحيث تُثبت كل نتيجة قبل استعمالها."
+        },
+        "presentation": {
+          "style": "clear_concise_student_friendly",
+          "one_idea_per_step": true,
+          "avoid_repetition": true,
+          "prove_before_use": true
+        }
+      },
+      "original_text": "بين أن \\((u_n)\\) متزايدة تمامًا.",
+      "standalone_text": "نعتبر المتتالية \\((u_n)\\) المعرفة بـ:\n\\[\nu_0=0,\\qquad u_{n+1}=\\frac45u_n+1.\n\\]\n1) أثبت بالتراجع أن \\(u_n<5\\) لكل \\(n\\).\n2) أثبت أن المتتالية \\((u_n)\\) متزايدة تمامًا.",
+      "standalone_support": {
+        "requires_previous_question": false,
+        "all_information_is_in_question": true,
+        "integrated_subquestions": [
+          "1) أثبت بالتراجع أن \\(u_n<5\\) لكل \\(n\\).",
+          "2) أثبت أن المتتالية \\((u_n)\\) متزايدة تمامًا."
+        ]
+      }
+    },
+    {
+      "id": "bac_2024_p19_exercise_3b_2-a",
+      "year": 2024,
+      "source_file": "bac_sequence_scientifique(5).pdf",
+      "source_page": 19,
+      "exercise": "exercise_3b",
+      "number": "2-a",
+      "text": "نعتبر المتتالية \\((u_n)\\) المعرفة، من أجل \\(n\\ge2\\)، بـ:\n\\[\nu_n=\\frac{n}{2^n}.\n\\]\nأثبت أن\n\\[\n\\frac{u_{n+1}}{u_n}\\le\\frac34,\n\\]\nثم استنتج اتجاه تغير \\((u_n)\\) ابتداءً من الرتبة \\(2\\).",
+      "context": "\\(u_n=\\frac{n}{2^n}\\) من أجل \\(n\\ge2\\).",
+      "tag": "seq_monotonicity",
+      "axis": "اتجاه تغير المتتالية",
+      "secondary_tags": [],
+      "skill": "مقارنة نسبة حدين",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمت كتابة السؤال من الوثيقة المصورة مع توحيد الترميز الرياضي بصيغة LaTeX.",
+      "solution": {
+        "strategy": "نحسب نسبة حدين متتاليين، ثم نقارنها بالعدد 1.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "التحقق من الإيجابية",
+            "explanation": "من أجل \\(n\\ge2\\)، لدينا \\(u_n>0\\)، ولذلك يمكن استعمال النسبة.",
+            "calculation": "\\(u_n=\\frac{n}{2^n}>0\\).",
+            "result": "إشارة الرتابة تُستنتج من مقارنة النسبة بالعدد 1."
+          },
+          {
+            "order": 2,
+            "title": "حساب النسبة",
+            "explanation": "نعوض عبارتي \\(u_{n+1}\\) و\\(u_n\\).",
+            "calculation": "\\(\\frac{u_{n+1}}{u_n}=\\frac{(n+1)/2^{n+1}}{n/2^n}=\\frac{n+1}{2n}=\\frac12+\\frac1{2n}\\).",
+            "result": "حصلنا على عبارة بسيطة."
+          },
+          {
+            "order": 3,
+            "title": "استعمال الشرط \\(n\\ge2\\)",
+            "explanation": "من \\(n\\ge2\\) نحصل على \\(\\frac1{2n}\\le\\frac14\\).",
+            "calculation": "\\(\\frac{u_{n+1}}{u_n}\\le\\frac12+\\frac14=\\frac34<1\\).",
+            "result": "إذن \\(u_{n+1}<u_n\\)."
+          },
+          {
+            "order": 4,
+            "title": "النتيجة",
+            "explanation": "بما أن الحدود موجبة والنسبة أصغر من 1، فالحد الموالي أصغر من السابق.",
+            "calculation": "\\(u_{n+1}<u_n\\quad(n\\ge2)\\).",
+            "result": "المتتالية \\((u_n)\\) متناقصة تمامًا ابتداءً من الرتبة 2."
+          }
+        ],
+        "final_answer": "\\boxed{\\frac{u_{n+1}}{u_n}\\le\\frac34<1}، ومنه \\((u_n)\\) متناقصة تمامًا ابتداءً من \\(n=2\\).",
+        "hints": [
+          "ابدأ بإثبات الحصر أو العبارة المساعدة الموجودة في الجزء الأول.",
+          "بعد ذلك احسب الفرق بين حدين متتاليين أو النسبة بينهما.",
+          "حدّد إشارة كل عامل قبل كتابة النتيجة."
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "استعمال نتيجة من سؤال سابق من دون كتابتها أو إثباتها.",
+            "correction": "في النسخة المستقلة أُضيفت النتيجة المطلوبة إلى نص السؤال وأُثبتت داخل الحل قبل استعمالها."
+          },
+          {
+            "mistake": "الحكم على إشارة كسر من دون التأكد من إشارة المقام.",
+            "correction": "يجب تحديد إشارة البسط والمقام كل واحد على حدة."
+          }
+        ],
+        "dependency_handling": {
+          "was_dependent_in_original_exam": false,
+          "previous_result_reused": [],
+          "how_made_standalone": "أعيدت صياغة السؤال ليحتوي على كل المعطيات والنتائج المساعدة المطلوبة، ثم أُعيد بناء الحل من الصفر بحيث تُثبت كل نتيجة قبل استعمالها."
+        },
+        "presentation": {
+          "style": "clear_concise_student_friendly",
+          "one_idea_per_step": true,
+          "avoid_repetition": true,
+          "prove_before_use": true
+        }
+      },
+      "original_text": "بين أن \\(\\frac{u_{n+1}}{u_n}\\le\\frac34\\).",
+      "standalone_text": "نعتبر المتتالية \\((u_n)\\) المعرفة، من أجل \\(n\\ge2\\)، بـ:\n\\[\nu_n=\\frac{n}{2^n}.\n\\]\nأثبت أن\n\\[\n\\frac{u_{n+1}}{u_n}\\le\\frac34,\n\\]\nثم استنتج اتجاه تغير \\((u_n)\\) ابتداءً من الرتبة \\(2\\).",
+      "standalone_support": {
+        "requires_previous_question": false,
+        "all_information_is_in_question": true,
+        "integrated_subquestions": []
+      }
+    },
+    {
+      "id": "bac_2025_p20_exercise_3_2-c",
+      "year": 2025,
+      "source_file": "bac_sequence_scientifique(5).pdf",
+      "source_page": 20,
+      "exercise": "exercise_3",
+      "number": "2-c",
+      "text": "نعتبر المتتالية \\((u_n)\\) المعرفة بـ:\n\\[\nu_0=3,\\qquad u_{n+1}=\\frac{5u_n}{2u_n+1}.\n\\]\n1) أثبت بالتراجع أن \\(u_n>2\\) لكل \\(n\\).\n2) ادرس اتجاه تغير \\((u_n)\\)، ثم بيّن أنها متقاربة واحسب نهايتها.",
+      "context": "\\(u_0=3\\)، \\(u_{n+1}=\\frac{5u_n}{2u_n+1}\\).",
+      "tag": "seq_monotonicity",
+      "axis": "اتجاه تغير المتتالية",
+      "secondary_tags": [
+        "sequence_limits_convergence_divergence"
+      ],
+      "skill": "الرتابة والتقارب",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمت كتابة السؤال من الوثيقة المصورة مع توحيد الترميز الرياضي بصيغة LaTeX.",
+      "solution": {
+        "strategy": "نثبت أن الحدود تبقى فوق 2، ثم نحسب الفرق ونحدد النهاية.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "التحقق عند البداية",
+            "explanation": "لدينا \\(u_0=3>2\\).",
+            "calculation": "\\(u_0>2\\).",
+            "result": "الحصر صحيح عند البداية."
+          },
+          {
+            "order": 2,
+            "title": "خطوة التراجع",
+            "explanation": "نفترض \\(u_n>2\\). المقام \\(2u_n+1\\) موجب.",
+            "calculation": "\\(u_{n+1}-2=\\frac{5u_n-2(2u_n+1)}{2u_n+1}=\\frac{u_n-2}{2u_n+1}>0\\).",
+            "result": "إذن \\(u_{n+1}>2\\)، وبالتراجع \\(u_n>2\\) لكل \\(n\\)."
+          },
+          {
+            "order": 3,
+            "title": "حساب الفرق",
+            "explanation": "نوحد المقام.",
+            "calculation": "\\(u_{n+1}-u_n=\\frac{5u_n-u_n(2u_n+1)}{2u_n+1}=\\frac{2u_n(2-u_n)}{2u_n+1}<0\\).",
+            "result": "المتتالية متناقصة تمامًا."
+          },
+          {
+            "order": 4,
+            "title": "إثبات التقارب",
+            "explanation": "المتتالية متناقصة ومحدودة من الأسفل بالعدد 2.",
+            "calculation": "\\(u_n>2\\).",
+            "result": "إذن لها نهاية \\(L\\ge2\\)."
+          },
+          {
+            "order": 5,
+            "title": "حساب النهاية",
+            "explanation": "نمر إلى النهاية في العلاقة.",
+            "calculation": "\\(L=\\frac{5L}{2L+1}\\Longrightarrow L(2L-4)=0\\).",
+            "result": "لأن \\(L\\ge2\\)، فإن \\(L=2\\)."
+          }
+        ],
+        "final_answer": "المتتالية \\((u_n)\\) متناقصة تمامًا و\\(\\displaystyle\\lim_{n\to+\\infty}u_n=2\\).",
+        "hints": [
+          "ابدأ بإثبات الحصر أو العبارة المساعدة الموجودة في الجزء الأول.",
+          "بعد ذلك احسب الفرق بين حدين متتاليين أو النسبة بينهما.",
+          "حدّد إشارة كل عامل قبل كتابة النتيجة."
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "استعمال نتيجة من سؤال سابق من دون كتابتها أو إثباتها.",
+            "correction": "في النسخة المستقلة أُضيفت النتيجة المطلوبة إلى نص السؤال وأُثبتت داخل الحل قبل استعمالها."
+          },
+          {
+            "mistake": "الحكم على إشارة كسر من دون التأكد من إشارة المقام.",
+            "correction": "يجب تحديد إشارة البسط والمقام كل واحد على حدة."
+          }
+        ],
+        "dependency_handling": {
+          "was_dependent_in_original_exam": true,
+          "previous_result_reused": [
+            "أثبت داخل الحل أن \\(u_n>2\\) لكل \\(n\\)."
+          ],
+          "how_made_standalone": "أعيدت صياغة السؤال ليحتوي على كل المعطيات والنتائج المساعدة المطلوبة، ثم أُعيد بناء الحل من الصفر بحيث تُثبت كل نتيجة قبل استعمالها."
+        },
+        "presentation": {
+          "style": "clear_concise_student_friendly",
+          "one_idea_per_step": true,
+          "avoid_repetition": true,
+          "prove_before_use": true
+        }
+      },
+      "original_text": "ادرس اتجاه تغير \\((u_n)\\)، ثم ادرس تقاربها.",
+      "standalone_text": "نعتبر المتتالية \\((u_n)\\) المعرفة بـ:\n\\[\nu_0=3,\\qquad u_{n+1}=\\frac{5u_n}{2u_n+1}.\n\\]\n1) أثبت بالتراجع أن \\(u_n>2\\) لكل \\(n\\).\n2) ادرس اتجاه تغير \\((u_n)\\)، ثم بيّن أنها متقاربة واحسب نهايتها.",
+      "standalone_support": {
+        "requires_previous_question": false,
+        "all_information_is_in_question": true,
+        "integrated_subquestions": [
+          "1) أثبت بالتراجع أن \\(u_n>2\\) لكل \\(n\\).",
+          "2) ادرس اتجاه تغير \\((u_n)\\)، ثم بيّن أنها متقاربة واحسب نهايتها."
+        ]
+      }
+    },
+    {
+      "id": "bac_2026_p21_exercise_3a_2-c",
+      "year": 2026,
+      "source_file": "bac_sequence_scientifique(5).pdf",
+      "source_page": 21,
+      "exercise": "exercise_3a",
+      "number": "2-c",
+      "text": "نعتبر المتتالية \\((u_n)\\) المعرفة بـ:\n\\[\nu_0=4,\\qquad u_{n+1}=\\frac{4u_n}{u_n+2}.\n\\]\n1) أثبت بالتراجع أن \\(u_n>2\\) لكل \\(n\\).\n2) ادرس اتجاه تغير المتتالية \\((u_n)\\).",
+      "context": "\\(u_0=4\\)، \\(u_{n+1}=\\frac{4u_n}{u_n+2}\\)، و\\(v_n=\\frac{u_n-2}{u_n}\\).",
+      "tag": "seq_monotonicity",
+      "axis": "اتجاه تغير المتتالية",
+      "secondary_tags": [],
+      "skill": "الرتابة",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمت كتابة السؤال من الوثيقة المصورة مع توحيد الترميز الرياضي بصيغة LaTeX.",
+      "solution": {
+        "strategy": "نثبت أن الحدود تبقى فوق 2، ثم نحسب الفرق.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "التحقق عند البداية",
+            "explanation": "لدينا \\(u_0=4>2\\).",
+            "calculation": "\\(u_0>2\\).",
+            "result": "الحصر صحيح عند البداية."
+          },
+          {
+            "order": 2,
+            "title": "خطوة التراجع",
+            "explanation": "نفترض \\(u_n>2\\). المقام \\(u_n+2\\) موجب.",
+            "calculation": "\\(u_{n+1}-2=\\frac{4u_n-2(u_n+2)}{u_n+2}=\\frac{2(u_n-2)}{u_n+2}>0\\).",
+            "result": "إذن \\(u_n>2\\) لكل \\(n\\)."
+          },
+          {
+            "order": 3,
+            "title": "حساب الفرق",
+            "explanation": "نوحد المقام.",
+            "calculation": "\\(u_{n+1}-u_n=\\frac{4u_n-u_n(u_n+2)}{u_n+2}=\\frac{u_n(2-u_n)}{u_n+2}\\).",
+            "result": "لدينا \\(u_n>0\\)، و\\(2-u_n<0\\)، والمقام موجب."
+          },
+          {
+            "order": 4,
+            "title": "النتيجة",
+            "explanation": "إذن الفرق سالب تمامًا.",
+            "calculation": "\\(u_{n+1}-u_n<0\\).",
+            "result": "المتتالية \\((u_n)\\) متناقصة تمامًا."
+          }
+        ],
+        "final_answer": "\\boxed{(u_n)\text{ متناقصة تمامًا}}",
+        "hints": [
+          "ابدأ بإثبات الحصر أو العبارة المساعدة الموجودة في الجزء الأول.",
+          "بعد ذلك احسب الفرق بين حدين متتاليين أو النسبة بينهما.",
+          "حدّد إشارة كل عامل قبل كتابة النتيجة."
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "استعمال نتيجة من سؤال سابق من دون كتابتها أو إثباتها.",
+            "correction": "في النسخة المستقلة أُضيفت النتيجة المطلوبة إلى نص السؤال وأُثبتت داخل الحل قبل استعمالها."
+          },
+          {
+            "mistake": "الحكم على إشارة كسر من دون التأكد من إشارة المقام.",
+            "correction": "يجب تحديد إشارة البسط والمقام كل واحد على حدة."
+          }
+        ],
+        "dependency_handling": {
+          "was_dependent_in_original_exam": true,
+          "previous_result_reused": [
+            "أثبت داخل الحل أن \\(u_n>2\\) لكل \\(n\\)."
+          ],
+          "how_made_standalone": "أعيدت صياغة السؤال ليحتوي على كل المعطيات والنتائج المساعدة المطلوبة، ثم أُعيد بناء الحل من الصفر بحيث تُثبت كل نتيجة قبل استعمالها."
+        },
+        "presentation": {
+          "style": "clear_concise_student_friendly",
+          "one_idea_per_step": true,
+          "avoid_repetition": true,
+          "prove_before_use": true
+        }
+      },
+      "original_text": "ادرس اتجاه تغير \\((u_n)\\).",
+      "standalone_text": "نعتبر المتتالية \\((u_n)\\) المعرفة بـ:\n\\[\nu_0=4,\\qquad u_{n+1}=\\frac{4u_n}{u_n+2}.\n\\]\n1) أثبت بالتراجع أن \\(u_n>2\\) لكل \\(n\\).\n2) ادرس اتجاه تغير المتتالية \\((u_n)\\).",
+      "standalone_support": {
+        "requires_previous_question": false,
+        "all_information_is_in_question": true,
+        "integrated_subquestions": [
+          "1) أثبت بالتراجع أن \\(u_n>2\\) لكل \\(n\\).",
+          "2) ادرس اتجاه تغير المتتالية \\((u_n)\\)."
+        ]
+      }
+    },
+    {
+      "id": "bac_2026_p21_exercise_3b_3-b",
+      "year": 2026,
+      "source_file": "bac_sequence_scientifique(5).pdf",
+      "source_page": 21,
+      "exercise": "exercise_3b",
+      "number": "3-b",
+      "text": "نعتبر المتتالية \\((u_n)\\) المعرفة بـ:\n\\[\nu_0=0,\\qquad\nu_{n+1}=\\frac{-6u_n+2}{2u_n-3}.\n\\]\nونضع\n\\[\nv_n=\\frac{4+2u_n}{1-2u_n}.\n\\]\n\nحتى يكون السؤال مستقلاً:\n1) أثبت أن \\(v_{n+1}=\\frac27v_n\\)، ثم اكتب \\(v_n\\) بدلالة \\(n\\).\n2) استخرج عبارة \\(u_n\\) بدلالة \\(v_n\\).\n3) حدد اتجاه تغير المتتالية \\((u_n)\\).",
+      "context": "\\(u_0=0\\)، \\(u_{n+1}=\\frac{-6u_n+2}{2u_n-3}\\)، و\\(v_n=\\frac{4+2u_n}{1-2u_n}\\).",
+      "tag": "seq_monotonicity",
+      "axis": "اتجاه تغير المتتالية",
+      "secondary_tags": [],
+      "skill": "الرتابة",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمت كتابة السؤال من الوثيقة المصورة مع توحيد الترميز الرياضي بصيغة LaTeX.",
+      "solution": {
+        "strategy": "نحوّل المتتالية إلى متتالية هندسية موجبة ومتناقصة، ثم ندرس الدالة التي تربط \\(u_n\\) بـ \\(v_n\\).",
+        "steps": [
+          {
+            "order": 1,
+            "title": "إثبات أن \\(v_n\\) هندسية",
+            "explanation": "نعوض \\(u_{n+1}\\) في تعريف \\(v_{n+1}\\)، ثم نبسط.",
+            "calculation": "\\(v_{n+1}=\\frac{4+2u_{n+1}}{1-2u_{n+1}}=\\frac27\\,\\frac{4+2u_n}{1-2u_n}=\\frac27v_n\\).",
+            "result": "\\((v_n)\\) هندسية أساسها \\(\\frac27\\)."
+          },
+          {
+            "order": 2,
+            "title": "كتابة الحد العام",
+            "explanation": "نحسب \\(v_0\\).",
+            "calculation": "\\(v_0=\\frac{4+2u_0}{1-2u_0}=4\\Longrightarrow v_n=4\\left(\\frac27\\right)^n\\).",
+            "result": "المتتالية \\((v_n)\\) موجبة ومتناقصة تمامًا."
+          },
+          {
+            "order": 3,
+            "title": "استخراج \\(u_n\\)",
+            "explanation": "نحل المعادلة \\(v_n=\\frac{4+2u_n}{1-2u_n}\\) بالنسبة إلى \\(u_n\\).",
+            "calculation": "\\(v_n(1-2u_n)=4+2u_n\\Longrightarrow u_n=\\frac{v_n-4}{2(v_n+1)}\\).",
+            "result": "نكتب \\(u_n=g(v_n)\\) حيث \\(g(x)=\\frac{x-4}{2(x+1)}\\)."
+          },
+          {
+            "order": 4,
+            "title": "دراسة الدالة \\(g\\)",
+            "explanation": "نحسب مشتقتها على المجال \\(x>0\\).",
+            "calculation": "\\(g'(x)=\\frac{5}{2(x+1)^2}>0\\).",
+            "result": "الدالة \\(g\\) متزايدة على \\(]0,+\\infty[\\)."
+          },
+          {
+            "order": 5,
+            "title": "استخلاص اتجاه \\(u_n\\)",
+            "explanation": "بما أن \\(v_n\\) متناقصة و\\(g\\) متزايدة، فإن ترتيب الحدود يُحفظ.",
+            "calculation": "\\(v_{n+1}<v_n\\Longrightarrow g(v_{n+1})<g(v_n)\\Longrightarrow u_{n+1}<u_n\\).",
+            "result": "المتتالية \\((u_n)\\) متناقصة تمامًا."
+          }
+        ],
+        "final_answer": "\\boxed{(u_n)\text{ متناقصة تمامًا}}",
+        "hints": [
+          "ابدأ بإثبات الحصر أو العبارة المساعدة الموجودة في الجزء الأول.",
+          "بعد ذلك احسب الفرق بين حدين متتاليين أو النسبة بينهما.",
+          "حدّد إشارة كل عامل قبل كتابة النتيجة."
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "استعمال نتيجة من سؤال سابق من دون كتابتها أو إثباتها.",
+            "correction": "في النسخة المستقلة أُضيفت النتيجة المطلوبة إلى نص السؤال وأُثبتت داخل الحل قبل استعمالها."
+          },
+          {
+            "mistake": "الحكم على إشارة كسر من دون التأكد من إشارة المقام.",
+            "correction": "يجب تحديد إشارة البسط والمقام كل واحد على حدة."
+          }
+        ],
+        "dependency_handling": {
+          "was_dependent_in_original_exam": true,
+          "previous_result_reused": [
+            "أعد إثبات طبيعة \\((v_n)\\) وعبارتها، ثم اربطها بعبارة \\(u_n\\)."
+          ],
+          "how_made_standalone": "أعيدت صياغة السؤال ليحتوي على كل المعطيات والنتائج المساعدة المطلوبة، ثم أُعيد بناء الحل من الصفر بحيث تُثبت كل نتيجة قبل استعمالها."
+        },
+        "presentation": {
+          "style": "clear_concise_student_friendly",
+          "one_idea_per_step": true,
+          "avoid_repetition": true,
+          "prove_before_use": true
+        }
+      },
+      "original_text": "حدد اتجاه تغير \\((u_n)\\).",
+      "standalone_text": "نعتبر المتتالية \\((u_n)\\) المعرفة بـ:\n\\[\nu_0=0,\\qquad\nu_{n+1}=\\frac{-6u_n+2}{2u_n-3}.\n\\]\nونضع\n\\[\nv_n=\\frac{4+2u_n}{1-2u_n}.\n\\]\n\nحتى يكون السؤال مستقلاً:\n1) أثبت أن \\(v_{n+1}=\\frac27v_n\\)، ثم اكتب \\(v_n\\) بدلالة \\(n\\).\n2) استخرج عبارة \\(u_n\\) بدلالة \\(v_n\\).\n3) حدد اتجاه تغير المتتالية \\((u_n)\\).",
+      "standalone_support": {
+        "requires_previous_question": false,
+        "all_information_is_in_question": true,
+        "integrated_subquestions": [
+          "1) أثبت أن \\(v_{n+1}=\\frac27v_n\\)، ثم اكتب \\(v_n\\) بدلالة \\(n\\).",
+          "2) استخرج عبارة \\(u_n\\) بدلالة \\(v_n\\).",
+          "3) حدد اتجاه تغير المتتالية \\((u_n)\\)."
+        ]
+      }
+    }
+  ],
+  "solution_schema": {
+    "strategy": "string",
+    "detailed_explanation": "string",
+    "steps": [
+      {
+        "order": "integer",
+        "title": "string",
+        "explanation": "string",
+        "calculation": "LaTeX string",
+        "result": "string"
+      }
+    ],
+    "final_answer": "string",
+    "verification": "string",
+    "common_mistakes": [
+      {
+        "mistake": "string",
+        "correction": "string"
+      }
+    ],
+    "hints": [
+      "string"
+    ],
+    "alternative_method": "string",
+    "is_complete": "boolean"
+  },
+  "pedagogical_profile": {
+    "audience": "تلميذ السنة الثالثة ثانوي - بكالوريا الجزائر",
+    "style": "مبسط، واضح، مباشر، دون تكرار",
+    "standalone_questions": true,
+    "avoid_repetition": true,
+    "one_idea_per_step": true
+  },
+  "standalone_question_count": 28,
+  "dependent_questions_resolved": 21,
+  "generation_notes": [
+    "أصبحت الحلول مستقلة ومناسبة للعرض المباشر في المنصة.",
+    "حُذف تكرار الخطوات بين solution.steps وsimple_solution.steps.",
+    "حُذفت العبارات العامة المتكررة التي لا تضيف فائدة للتلميذ.",
+    "احتفظ كل حل بفكرة قصيرة وخطوات واضحة ونتيجة نهائية.",
+    "صُحح سؤال بكالوريا 2014 رقم 5-a، وأزيل استعمال المتتالية u_n غير المعرفة داخله.",
+    "صُححت محارف LaTeX التالفة مثل frac وboxed."
+  ]
+}

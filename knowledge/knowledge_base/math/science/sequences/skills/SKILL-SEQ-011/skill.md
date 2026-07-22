@@ -1,0 +1,36 @@
+---
+{
+  "id": "SKILL-SEQ-011",
+  "title": "إثبات f(I)⊂I",
+  "type": "skill",
+  "description": "كيف أثبت أن صورة المجال داخله؟",
+  "concepts": [
+    "invariant_interval",
+    "function_study"
+  ],
+  "methods": [
+    "METHOD-SEQ-013",
+    "METHOD-SEQ-012"
+  ],
+  "formulas": [],
+  "theorems": [
+    "THEOREM-SEQ-005"
+  ],
+  "bac_questions": [
+    "BAC-2008-SCI-EX03-Q1"
+  ]
+}
+---
+
+# إثبات f(I)⊂I
+
+## السؤال الذي تغطيه المهارة
+كيف أثبت أن صورة المجال داخله؟
+
+## Concepts
+- invariant_interval
+- function_study
+
+## Methods
+- METHOD-SEQ-013
+- METHOD-SEQ-012

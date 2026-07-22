@@ -1,0 +1,697 @@
+{
+  "version": 1,
+  "language": "ar",
+  "direction": "rtl",
+  "subject_code": "math",
+  "chapter_code": "numerical_sequences",
+  "tag": "sequence_limits",
+  "title": "تمارين مباشرة: نهاية المتتالية",
+  "source_file": "bac_sequence_scientifique(13).pdf",
+  "question_count": 10,
+  "years": [
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+  ],
+  "questions": [
+    {
+      "id": "bac_2008_p1_exercise_3_3-b",
+      "year": 2008,
+      "source_file": "bac_sequence_scientifique(13).pdf",
+      "source_page": 1,
+      "exercise": "exercise_3",
+      "number": "3-b",
+      "text": "باستعمال العبارة الصريحة \\(u_n=1+\\frac{1}{(\\frac32)^n+1}\\)، احسب \\(\\lim_{n\\to+\\infty}u_n\\).",
+      "context": "لتكن المتتالية \\((u_n)\\) معرفة على \\(\\mathbb N\\) بـ \\(u_0=\\frac32\\) و\\(u_{n+1}=\\frac{u_n+2}{4-u_n}\\). وقد ثبت أن \\(u_n=1+\\frac{1}{(\\frac32)^n+1}\\) لكل \\(n\\in\\mathbb N\\).",
+      "tag": "sequence_limits",
+      "axis": "نهاية المتتالية والتقارب والتباعد",
+      "secondary_tags": [],
+      "skill": "النهاية",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "أعيدت صياغة السؤال ليكون مستقلًا تمامًا، وأضيفت إليه كل النتائج والمعطيات التي كان يعتمد عليها من الأسئلة السابقة، مع حل جديد مبسط ومفصل.",
+      "solution": {
+        "strategy": "نعتمد مباشرة على العبارة الصريحة، ثم ندرس نهاية القوة الموجودة في المقام.",
+        "detailed_explanation": "بما أن أساس القوة أكبر من واحد، فإن القوة تكبر بلا حد، ولذلك يصبح الكسر قريبًا من الصفر.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "دراسة القوة",
+            "explanation": "لدينا \\(\frac32>1\\)، إذن \\((\frac32)^n\\) تتجه إلى \\(+\\infty\\).",
+            "calculation": "\\(\\left(\\frac32\\right)^n\\longrightarrow +\\infty\\)",
+            "result": "\\(\\left(\\frac32\\right)^n+1\\longrightarrow +\\infty\\)"
+          },
+          {
+            "order": 2,
+            "title": "دراسة الكسر",
+            "explanation": "مقلوب عدد يتجه إلى \\(+\\infty\\) يتجه إلى الصفر.",
+            "calculation": "\\(\\frac1{(\\frac32)^n+1}\\longrightarrow0\\)",
+            "result": "\\(\\lim \\frac1{(\\frac32)^n+1}=0\\)"
+          },
+          {
+            "order": 3,
+            "title": "حساب النهاية",
+            "explanation": "نعوض نهاية الكسر في عبارة \\(u_n\\).",
+            "calculation": "\\(u_n=1+\\frac1{(\\frac32)^n+1}\\longrightarrow1+0\\)",
+            "result": "\\(\\lim u_n=1\\)"
+          }
+        ],
+        "final_answer": "\\(\\boxed{\\lim_{n\\to+\\infty}u_n=1}\\)",
+        "verification": "الحد الإضافي موجب ويتجه إلى الصفر، لذلك تقترب حدود المتتالية من \\(1\\) من الأعلى.",
+        "common_mistakes": [
+          {
+            "mistake": "استعمال نتيجة غير مذكورة في نص السؤال.",
+            "correction": "نستعمل فقط المعطيات المضافة داخل السؤال المستقل، ونبرهن كل نتيجة نحتاجها."
+          }
+        ],
+        "hints": [
+          "حدد أولًا الشكل المناسب: حصر، متتالية مساعدة، أو حد عام.",
+          "احسب نهاية الجزء الذي يحتوي على قوة مثل \\(q^n\\).",
+          "اكتب الجواب النهائي بوضوح مع رمز النهاية."
+        ],
+        "alternative_method": "",
+        "is_complete": true
+      }
+    },
+    {
+      "id": "bac_2008_p1_exercise_4_2-c",
+      "year": 2008,
+      "source_file": "bac_sequence_scientifique(13).pdf",
+      "source_page": 1,
+      "exercise": "exercise_4",
+      "number": "2-c",
+      "text": "أثبت أن المتتالية \\((u_n)\\) متقاربة، ثم حدد نهايتها.",
+      "context": "لتكن المتتالية \\((u_n)\\) معرفة بـ \\(u_0=\\frac52\\) و\\(u_{n+1}=\\frac23u_n+2\\). وقد ثبت أن \\((u_n)\\) متزايدة وأن \\(u_n\\le6\\) لكل \\(n\\in\\mathbb N\\).",
+      "tag": "sequence_limits",
+      "axis": "نهاية المتتالية والتقارب والتباعد",
+      "secondary_tags": [
+        "bounded_sequences",
+        "sequence_monotonicity"
+      ],
+      "skill": "التقارب الرتيب",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "أعيدت صياغة السؤال ليكون مستقلًا تمامًا، وأضيفت إليه كل النتائج والمعطيات التي كان يعتمد عليها من الأسئلة السابقة، مع حل جديد مبسط ومفصل.",
+      "solution": {
+        "strategy": "نطبق مبرهنة التقارب الرتيب: متتالية متزايدة ومحدودة من الأعلى تكون متقاربة، ثم نوجد النهاية من العلاقة التراجعية.",
+        "detailed_explanation": "المعطيان: التزايد ووجود الحد الأعلى \\(6\\)، يكفيان لإثبات التقارب. بعد ذلك نرمز للنهاية بـ \\(\\ell\\) ونمر إلى النهاية.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "إثبات التقارب",
+            "explanation": "المتتالية متزايدة ومحدودة من الأعلى بالعدد \\(6\\).",
+            "calculation": "\\((u_n)\\) متزايدة و\\(u_n\\le6\\)",
+            "result": "إذن \\((u_n)\\) متقاربة."
+          },
+          {
+            "order": 2,
+            "title": "كتابة معادلة النهاية",
+            "explanation": "إذا كانت \\(u_n\to\\ell\\)، فإن \\(u_{n+1}\to\\ell\\) أيضًا.",
+            "calculation": "\\(\\ell=\\frac23\\ell+2\\)",
+            "result": "\\(\\frac13\\ell=2\\)"
+          },
+          {
+            "order": 3,
+            "title": "حل المعادلة",
+            "explanation": "نضرب الطرفين في \\(3\\).",
+            "calculation": "\\(\\ell=6\\)",
+            "result": "\\(\\lim u_n=6\\)"
+          }
+        ],
+        "final_answer": "\\(\\boxed{(u_n)\\text{ متقاربة و }\\lim u_n=6}\\)",
+        "verification": "القيمة \\(6\\) تحقق فعلًا \\(6=\frac23\times6+2\\).",
+        "common_mistakes": [
+          {
+            "mistake": "استعمال نتيجة غير مذكورة في نص السؤال.",
+            "correction": "نستعمل فقط المعطيات المضافة داخل السؤال المستقل، ونبرهن كل نتيجة نحتاجها."
+          }
+        ],
+        "hints": [
+          "حدد أولًا الشكل المناسب: حصر، متتالية مساعدة، أو حد عام.",
+          "احسب نهاية الجزء الذي يحتوي على قوة مثل \\(q^n\\).",
+          "اكتب الجواب النهائي بوضوح مع رمز النهاية."
+        ],
+        "alternative_method": "",
+        "is_complete": true
+      }
+    },
+    {
+      "id": "bac_2009_p2_exercise_1_3-c",
+      "year": 2009,
+      "source_file": "bac_sequence_scientifique(13).pdf",
+      "source_page": 2,
+      "exercise": "exercise_1",
+      "number": "3-c",
+      "text": "باستعمال العبارة الصريحة، بين أن المتتالية \\((u_n)\\) متقاربة وحدد نهايتها.",
+      "context": "لتكن \\((u_n)\\) معرفة بـ \\(u_0=1\\)، \\(u_1=2\\)، و\\(u_{n+2}=\\frac43u_{n+1}-\\frac13u_n\\). وقد ثبت أن \\(u_n=\\frac52-\\frac32(\\frac13)^n\\) لكل \\(n\\in\\mathbb N\\).",
+      "tag": "sequence_limits",
+      "axis": "نهاية المتتالية والتقارب والتباعد",
+      "secondary_tags": [],
+      "skill": "التقارب",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "أعيدت صياغة السؤال ليكون مستقلًا تمامًا، وأضيفت إليه كل النتائج والمعطيات التي كان يعتمد عليها من الأسئلة السابقة، مع حل جديد مبسط ومفصل.",
+      "solution": {
+        "strategy": "نحسب نهاية العبارة الصريحة، وبالخصوص نهاية القوة \\((\frac13)^n\\).",
+        "detailed_explanation": "الحد العام يساوي عددًا ثابتًا ناقص مقدارًا يتجه إلى الصفر.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "نهاية القوة",
+            "explanation": "الأساس محصور مطلقًا بين \\(-1\\) و\\(1\\).",
+            "calculation": "\\(\\left(\\frac13\\right)^n\\longrightarrow0\\)",
+            "result": "\\(-\\frac32(\\frac13)^n\\longrightarrow0\\)"
+          },
+          {
+            "order": 2,
+            "title": "نهاية المتتالية",
+            "explanation": "نعوض في الحد العام.",
+            "calculation": "\\(u_n=\\frac52-\\frac32(\\frac13)^n\\longrightarrow\\frac52\\)",
+            "result": "\\(\\lim u_n=\\frac52\\)"
+          },
+          {
+            "order": 3,
+            "title": "الاستنتاج",
+            "explanation": "وجود نهاية حقيقية يعني أن المتتالية متقاربة.",
+            "calculation": "النهاية موجودة ومحدودة.",
+            "result": "إذن \\((u_n)\\) متقاربة."
+          }
+        ],
+        "final_answer": "\\(\\boxed{\\lim_{n\\to+\\infty}u_n=\\frac52}\\)",
+        "verification": "عند \\(n=0\\)، تعطي العبارة \\(\frac52-\frac32=1\\)، وهو الحد الأول الصحيح.",
+        "common_mistakes": [
+          {
+            "mistake": "استعمال نتيجة غير مذكورة في نص السؤال.",
+            "correction": "نستعمل فقط المعطيات المضافة داخل السؤال المستقل، ونبرهن كل نتيجة نحتاجها."
+          }
+        ],
+        "hints": [
+          "حدد أولًا الشكل المناسب: حصر، متتالية مساعدة، أو حد عام.",
+          "احسب نهاية الجزء الذي يحتوي على قوة مثل \\(q^n\\).",
+          "اكتب الجواب النهائي بوضوح مع رمز النهاية."
+        ],
+        "alternative_method": "",
+        "is_complete": true
+      }
+    },
+    {
+      "id": "bac_2010_p3_qcm_2",
+      "year": 2010,
+      "source_file": "bac_sequence_scientifique(13).pdf",
+      "source_page": 3,
+      "exercise": "qcm",
+      "number": "2",
+      "text": "أثبت أن \\((v_n)\\) هندسية، ثم حدد نهاية \\((u_n)\\).",
+      "context": "لتكن \\((u_n)\\) معرفة بـ \\(u_0=-1\\) و\\(u_{n+1}=3u_n+1\\). نضع \\(v_n=u_n+\\frac12\\).",
+      "tag": "sequence_limits",
+      "axis": "نهاية المتتالية والتقارب والتباعد",
+      "secondary_tags": [],
+      "skill": "النهاية",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "أعيدت صياغة السؤال ليكون مستقلًا تمامًا، وأضيفت إليه كل النتائج والمعطيات التي كان يعتمد عليها من الأسئلة السابقة، مع حل جديد مبسط ومفصل.",
+      "solution": {
+        "strategy": "نحوّل العلاقة التراجعية إلى متتالية هندسية باستعمال \\(v_n=u_n+\frac12\\).",
+        "detailed_explanation": "بعد إيجاد الحد العام نلاحظ أن قوة العدد \\(3\\) تكبر بلا حد، ومع الإشارة السالبة نحصل على \\(-\\infty\\).",
+        "steps": [
+          {
+            "order": 1,
+            "title": "العلاقة الهندسية",
+            "explanation": "نعوض تعريف \\(v_n\\).",
+            "calculation": "\\(v_{n+1}=u_{n+1}+\\frac12=3u_n+\\frac32=3(u_n+\\frac12)\\)",
+            "result": "\\(v_{n+1}=3v_n\\)"
+          },
+          {
+            "order": 2,
+            "title": "الحد العام",
+            "explanation": "نحسب \\(v_0\\).",
+            "calculation": "\\(v_0=-1+\\frac12=-\\frac12\\)",
+            "result": "\\(v_n=-\\frac12\\,3^n\\)"
+          },
+          {
+            "order": 3,
+            "title": "عبارة \\(u_n\\)",
+            "explanation": "من \\(u_n=v_n-\frac12\\).",
+            "calculation": "\\(u_n=-\\frac12(3^n+1)\\)",
+            "result": "\\(u_n<0\\)"
+          },
+          {
+            "order": 4,
+            "title": "النهاية",
+            "explanation": "بما أن \\(3^n\to+\\infty\\).",
+            "calculation": "\\(-\\frac12(3^n+1)\\to-\\infty\\)",
+            "result": "\\(\\lim u_n=-\\infty\\)"
+          }
+        ],
+        "final_answer": "\\(\\boxed{\\lim_{n\\to+\\infty}u_n=-\\infty}\\)",
+        "verification": "نحسب مثلًا \\(u_1=-2\\)، والعبارة تعطي \\(-\frac12(3+1)=-2\\).",
+        "common_mistakes": [
+          {
+            "mistake": "استعمال نتيجة غير مذكورة في نص السؤال.",
+            "correction": "نستعمل فقط المعطيات المضافة داخل السؤال المستقل، ونبرهن كل نتيجة نحتاجها."
+          }
+        ],
+        "hints": [
+          "حدد أولًا الشكل المناسب: حصر، متتالية مساعدة، أو حد عام.",
+          "احسب نهاية الجزء الذي يحتوي على قوة مثل \\(q^n\\).",
+          "اكتب الجواب النهائي بوضوح مع رمز النهاية."
+        ],
+        "alternative_method": "",
+        "is_complete": true
+      }
+    },
+    {
+      "id": "bac_2011_p4_exercise_1_1-c",
+      "year": 2011,
+      "source_file": "bac_sequence_scientifique(13).pdf",
+      "source_page": 4,
+      "exercise": "exercise_1",
+      "number": "1-c",
+      "text": "حدد جميع قيم \\(\\alpha\\) التي تكون من أجلها المتتالية \\((u_n)\\) متقاربة.",
+      "context": "ليكن \\(\\alpha>0\\) و\\(\\alpha\\ne1\\). نعتبر \\(u_0=6\\)، \\(u_{n+1}=\\alpha u_n+1\\)، ونضع \\(v_n=u_n+\\frac1{\\alpha-1}\\).",
+      "tag": "sequence_limits",
+      "axis": "نهاية المتتالية والتقارب والتباعد",
+      "secondary_tags": [
+        "geometric_sequences"
+      ],
+      "skill": "تقارب حسب وسيط",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "أعيدت صياغة السؤال ليكون مستقلًا تمامًا، وأضيفت إليه كل النتائج والمعطيات التي كان يعتمد عليها من الأسئلة السابقة، مع حل جديد مبسط ومفصل.",
+      "solution": {
+        "strategy": "نثبت أن \\((v_n)\\) هندسية أساسها \\(\u0007lpha\\)، ثم نستعمل شرط تقارب \\(\u0007lpha^n\\).",
+        "detailed_explanation": "لأن \\(\u0007lpha>0\\)، فإن \\(\u0007lpha^n\to0\\) بالضبط عندما \\(0<\u0007lpha<1\\).",
+        "steps": [
+          {
+            "order": 1,
+            "title": "إثبات أن \\(v_n\\) هندسية",
+            "explanation": "نعوض العلاقة التراجعية.",
+            "calculation": "\\(v_{n+1}=\\alpha u_n+1+\\frac1{\\alpha-1}=\\alpha(u_n+\\frac1{\\alpha-1})\\)",
+            "result": "\\(v_{n+1}=\\alpha v_n\\)"
+          },
+          {
+            "order": 2,
+            "title": "كتابة الحد العام",
+            "explanation": "المتتالية هندسية.",
+            "calculation": "\\(v_n=v_0\\alpha^n\\), حيث \\(v_0=6+\\frac1{\\alpha-1}\\)",
+            "result": "\\(u_n=v_0\\alpha^n-\\frac1{\\alpha-1}\\)"
+          },
+          {
+            "order": 3,
+            "title": "شرط التقارب",
+            "explanation": "إذا \\(0<\u0007lpha<1\\)، فإن \\(\u0007lpha^n\to0\\). أما إذا \\(\u0007lpha>1\\)، فإن \\(\u0007lpha^n\to+\\infty\\) ومعاملها غير منعدم.",
+            "calculation": "\\(0<\\alpha<1\\)",
+            "result": "\\(u_n\\to\\frac1{1-\\alpha}\\)"
+          },
+          {
+            "order": 4,
+            "title": "النتيجة",
+            "explanation": "نستبعد \\(\u0007lpha=1\\) حسب المعطيات.",
+            "calculation": "مجموعة القيم المقبولة هي المجال المفتوح بين \\(0\\) و\\(1\\).",
+            "result": "\\(\\alpha\\in]0,1[\\)"
+          }
+        ],
+        "final_answer": "\\(\\boxed{(u_n)\\text{ متقاربة إذا وفقط إذا }0<\\alpha<1}\\)",
+        "verification": "عند \\(0<\u0007lpha<1\\)، النهاية \\(\frac1{1-\u0007lpha}\\) تحقق معادلة التثبيت \\(\\ell=\u0007lpha\\ell+1\\).",
+        "common_mistakes": [
+          {
+            "mistake": "استعمال نتيجة غير مذكورة في نص السؤال.",
+            "correction": "نستعمل فقط المعطيات المضافة داخل السؤال المستقل، ونبرهن كل نتيجة نحتاجها."
+          }
+        ],
+        "hints": [
+          "حدد أولًا الشكل المناسب: حصر، متتالية مساعدة، أو حد عام.",
+          "احسب نهاية الجزء الذي يحتوي على قوة مثل \\(q^n\\).",
+          "اكتب الجواب النهائي بوضوح مع رمز النهاية."
+        ],
+        "alternative_method": "",
+        "is_complete": true
+      }
+    },
+    {
+      "id": "bac_2012_p5_exercise_1_3-b",
+      "year": 2012,
+      "source_file": "bac_sequence_scientifique(13).pdf",
+      "source_page": 5,
+      "exercise": "exercise_1",
+      "number": "3-b",
+      "text": "أثبت أن \\((u_n)\\) متقاربة، ثم احسب نهايتها.",
+      "context": "لتكن \\((u_n)\\) معرفة بـ \\(u_0=1\\) و\\(u_{n+1}=\\sqrt{2u_n+3}\\). وقد ثبت أن \\(0<u_n<3\\) وأن \\((u_n)\\) متزايدة.",
+      "tag": "sequence_limits",
+      "axis": "نهاية المتتالية والتقارب والتباعد",
+      "secondary_tags": [
+        "bounded_sequences",
+        "sequence_monotonicity"
+      ],
+      "skill": "التقارب والنهاية",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "أعيدت صياغة السؤال ليكون مستقلًا تمامًا، وأضيفت إليه كل النتائج والمعطيات التي كان يعتمد عليها من الأسئلة السابقة، مع حل جديد مبسط ومفصل.",
+      "solution": {
+        "strategy": "نطبق مبرهنة التقارب الرتيب، ثم نحل معادلة النهاية مع احترام إشارة الجذر.",
+        "detailed_explanation": "التزايد مع الحصر من الأعلى يضمن التقارب. ولأن الحدود موجبة، نختار الحل الموجب لمعادلة النهاية.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "إثبات التقارب",
+            "explanation": "المتتالية متزايدة ومحدودة من الأعلى بالعدد \\(3\\).",
+            "calculation": "\\(0<u_n<3\\)",
+            "result": "إذن \\((u_n)\\) متقاربة."
+          },
+          {
+            "order": 2,
+            "title": "معادلة النهاية",
+            "explanation": "نفرض \\(u_n\to\\ell\\).",
+            "calculation": "\\(\\ell=\\sqrt{2\\ell+3}\\)",
+            "result": "\\(\\ell\\ge0\\)"
+          },
+          {
+            "order": 3,
+            "title": "حل المعادلة",
+            "explanation": "نربع الطرفين ثم نحل.",
+            "calculation": "\\(\\ell^2=2\\ell+3\\iff(\\ell-3)(\\ell+1)=0\\)",
+            "result": "\\(\\ell=3\\) أو \\(\\ell=-1\\)"
+          },
+          {
+            "order": 4,
+            "title": "اختيار الحل الصحيح",
+            "explanation": "النهاية لا يمكن أن تكون سالبة لأن كل الحدود موجبة.",
+            "calculation": "\\(\\ell\\ge0\\)",
+            "result": "\\(\\ell=3\\)"
+          }
+        ],
+        "final_answer": "\\(\\boxed{\\lim u_n=3}\\)",
+        "verification": "القيمة \\(3\\) تحقق \\(3=\\sqrt{2\times3+3}=3\\).",
+        "common_mistakes": [
+          {
+            "mistake": "استعمال نتيجة غير مذكورة في نص السؤال.",
+            "correction": "نستعمل فقط المعطيات المضافة داخل السؤال المستقل، ونبرهن كل نتيجة نحتاجها."
+          }
+        ],
+        "hints": [
+          "حدد أولًا الشكل المناسب: حصر، متتالية مساعدة، أو حد عام.",
+          "احسب نهاية الجزء الذي يحتوي على قوة مثل \\(q^n\\).",
+          "اكتب الجواب النهائي بوضوح مع رمز النهاية."
+        ],
+        "alternative_method": "",
+        "is_complete": true
+      }
+    },
+    {
+      "id": "bac_2012_p5_exercise_2_3",
+      "year": 2012,
+      "source_file": "bac_sequence_scientifique(13).pdf",
+      "source_page": 5,
+      "exercise": "exercise_2",
+      "number": "3",
+      "text": "برر بدقة لماذا المتتالية \\((u_n)\\) متقاربة، ثم حدد نهايتها.",
+      "context": "لتكن \\((u_n)\\) معرفة بـ \\(u_0=\\frac{13}{4}\\) و\\(u_{n+1}=3+\\sqrt{u_n-3}\\). وقد ثبت أن \\(3<u_n<4\\) وأن \\((u_n)\\) متزايدة تمامًا.",
+      "tag": "sequence_limits",
+      "axis": "نهاية المتتالية والتقارب والتباعد",
+      "secondary_tags": [
+        "bounded_sequences",
+        "sequence_monotonicity"
+      ],
+      "skill": "التقارب الرتيب",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "أعيدت صياغة السؤال ليكون مستقلًا تمامًا، وأضيفت إليه كل النتائج والمعطيات التي كان يعتمد عليها من الأسئلة السابقة، مع حل جديد مبسط ومفصل.",
+      "solution": {
+        "strategy": "نستعمل مبرهنة التقارب الرتيب، ثم معادلة النهاية.",
+        "detailed_explanation": "المتتالية متزايدة لكنها لا تتجاوز \\(4\\)، لذلك لا يمكن أن تستمر في الارتفاع بلا حد.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "التقارب",
+            "explanation": "لدينا \\((u_n)\\) متزايدة و\\(u_n<4\\).",
+            "calculation": "المتتالية محدودة من الأعلى بالعدد \\(4\\).",
+            "result": "إذن \\((u_n)\\) متقاربة."
+          },
+          {
+            "order": 2,
+            "title": "معادلة النهاية",
+            "explanation": "نرمز إلى النهاية بـ \\(\\ell\\).",
+            "calculation": "\\(\\ell=3+\\sqrt{\\ell-3}\\)",
+            "result": "\\(3\\le\\ell\\le4\\)"
+          },
+          {
+            "order": 3,
+            "title": "حل المعادلة",
+            "explanation": "نضع \\(x=\\sqrt{\\ell-3}\\ge0\\)، فيكون \\(\\ell=x^2+3\\).",
+            "calculation": "\\(x^2+3=3+x\\iff x(x-1)=0\\)",
+            "result": "\\(x=0\\) أو \\(x=1\\)"
+          },
+          {
+            "order": 4,
+            "title": "اختيار النهاية",
+            "explanation": "بما أن المتتالية متزايدة وتنطلق من \\(\frac{13}{4}>3\\)، فلا يمكن أن تكون النهاية \\(3\\).",
+            "calculation": "\\(\\ell=4\\)",
+            "result": "\\(\\lim u_n=4\\)"
+          }
+        ],
+        "final_answer": "\\(\\boxed{(u_n)\\text{ متقاربة و }\\lim u_n=4}\\)",
+        "verification": "القيمة \\(4\\) تحقق \\(4=3+\\sqrt{4-3}\\).",
+        "common_mistakes": [
+          {
+            "mistake": "استعمال نتيجة غير مذكورة في نص السؤال.",
+            "correction": "نستعمل فقط المعطيات المضافة داخل السؤال المستقل، ونبرهن كل نتيجة نحتاجها."
+          }
+        ],
+        "hints": [
+          "حدد أولًا الشكل المناسب: حصر، متتالية مساعدة، أو حد عام.",
+          "احسب نهاية الجزء الذي يحتوي على قوة مثل \\(q^n\\).",
+          "اكتب الجواب النهائي بوضوح مع رمز النهاية."
+        ],
+        "alternative_method": "",
+        "is_complete": true
+      }
+    },
+    {
+      "id": "bac_2012_p5_exercise_2_4-b",
+      "year": 2012,
+      "source_file": "bac_sequence_scientifique(13).pdf",
+      "source_page": 5,
+      "exercise": "exercise_2",
+      "number": "4-b",
+      "text": "اكتب \\(v_n\\) ثم \\(u_n\\) بدلالة \\(n\\)، وبعد ذلك احسب \\(\\lim_{n\\to+\\infty}u_n\\).",
+      "context": "لتكن \\((u_n)\\) معرفة بـ \\(u_0=\\frac{13}{4}\\) و\\(u_{n+1}=3+\\sqrt{u_n-3}\\). نضع \\(v_n=\\ln(u_n-3)\\). وقد ثبت أن \\((v_n)\\) هندسية أساسها \\(\\frac12\\).",
+      "tag": "sequence_limits",
+      "axis": "نهاية المتتالية والتقارب والتباعد",
+      "secondary_tags": [
+        "geometric_sequences"
+      ],
+      "skill": "الحد العام والنهاية",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "أعيدت صياغة السؤال ليكون مستقلًا تمامًا، وأضيفت إليه كل النتائج والمعطيات التي كان يعتمد عليها من الأسئلة السابقة، مع حل جديد مبسط ومفصل.",
+      "solution": {
+        "strategy": "نحسب الحد الأول للمتتالية الهندسية، ثم نعود من اللوغاريتم إلى الأس باستعمال الدالة الأسية.",
+        "detailed_explanation": "التعريف \\(v_n=\\ln(u_n-3)\\) يعني أن \\(u_n-3=e^{v_n}\\).",
+        "steps": [
+          {
+            "order": 1,
+            "title": "حساب \\(v_0\\)",
+            "explanation": "نعوض \\(u_0=\frac{13}{4}\\).",
+            "calculation": "\\(v_0=\\ln(\\frac14)=-\\ln4\\)",
+            "result": "\\(v_0=-\\ln4\\)"
+          },
+          {
+            "order": 2,
+            "title": "الحد العام لـ \\(v_n\\)",
+            "explanation": "أساس المتتالية هو \\(\frac12\\).",
+            "calculation": "\\(v_n=v_0(\\frac12)^n=-\\frac{\\ln4}{2^n}\\)",
+            "result": "\\(v_n=-\\frac{\\ln4}{2^n}\\)"
+          },
+          {
+            "order": 3,
+            "title": "الرجوع إلى \\(u_n\\)",
+            "explanation": "نطبق الأسية على الطرفين.",
+            "calculation": "\\(u_n-3=e^{v_n}=e^{-\\frac{\\ln4}{2^n}}=4^{-1/2^n}\\)",
+            "result": "\\(u_n=3+4^{-1/2^n}\\)"
+          },
+          {
+            "order": 4,
+            "title": "حساب النهاية",
+            "explanation": "لدينا \\(\frac1{2^n}\to0\\)، وبالتالي \\(4^{-1/2^n}\to4^0=1\\).",
+            "calculation": "\\(u_n\\to3+1\\)",
+            "result": "\\(\\lim u_n=4\\)"
+          }
+        ],
+        "final_answer": "\\(\\boxed{v_n=-\\frac{\\ln4}{2^n},\\quad u_n=3+4^{-1/2^n},\\quad \\lim u_n=4}\\)",
+        "verification": "عند \\(n=0\\): \\(3+4^{-1}=\frac{13}{4}\\).",
+        "common_mistakes": [
+          {
+            "mistake": "استعمال نتيجة غير مذكورة في نص السؤال.",
+            "correction": "نستعمل فقط المعطيات المضافة داخل السؤال المستقل، ونبرهن كل نتيجة نحتاجها."
+          }
+        ],
+        "hints": [
+          "حدد أولًا الشكل المناسب: حصر، متتالية مساعدة، أو حد عام.",
+          "احسب نهاية الجزء الذي يحتوي على قوة مثل \\(q^n\\).",
+          "اكتب الجواب النهائي بوضوح مع رمز النهاية."
+        ],
+        "alternative_method": "",
+        "is_complete": true
+      }
+    },
+    {
+      "id": "bac_2013_p6_exercise_2_I_2",
+      "year": 2013,
+      "source_file": "bac_sequence_scientifique(13).pdf",
+      "source_page": 6,
+      "exercise": "exercise_2_I",
+      "number": "2",
+      "text": "احسب \\(\\lim_{n\\to+\\infty}v_n\\).",
+      "context": "لتكن المتتالية \\((v_n)\\) معرفة بـ \\(v_n=\\frac{5^{n+1}}{6^n}\\) لكل \\(n\\in\\mathbb N\\).",
+      "tag": "sequence_limits",
+      "axis": "نهاية المتتالية والتقارب والتباعد",
+      "secondary_tags": [
+        "geometric_sequences"
+      ],
+      "skill": "نهاية قوة",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "أعيدت صياغة السؤال ليكون مستقلًا تمامًا، وأضيفت إليه كل النتائج والمعطيات التي كان يعتمد عليها من الأسئلة السابقة، مع حل جديد مبسط ومفصل.",
+      "solution": {
+        "strategy": "نحوّل العبارة إلى ثابت مضروب في قوة أساسها أصغر من \\(1\\).",
+        "detailed_explanation": "نكتب \\(5^{n+1}=5\\cdot5^n\\)، ثم نجمع القوتين في كسر واحد.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "تبسيط الحد العام",
+            "explanation": "نفصل عامل \\(5\\).",
+            "calculation": "\\(v_n=5\\frac{5^n}{6^n}=5(\\frac56)^n\\)",
+            "result": "\\(v_n=5(\\frac56)^n\\)"
+          },
+          {
+            "order": 2,
+            "title": "نهاية القوة",
+            "explanation": "لأن \\(0<\frac56<1\\).",
+            "calculation": "\\((\\frac56)^n\\to0\\)",
+            "result": "\\(5(\\frac56)^n\\to0\\)"
+          },
+          {
+            "order": 3,
+            "title": "النتيجة",
+            "explanation": "نستنتج مباشرة.",
+            "calculation": "\\(\\lim v_n=5\\times0\\)",
+            "result": "\\(\\lim v_n=0\\)"
+          }
+        ],
+        "final_answer": "\\(\\boxed{\\lim v_n=0}\\)",
+        "verification": "كل الحدود موجبة وتتناقص لأننا نضرب كل مرة في \\(\frac56\\).",
+        "common_mistakes": [
+          {
+            "mistake": "استعمال نتيجة غير مذكورة في نص السؤال.",
+            "correction": "نستعمل فقط المعطيات المضافة داخل السؤال المستقل، ونبرهن كل نتيجة نحتاجها."
+          }
+        ],
+        "hints": [
+          "حدد أولًا الشكل المناسب: حصر، متتالية مساعدة، أو حد عام.",
+          "احسب نهاية الجزء الذي يحتوي على قوة مثل \\(q^n\\).",
+          "اكتب الجواب النهائي بوضوح مع رمز النهاية."
+        ],
+        "alternative_method": "",
+        "is_complete": true
+      }
+    },
+    {
+      "id": "bac_2013_p6_exercise_2_II_3-b",
+      "year": 2013,
+      "source_file": "bac_sequence_scientifique(13).pdf",
+      "source_page": 6,
+      "exercise": "exercise_2_II",
+      "number": "3-b",
+      "text": "باستعمال الحصر \\(0\\le6-u_n\\le5(\\frac56)^n\\)، استنتج نهاية المتتالية \\((u_n)\\).",
+      "context": "لتكن \\((u_n)\\) معرفة بـ \\(u_0=1\\) و\\(u_{n+1}=\\sqrt{5u_n+6}\\). ولتكن \\(v_n=5(\\frac56)^n\\). وقد ثبت أنه لكل \\(n\\): \\(0\\le6-u_n\\le v_n\\).",
+      "tag": "sequence_limits",
+      "axis": "نهاية المتتالية والتقارب والتباعد",
+      "secondary_tags": [
+        "bounded_sequences"
+      ],
+      "skill": "الحصر والنهاية",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "أعيدت صياغة السؤال ليكون مستقلًا تمامًا، وأضيفت إليه كل النتائج والمعطيات التي كان يعتمد عليها من الأسئلة السابقة، مع حل جديد مبسط ومفصل.",
+      "solution": {
+        "strategy": "نستعمل مبرهنة الحصر على الفرق \\(6-u_n\\).",
+        "detailed_explanation": "الطرف الأعلى يقترب من الصفر، والطرف الأدنى يساوي الصفر، لذلك الفرق نفسه يقترب من الصفر.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "نهاية الحد الأعلى",
+            "explanation": "لأن \\(0<\frac56<1\\).",
+            "calculation": "\\(5(\\frac56)^n\\to0\\)",
+            "result": "\\(v_n\\to0\\)"
+          },
+          {
+            "order": 2,
+            "title": "تطبيق الحصر",
+            "explanation": "لدينا \\(0\\le6-u_n\\le v_n\\) والطرفان يقتربان من \\(0\\).",
+            "calculation": "\\(0\\le6-u_n\\le5(\\frac56)^n\\)",
+            "result": "\\(6-u_n\\to0\\)"
+          },
+          {
+            "order": 3,
+            "title": "استخراج نهاية \\(u_n\\)",
+            "explanation": "إذا كان \\(6-u_n\to0\\)، فإن \\(u_n\to6\\).",
+            "calculation": "\\(u_n=6-(6-u_n)\\)",
+            "result": "\\(\\lim u_n=6\\)"
+          }
+        ],
+        "final_answer": "\\(\\boxed{\\lim_{n\\to+\\infty}u_n=6}\\)",
+        "verification": "الفرق بين \\(u_n\\) و\\(6\\) محصور بمقدار يتجه إلى الصفر.",
+        "common_mistakes": [
+          {
+            "mistake": "استعمال نتيجة غير مذكورة في نص السؤال.",
+            "correction": "نستعمل فقط المعطيات المضافة داخل السؤال المستقل، ونبرهن كل نتيجة نحتاجها."
+          }
+        ],
+        "hints": [
+          "حدد أولًا الشكل المناسب: حصر، متتالية مساعدة، أو حد عام.",
+          "احسب نهاية الجزء الذي يحتوي على قوة مثل \\(q^n\\).",
+          "اكتب الجواب النهائي بوضوح مع رمز النهاية."
+        ],
+        "alternative_method": "",
+        "is_complete": true
+      }
+    }
+  ],
+  "processing_note": "جميع الأسئلة مستقلة 100%، ولا يعتمد أي سؤال على سؤال سابق. أُعيدت كتابة الحلول بالكامل بخطوات بسيطة ومفصلة."
+}

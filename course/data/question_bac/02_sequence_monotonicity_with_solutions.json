@@ -1,0 +1,1827 @@
+{
+  "version": 2,
+  "language": "ar",
+  "direction": "rtl",
+  "subject_code": "math",
+  "chapter_code": "sequences",
+  "tag": "seq_monotonicity",
+  "title": "اتجاه تغير المتتالية",
+  "source_file": "bac_sequence_scientifique(5).pdf",
+  "question_count": 28,
+  "years": [
+    2008,
+    2010,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+  ],
+  "questions": [
+    {
+      "id": "bac_2008_p1_exercise_3_2-b",
+      "year": 2008,
+      "source_file": "bac_sequence_scientifique(5).pdf",
+      "source_page": 1,
+      "exercise": "exercise_3",
+      "number": "2-b",
+      "text": "ادرس اتجاه تغير \\((u_n)\\)، ثم استنتج أنها متقاربة.",
+      "context": "\\(u_0=\\frac32\\), \\(u_{n+1}=\\frac{u_n+2}{-u_n+4}\\), و\\(I=[1,2]\\).",
+      "tag": "seq_monotonicity",
+      "axis": "اتجاه تغير المتتالية",
+      "secondary_tags": [
+        "sequence_limits_convergence_divergence",
+        "bounded_sequences"
+      ],
+      "skill": "الرتابة والتقارب",
+      "difficulty": "medium",
+      "is_standalone": false,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمت كتابة السؤال من الوثيقة المصورة مع توحيد الترميز الرياضي بصيغة LaTeX.",
+      "solution": {
+        "strategy": "نحسب الفرق \\(u_{n+1}-u_n\\) ونستعمل أن حدود المتتالية تنتمي إلى المجال \\([1,2]\\).",
+        "detailed_explanation": "عندما تكون المتتالية معرفة بعلاقة تراجعية كسرية، فإن دراسة إشارة الفرق هي الطريقة المباشرة. بما أن \\(1\\le u_n\\le2\\)، يمكن تحديد إشارة جميع العوامل بسهولة.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "حساب الفرق",
+            "explanation": "نطرح \\(u_n\\) من العلاقة التراجعية.",
+            "calculation": "\\(u_{n+1}-u_n=\\frac{u_n+2}{4-u_n}-u_n=\\frac{(u_n-1)(u_n-2)}{4-u_n}\\)",
+            "result": "حصلنا على فرق مفكك إلى عوامل."
+          },
+          {
+            "order": 2,
+            "title": "دراسة الإشارة",
+            "explanation": "على المجال \\([1,2]\\) يكون المقام موجبًا والجداء في البسط غير موجب.",
+            "calculation": "\\((u_n-1)\\ge0,\\ (u_n-2)\\le0,\\ 4-u_n>0\\)",
+            "result": "\\(u_{n+1}-u_n\\le0\\)."
+          },
+          {
+            "order": 3,
+            "title": "استخلاص الرتابة",
+            "explanation": "إشارة الفرق السالبة تعني أن الحدود لا تزداد.",
+            "calculation": "\\(u_{n+1}\\le u_n\\)",
+            "result": "المتتالية متناقصة."
+          },
+          {
+            "order": 4,
+            "title": "إثبات التقارب",
+            "explanation": "كل متتالية متناقصة ومحدودة من الأسفل متقاربة.",
+            "calculation": "\\(u_n\\ge1\\)",
+            "result": "المتتالية متقاربة."
+          }
+        ],
+        "final_answer": "المتتالية \\((u_n)\\) متناقصة ومحدودة من الأسفل بالعدد \\(1\\)، ومنه فهي متقاربة.",
+        "verification": "الحد الأول \\(u_0=\\frac32\\) ينتمي إلى \\([1,2]\\)، والفرق غير موجب على هذا المجال.",
+        "common_mistakes": [
+          {
+            "mistake": "نسيان إشارة المقام",
+            "correction": "يجب التحقق أن \\(4-u_n>0\\) قبل تحديد إشارة الكسر."
+          }
+        ],
+        "hints": [
+          "احسب \\(u_{n+1}-u_n\\).",
+          "فكك البسط إلى \\((u_n-1)(u_n-2)\\)."
+        ],
+        "alternative_method": "",
+        "is_complete": true
+      }
+    },
+    {
+      "id": "bac_2008_p1_exercise_4_2-b",
+      "year": 2008,
+      "source_file": "bac_sequence_scientifique(5).pdf",
+      "source_page": 1,
+      "exercise": "exercise_4",
+      "number": "2-b",
+      "text": "تحقق أن \\((u_n)\\) متزايدة.",
+      "context": "\\(u_0=\\frac52\\)، \\(u_{n+1}=\\frac23u_n+2\\).",
+      "tag": "seq_monotonicity",
+      "axis": "اتجاه تغير المتتالية",
+      "secondary_tags": [],
+      "skill": "الرتابة",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمت كتابة السؤال من الوثيقة المصورة مع توحيد الترميز الرياضي بصيغة LaTeX.",
+      "solution": {
+        "strategy": "نقارن حدود المتتالية بالحد الثابت \\(6\\)، ثم ندرس الفرق.",
+        "detailed_explanation": "العدد \\(6\\) هو الحل الثابت للعلاقة. إثبات أن \\(u_n<6\\) يجعل إشارة \\(u_{n+1}-u_n\\) موجبة مباشرة.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "إيجاد الحد الثابت",
+            "explanation": "نبحث عن عدد \\(L\\) يحقق نفس العلاقة.",
+            "calculation": "\\(L=\\frac23L+2\\Rightarrow L=6\\)",
+            "result": "الحد الثابت هو \\(6\\)."
+          },
+          {
+            "order": 2,
+            "title": "إثبات البقاء تحت 6",
+            "explanation": "نحوّل العلاقة بالنسبة إلى \\(6\\).",
+            "calculation": "\\(u_{n+1}-6=\\frac23(u_n-6)\\)",
+            "result": "بما أن \\(u_0-6<0\\)، فإن \\(u_n<6\\) لكل \\(n\\)."
+          },
+          {
+            "order": 3,
+            "title": "حساب الفرق",
+            "explanation": "نطرح حدين متتاليين.",
+            "calculation": "\\(u_{n+1}-u_n=2-\\frac13u_n=\\frac{6-u_n}{3}\\)",
+            "result": "الفرق موجب لأن \\(u_n<6\\)."
+          },
+          {
+            "order": 4,
+            "title": "النتيجة",
+            "explanation": "الفرق الموجب يعني التزايد التام.",
+            "calculation": "\\(u_{n+1}>u_n\\)",
+            "result": "المتتالية متزايدة تمامًا."
+          }
+        ],
+        "final_answer": "المتتالية \\((u_n)\\) متزايدة تمامًا.",
+        "verification": "مثلًا \\(u_1=\\frac{11}{3}>\\frac52=u_0\\)، وهذا يوافق النتيجة.",
+        "common_mistakes": [
+          {
+            "mistake": "القول إن الفرق موجب دون إثبات \\(u_n<6\\)",
+            "correction": "يجب أولًا إثبات الحصر بالنسبة إلى الحد الثابت."
+          }
+        ],
+        "hints": [
+          "ابحث عن نقطة التثبيت.",
+          "اكتب \\(u_{n+1}-6\\) بدلالة \\(u_n-6\\)."
+        ],
+        "alternative_method": "",
+        "is_complete": true
+      }
+    },
+    {
+      "id": "bac_2010_p3_exercise_1_2-b",
+      "year": 2010,
+      "source_file": "bac_sequence_scientifique(5).pdf",
+      "source_page": 3,
+      "exercise": "exercise_1",
+      "number": "2-b",
+      "text": "استنتج اتجاه تغير \\((u_n)\\).",
+      "context": "\\(u_0=6\\)، \\(u_{n+1}=\\frac12u_n+\\frac13\\).",
+      "tag": "seq_monotonicity",
+      "axis": "اتجاه تغير المتتالية",
+      "secondary_tags": [],
+      "skill": "الرتابة",
+      "difficulty": "medium",
+      "is_standalone": false,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمت كتابة السؤال من الوثيقة المصورة مع توحيد الترميز الرياضي بصيغة LaTeX.",
+      "solution": {
+        "strategy": "نقارن المتتالية بالحد الثابت \\(\\frac23\\).",
+        "detailed_explanation": "العلاقة تآلفية ومعاملها \\(\\frac12\\). بما أن الحد الأول أكبر من نقطة التثبيت، تبقى الحدود فوقها وتتجه نحوها تنازليًا.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "إيجاد نقطة التثبيت",
+            "explanation": "نحل المعادلة \\(L=\\frac12L+\\frac13\\).",
+            "calculation": "\\(L=\\frac23\\)",
+            "result": "نقطة التثبيت هي \\(\\frac23\\)."
+          },
+          {
+            "order": 2,
+            "title": "دراسة الموضع",
+            "explanation": "نطرح \\(\\frac23\\) من طرفي العلاقة.",
+            "calculation": "\\(u_{n+1}-\\frac23=\\frac12\\left(u_n-\\frac23\\right)\\)",
+            "result": "بما أن \\(u_0>\\frac23\\)، فإن \\(u_n>\\frac23\\)."
+          },
+          {
+            "order": 3,
+            "title": "حساب الفرق",
+            "explanation": "نستعمل الحصر السابق.",
+            "calculation": "\\(u_{n+1}-u_n=-\\frac12\\left(u_n-\\frac23\\right)<0\\)",
+            "result": "الفرق سالب."
+          },
+          {
+            "order": 4,
+            "title": "النتيجة",
+            "explanation": "الفرق السالب يعني التناقص التام.",
+            "calculation": "\\(u_{n+1}<u_n\\)",
+            "result": "المتتالية متناقصة تمامًا."
+          }
+        ],
+        "final_answer": "المتتالية \\((u_n)\\) متناقصة تمامًا.",
+        "verification": "\\(u_1=\\frac{10}{3}<6=u_0\\)، وهو متوافق مع النتيجة.",
+        "common_mistakes": [],
+        "hints": [
+          "حدد الحل الثابت للعلاقة.",
+          "قارن \\(u_n\\) بـ \\(\\frac23\\)."
+        ],
+        "alternative_method": "",
+        "is_complete": true
+      }
+    },
+    {
+      "id": "bac_2012_p5_exercise_1_3-a",
+      "year": 2012,
+      "source_file": "bac_sequence_scientifique(5).pdf",
+      "source_page": 5,
+      "exercise": "exercise_1",
+      "number": "3-a",
+      "text": "ادرس اتجاه تغير \\((u_n)\\).",
+      "context": "\\(u_0=1\\)، \\(u_{n+1}=\\sqrt{2u_n+3}\\).",
+      "tag": "seq_monotonicity",
+      "axis": "اتجاه تغير المتتالية",
+      "secondary_tags": [],
+      "skill": "الرتابة",
+      "difficulty": "medium",
+      "is_standalone": false,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمت كتابة السؤال من الوثيقة المصورة مع توحيد الترميز الرياضي بصيغة LaTeX.",
+      "solution": {
+        "strategy": "نثبت أن \\(1\\le u_n<3\\)، ثم ندرس الفرق باستعمال المرافق.",
+        "detailed_explanation": "الجذر يجعل استعمال المرافق مناسبًا. الحد \\(3\\) هو نقطة تثبيت، والحصر بين \\(1\\) و\\(3\\) يحدد إشارة الفرق.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "تحديد نقطة التثبيت",
+            "explanation": "نحل \\(L=\\sqrt{2L+3}\\).",
+            "calculation": "\\(L^2=2L+3\\Rightarrow (L-3)(L+1)=0\\)",
+            "result": "القيمة الموجبة المناسبة هي \\(3\\)."
+          },
+          {
+            "order": 2,
+            "title": "إثبات الحصر العلوي",
+            "explanation": "إذا كان \\(u_n<3\\)، فإن العلاقة تحفظ هذا الحصر.",
+            "calculation": "\\(u_{n+1}=\\sqrt{2u_n+3}<\\sqrt9=3\\)",
+            "result": "إذن \\(u_n<3\\) لكل \\(n\\)."
+          },
+          {
+            "order": 3,
+            "title": "حساب الفرق",
+            "explanation": "نضرب في المرافق.",
+            "calculation": "\\(u_{n+1}-u_n=\\frac{2u_n+3-u_n^2}{\\sqrt{2u_n+3}+u_n}=\\frac{(3-u_n)(u_n+1)}{\\sqrt{2u_n+3}+u_n}\\)",
+            "result": "جميع العوامل موجبة."
+          },
+          {
+            "order": 4,
+            "title": "النتيجة",
+            "explanation": "إيجابية الفرق تعطي التزايد.",
+            "calculation": "\\(u_{n+1}-u_n>0\\)",
+            "result": "المتتالية متزايدة تمامًا."
+          }
+        ],
+        "final_answer": "المتتالية \\((u_n)\\) متزايدة تمامًا ومحدودة من الأعلى بالعدد \\(3\\).",
+        "verification": "\\(u_1=\\sqrt5>1\\)، كما أن \\(u_1<3\\).",
+        "common_mistakes": [
+          {
+            "mistake": "تربيع متراجحة دون التحقق من الإيجابية",
+            "correction": "هنا الحدود موجبة، لذلك التربيع أو استعمال الجذر مشروع."
+          }
+        ],
+        "hints": [
+          "ابحث عن الحد الثابت الموجب.",
+          "استعمل المرافق لحساب الفرق."
+        ],
+        "alternative_method": "",
+        "is_complete": true
+      }
+    },
+    {
+      "id": "bac_2012_p5_exercise_2_2",
+      "year": 2012,
+      "source_file": "bac_sequence_scientifique(5).pdf",
+      "source_page": 5,
+      "exercise": "exercise_2",
+      "number": "2",
+      "text": "بين صيغة \\(u_{n+1}-u_n\\) المعطاة، ثم استنتج أن \\((u_n)\\) متزايدة تمامًا.",
+      "context": "\\(u_0=\\frac{13}{4}\\)، \\(u_{n+1}=3+\\sqrt{u_n-3}\\).",
+      "tag": "seq_monotonicity",
+      "axis": "اتجاه تغير المتتالية",
+      "secondary_tags": [],
+      "skill": "الرتابة",
+      "difficulty": "medium",
+      "is_standalone": false,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمت كتابة السؤال من الوثيقة المصورة مع توحيد الترميز الرياضي بصيغة LaTeX.",
+      "solution": {
+        "strategy": "نضع \\(x_n=\\sqrt{u_n-3}\\) ونستعمل الحصر \\(3<u_n<4\\).",
+        "detailed_explanation": "الفرق يأخذ الشكل \\(x_n-x_n^2\\)، وهو موجب عندما يكون \\(0<x_n<1\\).",
+        "steps": [
+          {
+            "order": 1,
+            "title": "إثبات الحصر",
+            "explanation": "من \\(u_0=\\frac{13}{4}\\) نحصل على \\(3<u_0<4\\)، والعلاقة تحفظ المجال.",
+            "calculation": "\\(3<u_n<4\\Rightarrow 0<\\sqrt{u_n-3}<1\\Rightarrow 3<u_{n+1}<4\\)",
+            "result": "إذن \\(3<u_n<4\\) لكل \\(n\\)."
+          },
+          {
+            "order": 2,
+            "title": "حساب الفرق",
+            "explanation": "نطرح \\(u_n\\) من العلاقة.",
+            "calculation": "\\(u_{n+1}-u_n=\\sqrt{u_n-3}-(u_n-3)\\)",
+            "result": "الفرق أصبح بدلالة كمية موجبة أصغر من 1."
+          },
+          {
+            "order": 3,
+            "title": "تفكيك الفرق",
+            "explanation": "نضع \\(x_n=\\sqrt{u_n-3}\\).",
+            "calculation": "\\(u_{n+1}-u_n=x_n-x_n^2=x_n(1-x_n)\\)",
+            "result": "الجداء موجب لأن \\(0<x_n<1\\)."
+          },
+          {
+            "order": 4,
+            "title": "النتيجة",
+            "explanation": "الفرق موجب تمامًا.",
+            "calculation": "\\(u_{n+1}>u_n\\)",
+            "result": "المتتالية متزايدة تمامًا."
+          }
+        ],
+        "final_answer": "المتتالية \\((u_n)\\) متزايدة تمامًا.",
+        "verification": "بما أن \\(u_0=3.25\\) و\\(u_1=3.5\\)، يظهر التزايد منذ البداية.",
+        "common_mistakes": [],
+        "hints": [
+          "أثبت أن الحدود محصورة بين 3 و4.",
+          "ضع \\(x=\\sqrt{u_n-3}\\)."
+        ],
+        "alternative_method": "",
+        "is_complete": true
+      }
+    },
+    {
+      "id": "bac_2013_p6_exercise_2_II_2",
+      "year": 2013,
+      "source_file": "bac_sequence_scientifique(5).pdf",
+      "source_page": 6,
+      "exercise": "exercise_2_II",
+      "number": "2",
+      "text": "ادرس اتجاه تغير \\((u_n)\\).",
+      "context": "\\(u_0=1\\)، \\(u_{n+1}=\\sqrt{5u_n+6}\\).",
+      "tag": "seq_monotonicity",
+      "axis": "اتجاه تغير المتتالية",
+      "secondary_tags": [],
+      "skill": "الرتابة",
+      "difficulty": "medium",
+      "is_standalone": false,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمت كتابة السؤال من الوثيقة المصورة مع توحيد الترميز الرياضي بصيغة LaTeX.",
+      "solution": {
+        "strategy": "نثبت الحصر تحت \\(6\\)، ثم نستعمل المرافق.",
+        "detailed_explanation": "الحل الثابت الموجب هو \\(6\\). ما دام \\(u_n<6\\)، يكون الفرق موجبًا.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "إيجاد الحد الثابت",
+            "explanation": "نحل \\(L=\\sqrt{5L+6}\\).",
+            "calculation": "\\(L^2-5L-6=0\\Rightarrow (L-6)(L+1)=0\\)",
+            "result": "الحد المناسب هو \\(6\\)."
+          },
+          {
+            "order": 2,
+            "title": "إثبات الحصر",
+            "explanation": "العلاقة تحفظ المجال \\([1,6[\\).",
+            "calculation": "\\(u_n<6\\Rightarrow u_{n+1}<\\sqrt{36}=6\\)",
+            "result": "إذن \\(u_n<6\\)."
+          },
+          {
+            "order": 3,
+            "title": "حساب الفرق",
+            "explanation": "نستعمل المرافق.",
+            "calculation": "\\(u_{n+1}-u_n=\\frac{5u_n+6-u_n^2}{\\sqrt{5u_n+6}+u_n}=\\frac{(6-u_n)(u_n+1)}{\\sqrt{5u_n+6}+u_n}\\)",
+            "result": "الفرق موجب."
+          },
+          {
+            "order": 4,
+            "title": "النتيجة",
+            "explanation": "الفرق الموجب يثبت التزايد.",
+            "calculation": "\\(u_{n+1}>u_n\\)",
+            "result": "المتتالية متزايدة تمامًا."
+          }
+        ],
+        "final_answer": "المتتالية \\((u_n)\\) متزايدة تمامًا ومحدودة من الأعلى بـ \\(6\\).",
+        "verification": "\\(u_1=\\sqrt{11}>1\\) و\\(u_1<6\\).",
+        "common_mistakes": [],
+        "hints": [
+          "الحل الثابت الموجب هو 6.",
+          "استعمل المرافق."
+        ],
+        "alternative_method": "",
+        "is_complete": true
+      }
+    },
+    {
+      "id": "bac_2013_p6_exercise_graph_2-c",
+      "year": 2013,
+      "source_file": "bac_sequence_scientifique(5).pdf",
+      "source_page": 6,
+      "exercise": "exercise_graph",
+      "number": "2-c",
+      "text": "ادرس اتجاه تغير \\((u_n)\\).",
+      "context": "\\(u_0=\\frac12\\)، \\(u_{n+1}=\\frac{2u_n}{u_n+1}\\).",
+      "tag": "seq_monotonicity",
+      "axis": "اتجاه تغير المتتالية",
+      "secondary_tags": [],
+      "skill": "الرتابة",
+      "difficulty": "medium",
+      "is_standalone": false,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمت كتابة السؤال من الوثيقة المصورة مع توحيد الترميز الرياضي بصيغة LaTeX.",
+      "solution": {
+        "strategy": "نثبت أن \\(0<u_n<1\\)، ثم نحسب الفرق.",
+        "detailed_explanation": "العلاقة الكسرية تحفظ المجال \\(]0,1[\\)، وعلى هذا المجال تكون إشارة الفرق موجبة.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "إثبات الحصر",
+            "explanation": "ننطلق من \\(u_0=\\frac12\\).",
+            "calculation": "\\(0<u_n<1\\Rightarrow 0<\\frac{2u_n}{u_n+1}<1\\)",
+            "result": "إذن \\(0<u_n<1\\) لكل \\(n\\)."
+          },
+          {
+            "order": 2,
+            "title": "حساب الفرق",
+            "explanation": "نوحد المقام.",
+            "calculation": "\\(u_{n+1}-u_n=\\frac{2u_n-u_n(u_n+1)}{u_n+1}=\\frac{u_n(1-u_n)}{u_n+1}\\)",
+            "result": "البسط والمقام موجبان."
+          },
+          {
+            "order": 3,
+            "title": "النتيجة",
+            "explanation": "الفرق موجب تمامًا.",
+            "calculation": "\\(u_{n+1}-u_n>0\\)",
+            "result": "المتتالية متزايدة تمامًا."
+          }
+        ],
+        "final_answer": "المتتالية \\((u_n)\\) متزايدة تمامًا ومحدودة من الأعلى بالعدد \\(1\\).",
+        "verification": "\\(u_1=\\frac23>\\frac12\\)، وهو يوافق النتيجة.",
+        "common_mistakes": [],
+        "hints": [
+          "أثبت أولًا أن \\(0<u_n<1\\).",
+          "وحّد مقام الفرق."
+        ],
+        "alternative_method": "",
+        "is_complete": true
+      }
+    },
+    {
+      "id": "bac_2014_p7_exercise_1_3",
+      "year": 2014,
+      "source_file": "bac_sequence_scientifique(5).pdf",
+      "source_page": 7,
+      "exercise": "exercise_1",
+      "number": "3",
+      "text": "ادرس اتجاه تغير \\((u_n)\\).",
+      "context": "\\(u_0=1\\)، \\(u_{n+1}=\\frac23u_n-\\frac43\\)، و\\(v_n=u_n+4\\).",
+      "tag": "seq_monotonicity",
+      "axis": "اتجاه تغير المتتالية",
+      "secondary_tags": [],
+      "skill": "الرتابة",
+      "difficulty": "medium",
+      "is_standalone": false,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمت كتابة السؤال من الوثيقة المصورة مع توحيد الترميز الرياضي بصيغة LaTeX.",
+      "solution": {
+        "strategy": "نستعمل المتتالية المساعدة \\(v_n=u_n+4\\).",
+        "detailed_explanation": "إضافة \\(4\\) تحول العلاقة التآلفية إلى متتالية هندسية موجبة أساسها أصغر من 1.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "إيجاد علاقة \\(v_n\\)",
+            "explanation": "نعوض تعريف \\(v_n\\).",
+            "calculation": "\\(v_{n+1}=u_{n+1}+4=\\frac23u_n-\\frac43+4=\\frac23(u_n+4)=\\frac23v_n\\)",
+            "result": "\\((v_n)\\) هندسية أساسها \\(\\frac23\\)."
+          },
+          {
+            "order": 2,
+            "title": "كتابة الحد العام",
+            "explanation": "نحسب \\(v_0\\).",
+            "calculation": "\\(v_0=5\\Rightarrow v_n=5\\left(\\frac23\\right)^n\\)",
+            "result": "\\(v_n>0\\) ومتناقصة."
+          },
+          {
+            "order": 3,
+            "title": "الرجوع إلى \\(u_n\\)",
+            "explanation": "لدينا \\(u_n=v_n-4\\).",
+            "calculation": "\\(u_n=-4+5\\left(\\frac23\\right)^n\\)",
+            "result": "طرح ثابت لا يغير اتجاه التغير."
+          },
+          {
+            "order": 4,
+            "title": "النتيجة",
+            "explanation": "لأن \\(0<\\frac23<1\\)، فإن \\(v_n\\) ثم \\(u_n\\) متناقصتان.",
+            "calculation": "\\(u_{n+1}<u_n\\)",
+            "result": "المتتالية متناقصة تمامًا."
+          }
+        ],
+        "final_answer": "المتتالية \\((u_n)\\) متناقصة تمامًا.",
+        "verification": "\\(u_0=1\\) و\\(u_1=-\\frac23\\)، وبالتالي يبدأ التناقص مباشرة.",
+        "common_mistakes": [],
+        "hints": [
+          "احسب \\(v_{n+1}\\).",
+          "استعمل أن أساس المتتالية الهندسية بين 0 و1."
+        ],
+        "alternative_method": "",
+        "is_complete": true
+      }
+    },
+    {
+      "id": "bac_2014_p7_exercise_1_5-a",
+      "year": 2014,
+      "source_file": "bac_sequence_scientifique(5).pdf",
+      "source_page": 7,
+      "exercise": "exercise_1",
+      "number": "5-a",
+      "text": "لتكن \\(w_n=5(\\frac1{v_n+5}-1)\\). بين أن \\((w_n)\\) متزايدة تمامًا.",
+      "context": "\\(u_0=1\\)، \\(u_{n+1}=\\frac23u_n-\\frac43\\)، و\\(v_n=u_n+4\\).",
+      "tag": "seq_monotonicity",
+      "axis": "اتجاه تغير المتتالية",
+      "secondary_tags": [],
+      "skill": "رتابة مركبة",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمت كتابة السؤال من الوثيقة المصورة مع توحيد الترميز الرياضي بصيغة LaTeX.",
+      "solution": {
+        "strategy": "نقارن \\(w_{n+1}\\) و\\(w_n\\) باستعمال تناقص \\(v_n\\).",
+        "detailed_explanation": "الدالة \\(x\\mapsto \\frac1{x+5}\\) متناقصة، لكن بما أن \\(v_n\\) نفسها متناقصة فإن قيم هذه الدالة تتزايد. ويمكن إثبات ذلك مباشرة بحساب الفرق.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "استعمال رتابة \\(v_n\\)",
+            "explanation": "من النتائج السابقة \\(v_{n+1}<v_n\\) و\\(v_n>0\\).",
+            "calculation": "\\(v_n-v_{n+1}>0\\)",
+            "result": "لدينا فرق موجب."
+          },
+          {
+            "order": 2,
+            "title": "حساب فرق \\(w_n\\)",
+            "explanation": "الثابت \\(-5\\) يختفي عند الطرح.",
+            "calculation": "\\(w_{n+1}-w_n=5\\left(\\frac1{v_{n+1}+5}-\\frac1{v_n+5}\\right)\\)",
+            "result": "نوحد المقام."
+          },
+          {
+            "order": 3,
+            "title": "تحديد الإشارة",
+            "explanation": "المقامات موجبة.",
+            "calculation": "\\(w_{n+1}-w_n=\\frac{5(v_n-v_{n+1})}{(v_{n+1}+5)(v_n+5)}>0\\)",
+            "result": "الفرق موجب تمامًا."
+          },
+          {
+            "order": 4,
+            "title": "النتيجة",
+            "explanation": "إيجابية الفرق تعطي التزايد التام.",
+            "calculation": "\\(w_{n+1}>w_n\\)",
+            "result": "\\((w_n)\\) متزايدة تمامًا."
+          }
+        ],
+        "final_answer": "المتتالية \\((w_n)\\) متزايدة تمامًا.",
+        "verification": "كل عوامل المقام موجبة، والبسط موجب لأن \\(v_n\\) متناقصة تمامًا.",
+        "common_mistakes": [
+          {
+            "mistake": "الاعتقاد أن الدالة المتناقصة تحفظ الترتيب",
+            "correction": "الدالة المتناقصة تعكس الترتيب؛ لذلك تناقص \\(v_n\\) يعطي تزايد \\(1/(v_n+5)\\)."
+          }
+        ],
+        "hints": [
+          "احسب \\(w_{n+1}-w_n\\).",
+          "استعمل أن \\(v_n-v_{n+1}>0\\)."
+        ],
+        "alternative_method": "",
+        "is_complete": true
+      }
+    },
+    {
+      "id": "bac_2015_p8_exercise_3_3",
+      "year": 2015,
+      "source_file": "bac_sequence_scientifique(5).pdf",
+      "source_page": 8,
+      "exercise": "exercise_3",
+      "number": "3",
+      "text": "بين أن \\((u_n)\\) متناقصة، وادرس تقاربها.",
+      "context": "\\(u_0=e^2-1\\)، \\(u_{n+1}=(1+u_n)e^{-2}-1\\).",
+      "tag": "seq_monotonicity",
+      "axis": "اتجاه تغير المتتالية",
+      "secondary_tags": [
+        "sequence_limits_convergence_divergence"
+      ],
+      "skill": "الرتابة والتقارب",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمت كتابة السؤال من الوثيقة المصورة مع توحيد الترميز الرياضي بصيغة LaTeX.",
+      "solution": {
+        "strategy": "نبسط العلاقة باستعمال \\(1+(e^a-1)=e^a\\)، ثم نستخرج الحد العام.",
+        "detailed_explanation": "إضافة العدد 1 إلى طرفي العلاقة تجعلها هندسية مباشرة، وهذا يعطي الرتابة والنهاية دون تعقيد.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "إضافة 1",
+            "explanation": "نحوّل العلاقة إلى علاقة هندسية.",
+            "calculation": "\\(1+u_{n+1}=(1+u_n)e^{-2}\\)",
+            "result": "المتتالية \\((1+u_n)\\) هندسية."
+          },
+          {
+            "order": 2,
+            "title": "كتابة الحد العام",
+            "explanation": "لدينا \\(1+u_0=e^2\\).",
+            "calculation": "\\(1+u_n=e^2(e^{-2})^n=e^{2-2n}\\)",
+            "result": "\\(u_n=e^{2-2n}-1\\)."
+          },
+          {
+            "order": 3,
+            "title": "دراسة الرتابة",
+            "explanation": "الدالة الأسية متزايدة والأس \\(2-2n\\) يتناقص.",
+            "calculation": "\\(e^{2-2(n+1)}<e^{2-2n}\\)",
+            "result": "\\(u_{n+1}<u_n\\)."
+          },
+          {
+            "order": 4,
+            "title": "دراسة التقارب",
+            "explanation": "نحسب نهاية الحد العام.",
+            "calculation": "\\(e^{2-2n}\\to0\\)",
+            "result": "\\(u_n\\to-1\\)."
+          }
+        ],
+        "final_answer": "المتتالية \\((u_n)\\) متناقصة تمامًا ومتقاربة نحو \\(-1\\).",
+        "verification": "بالتعويض في العلاقة: إذا \\(u_n=e^{2-2n}-1\\) فإن \\(u_{n+1}=e^{-2n}-1=e^{2-2(n+1)}-1\\).",
+        "common_mistakes": [
+          {
+            "mistake": "نسيان إضافة 1 إلى الطرفين",
+            "correction": "العلاقة تصبح بسيطة جدًا بعد كتابة \\(1+u_{n+1}\\)."
+          }
+        ],
+        "hints": [
+          "أضف 1 إلى طرفي العلاقة.",
+          "استعمل \\(1+u_0=e^2\\)."
+        ],
+        "alternative_method": "",
+        "is_complete": true
+      }
+    },
+    {
+      "id": "bac_2016_p9_exercise_2_II-4-a",
+      "year": 2016,
+      "source_file": "bac_sequence_scientifique(5).pdf",
+      "source_page": 9,
+      "exercise": "exercise_2",
+      "number": "II-4-a",
+      "text": "ادرس اتجاه تغير \\((u_n)\\).",
+      "context": "\\(u_0=0\\)، \\(u_{n+1}=\\sqrt{2u_n+8}\\).",
+      "tag": "seq_monotonicity",
+      "axis": "اتجاه تغير المتتالية",
+      "secondary_tags": [],
+      "skill": "الرتابة",
+      "difficulty": "medium",
+      "is_standalone": false,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمت كتابة السؤال من الوثيقة المصورة مع توحيد الترميز الرياضي بصيغة LaTeX.",
+      "solution": {
+        "strategy": "نثبت أن \\(0\\le u_n<4\\)، ثم نستعمل المرافق.",
+        "detailed_explanation": "الحد الثابت الموجب هو \\(4\\)، والحصر أسفله يجعل الفرق موجبًا.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "إيجاد الحد الثابت",
+            "explanation": "نحل \\(L=\\sqrt{2L+8}\\).",
+            "calculation": "\\(L^2-2L-8=0\\Rightarrow (L-4)(L+2)=0\\)",
+            "result": "الحد المناسب هو \\(4\\)."
+          },
+          {
+            "order": 2,
+            "title": "إثبات الحصر",
+            "explanation": "العلاقة تحفظ المجال \\([0,4[\\).",
+            "calculation": "\\(0\\le u_n<4\\Rightarrow 0<u_{n+1}<4\\)",
+            "result": "إذن \\(0\\le u_n<4\\)."
+          },
+          {
+            "order": 3,
+            "title": "حساب الفرق",
+            "explanation": "نستعمل المرافق.",
+            "calculation": "\\(u_{n+1}-u_n=\\frac{2u_n+8-u_n^2}{\\sqrt{2u_n+8}+u_n}=\\frac{(4-u_n)(u_n+2)}{\\sqrt{2u_n+8}+u_n}>0\\)",
+            "result": "الفرق موجب."
+          },
+          {
+            "order": 4,
+            "title": "النتيجة",
+            "explanation": "إذن المتتالية متزايدة تمامًا.",
+            "calculation": "\\(u_{n+1}>u_n\\)",
+            "result": "المتتالية متزايدة."
+          }
+        ],
+        "final_answer": "المتتالية \\((u_n)\\) متزايدة تمامًا ومحدودة من الأعلى بـ \\(4\\).",
+        "verification": "\\(u_1=2\\sqrt2>0\\) و\\(u_1<4\\).",
+        "common_mistakes": [],
+        "hints": [
+          "الحل الثابت الموجب هو 4.",
+          "استعمل المرافق."
+        ],
+        "alternative_method": "",
+        "is_complete": true
+      }
+    },
+    {
+      "id": "bac_2016_p9_exercise_3_II-1-b",
+      "year": 2016,
+      "source_file": "bac_sequence_scientifique(5).pdf",
+      "source_page": 9,
+      "exercise": "exercise_3",
+      "number": "II-1-b",
+      "text": "ادرس اتجاه تغير \\((u_n)\\)، ثم استنتج أنها متقاربة.",
+      "context": "\\(u_0=1\\)، \\(u_{n+1}=\\frac{5u_n}{u_n+2}\\)، و\\(v_n=1-\\frac3{u_n}\\).",
+      "tag": "seq_monotonicity",
+      "axis": "اتجاه تغير المتتالية",
+      "secondary_tags": [
+        "sequence_limits_convergence_divergence"
+      ],
+      "skill": "الرتابة والتقارب",
+      "difficulty": "medium",
+      "is_standalone": false,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمت كتابة السؤال من الوثيقة المصورة مع توحيد الترميز الرياضي بصيغة LaTeX.",
+      "solution": {
+        "strategy": "نثبت أن \\(0<u_n<3\\)، ثم نحسب الفرق.",
+        "detailed_explanation": "النقطتان الثابتتان هما \\(0\\) و\\(3\\). وبما أن البداية داخل المجال \\(]0,3[\\)، تبقى الحدود داخله ويكون الفرق موجبًا.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "إثبات الحصر",
+            "explanation": "العلاقة تحفظ المجال \\(]0,3[\\).",
+            "calculation": "\\(0<u_n<3\\Rightarrow 0<\\frac{5u_n}{u_n+2}<3\\)",
+            "result": "إذن \\(0<u_n<3\\)."
+          },
+          {
+            "order": 2,
+            "title": "حساب الفرق",
+            "explanation": "نوحد المقام.",
+            "calculation": "\\(u_{n+1}-u_n=\\frac{5u_n-u_n(u_n+2)}{u_n+2}=\\frac{u_n(3-u_n)}{u_n+2}\\)",
+            "result": "الفرق موجب."
+          },
+          {
+            "order": 3,
+            "title": "استخلاص الرتابة",
+            "explanation": "كل عوامل التعبير موجبة.",
+            "calculation": "\\(u_{n+1}>u_n\\)",
+            "result": "المتتالية متزايدة تمامًا."
+          },
+          {
+            "order": 4,
+            "title": "استخلاص التقارب",
+            "explanation": "المتتالية متزايدة ومحدودة من الأعلى بـ \\(3\\).",
+            "calculation": "\\(u_n<3\\)",
+            "result": "إذن هي متقاربة."
+          }
+        ],
+        "final_answer": "المتتالية \\((u_n)\\) متزايدة تمامًا ومحدودة من الأعلى بالعدد \\(3\\)، لذلك فهي متقاربة.",
+        "verification": "إذا رمزنا للنهاية بـ \\(L\\)، فإن \\(L=\\frac{5L}{L+2}\\)، والنهاية الموافقة للحدود الموجبة هي \\(L=3\\).",
+        "common_mistakes": [],
+        "hints": [
+          "أثبت أن الحدود بين 0 و3.",
+          "فكك بسط الفرق."
+        ],
+        "alternative_method": "",
+        "is_complete": true
+      }
+    },
+    {
+      "id": "bac_2016_p10_exercise_3a_2-b",
+      "year": 2016,
+      "source_file": "bac_sequence_scientifique(5).pdf",
+      "source_page": 10,
+      "exercise": "exercise_3a",
+      "number": "2-b",
+      "text": "ادرس اتجاه تغير \\((u_n)\\)، ثم استنتج أنها متقاربة.",
+      "context": "\\(u_0=4\\)، \\(u_{n+1}=\\frac{13u_n}{9u_n+13}\\)، و\\(v_n=2+\\frac{13}{u_n}\\).",
+      "tag": "seq_monotonicity",
+      "axis": "اتجاه تغير المتتالية",
+      "secondary_tags": [
+        "sequence_limits_convergence_divergence"
+      ],
+      "skill": "الرتابة والتقارب",
+      "difficulty": "medium",
+      "is_standalone": false,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمت كتابة السؤال من الوثيقة المصورة مع توحيد الترميز الرياضي بصيغة LaTeX.",
+      "solution": {
+        "strategy": "نثبت إيجابية الحدود، ثم ندرس الفرق.",
+        "detailed_explanation": "العلاقة تعطي حدودًا موجبة. بعد توحيد المقام يظهر أن الفرق سالب دائمًا.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "إثبات الإيجابية",
+            "explanation": "البسط والمقام موجبان إذا كان \\(u_n>0\\).",
+            "calculation": "\\(u_0=4>0\\Rightarrow u_{n+1}=\\frac{13u_n}{9u_n+13}>0\\)",
+            "result": "إذن \\(u_n>0\\)."
+          },
+          {
+            "order": 2,
+            "title": "حساب الفرق",
+            "explanation": "نوحد المقام.",
+            "calculation": "\\(u_{n+1}-u_n=\\frac{13u_n-u_n(9u_n+13)}{9u_n+13}=-\\frac{9u_n^2}{9u_n+13}\\)",
+            "result": "الفرق سالب تمامًا."
+          },
+          {
+            "order": 3,
+            "title": "الرتابة",
+            "explanation": "بما أن \\(u_n>0\\)، فالبسط غير منعدم.",
+            "calculation": "\\(u_{n+1}<u_n\\)",
+            "result": "المتتالية متناقصة تمامًا."
+          },
+          {
+            "order": 4,
+            "title": "التقارب",
+            "explanation": "هي متناقصة ومحدودة من الأسفل بالصفر.",
+            "calculation": "\\(u_n>0\\)",
+            "result": "إذن هي متقاربة."
+          }
+        ],
+        "final_answer": "المتتالية \\((u_n)\\) متناقصة تمامًا ومحدودة من الأسفل بـ \\(0\\)، لذلك فهي متقاربة.",
+        "verification": "معادلة النهاية تعطي \\(9L^2=0\\)، ومنه \\(L=0\\).",
+        "common_mistakes": [],
+        "hints": [
+          "أثبت أولًا أن الحدود موجبة.",
+          "احسب \\(u_{n+1}-u_n\\)."
+        ],
+        "alternative_method": "",
+        "is_complete": true
+      }
+    },
+    {
+      "id": "bac_2017_p11_exercise_2_1-b",
+      "year": 2017,
+      "source_file": "bac_sequence_scientifique(5).pdf",
+      "source_page": 11,
+      "exercise": "exercise_2",
+      "number": "1-b",
+      "text": "بين أن \\((u_n)\\) متزايدة تمامًا، ثم استنتج أنها متقاربة.",
+      "context": "\\(u_0=\\frac14\\)، \\(u_{n+1}=3-\\frac{10}{u_n+4}\\)، و\\(v_n=\\frac{u_n+2}{1-u_n}\\).",
+      "tag": "seq_monotonicity",
+      "axis": "اتجاه تغير المتتالية",
+      "secondary_tags": [
+        "sequence_limits_convergence_divergence"
+      ],
+      "skill": "الرتابة والتقارب",
+      "difficulty": "medium",
+      "is_standalone": false,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمت كتابة السؤال من الوثيقة المصورة مع توحيد الترميز الرياضي بصيغة LaTeX.",
+      "solution": {
+        "strategy": "نثبت أن \\(0<u_n<1\\)، ثم نحسب الفرق.",
+        "detailed_explanation": "النقطة الثابتة المناسبة هي \\(1\\). داخل المجال \\(]0,1[\\) يكون الفرق موجبًا.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "إثبات الحصر",
+            "explanation": "البداية \\(u_0=\\frac14\\) داخل \\(]0,1[\\)، والعلاقة تحفظه.",
+            "calculation": "\\(0<u_n<1\\Rightarrow 0<3-\\frac{10}{u_n+4}<1\\)",
+            "result": "إذن \\(0<u_n<1\\)."
+          },
+          {
+            "order": 2,
+            "title": "حساب الفرق",
+            "explanation": "نوحد المقام.",
+            "calculation": "\\(u_{n+1}-u_n=3-\\frac{10}{u_n+4}-u_n=\\frac{(1-u_n)(u_n+2)}{u_n+4}\\)",
+            "result": "الفرق موجب."
+          },
+          {
+            "order": 3,
+            "title": "الرتابة",
+            "explanation": "كل العوامل موجبة على \\(]0,1[\\).",
+            "calculation": "\\(u_{n+1}>u_n\\)",
+            "result": "المتتالية متزايدة تمامًا."
+          },
+          {
+            "order": 4,
+            "title": "التقارب",
+            "explanation": "هي متزايدة ومحدودة من الأعلى بـ \\(1\\).",
+            "calculation": "\\(u_n<1\\)",
+            "result": "إذن هي متقاربة."
+          }
+        ],
+        "final_answer": "المتتالية \\((u_n)\\) متزايدة تمامًا ومحدودة من الأعلى بـ \\(1\\)، لذلك فهي متقاربة.",
+        "verification": "معادلة النهاية تعطي \\((L-1)(L+2)=0\\)، وبما أن الحدود موجبة وأصغر من 1 فإن \\(L=1\\).",
+        "common_mistakes": [],
+        "hints": [
+          "أثبت أن \\(0<u_n<1\\).",
+          "فكك بسط الفرق إلى \\((1-u_n)(u_n+2)\\)."
+        ],
+        "alternative_method": "",
+        "is_complete": true
+      }
+    },
+    {
+      "id": "bac_2017_p12_exercise_1_2-a",
+      "year": 2017,
+      "source_file": "bac_sequence_scientifique(5).pdf",
+      "source_page": 12,
+      "exercise": "exercise_1",
+      "number": "2-a",
+      "text": "اكتب \\(u_{n+2}-u_{n+1}\\) بدلالة \\(u_{n+1}-u_n\\).",
+      "context": "\\(u_0=1\\)، \\(u_{n+1}=\\frac34u_n+1\\)، و\\(v_0=6\\)، \\(v_{n+1}=\\frac34v_n+1\\).",
+      "tag": "seq_monotonicity",
+      "axis": "اتجاه تغير المتتالية",
+      "secondary_tags": [],
+      "skill": "فرق الفروق",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمت كتابة السؤال من الوثيقة المصورة مع توحيد الترميز الرياضي بصيغة LaTeX.",
+      "solution": {
+        "strategy": "نكتب العلاقة عند الرتبتين \\(n+1\\) و\\(n\\)، ثم نطرح.",
+        "detailed_explanation": "لأن الجزء الثابت يختفي عند الطرح، يبقى فقط معامل الفرق السابق.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "كتابة العلاقة التالية",
+            "explanation": "نعوض \\(n\\) بـ \\(n+1\\).",
+            "calculation": "\\(u_{n+2}=\\frac34u_{n+1}+1\\)",
+            "result": "لدينا عبارة \\(u_{n+2}\\)."
+          },
+          {
+            "order": 2,
+            "title": "طرح العلاقتين",
+            "explanation": "نطرح \\(u_{n+1}=\\frac34u_n+1\\).",
+            "calculation": "\\(u_{n+2}-u_{n+1}=\\frac34u_{n+1}+1-\\left(\\frac34u_n+1\\right)\\)",
+            "result": "الحدان الثابتان يتلاشيان."
+          },
+          {
+            "order": 3,
+            "title": "التبسيط",
+            "explanation": "نستخرج العامل المشترك.",
+            "calculation": "\\(u_{n+2}-u_{n+1}=\\frac34(u_{n+1}-u_n)\\)",
+            "result": "هذه هي العلاقة المطلوبة."
+          }
+        ],
+        "final_answer": "\\(\\boxed{u_{n+2}-u_{n+1}=\\frac34\\left(u_{n+1}-u_n\\right)}\\).",
+        "verification": "بالتوسيع يعود الطرف الأيمن إلى \\(\\frac34u_{n+1}-\\frac34u_n\\)، وهو فرق العلاقتين.",
+        "common_mistakes": [],
+        "hints": [
+          "اكتب العلاقة عند \\(n+1\\).",
+          "اطرح العلاقة عند \\(n\\)."
+        ],
+        "alternative_method": "",
+        "is_complete": true
+      }
+    },
+    {
+      "id": "bac_2018_p13_exercise_1a_1-b",
+      "year": 2018,
+      "source_file": "bac_sequence_scientifique(5).pdf",
+      "source_page": 13,
+      "exercise": "exercise_1a",
+      "number": "1-b",
+      "text": "بين أن \\((u_n)\\) متناقصة تمامًا، ثم استنتج أنها متقاربة.",
+      "context": "\\(u_0=1\\)، \\(u_{n+1}=1-\\frac9{u_n+5}\\)، و\\(v_n=\\frac1{u_n+2}\\).",
+      "tag": "seq_monotonicity",
+      "axis": "اتجاه تغير المتتالية",
+      "secondary_tags": [
+        "sequence_limits_convergence_divergence"
+      ],
+      "skill": "الرتابة والتقارب",
+      "difficulty": "medium",
+      "is_standalone": false,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمت كتابة السؤال من الوثيقة المصورة مع توحيد الترميز الرياضي بصيغة LaTeX.",
+      "solution": {
+        "strategy": "نثبت أن \\(u_n>-2\\)، ثم نحسب الفرق.",
+        "detailed_explanation": "النقطة الثابتة \\(-2\\) مزدوجة، والفرق يظهر على شكل سالب مربع، لذلك تكون الرتابة تناقصية.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "إثبات الحصر السفلي",
+            "explanation": "نحسب \\(u_{n+1}+2\\).",
+            "calculation": "\\(u_{n+1}+2=3-\\frac9{u_n+5}=\\frac{3(u_n+2)}{u_n+5}\\)",
+            "result": "إذا كان \\(u_n>-2\\)، فإن \\(u_{n+1}>-2\\)."
+          },
+          {
+            "order": 2,
+            "title": "حساب الفرق",
+            "explanation": "نوحد المقام.",
+            "calculation": "\\(u_{n+1}-u_n=1-\\frac9{u_n+5}-u_n=-\\frac{(u_n+2)^2}{u_n+5}\\)",
+            "result": "البسط مربع والمقام موجب."
+          },
+          {
+            "order": 3,
+            "title": "الرتابة",
+            "explanation": "بما أن \\(u_n>-2\\)، فإن المربع غير منعدم.",
+            "calculation": "\\(u_{n+1}-u_n<0\\)",
+            "result": "المتتالية متناقصة تمامًا."
+          },
+          {
+            "order": 4,
+            "title": "التقارب",
+            "explanation": "هي متناقصة ومحدودة من الأسفل بـ \\(-2\\).",
+            "calculation": "\\(u_n>-2\\)",
+            "result": "إذن هي متقاربة."
+          }
+        ],
+        "final_answer": "المتتالية \\((u_n)\\) متناقصة تمامًا ومحدودة من الأسفل بـ \\(-2\\)، لذلك فهي متقاربة.",
+        "verification": "معادلة النهاية تعطي \\((L+2)^2=0\\)، ومنه \\(L=-2\\).",
+        "common_mistakes": [],
+        "hints": [
+          "احسب \\(u_{n+1}+2\\).",
+          "سيظهر مربع في بسط الفرق."
+        ],
+        "alternative_method": "",
+        "is_complete": true
+      }
+    },
+    {
+      "id": "bac_2018_p13_exercise_1b_2",
+      "year": 2018,
+      "source_file": "bac_sequence_scientifique(5).pdf",
+      "source_page": 13,
+      "exercise": "exercise_1b",
+      "number": "2",
+      "text": "بين أن \\(\\frac{2n+3}{2n+1}>1\\)، ثم استنتج اتجاه تغير \\((u_n)\\).",
+      "context": "\\(u_0=0\\)، \\(u_{n+1}=u_n+\\ln\\left(\\frac{2n+3}{2n+1}\\right)\\)، و\\(v_n=2n+1\\).",
+      "tag": "seq_monotonicity",
+      "axis": "اتجاه تغير المتتالية",
+      "secondary_tags": [],
+      "skill": "رتابة",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمت كتابة السؤال من الوثيقة المصورة مع توحيد الترميز الرياضي بصيغة LaTeX.",
+      "solution": {
+        "strategy": "نثبت أن الكسر أكبر من 1، ثم نستعمل تزايد دالة اللوغاريتم.",
+        "detailed_explanation": "الفرق \\(u_{n+1}-u_n\\) يساوي لوغاريتم عدد أكبر من 1، ولذلك فهو موجب.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "مقارنة الكسر بالواحد",
+            "explanation": "نطرح المقام من البسط.",
+            "calculation": "\\(2n+3-(2n+1)=2>0\\)",
+            "result": "\\(\\frac{2n+3}{2n+1}>1\\)."
+          },
+          {
+            "order": 2,
+            "title": "استعمال اللوغاريتم",
+            "explanation": "دالة \\(\\ln\\) متزايدة و\\(\\ln(1)=0\\).",
+            "calculation": "\\(\\ln\\left(\\frac{2n+3}{2n+1}\\right)>0\\)",
+            "result": "الحد المضاف موجب."
+          },
+          {
+            "order": 3,
+            "title": "حساب الفرق",
+            "explanation": "من العلاقة التراجعية مباشرة.",
+            "calculation": "\\(u_{n+1}-u_n=\\ln\\left(\\frac{2n+3}{2n+1}\\right)>0\\)",
+            "result": "الفرق موجب."
+          },
+          {
+            "order": 4,
+            "title": "النتيجة",
+            "explanation": "إذن الحدود تتزايد تمامًا.",
+            "calculation": "\\(u_{n+1}>u_n\\)",
+            "result": "المتتالية متزايدة تمامًا."
+          }
+        ],
+        "final_answer": "المتتالية \\((u_n)\\) متزايدة تمامًا.",
+        "verification": "عند \\(n=0\\): \\(u_1-u_0=\\ln3>0\\).",
+        "common_mistakes": [
+          {
+            "mistake": "القول إن \\(\\ln(x)>0\\) لكل \\(x>0\\)",
+            "correction": "الصحيح أن \\(\\ln(x)>0\\) فقط عندما \\(x>1\\)."
+          }
+        ],
+        "hints": [
+          "قارن البسط بالمقام.",
+          "استعمل أن \\(\\ln\\) متزايدة."
+        ],
+        "alternative_method": "",
+        "is_complete": true
+      }
+    },
+    {
+      "id": "bac_2019_p14_exercise_1_1-b",
+      "year": 2019,
+      "source_file": "bac_sequence_scientifique(5).pdf",
+      "source_page": 14,
+      "exercise": "exercise_1",
+      "number": "1-b",
+      "text": "ادرس اتجاه تغير \\((u_n)\\)، ثم استنتج أنها متقاربة.",
+      "context": "\\(u_0=13\\)، \\(u_{n+1}=\\frac15u_n+\\frac45\\).",
+      "tag": "seq_monotonicity",
+      "axis": "اتجاه تغير المتتالية",
+      "secondary_tags": [
+        "sequence_limits_convergence_divergence"
+      ],
+      "skill": "الرتابة والتقارب",
+      "difficulty": "medium",
+      "is_standalone": false,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمت كتابة السؤال من الوثيقة المصورة مع توحيد الترميز الرياضي بصيغة LaTeX.",
+      "solution": {
+        "strategy": "نقارن المتتالية بالحد الثابت \\(1\\).",
+        "detailed_explanation": "العلاقة تآلفية ونقطة تثبيتها هي \\(1\\). بما أن البداية فوقها، تتناقص الحدود نحوها.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "إيجاد نقطة التثبيت",
+            "explanation": "نحل \\(L=\\frac15L+\\frac45\\).",
+            "calculation": "\\(L=1\\)",
+            "result": "الحد الثابت هو \\(1\\)."
+          },
+          {
+            "order": 2,
+            "title": "إثبات الحصر",
+            "explanation": "نطرح 1 من العلاقة.",
+            "calculation": "\\(u_{n+1}-1=\\frac15(u_n-1)\\)",
+            "result": "بما أن \\(u_0>1\\)، فإن \\(u_n>1\\)."
+          },
+          {
+            "order": 3,
+            "title": "حساب الفرق",
+            "explanation": "نستعمل الموضع فوق 1.",
+            "calculation": "\\(u_{n+1}-u_n=-\\frac45(u_n-1)<0\\)",
+            "result": "الفرق سالب."
+          },
+          {
+            "order": 4,
+            "title": "التقارب",
+            "explanation": "المتتالية متناقصة ومحدودة من الأسفل بـ 1.",
+            "calculation": "\\(u_n>1\\)",
+            "result": "إذن هي متقاربة."
+          }
+        ],
+        "final_answer": "المتتالية \\((u_n)\\) متناقصة تمامًا ومتقاربة نحو \\(1\\).",
+        "verification": "الحد العام النسبي هو \\(u_n-1=12\\left(\\frac15\\right)^n\\)، ومنه النهاية \\(1\\).",
+        "common_mistakes": [],
+        "hints": [
+          "حدد نقطة التثبيت.",
+          "اكتب \\(u_{n+1}-1\\)."
+        ],
+        "alternative_method": "",
+        "is_complete": true
+      }
+    },
+    {
+      "id": "bac_2019_p14_exercise_2_3-b",
+      "year": 2019,
+      "source_file": "bac_sequence_scientifique(5).pdf",
+      "source_page": 14,
+      "exercise": "exercise_2",
+      "number": "3-b",
+      "text": "استنتج اتجاه تغير المتتالية، ثم بين أنها متقاربة.",
+      "context": "\\(u_0=4\\)، \\(u_{n+1}=\\sqrt{u_n+2}+4\\).",
+      "tag": "seq_monotonicity",
+      "axis": "اتجاه تغير المتتالية",
+      "secondary_tags": [
+        "sequence_limits_convergence_divergence"
+      ],
+      "skill": "الرتابة والتقارب",
+      "difficulty": "medium",
+      "is_standalone": false,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمت كتابة السؤال من الوثيقة المصورة مع توحيد الترميز الرياضي بصيغة LaTeX.",
+      "solution": {
+        "strategy": "نثبت أن \\(4\\le u_n<7\\)، ثم ندرس الفرق.",
+        "detailed_explanation": "النقطة الثابتة المناسبة هي \\(7\\). على المجال \\([4,7[\\) تكون الدالة التراجعية أكبر من \\(u_n\\).",
+        "steps": [
+          {
+            "order": 1,
+            "title": "إيجاد نقاط التثبيت",
+            "explanation": "نحل \\(L=\\sqrt{L+2}+4\\).",
+            "calculation": "\\((L-4)^2=L+2\\Rightarrow (L-7)(L-2)=0\\)",
+            "result": "القيمة الموافقة للمجال هي \\(7\\)."
+          },
+          {
+            "order": 2,
+            "title": "إثبات الحصر",
+            "explanation": "العلاقة تحفظ المجال \\([4,7[\\).",
+            "calculation": "\\(4\\le u_n<7\\Rightarrow 4<u_{n+1}<7\\)",
+            "result": "إذن \\(4\\le u_n<7\\)."
+          },
+          {
+            "order": 3,
+            "title": "حساب الفرق",
+            "explanation": "نقارن \\(\\sqrt{u_n+2}\\) بـ \\(u_n-4\\).",
+            "calculation": "\\(u_{n+1}-u_n=\\sqrt{u_n+2}-(u_n-4)\\)",
+            "result": "الطرفان غير سالبين."
+          },
+          {
+            "order": 4,
+            "title": "تحديد الإشارة",
+            "explanation": "نقارن المربعين.",
+            "calculation": "\\(u_n+2-(u_n-4)^2=-(u_n-7)(u_n-2)>0\\)",
+            "result": "إذن \\(u_{n+1}-u_n>0\\)."
+          },
+          {
+            "order": 5,
+            "title": "التقارب",
+            "explanation": "المتتالية متزايدة ومحدودة من الأعلى بـ 7.",
+            "calculation": "\\(u_n<7\\)",
+            "result": "إذن هي متقاربة نحو 7."
+          }
+        ],
+        "final_answer": "المتتالية \\((u_n)\\) متزايدة تمامًا ومحدودة من الأعلى بـ \\(7\\)، ومنه فهي متقاربة نحو \\(7\\).",
+        "verification": "\\(u_1=4+\\sqrt6>4\\) و\\(u_1<7\\).",
+        "common_mistakes": [],
+        "hints": [
+          "ابحث عن نقاط التثبيت.",
+          "قارن \\(\\sqrt{u_n+2}\\) مع \\(u_n-4\\)."
+        ],
+        "alternative_method": "",
+        "is_complete": true
+      }
+    },
+    {
+      "id": "bac_2020_p15_exercise_3b_2-c",
+      "year": 2020,
+      "source_file": "bac_sequence_scientifique(5).pdf",
+      "source_page": 15,
+      "exercise": "exercise_3b",
+      "number": "2-c",
+      "text": "ادرس اتجاه تغير \\((u_n)\\).",
+      "context": "\\(u_0=0\\)، \\(u_{n+1}=3u_n-2n+3\\)، و\\(v_n=u_n-n+1\\).",
+      "tag": "seq_monotonicity",
+      "axis": "اتجاه تغير المتتالية",
+      "secondary_tags": [],
+      "skill": "الرتابة",
+      "difficulty": "medium",
+      "is_standalone": false,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمت كتابة السؤال من الوثيقة المصورة مع توحيد الترميز الرياضي بصيغة LaTeX.",
+      "solution": {
+        "strategy": "نستعمل المتتالية المساعدة \\(v_n=u_n-n+1\\)، ثم نستخرج الحد العام.",
+        "detailed_explanation": "هذا التغيير يزيل الحدود التي تحتوي على \\(n\\) ويحوّل العلاقة إلى متتالية هندسية.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "حساب علاقة \\(v_n\\)",
+            "explanation": "نعوض تعريف \\(v_{n+1}\\).",
+            "calculation": "\\(v_{n+1}=u_{n+1}-(n+1)+1=3u_n-3n+3=3v_n\\)",
+            "result": "\\((v_n)\\) هندسية أساسها 3."
+          },
+          {
+            "order": 2,
+            "title": "كتابة الحد العام",
+            "explanation": "نحسب \\(v_0\\).",
+            "calculation": "\\(v_0=u_0-0+1=1\\Rightarrow v_n=3^n\\)",
+            "result": "لدينا صيغة صريحة."
+          },
+          {
+            "order": 3,
+            "title": "استخراج \\(u_n\\)",
+            "explanation": "نرجع إلى التعريف.",
+            "calculation": "\\(u_n=v_n+n-1=3^n+n-1\\)",
+            "result": "هذه صيغة الحد العام."
+          },
+          {
+            "order": 4,
+            "title": "دراسة الفرق",
+            "explanation": "نحسب الفرق من الصيغة.",
+            "calculation": "\\(u_{n+1}-u_n=3^{n+1}+n-(3^n+n-1)=2\\cdot3^n+1>0\\)",
+            "result": "المتتالية متزايدة تمامًا."
+          }
+        ],
+        "final_answer": "المتتالية \\((u_n)\\) متزايدة تمامًا.",
+        "verification": "عند \\(n=0\\): \\(u_1=3\\)، بينما الصيغة تعطي \\(3^1+1-1=3\\).",
+        "common_mistakes": [],
+        "hints": [
+          "احسب \\(v_{n+1}\\).",
+          "استخرج \\(u_n\\) بدلالة \\(v_n\\)."
+        ],
+        "alternative_method": "",
+        "is_complete": true
+      }
+    },
+    {
+      "id": "bac_2021_p16_exercise_3b_2",
+      "year": 2021,
+      "source_file": "bac_sequence_scientifique(5).pdf",
+      "source_page": 16,
+      "exercise": "exercise_3b",
+      "number": "2",
+      "text": "بين أن \\((u_n)\\) متزايدة تمامًا، ثم استنتج أنها متقاربة.",
+      "context": "\\(u_0=0\\)، \\(u_{n+1}=\\frac38(u_n+5)\\).",
+      "tag": "seq_monotonicity",
+      "axis": "اتجاه تغير المتتالية",
+      "secondary_tags": [
+        "sequence_limits_convergence_divergence"
+      ],
+      "skill": "الرتابة والتقارب",
+      "difficulty": "medium",
+      "is_standalone": false,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمت كتابة السؤال من الوثيقة المصورة مع توحيد الترميز الرياضي بصيغة LaTeX.",
+      "solution": {
+        "strategy": "نقارن المتتالية بالحد الثابت \\(3\\).",
+        "detailed_explanation": "نقطة التثبيت هي \\(3\\). الحدود تبدأ تحتها وتبقى تحتها، فيكون الفرق موجبًا.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "إيجاد نقطة التثبيت",
+            "explanation": "نحل \\(L=\\frac38(L+5)\\).",
+            "calculation": "\\(8L=3L+15\\Rightarrow L=3\\)",
+            "result": "الحد الثابت هو \\(3\\)."
+          },
+          {
+            "order": 2,
+            "title": "إثبات الحصر",
+            "explanation": "نطرح 3 من العلاقة.",
+            "calculation": "\\(u_{n+1}-3=\\frac38(u_n-3)\\)",
+            "result": "بما أن \\(u_0<3\\)، فإن \\(u_n<3\\)."
+          },
+          {
+            "order": 3,
+            "title": "حساب الفرق",
+            "explanation": "نستعمل الحصر.",
+            "calculation": "\\(u_{n+1}-u_n=\\frac58(3-u_n)>0\\)",
+            "result": "الفرق موجب."
+          },
+          {
+            "order": 4,
+            "title": "التقارب",
+            "explanation": "المتتالية متزايدة ومحدودة من الأعلى بـ 3.",
+            "calculation": "\\(u_n<3\\)",
+            "result": "إذن هي متقاربة نحو 3."
+          }
+        ],
+        "final_answer": "المتتالية \\((u_n)\\) متزايدة تمامًا ومتقاربة نحو \\(3\\).",
+        "verification": "الحد الأول التالي هو \\(u_1=\\frac{15}{8}>0\\)، وهو أقل من 3.",
+        "common_mistakes": [],
+        "hints": [
+          "حدد الحل الثابت.",
+          "اكتب \\(u_{n+1}-3\\)."
+        ],
+        "alternative_method": "",
+        "is_complete": true
+      }
+    },
+    {
+      "id": "bac_2022_p17_exercise_3a_2-a",
+      "year": 2022,
+      "source_file": "bac_sequence_scientifique(5).pdf",
+      "source_page": 17,
+      "exercise": "exercise_3a",
+      "number": "2-a",
+      "text": "احسب \\(u_1,u_2,u_3\\)، ثم بين أنها غير رتيبة.",
+      "context": "\\(u_0=-4\\)، \\(u_{n+1}=-\\frac12u_n+1\\).",
+      "tag": "seq_monotonicity",
+      "axis": "اتجاه تغير المتتالية",
+      "secondary_tags": [],
+      "skill": "عدم الرتابة",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمت كتابة السؤال من الوثيقة المصورة مع توحيد الترميز الرياضي بصيغة LaTeX.",
+      "solution": {
+        "strategy": "نحسب ثلاثة حدود متتالية، ثم نقارنها.",
+        "detailed_explanation": "لإثبات أن متتالية غير رتيبة يكفي إيجاد تغير في الاتجاه: مرة تصعد ومرة تنزل.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "حساب \\(u_1\\)",
+            "explanation": "نعوض \\(u_0=-4\\).",
+            "calculation": "\\(u_1=-\\frac12(-4)+1=3\\)",
+            "result": "\\(u_1=3\\)."
+          },
+          {
+            "order": 2,
+            "title": "حساب \\(u_2\\)",
+            "explanation": "نعوض \\(u_1=3\\).",
+            "calculation": "\\(u_2=-\\frac12\\cdot3+1=-\\frac12\\)",
+            "result": "\\(u_2=-\\frac12\\)."
+          },
+          {
+            "order": 3,
+            "title": "حساب \\(u_3\\)",
+            "explanation": "نعوض \\(u_2=-\\frac12\\).",
+            "calculation": "\\(u_3=-\\frac12\\left(-\\frac12\\right)+1=\\frac54\\)",
+            "result": "\\(u_3=\\frac54\\)."
+          },
+          {
+            "order": 4,
+            "title": "إثبات عدم الرتابة",
+            "explanation": "نقارن الحدود المحسوبة.",
+            "calculation": "\\(u_1>u_0,\\quad u_2<u_1,\\quad u_3>u_2\\)",
+            "result": "الاتجاه يتغير، إذن المتتالية غير رتيبة."
+          }
+        ],
+        "final_answer": "\\(u_1=3\\)، \\(u_2=-\\frac12\\)، \\(u_3=\\frac54\\)، والمتتالية \\((u_n)\\) غير رتيبة.",
+        "verification": "وجود \\(u_1>u_0\\) ينفي التناقص، ووجود \\(u_2<u_1\\) ينفي التزايد.",
+        "common_mistakes": [
+          {
+            "mistake": "الاعتماد على حدين فقط",
+            "correction": "حدان يبينان اتجاهًا محليًا فقط؛ نحتاج مقارنة أخرى تنقض الرتابة."
+          }
+        ],
+        "hints": [
+          "احسب بالتعويض المتتالي.",
+          "ابحث عن صعود ثم نزول أو العكس."
+        ],
+        "alternative_method": "",
+        "is_complete": true
+      }
+    },
+    {
+      "id": "bac_2023_p18_exercise_3a_1-b",
+      "year": 2023,
+      "source_file": "bac_sequence_scientifique(5).pdf",
+      "source_page": 18,
+      "exercise": "exercise_3a",
+      "number": "1-b",
+      "text": "بين أن \\((u_n)\\) متناقصة تمامًا.",
+      "context": "\\(u_0=\\frac12\\)، \\(u_{n+1}=-1+\\frac2{2-u_n}\\)، و\\(v_n=\\frac1{u_n}-1\\).",
+      "tag": "seq_monotonicity",
+      "axis": "اتجاه تغير المتتالية",
+      "secondary_tags": [],
+      "skill": "الرتابة",
+      "difficulty": "medium",
+      "is_standalone": false,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمت كتابة السؤال من الوثيقة المصورة مع توحيد الترميز الرياضي بصيغة LaTeX.",
+      "solution": {
+        "strategy": "نثبت أن \\(0<u_n<1\\)، ثم نحسب الفرق.",
+        "detailed_explanation": "داخل المجال \\(]0,1[\\) يكون البسط \\(u_n(u_n-1)\\) سالبًا، بينما المقام موجب.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "إثبات الحصر",
+            "explanation": "البداية \\(u_0=\\frac12\\)، والعلاقة تحفظ المجال.",
+            "calculation": "\\(0<u_n<1\\Rightarrow 0<-1+\\frac2{2-u_n}<1\\)",
+            "result": "إذن \\(0<u_n<1\\)."
+          },
+          {
+            "order": 2,
+            "title": "حساب الفرق",
+            "explanation": "نوحد المقام.",
+            "calculation": "\\(u_{n+1}-u_n=-1+\\frac2{2-u_n}-u_n=\\frac{u_n(u_n-1)}{2-u_n}\\)",
+            "result": "البسط سالب والمقام موجب."
+          },
+          {
+            "order": 3,
+            "title": "النتيجة",
+            "explanation": "الفرق سالب تمامًا.",
+            "calculation": "\\(u_{n+1}<u_n\\)",
+            "result": "المتتالية متناقصة تمامًا."
+          }
+        ],
+        "final_answer": "المتتالية \\((u_n)\\) متناقصة تمامًا.",
+        "verification": "\\(u_1=-1+\\frac{2}{3/2}=\\frac13<\\frac12=u_0\\).",
+        "common_mistakes": [],
+        "hints": [
+          "أثبت أن الحدود بين 0 و1.",
+          "وحّد مقام الفرق."
+        ],
+        "alternative_method": "",
+        "is_complete": true
+      }
+    },
+    {
+      "id": "bac_2023_p18_exercise_3b_1-b",
+      "year": 2023,
+      "source_file": "bac_sequence_scientifique(5).pdf",
+      "source_page": 18,
+      "exercise": "exercise_3b",
+      "number": "1-b",
+      "text": "بين أن \\((u_n)\\) متزايدة تمامًا.",
+      "context": "\\(u_0=0\\)، \\(u_{n+1}=\\frac45u_n+1\\)، و\\(v_n=u_n-5\\).",
+      "tag": "seq_monotonicity",
+      "axis": "اتجاه تغير المتتالية",
+      "secondary_tags": [],
+      "skill": "الرتابة",
+      "difficulty": "medium",
+      "is_standalone": false,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمت كتابة السؤال من الوثيقة المصورة مع توحيد الترميز الرياضي بصيغة LaTeX.",
+      "solution": {
+        "strategy": "نقارن المتتالية بالحد الثابت \\(5\\).",
+        "detailed_explanation": "نقطة التثبيت هي \\(5\\). بما أن البداية أصغر منها، تبقى الحدود تحتها ويكون الفرق موجبًا.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "إيجاد نقطة التثبيت",
+            "explanation": "نحل \\(L=\\frac45L+1\\).",
+            "calculation": "\\(L=5\\)",
+            "result": "الحد الثابت هو \\(5\\)."
+          },
+          {
+            "order": 2,
+            "title": "إثبات الحصر",
+            "explanation": "نطرح 5.",
+            "calculation": "\\(u_{n+1}-5=\\frac45(u_n-5)\\)",
+            "result": "بما أن \\(u_0<5\\)، فإن \\(u_n<5\\)."
+          },
+          {
+            "order": 3,
+            "title": "حساب الفرق",
+            "explanation": "نستعمل الحصر.",
+            "calculation": "\\(u_{n+1}-u_n=1-\\frac15u_n=\\frac{5-u_n}{5}>0\\)",
+            "result": "الفرق موجب."
+          },
+          {
+            "order": 4,
+            "title": "النتيجة",
+            "explanation": "إذن المتتالية متزايدة تمامًا.",
+            "calculation": "\\(u_{n+1}>u_n\\)",
+            "result": "المتتالية متزايدة."
+          }
+        ],
+        "final_answer": "المتتالية \\((u_n)\\) متزايدة تمامًا.",
+        "verification": "\\(u_1=1>0=u_0\\)، كما أن الحدود تبقى أصغر من 5.",
+        "common_mistakes": [],
+        "hints": [
+          "ابحث عن نقطة التثبيت.",
+          "أثبت أن \\(u_n<5\\)."
+        ],
+        "alternative_method": "",
+        "is_complete": true
+      }
+    },
+    {
+      "id": "bac_2024_p19_exercise_3b_2-a",
+      "year": 2024,
+      "source_file": "bac_sequence_scientifique(5).pdf",
+      "source_page": 19,
+      "exercise": "exercise_3b",
+      "number": "2-a",
+      "text": "بين أن \\(\\frac{u_{n+1}}{u_n}\\le\\frac34\\).",
+      "context": "\\(u_n=\\frac{n}{2^n}\\) من أجل \\(n\\ge2\\).",
+      "tag": "seq_monotonicity",
+      "axis": "اتجاه تغير المتتالية",
+      "secondary_tags": [],
+      "skill": "مقارنة نسبة حدين",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمت كتابة السؤال من الوثيقة المصورة مع توحيد الترميز الرياضي بصيغة LaTeX.",
+      "solution": {
+        "strategy": "نحسب نسبة حدين متتاليين ونستعمل الشرط \\(n\\ge2\\).",
+        "detailed_explanation": "عندما تكون الحدود موجبة، مقارنة النسبة بالواحد أو بعدد أصغر منه طريقة فعالة لدراسة الرتابة.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "حساب النسبة",
+            "explanation": "نعوض صيغة الحد العام.",
+            "calculation": "\\(\\frac{u_{n+1}}{u_n}=\\frac{(n+1)/2^{n+1}}{n/2^n}=\\frac{n+1}{2n}\\)",
+            "result": "النسبة تساوي \\(\\frac12+\\frac1{2n}\\)."
+          },
+          {
+            "order": 2,
+            "title": "استعمال \\(n\\ge2\\)",
+            "explanation": "لدينا \\(\\frac1{2n}\\le\\frac14\\).",
+            "calculation": "\\(\\frac{n+1}{2n}=\\frac12+\\frac1{2n}\\le\\frac12+\\frac14=\\frac34\\)",
+            "result": "ثبتت المتراجحة المطلوبة."
+          },
+          {
+            "order": 3,
+            "title": "الاستنتاج",
+            "explanation": "بما أن \\(u_n>0\\) والنسبة أصغر من 1.",
+            "calculation": "\\(0<\\frac{u_{n+1}}{u_n}\\le\\frac34<1\\)",
+            "result": "\\(u_{n+1}<u_n\\)."
+          }
+        ],
+        "final_answer": "\\(\\boxed{\\frac{u_{n+1}}{u_n}\\le\\frac34}\\) لكل \\(n\\ge2\\)، وبالتالي \\((u_n)\\) متناقصة تمامًا ابتداءً من الرتبة \\(2\\).",
+        "verification": "عند \\(n=2\\)، النسبة تساوي \\(\\frac34\\)، فتتحقق حالة المساواة في المتراجحة.",
+        "common_mistakes": [],
+        "hints": [
+          "بسّط قوى العدد 2.",
+          "استعمل \\(n\\ge2\\Rightarrow 1/n\\le1/2\\)."
+        ],
+        "alternative_method": "",
+        "is_complete": true
+      }
+    },
+    {
+      "id": "bac_2025_p20_exercise_3_2-c",
+      "year": 2025,
+      "source_file": "bac_sequence_scientifique(5).pdf",
+      "source_page": 20,
+      "exercise": "exercise_3",
+      "number": "2-c",
+      "text": "ادرس اتجاه تغير \\((u_n)\\)، ثم ادرس تقاربها.",
+      "context": "\\(u_0=3\\)، \\(u_{n+1}=\\frac{5u_n}{2u_n+1}\\).",
+      "tag": "seq_monotonicity",
+      "axis": "اتجاه تغير المتتالية",
+      "secondary_tags": [
+        "sequence_limits_convergence_divergence"
+      ],
+      "skill": "الرتابة والتقارب",
+      "difficulty": "medium",
+      "is_standalone": false,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمت كتابة السؤال من الوثيقة المصورة مع توحيد الترميز الرياضي بصيغة LaTeX.",
+      "solution": {
+        "strategy": "نثبت أن \\(u_n>2\\)، ثم نحسب الفرق.",
+        "detailed_explanation": "النقطة الثابتة الموجبة هي \\(2\\). تبدأ المتتالية فوقها وتبقى فوقها، فيكون الفرق سالبًا.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "إثبات الحصر السفلي",
+            "explanation": "نحسب الفرق عن 2.",
+            "calculation": "\\(u_{n+1}-2=\\frac{5u_n-2(2u_n+1)}{2u_n+1}=\\frac{u_n-2}{2u_n+1}\\)",
+            "result": "بما أن \\(u_0>2\\)، فإن \\(u_n>2\\)."
+          },
+          {
+            "order": 2,
+            "title": "حساب الفرق",
+            "explanation": "نوحد المقام.",
+            "calculation": "\\(u_{n+1}-u_n=\\frac{5u_n-u_n(2u_n+1)}{2u_n+1}=\\frac{2u_n(2-u_n)}{2u_n+1}\\)",
+            "result": "الفرق سالب لأن \\(u_n>2\\)."
+          },
+          {
+            "order": 3,
+            "title": "الرتابة",
+            "explanation": "إشارة الفرق سالبة.",
+            "calculation": "\\(u_{n+1}<u_n\\)",
+            "result": "المتتالية متناقصة تمامًا."
+          },
+          {
+            "order": 4,
+            "title": "التقارب",
+            "explanation": "هي متناقصة ومحدودة من الأسفل بـ 2.",
+            "calculation": "\\(u_n>2\\)",
+            "result": "إذن هي متقاربة نحو 2."
+          }
+        ],
+        "final_answer": "المتتالية \\((u_n)\\) متناقصة تمامًا ومحدودة من الأسفل بـ \\(2\\)، لذلك فهي متقاربة نحو \\(2\\).",
+        "verification": "معادلة النهاية تعطي \\(L=0\\) أو \\(L=2\\)، والحصر \\(L\\ge2\\) يفرض \\(L=2\\).",
+        "common_mistakes": [],
+        "hints": [
+          "احسب \\(u_{n+1}-2\\).",
+          "فكك بسط \\(u_{n+1}-u_n\\)."
+        ],
+        "alternative_method": "",
+        "is_complete": true
+      }
+    },
+    {
+      "id": "bac_2026_p21_exercise_3a_2-c",
+      "year": 2026,
+      "source_file": "bac_sequence_scientifique(5).pdf",
+      "source_page": 21,
+      "exercise": "exercise_3a",
+      "number": "2-c",
+      "text": "ادرس اتجاه تغير \\((u_n)\\).",
+      "context": "\\(u_0=4\\)، \\(u_{n+1}=\\frac{4u_n}{u_n+2}\\)، و\\(v_n=\\frac{u_n-2}{u_n}\\).",
+      "tag": "seq_monotonicity",
+      "axis": "اتجاه تغير المتتالية",
+      "secondary_tags": [],
+      "skill": "الرتابة",
+      "difficulty": "medium",
+      "is_standalone": false,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمت كتابة السؤال من الوثيقة المصورة مع توحيد الترميز الرياضي بصيغة LaTeX.",
+      "solution": {
+        "strategy": "نثبت أن \\(u_n>2\\)، ثم نحسب الفرق.",
+        "detailed_explanation": "النقطة الثابتة المناسبة هي \\(2\\). تبدأ المتتالية عند \\(4\\) وتبقى فوق \\(2\\)، لذلك يكون الفرق سالبًا.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "إثبات الحصر",
+            "explanation": "نحسب الفرق عن 2.",
+            "calculation": "\\(u_{n+1}-2=\\frac{4u_n-2(u_n+2)}{u_n+2}=\\frac{2(u_n-2)}{u_n+2}\\)",
+            "result": "بما أن \\(u_0>2\\)، فإن \\(u_n>2\\)."
+          },
+          {
+            "order": 2,
+            "title": "حساب الفرق",
+            "explanation": "نوحد المقام.",
+            "calculation": "\\(u_{n+1}-u_n=\\frac{4u_n-u_n(u_n+2)}{u_n+2}=\\frac{u_n(2-u_n)}{u_n+2}\\)",
+            "result": "الفرق سالب."
+          },
+          {
+            "order": 3,
+            "title": "النتيجة",
+            "explanation": "لأن \\(u_n>2\\)، نحصل على تناقص تام.",
+            "calculation": "\\(u_{n+1}<u_n\\)",
+            "result": "المتتالية متناقصة تمامًا."
+          }
+        ],
+        "final_answer": "المتتالية \\((u_n)\\) متناقصة تمامًا.",
+        "verification": "\\(u_1=\\frac{16}{6}=\\frac83<4=u_0\\)، وهو يوافق النتيجة.",
+        "common_mistakes": [],
+        "hints": [
+          "قارن الحدود بالعدد 2.",
+          "احسب الفرق ووحّد المقام."
+        ],
+        "alternative_method": "",
+        "is_complete": true
+      }
+    },
+    {
+      "id": "bac_2026_p21_exercise_3b_3-b",
+      "year": 2026,
+      "source_file": "bac_sequence_scientifique(5).pdf",
+      "source_page": 21,
+      "exercise": "exercise_3b",
+      "number": "3-b",
+      "text": "حدد اتجاه تغير \\((u_n)\\).",
+      "context": "\\(u_0=0\\)، \\(u_{n+1}=\\frac{-6u_n+2}{2u_n-3}\\)، و\\(v_n=\\frac{4+2u_n}{1-2u_n}\\).",
+      "tag": "seq_monotonicity",
+      "axis": "اتجاه تغير المتتالية",
+      "secondary_tags": [],
+      "skill": "الرتابة",
+      "difficulty": "medium",
+      "is_standalone": false,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمت كتابة السؤال من الوثيقة المصورة مع توحيد الترميز الرياضي بصيغة LaTeX.",
+      "solution": {
+        "strategy": "نستعمل المتتالية المساعدة \\(v_n=\\frac{4+2u_n}{1-2u_n}\\)، ثم نربط رتابتها برتابة \\(u_n\\).",
+        "detailed_explanation": "العلاقة الكسرية المعقدة تصبح هندسية بعد تغيير المتتالية. ثم نكتب \\(u_n\\) بدلالة \\(v_n\\).",
+        "steps": [
+          {
+            "order": 1,
+            "title": "حساب علاقة \\(v_n\\)",
+            "explanation": "نعوض \\(u_{n+1}\\) في تعريف \\(v_{n+1}\\) ونبسط.",
+            "calculation": "\\(v_{n+1}=\\frac{4+2u_{n+1}}{1-2u_{n+1}}=\\frac27v_n\\)",
+            "result": "\\((v_n)\\) هندسية أساسها \\(\\frac27\\)."
+          },
+          {
+            "order": 2,
+            "title": "كتابة الحد العام",
+            "explanation": "نحسب \\(v_0\\).",
+            "calculation": "\\(v_0=4\\Rightarrow v_n=4\\left(\\frac27\\right)^n\\)",
+            "result": "\\(v_n>0\\) ومتناقصة تمامًا."
+          },
+          {
+            "order": 3,
+            "title": "التعبير عن \\(u_n\\)",
+            "explanation": "نحل تعريف \\(v_n\\) بالنسبة إلى \\(u_n\\).",
+            "calculation": "\\(u_n=\\frac{v_n-4}{2(v_n+1)}\\)",
+            "result": "الدالة \\(g(x)=\\frac{x-4}{2(x+1)}\\) متزايدة على \\(x>0\\)."
+          },
+          {
+            "order": 4,
+            "title": "استخلاص الرتابة",
+            "explanation": "صورة متتالية متناقصة بدالة متزايدة تبقى متناقصة.",
+            "calculation": "\\(g'(x)=\\frac{5}{2(x+1)^2}>0\\)",
+            "result": "\\((u_n)\\) متناقصة تمامًا."
+          }
+        ],
+        "final_answer": "المتتالية \\((u_n)\\) متناقصة تمامًا.",
+        "verification": "\\(u_0=0\\) و\\(u_1=-\\frac23<0\\)، كما أن \\(v_n\\to0\\) فينتج \\(u_n\\to-2\\).",
+        "common_mistakes": [
+          {
+            "mistake": "الاستنتاج مباشرة من تناقص \\(v_n\\)",
+            "correction": "يجب أولًا معرفة هل الدالة التي تربط \\(u_n\\) بـ \\(v_n\\) متزايدة أم متناقصة."
+          }
+        ],
+        "hints": [
+          "احسب \\(v_{n+1}\\) بدلالة \\(v_n\\).",
+          "حل المعادلة \\(v_n=\\frac{4+2u_n}{1-2u_n}\\) بالنسبة إلى \\(u_n\\)."
+        ],
+        "alternative_method": "",
+        "is_complete": true
+      }
+    }
+  ],
+  "solution_schema": {
+    "strategy": "string",
+    "detailed_explanation": "string",
+    "steps": [
+      {
+        "order": "integer",
+        "title": "string",
+        "explanation": "string",
+        "calculation": "LaTeX string",
+        "result": "string"
+      }
+    ],
+    "final_answer": "string",
+    "verification": "string",
+    "common_mistakes": [
+      {
+        "mistake": "string",
+        "correction": "string"
+      }
+    ],
+    "hints": [
+      "string"
+    ],
+    "alternative_method": "string",
+    "is_complete": "boolean"
+  }
+}

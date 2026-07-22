@@ -1,0 +1,135 @@
+{
+  "schema_version": "2.0",
+  "language": "ar",
+  "direction": "rtl",
+  "year": 2010,
+  "exercise_number": 2,
+  "source_page": 3,
+  "source_reference": "النص منقول كما ورد في ملف PDF، صفحة 3.",
+  "title": "التمرين الأول (03 نقاط)",
+  "axis_tags": [
+    "geometric_sequences",
+    "sequence_limits"
+  ],
+  "statement": "\\((u_n)\\) المتتالية العددية المعرفة بـ: \\(u_0=-1\\)، ومن أجل كل عدد طبيعي \\(n\\): \\[u_{n+1}=3u_n+1.\\] \\((v_n)\\) المتتالية العددية المعرفة من أجل كل عدد طبيعي \\(n\\) بـ: \\[v_n=u_n+\\frac12.\\] في كل حالة من الحالات الثلاث الآتية اقترحت ثلاث إجابات، إجابة واحدة فقط منها صحيحة، حددها مع التعليل.",
+  "questions": [
+    {
+      "id": "2010_ex2_q1",
+      "text": "1. المتتالية \\((v_n)\\): أ- حسابية. ب- هندسية. ج- لا حسابية ولا هندسية.",
+      "axis_tags": [
+        "geometric_sequences"
+      ],
+      "solution": {
+        "strategy": "نحسب \\(v_{n+1}\\) بدلالة \\(v_n\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الحساب",
+            "explanation": "",
+            "latex": "v_{n+1}=u_{n+1}+\\frac12=3u_n+1+\\frac12"
+          },
+          {
+            "step_number": 2,
+            "title": "التعويض بـ\\(u_n=v_n-\\frac12\\)",
+            "explanation": "",
+            "latex": "v_{n+1}=3\\left(v_n-\\frac12\\right)+\\frac32=3v_n"
+          },
+          {
+            "step_number": 3,
+            "title": "الاختيار",
+            "explanation": "العلاقة \\(v_{n+1}=3v_n\\) تعني أنها هندسية."
+          }
+        ],
+        "final_answer": "الإجابة الصحيحة: ب- هندسية، أساسها \\(3\\).",
+        "verification": "",
+        "common_mistakes": [],
+        "hints": [],
+        "graph_data": null,
+        "table_data": null
+      }
+    },
+    {
+      "id": "2010_ex2_q2",
+      "text": "2. نهاية المتتالية \\((u_n)\\) هي: أ- \\(+\\infty\\). ب- \\(-\\frac12\\). ج- \\(-\\infty\\).",
+      "axis_tags": [
+        "sequence_limits"
+      ],
+      "solution": {
+        "strategy": "نكتب عبارة \\(u_n\\) باستعمال المتتالية الهندسية \\((v_n)\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الحد الأول لـ\\(v_n\\)",
+            "explanation": "",
+            "latex": "v_0=u_0+\\frac12=-\\frac12"
+          },
+          {
+            "step_number": 2,
+            "title": "الحد العام",
+            "explanation": "",
+            "latex": "v_n=-\\frac12\\,3^n"
+          },
+          {
+            "step_number": 3,
+            "title": "الرجوع إلى \\(u_n\\)",
+            "explanation": "",
+            "latex": "u_n=v_n-\\frac12=-\\frac12(3^n+1)"
+          },
+          {
+            "step_number": 4,
+            "title": "النهاية",
+            "explanation": "لأن \\(3^n\\to+\\infty\\)، فإن \\(u_n\\to-\\infty\\)."
+          }
+        ],
+        "final_answer": "الإجابة الصحيحة: ج- \\(-\\infty\\).",
+        "verification": "",
+        "common_mistakes": [],
+        "hints": [],
+        "graph_data": null,
+        "table_data": null
+      }
+    },
+    {
+      "id": "2010_ex2_q3",
+      "text": "3. نضع من أجل كل عدد طبيعي \\(n\\): \\[S_n=-\\frac12\\left[1+e^{\\ln3}+e^{2\\ln3}+e^{3\\ln3}+\\cdots+e^{n\\ln3}\\right].\\]",
+      "axis_tags": [
+        "geometric_sequences"
+      ],
+      "solution": {
+        "strategy": "نبسط الحدود الأسية ثم نحسب مجموعا هندسيا.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تبسيط الأسس",
+            "explanation": "",
+            "latex": "e^{k\\ln3}=3^k"
+          },
+          {
+            "step_number": 2,
+            "title": "إعادة كتابة المجموع",
+            "explanation": "",
+            "latex": "S_n=-\\frac12(1+3+3^2+\\cdots+3^n)"
+          },
+          {
+            "step_number": 3,
+            "title": "قانون المجموع",
+            "explanation": "",
+            "latex": "1+3+\\cdots+3^n=\\frac{3^{n+1}-1}{3-1}"
+          },
+          {
+            "step_number": 4,
+            "title": "النتيجة",
+            "explanation": "",
+            "latex": "S_n=-\\frac12\\cdot\\frac{3^{n+1}-1}{2}=\\frac{1-3^{n+1}}{4}"
+          }
+        ],
+        "final_answer": "\\(\\displaystyle S_n=\\frac{1-3^{n+1}}4\\).",
+        "verification": "",
+        "common_mistakes": [],
+        "hints": [],
+        "graph_data": null,
+        "table_data": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,297 @@
+{
+  "schema_version": "2.0",
+  "language": "ar",
+  "direction": "rtl",
+  "year": 2012,
+  "exercise_number": 2,
+  "source_page": 5,
+  "source_reference": "النص منقول كما ورد في ملف PDF، صفحة 5.",
+  "title": "التمرين الأول (04.5 نقاط)",
+  "axis_tags": [
+    "mathematical_induction",
+    "seq_monotonicity",
+    "geometric_sequences",
+    "sequence_limits"
+  ],
+  "statement": "\\((u_n)\\) المتتالية العددية المعرفة بحدها الأول \\(u_0=\\frac{13}{4}\\)، ومن أجل كل عدد طبيعي \\(n\\): \\[u_{n+1}=3+\\sqrt{u_n-3}.\\]",
+  "questions": [
+    {
+      "id": "2012_ex2_q1",
+      "text": "1) برهن بالتراجع أنه من أجل كل عدد طبيعي \\(n\\): \\(3<u_n<4\\).",
+      "axis_tags": [
+        "mathematical_induction",
+        "seq_bounded"
+      ],
+      "solution": {
+        "strategy": "نطبق التراجع على الحصر \\(3<u_n<4\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التحقق",
+            "explanation": "",
+            "latex": "u_0=\\frac{13}{4}=3.25\\Rightarrow3<u_0<4"
+          },
+          {
+            "step_number": 2,
+            "title": "الفرضية",
+            "explanation": "نفترض أن \\(3<u_n<4\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "طرح 3",
+            "explanation": "",
+            "latex": "0<u_n-3<1"
+          },
+          {
+            "step_number": 4,
+            "title": "أخذ الجذر ثم إضافة 3",
+            "explanation": "",
+            "latex": "0<\\sqrt{u_n-3}<1\\Rightarrow3<u_{n+1}=3+\\sqrt{u_n-3}<4"
+          },
+          {
+            "step_number": 5,
+            "title": "الخاتمة",
+            "explanation": "إذن الحصر صحيح لكل عدد طبيعي \\(n\\)."
+          }
+        ],
+        "final_answer": "\\(\\forall n\\in\\mathbb N,\\ 3<u_n<4\\).",
+        "verification": "",
+        "common_mistakes": [],
+        "hints": [],
+        "graph_data": null,
+        "table_data": null
+      }
+    },
+    {
+      "id": "2012_ex2_q2",
+      "text": "2) بيّن أنه من أجل كل عدد طبيعي \\(n\\): \\[u_{n+1}-u_n=\\frac{-u_n^2+7u_n-12}{\\sqrt{u_n-3}+u_n-3}.\\] استنتج أن \\((u_n)\\) متزايدة تماما.",
+      "axis_tags": [
+        "seq_monotonicity"
+      ],
+      "solution": {
+        "strategy": "نضع \\(x=u_n-3\\)، ثم نستعمل المرافق لتبسيط الفرق.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "كتابة الفرق",
+            "explanation": "",
+            "latex": "u_{n+1}-u_n=3+\\sqrt{u_n-3}-u_n=\\sqrt{u_n-3}-(u_n-3)"
+          },
+          {
+            "step_number": 2,
+            "title": "الضرب في المرافق",
+            "explanation": "",
+            "latex": "u_{n+1}-u_n=\\frac{(u_n-3)-(u_n-3)^2}{\\sqrt{u_n-3}+u_n-3}"
+          },
+          {
+            "step_number": 3,
+            "title": "توسيع البسط",
+            "explanation": "",
+            "latex": "(u_n-3)-(u_n-3)^2=-u_n^2+7u_n-12"
+          },
+          {
+            "step_number": 4,
+            "title": "تحليل البسط",
+            "explanation": "",
+            "latex": "-u_n^2+7u_n-12=(4-u_n)(u_n-3)"
+          },
+          {
+            "step_number": 5,
+            "title": "دراسة الإشارة",
+            "explanation": "بما أن \\(3<u_n<4\\)، فإن \\(4-u_n>0\\)، و\\(u_n-3>0\\)، والمقام موجب. لذلك \\(u_{n+1}-u_n>0\\)."
+          }
+        ],
+        "final_answer": "\\((u_n)\\) متزايدة تماما.",
+        "verification": "",
+        "common_mistakes": [],
+        "hints": [],
+        "graph_data": null,
+        "table_data": null
+      }
+    },
+    {
+      "id": "2012_ex2_q3",
+      "text": "3) برر لماذا \\((u_n)\\) متقاربة.",
+      "axis_tags": [
+        "sequence_limits"
+      ],
+      "solution": {
+        "strategy": "نطبق مبرهنة التقارب الرتيب.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الرتابة",
+            "explanation": "أثبتنا أن المتتالية متزايدة تماما."
+          },
+          {
+            "step_number": 2,
+            "title": "الحصر",
+            "explanation": "لدينا \\(u_n<4\\) لكل \\(n\\)، فهي محدودة من الأعلى."
+          },
+          {
+            "step_number": 3,
+            "title": "الاستنتاج",
+            "explanation": "كل متتالية متزايدة ومحدودة من الأعلى متقاربة."
+          }
+        ],
+        "final_answer": "\\((u_n)\\) متقاربة.",
+        "verification": "",
+        "common_mistakes": [],
+        "hints": [],
+        "graph_data": null,
+        "table_data": null
+      }
+    },
+    {
+      "id": "2012_ex2_q4",
+      "text": "4) \\((v_n)\\) المتتالية المعرفة على \\(\\mathbb N\\) بـ: \\[v_n=\\ln(u_n-3).\\]",
+      "axis_tags": [
+        "geometric_sequences"
+      ],
+      "solution": {
+        "strategy": "هذا السطر يعرّف المتتالية اللوغاريتمية، وهي معرفة لأن \\(u_n-3>0\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "شرط التعريف",
+            "explanation": "من السؤال الأول \\(u_n>3\\)، لذلك \\(u_n-3>0\\) واللوغاريتم معرف."
+          }
+        ],
+        "final_answer": "\\(v_n=\\ln(u_n-3)\\).",
+        "verification": "",
+        "common_mistakes": [],
+        "hints": [],
+        "graph_data": null,
+        "table_data": null
+      }
+    },
+    {
+      "id": "2012_ex2_q4a",
+      "text": "أ) برهن أن \\((v_n)\\) متتالية هندسية أساسها \\(\\frac12\\)، ثم احسب حدها الأول.",
+      "axis_tags": [
+        "geometric_sequences"
+      ],
+      "solution": {
+        "strategy": "نستعمل العلاقة \\(u_{n+1}-3=\\sqrt{u_n-3}\\) وخصائص اللوغاريتم.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب \\(v_{n+1}\\)",
+            "explanation": "",
+            "latex": "v_{n+1}=\\ln(u_{n+1}-3)=\\ln\\sqrt{u_n-3}"
+          },
+          {
+            "step_number": 2,
+            "title": "خاصية اللوغاريتم",
+            "explanation": "",
+            "latex": "v_{n+1}=\\frac12\\ln(u_n-3)=\\frac12v_n"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب الحد الأول",
+            "explanation": "",
+            "latex": "v_0=\\ln\\left(\\frac{13}{4}-3\\right)=\\ln\\frac14=-\\ln4"
+          }
+        ],
+        "final_answer": "\\((v_n)\\) هندسية أساسها \\(\\frac12\\)، وحدها الأول \\(v_0=-\\ln4\\).",
+        "verification": "",
+        "common_mistakes": [],
+        "hints": [],
+        "graph_data": null,
+        "table_data": null
+      }
+    },
+    {
+      "id": "2012_ex2_q4b",
+      "text": "ب) اكتب كلا من \\(v_n\\) و \\(u_n\\) بدلالة \\(n\\)، ثم احسب \\(\\displaystyle\\lim_{n\\to+\\infty}u_n\\).",
+      "axis_tags": [
+        "geometric_sequences",
+        "sequence_limits"
+      ],
+      "solution": {
+        "strategy": "نكتب الحد العام لـ\\(v_n\\)، ثم نطبق الدالة الأسية.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "عبارة \\(v_n\\)",
+            "explanation": "",
+            "latex": "v_n=-\\ln4\\left(\\frac12\\right)^n=-\\frac{\\ln4}{2^n}"
+          },
+          {
+            "step_number": 2,
+            "title": "الرجوع إلى \\(u_n\\)",
+            "explanation": "بما أن \\(v_n=\\ln(u_n-3)\\):",
+            "latex": "u_n-3=e^{v_n}=e^{-\\frac{\\ln4}{2^n}}=4^{-\\frac1{2^n}}"
+          },
+          {
+            "step_number": 3,
+            "title": "عبارة \\(u_n\\)",
+            "explanation": "",
+            "latex": "u_n=3+4^{-\\frac1{2^n}}"
+          },
+          {
+            "step_number": 4,
+            "title": "النهاية",
+            "explanation": "لأن \\(\\frac1{2^n}\\to0\\)، فإن \\(4^{-1/2^n}\\to1\\).",
+            "latex": "\\lim u_n=3+1=4"
+          }
+        ],
+        "final_answer": "\\(\\displaystyle v_n=-\\frac{\\ln4}{2^n}\\)، \\(\\displaystyle u_n=3+4^{-1/2^n}\\)، و\\(\\displaystyle\\lim u_n=4\\).",
+        "verification": "",
+        "common_mistakes": [],
+        "hints": [],
+        "graph_data": null,
+        "table_data": null
+      }
+    },
+    {
+      "id": "2012_ex2_q4c",
+      "text": "ج) نضع من أجل كل عدد طبيعي \\(n\\): \\[P_n=(u_0-3)(u_1-3)(u_2-3)\\times\\cdots\\times(u_n-3).\\] اكتب \\(P_n\\) بدلالة \\(n\\)، ثم بيّن أن \\(\\displaystyle\\lim_{n\\to+\\infty}P_n=\\frac1{16}\\).",
+      "axis_tags": [
+        "geometric_sequences",
+        "sequence_limits"
+      ],
+      "solution": {
+        "strategy": "نأخذ لوغاريتم الجداء، فيتحول إلى مجموع حدود \\(v_k\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "لوغاريتم الجداء",
+            "explanation": "",
+            "latex": "\\ln P_n=\\sum_{k=0}^n\\ln(u_k-3)=\\sum_{k=0}^n v_k"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب المجموع",
+            "explanation": "",
+            "latex": "\\sum_{k=0}^n v_k=-\\ln4\\sum_{k=0}^n\\left(\\frac12\\right)^k=-2\\ln4\\left(1-\\left(\\frac12\\right)^{n+1}\\right)"
+          },
+          {
+            "step_number": 3,
+            "title": "إرجاع الجداء",
+            "explanation": "",
+            "latex": "P_n=\\exp\\left[-2\\ln4\\left(1-\\left(\\frac12\\right)^{n+1}\\right)\\right]"
+          },
+          {
+            "step_number": 4,
+            "title": "صيغة مبسطة",
+            "explanation": "",
+            "latex": "P_n=4^{-2+\\frac1{2^n}}"
+          },
+          {
+            "step_number": 5,
+            "title": "النهاية",
+            "explanation": "بما أن \\(\\frac1{2^n}\\to0\\):",
+            "latex": "\\lim P_n=4^{-2}=\\frac1{16}"
+          }
+        ],
+        "final_answer": "\\(\\displaystyle P_n=4^{-2+1/2^n}\\)، و\\(\\displaystyle\\lim P_n=\\frac1{16}\\).",
+        "verification": "",
+        "common_mistakes": [],
+        "hints": [],
+        "graph_data": null,
+        "table_data": null
+      }
+    }
+  ]
+}

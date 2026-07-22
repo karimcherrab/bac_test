@@ -1,0 +1,357 @@
+{
+  "schema_version": "2.1-corrected",
+  "language": "ar",
+  "direction": "rtl",
+  "year": 2008,
+  "exercise_number": 1,
+  "source_page": 1,
+  "source_reference": "النص منقول كما ورد في ملف PDF، صفحة 1.",
+  "title": "التمرين الثالث (04 نقاط)",
+  "axis_tags": [
+    "seq_monotonicity",
+    "seq_bounded",
+    "mathematical_induction",
+    "sequence_limits"
+  ],
+  "statement": "نعتبر الدالة \\(f\\) المعرفة على المجال \\(I=[1,2]\\) بالعبارة: \\[f(x)=\\frac{x+2}{-x+4}.\\]",
+  "questions": [
+    {
+      "id": "2008_ex1_q1a",
+      "text": "أ- بيّن أن الدالة \\(f\\) متزايدة تماما على \\(I\\).",
+      "axis_tags": [
+        "seq_monotonicity"
+      ],
+      "solution": {
+        "strategy": "لإثبات أن الدالة متزايدة تماما على مجال، نحسب مشتقتها ثم ندرس إشارتها على ذلك المجال.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب المشتقة",
+            "explanation": "الدالة كسرية، لذلك نستعمل قاعدة مشتقة خارج دالتين.",
+            "latex": "f'(x)=\\frac{1\\cdot(-x+4)-(x+2)(-1)}{(-x+4)^2}"
+          },
+          {
+            "step_number": 2,
+            "title": "تبسيط المشتقة",
+            "explanation": "نبسّط البسط مع الانتباه إلى أن طرح عدد سالب يتحول إلى جمع.",
+            "latex": "f'(x)=\\frac{-x+4+x+2}{(4-x)^2}=\\frac{6}{(4-x)^2}"
+          },
+          {
+            "step_number": 3,
+            "title": "دراسة الإشارة",
+            "explanation": "بما أن \\(x\\in[1,2]\\)، فإن \\(4-x\\neq0\\)، ومنه \\((4-x)^2>0\\). كما أن \\(6>0\\).",
+            "latex": "\\forall x\\in[1,2],\\quad f'(x)=\\frac6{(4-x)^2}>0"
+          },
+          {
+            "step_number": 4,
+            "title": "الاستنتاج",
+            "explanation": "بما أن مشتقة \\(f\\) موجبة تماما على \\(I\\)، فإن \\(f\\) متزايدة تماما على \\(I\\)."
+          }
+        ],
+        "final_answer": "\\(f\\) متزايدة تماما على \\(I=[1,2]\\).",
+        "verification": "نجد \\(f(1)=1\\) و\\(f(2)=2\\)، وهذا ينسجم مع كون الدالة متزايدة.",
+        "common_mistakes": [
+          "نسيان تربيع المقام.",
+          "الخطأ في إشارة \\(-(x+2)(-1)\\)."
+        ],
+        "hints": [
+          "ابدأ بكتابة التعريف أو العلاقة المطلوبة قبل التعويض.",
+          "استعمل النتيجة السابقة، ولا تنتقل إلى النتيجة النهائية مباشرة."
+        ],
+        "graph_data": null,
+        "table_data": null,
+        "solution_style": "حل مفصل وبسيط: كل انتقال مبرر، والحسابات مرتبة، والنتيجة النهائية منفصلة."
+      },
+      "display_order": 1,
+      "content_type": "question"
+    },
+    {
+      "id": "2008_ex1_q1b",
+      "text": "ب- بيّن أنه من أجل كل عدد حقيقي \\(x\\) من المجال \\(I\\)، \\(f(x)\\) ينتمي إلى \\(I\\).",
+      "axis_tags": [
+        "seq_bounded",
+        "seq_monotonicity"
+      ],
+      "solution": {
+        "strategy": "نستعمل تزايد الدالة على المجال، ثم نحسب صورتي طرفي المجال.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "استعمال التزايد",
+            "explanation": "بما أن \\(f\\) متزايدة على \\([1,2]\\)، فإذا كان \\(1\\le x\\le2\\) فإن:",
+            "latex": "f(1)\\le f(x)\\le f(2)"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب صورتي الطرفين",
+            "explanation": "نحسب الصورتين مباشرة.",
+            "latex": "f(1)=\\frac{1+2}{-1+4}=1,\\qquad f(2)=\\frac{2+2}{-2+4}=2"
+          },
+          {
+            "step_number": 3,
+            "title": "الحصر",
+            "explanation": "بالتعويض في المتراجحة السابقة نحصل على:",
+            "latex": "1\\le f(x)\\le2"
+          },
+          {
+            "step_number": 4,
+            "title": "الاستنتاج",
+            "explanation": "إذن صورة كل عنصر من \\(I\\) تبقى داخل \\(I\\)."
+          }
+        ],
+        "final_answer": "\\(\\forall x\\in I,\\ f(x)\\in I\\)، أي \\(f(I)\\subset I\\).",
+        "verification": "يمكن التحقق بتعويض أول قيمة أو قيمتين في النتيجة ومقارنتها مع تعريف المتتالية.",
+        "common_mistakes": [
+          "الخلط بين الحد ذي الفهرس n والحد ذي الفهرس n+1.",
+          "نسيان التحقق من شروط استعمال القانون أو المبرهنة."
+        ],
+        "hints": [
+          "ابدأ بكتابة التعريف أو العلاقة المطلوبة قبل التعويض.",
+          "استعمل النتيجة السابقة، ولا تنتقل إلى النتيجة النهائية مباشرة."
+        ],
+        "graph_data": null,
+        "table_data": null,
+        "solution_style": "حل مفصل وبسيط: كل انتقال مبرر، والحسابات مرتبة، والنتيجة النهائية منفصلة."
+      },
+      "display_order": 2,
+      "content_type": "question"
+    },
+    {
+      "id": "2008_ex1_q2a",
+      "text": "أ- برهن بالتراجع أنه من أجل كل عدد طبيعي \\(n\\)، \\(u_n\\) ينتمي إلى \\(I\\).",
+      "axis_tags": [
+        "mathematical_induction",
+        "seq_bounded"
+      ],
+      "solution": {
+        "strategy": "نطبق الاستدلال بالتراجع على الخاصية \\(P(n): u_n\\in[1,2]\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "المرحلة الابتدائية",
+            "explanation": "عند \\(n=0\\):",
+            "latex": "u_0=\\frac32\\in[1,2]"
+          },
+          {
+            "step_number": 2,
+            "title": "فرضية التراجع",
+            "explanation": "نفترض أنه من أجل رتبة طبيعية \\(n\\)، لدينا \\(u_n\\in I\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "الانتقال من \\(n\\) إلى \\(n+1\\)",
+            "explanation": "بما أن \\(u_n\\in I\\) وبما أننا أثبتنا أن \\(f(x)\\in I\\) لكل \\(x\\in I\\)، فإن:",
+            "latex": "u_{n+1}=f(u_n)\\in I"
+          },
+          {
+            "step_number": 4,
+            "title": "الخاتمة",
+            "explanation": "إذن الخاصية صحيحة في البداية وتنتقل من رتبة إلى التي تليها؛ وبالتالي فهي صحيحة لكل \\(n\\in\\mathbb N\\)."
+          }
+        ],
+        "final_answer": "\\(\\forall n\\in\\mathbb N,\\quad 1\\le u_n\\le2\\).",
+        "verification": "هذه النتيجة تضمن خصوصا أن المقام \\(4-u_n\\) موجب دائما.",
+        "common_mistakes": [
+          "الخلط بين الحد ذي الفهرس n والحد ذي الفهرس n+1.",
+          "نسيان التحقق من شروط استعمال القانون أو المبرهنة."
+        ],
+        "hints": [
+          "ابدأ بكتابة التعريف أو العلاقة المطلوبة قبل التعويض.",
+          "استعمل النتيجة السابقة، ولا تنتقل إلى النتيجة النهائية مباشرة."
+        ],
+        "graph_data": null,
+        "table_data": null,
+        "solution_style": "حل مفصل وبسيط: كل انتقال مبرر، والحسابات مرتبة، والنتيجة النهائية منفصلة."
+      },
+      "display_order": 3,
+      "content_type": "question"
+    },
+    {
+      "id": "2008_ex1_q2b",
+      "text": "ب- أدرس اتجاه تغير المتتالية \\((u_n)\\)، ثم استنتج أنها متقاربة.",
+      "axis_tags": [
+        "seq_monotonicity",
+        "seq_bounded",
+        "sequence_limits"
+      ],
+      "solution": {
+        "strategy": "نحسب الفرق \\(u_{n+1}-u_n\\) ثم نحدد إشارته باستعمال الحصر \\(1\\le u_n\\le2\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب الفرق",
+            "explanation": "نعوض عبارة \\(u_{n+1}\\).",
+            "latex": "u_{n+1}-u_n=\\frac{u_n+2}{4-u_n}-u_n"
+          },
+          {
+            "step_number": 2,
+            "title": "توحيد المقام",
+            "explanation": "نوحّد المقام ثم نحلل البسط.",
+            "latex": "u_{n+1}-u_n=\\frac{u_n^2-3u_n+2}{4-u_n}=\\frac{(u_n-1)(u_n-2)}{4-u_n}"
+          },
+          {
+            "step_number": 3,
+            "title": "دراسة الإشارة",
+            "explanation": "لدينا \\(u_n-1\\ge0\\)، و\\(u_n-2\\le0\\)، و\\(4-u_n>0\\). لذلك:",
+            "latex": "u_{n+1}-u_n\\le0"
+          },
+          {
+            "step_number": 4,
+            "title": "اتجاه التغير",
+            "explanation": "إذن المتتالية \\((u_n)\\) متناقصة."
+          },
+          {
+            "step_number": 5,
+            "title": "التقارب",
+            "explanation": "بما أن \\((u_n)\\) متناقصة ومحدودة من الأسفل بالعدد \\(1\\)، فإنها متقاربة حسب مبرهنة التقارب الرتيب."
+          }
+        ],
+        "final_answer": "\\((u_n)\\) متناقصة ومحدودة، ومنه فهي متقاربة.",
+        "verification": "يمكن ملاحظة أن \\(u_0=1.5\\) و\\(u_1=1.4\\)، وهو متوافق مع التناقص.",
+        "common_mistakes": [
+          "الاكتفاء بتخمين الاتجاه دون دراسة إشارة الفرق.",
+          "نسيان أن المقام موجب لأن \\(u_n\\le2\\)."
+        ],
+        "hints": [
+          "ابدأ بكتابة التعريف أو العلاقة المطلوبة قبل التعويض.",
+          "استعمل النتيجة السابقة، ولا تنتقل إلى النتيجة النهائية مباشرة."
+        ],
+        "graph_data": null,
+        "table_data": null,
+        "solution_style": "حل مفصل وبسيط: كل انتقال مبرر، والحسابات مرتبة، والنتيجة النهائية منفصلة."
+      },
+      "display_order": 4,
+      "content_type": "question"
+    },
+    {
+      "id": "2008_ex1_q3a",
+      "text": "أ) برهن بالتراجع أنه من أجل كل عدد طبيعي \\(n\\): \\[u_n=1+\\frac{1}{\\left(\\frac32\\right)^n+1}.\\]",
+      "axis_tags": [
+        "mathematical_induction"
+      ],
+      "solution": {
+        "strategy": "نبرهن صيغة الحد العام بالتراجع.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التحقق عند \\(n=0\\)",
+            "explanation": "نعوض \\(n=0\\) في الطرف الأيمن.",
+            "latex": "1+\\frac1{(\\frac32)^0+1}=1+\\frac12=\\frac32=u_0"
+          },
+          {
+            "step_number": 2,
+            "title": "فرضية التراجع",
+            "explanation": "نفترض أنه عند رتبة \\(n\\):",
+            "latex": "u_n=1+\\frac1{(\\frac32)^n+1}"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب الحد الموالي",
+            "explanation": "نضع \\(a=(\\frac32)^n\\)، فيكون \\(u_n=1+\\frac1{a+1}=\\frac{a+2}{a+1}\\). ثم:",
+            "latex": "u_{n+1}=\\frac{u_n+2}{4-u_n}=\\frac{\\frac{a+2}{a+1}+2}{4-\\frac{a+2}{a+1}}"
+          },
+          {
+            "step_number": 4,
+            "title": "التبسيط",
+            "explanation": "نوحّد المقامات في البسط والمقام.",
+            "latex": "u_{n+1}=\\frac{3a+4}{3a+2}=1+\\frac{2}{3a+2}=1+\\frac1{\\frac32a+1}"
+          },
+          {
+            "step_number": 5,
+            "title": "إرجاع قيمة \\(a\\)",
+            "explanation": "بما أن \\(\\frac32a=(\\frac32)^{n+1}\\)، نحصل على الصيغة المطلوبة.",
+            "latex": "u_{n+1}=1+\\frac1{(\\frac32)^{n+1}+1}"
+          }
+        ],
+        "final_answer": "\\(\\forall n\\in\\mathbb N,\\quad u_n=1+\\dfrac1{(\\frac32)^n+1}\\).",
+        "verification": "يمكن التحقق بتعويض أول قيمة أو قيمتين في النتيجة ومقارنتها مع تعريف المتتالية.",
+        "common_mistakes": [
+          "الخلط بين الحد ذي الفهرس n والحد ذي الفهرس n+1.",
+          "نسيان التحقق من شروط استعمال القانون أو المبرهنة."
+        ],
+        "hints": [
+          "ابدأ بكتابة التعريف أو العلاقة المطلوبة قبل التعويض.",
+          "استعمل النتيجة السابقة، ولا تنتقل إلى النتيجة النهائية مباشرة."
+        ],
+        "graph_data": null,
+        "table_data": null,
+        "solution_style": "حل مفصل وبسيط: كل انتقال مبرر، والحسابات مرتبة، والنتيجة النهائية منفصلة."
+      },
+      "display_order": 5,
+      "content_type": "question"
+    },
+    {
+      "id": "2008_ex1_q3b",
+      "text": "ب) عيّن النهاية: \\(\\displaystyle\\lim_{n\\to+\\infty}u_n\\).",
+      "axis_tags": [
+        "sequence_limits"
+      ],
+      "solution": {
+        "strategy": "نستعمل عبارة الحد العام المثبتة في السؤال السابق.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "نهاية القوة",
+            "explanation": "بما أن \\(\\frac32>1\\)، فإن:",
+            "latex": "\\left(\\frac32\\right)^n\\longrightarrow+\\infty"
+          },
+          {
+            "step_number": 2,
+            "title": "نهاية الكسر",
+            "explanation": "إذن مقام الكسر يؤول إلى \\(+\\infty\\)، ومنه:",
+            "latex": "\\frac1{(\\frac32)^n+1}\\longrightarrow0"
+          },
+          {
+            "step_number": 3,
+            "title": "النهاية النهائية",
+            "explanation": "نجمع النهايتين.",
+            "latex": "u_n=1+\\frac1{(\\frac32)^n+1}\\longrightarrow1"
+          }
+        ],
+        "final_answer": "\\(\\displaystyle\\lim_{n\\to+\\infty}u_n=1\\).",
+        "verification": "يمكن التحقق بتعويض أول قيمة أو قيمتين في النتيجة ومقارنتها مع تعريف المتتالية.",
+        "common_mistakes": [
+          "الخلط بين الحد ذي الفهرس n والحد ذي الفهرس n+1.",
+          "نسيان التحقق من شروط استعمال القانون أو المبرهنة."
+        ],
+        "hints": [
+          "ابدأ بكتابة التعريف أو العلاقة المطلوبة قبل التعويض.",
+          "استعمل النتيجة السابقة، ولا تنتقل إلى النتيجة النهائية مباشرة."
+        ],
+        "graph_data": null,
+        "table_data": null,
+        "solution_style": "حل مفصل وبسيط: كل انتقال مبرر، والحسابات مرتبة، والنتيجة النهائية منفصلة."
+      },
+      "display_order": 6,
+      "content_type": "question"
+    }
+  ],
+  "content_separation": {
+    "statement": "المعطيات والتعريفات فقط، من دون حل أو طلبات.",
+    "questions": "الأسئلة المطلوبة فقط، وكل سؤال يحتوي حله الخاص.",
+    "statement_graph_data": "الرسم المعطى مع نص التمرين عندما يكون موجودا في النسخة الأصلية.",
+    "solution.graph_data": "الرسم المنجز في الحل مع خطوط الإنشاء عندما يطلب السؤال رسما."
+  },
+  "statement_sections": [
+    {
+      "type": "given",
+      "text": "نعتبر الدالة \\(f\\) المعرفة على المجال \\(I=[1,2]\\) بالعبارة: \\[f(x)=\\frac{x+2}{-x+4}.\\]"
+    },
+    {
+      "type": "definition",
+      "source_id": "2008_ex1_q2",
+      "text": "المتتالية \\((u_n)\\) هي المتتالية العددية المعرفة على \\(\\mathbb N\\) كما يأتي: \\[u_0=\\frac32\\quad\\text{و}\\quad u_{n+1}=f(u_n).\\]"
+    }
+  ],
+  "review_status": {
+    "compared_with_original_pdf": true,
+    "source_page_checked": 1,
+    "statement_questions_separated": true,
+    "solutions_expanded_for_beginner": true,
+    "graphs_checked": true
+  },
+  "source_text_policy": {
+    "statement": "منقول كما ورد في النسخة الأصلية دون إضافة رسم أو نتيجة أو شرح.",
+    "questions": "تظل المطالب منفصلة عن الحل، ولا تضاف إليها نتائج الحل."
+  }
+}

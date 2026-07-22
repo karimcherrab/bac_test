@@ -1,0 +1,38 @@
+---
+{
+  "id": "SKILL-SEQ-009",
+  "title": "استعمال اللوغاريتم",
+  "type": "skill",
+  "description": "متى أستعمل ln في المتتاليات؟",
+  "concepts": [
+    "logarithm",
+    "product"
+  ],
+  "methods": [
+    "METHOD-SEQ-010"
+  ],
+  "formulas": [
+    "FORMULA-SEQ-009",
+    "FORMULA-SEQ-010"
+  ],
+  "theorems": [
+    "THEOREM-SEQ-008",
+    "THEOREM-SEQ-009"
+  ],
+  "bac_questions": [
+    "BAC-2012-SCI-EX01B-Q3"
+  ]
+}
+---
+
+# استعمال اللوغاريتم
+
+## السؤال الذي تغطيه المهارة
+متى أستعمل ln في المتتاليات؟
+
+## Concepts
+- logarithm
+- product
+
+## Methods
+- METHOD-SEQ-010

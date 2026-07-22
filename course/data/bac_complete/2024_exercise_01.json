@@ -1,0 +1,190 @@
+{
+  "schema_version": "1.0",
+  "language": "ar",
+  "direction": "rtl",
+  "math_format": "LaTeX",
+  "id": "bac_seq_2024_ex_01",
+  "source": {
+    "year": 2024,
+    "branch": "علوم تجريبية",
+    "session": "البكالوريا",
+    "exercise_number": "التمرين الثالث",
+    "points": 5,
+    "pdf_page": 19
+  },
+  "title": "متتالية تراجعية وتحويلها إلى متتالية هندسية",
+  "difficulty": "متوسط",
+  "axis_tags": [
+    "seq_definition_notation_methods",
+    "mathematical_induction",
+    "seq_bounded",
+    "geometric_sequences",
+    "sequence_limits_convergence_divergence"
+  ],
+  "statement": {
+    "introduction": "لتكن المتتالية العددية \\((u_n)\\) معرفة بـ:",
+    "givens": [
+      "\\(u_0=0\\)",
+      "\\(u_{n+1}=\\dfrac{4-u_n}{2+u_n}\\) من أجل كل \\(n\\in\\mathbb{N}\\)."
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "number": "1",
+        "text": "احسب \\(u_1,u_2,u_3\\)، ثم برهن بالتراجع أنه من أجل كل \\(n\\in\\mathbb{N}\\): \\(0\\le u_n\\le2\\)."
+      },
+      {
+        "id": "q2a",
+        "number": "2-أ",
+        "text": "نضع \\(v_n=\\dfrac{u_n-1}{u_n+4}\\). أثبت أن \\((v_n)\\) هندسية أساسها \\(-\\dfrac23\\)، ثم اكتب \\(v_n\\) بدلالة \\(n\\)."
+      },
+      {
+        "id": "q2b",
+        "number": "2-ب",
+        "text": "بيّن أن \\(u_n=\\dfrac{5}{1-v_n}-4\\)، ثم احسب \\(\\lim\\limits_{n\\to+\\infty}u_n\\)."
+      },
+      {
+        "id": "q3",
+        "number": "3",
+        "text": "نضع \\(S_n=v_n+v_{n+1}+\\cdots+v_{n+2024}\\) و\\(T_n=\\dfrac1{4+u_n}+\\dfrac1{4+u_{n+1}}+\\cdots+\\dfrac1{4+u_{n+2024}}\\). احسب \\(S_n\\) ثم استنتج \\(T_n\\)."
+      }
+    ]
+  },
+  "solution": {
+    "strategy": [
+      "نحسب الحدود الأولى بالتعويض المباشر.",
+      "لإثبات الحصر نستعمل الاستدلال بالتراجع مع دراسة صورة المجال \\([0,2]\\) بالدالة التراجعية.",
+      "نحوّل المتتالية الكسرية إلى هندسية باستعمال تحويل مناسب.",
+      "نستعمل مجموع متتالية هندسية لحساب المجاميع."
+    ],
+    "questions": [
+      {
+        "question_id": "q1",
+        "title": "حساب الحدود وإثبات الحصر",
+        "method": "تعويض مباشر ثم استدلال بالتراجع",
+        "steps": [
+          {
+            "title": "حساب الحدود الأولى",
+            "explanation": "نعوض تباعًا في العلاقة التراجعية.",
+            "calculation": [
+              "\\(u_1=\\dfrac{4-0}{2+0}=2\\)",
+              "\\(u_2=\\dfrac{4-2}{2+2}=\\dfrac12\\)",
+              "\\(u_3=\\dfrac{4-\\frac12}{2+\\frac12}=\\dfrac{7/2}{5/2}=\\dfrac75\\)"
+            ]
+          },
+          {
+            "title": "مرحلة البداية",
+            "explanation": "عند \\(n=0\\) لدينا \\(u_0=0\\)، ومنه \\(0\\le u_0\\le2\\)."
+          },
+          {
+            "title": "فرضية التراجع",
+            "explanation": "نفترض أنه عند رتبة \\(n\\): \\(0\\le u_n\\le2\\)."
+          },
+          {
+            "title": "إثبات الانتقال",
+            "explanation": "بما أن \\(u_n\\ge0\\) فإن \\(2+u_n>0\\). كما أن \\(u_n\\le2\\) يعطي \\(4-u_n\\ge2>0\\)، إذن \\(u_{n+1}\\ge0\\). ولإثبات الحد الأعلى:",
+            "calculation": [
+              "\\(u_{n+1}\\le2\\iff \\dfrac{4-u_n}{2+u_n}\\le2\\)",
+              "\\(\\iff 4-u_n\\le4+2u_n\\)",
+              "\\(\\iff 0\\le3u_n\\)، وهي صحيحة."
+            ]
+          },
+          {
+            "title": "الخاتمة",
+            "explanation": "حسب مبدأ الاستدلال بالتراجع:",
+            "conclusion": "\\(0\\le u_n\\le2\\) لكل \\(n\\in\\mathbb{N}\\)."
+          }
+        ],
+        "final_answer": "\\(u_1=2,\\;u_2=\\frac12,\\;u_3=\\frac75\\)، و\\(0\\le u_n\\le2\\)."
+      },
+      {
+        "question_id": "q2a",
+        "title": "إثبات أن المتتالية المساعدة هندسية",
+        "method": "حساب \\(v_{n+1}\\) بدلالة \\(v_n\\)",
+        "steps": [
+          {
+            "title": "كتابة الحد الموالي",
+            "explanation": "نعوض \\(u_{n+1}=\\dfrac{4-u_n}{2+u_n}\\) في تعريف \\(v_{n+1}\\)."
+          },
+          {
+            "title": "التبسيط",
+            "explanation": "نحسب البسط والمقام على نفس المقام.",
+            "calculation": [
+              "\\(u_{n+1}-1=\\dfrac{4-u_n-(2+u_n)}{2+u_n}=\\dfrac{2-2u_n}{2+u_n}\\)",
+              "\\(u_{n+1}+4=\\dfrac{4-u_n+4(2+u_n)}{2+u_n}=\\dfrac{12+3u_n}{2+u_n}\\)",
+              "\\(v_{n+1}=\\dfrac{2-2u_n}{12+3u_n}=-\\dfrac23\\dfrac{u_n-1}{u_n+4}=-\\dfrac23v_n\\)"
+            ]
+          },
+          {
+            "title": "الحد الأول",
+            "explanation": "\\(v_0=\\dfrac{0-1}{0+4}=-\\dfrac14\\)."
+          },
+          {
+            "title": "الحد العام",
+            "explanation": "لأنها هندسية أساسها \\(-\\frac23\\):",
+            "calculation": "\\(v_n=-\\dfrac14\\left(-\\dfrac23\\right)^n\\)."
+          }
+        ],
+        "final_answer": "\\(v_n=-\\dfrac14\\left(-\\dfrac23\\right)^n\\)."
+      },
+      {
+        "question_id": "q2b",
+        "title": "استخراج \\(u_n\\) وحساب النهاية",
+        "method": "حل العلاقة الكسرية بالنسبة إلى \\(u_n\\)",
+        "steps": [
+          {
+            "title": "حل العلاقة",
+            "explanation": "من \\(v_n=\\dfrac{u_n-1}{u_n+4}\\):",
+            "calculation": [
+              "\\(v_n(u_n+4)=u_n-1\\)",
+              "\\(u_n(1-v_n)=1+4v_n\\)",
+              "\\(u_n=\\dfrac{1+4v_n}{1-v_n}=\\dfrac5{1-v_n}-4\\)"
+            ]
+          },
+          {
+            "title": "نهاية المتتالية المساعدة",
+            "explanation": "لأن \\(\\left|-\\frac23\\right|<1\\)، فإن \\(v_n\\to0\\)."
+          },
+          {
+            "title": "نهاية \\(u_n\\)",
+            "explanation": "بالتعويض في العبارة السابقة:",
+            "calculation": "\\(\\lim u_n=\\dfrac5{1-0}-4=1\\)."
+          }
+        ],
+        "final_answer": "\\(\\lim\\limits_{n\\to+\\infty}u_n=1\\)."
+      },
+      {
+        "question_id": "q3",
+        "title": "حساب المجموعين",
+        "method": "مجموع هندسي ثم تحويل كل حد",
+        "steps": [
+          {
+            "title": "حساب \\(S_n\\)",
+            "explanation": "عدد الحدود هو \\(2025\\)، وأولها \\(v_n\\).",
+            "calculation": "\\(S_n=v_n\\dfrac{1-(-\\frac23)^{2025}}{1+\\frac23}=\\dfrac35v_n\\left(1-\\left(-\\dfrac23\\right)^{2025}\\right)\\)."
+          },
+          {
+            "title": "الربط بين \\(T_n\\) و\\(S_n\\)",
+            "explanation": "من تعريف \\(v_k\\):",
+            "calculation": [
+              "\\(1-v_k=\\dfrac{u_k+4-u_k+1}{u_k+4}=\\dfrac5{u_k+4}\\)",
+              "\\(\\dfrac1{u_k+4}=\\dfrac{1-v_k}{5}\\)"
+            ]
+          },
+          {
+            "title": "حساب \\(T_n\\)",
+            "explanation": "نجمع من \\(k=n\\) إلى \\(n+2024\\).",
+            "calculation": "\\(T_n=\\dfrac15\\left(2025-S_n\\right)\\)."
+          }
+        ],
+        "final_answer": "\\(S_n=\\dfrac35v_n\\left(1-(-\\frac23)^{2025}\\right)\\)، و\\(T_n=405-\\dfrac15S_n\\)."
+      }
+    ],
+    "final_summary": [
+      "\\(u_n\\) محصورة بين \\(0\\) و\\(2\\).",
+      "التحويل \\(v_n=\\dfrac{u_n-1}{u_n+4}\\) يجعل المتتالية هندسية.",
+      "\\(u_n\\to1\\)."
+    ]
+  },
+  "graph": null
+}

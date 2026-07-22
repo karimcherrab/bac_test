@@ -1,0 +1,537 @@
+{
+  "schema_version": "2.0",
+  "language": "ar",
+  "direction": "rtl",
+  "year": 2008,
+  "exercise_number": 2,
+  "source_page": 1,
+  "source_reference": "النص منقول كما ورد في ملف PDF، صفحة 1.",
+  "title": "التمرين الثاني (05 نقاط)",
+  "axis_tags": [
+    "sequence_graphical_representation",
+    "seq_monotonicity",
+    "seq_bounded",
+    "geometric_sequences",
+    "sequence_limits"
+  ],
+  "statement": "\\((u_n)\\) متتالية عددية معرفة كما يلي: \\[u_0=\\frac52\\quad\\text{و من أجل كل عدد طبيعي }n:\\quad u_{n+1}=\\frac23u_n+2.\\]",
+  "questions": [
+    {
+      "id": "2008_ex2_q1a",
+      "text": "1- أ- ارسم في معلم متعامد ومتجانس \\((O;\\vec i,\\vec j)\\)، المستقيم \\((\\Delta)\\) الذي معادلته \\(y=x\\) والمنحنى \\((d)\\) الممثل للدالة المعرفة على \\(\\mathbb R\\) بـ: \\(f(x)=\\frac23x+2\\).",
+      "axis_tags": [
+        "sequence_graphical_representation"
+      ],
+      "solution": {
+        "strategy": "لرسم كل مستقيم نحدد نقطتين منه.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "رسم \\((\\Delta)\\)",
+            "explanation": "المستقيم \\(y=x\\) يمر بالنقطتين \\((0,0)\\) و\\((6,6)\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "رسم \\((d)\\)",
+            "explanation": "المستقيم \\(y=\\frac23x+2\\) يمر بالنقطتين \\((0,2)\\) و\\((6,6)\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "الرسم",
+            "explanation": "نصل بين نقطتي كل مستقيم، ونحافظ على وحدة القياس نفسها على المحورين."
+          }
+        ],
+        "final_answer": "المستقيمان يتقاطعان في النقطة \\((6,6)\\).",
+        "verification": "",
+        "common_mistakes": [],
+        "hints": [],
+        "graph_data": {
+          "graph_type": "cobweb",
+          "x_label": "x",
+          "y_label": "y",
+          "x_domain": [
+            0,
+            7
+          ],
+          "y_domain": [
+            0,
+            7
+          ],
+          "series": [
+            {
+              "id": "identity",
+              "type": "line",
+              "label": "y=x",
+              "data": [
+                {
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "x": 1,
+                  "y": 1
+                },
+                {
+                  "x": 2,
+                  "y": 2
+                },
+                {
+                  "x": 3,
+                  "y": 3
+                },
+                {
+                  "x": 4,
+                  "y": 4
+                },
+                {
+                  "x": 5,
+                  "y": 5
+                },
+                {
+                  "x": 6,
+                  "y": 6
+                },
+                {
+                  "x": 7,
+                  "y": 7
+                }
+              ]
+            },
+            {
+              "id": "curve_f",
+              "type": "line",
+              "label": "y=(2/3)x+2",
+              "data": [
+                {
+                  "x": 0,
+                  "y": 2.0
+                },
+                {
+                  "x": 1,
+                  "y": 2.6666666666666665
+                },
+                {
+                  "x": 2,
+                  "y": 3.333333333333333
+                },
+                {
+                  "x": 3,
+                  "y": 4.0
+                },
+                {
+                  "x": 4,
+                  "y": 4.666666666666666
+                },
+                {
+                  "x": 5,
+                  "y": 5.333333333333333
+                },
+                {
+                  "x": 6,
+                  "y": 6.0
+                },
+                {
+                  "x": 7,
+                  "y": 6.666666666666666
+                }
+              ]
+            }
+          ],
+          "annotations": [
+            {
+              "x": 6,
+              "y": 6,
+              "label": "نقطة التقاطع (6,6)"
+            }
+          ],
+          "settings": {
+            "show_grid": true,
+            "show_axes": true
+          }
+        },
+        "table_data": null
+      }
+    },
+    {
+      "id": "2008_ex2_q1b",
+      "text": "ب- باستعمال الرسم السابق، مثّل على حامل محور الفواصل وبدون حساب الحدود: \\(u_0,u_1,u_2,u_3,u_4\\).",
+      "axis_tags": [
+        "sequence_graphical_representation"
+      ],
+      "solution": {
+        "strategy": "نستعمل مخطط السلم بين المستقيمين \\(y=f(x)\\) و\\(y=x\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الانطلاق",
+            "explanation": "نضع \\(u_0=\\frac52\\) على محور الفواصل."
+          },
+          {
+            "step_number": 2,
+            "title": "الانتقال إلى \\((d)\\)",
+            "explanation": "نرسم عموديا حتى المستقيم \\(y=f(x)\\)، فنحصل على الارتفاع \\(u_1\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "الانتقال إلى \\((\\Delta)\\)",
+            "explanation": "نرسم أفقيا حتى المستقيم \\(y=x\\)، وبذلك تصبح فاصلة النقطة هي \\(u_1\\)."
+          },
+          {
+            "step_number": 4,
+            "title": "التكرار",
+            "explanation": "نكرر الانتقال العمودي ثم الأفقي للحصول على \\(u_2,u_3,u_4\\)."
+          }
+        ],
+        "final_answer": "تظهر الحدود على الرسم متزايدة ومتجهة نحو \\(6\\).",
+        "verification": "",
+        "common_mistakes": [],
+        "hints": [],
+        "graph_data": {
+          "graph_type": "cobweb",
+          "x_label": "x",
+          "y_label": "y",
+          "x_domain": [
+            0,
+            7
+          ],
+          "y_domain": [
+            0,
+            7
+          ],
+          "series": [
+            {
+              "id": "identity",
+              "type": "line",
+              "label": "y=x",
+              "data": [
+                {
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "x": 1,
+                  "y": 1
+                },
+                {
+                  "x": 2,
+                  "y": 2
+                },
+                {
+                  "x": 3,
+                  "y": 3
+                },
+                {
+                  "x": 4,
+                  "y": 4
+                },
+                {
+                  "x": 5,
+                  "y": 5
+                },
+                {
+                  "x": 6,
+                  "y": 6
+                },
+                {
+                  "x": 7,
+                  "y": 7
+                }
+              ]
+            },
+            {
+              "id": "curve_f",
+              "type": "line",
+              "label": "y=(2/3)x+2",
+              "data": [
+                {
+                  "x": 0,
+                  "y": 2.0
+                },
+                {
+                  "x": 1,
+                  "y": 2.6666666666666665
+                },
+                {
+                  "x": 2,
+                  "y": 3.333333333333333
+                },
+                {
+                  "x": 3,
+                  "y": 4.0
+                },
+                {
+                  "x": 4,
+                  "y": 4.666666666666666
+                },
+                {
+                  "x": 5,
+                  "y": 5.333333333333333
+                },
+                {
+                  "x": 6,
+                  "y": 6.0
+                },
+                {
+                  "x": 7,
+                  "y": 6.666666666666666
+                }
+              ]
+            }
+          ],
+          "annotations": [
+            {
+              "x": 6,
+              "y": 6,
+              "label": "نقطة التقاطع (6,6)"
+            }
+          ],
+          "settings": {
+            "show_grid": true,
+            "show_axes": true
+          }
+        },
+        "table_data": null
+      }
+    },
+    {
+      "id": "2008_ex2_q1c",
+      "text": "ج- ضع تخمينا حول اتجاه تغير المتتالية \\((u_n)\\) وتقاربها.",
+      "axis_tags": [
+        "seq_monotonicity",
+        "sequence_limits"
+      ],
+      "solution": {
+        "strategy": "نقرأ سلوك الحدود من مخطط السلم.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "قراءة الاتجاه",
+            "explanation": "كل حد ممثل يقع إلى يمين الحد السابق، لذلك نتوقع أن المتتالية متزايدة."
+          },
+          {
+            "step_number": 2,
+            "title": "قراءة التقارب",
+            "explanation": "الحدود تقترب من فاصلة نقطة تقاطع المستقيمين، أي من العدد \\(6\\)."
+          }
+        ],
+        "final_answer": "التخمين: \\((u_n)\\) متزايدة ومتقاربة نحو \\(6\\).",
+        "verification": "",
+        "common_mistakes": [],
+        "hints": [],
+        "graph_data": null,
+        "table_data": null
+      }
+    },
+    {
+      "id": "2008_ex2_q2a",
+      "text": "2- أ- برهن بالتراجع أنه من أجل كل عدد طبيعي \\(n\\): \\(u_n\\le6\\).",
+      "axis_tags": [
+        "mathematical_induction",
+        "seq_bounded"
+      ],
+      "solution": {
+        "strategy": "نطبق التراجع على الخاصية \\(u_n\\le6\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التحقق",
+            "explanation": "لدينا:",
+            "latex": "u_0=\\frac52\\le6"
+          },
+          {
+            "step_number": 2,
+            "title": "الفرضية",
+            "explanation": "نفترض أن \\(u_n\\le6\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "الانتقال",
+            "explanation": "نضرب المتراجحة في \\(\\frac23>0\\) ثم نضيف \\(2\\).",
+            "latex": "u_{n+1}=\\frac23u_n+2\\le\\frac23\\cdot6+2=6"
+          },
+          {
+            "step_number": 4,
+            "title": "الخاتمة",
+            "explanation": "إذن حسب مبدأ التراجع، \\(u_n\\le6\\) لكل \\(n\\)."
+          }
+        ],
+        "final_answer": "\\(\\forall n\\in\\mathbb N,\\ u_n\\le6\\).",
+        "verification": "",
+        "common_mistakes": [],
+        "hints": [],
+        "graph_data": null,
+        "table_data": null
+      }
+    },
+    {
+      "id": "2008_ex2_q2b",
+      "text": "ب- تحقق أن \\((u_n)\\) متزايدة.",
+      "axis_tags": [
+        "seq_monotonicity"
+      ],
+      "solution": {
+        "strategy": "نحسب فرق حدين متتاليين ونستعمل الحصر السابق.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب الفرق",
+            "explanation": "",
+            "latex": "u_{n+1}-u_n=\\frac23u_n+2-u_n=2-\\frac13u_n=\\frac{6-u_n}{3}"
+          },
+          {
+            "step_number": 2,
+            "title": "الإشارة",
+            "explanation": "بما أن \\(u_n\\le6\\)، فإن \\(6-u_n\\ge0\\).",
+            "latex": "u_{n+1}-u_n\\ge0"
+          },
+          {
+            "step_number": 3,
+            "title": "الاستنتاج",
+            "explanation": "إذن المتتالية متزايدة."
+          }
+        ],
+        "final_answer": "\\((u_n)\\) متزايدة.",
+        "verification": "",
+        "common_mistakes": [],
+        "hints": [],
+        "graph_data": null,
+        "table_data": null
+      }
+    },
+    {
+      "id": "2008_ex2_q2c",
+      "text": "ج- هل \\((u_n)\\) متقاربة؟ برر إجابتك.",
+      "axis_tags": [
+        "sequence_limits",
+        "seq_bounded"
+      ],
+      "solution": {
+        "strategy": "نطبق مبرهنة التقارب الرتيب.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الرتابة",
+            "explanation": "أثبتنا أن \\((u_n)\\) متزايدة."
+          },
+          {
+            "step_number": 2,
+            "title": "الحصر",
+            "explanation": "أثبتنا أن \\(u_n\\le6\\)، أي أنها محدودة من الأعلى."
+          },
+          {
+            "step_number": 3,
+            "title": "الاستنتاج",
+            "explanation": "كل متتالية متزايدة ومحدودة من الأعلى متقاربة."
+          }
+        ],
+        "final_answer": "نعم، \\((u_n)\\) متقاربة.",
+        "verification": "",
+        "common_mistakes": [],
+        "hints": [],
+        "graph_data": null,
+        "table_data": null
+      }
+    },
+    {
+      "id": "2008_ex2_q3",
+      "text": "3- نضع من أجل كل عدد طبيعي \\(n\\): \\(v_n=u_n-6\\).",
+      "axis_tags": [
+        "geometric_sequences"
+      ],
+      "solution": {
+        "strategy": "هذا السطر يعرّف المتتالية المساعدة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التعريف",
+            "explanation": "سنستعمل \\(v_n=u_n-6\\) لتحويل العلاقة التراجعية إلى علاقة هندسية."
+          }
+        ],
+        "final_answer": "\\(v_n=u_n-6\\).",
+        "verification": "",
+        "common_mistakes": [],
+        "hints": [],
+        "graph_data": null,
+        "table_data": null
+      }
+    },
+    {
+      "id": "2008_ex2_q3a",
+      "text": "أ- أثبت أن \\((v_n)\\) متتالية هندسية، يطلب تعيين أساسها وحدها الأول.",
+      "axis_tags": [
+        "geometric_sequences"
+      ],
+      "solution": {
+        "strategy": "نحسب \\(v_{n+1}\\) بدلالة \\(v_n\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب الحد الموالي",
+            "explanation": "",
+            "latex": "v_{n+1}=u_{n+1}-6=\\frac23u_n+2-6"
+          },
+          {
+            "step_number": 2,
+            "title": "التبسيط",
+            "explanation": "",
+            "latex": "v_{n+1}=\\frac23u_n-4=\\frac23(u_n-6)=\\frac23v_n"
+          },
+          {
+            "step_number": 3,
+            "title": "الأساس",
+            "explanation": "إذن \\((v_n)\\) هندسية أساسها \\(q=\\frac23\\)."
+          },
+          {
+            "step_number": 4,
+            "title": "الحد الأول",
+            "explanation": "",
+            "latex": "v_0=u_0-6=\\frac52-6=-\\frac72"
+          }
+        ],
+        "final_answer": "\\((v_n)\\) هندسية أساسها \\(\\frac23\\) وحدها الأول \\(v_0=-\\frac72\\).",
+        "verification": "",
+        "common_mistakes": [],
+        "hints": [],
+        "graph_data": null,
+        "table_data": null
+      }
+    },
+    {
+      "id": "2008_ex2_q3b",
+      "text": "ب- اكتب عبارة \\(u_n\\) بدلالة \\(n\\) ثم استنتج \\(\\displaystyle\\lim_{n\\to+\\infty}u_n\\).",
+      "axis_tags": [
+        "geometric_sequences",
+        "sequence_limits"
+      ],
+      "solution": {
+        "strategy": "نكتب الحد العام لـ\\((v_n)\\)، ثم نرجع إلى \\(u_n\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الحد العام لـ\\(v_n\\)",
+            "explanation": "",
+            "latex": "v_n=v_0q^n=-\\frac72\\left(\\frac23\\right)^n"
+          },
+          {
+            "step_number": 2,
+            "title": "الرجوع إلى \\(u_n\\)",
+            "explanation": "بما أن \\(v_n=u_n-6\\)، فإن:",
+            "latex": "u_n=6+v_n=6-\\frac72\\left(\\frac23\\right)^n"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب النهاية",
+            "explanation": "لأن \\(\\left|\\frac23\\right|<1\\)، فإن \\((\\frac23)^n\\to0\\).",
+            "latex": "\\lim_{n\\to+\\infty}u_n=6"
+          }
+        ],
+        "final_answer": "\\(u_n=6-\\dfrac72(\\frac23)^n\\)، و\\(\\displaystyle\\lim u_n=6\\).",
+        "verification": "",
+        "common_mistakes": [],
+        "hints": [],
+        "graph_data": null,
+        "table_data": null
+      }
+    }
+  ]
+}

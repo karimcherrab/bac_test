@@ -1,0 +1,139 @@
+{
+  "schema_version": "1.0",
+  "language": "ar",
+  "direction": "rtl",
+  "math_format": "LaTeX",
+  "id": "bac_seq_2024_ex_02",
+  "source": {
+    "year": 2024,
+    "branch": "علوم تجريبية",
+    "session": "البكالوريا",
+    "exercise_number": "التمرين الثالث - موضوع ثان",
+    "points": 5,
+    "pdf_page": 19
+  },
+  "title": "متتالية من الشكل n على 2 أس n ومجموع تلسكوبي",
+  "difficulty": "متوسط",
+  "axis_tags": [
+    "seq_monotonicity",
+    "sequence_limits_convergence_divergence",
+    "geometric_sequences"
+  ],
+  "statement": {
+    "givens": [
+      "\\(f(x)=\\dfrac{x+1}{2x}\\) معرفة على \\([2,+\\infty[\\).",
+      "\\(u_n=\\dfrac{n}{2^n}\\) من أجل \\(n\\ge2\\)."
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "number": "1",
+        "text": "شكّل جدول تغيرات \\(f\\)، ثم استنتج أنه من أجل كل \\(x\\ge2\\): \\(\\frac12<f(x)\\le\\frac34\\)."
+      },
+      {
+        "id": "q2a",
+        "number": "2-أ",
+        "text": "بيّن أن \\(\\dfrac{u_{n+1}}{u_n}\\le\\dfrac34\\)."
+      },
+      {
+        "id": "q2b",
+        "number": "2-ب",
+        "text": "أثبت أن \\(u_n\\le\\dfrac12(\\frac34)^{n-2}\\)، ثم استنتج نهاية \\(u_n\\)."
+      },
+      {
+        "id": "q2c",
+        "number": "2-ج",
+        "text": "نضع \\(S_n=\\dfrac{u_2}{2}+\\dfrac{u_3}{3}+\\cdots+\\dfrac{u_n}{n}\\). بيّن أن \\(S_n=\\dfrac12\\left(1-(\\frac12)^{n-1}\\right)\\)، ثم عين \\(n\\) حتى يكون \\(S_n=\\frac{511}{1024}\\)."
+      }
+    ]
+  },
+  "solution": {
+    "questions": [
+      {
+        "question_id": "q1",
+        "title": "دراسة الدالة",
+        "method": "اشتقاق مباشر",
+        "steps": [
+          {
+            "title": "الاشتقاق",
+            "explanation": "\\(f(x)=\\frac12+\\frac1{2x}\\)، ومنه:",
+            "calculation": "\\(f'(x)=-\\dfrac1{2x^2}<0\\) على \\([2,+\\infty[\\)."
+          },
+          {
+            "title": "التغيرات",
+            "explanation": "الدالة متناقصة، و\\(f(2)=\\frac34\\)، كما أن \\(\\lim_{x\\to+\\infty}f(x)=\\frac12\\)."
+          },
+          {
+            "title": "الحصر",
+            "explanation": "بما أن القيمة \\(\\frac12\\) نهاية غير محققة عند عدد منتهٍ:",
+            "conclusion": "\\(\\frac12<f(x)\\le\\frac34\\)."
+          }
+        ],
+        "final_answer": "\\(f\\) متناقصة و\\(\\frac12<f(x)\\le\\frac34\\)."
+      },
+      {
+        "question_id": "q2a",
+        "title": "حساب نسبة حدين",
+        "method": "تبسيط النسبة",
+        "steps": [
+          {
+            "title": "الحساب",
+            "explanation": "",
+            "calculation": "\\(\\dfrac{u_{n+1}}{u_n}=\\dfrac{(n+1)/2^{n+1}}{n/2^n}=\\dfrac{n+1}{2n}=f(n)\\le\\dfrac34\\)."
+          }
+        ],
+        "final_answer": "\\(\\frac{u_{n+1}}{u_n}\\le\\frac34\\)."
+      },
+      {
+        "question_id": "q2b",
+        "title": "إنشاء حد علوي هندسي",
+        "method": "تكرار المتراجحة",
+        "steps": [
+          {
+            "title": "الانطلاق",
+            "explanation": "\\(u_2=\\frac{2}{4}=\\frac12\\)."
+          },
+          {
+            "title": "التكرار",
+            "explanation": "من \\(u_{k+1}\\le\\frac34u_k\\) نحصل بالتتابع على:",
+            "calculation": "\\(u_n\\le u_2(\\frac34)^{n-2}=\\frac12(\\frac34)^{n-2}\\)."
+          },
+          {
+            "title": "النهاية",
+            "explanation": "الحدود موجبة والحد الأعلى يؤول إلى الصفر، فنطبق مبرهنة الحصر.",
+            "conclusion": "\\(u_n\\to0\\)."
+          }
+        ],
+        "final_answer": "\\(\\lim u_n=0\\)."
+      },
+      {
+        "question_id": "q2c",
+        "title": "حساب المجموع",
+        "method": "تحويله إلى مجموع هندسي",
+        "steps": [
+          {
+            "title": "تبسيط الحد",
+            "explanation": "\\(\\frac{u_k}{k}=\\frac1{2^k}\\)."
+          },
+          {
+            "title": "المجموع",
+            "explanation": "",
+            "calculation": "\\(S_n=\\sum_{k=2}^n\\frac1{2^k}=\\frac12\\left(1-(\\frac12)^{n-1}\\right)\\)."
+          },
+          {
+            "title": "تعيين n",
+            "explanation": "نحل:",
+            "calculation": [
+              "\\(\\frac12(1-2^{-(n-1)})=\\frac{511}{1024}\\)",
+              "\\(1-2^{-(n-1)}=\\frac{511}{512}\\)",
+              "\\(2^{-(n-1)}=\\frac1{512}=2^{-9}\\)"
+            ],
+            "conclusion": "\\(n=10\\)."
+          }
+        ],
+        "final_answer": "\\(S_n=\\frac12(1-(\\frac12)^{n-1})\\) و\\(n=10\\)."
+      }
+    ]
+  },
+  "graph": null
+}

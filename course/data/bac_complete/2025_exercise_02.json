@@ -1,0 +1,236 @@
+{
+  "schema_version": "1.0",
+  "language": "ar",
+  "direction": "rtl",
+  "math_format": "LaTeX",
+  "id": "bac_seq_2025_ex_02",
+  "source": {
+    "year": 2025,
+    "branch": "علوم تجريبية",
+    "exercise_number": "التمرين الثالث",
+    "points": 5,
+    "pdf_page": 20
+  },
+  "title": "متتالية تراجعية ودراسة متتالية مساعدة هندسية",
+  "difficulty": "متوسط",
+  "axis_tags": [
+    "seq_monotonicity",
+    "mathematical_induction",
+    "seq_bounded",
+    "geometric_sequences",
+    "sequence_limits_convergence_divergence"
+  ],
+  "statement": {
+    "givens": [
+      "\\(f(x)=\\dfrac{5x}{2x+1}\\) على \\([0,+\\infty[\\).",
+      "\\(u_0=3\\) و\\(u_{n+1}=f(u_n)\\).",
+      "\\(v_n=3^n(1-\\frac2{u_n})\\)."
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "number": "1",
+        "text": "ادرس اتجاه تغير الدالة \\(f\\)."
+      },
+      {
+        "id": "q2a",
+        "number": "2-أ",
+        "text": "احسب \\(u_1,u_2\\)، ثم خمن اتجاه تغير \\((u_n)\\)."
+      },
+      {
+        "id": "q2b",
+        "number": "2-ب",
+        "text": "برهن بالتراجع أنه لكل \\(n\\): \\(2<u_n\\le3\\)."
+      },
+      {
+        "id": "q2c",
+        "number": "2-ج",
+        "text": "ادرس اتجاه تغير \\((u_n)\\)."
+      },
+      {
+        "id": "q3a",
+        "number": "3-أ",
+        "text": "أثبت أن \\((v_n)\\) هندسية أساسها \\(\\frac35\\)، ثم اكتب \\(v_n\\) بدلالة \\(n\\)."
+      },
+      {
+        "id": "q3b",
+        "number": "3-ب",
+        "text": "احسب \\(S_n=v_0+5v_1+5^2v_2+\\cdots+5^nv_n\\)."
+      },
+      {
+        "id": "q3c",
+        "number": "3-ج",
+        "text": "اكتب \\(u_n\\) بدلالة \\(n\\)، ثم احسب نهايتها."
+      },
+      {
+        "id": "q4",
+        "number": "4",
+        "text": "تحقق أن \\(\\frac6{u_n}=3-\\frac1{5^n}\\)، ثم احسب \\(T_n=\\frac6{u_0}+\\cdots+\\frac6{u_n}\\)."
+      }
+    ]
+  },
+  "solution": {
+    "questions": [
+      {
+        "question_id": "q1",
+        "title": "تغير الدالة",
+        "method": "اشتقاق",
+        "steps": [
+          {
+            "title": "المشتقة",
+            "explanation": "",
+            "calculation": "\\(f'(x)=\\dfrac5{(2x+1)^2}>0\\)."
+          },
+          {
+            "title": "النتيجة",
+            "explanation": "إذن \\(f\\) متزايدة تمامًا على مجالها."
+          }
+        ],
+        "final_answer": "\\(f\\) متزايدة."
+      },
+      {
+        "question_id": "q2a",
+        "title": "الحدود الأولى",
+        "method": "تعويض",
+        "steps": [
+          {
+            "title": "الحساب",
+            "explanation": "",
+            "calculation": [
+              "\\(u_1=\\frac{15}{7}\\)",
+              "\\(u_2=\\frac{75}{37}\\)"
+            ]
+          },
+          {
+            "title": "التخمين",
+            "explanation": "نلاحظ \\(3>u_1>u_2>2\\)، فنخمن أنها متناقصة ومحصورة أسفلًا بـ\\(2\\)."
+          }
+        ],
+        "final_answer": "التخمين: متناقصة نحو \\(2\\)."
+      },
+      {
+        "question_id": "q2b",
+        "title": "إثبات الحصر",
+        "method": "استدلال بالتراجع",
+        "steps": [
+          {
+            "title": "البداية",
+            "explanation": "\\(u_0=3\\)، إذن \\(2<u_0\\le3\\)."
+          },
+          {
+            "title": "الانتقال",
+            "explanation": "إذا \\(2<u_n\\le3\\)، فإن لأن \\(f\\) متزايدة:",
+            "calculation": "\\(f(2)<f(u_n)\\le f(3)\\Rightarrow 2<u_{n+1}\\le\\frac{15}{7}<3\\)."
+          },
+          {
+            "title": "الخاتمة",
+            "explanation": "إذن \\(2<u_n\\le3\\) لكل \\(n\\)."
+          }
+        ],
+        "final_answer": "\\(2<u_n\\le3\\)."
+      },
+      {
+        "question_id": "q2c",
+        "title": "اتجاه تغير المتتالية",
+        "method": "دراسة الفرق",
+        "steps": [
+          {
+            "title": "الفرق",
+            "explanation": "",
+            "calculation": "\\(u_{n+1}-u_n=\\dfrac{5u_n}{2u_n+1}-u_n=\\dfrac{2u_n(2-u_n)}{2u_n+1}<0\\)."
+          },
+          {
+            "title": "النتيجة",
+            "explanation": "لأن \\(u_n>2\\)، فالمتتالية متناقصة تمامًا."
+          }
+        ],
+        "final_answer": "\\((u_n)\\) متناقصة."
+      },
+      {
+        "question_id": "q3a",
+        "title": "المتتالية المساعدة",
+        "method": "تبسيط",
+        "steps": [
+          {
+            "title": "الحساب",
+            "explanation": "",
+            "calculation": "\\(1-\\frac2{u_{n+1}}=1-\\frac{2(2u_n+1)}{5u_n}=\\frac15(1-\\frac2{u_n})\\)."
+          },
+          {
+            "title": "الحد الموالي",
+            "explanation": "",
+            "calculation": "\\(v_{n+1}=3^{n+1}\\frac15(1-\\frac2{u_n})=\\frac35v_n\\)."
+          },
+          {
+            "title": "الحد الأول",
+            "explanation": "\\(v_0=1-\\frac23=\\frac13\\)."
+          },
+          {
+            "title": "الحد العام",
+            "explanation": "",
+            "calculation": "\\(v_n=\\frac13(\\frac35)^n\\)."
+          }
+        ],
+        "final_answer": "\\(v_n=\\frac13(\\frac35)^n\\)."
+      },
+      {
+        "question_id": "q3b",
+        "title": "حساب S_n",
+        "method": "تحويل الحدود",
+        "steps": [
+          {
+            "title": "التبسيط",
+            "explanation": "\\(5^kv_k=5^k\\cdot\\frac13(\\frac35)^k=\\frac13 3^k\\)."
+          },
+          {
+            "title": "المجموع",
+            "explanation": "",
+            "calculation": "\\(S_n=\\frac13\\sum_{k=0}^n3^k=\\frac{3^{n+1}-1}{6}\\)."
+          }
+        ],
+        "final_answer": "\\(S_n=\\frac{3^{n+1}-1}{6}\\)."
+      },
+      {
+        "question_id": "q3c",
+        "title": "عبارة u_n والنهاية",
+        "method": "حل تعريف v_n",
+        "steps": [
+          {
+            "title": "العلاقة",
+            "explanation": "",
+            "calculation": "\\(3^n(1-\\frac2{u_n})=\\frac13(\\frac35)^n\\Rightarrow 1-\\frac2{u_n}=\\frac1{3\\cdot5^n}\\)."
+          },
+          {
+            "title": "الحل",
+            "explanation": "",
+            "calculation": "\\(u_n=\\dfrac{2}{1-\\frac1{3\\cdot5^n}}=\\dfrac{6\\cdot5^n}{3\\cdot5^n-1}\\)."
+          },
+          {
+            "title": "النهاية",
+            "explanation": "\\(u_n\\to2\\)."
+          }
+        ],
+        "final_answer": "\\(u_n=\\frac{6\\cdot5^n}{3\\cdot5^n-1}\\)، و\\(\\lim u_n=2\\)."
+      },
+      {
+        "question_id": "q4",
+        "title": "حساب T_n",
+        "method": "جمع عبارة بسيطة",
+        "steps": [
+          {
+            "title": "التحقق",
+            "explanation": "من العبارة السابقة:",
+            "calculation": "\\(\\frac6{u_n}=3-\\frac1{5^n}\\)."
+          },
+          {
+            "title": "المجموع",
+            "explanation": "",
+            "calculation": "\\(T_n=3(n+1)-\\sum_{k=0}^n5^{-k}=3(n+1)-\\frac54(1-5^{-(n+1)})\\)."
+          }
+        ],
+        "final_answer": "\\(T_n=3(n+1)-\\frac54(1-5^{-(n+1)})\\)."
+      }
+    ]
+  },
+  "graph": null
+}

@@ -1,0 +1,453 @@
+{
+  "schema_version": "2.0",
+  "language": "ar",
+  "direction": "rtl",
+  "year": 2010,
+  "exercise_number": 1,
+  "source_page": 3,
+  "source_reference": "النص منقول كما ورد في ملف PDF، صفحة 3.",
+  "title": "التمرين الأول (05 نقاط)",
+  "axis_tags": [
+    "sequence_graphical_representation",
+    "mathematical_induction",
+    "seq_monotonicity",
+    "geometric_sequences",
+    "sequence_limits"
+  ],
+  "statement": "في المستوى المنسوب إلى معلم متعامد ومتجانس مثلنا المستقيمين \\((\\Delta)\\) و\\((D)\\) معادلتيهما على الترتيب: \\[y=x\\quad\\text{و}\\quad y=\\frac12x+\\frac13.\\]",
+  "questions": [
+    {
+      "id": "2010_ex1_q1",
+      "text": "1) لتكن المتتالية \\((u_n)\\) المعرفة على مجموعة الأعداد الطبيعية \\(\\mathbb N\\) بـ: \\(u_0=6\\)، ومن أجل كل عدد طبيعي \\(n\\): \\[u_{n+1}=\\frac12u_n+\\frac13.\\]",
+      "axis_tags": [
+        "seq_definition_notation_methods"
+      ],
+      "solution": {
+        "strategy": "هذا السطر يعرّف المتتالية.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "قراءة التعريف",
+            "explanation": "نبدأ من \\(u_0=6\\)، ثم نطبق الدالة \\(f(x)=\\frac12x+\\frac13\\) في كل مرة."
+          }
+        ],
+        "final_answer": "\\(u_{n+1}=\\frac12u_n+\\frac13\\).",
+        "verification": "",
+        "common_mistakes": [],
+        "hints": [],
+        "graph_data": null,
+        "table_data": null
+      }
+    },
+    {
+      "id": "2010_ex1_q1a",
+      "text": "أ- انقل الشكل ثم مثل على محور الفواصل الحدود التالية: \\(u_0,u_1,u_2,u_3,u_4\\)، دون حسابها مبرزا خطوط الرسم.",
+      "axis_tags": [
+        "sequence_graphical_representation"
+      ],
+      "solution": {
+        "strategy": "نستعمل مخطط السلم بين المستقيمين.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "البداية",
+            "explanation": "نضع \\(u_0=6\\) على محور الفواصل."
+          },
+          {
+            "step_number": 2,
+            "title": "الانتقال العمودي",
+            "explanation": "نصعد إلى المستقيم \\(y=\\frac12x+\\frac13\\) للحصول على \\(u_1\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "الانتقال الأفقي",
+            "explanation": "ننتقل أفقيا إلى المستقيم \\(y=x\\) لننقل القيمة إلى محور الفواصل."
+          },
+          {
+            "step_number": 4,
+            "title": "التكرار",
+            "explanation": "نكرر العملية إلى أن نمثل \\(u_2,u_3,u_4\\)."
+          }
+        ],
+        "final_answer": "يظهر من الرسم أن الحدود تتناقص نحو \\(\\frac23\\).",
+        "verification": "",
+        "common_mistakes": [],
+        "hints": [],
+        "graph_data": {
+          "graph_type": "cobweb",
+          "x_label": "x",
+          "y_label": "y",
+          "x_domain": [
+            0,
+            7
+          ],
+          "y_domain": [
+            0,
+            7
+          ],
+          "series": [
+            {
+              "id": "identity",
+              "type": "line",
+              "label": "y=x",
+              "data": [
+                {
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "x": 1,
+                  "y": 1
+                },
+                {
+                  "x": 2,
+                  "y": 2
+                },
+                {
+                  "x": 3,
+                  "y": 3
+                },
+                {
+                  "x": 4,
+                  "y": 4
+                },
+                {
+                  "x": 5,
+                  "y": 5
+                },
+                {
+                  "x": 6,
+                  "y": 6
+                },
+                {
+                  "x": 7,
+                  "y": 7
+                }
+              ]
+            },
+            {
+              "id": "delta",
+              "type": "line",
+              "label": "y=(1/2)x+1/3",
+              "data": [
+                {
+                  "x": 0,
+                  "y": 0.3333333333333333
+                },
+                {
+                  "x": 1,
+                  "y": 0.8333333333333333
+                },
+                {
+                  "x": 2,
+                  "y": 1.3333333333333333
+                },
+                {
+                  "x": 3,
+                  "y": 1.8333333333333333
+                },
+                {
+                  "x": 4,
+                  "y": 2.3333333333333335
+                },
+                {
+                  "x": 5,
+                  "y": 2.8333333333333335
+                },
+                {
+                  "x": 6,
+                  "y": 3.3333333333333335
+                },
+                {
+                  "x": 7,
+                  "y": 3.8333333333333335
+                }
+              ]
+            }
+          ],
+          "annotations": [
+            {
+              "x": 0.6666666666666666,
+              "y": 0.6666666666666666,
+              "label": "نقطة التقاطع"
+            }
+          ],
+          "settings": {
+            "show_grid": true,
+            "show_axes": true
+          }
+        },
+        "table_data": null
+      }
+    },
+    {
+      "id": "2010_ex1_q1b",
+      "text": "ب- عين إحداثيي نقطة تقاطع المستقيمين \\((\\Delta)\\) و\\((D)\\).",
+      "axis_tags": [
+        "sequence_graphical_representation"
+      ],
+      "solution": {
+        "strategy": "في نقطة التقاطع تكون قيمتا \\(y\\) متساويتين.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حل المعادلة",
+            "explanation": "",
+            "latex": "x=\\frac12x+\\frac13"
+          },
+          {
+            "step_number": 2,
+            "title": "التبسيط",
+            "explanation": "",
+            "latex": "\\frac12x=\\frac13\\Rightarrow x=\\frac23"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب الترتيبة",
+            "explanation": "على \\(y=x\\)، فإن \\(y=\\frac23\\)."
+          }
+        ],
+        "final_answer": "نقطة التقاطع هي \\(A(\\frac23,\\frac23)\\).",
+        "verification": "",
+        "common_mistakes": [],
+        "hints": [],
+        "graph_data": null,
+        "table_data": null
+      }
+    },
+    {
+      "id": "2010_ex1_q1c",
+      "text": "ج- أعط تخمينا حول اتجاه تغير المتتالية \\((u_n)\\).",
+      "axis_tags": [
+        "seq_monotonicity"
+      ],
+      "solution": {
+        "strategy": "نقرأ ترتيب الحدود من الرسم.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "القراءة",
+            "explanation": "نلاحظ أن \\(u_0>u_1>u_2>u_3>u_4\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "التخمين",
+            "explanation": "نتوقع أن المتتالية متناقصة."
+          }
+        ],
+        "final_answer": "التخمين: \\((u_n)\\) متناقصة.",
+        "verification": "",
+        "common_mistakes": [],
+        "hints": [],
+        "graph_data": null,
+        "table_data": null
+      }
+    },
+    {
+      "id": "2010_ex1_q2a",
+      "text": "2) أ- باستعمال الاستدلال بالتراجع، أثبت أنه من أجل كل عدد طبيعي \\(n\\): \\(u_n>\\frac23\\).",
+      "axis_tags": [
+        "mathematical_induction",
+        "seq_bounded"
+      ],
+      "solution": {
+        "strategy": "نطبق التراجع على الخاصية \\(u_n>\\frac23\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التحقق",
+            "explanation": "",
+            "latex": "u_0=6>\\frac23"
+          },
+          {
+            "step_number": 2,
+            "title": "الفرضية",
+            "explanation": "نفترض أن \\(u_n>\\frac23\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "الانتقال",
+            "explanation": "",
+            "latex": "u_{n+1}-\\frac23=\\frac12u_n+\\frac13-\\frac23=\\frac12\\left(u_n-\\frac23\\right)>0"
+          },
+          {
+            "step_number": 4,
+            "title": "الخاتمة",
+            "explanation": "إذن \\(u_{n+1}>\\frac23\\)، ومنه الخاصية صحيحة لكل \\(n\\)."
+          }
+        ],
+        "final_answer": "\\(\\forall n\\in\\mathbb N,\\ u_n>\\frac23\\).",
+        "verification": "",
+        "common_mistakes": [],
+        "hints": [],
+        "graph_data": null,
+        "table_data": null
+      }
+    },
+    {
+      "id": "2010_ex1_q2b",
+      "text": "ب- استنتج اتجاه تغير المتتالية \\((u_n)\\).",
+      "axis_tags": [
+        "seq_monotonicity"
+      ],
+      "solution": {
+        "strategy": "نحسب الفرق ونستعمل النتيجة السابقة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب الفرق",
+            "explanation": "",
+            "latex": "u_{n+1}-u_n=\\frac12u_n+\\frac13-u_n=\\frac13-\\frac12u_n"
+          },
+          {
+            "step_number": 2,
+            "title": "إعادة الكتابة",
+            "explanation": "",
+            "latex": "u_{n+1}-u_n=-\\frac12\\left(u_n-\\frac23\\right)"
+          },
+          {
+            "step_number": 3,
+            "title": "الإشارة",
+            "explanation": "بما أن \\(u_n>\\frac23\\)، فإن الفرق سالب تماما."
+          },
+          {
+            "step_number": 4,
+            "title": "الاستنتاج",
+            "explanation": "إذن \\((u_n)\\) متناقصة تماما."
+          }
+        ],
+        "final_answer": "\\((u_n)\\) متناقصة تماما.",
+        "verification": "",
+        "common_mistakes": [],
+        "hints": [],
+        "graph_data": null,
+        "table_data": null
+      }
+    },
+    {
+      "id": "2010_ex1_q3",
+      "text": "3) نعتبر المتتالية \\((v_n)\\) المعرفة من أجل كل عدد طبيعي \\(n\\) بالعلاقة: \\[v_n=u_n-\\frac23.\\]",
+      "axis_tags": [
+        "geometric_sequences"
+      ],
+      "solution": {
+        "strategy": "تعريف متتالية مساعدة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الهدف",
+            "explanation": "طرح نقطة التثبيت \\(\\frac23\\) يحول العلاقة إلى علاقة هندسية."
+          }
+        ],
+        "final_answer": "\\(v_n=u_n-\\frac23\\).",
+        "verification": "",
+        "common_mistakes": [],
+        "hints": [],
+        "graph_data": null,
+        "table_data": null
+      }
+    },
+    {
+      "id": "2010_ex1_q3a",
+      "text": "أ- بين أن المتتالية \\((v_n)\\) هندسية يطلب تحديد أساسها وحدها الأول.",
+      "axis_tags": [
+        "geometric_sequences"
+      ],
+      "solution": {
+        "strategy": "نحسب \\(v_{n+1}\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الحساب",
+            "explanation": "",
+            "latex": "v_{n+1}=u_{n+1}-\\frac23=\\frac12u_n+\\frac13-\\frac23"
+          },
+          {
+            "step_number": 2,
+            "title": "التبسيط",
+            "explanation": "",
+            "latex": "v_{n+1}=\\frac12\\left(u_n-\\frac23\\right)=\\frac12v_n"
+          },
+          {
+            "step_number": 3,
+            "title": "الحد الأول",
+            "explanation": "",
+            "latex": "v_0=u_0-\\frac23=6-\\frac23=\\frac{16}{3}"
+          }
+        ],
+        "final_answer": "\\((v_n)\\) هندسية أساسها \\(\\frac12\\) وحدها الأول \\(v_0=\\frac{16}{3}\\).",
+        "verification": "",
+        "common_mistakes": [],
+        "hints": [],
+        "graph_data": null,
+        "table_data": null
+      }
+    },
+    {
+      "id": "2010_ex1_q3b",
+      "text": "ب- اكتب بدلالة \\(n\\) عبارة الحد العام \\(v_n\\)، واستنتج عبارة \\(u_n\\) بدلالة \\(n\\).",
+      "axis_tags": [
+        "geometric_sequences"
+      ],
+      "solution": {
+        "strategy": "نستعمل صيغة الحد العام ثم نرجع إلى \\(u_n\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "عبارة \\(v_n\\)",
+            "explanation": "",
+            "latex": "v_n=\\frac{16}{3}\\left(\\frac12\\right)^n"
+          },
+          {
+            "step_number": 2,
+            "title": "عبارة \\(u_n\\)",
+            "explanation": "",
+            "latex": "u_n=v_n+\\frac23=\\frac23+\\frac{16}{3}\\left(\\frac12\\right)^n"
+          }
+        ],
+        "final_answer": "\\(\\displaystyle v_n=\\frac{16}{3}(\\frac12)^n\\)، و\\(\\displaystyle u_n=\\frac23+\\frac{16}{3}(\\frac12)^n\\).",
+        "verification": "",
+        "common_mistakes": [],
+        "hints": [],
+        "graph_data": null,
+        "table_data": null
+      }
+    },
+    {
+      "id": "2010_ex1_q3c",
+      "text": "ج- احسب بدلالة \\(n\\) المجموع \\(S_n\\) حيث: \\(S_n=v_0+v_1+\\cdots+v_n\\)، واستنتج المجموع \\(S'_n\\) حيث: \\(S'_n=u_0+u_1+\\cdots+u_n\\).",
+      "axis_tags": [
+        "geometric_sequences"
+      ],
+      "solution": {
+        "strategy": "نحسب مجموعا هندسيا، ثم نستعمل \\(u_k=v_k+\\frac23\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب \\(S_n\\)",
+            "explanation": "",
+            "latex": "S_n=\\frac{16}{3}\\frac{1-(\\frac12)^{n+1}}{1-\\frac12}=\\frac{32}{3}\\left(1-\\left(\\frac12\\right)^{n+1}\\right)"
+          },
+          {
+            "step_number": 2,
+            "title": "ربط المجموعين",
+            "explanation": "",
+            "latex": "S'_n=\\sum_{k=0}^n\\left(v_k+\\frac23\\right)=S_n+\\frac23(n+1)"
+          },
+          {
+            "step_number": 3,
+            "title": "النتيجة",
+            "explanation": "",
+            "latex": "S'_n=\\frac{32}{3}\\left(1-\\left(\\frac12\\right)^{n+1}\\right)+\\frac23(n+1)"
+          }
+        ],
+        "final_answer": "\\(\\displaystyle S_n=\\frac{32}{3}(1-(\\frac12)^{n+1})\\)، و\\(\\displaystyle S'_n=S_n+\\frac23(n+1)\\).",
+        "verification": "",
+        "common_mistakes": [],
+        "hints": [],
+        "graph_data": null,
+        "table_data": null
+      }
+    }
+  ]
+}

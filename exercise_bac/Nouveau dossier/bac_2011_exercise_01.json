@@ -1,0 +1,177 @@
+{
+  "schema_version": "2.0",
+  "language": "ar",
+  "direction": "rtl",
+  "year": 2011,
+  "exercise_number": 1,
+  "source_page": 4,
+  "source_reference": "النص منقول كما ورد في ملف PDF، صفحة 4.",
+  "title": "التمرين الأول (04 نقاط)",
+  "axis_tags": [
+    "geometric_sequences",
+    "sequence_limits",
+    "sequence_sums"
+  ],
+  "statement": "\\(\\alpha\\) عدد حقيقي موجب تماما ويختلف عن \\(1\\). \\((u_n)\\) متتالية عددية معرفة على \\(\\mathbb N\\) بـ: \\(u_0=6\\)، ومن أجل كل عدد طبيعي \\(n\\): \\[u_{n+1}=\\alpha u_n+1.\\] \\((v_n)\\) متتالية عددية معرفة من أجل كل عدد طبيعي \\(n\\) بـ: \\[v_n=u_n+\\frac1{\\alpha-1}.\\]",
+  "questions": [
+    {
+      "id": "2011_ex1_q1a",
+      "text": "1. أ- بيّن أن \\((v_n)\\) متتالية هندسية أساسها \\(\\alpha\\).",
+      "axis_tags": [
+        "geometric_sequences"
+      ],
+      "solution": {
+        "strategy": "نحسب \\(v_{n+1}\\) ثم نستخرج العامل \\(\\alpha\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الحساب",
+            "explanation": "",
+            "latex": "v_{n+1}=u_{n+1}+\\frac1{\\alpha-1}=\\alpha u_n+1+\\frac1{\\alpha-1}"
+          },
+          {
+            "step_number": 2,
+            "title": "جمع الثابتين",
+            "explanation": "",
+            "latex": "1+\\frac1{\\alpha-1}=\\frac{\\alpha}{\\alpha-1}"
+          },
+          {
+            "step_number": 3,
+            "title": "استخراج العامل",
+            "explanation": "",
+            "latex": "v_{n+1}=\\alpha\\left(u_n+\\frac1{\\alpha-1}\\right)=\\alpha v_n"
+          }
+        ],
+        "final_answer": "\\((v_n)\\) هندسية أساسها \\(\\alpha\\).",
+        "verification": "",
+        "common_mistakes": [],
+        "hints": [],
+        "graph_data": null,
+        "table_data": null
+      }
+    },
+    {
+      "id": "2011_ex1_q1b",
+      "text": "ب- اكتب بدلالة \\(n\\) و \\(\\alpha\\)، عبارة \\(v_n\\) ثم استنتج بدلالة \\(n\\) و \\(\\alpha\\)، عبارة \\(u_n\\).",
+      "axis_tags": [
+        "geometric_sequences"
+      ],
+      "solution": {
+        "strategy": "نحسب الحد الأول ثم نكتب الحد العام.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الحد الأول",
+            "explanation": "",
+            "latex": "v_0=6+\\frac1{\\alpha-1}"
+          },
+          {
+            "step_number": 2,
+            "title": "الحد العام لـ\\(v_n\\)",
+            "explanation": "",
+            "latex": "v_n=\\left(6+\\frac1{\\alpha-1}\\right)\\alpha^n"
+          },
+          {
+            "step_number": 3,
+            "title": "الرجوع إلى \\(u_n\\)",
+            "explanation": "",
+            "latex": "u_n=v_n-\\frac1{\\alpha-1}"
+          },
+          {
+            "step_number": 4,
+            "title": "العبارة النهائية",
+            "explanation": "",
+            "latex": "u_n=\\left(6+\\frac1{\\alpha-1}\\right)\\alpha^n-\\frac1{\\alpha-1}"
+          }
+        ],
+        "final_answer": "\\(\\displaystyle v_n=(6+\\frac1{\\alpha-1})\\alpha^n\\)، و\\(\\displaystyle u_n=(6+\\frac1{\\alpha-1})\\alpha^n-\\frac1{\\alpha-1}\\).",
+        "verification": "",
+        "common_mistakes": [],
+        "hints": [],
+        "graph_data": null,
+        "table_data": null
+      }
+    },
+    {
+      "id": "2011_ex1_q1c",
+      "text": "ج- عين قيم العدد الحقيقي \\(\\alpha\\) التي تكون من أجلها المتتالية \\((u_n)\\) متقاربة.",
+      "axis_tags": [
+        "sequence_limits"
+      ],
+      "solution": {
+        "strategy": "ندرس نهاية \\(\\alpha^n\\) حسب قيمة \\(\\alpha>0\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الحالة \\(0<\\alpha<1\\)",
+            "explanation": "لدينا \\(\\alpha^n\\to0\\)، لذلك:",
+            "latex": "u_n\\to-\\frac1{\\alpha-1}=\\frac1{1-\\alpha}"
+          },
+          {
+            "step_number": 2,
+            "title": "الحالة \\(\\alpha>1\\)",
+            "explanation": "لدينا \\(\\alpha^n\\to+\\infty\\)، كما أن \\(6+\\frac1{\\alpha-1}>0\\)، لذلك \\(u_n\\to+\\infty\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "الاستنتاج",
+            "explanation": "القيمة \\(\\alpha=1\\) مستبعدة أصلا من نص التمرين."
+          }
+        ],
+        "final_answer": "تكون \\((u_n)\\) متقاربة بالضبط عندما \\(0<\\alpha<1\\).",
+        "verification": "",
+        "common_mistakes": [],
+        "hints": [],
+        "graph_data": null,
+        "table_data": null
+      }
+    },
+    {
+      "id": "2011_ex1_q2",
+      "text": "2. نضع \\(\\alpha=\\frac32\\). احسب بدلالة \\(n\\)، المجموعين \\(S_n\\) و \\(T_n\\) حيث: \\[S_n=v_0+v_1+\\cdots+v_n\\quad\\text{و}\\quad T_n=u_0+u_1+\\cdots+u_n.\\]",
+      "axis_tags": [
+        "geometric_sequences"
+      ],
+      "solution": {
+        "strategy": "نعوض \\(\\alpha=\\frac32\\)، ثم نحسب مجموعا هندسيا ونربطه بمجموع \\(u_k\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تعيين \\(v_0\\)",
+            "explanation": "",
+            "latex": "v_0=6+\\frac1{\\frac32-1}=6+2=8"
+          },
+          {
+            "step_number": 2,
+            "title": "عبارة \\(v_n\\)",
+            "explanation": "",
+            "latex": "v_n=8\\left(\\frac32\\right)^n"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب \\(S_n\\)",
+            "explanation": "",
+            "latex": "S_n=8\\frac{(\\frac32)^{n+1}-1}{\\frac32-1}=16\\left[\\left(\\frac32\\right)^{n+1}-1\\right]"
+          },
+          {
+            "step_number": 4,
+            "title": "ربط \\(u_n\\) و\\(v_n\\)",
+            "explanation": "لأن \\(v_n=u_n+2\\)، فإن \\(u_n=v_n-2\\)."
+          },
+          {
+            "step_number": 5,
+            "title": "حساب \\(T_n\\)",
+            "explanation": "",
+            "latex": "T_n=\\sum_{k=0}^n(v_k-2)=S_n-2(n+1)"
+          }
+        ],
+        "final_answer": "\\(\\displaystyle S_n=16[(\\frac32)^{n+1}-1]\\)، و\\(\\displaystyle T_n=16[(\\frac32)^{n+1}-1]-2(n+1)\\).",
+        "verification": "",
+        "common_mistakes": [],
+        "hints": [],
+        "graph_data": null,
+        "table_data": null
+      }
+    }
+  ]
+}

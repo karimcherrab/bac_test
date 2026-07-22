@@ -1,0 +1,158 @@
+{
+  "schema_version": "1.0",
+  "language": "ar",
+  "direction": "rtl",
+  "math_format": "LaTeX",
+  "id": "bac_seq_2026_ex_01",
+  "source": {
+    "year": 2026,
+    "branch": "علوم تجريبية",
+    "exercise_number": "التمرين الثالث",
+    "points": 5,
+    "pdf_page": 21
+  },
+  "title": "متتالية تراجعية مرتبطة بدالة كسرية",
+  "difficulty": "متوسط",
+  "axis_tags": [
+    "seq_monotonicity",
+    "mathematical_induction",
+    "seq_bounded",
+    "geometric_sequences",
+    "sequence_limits_convergence_divergence"
+  ],
+  "statement": {
+    "givens": [
+      "\\(f(x)=\\dfrac{4x}{x+2}\\) على \\(]-2,+\\infty[\\).",
+      "\\(u_0=4\\) و\\(u_{n+1}=f(u_n)\\).",
+      "\\(v_n=\\dfrac{u_n-2}{u_n}\\)."
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "number": "1",
+        "text": "ادرس اتجاه تغير الدالة \\(f\\)."
+      },
+      {
+        "id": "q2",
+        "number": "2",
+        "text": "احسب \\(u_1,u_2\\)، خمن اتجاه التغير، برهن أن \\(u_n>2\\)، ثم ادرس اتجاه تغير \\((u_n)\\)."
+      },
+      {
+        "id": "q3",
+        "number": "3",
+        "text": "أثبت أن \\((v_n)\\) هندسية أساسها \\(\\frac12\\)، اكتب \\(v_n\\)، ثم عبّر عن \\(u_n\\) واحسب النهاية."
+      },
+      {
+        "id": "q4",
+        "number": "4",
+        "text": "نضع \\(S_n=v_0+\\cdots+v_n\\) و\\(T_n=\\frac1{u_0}+\\cdots+\\frac1{u_n}\\). احسب \\(S_n\\)، ثم استنتج \\(T_n\\)."
+      }
+    ]
+  },
+  "solution": {
+    "questions": [
+      {
+        "question_id": "q1",
+        "title": "تغير f",
+        "method": "اشتقاق",
+        "steps": [
+          {
+            "title": "المشتقة",
+            "explanation": "",
+            "calculation": "\\(f'(x)=\\dfrac8{(x+2)^2}>0\\)."
+          },
+          {
+            "title": "النتيجة",
+            "explanation": "\\(f\\) متزايدة تمامًا."
+          }
+        ],
+        "final_answer": "\\(f\\) متزايدة."
+      },
+      {
+        "question_id": "q2",
+        "title": "الحصر والرتابة",
+        "method": "حساب ثم تراجع ودراسة الفرق",
+        "steps": [
+          {
+            "title": "الحدود",
+            "explanation": "",
+            "calculation": [
+              "\\(u_1=\\frac83\\)",
+              "\\(u_2=\\frac{16}{7}\\)"
+            ]
+          },
+          {
+            "title": "التراجع",
+            "explanation": "البداية \\(u_0=4>2\\). إذا \\(u_n>2\\):",
+            "calculation": "\\(u_{n+1}-2=\\dfrac{2(u_n-2)}{u_n+2}>0\\)."
+          },
+          {
+            "title": "الفرق",
+            "explanation": "",
+            "calculation": "\\(u_{n+1}-u_n=\\dfrac{u_n(2-u_n)}{u_n+2}<0\\)."
+          },
+          {
+            "title": "النتيجة",
+            "explanation": "المتتالية متناقصة ومحدودة من الأسفل بـ\\(2\\)."
+          }
+        ],
+        "final_answer": "\\(u_n>2\\) و\\((u_n)\\) متناقصة."
+      },
+      {
+        "question_id": "q3",
+        "title": "المتتالية المساعدة والنهاية",
+        "method": "حساب v_{n+1}",
+        "steps": [
+          {
+            "title": "الحد الموالي",
+            "explanation": "",
+            "calculation": "\\(v_{n+1}=1-\\frac2{u_{n+1}}=1-\\frac{u_n+2}{2u_n}=\\frac12(1-\\frac2{u_n})=\\frac12v_n\\)."
+          },
+          {
+            "title": "الحد الأول",
+            "explanation": "\\(v_0=\\frac{4-2}{4}=\\frac12\\)."
+          },
+          {
+            "title": "الحد العام",
+            "explanation": "",
+            "calculation": "\\(v_n=(\\frac12)^{n+1}\\)."
+          },
+          {
+            "title": "استخراج u_n",
+            "explanation": "\\(v_n=1-\\frac2{u_n}\\).",
+            "calculation": "\\(u_n=\\dfrac2{1-(\\frac12)^{n+1}}\\)."
+          },
+          {
+            "title": "النهاية",
+            "explanation": "\\((\\frac12)^{n+1}\\to0\\)، إذن \\(u_n\\to2\\)."
+          }
+        ],
+        "final_answer": "\\(u_n=\\frac2{1-2^{-(n+1)}}\\)، و\\(\\lim u_n=2\\)."
+      },
+      {
+        "question_id": "q4",
+        "title": "المجموعان",
+        "method": "مجموع هندسي ثم علاقة حدية",
+        "steps": [
+          {
+            "title": "حساب S_n",
+            "explanation": "",
+            "calculation": "\\(S_n=\\sum_{k=0}^n(\\frac12)^{k+1}=1-(\\frac12)^{n+1}\\)."
+          },
+          {
+            "title": "الربط",
+            "explanation": "من \\(v_k=1-\\frac2{u_k}\\):",
+            "calculation": "\\(\\frac1{u_k}=\\frac{1-v_k}{2}\\)."
+          },
+          {
+            "title": "حساب T_n",
+            "explanation": "",
+            "calculation": "\\(T_n=\\frac12[(n+1)-S_n]=\\frac n2+(\\frac12)^{n+2}\\)."
+          }
+        ],
+        "final_answer": "\\(T_n=\\frac n2+(\\frac12)^{n+2}\\)."
+      }
+    ]
+  },
+  "graph": null
+}
