@@ -217,19 +217,17 @@ CSRF_TRUSTED_ORIGINS = [
     if origin.strip()
 ]
 
-ALLOWED_HOSTS = [
-    '127.0.0.1', 'localhost',
-    ".onrender.com", "Back.onrender.com",
+ALLOWED_HOSTS = os.getenv(
+    "ALLOWED_HOSTS",
+    "127.0.0.1,localhost"
+).split(",")
 
 
-
-]
 CORS_ALLOW_CREDENTIALS = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = 'static/'
-
+STATIC_URL = "/static/"
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
