@@ -217,11 +217,15 @@ CSRF_TRUSTED_ORIGINS = [
     if origin.strip()
 ]
 
-ALLOWED_HOSTS = os.getenv(
-    "ALLOWED_HOSTS",
-    "127.0.0.1,localhost"
-).split(",")
+ALLOWED_HOSTS = [
+    "127.0.0.1",
+    "localhost",
+]
 
+render_hostname = os.getenv("RENDER_EXTERNAL_HOSTNAME")
+
+if render_hostname:
+    ALLOWED_HOSTS.append(render_hostname)
 
 CORS_ALLOW_CREDENTIALS = True
 # Static files (CSS, JavaScript, Images)
