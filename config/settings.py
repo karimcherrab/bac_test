@@ -61,6 +61,7 @@ INSTALLED_APPS = [
     'course',
     'exercise_generation',
     'exercise_bac',
+    'axis_revision',
     'accounts.apps.AccountsConfig'
 ]
 
@@ -103,19 +104,19 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 
-DATABASE_URL = os.getenv("DATABASE_URL")
-
-if DATABASE_URL:
-    DATABASES = {
-        "default": dj_database_url.parse(
-            DATABASE_URL,
-            conn_max_age=600,
-            conn_health_checks=True,
-            ssl_require=not DEBUG,
-        )
-    }
-else:
-    DATABASES = {
+# DATABASE_URL = os.getenv("DATABASE_URL")
+#
+# if False:
+#     DATABASES = {
+#         "default": dj_database_url.parse(
+#             DATABASE_URL,
+#             conn_max_age=600,
+#             conn_health_checks=True,
+#             ssl_require=not DEBUG,
+#         )
+#     }
+# else:
+DATABASES = {
         "default": {
             "ENGINE": "django.db.backends.postgresql",
             "NAME": os.getenv(

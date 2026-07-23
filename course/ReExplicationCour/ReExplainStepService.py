@@ -1,3 +1,4 @@
+import inspect
 import json
 import re
 from typing import Any
@@ -12,17 +13,17 @@ from knowledge.retrieval.context_builder import (
 
 class ReExplainStepService:
     """
-    يجيب عن سؤال التلميذ اعتمادًا على المرحلة الحالية فقط.
+    خدمة إعادة شرح مرحلة محددة من الدرس.
 
-    إذا كان السؤال خارج المرحلة:
-    - لا يجيب عن الموضوع الخارجي.
-    - يعيد is_related=False.
+    تعتمد الإجابة على:
+    - بيانات المرحلة الحالية.
+    - سؤال التلميذ.
+    - دون تحميل سياق الفصل كاملًا.
     """
 
     MAX_STEPS = 4
-
-    # أقصى حجم لمحتوى المرحلة المرسل إلى النموذج.
     MAX_STEP_CONTENT_CHARS = 5500
+    MAX_STUDENT_QUESTION_CHARS = 1200
 
     def __init__(self):
         self.generator = AnswerGenerator()
@@ -73,7 +74,11 @@ class ReExplainStepService:
             if isinstance(parsed, dict):
                 return parsed
 
-        except json.JSONDecodeError:
+        except (
+            json.JSONDecodeError,
+            TypeError,
+            ValueError,
+        ):
             pass
 
         start = cleaned.find("{")
@@ -84,15 +89,19 @@ class ReExplainStepService:
             and end != -1
             and end > start
         ):
+            json_part = cleaned[start:end + 1]
+
             try:
-                parsed = json.loads(
-                    cleaned[start:end + 1]
-                )
+                parsed = json.loads(json_part)
 
                 if isinstance(parsed, dict):
                     return parsed
 
-            except json.JSONDecodeError:
+            except (
+                json.JSONDecodeError,
+                TypeError,
+                ValueError,
+            ):
                 pass
 
         return self.get_fallback_answer(
@@ -109,11 +118,9 @@ class ReExplainStepService:
 
         if isinstance(value, str):
             value = value.strip()
-
             return value or default
 
         value = str(value).strip()
-
         return value or default
 
     def normalize_boolean(
@@ -130,7 +137,7 @@ class ReExplainStepService:
         if isinstance(value, str):
             normalized = value.strip().lower()
 
-            if normalized in {
+            true_values = {
                 "true",
                 "1",
                 "yes",
@@ -138,10 +145,9 @@ class ReExplainStepService:
                 "نعم",
                 "مرتبط",
                 "related",
-            }:
-                return True
+            }
 
-            if normalized in {
+            false_values = {
                 "false",
                 "0",
                 "no",
@@ -149,7 +155,12 @@ class ReExplainStepService:
                 "لا",
                 "غير مرتبط",
                 "unrelated",
-            }:
+            }
+
+            if normalized in true_values:
+                return True
+
+            if normalized in false_values:
                 return False
 
         return default
@@ -187,14 +198,17 @@ class ReExplainStepService:
         self,
         message: str = "",
     ) -> dict:
+        explanation = (
+            message
+            or "لم أتمكن من إنشاء شرح مناسب."
+        )
+
         return {
             "is_related": True,
             "relation_reason": "",
             "title": "توضيح المرحلة",
-            "simple_explanation": (
-                message
-                or "لم أتمكن من إنشاء شرح مناسب."
-            ),
+            "direct_answer": explanation,
+            "simple_explanation": explanation,
             "example": "",
             "steps": [],
             "check_question": "",
@@ -220,6 +234,7 @@ class ReExplainStepService:
             "title": (
                 "السؤال غير متعلق بهذه المرحلة"
             ),
+            "direct_answer": "",
             "simple_explanation": (
                 "هذا السؤال غير متعلق بالمحتوى "
                 "الموجود في هذه المرحلة. "
@@ -261,10 +276,17 @@ class ReExplainStepService:
                 relation_reason=relation_reason,
             )
 
+        direct_answer = self.normalize_text(
+            answer.get("direct_answer")
+            or answer.get("result")
+            or answer.get("final_answer")
+        )
+
         simple_explanation = self.normalize_text(
             answer.get("simple_explanation")
             or answer.get("explanation")
             or answer.get("answer")
+            or direct_answer
         )
 
         if not simple_explanation:
@@ -273,6 +295,9 @@ class ReExplainStepService:
                 "حاول إعادة صياغة السؤال."
             )
 
+        if not direct_answer:
+            direct_answer = simple_explanation
+
         return {
             "is_related": True,
             "relation_reason": relation_reason,
@@ -280,6 +305,7 @@ class ReExplainStepService:
                 answer.get("title"),
                 f"توضيح: {step_title}",
             ),
+            "direct_answer": direct_answer,
             "simple_explanation": (
                 simple_explanation
             ),
@@ -309,7 +335,7 @@ class ReExplainStepService:
         """
         تنظيف محتوى المرحلة قبل إرساله للنموذج.
 
-        يحذف:
+        يتم حذف:
         - القيم الفارغة.
         - البيانات الرسومية الكبيرة.
         - الحقول التقنية.
@@ -328,7 +354,6 @@ class ReExplainStepService:
             if not value:
                 return None
 
-            # منع النصوص الطويلة جدًا داخل حقل واحد.
             return value[:1800]
 
         if isinstance(
@@ -340,7 +365,6 @@ class ReExplainStepService:
         if isinstance(value, list):
             cleaned_items = []
 
-            # نرسل أول 8 عناصر فقط.
             for item in value[:8]:
                 cleaned_item = self.compact_value(
                     item,
@@ -408,11 +432,18 @@ class ReExplainStepService:
             {},
         )
 
+        if not isinstance(content, dict):
+            content = {
+                "content": content,
+            }
+
         compact_content = self.compact_value(
             content
         )
 
-        # separators بدون مسافات لتقليل حجم الـTokens.
+        if compact_content is None:
+            compact_content = {}
+
         content_json = json.dumps(
             compact_content,
             ensure_ascii=False,
@@ -431,9 +462,9 @@ class ReExplainStepService:
         return content_json
 
     def build_prompt(
-            self,
-            step: dict,
-            student_question: str,
+        self,
+        step: dict,
+        student_question: str,
     ) -> str:
         step_title = self.normalize_text(
             step.get("title"),
@@ -451,80 +482,148 @@ class ReExplainStepService:
 
         student_question = self.normalize_text(
             student_question
-        )[:1200]
+        )[:self.MAX_STUDENT_QUESTION_CHARS]
 
         return f"""
-    أنت أستاذ رياضيات جزائري تجيب عن سؤال تلميذ بكالوريا.
+أنت أستاذ رياضيات جزائري تجيب عن سؤال تلميذ بكالوريا.
 
-    مرجع المرحلة الحالية:
-    العنوان: {step_title}
-    النوع: {step_type}
-    المحتوى: {content_json}
+مرجع المرحلة الحالية:
+العنوان: {step_title}
+النوع: {step_type}
+المحتوى: {content_json}
 
-    السؤال الحقيقي الذي كتبه التلميذ:
-    {student_question}
+السؤال الحقيقي الذي كتبه التلميذ:
+{student_question}
 
-    أجب عن السؤال المكتوب أعلاه نفسه فقط.
+أجب عن السؤال المكتوب أعلاه نفسه فقط.
 
-    تعليمات إلزامية:
-    - استخرج جميع المعطيات الرياضية الموجودة في سؤال التلميذ.
-    - لا تقل إن المعطيات ناقصة إذا كانت موجودة في السؤال.
-    - لا تنقل معطيات السؤال إلى سؤال تحقق جديد دون حلها أولًا.
-    - لا تحول السؤال إلى تعريف عام أو درس عام.
-    - لا تغير التعبير أو الأعداد أو الرموز التي كتبها التلميذ.
-    - إذا طلب قيمة، احسبها وأعط النتيجة مباشرة.
-    - إذا طلب تفسيرًا، فسر النقطة المطلوبة فقط.
-    - إذا طلب طريقة، طبقها على معطياته.
-    - ابدأ simple_explanation بجواب مباشر عن السؤال.
-    - يجب أن تعتمد steps على معطيات سؤال التلميذ نفسه.
-    - لا تخترع مثالًا بدل حل السؤال.
-    - لا تقل: أرسل الصيغة، أعطني الحدود، المعطيات غير كافية؛
-      إلا إذا كان سؤال التلميذ فعلًا خاليًا تمامًا من المعطيات الضرورية.
-    - تحقق من صحة الحساب قبل الإجابة.
-    - استعمل عربية بسيطة وواضحة.
-    - استعمل من خطوة واحدة إلى ثلاث خطوات فقط.
-    - لا تستعمل Markdown.
-    - أرجع JSON صحيحًا فقط.
+تعليمات إلزامية:
+- استخرج جميع المعطيات الرياضية الموجودة في سؤال التلميذ.
+- لا تقل إن المعطيات ناقصة إذا كانت موجودة في السؤال.
+- لا تنقل معطيات السؤال إلى سؤال تحقق جديد دون حلها أولًا.
+- لا تحول السؤال إلى تعريف عام أو درس عام.
+- لا تغير التعبير أو الأعداد أو الرموز التي كتبها التلميذ.
+- إذا طلب قيمة، احسبها وأعط النتيجة مباشرة.
+- إذا طلب تفسيرًا، فسر النقطة المطلوبة فقط.
+- إذا طلب طريقة، طبقها على معطياته.
+- ضع النتيجة المباشرة في direct_answer.
+- ابدأ simple_explanation بجواب مباشر عن السؤال.
+- يجب أن تعتمد steps على معطيات سؤال التلميذ نفسه.
+- لا تخترع مثالًا بدل حل السؤال.
+- لا تقل إن المعطيات غير كافية إلا إذا كانت ناقصة فعلًا.
+- تحقق من صحة الحساب قبل الإجابة.
+- استعمل عربية بسيطة وواضحة.
+- استعمل من خطوة واحدة إلى ثلاث خطوات فقط.
+- لا تستعمل Markdown.
+- أرجع JSON صحيحًا فقط.
+- لا تضف أي نص قبل JSON أو بعده.
 
-    مثال إلزامي لفهم طريقة الإجابة:
+مثال:
 
-    السؤال:
-    ما هو أساس المتتالية u_n = 5n + 2؟
+السؤال:
+ما هو أساس المتتالية u_n = 5n + 2؟
 
-    الجواب:
-    - النتيجة: r = 5.
-    - لأن معامل n هو 5.
-    - ويمكن التحقق بحساب:
-      u_(n+1) - u_n = 5.
+الجواب الصحيح:
+النتيجة r = 5، لأن معامل n هو 5، ويمكن التحقق بحساب:
+u_(n+1) - u_n = 5.
 
-    لا تقل:
-    لا يمكن حساب الأساس دون معرفة صيغة المتتالية؛
-    لأن الصيغة موجودة فعلًا في السؤال.
+شكل JSON المطلوب:
 
-    شكل JSON المطلوب:
+{{
+  "is_related": true,
+  "relation_reason": "",
+  "title": "عنوان يطابق سؤال التلميذ",
+  "direct_answer": "النتيجة المباشرة",
+  "simple_explanation": "شرح باستعمال معطيات التلميذ نفسها",
+  "example": "",
+  "steps": [
+    "الخطوة الأولى",
+    "الخطوة الثانية"
+  ],
+  "check_question": "",
+  "expected_answer": "",
+  "encouragement": "جملة قصيرة"
+}}
+""".strip()
 
-    {{
-      "title": "عنوان يطابق سؤال التلميذ",
-      "direct_answer": "النتيجة المباشرة لسؤال التلميذ",
-      "simple_explanation": "شرح الجواب باستعمال معطيات التلميذ نفسها",
-      "steps": [
-        "خطوة مرتبطة مباشرة بالسؤال",
-        "خطوة مرتبطة مباشرة بالسؤال"
-      ],
-      "check_question": "",
-      "expected_answer": "",
-      "encouragement": "جملة قصيرة"
-    }}
-    """.strip()
+    def build_context(
+        self,
+        prompt: str,
+    ) -> BuiltContext:
+        """
+        إنشاء BuiltContext دون افتراض وجود الحقل items.
+
+        يتم فحص الحقول التي يقبلها BuiltContext
+        وإرسال الحقول المتوافقة فقط.
+        """
+
+        available_values = {
+            "question": (
+                "أجب عن سؤال التلميذ الموجود "
+                "داخل السياق."
+            ),
+            "intent": "re_explain_step",
+            "context_text": prompt,
+            "context": prompt,
+            "items": [],
+            "sources": [],
+            "metadata": {},
+        }
+
+        try:
+            signature = inspect.signature(
+                BuiltContext
+            )
+
+            accepted_parameters = {
+                parameter_name
+                for parameter_name, parameter
+                in signature.parameters.items()
+                if parameter_name != "self"
+                and parameter.kind
+                in {
+                    inspect.Parameter.POSITIONAL_OR_KEYWORD,
+                    inspect.Parameter.KEYWORD_ONLY,
+                }
+            }
+
+            context_kwargs = {
+                key: value
+                for key, value
+                in available_values.items()
+                if key in accepted_parameters
+            }
+
+            return BuiltContext(
+                **context_kwargs
+            )
+
+        except TypeError:
+            # التوافق مع النسخة الحالية الأكثر شيوعًا.
+            return BuiltContext(
+                question=available_values["question"],
+                intent=available_values["intent"],
+                context_text=prompt,
+            )
 
     def generate(
-            self,
-            step: dict,
-            student_question: str,
+        self,
+        step: dict,
+        student_question: str,
     ) -> dict:
+        if not isinstance(step, dict):
+            raise ValueError(
+                "بيانات المرحلة غير صحيحة."
+            )
+
         step_id = self.normalize_text(
             step.get("id")
         )
+
+        if not step_id:
+            raise ValueError(
+                "معرف المرحلة غير موجود."
+            )
 
         step_title = self.normalize_text(
             step.get("title"),
@@ -540,30 +639,37 @@ class ReExplainStepService:
                 "سؤال التلميذ فارغ."
             )
 
-        # حماية من الطلبات الكبيرة.
-        student_question = student_question[:1200]
+        student_question = student_question[
+            :self.MAX_STUDENT_QUESTION_CHARS
+        ]
 
         prompt = self.build_prompt(
             step=step,
             student_question=student_question,
         )
 
-        context = BuiltContext(
-            # السؤال موجود داخل prompt بالفعل.
-            # نضع نصًا قصيرًا هنا لأن AnswerGenerator
-            # قد يحتاج question غير فارغ.
-            question="أجب عن سؤال التلميذ الموجود في السياق.",
-            intent="re_explain_step",
-            context_text=prompt,
-            items=[],
+        context = self.build_context(
+            prompt=prompt
         )
 
         generated = self.generator.generate(
             context
         )
 
+        generated_answer = getattr(
+            generated,
+            "answer",
+            "",
+        )
+
+        generated_model = getattr(
+            generated,
+            "model",
+            "",
+        )
+
         parsed_answer = self.extract_json(
-            generated.answer
+            generated_answer
         )
 
         normalized_answer = self.normalize_answer(
@@ -576,7 +682,7 @@ class ReExplainStepService:
             "step_id": step_id,
             "step_title": step_title,
             "model": self.normalize_text(
-                generated.model
+                generated_model
             ),
             "answer": normalized_answer,
         }

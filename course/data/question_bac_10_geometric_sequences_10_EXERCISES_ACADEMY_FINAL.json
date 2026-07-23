@@ -1,0 +1,902 @@
+{
+  "version": 2,
+  "language": "ar",
+  "direction": "rtl",
+  "subject_code": "math",
+  "chapter_code": "numerical_sequences",
+  "tag": "geometric_sequences",
+  "title": "المتتالية الهندسية",
+  "source_file": "bac_sequence_scientifique(19).pdf",
+  "original_question_count": 70,
+  "question_count": 10,
+  "selection_rule": "تم اختيار أفضل 10 أسئلة مرتبطة مباشرة بمحور المتتالية الهندسية من الملف الأصلي فقط، دون إضافة أي سؤال جديد.",
+  "lesson_alignment": {
+    "lesson_file": "axis_13_geometric_sequences_final(1).json",
+    "covered_skills": [
+      "التعرف على متتالية هندسية",
+      "إثبات العلاقة v_{n+1}=qv_n",
+      "حساب الأساس والحد الأول",
+      "الحد العام",
+      "مجموع الحدود",
+      "الأساس السالب",
+      "المتتالية المساعدة",
+      "النهاية المرتبطة بمجموع هندسي"
+    ],
+    "excluded_count": 60
+  },
+  "review_status": {
+    "reviewed": true,
+    "mathematical_validation": "completed",
+    "solutions_rewritten": true
+  },
+  "questions": [
+    {
+      "id": "bac_2013_p6_exercise_2_I_1",
+      "year": 2013,
+      "source_file": "bac_sequence_scientifique(19).pdf",
+      "source_page": 6,
+      "exercise": "exercise_2_I",
+      "number": "1",
+      "text": "نعتبر المعطيات الآتية: \\(v_n=\\frac{5^{n+1}}{6^n}\\).. المطلوب: بين أن \\((v_n)\\) هندسية، وحدد أساسها وحدها الأول.",
+      "context": "كل المعطيات والنتائج الوسيطة الضرورية موجودة داخل نص السؤال، لذلك يمكن عرضه وحله منفردًا دون الرجوع إلى أي سؤال سابق.",
+      "tag": "geometric_sequences",
+      "axis": "المتتالية الهندسية",
+      "secondary_tags": [],
+      "skill": "إثبات هندسية",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمت كتابة السؤال من الوثيقة المصورة مع توحيد الترميز الرياضي بصيغة LaTeX.",
+      "original_text": "بين أن \\((v_n)\\) هندسية، وحدد أساسها وحدها الأول.",
+      "rewriting_note": "أعيدت صياغة السؤال ليكون مستقلًا، وأزيلت العبارات المبهمة، وأضيفت النتائج التي كان يعتمد عليها من الأسئلة السابقة.",
+      "solution": {
+        "strategy": "إعادة كتابة الحد العام على الصورة \\(v_n=v_0q^n\\).",
+        "detailed_explanation": "نستعمل خواص القوى لفصل الجزء الثابت عن الجزء الذي يعتمد على الرتبة \\(n\\). بعد ذلك نقارن العبارة مع الصيغة العامة للمتتالية الهندسية.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "إعادة كتابة العبارة",
+            "instruction": "نفصل قوة العدد 5.",
+            "calculation": "\\[v_n=\\frac{5^{n+1}}{6^n}=5\\frac{5^n}{6^n}=5\\left(\\frac56\\right)^n.\\]",
+            "explanation": "استعملنا \\(5^{n+1}=5\\times5^n\\) و\\(\\frac{5^n}{6^n}=(\\frac56)^n\\).",
+            "result": "أصبحت العبارة على الصورة \\(v_n=v_0q^n\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "تحديد الأساس",
+            "instruction": "نقارن مع \\(v_n=v_0q^n\\).",
+            "calculation": "\\[q=\\frac56.\\]",
+            "explanation": "العدد المرفوع إلى القوة \\(n\\) هو أساس المتتالية.",
+            "result": "الأساس هو \\(\\frac56\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "حساب الحد الأول",
+            "instruction": "نعوض \\(n=0\\).",
+            "calculation": "\\[v_0=\\frac{5^{1}}{6^0}=5.\\]",
+            "explanation": "يمكن أيضًا قراءته مباشرة من الصيغة \\(5(\\frac56)^n\\).",
+            "result": "\\(v_0=5\\)."
+          },
+          {
+            "step_number": 4,
+            "title": "التحقق بالعلاقة التراجعية",
+            "instruction": "نحسب نسبة حدين متتاليين.",
+            "calculation": "\\[\\frac{v_{n+1}}{v_n}=\\frac56.\\]",
+            "explanation": "النسبة ثابتة ولا تعتمد على \\(n\\).",
+            "result": "إذن \\((v_n)\\) هندسية."
+          }
+        ],
+        "final_answer": "\\[\\boxed{v_n=5\\left(\\frac56\\right)^n,\\quad q=\\frac56,\\quad v_0=5}\\]",
+        "verification": "عند \\(n=1\\): \\(v_1=25/6\\)، و\\(v_1/v_0=(25/6)/5=5/6\\)، فتتوافق النتيجة مع الأساس.",
+        "common_mistakes": [
+          "اعتبار العدد 5 أساسًا بدل \\(5/6\\).",
+          "نسيان أن \\(6^0=1\\).",
+          "عدم إظهار النسبة الثابتة أو الصيغة \\(v_0q^n\\)."
+        ],
+        "hints": [
+          {
+            "level": 1,
+            "hint": "حوّل \\(5^{n+1}\\) إلى \\(5\\times5^n\\)."
+          },
+          {
+            "level": 2,
+            "hint": "اجمع القوتين في \\((5/6)^n\\)."
+          },
+          {
+            "level": 3,
+            "hint": "قارن مع \\(v_n=v_0q^n\\)."
+          }
+        ],
+        "is_complete": true,
+        "academy_quality": true
+      }
+    },
+    {
+      "id": "bac_2008_p1_exercise_4_3-a",
+      "year": 2008,
+      "source_file": "bac_sequence_scientifique(19).pdf",
+      "source_page": 1,
+      "exercise": "exercise_4",
+      "number": "3-a",
+      "text": "نعتبر المعطيات الآتية: \\(u_0=\\frac52\\)، \\(u_{n+1}=\\frac23u_n+2\\).. المطلوب: نضع \\(v_n=u_n-6\\). أثبت أن \\((v_n)\\) هندسية، ثم عين أساسها وحدها الأول.",
+      "context": "كل المعطيات والنتائج الوسيطة الضرورية موجودة داخل نص السؤال، لذلك يمكن عرضه وحله منفردًا دون الرجوع إلى أي سؤال سابق.",
+      "tag": "geometric_sequences",
+      "axis": "المتتالية الهندسية",
+      "secondary_tags": [],
+      "skill": "متتالية مساعدة",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمت كتابة السؤال من الوثيقة المصورة مع توحيد الترميز الرياضي بصيغة LaTeX.",
+      "original_text": "نضع \\(v_n=u_n-6\\). أثبت أن \\((v_n)\\) هندسية، ثم عين أساسها وحدها الأول.",
+      "rewriting_note": "أعيدت صياغة السؤال ليكون مستقلًا، وأزيلت العبارات المبهمة، وأضيفت النتائج التي كان يعتمد عليها من الأسئلة السابقة.",
+      "solution": {
+        "strategy": "حساب \\(v_{n+1}\\) انطلاقًا من تعريف المتتالية المساعدة ثم إظهار أنه يساوي ثابتًا مضروبًا في \\(v_n\\).",
+        "detailed_explanation": "اختيار \\(v_n=u_n-6\\) يهدف إلى حذف الحد الثابت في العلاقة التراجعية. نحسب بدقة ثم نستعمل \\(u_n-6=v_n\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "كتابة الحد الموالي",
+            "instruction": "نكتب \\(v_{n+1}=u_{n+1}-6\\).",
+            "calculation": "\\[v_{n+1}=u_{n+1}-6.\\]",
+            "explanation": "نعوض بعد ذلك علاقة \\(u_{n+1}\\).",
+            "result": "نبدأ من تعريف \\(v_n\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "التعويض والتبسيط",
+            "instruction": "نعوض \\(u_{n+1}=\\frac23u_n+2\\).",
+            "calculation": "\\[v_{n+1}=\\frac23u_n+2-6=\\frac23u_n-4=\\frac23(u_n-6).\\]",
+            "explanation": "لأن \\(-4=\\frac23(-6)\\).",
+            "result": "\\[v_{n+1}=\\frac23v_n.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "استنتاج النوع والأساس",
+            "instruction": "نقارن مع \\(v_{n+1}=qv_n\\).",
+            "calculation": "\\[q=\\frac23.\\]",
+            "explanation": "العامل ثابت ولا يعتمد على \\(n\\).",
+            "result": "\\((v_n)\\) هندسية أساسها \\(2/3\\)."
+          },
+          {
+            "step_number": 4,
+            "title": "حساب الحد الأول",
+            "instruction": "نستعمل \\(v_0=u_0-6\\).",
+            "calculation": "\\[v_0=\\frac52-6=\\frac52-\\frac{12}{2}=-\\frac72.\\]",
+            "explanation": "وحدنا المقام قبل الطرح.",
+            "result": "\\(v_0=-\\frac72\\)."
+          }
+        ],
+        "final_answer": "\\[\\boxed{v_{n+1}=\\frac23v_n,\\quad q=\\frac23,\\quad v_0=-\\frac72}\\]",
+        "verification": "نحسب \\(u_1=\\frac23\\times\\frac52+2=\\frac{11}{3}\\)، ومنه \\(v_1=\\frac{11}{3}-6=-\\frac73\\). كما أن \\(\\frac23v_0=\\frac23(-\\frac72)=-\\frac73\\).",
+        "common_mistakes": [
+          "نسيان طرح 6 عند حساب \\(v_{n+1}\\).",
+          "الخطأ في كتابة \\(-4=\\frac23(-6)\\).",
+          "الخلط بين \\(u_0\\) و\\(v_0\\)."
+        ],
+        "hints": [
+          {
+            "level": 1,
+            "hint": "ابدأ من \\(v_{n+1}=u_{n+1}-6\\)."
+          },
+          {
+            "level": 2,
+            "hint": "حاول استخراج العامل \\(2/3\\)."
+          },
+          {
+            "level": 3,
+            "hint": "احسب \\(v_0\\) من تعريف \\(v_n\\)."
+          }
+        ],
+        "is_complete": true,
+        "academy_quality": true
+      }
+    },
+    {
+      "id": "bac_2009_p2_exercise_3_1-a",
+      "year": 2009,
+      "source_file": "bac_sequence_scientifique(19).pdf",
+      "source_page": 2,
+      "exercise": "exercise_3",
+      "number": "1-a",
+      "text": "نعتبر المعطيات الآتية: \\((u_n)\\) هندسية متزايدة تمامًا، وتحقق \\(u_1+2u_2+u_3=32\\) و\\(u_1u_2u_3=216\\).. المطلوب: احسب \\(u_2\\) والأساس \\(q\\)، ثم استنتج \\(u_1\\).",
+      "context": "كل المعطيات والنتائج الوسيطة الضرورية موجودة داخل نص السؤال، لذلك يمكن عرضه وحله منفردًا دون الرجوع إلى أي سؤال سابق.",
+      "tag": "geometric_sequences",
+      "axis": "المتتالية الهندسية",
+      "secondary_tags": [],
+      "skill": "تعيين عناصر هندسية",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمت كتابة السؤال من الوثيقة المصورة مع توحيد الترميز الرياضي بصيغة LaTeX.",
+      "original_text": "احسب \\(u_2\\) والأساس \\(q\\)، ثم استنتج \\(u_1\\).",
+      "rewriting_note": "أعيدت صياغة السؤال ليكون مستقلًا، وأزيلت العبارات المبهمة، وأضيفت النتائج التي كان يعتمد عليها من الأسئلة السابقة.",
+      "solution": {
+        "strategy": "استعمال خاصية الحدود الثلاثة المتتالية في متتالية هندسية، ثم استغلال شرط التزايد لتحديد قيمة الأساس الصحيحة.",
+        "detailed_explanation": "بما أن \\(u_1,u_2,u_3\\) حدود متتالية هندسية، فإن \\(u_1u_3=u_2^2\\). هذا يحول شرط الجداء إلى معادلة مباشرة في \\(u_2\\)، ثم نستعمل شرط المجموع لإيجاد \\(q\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "استعمال خاصية الحدود المتتالية",
+            "instruction": "نكتب \\(u_1u_3=u_2^2\\).",
+            "calculation": "\\[u_1u_2u_3=u_2(u_1u_3)=u_2^3.\\]",
+            "explanation": "لأن \\(u_1u_3=u_2^2\\).",
+            "result": "\\[u_2^3=216.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب \\(u_2\\)",
+            "instruction": "نأخذ الجذر التكعيبي.",
+            "calculation": "\\[u_2=\\sqrt[3]{216}=6.\\]",
+            "explanation": "لأن \\(6^3=216\\).",
+            "result": "\\(u_2=6\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "كتابة \\(u_1\\) و\\(u_3\\) بدلالة \\(q\\)",
+            "instruction": "نستعمل علاقات المتتالية الهندسية.",
+            "calculation": "\\[u_1=\\frac{u_2}{q}=\\frac6q,\\qquad u_3=u_2q=6q.\\]",
+            "explanation": "الانتقال من حد إلى التالي يتم بالضرب في \\(q\\).",
+            "result": "عبرنا عن الحدين المجاورين بدلالة \\(q\\)."
+          },
+          {
+            "step_number": 4,
+            "title": "استعمال شرط المجموع",
+            "instruction": "نعوض في \\(u_1+2u_2+u_3=32\\).",
+            "calculation": "\\[\\frac6q+12+6q=32\\Rightarrow \\frac1q+q=\\frac{10}{3}.\\]",
+            "explanation": "نقسم على 6 بعد نقل 12.",
+            "result": "\\[3q^2-10q+3=0.\\]"
+          },
+          {
+            "step_number": 5,
+            "title": "حل المعادلة واختيار الأساس",
+            "instruction": "نحل المعادلة التربيعية.",
+            "calculation": "\\[3q^2-10q+3=(3q-1)(q-3)=0.\\]",
+            "explanation": "إذن \\(q=\\frac13\\) أو \\(q=3\\). ولأن المتتالية متزايدة تمامًا وحدودها موجبة، نختار \\(q>1\\).",
+            "result": "\\(q=3\\)."
+          },
+          {
+            "step_number": 6,
+            "title": "استنتاج \\(u_1\\)",
+            "instruction": "نستعمل \\(u_1=u_2/q\\).",
+            "calculation": "\\[u_1=\\frac63=2.\\]",
+            "explanation": "نعوض القيم المحسوبة.",
+            "result": "\\(u_1=2\\)."
+          }
+        ],
+        "final_answer": "\\[\\boxed{u_2=6,\\quad q=3,\\quad u_1=2}\\]",
+        "verification": "نجد \\(u_3=18\\). عندئذ \\(2+2\\times6+18=32\\) و\\(2\\times6\\times18=216\\)، كما أن \\(2<6<18\\).",
+        "common_mistakes": [
+          "نسيان الخاصية \\(u_1u_3=u_2^2\\).",
+          "قبول \\(q=1/3\\) رغم شرط التزايد.",
+          "الخلط بين \\(u_1=u_2q\\) و\\(u_1=u_2/q\\)."
+        ],
+        "hints": [
+          {
+            "level": 1,
+            "hint": "حوّل الجداء إلى \\(u_2^3\\)."
+          },
+          {
+            "level": 2,
+            "hint": "اكتب \\(u_1=6/q\\) و\\(u_3=6q\\)."
+          },
+          {
+            "level": 3,
+            "hint": "استعمل شرط التزايد للاختيار بين الجذرين."
+          }
+        ],
+        "is_complete": true,
+        "academy_quality": true
+      }
+    },
+    {
+      "id": "bac_2009_p2_exercise_3_1-c",
+      "year": 2009,
+      "source_file": "bac_sequence_scientifique(19).pdf",
+      "source_page": 2,
+      "exercise": "exercise_3",
+      "number": "1-c",
+      "text": "نعتبر المعطيات الآتية: \\((u_n)\\) هندسية متزايدة تمامًا، وتحقق \\(u_1+2u_2+u_3=32\\) و\\(u_1u_2u_3=216\\).. وقد وجدنا أن \\(u_1=2\\) وأن \\(q=3\\)، ومنه \\(u_n=2\\cdot3^{n-1}\\). المطلوب: احسب \\(S_n=u_1+\\cdots+u_n\\)، ثم عين \\(n\\) بحيث \\(S_n=728\\).",
+      "context": "كل المعطيات والنتائج الوسيطة الضرورية موجودة داخل نص السؤال، لذلك يمكن عرضه وحله منفردًا دون الرجوع إلى أي سؤال سابق.",
+      "tag": "geometric_sequences",
+      "axis": "المتتالية الهندسية",
+      "secondary_tags": [],
+      "skill": "مجموع هندسي",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمت كتابة السؤال من الوثيقة المصورة مع توحيد الترميز الرياضي بصيغة LaTeX.",
+      "original_text": "احسب \\(S_n=u_1+\\cdots+u_n\\)، ثم عين \\(n\\) بحيث \\(S_n=728\\).",
+      "rewriting_note": "أعيدت صياغة السؤال ليكون مستقلًا، وأزيلت العبارات المبهمة، وأضيفت النتائج التي كان يعتمد عليها من الأسئلة السابقة.",
+      "solution": {
+        "strategy": "تطبيق قانون مجموع أول \\(n\\) حدود لمتتالية هندسية تبدأ من \\(u_1\\)، ثم حل معادلة أسية بسيطة.",
+        "detailed_explanation": "لدينا \\(u_1=2\\) و\\(q=3\\). عدد الحدود من \\(u_1\\) إلى \\(u_n\\) هو \\(n\\)، لذلك يجب استعمال القوة \\(q^n\\) في صيغة المجموع.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تحديد المعطيات وعدد الحدود",
+            "instruction": "نحدد الحد الأول والأساس.",
+            "calculation": "\\[u_1=2,\\qquad q=3,\\qquad N=n.\\]",
+            "explanation": "من الرتبة 1 إلى الرتبة \\(n\\) توجد \\(n\\) حدود.",
+            "result": "سنطبق صيغة مجموع \\(n\\) حدود."
+          },
+          {
+            "step_number": 2,
+            "title": "تطبيق قانون المجموع",
+            "instruction": "نستعمل \\(S_n=u_1\\frac{q^n-1}{q-1}\\).",
+            "calculation": "\\[S_n=2\\frac{3^n-1}{3-1}.\\]",
+            "explanation": "استعملنا الصيغة المناسبة لأن \\(q\\ne1\\).",
+            "result": "\\[S_n=3^n-1.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حل الشرط \\(S_n=728\\)",
+            "instruction": "نعوض قيمة المجموع المطلوبة.",
+            "calculation": "\\[3^n-1=728\\Rightarrow 3^n=729.\\]",
+            "explanation": "نضيف 1 إلى الطرفين.",
+            "result": "\\[3^n=3^6.\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "استخراج الرتبة",
+            "instruction": "نساوي الأسس.",
+            "calculation": "\\[n=6.\\]",
+            "explanation": "لأن الأساس نفسه ويساوي 3.",
+            "result": "الرتبة المطلوبة هي 6."
+          }
+        ],
+        "final_answer": "\\[\\boxed{S_n=3^n-1,\\qquad S_n=728\\Longrightarrow n=6}\\]",
+        "verification": "عند \\(n=6\\): الحدود هي \\(2,6,18,54,162,486\\)، ومجموعها \\(728\\).",
+        "common_mistakes": [
+          "اعتبار عدد الحدود \\(n+1\\) بدل \\(n\\).",
+          "استعمال \\(1-q^n\\) مع مقام \\(q-1\\) دون ضبط الإشارة.",
+          "القول إن \\(729=3^5\\) بدل \\(3^6\\)."
+        ],
+        "hints": [
+          {
+            "level": 1,
+            "hint": "عدّ الحدود من \\(u_1\\) إلى \\(u_n\\)."
+          },
+          {
+            "level": 2,
+            "hint": "استعمل صيغة مجموع متتالية هندسية."
+          },
+          {
+            "level": 3,
+            "hint": "لاحظ أن \\(729=3^6\\)."
+          }
+        ],
+        "is_complete": true,
+        "academy_quality": true
+      }
+    },
+    {
+      "id": "bac_2012_p5_exercise_2_4-a",
+      "year": 2012,
+      "source_file": "bac_sequence_scientifique(19).pdf",
+      "source_page": 5,
+      "exercise": "exercise_2",
+      "number": "4-a",
+      "text": "نعتبر المعطيات الآتية: \\(u_0=\\frac{13}{4}\\)، \\(u_{n+1}=3+\\sqrt{u_n-3}\\).. المطلوب: نضع \\(v_n=\\ln(u_n-3)\\). برهن أن \\((v_n)\\) هندسية أساسها \\(\\frac12\\)، ثم احسب حدها الأول.",
+      "context": "كل المعطيات والنتائج الوسيطة الضرورية موجودة داخل نص السؤال، لذلك يمكن عرضه وحله منفردًا دون الرجوع إلى أي سؤال سابق.",
+      "tag": "geometric_sequences",
+      "axis": "المتتالية الهندسية",
+      "secondary_tags": [],
+      "skill": "تحويل لوغاريتمي",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمت كتابة السؤال من الوثيقة المصورة مع توحيد الترميز الرياضي بصيغة LaTeX.",
+      "original_text": "نضع \\(v_n=\\ln(u_n-3)\\). برهن أن \\((v_n)\\) هندسية أساسها \\(\\frac12\\)، ثم احسب حدها الأول.",
+      "rewriting_note": "أعيدت صياغة السؤال ليكون مستقلًا، وأزيلت العبارات المبهمة، وأضيفت النتائج التي كان يعتمد عليها من الأسئلة السابقة.",
+      "solution": {
+        "strategy": "حساب \\(v_{n+1}\\) باستعمال العلاقة التراجعية وخواص اللوغاريتم.",
+        "detailed_explanation": "بما أن \\(u_{n+1}-3=\\sqrt{u_n-3}\\)، فإن تطبيق اللوغاريتم يحول الجذر التربيعي إلى معامل \\(1/2\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "كتابة \\(v_{n+1}\\)",
+            "instruction": "نطبق تعريف المتتالية المساعدة.",
+            "calculation": "\\[v_{n+1}=\\ln(u_{n+1}-3).\\]",
+            "explanation": "نعوض العلاقة التراجعية في الخطوة التالية.",
+            "result": "بدأنا من التعريف."
+          },
+          {
+            "step_number": 2,
+            "title": "استعمال العلاقة التراجعية",
+            "instruction": "نحسب \\(u_{n+1}-3\\).",
+            "calculation": "\\[u_{n+1}-3=\\sqrt{u_n-3}.\\]",
+            "explanation": "طرح 3 يلغي الحد الثابت.",
+            "result": "\\[v_{n+1}=\\ln\\sqrt{u_n-3}.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "استعمال خاصية اللوغاريتم",
+            "instruction": "نستعمل \\(\\ln(\\sqrt{x})=\\frac12\\ln x\\) عندما \\(x>0\\).",
+            "calculation": "\\[v_{n+1}=\\frac12\\ln(u_n-3)=\\frac12v_n.\\]",
+            "explanation": "العامل \\(1/2\\) ثابت.",
+            "result": "\\((v_n)\\) هندسية أساسها \\(q=1/2\\)."
+          },
+          {
+            "step_number": 4,
+            "title": "حساب الحد الأول",
+            "instruction": "نعوض \\(u_0=13/4\\).",
+            "calculation": "\\[v_0=\\ln\\left(\\frac{13}{4}-3\\right)=\\ln\\left(\\frac14\\right)=-\\ln4.\\]",
+            "explanation": "لأن \\(13/4-12/4=1/4\\).",
+            "result": "\\(v_0=-\\ln4\\)."
+          }
+        ],
+        "final_answer": "\\[\\boxed{v_{n+1}=\\frac12v_n,\\quad q=\\frac12,\\quad v_0=-\\ln4}\\]",
+        "verification": "نحسب \\(u_1=3+\\sqrt{1/4}=7/2\\)، ومنه \\(v_1=\\ln(1/2)=-\\ln2\\). كما أن \\(\\frac12v_0=-\\frac12\\ln4=-\\ln2\\).",
+        "common_mistakes": [
+          "نسيان طرح 3 داخل اللوغاريتم.",
+          "كتابة \\(\\ln\\sqrt{x}=\\sqrt{\\ln x}\\).",
+          "الخطأ في \\(13/4-3\\)."
+        ],
+        "hints": [
+          {
+            "level": 1,
+            "hint": "احسب أولًا \\(u_{n+1}-3\\)."
+          },
+          {
+            "level": 2,
+            "hint": "حوّل الجذر إلى قوة \\(1/2\\)."
+          },
+          {
+            "level": 3,
+            "hint": "استعمل \\(\\ln(x^{1/2})=\\frac12\\ln x\\)."
+          }
+        ],
+        "is_complete": true,
+        "academy_quality": true
+      }
+    },
+    {
+      "id": "bac_2016_p10_exercise_3b_1",
+      "year": 2016,
+      "source_file": "bac_sequence_scientifique(19).pdf",
+      "source_page": 10,
+      "exercise": "exercise_3b",
+      "number": "1",
+      "text": "نعتبر المعطيات الآتية: \\(u_0=0\\)، \\(u_{n+1}=\\frac{2u_n+2}{u_n+3}\\)، و\\(v_n=\\frac{u_n-1}{u_n+2}\\).. المطلوب: بين أن \\((v_n)\\) هندسية، ثم عين أساسها وحدها الأول.",
+      "context": "كل المعطيات والنتائج الوسيطة الضرورية موجودة داخل نص السؤال، لذلك يمكن عرضه وحله منفردًا دون الرجوع إلى أي سؤال سابق.",
+      "tag": "geometric_sequences",
+      "axis": "المتتالية الهندسية",
+      "secondary_tags": [],
+      "skill": "متتالية مساعدة",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمت كتابة السؤال من الوثيقة المصورة مع توحيد الترميز الرياضي بصيغة LaTeX.",
+      "original_text": "بين أن \\((v_n)\\) هندسية، ثم عين أساسها وحدها الأول.",
+      "rewriting_note": "أعيدت صياغة السؤال ليكون مستقلًا، وأزيلت العبارات المبهمة، وأضيفت النتائج التي كان يعتمد عليها من الأسئلة السابقة.",
+      "solution": {
+        "strategy": "التعويض المباشر في \\(v_{n+1}\\) ثم تبسيط الكسر حتى يظهر \\(v_n\\).",
+        "detailed_explanation": "هذا النوع من الأسئلة يحتاج إلى تنظيم البسط والمقام منفصلين بعد تعويض \\(u_{n+1}\\)، ثم اختزال العامل المشترك.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "كتابة \\(v_{n+1}\\)",
+            "instruction": "نستعمل تعريف \\(v_n\\).",
+            "calculation": "\\[v_{n+1}=\\frac{u_{n+1}-1}{u_{n+1}+2}.\\]",
+            "explanation": "نعوض \\(u_{n+1}\\) في البسط والمقام.",
+            "result": "بدأنا من الحد الموالي."
+          },
+          {
+            "step_number": 2,
+            "title": "تبسيط البسط",
+            "instruction": "نعوض العلاقة التراجعية.",
+            "calculation": "\\[u_{n+1}-1=\\frac{2u_n+2}{u_n+3}-1=\\frac{u_n-1}{u_n+3}.\\]",
+            "explanation": "وحدنا المقام \\(u_n+3\\).",
+            "result": "البسط الجديد هو \\((u_n-1)/(u_n+3)\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "تبسيط المقام",
+            "instruction": "نحسب \\(u_{n+1}+2\\).",
+            "calculation": "\\[u_{n+1}+2=\\frac{2u_n+2}{u_n+3}+2=\\frac{4u_n+8}{u_n+3}=\\frac{4(u_n+2)}{u_n+3}.\\]",
+            "explanation": "جمعنا الحدود ثم استخرجنا العامل 4.",
+            "result": "المقام الجديد هو \\(4(u_n+2)/(u_n+3)\\)."
+          },
+          {
+            "step_number": 4,
+            "title": "حساب النسبة",
+            "instruction": "نقسم البسط على المقام.",
+            "calculation": "\\[v_{n+1}=\\frac{\\frac{u_n-1}{u_n+3}}{\\frac{4(u_n+2)}{u_n+3}}=\\frac14\\frac{u_n-1}{u_n+2}=\\frac14v_n.\\]",
+            "explanation": "يختزل العامل \\(u_n+3\\).",
+            "result": "الأساس الصحيح هو \\(q=1/4\\)."
+          },
+          {
+            "step_number": 5,
+            "title": "حساب الحد الأول",
+            "instruction": "نعوض \\(u_0=0\\).",
+            "calculation": "\\[v_0=\\frac{0-1}{0+2}=-\\frac12.\\]",
+            "explanation": "حساب مباشر.",
+            "result": "\\(v_0=-1/2\\)."
+          }
+        ],
+        "final_answer": "\\[\\boxed{v_{n+1}=\\frac14v_n,\\quad q=\\frac14,\\quad v_0=-\\frac12}\\]",
+        "verification": "من العلاقة الأصلية \\(u_1=2/3\\)، وبالتالي \\(v_1=(2/3-1)/(2/3+2)=-1/8\\). كما أن \\((1/4)v_0=-1/8\\).",
+        "common_mistakes": [
+          "الخطأ الشائع في اعتبار الأساس \\(1/3\\)؛ الحساب الصحيح يعطي \\(1/4\\).",
+          "جمع الكسور في البسط أو المقام دون توحيد المقام.",
+          "نسيان قلب الكسر الثاني عند القسمة."
+        ],
+        "hints": [
+          {
+            "level": 1,
+            "hint": "بسّط \\(u_{n+1}-1\\) وحده."
+          },
+          {
+            "level": 2,
+            "hint": "بسّط \\(u_{n+1}+2\\) وحده."
+          },
+          {
+            "level": 3,
+            "hint": "اقسم التعبيرين واختزل \\(u_n+3\\)."
+          }
+        ],
+        "is_complete": true,
+        "academy_quality": true
+      }
+    },
+    {
+      "id": "bac_2020_p15_exercise_3a_2-c",
+      "year": 2020,
+      "source_file": "bac_sequence_scientifique(19).pdf",
+      "source_page": 15,
+      "exercise": "exercise_3a",
+      "number": "2-c",
+      "text": "نعتبر المعطيات الآتية: \\(u_0=\\alpha\\)، \\(u_{n+1}=\\frac34u_n-1\\).. وقد ثبت أن \\(v_n=(\\alpha+4)\\left(\\frac34\\right)^n\\)، ومنه \\(u_n=(\\alpha+4)\\left(\\frac34\\right)^n-4\\). المطلوب: احسب \\(S_n=u_0+\\cdots+u_n\\)، ثم احسب \\(\\lim S_n\\).",
+      "context": "كل المعطيات والنتائج الوسيطة الضرورية موجودة داخل نص السؤال، لذلك يمكن عرضه وحله منفردًا دون الرجوع إلى أي سؤال سابق.",
+      "tag": "geometric_sequences",
+      "axis": "المتتالية الهندسية",
+      "secondary_tags": [],
+      "skill": "مجموع ونهاية",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمت كتابة السؤال من الوثيقة المصورة مع توحيد الترميز الرياضي بصيغة LaTeX.",
+      "original_text": "احسب \\(S_n=u_0+\\cdots+u_n\\)، ثم احسب \\(\\lim S_n\\).",
+      "rewriting_note": "أعيدت صياغة السؤال ليكون مستقلًا، وأزيلت العبارات المبهمة، وأضيفت النتائج التي كان يعتمد عليها من الأسئلة السابقة.",
+      "solution": {
+        "strategy": "فصل مجموع \\(u_k\\) إلى مجموع هندسي ومجموع ثابت، ثم دراسة النهاية.",
+        "detailed_explanation": "بما أن \\(u_k=(\\alpha+4)(3/4)^k-4\\)، فإن المجموع يتكون من مجموع هندسي ناقص \\(4\\) مكررًا \\(n+1\\) مرة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "كتابة المجموع باستعمال الحد العام",
+            "instruction": "نعوض عبارة \\(u_k\\).",
+            "calculation": "\\[S_n=\\sum_{k=0}^{n}\\left[(\\alpha+4)\\left(\\frac34\\right)^k-4\\right].\\]",
+            "explanation": "المجموع يبدأ من 0 وينتهي عند \\(n\\).",
+            "result": "سنفصل المجموع إلى جزأين."
+          },
+          {
+            "step_number": 2,
+            "title": "فصل المجموعين",
+            "instruction": "نستعمل خطية المجموع.",
+            "calculation": "\\[S_n=(\\alpha+4)\\sum_{k=0}^{n}\\left(\\frac34\\right)^k-4\\sum_{k=0}^{n}1.\\]",
+            "explanation": "عدد الحدود في المجموع الثاني هو \\(n+1\\).",
+            "result": "\\[S_n=(\\alpha+4)\\sum_{k=0}^{n}(\\frac34)^k-4(n+1).\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب المجموع الهندسي",
+            "instruction": "نطبق قانون المجموع.",
+            "calculation": "\\[\\sum_{k=0}^{n}\\left(\\frac34\\right)^k=\\frac{1-(\\frac34)^{n+1}}{1-\\frac34}=4\\left[1-\\left(\\frac34\\right)^{n+1}\\right].\\]",
+            "explanation": "لأن \\(1-3/4=1/4\\).",
+            "result": "المجموع الهندسي محدود."
+          },
+          {
+            "step_number": 4,
+            "title": "صيغة \\(S_n\\)",
+            "instruction": "نعوض النتيجة.",
+            "calculation": "\\[S_n=4(\\alpha+4)\\left[1-\\left(\\frac34\\right)^{n+1}\\right]-4(n+1).\\]",
+            "explanation": "هذه هي الصيغة المطلوبة.",
+            "result": "حصلنا على \\(S_n\\) بدلالة \\(n\\)."
+          },
+          {
+            "step_number": 5,
+            "title": "حساب النهاية",
+            "instruction": "ندرس كل جزء عندما \\(n\\to+\\infty\\).",
+            "calculation": "\\[\\left(\\frac34\\right)^{n+1}\\to0,\\qquad -4(n+1)\\to-\\infty.\\]",
+            "explanation": "الجزء الأول يتجه إلى العدد الثابت \\(4(\\alpha+4)\\)، بينما الجزء الخطي يتجه إلى \\(-\\infty\\).",
+            "result": "\\[S_n\\to-\\infty.\\]"
+          }
+        ],
+        "final_answer": "\\[\\boxed{S_n=4(\\alpha+4)\\left(1-\\left(\\frac34\\right)^{n+1}\\right)-4(n+1),\\quad \\lim_{n\\to\\infty}S_n=-\\infty}\\]",
+        "verification": "عند \\(n=0\\)، تعطي الصيغة \\(S_0=4(\\alpha+4)(1-3/4)-4=\\alpha=u_0\\)، وهذا يؤكد صحة عدد الحدود والصيغة.",
+        "common_mistakes": [
+          "نسيان أن عدد الحدود من 0 إلى \\(n\\) هو \\(n+1\\).",
+          "إهمال الحد \\(-4(n+1)\\) عند حساب النهاية.",
+          "القول إن النهاية ثابتة لأن المجموع الهندسي له نهاية."
+        ],
+        "hints": [
+          {
+            "level": 1,
+            "hint": "افصل المجموع الهندسي عن مجموع العدد \\(-4\\)."
+          },
+          {
+            "level": 2,
+            "hint": "احسب عدد مرات تكرار \\(-4\\)."
+          },
+          {
+            "level": 3,
+            "hint": "في النهاية، قارن جزءًا ثابتًا تقريبًا مع \\(-4n\\)."
+          }
+        ],
+        "is_complete": true,
+        "academy_quality": true
+      }
+    },
+    {
+      "id": "bac_2022_p17_exercise_3a_3-a",
+      "year": 2022,
+      "source_file": "bac_sequence_scientifique(19).pdf",
+      "source_page": 17,
+      "exercise": "exercise_3a",
+      "number": "3-a",
+      "text": "نعتبر المعطيات الآتية: \\(u_0=-4\\)، \\(u_{n+1}=-\\frac12u_n+1\\).. المطلوب: نضع \\(v_n=(u_n-\\frac23)^2\\). بين أن \\((v_n)\\) هندسية أساسها \\(\\frac14\\)، ثم احسب \\(v_0\\).",
+      "context": "كل المعطيات والنتائج الوسيطة الضرورية موجودة داخل نص السؤال، لذلك يمكن عرضه وحله منفردًا دون الرجوع إلى أي سؤال سابق.",
+      "tag": "geometric_sequences",
+      "axis": "المتتالية الهندسية",
+      "secondary_tags": [],
+      "skill": "مربع فرق",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمت كتابة السؤال من الوثيقة المصورة مع توحيد الترميز الرياضي بصيغة LaTeX.",
+      "original_text": "نضع \\(v_n=(u_n-\\frac23)^2\\). بين أن \\((v_n)\\) هندسية أساسها \\(\\frac14\\)، ثم احسب \\(v_0\\).",
+      "rewriting_note": "أعيدت صياغة السؤال ليكون مستقلًا، وأزيلت العبارات المبهمة، وأضيفت النتائج التي كان يعتمد عليها من الأسئلة السابقة.",
+      "solution": {
+        "strategy": "إظهار أن الفرق عن القيمة الثابتة \\(2/3\\) يتغير بعامل \\(-1/2\\)، ثم تربيع العلاقة.",
+        "detailed_explanation": "التربيع يحول العامل \\(-1/2\\) إلى \\(1/4\\)، ولذلك تصبح المتتالية \\(v_n\\) هندسية موجبة الأساس.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب الفرق عند الرتبة \\(n+1\\)",
+            "instruction": "نطرح \\(2/3\\) من العلاقة التراجعية.",
+            "calculation": "\\[u_{n+1}-\\frac23=-\\frac12u_n+1-\\frac23=-\\frac12u_n+\\frac13.\\]",
+            "explanation": "وحدنا الحدين الثابتين.",
+            "result": "نحاول استخراج \\(u_n-2/3\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "استخراج العامل",
+            "instruction": "نكتب الطرف على صورة عامل مضروب في الفرق السابق.",
+            "calculation": "\\[-\\frac12u_n+\\frac13=-\\frac12\\left(u_n-\\frac23\\right).\\]",
+            "explanation": "لأن \\(-\\frac12\\times(-\\frac23)=\\frac13\\).",
+            "result": "\\[u_{n+1}-\\frac23=-\\frac12(u_n-\\frac23).\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "تربيع العلاقة",
+            "instruction": "نستعمل تعريف \\(v_n\\).",
+            "calculation": "\\[v_{n+1}=\\left(u_{n+1}-\\frac23\\right)^2=\\left(-\\frac12\\right)^2\\left(u_n-\\frac23\\right)^2=\\frac14v_n.\\]",
+            "explanation": "التربيع يلغي الإشارة السالبة.",
+            "result": "\\((v_n)\\) هندسية أساسها \\(1/4\\)."
+          },
+          {
+            "step_number": 4,
+            "title": "حساب \\(v_0\\)",
+            "instruction": "نعوض \\(u_0=-4\\).",
+            "calculation": "\\[v_0=\\left(-4-\\frac23\\right)^2=\\left(-\\frac{14}{3}\\right)^2=\\frac{196}{9}.\\]",
+            "explanation": "جمعنا \\(-4=-12/3\\) مع \\(-2/3\\).",
+            "result": "\\(v_0=196/9\\)."
+          }
+        ],
+        "final_answer": "\\[\\boxed{v_{n+1}=\\frac14v_n,\\quad q=\\frac14,\\quad v_0=\\frac{196}{9}}\\]",
+        "verification": "نحسب \\(u_1=3\\)، فيكون \\(v_1=(3-2/3)^2=(7/3)^2=49/9\\). كما أن \\(v_0/4=49/9\\).",
+        "common_mistakes": [
+          "نسيان تربيع العامل \\(-1/2\\).",
+          "اعتبار الأساس \\(-1/2\\) بدل \\(1/4\\).",
+          "الخطأ في \\(-4-2/3=-14/3\\)."
+        ],
+        "hints": [
+          {
+            "level": 1,
+            "hint": "ابدأ بدراسة \\(u_{n+1}-2/3\\)."
+          },
+          {
+            "level": 2,
+            "hint": "استخرج العامل \\(-1/2\\)."
+          },
+          {
+            "level": 3,
+            "hint": "بعد ذلك ربّع الطرفين."
+          }
+        ],
+        "is_complete": true,
+        "academy_quality": true
+      }
+    },
+    {
+      "id": "bac_2024_p19_exercise_3a_2-a",
+      "year": 2024,
+      "source_file": "bac_sequence_scientifique(19).pdf",
+      "source_page": 19,
+      "exercise": "exercise_3a",
+      "number": "2-a",
+      "text": "نعتبر المعطيات الآتية: \\(u_0=0\\)، \\(u_{n+1}=\\frac{4-u_n}{2+u_n}\\)، و\\(v_n=\\frac{u_n-1}{u_n+4}\\).. المطلوب: أثبت أن \\((v_n)\\) هندسية أساسها \\(-\\frac23\\)، ثم اكتب \\(v_n\\).",
+      "context": "كل المعطيات والنتائج الوسيطة الضرورية موجودة داخل نص السؤال، لذلك يمكن عرضه وحله منفردًا دون الرجوع إلى أي سؤال سابق.",
+      "tag": "geometric_sequences",
+      "axis": "المتتالية الهندسية",
+      "secondary_tags": [],
+      "skill": "أساس سالب",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمت كتابة السؤال من الوثيقة المصورة مع توحيد الترميز الرياضي بصيغة LaTeX.",
+      "original_text": "أثبت أن \\((v_n)\\) هندسية أساسها \\(-\\frac23\\)، ثم اكتب \\(v_n\\).",
+      "rewriting_note": "أعيدت صياغة السؤال ليكون مستقلًا، وأزيلت العبارات المبهمة، وأضيفت النتائج التي كان يعتمد عليها من الأسئلة السابقة.",
+      "solution": {
+        "strategy": "تبسيط \\(v_{n+1}\\) ككسر بدلالة \\(u_n\\)، ثم مقارنته بـ\\(v_n\\).",
+        "detailed_explanation": "وجود أساس سالب يعني أن إشارات حدود \\(v_n\\) تتناوب. يجب الحفاظ على الإشارة أثناء تبسيط البسط.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "كتابة \\(v_{n+1}\\)",
+            "instruction": "نستعمل تعريف المتتالية المساعدة.",
+            "calculation": "\\[v_{n+1}=\\frac{u_{n+1}-1}{u_{n+1}+4}.\\]",
+            "explanation": "نعوض العلاقة التراجعية في البسط والمقام.",
+            "result": "بدأنا من الحد التالي."
+          },
+          {
+            "step_number": 2,
+            "title": "تبسيط البسط",
+            "instruction": "نعوض \\(u_{n+1}=\\frac{4-u_n}{2+u_n}\\).",
+            "calculation": "\\[u_{n+1}-1=\\frac{4-u_n-(2+u_n)}{2+u_n}=\\frac{2-2u_n}{2+u_n}=-\\frac{2(u_n-1)}{u_n+2}.\\]",
+            "explanation": "أظهرنا العامل \\(u_n-1\\) مع الإشارة السالبة.",
+            "result": "البسط مناسب للمقارنة مع \\(v_n\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "تبسيط المقام",
+            "instruction": "نحسب \\(u_{n+1}+4\\).",
+            "calculation": "\\[u_{n+1}+4=\\frac{4-u_n+4(2+u_n)}{2+u_n}=\\frac{12+3u_n}{2+u_n}=\\frac{3(u_n+4)}{u_n+2}.\\]",
+            "explanation": "جمعنا الحدود بدقة.",
+            "result": "المقام يحتوي على \\(u_n+4\\)."
+          },
+          {
+            "step_number": 4,
+            "title": "إثبات العلاقة الهندسية",
+            "instruction": "نقسم التعبيرين.",
+            "calculation": "\\[v_{n+1}=\\frac{-2(u_n-1)/(u_n+2)}{3(u_n+4)/(u_n+2)}=-\\frac23\\frac{u_n-1}{u_n+4}=-\\frac23v_n.\\]",
+            "explanation": "العامل \\(u_n+2\\) يختزل.",
+            "result": "الأساس \\(q=-2/3\\)."
+          },
+          {
+            "step_number": 5,
+            "title": "حساب الحد الأول والحد العام",
+            "instruction": "نحسب \\(v_0\\) ثم نطبق الصيغة العامة.",
+            "calculation": "\\[v_0=\\frac{0-1}{0+4}=-\\frac14,\\qquad v_n=v_0q^n=-\\frac14\\left(-\\frac23\\right)^n.\\]",
+            "explanation": "المتتالية معرفة ابتداءً من الرتبة 0.",
+            "result": "حصلنا على الحد العام."
+          }
+        ],
+        "final_answer": "\\[\\boxed{v_{n+1}=-\\frac23v_n,\\quad v_0=-\\frac14,\\quad v_n=-\\frac14\\left(-\\frac23\\right)^n}\\]",
+        "verification": "نحسب \\(u_1=2\\)، ومنه \\(v_1=(2-1)/(2+4)=1/6\\). والصيغة تعطي \\((-2/3)(-1/4)=1/6\\).",
+        "common_mistakes": [
+          "ضياع الإشارة السالبة في البسط.",
+          "اعتبار الأساس \\(2/3\\) موجبًا.",
+          "كتابة \\(v_n=v_0q^{n-1}\\) رغم أن البداية من \\(v_0\\)."
+        ],
+        "hints": [
+          {
+            "level": 1,
+            "hint": "بسّط البسط والمقام كلًا على حدة."
+          },
+          {
+            "level": 2,
+            "hint": "انتبه إلى \\(2-2u_n=-2(u_n-1)\\)."
+          },
+          {
+            "level": 3,
+            "hint": "بعد إيجاد \\(q\\)، استعمل \\(v_n=v_0q^n\\)."
+          }
+        ],
+        "is_complete": true,
+        "academy_quality": true
+      }
+    },
+    {
+      "id": "bac_2026_p21_exercise_3a_3-a",
+      "year": 2026,
+      "source_file": "bac_sequence_scientifique(19).pdf",
+      "source_page": 21,
+      "exercise": "exercise_3a",
+      "number": "3-a",
+      "text": "نعتبر المعطيات الآتية: \\(u_0=4\\)، \\(u_{n+1}=\\frac{4u_n}{u_n+2}\\)، و\\(v_n=\\frac{u_n-2}{u_n}\\).. المطلوب: أثبت أن \\((v_n)\\) هندسية أساسها \\(\\frac12\\)، ثم اكتب \\(v_n\\).",
+      "context": "كل المعطيات والنتائج الوسيطة الضرورية موجودة داخل نص السؤال، لذلك يمكن عرضه وحله منفردًا دون الرجوع إلى أي سؤال سابق.",
+      "tag": "geometric_sequences",
+      "axis": "المتتالية الهندسية",
+      "secondary_tags": [],
+      "skill": "متتالية مساعدة",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمت كتابة السؤال من الوثيقة المصورة مع توحيد الترميز الرياضي بصيغة LaTeX.",
+      "original_text": "أثبت أن \\((v_n)\\) هندسية أساسها \\(\\frac12\\)، ثم اكتب \\(v_n\\).",
+      "rewriting_note": "أعيدت صياغة السؤال ليكون مستقلًا، وأزيلت العبارات المبهمة، وأضيفت النتائج التي كان يعتمد عليها من الأسئلة السابقة.",
+      "solution": {
+        "strategy": "حساب \\(v_{n+1}\\) مباشرة من العلاقة التراجعية ثم كتابة الحد العام.",
+        "detailed_explanation": "نحوّل الكسر المركب بعناية. بعد التبسيط يظهر أن \\(v_{n+1}\\) يساوي نصف \\(v_n\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "كتابة \\(v_{n+1}\\)",
+            "instruction": "نطبق التعريف عند الرتبة \\(n+1\\).",
+            "calculation": "\\[v_{n+1}=\\frac{u_{n+1}-2}{u_{n+1}}=1-\\frac{2}{u_{n+1}}.\\]",
+            "explanation": "الصيغة الثانية أسهل للتعويض.",
+            "result": "سنستعمل مقلوب \\(u_{n+1}\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "تعويض العلاقة التراجعية",
+            "instruction": "نعوض \\(u_{n+1}=\\frac{4u_n}{u_n+2}\\).",
+            "calculation": "\\[v_{n+1}=1-\\frac{2(u_n+2)}{4u_n}=1-\\frac{u_n+2}{2u_n}.\\]",
+            "explanation": "قسمنا 2 على الكسر بقلبه.",
+            "result": "نواصل التبسيط."
+          },
+          {
+            "step_number": 3,
+            "title": "إظهار \\(v_n\\)",
+            "instruction": "نوحد المقام.",
+            "calculation": "\\[v_{n+1}=\\frac{2u_n-(u_n+2)}{2u_n}=\\frac{u_n-2}{2u_n}=\\frac12\\frac{u_n-2}{u_n}=\\frac12v_n.\\]",
+            "explanation": "العامل ثابت.",
+            "result": "\\((v_n)\\) هندسية أساسها \\(q=1/2\\)."
+          },
+          {
+            "step_number": 4,
+            "title": "حساب الحد الأول",
+            "instruction": "نعوض \\(u_0=4\\).",
+            "calculation": "\\[v_0=\\frac{4-2}{4}=\\frac12.\\]",
+            "explanation": "حساب مباشر.",
+            "result": "\\(v_0=1/2\\)."
+          },
+          {
+            "step_number": 5,
+            "title": "كتابة الحد العام",
+            "instruction": "نستعمل \\(v_n=v_0q^n\\).",
+            "calculation": "\\[v_n=\\frac12\\left(\\frac12\\right)^n=\\frac1{2^{n+1}}.\\]",
+            "explanation": "جمعنا قوتي العدد 2.",
+            "result": "هذا هو الحد العام."
+          }
+        ],
+        "final_answer": "\\[\\boxed{v_{n+1}=\\frac12v_n,\\quad v_0=\\frac12,\\quad v_n=\\frac1{2^{n+1}}}\\]",
+        "verification": "نحسب \\(u_1=16/6=8/3\\)، ومنه \\(v_1=(8/3-2)/(8/3)=1/4\\)، وهو يساوي \\(v_0/2\\).",
+        "common_mistakes": [
+          "الخطأ عند قسمة 2 على \\(4u_n/(u_n+2)\\).",
+          "نسيان أن البداية من \\(v_0\\).",
+          "كتابة \\(1/2^n\\) بدل \\(1/2^{n+1}\\)."
+        ],
+        "hints": [
+          {
+            "level": 1,
+            "hint": "اكتب \\(v_{n+1}=1-2/u_{n+1}\\)."
+          },
+          {
+            "level": 2,
+            "hint": "اقلب الكسر عند القسمة."
+          },
+          {
+            "level": 3,
+            "hint": "بعد إثبات الهندسية، استعمل \\(v_n=v_0q^n\\)."
+          }
+        ],
+        "is_complete": true,
+        "academy_quality": true
+      }
+    }
+  ]
+}
