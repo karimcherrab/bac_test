@@ -26,6 +26,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/knowledge/', include("knowledge.urls")),
     path('api/', include("axis_revision.urls")),
+    path('api/bac/', include("generated_bac.urls")),
     path('api/account/', include("accounts.urls")),
     path('api/course/', include("course.urls")),
     path('api/exercise-generation/', include("exercise_generation.urls")),

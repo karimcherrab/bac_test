@@ -1,0 +1,350 @@
+{
+  "schema_version": "4.0-math-tech-graphs",
+  "version": "4.0-math-tech-graphs",
+  "language": "ar",
+  "direction": "rtl",
+  "branch": {
+    "code": "math_tech",
+    "name": "تقني رياضي"
+  },
+  "branch_code": "math_tech",
+  "branches": [
+    {
+      "code": "math_tech",
+      "name": "تقني رياضي"
+    }
+  ],
+  "year": 2024,
+  "exercise_number": 2,
+  "original_exercise_number": 3,
+  "source_page": 11,
+  "source_reference": "bac_sequence_math_technique.pdf، الصفحة 11.",
+  "title": "التمرين 3 (5 نقاط)",
+  "axis_tags": [
+    "sequence_recursive",
+    "mathematical_induction",
+    "geometric_sequence",
+    "sequence_sum"
+  ],
+  "statement": "المتتالية \\((u_n)\\) معرفة بـ \\(u_0=0\\) و\\(u_{n+1}=\\frac{6+6u_n}{5+u_n}\\).",
+  "has_statement_graph": false,
+  "statement_graph_data": null,
+  "statement_figure": {
+    "exists_in_original_exam": false,
+    "render_location": null,
+    "graph_data_key": null,
+    "show_in_solution": false
+  },
+  "questions": [
+    {
+      "id": "math_tech_2024_02_q1",
+      "text": "احسب \\(u_1,u_2\\)، ثم تحقق أن \\(u_{n+1}=6-\\frac{24}{5+u_n}\\).",
+      "display_order": 1,
+      "content_type": "question",
+      "axis_tags": [
+        "sequence_recursive"
+      ],
+      "solution": {
+        "strategy": "نعوض ثم نبسط.",
+        "methodology": {
+          "goal": "حل السؤال بطريقة منظمة وفق منهجية البكالوريا.",
+          "method": "نعوض ثم نبسط.",
+          "why_this_method": "لأنها تستعمل المعطيات بالترتيب وتقدم تبريرا واضحا لكل استنتاج.",
+          "used_theorem": "",
+          "bac_template": [
+            "نكتب العلاقة أو الخاصية المستعملة.",
+            "نعوض بالمعطيات ونبسط الحساب تدريجيا.",
+            "نبرر الإشارة أو النهاية أو الرتابة.",
+            "نكتب الاستنتاج النهائي بوضوح."
+          ],
+          "formal_writing": [
+            "تحديد المجال أو شروط الاستعمال.",
+            "ترتيب الحسابات على شكل مساويات.",
+            "ذكر المبرهنة المناسبة عند الحاجة.",
+            "ختم الحل بجواب مباشر."
+          ]
+        },
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الحد الأول",
+            "explanation": "",
+            "latex": "u_1=\\frac65"
+          },
+          {
+            "step_number": 2,
+            "title": "الحد الثاني",
+            "explanation": "",
+            "latex": "u_2=\\frac{66}{31}"
+          },
+          {
+            "step_number": 3,
+            "title": "التحويل",
+            "explanation": "",
+            "latex": "\\frac{6+6u_n}{5+u_n}=\\frac{6(5+u_n)-24}{5+u_n}=6-\\frac{24}{5+u_n}"
+          }
+        ],
+        "final_answer": "\\(u_1=6/5\\)، \\(u_2=66/31\\)، والعلاقة صحيحة.",
+        "verification": "نراجع النتيجة بالتعويض في العلاقة الأصلية وبمقارنة الحدود الأولى عند الإمكان.",
+        "common_mistakes": [
+          "الخلط بين الفهرسين \\(n\\) و\\(n+1\\).",
+          "استنتاج التقارب دون إثبات الرتابة والمحدودية أو دون صيغة صريحة.",
+          "نسيان تحديد الحد الأول عند تحويل المتتالية إلى متتالية هندسية أو حسابية."
+        ],
+        "hints": [
+          "استعمل النتائج السابقة بالترتيب.",
+          "ابحث عن تحويل يجعل المتتالية هندسية أو حسابية."
+        ],
+        "graph_data": null,
+        "table_data": null,
+        "solution_style": "حل بكالوريا مفصل: منهجية واضحة، حساب تدريجي، كتابة رياضية ثم استنتاج.",
+        "has_solution_graph": false,
+        "has_variation_table": false
+      }
+    },
+    {
+      "id": "math_tech_2024_02_q2",
+      "text": "برهن بالتراجع أن \\(0\\le u_n<3\\)، ثم ادرس اتجاه تغيرها.",
+      "display_order": 2,
+      "content_type": "question",
+      "axis_tags": [
+        "mathematical_induction",
+        "seq_monotonicity"
+      ],
+      "solution": {
+        "strategy": "نثبت الحصر ثم ندرس الفرق.",
+        "methodology": {
+          "goal": "حل السؤال بطريقة منظمة وفق منهجية البكالوريا.",
+          "method": "نثبت الحصر ثم ندرس الفرق.",
+          "why_this_method": "لأنها تستعمل المعطيات بالترتيب وتقدم تبريرا واضحا لكل استنتاج.",
+          "used_theorem": "",
+          "bac_template": [
+            "نكتب العلاقة أو الخاصية المستعملة.",
+            "نعوض بالمعطيات ونبسط الحساب تدريجيا.",
+            "نبرر الإشارة أو النهاية أو الرتابة.",
+            "نكتب الاستنتاج النهائي بوضوح."
+          ],
+          "formal_writing": [
+            "تحديد المجال أو شروط الاستعمال.",
+            "ترتيب الحسابات على شكل مساويات.",
+            "ذكر المبرهنة المناسبة عند الحاجة.",
+            "ختم الحل بجواب مباشر."
+          ]
+        },
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الحصر",
+            "explanation": "إذا \\(0\\le u_n<3\\)، فإن \\(0<u_{n+1}<3\\)، فتثبت الخاصية بالتراجع."
+          },
+          {
+            "step_number": 2,
+            "title": "الفرق",
+            "explanation": "",
+            "latex": "u_{n+1}-u_n=\\frac{(3-u_n)(u_n+2)}{u_n+5}>0"
+          },
+          {
+            "step_number": 3,
+            "title": "الرتابة",
+            "explanation": "إذن المتتالية متزايدة."
+          }
+        ],
+        "final_answer": "\\(0\\le u_n<3\\) والمتتالية متزايدة.",
+        "verification": "نراجع النتيجة بالتعويض في العلاقة الأصلية وبمقارنة الحدود الأولى عند الإمكان.",
+        "common_mistakes": [
+          "الخلط بين الفهرسين \\(n\\) و\\(n+1\\).",
+          "استنتاج التقارب دون إثبات الرتابة والمحدودية أو دون صيغة صريحة.",
+          "نسيان تحديد الحد الأول عند تحويل المتتالية إلى متتالية هندسية أو حسابية."
+        ],
+        "hints": [
+          "استعمل النتائج السابقة بالترتيب.",
+          "ابحث عن تحويل يجعل المتتالية هندسية أو حسابية."
+        ],
+        "graph_data": null,
+        "table_data": null,
+        "solution_style": "حل بكالوريا مفصل: منهجية واضحة، حساب تدريجي، كتابة رياضية ثم استنتاج.",
+        "has_solution_graph": false,
+        "has_variation_table": false
+      }
+    },
+    {
+      "id": "math_tech_2024_02_q3",
+      "text": "نعرف \\(v_n=\\frac{u_n+2}{u_n-3}\\). أثبت أنها هندسية أساسها \\(\\frac83\\)، ثم اكتب \\(v_n,u_n\\) واحسب النهاية.",
+      "display_order": 3,
+      "content_type": "question",
+      "axis_tags": [
+        "geometric_sequence",
+        "explicit_sequence",
+        "sequence_limits"
+      ],
+      "solution": {
+        "strategy": "نعوض بالعلاقة التراجعية.",
+        "methodology": {
+          "goal": "حل السؤال بطريقة منظمة وفق منهجية البكالوريا.",
+          "method": "نعوض بالعلاقة التراجعية.",
+          "why_this_method": "لأنها تستعمل المعطيات بالترتيب وتقدم تبريرا واضحا لكل استنتاج.",
+          "used_theorem": "",
+          "bac_template": [
+            "نكتب العلاقة أو الخاصية المستعملة.",
+            "نعوض بالمعطيات ونبسط الحساب تدريجيا.",
+            "نبرر الإشارة أو النهاية أو الرتابة.",
+            "نكتب الاستنتاج النهائي بوضوح."
+          ],
+          "formal_writing": [
+            "تحديد المجال أو شروط الاستعمال.",
+            "ترتيب الحسابات على شكل مساويات.",
+            "ذكر المبرهنة المناسبة عند الحاجة.",
+            "ختم الحل بجواب مباشر."
+          ]
+        },
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "العلاقة",
+            "explanation": "",
+            "latex": "v_{n+1}=\\frac83v_n"
+          },
+          {
+            "step_number": 2,
+            "title": "الحد الأول",
+            "explanation": "",
+            "latex": "v_0=-\\frac23"
+          },
+          {
+            "step_number": 3,
+            "title": "الحد العام",
+            "explanation": "",
+            "latex": "v_n=-\\frac23\\left(\\frac83\\right)^n"
+          },
+          {
+            "step_number": 4,
+            "title": "العودة",
+            "explanation": "",
+            "latex": "u_n=3+\\frac5{v_n-1}"
+          },
+          {
+            "step_number": 5,
+            "title": "النهاية",
+            "explanation": "بما أن \\(v_n\\to-\\infty\\)، فإن \\(u_n\\to3\\)."
+          }
+        ],
+        "final_answer": "\\(v_n=-\\frac23(8/3)^n\\)، \\(u_n=3+\\frac5{v_n-1}\\)، و\\(\\lim u_n=3\\).",
+        "verification": "نراجع النتيجة بالتعويض في العلاقة الأصلية وبمقارنة الحدود الأولى عند الإمكان.",
+        "common_mistakes": [
+          "الخلط بين الفهرسين \\(n\\) و\\(n+1\\).",
+          "استنتاج التقارب دون إثبات الرتابة والمحدودية أو دون صيغة صريحة.",
+          "نسيان تحديد الحد الأول عند تحويل المتتالية إلى متتالية هندسية أو حسابية."
+        ],
+        "hints": [
+          "استعمل النتائج السابقة بالترتيب.",
+          "ابحث عن تحويل يجعل المتتالية هندسية أو حسابية."
+        ],
+        "graph_data": null,
+        "table_data": null,
+        "solution_style": "حل بكالوريا مفصل: منهجية واضحة، حساب تدريجي، كتابة رياضية ثم استنتاج.",
+        "has_solution_graph": false,
+        "has_variation_table": false
+      }
+    },
+    {
+      "id": "math_tech_2024_02_q4",
+      "text": "احسب \\(S_n=v_0+3v_1+3^2v_2+\\cdots+3^nv_n\\).",
+      "display_order": 4,
+      "content_type": "question",
+      "axis_tags": [
+        "sequence_sum",
+        "geometric_sequence"
+      ],
+      "solution": {
+        "strategy": "نحسب الحد العام للحدود الموزونة.",
+        "methodology": {
+          "goal": "حل السؤال بطريقة منظمة وفق منهجية البكالوريا.",
+          "method": "نحسب الحد العام للحدود الموزونة.",
+          "why_this_method": "لأنها تستعمل المعطيات بالترتيب وتقدم تبريرا واضحا لكل استنتاج.",
+          "used_theorem": "",
+          "bac_template": [
+            "نكتب العلاقة أو الخاصية المستعملة.",
+            "نعوض بالمعطيات ونبسط الحساب تدريجيا.",
+            "نبرر الإشارة أو النهاية أو الرتابة.",
+            "نكتب الاستنتاج النهائي بوضوح."
+          ],
+          "formal_writing": [
+            "تحديد المجال أو شروط الاستعمال.",
+            "ترتيب الحسابات على شكل مساويات.",
+            "ذكر المبرهنة المناسبة عند الحاجة.",
+            "ختم الحل بجواب مباشر."
+          ]
+        },
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الحد",
+            "explanation": "",
+            "latex": "3^kv_k=-\\frac23\\,3^k\\left(\\frac83\\right)^k=-\\frac23\\,8^k"
+          },
+          {
+            "step_number": 2,
+            "title": "المجموع",
+            "explanation": "",
+            "latex": "S_n=-\\frac23\\frac{8^{n+1}-1}{8-1}=-\\frac2{21}(8^{n+1}-1)"
+          }
+        ],
+        "final_answer": "\\(S_n=-\\frac2{21}(8^{n+1}-1)\\).",
+        "verification": "نراجع النتيجة بالتعويض في العلاقة الأصلية وبمقارنة الحدود الأولى عند الإمكان.",
+        "common_mistakes": [
+          "الخلط بين الفهرسين \\(n\\) و\\(n+1\\).",
+          "استنتاج التقارب دون إثبات الرتابة والمحدودية أو دون صيغة صريحة.",
+          "نسيان تحديد الحد الأول عند تحويل المتتالية إلى متتالية هندسية أو حسابية."
+        ],
+        "hints": [
+          "استعمل النتائج السابقة بالترتيب.",
+          "ابحث عن تحويل يجعل المتتالية هندسية أو حسابية."
+        ],
+        "graph_data": null,
+        "table_data": null,
+        "solution_style": "حل بكالوريا مفصل: منهجية واضحة، حساب تدريجي، كتابة رياضية ثم استنتاج.",
+        "has_solution_graph": false,
+        "has_variation_table": false
+      }
+    }
+  ],
+  "content": {
+    "statement": "المتتالية \\((u_n)\\) معرفة بـ \\(u_0=0\\) و\\(u_{n+1}=\\frac{6+6u_n}{5+u_n}\\).",
+    "statement_graph_data": null,
+    "questions": [
+      {
+        "id": "math_tech_2024_02_q1",
+        "order": 1,
+        "text": "احسب \\(u_1,u_2\\)، ثم تحقق أن \\(u_{n+1}=6-\\frac{24}{5+u_n}\\)."
+      },
+      {
+        "id": "math_tech_2024_02_q2",
+        "order": 2,
+        "text": "برهن بالتراجع أن \\(0\\le u_n<3\\)، ثم ادرس اتجاه تغيرها."
+      },
+      {
+        "id": "math_tech_2024_02_q3",
+        "order": 3,
+        "text": "نعرف \\(v_n=\\frac{u_n+2}{u_n-3}\\). أثبت أنها هندسية أساسها \\(\\frac83\\)، ثم اكتب \\(v_n,u_n\\) واحسب النهاية."
+      },
+      {
+        "id": "math_tech_2024_02_q4",
+        "order": 4,
+        "text": "احسب \\(S_n=v_0+3v_1+3^2v_2+\\cdots+3^nv_n\\)."
+      }
+    ]
+  },
+  "is_active": true,
+  "render_contract": {
+    "math_renderer": "MathJax",
+    "graph_renderer": "recharts_or_plotly",
+    "variation_table_renderer": "custom_rtl_variation_table",
+    "graph_data_locations": [
+      "statement_graph_data",
+      "questions[].solution.graph_data"
+    ],
+    "table_data_locations": [
+      "questions[].solution.table_data"
+    ]
+  }
+}

@@ -62,6 +62,7 @@ INSTALLED_APPS = [
     'exercise_generation',
     'exercise_bac',
     'axis_revision',
+    'generated_bac',
     'accounts.apps.AccountsConfig'
 ]
 

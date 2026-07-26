@@ -1,0 +1,376 @@
+{
+  "schema_version": "4.0-math-tech-graphs",
+  "version": "4.0-math-tech-graphs",
+  "language": "ar",
+  "direction": "rtl",
+  "branch": {
+    "code": "math_tech",
+    "name": "تقني رياضي"
+  },
+  "branch_code": "math_tech",
+  "branches": [
+    {
+      "code": "math_tech",
+      "name": "تقني رياضي"
+    }
+  ],
+  "year": 2024,
+  "exercise_number": 1,
+  "original_exercise_number": 3,
+  "source_page": 11,
+  "source_reference": "bac_sequence_math_technique.pdf، الصفحة 11.",
+  "title": "التمرين 3 (5 نقاط)",
+  "axis_tags": [
+    "derivative",
+    "mathematical_induction",
+    "contraction",
+    "sequence_sum"
+  ],
+  "statement": "الدالة \\(f\\) معرفة على \\([2,3]\\) بـ \\(f(x)=\\frac{3x+2}{x+2}\\). نعرف \\(u_0=3\\) و\\(u_{n+1}=f(u_n)\\).",
+  "has_statement_graph": false,
+  "statement_graph_data": null,
+  "statement_figure": {
+    "exists_in_original_exam": false,
+    "render_location": null,
+    "graph_data_key": null,
+    "show_in_solution": false
+  },
+  "questions": [
+    {
+      "id": "math_tech_2024_01_q1",
+      "text": "ادرس تغير \\(f\\) ثم بين أن \\(2\\le f(x)\\le\\frac{11}{5}\\) على \\([2,3]\\).",
+      "display_order": 1,
+      "content_type": "question",
+      "axis_tags": [
+        "derivative",
+        "variation_table"
+      ],
+      "solution": {
+        "strategy": "نحسب المشتقة وقيم الطرفين.",
+        "methodology": {
+          "goal": "حل السؤال بطريقة منظمة وفق منهجية البكالوريا.",
+          "method": "نحسب المشتقة وقيم الطرفين.",
+          "why_this_method": "لأنها تستعمل المعطيات بالترتيب وتقدم تبريرا واضحا لكل استنتاج.",
+          "used_theorem": "",
+          "bac_template": [
+            "نكتب العلاقة أو الخاصية المستعملة.",
+            "نعوض بالمعطيات ونبسط الحساب تدريجيا.",
+            "نبرر الإشارة أو النهاية أو الرتابة.",
+            "نكتب الاستنتاج النهائي بوضوح."
+          ],
+          "formal_writing": [
+            "تحديد المجال أو شروط الاستعمال.",
+            "ترتيب الحسابات على شكل مساويات.",
+            "ذكر المبرهنة المناسبة عند الحاجة.",
+            "ختم الحل بجواب مباشر."
+          ]
+        },
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "المشتقة",
+            "explanation": "",
+            "latex": "f'(x)=\\frac4{(x+2)^2}>0"
+          },
+          {
+            "step_number": 2,
+            "title": "التغير",
+            "explanation": "الدالة متزايدة."
+          },
+          {
+            "step_number": 3,
+            "title": "القيم",
+            "explanation": "",
+            "latex": "f(2)=2,\\quad f(3)=\\frac{11}{5}"
+          },
+          {
+            "step_number": 4,
+            "title": "النتيجة",
+            "explanation": "إذن \\(2\\le f(x)\\le11/5\\)."
+          }
+        ],
+        "final_answer": "\\(f\\) متزايدة و\\(f([2,3])=[2,11/5]\\).",
+        "verification": "نراجع النتيجة بالتعويض في العلاقة الأصلية وبمقارنة الحدود الأولى عند الإمكان.",
+        "common_mistakes": [
+          "الخلط بين الفهرسين \\(n\\) و\\(n+1\\).",
+          "استنتاج التقارب دون إثبات الرتابة والمحدودية أو دون صيغة صريحة.",
+          "نسيان تحديد الحد الأول عند تحويل المتتالية إلى متتالية هندسية أو حسابية."
+        ],
+        "hints": [
+          "استعمل النتائج السابقة بالترتيب.",
+          "ابحث عن تحويل يجعل المتتالية هندسية أو حسابية."
+        ],
+        "graph_data": null,
+        "table_data": {
+          "type": "variation_table",
+          "domain": "[2,3]",
+          "x_values": [
+            "2",
+            "3"
+          ],
+          "derivative": {
+            "expression": "f'(x)=\\frac4{(x+2)^2}",
+            "signs": [
+              "+"
+            ],
+            "critical_points": []
+          },
+          "function_variation": {
+            "directions": [
+              "increasing"
+            ],
+            "values": [
+              "2",
+              "\\frac{11}{5}"
+            ]
+          },
+          "notes": [
+            "الدالة متزايدة تمامًا على [2,3]."
+          ],
+          "render_in_react": true
+        },
+        "solution_style": "حل بكالوريا مفصل: منهجية واضحة، حساب تدريجي، كتابة رياضية ثم استنتاج.",
+        "has_solution_graph": false,
+        "has_variation_table": true,
+        "variation_table_render_location": "after_derivative_sign_analysis"
+      }
+    },
+    {
+      "id": "math_tech_2024_01_q2",
+      "text": "برهن بالتراجع أن \\(2<u_n\\le3\\)، ثم استنتج اتجاه تغير المتتالية من العلاقة المعطاة.",
+      "display_order": 2,
+      "content_type": "question",
+      "axis_tags": [
+        "mathematical_induction",
+        "seq_monotonicity"
+      ],
+      "solution": {
+        "strategy": "نثبت الحصر ثم ندرس الفرق.",
+        "methodology": {
+          "goal": "حل السؤال بطريقة منظمة وفق منهجية البكالوريا.",
+          "method": "نثبت الحصر ثم ندرس الفرق.",
+          "why_this_method": "لأنها تستعمل المعطيات بالترتيب وتقدم تبريرا واضحا لكل استنتاج.",
+          "used_theorem": "",
+          "bac_template": [
+            "نكتب العلاقة أو الخاصية المستعملة.",
+            "نعوض بالمعطيات ونبسط الحساب تدريجيا.",
+            "نبرر الإشارة أو النهاية أو الرتابة.",
+            "نكتب الاستنتاج النهائي بوضوح."
+          ],
+          "formal_writing": [
+            "تحديد المجال أو شروط الاستعمال.",
+            "ترتيب الحسابات على شكل مساويات.",
+            "ذكر المبرهنة المناسبة عند الحاجة.",
+            "ختم الحل بجواب مباشر."
+          ]
+        },
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الحصر",
+            "explanation": "من استقرار \\([2,3]\\) بالتطبيق \\(f\\)، نحصل بالتراجع على \\(2<u_n\\le3\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "الفرق",
+            "explanation": "",
+            "latex": "u_{n+1}-u_n=\\frac{(1+u_n)(2-u_n)}{2+u_n}"
+          },
+          {
+            "step_number": 3,
+            "title": "الإشارة",
+            "explanation": "لأن \\(u_n>2\\)، فالفرق سالب، إذن المتتالية متناقصة."
+          }
+        ],
+        "final_answer": "\\(2<u_n\\le3\\) والمتتالية متناقصة.",
+        "verification": "نراجع النتيجة بالتعويض في العلاقة الأصلية وبمقارنة الحدود الأولى عند الإمكان.",
+        "common_mistakes": [
+          "الخلط بين الفهرسين \\(n\\) و\\(n+1\\).",
+          "استنتاج التقارب دون إثبات الرتابة والمحدودية أو دون صيغة صريحة.",
+          "نسيان تحديد الحد الأول عند تحويل المتتالية إلى متتالية هندسية أو حسابية."
+        ],
+        "hints": [
+          "استعمل النتائج السابقة بالترتيب.",
+          "ابحث عن تحويل يجعل المتتالية هندسية أو حسابية."
+        ],
+        "graph_data": null,
+        "table_data": null,
+        "solution_style": "حل بكالوريا مفصل: منهجية واضحة، حساب تدريجي، كتابة رياضية ثم استنتاج.",
+        "has_solution_graph": false,
+        "has_variation_table": false
+      }
+    },
+    {
+      "id": "math_tech_2024_01_q3",
+      "text": "بين أن \\(u_{n+1}-2\\le\\frac14(u_n-2)\\)، ثم استنتج الحصر والنهاية.",
+      "display_order": 3,
+      "content_type": "question",
+      "axis_tags": [
+        "contraction",
+        "sequence_limits"
+      ],
+      "solution": {
+        "strategy": "نكتب الفرق عن النقطة الثابتة.",
+        "methodology": {
+          "goal": "حل السؤال بطريقة منظمة وفق منهجية البكالوريا.",
+          "method": "نكتب الفرق عن النقطة الثابتة.",
+          "why_this_method": "لأنها تستعمل المعطيات بالترتيب وتقدم تبريرا واضحا لكل استنتاج.",
+          "used_theorem": "",
+          "bac_template": [
+            "نكتب العلاقة أو الخاصية المستعملة.",
+            "نعوض بالمعطيات ونبسط الحساب تدريجيا.",
+            "نبرر الإشارة أو النهاية أو الرتابة.",
+            "نكتب الاستنتاج النهائي بوضوح."
+          ],
+          "formal_writing": [
+            "تحديد المجال أو شروط الاستعمال.",
+            "ترتيب الحسابات على شكل مساويات.",
+            "ذكر المبرهنة المناسبة عند الحاجة.",
+            "ختم الحل بجواب مباشر."
+          ]
+        },
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التبسيط",
+            "explanation": "",
+            "latex": "u_{n+1}-2=\\frac{u_n-2}{u_n+2}"
+          },
+          {
+            "step_number": 2,
+            "title": "الحصر",
+            "explanation": "لأن \\(u_n\\ge2\\)، فإن \\(\\frac1{u_n+2}\\le\\frac14\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "التكرار",
+            "explanation": "",
+            "latex": "0<u_n-2\\le\\left(\\frac14\\right)^n"
+          },
+          {
+            "step_number": 4,
+            "title": "النهاية",
+            "explanation": "",
+            "latex": "\\lim u_n=2"
+          }
+        ],
+        "final_answer": "\\(0<u_n-2\\le(1/4)^n\\) و\\(\\lim u_n=2\\).",
+        "verification": "نراجع النتيجة بالتعويض في العلاقة الأصلية وبمقارنة الحدود الأولى عند الإمكان.",
+        "common_mistakes": [
+          "الخلط بين الفهرسين \\(n\\) و\\(n+1\\).",
+          "استنتاج التقارب دون إثبات الرتابة والمحدودية أو دون صيغة صريحة.",
+          "نسيان تحديد الحد الأول عند تحويل المتتالية إلى متتالية هندسية أو حسابية."
+        ],
+        "hints": [
+          "استعمل النتائج السابقة بالترتيب.",
+          "ابحث عن تحويل يجعل المتتالية هندسية أو حسابية."
+        ],
+        "graph_data": null,
+        "table_data": null,
+        "solution_style": "حل بكالوريا مفصل: منهجية واضحة، حساب تدريجي، كتابة رياضية ثم استنتاج.",
+        "has_solution_graph": false,
+        "has_variation_table": false
+      }
+    },
+    {
+      "id": "math_tech_2024_01_q4",
+      "text": "استنتج حدا علويا للمجموع \\(u_0+u_1+\\cdots+u_n\\).",
+      "display_order": 4,
+      "content_type": "question",
+      "axis_tags": [
+        "sequence_sum",
+        "inequality"
+      ],
+      "solution": {
+        "strategy": "نجمع المتراجحة \\(u_k\\le2+(1/4)^k\\).",
+        "methodology": {
+          "goal": "حل السؤال بطريقة منظمة وفق منهجية البكالوريا.",
+          "method": "نجمع المتراجحة \\(u_k\\le2+(1/4)^k\\).",
+          "why_this_method": "لأنها تستعمل المعطيات بالترتيب وتقدم تبريرا واضحا لكل استنتاج.",
+          "used_theorem": "",
+          "bac_template": [
+            "نكتب العلاقة أو الخاصية المستعملة.",
+            "نعوض بالمعطيات ونبسط الحساب تدريجيا.",
+            "نبرر الإشارة أو النهاية أو الرتابة.",
+            "نكتب الاستنتاج النهائي بوضوح."
+          ],
+          "formal_writing": [
+            "تحديد المجال أو شروط الاستعمال.",
+            "ترتيب الحسابات على شكل مساويات.",
+            "ذكر المبرهنة المناسبة عند الحاجة.",
+            "ختم الحل بجواب مباشر."
+          ]
+        },
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الجمع",
+            "explanation": "",
+            "latex": "\\sum_{k=0}^n u_k\\le2(n+1)+\\sum_{k=0}^n\\left(\\frac14\\right)^k"
+          },
+          {
+            "step_number": 2,
+            "title": "المجموع الهندسي",
+            "explanation": "",
+            "latex": "\\sum_{k=0}^n\\left(\\frac14\\right)^k=\\frac43\\left(1-\\left(\\frac14\\right)^{n+1}\\right)"
+          }
+        ],
+        "final_answer": "\\(u_0+\\cdots+u_n\\le2(n+1)+\\frac43[1-(1/4)^{n+1}]\\).",
+        "verification": "نراجع النتيجة بالتعويض في العلاقة الأصلية وبمقارنة الحدود الأولى عند الإمكان.",
+        "common_mistakes": [
+          "الخلط بين الفهرسين \\(n\\) و\\(n+1\\).",
+          "استنتاج التقارب دون إثبات الرتابة والمحدودية أو دون صيغة صريحة.",
+          "نسيان تحديد الحد الأول عند تحويل المتتالية إلى متتالية هندسية أو حسابية."
+        ],
+        "hints": [
+          "استعمل النتائج السابقة بالترتيب.",
+          "ابحث عن تحويل يجعل المتتالية هندسية أو حسابية."
+        ],
+        "graph_data": null,
+        "table_data": null,
+        "solution_style": "حل بكالوريا مفصل: منهجية واضحة، حساب تدريجي، كتابة رياضية ثم استنتاج.",
+        "has_solution_graph": false,
+        "has_variation_table": false
+      }
+    }
+  ],
+  "content": {
+    "statement": "الدالة \\(f\\) معرفة على \\([2,3]\\) بـ \\(f(x)=\\frac{3x+2}{x+2}\\). نعرف \\(u_0=3\\) و\\(u_{n+1}=f(u_n)\\).",
+    "statement_graph_data": null,
+    "questions": [
+      {
+        "id": "math_tech_2024_01_q1",
+        "order": 1,
+        "text": "ادرس تغير \\(f\\) ثم بين أن \\(2\\le f(x)\\le\\frac{11}{5}\\) على \\([2,3]\\)."
+      },
+      {
+        "id": "math_tech_2024_01_q2",
+        "order": 2,
+        "text": "برهن بالتراجع أن \\(2<u_n\\le3\\)، ثم استنتج اتجاه تغير المتتالية من العلاقة المعطاة."
+      },
+      {
+        "id": "math_tech_2024_01_q3",
+        "order": 3,
+        "text": "بين أن \\(u_{n+1}-2\\le\\frac14(u_n-2)\\)، ثم استنتج الحصر والنهاية."
+      },
+      {
+        "id": "math_tech_2024_01_q4",
+        "order": 4,
+        "text": "استنتج حدا علويا للمجموع \\(u_0+u_1+\\cdots+u_n\\)."
+      }
+    ]
+  },
+  "is_active": true,
+  "render_contract": {
+    "math_renderer": "MathJax",
+    "graph_renderer": "recharts_or_plotly",
+    "variation_table_renderer": "custom_rtl_variation_table",
+    "graph_data_locations": [
+      "statement_graph_data",
+      "questions[].solution.graph_data"
+    ],
+    "table_data_locations": [
+      "questions[].solution.table_data"
+    ]
+  }
+}

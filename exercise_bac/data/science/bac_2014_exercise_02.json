@@ -1,0 +1,392 @@
+{
+  "schema_version": "2.6-clear-graphs",
+  "language": "ar",
+  "direction": "rtl",
+    "branch": {
+    "code": "science",
+    "name": "شعبة علوم تجريبية"
+  },
+  "branch_code": "science",
+  "branches": [
+    {
+      "code": "science",
+      "name": "شعبة علوم تجريبية"
+    }
+  ],
+  "year": 2014,
+  "exercise_number": 2,
+  "source_page": 7,
+  "source_reference": "النص منقول كما ورد في ملف PDF، صفحة 7.",
+  "title": "التمرين الأول (04 نقاط)",
+  "axis_tags": [
+    "seq_geometric",
+    "seq_limits",
+    "seq_sum",
+    "seq_arithmetic"
+  ],
+  "statement": "I) نعتبر المتتالية العددية \\((u_n)\\) المعرفة على مجموعة الأعداد الطبيعية \\(\\mathbb N\\) بحدها العام: \\[u_n=e^{\\frac12-n}.\\] (\\(e\\) هو أساس اللوغاريتم النيبيري). II) نضع، من أجل كل عدد طبيعي \\(n\\): \\[v_n=\\ln(u_n).\\] (\\(\\ln\\) يرمز إلى اللوغاريتم النيبيري).",
+  "questions": [
+    {
+      "id": "2014_ex2_q1",
+      "text": "I-1) بيّن أن \\((u_n)\\) متتالية هندسية، يطلب تعيين أساسها وحدها الأول.",
+      "axis_tags": [
+        "seq_geometric"
+      ],
+      "solution": {
+        "strategy": "نحسب u_{n+1}/u_n.",
+        "methodology": {
+          "goal": "إثبات أن u_n هندسية.",
+          "method": "إظهار أن النسبة ثابتة.",
+          "simple_plan": [
+            "نحسب النسبة.",
+            "نحدد q وu0."
+          ],
+          "formal_writing": [
+            "نحسب v_{n+1} انطلاقا من تعريف v_n والعلاقة المعطاة.",
+            "نبسط حتى نحصل على v_{n+1}=qv_n حيث q ثابت لا يتعلق بـ n.",
+            "نستنتج أن (v_n) هندسية أساسها q، ثم نحسب حدها الأول."
+          ],
+          "why_this_method": "الحد العام أسي."
+        },
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب النسبة",
+            "explanation": "لدينا:",
+            "latex": "\\frac{u_{n+1}}{u_n}=\\frac{e^{\\frac12-(n+1)}}{e^{\\frac12-n}}=e^{-1}=\\frac1e"
+          },
+          {
+            "step_number": 2,
+            "title": "الحد الأول",
+            "explanation": "نحسب:",
+            "latex": "u_0=e^{1/2}=\\sqrt e"
+          }
+        ],
+        "final_answer": "\\((u_n)\\) هندسية أساسها \\(q=\\frac1e\\) وحدها الأول \\(u_0=\\sqrt e\\).",
+        "common_mistakes": [
+          "عدم حساب الحد الأول.",
+          "الخلط بين أساس المتتالية وحدها الأول.",
+          "كتابة عبارة الحد العام بفهرسة غير مناسبة."
+        ],
+        "hints": [],
+        "presentation": {
+          "show_method_first": true,
+          "show_steps_one_by_one": true,
+          "show_calculations_separately": true,
+          "show_graph_only_when_required": true,
+          "show_formal_writing": true
+        }
+      },
+      "display_order": 1,
+      "content_type": "question"
+    },
+    {
+      "id": "2014_ex2_q2",
+      "text": "I-2) احسب \\(\\displaystyle\\lim_{n\\to+\\infty}u_n\\)، ماذا تستنتج؟",
+      "axis_tags": [
+        "seq_limits"
+      ],
+      "solution": {
+        "strategy": "نستعمل نهاية q^n عندما 0<q<1.",
+        "methodology": {
+          "goal": "حساب النهاية والاستنتاج.",
+          "method": "u_n=√e(1/e)^n.",
+          "simple_plan": [
+            "نكتب الحد العام.",
+            "نحسب النهاية.",
+            "نستنتج التقارب."
+          ],
+          "formal_writing": [
+            "نحدد أولا المبرهنة أو النهاية المرجعية المستعملة.",
+            "نعوض في عبارة الحد العام أو نستعمل مبرهنة التقارب الرتيب بعد إثبات الرتابة والمحدودية.",
+            "نكتب النتيجة النهائية بصيغة واضحة مع ذكر قيمة النهاية."
+          ],
+          "why_this_method": "الأساس بين 0 و1."
+        },
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الكتابة الهندسية",
+            "explanation": "لدينا:",
+            "latex": "u_n=\\sqrt e\\left(\\frac1e\\right)^n"
+          },
+          {
+            "step_number": 2,
+            "title": "النهاية",
+            "explanation": "بما أن 0<1/e<1:",
+            "latex": "\\lim u_n=0"
+          }
+        ],
+        "final_answer": "\\(\\lim u_n=0\\)، ومنه \\((u_n)\\) متقاربة نحو الصفر.",
+        "common_mistakes": [
+          "تعويض النهاية قبل إثبات وجودها.",
+          "نسيان استعمال شرط |q|<1 عند نهاية متتالية هندسية.",
+          "إهمال تبرير تطبيق مبرهنة الحصر أو التقارب الرتيب."
+        ],
+        "hints": [],
+        "presentation": {
+          "show_method_first": true,
+          "show_steps_one_by_one": true,
+          "show_calculations_separately": true,
+          "show_graph_only_when_required": true,
+          "show_formal_writing": true
+        }
+      },
+      "display_order": 2,
+      "content_type": "question"
+    },
+    {
+      "id": "2014_ex2_q3",
+      "text": "I-3) احسب بدلالة \\(n\\) المجموع \\(S_n\\) حيث: \\[S_n=u_0+u_1+u_2+\\cdots+u_n.\\]",
+      "axis_tags": [
+        "seq_sum"
+      ],
+      "solution": {
+        "strategy": "نطبق قانون مجموع n+1 حدود هندسية.",
+        "methodology": {
+          "goal": "حساب S_n.",
+          "method": "S_n=u0(1-q^{n+1})/(1-q).",
+          "simple_plan": [
+            "نحدد عدد الحدود.",
+            "نطبق القانون.",
+            "نبسط."
+          ],
+          "why_this_method": "u_n هندسية."
+        },
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تطبيق القانون",
+            "explanation": "من 0 إلى n يوجد n+1 حدا:",
+            "latex": "S_n=\\sqrt e\\,\\frac{1-(1/e)^{n+1}}{1-1/e}"
+          },
+          {
+            "step_number": 2,
+            "title": "التبسيط",
+            "explanation": "يمكن كتابة:",
+            "latex": "S_n=\\frac{e\\sqrt e}{e-1}\\left(1-e^{-(n+1)}\\right)"
+          }
+        ],
+        "final_answer": "\\(S_n=\\sqrt e\\frac{1-e^{-(n+1)}}{1-e^{-1}}\\).",
+        "common_mistakes": [
+          "الخطأ في عدد الحدود: من 0 إلى n يوجد n+1 حدا.",
+          "استعمال قانون مجموع متتالية هندسية دون تحديد الحد الأول والأساس.",
+          "نسيان تبسيط النتيجة النهائية."
+        ],
+        "hints": [],
+        "presentation": {
+          "show_method_first": true,
+          "show_steps_one_by_one": true,
+          "show_calculations_separately": true,
+          "show_graph_only_when_required": true,
+          "show_formal_writing": true
+        }
+      },
+      "display_order": 3,
+      "content_type": "question"
+    },
+    {
+      "id": "2014_ex2_q4",
+      "text": "II-1) عبّر عن \\(v_n\\) بدلالة \\(n\\) ثم استنتج نوع المتتالية \\((v_n)\\).",
+      "axis_tags": [
+        "seq_arithmetic"
+      ],
+      "solution": {
+        "strategy": "نستعمل ln(e^a)=a.",
+        "methodology": {
+          "goal": "التعبير عن v_n وتحديد نوعها.",
+          "method": "تبسيط اللوغاريتم.",
+          "simple_plan": [
+            "نعوض u_n.",
+            "نطبق خاصية اللوغاريتم.",
+            "نحدد الفرق الثابت."
+          ],
+          "why_this_method": "u_n قوة للعدد e."
+        },
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التبسيط",
+            "explanation": "لدينا:",
+            "latex": "v_n=\\ln(u_n)=\\ln(e^{\\frac12-n})=\\frac12-n"
+          },
+          {
+            "step_number": 2,
+            "title": "تحديد النوع",
+            "explanation": "نحسب:",
+            "latex": "v_{n+1}-v_n=-1"
+          }
+        ],
+        "final_answer": "\\((v_n)\\) حسابية أساسها \\(-1\\) وحدها الأول \\(v_0=\\frac12\\).",
+        "common_mistakes": [],
+        "hints": [],
+        "presentation": {
+          "show_method_first": true,
+          "show_steps_one_by_one": true,
+          "show_calculations_separately": true,
+          "show_graph_only_when_required": true,
+          "show_formal_writing": true
+        }
+      },
+      "display_order": 4,
+      "content_type": "question"
+    },
+    {
+      "id": "2014_ex2_q5a",
+      "text": "II-2-أ) احسب بدلالة \\(n\\) العدد \\(P_n\\) حيث: \\[P_n=\\ln(u_0\\times u_1\\times u_2\\times\\cdots\\times u_n).\\]",
+      "axis_tags": [
+        "seq_sum",
+        "seq_logarithm"
+      ],
+      "solution": {
+        "strategy": "نستعمل ln(product)=sum ln ثم مجموع متتالية حسابية.",
+        "methodology": {
+          "goal": "حساب P_n.",
+          "method": "P_n=Σv_k.",
+          "simple_plan": [
+            "نحوّل لوغاريتم الجداء إلى مجموع.",
+            "نعوض v_k.",
+            "نحسب مجموع الأعداد من 0 إلى n."
+          ],
+          "why_this_method": "تعريف P_n لوغاريتم جداء."
+        },
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تحويل الجداء",
+            "explanation": "لدينا:",
+            "latex": "P_n=\\sum_{k=0}^n\\ln(u_k)=\\sum_{k=0}^n v_k"
+          },
+          {
+            "step_number": 2,
+            "title": "التعويض",
+            "explanation": "إذن:",
+            "latex": "P_n=\\sum_{k=0}^n\\left(\\frac12-k\\right)=\\frac{n+1}{2}-\\frac{n(n+1)}2"
+          },
+          {
+            "step_number": 3,
+            "title": "التبسيط",
+            "explanation": "فنحصل على:",
+            "latex": "P_n=\\frac{(n+1)(1-n)}2=\\frac{1-n^2}{2}"
+          }
+        ],
+        "final_answer": "\\(P_n=\\frac{1-n^2}{2}\\).",
+        "common_mistakes": [
+          "الخطأ في عدد الحدود: من 0 إلى n يوجد n+1 حدا.",
+          "استعمال قانون مجموع متتالية هندسية دون تحديد الحد الأول والأساس.",
+          "نسيان تبسيط النتيجة النهائية."
+        ],
+        "hints": [],
+        "presentation": {
+          "show_method_first": true,
+          "show_steps_one_by_one": true,
+          "show_calculations_separately": true,
+          "show_graph_only_when_required": true,
+          "show_formal_writing": true
+        }
+      },
+      "display_order": 5,
+      "content_type": "question"
+    },
+    {
+      "id": "2014_ex2_q5b",
+      "text": "II-2-ب) عيّن مجموعة قيم العدد الطبيعي \\(n\\) بحيث: \\(P_n+4n>0\\).",
+      "axis_tags": [
+        "seq_inequalities"
+      ],
+      "solution": {
+        "strategy": "نعوض P_n ثم نحل متراجحة من الدرجة الثانية على N.",
+        "methodology": {
+          "goal": "تعيين n بحيث P_n+4n>0.",
+          "method": "تحليل العبارة إلى جداء.",
+          "simple_plan": [
+            "نعوض.",
+            "نضرب في 2 الموجب.",
+            "نحل المتراجحة.",
+            "نقاطع مع N."
+          ],
+          "why_this_method": "بعد التعويض نحصل على كثيرة حدود."
+        },
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التعويض",
+            "explanation": "لدينا:",
+            "latex": "P_n+4n=\\frac{1-n^2}{2}+4n=\\frac{-n^2+8n+1}{2}"
+          },
+          {
+            "step_number": 2,
+            "title": "حل المتراجحة",
+            "explanation": "نطلب:",
+            "latex": "-n^2+8n+1>0\\iff n^2-8n-1<0"
+          },
+          {
+            "step_number": 3,
+            "title": "الجذور",
+            "explanation": "جذرا كثيرة الحدود هما:",
+            "latex": "4-\\sqrt{17}\\quad\\text{و}\\quad4+\\sqrt{17}"
+          },
+          {
+            "step_number": 4,
+            "title": "التقاطع مع N",
+            "explanation": "إذن 4-√17<n<4+√17، وبما أن n طبيعي:",
+            "latex": "n\\in\\{0,1,2,3,4,5,6,7,8\\}"
+          }
+        ],
+        "final_answer": "\\(n\\in\\{0,1,2,3,4,5,6,7,8\\}\\).",
+        "common_mistakes": [],
+        "hints": [],
+        "presentation": {
+          "show_method_first": true,
+          "show_steps_one_by_one": true,
+          "show_calculations_separately": true,
+          "show_graph_only_when_required": true,
+          "show_formal_writing": true
+        }
+      },
+      "display_order": 6,
+      "content_type": "question"
+    }
+  ],
+  "content_separation": {
+    "statement": "المعطيات والتعريفات فقط، من دون حل أو طلبات.",
+    "questions": "الأسئلة المطلوبة فقط، وكل سؤال يحتوي حله الخاص.",
+    "statement_graph_data": "الرسم المعطى مع نص التمرين عندما يكون موجودا في النسخة الأصلية.",
+    "solution.graph_data": "الرسم المنجز في الحل مع خطوط الإنشاء عندما يطلب السؤال رسما."
+  },
+  "statement_sections": [
+    {
+      "type": "given",
+      "text": "I) نعتبر المتتالية العددية \\((u_n)\\) المعرفة على مجموعة الأعداد الطبيعية \\(\\mathbb N\\) بحدها العام: \\[u_n=e^{\\frac12-n}.\\] (\\(e\\) هو أساس اللوغاريتم النيبيري). II) نضع، من أجل كل عدد طبيعي \\(n\\): \\[v_n=\\ln(u_n).\\] (\\(\\ln\\) يرمز إلى اللوغاريتم النيبيري)."
+    }
+  ],
+  "review_status": {
+    "statement_copied_from_source_pdf": true,
+    "questions_copied_from_source_pdf": true,
+    "solutions_rewritten_methodically": true,
+    "induction_written_with_initialization_hypothesis_heredity_conclusion": true,
+    "target_level": "تلميذ بكالوريا يحتاج شرحا مفصلا ومفهوما",
+    "graphs_generated_when_required": true,
+    "formal_mathematical_writing_added": true,
+    "source_statement_preserved_exactly": true
+  },
+  "source_text_policy": {
+    "statement": "يبقى نص المعطيات كما هو في الملف الأصلي ولا يضاف إليه أي شرح أو نتيجة.",
+    "questions": "تبقى مطالب التمرين منفصلة عن الحل ولا تضاف إليها معلومات من التصحيح.",
+    "solution": "الشرح والحسابات والمنهجية توضع داخل solution فقط."
+  },
+  "solution_display": {
+    "methodology": "visible",
+    "formal_writing": "visible",
+    "calculations": "step_by_step",
+    "graphs": "statement_only_if_present_in_source; solution_only_if_required"
+  },
+  "graph_policy": {
+    "statement_graph_only_if_present_in_original": true,
+    "generated_graphs_location": "solution_only",
+    "variation_tables_location": "solution_only",
+    "variation_table_style": "arrow_table",
+    "remove_variation_tables_from_statement": true
+  },
+  "version": "2.6-clear-graphs"
+}

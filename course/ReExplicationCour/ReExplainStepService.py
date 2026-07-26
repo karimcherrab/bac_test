@@ -1,567 +1,332 @@
 import inspect
 import json
+import logging
+import math
 import re
-from typing import Any
+from typing import Any, Literal
 
-from knowledge.retrieval.answer_generator import (
-    AnswerGenerator,
-)
-from knowledge.retrieval.context_builder import (
-    BuiltContext,
-)
+from knowledge.retrieval.answer_generator import AnswerGenerator
+from knowledge.retrieval.context_builder import BuiltContext
+
+logger = logging.getLogger(__name__)
+
+RequestType = Literal["explanation", "example"]
 
 
 class ReExplainStepService:
-    """
-    خدمة إعادة شرح مرحلة محددة من الدرس.
+    """إنشاء شرح مبسط ومفصل أو مثال واحد لمرحلة محددة فقط."""
 
-    تعتمد الإجابة على:
-    - بيانات المرحلة الحالية.
-    - سؤال التلميذ.
-    - دون تحميل سياق الفصل كاملًا.
-    """
-
-    MAX_STEPS = 4
-    MAX_STEP_CONTENT_CHARS = 5500
-    MAX_STUDENT_QUESTION_CHARS = 1200
+    MAX_STEP_CONTENT_CHARS = 6000
+    MAX_STUDENT_QUESTION_CHARS = 700
+    MAX_CONTENT_CHARS = 4000
+    MAX_GRAPH_SERIES = 2
+    MAX_GRAPH_POINTS = 40
+    ALLOWED_REQUEST_TYPES = {"explanation", "example"}
 
     def __init__(self):
         self.generator = AnswerGenerator()
 
-    def clean_model_response(
-        self,
-        text: str,
-    ) -> str:
-        if not text:
-            return ""
-
-        text = str(text).strip()
-
-        text = re.sub(
-            r"^\s*```(?:json)?\s*",
-            "",
-            text,
-            flags=re.IGNORECASE,
-        )
-
-        text = re.sub(
-            r"\s*```\s*$",
-            "",
-            text,
-        )
-
-        return text.strip()
-
-    def extract_json(
-        self,
-        text: str,
-    ) -> dict:
-        cleaned = self.clean_model_response(
-            text
-        )
-
-        if not cleaned:
-            return self.get_fallback_answer(
-                message=(
-                    "لم أتمكن من إنشاء جواب مناسب. "
-                    "أعد كتابة السؤال بطريقة أوضح."
-                )
-            )
-
-        try:
-            parsed = json.loads(cleaned)
-
-            if isinstance(parsed, dict):
-                return parsed
-
-        except (
-            json.JSONDecodeError,
-            TypeError,
-            ValueError,
-        ):
-            pass
-
-        start = cleaned.find("{")
-        end = cleaned.rfind("}")
-
-        if (
-            start != -1
-            and end != -1
-            and end > start
-        ):
-            json_part = cleaned[start:end + 1]
-
-            try:
-                parsed = json.loads(json_part)
-
-                if isinstance(parsed, dict):
-                    return parsed
-
-            except (
-                json.JSONDecodeError,
-                TypeError,
-                ValueError,
-            ):
-                pass
-
-        return self.get_fallback_answer(
-            message=cleaned
-        )
-
-    def normalize_text(
-        self,
-        value: Any,
-        default: str = "",
-    ) -> str:
+    @staticmethod
+    def normalize_text(value: Any, default: str = "") -> str:
         if value is None:
             return default
-
-        if isinstance(value, str):
-            value = value.strip()
-            return value or default
-
         value = str(value).strip()
         return value or default
 
-    def normalize_boolean(
-        self,
-        value: Any,
-        default: bool = True,
-    ) -> bool:
-        if isinstance(value, bool):
-            return value
+    @staticmethod
+    def clean_model_response(text: Any) -> str:
+        text = str(text or "").strip()
+        text = re.sub(r"^\s*```(?:json)?\s*", "", text, flags=re.I)
+        text = re.sub(r"\s*```\s*$", "", text)
+        return text.strip()
 
-        if isinstance(value, int):
-            return value != 0
-
-        if isinstance(value, str):
-            normalized = value.strip().lower()
-
-            true_values = {
-                "true",
-                "1",
-                "yes",
-                "oui",
-                "نعم",
-                "مرتبط",
-                "related",
-            }
-
-            false_values = {
-                "false",
-                "0",
-                "no",
-                "non",
-                "لا",
-                "غير مرتبط",
-                "unrelated",
-            }
-
-            if normalized in true_values:
-                return True
-
-            if normalized in false_values:
-                return False
-
-        return default
-
-    def normalize_steps(
-        self,
-        value: Any,
-    ) -> list[str]:
-        if not isinstance(value, list):
-            return []
-
-        normalized_steps = []
-
-        for item in value:
-            if isinstance(item, dict):
-                text = (
-                    item.get("text")
-                    or item.get("instruction")
-                    or item.get("explanation")
-                    or item.get("step")
-                    or item.get("title")
-                    or ""
-                )
-            else:
-                text = item
-
-            text = self.normalize_text(text)
-
-            if text:
-                normalized_steps.append(text)
-
-        return normalized_steps[:self.MAX_STEPS]
-
-    def get_fallback_answer(
-        self,
-        message: str = "",
-    ) -> dict:
-        explanation = (
-            message
-            or "لم أتمكن من إنشاء شرح مناسب."
+    def fallback_answer(self, request_type: RequestType, message: str = "") -> dict:
+        default_message = (
+            "تعذّر إنشاء المثال الآن. أعد المحاولة مرة أخرى."
+            if request_type == "example"
+            else "تعذّر إنشاء الشرح الآن. أعد المحاولة مرة أخرى."
         )
-
         return {
-            "is_related": True,
-            "relation_reason": "",
-            "title": "توضيح المرحلة",
-            "direct_answer": explanation,
-            "simple_explanation": explanation,
-            "example": "",
-            "steps": [],
-            "check_question": "",
-            "expected_answer": "",
-            "encouragement": (
-                "أعد صياغة الجزء الذي لم تفهمه."
-            ),
+            "type": request_type,
+            "content": self.normalize_text(message, default_message)[: self.MAX_CONTENT_CHARS],
+            "graph": None,
         }
 
-    def get_unrelated_answer(
-        self,
-        relation_reason: str = "",
-    ) -> dict:
-        return {
-            "is_related": False,
-            "relation_reason": (
-                relation_reason
-                or (
-                    "السؤال لا يتعلق بالمفهوم "
-                    "الموجود في المرحلة الحالية."
-                )
-            ),
-            "title": (
-                "السؤال غير متعلق بهذه المرحلة"
-            ),
-            "direct_answer": "",
-            "simple_explanation": (
-                "هذا السؤال غير متعلق بالمحتوى "
-                "الموجود في هذه المرحلة. "
-                "اختر المرحلة المناسبة ثم أعد طرحه."
-            ),
-            "example": "",
-            "steps": [],
-            "check_question": "",
-            "expected_answer": "",
-            "encouragement": (
-                "اطرح سؤالًا حول الفكرة الموجودة "
-                "في المرحلة الحالية."
-            ),
-        }
+    def extract_json(self, text: Any, request_type: RequestType) -> dict:
+        cleaned = self.clean_model_response(text)
+        if not cleaned:
+            return self.fallback_answer(request_type)
 
-    def normalize_answer(
-        self,
-        answer: dict,
-        step_title: str,
-    ) -> dict:
-        if not isinstance(answer, dict):
-            answer = {
-                "simple_explanation": (
-                    self.normalize_text(answer)
-                )
-            }
+        candidates = [cleaned]
+        start, end = cleaned.find("{"), cleaned.rfind("}")
+        if start >= 0 and end > start:
+            candidates.append(cleaned[start : end + 1])
 
-        is_related = self.normalize_boolean(
-            answer.get("is_related"),
-            default=True,
-        )
+        for candidate in candidates:
+            try:
+                parsed = json.loads(candidate)
+                if isinstance(parsed, dict):
+                    return parsed
+            except (json.JSONDecodeError, TypeError, ValueError):
+                continue
 
-        relation_reason = self.normalize_text(
-            answer.get("relation_reason")
-        )
+        # لا نعرض JSON تالفًا أو تعليمات تقنية للتلميذ.
+        plain_text = re.sub(r"[{}\[\]\"]", " ", cleaned)
+        plain_text = re.sub(r"\s+", " ", plain_text).strip()
+        return self.fallback_answer(request_type, plain_text)
 
-        if not is_related:
-            return self.get_unrelated_answer(
-                relation_reason=relation_reason,
-            )
-
-        direct_answer = self.normalize_text(
-            answer.get("direct_answer")
-            or answer.get("result")
-            or answer.get("final_answer")
-        )
-
-        simple_explanation = self.normalize_text(
-            answer.get("simple_explanation")
-            or answer.get("explanation")
-            or answer.get("answer")
-            or direct_answer
-        )
-
-        if not simple_explanation:
-            simple_explanation = (
-                "لم يتم إنشاء شرح واضح. "
-                "حاول إعادة صياغة السؤال."
-            )
-
-        if not direct_answer:
-            direct_answer = simple_explanation
-
-        return {
-            "is_related": True,
-            "relation_reason": relation_reason,
-            "title": self.normalize_text(
-                answer.get("title"),
-                f"توضيح: {step_title}",
-            ),
-            "direct_answer": direct_answer,
-            "simple_explanation": (
-                simple_explanation
-            ),
-            "example": self.normalize_text(
-                answer.get("example")
-            ),
-            "steps": self.normalize_steps(
-                answer.get("steps")
-            ),
-            "check_question": self.normalize_text(
-                answer.get("check_question")
-            ),
-            "expected_answer": self.normalize_text(
-                answer.get("expected_answer")
-            ),
-            "encouragement": self.normalize_text(
-                answer.get("encouragement"),
-                "لا بأس، سنفهمها خطوة بخطوة.",
-            ),
-        }
-
-    def compact_value(
-        self,
-        value: Any,
-        depth: int = 0,
-    ) -> Any:
-        """
-        تنظيف محتوى المرحلة قبل إرساله للنموذج.
-
-        يتم حذف:
-        - القيم الفارغة.
-        - البيانات الرسومية الكبيرة.
-        - الحقول التقنية.
-        - القوائم الطويلة.
-        """
-
-        if depth > 5:
+    def compact_value(self, value: Any, depth: int = 0) -> Any:
+        if depth > 6 or value is None:
             return None
-
-        if value is None:
-            return None
-
         if isinstance(value, str):
             value = value.strip()
-
-            if not value:
-                return None
-
-            return value[:1800]
-
-        if isinstance(
-            value,
-            (int, float, bool),
-        ):
+            return value[:2200] if value else None
+        if isinstance(value, (int, float, bool)):
             return value
-
         if isinstance(value, list):
-            cleaned_items = []
-
-            for item in value[:8]:
-                cleaned_item = self.compact_value(
-                    item,
-                    depth=depth + 1,
-                )
-
-                if cleaned_item not in (
-                    None,
-                    "",
-                    [],
-                    {},
-                ):
-                    cleaned_items.append(
-                        cleaned_item
-                    )
-
-            return cleaned_items
-
+            result = []
+            for item in value[:10]:
+                cleaned = self.compact_value(item, depth + 1)
+                if cleaned not in (None, "", [], {}):
+                    result.append(cleaned)
+            return result
         if isinstance(value, dict):
-            ignored_keys = {
-                "graph_data",
-                "graph",
-                "series",
-                "annotations",
-                "settings",
-                "x_domain",
-                "y_domain",
-                "created_at",
-                "updated_at",
-                "metadata",
-                "dynamic_profile",
+            ignored = {
+                "created_at", "updated_at", "metadata", "dynamic_profile",
+                "re_explain_history", "history",
             }
-
-            cleaned_dict = {}
-
-            for key, nested_value in value.items():
-                if key in ignored_keys:
+            result = {}
+            for key, item in value.items():
+                if key in ignored:
                     continue
-
-                cleaned_value = self.compact_value(
-                    nested_value,
-                    depth=depth + 1,
-                )
-
-                if cleaned_value not in (
-                    None,
-                    "",
-                    [],
-                    {},
-                ):
-                    cleaned_dict[key] = (
-                        cleaned_value
-                    )
-
-            return cleaned_dict
-
+                cleaned = self.compact_value(item, depth + 1)
+                if cleaned not in (None, "", [], {}):
+                    result[str(key)] = cleaned
+            return result
         return str(value)[:1000]
 
-    def prepare_step_content(
-        self,
-        step: dict,
-    ) -> str:
-        content = step.get(
-            "content",
-            {},
-        )
-
+    def prepare_step_content(self, step: dict) -> str:
+        content = step.get("content", {})
         if not isinstance(content, dict):
-            content = {
-                "content": content,
-            }
-
-        compact_content = self.compact_value(
-            content
-        )
-
-        if compact_content is None:
-            compact_content = {}
-
-        content_json = json.dumps(
-            compact_content,
+            content = {"content": content}
+        compact = self.compact_value(content) or {}
+        serialized = json.dumps(
+            compact,
             ensure_ascii=False,
             separators=(",", ":"),
             default=str,
         )
+        return serialized[: self.MAX_STEP_CONTENT_CHARS]
 
-        if (
-            len(content_json)
-            > self.MAX_STEP_CONTENT_CHARS
-        ):
-            content_json = content_json[
-                :self.MAX_STEP_CONTENT_CHARS
-            ]
+    @staticmethod
+    def _finite_number(value: Any) -> float | None:
+        try:
+            number = float(value)
+        except (TypeError, ValueError):
+            return None
+        return number if math.isfinite(number) else None
 
-        return content_json
+    def normalize_graph(self, value: Any) -> dict | None:
+        """قبول بيانات رسم رقمية فقط، دون كود مولّد أو HTML."""
+        if not isinstance(value, dict) or value.get("required") is not True:
+            return None
+
+        raw_series = value.get("series")
+        if not isinstance(raw_series, list):
+            return None
+
+        series = []
+        for series_index, raw_serie in enumerate(raw_series[: self.MAX_GRAPH_SERIES]):
+            if not isinstance(raw_serie, dict):
+                continue
+
+            raw_points = raw_serie.get("data")
+            if not isinstance(raw_points, list):
+                continue
+
+            points = []
+            for raw_point in raw_points[: self.MAX_GRAPH_POINTS]:
+                if not isinstance(raw_point, dict):
+                    continue
+
+                x = self._finite_number(raw_point.get("x", raw_point.get("n")))
+                y = self._finite_number(raw_point.get("y", raw_point.get("value")))
+                if x is None or y is None:
+                    continue
+
+                point = {"x": x, "y": y}
+                n = raw_point.get("n")
+                if isinstance(n, int) and n >= 0:
+                    point["n"] = n
+
+                label = self.normalize_text(raw_point.get("label"))[:40]
+                if label:
+                    point["label"] = label
+                points.append(point)
+
+            if points:
+                series.append({
+                    "id": self.normalize_text(
+                        raw_serie.get("id"), f"series_{series_index + 1}"
+                    )[:50],
+                    "label": self.normalize_text(raw_serie.get("label"))[:80],
+                    "type": "line" if raw_serie.get("type") == "line" else "points",
+                    "data": points,
+                })
+
+        if not series:
+            return None
+
+        all_x = [point["x"] for serie in series for point in serie["data"]]
+        all_y = [point["y"] for serie in series for point in serie["data"]]
+
+        x_span = max(all_x) - min(all_x)
+        y_span = max(all_y) - min(all_y)
+        x_pad = max(x_span * 0.08, 1.0)
+        y_pad = max(y_span * 0.10, 1.0)
+
+        return {
+            "title": self.normalize_text(value.get("title"), "الرسم البياني")[:120],
+            "x_label": self.normalize_text(value.get("x_label"), "x")[:40],
+            "y_label": self.normalize_text(value.get("y_label"), "y")[:40],
+            "x_domain": [min(all_x) - x_pad, max(all_x) + x_pad],
+            "y_domain": [min(all_y) - y_pad, max(all_y) + y_pad],
+            "series": series,
+            "annotations": [],
+            "settings": {
+                "connect_points": bool(value.get("connect_points", True)),
+                "show_point_labels": bool(value.get("show_point_labels", False)),
+                "show_grid": True,
+            },
+        }
+
+    def normalize_answer(self, raw: Any, request_type: RequestType) -> dict:
+        if not isinstance(raw, dict):
+            raw = {"content": raw}
+
+        # توافق مع إجابات الإصدارات السابقة.
+        if request_type == "example":
+            fallback_fields = (
+                raw.get("example"),
+                raw.get("content"),
+                raw.get("explanation"),
+                raw.get("simple_explanation"),
+            )
+        else:
+            fallback_fields = (
+                raw.get("content"),
+                raw.get("explanation"),
+                raw.get("simple_explanation"),
+                raw.get("direct_answer"),
+            )
+
+        content = next(
+            (self.normalize_text(value) for value in fallback_fields if self.normalize_text(value)),
+            "",
+        )[: self.MAX_CONTENT_CHARS]
+
+        if not content:
+            return self.fallback_answer(request_type)
+
+        return {
+            "type": request_type,
+            "content": content,
+            "graph": self.normalize_graph(raw.get("graph")),
+        }
 
     def build_prompt(
         self,
         step: dict,
         student_question: str,
+        request_type: RequestType,
     ) -> str:
-        step_title = self.normalize_text(
-            step.get("title"),
-            "مرحلة من الدرس",
-        )
+        title = self.normalize_text(step.get("title"), "مرحلة من الدرس")
+        step_type = self.normalize_text(step.get("type"), "lesson_step")
+        content = self.prepare_step_content(step)
+        question = self.normalize_text(student_question)[: self.MAX_STUDENT_QUESTION_CHARS]
 
-        step_type = self.normalize_text(
-            step.get("type"),
-            "explanation",
-        )
-
-        content_json = self.prepare_step_content(
-            step
-        )
-
-        student_question = self.normalize_text(
-            student_question
-        )[:self.MAX_STUDENT_QUESTION_CHARS]
+        if request_type == "example":
+            task = """
+أنشئ مثالًا واحدًا فقط يساعد التلميذ على فهم المرحلة.
+- ابدأ بمعطيات المثال بوضوح.
+- طبّق فكرة المرحلة خطوة بخطوة داخل فقرة مرتبة وسهلة.
+- اشرح سبب كل عملية حسابية باختصار.
+- اختم بنتيجة المثال.
+- لا تعِد شرح الدرس كاملًا ولا تضف قسم شرح منفصل.
+""".strip()
+        else:
+            task = """
+أعد شرح المرحلة بطريقة أبسط بكثير وبالتفصيل الكافي لتلميذ لم يفهمها.
+- ابدأ من الفكرة الأساسية دون افتراض أنه فهم المصطلحات.
+- فسّر الرموز والمعنى الرياضي الضروريين داخل الشرح.
+- اربط الأفكار تدريجيًا باستعمال جمل قصيرة وواضحة.
+- اشرح لماذا نقوم بكل خطوة، وليس ماذا نفعل فقط.
+- لا تعط مثالًا مستقلًا؛ المطلوب هنا شرح المرحلة فقط.
+""".strip()
 
         return f"""
-أنت أستاذ رياضيات جزائري تجيب عن سؤال تلميذ بكالوريا.
+أنت أستاذ رياضيات جزائري متخصص في شرح دروس البكالوريا.
+اعتمد حصريًا على المرحلة الحالية، ولا تنتقل إلى مرحلة أخرى أو إلى الدرس كاملًا.
 
-مرجع المرحلة الحالية:
-العنوان: {step_title}
-النوع: {step_type}
-المحتوى: {content_json}
+عنوان المرحلة: {title}
+نوع المرحلة: {step_type}
+محتوى المرحلة: {content}
+اختيار التلميذ: {question}
+نوع الاستجابة المطلوب: {request_type}
 
-السؤال الحقيقي الذي كتبه التلميذ:
-{student_question}
+المهمة:
+{task}
 
-أجب عن السؤال المكتوب أعلاه نفسه فقط.
+قواعد إلزامية:
+1. أرجع JSON صحيحًا فقط دون Markdown أو نص قبل JSON أو بعده.
+2. الحقول المسموحة فقط هي: type وcontent وgraph.
+3. type يجب أن يساوي حرفيًا: {request_type}
+4. content هو النص الكامل المطلوب، بلغة عربية بسيطة وواضحة.
+5. استعمل LaTeX بين \\( و \\) للرموز والتعابير الرياضية.
+6. راجع جميع الحسابات والرموز قبل الإرجاع.
+7. لا تخترع معطيات تناقض محتوى المرحلة.
+8. graph=null افتراضيًا.
+9. أضف الرسم فقط إذا كان ضروريًا فعلًا للفهم، مثل منحنى دالة، تمثيل حدود متتالية، مخطط السلم، أو قراءة بيانية.
+10. لا ترسم لمجرد وجود أعداد أو صيغة جبرية قابلة للفهم دون رسم.
+11. الرسم يحتوي نقاطًا رقمية فقط؛ ممنوع JavaScript أو Python أو HTML.
+12. لا تتجاوز سلسلتين و30 نقطة لكل سلسلة.
 
-تعليمات إلزامية:
-- استخرج جميع المعطيات الرياضية الموجودة في سؤال التلميذ.
-- لا تقل إن المعطيات ناقصة إذا كانت موجودة في السؤال.
-- لا تنقل معطيات السؤال إلى سؤال تحقق جديد دون حلها أولًا.
-- لا تحول السؤال إلى تعريف عام أو درس عام.
-- لا تغير التعبير أو الأعداد أو الرموز التي كتبها التلميذ.
-- إذا طلب قيمة، احسبها وأعط النتيجة مباشرة.
-- إذا طلب تفسيرًا، فسر النقطة المطلوبة فقط.
-- إذا طلب طريقة، طبقها على معطياته.
-- ضع النتيجة المباشرة في direct_answer.
-- ابدأ simple_explanation بجواب مباشر عن السؤال.
-- يجب أن تعتمد steps على معطيات سؤال التلميذ نفسه.
-- لا تخترع مثالًا بدل حل السؤال.
-- لا تقل إن المعطيات غير كافية إلا إذا كانت ناقصة فعلًا.
-- تحقق من صحة الحساب قبل الإجابة.
-- استعمل عربية بسيطة وواضحة.
-- استعمل من خطوة واحدة إلى ثلاث خطوات فقط.
-- لا تستعمل Markdown.
-- أرجع JSON صحيحًا فقط.
-- لا تضف أي نص قبل JSON أو بعده.
-
-مثال:
-
-السؤال:
-ما هو أساس المتتالية u_n = 5n + 2؟
-
-الجواب الصحيح:
-النتيجة r = 5، لأن معامل n هو 5، ويمكن التحقق بحساب:
-u_(n+1) - u_n = 5.
-
-شكل JSON المطلوب:
-
+الشكل العادي:
 {{
-  "is_related": true,
-  "relation_reason": "",
-  "title": "عنوان يطابق سؤال التلميذ",
-  "direct_answer": "النتيجة المباشرة",
-  "simple_explanation": "شرح باستعمال معطيات التلميذ نفسها",
-  "example": "",
-  "steps": [
-    "الخطوة الأولى",
-    "الخطوة الثانية"
-  ],
-  "check_question": "",
-  "expected_answer": "",
-  "encouragement": "جملة قصيرة"
+  "type": "{request_type}",
+  "content": "النص المطلوب",
+  "graph": null
+}}
+
+شكل الرسم عند الضرورة فقط:
+{{
+  "type": "{request_type}",
+  "content": "النص المطلوب مع الإشارة إلى الرسم",
+  "graph": {{
+    "required": true,
+    "title": "عنوان الرسم",
+    "x_label": "n",
+    "y_label": "u_n",
+    "connect_points": true,
+    "show_point_labels": true,
+    "series": [
+      {{
+        "id": "u",
+        "label": "u_n",
+        "type": "points",
+        "data": [
+          {{"n": 0, "x": 0, "y": 2, "label": "u_0"}}
+        ]
+      }}
+    ]
+  }}
 }}
 """.strip()
 
-    def build_context(
-        self,
-        prompt: str,
-    ) -> BuiltContext:
-        """
-        إنشاء BuiltContext دون افتراض وجود الحقل items.
-
-        يتم فحص الحقول التي يقبلها BuiltContext
-        وإرسال الحقول المتوافقة فقط.
-        """
-
-        available_values = {
-            "question": (
-                "أجب عن سؤال التلميذ الموجود "
-                "داخل السياق."
-            ),
+    @staticmethod
+    def build_context(prompt: str) -> BuiltContext:
+        values = {
+            "question": "نفّذ نوع المساعدة المحدد للمرحلة الحالية فقط.",
             "intent": "re_explain_step",
             "context_text": prompt,
             "context": prompt,
@@ -569,40 +334,23 @@ u_(n+1) - u_n = 5.
             "sources": [],
             "metadata": {},
         }
-
         try:
-            signature = inspect.signature(
-                BuiltContext
-            )
-
-            accepted_parameters = {
-                parameter_name
-                for parameter_name, parameter
-                in signature.parameters.items()
-                if parameter_name != "self"
+            signature = inspect.signature(BuiltContext)
+            accepted = {
+                name
+                for name, parameter in signature.parameters.items()
+                if name != "self"
                 and parameter.kind
                 in {
                     inspect.Parameter.POSITIONAL_OR_KEYWORD,
                     inspect.Parameter.KEYWORD_ONLY,
                 }
             }
-
-            context_kwargs = {
-                key: value
-                for key, value
-                in available_values.items()
-                if key in accepted_parameters
-            }
-
+            return BuiltContext(**{key: value for key, value in values.items() if key in accepted})
+        except (TypeError, ValueError):
             return BuiltContext(
-                **context_kwargs
-            )
-
-        except TypeError:
-            # التوافق مع النسخة الحالية الأكثر شيوعًا.
-            return BuiltContext(
-                question=available_values["question"],
-                intent=available_values["intent"],
+                question=values["question"],
+                intent=values["intent"],
                 context_text=prompt,
             )
 
@@ -610,79 +358,39 @@ u_(n+1) - u_n = 5.
         self,
         step: dict,
         student_question: str,
+        request_type: RequestType,
     ) -> dict:
         if not isinstance(step, dict):
-            raise ValueError(
-                "بيانات المرحلة غير صحيحة."
-            )
+            raise ValueError("بيانات المرحلة غير صحيحة.")
 
-        step_id = self.normalize_text(
-            step.get("id")
-        )
-
+        step_id = self.normalize_text(step.get("id"))
         if not step_id:
-            raise ValueError(
-                "معرف المرحلة غير موجود."
-            )
+            raise ValueError("معرف المرحلة غير موجود.")
 
-        step_title = self.normalize_text(
-            step.get("title"),
-            "مرحلة من الدرس",
-        )
+        request_type = self.normalize_text(request_type).lower()
+        if request_type not in self.ALLOWED_REQUEST_TYPES:
+            raise ValueError("نوع المساعدة غير صالح.")
 
-        student_question = self.normalize_text(
-            student_question
-        )
-
-        if not student_question:
-            raise ValueError(
-                "سؤال التلميذ فارغ."
-            )
-
-        student_question = student_question[
-            :self.MAX_STUDENT_QUESTION_CHARS
-        ]
+        step_title = self.normalize_text(step.get("title"), "مرحلة من الدرس")
+        question = self.normalize_text(student_question)
+        if not question:
+            raise ValueError("طلب المساعدة فارغ.")
 
         prompt = self.build_prompt(
             step=step,
-            student_question=student_question,
+            student_question=question,
+            request_type=request_type,
         )
+        generated = self.generator.generate(self.build_context(prompt))
 
-        context = self.build_context(
-            prompt=prompt
-        )
-
-        generated = self.generator.generate(
-            context
-        )
-
-        generated_answer = getattr(
-            generated,
-            "answer",
-            "",
-        )
-
-        generated_model = getattr(
-            generated,
-            "model",
-            "",
-        )
-
-        parsed_answer = self.extract_json(
-            generated_answer
-        )
-
-        normalized_answer = self.normalize_answer(
-            answer=parsed_answer,
-            step_title=step_title,
-        )
+        raw_answer = getattr(generated, "answer", "")
+        model = self.normalize_text(getattr(generated, "model", ""))
+        parsed = self.extract_json(raw_answer, request_type)
 
         return {
             "mode": "re_explain_step",
             "step_id": step_id,
             "step_title": step_title,
-            "model": self.normalize_text(
-                generated_model
-            ),
-            "answer": normalized_answer,
+            "model": model,
+            "answer": self.normalize_answer(parsed, request_type),
         }

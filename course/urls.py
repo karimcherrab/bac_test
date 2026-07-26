@@ -42,7 +42,7 @@ urlpatterns = [
 
     # Chapitres
     path(
-        "chapters/",
+        "subjects/<int:subject_id>/chapters/",
         ChapterListView.as_view(),
         name="chapter-list",
     ),
@@ -54,7 +54,7 @@ urlpatterns = [
 
     # Axes
     path(
-        "axes/",
+        "axes/<int:chapter_id>/branch/<str:branch_code>/",
         AxisListView.as_view(),
         name="axis-list",
     ),

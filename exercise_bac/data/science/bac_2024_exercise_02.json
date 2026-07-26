@@ -1,0 +1,348 @@
+{
+  "schema_version": "2.7-stmt-graphs",
+  "version": "2.7-stmt-graphs",
+  "language": "ar",
+  "direction": "rtl",
+    "branch": {
+    "code": "science",
+    "name": "شعبة علوم تجريبية"
+  },
+  "branch_code": "science",
+  "branches": [
+    {
+      "code": "science",
+      "name": "شعبة علوم تجريبية"
+    }
+  ],
+  "year": 2024,
+  "exercise_number": 2,
+  "source_page": 19,
+  "source_reference": "النص منقول من ملف PDF، صفحة 19.",
+  "title": "التمرين الثالث (05 نقاط)",
+  "axis_tags": [
+    "seq_monotonicity",
+    "sequence_limits",
+    "sequence_sums"
+  ],
+  "statement": "الدالة \\(f\\) معرفة على \\([2,+\\infty[\\) بـ \\(f(x)=\\frac{x+1}{2x}\\). والمتتالية \\((u_n)\\) معرفة من أجل \\(n\\ge2\\) بـ \\(u_n=\\frac{n}{2^n}\\).",
+  "questions": [
+    {
+      "id": "2024_ex2_q1",
+      "text": "1) شكّل جدول تغيرات الدالة \\(f(x)=\\frac{x+1}{2x}\\) على \\([2,+\\infty[\\)، ثم استنتج \\(\\frac12<f(x)\\le\\frac34\\).",
+      "axis_tags": [
+        "seq_monotonicity"
+      ],
+      "solution": {
+        "strategy": "نحسب المشتقة والنهايات والقيم الطرفية.",
+        "methodology": {
+          "goal": "الوصول إلى النتيجة بطريقة منظمة ومناسبة لكتابة البكالوريا.",
+          "method": "نحسب المشتقة والنهايات والقيم الطرفية.",
+          "why_this_method": "لأنها تربط مباشرة بين المعطيات والنتيجة المطلوبة وتسمح بحساب تدريجي واضح.",
+          "used_theorem": "",
+          "bac_template": [
+            "نكتب العلاقة أو الخاصية المستعملة.",
+            "نعوض بالمعطيات ونبسط الحساب تدريجيا.",
+            "ندرس الإشارة أو النهاية عند الحاجة.",
+            "نكتب الاستنتاج النهائي بوضوح."
+          ],
+          "formal_writing": [
+            "نكتب العلاقة المستعملة قبل التعويض.",
+            "نحافظ على ترتيب المساويات.",
+            "نختم بجملة رياضية تجيب عن المطلوب."
+          ]
+        },
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "المشتقة",
+            "explanation": "نكتب \\(f(x)=\\frac12+\\frac1{2x}\\).",
+            "latex": "f'(x)=-\\frac1{2x^2}<0"
+          },
+          {
+            "step_number": 2,
+            "title": "التغير",
+            "explanation": "إذن \\(f\\) متناقصة تماما على المجال."
+          },
+          {
+            "step_number": 3,
+            "title": "القيم",
+            "explanation": "نحسب.",
+            "latex": "f(2)=\\frac34,\\qquad \\lim_{x\\to+\\infty}f(x)=\\frac12"
+          },
+          {
+            "step_number": 4,
+            "title": "الحصر",
+            "explanation": "ومن جدول التغيرات.",
+            "latex": "\\frac12<f(x)\\le\\frac34"
+          }
+        ],
+        "final_answer": "\\(\\frac12<f(x)\\le\\frac34\\).",
+        "verification": "يمكن التحقق بالتعويض في العلاقة الأصلية أو بمقارنة أول حدين.",
+        "common_mistakes": [
+          "الخلط بين n و n+1.",
+          "القفز إلى النتيجة دون كتابة العلاقة المستعملة."
+        ],
+        "hints": [
+          "اكتب العلاقة الأساسية أولا.",
+          "استعمل النتائج السابقة بالترتيب."
+        ],
+        "graph_data": null,
+        "table_data": {
+          "type": "variation_table",
+          "title": "جدول تغيرات الدالة f",
+          "domain": "\\([2,+\\infty[\\)",
+          "rows": {
+            "x": [
+              "2",
+              "+\\infty"
+            ],
+            "derivative": {
+              "signs": [
+                "-"
+              ]
+            },
+            "function": {
+              "directions": [
+                "down"
+              ],
+              "values": [
+                "\\frac34",
+                "\\frac12"
+              ]
+            }
+          }
+        },
+        "solution_style": "حل بكالوريا منظم: منهجية واضحة، حسابات تدريجية، ثم استنتاج."
+      },
+      "display_order": 1,
+      "content_type": "question"
+    },
+    {
+      "id": "2024_ex2_q2a",
+      "text": "2) المتتالية \\(u_n=\\frac{n}{2^n}\\) لـ\\(n\\ge2\\). أ) بيّن أن \\(\\frac{u_{n+1}}{u_n}\\le\\frac34\\).",
+      "axis_tags": [
+        "sequence_limits"
+      ],
+      "solution": {
+        "strategy": "نحسب النسبة ونستعمل حصر الدالة.",
+        "methodology": {
+          "goal": "الوصول إلى النتيجة بطريقة منظمة ومناسبة لكتابة البكالوريا.",
+          "method": "نحسب النسبة ونستعمل حصر الدالة.",
+          "why_this_method": "لأنها تربط مباشرة بين المعطيات والنتيجة المطلوبة وتسمح بحساب تدريجي واضح.",
+          "used_theorem": "",
+          "bac_template": [
+            "نكتب العلاقة أو الخاصية المستعملة.",
+            "نعوض بالمعطيات ونبسط الحساب تدريجيا.",
+            "ندرس الإشارة أو النهاية عند الحاجة.",
+            "نكتب الاستنتاج النهائي بوضوح."
+          ],
+          "formal_writing": [
+            "نكتب العلاقة المستعملة قبل التعويض.",
+            "نحافظ على ترتيب المساويات.",
+            "نختم بجملة رياضية تجيب عن المطلوب."
+          ]
+        },
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "النسبة",
+            "explanation": "نحسب.",
+            "latex": "\\frac{u_{n+1}}{u_n}=\\frac{n+1}{2n}=f(n)"
+          },
+          {
+            "step_number": 2,
+            "title": "الحصر",
+            "explanation": "لأن \\(n\\ge2\\).",
+            "latex": "f(n)\\le\\frac34"
+          }
+        ],
+        "final_answer": "\\(\\frac{u_{n+1}}{u_n}\\le\\frac34\\).",
+        "verification": "يمكن التحقق بالتعويض في العلاقة الأصلية أو بمقارنة أول حدين.",
+        "common_mistakes": [
+          "الخلط بين n و n+1.",
+          "القفز إلى النتيجة دون كتابة العلاقة المستعملة."
+        ],
+        "hints": [
+          "اكتب العلاقة الأساسية أولا.",
+          "استعمل النتائج السابقة بالترتيب."
+        ],
+        "graph_data": null,
+        "table_data": null,
+        "solution_style": "حل بكالوريا منظم: منهجية واضحة، حسابات تدريجية، ثم استنتاج."
+      },
+      "display_order": 2,
+      "content_type": "question"
+    },
+    {
+      "id": "2024_ex2_q2b",
+      "text": "ب) أثبت أنه من أجل كل \\(n\\ge2\\): \\(u_n\\le\\frac12(\\frac34)^{n-2}\\)، ثم استنتج النهاية.",
+      "axis_tags": [
+        "sequence_limits"
+      ],
+      "solution": {
+        "strategy": "نستعمل البرهان بالتراجع اعتمادا على النسبة السابقة.",
+        "methodology": {
+          "goal": "إثبات الخاصية لكل عدد طبيعي.",
+          "method": "نستعمل البرهان بالتراجع: التهيئة، الفرضية، الانتقال، الخاتمة.",
+          "why_this_method": "لأن المطلوب خاصية مرتبطة بعلاقة تراجعية وتشمل جميع الرتب.",
+          "used_theorem": "مبدأ البرهان بالتراجع.",
+          "bac_template": [
+            "نحدد الخاصية P(n).",
+            "نتحقق منها عند الرتبة الأولى.",
+            "نفترض صحتها عند n.",
+            "نبرهن صحتها عند n+1.",
+            "نختم بمبدأ التراجع."
+          ],
+          "formal_writing": [
+            "من أجل n=0 نتحقق من الخاصية.",
+            "نفترض صحتها عند رتبة n.",
+            "نبرهن صحتها عند n+1.",
+            "إذن الخاصية صحيحة لكل n."
+          ]
+        },
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التهيئة",
+            "explanation": "عند \\(n=2\\).",
+            "latex": "u_2=\\frac12"
+          },
+          {
+            "step_number": 2,
+            "title": "فرضية التراجع",
+            "explanation": "نفترض \\(u_n\\le\\frac12(\\frac34)^{n-2}\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "الانتقال",
+            "explanation": "باستعمال \\(u_{n+1}\\le\\frac34u_n\\).",
+            "latex": "u_{n+1}\\le\\frac34\\cdot\\frac12\\left(\\frac34\\right)^{n-2}=\\frac12\\left(\\frac34\\right)^{n-1}"
+          },
+          {
+            "step_number": 4,
+            "title": "النهاية",
+            "explanation": "الطرف الأيمن يتجه إلى 0.",
+            "latex": "\\lim u_n=0"
+          }
+        ],
+        "final_answer": "\\(u_n\\le\\frac12(\\frac34)^{n-2}\\)، و\\(\\lim u_n=0\\).",
+        "verification": "يمكن التحقق بالتعويض في العلاقة الأصلية أو بمقارنة أول حدين.",
+        "common_mistakes": [
+          "الخلط بين n و n+1.",
+          "القفز إلى النتيجة دون كتابة العلاقة المستعملة."
+        ],
+        "hints": [
+          "اكتب العلاقة الأساسية أولا.",
+          "استعمل النتائج السابقة بالترتيب."
+        ],
+        "graph_data": null,
+        "table_data": null,
+        "solution_style": "حل بكالوريا منظم: منهجية واضحة، حسابات تدريجية، ثم استنتاج."
+      },
+      "display_order": 3,
+      "content_type": "question"
+    },
+    {
+      "id": "2024_ex2_q2c",
+      "text": "ج) نضع \\(S_n=\\frac{u_2}{2}+\\frac{u_3}{3}+\\cdots+\\frac{u_n}{n}\\). بيّن أن \\[S_n=\\frac12\\left(1-\\left(\\frac12\\right)^{n-1}\\right),\\] ثم عين \\(n\\) حيث \\(S_n=\\frac{511}{1024}\\).",
+      "axis_tags": [
+        "sequence_sums"
+      ],
+      "solution": {
+        "strategy": "نبسط كل حد ثم نحسب مجموعا هندسيا.",
+        "methodology": {
+          "goal": "الوصول إلى النتيجة بطريقة منظمة ومناسبة لكتابة البكالوريا.",
+          "method": "نبسط كل حد ثم نحسب مجموعا هندسيا.",
+          "why_this_method": "لأنها تربط مباشرة بين المعطيات والنتيجة المطلوبة وتسمح بحساب تدريجي واضح.",
+          "used_theorem": "",
+          "bac_template": [
+            "نكتب العلاقة أو الخاصية المستعملة.",
+            "نعوض بالمعطيات ونبسط الحساب تدريجيا.",
+            "ندرس الإشارة أو النهاية عند الحاجة.",
+            "نكتب الاستنتاج النهائي بوضوح."
+          ],
+          "formal_writing": [
+            "نكتب العلاقة المستعملة قبل التعويض.",
+            "نحافظ على ترتيب المساويات.",
+            "نختم بجملة رياضية تجيب عن المطلوب."
+          ]
+        },
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تبسيط الحد",
+            "explanation": "لأن \\(u_k=\\frac{k}{2^k}\\).",
+            "latex": "\\frac{u_k}{k}=\\frac1{2^k}"
+          },
+          {
+            "step_number": 2,
+            "title": "المجموع",
+            "explanation": "إذن.",
+            "latex": "S_n=\\sum_{k=2}^n\\frac1{2^k}=\\frac12\\left(1-\\left(\\frac12\\right)^{n-1}\\right)"
+          },
+          {
+            "step_number": 3,
+            "title": "حل المعادلة",
+            "explanation": "نعوض بالقيمة.",
+            "latex": "\\frac12\\left(1-2^{-(n-1)}\\right)=\\frac{511}{1024}"
+          },
+          {
+            "step_number": 4,
+            "title": "التبسيط",
+            "explanation": "نحصل على.",
+            "latex": "2^{-(n-1)}=\\frac1{512}=2^{-9}\\Rightarrow n=10"
+          }
+        ],
+        "final_answer": "\\(n=10\\).",
+        "verification": "يمكن التحقق بالتعويض في العلاقة الأصلية أو بمقارنة أول حدين.",
+        "common_mistakes": [
+          "الخلط بين n و n+1.",
+          "القفز إلى النتيجة دون كتابة العلاقة المستعملة."
+        ],
+        "hints": [
+          "اكتب العلاقة الأساسية أولا.",
+          "استعمل النتائج السابقة بالترتيب."
+        ],
+        "graph_data": null,
+        "table_data": null,
+        "solution_style": "حل بكالوريا منظم: منهجية واضحة، حسابات تدريجية، ثم استنتاج."
+      },
+      "display_order": 4,
+      "content_type": "question"
+    }
+  ],
+  "is_active": true,
+  "has_statement_graph": false,
+  "statement_figure": {
+    "exists_in_original_exam": false,
+    "render_location": null,
+    "graph_data_key": null,
+    "show_in_solution": false
+  },
+  "content": {
+    "statement": "الدالة \\(f\\) معرفة على \\([2,+\\infty[\\) بـ \\(f(x)=\\frac{x+1}{2x}\\). والمتتالية \\((u_n)\\) معرفة من أجل \\(n\\ge2\\) بـ \\(u_n=\\frac{n}{2^n}\\).",
+    "statement_graph_data": null,
+    "questions": [
+      {
+        "id": "2024_ex2_q1",
+        "order": 1,
+        "text": "1) شكّل جدول تغيرات الدالة \\(f(x)=\\frac{x+1}{2x}\\) على \\([2,+\\infty[\\)، ثم استنتج \\(\\frac12<f(x)\\le\\frac34\\)."
+      },
+      {
+        "id": "2024_ex2_q2a",
+        "order": 2,
+        "text": "2) المتتالية \\(u_n=\\frac{n}{2^n}\\) لـ\\(n\\ge2\\). أ) بيّن أن \\(\\frac{u_{n+1}}{u_n}\\le\\frac34\\)."
+      },
+      {
+        "id": "2024_ex2_q2b",
+        "order": 3,
+        "text": "ب) أثبت أنه من أجل كل \\(n\\ge2\\): \\(u_n\\le\\frac12(\\frac34)^{n-2}\\)، ثم استنتج النهاية."
+      },
+      {
+        "id": "2024_ex2_q2c",
+        "order": 4,
+        "text": "ج) نضع \\(S_n=\\frac{u_2}{2}+\\frac{u_3}{3}+\\cdots+\\frac{u_n}{n}\\). بيّن أن \\[S_n=\\frac12\\left(1-\\left(\\frac12\\right)^{n-1}\\right),\\] ثم عين \\(n\\) حيث \\(S_n=\\frac{511}{1024}\\)."
+      }
+    ]
+  }
+}

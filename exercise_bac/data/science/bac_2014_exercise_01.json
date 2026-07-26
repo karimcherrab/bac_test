@@ -1,0 +1,420 @@
+{
+  "schema_version": "2.6-clear-graphs",
+  "language": "ar",
+  "direction": "rtl",
+    "branch": {
+    "code": "science",
+    "name": "شعبة علوم تجريبية"
+  },
+  "branch_code": "science",
+  "branches": [
+    {
+      "code": "science",
+      "name": "شعبة علوم تجريبية"
+    }
+  ],
+  "year": 2014,
+  "exercise_number": 1,
+  "source_page": 7,
+  "source_reference": "النص منقول كما ورد في ملف PDF، صفحة 7.",
+  "title": "التمرين الأول (04 نقاط)",
+  "axis_tags": [
+    "seq_recursive",
+    "seq_geometric",
+    "seq_monotonicity",
+    "seq_sum",
+    "seq_limits"
+  ],
+  "statement": "لتكن \\((u_n)\\) المتتالية العددية المعرفة كما يلي: \\(u_0=1\\)، ومن أجل كل عدد طبيعي \\(n\\): \\[u_{n+1}=\\frac23u_n-\\frac43,\\] و\\((v_n)\\) المتتالية العددية المعرفة كما يلي، من أجل كل عدد طبيعي \\(n\\): \\[v_n=u_n+4.\\]",
+  "questions": [
+    {
+      "id": "2014_ex1_q1",
+      "text": "1) بيّن أن \\((v_n)\\) متتالية هندسية يطلب تعيين أساسها وحدها الأول.",
+      "axis_tags": [
+        "seq_geometric"
+      ],
+      "solution": {
+        "strategy": "نحسب v_{n+1} باستعمال u_{n+1}.",
+        "methodology": {
+          "goal": "إثبات أن v_n هندسية.",
+          "method": "تعويض التعريف ثم التبسيط.",
+          "simple_plan": [
+            "نكتب v_{n+1}=u_{n+1}+4.",
+            "نعوض.",
+            "نستخرج v_n.",
+            "نحسب v0."
+          ],
+          "formal_writing": [
+            "نحسب v_{n+1} انطلاقا من تعريف v_n والعلاقة المعطاة.",
+            "نبسط حتى نحصل على v_{n+1}=qv_n حيث q ثابت لا يتعلق بـ n.",
+            "نستنتج أن (v_n) هندسية أساسها q، ثم نحسب حدها الأول."
+          ],
+          "why_this_method": "الإزاحة +4 تلغي الحد الثابت في العلاقة التراجعية."
+        },
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب الحد الموالي",
+            "explanation": "لدينا:",
+            "latex": "v_{n+1}=u_{n+1}+4=\\frac23u_n-\\frac43+4"
+          },
+          {
+            "step_number": 2,
+            "title": "التبسيط",
+            "explanation": "فنحصل على:",
+            "latex": "v_{n+1}=\\frac23(u_n+4)=\\frac23v_n"
+          },
+          {
+            "step_number": 3,
+            "title": "الحد الأول",
+            "explanation": "نحسب:",
+            "latex": "v_0=u_0+4=5"
+          }
+        ],
+        "final_answer": "\\((v_n)\\) هندسية أساسها \\(q=\\frac23\\) وحدها الأول \\(v_0=5\\).",
+        "common_mistakes": [
+          "عدم حساب الحد الأول.",
+          "الخلط بين أساس المتتالية وحدها الأول.",
+          "كتابة عبارة الحد العام بفهرسة غير مناسبة."
+        ],
+        "hints": [],
+        "presentation": {
+          "show_method_first": true,
+          "show_steps_one_by_one": true,
+          "show_calculations_separately": true,
+          "show_graph_only_when_required": true,
+          "show_formal_writing": true
+        }
+      },
+      "display_order": 1,
+      "content_type": "question"
+    },
+    {
+      "id": "2014_ex1_q2",
+      "text": "2) اكتب كلا من \\(v_n\\) و\\(u_n\\) بدلالة \\(n\\).",
+      "axis_tags": [
+        "seq_geometric"
+      ],
+      "solution": {
+        "strategy": "نستعمل عبارة الحد العام لمتتالية هندسية ثم العلاقة u_n=v_n-4.",
+        "methodology": {
+          "goal": "كتابة v_n وu_n بدلالة n.",
+          "method": "تطبيق v_n=v_0q^n.",
+          "simple_plan": [
+            "نكتب v_n.",
+            "نرجع إلى u_n."
+          ],
+          "why_this_method": "تم إثبات أن v_n هندسية."
+        },
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "عبارة v_n",
+            "explanation": "بما أن v_n هندسية:",
+            "latex": "v_n=5\\left(\\frac23\\right)^n"
+          },
+          {
+            "step_number": 2,
+            "title": "عبارة u_n",
+            "explanation": "لأن v_n=u_n+4:",
+            "latex": "u_n=5\\left(\\frac23\\right)^n-4"
+          }
+        ],
+        "final_answer": "\\(v_n=5(\\frac23)^n\\) و\\(u_n=5(\\frac23)^n-4\\).",
+        "common_mistakes": [],
+        "hints": [],
+        "presentation": {
+          "show_method_first": true,
+          "show_steps_one_by_one": true,
+          "show_calculations_separately": true,
+          "show_graph_only_when_required": true,
+          "show_formal_writing": true
+        }
+      },
+      "display_order": 2,
+      "content_type": "question"
+    },
+    {
+      "id": "2014_ex1_q3",
+      "text": "3) ادرس اتجاه تغير المتتالية \\((u_n)\\) على \\(\\mathbb N\\).",
+      "axis_tags": [
+        "seq_monotonicity"
+      ],
+      "solution": {
+        "strategy": "ندرس إشارة u_{n+1}-u_n باستعمال العبارة الصريحة.",
+        "methodology": {
+          "goal": "تحديد اتجاه تغير u_n.",
+          "method": "حساب الفرق من العبارة الصريحة.",
+          "simple_plan": [
+            "نحسب الفرق.",
+            "نحدد الإشارة.",
+            "نستنتج."
+          ],
+          "formal_writing": [
+            "لدراسة اتجاه تغير المتتالية نحسب الفرق u_{n+1}-u_n أو نستعمل تعبير الحد العام إن كان متوفرا.",
+            "نحدد إشارة الفرق مع الاستفادة من الحصر المثبت سابقا.",
+            "نستنتج الرتابة فقط بعد تبرير الإشارة لكل عدد طبيعي n."
+          ],
+          "why_this_method": "القوة (2/3)^n موجبة وتناقصية."
+        },
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب الفرق",
+            "explanation": "من العبارة الصريحة:",
+            "latex": "u_{n+1}-u_n=5\\left(\\frac23\\right)^n\\left(\\frac23-1\\right)"
+          },
+          {
+            "step_number": 2,
+            "title": "الإشارة",
+            "explanation": "أي:",
+            "latex": "u_{n+1}-u_n=-\\frac53\\left(\\frac23\\right)^n<0"
+          }
+        ],
+        "final_answer": "\\((u_n)\\) متناقصة تماما على \\(\\mathbb N\\).",
+        "common_mistakes": [
+          "تحديد الإشارة دون استعمال الحصر المعروف للمتتالية.",
+          "الخطأ في تحليل الفرق أو في إشارة المقام.",
+          "القول إن المتتالية متقاربة من الرتابة فقط دون إثبات المحدودية."
+        ],
+        "hints": [],
+        "presentation": {
+          "show_method_first": true,
+          "show_steps_one_by_one": true,
+          "show_calculations_separately": true,
+          "show_graph_only_when_required": true,
+          "show_formal_writing": true
+        }
+      },
+      "display_order": 3,
+      "content_type": "question"
+    },
+    {
+      "id": "2014_ex1_q4",
+      "text": "4) احسب بدلالة \\(n\\) المجموع \\(S_n\\) حيث: \\[S_n=u_0+u_1+u_2+\\cdots+u_n.\\]",
+      "axis_tags": [
+        "seq_sum"
+      ],
+      "solution": {
+        "strategy": "نعوض عبارة u_k ثم نفصل مجموعا هندسيا وثابتا.",
+        "methodology": {
+          "goal": "حساب S_n.",
+          "method": "S_n=5Σ(2/3)^k-4(n+1).",
+          "simple_plan": [
+            "نعوض u_k.",
+            "نفصل المجموعين.",
+            "نطبق قانون المجموع الهندسي.",
+            "نبسط."
+          ],
+          "why_this_method": "u_k مجموع حد هندسي وثابت."
+        },
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التعويض",
+            "explanation": "لدينا:",
+            "latex": "S_n=\\sum_{k=0}^n\\left[5\\left(\\frac23\\right)^k-4\\right]"
+          },
+          {
+            "step_number": 2,
+            "title": "فصل المجموع",
+            "explanation": "إذن:",
+            "latex": "S_n=5\\sum_{k=0}^n\\left(\\frac23\\right)^k-4(n+1)"
+          },
+          {
+            "step_number": 3,
+            "title": "المجموع الهندسي",
+            "explanation": "نطبق القانون:",
+            "latex": "\\sum_{k=0}^n\\left(\\frac23\\right)^k=\\frac{1-(\\frac23)^{n+1}}{1-\\frac23}=3\\left[1-\\left(\\frac23\\right)^{n+1}\\right]"
+          },
+          {
+            "step_number": 4,
+            "title": "النتيجة",
+            "explanation": "ومن ثم:",
+            "latex": "S_n=15\\left[1-\\left(\\frac23\\right)^{n+1}\\right]-4(n+1)"
+          }
+        ],
+        "final_answer": "\\(S_n=15[1-(\\frac23)^{n+1}]-4(n+1)\\).",
+        "common_mistakes": [
+          "الخطأ في عدد الحدود: من 0 إلى n يوجد n+1 حدا.",
+          "استعمال قانون مجموع متتالية هندسية دون تحديد الحد الأول والأساس.",
+          "نسيان تبسيط النتيجة النهائية."
+        ],
+        "hints": [],
+        "presentation": {
+          "show_method_first": true,
+          "show_steps_one_by_one": true,
+          "show_calculations_separately": true,
+          "show_graph_only_when_required": true,
+          "show_formal_writing": true
+        }
+      },
+      "display_order": 4,
+      "content_type": "question"
+    },
+    {
+      "id": "2014_ex1_q5a",
+      "text": "5-أ) لتكن المتتالية العددية \\((w_n)\\) المعرفة على \\(\\mathbb N\\) كما يلي: \\[w_n=5\\left(\\frac1{v_n+5}-1\\right).\\] بيّن أن المتتالية \\((w_n)\\) متزايدة تماما على \\(\\mathbb N\\).",
+      "axis_tags": [
+        "seq_monotonicity"
+      ],
+      "solution": {
+        "strategy": "نعوض v_n ثم نكتب w_n بدلالة t_n=(2/3)^n ونقارن w_{n+1}-w_n.",
+        "methodology": {
+          "goal": "إثبات تزايد w_n.",
+          "method": "الحساب المباشر للفرق بعد التبسيط.",
+          "simple_plan": [
+            "نعوض v_n.",
+            "نبسط w_n.",
+            "نحسب الفرق.",
+            "نحدد الإشارة."
+          ],
+          "formal_writing": [
+            "لدراسة اتجاه تغير المتتالية نحسب الفرق u_{n+1}-u_n أو نستعمل تعبير الحد العام إن كان متوفرا.",
+            "نحدد إشارة الفرق مع الاستفادة من الحصر المثبت سابقا.",
+            "نستنتج الرتابة فقط بعد تبرير الإشارة لكل عدد طبيعي n."
+          ],
+          "why_this_method": "صيغة w_n كسرية في متتالية هندسية موجبة."
+        },
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "كتابة w_n",
+            "explanation": "بما أن v_n=5(2/3)^n:",
+            "latex": "w_n=5\\left(\\frac1{5(\\frac23)^n+5}-1\\right)=\\frac1{1+(\\frac23)^n}-5"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب الفرق",
+            "explanation": "نضع a=(2/3)^n>0:",
+            "latex": "w_{n+1}-w_n=\\frac1{1+\\frac23a}-\\frac1{1+a}"
+          },
+          {
+            "step_number": 3,
+            "title": "التبسيط والإشارة",
+            "explanation": "إذن:",
+            "latex": "w_{n+1}-w_n=\\frac{a/3}{(1+\\frac23a)(1+a)}>0"
+          }
+        ],
+        "final_answer": "\\((w_n)\\) متزايدة تماما.",
+        "common_mistakes": [
+          "تحديد الإشارة دون استعمال الحصر المعروف للمتتالية.",
+          "الخطأ في تحليل الفرق أو في إشارة المقام.",
+          "القول إن المتتالية متقاربة من الرتابة فقط دون إثبات المحدودية."
+        ],
+        "hints": [],
+        "presentation": {
+          "show_method_first": true,
+          "show_steps_one_by_one": true,
+          "show_calculations_separately": true,
+          "show_graph_only_when_required": true,
+          "show_formal_writing": true
+        }
+      },
+      "display_order": 5,
+      "content_type": "question"
+    },
+    {
+      "id": "2014_ex1_q5b",
+      "text": "5-ب) احسب \\(\\displaystyle\\lim_{n\\to+\\infty}(u_n-w_n)\\).",
+      "axis_tags": [
+        "seq_limits"
+      ],
+      "solution": {
+        "strategy": "نحسب نهايتي u_n وw_n ثم نهاية الفرق.",
+        "methodology": {
+          "goal": "حساب lim(u_n-w_n).",
+          "method": "استعمال (2/3)^n→0.",
+          "simple_plan": [
+            "نحسب lim u_n.",
+            "نحسب lim w_n.",
+            "نطرح."
+          ],
+          "formal_writing": [
+            "نحدد أولا المبرهنة أو النهاية المرجعية المستعملة.",
+            "نعوض في عبارة الحد العام أو نستعمل مبرهنة التقارب الرتيب بعد إثبات الرتابة والمحدودية.",
+            "نكتب النتيجة النهائية بصيغة واضحة مع ذكر قيمة النهاية."
+          ],
+          "why_this_method": "كلتا العبارتين صريحتان."
+        },
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "نهاية u_n",
+            "explanation": "لأن (2/3)^n→0:",
+            "latex": "u_n=5(\\frac23)^n-4\\to-4"
+          },
+          {
+            "step_number": 2,
+            "title": "نهاية w_n",
+            "explanation": "من عبارتها:",
+            "latex": "w_n=\\frac1{1+(\\frac23)^n}-5\\to1-5=-4"
+          },
+          {
+            "step_number": 3,
+            "title": "نهاية الفرق",
+            "explanation": "إذن:",
+            "latex": "u_n-w_n\\to-4-(-4)=0"
+          }
+        ],
+        "final_answer": "\\(\\displaystyle\\lim_{n\\to+\\infty}(u_n-w_n)=0\\).",
+        "common_mistakes": [
+          "تعويض النهاية قبل إثبات وجودها.",
+          "نسيان استعمال شرط |q|<1 عند نهاية متتالية هندسية.",
+          "إهمال تبرير تطبيق مبرهنة الحصر أو التقارب الرتيب."
+        ],
+        "hints": [],
+        "presentation": {
+          "show_method_first": true,
+          "show_steps_one_by_one": true,
+          "show_calculations_separately": true,
+          "show_graph_only_when_required": true,
+          "show_formal_writing": true
+        }
+      },
+      "display_order": 6,
+      "content_type": "question"
+    }
+  ],
+  "content_separation": {
+    "statement": "المعطيات والتعريفات فقط، من دون حل أو طلبات.",
+    "questions": "الأسئلة المطلوبة فقط، وكل سؤال يحتوي حله الخاص.",
+    "statement_graph_data": "الرسم المعطى مع نص التمرين عندما يكون موجودا في النسخة الأصلية.",
+    "solution.graph_data": "الرسم المنجز في الحل مع خطوط الإنشاء عندما يطلب السؤال رسما."
+  },
+  "statement_sections": [
+    {
+      "type": "given",
+      "text": "لتكن \\((u_n)\\) المتتالية العددية المعرفة كما يلي: \\(u_0=1\\)، ومن أجل كل عدد طبيعي \\(n\\): \\[u_{n+1}=\\frac23u_n-\\frac43,\\] و\\((v_n)\\) المتتالية العددية المعرفة كما يلي، من أجل كل عدد طبيعي \\(n\\): \\[v_n=u_n+4.\\]"
+    }
+  ],
+  "review_status": {
+    "statement_copied_from_source_pdf": true,
+    "questions_copied_from_source_pdf": true,
+    "solutions_rewritten_methodically": true,
+    "induction_written_with_initialization_hypothesis_heredity_conclusion": true,
+    "target_level": "تلميذ بكالوريا يحتاج شرحا مفصلا ومفهوما",
+    "graphs_generated_when_required": true,
+    "formal_mathematical_writing_added": true,
+    "source_statement_preserved_exactly": true
+  },
+  "source_text_policy": {
+    "statement": "يبقى نص المعطيات كما هو في الملف الأصلي ولا يضاف إليه أي شرح أو نتيجة.",
+    "questions": "تبقى مطالب التمرين منفصلة عن الحل ولا تضاف إليها معلومات من التصحيح.",
+    "solution": "الشرح والحسابات والمنهجية توضع داخل solution فقط."
+  },
+  "solution_display": {
+    "methodology": "visible",
+    "formal_writing": "visible",
+    "calculations": "step_by_step",
+    "graphs": "statement_only_if_present_in_source; solution_only_if_required"
+  },
+  "graph_policy": {
+    "statement_graph_only_if_present_in_original": true,
+    "generated_graphs_location": "solution_only",
+    "variation_tables_location": "solution_only",
+    "variation_table_style": "arrow_table",
+    "remove_variation_tables_from_statement": true
+  },
+  "version": "2.6-clear-graphs"
+}

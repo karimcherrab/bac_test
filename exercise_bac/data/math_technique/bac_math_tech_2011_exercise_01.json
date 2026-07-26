@@ -1,0 +1,343 @@
+{
+  "schema_version": "4.0-math-tech-graphs",
+  "version": "4.0-math-tech-graphs",
+  "language": "ar",
+  "direction": "rtl",
+  "branch": {
+    "code": "math_tech",
+    "name": "تقني رياضي"
+  },
+  "branch_code": "math_tech",
+  "branches": [
+    {
+      "code": "math_tech",
+      "name": "تقني رياضي"
+    }
+  ],
+  "year": 2011,
+  "exercise_number": 1,
+  "original_exercise_number": 3,
+  "source_page": 2,
+  "source_reference": "bac_sequence_math_technique.pdf، الصفحة 2.",
+  "title": "التمرين 3 (5 نقاط)",
+  "axis_tags": [
+    "explicit_sequence",
+    "product",
+    "logarithm",
+    "sequence_limits"
+  ],
+  "statement": "المتتالية العددية \\((u_n)\\) معرفة على \\(\\mathbb N^*\\) بـ \\(u_n=\\frac{(n+1)^2}{n(n+2)}\\).",
+  "has_statement_graph": false,
+  "statement_graph_data": null,
+  "statement_figure": {
+    "exists_in_original_exam": false,
+    "render_location": null,
+    "graph_data_key": null,
+    "show_in_solution": false
+  },
+  "questions": [
+    {
+      "id": "math_tech_2011_01_q1",
+      "text": "أثبت أن \\(u_n=1+\\frac1{n(n+2)}\\) واستنتج أن \\(u_n>1\\).",
+      "display_order": 1,
+      "content_type": "question",
+      "axis_tags": [
+        "explicit_sequence"
+      ],
+      "solution": {
+        "strategy": "نفكك البسط.",
+        "methodology": {
+          "goal": "حل السؤال بطريقة منظمة وفق منهجية البكالوريا.",
+          "method": "نفكك البسط.",
+          "why_this_method": "لأنها تستعمل المعطيات بالترتيب وتقدم تبريرا واضحا لكل استنتاج.",
+          "used_theorem": "",
+          "bac_template": [
+            "نكتب العلاقة أو الخاصية المستعملة.",
+            "نعوض بالمعطيات ونبسط الحساب تدريجيا.",
+            "نبرر الإشارة أو النهاية أو الرتابة.",
+            "نكتب الاستنتاج النهائي بوضوح."
+          ],
+          "formal_writing": [
+            "تحديد المجال أو شروط الاستعمال.",
+            "ترتيب الحسابات على شكل مساويات.",
+            "ذكر المبرهنة المناسبة عند الحاجة.",
+            "ختم الحل بجواب مباشر."
+          ]
+        },
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التفكيك",
+            "explanation": "",
+            "latex": "(n+1)^2=n(n+2)+1"
+          },
+          {
+            "step_number": 2,
+            "title": "التعويض",
+            "explanation": "",
+            "latex": "u_n=1+\\frac1{n(n+2)}"
+          },
+          {
+            "step_number": 3,
+            "title": "الإشارة",
+            "explanation": "لأن \\(n(n+2)>0\\)، فإن \\(u_n>1\\)."
+          }
+        ],
+        "final_answer": "\\(u_n=1+\\frac1{n(n+2)}>1\\).",
+        "verification": "نراجع النتيجة بالتعويض في العلاقة الأصلية وبمقارنة الحدود الأولى عند الإمكان.",
+        "common_mistakes": [
+          "الخلط بين الفهرسين \\(n\\) و\\(n+1\\).",
+          "استنتاج التقارب دون إثبات الرتابة والمحدودية أو دون صيغة صريحة.",
+          "نسيان تحديد الحد الأول عند تحويل المتتالية إلى متتالية هندسية أو حسابية."
+        ],
+        "hints": [
+          "استعمل النتائج السابقة بالترتيب.",
+          "ابحث عن تحويل يجعل المتتالية هندسية أو حسابية."
+        ],
+        "graph_data": null,
+        "table_data": null,
+        "solution_style": "حل بكالوريا مفصل: منهجية واضحة، حساب تدريجي، كتابة رياضية ثم استنتاج.",
+        "has_solution_graph": false,
+        "has_variation_table": false
+      }
+    },
+    {
+      "id": "math_tech_2011_01_q2",
+      "text": "ادرس اتجاه تغير \\((u_n)\\)، ثم بين أنها متقاربة واحسب نهايتها.",
+      "display_order": 2,
+      "content_type": "question",
+      "axis_tags": [
+        "seq_monotonicity",
+        "sequence_limits"
+      ],
+      "solution": {
+        "strategy": "ندرس تناقص الحد الإضافي.",
+        "methodology": {
+          "goal": "حل السؤال بطريقة منظمة وفق منهجية البكالوريا.",
+          "method": "ندرس تناقص الحد الإضافي.",
+          "why_this_method": "لأنها تستعمل المعطيات بالترتيب وتقدم تبريرا واضحا لكل استنتاج.",
+          "used_theorem": "",
+          "bac_template": [
+            "نكتب العلاقة أو الخاصية المستعملة.",
+            "نعوض بالمعطيات ونبسط الحساب تدريجيا.",
+            "نبرر الإشارة أو النهاية أو الرتابة.",
+            "نكتب الاستنتاج النهائي بوضوح."
+          ],
+          "formal_writing": [
+            "تحديد المجال أو شروط الاستعمال.",
+            "ترتيب الحسابات على شكل مساويات.",
+            "ذكر المبرهنة المناسبة عند الحاجة.",
+            "ختم الحل بجواب مباشر."
+          ]
+        },
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "المقارنة",
+            "explanation": "الدالة \\(n\\mapsto n(n+2)\\) متزايدة، لذا \\(\\frac1{n(n+2)}\\) متناقصة."
+          },
+          {
+            "step_number": 2,
+            "title": "الرتابة",
+            "explanation": "إذن \\((u_n)\\) متناقصة ومحدودة من الأسفل بالعدد 1."
+          },
+          {
+            "step_number": 3,
+            "title": "النهاية",
+            "explanation": "",
+            "latex": "\\lim_{n\\to\\infty}u_n=1"
+          }
+        ],
+        "final_answer": "\\((u_n)\\) متناقصة ومتقاربة إلى \\(1\\).",
+        "verification": "نراجع النتيجة بالتعويض في العلاقة الأصلية وبمقارنة الحدود الأولى عند الإمكان.",
+        "common_mistakes": [
+          "الخلط بين الفهرسين \\(n\\) و\\(n+1\\).",
+          "استنتاج التقارب دون إثبات الرتابة والمحدودية أو دون صيغة صريحة.",
+          "نسيان تحديد الحد الأول عند تحويل المتتالية إلى متتالية هندسية أو حسابية."
+        ],
+        "hints": [
+          "استعمل النتائج السابقة بالترتيب.",
+          "ابحث عن تحويل يجعل المتتالية هندسية أو حسابية."
+        ],
+        "graph_data": null,
+        "table_data": null,
+        "solution_style": "حل بكالوريا مفصل: منهجية واضحة، حساب تدريجي، كتابة رياضية ثم استنتاج.",
+        "has_solution_graph": false,
+        "has_variation_table": false
+      }
+    },
+    {
+      "id": "math_tech_2011_01_q3",
+      "text": "ليكن \\(p_n=u_1u_2\\cdots u_n\\). أثبت بالتراجع أن \\(p_n=\\frac{2n+2}{n+2}\\).",
+      "display_order": 3,
+      "content_type": "question",
+      "axis_tags": [
+        "product",
+        "mathematical_induction"
+      ],
+      "solution": {
+        "strategy": "نكتب \\(u_n\\) على شكل جداء كسور متتالية.",
+        "methodology": {
+          "goal": "حل السؤال بطريقة منظمة وفق منهجية البكالوريا.",
+          "method": "نكتب \\(u_n\\) على شكل جداء كسور متتالية.",
+          "why_this_method": "لأنها تستعمل المعطيات بالترتيب وتقدم تبريرا واضحا لكل استنتاج.",
+          "used_theorem": "",
+          "bac_template": [
+            "نكتب العلاقة أو الخاصية المستعملة.",
+            "نعوض بالمعطيات ونبسط الحساب تدريجيا.",
+            "نبرر الإشارة أو النهاية أو الرتابة.",
+            "نكتب الاستنتاج النهائي بوضوح."
+          ],
+          "formal_writing": [
+            "تحديد المجال أو شروط الاستعمال.",
+            "ترتيب الحسابات على شكل مساويات.",
+            "ذكر المبرهنة المناسبة عند الحاجة.",
+            "ختم الحل بجواب مباشر."
+          ]
+        },
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التفكيك",
+            "explanation": "",
+            "latex": "u_k=\\frac{(k+1)^2}{k(k+2)}=\\frac{k+1}{k}\\frac{k+1}{k+2}"
+          },
+          {
+            "step_number": 2,
+            "title": "الجداء",
+            "explanation": "تختزل العوامل المتتالية.",
+            "latex": "p_n=\\left(\\frac21\\cdots\\frac{n+1}{n}\\right)\\left(\\frac23\\cdots\\frac{n+1}{n+2}\\right)"
+          },
+          {
+            "step_number": 3,
+            "title": "النتيجة",
+            "explanation": "",
+            "latex": "p_n=(n+1)\\frac{2}{n+2}=\\frac{2n+2}{n+2}"
+          }
+        ],
+        "final_answer": "\\(p_n=\\frac{2n+2}{n+2}\\).",
+        "verification": "نراجع النتيجة بالتعويض في العلاقة الأصلية وبمقارنة الحدود الأولى عند الإمكان.",
+        "common_mistakes": [
+          "الخلط بين الفهرسين \\(n\\) و\\(n+1\\).",
+          "استنتاج التقارب دون إثبات الرتابة والمحدودية أو دون صيغة صريحة.",
+          "نسيان تحديد الحد الأول عند تحويل المتتالية إلى متتالية هندسية أو حسابية."
+        ],
+        "hints": [
+          "استعمل النتائج السابقة بالترتيب.",
+          "ابحث عن تحويل يجعل المتتالية هندسية أو حسابية."
+        ],
+        "graph_data": null,
+        "table_data": null,
+        "solution_style": "حل بكالوريا مفصل: منهجية واضحة، حساب تدريجي، كتابة رياضية ثم استنتاج.",
+        "has_solution_graph": false,
+        "has_variation_table": false
+      }
+    },
+    {
+      "id": "math_tech_2011_01_q4",
+      "text": "نعرف \\(v_n=\\ln u_n\\) و\\(S_n=v_1+\\cdots+v_n\\). عبر عن \\(S_n\\) بدلالة \\(p_n\\) ثم احسب نهايته.",
+      "display_order": 4,
+      "content_type": "question",
+      "axis_tags": [
+        "logarithm",
+        "sequence_sum"
+      ],
+      "solution": {
+        "strategy": "نستعمل أن مجموع اللوغاريتمات لوغاريتم الجداء.",
+        "methodology": {
+          "goal": "حل السؤال بطريقة منظمة وفق منهجية البكالوريا.",
+          "method": "نستعمل أن مجموع اللوغاريتمات لوغاريتم الجداء.",
+          "why_this_method": "لأنها تستعمل المعطيات بالترتيب وتقدم تبريرا واضحا لكل استنتاج.",
+          "used_theorem": "",
+          "bac_template": [
+            "نكتب العلاقة أو الخاصية المستعملة.",
+            "نعوض بالمعطيات ونبسط الحساب تدريجيا.",
+            "نبرر الإشارة أو النهاية أو الرتابة.",
+            "نكتب الاستنتاج النهائي بوضوح."
+          ],
+          "formal_writing": [
+            "تحديد المجال أو شروط الاستعمال.",
+            "ترتيب الحسابات على شكل مساويات.",
+            "ذكر المبرهنة المناسبة عند الحاجة.",
+            "ختم الحل بجواب مباشر."
+          ]
+        },
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التحويل",
+            "explanation": "",
+            "latex": "S_n=\\ln(u_1\\cdots u_n)=\\ln p_n"
+          },
+          {
+            "step_number": 2,
+            "title": "التعويض",
+            "explanation": "",
+            "latex": "S_n=\\ln\\left(\\frac{2n+2}{n+2}\\right)"
+          },
+          {
+            "step_number": 3,
+            "title": "النهاية",
+            "explanation": "",
+            "latex": "\\lim S_n=\\ln2"
+          }
+        ],
+        "final_answer": "\\(S_n=\\ln\\left(\\frac{2n+2}{n+2}\\right)\\) و\\(\\lim S_n=\\ln2\\).",
+        "verification": "نراجع النتيجة بالتعويض في العلاقة الأصلية وبمقارنة الحدود الأولى عند الإمكان.",
+        "common_mistakes": [
+          "الخلط بين الفهرسين \\(n\\) و\\(n+1\\).",
+          "استنتاج التقارب دون إثبات الرتابة والمحدودية أو دون صيغة صريحة.",
+          "نسيان تحديد الحد الأول عند تحويل المتتالية إلى متتالية هندسية أو حسابية."
+        ],
+        "hints": [
+          "استعمل النتائج السابقة بالترتيب.",
+          "ابحث عن تحويل يجعل المتتالية هندسية أو حسابية."
+        ],
+        "graph_data": null,
+        "table_data": null,
+        "solution_style": "حل بكالوريا مفصل: منهجية واضحة، حساب تدريجي، كتابة رياضية ثم استنتاج.",
+        "has_solution_graph": false,
+        "has_variation_table": false
+      }
+    }
+  ],
+  "content": {
+    "statement": "المتتالية العددية \\((u_n)\\) معرفة على \\(\\mathbb N^*\\) بـ \\(u_n=\\frac{(n+1)^2}{n(n+2)}\\).",
+    "statement_graph_data": null,
+    "questions": [
+      {
+        "id": "math_tech_2011_01_q1",
+        "order": 1,
+        "text": "أثبت أن \\(u_n=1+\\frac1{n(n+2)}\\) واستنتج أن \\(u_n>1\\)."
+      },
+      {
+        "id": "math_tech_2011_01_q2",
+        "order": 2,
+        "text": "ادرس اتجاه تغير \\((u_n)\\)، ثم بين أنها متقاربة واحسب نهايتها."
+      },
+      {
+        "id": "math_tech_2011_01_q3",
+        "order": 3,
+        "text": "ليكن \\(p_n=u_1u_2\\cdots u_n\\). أثبت بالتراجع أن \\(p_n=\\frac{2n+2}{n+2}\\)."
+      },
+      {
+        "id": "math_tech_2011_01_q4",
+        "order": 4,
+        "text": "نعرف \\(v_n=\\ln u_n\\) و\\(S_n=v_1+\\cdots+v_n\\). عبر عن \\(S_n\\) بدلالة \\(p_n\\) ثم احسب نهايته."
+      }
+    ]
+  },
+  "is_active": true,
+  "render_contract": {
+    "math_renderer": "MathJax",
+    "graph_renderer": "recharts_or_plotly",
+    "variation_table_renderer": "custom_rtl_variation_table",
+    "graph_data_locations": [
+      "statement_graph_data",
+      "questions[].solution.graph_data"
+    ],
+    "table_data_locations": [
+      "questions[].solution.table_data"
+    ]
+  }
+}

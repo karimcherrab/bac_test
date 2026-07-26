@@ -1,0 +1,441 @@
+{
+  "schema_version": "2.6-clear-graphs",
+  "language": "ar",
+  "direction": "rtl",
+    "branch": {
+    "code": "science",
+    "name": "شعبة علوم تجريبية"
+  },
+  "branch_code": "science",
+  "branches": [
+    {
+      "code": "science",
+      "name": "شعبة علوم تجريبية"
+    }
+  ],
+  "year": 2015,
+  "exercise_number": 1,
+  "source_page": 8,
+  "source_reference": "النص منقول كما ورد في ملف PDF، صفحة 8.",
+  "title": "التمرين الثالث (04.5 نقطة)",
+  "axis_tags": [
+    "seq_recursive",
+    "seq_monotonicity",
+    "seq_geometric",
+    "seq_limits",
+    "seq_sum"
+  ],
+  "statement": "\\((u_n)\\) المتتالية العددية المعرفة بـ: \\(u_0=e^2-1\\)، ومن أجل كل عدد طبيعي \\(n\\): \\[u_{n+1}=(1+u_n)e^{-2}-1.\\]",
+  "questions": [
+    {
+      "id": "2015_ex1_q1",
+      "text": "1) احسب \\(u_1\\)، \\(u_2\\) و\\(u_3\\).",
+      "axis_tags": [
+        "seq_recursive"
+      ],
+      "solution": {
+        "strategy": "نعوض بالتتابع في العلاقة التراجعية.",
+        "methodology": {
+          "goal": "حساب u1,u2,u3.",
+          "method": "استعمال العلاقة مرة بعد مرة.",
+          "simple_plan": [
+            "نعوض n=0.",
+            "ثم n=1.",
+            "ثم n=2."
+          ],
+          "why_this_method": "القيم الأولى مطلوبة مباشرة."
+        },
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب u_1",
+            "explanation": "نعوض u0=e²-1:",
+            "latex": "u_1=(1+u_0)e^{-2}-1=e^2e^{-2}-1=0"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب u_2",
+            "explanation": "نعوض u1=0:",
+            "latex": "u_2=(1+0)e^{-2}-1=e^{-2}-1"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب u_3",
+            "explanation": "نعوض u2=e^{-2}-1:",
+            "latex": "u_3=e^{-2}e^{-2}-1=e^{-4}-1"
+          }
+        ],
+        "final_answer": "\\(u_1=0\\)، \\(u_2=e^{-2}-1\\)، \\(u_3=e^{-4}-1\\).",
+        "common_mistakes": [],
+        "hints": [],
+        "presentation": {
+          "show_method_first": true,
+          "show_steps_one_by_one": true,
+          "show_calculations_separately": true,
+          "show_graph_only_when_required": true,
+          "show_formal_writing": true
+        }
+      },
+      "display_order": 1,
+      "content_type": "question"
+    },
+    {
+      "id": "2015_ex1_q2",
+      "text": "2) أثبت أنه من أجل كل عدد طبيعي \\(n\\): \\(1+u_n>0\\).",
+      "axis_tags": [
+        "seq_induction"
+      ],
+      "solution": {
+        "strategy": "نستخرج علاقة مباشرة لـ1+u_{n+1} ثم نستعمل التراجع أو الصيغة المتكررة.",
+        "methodology": {
+          "goal": "إثبات 1+u_n>0.",
+          "method": "ملاحظة أن 1+u_{n+1}=e^{-2}(1+u_n).",
+          "simple_plan": [
+            "التهيئة.",
+            "فرضية التراجع.",
+            "الانتقال.",
+            "الخلاصة."
+          ],
+          "why_this_method": "عامل موجب يحافظ على الإشارة."
+        },
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التهيئة",
+            "explanation": "لدينا:",
+            "latex": "1+u_0=e^2>0"
+          },
+          {
+            "step_number": 2,
+            "title": "فرضية التراجع",
+            "explanation": "نفرض:",
+            "latex": "1+u_n>0"
+          },
+          {
+            "step_number": 3,
+            "title": "الانتقال",
+            "explanation": "من العلاقة:",
+            "latex": "1+u_{n+1}=e^{-2}(1+u_n)"
+          },
+          {
+            "step_number": 4,
+            "title": "الإشارة",
+            "explanation": "بما أن e^{-2}>0 و1+u_n>0، فإن:",
+            "latex": "1+u_{n+1}>0"
+          },
+          {
+            "step_number": 5,
+            "title": "الخلاصة",
+            "explanation": "بالتراجع: 1+u_n>0 لكل n طبيعي."
+          }
+        ],
+        "final_answer": "من أجل كل \\(n\\): \\(1+u_n>0\\).",
+        "common_mistakes": [
+          "نسيان التحقق من الخاصية عند الرتبة الأولى.",
+          "استعمال المطلوب إثباته عند n+1 دون الانطلاق من فرضية التراجع.",
+          "عدم كتابة الخلاصة: الخاصية صحيحة لكل n طبيعي."
+        ],
+        "hints": [],
+        "presentation": {
+          "show_method_first": true,
+          "show_steps_one_by_one": true,
+          "show_calculations_separately": true,
+          "show_graph_only_when_required": true,
+          "show_formal_writing": true
+        }
+      },
+      "display_order": 2,
+      "content_type": "question"
+    },
+    {
+      "id": "2015_ex1_q3",
+      "text": "3) بيّن أن المتتالية \\((u_n)\\) متناقصة. هل هي متقاربة؟ علل.",
+      "axis_tags": [
+        "seq_monotonicity",
+        "seq_limits"
+      ],
+      "solution": {
+        "strategy": "نحسب الفرق ثم نثبت المحدودية من الأسفل.",
+        "methodology": {
+          "goal": "إثبات التناقص ثم التقارب.",
+          "method": "حساب u_{n+1}-u_n، ثم استعمال 1+u_n>0 وe^{-2}-1<0؛ وبعدها إثبات u_n>-1.",
+          "simple_plan": [
+            "نحسب الفرق.",
+            "نحدد الإشارة.",
+            "نحدد حدا سفليا.",
+            "نطبق مبرهنة التقارب الرتيب."
+          ],
+          "formal_writing": [
+            "لدراسة اتجاه تغير المتتالية نحسب الفرق u_{n+1}-u_n أو نستعمل تعبير الحد العام إن كان متوفرا.",
+            "نحدد إشارة الفرق مع الاستفادة من الحصر المثبت سابقا.",
+            "نستنتج الرتابة فقط بعد تبرير الإشارة لكل عدد طبيعي n."
+          ],
+          "why_this_method": "المتتالية المتناقصة لا تكفي وحدها؛ نحتاج حدا سفليا."
+        },
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب الفرق",
+            "explanation": "لدينا:",
+            "latex": "u_{n+1}-u_n=(1+u_n)e^{-2}-1-u_n=(1+u_n)(e^{-2}-1)"
+          },
+          {
+            "step_number": 2,
+            "title": "الإشارة",
+            "explanation": "بما أن 1+u_n>0 وe^{-2}-1<0:",
+            "latex": "u_{n+1}-u_n<0"
+          },
+          {
+            "step_number": 3,
+            "title": "المحدودية من الأسفل",
+            "explanation": "من 1+u_n>0 نستنتج:",
+            "latex": "u_n>-1"
+          },
+          {
+            "step_number": 4,
+            "title": "التقارب",
+            "explanation": "إذن (u_n) متناقصة ومحدودة من الأسفل، فهي متقاربة."
+          }
+        ],
+        "final_answer": "\\((u_n)\\) متناقصة تماما ومحدودة من الأسفل بـ\\(-1\\)، لذلك هي متقاربة.",
+        "common_mistakes": [
+          "تحديد الإشارة دون استعمال الحصر المعروف للمتتالية.",
+          "الخطأ في تحليل الفرق أو في إشارة المقام.",
+          "القول إن المتتالية متقاربة من الرتابة فقط دون إثبات المحدودية."
+        ],
+        "hints": [],
+        "presentation": {
+          "show_method_first": true,
+          "show_steps_one_by_one": true,
+          "show_calculations_separately": true,
+          "show_graph_only_when_required": true,
+          "show_formal_writing": true
+        }
+      },
+      "display_order": 3,
+      "content_type": "question"
+    },
+    {
+      "id": "2015_ex1_q4a",
+      "text": "4-أ) نضع من أجل كل عدد طبيعي \\(n\\): \\(v_n=3(1+u_n)\\). أثبت أن \\((v_n)\\) متتالية هندسية يطلب تعيين أساسها وحدها الأول.",
+      "axis_tags": [
+        "seq_geometric"
+      ],
+      "solution": {
+        "strategy": "نحسب v_{n+1} بدلالة v_n.",
+        "methodology": {
+          "goal": "إثبات أن v_n هندسية.",
+          "method": "استعمال 1+u_{n+1}=e^{-2}(1+u_n).",
+          "simple_plan": [
+            "نكتب v_{n+1}.",
+            "نعوض.",
+            "نحدد q وv0."
+          ],
+          "formal_writing": [
+            "نحسب v_{n+1} انطلاقا من تعريف v_n والعلاقة المعطاة.",
+            "نبسط حتى نحصل على v_{n+1}=qv_n حيث q ثابت لا يتعلق بـ n.",
+            "نستنتج أن (v_n) هندسية أساسها q، ثم نحسب حدها الأول."
+          ],
+          "why_this_method": "تعريف v_n يضرب 1+u_n بثابت فقط."
+        },
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب الحد الموالي",
+            "explanation": "لدينا:",
+            "latex": "v_{n+1}=3(1+u_{n+1})=3e^{-2}(1+u_n)=e^{-2}v_n"
+          },
+          {
+            "step_number": 2,
+            "title": "الحد الأول",
+            "explanation": "نحسب:",
+            "latex": "v_0=3(1+u_0)=3e^2"
+          }
+        ],
+        "final_answer": "\\((v_n)\\) هندسية أساسها \\(q=e^{-2}\\) وحدها الأول \\(v_0=3e^2\\).",
+        "common_mistakes": [
+          "عدم حساب الحد الأول.",
+          "الخلط بين أساس المتتالية وحدها الأول.",
+          "كتابة عبارة الحد العام بفهرسة غير مناسبة."
+        ],
+        "hints": [],
+        "presentation": {
+          "show_method_first": true,
+          "show_steps_one_by_one": true,
+          "show_calculations_separately": true,
+          "show_graph_only_when_required": true,
+          "show_formal_writing": true
+        }
+      },
+      "display_order": 4,
+      "content_type": "question"
+    },
+    {
+      "id": "2015_ex1_q4b",
+      "text": "4-ب) اكتب \\(v_n\\) و\\(u_n\\) بدلالة \\(n\\)، ثم احسب \\(\\displaystyle\\lim_{n\\to+\\infty}u_n\\).",
+      "axis_tags": [
+        "seq_geometric",
+        "seq_limits"
+      ],
+      "solution": {
+        "strategy": "نكتب الحد العام لـv_n ثم نستخرج u_n.",
+        "methodology": {
+          "goal": "كتابة v_n وu_n ثم حساب النهاية.",
+          "method": "v_n=v0q^n ثم u_n=v_n/3-1.",
+          "simple_plan": [
+            "نكتب v_n.",
+            "نستخرج u_n.",
+            "نحسب النهاية."
+          ],
+          "formal_writing": [
+            "نحدد أولا المبرهنة أو النهاية المرجعية المستعملة.",
+            "نعوض في عبارة الحد العام أو نستعمل مبرهنة التقارب الرتيب بعد إثبات الرتابة والمحدودية.",
+            "نكتب النتيجة النهائية بصيغة واضحة مع ذكر قيمة النهاية."
+          ],
+          "why_this_method": "تم إثبات أن v_n هندسية."
+        },
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "عبارة v_n",
+            "explanation": "لدينا:",
+            "latex": "v_n=3e^2(e^{-2})^n=3e^{2-2n}"
+          },
+          {
+            "step_number": 2,
+            "title": "عبارة u_n",
+            "explanation": "من v_n=3(1+u_n):",
+            "latex": "u_n=e^{2-2n}-1"
+          },
+          {
+            "step_number": 3,
+            "title": "النهاية",
+            "explanation": "لأن e^{2-2n}→0:",
+            "latex": "\\lim u_n=-1"
+          }
+        ],
+        "final_answer": "\\(v_n=3e^{2-2n}\\)، \\(u_n=e^{2-2n}-1\\)، و\\(\\lim u_n=-1\\).",
+        "common_mistakes": [
+          "تعويض النهاية قبل إثبات وجودها.",
+          "نسيان استعمال شرط |q|<1 عند نهاية متتالية هندسية.",
+          "إهمال تبرير تطبيق مبرهنة الحصر أو التقارب الرتيب."
+        ],
+        "hints": [],
+        "presentation": {
+          "show_method_first": true,
+          "show_steps_one_by_one": true,
+          "show_calculations_separately": true,
+          "show_graph_only_when_required": true,
+          "show_formal_writing": true
+        }
+      },
+      "display_order": 5,
+      "content_type": "question"
+    },
+    {
+      "id": "2015_ex1_q4c",
+      "text": "4-ج) بيّن أنه من أجل كل \\(n\\) من \\(\\mathbb N\\): \\[\\ln v_0+\\ln v_1+\\cdots+\\ln v_n=(n+1)(-n+2+\\ln3).\\]",
+      "axis_tags": [
+        "seq_sum",
+        "seq_logarithm"
+      ],
+      "solution": {
+        "strategy": "نستعمل عبارة v_k ثم نجمع اللوغاريتمات.",
+        "methodology": {
+          "goal": "إثبات هوية مجموع اللوغاريتمات.",
+          "method": "ln(v_k)=ln3+2-2k ثم جمع من 0 إلى n.",
+          "simple_plan": [
+            "نحسب ln(v_k).",
+            "نجمع.",
+            "نستعمل Σk=n(n+1)/2.",
+            "نبسط."
+          ],
+          "why_this_method": "لدينا صيغة صريحة لـv_k."
+        },
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "لوغاريتم الحد العام",
+            "explanation": "من v_k=3e^{2-2k}:",
+            "latex": "\\ln v_k=\\ln3+2-2k"
+          },
+          {
+            "step_number": 2,
+            "title": "جمع الحدود",
+            "explanation": "إذن:",
+            "latex": "\\sum_{k=0}^n\\ln v_k=(n+1)(\\ln3+2)-2\\sum_{k=0}^n k"
+          },
+          {
+            "step_number": 3,
+            "title": "استعمال مجموع الأعداد",
+            "explanation": "بما أن Σk=n(n+1)/2:",
+            "latex": "\\sum_{k=0}^n\\ln v_k=(n+1)(\\ln3+2)-n(n+1)"
+          },
+          {
+            "step_number": 4,
+            "title": "التبسيط",
+            "explanation": "فنحصل على:",
+            "latex": "\\sum_{k=0}^n\\ln v_k=(n+1)(-n+2+\\ln3)"
+          }
+        ],
+        "final_answer": "\\(\\ln v_0+\\cdots+\\ln v_n=(n+1)(-n+2+\\ln3)\\).",
+        "common_mistakes": [
+          "الخطأ في عدد الحدود: من 0 إلى n يوجد n+1 حدا.",
+          "استعمال قانون مجموع متتالية هندسية دون تحديد الحد الأول والأساس.",
+          "نسيان تبسيط النتيجة النهائية."
+        ],
+        "hints": [],
+        "presentation": {
+          "show_method_first": true,
+          "show_steps_one_by_one": true,
+          "show_calculations_separately": true,
+          "show_graph_only_when_required": true,
+          "show_formal_writing": true
+        }
+      },
+      "display_order": 6,
+      "content_type": "question"
+    }
+  ],
+  "content_separation": {
+    "statement": "المعطيات والتعريفات فقط، من دون حل أو طلبات.",
+    "questions": "الأسئلة المطلوبة فقط، وكل سؤال يحتوي حله الخاص.",
+    "statement_graph_data": "الرسم المعطى مع نص التمرين عندما يكون موجودا في النسخة الأصلية.",
+    "solution.graph_data": "الرسم المنجز في الحل مع خطوط الإنشاء عندما يطلب السؤال رسما."
+  },
+  "statement_sections": [
+    {
+      "type": "given",
+      "text": "\\((u_n)\\) المتتالية العددية المعرفة بـ: \\(u_0=e^2-1\\)، ومن أجل كل عدد طبيعي \\(n\\): \\[u_{n+1}=(1+u_n)e^{-2}-1.\\]"
+    }
+  ],
+  "review_status": {
+    "statement_copied_from_source_pdf": true,
+    "questions_copied_from_source_pdf": true,
+    "solutions_rewritten_methodically": true,
+    "induction_written_with_initialization_hypothesis_heredity_conclusion": true,
+    "target_level": "تلميذ بكالوريا يحتاج شرحا مفصلا ومفهوما",
+    "graphs_generated_when_required": true,
+    "formal_mathematical_writing_added": true,
+    "source_statement_preserved_exactly": true
+  },
+  "source_text_policy": {
+    "statement": "يبقى نص المعطيات كما هو في الملف الأصلي ولا يضاف إليه أي شرح أو نتيجة.",
+    "questions": "تبقى مطالب التمرين منفصلة عن الحل ولا تضاف إليها معلومات من التصحيح.",
+    "solution": "الشرح والحسابات والمنهجية توضع داخل solution فقط."
+  },
+  "solution_display": {
+    "methodology": "visible",
+    "formal_writing": "visible",
+    "calculations": "step_by_step",
+    "graphs": "statement_only_if_present_in_source; solution_only_if_required"
+  },
+  "graph_policy": {
+    "statement_graph_only_if_present_in_original": true,
+    "generated_graphs_location": "solution_only",
+    "variation_tables_location": "solution_only",
+    "variation_table_style": "arrow_table",
+    "remove_variation_tables_from_statement": true
+  },
+  "version": "2.6-clear-graphs"
+}

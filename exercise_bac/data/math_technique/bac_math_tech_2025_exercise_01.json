@@ -1,0 +1,296 @@
+{
+  "schema_version": "4.0-math-tech-graphs",
+  "version": "4.0-math-tech-graphs",
+  "language": "ar",
+  "direction": "rtl",
+  "branch": {
+    "code": "math_tech",
+    "name": "تقني رياضي"
+  },
+  "branch_code": "math_tech",
+  "branches": [
+    {
+      "code": "math_tech",
+      "name": "تقني رياضي"
+    }
+  ],
+  "year": 2025,
+  "exercise_number": 1,
+  "original_exercise_number": 2,
+  "source_page": 12,
+  "source_reference": "bac_sequence_math_technique.pdf، الصفحة 12.",
+  "title": "التمرين 2 (4 نقاط)",
+  "axis_tags": [
+    "fractional_recursive_sequence",
+    "mathematical_induction",
+    "geometric_sequence",
+    "sequence_sum"
+  ],
+  "statement": "المتتالية \\((u_n)\\) معرفة بـ \\(u_0=0\\) و\\(u_{n+1}=\\frac{3+5u_n}{3+u_n}\\). نعرف \\(v_n=\\frac{u_n-3}{u_n+1}\\).",
+  "has_statement_graph": false,
+  "statement_graph_data": null,
+  "statement_figure": {
+    "exists_in_original_exam": false,
+    "render_location": null,
+    "graph_data_key": null,
+    "show_in_solution": false
+  },
+  "questions": [
+    {
+      "id": "math_tech_2025_01_q1",
+      "text": "تحقق أن \\(u_{n+1}=5-\\frac{12}{3+u_n}\\)، برهن أن \\(0\\le u_n<3\\)، ثم ادرس اتجاه تغير المتتالية.",
+      "display_order": 1,
+      "content_type": "question",
+      "axis_tags": [
+        "mathematical_induction",
+        "seq_monotonicity"
+      ],
+      "solution": {
+        "strategy": "نحول العلاقة ونثبت الحصر ثم ندرس الفرق.",
+        "methodology": {
+          "goal": "حل السؤال بطريقة منظمة وفق منهجية البكالوريا.",
+          "method": "نحول العلاقة ونثبت الحصر ثم ندرس الفرق.",
+          "why_this_method": "لأنها تستعمل المعطيات بالترتيب وتقدم تبريرا واضحا لكل استنتاج.",
+          "used_theorem": "",
+          "bac_template": [
+            "نكتب العلاقة أو الخاصية المستعملة.",
+            "نعوض بالمعطيات ونبسط الحساب تدريجيا.",
+            "نبرر الإشارة أو النهاية أو الرتابة.",
+            "نكتب الاستنتاج النهائي بوضوح."
+          ],
+          "formal_writing": [
+            "تحديد المجال أو شروط الاستعمال.",
+            "ترتيب الحسابات على شكل مساويات.",
+            "ذكر المبرهنة المناسبة عند الحاجة.",
+            "ختم الحل بجواب مباشر."
+          ]
+        },
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التحويل",
+            "explanation": "",
+            "latex": "u_{n+1}=5-\\frac{12}{3+u_n}"
+          },
+          {
+            "step_number": 2,
+            "title": "الحصر",
+            "explanation": "بالتراجع: إذا \\(0\\le u_n<3\\)، فإن \\(1\\le u_{n+1}<3\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "الفرق",
+            "explanation": "",
+            "latex": "u_{n+1}-u_n=\\frac{(3-u_n)(u_n+1)}{u_n+3}>0"
+          },
+          {
+            "step_number": 4,
+            "title": "الرتابة",
+            "explanation": "إذن المتتالية متزايدة."
+          }
+        ],
+        "final_answer": "\\(0\\le u_n<3\\) والمتتالية متزايدة.",
+        "verification": "نراجع النتيجة بالتعويض في العلاقة الأصلية وبمقارنة الحدود الأولى عند الإمكان.",
+        "common_mistakes": [
+          "الخلط بين الفهرسين \\(n\\) و\\(n+1\\).",
+          "استنتاج التقارب دون إثبات الرتابة والمحدودية أو دون صيغة صريحة.",
+          "نسيان تحديد الحد الأول عند تحويل المتتالية إلى متتالية هندسية أو حسابية."
+        ],
+        "hints": [
+          "استعمل النتائج السابقة بالترتيب.",
+          "ابحث عن تحويل يجعل المتتالية هندسية أو حسابية."
+        ],
+        "graph_data": null,
+        "table_data": null,
+        "solution_style": "حل بكالوريا مفصل: منهجية واضحة، حساب تدريجي، كتابة رياضية ثم استنتاج.",
+        "has_solution_graph": false,
+        "has_variation_table": false
+      }
+    },
+    {
+      "id": "math_tech_2025_01_q2",
+      "text": "بين أن \\((v_n)\\) هندسية أساسها \\(\\frac13\\)، ثم اكتب \\(v_n\\) و\\(u_n\\) واحسب النهاية.",
+      "display_order": 2,
+      "content_type": "question",
+      "axis_tags": [
+        "geometric_sequence",
+        "explicit_sequence",
+        "sequence_limits"
+      ],
+      "solution": {
+        "strategy": "نعوض ونحل التحويل الكسري.",
+        "methodology": {
+          "goal": "حل السؤال بطريقة منظمة وفق منهجية البكالوريا.",
+          "method": "نعوض ونحل التحويل الكسري.",
+          "why_this_method": "لأنها تستعمل المعطيات بالترتيب وتقدم تبريرا واضحا لكل استنتاج.",
+          "used_theorem": "",
+          "bac_template": [
+            "نكتب العلاقة أو الخاصية المستعملة.",
+            "نعوض بالمعطيات ونبسط الحساب تدريجيا.",
+            "نبرر الإشارة أو النهاية أو الرتابة.",
+            "نكتب الاستنتاج النهائي بوضوح."
+          ],
+          "formal_writing": [
+            "تحديد المجال أو شروط الاستعمال.",
+            "ترتيب الحسابات على شكل مساويات.",
+            "ذكر المبرهنة المناسبة عند الحاجة.",
+            "ختم الحل بجواب مباشر."
+          ]
+        },
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "العلاقة",
+            "explanation": "",
+            "latex": "v_{n+1}=\\frac13v_n"
+          },
+          {
+            "step_number": 2,
+            "title": "الحد الأول",
+            "explanation": "",
+            "latex": "v_0=-3"
+          },
+          {
+            "step_number": 3,
+            "title": "الحد العام",
+            "explanation": "",
+            "latex": "v_n=-3\\left(\\frac13\\right)^n=-3^{1-n}"
+          },
+          {
+            "step_number": 4,
+            "title": "العودة",
+            "explanation": "",
+            "latex": "v_n=\\frac{u_n-3}{u_n+1}\\Rightarrow u_n=\\frac{v_n+3}{1-v_n}"
+          },
+          {
+            "step_number": 5,
+            "title": "النهاية",
+            "explanation": "لأن \\(v_n\\to0\\)، فإن \\(u_n\\to3\\)."
+          }
+        ],
+        "final_answer": "\\(v_n=-3^{1-n}\\)، \\(u_n=\\frac{3-3^{1-n}}{1+3^{1-n}}\\)، و\\(\\lim u_n=3\\).",
+        "verification": "نراجع النتيجة بالتعويض في العلاقة الأصلية وبمقارنة الحدود الأولى عند الإمكان.",
+        "common_mistakes": [
+          "الخلط بين الفهرسين \\(n\\) و\\(n+1\\).",
+          "استنتاج التقارب دون إثبات الرتابة والمحدودية أو دون صيغة صريحة.",
+          "نسيان تحديد الحد الأول عند تحويل المتتالية إلى متتالية هندسية أو حسابية."
+        ],
+        "hints": [
+          "استعمل النتائج السابقة بالترتيب.",
+          "ابحث عن تحويل يجعل المتتالية هندسية أو حسابية."
+        ],
+        "graph_data": null,
+        "table_data": null,
+        "solution_style": "حل بكالوريا مفصل: منهجية واضحة، حساب تدريجي، كتابة رياضية ثم استنتاج.",
+        "has_solution_graph": false,
+        "has_variation_table": false
+      }
+    },
+    {
+      "id": "math_tech_2025_01_q3",
+      "text": "بين أن \\(\\frac4{1+u_n}=1-v_n\\)، ثم احسب \\(S_n=\\frac4{1+u_0}+\\cdots+\\frac4{1+u_n}\\).",
+      "display_order": 3,
+      "content_type": "question",
+      "axis_tags": [
+        "sequence_sum"
+      ],
+      "solution": {
+        "strategy": "نستعمل العلاقة بين الحدين.",
+        "methodology": {
+          "goal": "حل السؤال بطريقة منظمة وفق منهجية البكالوريا.",
+          "method": "نستعمل العلاقة بين الحدين.",
+          "why_this_method": "لأنها تستعمل المعطيات بالترتيب وتقدم تبريرا واضحا لكل استنتاج.",
+          "used_theorem": "",
+          "bac_template": [
+            "نكتب العلاقة أو الخاصية المستعملة.",
+            "نعوض بالمعطيات ونبسط الحساب تدريجيا.",
+            "نبرر الإشارة أو النهاية أو الرتابة.",
+            "نكتب الاستنتاج النهائي بوضوح."
+          ],
+          "formal_writing": [
+            "تحديد المجال أو شروط الاستعمال.",
+            "ترتيب الحسابات على شكل مساويات.",
+            "ذكر المبرهنة المناسبة عند الحاجة.",
+            "ختم الحل بجواب مباشر."
+          ]
+        },
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الهوية",
+            "explanation": "",
+            "latex": "1-v_n=1-\\frac{u_n-3}{u_n+1}=\\frac4{u_n+1}"
+          },
+          {
+            "step_number": 2,
+            "title": "الجمع",
+            "explanation": "",
+            "latex": "S_n=\\sum_{k=0}^n(1-v_k)=(n+1)-\\sum_{k=0}^nv_k"
+          },
+          {
+            "step_number": 3,
+            "title": "مجموع v",
+            "explanation": "",
+            "latex": "\\sum_{k=0}^nv_k=-3\\frac{1-(1/3)^{n+1}}{1-1/3}=-\\frac92\\left(1-\\left(\\frac13\\right)^{n+1}\\right)"
+          },
+          {
+            "step_number": 4,
+            "title": "النتيجة",
+            "explanation": "",
+            "latex": "S_n=n+1+\\frac92\\left(1-\\left(\\frac13\\right)^{n+1}\\right)"
+          }
+        ],
+        "final_answer": "\\(S_n=n+1+\\frac92[1-(1/3)^{n+1}]\\).",
+        "verification": "نراجع النتيجة بالتعويض في العلاقة الأصلية وبمقارنة الحدود الأولى عند الإمكان.",
+        "common_mistakes": [
+          "الخلط بين الفهرسين \\(n\\) و\\(n+1\\).",
+          "استنتاج التقارب دون إثبات الرتابة والمحدودية أو دون صيغة صريحة.",
+          "نسيان تحديد الحد الأول عند تحويل المتتالية إلى متتالية هندسية أو حسابية."
+        ],
+        "hints": [
+          "استعمل النتائج السابقة بالترتيب.",
+          "ابحث عن تحويل يجعل المتتالية هندسية أو حسابية."
+        ],
+        "graph_data": null,
+        "table_data": null,
+        "solution_style": "حل بكالوريا مفصل: منهجية واضحة، حساب تدريجي، كتابة رياضية ثم استنتاج.",
+        "has_solution_graph": false,
+        "has_variation_table": false
+      }
+    }
+  ],
+  "content": {
+    "statement": "المتتالية \\((u_n)\\) معرفة بـ \\(u_0=0\\) و\\(u_{n+1}=\\frac{3+5u_n}{3+u_n}\\). نعرف \\(v_n=\\frac{u_n-3}{u_n+1}\\).",
+    "statement_graph_data": null,
+    "questions": [
+      {
+        "id": "math_tech_2025_01_q1",
+        "order": 1,
+        "text": "تحقق أن \\(u_{n+1}=5-\\frac{12}{3+u_n}\\)، برهن أن \\(0\\le u_n<3\\)، ثم ادرس اتجاه تغير المتتالية."
+      },
+      {
+        "id": "math_tech_2025_01_q2",
+        "order": 2,
+        "text": "بين أن \\((v_n)\\) هندسية أساسها \\(\\frac13\\)، ثم اكتب \\(v_n\\) و\\(u_n\\) واحسب النهاية."
+      },
+      {
+        "id": "math_tech_2025_01_q3",
+        "order": 3,
+        "text": "بين أن \\(\\frac4{1+u_n}=1-v_n\\)، ثم احسب \\(S_n=\\frac4{1+u_0}+\\cdots+\\frac4{1+u_n}\\)."
+      }
+    ]
+  },
+  "is_active": true,
+  "render_contract": {
+    "math_renderer": "MathJax",
+    "graph_renderer": "recharts_or_plotly",
+    "variation_table_renderer": "custom_rtl_variation_table",
+    "graph_data_locations": [
+      "statement_graph_data",
+      "questions[].solution.graph_data"
+    ],
+    "table_data_locations": [
+      "questions[].solution.table_data"
+    ]
+  }
+}

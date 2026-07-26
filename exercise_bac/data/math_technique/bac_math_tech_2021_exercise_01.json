@@ -1,0 +1,279 @@
+{
+  "schema_version": "4.0-math-tech-graphs",
+  "version": "4.0-math-tech-graphs",
+  "language": "ar",
+  "direction": "rtl",
+  "branch": {
+    "code": "math_tech",
+    "name": "تقني رياضي"
+  },
+  "branch_code": "math_tech",
+  "branches": [
+    {
+      "code": "math_tech",
+      "name": "تقني رياضي"
+    }
+  ],
+  "year": 2021,
+  "exercise_number": 1,
+  "original_exercise_number": 1,
+  "source_page": 8,
+  "source_reference": "bac_sequence_math_technique.pdf، الصفحة 8.",
+  "title": "التمرين 1 (4 نقاط)",
+  "axis_tags": [
+    "affine_recursive_sequence",
+    "geometric_sequence",
+    "sequence_sum",
+    "sequence_limits"
+  ],
+  "statement": "المتتالية \\((u_n)\\) معرفة بـ \\(u_0=3\\) و\\(u_{n+1}=\\frac79u_n+1\\).",
+  "has_statement_graph": false,
+  "statement_graph_data": null,
+  "statement_figure": {
+    "exists_in_original_exam": false,
+    "render_location": null,
+    "graph_data_key": null,
+    "show_in_solution": false
+  },
+  "questions": [
+    {
+      "id": "math_tech_2021_01_q1",
+      "text": "برهن أن \\(u_n<\\frac92\\)، ثم بين أن المتتالية متزايدة تماما ومتقاربة.",
+      "display_order": 1,
+      "content_type": "question",
+      "axis_tags": [
+        "mathematical_induction",
+        "seq_monotonicity",
+        "sequence_limits"
+      ],
+      "solution": {
+        "strategy": "نثبت الحصر ثم ندرس الفرق.",
+        "methodology": {
+          "goal": "حل السؤال بطريقة منظمة وفق منهجية البكالوريا.",
+          "method": "نثبت الحصر ثم ندرس الفرق.",
+          "why_this_method": "لأنها تستعمل المعطيات بالترتيب وتقدم تبريرا واضحا لكل استنتاج.",
+          "used_theorem": "",
+          "bac_template": [
+            "نكتب العلاقة أو الخاصية المستعملة.",
+            "نعوض بالمعطيات ونبسط الحساب تدريجيا.",
+            "نبرر الإشارة أو النهاية أو الرتابة.",
+            "نكتب الاستنتاج النهائي بوضوح."
+          ],
+          "formal_writing": [
+            "تحديد المجال أو شروط الاستعمال.",
+            "ترتيب الحسابات على شكل مساويات.",
+            "ذكر المبرهنة المناسبة عند الحاجة.",
+            "ختم الحل بجواب مباشر."
+          ]
+        },
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الحصر",
+            "explanation": "بالتراجع: إذا \\(u_n<9/2\\)، فإن \\(u_{n+1}<7/2+1=9/2\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "الفرق",
+            "explanation": "",
+            "latex": "u_{n+1}-u_n=1-\\frac29u_n>0"
+          },
+          {
+            "step_number": 3,
+            "title": "التقارب",
+            "explanation": "المتتالية متزايدة ومحدودة من الأعلى، وحدها يحل \\(\\ell=\\frac79\\ell+1\\)، أي \\(\\ell=9/2\\)."
+          }
+        ],
+        "final_answer": "\\(u_n<9/2\\)، والمتتالية متزايدة ومتقاربة إلى \\(9/2\\).",
+        "verification": "نراجع النتيجة بالتعويض في العلاقة الأصلية وبمقارنة الحدود الأولى عند الإمكان.",
+        "common_mistakes": [
+          "الخلط بين الفهرسين \\(n\\) و\\(n+1\\).",
+          "استنتاج التقارب دون إثبات الرتابة والمحدودية أو دون صيغة صريحة.",
+          "نسيان تحديد الحد الأول عند تحويل المتتالية إلى متتالية هندسية أو حسابية."
+        ],
+        "hints": [
+          "استعمل النتائج السابقة بالترتيب.",
+          "ابحث عن تحويل يجعل المتتالية هندسية أو حسابية."
+        ],
+        "graph_data": null,
+        "table_data": null,
+        "solution_style": "حل بكالوريا مفصل: منهجية واضحة، حساب تدريجي، كتابة رياضية ثم استنتاج.",
+        "has_solution_graph": false,
+        "has_variation_table": false
+      }
+    },
+    {
+      "id": "math_tech_2021_01_q2",
+      "text": "نعرف \\(v_n=\\frac13u_n-\\frac32\\). بين أنها هندسية أساسها \\(\\frac79\\)، ثم اكتب \\(v_n\\) و\\(u_n\\).",
+      "display_order": 2,
+      "content_type": "question",
+      "axis_tags": [
+        "geometric_sequence",
+        "explicit_sequence"
+      ],
+      "solution": {
+        "strategy": "نعوض العلاقة التراجعية.",
+        "methodology": {
+          "goal": "حل السؤال بطريقة منظمة وفق منهجية البكالوريا.",
+          "method": "نعوض العلاقة التراجعية.",
+          "why_this_method": "لأنها تستعمل المعطيات بالترتيب وتقدم تبريرا واضحا لكل استنتاج.",
+          "used_theorem": "",
+          "bac_template": [
+            "نكتب العلاقة أو الخاصية المستعملة.",
+            "نعوض بالمعطيات ونبسط الحساب تدريجيا.",
+            "نبرر الإشارة أو النهاية أو الرتابة.",
+            "نكتب الاستنتاج النهائي بوضوح."
+          ],
+          "formal_writing": [
+            "تحديد المجال أو شروط الاستعمال.",
+            "ترتيب الحسابات على شكل مساويات.",
+            "ذكر المبرهنة المناسبة عند الحاجة.",
+            "ختم الحل بجواب مباشر."
+          ]
+        },
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "العلاقة",
+            "explanation": "",
+            "latex": "v_{n+1}=\\frac79v_n"
+          },
+          {
+            "step_number": 2,
+            "title": "الحد الأول",
+            "explanation": "",
+            "latex": "v_0=1-\\frac32=-\\frac12"
+          },
+          {
+            "step_number": 3,
+            "title": "الحد العام",
+            "explanation": "",
+            "latex": "v_n=-\\frac12\\left(\\frac79\\right)^n"
+          },
+          {
+            "step_number": 4,
+            "title": "العودة",
+            "explanation": "",
+            "latex": "u_n=3v_n+\\frac92=-\\frac32\\left(\\frac79\\right)^n+\\frac92"
+          }
+        ],
+        "final_answer": "\\(u_n=-\\frac32(7/9)^n+\\frac92\\)، و\\(\\lim u_n=9/2\\).",
+        "verification": "نراجع النتيجة بالتعويض في العلاقة الأصلية وبمقارنة الحدود الأولى عند الإمكان.",
+        "common_mistakes": [
+          "الخلط بين الفهرسين \\(n\\) و\\(n+1\\).",
+          "استنتاج التقارب دون إثبات الرتابة والمحدودية أو دون صيغة صريحة.",
+          "نسيان تحديد الحد الأول عند تحويل المتتالية إلى متتالية هندسية أو حسابية."
+        ],
+        "hints": [
+          "استعمل النتائج السابقة بالترتيب.",
+          "ابحث عن تحويل يجعل المتتالية هندسية أو حسابية."
+        ],
+        "graph_data": null,
+        "table_data": null,
+        "solution_style": "حل بكالوريا مفصل: منهجية واضحة، حساب تدريجي، كتابة رياضية ثم استنتاج.",
+        "has_solution_graph": false,
+        "has_variation_table": false
+      }
+    },
+    {
+      "id": "math_tech_2021_01_q3",
+      "text": "احسب \\(S_n=\\frac13u_0+\\frac13u_1+\\cdots+\\frac13u_n\\).",
+      "display_order": 3,
+      "content_type": "question",
+      "axis_tags": [
+        "sequence_sum"
+      ],
+      "solution": {
+        "strategy": "نستعمل الصيغة الصريحة.",
+        "methodology": {
+          "goal": "حل السؤال بطريقة منظمة وفق منهجية البكالوريا.",
+          "method": "نستعمل الصيغة الصريحة.",
+          "why_this_method": "لأنها تستعمل المعطيات بالترتيب وتقدم تبريرا واضحا لكل استنتاج.",
+          "used_theorem": "",
+          "bac_template": [
+            "نكتب العلاقة أو الخاصية المستعملة.",
+            "نعوض بالمعطيات ونبسط الحساب تدريجيا.",
+            "نبرر الإشارة أو النهاية أو الرتابة.",
+            "نكتب الاستنتاج النهائي بوضوح."
+          ],
+          "formal_writing": [
+            "تحديد المجال أو شروط الاستعمال.",
+            "ترتيب الحسابات على شكل مساويات.",
+            "ذكر المبرهنة المناسبة عند الحاجة.",
+            "ختم الحل بجواب مباشر."
+          ]
+        },
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التعويض",
+            "explanation": "",
+            "latex": "\\frac13u_k=-\\frac12\\left(\\frac79\\right)^k+\\frac32"
+          },
+          {
+            "step_number": 2,
+            "title": "الجمع",
+            "explanation": "",
+            "latex": "S_n=-\\frac12\\frac{1-(7/9)^{n+1}}{1-7/9}+\\frac32(n+1)"
+          },
+          {
+            "step_number": 3,
+            "title": "التبسيط",
+            "explanation": "",
+            "latex": "S_n=-\\frac94\\left(1-\\left(\\frac79\\right)^{n+1}\\right)+\\frac32(n+1)"
+          }
+        ],
+        "final_answer": "\\(S_n=\\frac32(n+1)-\\frac94[1-(7/9)^{n+1}]\\).",
+        "verification": "نراجع النتيجة بالتعويض في العلاقة الأصلية وبمقارنة الحدود الأولى عند الإمكان.",
+        "common_mistakes": [
+          "الخلط بين الفهرسين \\(n\\) و\\(n+1\\).",
+          "استنتاج التقارب دون إثبات الرتابة والمحدودية أو دون صيغة صريحة.",
+          "نسيان تحديد الحد الأول عند تحويل المتتالية إلى متتالية هندسية أو حسابية."
+        ],
+        "hints": [
+          "استعمل النتائج السابقة بالترتيب.",
+          "ابحث عن تحويل يجعل المتتالية هندسية أو حسابية."
+        ],
+        "graph_data": null,
+        "table_data": null,
+        "solution_style": "حل بكالوريا مفصل: منهجية واضحة، حساب تدريجي، كتابة رياضية ثم استنتاج.",
+        "has_solution_graph": false,
+        "has_variation_table": false
+      }
+    }
+  ],
+  "content": {
+    "statement": "المتتالية \\((u_n)\\) معرفة بـ \\(u_0=3\\) و\\(u_{n+1}=\\frac79u_n+1\\).",
+    "statement_graph_data": null,
+    "questions": [
+      {
+        "id": "math_tech_2021_01_q1",
+        "order": 1,
+        "text": "برهن أن \\(u_n<\\frac92\\)، ثم بين أن المتتالية متزايدة تماما ومتقاربة."
+      },
+      {
+        "id": "math_tech_2021_01_q2",
+        "order": 2,
+        "text": "نعرف \\(v_n=\\frac13u_n-\\frac32\\). بين أنها هندسية أساسها \\(\\frac79\\)، ثم اكتب \\(v_n\\) و\\(u_n\\)."
+      },
+      {
+        "id": "math_tech_2021_01_q3",
+        "order": 3,
+        "text": "احسب \\(S_n=\\frac13u_0+\\frac13u_1+\\cdots+\\frac13u_n\\)."
+      }
+    ]
+  },
+  "is_active": true,
+  "render_contract": {
+    "math_renderer": "MathJax",
+    "graph_renderer": "recharts_or_plotly",
+    "variation_table_renderer": "custom_rtl_variation_table",
+    "graph_data_locations": [
+      "statement_graph_data",
+      "questions[].solution.graph_data"
+    ],
+    "table_data_locations": [
+      "questions[].solution.table_data"
+    ]
+  }
+}

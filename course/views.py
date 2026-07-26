@@ -267,55 +267,24 @@ class SubjectByBranchView(BaseStudentAPIView):
 class ChapterListView(BaseStudentAPIView):
     serializer_class = ChapterSummarySerializer
 
-    def get(self, request):
-        chapters = Chapter.objects.select_related(
-            "subject",
-        ).prefetch_related(
-            "axes",
-        ).filter(
-            is_active=True,
-        )
-
-        subject_id = request.query_params.get(
-            "subject_id"
-        )
-
-        subject_code = request.query_params.get(
-            "subject_code"
-        )
-
-        branch_id = request.query_params.get(
-            "branch_id"
-        )
-
-        branch_code = request.query_params.get(
-            "branch_code"
-        )
-
-        if subject_id:
-            chapters = chapters.filter(
+    def get(self, request, subject_id):
+        chapters = (
+            Chapter.objects
+            .select_related(
+                "subject",
+            )
+            .prefetch_related(
+                "axes",
+            )
+            .filter(
                 subject_id=subject_id,
+                is_active=True,
             )
-
-        if subject_code:
-            chapters = chapters.filter(
-                subject__code=subject_code,
+            .distinct()
+            .order_by(
+                "order",
+                "title",
             )
-
-        if branch_id:
-            chapters = chapters.filter(
-                subject__branches__id=branch_id,
-            )
-
-        if branch_code:
-            chapters = chapters.filter(
-                subject__branches__code=branch_code,
-            )
-
-        chapters = chapters.distinct().order_by(
-            "subject__name",
-            "order",
-            "title",
         )
 
         serializer = self.get_serializer(
@@ -325,13 +294,12 @@ class ChapterListView(BaseStudentAPIView):
 
         return Response(
             {
+                "subject_id": subject_id,
                 "count": chapters.count(),
                 "chapters": serializer.data,
             },
             status=status.HTTP_200_OK,
         )
-
-
 class ChapterDetailView(BaseStudentAPIView):
     serializer_class = ChapterDetailSerializer
 
@@ -358,49 +326,38 @@ class ChapterDetailView(BaseStudentAPIView):
         )
 
 
+
+
 class AxisListView(BaseStudentAPIView):
     serializer_class = AxisSummarySerializer
 
-    def get(self, request):
-        axes = Axis.objects.select_related(
-            "chapter",
-            "chapter__subject",
-        ).filter(
-            is_active=True,
-            chapter__is_active=True,
-        )
-
-        chapter_id = request.query_params.get(
-            "chapter_id"
-        )
-
-        chapter_code = request.query_params.get(
-            "chapter_code"
-        )
-
-        subject_id = request.query_params.get(
-            "subject_id"
-        )
-
-        if chapter_id:
-            axes = axes.filter(
+    def get(
+        self,
+        request,
+        chapter_id,
+        branch_code,
+    ):
+        axes = (
+            Axis.objects
+            .select_related(
+                "chapter",
+                "chapter__subject",
+            )
+            .prefetch_related(
+                "branches",
+            )
+            .filter(
                 chapter_id=chapter_id,
+                branches__code=branch_code,
+                is_active=True,
+                chapter__is_active=True,
             )
-
-        if chapter_code:
-            axes = axes.filter(
-                chapter__code=chapter_code,
+            .distinct()
+            .order_by(
+                "chapter__order",
+                "order",
+                "title",
             )
-
-        if subject_id:
-            axes = axes.filter(
-                chapter__subject_id=subject_id,
-            )
-
-        axes = axes.order_by(
-            "chapter__order",
-            "order",
-            "title",
         )
 
         serializer = self.get_serializer(
@@ -410,13 +367,15 @@ class AxisListView(BaseStudentAPIView):
 
         return Response(
             {
+                "filters": {
+                    "chapter_id": chapter_id,
+                    "branch_code": branch_code,
+                },
                 "count": axes.count(),
                 "axes": serializer.data,
             },
             status=status.HTTP_200_OK,
         )
-
-
 class AxisDetailView(BaseStudentAPIView):
     serializer_class = AxisDetailSerializer
 
@@ -1288,266 +1247,97 @@ from course.models import Axis
 logger = logging.getLogger(__name__)
 
 
-class ReExplainStepAPIView(
-    GenericAPIView
-):
-    permission_classes = [
-        IsAuthenticated,
-    ]
+import logging
+from django.shortcuts import get_object_or_404
+from rest_framework import status
+from rest_framework.generics import GenericAPIView
+from rest_framework.permissions import IsAuthenticated
+from rest_framework.response import Response
+from drf_spectacular.utils import OpenApiParameter, extend_schema
 
-    serializer_class = (
-        ReExplainStepRequestSerializer
-    )
+from course.models import Axis
+
+logger = logging.getLogger(__name__)
+
+
+class ReExplainStepAPIView(GenericAPIView):
+    permission_classes = [IsAuthenticated]
+    serializer_class = ReExplainStepRequestSerializer
 
     @extend_schema(
         parameters=[
-            OpenApiParameter(
-                name="step_id",
-                type=str,
-                required=False,
-                location=(
-                    OpenApiParameter.QUERY
-                ),
-                description=(
-                    "معرف المرحلة لجلب "
-                    "شروحاتها فقط."
-                ),
-            ),
-            OpenApiParameter(
-                name="axis_id",
-                type=int,
-                required=False,
-                location=(
-                    OpenApiParameter.QUERY
-                ),
-                description=(
-                    "معرف المحور لمنع خلط "
-                    "شروحات المحاور المختلفة."
-                ),
-            ),
+            OpenApiParameter(name="step_id", type=str, required=False, location=OpenApiParameter.QUERY),
+            OpenApiParameter(name="axis_id", type=int, required=False, location=OpenApiParameter.QUERY),
         ],
-        responses={
-            200: (
-                ReExplainStepHistoryListResponseSerializer
-            ),
-        },
+        responses={200: ReExplainStepHistoryListResponseSerializer},
     )
     def get(self, request):
-        step_id = str(
-            request.query_params.get(
-                "step_id"
-            )
-            or ""
-        ).strip()
-
-        axis_id_value = str(
-            request.query_params.get(
-                "axis_id"
-            )
-            or ""
-        ).strip()
-
+        step_id = str(request.query_params.get("step_id") or "").strip()
+        raw_axis_id = str(request.query_params.get("axis_id") or "").strip()
         axis_id = None
-
-        if axis_id_value:
+        if raw_axis_id:
             try:
-                axis_id = int(
-                    axis_id_value
-                )
-
+                axis_id = int(raw_axis_id)
                 if axis_id < 1:
                     raise ValueError
+            except (TypeError, ValueError):
+                return Response({"axis_id": ["معرف المحور يجب أن يكون عددًا صحيحًا موجبًا."]}, status=400)
 
-            except ValueError:
-                return Response(
-                    {
-                        "axis_id": [
-                            (
-                                "معرف المحور يجب أن "
-                                "يكون عددًا صحيحًا."
-                            )
-                        ]
-                    },
-                    status=(
-                        status
-                        .HTTP_400_BAD_REQUEST
-                    ),
-                )
-
-        histories = (
-            ReExplainStepHistoryService
-            .get_student_history(
-                student=request.user,
-                step_id=step_id or None,
-                axis_id=axis_id,
-            )
+        histories = ReExplainStepHistoryService.get_student_history(
+            student=request.user, step_id=step_id or None, axis_id=axis_id
         )
+        return Response({
+            "step_id": step_id,
+            "axis_id": axis_id,
+            "count": histories.count(),
+            "max_explanations": ReExplainStepHistoryService.MAX_EXPLANATIONS,
+            "results": ReExplainStepHistorySerializer(histories, many=True).data,
+        })
 
-        history_serializer = (
-            ReExplainStepHistorySerializer(
-                histories,
-                many=True,
-            )
-        )
-
-        return Response(
-            {
-                "step_id": step_id,
-                "count": histories.count(),
-                "max_explanations": (
-                    ReExplainStepHistoryService
-                    .MAX_EXPLANATIONS
-                ),
-                "results": (
-                    history_serializer.data
-                ),
-            },
-            status=status.HTTP_200_OK,
-        )
-
-    @extend_schema(
-        request=(
-            ReExplainStepRequestSerializer
-        ),
-        responses={
-            200: (
-                ReExplainStepResponseSerializer
-            ),
-        },
-    )
+    @extend_schema(request=ReExplainStepRequestSerializer, responses={200: ReExplainStepResponseSerializer})
     def post(self, request):
-        request_serializer = (
-            self.get_serializer(
-                data=request.data
-            )
-        )
-
-        request_serializer.is_valid(
-            raise_exception=True
-        )
-
-        validated_data = (
-            request_serializer.validated_data
-        )
-
-        step = validated_data["step"]
-
-        student_question = (
-            validated_data[
-                "student_question"
-            ]
-        )
-
-        axis_id = validated_data[
-            "axis_id"
-        ]
+        serializer = self.get_serializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        data = serializer.validated_data
 
         axis = get_object_or_404(
-            Axis.objects.select_related(
-                "chapter",
-                "chapter__subject",
-            ),
-            id=axis_id,
-            is_active=True,
-            chapter__is_active=True,
+            Axis.objects.select_related("chapter", "chapter__subject"),
+            id=data["axis_id"], is_active=True, chapter__is_active=True,
         )
 
         try:
-            generation_service = (
-                ReExplainStepService()
+            generated = ReExplainStepService().generate(
+                step=data["step"],
+                student_question=data["student_question"],
+                request_type=data["request_type"],
             )
-
-            generated_result = (
-                generation_service.generate(
-                    step=step,
-                    student_question=(
-                        student_question
-                    ),
-                )
+            saved = ReExplainStepHistoryService.save_history(
+                student=request.user,
+                axis=axis,
+                step=data["step"],
+                student_question=data["student_question"],
+                generated_result=generated,
             )
-
-            save_result = (
-                ReExplainStepHistoryService
-                .save_history(
-                    student=request.user,
-                    axis=axis,
-                    step=step,
-                    student_question=(
-                        student_question
-                    ),
-                    generated_result=(
-                        generated_result
-                    ),
-                )
-            )
-
-            saved_history = (
-                save_result["history"]
-            )
-
-            saved_serializer = (
-                ReExplainStepHistorySerializer(
-                    saved_history
-                )
-            )
-
             response_data = {
-                **generated_result,
-                "replaced_oldest": (
-                    save_result[
-                        "replaced_oldest"
-                    ]
-                ),
-                "explanations_count": (
-                    save_result["count"]
-                ),
-                "max_explanations": (
-                    ReExplainStepHistoryService
-                    .MAX_EXPLANATIONS
-                ),
-                "saved_explanation": (
-                    saved_serializer.data
-                ),
+                **generated,
+                "replaced_oldest": saved["replaced_oldest"],
+                "explanations_count": saved["count"],
+                "max_explanations": ReExplainStepHistoryService.MAX_EXPLANATIONS,
+                "saved_explanation": ReExplainStepHistorySerializer(saved["history"]).data,
             }
+            output = ReExplainStepResponseSerializer(data=response_data)
+            output.is_valid(raise_exception=True)
+            return Response(output.data, status=status.HTTP_200_OK)
 
-            response_serializer = (
-                ReExplainStepResponseSerializer(
-                    data=response_data
-                )
-            )
-
-            response_serializer.is_valid(
-                raise_exception=True
-            )
-
-            return Response(
-                response_serializer.data,
-                status=status.HTTP_200_OK,
-            )
-
-        except Exception as exc:
+        except ValueError as exc:
+            return Response({"error": str(exc)}, status=status.HTTP_400_BAD_REQUEST)
+        except Exception:
             logger.exception(
-                (
-                    "Erreur pendant la "
-                    "ré-explication step=%s "
-                    "axis=%s student=%s"
-                ),
-                step.get("id"),
-                axis_id,
-                request.user.pk,
+                "Re-explanation failed step=%s axis=%s student=%s",
+                data["step"].get("id"), data["axis_id"], request.user.pk,
             )
-
+            # لا نرسل تفاصيل الاستثناء الداخلية إلى الواجهة في production.
             return Response(
-                {
-                    "error": (
-                        "حدث خطأ أثناء إعادة "
-                        "شرح المرحلة."
-                    ),
-                    "details": str(exc),
-                },
-                status=(
-                    status
-                    .HTTP_500_INTERNAL_SERVER_ERROR
-                ),
+                {"error": "حدث خطأ أثناء إنشاء الشرح. أعد المحاولة."},
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR,
             )
-

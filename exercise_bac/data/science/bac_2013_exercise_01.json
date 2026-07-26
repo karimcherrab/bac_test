@@ -1,0 +1,475 @@
+{
+  "schema_version": "2.6-clear-graphs",
+  "language": "ar",
+  "direction": "rtl",
+    "branch": {
+    "code": "science",
+    "name": "شعبة علوم تجريبية"
+  },
+  "branch_code": "science",
+  "branches": [
+    {
+      "code": "science",
+      "name": "شعبة علوم تجريبية"
+    }
+  ],
+  "year": 2013,
+  "exercise_number": 1,
+  "source_page": 6,
+  "source_reference": "النص منقول كما ورد في ملف PDF، صفحة 6.",
+  "title": "التمرين الثاني (04 نقاط)",
+  "axis_tags": [
+    "seq_geometric",
+    "seq_recursive",
+    "seq_induction",
+    "seq_monotonicity",
+    "seq_limits"
+  ],
+  "statement": "I) المتتالية \\((V_n)\\) معرفة على \\(\\mathbb N\\) بـ: \\[V_n=\\frac{5^{n+1}}{6^n}.\\] II) المتتالية \\((u_n)\\) معرفة بـ: \\(u_0=1\\)، ومن أجل كل عدد طبيعي \\(n\\): \\[u_{n+1}=\\sqrt{5u_n+6}.\\]",
+  "questions": [
+    {
+      "id": "2013_ex1_q1",
+      "text": "I-1) بيّن أن \\((V_n)\\) متتالية هندسية يطلب تحديد أساسها وحدها الأول.",
+      "axis_tags": [
+        "seq_geometric"
+      ],
+      "solution": {
+        "strategy": "نحسب النسبة V_{n+1}/V_n ثم نحدد الحد الأول.",
+        "methodology": {
+          "goal": "إثبات أن (V_n) هندسية.",
+          "method": "إظهار أن V_{n+1}=qV_n حيث q ثابت.",
+          "simple_plan": [
+            "نحسب V_{n+1}.",
+            "نستخرج V_n عاملا مشتركا.",
+            "نحدد q وV_0."
+          ],
+          "formal_writing": [
+            "نحسب v_{n+1} انطلاقا من تعريف v_n والعلاقة المعطاة.",
+            "نبسط حتى نحصل على v_{n+1}=qv_n حيث q ثابت لا يتعلق بـ n.",
+            "نستنتج أن (v_n) هندسية أساسها q، ثم نحسب حدها الأول."
+          ],
+          "why_this_method": "هذا هو التعريف المباشر للمتتالية الهندسية."
+        },
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب الحد الموالي",
+            "explanation": "من التعريف:",
+            "latex": "V_{n+1}=\\frac{5^{n+2}}{6^{n+1}}"
+          },
+          {
+            "step_number": 2,
+            "title": "الربط بـ V_n",
+            "explanation": "نفصل عاملا 5/6:",
+            "latex": "V_{n+1}=\\frac56\\,\\frac{5^{n+1}}{6^n}=\\frac56V_n"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب الحد الأول",
+            "explanation": "نعوض n=0:",
+            "latex": "V_0=\\frac{5^{1}}{6^0}=5"
+          }
+        ],
+        "final_answer": "\\((V_n)\\) هندسية أساسها \\(q=\\frac56\\) وحدها الأول \\(V_0=5\\).",
+        "common_mistakes": [
+          "عدم حساب الحد الأول.",
+          "الخلط بين أساس المتتالية وحدها الأول.",
+          "كتابة عبارة الحد العام بفهرسة غير مناسبة."
+        ],
+        "hints": [],
+        "presentation": {
+          "show_method_first": true,
+          "show_steps_one_by_one": true,
+          "show_calculations_separately": true,
+          "show_graph_only_when_required": true,
+          "show_formal_writing": true
+        }
+      },
+      "display_order": 1,
+      "content_type": "question"
+    },
+    {
+      "id": "2013_ex1_q2",
+      "text": "I-2) احسب \\(\\displaystyle\\lim_{n\\to+\\infty}V_n\\).",
+      "axis_tags": [
+        "seq_limits"
+      ],
+      "solution": {
+        "strategy": "نستعمل نهاية متتالية هندسية أساسها بين -1 و1.",
+        "methodology": {
+          "goal": "حساب نهاية V_n.",
+          "method": "كتابة V_n=5(5/6)^n ثم تطبيق نهاية q^n.",
+          "simple_plan": [
+            "نكتب الحد العام على الشكل V_0q^n.",
+            "نحدد نهاية q^n.",
+            "نستنتج النهاية."
+          ],
+          "formal_writing": [
+            "نحدد أولا المبرهنة أو النهاية المرجعية المستعملة.",
+            "نعوض في عبارة الحد العام أو نستعمل مبرهنة التقارب الرتيب بعد إثبات الرتابة والمحدودية.",
+            "نكتب النتيجة النهائية بصيغة واضحة مع ذكر قيمة النهاية."
+          ],
+          "why_this_method": "لأن |5/6|<1."
+        },
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "إعادة كتابة الحد",
+            "explanation": "لدينا:",
+            "latex": "V_n=5\\left(\\frac56\\right)^n"
+          },
+          {
+            "step_number": 2,
+            "title": "نهاية القوة",
+            "explanation": "بما أن 0<5/6<1:",
+            "latex": "\\lim_{n\\to+\\infty}\\left(\\frac56\\right)^n=0"
+          },
+          {
+            "step_number": 3,
+            "title": "الاستنتاج",
+            "explanation": "إذن:",
+            "latex": "\\lim_{n\\to+\\infty}V_n=5\\times0=0"
+          }
+        ],
+        "final_answer": "\\(\\displaystyle\\lim_{n\\to+\\infty}V_n=0\\).",
+        "common_mistakes": [
+          "تعويض النهاية قبل إثبات وجودها.",
+          "نسيان استعمال شرط |q|<1 عند نهاية متتالية هندسية.",
+          "إهمال تبرير تطبيق مبرهنة الحصر أو التقارب الرتيب."
+        ],
+        "hints": [],
+        "presentation": {
+          "show_method_first": true,
+          "show_steps_one_by_one": true,
+          "show_calculations_separately": true,
+          "show_graph_only_when_required": true,
+          "show_formal_writing": true
+        }
+      },
+      "display_order": 2,
+      "content_type": "question"
+    },
+    {
+      "id": "2013_ex1_q3",
+      "text": "II-1) برهن بالتراجع أنه من أجل كل عدد طبيعي \\(n\\): \\(1\\le u_n\\le6\\).",
+      "axis_tags": [
+        "seq_induction",
+        "seq_bounded"
+      ],
+      "solution": {
+        "strategy": "نستعمل البرهان بالتراجع على الخاصية P(n): 1≤u_n≤6.",
+        "methodology": {
+          "goal": "إثبات حصر u_n.",
+          "method": "التحقق، فرضية التراجع، الانتقال، الخلاصة.",
+          "simple_plan": [
+            "التهيئة عند n=0.",
+            "نفرض 1≤u_n≤6.",
+            "نبرهن 1≤u_{n+1}≤6.",
+            "نختم بالتراجع."
+          ],
+          "formal_writing": [
+            "نضع الخاصية المطلوب إثباتها على الشكل P(n).",
+            "التهيئة: نتحقق من صحة P(0) أو من الرتبة الأولى المحددة في التمرين.",
+            "فرضية التراجع: نفرض أنه من أجل عدد طبيعي n تكون P(n) صحيحة.",
+            "الانتقال: انطلاقا من فرضية التراجع والعلاقة التراجعية نبرهن P(n+1).",
+            "الخاتمة: حسب مبدأ البرهان بالتراجع، الخاصية صحيحة من أجل كل عدد طبيعي n."
+          ],
+          "used_theorem": "مبدأ البرهان بالتراجع.",
+          "why_this_method": "المطلوب صراحة برهان بالتراجع والعلاقة تراجعية."
+        },
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التهيئة",
+            "explanation": "عند n=0 لدينا u_0=1، ومنه:",
+            "latex": "1\\le u_0\\le6"
+          },
+          {
+            "step_number": 2,
+            "title": "فرضية التراجع",
+            "explanation": "نفرض أنه من أجل رتبة طبيعية n:",
+            "latex": "1\\le u_n\\le6"
+          },
+          {
+            "step_number": 3,
+            "title": "إثبات الحد الأدنى عند n+1",
+            "explanation": "من u_n≥1 نحصل على 5u_n+6≥11>1، والجذر دالة متزايدة:",
+            "latex": "u_{n+1}=\\sqrt{5u_n+6}\\ge\\sqrt{11}>1"
+          },
+          {
+            "step_number": 4,
+            "title": "إثبات الحد الأعلى عند n+1",
+            "explanation": "من u_n≤6 نحصل على 5u_n+6≤36:",
+            "latex": "u_{n+1}=\\sqrt{5u_n+6}\\le6"
+          },
+          {
+            "step_number": 5,
+            "title": "الخلاصة",
+            "explanation": "إذن 1≤u_{n+1}≤6، وبحسب مبدأ التراجع تصح الخاصية لكل n طبيعي."
+          }
+        ],
+        "final_answer": "من أجل كل \\(n\\in\\mathbb N\\): \\(1\\le u_n\\le6\\).",
+        "common_mistakes": [
+          "نسيان التحقق من الخاصية عند الرتبة الأولى.",
+          "استعمال المطلوب إثباته عند n+1 دون الانطلاق من فرضية التراجع.",
+          "عدم كتابة الخلاصة: الخاصية صحيحة لكل n طبيعي."
+        ],
+        "hints": [],
+        "presentation": {
+          "show_method_first": true,
+          "show_steps_one_by_one": true,
+          "show_calculations_separately": true,
+          "show_graph_only_when_required": true,
+          "show_formal_writing": true
+        }
+      },
+      "display_order": 3,
+      "content_type": "question"
+    },
+    {
+      "id": "2013_ex1_q4",
+      "text": "II-2) ادرس اتجاه تغير المتتالية \\((u_n)\\).",
+      "axis_tags": [
+        "seq_monotonicity"
+      ],
+      "solution": {
+        "strategy": "ندرس إشارة u_{n+1}-u_n باستعمال الحصر 1≤u_n≤6.",
+        "methodology": {
+          "goal": "دراسة اتجاه تغير u_n.",
+          "method": "نحوّل الفرق إلى كسر باستعمال المرافق.",
+          "simple_plan": [
+            "نحسب u_{n+1}-u_n.",
+            "نضرب في المرافق.",
+            "نحلل البسط.",
+            "نستنتج الإشارة والرتابة."
+          ],
+          "formal_writing": [
+            "لدراسة اتجاه تغير المتتالية نحسب الفرق u_{n+1}-u_n أو نستعمل تعبير الحد العام إن كان متوفرا.",
+            "نحدد إشارة الفرق مع الاستفادة من الحصر المثبت سابقا.",
+            "نستنتج الرتابة فقط بعد تبرير الإشارة لكل عدد طبيعي n."
+          ],
+          "why_this_method": "إشارة الفرق تحدد الرتابة، والحصر يسمح بتحديد إشارة البسط."
+        },
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب الفرق",
+            "explanation": "نكتب:",
+            "latex": "u_{n+1}-u_n=\\sqrt{5u_n+6}-u_n"
+          },
+          {
+            "step_number": 2,
+            "title": "استعمال المرافق",
+            "explanation": "المقام موجب:",
+            "latex": "u_{n+1}-u_n=\\frac{5u_n+6-u_n^2}{\\sqrt{5u_n+6}+u_n}"
+          },
+          {
+            "step_number": 3,
+            "title": "تحليل البسط",
+            "explanation": "نحلل:",
+            "latex": "5u_n+6-u_n^2=(6-u_n)(u_n+1)"
+          },
+          {
+            "step_number": 4,
+            "title": "دراسة الإشارة",
+            "explanation": "لدينا 1≤u_n≤6، إذن 6-u_n≥0 وu_n+1>0، والمقام موجب، وبالتالي:",
+            "latex": "u_{n+1}-u_n\\ge0"
+          }
+        ],
+        "final_answer": "\\((u_n)\\) متزايدة على \\(\\mathbb N\\).",
+        "common_mistakes": [
+          "تحديد الإشارة دون استعمال الحصر المعروف للمتتالية.",
+          "الخطأ في تحليل الفرق أو في إشارة المقام.",
+          "القول إن المتتالية متقاربة من الرتابة فقط دون إثبات المحدودية."
+        ],
+        "hints": [],
+        "presentation": {
+          "show_method_first": true,
+          "show_steps_one_by_one": true,
+          "show_calculations_separately": true,
+          "show_graph_only_when_required": true,
+          "show_formal_writing": true
+        }
+      },
+      "display_order": 4,
+      "content_type": "question"
+    },
+    {
+      "id": "2013_ex1_q5",
+      "text": "II-3-أ) برهن أنه من أجل كل عدد طبيعي \\(n\\): \\[6-u_{n+1}\\le\\frac56(6-u_n).\\]",
+      "axis_tags": [
+        "seq_recursive",
+        "seq_inequalities"
+      ],
+      "solution": {
+        "strategy": "نحوّل الفرق 6-u_{n+1} باستعمال المرافق ثم نستعمل الحصر u_n≥1.",
+        "methodology": {
+          "goal": "إثبات المتراجحة المطلوبة.",
+          "method": "التبسيط الجبري ثم مقارنة المقام بـ6.",
+          "simple_plan": [
+            "نكتب الفرق.",
+            "نضرب في المرافق.",
+            "نستعمل العلاقة داخل الجذر.",
+            "نقارن المقام."
+          ],
+          "why_this_method": "ظهور الجذر يستدعي استعمال المرافق."
+        },
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "استعمال المرافق",
+            "explanation": "لدينا:",
+            "latex": "6-u_{n+1}=6-\\sqrt{5u_n+6}=\\frac{36-(5u_n+6)}{6+\\sqrt{5u_n+6}}"
+          },
+          {
+            "step_number": 2,
+            "title": "التبسيط",
+            "explanation": "نختزل البسط:",
+            "latex": "6-u_{n+1}=\\frac{5(6-u_n)}{6+u_{n+1}}"
+          },
+          {
+            "step_number": 3,
+            "title": "المقارنة",
+            "explanation": "بما أن u_{n+1}≥0 فإن 6+u_{n+1}≥6، ومع 6-u_n≥0:",
+            "latex": "6-u_{n+1}\\le\\frac{5}{6}(6-u_n)"
+          }
+        ],
+        "final_answer": "\\(6-u_{n+1}\\le\\frac56(6-u_n)\\).",
+        "common_mistakes": [
+          "تحديد الإشارة دون استعمال الحصر المعروف للمتتالية.",
+          "الخطأ في تحليل الفرق أو في إشارة المقام.",
+          "القول إن المتتالية متقاربة من الرتابة فقط دون إثبات المحدودية."
+        ],
+        "hints": [],
+        "presentation": {
+          "show_method_first": true,
+          "show_steps_one_by_one": true,
+          "show_calculations_separately": true,
+          "show_graph_only_when_required": true,
+          "show_formal_writing": true
+        }
+      },
+      "display_order": 5,
+      "content_type": "question"
+    },
+    {
+      "id": "2013_ex1_q6",
+      "text": "II-3-ب) بيّن أنه من أجل كل عدد طبيعي \\(n\\): \\(0\\le6-u_n\\le V_n\\). استنتج \\(\\displaystyle\\lim_{n\\to+\\infty}u_n\\).",
+      "axis_tags": [
+        "seq_induction",
+        "seq_limits"
+      ],
+      "solution": {
+        "strategy": "نبرهن المتراجحة بالتراجع ثم نطبق مبرهنة الحصر.",
+        "methodology": {
+          "goal": "إثبات 0≤6-u_n≤V_n ثم حساب نهاية u_n.",
+          "method": "تراجع باستعمال السؤال السابق والعلاقة V_{n+1}=(5/6)V_n، ثم الحصر.",
+          "simple_plan": [
+            "التهيئة.",
+            "فرضية التراجع.",
+            "الانتقال باستعمال 3-أ.",
+            "الخلاصة."
+          ],
+          "formal_writing": [
+            "نحدد أولا المبرهنة أو النهاية المرجعية المستعملة.",
+            "نعوض في عبارة الحد العام أو نستعمل مبرهنة التقارب الرتيب بعد إثبات الرتابة والمحدودية.",
+            "نكتب النتيجة النهائية بصيغة واضحة مع ذكر قيمة النهاية."
+          ],
+          "why_this_method": "المتراجحة تتكرر من رتبة إلى أخرى بنفس العامل."
+        },
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التهيئة",
+            "explanation": "عند n=0:",
+            "latex": "0\\le6-u_0=5=V_0"
+          },
+          {
+            "step_number": 2,
+            "title": "فرضية التراجع",
+            "explanation": "نفرض عند رتبة n:",
+            "latex": "0\\le6-u_n\\le V_n"
+          },
+          {
+            "step_number": 3,
+            "title": "الانتقال",
+            "explanation": "من السؤال السابق:",
+            "latex": "0\\le6-u_{n+1}\\le\\frac56(6-u_n)\\le\\frac56V_n=V_{n+1}"
+          },
+          {
+            "step_number": 4,
+            "title": "خلاصة التراجع",
+            "explanation": "إذن من أجل كل n طبيعي:",
+            "latex": "0\\le6-u_n\\le V_n"
+          },
+          {
+            "step_number": 5,
+            "title": "الحصر والنهاية",
+            "explanation": "وبما أن V_n→0، فإن مبرهنة الحصر تعطي:",
+            "latex": "6-u_n\\to0\\quad\\Longrightarrow\\quad u_n\\to6"
+          }
+        ],
+        "final_answer": "من أجل كل \\(n\\): \\(0\\le6-u_n\\le V_n\\)، و\\(\\displaystyle\\lim u_n=6\\).",
+        "common_mistakes": [
+          "نسيان التحقق من الخاصية عند الرتبة الأولى.",
+          "استعمال المطلوب إثباته عند n+1 دون الانطلاق من فرضية التراجع.",
+          "عدم كتابة الخلاصة: الخاصية صحيحة لكل n طبيعي.",
+          "تعويض النهاية قبل إثبات وجودها.",
+          "نسيان استعمال شرط |q|<1 عند نهاية متتالية هندسية.",
+          "إهمال تبرير تطبيق مبرهنة الحصر أو التقارب الرتيب."
+        ],
+        "hints": [],
+        "presentation": {
+          "show_method_first": true,
+          "show_steps_one_by_one": true,
+          "show_calculations_separately": true,
+          "show_graph_only_when_required": true,
+          "show_formal_writing": true
+        }
+      },
+      "display_order": 6,
+      "content_type": "question"
+    }
+  ],
+  "content_separation": {
+    "statement": "المعطيات والتعريفات فقط، من دون حل أو طلبات.",
+    "questions": "الأسئلة المطلوبة فقط، وكل سؤال يحتوي حله الخاص.",
+    "statement_graph_data": "الرسم المعطى مع نص التمرين عندما يكون موجودا في النسخة الأصلية.",
+    "solution.graph_data": "الرسم المنجز في الحل مع خطوط الإنشاء عندما يطلب السؤال رسما."
+  },
+  "statement_sections": [
+    {
+      "type": "given",
+      "text": "I) المتتالية \\((V_n)\\) معرفة على \\(\\mathbb N\\) بـ: \\[V_n=\\frac{5^{n+1}}{6^n}.\\] II) المتتالية \\((u_n)\\) معرفة بـ: \\(u_0=1\\)، ومن أجل كل عدد طبيعي \\(n\\): \\[u_{n+1}=\\sqrt{5u_n+6}.\\]"
+    }
+  ],
+  "review_status": {
+    "statement_copied_from_source_pdf": true,
+    "questions_copied_from_source_pdf": true,
+    "solutions_rewritten_methodically": true,
+    "induction_written_with_initialization_hypothesis_heredity_conclusion": true,
+    "target_level": "تلميذ بكالوريا يحتاج شرحا مفصلا ومفهوما",
+    "graphs_generated_when_required": true,
+    "formal_mathematical_writing_added": true,
+    "source_statement_preserved_exactly": true
+  },
+  "source_text_policy": {
+    "statement": "يبقى نص المعطيات كما هو في الملف الأصلي ولا يضاف إليه أي شرح أو نتيجة.",
+    "questions": "تبقى مطالب التمرين منفصلة عن الحل ولا تضاف إليها معلومات من التصحيح.",
+    "solution": "الشرح والحسابات والمنهجية توضع داخل solution فقط."
+  },
+  "solution_display": {
+    "methodology": "visible",
+    "formal_writing": "visible",
+    "calculations": "step_by_step",
+    "graphs": "statement_only_if_present_in_source; solution_only_if_required"
+  },
+  "graph_policy": {
+    "statement_graph_only_if_present_in_original": true,
+    "generated_graphs_location": "solution_only",
+    "variation_tables_location": "solution_only",
+    "variation_table_style": "arrow_table",
+    "remove_variation_tables_from_statement": true
+  },
+  "version": "2.6-clear-graphs"
+}

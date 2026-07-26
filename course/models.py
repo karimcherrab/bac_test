@@ -91,6 +91,12 @@ class Axis(models.Model):
         related_name="axes",
     )
 
+    branches = models.ManyToManyField(
+        Branch,
+        related_name="axes",
+        blank=True,
+    )
+
     tag = models.CharField(
         max_length=100,
     )

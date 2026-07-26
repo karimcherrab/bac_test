@@ -78,6 +78,11 @@ class AxisDetailSerializer(serializers.ModelSerializer):
         ).count()
 
 
+from rest_framework import serializers
+
+from course.models import Chapter
+
+
 class ChapterSummarySerializer(serializers.ModelSerializer):
     axes_count = serializers.SerializerMethodField()
 
@@ -93,10 +98,18 @@ class ChapterSummarySerializer(serializers.ModelSerializer):
         ]
 
     def get_axes_count(self, obj):
-        return obj.axes.filter(
-            is_active=True,
-        ).count()
+        branch_code = self.context.get("branch_code")
 
+        axes = obj.axes.filter(
+            is_active=True,
+        )
+
+        if branch_code:
+            axes = axes.filter(
+                branches__code=branch_code,
+            )
+
+        return axes.distinct().count()
 
 class ChapterDetailSerializer(serializers.ModelSerializer):
     subject_id = serializers.IntegerField(

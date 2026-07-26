@@ -1,0 +1,325 @@
+{
+  "schema_version": "4.0-math-tech-graphs",
+  "version": "4.0-math-tech-graphs",
+  "language": "ar",
+  "direction": "rtl",
+  "branch": {
+    "code": "math_tech",
+    "name": "تقني رياضي"
+  },
+  "branch_code": "math_tech",
+  "branches": [
+    {
+      "code": "math_tech",
+      "name": "تقني رياضي"
+    }
+  ],
+  "year": 2014,
+  "exercise_number": 1,
+  "original_exercise_number": 3,
+  "source_page": 4,
+  "source_reference": "bac_sequence_math_technique.pdf، الصفحة 4.",
+  "title": "التمرين 3 (4 نقاط)",
+  "axis_tags": [
+    "derivative",
+    "sequence_recursive",
+    "mathematical_induction",
+    "sequence_limits"
+  ],
+  "statement": "الدالة \\(f\\) معرفة على \\(]1,+\\infty[\\) بـ \\(f(x)=x-\\ln(x-1)\\). نعرف المتتالية \\(u_0=e+1\\) و\\(u_{n+1}=u_n-\\ln(u_n-1)\\).",
+  "has_statement_graph": false,
+  "statement_graph_data": null,
+  "statement_figure": {
+    "exists_in_original_exam": false,
+    "render_location": null,
+    "graph_data_key": null,
+    "show_in_solution": false
+  },
+  "questions": [
+    {
+      "id": "math_tech_2014_01_q1",
+      "text": "حدد إشارة \\(f(x)-x\\)، ادرس تغير \\(f\\)، ثم بين أن \\(f([2,e+1])\\subset[2,e+1]\\).",
+      "display_order": 1,
+      "content_type": "question",
+      "axis_tags": [
+        "derivative",
+        "variation_table"
+      ],
+      "solution": {
+        "strategy": "نستعمل خصائص اللوغاريتم والمشتقة.",
+        "methodology": {
+          "goal": "حل السؤال بطريقة منظمة وفق منهجية البكالوريا.",
+          "method": "نستعمل خصائص اللوغاريتم والمشتقة.",
+          "why_this_method": "لأنها تستعمل المعطيات بالترتيب وتقدم تبريرا واضحا لكل استنتاج.",
+          "used_theorem": "",
+          "bac_template": [
+            "نكتب العلاقة أو الخاصية المستعملة.",
+            "نعوض بالمعطيات ونبسط الحساب تدريجيا.",
+            "نبرر الإشارة أو النهاية أو الرتابة.",
+            "نكتب الاستنتاج النهائي بوضوح."
+          ],
+          "formal_writing": [
+            "تحديد المجال أو شروط الاستعمال.",
+            "ترتيب الحسابات على شكل مساويات.",
+            "ذكر المبرهنة المناسبة عند الحاجة.",
+            "ختم الحل بجواب مباشر."
+          ]
+        },
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الإشارة",
+            "explanation": "",
+            "latex": "f(x)-x=-\\ln(x-1)"
+          },
+          {
+            "step_number": 2,
+            "title": "تفصيل الإشارة",
+            "explanation": "هي موجبة على \\(]1,2[\\)، منعدمة عند 2، وسالبة على \\(]2,+\\infty[\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "المشتقة",
+            "explanation": "",
+            "latex": "f'(x)=1-\\frac1{x-1}=\\frac{x-2}{x-1}"
+          },
+          {
+            "step_number": 4,
+            "title": "التغير",
+            "explanation": "الدالة متناقصة على \\(]1,2]\\) ومتزايدة على \\([2,+\\infty[\\)."
+          },
+          {
+            "step_number": 5,
+            "title": "صورة المجال",
+            "explanation": "على \\([2,e+1]\\): \\(f(2)=2\\)، \\(f(e+1)=e\\)، ومنه \\(2\\le f(x)\\le e<e+1\\)."
+          }
+        ],
+        "final_answer": "\\(f([2,e+1])\\subset[2,e+1]\\).",
+        "verification": "نراجع النتيجة بالتعويض في العلاقة الأصلية وبمقارنة الحدود الأولى عند الإمكان.",
+        "common_mistakes": [
+          "الخلط بين الفهرسين \\(n\\) و\\(n+1\\).",
+          "استنتاج التقارب دون إثبات الرتابة والمحدودية أو دون صيغة صريحة.",
+          "نسيان تحديد الحد الأول عند تحويل المتتالية إلى متتالية هندسية أو حسابية."
+        ],
+        "hints": [
+          "استعمل النتائج السابقة بالترتيب.",
+          "ابحث عن تحويل يجعل المتتالية هندسية أو حسابية."
+        ],
+        "graph_data": null,
+        "table_data": {
+          "type": "variation_table",
+          "domain": "]1,+∞[",
+          "x_values": [
+            "1^+",
+            "2",
+            "+∞"
+          ],
+          "derivative": {
+            "expression": "f'(x)=\\frac{x-2}{x-1}",
+            "signs": [
+              "-",
+              "0",
+              "+"
+            ],
+            "critical_points": [
+              {
+                "x": "2",
+                "type": "minimum",
+                "value": "2"
+              }
+            ]
+          },
+          "function_variation": {
+            "directions": [
+              "decreasing",
+              "increasing"
+            ],
+            "values": [
+              "+∞",
+              "2",
+              "+∞"
+            ]
+          },
+          "notes": [
+            "\\lim_{x\\to1^+}f(x)=+\\infty",
+            "\\lim_{x\\to+\\infty}f(x)=+\\infty"
+          ],
+          "render_in_react": true
+        },
+        "solution_style": "حل بكالوريا مفصل: منهجية واضحة، حساب تدريجي، كتابة رياضية ثم استنتاج.",
+        "has_solution_graph": false,
+        "has_variation_table": true,
+        "variation_table_render_location": "after_derivative_sign_analysis"
+      }
+    },
+    {
+      "id": "math_tech_2014_01_q2",
+      "text": "برهن بالتراجع أن \\(u_n\\in[2,e+1]\\)، ثم ادرس اتجاه تغير المتتالية.",
+      "display_order": 2,
+      "content_type": "question",
+      "axis_tags": [
+        "mathematical_induction",
+        "seq_monotonicity"
+      ],
+      "solution": {
+        "strategy": "نستعمل استقرار المجال وإشارة \\(f(x)-x\\).",
+        "methodology": {
+          "goal": "حل السؤال بطريقة منظمة وفق منهجية البكالوريا.",
+          "method": "نستعمل استقرار المجال وإشارة \\(f(x)-x\\).",
+          "why_this_method": "لأنها تستعمل المعطيات بالترتيب وتقدم تبريرا واضحا لكل استنتاج.",
+          "used_theorem": "",
+          "bac_template": [
+            "نكتب العلاقة أو الخاصية المستعملة.",
+            "نعوض بالمعطيات ونبسط الحساب تدريجيا.",
+            "نبرر الإشارة أو النهاية أو الرتابة.",
+            "نكتب الاستنتاج النهائي بوضوح."
+          ],
+          "formal_writing": [
+            "تحديد المجال أو شروط الاستعمال.",
+            "ترتيب الحسابات على شكل مساويات.",
+            "ذكر المبرهنة المناسبة عند الحاجة.",
+            "ختم الحل بجواب مباشر."
+          ]
+        },
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التهيئة",
+            "explanation": "\\(u_0=e+1\\in[2,e+1]\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "الوراثة",
+            "explanation": "إذا \\(u_n\\in[2,e+1]\\)، فإن \\(u_{n+1}=f(u_n)\\in[2,e+1]\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "الفرق",
+            "explanation": "",
+            "latex": "u_{n+1}-u_n=-\\ln(u_n-1)\\le0"
+          },
+          {
+            "step_number": 4,
+            "title": "الرتابة",
+            "explanation": "لأن \\(u_n\\ge2\\)، فإن المتتالية متناقصة."
+          }
+        ],
+        "final_answer": "\\(u_n\\in[2,e+1]\\) و\\((u_n)\\) متناقصة.",
+        "verification": "نراجع النتيجة بالتعويض في العلاقة الأصلية وبمقارنة الحدود الأولى عند الإمكان.",
+        "common_mistakes": [
+          "الخلط بين الفهرسين \\(n\\) و\\(n+1\\).",
+          "استنتاج التقارب دون إثبات الرتابة والمحدودية أو دون صيغة صريحة.",
+          "نسيان تحديد الحد الأول عند تحويل المتتالية إلى متتالية هندسية أو حسابية."
+        ],
+        "hints": [
+          "استعمل النتائج السابقة بالترتيب.",
+          "ابحث عن تحويل يجعل المتتالية هندسية أو حسابية."
+        ],
+        "graph_data": null,
+        "table_data": null,
+        "solution_style": "حل بكالوريا مفصل: منهجية واضحة، حساب تدريجي، كتابة رياضية ثم استنتاج.",
+        "has_solution_graph": false,
+        "has_variation_table": false
+      }
+    },
+    {
+      "id": "math_tech_2014_01_q3",
+      "text": "برر تقارب \\((u_n)\\) ثم احسب نهايتها.",
+      "display_order": 3,
+      "content_type": "question",
+      "axis_tags": [
+        "sequence_limits"
+      ],
+      "solution": {
+        "strategy": "نستعمل مبرهنة الرتابة والحصر ثم معادلة النقطة الثابتة.",
+        "methodology": {
+          "goal": "حل السؤال بطريقة منظمة وفق منهجية البكالوريا.",
+          "method": "نستعمل مبرهنة الرتابة والحصر ثم معادلة النقطة الثابتة.",
+          "why_this_method": "لأنها تستعمل المعطيات بالترتيب وتقدم تبريرا واضحا لكل استنتاج.",
+          "used_theorem": "كل متتالية متناقصة ومحدودة من الأسفل متقاربة.",
+          "bac_template": [
+            "نكتب العلاقة أو الخاصية المستعملة.",
+            "نعوض بالمعطيات ونبسط الحساب تدريجيا.",
+            "نبرر الإشارة أو النهاية أو الرتابة.",
+            "نكتب الاستنتاج النهائي بوضوح."
+          ],
+          "formal_writing": [
+            "تحديد المجال أو شروط الاستعمال.",
+            "ترتيب الحسابات على شكل مساويات.",
+            "ذكر المبرهنة المناسبة عند الحاجة.",
+            "ختم الحل بجواب مباشر."
+          ]
+        },
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التقارب",
+            "explanation": "المتتالية متناقصة ومحدودة من الأسفل بالعدد 2، إذن متقاربة."
+          },
+          {
+            "step_number": 2,
+            "title": "معادلة النهاية",
+            "explanation": "",
+            "latex": "\\ell=\\ell-\\ln(\\ell-1)\\Rightarrow\\ln(\\ell-1)=0"
+          },
+          {
+            "step_number": 3,
+            "title": "النتيجة",
+            "explanation": "",
+            "latex": "\\ell=2"
+          }
+        ],
+        "final_answer": "\\(\\lim u_n=2\\).",
+        "verification": "نراجع النتيجة بالتعويض في العلاقة الأصلية وبمقارنة الحدود الأولى عند الإمكان.",
+        "common_mistakes": [
+          "الخلط بين الفهرسين \\(n\\) و\\(n+1\\).",
+          "استنتاج التقارب دون إثبات الرتابة والمحدودية أو دون صيغة صريحة.",
+          "نسيان تحديد الحد الأول عند تحويل المتتالية إلى متتالية هندسية أو حسابية."
+        ],
+        "hints": [
+          "استعمل النتائج السابقة بالترتيب.",
+          "ابحث عن تحويل يجعل المتتالية هندسية أو حسابية."
+        ],
+        "graph_data": null,
+        "table_data": null,
+        "solution_style": "حل بكالوريا مفصل: منهجية واضحة، حساب تدريجي، كتابة رياضية ثم استنتاج.",
+        "has_solution_graph": false,
+        "has_variation_table": false
+      }
+    }
+  ],
+  "content": {
+    "statement": "الدالة \\(f\\) معرفة على \\(]1,+\\infty[\\) بـ \\(f(x)=x-\\ln(x-1)\\). نعرف المتتالية \\(u_0=e+1\\) و\\(u_{n+1}=u_n-\\ln(u_n-1)\\).",
+    "statement_graph_data": null,
+    "questions": [
+      {
+        "id": "math_tech_2014_01_q1",
+        "order": 1,
+        "text": "حدد إشارة \\(f(x)-x\\)، ادرس تغير \\(f\\)، ثم بين أن \\(f([2,e+1])\\subset[2,e+1]\\)."
+      },
+      {
+        "id": "math_tech_2014_01_q2",
+        "order": 2,
+        "text": "برهن بالتراجع أن \\(u_n\\in[2,e+1]\\)، ثم ادرس اتجاه تغير المتتالية."
+      },
+      {
+        "id": "math_tech_2014_01_q3",
+        "order": 3,
+        "text": "برر تقارب \\((u_n)\\) ثم احسب نهايتها."
+      }
+    ]
+  },
+  "is_active": true,
+  "render_contract": {
+    "math_renderer": "MathJax",
+    "graph_renderer": "recharts_or_plotly",
+    "variation_table_renderer": "custom_rtl_variation_table",
+    "graph_data_locations": [
+      "statement_graph_data",
+      "questions[].solution.graph_data"
+    ],
+    "table_data_locations": [
+      "questions[].solution.table_data"
+    ]
+  }
+}

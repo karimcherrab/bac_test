@@ -1,0 +1,647 @@
+{
+  "schema_version": "2.6-clear-graphs",
+  "language": "ar",
+  "direction": "rtl",
+    "branch": {
+    "code": "science",
+    "name": "شعبة علوم تجريبية"
+  },
+  "branch_code": "science",
+  "branches": [
+    {
+      "code": "science",
+      "name": "شعبة علوم تجريبية"
+    }
+  ],
+  "year": 2016,
+  "exercise_number": 2,
+  "source_page": 9,
+  "source_reference": "النص منقول كما ورد في ملف PDF، صفحة 9.",
+  "title": "التمرين الثاني (04 نقاط)",
+  "axis_tags": [
+    "functions",
+    "seq_recursive",
+    "seq_induction",
+    "seq_monotonicity",
+    "seq_geometric",
+    "seq_limits",
+    "seq_sum"
+  ],
+  "statement": "I) الدالة العددية \\(f\\) المعرفة على المجال \\([0;+\\infty[\\) بـ: \\[f(x)=\\frac{5x}{x+2}.\\] II) المتتالية العددية \\((u_n)\\) المعرفة على \\(\\mathbb N\\) بحدها الأول \\(u_0=1\\)، ومن أجل كل عدد طبيعي \\(n\\): \\[u_{n+1}=\\frac{5u_n}{u_n+2}.\\]",
+  "questions": [
+    {
+      "id": "2016_ex2_q1a",
+      "text": "I-1-أ) احسب \\(\\displaystyle\\lim_{x\\to+\\infty}f(x)\\).",
+      "axis_tags": [
+        "functions_limits"
+      ],
+      "solution": {
+        "strategy": "نقسم البسط والمقام على x.",
+        "methodology": {
+          "goal": "حساب نهاية f.",
+          "method": "استخراج المعاملات الغالبة.",
+          "simple_plan": [
+            "نقسم على x.",
+            "نمر إلى النهاية."
+          ],
+          "formal_writing": [
+            "نحدد أولا المبرهنة أو النهاية المرجعية المستعملة.",
+            "نعوض في عبارة الحد العام أو نستعمل مبرهنة التقارب الرتيب بعد إثبات الرتابة والمحدودية.",
+            "نكتب النتيجة النهائية بصيغة واضحة مع ذكر قيمة النهاية."
+          ],
+          "why_this_method": "دالة كسرية من الدرجة نفسها."
+        },
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "إعادة الكتابة",
+            "explanation": "لـx>0:",
+            "latex": "f(x)=\\frac5{1+2/x}"
+          },
+          {
+            "step_number": 2,
+            "title": "النهاية",
+            "explanation": "عندما x→+∞، 2/x→0:",
+            "latex": "\\lim f(x)=5"
+          }
+        ],
+        "final_answer": "\\(\\lim_{x\\to+\\infty}f(x)=5\\).",
+        "common_mistakes": [],
+        "hints": [],
+        "presentation": {
+          "show_method_first": true,
+          "show_steps_one_by_one": true,
+          "show_calculations_separately": true,
+          "show_graph_only_when_required": true,
+          "show_formal_writing": true
+        }
+      },
+      "display_order": 1,
+      "content_type": "question"
+    },
+    {
+      "id": "2016_ex2_q1b",
+      "text": "I-1-ب) ادرس اتجاه تغير الدالة \\(f\\) ثم شكّل جدول تغيراتها.",
+      "axis_tags": [
+        "functions_variations"
+      ],
+      "solution": {
+        "strategy": "نحسب المشتقة.",
+        "methodology": {
+          "goal": "دراسة التغير.",
+          "method": "إشارة f'.",
+          "simple_plan": [
+            "نحسب المشتقة.",
+            "نحدد الإشارة.",
+            "نكتب الجدول."
+          ],
+          "formal_writing": [
+            "الدالة f قابلة للاشتقاق على المجال المدروس لأن مقامها لا ينعدم عليه أو لأن الدالة المركبة معرفة وقابلة للاشتقاق عليه.",
+            "من أجل كل x من المجال، نحسب f'(x).",
+            "ندرس إشارة f'(x) مع تبرير إشارة كل عامل أو مقام.",
+            "بما أن f'(x)>0 على المجال، فإن الدالة f متزايدة تماما عليه.",
+            "إذا طُلب جدول التغيرات، نضيف قيم الدالة عند أطراف المجال والنهايات اللازمة."
+          ],
+          "used_theorem": "إذا كانت f قابلة للاشتقاق على مجال وكان f'(x)>0 عليه فإن f متزايدة تماما على ذلك المجال.",
+          "why_this_method": "المقام موجب على المجال."
+        },
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "المشتقة",
+            "explanation": "الدالة \\(f(x)=\\frac{5x}{x+2}\\) قابلة للاشتقاق على \\([0,+\\infty[\\) لأن \\(x+2>0\\) على هذا المجال. ومن أجل كل \\(x\\ge0\\):",
+            "latex": "f'(x)=\\frac{5(x+2)-5x}{(x+2)^2}=\\frac{10}{(x+2)^2}>0"
+          },
+          {
+            "step_number": 2,
+            "title": "النتيجة",
+            "explanation": "إذن f متزايدة من f(0)=0 نحو 5."
+          },
+          {
+            "step_number": 3,
+            "title": "الاستنتاج وجدول التغيرات",
+            "explanation": "بما أن \\(f'(x)>0\\) على المجال، فإن \\(f\\) متزايدة تماما عليه، و\\(f(0)=0\\) و\\(\\lim_{x\to+\\infty}f(x)=5\\)."
+          }
+        ],
+        "final_answer": "\\(f\\) متزايدة تماما على \\([0,+\\infty[\\).",
+        "common_mistakes": [
+          "إهمال مجال التعريف.",
+          "دراسة إشارة المشتقة دون ذكر أن المقام موجب.",
+          "نسيان كتابة جدول التغيرات بعد تحديد إشارة المشتقة."
+        ],
+        "hints": [],
+        "presentation": {
+          "show_method_first": true,
+          "show_steps_one_by_one": true,
+          "show_calculations_separately": true,
+          "show_graph_only_when_required": true,
+          "show_formal_writing": true,
+          "variation_table": "arrow_table",
+          "show_in_solution_only": true
+        },
+        "variation_table": {
+          "type": "variation_table",
+          "style": "arrow_table",
+          "title": "جدول تغيرات الدالة f",
+          "domain": "[0,+\\infty[",
+          "rows": {
+            "x": [
+              "0",
+              "+\\infty"
+            ],
+            "derivative": {
+              "label": "f'(x)",
+              "intervals": [
+                {
+                  "from": "0",
+                  "to": "+\\infty",
+                  "sign": "+"
+                }
+              ]
+            },
+            "function": {
+              "label": "f(x)",
+              "start": {
+                "x": "0",
+                "value": "0"
+              },
+              "arrows": [
+                {
+                  "from": "0",
+                  "to": "5",
+                  "direction": "up",
+                  "symbol": "↗"
+                }
+              ],
+              "end": {
+                "x": "+\\infty",
+                "value": "5",
+                "is_limit": true,
+                "limit_latex": "\\lim_{x\\to+\\infty}f(x)=5"
+              }
+            }
+          },
+          "render": {
+            "show_vertical_separators": true,
+            "show_derivative_row": true,
+            "show_function_arrows": true,
+            "rtl_labels": false
+          },
+          "caption": "بما أن f'(x)>0 على [0,+∞[ فإن f متزايدة تماما من 0 نحو 5."
+        }
+      },
+      "display_order": 2,
+      "content_type": "question"
+    },
+    {
+      "id": "2016_ex2_q2",
+      "text": "I-2) بيّن أنه من أجل كل عدد حقيقي \\(x\\) من المجال \\([0;+\\infty[\\): \\(f(x)\\ge0\\).",
+      "axis_tags": [
+        "functions_sign"
+      ],
+      "solution": {
+        "strategy": "ندرس إشارة البسط والمقام.",
+        "methodology": {
+          "goal": "إثبات f(x)≥0.",
+          "method": "بما أن x≥0 فـ5x≥0 وx+2>0.",
+          "simple_plan": [
+            "نحدد إشارة البسط.",
+            "نحدد إشارة المقام.",
+            "نستنتج."
+          ],
+          "why_this_method": "إشارة كسر."
+        },
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الإشارة",
+            "explanation": "على المجال:",
+            "latex": "5x\\ge0\\quad\\text{و}\\quad x+2>0"
+          },
+          {
+            "step_number": 2,
+            "title": "النتيجة",
+            "explanation": "إذن:",
+            "latex": "f(x)=\\frac{5x}{x+2}\\ge0"
+          }
+        ],
+        "final_answer": "لكل \\(x\\ge0\\): \\(f(x)\\ge0\\).",
+        "common_mistakes": [],
+        "hints": [],
+        "presentation": {
+          "show_method_first": true,
+          "show_steps_one_by_one": true,
+          "show_calculations_separately": true,
+          "show_graph_only_when_required": true,
+          "show_formal_writing": true
+        }
+      },
+      "display_order": 3,
+      "content_type": "question"
+    },
+    {
+      "id": "2016_ex2_q3a",
+      "text": "II-1-أ) برهن بالتراجع أنه من أجل كل عدد طبيعي \\(n\\): \\(1\\le u_n\\le3\\).",
+      "axis_tags": [
+        "seq_induction",
+        "seq_bounded"
+      ],
+      "solution": {
+        "strategy": "نستعمل البرهان بالتراجع على 1≤u_n≤3.",
+        "methodology": {
+          "goal": "إثبات الحصر.",
+          "method": "التهيئة ثم استغلال تزايد f وقيمتي f(1),f(3).",
+          "simple_plan": [
+            "التهيئة.",
+            "فرضية التراجع.",
+            "تطبيق f.",
+            "الخلاصة."
+          ],
+          "formal_writing": [
+            "نضع الخاصية المطلوب إثباتها على الشكل P(n).",
+            "التهيئة: نتحقق من صحة P(0) أو من الرتبة الأولى المحددة في التمرين.",
+            "فرضية التراجع: نفرض أنه من أجل عدد طبيعي n تكون P(n) صحيحة.",
+            "الانتقال: انطلاقا من فرضية التراجع والعلاقة التراجعية نبرهن P(n+1).",
+            "الخاتمة: حسب مبدأ البرهان بالتراجع، الخاصية صحيحة من أجل كل عدد طبيعي n."
+          ],
+          "used_theorem": "مبدأ البرهان بالتراجع.",
+          "why_this_method": "u_{n+1}=f(u_n)."
+        },
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التهيئة",
+            "explanation": "لدينا:",
+            "latex": "1\\le u_0=1\\le3"
+          },
+          {
+            "step_number": 2,
+            "title": "فرضية التراجع",
+            "explanation": "نفرض:",
+            "latex": "1\\le u_n\\le3"
+          },
+          {
+            "step_number": 3,
+            "title": "الانتقال",
+            "explanation": "بما أن f متزايدة:",
+            "latex": "f(1)\\le f(u_n)\\le f(3)"
+          },
+          {
+            "step_number": 4,
+            "title": "حساب الطرفين",
+            "explanation": "لدينا f(1)=5/3≥1 وf(3)=3:",
+            "latex": "1\\le u_{n+1}\\le3"
+          },
+          {
+            "step_number": 5,
+            "title": "الخلاصة",
+            "explanation": "بالتراجع: 1≤u_n≤3 لكل n."
+          }
+        ],
+        "final_answer": "من أجل كل \\(n\\): \\(1\\le u_n\\le3\\).",
+        "common_mistakes": [
+          "نسيان التحقق من الخاصية عند الرتبة الأولى.",
+          "استعمال المطلوب إثباته عند n+1 دون الانطلاق من فرضية التراجع.",
+          "عدم كتابة الخلاصة: الخاصية صحيحة لكل n طبيعي."
+        ],
+        "hints": [],
+        "presentation": {
+          "show_method_first": true,
+          "show_steps_one_by_one": true,
+          "show_calculations_separately": true,
+          "show_graph_only_when_required": true,
+          "show_formal_writing": true
+        }
+      },
+      "display_order": 4,
+      "content_type": "question"
+    },
+    {
+      "id": "2016_ex2_q3b",
+      "text": "II-1-ب) ادرس اتجاه تغير المتتالية \\((u_n)\\)، ثم استنتج أنها متقاربة.",
+      "axis_tags": [
+        "seq_monotonicity",
+        "seq_limits"
+      ],
+      "solution": {
+        "strategy": "نحسب الفرق ونستعمل 1≤u_n≤3، ثم مبرهنة التقارب الرتيب.",
+        "methodology": {
+          "goal": "دراسة الرتابة وإثبات التقارب.",
+          "method": "دراسة u_{n+1}-u_n.",
+          "simple_plan": [
+            "نحسب الفرق.",
+            "نحدد الإشارة.",
+            "نستنتج الرتابة.",
+            "نستعمل الحصر."
+          ],
+          "formal_writing": [
+            "لدراسة اتجاه تغير المتتالية نحسب الفرق u_{n+1}-u_n أو نستعمل تعبير الحد العام إن كان متوفرا.",
+            "نحدد إشارة الفرق مع الاستفادة من الحصر المثبت سابقا.",
+            "نستنتج الرتابة فقط بعد تبرير الإشارة لكل عدد طبيعي n."
+          ],
+          "why_this_method": "الفرق يتحلل بعامل (3-u_n)."
+        },
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب الفرق",
+            "explanation": "لدينا:",
+            "latex": "u_{n+1}-u_n=\\frac{5u_n}{u_n+2}-u_n=\\frac{u_n(3-u_n)}{u_n+2}"
+          },
+          {
+            "step_number": 2,
+            "title": "الإشارة",
+            "explanation": "من 1≤u_n≤3:",
+            "latex": "u_n(3-u_n)\\ge0\\quad\\text{والمقام موجب}"
+          },
+          {
+            "step_number": 3,
+            "title": "الرتابة",
+            "explanation": "إذن u_{n+1}-u_n≥0، فالمتتالية متزايدة."
+          },
+          {
+            "step_number": 4,
+            "title": "التقارب",
+            "explanation": "وهي محدودة من الأعلى بـ3، إذن متقاربة."
+          }
+        ],
+        "final_answer": "\\((u_n)\\) متزايدة ومحدودة من الأعلى بـ\\(3\\)، لذلك متقاربة.",
+        "common_mistakes": [
+          "تحديد الإشارة دون استعمال الحصر المعروف للمتتالية.",
+          "الخطأ في تحليل الفرق أو في إشارة المقام.",
+          "القول إن المتتالية متقاربة من الرتابة فقط دون إثبات المحدودية."
+        ],
+        "hints": [],
+        "presentation": {
+          "show_method_first": true,
+          "show_steps_one_by_one": true,
+          "show_calculations_separately": true,
+          "show_graph_only_when_required": true,
+          "show_formal_writing": true
+        }
+      },
+      "display_order": 5,
+      "content_type": "question"
+    },
+    {
+      "id": "2016_ex2_q4a",
+      "text": "II-2-أ) المتتالية العددية \\((v_n)\\) المعرفة على \\(\\mathbb N\\) كما يلي: \\[v_n=1-\\frac3{u_n}.\\] برهن أن \\((v_n)\\) متتالية هندسية أساسها \\(\\frac25\\)، يطلب حساب حدها الأول \\(v_0\\).",
+      "axis_tags": [
+        "seq_geometric"
+      ],
+      "solution": {
+        "strategy": "نحسب v_{n+1} بعد تعويض u_{n+1}.",
+        "methodology": {
+          "goal": "إثبات أن v_n هندسية.",
+          "method": "تبسيط 1-3/u_{n+1}.",
+          "simple_plan": [
+            "نكتب v_{n+1}.",
+            "نعوض.",
+            "نبسط إلى qv_n.",
+            "نحسب v0."
+          ],
+          "formal_writing": [
+            "نحسب v_{n+1} انطلاقا من تعريف v_n والعلاقة المعطاة.",
+            "نبسط حتى نحصل على v_{n+1}=qv_n حيث q ثابت لا يتعلق بـ n.",
+            "نستنتج أن (v_n) هندسية أساسها q، ثم نحسب حدها الأول."
+          ],
+          "why_this_method": "هذا التحويل يخطي العلاقة الكسرية."
+        },
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب الحد الموالي",
+            "explanation": "لدينا:",
+            "latex": "v_{n+1}=1-\\frac3{u_{n+1}}=1-\\frac{3(u_n+2)}{5u_n}"
+          },
+          {
+            "step_number": 2,
+            "title": "التبسيط",
+            "explanation": "إذن:",
+            "latex": "v_{n+1}=\\frac25\\left(1-\\frac3{u_n}\\right)=\\frac25v_n"
+          },
+          {
+            "step_number": 3,
+            "title": "الحد الأول",
+            "explanation": "نحسب:",
+            "latex": "v_0=1-\\frac3{1}=-2"
+          }
+        ],
+        "final_answer": "\\((v_n)\\) هندسية أساسها \\(\\frac25\\) وحدها الأول \\(v_0=-2\\).",
+        "common_mistakes": [
+          "عدم حساب الحد الأول.",
+          "الخلط بين أساس المتتالية وحدها الأول.",
+          "كتابة عبارة الحد العام بفهرسة غير مناسبة."
+        ],
+        "hints": [],
+        "presentation": {
+          "show_method_first": true,
+          "show_steps_one_by_one": true,
+          "show_calculations_separately": true,
+          "show_graph_only_when_required": true,
+          "show_formal_writing": true
+        }
+      },
+      "display_order": 6,
+      "content_type": "question"
+    },
+    {
+      "id": "2016_ex2_q4b",
+      "text": "II-2-ب) اكتب بدلالة \\(n\\) عبارة \\(v_n\\) ثم استنتج عبارة \\(u_n\\) بدلالة \\(n\\).",
+      "axis_tags": [
+        "seq_geometric"
+      ],
+      "solution": {
+        "strategy": "نكتب v_n ثم نحل العلاقة بالنسبة إلى u_n.",
+        "methodology": {
+          "goal": "إيجاد عبارتي v_n وu_n.",
+          "method": "v_n=v0q^n ثم 3/u_n=1-v_n.",
+          "simple_plan": [
+            "نكتب v_n.",
+            "نستخرج u_n.",
+            "نبسط."
+          ],
+          "why_this_method": "علاقة التحويل قابلة للعكس."
+        },
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "عبارة v_n",
+            "explanation": "لدينا:",
+            "latex": "v_n=-2\\left(\\frac25\\right)^n"
+          },
+          {
+            "step_number": 2,
+            "title": "استخراج u_n",
+            "explanation": "من v_n=1-3/u_n:",
+            "latex": "u_n=\\frac3{1-v_n}=\\frac3{1+2(\\frac25)^n}"
+          }
+        ],
+        "final_answer": "\\(v_n=-2(\\frac25)^n\\)، و\\(u_n=\\frac3{1+2(\\frac25)^n}\\).",
+        "common_mistakes": [],
+        "hints": [],
+        "presentation": {
+          "show_method_first": true,
+          "show_steps_one_by_one": true,
+          "show_calculations_separately": true,
+          "show_graph_only_when_required": true,
+          "show_formal_writing": true
+        }
+      },
+      "display_order": 7,
+      "content_type": "question"
+    },
+    {
+      "id": "2016_ex2_q4c",
+      "text": "II-2-ج) احسب نهاية المتتالية \\((u_n)\\).",
+      "axis_tags": [
+        "seq_limits"
+      ],
+      "solution": {
+        "strategy": "نستعمل العبارة الصريحة.",
+        "methodology": {
+          "goal": "حساب النهاية.",
+          "method": "(2/5)^n→0.",
+          "simple_plan": [
+            "نحسب نهاية القوة.",
+            "نعوض."
+          ],
+          "formal_writing": [
+            "نحدد أولا المبرهنة أو النهاية المرجعية المستعملة.",
+            "نعوض في عبارة الحد العام أو نستعمل مبرهنة التقارب الرتيب بعد إثبات الرتابة والمحدودية.",
+            "نكتب النتيجة النهائية بصيغة واضحة مع ذكر قيمة النهاية."
+          ],
+          "why_this_method": "الأساس بين 0 و1."
+        },
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "النهاية",
+            "explanation": "بما أن (2/5)^n→0:",
+            "latex": "u_n=\\frac3{1+2(\\frac25)^n}\\to3"
+          }
+        ],
+        "final_answer": "\\(\\lim u_n=3\\).",
+        "common_mistakes": [
+          "تعويض النهاية قبل إثبات وجودها.",
+          "نسيان استعمال شرط |q|<1 عند نهاية متتالية هندسية.",
+          "إهمال تبرير تطبيق مبرهنة الحصر أو التقارب الرتيب."
+        ],
+        "hints": [],
+        "presentation": {
+          "show_method_first": true,
+          "show_steps_one_by_one": true,
+          "show_calculations_separately": true,
+          "show_graph_only_when_required": true,
+          "show_formal_writing": true
+        }
+      },
+      "display_order": 8,
+      "content_type": "question"
+    },
+    {
+      "id": "2016_ex2_q5",
+      "text": "II-3) اكتب بدلالة \\(n\\) المجموع \\(S_n\\) حيث: \\[S_n=\\frac1{u_0}+\\frac1{u_1}+\\frac1{u_2}+\\cdots+\\frac1{u_n}.\\]",
+      "axis_tags": [
+        "seq_sum"
+      ],
+      "solution": {
+        "strategy": "نستعمل العلاقة 1/u_n=(1-v_n)/3 ثم مجموعا هندسيا.",
+        "methodology": {
+          "goal": "حساب S_n.",
+          "method": "تحويل كل 1/u_k بدلالة v_k.",
+          "simple_plan": [
+            "نكتب 1/u_k.",
+            "نجمع.",
+            "نحسب مجموع v_k.",
+            "نبسط."
+          ],
+          "why_this_method": "v_k هندسية ومجموعها معروف."
+        },
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التحويل",
+            "explanation": "من v_k=1-3/u_k:",
+            "latex": "\\frac1{u_k}=\\frac{1-v_k}{3}"
+          },
+          {
+            "step_number": 2,
+            "title": "جمع الحدود",
+            "explanation": "إذن:",
+            "latex": "S_n=\\frac{n+1}{3}-\\frac13\\sum_{k=0}^n v_k"
+          },
+          {
+            "step_number": 3,
+            "title": "مجموع v_k",
+            "explanation": "وبما أن v_k=-2(2/5)^k:",
+            "latex": "\\sum_{k=0}^n v_k=-2\\frac{1-(\\frac25)^{n+1}}{1-\\frac25}=-\\frac{10}{3}\\left[1-(\\frac25)^{n+1}\\right]"
+          },
+          {
+            "step_number": 4,
+            "title": "النتيجة",
+            "explanation": "إذن:",
+            "latex": "S_n=\\frac{n+1}{3}+\\frac{10}{9}\\left[1-(\\frac25)^{n+1}\\right]"
+          }
+        ],
+        "final_answer": "\\(S_n=\\frac{n+1}{3}+\\frac{10}{9}[1-(\\frac25)^{n+1}]\\).",
+        "common_mistakes": [
+          "الخطأ في عدد الحدود: من 0 إلى n يوجد n+1 حدا.",
+          "استعمال قانون مجموع متتالية هندسية دون تحديد الحد الأول والأساس.",
+          "نسيان تبسيط النتيجة النهائية."
+        ],
+        "hints": [],
+        "presentation": {
+          "show_method_first": true,
+          "show_steps_one_by_one": true,
+          "show_calculations_separately": true,
+          "show_graph_only_when_required": true,
+          "show_formal_writing": true
+        }
+      },
+      "display_order": 9,
+      "content_type": "question"
+    }
+  ],
+  "content_separation": {
+    "statement": "المعطيات والتعريفات فقط، من دون حل أو طلبات.",
+    "questions": "الأسئلة المطلوبة فقط، وكل سؤال يحتوي حله الخاص.",
+    "statement_graph_data": "الرسم المعطى مع نص التمرين عندما يكون موجودا في النسخة الأصلية.",
+    "solution.graph_data": "الرسم المنجز في الحل مع خطوط الإنشاء عندما يطلب السؤال رسما."
+  },
+  "statement_sections": [
+    {
+      "type": "given",
+      "text": "I) الدالة العددية \\(f\\) المعرفة على المجال \\([0;+\\infty[\\) بـ: \\[f(x)=\\frac{5x}{x+2}.\\] II) المتتالية العددية \\((u_n)\\) المعرفة على \\(\\mathbb N\\) بحدها الأول \\(u_0=1\\)، ومن أجل كل عدد طبيعي \\(n\\): \\[u_{n+1}=\\frac{5u_n}{u_n+2}.\\]"
+    }
+  ],
+  "review_status": {
+    "statement_copied_from_source_pdf": true,
+    "questions_copied_from_source_pdf": true,
+    "solutions_rewritten_methodically": true,
+    "induction_written_with_initialization_hypothesis_heredity_conclusion": true,
+    "target_level": "تلميذ بكالوريا يحتاج شرحا مفصلا ومفهوما",
+    "graphs_generated_when_required": true,
+    "formal_mathematical_writing_added": true,
+    "source_statement_preserved_exactly": true
+  },
+  "source_text_policy": {
+    "statement": "يبقى نص المعطيات كما هو في الملف الأصلي ولا يضاف إليه أي شرح أو نتيجة.",
+    "questions": "تبقى مطالب التمرين منفصلة عن الحل ولا تضاف إليها معلومات من التصحيح.",
+    "solution": "الشرح والحسابات والمنهجية توضع داخل solution فقط."
+  },
+  "solution_display": {
+    "methodology": "visible",
+    "formal_writing": "visible",
+    "calculations": "step_by_step",
+    "graphs": "statement_only_if_present_in_source; solution_only_if_required"
+  },
+  "graph_policy": {
+    "statement_graph_only_if_present_in_original": true,
+    "generated_graphs_location": "solution_only",
+    "variation_tables_location": "solution_only",
+    "variation_table_style": "arrow_table",
+    "remove_variation_tables_from_statement": true
+  },
+  "version": "2.6-clear-graphs"
+}

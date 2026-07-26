@@ -1,0 +1,351 @@
+{
+  "schema_version": "4.0-math-tech-graphs",
+  "version": "4.0-math-tech-graphs",
+  "language": "ar",
+  "direction": "rtl",
+  "branch": {
+    "code": "math_tech",
+    "name": "تقني رياضي"
+  },
+  "branch_code": "math_tech",
+  "branches": [
+    {
+      "code": "math_tech",
+      "name": "تقني رياضي"
+    }
+  ],
+  "year": 2020,
+  "exercise_number": 2,
+  "original_exercise_number": 3,
+  "source_page": 7,
+  "source_reference": "bac_sequence_math_technique.pdf، الصفحة 7.",
+  "title": "التمرين 3 (5 نقاط)",
+  "axis_tags": [
+    "mathematical_induction",
+    "seq_monotonicity",
+    "geometric_sequence",
+    "sequence_limits"
+  ],
+  "statement": "المتتالية \\((u_n)\\) معرفة بـ \\(u_0=\\frac12\\) و\\(u_{n+1}=3-\\frac4{u_n+2}\\).",
+  "has_statement_graph": false,
+  "statement_graph_data": null,
+  "statement_figure": {
+    "exists_in_original_exam": false,
+    "render_location": null,
+    "graph_data_key": null,
+    "show_in_solution": false
+  },
+  "questions": [
+    {
+      "id": "math_tech_2020_02_q1",
+      "text": "برهن بالتراجع أنه لكل \\(n\\): \\(-1<u_n<2\\).",
+      "display_order": 1,
+      "content_type": "question",
+      "axis_tags": [
+        "mathematical_induction"
+      ],
+      "solution": {
+        "strategy": "نثبت استقرار المجال.",
+        "methodology": {
+          "goal": "حل السؤال بطريقة منظمة وفق منهجية البكالوريا.",
+          "method": "نثبت استقرار المجال.",
+          "why_this_method": "لأنها تستعمل المعطيات بالترتيب وتقدم تبريرا واضحا لكل استنتاج.",
+          "used_theorem": "",
+          "bac_template": [
+            "نكتب العلاقة أو الخاصية المستعملة.",
+            "نعوض بالمعطيات ونبسط الحساب تدريجيا.",
+            "نبرر الإشارة أو النهاية أو الرتابة.",
+            "نكتب الاستنتاج النهائي بوضوح."
+          ],
+          "formal_writing": [
+            "تحديد المجال أو شروط الاستعمال.",
+            "ترتيب الحسابات على شكل مساويات.",
+            "ذكر المبرهنة المناسبة عند الحاجة.",
+            "ختم الحل بجواب مباشر."
+          ]
+        },
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التهيئة",
+            "explanation": "\\(-1<\\frac12<2\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "الوراثة",
+            "explanation": "إذا \\(-1<u_n<2\\)، فإن \\(1<u_n+2<4\\)، وبالتالي \\(1<\\frac4{u_n+2}<4\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "النتيجة",
+            "explanation": "إذن \\(-1<3-\\frac4{u_n+2}<2\\)، أي \\(-1<u_{n+1}<2\\)."
+          }
+        ],
+        "final_answer": "\\(-1<u_n<2\\) لكل \\(n\\).",
+        "verification": "نراجع النتيجة بالتعويض في العلاقة الأصلية وبمقارنة الحدود الأولى عند الإمكان.",
+        "common_mistakes": [
+          "الخلط بين الفهرسين \\(n\\) و\\(n+1\\).",
+          "استنتاج التقارب دون إثبات الرتابة والمحدودية أو دون صيغة صريحة.",
+          "نسيان تحديد الحد الأول عند تحويل المتتالية إلى متتالية هندسية أو حسابية."
+        ],
+        "hints": [
+          "استعمل النتائج السابقة بالترتيب.",
+          "ابحث عن تحويل يجعل المتتالية هندسية أو حسابية."
+        ],
+        "graph_data": null,
+        "table_data": null,
+        "solution_style": "حل بكالوريا مفصل: منهجية واضحة، حساب تدريجي، كتابة رياضية ثم استنتاج.",
+        "has_solution_graph": false,
+        "has_variation_table": false
+      }
+    },
+    {
+      "id": "math_tech_2020_02_q2",
+      "text": "بين أن \\(u_{n+1}-u_n=\\frac{(2-u_n)(1+u_n)}{u_n+2}\\)، ثم حدد اتجاه التغير والتقارب.",
+      "display_order": 2,
+      "content_type": "question",
+      "axis_tags": [
+        "seq_monotonicity",
+        "sequence_limits"
+      ],
+      "solution": {
+        "strategy": "نحسب الفرق ونستعمل الحصر.",
+        "methodology": {
+          "goal": "حل السؤال بطريقة منظمة وفق منهجية البكالوريا.",
+          "method": "نحسب الفرق ونستعمل الحصر.",
+          "why_this_method": "لأنها تستعمل المعطيات بالترتيب وتقدم تبريرا واضحا لكل استنتاج.",
+          "used_theorem": "",
+          "bac_template": [
+            "نكتب العلاقة أو الخاصية المستعملة.",
+            "نعوض بالمعطيات ونبسط الحساب تدريجيا.",
+            "نبرر الإشارة أو النهاية أو الرتابة.",
+            "نكتب الاستنتاج النهائي بوضوح."
+          ],
+          "formal_writing": [
+            "تحديد المجال أو شروط الاستعمال.",
+            "ترتيب الحسابات على شكل مساويات.",
+            "ذكر المبرهنة المناسبة عند الحاجة.",
+            "ختم الحل بجواب مباشر."
+          ]
+        },
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الفرق",
+            "explanation": "",
+            "latex": "u_{n+1}-u_n=\\frac{(2-u_n)(1+u_n)}{u_n+2}"
+          },
+          {
+            "step_number": 2,
+            "title": "الإشارة",
+            "explanation": "بسبب \\(-1<u_n<2\\)، كل العوامل موجبة، إذن المتتالية متزايدة."
+          },
+          {
+            "step_number": 3,
+            "title": "التقارب",
+            "explanation": "محدودة من الأعلى بـ2، إذن متقاربة. النهاية تحقق \\((\\ell-2)(\\ell+1)=0\\)، وبالحصر \\(\\ell=2\\)."
+          }
+        ],
+        "final_answer": "\\((u_n)\\) متزايدة ومتقاربة إلى \\(2\\).",
+        "verification": "نراجع النتيجة بالتعويض في العلاقة الأصلية وبمقارنة الحدود الأولى عند الإمكان.",
+        "common_mistakes": [
+          "الخلط بين الفهرسين \\(n\\) و\\(n+1\\).",
+          "استنتاج التقارب دون إثبات الرتابة والمحدودية أو دون صيغة صريحة.",
+          "نسيان تحديد الحد الأول عند تحويل المتتالية إلى متتالية هندسية أو حسابية."
+        ],
+        "hints": [
+          "استعمل النتائج السابقة بالترتيب.",
+          "ابحث عن تحويل يجعل المتتالية هندسية أو حسابية."
+        ],
+        "graph_data": null,
+        "table_data": null,
+        "solution_style": "حل بكالوريا مفصل: منهجية واضحة، حساب تدريجي، كتابة رياضية ثم استنتاج.",
+        "has_solution_graph": false,
+        "has_variation_table": false
+      }
+    },
+    {
+      "id": "math_tech_2020_02_q3",
+      "text": "نعرف \\(v_n=\\frac{u_n+\\alpha}{u_n+1}\\). أوجد \\(\\alpha\\) حتى تكون \\((v_n)\\) هندسية أساسها \\(\\frac14\\)، ثم احسب \\(v_0\\).",
+      "display_order": 3,
+      "content_type": "question",
+      "axis_tags": [
+        "geometric_sequence"
+      ],
+      "solution": {
+        "strategy": "نبحث عن تحويل كسري مرتبط بنقطتي الثبات.",
+        "methodology": {
+          "goal": "حل السؤال بطريقة منظمة وفق منهجية البكالوريا.",
+          "method": "نبحث عن تحويل كسري مرتبط بنقطتي الثبات.",
+          "why_this_method": "لأنها تستعمل المعطيات بالترتيب وتقدم تبريرا واضحا لكل استنتاج.",
+          "used_theorem": "",
+          "bac_template": [
+            "نكتب العلاقة أو الخاصية المستعملة.",
+            "نعوض بالمعطيات ونبسط الحساب تدريجيا.",
+            "نبرر الإشارة أو النهاية أو الرتابة.",
+            "نكتب الاستنتاج النهائي بوضوح."
+          ],
+          "formal_writing": [
+            "تحديد المجال أو شروط الاستعمال.",
+            "ترتيب الحسابات على شكل مساويات.",
+            "ذكر المبرهنة المناسبة عند الحاجة.",
+            "ختم الحل بجواب مباشر."
+          ]
+        },
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "النقط الثابتة",
+            "explanation": "نقطتا الثبات هما \\(2\\) و\\(-1\\)، لذا نأخذ \\(\\alpha=-2\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "التحويل",
+            "explanation": "",
+            "latex": "v_n=\\frac{u_n-2}{u_n+1}"
+          },
+          {
+            "step_number": 3,
+            "title": "العلاقة",
+            "explanation": "",
+            "latex": "v_{n+1}=\\frac14v_n"
+          },
+          {
+            "step_number": 4,
+            "title": "الحد الأول",
+            "explanation": "",
+            "latex": "v_0=\\frac{1/2-2}{1/2+1}=-1"
+          }
+        ],
+        "final_answer": "\\(\\alpha=-2\\)، و\\(v_0=-1\\).",
+        "verification": "نراجع النتيجة بالتعويض في العلاقة الأصلية وبمقارنة الحدود الأولى عند الإمكان.",
+        "common_mistakes": [
+          "الخلط بين الفهرسين \\(n\\) و\\(n+1\\).",
+          "استنتاج التقارب دون إثبات الرتابة والمحدودية أو دون صيغة صريحة.",
+          "نسيان تحديد الحد الأول عند تحويل المتتالية إلى متتالية هندسية أو حسابية."
+        ],
+        "hints": [
+          "استعمل النتائج السابقة بالترتيب.",
+          "ابحث عن تحويل يجعل المتتالية هندسية أو حسابية."
+        ],
+        "graph_data": null,
+        "table_data": null,
+        "solution_style": "حل بكالوريا مفصل: منهجية واضحة، حساب تدريجي، كتابة رياضية ثم استنتاج.",
+        "has_solution_graph": false,
+        "has_variation_table": false
+      }
+    },
+    {
+      "id": "math_tech_2020_02_q4",
+      "text": "بين أن \\(u_n=\\frac{2\\cdot4^n-1}{4^n+1}\\) ثم احسب النهاية.",
+      "display_order": 4,
+      "content_type": "question",
+      "axis_tags": [
+        "explicit_sequence",
+        "sequence_limits"
+      ],
+      "solution": {
+        "strategy": "نستعمل \\(v_n=-4^{-n}\\) ونحل بالنسبة إلى \\(u_n\\).",
+        "methodology": {
+          "goal": "حل السؤال بطريقة منظمة وفق منهجية البكالوريا.",
+          "method": "نستعمل \\(v_n=-4^{-n}\\) ونحل بالنسبة إلى \\(u_n\\).",
+          "why_this_method": "لأنها تستعمل المعطيات بالترتيب وتقدم تبريرا واضحا لكل استنتاج.",
+          "used_theorem": "",
+          "bac_template": [
+            "نكتب العلاقة أو الخاصية المستعملة.",
+            "نعوض بالمعطيات ونبسط الحساب تدريجيا.",
+            "نبرر الإشارة أو النهاية أو الرتابة.",
+            "نكتب الاستنتاج النهائي بوضوح."
+          ],
+          "formal_writing": [
+            "تحديد المجال أو شروط الاستعمال.",
+            "ترتيب الحسابات على شكل مساويات.",
+            "ذكر المبرهنة المناسبة عند الحاجة.",
+            "ختم الحل بجواب مباشر."
+          ]
+        },
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الحد العام",
+            "explanation": "",
+            "latex": "v_n=-\\left(\\frac14\\right)^n"
+          },
+          {
+            "step_number": 2,
+            "title": "الحل",
+            "explanation": "",
+            "latex": "\\frac{u_n-2}{u_n+1}=-4^{-n}"
+          },
+          {
+            "step_number": 3,
+            "title": "التبسيط",
+            "explanation": "",
+            "latex": "u_n=\\frac{2\\cdot4^n-1}{4^n+1}"
+          },
+          {
+            "step_number": 4,
+            "title": "النهاية",
+            "explanation": "",
+            "latex": "\\lim u_n=2"
+          }
+        ],
+        "final_answer": "\\(u_n=\\frac{2\\cdot4^n-1}{4^n+1}\\) و\\(\\lim u_n=2\\).",
+        "verification": "نراجع النتيجة بالتعويض في العلاقة الأصلية وبمقارنة الحدود الأولى عند الإمكان.",
+        "common_mistakes": [
+          "الخلط بين الفهرسين \\(n\\) و\\(n+1\\).",
+          "استنتاج التقارب دون إثبات الرتابة والمحدودية أو دون صيغة صريحة.",
+          "نسيان تحديد الحد الأول عند تحويل المتتالية إلى متتالية هندسية أو حسابية."
+        ],
+        "hints": [
+          "استعمل النتائج السابقة بالترتيب.",
+          "ابحث عن تحويل يجعل المتتالية هندسية أو حسابية."
+        ],
+        "graph_data": null,
+        "table_data": null,
+        "solution_style": "حل بكالوريا مفصل: منهجية واضحة، حساب تدريجي، كتابة رياضية ثم استنتاج.",
+        "has_solution_graph": false,
+        "has_variation_table": false
+      }
+    }
+  ],
+  "content": {
+    "statement": "المتتالية \\((u_n)\\) معرفة بـ \\(u_0=\\frac12\\) و\\(u_{n+1}=3-\\frac4{u_n+2}\\).",
+    "statement_graph_data": null,
+    "questions": [
+      {
+        "id": "math_tech_2020_02_q1",
+        "order": 1,
+        "text": "برهن بالتراجع أنه لكل \\(n\\): \\(-1<u_n<2\\)."
+      },
+      {
+        "id": "math_tech_2020_02_q2",
+        "order": 2,
+        "text": "بين أن \\(u_{n+1}-u_n=\\frac{(2-u_n)(1+u_n)}{u_n+2}\\)، ثم حدد اتجاه التغير والتقارب."
+      },
+      {
+        "id": "math_tech_2020_02_q3",
+        "order": 3,
+        "text": "نعرف \\(v_n=\\frac{u_n+\\alpha}{u_n+1}\\). أوجد \\(\\alpha\\) حتى تكون \\((v_n)\\) هندسية أساسها \\(\\frac14\\)، ثم احسب \\(v_0\\)."
+      },
+      {
+        "id": "math_tech_2020_02_q4",
+        "order": 4,
+        "text": "بين أن \\(u_n=\\frac{2\\cdot4^n-1}{4^n+1}\\) ثم احسب النهاية."
+      }
+    ]
+  },
+  "is_active": true,
+  "render_contract": {
+    "math_renderer": "MathJax",
+    "graph_renderer": "recharts_or_plotly",
+    "variation_table_renderer": "custom_rtl_variation_table",
+    "graph_data_locations": [
+      "statement_graph_data",
+      "questions[].solution.graph_data"
+    ],
+    "table_data_locations": [
+      "questions[].solution.table_data"
+    ]
+  }
+}

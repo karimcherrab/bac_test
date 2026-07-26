@@ -1,9 +1,7 @@
-from django.conf import settings
-from django.core.exceptions import ValidationError
 from django.db import models
 
 from accounts.models import Student
-from course.models import Chapter
+from course.models import Branch, Chapter
 
 
 class ExerciseBac(models.Model):
@@ -14,11 +12,24 @@ class ExerciseBac(models.Model):
         verbose_name="Code unique",
     )
 
+    branches = models.ManyToManyField(
+        Branch,
+        related_name="bac_exercises",
+        blank=True,
+        verbose_name="Filières",
+        help_text=(
+            "Filières concernées par cet exercice. "
+            "Un même exercice peut appartenir à plusieurs filières."
+        ),
+    )
+
     chapter = models.ForeignKey(
         Chapter,
         on_delete=models.CASCADE,
-        related_name="chapter_exerice_bac",
+        related_name="chapter_exercises_bac",
         null=True,
+        blank=True,
+        verbose_name="Chapitre",
     )
 
     year = models.PositiveSmallIntegerField(
@@ -52,9 +63,10 @@ class ExerciseBac(models.Model):
 
     content = models.JSONField(
         default=dict,
+        blank=True,
         verbose_name="Contenu complet",
         help_text=(
-            "Contient le texte de l'exercice, les questions, "
+            "Contient le texte, les questions, "
             "les solutions, les tableaux et les graphiques."
         ),
     )
@@ -103,29 +115,23 @@ class ExerciseBac(models.Model):
         db_table = "exercise_bac"
 
         verbose_name = "Exercice du baccalauréat"
-        verbose_name_plural = (
-            "Exercices du baccalauréat"
-        )
+        verbose_name_plural = "Exercices du baccalauréat"
 
         ordering = [
-            "year",
+            "-year",
             "exercise_number",
-        ]
-
-        constraints = [
-            models.UniqueConstraint(
-                fields=[
-                    "year",
-                    "exercise_number",
-                ],
-                name=(
-                    "unique_bac_exercise_"
-                    "year_number"
-                ),
-            ),
+            "id",
         ]
 
         indexes = [
+            models.Index(
+                fields=[
+                    "chapter",
+                    "is_active",
+                    "year",
+                ],
+                name="bac_chapter_active_year_idx",
+            ),
             models.Index(
                 fields=[
                     "year",
@@ -150,13 +156,60 @@ class ExerciseBac(models.Model):
         )
 
     @property
+    def branch_codes(self):
+        return list(
+            self.branches.values_list(
+                "code",
+                flat=True,
+            )
+        )
+
+    @property
+    def branch_names(self):
+        return list(
+            self.branches.values_list(
+                "name",
+                flat=True,
+            )
+        )
+
+    @property
     def statement(self):
         if not isinstance(self.content, dict):
             return ""
 
-        return self.content.get(
+        value = self.content.get(
             "statement",
             "",
+        )
+
+        return value if isinstance(value, str) else ""
+
+    @property
+    def statement_sections(self):
+        if not isinstance(self.content, dict):
+            return []
+
+        value = self.content.get(
+            "statement_sections",
+            [],
+        )
+
+        return value if isinstance(value, list) else []
+
+    @property
+    def statement_graph_data(self):
+        if not isinstance(self.content, dict):
+            return None
+
+        return self.content.get(
+            "statement_graph_data",
+        )
+
+    @property
+    def has_statement_graph(self):
+        return bool(
+            self.statement_graph_data
         )
 
     @property
@@ -169,89 +222,20 @@ class ExerciseBac(models.Model):
             [],
         )
 
-        if not isinstance(questions, list):
-            return []
-
-        return questions
+        return questions if isinstance(
+            questions,
+            list,
+        ) else []
 
     @property
     def question_count(self):
         return len(self.questions)
 
-    # @property
-    # def has_solutions(self):
-    #     for question in self.questions:
-    #         if not isinstance(question, dict):
-    #             continue
-    #
-    #         solution = question.get("solution")
-    #
-    #         if (
-    #             isinstance(solution, dict)
-    #             and solution
-    #         ):
-    #             return True
-    #
-    #     return False
-    #
-    # def clean(self):
-    #     errors = {}
-    #
-    #     if not isinstance(self.axis_tags, list):
-    #         errors["axis_tags"] = (
-    #             "axis_tags doit être une liste JSON."
-    #         )
-    #
-    #     if not isinstance(self.content, dict):
-    #         errors["content"] = (
-    #             "content doit être un objet JSON."
-    #         )
-    #
-    #     if isinstance(self.content, dict):
-    #         statement = self.content.get(
-    #             "statement"
-    #         )
-    #
-    #         questions = self.content.get(
-    #             "questions"
-    #         )
-    #
-    #         if not statement:
-    #             errors["content"] = (
-    #                 "Le champ content doit contenir "
-    #                 "statement."
-    #             )
-    #
-    #         if not isinstance(questions, list):
-    #             errors["content"] = (
-    #                 "Le champ content doit contenir "
-    #                 "une liste questions."
-    #             )
-    #
-    #     if errors:
-    #         raise ValidationError(errors)
-    #
-    # def save(self, *args, **kwargs):
-    #     if (
-    #         not self.code
-    #         and self.year
-    #         and self.exercise_number
-    #     ):
-    #         self.code = (
-    #             f"bac_{self.year}_"
-    #             f"exercise_"
-    #             f"{self.exercise_number:02d}"
-    #         )
-    #
-    #     self.full_clean()
-    #
-    #     super().save(*args, **kwargs)
-
 
 class BacStepReExplanation(models.Model):
     """
-    شرح مبسط محفوظ لطالب معيّن
-    حول خطوة معيّنة من حل تمرين بكالوريا.
+    Réexplication simplifiée d'une étape
+    pour un étudiant donné.
     """
 
     REQUEST_TYPE_CHOICES = [
@@ -264,21 +248,15 @@ class BacStepReExplanation(models.Model):
     student = models.ForeignKey(
         Student,
         on_delete=models.CASCADE,
-        related_name=(
-            "bac_step_reexplanations"
-        ),
+        related_name="bac_step_reexplanations",
         verbose_name="Étudiant",
     )
 
     exercise = models.ForeignKey(
         ExerciseBac,
         on_delete=models.CASCADE,
-        related_name=(
-            "step_reexplanations"
-        ),
-        verbose_name=(
-            "Exercice du baccalauréat"
-        ),
+        related_name="step_reexplanations",
+        verbose_name="Exercice du baccalauréat",
     )
 
     question_id = models.CharField(
@@ -308,6 +286,7 @@ class BacStepReExplanation(models.Model):
 
     explanation = models.JSONField(
         default=dict,
+        blank=True,
         verbose_name="Réexplication générée",
     )
 
@@ -326,47 +305,36 @@ class BacStepReExplanation(models.Model):
     updated_at = models.DateTimeField(
         auto_now=True,
     )
-    #
-    # class Meta:
-    #     db_table = (
-    #         "bac_step_reexplanation"
-    #     )
-    #
-    #     verbose_name = (
-    #         "Réexplication d'une étape"
-    #     )
-    #
-    #     verbose_name_plural = (
-    #         "Réexplications des étapes"
-    #     )
-    #
-    #     ordering = [
-    #         "-created_at",
-    #     ]
-    #
-    #     indexes = [
-    #         models.Index(
-    #             fields=[
-    #                 "student",
-    #                 "exercise",
-    #                 "question_id",
-    #                 "step_number",
-    #             ],
-    #             name=(
-    #                 "bac_reexp_student_step_idx"
-    #             ),
-    #         ),
-    #         models.Index(
-    #             fields=[
-    #                 "exercise",
-    #                 "question_id",
-    #                 "step_number",
-    #             ],
-    #             name=(
-    #                 "bac_reexp_exercise_step_idx"
-    #             ),
-    #         ),
-    #     ]
+
+    class Meta:
+        db_table = "bac_step_reexplanation"
+
+        verbose_name = "Réexplication d'une étape"
+        verbose_name_plural = "Réexplications des étapes"
+
+        ordering = [
+            "-created_at",
+        ]
+
+        indexes = [
+            models.Index(
+                fields=[
+                    "student",
+                    "exercise",
+                    "question_id",
+                    "step_number",
+                ],
+                name="bac_reexp_student_step_idx",
+            ),
+            models.Index(
+                fields=[
+                    "exercise",
+                    "question_id",
+                    "step_number",
+                ],
+                name="bac_reexp_exercise_step_idx",
+            ),
+        ]
 
     def __str__(self):
         return (
@@ -375,4 +343,3 @@ class BacStepReExplanation(models.Model):
             f"Question {self.question_id} - "
             f"Étape {self.step_number}"
         )
-

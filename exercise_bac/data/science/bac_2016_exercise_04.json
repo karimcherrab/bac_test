@@ -1,0 +1,430 @@
+{
+  "schema_version": "2.6-clear-graphs",
+  "language": "ar",
+  "direction": "rtl",
+    "branch": {
+    "code": "science",
+    "name": "شعبة علوم تجريبية"
+  },
+  "branch_code": "science",
+  "branches": [
+    {
+      "code": "science",
+      "name": "شعبة علوم تجريبية"
+    }
+  ],
+  "year": 2016,
+  "exercise_number": 4,
+  "source_page": 10,
+  "source_reference": "النص منقول كما ورد في ملف PDF، صفحة 10.",
+  "title": "التمرين الثالث (4.50 نقاط)",
+  "axis_tags": [
+    "seq_recursive",
+    "seq_geometric",
+    "seq_limits",
+    "seq_sum"
+  ],
+  "statement": "\\((u_n)\\) متتالية عددية معرفة على مجموعة الأعداد الطبيعية \\(\\mathbb N\\) بحدها الأول \\(u_0=0\\)، ومن أجل كل عدد طبيعي \\(n\\): \\[u_{n+1}=\\frac{2u_n+2}{u_n+3}.\\] ولتكن المتتالية \\((v_n)\\) المعرفة من أجل كل عدد طبيعي \\(n\\) بـ: \\[v_n=\\frac{u_n-1}{u_n+2}.\\]",
+  "questions": [
+    {
+      "id": "2016_ex4_q1",
+      "text": "1) بيّن أن \\((v_n)\\) متتالية هندسية يطلب تعيين أساسها \\(q\\) وحدها الأول \\(v_0\\).",
+      "axis_tags": [
+        "seq_geometric"
+      ],
+      "solution": {
+        "strategy": "نحسب v_{n+1} بعد تعويض u_{n+1}.",
+        "methodology": {
+          "goal": "إثبات أن v_n هندسية.",
+          "method": "تبسيط الكسر المركب.",
+          "simple_plan": [
+            "نكتب v_{n+1}.",
+            "نعوض.",
+            "نبسط إلى qv_n.",
+            "نحسب v0."
+          ],
+          "formal_writing": [
+            "نحسب v_{n+1} انطلاقا من تعريف v_n والعلاقة المعطاة.",
+            "نبسط حتى نحصل على v_{n+1}=qv_n حيث q ثابت لا يتعلق بـ n.",
+            "نستنتج أن (v_n) هندسية أساسها q، ثم نحسب حدها الأول."
+          ],
+          "why_this_method": "تحويل Möbius المختار يجعل العلاقة ضربـية."
+        },
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب البسط الجديد",
+            "explanation": "لدينا:",
+            "latex": "u_{n+1}-1=\\frac{2u_n+2}{u_n+3}-1=\\frac{u_n-1}{u_n+3}"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب المقام الجديد",
+            "explanation": "وكذلك:",
+            "latex": "u_{n+1}+2=\\frac{2u_n+2}{u_n+3}+2=\\frac{4(u_n+2)}{u_n+3}"
+          },
+          {
+            "step_number": 3,
+            "title": "النسبة",
+            "explanation": "إذن:",
+            "latex": "v_{n+1}=\\frac14\\frac{u_n-1}{u_n+2}=\\frac14v_n"
+          },
+          {
+            "step_number": 4,
+            "title": "الحد الأول",
+            "explanation": "نحسب:",
+            "latex": "v_0=\\frac{0-1}{0+2}=-\\frac12"
+          }
+        ],
+        "final_answer": "\\((v_n)\\) هندسية أساسها \\(q=\\frac14\\) وحدها الأول \\(v_0=-\\frac12\\).",
+        "common_mistakes": [
+          "عدم حساب الحد الأول.",
+          "الخلط بين أساس المتتالية وحدها الأول.",
+          "كتابة عبارة الحد العام بفهرسة غير مناسبة."
+        ],
+        "hints": [],
+        "presentation": {
+          "show_method_first": true,
+          "show_steps_one_by_one": true,
+          "show_calculations_separately": true,
+          "show_graph_only_when_required": true,
+          "show_formal_writing": true
+        }
+      },
+      "display_order": 1,
+      "content_type": "question"
+    },
+    {
+      "id": "2016_ex4_q2a",
+      "text": "2-أ) عبّر بدلالة \\(n\\) عن عبارة الحد العام \\(v_n\\).",
+      "axis_tags": [
+        "seq_geometric"
+      ],
+      "solution": {
+        "strategy": "نطبق قانون الحد العام.",
+        "methodology": {
+          "goal": "كتابة v_n.",
+          "method": "v_n=v0q^n.",
+          "simple_plan": [
+            "نعوض v0 وq."
+          ],
+          "why_this_method": "v_n هندسية."
+        },
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الحد العام",
+            "explanation": "لدينا:",
+            "latex": "v_n=-\\frac12\\left(\\frac14\\right)^n=-\\frac1{2\\cdot4^n}"
+          }
+        ],
+        "final_answer": "\\(v_n=-\\frac12(\\frac14)^n\\).",
+        "common_mistakes": [],
+        "hints": [],
+        "presentation": {
+          "show_method_first": true,
+          "show_steps_one_by_one": true,
+          "show_calculations_separately": true,
+          "show_graph_only_when_required": true,
+          "show_formal_writing": true
+        }
+      },
+      "display_order": 2,
+      "content_type": "question"
+    },
+    {
+      "id": "2016_ex4_q2b",
+      "text": "2-ب) استنتج عبارة الحد العام \\(u_n\\) بدلالة \\(n\\).",
+      "axis_tags": [
+        "seq_definition_notation_methods"
+      ],
+      "solution": {
+        "strategy": "نحل v_n=(u_n-1)/(u_n+2) بالنسبة إلى u_n.",
+        "methodology": {
+          "goal": "إيجاد u_n.",
+          "method": "جمع حدود u_n في طرف واحد.",
+          "simple_plan": [
+            "نضرب تبادليا.",
+            "نجمع حدود u_n.",
+            "نعوض v_n.",
+            "نبسط."
+          ],
+          "why_this_method": "لدينا v_n صريحة."
+        },
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حل العلاقة",
+            "explanation": "من:",
+            "latex": "v_n(u_n+2)=u_n-1"
+          },
+          {
+            "step_number": 2,
+            "title": "استخراج u_n",
+            "explanation": "نحصل على:",
+            "latex": "u_n=\\frac{1+2v_n}{1-v_n}"
+          },
+          {
+            "step_number": 3,
+            "title": "التعويض",
+            "explanation": "بالتعويض v_n=-1/(2·4^n):",
+            "latex": "u_n=\\frac{2(4^n-1)}{2\\cdot4^n+1}"
+          }
+        ],
+        "final_answer": "\\(u_n=\\frac{2(4^n-1)}{2\\cdot4^n+1}\\).",
+        "common_mistakes": [],
+        "hints": [],
+        "presentation": {
+          "show_method_first": true,
+          "show_steps_one_by_one": true,
+          "show_calculations_separately": true,
+          "show_graph_only_when_required": true,
+          "show_formal_writing": true
+        }
+      },
+      "display_order": 3,
+      "content_type": "question"
+    },
+    {
+      "id": "2016_ex4_q2c",
+      "text": "2-ج) احسب \\(\\displaystyle\\lim_{n\\to+\\infty}u_n\\).",
+      "axis_tags": [
+        "seq_limits"
+      ],
+      "solution": {
+        "strategy": "نقسم البسط والمقام على 4^n.",
+        "methodology": {
+          "goal": "حساب النهاية.",
+          "method": "استعمال 4^{-n}→0.",
+          "simple_plan": [
+            "نقسم على 4^n.",
+            "نمر إلى النهاية."
+          ],
+          "formal_writing": [
+            "نحدد أولا المبرهنة أو النهاية المرجعية المستعملة.",
+            "نعوض في عبارة الحد العام أو نستعمل مبرهنة التقارب الرتيب بعد إثبات الرتابة والمحدودية.",
+            "نكتب النتيجة النهائية بصيغة واضحة مع ذكر قيمة النهاية."
+          ],
+          "why_this_method": "العبارة الصريحة كسرية في 4^n."
+        },
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "إعادة الكتابة",
+            "explanation": "لدينا:",
+            "latex": "u_n=\\frac{2(1-4^{-n})}{2+4^{-n}}"
+          },
+          {
+            "step_number": 2,
+            "title": "النهاية",
+            "explanation": "بما أن 4^{-n}→0:",
+            "latex": "\\lim u_n=1"
+          }
+        ],
+        "final_answer": "\\(\\lim u_n=1\\).",
+        "common_mistakes": [
+          "تعويض النهاية قبل إثبات وجودها.",
+          "نسيان استعمال شرط |q|<1 عند نهاية متتالية هندسية.",
+          "إهمال تبرير تطبيق مبرهنة الحصر أو التقارب الرتيب."
+        ],
+        "hints": [],
+        "presentation": {
+          "show_method_first": true,
+          "show_steps_one_by_one": true,
+          "show_calculations_separately": true,
+          "show_graph_only_when_required": true,
+          "show_formal_writing": true
+        }
+      },
+      "display_order": 4,
+      "content_type": "question"
+    },
+    {
+      "id": "2016_ex4_q3a",
+      "text": "3-أ) احسب بدلالة \\(n\\) المجموع: \\[S_n=v_0+v_1+\\cdots+v_n.\\]",
+      "axis_tags": [
+        "seq_sum"
+      ],
+      "solution": {
+        "strategy": "نطبق مجموع متتالية هندسية.",
+        "methodology": {
+          "goal": "حساب S_n.",
+          "method": "جمع v_k من 0 إلى n.",
+          "simple_plan": [
+            "نحدد v0 وq وعدد الحدود.",
+            "نطبق القانون.",
+            "نبسط."
+          ],
+          "why_this_method": "v_k هندسية."
+        },
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تطبيق القانون",
+            "explanation": "لدينا:",
+            "latex": "S_n=-\\frac12\\frac{1-(1/4)^{n+1}}{1-1/4}"
+          },
+          {
+            "step_number": 2,
+            "title": "التبسيط",
+            "explanation": "إذن:",
+            "latex": "S_n=-\\frac23\\left[1-\\left(\\frac14\\right)^{n+1}\\right]"
+          }
+        ],
+        "final_answer": "\\(S_n=-\\frac23[1-(\\frac14)^{n+1}]\\).",
+        "common_mistakes": [
+          "الخطأ في عدد الحدود: من 0 إلى n يوجد n+1 حدا.",
+          "استعمال قانون مجموع متتالية هندسية دون تحديد الحد الأول والأساس.",
+          "نسيان تبسيط النتيجة النهائية."
+        ],
+        "hints": [],
+        "presentation": {
+          "show_method_first": true,
+          "show_steps_one_by_one": true,
+          "show_calculations_separately": true,
+          "show_graph_only_when_required": true,
+          "show_formal_writing": true
+        }
+      },
+      "display_order": 5,
+      "content_type": "question"
+    },
+    {
+      "id": "2016_ex4_q3b",
+      "text": "3-ب) تحقق أن: \\[\\frac1{u_n+2}=\\frac13(1-v_n),\\] وذلك من أجل كل عدد طبيعي \\(n\\).",
+      "axis_tags": [
+        "seq_algebra"
+      ],
+      "solution": {
+        "strategy": "ننطلق من تعريف v_n ونحسب 1-v_n.",
+        "methodology": {
+          "goal": "التحقق من العلاقة.",
+          "method": "تبسيط جبري مباشر.",
+          "simple_plan": [
+            "نحسب 1-v_n.",
+            "نبسط.",
+            "نقسم على 3."
+          ],
+          "why_this_method": "العلاقة مكافئة لتعريف v_n."
+        },
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الحساب",
+            "explanation": "لدينا:",
+            "latex": "1-v_n=1-\\frac{u_n-1}{u_n+2}=\\frac{3}{u_n+2}"
+          },
+          {
+            "step_number": 2,
+            "title": "النتيجة",
+            "explanation": "إذن:",
+            "latex": "\\frac1{u_n+2}=\\frac13(1-v_n)"
+          }
+        ],
+        "final_answer": "\\(\\frac1{u_n+2}=\\frac13(1-v_n)\\).",
+        "common_mistakes": [],
+        "hints": [],
+        "presentation": {
+          "show_method_first": true,
+          "show_steps_one_by_one": true,
+          "show_calculations_separately": true,
+          "show_graph_only_when_required": true,
+          "show_formal_writing": true
+        }
+      },
+      "display_order": 6,
+      "content_type": "question"
+    },
+    {
+      "id": "2016_ex4_q3c",
+      "text": "3-ج) استنتج بدلالة \\(n\\) المجموع: \\[S'_n=\\frac1{u_0+2}+\\frac1{u_1+2}+\\cdots+\\frac1{u_n+2}.\\]",
+      "axis_tags": [
+        "seq_sum"
+      ],
+      "solution": {
+        "strategy": "نجمع العلاقة السابقة من k=0 إلى n.",
+        "methodology": {
+          "goal": "حساب S'_n.",
+          "method": "S'_n=(n+1)/3-(1/3)S_n.",
+          "simple_plan": [
+            "نجمع الطرفين.",
+            "نعوض S_n.",
+            "نبسط."
+          ],
+          "why_this_method": "تم تحويل كل حد إلى ثابت ناقص حد هندسي."
+        },
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "جمع العلاقة",
+            "explanation": "لدينا:",
+            "latex": "S'_n=\\frac13\\sum_{k=0}^n(1-v_k)=\\frac{n+1}{3}-\\frac13S_n"
+          },
+          {
+            "step_number": 2,
+            "title": "التعويض",
+            "explanation": "نعوض S_n:",
+            "latex": "S'_n=\\frac{n+1}{3}+\\frac29\\left[1-\\left(\\frac14\\right)^{n+1}\\right]"
+          }
+        ],
+        "final_answer": "\\(S'_n=\\frac{n+1}{3}+\\frac29[1-(\\frac14)^{n+1}]\\).",
+        "common_mistakes": [
+          "الخطأ في عدد الحدود: من 0 إلى n يوجد n+1 حدا.",
+          "استعمال قانون مجموع متتالية هندسية دون تحديد الحد الأول والأساس.",
+          "نسيان تبسيط النتيجة النهائية."
+        ],
+        "hints": [],
+        "presentation": {
+          "show_method_first": true,
+          "show_steps_one_by_one": true,
+          "show_calculations_separately": true,
+          "show_graph_only_when_required": true,
+          "show_formal_writing": true
+        }
+      },
+      "display_order": 7,
+      "content_type": "question"
+    }
+  ],
+  "content_separation": {
+    "statement": "المعطيات والتعريفات فقط، من دون حل أو طلبات.",
+    "questions": "الأسئلة المطلوبة فقط، وكل سؤال يحتوي حله الخاص.",
+    "statement_graph_data": "الرسم المعطى مع نص التمرين عندما يكون موجودا في النسخة الأصلية.",
+    "solution.graph_data": "الرسم المنجز في الحل مع خطوط الإنشاء عندما يطلب السؤال رسما."
+  },
+  "statement_sections": [
+    {
+      "type": "given",
+      "text": "\\((u_n)\\) متتالية عددية معرفة على مجموعة الأعداد الطبيعية \\(\\mathbb N\\) بحدها الأول \\(u_0=0\\)، ومن أجل كل عدد طبيعي \\(n\\): \\[u_{n+1}=\\frac{2u_n+2}{u_n+3}.\\] ولتكن المتتالية \\((v_n)\\) المعرفة من أجل كل عدد طبيعي \\(n\\) بـ: \\[v_n=\\frac{u_n-1}{u_n+2}.\\]"
+    }
+  ],
+  "review_status": {
+    "statement_copied_from_source_pdf": true,
+    "questions_copied_from_source_pdf": true,
+    "solutions_rewritten_methodically": true,
+    "induction_written_with_initialization_hypothesis_heredity_conclusion": true,
+    "target_level": "تلميذ بكالوريا يحتاج شرحا مفصلا ومفهوما",
+    "graphs_generated_when_required": true,
+    "formal_mathematical_writing_added": true,
+    "source_statement_preserved_exactly": true
+  },
+  "source_text_policy": {
+    "statement": "يبقى نص المعطيات كما هو في الملف الأصلي ولا يضاف إليه أي شرح أو نتيجة.",
+    "questions": "تبقى مطالب التمرين منفصلة عن الحل ولا تضاف إليها معلومات من التصحيح.",
+    "solution": "الشرح والحسابات والمنهجية توضع داخل solution فقط."
+  },
+  "solution_display": {
+    "methodology": "visible",
+    "formal_writing": "visible",
+    "calculations": "step_by_step",
+    "graphs": "statement_only_if_present_in_source; solution_only_if_required"
+  },
+  "graph_policy": {
+    "statement_graph_only_if_present_in_original": true,
+    "generated_graphs_location": "solution_only",
+    "variation_tables_location": "solution_only",
+    "variation_table_style": "arrow_table",
+    "remove_variation_tables_from_statement": true
+  },
+  "version": "2.6-clear-graphs"
+}
