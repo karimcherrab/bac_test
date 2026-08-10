@@ -1,0 +1,419 @@
+{
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2016-electrical-verified",
+  "language": "ar",
+  "direction": "rtl",
+  "year": 2016,
+  "session": "ordinary",
+  "chapter_code": "electrical_phenomena_evolution",
+  "chapter_title": "تطور دراسة ظواهر كهربائية",
+  "exercise_number": 35,
+  "source_page": 13,
+  "source_pages": [
+    13,
+    14
+  ],
+  "solution_source_pages": [
+    34
+  ],
+
+  "branches": [
+    {
+      "code": "math",
+      "name": "شعبة رياضيات"
+    },
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "title": "التمرين 35 — بكالوريا الجزائر 2016 — شعبة رياضيات وتقني رياضي",
+  "axis_tags": [
+    "rc_capacitor_charging",
+    "rc_differential_equation_solution",
+    "rc_time_constant_graphical_analysis"
+  ],
+  "questions": [
+    {
+      "id": "2016_elec_ex35_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) ارسم الدارة الكهربائية التي ركبها التلاميذ.",
+      "solution": {
+        "strategy": "دارة شحن RC على التسلسل.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الرسم",
+            "explanation": "مولد E وقاطعة K ومقاومة R ومكثفة C على التسلسل.",
+            "graph_data": {
+              "diagram_type": "ex35_solution_circuit",
+              "title": "دارة التجربة",
+              "description": "دارة RC المناسبة.",
+              "svg": "<svg viewBox=\"0 0 820 360\" xmlns=\"http://www.w3.org/2000/svg\">\n    <path d=\"M140 80 H650 V285 H140 Z\" fill=\"none\" stroke=\"#111827\" stroke-width=\"5\"/>\n    <circle cx=\"140\" cy=\"185\" r=\"30\" fill=\"white\" stroke=\"#111827\" stroke-width=\"4\"/><text x=\"130\" y=\"193\" font-size=\"22\">E</text>\n    <line x1=\"245\" y1=\"80\" x2=\"290\" y2=\"80\" stroke=\"#111827\" stroke-width=\"5\"/><line x1=\"315\" y1=\"80\" x2=\"360\" y2=\"80\" stroke=\"#111827\" stroke-width=\"5\"/><line x1=\"290\" y1=\"80\" x2=\"318\" y2=\"56\" stroke=\"#111827\" stroke-width=\"5\"/><text x=\"295\" y=\"45\" font-size=\"21\">K</text>\n    <rect x=\"400\" y=\"55\" width=\"100\" height=\"50\" rx=\"5\" fill=\"white\" stroke=\"#111827\" stroke-width=\"3\"/><text x=\"430\" y=\"87\" font-size=\"20\">R=10kΩ</text>\n    <line x1=\"610\" y1=\"80\" x2=\"610\" y2=\"145\" stroke=\"#111827\" stroke-width=\"5\"/><line x1=\"580\" y1=\"145\" x2=\"640\" y2=\"145\" stroke=\"#111827\" stroke-width=\"6\"/><line x1=\"580\" y1=\"180\" x2=\"640\" y2=\"180\" stroke=\"#111827\" stroke-width=\"6\"/><line x1=\"610\" y1=\"180\" x2=\"610\" y2=\"285\" stroke=\"#111827\" stroke-width=\"5\"/><text x=\"655\" y=\"170\" font-size=\"22\">C</text></svg>",
+              "render_mode": "inline",
+              "responsive": true
+            }
+          }
+        ],
+        "final_answer": "دارة RC على التسلسل."
+      }
+    },
+    {
+      "id": "2016_elec_ex35_q2",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2) باستعمال قانون التوترات، جد المعادلة التفاضلية للتوتر \\(u_R(t)\\) بين طرفي المقاومة.",
+      "solution": {
+        "strategy": "نشتق E=uC+uR.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "القانون",
+            "explanation": "\\[E=u_C+u_R\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "الاشتقاق",
+            "explanation": "مع \\(du_C/dt=i/C=u_R/(RC)\\): \\[\\boxed{\\frac{du_R}{dt}+\\frac1{RC}u_R=0}\\]"
+          }
+        ],
+        "final_answer": "\\(u_R'+u_R/(RC)=0\\)."
+      }
+    },
+    {
+      "id": "2016_elec_ex35_q3",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "3) علماً أن الحل من الشكل \\(u_R(t)=Ae^{-t/\\tau}\\)، أوجد عبارتي \\(A\\) و\\(\\tau\\) بدلالة \\(R,C,E\\).",
+      "solution": {
+        "strategy": "نستعمل الشرط الابتدائي والمطابقة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "A",
+            "explanation": "عند t=0: المكثفة فارغة و\\(u_R(0)=E\\)، إذن \\(\\boxed{A=E}\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "τ",
+            "explanation": "\\(\\boxed{\\tau=RC}\\)."
+          }
+        ],
+        "final_answer": "\\(A=E,\\tau=RC\\)."
+      }
+    },
+    {
+      "id": "2016_elec_ex35_q4",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "4) ارسم المنحنى \\(u_R=f(t)\\)، ثم استنتج قيمتي \\(E\\) وثابت الزمن \\(\\tau\\).",
+      "solution": {
+        "strategy": "نستغل الجدول والمنحنى.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "المنحنى",
+            "explanation": "المنحنى أسي تنازلي.",
+            "graph_data": {
+              "title": "u_R=f(t)",
+              "description": "القيم التجريبية المعطاة في الجدول.",
+              "x_label": "t (s)",
+              "y_label": "u_R (V)",
+              "x_domain": [
+                0,
+                0.5
+              ],
+              "y_domain": [
+                0,
+                10
+              ],
+              "series": [
+                {
+                  "name": "u_R",
+                  "data": [
+                    {
+                      "x": 0,
+                      "y": 9.0
+                    },
+                    {
+                      "x": 0.05,
+                      "y": 5.458
+                    },
+                    {
+                      "x": 0.1,
+                      "y": 3.33
+                    },
+                    {
+                      "x": 0.15,
+                      "y": 2.008
+                    },
+                    {
+                      "x": 0.2,
+                      "y": 1.218
+                    },
+                    {
+                      "x": 0.25,
+                      "y": 0.738
+                    },
+                    {
+                      "x": 0.3,
+                      "y": 0.448
+                    },
+                    {
+                      "x": 0.35,
+                      "y": 0.271
+                    },
+                    {
+                      "x": 0.4,
+                      "y": 0.164
+                    },
+                    {
+                      "x": 0.5,
+                      "y": 0.06
+                    }
+                  ]
+                }
+              ],
+              "settings": {
+                "show_grid": true,
+                "show_axes": true,
+                "show_legend": false,
+                "show_point_labels": false,
+                "connect_points": true
+              }
+            }
+          },
+          {
+            "step_number": 2,
+            "title": "E",
+            "explanation": "\\(u_R(0)=E=\\boxed{9V}\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "τ",
+            "explanation": "عند \\(u_R=E/e\\approx3.31V\\) نجد \\(t\\approx0.10s\\)، إذن \\(\\boxed{\\tau=0.10s}\\)."
+          }
+        ],
+        "final_answer": "\\(E=9V,\\tau=0.10s\\)."
+      }
+    },
+    {
+      "id": "2016_elec_ex35_q5",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "5) احسب قيمة \\(C\\) للمكثفة.",
+      "solution": {
+        "strategy": "C=τ/R.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الحساب",
+            "explanation": "\\[C=\\frac{0.10}{10^4}=10^{-5}F=\\boxed{10\\mu F}\\]"
+          }
+        ],
+        "final_answer": "\\(C=10\\mu F\\)."
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "تجميعية_عمورة_للبكالوريات_السابقة_الوحدة_3(1).pdf",
+    "statement_figure_policy": "كل شكل أو بيان معطى في الموضوع يوضع مع نص التمرين. الرسم المطلوب من التلميذ يوضع داخل الحل فقط.",
+    "solution_figure_policy": "الرسم الذي يمثل إجابة سؤال أو توصيل جهاز قياس يوضع داخل خطوات الحل.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  },
+  "statement": "في حصة أعمال تطبيقية اقترح الأستاذ تجربة للتحقق من المعلومات المكتوبة على مكثفة: \\(C=10\\mu F\\). استعمل التلاميذ ناقلاً أومياً \\(R=10k\\Omega\\)، قاطعة، مولد توتر ثابت \\(E\\)، وتجهيز ExAO باستعمال لاقط التوتر. بعد غلق القاطعة لدائرة الشحن حصلوا على قيم \\(u_R(t)\\) المعطاة.",
+  "tables": [
+    {
+      "title": "القيم التجريبية",
+      "headers": [
+        "t(s)",
+        "u_R(V)"
+      ],
+      "rows": [
+        [
+          0,
+          9.0
+        ],
+        [
+          0.05,
+          5.458
+        ],
+        [
+          0.1,
+          3.33
+        ],
+        [
+          0.15,
+          2.008
+        ],
+        [
+          0.2,
+          1.218
+        ],
+        [
+          0.25,
+          0.738
+        ],
+        [
+          0.3,
+          0.448
+        ],
+        [
+          0.35,
+          0.271
+        ],
+        [
+          0.4,
+          0.164
+        ],
+        [
+          0.5,
+          0.06
+        ]
+      ]
+    }
+  ],
+  "figures": [
+    {
+      "title": "u_R=f(t)",
+      "description": "القيم التجريبية المعطاة في الجدول.",
+      "x_label": "t (s)",
+      "y_label": "u_R (V)",
+      "x_domain": [
+        0,
+        0.5
+      ],
+      "y_domain": [
+        0,
+        10
+      ],
+      "series": [
+        {
+          "name": "u_R",
+          "data": [
+            {
+              "x": 0,
+              "y": 9.0
+            },
+            {
+              "x": 0.05,
+              "y": 5.458
+            },
+            {
+              "x": 0.1,
+              "y": 3.33
+            },
+            {
+              "x": 0.15,
+              "y": 2.008
+            },
+            {
+              "x": 0.2,
+              "y": 1.218
+            },
+            {
+              "x": 0.25,
+              "y": 0.738
+            },
+            {
+              "x": 0.3,
+              "y": 0.448
+            },
+            {
+              "x": 0.35,
+              "y": 0.271
+            },
+            {
+              "x": 0.4,
+              "y": 0.164
+            },
+            {
+              "x": 0.5,
+              "y": 0.06
+            }
+          ]
+        }
+      ],
+      "settings": {
+        "show_grid": true,
+        "show_axes": true,
+        "show_legend": false,
+        "show_point_labels": false,
+        "connect_points": true
+      }
+    }
+  ],
+  "statement_graphs": [
+    {
+      "title": "u_R=f(t)",
+      "description": "القيم التجريبية المعطاة في الجدول.",
+      "x_label": "t (s)",
+      "y_label": "u_R (V)",
+      "x_domain": [
+        0,
+        0.5
+      ],
+      "y_domain": [
+        0,
+        10
+      ],
+      "series": [
+        {
+          "name": "u_R",
+          "data": [
+            {
+              "x": 0,
+              "y": 9.0
+            },
+            {
+              "x": 0.05,
+              "y": 5.458
+            },
+            {
+              "x": 0.1,
+              "y": 3.33
+            },
+            {
+              "x": 0.15,
+              "y": 2.008
+            },
+            {
+              "x": 0.2,
+              "y": 1.218
+            },
+            {
+              "x": 0.25,
+              "y": 0.738
+            },
+            {
+              "x": 0.3,
+              "y": 0.448
+            },
+            {
+              "x": 0.35,
+              "y": 0.271
+            },
+            {
+              "x": 0.4,
+              "y": 0.164
+            },
+            {
+              "x": 0.5,
+              "y": 0.06
+            }
+          ]
+        }
+      ],
+      "settings": {
+        "show_grid": true,
+        "show_axes": true,
+        "show_legend": false,
+        "show_point_labels": false,
+        "connect_points": true
+      }
+    }
+  ]
+}

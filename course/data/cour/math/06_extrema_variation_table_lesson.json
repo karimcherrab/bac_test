@@ -1,0 +1,250 @@
+{
+  "tag": "extrema_variation_table",
+  "title": "القيم الحدية وجدول التغيرات",
+  "order": 6,
+  "is_active": true,
+  "branches": [
+    "math",
+    "science",
+    "math_tech"
+  ],
+  "content": {
+    "version": 1,
+    "language": "ar",
+    "direction": "rtl",
+    "chapter_code": "functions",
+    "chapter_title": "دراسة الدوال",
+    "axis_tag": "extrema_variation_table",
+    "axis_title": "القيم الحدية وجدول التغيرات",
+    "estimated_minutes": 60,
+    "difficulty": "medium",
+    "source_note": "محور مبسط ومنظم لمنصة تعليمية موجهة إلى البكالوريا الجزائرية.",
+    "lesson_goal": "أن يحدد التلميذ القيم العظمى والصغرى من تغير إشارة المشتقة ومن جدول التغيرات.",
+    "prerequisites": [
+      "إشارة المشتقة",
+      "جدول التغيرات",
+      "حساب صورة عدد"
+    ],
+    "learning_outcomes": [
+      "يميز القيمة العظمى والصغرى",
+      "يتحقق من تغير الإشارة",
+      "يحسب القيمة الحدية",
+      "يميز بين f'(a)=0 ووجود قيمة حدية"
+    ],
+    "learning_path": [
+      {
+        "id": "step_1",
+        "type": "definition",
+        "title": "القيمة العظمى المحلية",
+        "content": {
+          "teacher": "تكون f(a) قيمة عظمى محلية إذا كانت أكبر من القيم القريبة منها.",
+          "derivative_sign_change": "\\(+\\to-\\)",
+          "geometric_interpretation": "قمة محلية."
+        }
+      },
+      {
+        "id": "step_2",
+        "type": "definition",
+        "title": "القيمة الصغرى المحلية",
+        "content": {
+          "teacher": "تكون f(a) قيمة صغرى محلية إذا كانت أصغر من القيم القريبة منها.",
+          "derivative_sign_change": "\\(-\\to+\\)",
+          "geometric_interpretation": "قاع محلي."
+        }
+      },
+      {
+        "id": "step_3",
+        "type": "attention",
+        "title": "انعدام المشتقة لا يكفي",
+        "content": {
+          "teacher": "قد يكون f'(a)=0 دون وجود قيمة حدية، مثل f(x)=x³ عند 0.",
+          "rule": "يجب فحص إشارة f' قبل a وبعدها.",
+          "quick_check": {
+            "question": "هل f'(a)=0 وحده يثبت قيمة حدية؟",
+            "answer": "لا."
+          }
+        }
+      },
+      {
+        "id": "step_4",
+        "type": "variation_table",
+        "title": "قراءة جدول نموذجي",
+        "content": {
+          "table": {
+            "type": "variation_table",
+            "renderer": "jsx_svg_or_html_table",
+            "columns": [
+              {
+                "x": "-∞",
+                "derivative": "+",
+                "function_value": "-∞",
+                "arrow": "up"
+              },
+              {
+                "x": "-1",
+                "derivative": "0",
+                "function_value": "2",
+                "point_type": "maximum"
+              },
+              {
+                "x": "1",
+                "derivative": "0",
+                "function_value": "-2",
+                "point_type": "minimum"
+              },
+              {
+                "x": "+∞",
+                "derivative": "+",
+                "function_value": "+∞",
+                "arrow": "up"
+              }
+            ],
+            "interval_signs": [
+              {
+                "from": "-∞",
+                "to": "-1",
+                "sign": "+"
+              },
+              {
+                "from": "-1",
+                "to": "1",
+                "sign": "-"
+              },
+              {
+                "from": "1",
+                "to": "+∞",
+                "sign": "+"
+              }
+            ]
+          },
+          "reading": "قيمة عظمى 2 عند -1 وقيمة صغرى -2 عند 1."
+        }
+      },
+      {
+        "id": "step_5",
+        "type": "visualization",
+        "title": "القمة والقاع على منحنى",
+        "content": {
+          "visualization": {
+            "type": "extrema_curve",
+            "renderer": "jsx_svg_or_recharts",
+            "function": {
+              "expression": "x^3-3*x",
+              "domain": [
+                -2.5,
+                2.5
+              ],
+              "sample_step": 0.03
+            },
+            "special_points": [
+              {
+                "x": -1,
+                "y": 2,
+                "type": "local_maximum",
+                "label": "عظمى محلية"
+              },
+              {
+                "x": 1,
+                "y": -2,
+                "type": "local_minimum",
+                "label": "صغرى محلية"
+              }
+            ],
+            "axes": {
+              "x_min": -2.5,
+              "x_max": 2.5,
+              "y_min": -5,
+              "y_max": 5
+            }
+          }
+        }
+      }
+    ],
+    "graph": {
+      "engine_hint": "الرسم اختياري ويستعمل للتوضيح.",
+      "coordinate_system": "cartesian",
+      "series": [],
+      "react_rendering_notes": [
+        "استعمل parser رياضيًا آمنًا بدل eval.",
+        "اجعل مجال الرسم قابلًا للتخصيص.",
+        "ادعم اتجاه RTL."
+      ]
+    },
+    "final_assessment": {
+      "question": "إذا تغيرت إشارة f' عند 2 من - إلى + وكان f(2)=5، فما النتيجة؟",
+      "expected_answer": "للدالة قيمة صغرى محلية تساوي 5 عند x=2.",
+      "success_criteria": [
+        "ذكر صغرى",
+        "ذكر القيمة 5",
+        "ذكر الفاصلة 2"
+      ],
+      "hint_levels": [
+        "- ثم + يعني قاعًا."
+      ]
+    },
+    "lesson_summary": {
+      "key_ideas": [
+        "تغير + إلى - يعطي عظمى.",
+        "تغير - إلى + يعطي صغرى.",
+        "القيمة الحدية هي f(a)، وليست a."
+      ],
+      "method_template": [
+        "حدد النقطة الحرجة a.",
+        "افحص إشارة f' قبلها وبعدها.",
+        "حدد النوع.",
+        "احسب f(a)."
+      ]
+    },
+    "dynamic_profile": {
+      "lesson_profile": "شرح بسيط ثم تطبيق موجه ثم سؤال بكالوريا",
+      "profile_reason": "المتعلم يحتاج إلى فهم الفكرة، ثم حفظ المنهجية، ثم استعمالها في تمرين."
+    },
+    "schema_version": "3.0",
+    "content_status": "ready",
+    "pedagogical_style": "simple_progressive_bac_oriented",
+    "lesson_intro": {
+      "title": "القمة والقاع من تغير الإشارة",
+      "teacher": "عندما تنتقل المشتقة من موجب إلى سالب نحصل على قمة، ومن سالب إلى موجب نحصل على قاع.",
+      "central_idea": "تغير الإشارة هو الشرط المهم، وليس انعدام المشتقة وحده.",
+      "memory_tip": "+ ثم − عظمى، − ثم + صغرى."
+    },
+    "support_path": {
+      "when_student_stuck": [
+        "أعد قراءة الفكرة المركزية.",
+        "طبّق المثال القصير خطوة بخطوة.",
+        "استعمل التلميح الأول قبل إظهار الحل."
+      ],
+      "quick_actions": [
+        "أعد الشرح",
+        "أعطني مثالًا",
+        "اعرض الخطوات",
+        "أعطني تلميحًا"
+      ]
+    },
+    "method_decision_tree": {
+      "start_question": "ما نوع السؤال؟",
+      "branches": [
+        {
+          "condition": "سؤال مباشر",
+          "action": "طبق القاعدة الأساسية."
+        },
+        {
+          "condition": "سؤال مركب",
+          "action": "قسّم المطلوب إلى خطوات."
+        }
+      ],
+      "golden_rule": "حدد نوع السؤال قبل البدء."
+    },
+    "lesson_closure": {
+      "student_message": "لا تنتقل إلى المحور التالي حتى تستطيع تطبيق المنهجية دون مساعدة.",
+      "mastery_rule": "نجاح في الاختبار القصير ثم حل تمرين تطبيقي مستقل."
+    },
+    "quality_review": {
+      "simple_arabic": true,
+      "rtl_ready": true,
+      "latex_ready": true,
+      "react_visualization_ready": true,
+      "bac_oriented": true
+    }
+  }
+}

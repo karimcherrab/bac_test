@@ -1,36 +1,9 @@
+from django.contrib.auth.hashers import (
+    check_password,
+    make_password,
+)
 from django.db import models
 
-
-# class Student(models.Model):
-#     BRANCH_CHOICES = [
-#         ("math", "Mathématiques"),
-#         ("science", "Sciences expérimentales"),
-#         ("math_tech", "Mathématiques techniques"),
-#     ]
-#
-#     username = models.CharField(max_length=100)
-#     email = models.EmailField(unique=True)
-#     password = models.CharField(max_length=128)
-#     branch = models.CharField(max_length=20, choices=BRANCH_CHOICES)
-#
-#     created_at = models.DateTimeField(auto_now_add=True)
-#     updated_at = models.DateTimeField(auto_now=True)
-#
-#     @property
-#     def is_authenticated(self):
-#         return True
-#
-#     class Meta:
-#         db_table = "students"
-#         ordering = ["username"]
-#
-#     def __str__(self):
-#         return self.username
-#
-
-
-
-from django.db import models
 
 class Branch(models.Model):
     code = models.CharField(
@@ -48,9 +21,11 @@ class Branch(models.Model):
     class Meta:
         ordering = ["name"]
 
+
 class Student(models.Model):
     username = models.CharField(
         max_length=100,
+        db_index=True,
     )
 
     email = models.EmailField(
@@ -69,7 +44,13 @@ class Student(models.Model):
     )
 
     is_active = models.BooleanField(
-        default=True,
+        default=False,
+        db_index=True,
+    )
+
+    email_verified_at = models.DateTimeField(
+        null=True,
+        blank=True,
     )
 
     created_at = models.DateTimeField(
@@ -79,6 +60,21 @@ class Student(models.Model):
     updated_at = models.DateTimeField(
         auto_now=True,
     )
+
+    def set_password(self, raw_password):
+        """
+        تشفير كلمة المرور قبل حفظها.
+        """
+        self.password = make_password(raw_password)
+
+    def check_password(self, raw_password):
+        """
+        التحقق من كلمة المرور الحالية.
+        """
+        return check_password(
+            raw_password,
+            self.password,
+        )
 
     @property
     def is_authenticated(self):

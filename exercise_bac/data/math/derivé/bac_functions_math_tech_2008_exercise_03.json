@@ -1,0 +1,751 @@
+{
+  "schema_version": "2.9-bac-final-corrected",
+  "language": "ar",
+  "direction": "rtl",
+  "branch": {
+    "code": "math_tech",
+    "name": "شعبة تقني رياضي"
+  },
+  "branch_code": "math_tech",
+  "branches": [
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+    "chapter_code": "derivatives",
+
+  "year": 2008,
+  "exercise_number": 3,
+  "source_page": 1,
+  "source_reference": "النص منقول من ملف fonctions_math_tech.pdf المرفق، الصفحة 1.",
+  "title": "التمرين الثالث (07 نقاط)",
+  "axis_tags": [
+    "derivative_rules",
+    "derivative_sign_variation",
+    "extrema_variation_table",
+    "function_curve_construction"
+  ],
+  "statement": "نعتبر الدالة العددية f المعرفة على المجال [0,2] بالعبارة:\n\\[f(x)=\\frac{2x+3}{x+2}.\\]\n1) أ- ادرس تغيرات الدالة f على المجال [0,2].\nب- أنشئ المنحنى (C) الممثل للدالة f في معلم متعامد ومتجانس (الوحدة على المحورين 4 cm).\nج- برهن أنه إذا كان x∈[0,2] فإن f(x)∈[0,2].",
+  "statement_graph_data": null,
+  "questions": [
+    {
+      "id": "2008_ex3_q1a",
+      "text": "ادرس تغيرات الدالة f على المجال [0,2].",
+      "axis_tags": [
+        "derivative_rules",
+        "derivative_sign_variation",
+        "extrema_variation_table"
+      ],
+      "solution": {
+        "strategy": "نحسب المشتقة ثم ندرس إشارتها.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "اشتقاق الدالة",
+            "explanation": "نستعمل قاعدة مشتقة خارج قسمة.",
+            "student_help": "نفهم الفكرة أولًا، ثم نكتب الحساب سطرًا سطرًا دون القفز إلى النتيجة.",
+            "why_this_step": "هذه الخطوة تربط المعطيات بالنتيجة المطلوبة بطريقة مناسبة لكتابة البكالوريا.",
+            "latex": "f'(x)=\\frac{2(x+2)-(2x+3)}{(x+2)^2}"
+          },
+          {
+            "step_number": 2,
+            "title": "تبسيط المشتقة",
+            "explanation": "نبسط البسط فنجد العدد 1.",
+            "student_help": "نفهم الفكرة أولًا، ثم نكتب الحساب سطرًا سطرًا دون القفز إلى النتيجة.",
+            "why_this_step": "هذه الخطوة تربط المعطيات بالنتيجة المطلوبة بطريقة مناسبة لكتابة البكالوريا.",
+            "latex": "f'(x)=\\frac{1}{(x+2)^2}"
+          },
+          {
+            "step_number": 3,
+            "title": "دراسة الإشارة",
+            "explanation": "على [0,2] لدينا (x+2)^2>0، إذن المشتقة موجبة تمامًا.",
+            "student_help": "نفهم الفكرة أولًا، ثم نكتب الحساب سطرًا سطرًا دون القفز إلى النتيجة.",
+            "why_this_step": "هذه الخطوة تربط المعطيات بالنتيجة المطلوبة بطريقة مناسبة لكتابة البكالوريا.",
+            "latex": "f'(x)>0"
+          },
+          {
+            "step_number": 4,
+            "title": "حساب قيم الطرفين",
+            "explanation": "نحسب f(0)=3/2 و f(2)=7/4.",
+            "student_help": "نفهم الفكرة أولًا، ثم نكتب الحساب سطرًا سطرًا دون القفز إلى النتيجة.",
+            "why_this_step": "هذه الخطوة تربط المعطيات بالنتيجة المطلوبة بطريقة مناسبة لكتابة البكالوريا.",
+            "latex": "f(0)=\\frac32,\\quad f(2)=\\frac74"
+          }
+        ],
+        "final_answer": "الدالة f متزايدة تمامًا على [0,2] من 3/2 إلى 7/4.",
+        "verification": "",
+        "common_mistakes": [
+          "نسيان تربيع المقام في قاعدة الاشتقاق."
+        ],
+        "hints": [
+          "ابدأ بقاعدة مشتقة u/v."
+        ],
+        "graph_data": null,
+        "table_data": {
+          "table_type": "variation_table",
+          "title": "جدول تغيرات الدالة f",
+          "direction": "ltr",
+          "function_name": "f",
+          "derivative_name": "f'(x)",
+          "domain": "[0,2]",
+          "x_values": [
+            "0",
+            "2"
+          ],
+          "derivative": {
+            "interval_signs": [
+              "+"
+            ],
+            "critical_values": {}
+          },
+          "function": {
+            "branches": [
+              {
+                "id": "b1",
+                "interval": "[0,2]",
+                "start_x": "0",
+                "end_x": "2",
+                "start_value": "3/2",
+                "end_value": "7/4",
+                "direction": "up"
+              }
+            ]
+          },
+          "discontinuities": [],
+          "settings": {
+            "responsive": true,
+            "math_renderer": "better-react-mathjax",
+            "render_mode": "branch_based",
+            "show_double_separator": false,
+            "do_not_connect_across_discontinuity": true
+          }
+        },
+        "solution_style": "حل مبسط جدًا ومفصل: نشرح القاعدة، ثم نطبقها خطوة بخطوة، ثم نختم باستنتاج واضح.",
+        "methodology": {
+          "goal": "دراسة تغيرات دالة كسرية.",
+          "method": "حساب المشتقة ودراسة إشارتها.",
+          "why_this_method": "لأنها الطريقة الأقصر والأوضح والمتوافقة مع منهجية البكالوريا.",
+          "used_theorem": "إذا كانت f موجبة المشتقة على مجال فهي متزايدة عليه.",
+          "bac_template": [
+            "نكتب القاعدة المستعملة.",
+            "ننجز الحساب بالتدرج.",
+            "نستنتج النتيجة بوضوح."
+          ],
+          "formal_writing": [
+            "نحدد المعطيات والمجال.",
+            "نطبق القاعدة مع إظهار الحساب.",
+            "نكتب الاستنتاج النهائي."
+          ]
+        },
+        "formal_writing": [
+          "نكتب المعطيات والقاعدة المستعملة.",
+          "ننجز الحساب تدريجيًا.",
+          "نختم باستنتاج واضح."
+        ],
+        "react_display": {
+          "show_strategy": true,
+          "show_steps": true,
+          "show_final_answer": true,
+          "show_graph": false,
+          "show_table": true,
+          "graph_key": "graph_data",
+          "table_key": "table_data",
+          "math_renderer": "better-react-mathjax"
+        },
+        "official_answer_check": {
+          "checked": true,
+          "reference": "تم التحقق حسابيًا انطلاقًا من نص التمرين المرفق.",
+          "final_result_matches_reference": null,
+          "note": "لا يتضمن الملف المرفق حلًا نموذجيًا؛ لذلك تم التحقق الرياضي المباشر من جميع النتائج."
+        },
+        "pedagogical_detail": {
+          "level": "مبسط جدًا",
+          "show_intermediate_calculations": true,
+          "explain_rule_before_use": true,
+          "state_final_conclusion": true
+        },
+        "display_order": [
+          "strategy",
+          "steps",
+          "table_data",
+          "graph_data",
+          "final_answer",
+          "verification"
+        ],
+        "validation": {
+          "checked_against_official_solution": false,
+          "table_values_checked": true,
+          "critical_points_checked": true,
+          "final_answer_checked": true
+        }
+      },
+      "display_order": 1,
+      "content_type": "question"
+    },
+    {
+      "id": "2008_ex3_q1b",
+      "text": "أنشئ المنحنى (C) الممثل للدالة f في معلم متعامد ومتجانس، حيث الوحدة 4 cm على المحورين.",
+      "axis_tags": [
+        "function_curve_construction",
+        "function_concept_graph_reading"
+      ],
+      "solution": {
+        "strategy": "نستعمل جدول التغيرات ونحسب نقاطًا مساعدة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تحديد السلوك",
+            "explanation": "المنحنى متزايد على المجال كله.",
+            "student_help": "نفهم الفكرة أولًا، ثم نكتب الحساب سطرًا سطرًا دون القفز إلى النتيجة.",
+            "why_this_step": "هذه الخطوة تربط المعطيات بالنتيجة المطلوبة بطريقة مناسبة لكتابة البكالوريا."
+          },
+          {
+            "step_number": 2,
+            "title": "حساب نقاط",
+            "explanation": "نحسب بعض القيم لتسهيل الرسم.",
+            "student_help": "نفهم الفكرة أولًا، ثم نكتب الحساب سطرًا سطرًا دون القفز إلى النتيجة.",
+            "why_this_step": "هذه الخطوة تربط المعطيات بالنتيجة المطلوبة بطريقة مناسبة لكتابة البكالوريا.",
+            "latex": "f(0)=1.5,\\ f(0.5)=1.6,\\ f(1)=\\frac53,\\ f(1.5)=\\frac{12}{7},\\ f(2)=1.75"
+          },
+          {
+            "step_number": 3,
+            "title": "وضع النقاط",
+            "explanation": "نضع النقاط في المعلم ثم نصل بينها بمنحنى متزايد وناعم.",
+            "student_help": "نفهم الفكرة أولًا، ثم نكتب الحساب سطرًا سطرًا دون القفز إلى النتيجة.",
+            "why_this_step": "هذه الخطوة تربط المعطيات بالنتيجة المطلوبة بطريقة مناسبة لكتابة البكالوريا."
+          },
+          {
+            "step_number": 4,
+            "title": "احترام المجال",
+            "explanation": "لا نرسم خارج [0,2].",
+            "student_help": "نفهم الفكرة أولًا، ثم نكتب الحساب سطرًا سطرًا دون القفز إلى النتيجة.",
+            "why_this_step": "هذه الخطوة تربط المعطيات بالنتيجة المطلوبة بطريقة مناسبة لكتابة البكالوريا."
+          }
+        ],
+        "final_answer": "يمر المنحنى بالنقط (0,3/2) و(1,5/3) و(2,7/4)، وهو متزايد على [0,2].",
+        "verification": "",
+        "common_mistakes": [],
+        "hints": [],
+        "graph_data": {
+          "graph_type": "function_graph",
+          "title": "منحنى الدالة f على [0,2]",
+          "x_label": "x",
+          "y_label": "y",
+          "x_domain": [
+            -0.2,
+            2.2
+          ],
+          "y_domain": [
+            0,
+            2.2
+          ],
+          "series": [
+            {
+              "id": "f",
+              "type": "line",
+              "label": "C_f",
+              "data": [
+                {
+                  "x": 0.0,
+                  "y": 1.5
+                },
+                {
+                  "x": 0.05,
+                  "y": 1.5122
+                },
+                {
+                  "x": 0.1,
+                  "y": 1.5238
+                },
+                {
+                  "x": 0.15,
+                  "y": 1.5349
+                },
+                {
+                  "x": 0.2,
+                  "y": 1.5455
+                },
+                {
+                  "x": 0.25,
+                  "y": 1.5556
+                },
+                {
+                  "x": 0.3,
+                  "y": 1.5652
+                },
+                {
+                  "x": 0.35,
+                  "y": 1.5745
+                },
+                {
+                  "x": 0.4,
+                  "y": 1.5833
+                },
+                {
+                  "x": 0.45,
+                  "y": 1.5918
+                },
+                {
+                  "x": 0.5,
+                  "y": 1.6
+                },
+                {
+                  "x": 0.55,
+                  "y": 1.6078
+                },
+                {
+                  "x": 0.6,
+                  "y": 1.6154
+                },
+                {
+                  "x": 0.65,
+                  "y": 1.6226
+                },
+                {
+                  "x": 0.7,
+                  "y": 1.6296
+                },
+                {
+                  "x": 0.75,
+                  "y": 1.6364
+                },
+                {
+                  "x": 0.8,
+                  "y": 1.6429
+                },
+                {
+                  "x": 0.85,
+                  "y": 1.6491
+                },
+                {
+                  "x": 0.9,
+                  "y": 1.6552
+                },
+                {
+                  "x": 0.95,
+                  "y": 1.661
+                },
+                {
+                  "x": 1.0,
+                  "y": 1.6667
+                },
+                {
+                  "x": 1.05,
+                  "y": 1.6721
+                },
+                {
+                  "x": 1.1,
+                  "y": 1.6774
+                },
+                {
+                  "x": 1.15,
+                  "y": 1.6825
+                },
+                {
+                  "x": 1.2,
+                  "y": 1.6875
+                },
+                {
+                  "x": 1.25,
+                  "y": 1.6923
+                },
+                {
+                  "x": 1.3,
+                  "y": 1.697
+                },
+                {
+                  "x": 1.35,
+                  "y": 1.7015
+                },
+                {
+                  "x": 1.4,
+                  "y": 1.7059
+                },
+                {
+                  "x": 1.45,
+                  "y": 1.7101
+                },
+                {
+                  "x": 1.5,
+                  "y": 1.7143
+                },
+                {
+                  "x": 1.55,
+                  "y": 1.7183
+                },
+                {
+                  "x": 1.6,
+                  "y": 1.7222
+                },
+                {
+                  "x": 1.65,
+                  "y": 1.726
+                },
+                {
+                  "x": 1.7,
+                  "y": 1.7297
+                },
+                {
+                  "x": 1.75,
+                  "y": 1.7333
+                },
+                {
+                  "x": 1.8,
+                  "y": 1.7368
+                },
+                {
+                  "x": 1.85,
+                  "y": 1.7403
+                },
+                {
+                  "x": 1.9,
+                  "y": 1.7436
+                },
+                {
+                  "x": 1.95,
+                  "y": 1.7468
+                },
+                {
+                  "x": 2.0,
+                  "y": 1.75
+                }
+              ],
+              "role": "curve",
+              "expression": "(2x+3)/(x+2)"
+            },
+            {
+              "id": "y0",
+              "type": "line",
+              "label": "محور الفواصل",
+              "data": [
+                {
+                  "x": 0.0,
+                  "y": 0
+                },
+                {
+                  "x": 0.1,
+                  "y": 0
+                },
+                {
+                  "x": 0.2,
+                  "y": 0
+                },
+                {
+                  "x": 0.3,
+                  "y": 0
+                },
+                {
+                  "x": 0.4,
+                  "y": 0
+                },
+                {
+                  "x": 0.5,
+                  "y": 0
+                },
+                {
+                  "x": 0.6,
+                  "y": 0
+                },
+                {
+                  "x": 0.7,
+                  "y": 0
+                },
+                {
+                  "x": 0.8,
+                  "y": 0
+                },
+                {
+                  "x": 0.9,
+                  "y": 0
+                },
+                {
+                  "x": 1.0,
+                  "y": 0
+                },
+                {
+                  "x": 1.1,
+                  "y": 0
+                },
+                {
+                  "x": 1.2,
+                  "y": 0
+                },
+                {
+                  "x": 1.3,
+                  "y": 0
+                },
+                {
+                  "x": 1.4,
+                  "y": 0
+                },
+                {
+                  "x": 1.5,
+                  "y": 0
+                },
+                {
+                  "x": 1.6,
+                  "y": 0
+                },
+                {
+                  "x": 1.7,
+                  "y": 0
+                },
+                {
+                  "x": 1.8,
+                  "y": 0
+                },
+                {
+                  "x": 1.9,
+                  "y": 0
+                },
+                {
+                  "x": 2.0,
+                  "y": 0
+                }
+              ],
+              "role": "axis",
+              "expression": "0"
+            }
+          ],
+          "construction_lines": [],
+          "axis_markers": [],
+          "construction": null,
+          "annotations": [],
+          "settings": {
+            "show_grid": true,
+            "show_axes": true,
+            "show_legend": true,
+            "show_tooltip": true,
+            "show_points": false,
+            "connect_nulls": false,
+            "responsive": true,
+            "x_tick_step": 1,
+            "y_tick_step": 1
+          },
+          "caption": "",
+          "react_rendering": {
+            "recommended_library": "recharts",
+            "component_hint": "ResponsiveContainer + ComposedChart",
+            "data_source": "series[].data",
+            "series_type_mapping": {
+              "line": "Line",
+              "polyline": "Line",
+              "scatter": "Scatter"
+            },
+            "rtl_labels": true,
+            "math_labels": "MathJax"
+          }
+        },
+        "table_data": null,
+        "solution_style": "حل مبسط جدًا ومفصل: نشرح القاعدة، ثم نطبقها خطوة بخطوة، ثم نختم باستنتاج واضح.",
+        "methodology": {
+          "goal": "بناء منحنى دالة على مجال مغلق.",
+          "method": "جدول التغيرات مع نقاط عددية.",
+          "why_this_method": "لأنها الطريقة الأقصر والأوضح والمتوافقة مع منهجية البكالوريا.",
+          "used_theorem": "الرسم التقريبي انطلاقًا من القيم واتجاه التغير.",
+          "bac_template": [
+            "نكتب القاعدة المستعملة.",
+            "ننجز الحساب بالتدرج.",
+            "نستنتج النتيجة بوضوح."
+          ],
+          "formal_writing": [
+            "نحدد المعطيات والمجال.",
+            "نطبق القاعدة مع إظهار الحساب.",
+            "نكتب الاستنتاج النهائي."
+          ]
+        },
+        "formal_writing": [
+          "نكتب المعطيات والقاعدة المستعملة.",
+          "ننجز الحساب تدريجيًا.",
+          "نختم باستنتاج واضح."
+        ],
+        "react_display": {
+          "show_strategy": true,
+          "show_steps": true,
+          "show_final_answer": true,
+          "show_graph": true,
+          "show_table": false,
+          "graph_key": "graph_data",
+          "table_key": "table_data",
+          "math_renderer": "better-react-mathjax"
+        },
+        "official_answer_check": {
+          "checked": true,
+          "reference": "تم التحقق حسابيًا انطلاقًا من نص التمرين المرفق.",
+          "final_result_matches_reference": null,
+          "note": "لا يتضمن الملف المرفق حلًا نموذجيًا؛ لذلك تم التحقق الرياضي المباشر من جميع النتائج."
+        },
+        "pedagogical_detail": {
+          "level": "مبسط جدًا",
+          "show_intermediate_calculations": true,
+          "explain_rule_before_use": true,
+          "state_final_conclusion": true
+        },
+        "display_order": [
+          "strategy",
+          "steps",
+          "table_data",
+          "graph_data",
+          "final_answer",
+          "verification"
+        ],
+        "validation": {
+          "checked_against_official_solution": false,
+          "table_values_checked": true,
+          "critical_points_checked": true,
+          "final_answer_checked": true
+        }
+      },
+      "display_order": 2,
+      "content_type": "question"
+    },
+    {
+      "id": "2008_ex3_q1c",
+      "text": "برهن أنه إذا كان x∈[0,2] فإن f(x)∈[0,2].",
+      "axis_tags": [
+        "derivative_sign_variation",
+        "extrema_variation_table"
+      ],
+      "solution": {
+        "strategy": "نستعمل صورة المجال من جدول التغيرات.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "استعمال التزايد",
+            "explanation": "بما أن f متزايدة على [0,2] فإن أصغر قيمة هي f(0) وأكبر قيمة هي f(2).",
+            "student_help": "نفهم الفكرة أولًا، ثم نكتب الحساب سطرًا سطرًا دون القفز إلى النتيجة.",
+            "why_this_step": "هذه الخطوة تربط المعطيات بالنتيجة المطلوبة بطريقة مناسبة لكتابة البكالوريا."
+          },
+          {
+            "step_number": 2,
+            "title": "كتابة الحصر",
+            "explanation": "\\frac32\\le f(x)\\le\\frac74",
+            "student_help": "نفهم الفكرة أولًا، ثم نكتب الحساب سطرًا سطرًا دون القفز إلى النتيجة.",
+            "why_this_step": "هذه الخطوة تربط المعطيات بالنتيجة المطلوبة بطريقة مناسبة لكتابة البكالوريا."
+          },
+          {
+            "step_number": 3,
+            "title": "المقارنة مع [0,2]",
+            "explanation": "لدينا 0≤3/2 و7/4≤2، لذلك كل القيم تقع داخل [0,2].",
+            "student_help": "نفهم الفكرة أولًا، ثم نكتب الحساب سطرًا سطرًا دون القفز إلى النتيجة.",
+            "why_this_step": "هذه الخطوة تربط المعطيات بالنتيجة المطلوبة بطريقة مناسبة لكتابة البكالوريا.",
+            "latex": "0\\le\\frac32\\le f(x)\\le\\frac74\\le2"
+          }
+        ],
+        "final_answer": "لكل x∈[0,2] لدينا f(x)∈[3/2,7/4]⊂[0,2].",
+        "verification": "الحصر أدق من المطلوب.",
+        "common_mistakes": [
+          "محاولة حل المتراجحتين مباشرة مع أن جدول التغيرات يكفي."
+        ],
+        "hints": [
+          "استعمل القيمتين f(0) وf(2)."
+        ],
+        "graph_data": null,
+        "table_data": null,
+        "solution_style": "حل مبسط جدًا ومفصل: نشرح القاعدة، ثم نطبقها خطوة بخطوة، ثم نختم باستنتاج واضح.",
+        "methodology": {
+          "goal": "إثبات استقرار مجال بالدالة.",
+          "method": "تحديد صورة المجال بواسطة التغيرات.",
+          "why_this_method": "لأنها الطريقة الأقصر والأوضح والمتوافقة مع منهجية البكالوريا.",
+          "used_theorem": "صورة مجال بدالة متزايدة تحدد بقيم الطرفين.",
+          "bac_template": [
+            "نكتب القاعدة المستعملة.",
+            "ننجز الحساب بالتدرج.",
+            "نستنتج النتيجة بوضوح."
+          ],
+          "formal_writing": [
+            "نحدد المعطيات والمجال.",
+            "نطبق القاعدة مع إظهار الحساب.",
+            "نكتب الاستنتاج النهائي."
+          ]
+        },
+        "formal_writing": [
+          "نكتب المعطيات والقاعدة المستعملة.",
+          "ننجز الحساب تدريجيًا.",
+          "نختم باستنتاج واضح."
+        ],
+        "react_display": {
+          "show_strategy": true,
+          "show_steps": true,
+          "show_final_answer": true,
+          "show_graph": false,
+          "show_table": false,
+          "graph_key": "graph_data",
+          "table_key": "table_data",
+          "math_renderer": "better-react-mathjax"
+        },
+        "official_answer_check": {
+          "checked": true,
+          "reference": "تم التحقق حسابيًا انطلاقًا من نص التمرين المرفق.",
+          "final_result_matches_reference": null,
+          "note": "لا يتضمن الملف المرفق حلًا نموذجيًا؛ لذلك تم التحقق الرياضي المباشر من جميع النتائج."
+        },
+        "pedagogical_detail": {
+          "level": "مبسط جدًا",
+          "show_intermediate_calculations": true,
+          "explain_rule_before_use": true,
+          "state_final_conclusion": true
+        },
+        "display_order": [
+          "strategy",
+          "steps",
+          "table_data",
+          "graph_data",
+          "final_answer",
+          "verification"
+        ],
+        "validation": {
+          "checked_against_official_solution": false,
+          "table_values_checked": true,
+          "critical_points_checked": true,
+          "final_answer_checked": true
+        }
+      },
+      "display_order": 3,
+      "content_type": "question"
+    }
+  ],
+  "content_separation": {
+    "statement": "statement",
+    "questions": "questions[]",
+    "statement_graph_data": "statement_graph_data",
+    "solution.graph_data": "questions[].solution.graph_data",
+    "solution.table_data": "questions[].solution.table_data"
+  },
+  "statement_sections": [],
+  "review_status": {
+    "compared_with_original_pdf": true,
+    "source_page_checked": true,
+    "statement_questions_separated": true,
+    "solutions_expanded_for_beginner": true,
+    "graphs_checked": true,
+    "axis_classification_checked": true,
+    "react_graph_structure_checked": true,
+    "all_graph_series_have_data_arrays": true,
+    "tables_normalized_for_react": true,
+    "compared_with_official_solution": false,
+    "final_answers_verified": true,
+    "explanations_rewritten_in_detail": true,
+    "statement_rewritten_cleanly": true,
+    "all_variation_tables_rebuilt": true,
+    "all_sign_tables_rebuilt": true,
+    "final_json_validation": true
+  },
+  "source_text_policy": {
+    "statement": "منقول مع تنظيف رموز الطباعة فقط دون تغيير المعنى.",
+    "questions": "منقولة مع ترقيم واضح دون تغيير المطلوب.",
+    "added_content": "الحلول والجداول وبيانات الرسم أضيفت لعرضها في React."
+  },
+  "version": "2.9-bac-final-corrected",
+  "react_display": {
+    "statement_component": "ExerciseStatement",
+    "question_component": "ExerciseQuestion",
+    "solution_component": "ExerciseSolution",
+    "graph_component": "FunctionGraph",
+    "table_component": "MathTable",
+    "graph_schema": "series[].data[{x,y}]",
+    "supports_rtl": true,
+    "supports_mathjax": true
+  }
+}

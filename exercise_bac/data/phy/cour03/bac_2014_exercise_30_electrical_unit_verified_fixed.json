@@ -1,0 +1,438 @@
+{
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2014-electrical-verified",
+  "language": "ar",
+  "direction": "rtl",
+  "year": 2014,
+  "session": "ordinary",
+  "chapter_code": "electrical_phenomena_evolution",
+  "chapter_title": "تطور دراسة ظواهر كهربائية",
+  "exercise_number": 30,
+  "source_page": 11,
+  "source_pages": [
+    11,
+    12
+  ],
+  "solution_source_pages": [
+    32
+  ],
+
+  "branches": [
+    {
+      "code": "science",
+      "name": "شعبة علوم تجريبية"
+    }
+  ],
+  "title": "التمرين 30 — بكالوريا الجزائر 2014 — شعبة علوم تجريبية",
+  "axis_tags": [
+    "rc_capacitor_charging",
+    "rc_capacitor_discharge",
+    "rc_differential_equation_solution",
+    "rc_time_constant_graphical_analysis",
+    "rc_model_exploitation_physical_quantities"
+  ],
+  "questions": [
+    {
+      "id": "2014_elec_ex30_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) نضع البادلة في الوضع (1). ماذا يمثل المنحنيان المشاهدان بالمدخلين \\(Y_1\\) و\\(Y_2\\) لراسم الاهتزاز المهبطي؟",
+      "solution": {
+        "strategy": "نقرأ التوصيل من الشكل 46.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "المدخل Y1",
+            "explanation": "يعرض التوتر بين طرفي الناقل الأومي \\(R_1\\): \\[\\boxed{u_{R_1}(t)}\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "المدخل Y2",
+            "explanation": "يعرض التوتر بين طرفي المكثفة: \\[\\boxed{u_C(t)}\\]"
+          }
+        ],
+        "final_answer": "Y1→uR1، Y2→uC."
+      }
+    },
+    {
+      "id": "2014_elec_ex30_q2",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2) يظهر على الشاشة المنحنيان (a) و(b) (الشكل 47). أ- ما هو المنحنى المعطى بالمدخل \\(Y_1\\)؟ برر إجابتك، ثم اكتب المعادلة التفاضلية الموافقة لتطور المقدار الفيزيائي الذي يمثله هذا المنحنى. ب- جد قيمة ثابت الزمن \\(\\tau_1\\) للدارة.",
+      "solution": {
+        "strategy": "أثناء الشحن يتناقص uR1 من E إلى 0 بينما يزداد uC من 0 إلى E.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تحديد المنحنى",
+            "explanation": "المدخل \\(Y_1\\) يمثل \\(u_{R_1}\\)، لذا هو المنحنى \\(\\boxed{(a)}\\) المتناقص."
+          },
+          {
+            "step_number": 2,
+            "title": "المعادلة التفاضلية",
+            "explanation": "من \\(E=u_{R_1}+u_C\\)، وباشتقاق العلاقة واستعمال \\(du_C/dt=i/C=u_{R_1}/(R_1C)\\): \\[\\boxed{\\frac{du_{R_1}}{dt}+\\frac1{R_1C}u_{R_1}=0}\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "ثابت الزمن",
+            "explanation": "في المنحنى المتناقص: \\[u_{R_1}(\\tau_1)=0.37E\\] ومن الشكل \\(0.37E\\approx2.2V\\) يقابل \\[\\boxed{\\tau_1=0.08s}\\]"
+          }
+        ],
+        "final_answer": "المنحنى (a) هو uR1، و\\(\\tau_1=0.08s\\)."
+      }
+    },
+    {
+      "id": "2014_elec_ex30_q3",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "3) حدد قيمة كل من \\(E\\) و\\(C\\).",
+      "solution": {
+        "strategy": "القيمة الابتدائية لـuR1 تعطي E، ثم C=τ1/R1.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "E",
+            "explanation": "\\[E=u_{R_1}(0)=\\boxed{6V}\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "C",
+            "explanation": "\\[C=\\frac{\\tau_1}{R_1}=\\frac{0.08}{1\\times10^3}=\\boxed{80\\mu F}\\]"
+          }
+        ],
+        "final_answer": "\\(E=6V\\)، \\(C=80\\mu F\\)."
+      }
+    },
+    {
+      "id": "2014_elec_ex30_q4",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "4) احسب شدة التيار \\(i(t)\\) في اللحظة \\(t=0\\) وفي اللحظة \\(t\\ge0.6s\\).",
+      "solution": {
+        "strategy": "نستعمل i=(E-uC)/R1 أثناء الشحن.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "عند t=0",
+            "explanation": "\\[u_C(0)=0\\Rightarrow i(0)=\\frac{6}{1000}=\\boxed{6mA}\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "بعد اكتمال الشحن",
+            "explanation": "لـ\\(t\\ge0.6s\\) تكون \\(u_C\\approx E\\)، لذلك \\[\\boxed{i\\approx0A}\\]"
+          }
+        ],
+        "final_answer": "\\(i(0)=6mA\\)، و\\(i\\approx0\\) بعد اكتمال الشحن."
+      }
+    },
+    {
+      "id": "2014_elec_ex30_q5",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "5) بعد نهاية شحن المكثفة نضع البادلة \\(K\\) في الوضع (2) في لحظة نعتبرها مبدأ الأزمنة. أ- احسب قيمة ثابت الزمن \\(\\tau_2\\) للدارة في هذه الحالة وقارنها بقيمة \\(\\tau_1\\). ماذا تستنتج؟ ب- احسب قيمة الطاقة الكهربائية المحولة في الناقل الأومي \\(R_2\\) بفعل جول في اللحظة \\(t=\\tau_2\\).",
+      "solution": {
+        "strategy": "في الوضع (2) تفرغ المكثفة عبر R2 فقط.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "ثابت زمن التفريغ",
+            "explanation": "\\[\\tau_2=R_2C=2\\times10^3\\times80\\times10^{-6}=\\boxed{0.16s}\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "المقارنة",
+            "explanation": "\\[\\boxed{\\tau_2=2\\tau_1}\\] لذلك التفريغ أبطأ من الشحن."
+          },
+          {
+            "step_number": 3,
+            "title": "توتر المكثفة عند τ2",
+            "explanation": "\\[u_C(\\tau_2)=Ee^{-1}=\\frac6e\\approx2.21V\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "الطاقة المحولة بفعل جول",
+            "explanation": "الطاقة المحولة بين \\(0\\) و\\(\\tau_2\\) هي نقص طاقة المكثفة: \\[E_J=\\frac12C\\left(E^2-u_C^2(\\tau_2)\\right)\\]"
+          },
+          {
+            "step_number": 5,
+            "title": "القيمة",
+            "explanation": "\\[E_J=\\frac12\\times80\\times10^{-6}\\left(6^2-(6/e)^2\\right)\\approx\\boxed{1.24\\times10^{-3}J}\\]"
+          }
+        ],
+        "final_answer": "\\(\\tau_2=0.16s=2\\tau_1\\)، والطاقة المحولة حتى \\(t=\\tau_2\\) ≈ \\(1.24mJ\\).",
+        "verification": "القيمة العددية محسوبة من علاقة الطاقة نفسها؛ قراءة التصحيح المصور توافق تقريباً 1.24×10⁻³ J."
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "تجميعية_عمورة_للبكالوريات_السابقة_الوحدة_3(1).pdf",
+    "statement_figure_policy": "كل شكل أو بيان معطى أصلاً في نص البكالوريا يعرض مع التمرين. إذا كان السؤال يطلب رسم دارة أو توصيل جهاز فلا يكشف الرسم قبل فتح الحل.",
+    "solution_figure_policy": "تضاف الرسومات المطلوبة أو المساعدة داخل خطوات الحل فقط.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  },
+  "statement": "تتكون الدارة الكهربائية (الشكل 46) من مولد لتوتر كهربائي ثابت \\(E\\)، مكثفة سعتها \\(C\\)، ناقلين أوميين مقاومتهما \\(R_1=1k\\Omega\\) و\\(R_2=2k\\Omega\\)، وبادلة \\(K\\). توصل الدارة براسم اهتزاز مهبطي ذي مدخلين \\(Y_1\\) و\\(Y_2\\). نضع البادلة في الوضع (1)، ويظهر على شاشة الراسم المنحنيان (a) و(b) في الشكل 47.",
+  "figures": [
+    {
+      "diagram_type": "bac_2014_ex30_statement_circuit",
+      "title": "الشكل 46 — دارة RC ببادلة",
+      "description": "الدارة الأصلية للتمرين مع R1 وR2 والمكثفة.",
+      "svg": "<svg viewBox=\"0 0 920 420\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"الشكل 46 دارة RC ببادلة\">\n <rect x=\"35\" y=\"25\" width=\"850\" height=\"340\" rx=\"22\" fill=\"#fff\" stroke=\"#cbd5e1\" stroke-width=\"2\"/>\n <path d=\"M160 100 H300\" stroke=\"#111827\" stroke-width=\"5\"/>\n <path d=\"M585 100 H705 V310 H160 V100\" stroke=\"#111827\" stroke-width=\"5\" fill=\"none\"/>\n\n <circle cx=\"160\" cy=\"205\" r=\"34\" fill=\"#fff\" stroke=\"#111827\" stroke-width=\"4\"/>\n <text x=\"149\" y=\"213\" font-size=\"23\" font-family=\"Arial\">E</text>\n <text x=\"118\" y=\"175\" font-size=\"25\" font-family=\"Arial\">+</text>\n <text x=\"118\" y=\"250\" font-size=\"25\" font-family=\"Arial\">−</text>\n\n <circle cx=\"315\" cy=\"100\" r=\"5\" fill=\"#111827\"/>\n <circle cx=\"410\" cy=\"100\" r=\"5\" fill=\"#111827\"/>\n <circle cx=\"505\" cy=\"100\" r=\"5\" fill=\"#111827\"/>\n <line x1=\"335\" y1=\"97\" x2=\"390\" y2=\"135\" stroke=\"#111827\" stroke-width=\"5\"/>\n <text x=\"300\" y=\"72\" font-size=\"22\" font-family=\"Arial\">1</text>\n <text x=\"398\" y=\"72\" font-size=\"22\" font-family=\"Arial\">K</text>\n <text x=\"493\" y=\"72\" font-size=\"22\" font-family=\"Arial\">2</text>\n\n <line x1=\"410\" y1=\"135\" x2=\"410\" y2=\"180\" stroke=\"#111827\" stroke-width=\"5\"/>\n <line x1=\"380\" y1=\"180\" x2=\"440\" y2=\"180\" stroke=\"#111827\" stroke-width=\"6\"/>\n <line x1=\"380\" y1=\"215\" x2=\"440\" y2=\"215\" stroke=\"#111827\" stroke-width=\"6\"/>\n <line x1=\"410\" y1=\"215\" x2=\"410\" y2=\"310\" stroke=\"#111827\" stroke-width=\"5\"/>\n <text x=\"455\" y=\"205\" font-size=\"24\" font-family=\"Arial\">C</text>\n\n <rect x=\"225\" y=\"285\" width=\"100\" height=\"50\" rx=\"7\" fill=\"#fff\" stroke=\"#111827\" stroke-width=\"3\"/>\n <text x=\"247\" y=\"318\" font-size=\"20\" font-family=\"Arial\">R₁=1kΩ</text>\n\n <rect x=\"620\" y=\"175\" width=\"100\" height=\"50\" rx=\"7\" fill=\"#fff\" stroke=\"#111827\" stroke-width=\"3\"/>\n <text x=\"642\" y=\"208\" font-size=\"20\" font-family=\"Arial\">R₂=2kΩ</text>\n\n <text x=\"150\" y=\"348\" font-size=\"21\" font-family=\"Arial\">Y₁</text>\n <text x=\"445\" y=\"160\" font-size=\"21\" font-family=\"Arial\">Y₂</text>\n</svg>",
+      "render_mode": "inline",
+      "responsive": true
+    },
+    {
+      "title": "الشكل 47 — المنحنيان (a) و(b)",
+      "description": "أثناء الشحن: (a) متناقص ويمثل u_R1، و(b) متزايد ويمثل u_C.",
+      "x_label": "t (s)",
+      "y_label": "u (V)",
+      "x_domain": [
+        0,
+        0.6
+      ],
+      "y_domain": [
+        0,
+        6.5
+      ],
+      "series": [
+        {
+          "name": "(a) u_R1",
+          "data": [
+            {
+              "x": 0,
+              "y": 6.0
+            },
+            {
+              "x": 0.02,
+              "y": 4.673
+            },
+            {
+              "x": 0.04,
+              "y": 3.639
+            },
+            {
+              "x": 0.06,
+              "y": 2.834
+            },
+            {
+              "x": 0.08,
+              "y": 2.207
+            },
+            {
+              "x": 0.12,
+              "y": 1.339
+            },
+            {
+              "x": 0.16,
+              "y": 0.812
+            },
+            {
+              "x": 0.24,
+              "y": 0.299
+            },
+            {
+              "x": 0.32,
+              "y": 0.11
+            },
+            {
+              "x": 0.48,
+              "y": 0.015
+            },
+            {
+              "x": 0.6,
+              "y": 0.003
+            }
+          ]
+        },
+        {
+          "name": "(b) u_C",
+          "data": [
+            {
+              "x": 0,
+              "y": 0.0
+            },
+            {
+              "x": 0.02,
+              "y": 1.327
+            },
+            {
+              "x": 0.04,
+              "y": 2.361
+            },
+            {
+              "x": 0.06,
+              "y": 3.166
+            },
+            {
+              "x": 0.08,
+              "y": 3.793
+            },
+            {
+              "x": 0.12,
+              "y": 4.661
+            },
+            {
+              "x": 0.16,
+              "y": 5.188
+            },
+            {
+              "x": 0.24,
+              "y": 5.701
+            },
+            {
+              "x": 0.32,
+              "y": 5.89
+            },
+            {
+              "x": 0.48,
+              "y": 5.985
+            },
+            {
+              "x": 0.6,
+              "y": 5.997
+            }
+          ]
+        }
+      ],
+      "settings": {
+        "show_grid": true,
+        "show_axes": true,
+        "show_legend": true,
+        "show_point_labels": false,
+        "connect_points": true
+      }
+    }
+  ],
+  "statement_graphs": [
+    {
+      "diagram_type": "bac_2014_ex30_statement_circuit",
+      "title": "الشكل 46 — دارة RC ببادلة",
+      "description": "الدارة الأصلية للتمرين مع R1 وR2 والمكثفة.",
+      "svg": "<svg viewBox=\"0 0 920 420\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"الشكل 46 دارة RC ببادلة\">\n <rect x=\"35\" y=\"25\" width=\"850\" height=\"340\" rx=\"22\" fill=\"#fff\" stroke=\"#cbd5e1\" stroke-width=\"2\"/>\n <path d=\"M160 100 H300\" stroke=\"#111827\" stroke-width=\"5\"/>\n <path d=\"M585 100 H705 V310 H160 V100\" stroke=\"#111827\" stroke-width=\"5\" fill=\"none\"/>\n\n <circle cx=\"160\" cy=\"205\" r=\"34\" fill=\"#fff\" stroke=\"#111827\" stroke-width=\"4\"/>\n <text x=\"149\" y=\"213\" font-size=\"23\" font-family=\"Arial\">E</text>\n <text x=\"118\" y=\"175\" font-size=\"25\" font-family=\"Arial\">+</text>\n <text x=\"118\" y=\"250\" font-size=\"25\" font-family=\"Arial\">−</text>\n\n <circle cx=\"315\" cy=\"100\" r=\"5\" fill=\"#111827\"/>\n <circle cx=\"410\" cy=\"100\" r=\"5\" fill=\"#111827\"/>\n <circle cx=\"505\" cy=\"100\" r=\"5\" fill=\"#111827\"/>\n <line x1=\"335\" y1=\"97\" x2=\"390\" y2=\"135\" stroke=\"#111827\" stroke-width=\"5\"/>\n <text x=\"300\" y=\"72\" font-size=\"22\" font-family=\"Arial\">1</text>\n <text x=\"398\" y=\"72\" font-size=\"22\" font-family=\"Arial\">K</text>\n <text x=\"493\" y=\"72\" font-size=\"22\" font-family=\"Arial\">2</text>\n\n <line x1=\"410\" y1=\"135\" x2=\"410\" y2=\"180\" stroke=\"#111827\" stroke-width=\"5\"/>\n <line x1=\"380\" y1=\"180\" x2=\"440\" y2=\"180\" stroke=\"#111827\" stroke-width=\"6\"/>\n <line x1=\"380\" y1=\"215\" x2=\"440\" y2=\"215\" stroke=\"#111827\" stroke-width=\"6\"/>\n <line x1=\"410\" y1=\"215\" x2=\"410\" y2=\"310\" stroke=\"#111827\" stroke-width=\"5\"/>\n <text x=\"455\" y=\"205\" font-size=\"24\" font-family=\"Arial\">C</text>\n\n <rect x=\"225\" y=\"285\" width=\"100\" height=\"50\" rx=\"7\" fill=\"#fff\" stroke=\"#111827\" stroke-width=\"3\"/>\n <text x=\"247\" y=\"318\" font-size=\"20\" font-family=\"Arial\">R₁=1kΩ</text>\n\n <rect x=\"620\" y=\"175\" width=\"100\" height=\"50\" rx=\"7\" fill=\"#fff\" stroke=\"#111827\" stroke-width=\"3\"/>\n <text x=\"642\" y=\"208\" font-size=\"20\" font-family=\"Arial\">R₂=2kΩ</text>\n\n <text x=\"150\" y=\"348\" font-size=\"21\" font-family=\"Arial\">Y₁</text>\n <text x=\"445\" y=\"160\" font-size=\"21\" font-family=\"Arial\">Y₂</text>\n</svg>",
+      "render_mode": "inline",
+      "responsive": true
+    },
+    {
+      "title": "الشكل 47 — المنحنيان (a) و(b)",
+      "description": "أثناء الشحن: (a) متناقص ويمثل u_R1، و(b) متزايد ويمثل u_C.",
+      "x_label": "t (s)",
+      "y_label": "u (V)",
+      "x_domain": [
+        0,
+        0.6
+      ],
+      "y_domain": [
+        0,
+        6.5
+      ],
+      "series": [
+        {
+          "name": "(a) u_R1",
+          "data": [
+            {
+              "x": 0,
+              "y": 6.0
+            },
+            {
+              "x": 0.02,
+              "y": 4.673
+            },
+            {
+              "x": 0.04,
+              "y": 3.639
+            },
+            {
+              "x": 0.06,
+              "y": 2.834
+            },
+            {
+              "x": 0.08,
+              "y": 2.207
+            },
+            {
+              "x": 0.12,
+              "y": 1.339
+            },
+            {
+              "x": 0.16,
+              "y": 0.812
+            },
+            {
+              "x": 0.24,
+              "y": 0.299
+            },
+            {
+              "x": 0.32,
+              "y": 0.11
+            },
+            {
+              "x": 0.48,
+              "y": 0.015
+            },
+            {
+              "x": 0.6,
+              "y": 0.003
+            }
+          ]
+        },
+        {
+          "name": "(b) u_C",
+          "data": [
+            {
+              "x": 0,
+              "y": 0.0
+            },
+            {
+              "x": 0.02,
+              "y": 1.327
+            },
+            {
+              "x": 0.04,
+              "y": 2.361
+            },
+            {
+              "x": 0.06,
+              "y": 3.166
+            },
+            {
+              "x": 0.08,
+              "y": 3.793
+            },
+            {
+              "x": 0.12,
+              "y": 4.661
+            },
+            {
+              "x": 0.16,
+              "y": 5.188
+            },
+            {
+              "x": 0.24,
+              "y": 5.701
+            },
+            {
+              "x": 0.32,
+              "y": 5.89
+            },
+            {
+              "x": 0.48,
+              "y": 5.985
+            },
+            {
+              "x": 0.6,
+              "y": 5.997
+            }
+          ]
+        }
+      ],
+      "settings": {
+        "show_grid": true,
+        "show_axes": true,
+        "show_legend": true,
+        "show_point_labels": false,
+        "connect_points": true
+      }
+    }
+  ]
+}

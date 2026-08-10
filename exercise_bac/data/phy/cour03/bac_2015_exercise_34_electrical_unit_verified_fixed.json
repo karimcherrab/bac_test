@@ -1,0 +1,470 @@
+{
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2015-electrical-verified",
+  "language": "ar",
+  "direction": "rtl",
+  "year": 2015,
+  "session": "ordinary",
+  "chapter_code": "electrical_phenomena_evolution",
+  "chapter_title": "تطور دراسة ظواهر كهربائية",
+  "exercise_number": 34,
+  "source_page": 13,
+  "source_pages": [
+    13
+  ],
+  "solution_source_pages": [
+    34
+  ],
+
+  "branches": [
+    {
+      "code": "science",
+      "name": "شعبة علوم تجريبية"
+    }
+  ],
+  "title": "التمرين 34 — بكالوريا الجزائر 2015 — شعبة علوم تجريبية",
+  "axis_tags": [
+    "rc_capacitor_charging",
+    "rc_capacitor_discharge",
+    "rc_differential_equation_solution",
+    "rc_time_constant_graphical_analysis"
+  ],
+  "questions": [
+    {
+      "id": "2015_elec_ex34_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) ألحق بكل منحنى الظاهرة الموافقة (شحن أم تفريغ)، وما اسم الجهاز \\(M\\)؟",
+      "solution": {
+        "strategy": "نحدد الظاهرة من اتجاه تغير uAB.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الشكل 55",
+            "explanation": "يتناقص من قيمة عظمى نحو الصفر، إذن \\(\\boxed{\\text{تفريغ}}\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "الشكل 56",
+            "explanation": "يتزايد من الصفر نحو قيمة ثابتة، إذن \\(\\boxed{\\text{شحن}}\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "الجهاز M",
+            "explanation": "\\[\\boxed{\\text{راسم اهتزاز ذي ذاكرة أو جهاز ExAO}}\\]"
+          }
+        ],
+        "final_answer": "55 تفريغ، 56 شحن، وM راسم اهتزاز ذي ذاكرة أو ExAO."
+      }
+    },
+    {
+      "id": "2015_elec_ex34_q2",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2) بتطبيق قانون جمع التوترات، اكتب المعادلة التفاضلية للدارة بدلالة \\(u_{AB}(t)\\) خلال مرحلة التفريغ.",
+      "solution": {
+        "strategy": "أثناء التفريغ لا يوجد مولد في الحلقة الفعالة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "قانون الدارة",
+            "explanation": "\\[u_{AB}+u_{R'}=0\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "العلاقات",
+            "explanation": "\\[u_{R'}=R'i=R'C\\frac{du_{AB}}{dt}\\] وفق التوجيه المعتمد."
+          },
+          {
+            "step_number": 3,
+            "title": "المعادلة",
+            "explanation": "\\[\\boxed{\\frac{du_{AB}}{dt}+\\frac1{R'C}u_{AB}=0}\\]"
+          }
+        ],
+        "final_answer": "\\(u'_{AB}+u_{AB}/(R'C)=0\\)."
+      }
+    },
+    {
+      "id": "2015_elec_ex34_q3",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "3) تحقق من أن حل المعادلة التفاضلية من الشكل \\(u_{AB}(t)=Ae^{-t/(R'C)}\\)، حيث \\(A\\) ثابت يطلب تحديد عبارته من الشروط الابتدائية.",
+      "solution": {
+        "strategy": "نشتق الحل ثم نستعمل uAB(0)=E.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التحقق",
+            "explanation": "\\[u'_{AB}=-\\frac{A}{R'C}e^{-t/(R'C)}\\] وبالتعويض تتحقق المعادلة."
+          },
+          {
+            "step_number": 2,
+            "title": "الشرط الابتدائي",
+            "explanation": "عند \\(t=0\\): \\[u_{AB}(0)=A=E\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الحل",
+            "explanation": "\\[\\boxed{u_{AB}(t)=Ee^{-t/(R'C)}}\\]"
+          }
+        ],
+        "final_answer": "\\(A=E\\)."
+      }
+    },
+    {
+      "id": "2015_elec_ex34_q4",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "4) اكتب عبارة شدة التيار \\(i(t)\\) أثناء التفريغ.",
+      "solution": {
+        "strategy": "نستعمل i=C duAB/dt وفق الاتجاه الجبري المعتمد.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "العبارة",
+            "explanation": "\\[i(t)=C\\frac{du_{AB}}{dt}=-\\frac{E}{R'}e^{-t/(R'C)}\\]"
+          }
+        ],
+        "final_answer": "\\(i(t)=-\\frac{E}{R'}e^{-t/(R'C)}\\)."
+      }
+    },
+    {
+      "id": "2015_elec_ex34_q5",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "5) حدّد من البيان قيمة ثابتَي الزمن \\(\\tau\\) و\\(\\tau'\\) لدارة الشحن والتفريغ.",
+      "solution": {
+        "strategy": "نستخدم 63% للشحن و37% للتفريغ.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "ثابت زمن الشحن",
+            "explanation": "من الشكل 56: عند \\(u_{AB}=0.63E\\approx7.5V\\) نجد \\[\\boxed{\\tau=0.20s}\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "ثابت زمن التفريغ",
+            "explanation": "من الشكل 55: عند \\(u_{AB}=0.37E\\approx4.4V\\) نجد تقريباً \\[\\boxed{\\tau'=0.10s}\\]"
+          }
+        ],
+        "final_answer": "\\(\\tau=0.20s\\)، \\(\\tau'\\approx0.10s\\)."
+      }
+    },
+    {
+      "id": "2015_elec_ex34_q6",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "6) استنتج قيمة سعة المكثفة \\(C\\) وقيمة مقاومة الناقل الأومي \\(R\\).",
+      "solution": {
+        "strategy": "نستعمل τ'=R'C للتفريغ ثم τ=RC للشحن.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "السعة",
+            "explanation": "\\[C=\\frac{\\tau'}{R'}=\\frac{0.10}{500}=\\boxed{2.0\\times10^{-4}F=200\\mu F}\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "مقاومة الشحن",
+            "explanation": "\\[R=\\frac{\\tau}{C}=\\frac{0.20}{200\\times10^{-6}}=\\boxed{1000\\Omega=1k\\Omega}\\]"
+          }
+        ],
+        "final_answer": "\\(C=200\\mu F\\)، \\(R=1k\\Omega\\).",
+        "verification": "قيم C وR مستنتجة من قراءتي ثابتَي الزمن في الشكلين 55 و56 والعلاقتين τ=RC وτ'=R'C."
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "تجميعية_عمورة_للبكالوريات_السابقة_الوحدة_3(1).pdf",
+    "statement_figure_policy": "الشكل أو البيان المعطى في موضوع البكالوريا يعرض مع نص التمرين. إذا طلب السؤال إعادة رسم الدارة فتبقى الدارة الأصلية المعطاة ظاهرة لأنها جزء من الموضوع، ويضاف داخل الحل فقط الرسم الموجه أو توصيل جهاز القياس.",
+    "solution_figure_policy": "الرسومات التوجيهية أو رسومات التوصيل التي تمثل جزءاً من الحل توضع داخل خطوات الحل.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  },
+  "statement": "نركب الدارة المبينة بالشكل 54. يسمح جهاز \\(M\\) برسم المنحنيين (الشكل 55) و(الشكل 56) للتوتر الكهربائي \\(u_{AB}(t)\\) بين طرفي المكثفة في حالتي الشحن والتفريغ. عندما تكون البادلة في الوضع (1) يتم شحن المكثفة الفارغة بواسطة مولد للتوتر الثابت قوته المحركة الكهربائية \\(E\\). بعد شحن المكثفة تماماً يتم نقل البادلة إلى الوضع (2) في اللحظة \\(t=0\\)، حيث يتم تفريغ المكثفة عبر ناقل أومي مقاومته \\(R'=500\\Omega\\).",
+  "figures": [
+    {
+      "diagram_type": "bac_2015_ex34_statement_circuit",
+      "title": "الشكل 54 — دارة الشحن والتفريغ",
+      "description": "الدارة الأصلية ببادلة ومقاومتي الشحن والتفريغ.",
+      "svg": "<svg viewBox=\"0 0 900 390\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"الشكل 54 دارة شحن وتفريغ مكثفة\">\n <rect x=\"35\" y=\"25\" width=\"830\" height=\"305\" rx=\"20\" fill=\"#fff\" stroke=\"#cbd5e1\" stroke-width=\"2\"/>\n <path d=\"M145 95 H290\" stroke=\"#111827\" stroke-width=\"5\"/>\n <path d=\"M585 95 H700 V285 H145 V95\" stroke=\"#111827\" stroke-width=\"5\" fill=\"none\"/>\n <circle cx=\"145\" cy=\"190\" r=\"32\" fill=\"#fff\" stroke=\"#111827\" stroke-width=\"4\"/>\n <text x=\"134\" y=\"198\" font-size=\"22\">E</text><text x=\"104\" y=\"160\" font-size=\"23\">+</text><text x=\"104\" y=\"235\" font-size=\"23\">−</text>\n <rect x=\"205\" y=\"70\" width=\"80\" height=\"50\" rx=\"6\" fill=\"#fff\" stroke=\"#111827\" stroke-width=\"3\"/><text x=\"235\" y=\"102\" font-size=\"22\">R</text>\n <circle cx=\"315\" cy=\"95\" r=\"5\"/><circle cx=\"405\" cy=\"95\" r=\"5\"/><circle cx=\"495\" cy=\"95\" r=\"5\"/>\n <line x1=\"335\" y1=\"92\" x2=\"385\" y2=\"130\" stroke=\"#111827\" stroke-width=\"5\"/><text x=\"300\" y=\"67\" font-size=\"21\">1</text><text x=\"396\" y=\"67\" font-size=\"21\">K</text><text x=\"485\" y=\"67\" font-size=\"21\">2</text>\n <line x1=\"405\" y1=\"130\" x2=\"405\" y2=\"170\" stroke=\"#111827\" stroke-width=\"5\"/>\n <line x1=\"375\" y1=\"170\" x2=\"435\" y2=\"170\" stroke=\"#111827\" stroke-width=\"6\"/><line x1=\"375\" y1=\"205\" x2=\"435\" y2=\"205\" stroke=\"#111827\" stroke-width=\"6\"/>\n <line x1=\"405\" y1=\"205\" x2=\"405\" y2=\"285\" stroke=\"#111827\" stroke-width=\"5\"/><text x=\"450\" y=\"195\" font-size=\"23\">C</text>\n <text x=\"375\" y=\"152\" font-size=\"20\">A</text><text x=\"375\" y=\"230\" font-size=\"20\">B</text>\n <rect x=\"620\" y=\"165\" width=\"80\" height=\"55\" rx=\"6\" fill=\"#fff\" stroke=\"#111827\" stroke-width=\"3\"/><text x=\"640\" y=\"199\" font-size=\"21\">R'=500Ω</text>\n</svg>",
+      "render_mode": "inline",
+      "responsive": true
+    },
+    {
+      "title": "الشكل 55 — u_AB=f(t)",
+      "description": "منحنى التفريغ: يبدأ من E≈12V ويتناقص نحو الصفر؛ τ'≈0.10s.",
+      "x_label": "t (ms)",
+      "y_label": "u_AB (V)",
+      "x_domain": [
+        0,
+        400
+      ],
+      "y_domain": [
+        0,
+        13
+      ],
+      "series": [
+        {
+          "name": "تفريغ",
+          "data": [
+            {
+              "x": 0,
+              "y": 12.0
+            },
+            {
+              "x": 25,
+              "y": 9.346
+            },
+            {
+              "x": 50,
+              "y": 7.278
+            },
+            {
+              "x": 75,
+              "y": 5.668
+            },
+            {
+              "x": 100,
+              "y": 4.415
+            },
+            {
+              "x": 150,
+              "y": 2.678
+            },
+            {
+              "x": 200,
+              "y": 1.624
+            },
+            {
+              "x": 300,
+              "y": 0.597
+            },
+            {
+              "x": 400,
+              "y": 0.22
+            }
+          ]
+        }
+      ],
+      "settings": {
+        "show_grid": true,
+        "show_axes": true,
+        "show_legend": false,
+        "show_point_labels": false,
+        "connect_points": true
+      }
+    },
+    {
+      "title": "الشكل 56 — u_AB=f(t)",
+      "description": "منحنى الشحن: يتزايد من الصفر نحو E≈12V؛ τ≈0.20s.",
+      "x_label": "t (s)",
+      "y_label": "u_AB (V)",
+      "x_domain": [
+        0,
+        1.0
+      ],
+      "y_domain": [
+        0,
+        13
+      ],
+      "series": [
+        {
+          "name": "شحن",
+          "data": [
+            {
+              "x": 0,
+              "y": 0.0
+            },
+            {
+              "x": 0.05,
+              "y": 2.654
+            },
+            {
+              "x": 0.1,
+              "y": 4.722
+            },
+            {
+              "x": 0.15,
+              "y": 6.332
+            },
+            {
+              "x": 0.2,
+              "y": 7.585
+            },
+            {
+              "x": 0.3,
+              "y": 9.322
+            },
+            {
+              "x": 0.4,
+              "y": 10.376
+            },
+            {
+              "x": 0.6,
+              "y": 11.403
+            },
+            {
+              "x": 0.8,
+              "y": 11.78
+            },
+            {
+              "x": 1.0,
+              "y": 11.919
+            }
+          ]
+        }
+      ],
+      "settings": {
+        "show_grid": true,
+        "show_axes": true,
+        "show_legend": false,
+        "show_point_labels": false,
+        "connect_points": true
+      }
+    }
+  ],
+  "statement_graphs": [
+    {
+      "diagram_type": "bac_2015_ex34_statement_circuit",
+      "title": "الشكل 54 — دارة الشحن والتفريغ",
+      "description": "الدارة الأصلية ببادلة ومقاومتي الشحن والتفريغ.",
+      "svg": "<svg viewBox=\"0 0 900 390\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"الشكل 54 دارة شحن وتفريغ مكثفة\">\n <rect x=\"35\" y=\"25\" width=\"830\" height=\"305\" rx=\"20\" fill=\"#fff\" stroke=\"#cbd5e1\" stroke-width=\"2\"/>\n <path d=\"M145 95 H290\" stroke=\"#111827\" stroke-width=\"5\"/>\n <path d=\"M585 95 H700 V285 H145 V95\" stroke=\"#111827\" stroke-width=\"5\" fill=\"none\"/>\n <circle cx=\"145\" cy=\"190\" r=\"32\" fill=\"#fff\" stroke=\"#111827\" stroke-width=\"4\"/>\n <text x=\"134\" y=\"198\" font-size=\"22\">E</text><text x=\"104\" y=\"160\" font-size=\"23\">+</text><text x=\"104\" y=\"235\" font-size=\"23\">−</text>\n <rect x=\"205\" y=\"70\" width=\"80\" height=\"50\" rx=\"6\" fill=\"#fff\" stroke=\"#111827\" stroke-width=\"3\"/><text x=\"235\" y=\"102\" font-size=\"22\">R</text>\n <circle cx=\"315\" cy=\"95\" r=\"5\"/><circle cx=\"405\" cy=\"95\" r=\"5\"/><circle cx=\"495\" cy=\"95\" r=\"5\"/>\n <line x1=\"335\" y1=\"92\" x2=\"385\" y2=\"130\" stroke=\"#111827\" stroke-width=\"5\"/><text x=\"300\" y=\"67\" font-size=\"21\">1</text><text x=\"396\" y=\"67\" font-size=\"21\">K</text><text x=\"485\" y=\"67\" font-size=\"21\">2</text>\n <line x1=\"405\" y1=\"130\" x2=\"405\" y2=\"170\" stroke=\"#111827\" stroke-width=\"5\"/>\n <line x1=\"375\" y1=\"170\" x2=\"435\" y2=\"170\" stroke=\"#111827\" stroke-width=\"6\"/><line x1=\"375\" y1=\"205\" x2=\"435\" y2=\"205\" stroke=\"#111827\" stroke-width=\"6\"/>\n <line x1=\"405\" y1=\"205\" x2=\"405\" y2=\"285\" stroke=\"#111827\" stroke-width=\"5\"/><text x=\"450\" y=\"195\" font-size=\"23\">C</text>\n <text x=\"375\" y=\"152\" font-size=\"20\">A</text><text x=\"375\" y=\"230\" font-size=\"20\">B</text>\n <rect x=\"620\" y=\"165\" width=\"80\" height=\"55\" rx=\"6\" fill=\"#fff\" stroke=\"#111827\" stroke-width=\"3\"/><text x=\"640\" y=\"199\" font-size=\"21\">R'=500Ω</text>\n</svg>",
+      "render_mode": "inline",
+      "responsive": true
+    },
+    {
+      "title": "الشكل 55 — u_AB=f(t)",
+      "description": "منحنى التفريغ: يبدأ من E≈12V ويتناقص نحو الصفر؛ τ'≈0.10s.",
+      "x_label": "t (ms)",
+      "y_label": "u_AB (V)",
+      "x_domain": [
+        0,
+        400
+      ],
+      "y_domain": [
+        0,
+        13
+      ],
+      "series": [
+        {
+          "name": "تفريغ",
+          "data": [
+            {
+              "x": 0,
+              "y": 12.0
+            },
+            {
+              "x": 25,
+              "y": 9.346
+            },
+            {
+              "x": 50,
+              "y": 7.278
+            },
+            {
+              "x": 75,
+              "y": 5.668
+            },
+            {
+              "x": 100,
+              "y": 4.415
+            },
+            {
+              "x": 150,
+              "y": 2.678
+            },
+            {
+              "x": 200,
+              "y": 1.624
+            },
+            {
+              "x": 300,
+              "y": 0.597
+            },
+            {
+              "x": 400,
+              "y": 0.22
+            }
+          ]
+        }
+      ],
+      "settings": {
+        "show_grid": true,
+        "show_axes": true,
+        "show_legend": false,
+        "show_point_labels": false,
+        "connect_points": true
+      }
+    },
+    {
+      "title": "الشكل 56 — u_AB=f(t)",
+      "description": "منحنى الشحن: يتزايد من الصفر نحو E≈12V؛ τ≈0.20s.",
+      "x_label": "t (s)",
+      "y_label": "u_AB (V)",
+      "x_domain": [
+        0,
+        1.0
+      ],
+      "y_domain": [
+        0,
+        13
+      ],
+      "series": [
+        {
+          "name": "شحن",
+          "data": [
+            {
+              "x": 0,
+              "y": 0.0
+            },
+            {
+              "x": 0.05,
+              "y": 2.654
+            },
+            {
+              "x": 0.1,
+              "y": 4.722
+            },
+            {
+              "x": 0.15,
+              "y": 6.332
+            },
+            {
+              "x": 0.2,
+              "y": 7.585
+            },
+            {
+              "x": 0.3,
+              "y": 9.322
+            },
+            {
+              "x": 0.4,
+              "y": 10.376
+            },
+            {
+              "x": 0.6,
+              "y": 11.403
+            },
+            {
+              "x": 0.8,
+              "y": 11.78
+            },
+            {
+              "x": 1.0,
+              "y": 11.919
+            }
+          ]
+        }
+      ],
+      "settings": {
+        "show_grid": true,
+        "show_axes": true,
+        "show_legend": false,
+        "show_point_labels": false,
+        "connect_points": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,222 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.1-bac-source-faithful",
+  "version": "4.1-verified-statement-and-solution-figures",
+  "session": "ordinary",
+  "year": 2008,
+  "chapter_code": "mechanical_system_evolution",
+  "chapter_title": "تطور جملة ميكانيكية",
+  "axis_tags": [
+    "straight_inclined_motion_friction",
+    "circular_path_motion",
+    "projectile_motion",
+    "mechanical_energy_data_analysis"
+  ],
+  "branches": [
+    {
+      "code": "math",
+      "name": "شعبة رياضيات"
+    },
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "exercise_number": 2,
+  "source_pages": [
+    1
+  ],
+  "solution_source_pages": [
+    25
+  ],
+  "title": "التمرين 2 — بكالوريا 2008 — مستوى مائل ومسار دائري وقذيفة",
+  "statement": "ملاحظة: نهمل تأثير الهواء وكل الاحتكاكات.\n\nيترك جسم نقطي \\((S)\\)، دون سرعة ابتدائية من النقطة \\(A\\)، لينزلق وفق خط الميل الأعظم \\(AB\\) لمستوى مائل يصنع مع الأفق زاوية \\(\\alpha=30^\\circ\\). المسافة \\(AB=L\\). يتصل \\(AB\\) مماسيًا في النقطة \\(B\\) بمسلك دائري \\(BC\\) مركزه \\(O\\) ونصف قطره \\(r\\)، بحيث تكون النقاط \\(A,B,C,O\\) ضمن نفس المستوى الشاقولي والنقطتان \\(B,C\\) على نفس المستوى الأفقي.\n\nيعطى: \\(m=0.2\\,kg\\)، \\(g=10\\,m\\,s^{-2}\\)، \\(L=5\\,m\\)، \\(r=2\\,m\\).",
+  "questions": [
+    {
+      "id": "2008_ex02_q1",
+      "text": "1) أوجد عبارة سرعة الجسم عند مروره بالنقطة \\(B\\) بدلالة \\(L\\)، \\(g\\) و\\(\\alpha\\)، ثم احسب قيمتها.",
+      "axis_tags": [
+        "straight_inclined_motion_friction",
+        "mechanical_energy_data_analysis"
+      ],
+      "display_order": 1,
+      "content_type": "question",
+      "solution": {
+        "strategy": "نطبق انحفاظ الطاقة الميكانيكية بين A وB.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "فرق الارتفاع",
+            "explanation": "\\[h=L\\sin\\alpha\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "انحفاظ الطاقة",
+            "explanation": "\\[mgL\\sin\\alpha=\\frac12mv_B^2\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "النتيجة",
+            "explanation": "\\[v_B=\\sqrt{2gL\\sin\\alpha}=\\sqrt{50}=7.07\\,m\\,s^{-1}\\]"
+          }
+        ],
+        "final_answer": "\\(v_B=\\sqrt{2gL\\sin\\alpha}=7.07\\,m\\,s^{-1}\\).",
+        "verification": "الكتلة تختزل.",
+        "common_mistakes": [
+          "استعمال cos بدل sin."
+        ]
+      }
+    },
+    {
+      "id": "2008_ex02_q2",
+      "text": "2) حدد خصائص شعاع السرعة للجسم \\((S)\\) في النقطة \\(C\\).",
+      "axis_tags": [
+        "circular_path_motion"
+      ],
+      "display_order": 2,
+      "content_type": "question",
+      "solution": {
+        "strategy": "السرعة مماسية للمسار الدائري.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "نقطة التطبيق",
+            "explanation": "مركز عطالة الجسم عند \\(C\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "الحامل والجهة",
+            "explanation": "حاملها المماس للمسار الدائري عند \\(C\\)، وجهتها جهة الحركة."
+          },
+          {
+            "step_number": 3,
+            "title": "القيمة",
+            "explanation": "لأن B وC في الارتفاع نفسه ولا احتكاك: \\[v_C=v_B=7.07\\,m\\,s^{-1}\\]"
+          }
+        ],
+        "final_answer": "مماس للمسار عند C، في جهة الحركة، وقيمته \\(7.07\\,m\\,s^{-1}\\).",
+        "verification": "السرعة عمودية على OC.",
+        "common_mistakes": [
+          "توجيه السرعة نحو المركز."
+        ]
+      }
+    },
+    {
+      "id": "2008_ex02_q3a",
+      "text": "3-أ) أوجد بدلالة \\(m\\)، \\(g\\) و\\(\\alpha\\) عبارة شدة القوة التي تطبقها الطريق على الجسم خلال انزلاقه على المستوى المائل، ثم احسب قيمتها.",
+      "axis_tags": [
+        "straight_inclined_motion_friction"
+      ],
+      "display_order": 3,
+      "content_type": "question",
+      "solution": {
+        "strategy": "نسقط قانون نيوتن عموديًا على المستوى.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الإسقاط العمودي",
+            "explanation": "\\[R_1-mg\\cos\\alpha=0\\]",
+            "graph_data": {
+              "diagram_type": "inclined_plane_forces",
+              "title": "تمثيل القوى على الجسم فوق المستوى المائل",
+              "description": "كما في التصحيح: الثقل P نحو الأسفل ورد فعل الطريق R₁ عموديا على المستوى."
+            }
+          },
+          {
+            "step_number": 2,
+            "title": "الحساب",
+            "explanation": "\\[R_1=mg\\cos\\alpha=0.2\\times10\\times\\cos30^\\circ\\approx1.73\\,N\\]"
+          }
+        ],
+        "final_answer": "\\(R_1=mg\\cos\\alpha\\approx1.73\\,N\\).",
+        "verification": "لا يوجد تسارع عمودي على المستوى."
+      }
+    },
+    {
+      "id": "2008_ex02_q3b",
+      "text": "3-ب) لتكن \\(I\\) أخفض نقطة من المسار الدائري. يمر الجسم بالنقطة \\(I\\) بالسرعة \\(v_I=7.37\\,m\\,s^{-1}\\). احسب شدة القوة التي تطبقها الطريق على الجسم عند النقطة \\(I\\).",
+      "axis_tags": [
+        "circular_path_motion"
+      ],
+      "display_order": 4,
+      "content_type": "question",
+      "solution": {
+        "strategy": "نطبق نيوتن على المحور الناظمي نحو المركز.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الإسقاط",
+            "explanation": "\\[R_2-mg=m\\frac{v_I^2}{r}\\]",
+            "graph_data": {
+              "diagram_type": "circular_low_point_forces",
+              "title": "تمثيل القوى عند أخفض نقطة I",
+              "description": "كما في التصحيح: R₂ نحو المركز O والثقل P إلى الأسفل."
+            }
+          },
+          {
+            "step_number": 2,
+            "title": "الحساب",
+            "explanation": "\\[R_2=m\\left(g+\\frac{v_I^2}{r}\\right)=0.2\\left(10+\\frac{7.37^2}{2}\\right)\\approx7.44\\,N\\]"
+          }
+        ],
+        "final_answer": "\\(R_2\\approx7.44\\,N\\).",
+        "verification": "رد الفعل أكبر من الثقل عند أدنى نقطة."
+      }
+    },
+    {
+      "id": "2008_ex02_q4",
+      "text": "4) عند وصول الجسم إلى النقطة \\(C\\) يغادر المسار \\(BC\\) ليقذف في الهواء. أ- أوجد في المعلم \\((C x,C y)\\) المعادلة الديكارتية \\(y=f(x)\\) لمسار الجسم، ونأخذ مبدأ الأزمنة لحظة مغادرة النقطة \\(C\\). ب- يسقط الجسم على المستوى الأفقي المار بالنقطتين \\(B,C\\) في النقطة \\(M\\). احسب المسافة \\(CM\\).",
+      "axis_tags": [
+        "projectile_motion"
+      ],
+      "display_order": 5,
+      "content_type": "question",
+      "solution": {
+        "strategy": "نحلل الحركة إلى محورين ثم نحذف الزمن.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "مركبتا التسارع والسرعة",
+            "explanation": "\\[a_x=0,\\quad a_y=-g,\\quad v_{0x}=v_C\\cos\\alpha,\\quad v_{0y}=v_C\\sin\\alpha\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "المعادلتان الزمنيتان",
+            "explanation": "\\[x=v_C\\cos\\alpha\\,t,\\qquad y=v_C\\sin\\alpha\\,t-\\frac12gt^2\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "معادلة المسار",
+            "explanation": "\\[y=x\\tan\\alpha-\\frac{g}{2v_C^2\\cos^2\\alpha}x^2\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "المدى",
+            "explanation": "بوضع \\(y_M=0\\): \\[CM=\\frac{v_C^2\\sin2\\alpha}{g}=\\frac{50\\sin60^\\circ}{10}=4.33\\,m\\]"
+          }
+        ],
+        "final_answer": "\\(y=x\\tan\\alpha-\\dfrac{g}{2v_C^2\\cos^2\\alpha}x^2\\)، و\\(CM=4.33\\,m\\).",
+        "verification": "توافق حل التجميعية.",
+        "common_mistakes": [
+          "اعتبار سرعة الخروج أفقية.",
+          "نسيان أن المماس عند C يصنع الزاوية α."
+        ]
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "statement_figure_policy": "يعرض في نص التمرين فقط الشكل الموجود فعلا في موضوع البكالوريا الأصلي.",
+    "solution_figure_policy": "يعرض داخل الحل الرسم الموجود في التصحيح أو الرسم المطلوب صراحة لإنجاز الحل، ولا يضاف رسم زخرفي.",
+    "renderer": "GraphRenderer"
+  },
+  "statement_graphs": [
+    {
+      "diagram_type": "inclined_circular_track",
+      "title": "الشكل 1 — المسار AB ثم المسار الدائري BC",
+      "description": "الشكل الأصلي للموضوع: المستوى المائل AB متصل مماسيا بالمسار الدائري، مع O وI وC والمحور عند C."
+    }
+  ]
+}

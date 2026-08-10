@@ -1,0 +1,304 @@
+{
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2011-electrical-verified",
+  "language": "ar",
+  "direction": "rtl",
+  "year": 2011,
+  "session": "ordinary",
+  "chapter_code": "electrical_phenomena_evolution",
+  "chapter_title": "تطور دراسة ظواهر كهربائية",
+  "exercise_number": 15,
+  "source_page": 6,
+  "source_pages": [
+    6
+  ],
+  "solution_source_pages": [
+    27
+  ],
+
+  "branches": [
+    {
+      "code": "math",
+      "name": "شعبة رياضيات"
+    },
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "title": "التمرين 15 — بكالوريا الجزائر 2011 — شعبة رياضيات وتقني رياضي",
+  "axis_tags": [
+    "rl_current_establishment_differential_equation",
+    "rl_time_constant_graphical_analysis",
+    "inductor_energy_rl_energy_balance"
+  ],
+  "questions": [
+    {
+      "id": "2011_elec_ex15_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) باستخدام قانون جمع التوترات، بيّن أن المعادلة التفاضلية لشدة التيار هي \\(\\frac{di}{dt}+\\frac1\\tau i=\\frac EL\\).",
+      "solution": {
+        "strategy": "نطبق قانون جمع التوترات على دارة RL.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "المعادلة",
+            "explanation": "\\[E=ri+L\\frac{di}{dt}+Ri\\Rightarrow \\frac{di}{dt}+\\frac{R+r}{L}i=\\frac EL\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "التعريف",
+            "explanation": "بما أن \\(\\tau=\\frac{L}{R+r}\\) نحصل على \\[\\boxed{\\frac{di}{dt}+\\frac1\\tau i=\\frac EL}\\]"
+          }
+        ],
+        "final_answer": "المعادلة المطلوبة محققة."
+      }
+    },
+    {
+      "id": "2011_elec_ex15_q2",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2) العبارة \\(i(t)=A(1-e^{-t/\\tau})\\) حل للمعادلة السابقة. أوجد الثابت \\(A\\). ماذا يمثل؟",
+      "solution": {
+        "strategy": "نعوض الحل في المعادلة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التعويض",
+            "explanation": "ينتج \\[\\boxed{A=\\frac{E}{R+r}}\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "المدلول",
+            "explanation": "يمثل \\(A\\) الشدة الأعظمية، أي شدة التيار في النظام الدائم \\(I_0\\)."
+          }
+        ],
+        "final_answer": "\\(A=E/(R+r)=I_0\\)."
+      }
+    },
+    {
+      "id": "2011_elec_ex15_q3",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "3) عبّر عن ثابت الزمن \\(\\tau\\) بدلالة \\(L,r,R\\)، وبيّن بالتحليل البعدي أنه متجانس مع الزمن.",
+      "solution": {
+        "strategy": "من معامل i في المعادلة نستخرج τ.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "العبارة",
+            "explanation": "\\[\\boxed{\\tau=\\frac{L}{R+r}}\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "التحليل البعدي",
+            "explanation": "\\([L]/[R]=s\\)، لذلك \\([\\tau]=s\\)."
+          }
+        ],
+        "final_answer": "\\(\\tau=L/(R+r)\\) ووحدته الثانية."
+      }
+    },
+    {
+      "id": "2011_elec_ex15_q4",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "4) أ- أوجد بيانيا قيمة ثابت الزمن \\(\\tau\\) مع شرح الطريقة. ب- أوجد قيمة المقاومة \\(r\\)، ثم احسب ذاتية الوشيعة \\(L\\).",
+      "solution": {
+        "strategy": "نقرأ τ وI0 من الشكل 21 ثم نستعمل النظام الدائم.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "القراءة البيانية",
+            "explanation": "بطريقة المماس عند \\(t=0\\) أو 63% نجد \\[\\boxed{\\tau=0.2ms}\\] كما نقرأ \\[\\boxed{I_0=180mA=0.18A}\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "المقاومة",
+            "explanation": "\\[r=\\frac{E-RI_0}{I_0}=\\frac{9-45(0.18)}{0.18}=\\boxed{5\\Omega}\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الذاتية",
+            "explanation": "\\[L=\\tau(R+r)=0.2\\times10^{-3}\\times50=\\boxed{0.01H}\\]"
+          }
+        ],
+        "final_answer": "\\(\\tau=0.2ms\\)، \\(r=5\\Omega\\)، \\(L=0.01H\\)."
+      }
+    },
+    {
+      "id": "2011_elec_ex15_q5",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "5) احسب الطاقة الأعظمية المخزنة في الوشيعة.",
+      "solution": {
+        "strategy": "نستعمل طاقة الوشيعة عند I0.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الحساب",
+            "explanation": "\\[E_L=\\frac12LI_0^2=\\frac12(0.01)(0.18)^2=\\boxed{1.62\\times10^{-4}J}\\]"
+          }
+        ],
+        "final_answer": "\\(E_{L,max}=1.62\\times10^{-4}J\\)."
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "تجميعية_عمورة_للبكالوريات_السابقة_الوحدة_3(1).pdf",
+    "statement_figure_policy": "الشكل الموجود في الموضوع يظهر مع نص التمرين. الرسم الذي يطلب السؤال إنشاؤه لا يظهر قبل الحل.",
+    "solution_figure_policy": "الرسم المطلوب أو المساعد يوضع داخل خطوة الحل فقط.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  },
+  "statement": "بهدف تعيين الثابتين المميزين لوشيعة \\((L,r)\\)، نحقق الدارة الكهربائية (الشكل–20)، حيث \\(E=9V\\) و\\(R=45\\Omega\\). في اللحظة \\(t=0s\\) نغلق القاطعة \\(K\\). بواسطة لاقط أمبيرمتر وواجهة دخول لجهاز إعلام آلي نحصل على التطور الزمني للتيار \\(i(t)\\) (الشكل–21).",
+  "figures": [
+    {
+      "diagram_type": "bac_2011_ex15_statement_circuit",
+      "title": "الشكل 20 — دارة RL",
+      "description": "دارة الوشيعة والناقل الأومي والمولد.",
+      "svg": "<svg viewBox=\"0 0 800 330\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M130 85 H650 V245 H130 Z\" fill=\"none\" stroke=\"#111827\" stroke-width=\"5\"/>\n<circle cx=\"400\" cy=\"245\" r=\"31\" fill=\"white\" stroke=\"#111827\" stroke-width=\"4\"/><text x=\"389\" y=\"253\" font-size=\"22\">E</text>\n<path d=\"M190 85 c0 -30 38 -30 38 0 c0 -30 38 -30 38 0 c0 -30 38 -30 38 0\" fill=\"none\" stroke=\"#111827\" stroke-width=\"5\"/>\n<text x=\"225\" y=\"45\" font-size=\"22\">L,r</text><rect x=\"400\" y=\"60\" width=\"95\" height=\"50\" rx=\"5\" fill=\"white\" stroke=\"#111827\" stroke-width=\"3\"/><text x=\"437\" y=\"93\" font-size=\"22\">R</text>\n<line x1=\"570\" y1=\"245\" x2=\"610\" y2=\"245\" stroke=\"#111827\" stroke-width=\"5\"/><line x1=\"635\" y1=\"245\" x2=\"670\" y2=\"245\" stroke=\"#111827\" stroke-width=\"5\"/><line x1=\"610\" y1=\"245\" x2=\"638\" y2=\"220\" stroke=\"#111827\" stroke-width=\"5\"/><text x=\"612\" y=\"286\" font-size=\"22\">K</text>\n</svg>",
+      "render_mode": "inline",
+      "responsive": true
+    },
+    {
+      "title": "الشكل 21 — i=f(t)",
+      "description": "منحنى إقامة التيار؛ التصحيح يقرأ I₀≈180mA وτ≈0.2ms.",
+      "x_label": "t (ms)",
+      "y_label": "i (mA)",
+      "x_domain": [
+        0,
+        1.2
+      ],
+      "y_domain": [
+        0,
+        200
+      ],
+      "series": [
+        {
+          "name": "i",
+          "data": [
+            {
+              "x": 0,
+              "y": 0.0
+            },
+            {
+              "x": 0.1,
+              "y": 70.82
+            },
+            {
+              "x": 0.2,
+              "y": 113.78
+            },
+            {
+              "x": 0.3,
+              "y": 139.84
+            },
+            {
+              "x": 0.4,
+              "y": 155.64
+            },
+            {
+              "x": 0.6,
+              "y": 171.04
+            },
+            {
+              "x": 0.8,
+              "y": 176.7
+            },
+            {
+              "x": 1,
+              "y": 178.79
+            },
+            {
+              "x": 1.2,
+              "y": 179.55
+            }
+          ]
+        }
+      ],
+      "settings": {
+        "show_grid": true,
+        "show_axes": true,
+        "show_legend": false,
+        "show_point_labels": false,
+        "connect_points": true
+      }
+    }
+  ],
+  "statement_graphs": [
+    {
+      "diagram_type": "bac_2011_ex15_statement_circuit",
+      "title": "الشكل 20 — دارة RL",
+      "description": "دارة الوشيعة والناقل الأومي والمولد.",
+      "svg": "<svg viewBox=\"0 0 800 330\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M130 85 H650 V245 H130 Z\" fill=\"none\" stroke=\"#111827\" stroke-width=\"5\"/>\n<circle cx=\"400\" cy=\"245\" r=\"31\" fill=\"white\" stroke=\"#111827\" stroke-width=\"4\"/><text x=\"389\" y=\"253\" font-size=\"22\">E</text>\n<path d=\"M190 85 c0 -30 38 -30 38 0 c0 -30 38 -30 38 0 c0 -30 38 -30 38 0\" fill=\"none\" stroke=\"#111827\" stroke-width=\"5\"/>\n<text x=\"225\" y=\"45\" font-size=\"22\">L,r</text><rect x=\"400\" y=\"60\" width=\"95\" height=\"50\" rx=\"5\" fill=\"white\" stroke=\"#111827\" stroke-width=\"3\"/><text x=\"437\" y=\"93\" font-size=\"22\">R</text>\n<line x1=\"570\" y1=\"245\" x2=\"610\" y2=\"245\" stroke=\"#111827\" stroke-width=\"5\"/><line x1=\"635\" y1=\"245\" x2=\"670\" y2=\"245\" stroke=\"#111827\" stroke-width=\"5\"/><line x1=\"610\" y1=\"245\" x2=\"638\" y2=\"220\" stroke=\"#111827\" stroke-width=\"5\"/><text x=\"612\" y=\"286\" font-size=\"22\">K</text>\n</svg>",
+      "render_mode": "inline",
+      "responsive": true
+    },
+    {
+      "title": "الشكل 21 — i=f(t)",
+      "description": "منحنى إقامة التيار؛ التصحيح يقرأ I₀≈180mA وτ≈0.2ms.",
+      "x_label": "t (ms)",
+      "y_label": "i (mA)",
+      "x_domain": [
+        0,
+        1.2
+      ],
+      "y_domain": [
+        0,
+        200
+      ],
+      "series": [
+        {
+          "name": "i",
+          "data": [
+            {
+              "x": 0,
+              "y": 0.0
+            },
+            {
+              "x": 0.1,
+              "y": 70.82
+            },
+            {
+              "x": 0.2,
+              "y": 113.78
+            },
+            {
+              "x": 0.3,
+              "y": 139.84
+            },
+            {
+              "x": 0.4,
+              "y": 155.64
+            },
+            {
+              "x": 0.6,
+              "y": 171.04
+            },
+            {
+              "x": 0.8,
+              "y": 176.7
+            },
+            {
+              "x": 1,
+              "y": 178.79
+            },
+            {
+              "x": 1.2,
+              "y": 179.55
+            }
+          ]
+        }
+      ],
+      "settings": {
+        "show_grid": true,
+        "show_axes": true,
+        "show_legend": false,
+        "show_point_labels": false,
+        "connect_points": true
+      }
+    }
+  ]
+}

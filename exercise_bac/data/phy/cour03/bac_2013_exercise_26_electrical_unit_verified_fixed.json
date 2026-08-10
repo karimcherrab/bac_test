@@ -1,0 +1,299 @@
+{
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2013-electrical-verified",
+  "language": "ar",
+  "direction": "rtl",
+  "year": 2013,
+  "session": "ordinary",
+  "chapter_code": "electrical_phenomena_evolution",
+  "chapter_title": "تطور دراسة ظواهر كهربائية",
+  "exercise_number": 26,
+  "source_page": 10,
+  "source_pages": [
+    10
+  ],
+  "solution_source_pages": [
+    31
+  ],
+
+  "branches": [
+    {
+      "code": "science",
+      "name": "شعبة علوم تجريبية"
+    }
+  ],
+  "title": "التمرين 26 — بكالوريا الجزائر 2013 — شعبة علوم تجريبية",
+  "axis_tags": [
+    "rl_current_establishment_differential_equation",
+    "rl_time_constant_graphical_analysis"
+  ],
+  "questions": [
+    {
+      "id": "2013_elec_ex26_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) ارسم الشكل التخطيطي للدارة الكهربائية، موضحاً عليها كيفية ربط راسم الاهتزاز المهبطي.",
+      "solution": {
+        "strategy": "نرسم دارة RL تسلسلية ونربط مدخل الراسم على طرفي المقاومة لقياس uR.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الرسم والربط",
+            "explanation": "الرسم يظهر في الحل فقط لأن السؤال يطلب إنشاؤه.",
+            "graph_data": {
+              "diagram_type": "bac_2013_ex26_solution_circuit_scope",
+              "title": "دارة RL وربط الراسم",
+              "description": "المخطط الموافق للتصحيح.",
+              "svg": "<svg viewBox=\"0 0 800 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"دارة RL التمرين 26 مع ربط راسم الاهتزاز\">\n <defs><marker id=\"i26\" markerWidth=\"10\" markerHeight=\"10\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L0,6 L9,3z\" fill=\"#111827\"/></marker></defs>\n <path d=\"M150 80 H620 V270 H150 Z\" fill=\"none\" stroke=\"#111827\" stroke-width=\"5\"/>\n <circle cx=\"150\" cy=\"175\" r=\"31\" fill=\"#fff\" stroke=\"#111827\" stroke-width=\"4\"/><text x=\"139\" y=\"183\" font-size=\"22\">E</text>\n <line x1=\"280\" y1=\"80\" x2=\"325\" y2=\"80\" stroke=\"#111827\" stroke-width=\"5\"/><line x1=\"350\" y1=\"80\" x2=\"395\" y2=\"80\" stroke=\"#111827\" stroke-width=\"5\"/><line x1=\"325\" y1=\"80\" x2=\"353\" y2=\"55\" stroke=\"#111827\" stroke-width=\"5\"/><text x=\"330\" y=\"43\" font-size=\"22\">K</text>\n <path d=\"M585 105 c-30 0 -30 30 0 30 c-30 0 -30 30 0 30 c-30 0 -30 30 0 30\" fill=\"none\" stroke=\"#111827\" stroke-width=\"5\"/><text x=\"625\" y=\"160\" font-size=\"21\">L,r=5Ω</text>\n <rect x=\"545\" y=\"220\" width=\"80\" height=\"50\" rx=\"6\" fill=\"#fff\" stroke=\"#111827\" stroke-width=\"3\"/><text x=\"568\" y=\"252\" font-size=\"21\">R=10Ω</text>\n <line x1=\"205\" y1=\"45\" x2=\"275\" y2=\"45\" stroke=\"#111827\" stroke-width=\"4\" marker-end=\"url(#i26)\"/><text x=\"235\" y=\"32\" font-size=\"22\">i</text>\n <text x=\"490\" y=\"250\" font-size=\"20\" font-family=\"Arial\">Y</text>\n <text x=\"490\" y=\"285\" font-size=\"20\" font-family=\"Arial\">M</text>\n</svg>",
+              "render_mode": "inline",
+              "responsive": true
+            }
+          }
+        ],
+        "final_answer": "يوصل الراسم على طرفي المقاومة لقياس uR(t)."
+      }
+    },
+    {
+      "id": "2013_elec_ex26_q2",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2) باستخدام قانون جمع التوترات، بيّن أن المعادلة التفاضلية لـ\\(u_R(t)\\) بين طرفي الناقل الأومي تكون على الشكل \\(\\frac{du_R}{dt}+\\frac{R+r}{L}u_R=\\frac RL E\\).",
+      "solution": {
+        "strategy": "نكتب قانون الدارة ونحول i وdi/dt إلى uR.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "قانون التوترات",
+            "explanation": "\\[u_b+u_R=E\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "العلاقات",
+            "explanation": "\\[u_b=L\\frac{di}{dt}+ri,\\qquad i=\\frac{u_R}{R},\\qquad \\frac{di}{dt}=\\frac1R\\frac{du_R}{dt}\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "المعادلة",
+            "explanation": "بالتعويض: \\[\\boxed{\\frac{du_R}{dt}+\\frac{R+r}{L}u_R=\\frac RL E}\\]"
+          }
+        ],
+        "final_answer": "المعادلة المطلوبة محققة."
+      }
+    },
+    {
+      "id": "2013_elec_ex26_q3",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "3) العبارة \\(u_R=A(1-e^{-t/\\tau})\\) تمثل حلاً للمعادلة التفاضلية السابقة. جد عبارة كل من \\(A\\) و\\(\\tau\\).",
+      "solution": {
+        "strategy": "نقارن الحل مع الحالة النهائية ومعامل المعادلة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "A",
+            "explanation": "في النظام الدائم \\[u_R(\\infty)=RI_0=\\frac{RE}{R+r}\\] إذن \\[\\boxed{A=\\frac{RE}{R+r}}\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "τ",
+            "explanation": "من معامل uR: \\[\\boxed{\\tau=\\frac{L}{R+r}}\\]"
+          }
+        ],
+        "final_answer": "\\(A=RE/(R+r)\\)، \\(\\tau=L/(R+r)\\)."
+      }
+    },
+    {
+      "id": "2013_elec_ex26_q4",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "4) بيّن بالتحليل البعدي أن \\(\\tau\\) متجانس مع الزمن، ثم حدد قيمته بيانياً.",
+      "solution": {
+        "strategy": "نثبت الوحدة ثم نقرأ 63% من القيمة النهائية.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التحليل البعدي",
+            "explanation": "\\[\\tau=\\frac{L}{R+r}\\] ومع \\([L]/[R]=s\\)، إذن \\(\\boxed{[\\tau]=s}\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "القراءة البيانية",
+            "explanation": "من البيان: \\[u_R(\\tau)=0.63u_{R,max}\\approx0.63\\times3.2\\approx2.0V\\] والزمن الموافق هو \\[\\boxed{\\tau=1.2ms}\\]"
+          }
+        ],
+        "final_answer": "\\(\\tau=1.2ms\\)."
+      }
+    },
+    {
+      "id": "2013_elec_ex26_q5",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "5) استنتج قيمة كل من ذاتية الوشيعة \\(L\\) والقوة المحركة الكهربائية للمولد \\(E\\).",
+      "solution": {
+        "strategy": "نستعمل τ=L/(R+r) والقيمة النهائية uR,max=A.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الذاتية",
+            "explanation": "\\[L=\\tau(R+r)=1.2\\times10^{-3}(10+5)=\\boxed{18\\times10^{-3}H=18mH}\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "القوة المحركة",
+            "explanation": "\\[u_{R,max}=\\frac{RE}{R+r}\\Rightarrow E=u_{R,max}\\frac{R+r}{R}=3.2\\times\\frac{15}{10}=\\boxed{4.8V}\\]"
+          }
+        ],
+        "final_answer": "\\(L=18mH\\)، \\(E=4.8V\\)."
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "تجميعية_عمورة_للبكالوريات_السابقة_الوحدة_3(1).pdf",
+    "statement_figure_policy": "الشكل أو البيان الموجود أصلاً في موضوع البكالوريا يظهر مع نص التمرين. الرسم المطلوب من التلميذ لا يظهر قبل الحل.",
+    "solution_figure_policy": "تضاف الرسومات المطلوبة أو المساعدة داخل خطوات الحل فقط.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  },
+  "statement": "تتكون دارة كهربائية على التسلسل من مولد للتوتر قوته المحركة الكهربائية \\(E\\)، وشيعة \\((L,r=5\\Omega)\\)، ناقل أومي مقاومته \\(R=10\\Omega\\)، وقاطعة \\(K\\). نغلق القاطعة \\(K\\) في اللحظة \\(t=0\\)، وبواسطة راسم اهتزاز مهبطي ذي ذاكرة نشاهد التمثيل البياني \\(u_R=f(t)\\) (الشكل–39).",
+  "figures": [
+    {
+      "title": "الشكل 39 — u_R=f(t)",
+      "description": "تطور توتر الناقل الأومي. من البيان u_R,max≈3.2V وτ≈1.2ms.",
+      "x_label": "t (ms)",
+      "y_label": "u_R (V)",
+      "x_domain": [
+        0,
+        6
+      ],
+      "y_domain": [
+        0,
+        3.5
+      ],
+      "series": [
+        {
+          "name": "u_R(t)",
+          "data": [
+            {
+              "x": 0,
+              "y": 0.0
+            },
+            {
+              "x": 0.3,
+              "y": 0.708
+            },
+            {
+              "x": 0.6,
+              "y": 1.259
+            },
+            {
+              "x": 0.9,
+              "y": 1.688
+            },
+            {
+              "x": 1.2,
+              "y": 2.023
+            },
+            {
+              "x": 1.8,
+              "y": 2.486
+            },
+            {
+              "x": 2.4,
+              "y": 2.767
+            },
+            {
+              "x": 3.6,
+              "y": 3.041
+            },
+            {
+              "x": 4.8,
+              "y": 3.141
+            },
+            {
+              "x": 6,
+              "y": 3.178
+            }
+          ]
+        }
+      ],
+      "settings": {
+        "show_grid": true,
+        "show_axes": true,
+        "show_legend": false,
+        "show_point_labels": false,
+        "connect_points": true
+      }
+    }
+  ],
+  "statement_graphs": [
+    {
+      "title": "الشكل 39 — u_R=f(t)",
+      "description": "تطور توتر الناقل الأومي. من البيان u_R,max≈3.2V وτ≈1.2ms.",
+      "x_label": "t (ms)",
+      "y_label": "u_R (V)",
+      "x_domain": [
+        0,
+        6
+      ],
+      "y_domain": [
+        0,
+        3.5
+      ],
+      "series": [
+        {
+          "name": "u_R(t)",
+          "data": [
+            {
+              "x": 0,
+              "y": 0.0
+            },
+            {
+              "x": 0.3,
+              "y": 0.708
+            },
+            {
+              "x": 0.6,
+              "y": 1.259
+            },
+            {
+              "x": 0.9,
+              "y": 1.688
+            },
+            {
+              "x": 1.2,
+              "y": 2.023
+            },
+            {
+              "x": 1.8,
+              "y": 2.486
+            },
+            {
+              "x": 2.4,
+              "y": 2.767
+            },
+            {
+              "x": 3.6,
+              "y": 3.041
+            },
+            {
+              "x": 4.8,
+              "y": 3.141
+            },
+            {
+              "x": 6,
+              "y": 3.178
+            }
+          ]
+        }
+      ],
+      "settings": {
+        "show_grid": true,
+        "show_axes": true,
+        "show_legend": false,
+        "show_point_labels": false,
+        "connect_points": true
+      }
+    }
+  ]
+}

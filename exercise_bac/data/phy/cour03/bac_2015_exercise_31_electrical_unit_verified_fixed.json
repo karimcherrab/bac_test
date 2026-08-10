@@ -1,0 +1,350 @@
+{
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2015-electrical-verified",
+  "language": "ar",
+  "direction": "rtl",
+  "year": 2015,
+  "session": "ordinary",
+  "chapter_code": "electrical_phenomena_evolution",
+  "chapter_title": "تطور دراسة ظواهر كهربائية",
+  "exercise_number": 31,
+  "source_page": 12,
+  "source_pages": [
+    12
+  ],
+  "solution_source_pages": [
+    33
+  ],
+
+  "branches": [
+    {
+      "code": "math",
+      "name": "شعبة رياضيات"
+    },
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "title": "التمرين 31 — بكالوريا الجزائر 2015 — شعبة رياضيات وتقني رياضي",
+  "axis_tags": [
+    "rl_current_establishment_differential_equation",
+    "rl_time_constant_graphical_analysis",
+    "inductor_energy_rl_energy_balance"
+  ],
+  "questions": [
+    {
+      "id": "2015_elec_ex31_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) بتطبيق قانون جمع التوترات، بيّن أن المعادلة التفاضلية لشدة التيار تكتب بالشكل \\(\\frac{di(t)}{dt}+\\alpha i(t)=\\beta\\)، حيث \\(\\alpha\\) و\\(\\beta\\) ثابتان يطلب تحديد عبارتيهما باستعمال \\(L,R,r,E\\).",
+      "solution": {
+        "strategy": "نكتب قانون جمع التوترات ثم نقسم على L.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "قانون التوترات",
+            "explanation": "\\[u_R+u_b=E\\] ومع \\[u_R=Ri,\\qquad u_b=L\\frac{di}{dt}+ri\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "المعادلة",
+            "explanation": "\\[L\\frac{di}{dt}+(R+r)i=E\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "المطابقة",
+            "explanation": "\\[\\boxed{\\alpha=\\frac{R+r}{L}},\\qquad \\boxed{\\beta=\\frac EL}\\]"
+          }
+        ],
+        "final_answer": "\\(\\alpha=(R+r)/L\\)، \\(\\beta=E/L\\)."
+      }
+    },
+    {
+      "id": "2015_elec_ex31_q2",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2) تحقق أن العبارة \\(i(t)=\\frac{\\beta}{\\alpha}(1-e^{-\\alpha t})\\) هي حل للمعادلة التفاضلية.",
+      "solution": {
+        "strategy": "نشتق العبارة ثم نعوض.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "المشتقة",
+            "explanation": "\\[\\frac{di}{dt}=\\beta e^{-\\alpha t}\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "التعويض",
+            "explanation": "\\[\\frac{di}{dt}+\\alpha i=\\beta e^{-\\alpha t}+\\beta(1-e^{-\\alpha t})=\\beta\\]"
+          }
+        ],
+        "final_answer": "العبارة تحقق المعادلة التفاضلية."
+      }
+    },
+    {
+      "id": "2015_elec_ex31_q3",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "3) بيّن أن عبارة التوتر بين طرفي الوشيعة تعطى بالعلاقة \\(u_b(t)=\\frac{E}{R+r}\\left(r+Re^{-\\frac{R+r}{L}t}\\right)\\).",
+      "solution": {
+        "strategy": "نعوض i(t) وdi/dt في u_b=Ldi/dt+ri، أو نستعمل u_b=E-u_R.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تيار الدارة",
+            "explanation": "\\[i(t)=\\frac{E}{R+r}\\left(1-e^{-\\frac{R+r}{L}t}\\right)\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "اشتقاقه",
+            "explanation": "\\[\\frac{di}{dt}=\\frac EL e^{-\\frac{R+r}{L}t}\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "توتر الوشيعة",
+            "explanation": "\\[u_b=L\\frac{di}{dt}+ri\\] ومنه \\[\\boxed{u_b(t)=\\frac{E}{R+r}\\left(r+Re^{-\\frac{R+r}{L}t}\\right)}\\]"
+          }
+        ],
+        "final_answer": "العلاقة المطلوبة محققة."
+      }
+    },
+    {
+      "id": "2015_elec_ex31_q4",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "4) أ- أعد رسم الدارة موضحاً كيفية توصيل راسم الاهتزازات لمشاهدة بيان الشكل 49. ب- بالاعتماد على البيان استنتج القوة المحركة الكهربائية \\(E\\)، ومقاومة الوشيعة \\(r\\)، وثابت الزمن \\(\\tau\\)، وذاتية الوشيعة \\(L\\).",
+      "solution": {
+        "strategy": "نربط الراسم على طرفي الوشيعة، ثم نستغل القيم الابتدائية والنهائية وطريقة المماس.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "توصيل الراسم",
+            "explanation": "يوصل مدخل القياس بين طرفي الوشيعة لمشاهدة \\(u_b(t)\\).",
+            "graph_data": {
+              "diagram_type": "bac_2015_ex31_solution_scope",
+              "title": "توصيل راسم الاهتزاز",
+              "description": "رسم توضيحي لتوصيل الراسم على طرفي الوشيعة.",
+              "svg": "<svg viewBox=\"0 0 900 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"توصيل راسم الاهتزاز لقياس توتر الوشيعة\">\n  <path d=\"M150 90 H700 V255 H150 Z\" fill=\"none\" stroke=\"#111827\" stroke-width=\"5\"/>\n  <circle cx=\"410\" cy=\"255\" r=\"31\" fill=\"#fff\" stroke=\"#111827\" stroke-width=\"4\"/>\n  <text x=\"399\" y=\"263\" font-size=\"22\">E</text>\n  <path d=\"M390 90 c0 -32 40 -32 40 0 c0 -32 40 -32 40 0 c0 -32 40 -32 40 0 c0 -32 40 -32 40 0\"\n        fill=\"none\" stroke=\"#111827\" stroke-width=\"5\"/>\n  <text x=\"445\" y=\"45\" font-size=\"22\">L,r</text>\n  <rect x=\"590\" y=\"65\" width=\"85\" height=\"50\" rx=\"6\" fill=\"#fff\" stroke=\"#111827\" stroke-width=\"3\"/>\n  <text x=\"614\" y=\"98\" font-size=\"21\">R</text>\n  <text x=\"545\" y=\"105\" font-size=\"21\">Y</text>\n  <text x=\"350\" y=\"112\" font-size=\"21\">M</text>\n  <line x1=\"535\" y1=\"110\" x2=\"535\" y2=\"55\" stroke=\"#111827\" stroke-width=\"3\"/>\n  <line x1=\"350\" y1=\"110\" x2=\"350\" y2=\"55\" stroke=\"#111827\" stroke-width=\"3\"/>\n</svg>",
+              "render_mode": "inline",
+              "responsive": true
+            }
+          },
+          {
+            "step_number": 2,
+            "title": "E",
+            "explanation": "من البداية \\(u_b(0)=E\\)، ومن البيان: \\[\\boxed{E=6V}\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "r",
+            "explanation": "في النظام الدائم \\(u_b(\\infty)=\\frac{Er}{R+r}=1.5V\\). إذن \\[r=\\frac{1.5R}{E-1.5}=\\frac{1.5\\times15}{6-1.5}=\\boxed{5\\Omega}\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "τ",
+            "explanation": "من البيان باستعمال المماس أو القيمة المميزة نجد \\[\\boxed{\\tau=25ms}\\]"
+          },
+          {
+            "step_number": 5,
+            "title": "L",
+            "explanation": "\\[L=\\tau(R+r)=0.025(15+5)=\\boxed{0.50H}\\]"
+          }
+        ],
+        "final_answer": "\\(E=6V\\)، \\(r=5\\Omega\\)، \\(\\tau=25ms\\)، \\(L=0.50H\\)."
+      }
+    },
+    {
+      "id": "2015_elec_ex31_q5",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "5) أ- اكتب العبارة اللحظية للطاقة المخزنة في الوشيعة \\(E_L(t)\\). ب- أوجد قيمة هذه الطاقة في النظام الدائم.",
+      "solution": {
+        "strategy": "نستعمل E_L=1/2Li².",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "العبارة اللحظية",
+            "explanation": "\\[\\boxed{E_L(t)=\\frac12L\\left[\\frac{E}{R+r}\\left(1-e^{-\\frac{R+r}{L}t}\\right)\\right]^2}\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "النظام الدائم",
+            "explanation": "\\[I_0=\\frac{E}{R+r}=\\frac6{20}=0.30A\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الطاقة النهائية",
+            "explanation": "\\[E_L(\\infty)=\\frac12LI_0^2=\\frac12(0.50)(0.30)^2=\\boxed{2.25\\times10^{-2}J}\\]"
+          }
+        ],
+        "final_answer": "\\(E_L(\\infty)=2.25\\times10^{-2}J\\)."
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "تجميعية_عمورة_للبكالوريات_السابقة_الوحدة_3(1).pdf",
+    "statement_figure_policy": "الشكل أو البيان المعطى في موضوع البكالوريا يعرض مع نص التمرين. إذا طلب السؤال إعادة رسم الدارة فتبقى الدارة الأصلية المعطاة ظاهرة لأنها جزء من الموضوع، ويضاف داخل الحل فقط الرسم الموجه أو توصيل جهاز القياس.",
+    "solution_figure_policy": "الرسومات التوجيهية أو رسومات التوصيل التي تمثل جزءاً من الحل توضع داخل خطوات الحل.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  },
+  "statement": "بهدف معرفة ذاتية وشيعة \\(L\\) ومقاومتها \\(r\\)، نحقق التركيب الموضح بالشكل 48، حيث \\(R=15\\Omega\\) والمولد ثابت التوتر قوته المحركة الكهربائية \\(E\\). باستعمال راسم اهتزازات ذي ذاكرة تحصلنا على بيان الشكل 49 الممثل لتغيرات التوتر بين طرفي الوشيعة بدلالة الزمن.",
+  "figures": [
+    {
+      "diagram_type": "bac_2015_ex31_statement_circuit",
+      "title": "الشكل 48 — دارة RL",
+      "description": "الدارة الأصلية في الموضوع.",
+      "svg": "<svg viewBox=\"0 0 900 340\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"الشكل 48 دارة RL\">\n  <rect x=\"35\" y=\"25\" width=\"830\" height=\"260\" rx=\"20\" fill=\"#fff\" stroke=\"#cbd5e1\" stroke-width=\"2\"/>\n  <path d=\"M150 90 H700 V245 H150 Z\" fill=\"none\" stroke=\"#111827\" stroke-width=\"5\"/>\n  <circle cx=\"430\" cy=\"245\" r=\"32\" fill=\"#fff\" stroke=\"#111827\" stroke-width=\"4\"/>\n  <text x=\"420\" y=\"253\" font-size=\"23\" font-family=\"Arial\">E</text>\n  <line x1=\"255\" y1=\"90\" x2=\"300\" y2=\"90\" stroke=\"#111827\" stroke-width=\"5\"/>\n  <line x1=\"325\" y1=\"90\" x2=\"370\" y2=\"90\" stroke=\"#111827\" stroke-width=\"5\"/>\n  <line x1=\"300\" y1=\"90\" x2=\"328\" y2=\"65\" stroke=\"#111827\" stroke-width=\"5\"/>\n  <text x=\"305\" y=\"50\" font-size=\"22\" font-family=\"Arial\">K</text>\n  <path d=\"M420 90 c0 -32 40 -32 40 0 c0 -32 40 -32 40 0 c0 -32 40 -32 40 0 c0 -32 40 -32 40 0\"\n        fill=\"none\" stroke=\"#111827\" stroke-width=\"5\"/>\n  <text x=\"480\" y=\"45\" font-size=\"22\" font-family=\"Arial\">L,r</text>\n  <rect x=\"605\" y=\"65\" width=\"80\" height=\"50\" rx=\"7\" fill=\"#fff\" stroke=\"#111827\" stroke-width=\"3\"/>\n  <text x=\"625\" y=\"98\" font-size=\"21\" font-family=\"Arial\">R=15Ω</text>\n</svg>",
+      "render_mode": "inline",
+      "responsive": true
+    },
+    {
+      "title": "الشكل 49 — u_b=f(t)",
+      "description": "تطور التوتر بين طرفي الوشيعة: يبدأ من 6V ويتناقص نحو 1.5V.",
+      "x_label": "t (ms)",
+      "y_label": "u_b (V)",
+      "x_domain": [
+        0,
+        100
+      ],
+      "y_domain": [
+        0,
+        6.5
+      ],
+      "series": [
+        {
+          "name": "u_b(t)",
+          "data": [
+            {
+              "x": 0,
+              "y": 6.0
+            },
+            {
+              "x": 5,
+              "y": 5.184
+            },
+            {
+              "x": 10,
+              "y": 4.516
+            },
+            {
+              "x": 15,
+              "y": 3.97
+            },
+            {
+              "x": 20,
+              "y": 3.522
+            },
+            {
+              "x": 25,
+              "y": 3.155
+            },
+            {
+              "x": 40,
+              "y": 2.409
+            },
+            {
+              "x": 60,
+              "y": 1.908
+            },
+            {
+              "x": 80,
+              "y": 1.683
+            },
+            {
+              "x": 100,
+              "y": 1.582
+            }
+          ]
+        }
+      ],
+      "settings": {
+        "show_grid": true,
+        "show_axes": true,
+        "show_legend": false,
+        "show_point_labels": false,
+        "connect_points": true
+      }
+    }
+  ],
+  "statement_graphs": [
+    {
+      "diagram_type": "bac_2015_ex31_statement_circuit",
+      "title": "الشكل 48 — دارة RL",
+      "description": "الدارة الأصلية في الموضوع.",
+      "svg": "<svg viewBox=\"0 0 900 340\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"الشكل 48 دارة RL\">\n  <rect x=\"35\" y=\"25\" width=\"830\" height=\"260\" rx=\"20\" fill=\"#fff\" stroke=\"#cbd5e1\" stroke-width=\"2\"/>\n  <path d=\"M150 90 H700 V245 H150 Z\" fill=\"none\" stroke=\"#111827\" stroke-width=\"5\"/>\n  <circle cx=\"430\" cy=\"245\" r=\"32\" fill=\"#fff\" stroke=\"#111827\" stroke-width=\"4\"/>\n  <text x=\"420\" y=\"253\" font-size=\"23\" font-family=\"Arial\">E</text>\n  <line x1=\"255\" y1=\"90\" x2=\"300\" y2=\"90\" stroke=\"#111827\" stroke-width=\"5\"/>\n  <line x1=\"325\" y1=\"90\" x2=\"370\" y2=\"90\" stroke=\"#111827\" stroke-width=\"5\"/>\n  <line x1=\"300\" y1=\"90\" x2=\"328\" y2=\"65\" stroke=\"#111827\" stroke-width=\"5\"/>\n  <text x=\"305\" y=\"50\" font-size=\"22\" font-family=\"Arial\">K</text>\n  <path d=\"M420 90 c0 -32 40 -32 40 0 c0 -32 40 -32 40 0 c0 -32 40 -32 40 0 c0 -32 40 -32 40 0\"\n        fill=\"none\" stroke=\"#111827\" stroke-width=\"5\"/>\n  <text x=\"480\" y=\"45\" font-size=\"22\" font-family=\"Arial\">L,r</text>\n  <rect x=\"605\" y=\"65\" width=\"80\" height=\"50\" rx=\"7\" fill=\"#fff\" stroke=\"#111827\" stroke-width=\"3\"/>\n  <text x=\"625\" y=\"98\" font-size=\"21\" font-family=\"Arial\">R=15Ω</text>\n</svg>",
+      "render_mode": "inline",
+      "responsive": true
+    },
+    {
+      "title": "الشكل 49 — u_b=f(t)",
+      "description": "تطور التوتر بين طرفي الوشيعة: يبدأ من 6V ويتناقص نحو 1.5V.",
+      "x_label": "t (ms)",
+      "y_label": "u_b (V)",
+      "x_domain": [
+        0,
+        100
+      ],
+      "y_domain": [
+        0,
+        6.5
+      ],
+      "series": [
+        {
+          "name": "u_b(t)",
+          "data": [
+            {
+              "x": 0,
+              "y": 6.0
+            },
+            {
+              "x": 5,
+              "y": 5.184
+            },
+            {
+              "x": 10,
+              "y": 4.516
+            },
+            {
+              "x": 15,
+              "y": 3.97
+            },
+            {
+              "x": 20,
+              "y": 3.522
+            },
+            {
+              "x": 25,
+              "y": 3.155
+            },
+            {
+              "x": 40,
+              "y": 2.409
+            },
+            {
+              "x": 60,
+              "y": 1.908
+            },
+            {
+              "x": 80,
+              "y": 1.683
+            },
+            {
+              "x": 100,
+              "y": 1.582
+            }
+          ]
+        }
+      ],
+      "settings": {
+        "show_grid": true,
+        "show_axes": true,
+        "show_legend": false,
+        "show_point_labels": false,
+        "connect_points": true
+      }
+    }
+  ]
+}

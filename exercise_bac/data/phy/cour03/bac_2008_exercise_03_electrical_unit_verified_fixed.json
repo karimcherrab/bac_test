@@ -1,0 +1,350 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.1-bac-source-faithful",
+  "version": "4.1-verified-statement-and-solution-figures",
+  "session": "ordinary",
+  "year": 2008,
+  "chapter_code": "electrical_phenomena_evolution",
+  "chapter_title": "تطور دراسة ظواهر كهربائية",
+  "axis_tags": [
+    "rc_capacitor_charging",
+    "rc_time_constant_graphical_analysis",
+    "rc_differential_equation_solution"
+  ],
+  "branches": [
+    {
+      "code": "science",
+      "name": "شعبة علوم تجريبية"
+    }
+  ],
+  "exercise_number": 3,
+  "source_pages": [
+    1,
+    2
+  ],
+  "solution_source_pages": [
+    21,
+    22
+  ],
+  "title": "التمرين 3 — بكالوريا الجزائر 2008 — شحن مكثفة ودراسة البيان",
+  "statement": "قصد شحن مكثفة مفرغة، سعتها \\(C\\)، نربطها على التسلسل مع: مولد كهربائي ذو توتر ثابت \\(E=3\\,V\\) مقاومته الداخلية مهملة، ناقل أومي مقاومته \\(R=10^4\\,\\Omega\\)، وقاطعة \\(K\\). لإظهار التطور الزمني للتوتر \\(u_C(t)\\) بين طرفي المكثفة، نصلها براسم اهتزاز مهبطي ذي ذاكرة. في اللحظة \\(t=0\\) نغلق القاطعة \\(K\\)، فنشاهد المنحنى المبين في الشكل 4.",
+  "figures": [
+    {
+      "diagram_type": "bac_2008_ex03_statement_circuit",
+      "title": "الشكل 3 — التركيب التجريبي",
+      "description": "دارة شحن المكثفة وربط القياس كما في الموضوع.",
+      "svg": "<svg viewBox=\"0 0 900 380\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"الشكل 3 دارة شحن مكثفة مع راسم اهتزاز\">\n  <defs><marker id=\"i3\" markerWidth=\"10\" markerHeight=\"10\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L0,6 L9,3z\" fill=\"#111827\"/></marker></defs>\n  <rect x=\"35\" y=\"25\" width=\"830\" height=\"300\" rx=\"20\" fill=\"#fff\" stroke=\"#cbd5e1\" stroke-width=\"2\"/>\n  <path d=\"M165 90 H700 V275 H165 Z\" fill=\"none\" stroke=\"#111827\" stroke-width=\"5\"/>\n  <circle cx=\"165\" cy=\"180\" r=\"34\" fill=\"#fff\" stroke=\"#111827\" stroke-width=\"4\"/>\n  <text x=\"153\" y=\"188\" font-size=\"23\" font-family=\"Arial\">E</text>\n  <rect x=\"330\" y=\"64\" width=\"120\" height=\"52\" rx=\"6\" fill=\"#fff\" stroke=\"#111827\" stroke-width=\"3\"/>\n  <text x=\"382\" y=\"98\" font-size=\"25\" font-family=\"Arial\">R</text>\n  <line x1=\"520\" y1=\"90\" x2=\"520\" y2=\"160\" stroke=\"#111827\" stroke-width=\"5\"/>\n  <line x1=\"490\" y1=\"160\" x2=\"550\" y2=\"160\" stroke=\"#111827\" stroke-width=\"6\"/>\n  <line x1=\"490\" y1=\"195\" x2=\"550\" y2=\"195\" stroke=\"#111827\" stroke-width=\"6\"/>\n  <line x1=\"520\" y1=\"195\" x2=\"520\" y2=\"275\" stroke=\"#111827\" stroke-width=\"5\"/>\n  <text x=\"565\" y=\"183\" font-size=\"25\" font-family=\"Arial\">C</text>\n  <line x1=\"310\" y1=\"275\" x2=\"365\" y2=\"275\" stroke=\"#111827\" stroke-width=\"5\"/>\n  <line x1=\"390\" y1=\"275\" x2=\"455\" y2=\"275\" stroke=\"#111827\" stroke-width=\"5\"/>\n  <line x1=\"365\" y1=\"275\" x2=\"395\" y2=\"250\" stroke=\"#111827\" stroke-width=\"5\"/>\n  <text x=\"370\" y=\"315\" font-size=\"23\" font-family=\"Arial\">K</text>\n  <line x1=\"220\" y1=\"45\" x2=\"300\" y2=\"45\" stroke=\"#111827\" stroke-width=\"4\" marker-end=\"url(#i3)\"/>\n  <text x=\"250\" y=\"35\" font-size=\"22\" font-family=\"Arial\">i</text>\n  <text x=\"575\" y=\"120\" font-size=\"23\" font-family=\"Arial\">Y</text>\n  <text x=\"575\" y=\"255\" font-size=\"23\" font-family=\"Arial\">M</text>\n</svg>",
+      "render_mode": "inline",
+      "responsive": true
+    },
+    {
+      "title": "الشكل 4 — التطور الزمني للتوتر u_C(t)",
+      "description": "منحنى شحن المكثفة كما في موضوع 2008: يتزايد u_C من الصفر نحو القيمة النهائية E=3 V.",
+      "x_label": "t (s)",
+      "y_label": "u_C (V)",
+      "x_domain": [
+        0,
+        15
+      ],
+      "y_domain": [
+        0,
+        3.3
+      ],
+      "series": [
+        {
+          "name": "u_C(t)",
+          "data": [
+            {
+              "x": 0,
+              "y": 0.0
+            },
+            {
+              "x": 0.5,
+              "y": 0.564
+            },
+            {
+              "x": 1,
+              "y": 1.022
+            },
+            {
+              "x": 1.5,
+              "y": 1.394
+            },
+            {
+              "x": 2,
+              "y": 1.696
+            },
+            {
+              "x": 3,
+              "y": 2.14
+            },
+            {
+              "x": 4,
+              "y": 2.433
+            },
+            {
+              "x": 5,
+              "y": 2.626
+            },
+            {
+              "x": 6,
+              "y": 2.754
+            },
+            {
+              "x": 8,
+              "y": 2.893
+            },
+            {
+              "x": 10,
+              "y": 2.953
+            },
+            {
+              "x": 12,
+              "y": 2.98
+            },
+            {
+              "x": 15,
+              "y": 2.994
+            }
+          ]
+        }
+      ],
+      "settings": {
+        "show_grid": true,
+        "show_axes": true,
+        "show_legend": false,
+        "show_point_labels": false,
+        "connect_points": true
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "2008_elec_ex03_q1",
+      "text": "1) ما هي شدة التيار الكهربائي المار في الدارة بعد مدة \\(\\Delta t=15\\,s\\) من غلقها؟",
+      "axis_tags": [
+        "rc_capacitor_charging",
+        "rc_time_constant_graphical_analysis",
+        "rc_differential_equation_solution"
+      ],
+      "display_order": 1,
+      "content_type": "question",
+      "solution": {
+        "strategy": "نقرأ حالة الدارة بعد 15 s من منحنى الشحن.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "قراءة النظام",
+            "explanation": "من البيان، بعد \\(15s\\) أصبح \\(u_C\\) ثابتًا تقريبًا ومساويًا لـ\\(E\\)، أي أن الدارة في النظام الدائم."
+          },
+          {
+            "step_number": 2,
+            "title": "التيار في النظام الدائم",
+            "explanation": "من \\[u_C+Ri-E=0\\] ومع \\(u_C=E\\) نحصل على \\(Ri=0\\)، إذن \\[i=0\\,A\\]"
+          }
+        ],
+        "final_answer": "\\(i(15s)=0\\,A\\) تقريبًا."
+      }
+    },
+    {
+      "id": "2008_elec_ex03_q2",
+      "text": "2) أعط العبارة الحرفية لثابت الزمن \\(\\tau\\)، وبيّن أن له نفس وحدة قياس الزمن.",
+      "axis_tags": [
+        "rc_capacitor_charging",
+        "rc_time_constant_graphical_analysis",
+        "rc_differential_equation_solution"
+      ],
+      "display_order": 2,
+      "content_type": "question",
+      "solution": {
+        "strategy": "ثابت الزمن لدارة RC هو حاصل ضرب R في C، ونثبت وحدته بالتحليل البعدي.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "العبارة",
+            "explanation": "\\[\\tau=RC\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "الوحدات",
+            "explanation": "من \\([R]=[U][I]^{-1}\\) ومن \\(i=C\\,du/dt\\) نجد \\([C]=[T][I][U]^{-1}\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "النتيجة",
+            "explanation": "\\[[\\tau]=[R][C]=[T]\\] لذلك يقاس بالثانية."
+          }
+        ],
+        "final_answer": "\\(\\tau=RC\\) ووحدته الثانية."
+      }
+    },
+    {
+      "id": "2008_elec_ex03_q3",
+      "text": "3) عيّن بيانيًا قيمة \\(\\tau\\) واستنتج السعة \\(C\\) للمكثفة.",
+      "axis_tags": [
+        "rc_capacitor_charging",
+        "rc_time_constant_graphical_analysis",
+        "rc_differential_equation_solution"
+      ],
+      "display_order": 3,
+      "content_type": "question",
+      "solution": {
+        "strategy": "نستخرج τ من المنحنى باستعمال 63% أو المماس، ثم نحسب C=τ/R.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "استخراج τ",
+            "explanation": "عند \\(u_C(\\tau)=0.63E\\) أو من تقاطع مماس المبدأ مع المستقيم المقارب، يقرأ من البيان: \\[\\tau\\approx2.4\\,s\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب السعة",
+            "explanation": "\\[C=\\frac{\\tau}{R}=\\frac{2.4}{10^4}=2.4\\times10^{-4}\\,F=240\\,\\mu F\\]"
+          }
+        ],
+        "final_answer": "\\(\\tau\\approx2.4\\,s\\)، \\(C=240\\,\\mu F\\)."
+      }
+    },
+    {
+      "id": "2008_elec_ex03_q4",
+      "text": "4) بعد غلق القاطعة (في اللحظة \\(t=0\\)): أ- اكتب عبارة شدة التيار الكهربائي \\(i(t)\\) المار في الدارة بدلالة \\(q(t)\\) شحنة المكثفة. ب- اكتب عبارة التوتر الكهربائي \\(u_C(t)\\) بين لبوسي المكثفة بدلالة الشحنة \\(q(t)\\). ج- بيّن أن المعادلة التفاضلية التي تعبر عن \\(u_C(t)\\) تعطى بالعبارة: \\(RC\\frac{du_C}{dt}+u_C=E\\). يعطى حل المعادلة التفاضلية السابقة بالعبارة: \\(u_C(t)=E\\left(1-e^{-t/A}\\right)\\). استنتج العبارة الحرفية للثابت \\(A\\)، وما هو مدلوله الفيزيائي؟",
+      "axis_tags": [
+        "rc_capacitor_charging",
+        "rc_time_constant_graphical_analysis",
+        "rc_differential_equation_solution"
+      ],
+      "display_order": 4,
+      "content_type": "question",
+      "solution": {
+        "strategy": "نستعمل تعريف التيار وعلاقة المكثفة ثم قانون جمع التوترات، وبعدها نحدد A بالمقارنة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التيار بدلالة الشحنة",
+            "explanation": "\\[i(t)=\\frac{dq(t)}{dt}\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "التوتر بدلالة الشحنة",
+            "explanation": "\\[u_C(t)=\\frac{q(t)}{C}\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "المعادلة التفاضلية",
+            "explanation": "من \\(u_C+Ri=E\\) و\\(i=Cdu_C/dt\\): \\[RC\\frac{du_C}{dt}+u_C=E\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "تحديد A",
+            "explanation": "بالتعويض بـ \\[u_C(t)=E(1-e^{-t/A})\\] في المعادلة نجد أن الشرط هو \\[A=RC=\\tau\\]"
+          },
+          {
+            "step_number": 5,
+            "title": "المدلول الفيزيائي",
+            "explanation": "\\(A\\) هو ثابت الزمن للدارة؛ عند \\(t=\\tau\\) يبلغ توتر وشحنة المكثفة نحو 63% من قيمتهما النهائية."
+          }
+        ],
+        "final_answer": "\\(i=dq/dt\\)، \\(u_C=q/C\\)، \\(RCu'_C+u_C=E\\)، و\\(A=RC=\\tau\\)."
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "statement_figure_policy": "يعرض في نص التمرين فقط الشكل الموجود فعلا في موضوع البكالوريا الأصلي.",
+    "solution_figure_policy": "يعرض داخل الحل الرسم الموجود في التصحيح أو الرسم المطلوب صراحة لإنجاز الحل، ولا يضاف رسم زخرفي.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)",
+    "statement_figures_embedded": true
+  },
+  "statement_graphs": [
+    {
+      "diagram_type": "bac_2008_ex03_statement_circuit",
+      "title": "الشكل 3 — التركيب التجريبي",
+      "description": "دارة شحن المكثفة وربط القياس كما في الموضوع.",
+      "svg": "<svg viewBox=\"0 0 900 380\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"الشكل 3 دارة شحن مكثفة مع راسم اهتزاز\">\n  <defs><marker id=\"i3\" markerWidth=\"10\" markerHeight=\"10\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L0,6 L9,3z\" fill=\"#111827\"/></marker></defs>\n  <rect x=\"35\" y=\"25\" width=\"830\" height=\"300\" rx=\"20\" fill=\"#fff\" stroke=\"#cbd5e1\" stroke-width=\"2\"/>\n  <path d=\"M165 90 H700 V275 H165 Z\" fill=\"none\" stroke=\"#111827\" stroke-width=\"5\"/>\n  <circle cx=\"165\" cy=\"180\" r=\"34\" fill=\"#fff\" stroke=\"#111827\" stroke-width=\"4\"/>\n  <text x=\"153\" y=\"188\" font-size=\"23\" font-family=\"Arial\">E</text>\n  <rect x=\"330\" y=\"64\" width=\"120\" height=\"52\" rx=\"6\" fill=\"#fff\" stroke=\"#111827\" stroke-width=\"3\"/>\n  <text x=\"382\" y=\"98\" font-size=\"25\" font-family=\"Arial\">R</text>\n  <line x1=\"520\" y1=\"90\" x2=\"520\" y2=\"160\" stroke=\"#111827\" stroke-width=\"5\"/>\n  <line x1=\"490\" y1=\"160\" x2=\"550\" y2=\"160\" stroke=\"#111827\" stroke-width=\"6\"/>\n  <line x1=\"490\" y1=\"195\" x2=\"550\" y2=\"195\" stroke=\"#111827\" stroke-width=\"6\"/>\n  <line x1=\"520\" y1=\"195\" x2=\"520\" y2=\"275\" stroke=\"#111827\" stroke-width=\"5\"/>\n  <text x=\"565\" y=\"183\" font-size=\"25\" font-family=\"Arial\">C</text>\n  <line x1=\"310\" y1=\"275\" x2=\"365\" y2=\"275\" stroke=\"#111827\" stroke-width=\"5\"/>\n  <line x1=\"390\" y1=\"275\" x2=\"455\" y2=\"275\" stroke=\"#111827\" stroke-width=\"5\"/>\n  <line x1=\"365\" y1=\"275\" x2=\"395\" y2=\"250\" stroke=\"#111827\" stroke-width=\"5\"/>\n  <text x=\"370\" y=\"315\" font-size=\"23\" font-family=\"Arial\">K</text>\n  <line x1=\"220\" y1=\"45\" x2=\"300\" y2=\"45\" stroke=\"#111827\" stroke-width=\"4\" marker-end=\"url(#i3)\"/>\n  <text x=\"250\" y=\"35\" font-size=\"22\" font-family=\"Arial\">i</text>\n  <text x=\"575\" y=\"120\" font-size=\"23\" font-family=\"Arial\">Y</text>\n  <text x=\"575\" y=\"255\" font-size=\"23\" font-family=\"Arial\">M</text>\n</svg>",
+      "render_mode": "inline",
+      "responsive": true
+    },
+    {
+      "title": "الشكل 4 — التطور الزمني للتوتر u_C(t)",
+      "description": "منحنى شحن المكثفة كما في موضوع 2008: يتزايد u_C من الصفر نحو القيمة النهائية E=3 V.",
+      "x_label": "t (s)",
+      "y_label": "u_C (V)",
+      "x_domain": [
+        0,
+        15
+      ],
+      "y_domain": [
+        0,
+        3.3
+      ],
+      "series": [
+        {
+          "name": "u_C(t)",
+          "data": [
+            {
+              "x": 0,
+              "y": 0.0
+            },
+            {
+              "x": 0.5,
+              "y": 0.564
+            },
+            {
+              "x": 1,
+              "y": 1.022
+            },
+            {
+              "x": 1.5,
+              "y": 1.394
+            },
+            {
+              "x": 2,
+              "y": 1.696
+            },
+            {
+              "x": 3,
+              "y": 2.14
+            },
+            {
+              "x": 4,
+              "y": 2.433
+            },
+            {
+              "x": 5,
+              "y": 2.626
+            },
+            {
+              "x": 6,
+              "y": 2.754
+            },
+            {
+              "x": 8,
+              "y": 2.893
+            },
+            {
+              "x": 10,
+              "y": 2.953
+            },
+            {
+              "x": 12,
+              "y": 2.98
+            },
+            {
+              "x": 15,
+              "y": 2.994
+            }
+          ]
+        }
+      ],
+      "settings": {
+        "show_grid": true,
+        "show_axes": true,
+        "show_legend": false,
+        "show_point_labels": false,
+        "connect_points": true
+      }
+    }
+  ]
+}

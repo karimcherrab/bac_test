@@ -1,0 +1,920 @@
+{
+  "tag": "log_properties",
+  "title": "الخصائص الجبرية للوغاريتم",
+  "order": 8,
+  "is_active": true,
+  "branches": [
+    "math",
+    "science",
+    "math_tech"
+  ],
+  "content": {
+    "version": 6,
+    "language": "ar",
+    "direction": "rtl",
+    "chapter_code": "exponential_logarithmic_functions",
+    "chapter_title": "الدوال الأسية واللوغاريتمية",
+    "axis_tag": "log_properties",
+    "axis_title": "الخصائص الجبرية للوغاريتم",
+    "estimated_minutes": 60,
+    "difficulty": "medium",
+    "source_note": "أُنجز هذا الدرس وفق بنية ملف JSON النموذجي المرفق، وبالاعتماد أساسًا على الصفحة 88 من كتاب الرياضيات العلمي، حيث وردت الخاصية الأساسية ln(ab)=ln(a)+ln(b) للأعداد الموجبة، ثم النتائج ln(1/a)=-ln(a)، وln(a/b)=ln(a)-ln(b)، وln(a^n)=nln(a)، وln(sqrt(a))=1/2 ln(a). كما استُخدمت أمثلة الصفحة 89 التي تبرز أهمية التمييز بين مجال ln((x-1)(x+2)) ومجال ln(x-1)+ln(x+2). اقتصر المحور على الخصائص الجبرية والتبسيط وشروط الاستعمال، ولم تُدرج الاشتقاق أو النهايات أو دراسة التغير لأنها محاور لاحقة.",
+    "lesson_goal": "أن يفهم التلميذ الخصائص الجبرية الأساسية للدالة اللوغاريتمية، ويستعملها في نشر أو تجميع تعابير لوغاريتمية، مع احترام شروط المجال وعدم تطبيق الخصائص إلا عندما تكون العبارات المعنية موجبة.",
+    "prerequisites": [
+      "معرفة تعريف الدالة اللوغاريتمية.",
+      "معرفة أن مجال ln هو الأعداد الموجبة فقط.",
+      "معرفة أن ln وexp دالتان متعاكستان.",
+      "معرفة خواص القوى والجذور.",
+      "إتقان التحليل البسيط وحل المتراجحات."
+    ],
+    "learning_outcomes": [
+      "يستعمل ln(ab)=ln(a)+ln(b) عندما a>0 وb>0.",
+      "يستنتج ln(1/a)=-ln(a).",
+      "يستعمل ln(a/b)=ln(a)-ln(b).",
+      "يستعمل ln(a^n)=nln(a) للعدد الصحيح النسبي n.",
+      "يستعمل ln(sqrt(a))=1/2 ln(a).",
+      "ينشر تعبيرًا لوغاريتميًا مركبًا.",
+      "يجمع مجموعًا أو فرقًا من اللوغاريتمات في لوغاريتم واحد.",
+      "يميز بين ln(ab) وln(a)+ln(b) من حيث شروط المجال.",
+      "يتجنب القواعد الخاطئة مثل ln(a+b)=ln(a)+ln(b).",
+      "يحل تطبيقات بسيطة باستعمال الخصائص."
+    ],
+    "lesson_strategy": {
+      "main_idea": "اللوغاريتم يحول الجداء إلى مجموع، والخارج إلى فرق، والقوة إلى معامل.",
+      "bac_skill": "تبسيط التعابير اللوغاريتمية واختيار الصيغة المناسبة مع كتابة شروط المجال.",
+      "common_obstacle": "تطبيق الخصائص دون التأكد من إيجابية كل عامل، أو استعمال خاصية غير صحيحة مع الجمع والطرح.",
+      "teaching_sequence": "ملاحظة من خواص الأسية ← خاصية الجداء ← المقلوب ← الخارج ← القوى ← الجذر ← النشر ← التجميع ← شروط المجال ← أخطاء شائعة ← تطبيق شامل ← تقويم.",
+      "interaction_model": "يلاحظ التلميذ التحويل، ثم يطبق الخاصية في مثال قصير، وينجز تحققًا سريعًا قبل الانتقال.",
+      "screen_rule": "تعرض كل مرحلة بفكرة جبرية واحدة، مع شرط الاستعمال ومثال مباشر.",
+      "graph_display_rule": "لا يحتاج هذا المحور إلى منحنى بياني؛ تستعمل جداول تحويل وخطوات جبرية لأنها أوضح."
+    },
+    "learning_path": [
+      {
+        "id": "step_1",
+        "type": "motivation",
+        "title": "كيف يحول ln الجداء؟",
+        "content": {
+          "teacher": "نعرف من خواص الأسية أن \\(e^{u+v}=e^u e^v\\). بما أن ln هي الدالة العكسية للأسية، فإنها تحول الجداء إلى مجموع.",
+          "simple_model": "\\(\\text{جداء داخل ln}\\longrightarrow\\text{مجموع خارج ln}\\).",
+          "example": "\\(\\ln(e^2e^3)=\\ln(e^5)=5\\)، وفي الوقت نفسه \\(\\ln(e^2)+\\ln(e^3)=2+3=5\\).",
+          "central_idea": "الخاصية الجبرية للوغاريتم تعكس خاصية جمع الأسس في الدالة الأسية.",
+          "why": "هذه الخاصية تسمح بتبسيط جداءات كبيرة أو حل معادلات لوغاريتمية.",
+          "how_to_think": "كلما رأيت جداء أعداد موجبة داخل ln، يمكنك تفكيكه إلى مجموع.",
+          "attention": "يجب أن تكون العوامل موجبة عند تطبيق الصيغة المدرسية المباشرة.",
+          "quick_check": {
+            "question": "ما الشكل المتوقع لـ \\(\\ln(ab)\\) عندما \\(a,b>0\\)؟",
+            "answer": "\\(\\ln(a)+\\ln(b)\\).",
+            "explanation": "اللوغاريتم يحول الجداء إلى مجموع.",
+            "wrong_answer_help": "اربط ذلك بخاصية e^{u+v}=e^ue^v."
+          },
+          "pre_question": {
+            "prompt": "أي عملية داخل ln تتحول إلى مجموع خارجه؟",
+            "options": [
+              "الجداء",
+              "الجمع",
+              "الطرح"
+            ],
+            "correct_index": 0,
+            "feedback_correct": "صحيح، الجداء هو الذي يتحول إلى مجموع.",
+            "feedback_wrong": "لا توجد خاصية مماثلة للجمع أو الطرح.",
+            "hint": "تذكر خواص الأسس."
+          },
+          "takeaway": "ln يحول الجداء إلى مجموع.",
+          "attempt_instruction": "حاول ربط الخاصية بخواص الأسية.",
+          "stage_ui": {
+            "one_idea_only": true,
+            "show_understood_button": true,
+            "understood_label": "فهمت، انتقل",
+            "show_quick_check": true,
+            "transition_message": "سنكتب الآن الخاصية الأساسية بدقة مع شروطها."
+          },
+          "memory_tip": "جداء داخل ln = مجموع خارج ln."
+        }
+      },
+      {
+        "id": "step_2",
+        "type": "definition",
+        "title": "الخاصية الأساسية: لوغاريتم الجداء",
+        "content": {
+          "teacher": "إذا كان \\(a>0\\) و\\(b>0\\)، فإن لوغاريتم جدائهما يساوي مجموع لوغاريتميهما.",
+          "rule": "\\[\\ln(ab)=\\ln(a)+\\ln(b),\\qquad a>0,\\ b>0.\\]",
+          "proof_idea": [
+            "نضع \\(\\alpha=\\ln(ab)\\)، إذن \\(e^\\alpha=ab\\).",
+            "نضع \\(\\beta=\\ln(a)+\\ln(b)\\).",
+            "\\(e^\\beta=e^{\\ln a}e^{\\ln b}=ab\\).",
+            "بما أن الدالة الأسية حقنية، فإن \\(\\alpha=\\beta\\)."
+          ],
+          "central_idea": "الشرط a>0 وb>0 جزء من الخاصية وليس تفصيلًا ثانويًا.",
+          "why": "لأن ln(a) وln(b) يجب أن يكونا معرفين.",
+          "how_to_think": "افحص الإيجابية ثم فكك الجداء.",
+          "attention": "لا تكتب \\(\\ln(ab)=\\ln a\\times\\ln b\\).",
+          "quick_check": {
+            "question": "بسط \\(\\ln(3e^2)\\).",
+            "answer": "\\(\\ln(3)+2\\).",
+            "explanation": "\\(\\ln(3e^2)=\\ln3+\\ln(e^2)=\\ln3+2\\).",
+            "wrong_answer_help": "فكك الجداء ثم استعمل ln(e^2)=2."
+          },
+          "pre_question": {
+            "prompt": "ما الشرطان اللازمان لتطبيق \\(\\ln(ab)=\\ln a+\\ln b\\)؟",
+            "options": [
+              "\\(a>0,b>0\\)",
+              "\\(a\\ne0,b\\ne0\\)",
+              "\\(ab>0\\) فقط"
+            ],
+            "correct_index": 0,
+            "feedback_correct": "ممتاز، كل لوغاريتم منفرد يجب أن يكون معرفًا.",
+            "feedback_wrong": "شرط ab>0 وحده لا يضمن أن ln(a) وln(b) معرفان.",
+            "hint": "تحقق من مجال كل حد."
+          },
+          "takeaway": "\\(\\ln(ab)=\\ln a+\\ln b\\) للأعداد الموجبة.",
+          "attempt_instruction": "اكتب الشروط قبل تطبيق الخاصية.",
+          "stage_ui": {
+            "one_idea_only": true,
+            "show_understood_button": true,
+            "understood_label": "فهمت، انتقل",
+            "show_quick_check": true,
+            "transition_message": "سنستنتج خاصية مقلوب عدد موجب."
+          }
+        }
+      },
+      {
+        "id": "step_3",
+        "type": "concept",
+        "title": "لوغاريتم المقلوب",
+        "content": {
+          "teacher": "لأن \\(a\\times\\frac1a=1\\)، فإننا نستعمل خاصية الجداء.",
+          "derivation": [
+            "\\(\\ln(a\\times1/a)=\\ln(1)=0\\).",
+            "\\(\\ln(a)+\\ln(1/a)=0\\).",
+            "\\(\\ln(1/a)=-\\ln(a)\\)."
+          ],
+          "rule": "\\[\\ln\\left(\\frac1a\\right)=-\\ln(a),\\qquad a>0.\\]",
+          "central_idea": "مقلوب العدد يغير إشارة لوغاريتمه.",
+          "memory_tip": "المقلوب داخل ln = تغيير الإشارة.",
+          "why": "لأن جداء العدد ومقلوبه يساوي 1 ولوغاريتم 1 يساوي صفرًا.",
+          "how_to_think": "حوّل 1/a إلى a^{-1}.",
+          "attention": "النتيجة ليست \\(1/\\ln(a)\\).",
+          "quick_check": {
+            "question": "احسب \\(\\ln(1/e^4)\\).",
+            "answer": "\\(-4\\).",
+            "explanation": "\\(1/e^4=e^{-4}\\)، ومنه اللوغاريتم يساوي -4.",
+            "wrong_answer_help": "حوّل المقلوب إلى قوة سالبة."
+          },
+          "pre_question": {
+            "prompt": "ما قيمة \\(\\ln(1/a)\\)؟",
+            "options": [
+              "\\(-\\ln a\\)",
+              "\\(1/\\ln a\\)",
+              "\\(\\ln a\\)"
+            ],
+            "correct_index": 0,
+            "feedback_correct": "صحيح، المقلوب يغير الإشارة.",
+            "feedback_wrong": "لا تقلب قيمة اللوغاريتم؛ بل غيّر إشارتها.",
+            "hint": "استعمل ln(a)+ln(1/a)=0."
+          },
+          "takeaway": "\\(\\ln(1/a)=-\\ln(a)\\).",
+          "attempt_instruction": "اربط المقلوب بالقوة -1.",
+          "stage_ui": {
+            "one_idea_only": true,
+            "show_understood_button": true,
+            "understood_label": "فهمت، انتقل",
+            "show_quick_check": true,
+            "transition_message": "سنستعمل هذه النتيجة لإثبات خاصية الخارج."
+          }
+        }
+      },
+      {
+        "id": "step_4",
+        "type": "definition",
+        "title": "لوغاريتم الخارج",
+        "content": {
+          "teacher": "نكتب \\(a/b=a\\times1/b\\)، ثم نستعمل خاصيتي الجداء والمقلوب.",
+          "rule": "\\[\\ln\\left(\\frac ab\\right)=\\ln(a)-\\ln(b),\\qquad a>0,\\ b>0.\\]",
+          "derivation": "\\(\\ln(a/b)=\\ln(a)+\\ln(1/b)=\\ln(a)-\\ln(b)\\).",
+          "central_idea": "الخارج داخل ln يتحول إلى فرق.",
+          "memory_tip": "البسط موجب، المقام موجب، ثم: الأول ناقص الثاني.",
+          "why": "لأن القسمة هي ضرب في المقلوب.",
+          "how_to_think": "حدد البسط أولًا ثم المقام حتى لا تعكس الإشارة.",
+          "attention": "\\(\\ln(a/b)=\\ln a-\\ln b\\)، وليس العكس.",
+          "quick_check": {
+            "question": "بسط \\(\\ln(e^5/2)\\).",
+            "answer": "\\(5-\\ln2\\).",
+            "explanation": "\\(\\ln(e^5/2)=\\ln(e^5)-\\ln2=5-\\ln2\\).",
+            "wrong_answer_help": "البسط أولًا ثم المقام."
+          },
+          "pre_question": {
+            "prompt": "ما نتيجة \\(\\ln(8/3)\\)؟",
+            "options": [
+              "\\(\\ln8-\\ln3\\)",
+              "\\(\\ln3-\\ln8\\)",
+              "\\(\\ln8+\\ln3\\)"
+            ],
+            "correct_index": 0,
+            "feedback_correct": "صحيح، لوغاريتم الخارج هو فرق.",
+            "feedback_wrong": "يجب الحفاظ على ترتيب البسط والمقام.",
+            "hint": "اكتب الأول ناقص الثاني."
+          },
+          "takeaway": "\\(\\ln(a/b)=\\ln a-\\ln b\\).",
+          "attempt_instruction": "حدد البسط والمقام قبل الكتابة.",
+          "stage_ui": {
+            "one_idea_only": true,
+            "show_understood_button": true,
+            "understood_label": "فهمت، انتقل",
+            "show_quick_check": true,
+            "transition_message": "سننتقل إلى لوغاريتم القوة."
+          }
+        }
+      },
+      {
+        "id": "step_5",
+        "type": "definition",
+        "title": "لوغاريتم القوة",
+        "content": {
+          "teacher": "إذا كان \\(n\\) عددًا صحيحًا نسبيًا و\\(a>0\\)، فإن القوة داخل ln تتحول إلى معامل أمام ln.",
+          "rule": "\\[\\ln(a^n)=n\\ln(a),\\qquad a>0,\\ n\\in\\mathbb Z.\\]",
+          "cases": [
+            "إذا \\(n>0\\)، نكرر خاصية الجداء n مرات.",
+            "إذا \\(n=0\\)، فإن \\(\\ln(a^0)=\\ln1=0\\).",
+            "إذا \\(n<0\\)، نستعمل المقلوب."
+          ],
+          "central_idea": "الأس ينزل أمام ln كمعامل.",
+          "memory_tip": "القوة داخل ln تنزل أمامه.",
+          "why": "لأن a^n جداء متكرر أو مقلوب قوة موجبة.",
+          "how_to_think": "انقل الأس كما هو مع إشارته.",
+          "attention": "لا تكتب \\(\\ln(a^n)=(\\ln a)^n\\).",
+          "quick_check": {
+            "question": "بسط \\(\\ln(x^4)\\) إذا كان \\(x>0\\).",
+            "answer": "\\(4\\ln x\\).",
+            "explanation": "الأس 4 ينزل معاملًا أمام ln.",
+            "wrong_answer_help": "استعمل خاصية القوة."
+          },
+          "pre_question": {
+            "prompt": "ما قيمة \\(\\ln(a^{-3})\\)؟",
+            "options": [
+              "\\(-3\\ln a\\)",
+              "\\(3\\ln a\\)",
+              "\\((\\ln a)^{-3}\\)"
+            ],
+            "correct_index": 0,
+            "feedback_correct": "صحيح، ننقل الأس بإشارته.",
+            "feedback_wrong": "الأس السالب يبقى سالبًا عند نزوله.",
+            "hint": "استعمل ln(a^n)=nln(a)."
+          },
+          "takeaway": "\\(\\ln(a^n)=n\\ln a\\).",
+          "attempt_instruction": "انتبه إلى إشارة الأس.",
+          "stage_ui": {
+            "one_idea_only": true,
+            "show_understood_button": true,
+            "understood_label": "فهمت، انتقل",
+            "show_quick_check": true,
+            "transition_message": "سنستنتج منها خاصية الجذر التربيعي."
+          }
+        }
+      },
+      {
+        "id": "step_6",
+        "type": "concept",
+        "title": "لوغاريتم الجذر",
+        "content": {
+          "teacher": "بما أن \\(\\sqrt a=a^{1/2}\\) عندما \\(a>0\\)، فإننا نستعمل خاصية القوة.",
+          "rule": "\\[\\ln(\\sqrt a)=\\frac12\\ln(a),\\qquad a>0.\\]",
+          "derivation": "\\(\\ln(\\sqrt a)=\\ln(a^{1/2})=\\frac12\\ln(a)\\).",
+          "extension": "\\[\\ln(\\sqrt[n]{a})=\\frac1n\\ln(a),\\qquad a>0,\\ n\\ge2.\\]",
+          "central_idea": "الجذر قوة كسرية.",
+          "memory_tip": "الجذر n يعطي المعامل 1/n.",
+          "why": "لأن \\(\\sqrt[n]{a}=a^{1/n}\\).",
+          "how_to_think": "حوّل الجذر إلى قوة أولًا.",
+          "attention": "في الدرس المدرسي يجب أن يكون العدد داخل الجذر موجبًا عند استعمال ln.",
+          "quick_check": {
+            "question": "بسط \\(\\ln(\\sqrt[3]{e^6})\\).",
+            "answer": "\\(2\\).",
+            "explanation": "\\(\\ln((e^6)^{1/3})=\\frac13\\times6=2\\).",
+            "wrong_answer_help": "حوّل الجذر إلى أس 1/3."
+          },
+          "pre_question": {
+            "prompt": "ما نتيجة \\(\\ln(\\sqrt a)\\)؟",
+            "options": [
+              "\\(\\frac12\\ln a\\)",
+              "\\(2\\ln a\\)",
+              "\\(\\sqrt{\\ln a}\\)"
+            ],
+            "correct_index": 0,
+            "feedback_correct": "صحيح، الجذر التربيعي قوة 1/2.",
+            "feedback_wrong": "لا يدخل الجذر على قيمة اللوغاريتم.",
+            "hint": "اكتب sqrt(a)=a^{1/2}."
+          },
+          "takeaway": "\\(\\ln(\\sqrt a)=\\frac12\\ln a\\).",
+          "attempt_instruction": "حوّل كل جذر إلى قوة كسرية.",
+          "stage_ui": {
+            "one_idea_only": true,
+            "show_understood_button": true,
+            "understood_label": "فهمت، انتقل",
+            "show_quick_check": true,
+            "transition_message": "سننظم الخصائص كلها في جدول واحد."
+          }
+        }
+      },
+      {
+        "id": "step_7",
+        "type": "summary_table",
+        "title": "جدول الخصائص الأساسية",
+        "content": {
+          "teacher": "هذا الجدول يلخص التحويلات التي يجب حفظها مع شروطها.",
+          "table": {
+            "headers": [
+              "الشكل",
+              "التحويل",
+              "الشروط"
+            ],
+            "rows": [
+              [
+                "\\(\\ln(ab)\\)",
+                "\\(\\ln a+\\ln b\\)",
+                "\\(a>0,b>0\\)"
+              ],
+              [
+                "\\(\\ln(a/b)\\)",
+                "\\(\\ln a-\\ln b\\)",
+                "\\(a>0,b>0\\)"
+              ],
+              [
+                "\\(\\ln(1/a)\\)",
+                "\\(-\\ln a\\)",
+                "\\(a>0\\)"
+              ],
+              [
+                "\\(\\ln(a^n)\\)",
+                "\\(n\\ln a\\)",
+                "\\(a>0,n\\in\\mathbb Z\\)"
+              ],
+              [
+                "\\(\\ln(\\sqrt a)\\)",
+                "\\(\\frac12\\ln a\\)",
+                "\\(a>0\\)"
+              ]
+            ],
+            "caption": "الخصائص الجبرية الأساسية للدالة اللوغاريتمية."
+          },
+          "central_idea": "جداء → مجموع، خارج → فرق، قوة → معامل.",
+          "why": "الجدول يساعد على اختيار الخاصية المناسبة بسرعة.",
+          "how_to_think": "حدد العملية الرئيسية داخل ln.",
+          "attention": "لا توجد خاصية للجمع أو الطرح داخل ln.",
+          "quick_check": {
+            "question": "أي خاصية تستعمل في \\(\\ln(5x^2)\\) إذا \\(x\\ne0\\)؟",
+            "answer": "خاصية الجداء ثم القوة، مع الانتباه إلى أن \\(x^2>0\\).",
+            "explanation": "\\(\\ln(5x^2)=\\ln5+\\ln(x^2)\\).",
+            "wrong_answer_help": "حدد أولًا الجداء ثم القوة."
+          },
+          "pre_question": {
+            "prompt": "أي تحويل صحيح؟",
+            "options": [
+              "\\(\\ln(a/b)=\\ln a-\\ln b\\)",
+              "\\(\\ln(a+b)=\\ln a+\\ln b\\)",
+              "\\(\\ln(a^2)=(\\ln a)^2\\)"
+            ],
+            "correct_index": 0,
+            "feedback_correct": "صحيح، هذه خاصية الخارج.",
+            "feedback_wrong": "العبارتان الأخريان من الأخطاء الشائعة.",
+            "hint": "راجع الجدول."
+          },
+          "takeaway": "ثلاث كلمات: جداء–مجموع، خارج–فرق، قوة–معامل.",
+          "attempt_instruction": "احفظ المعنى لا الرموز فقط.",
+          "stage_ui": {
+            "one_idea_only": true,
+            "show_understood_button": true,
+            "understood_label": "فهمت، انتقل",
+            "show_quick_check": true,
+            "transition_message": "سنستعمل الجدول في نشر تعبير مركب."
+          }
+        }
+      },
+      {
+        "id": "step_8",
+        "type": "method",
+        "title": "نشر تعبير لوغاريتمي",
+        "content": {
+          "teacher": "النشر يعني تحويل لوغاريتم جداء أو خارج أو قوة إلى مجموع وفروق.",
+          "method_goal": "تفكيك تعبير لوغاريتمي مركب.",
+          "algorithm": [
+            "تحقق من شروط المجال.",
+            "فكك الخارج إلى فرق.",
+            "فكك الجداء إلى مجموع.",
+            "أنزل القوى كمعاملات.",
+            "بسط القيم المعروفة مثل ln(e)=1."
+          ],
+          "worked_example": {
+            "question": "بسط \\(A=\\ln\\left(\\frac{3x^2\\sqrt y}{e^4}\\right)\\) حيث \\(x\\ne0\\) و\\(y>0\\).",
+            "steps": [
+              "\\(A=\\ln(3x^2\\sqrt y)-\\ln(e^4)\\).",
+              "\\(A=\\ln3+\\ln(x^2)+\\ln(\\sqrt y)-4\\).",
+              "\\(A=\\ln3+2\\ln|x|+\\frac12\\ln y-4\\)."
+            ],
+            "final_answer": "\\(A=\\ln3+2\\ln|x|+\\frac12\\ln y-4\\)."
+          },
+          "important_note": "عندما لا نعلم أن x موجب، فإن \\(\\ln(x^2)=2\\ln|x|\\)، وليس دائمًا \\(2\\ln x\\).",
+          "why": "النشر يحول تعبيرًا معقدًا إلى مجموع حدود بسيطة.",
+          "how_to_think": "ابدأ من العملية الخارجية ثم انتقل إلى الداخل.",
+          "attention": "خاصية \\(\\ln(x^2)=2\\ln x\\) تتطلب x>0، أما الصيغة العامة لـx≠0 فهي \\(2\\ln|x|\\).",
+          "quick_check": {
+            "question": "بسط \\(\\ln(2e^3)\\).",
+            "answer": "\\(\\ln2+3\\).",
+            "explanation": "نفكك الجداء ثم نحسب ln(e^3).",
+            "wrong_answer_help": "استعمل خاصيتي الجداء والقوة."
+          },
+          "pre_question": {
+            "prompt": "ما أول خطوة في \\(\\ln(a^2/b)\\)؟",
+            "options": [
+              "تحويل الخارج إلى فرق",
+              "جمع a وb",
+              "حذف ln"
+            ],
+            "correct_index": 0,
+            "feedback_correct": "صحيح، نبدأ بالعملية الخارجية وهي القسمة.",
+            "feedback_wrong": "يجب احترام ترتيب البنية الجبرية.",
+            "hint": "انظر إلى العملية الكبرى داخل ln."
+          },
+          "takeaway": "في النشر: خارج ثم جداء ثم قوة.",
+          "attempt_instruction": "اكتب كل تحويل في سطر مستقل.",
+          "stage_ui": {
+            "one_idea_only": true,
+            "show_understood_button": true,
+            "understood_label": "فهمت، انتقل",
+            "show_quick_check": true,
+            "transition_message": "سنطبق العملية العكسية: تجميع اللوغاريتمات."
+          }
+        }
+      },
+      {
+        "id": "step_9",
+        "type": "method",
+        "title": "تجميع اللوغاريتمات",
+        "content": {
+          "teacher": "التجميع هو العملية العكسية للنشر: نحول مجموعًا إلى جداء، وفرقًا إلى خارج، ومعاملًا إلى قوة.",
+          "method_goal": "كتابة تعبير على شكل لوغاريتم واحد.",
+          "algorithm": [
+            "حوّل المعامل إلى قوة داخل ln.",
+            "حوّل الجمع إلى جداء.",
+            "حوّل الطرح إلى خارج.",
+            "تحقق من شروط المجال."
+          ],
+          "worked_example": {
+            "question": "اكتب \\(B=2\\ln x+\\ln3-\\frac12\\ln y\\) على شكل لوغاريتم واحد، حيث x>0 وy>0.",
+            "steps": [
+              "\\(2\\ln x=\\ln(x^2)\\).",
+              "\\(\\frac12\\ln y=\\ln(\\sqrt y)\\).",
+              "\\(B=\\ln(x^2)+\\ln3-\\ln(\\sqrt y)\\).",
+              "\\(B=\\ln\\left(\\frac{3x^2}{\\sqrt y}\\right)\\)."
+            ],
+            "final_answer": "\\(B=\\ln\\left(\\frac{3x^2}{\\sqrt y}\\right)\\)."
+          },
+          "why": "التجميع مفيد في حل المعادلات والمتراجحات.",
+          "how_to_think": "اعكس الأسهم الموجودة في جدول الخصائص.",
+          "attention": "لا تجمع الحدود قبل تحويل معاملات ln إلى قوى.",
+          "quick_check": {
+            "question": "اجمع \\(\\ln2+\\ln5\\).",
+            "answer": "\\(\\ln10\\).",
+            "explanation": "مجموع لوغاريتمين يتحول إلى لوغاريتم الجداء.",
+            "wrong_answer_help": "اضرب العددين."
+          },
+          "pre_question": {
+            "prompt": "ما الشكل المكافئ لـ \\(3\\ln x\\)؟",
+            "options": [
+              "\\(\\ln(x^3)\\)",
+              "\\(\\ln(3x)\\)",
+              "\\((\\ln x)^3\\)"
+            ],
+            "correct_index": 0,
+            "feedback_correct": "صحيح، المعامل يصبح أسًا.",
+            "feedback_wrong": "العدد 3 لا يدخل كعامل بل كأس.",
+            "hint": "اعكس خاصية القوة."
+          },
+          "takeaway": "في التجميع: معامل → قوة، مجموع → جداء، فرق → خارج.",
+          "attempt_instruction": "ابدأ بالمعاملات.",
+          "stage_ui": {
+            "one_idea_only": true,
+            "show_understood_button": true,
+            "understood_label": "فهمت، انتقل",
+            "show_quick_check": true,
+            "transition_message": "سنفهم الآن لماذا شروط المجال مهمة جدًا."
+          }
+        }
+      },
+      {
+        "id": "step_10",
+        "type": "concept",
+        "title": "الخاصية والمجال: فرق مهم",
+        "content": {
+          "teacher": "قد يكون \\(\\ln((x-1)(x+2))\\) معرفًا في قيم لا يكون فيها \\(\\ln(x-1)+\\ln(x+2)\\) معرفًا. لذلك لا يجوز التفكيك قبل فحص شروط كل طرف.",
+          "comparison_table": {
+            "headers": [
+              "التعبير",
+              "شرط التعريف",
+              "المجال"
+            ],
+            "rows": [
+              [
+                "\\(\\ln((x-1)(x+2))\\)",
+                "\\((x-1)(x+2)>0\\)",
+                "\\(]-\\infty,-2[\\cup]1,+\\infty[\\)"
+              ],
+              [
+                "\\(\\ln(x-1)+\\ln(x+2)\\)",
+                "\\(x-1>0\\) و\\(x+2>0\\)",
+                "\\(]1,+\\infty[\\)"
+              ]
+            ],
+            "caption": "التعبيران لا يملكان المجال نفسه."
+          },
+          "central_idea": "المساواة \\(\\ln(ab)=\\ln a+\\ln b\\) تستعمل عندما a>0 وb>0.",
+          "why": "إذا كان العاملان سالبين فجداؤهما موجب، لكن ln(a) وln(b) غير معرفين.",
+          "how_to_think": "قارن مجال الطرف الأصلي بمجال الطرف المفكك.",
+          "attention": "شرط ab>0 لا يكفي لتفكيك ln(ab) إلى ln(a)+ln(b).",
+          "quick_check": {
+            "question": "هل يمكن عند \\(x=-3\\) كتابة \\(\\ln((x-1)(x+2))=\\ln(x-1)+\\ln(x+2)\\)؟",
+            "answer": "لا.",
+            "explanation": "الجداء موجب، لكن كل عامل سالب، لذلك اللوغاريتمان المنفردان غير معرفين.",
+            "wrong_answer_help": "افحص كل عامل على حدة."
+          },
+          "pre_question": {
+            "prompt": "ما الشرط الصحيح لتفكيك \\(\\ln(uv)\\)؟",
+            "options": [
+              "\\(u>0\\) و\\(v>0\\)",
+              "\\(uv>0\\) فقط",
+              "\\(u\\ne0\\) و\\(v\\ne0\\)"
+            ],
+            "correct_index": 0,
+            "feedback_correct": "صحيح، لأن ln(u) وln(v) يجب أن يكونا معرفين.",
+            "feedback_wrong": "إيجابية الجداء وحدها لا تكفي.",
+            "hint": "راجع مجال كل لوغاريتم."
+          },
+          "takeaway": "افحص مجال الطرفين قبل استعمال الخاصية.",
+          "attempt_instruction": "لا تفكك أي لوغاريتم قبل كتابة الشروط.",
+          "stage_ui": {
+            "one_idea_only": true,
+            "show_understood_button": true,
+            "understood_label": "فهمت، انتقل",
+            "show_quick_check": true,
+            "transition_message": "سنراجع الأخطاء الشائعة في الخصائص."
+          }
+        }
+      },
+      {
+        "id": "step_11",
+        "type": "common_mistakes",
+        "title": "الأخطاء الشائعة",
+        "content": {
+          "teacher": "هذه الأخطاء تظهر كثيرًا في حلول التلاميذ.",
+          "mistakes": [
+            {
+              "wrong": "\\(\\ln(a+b)=\\ln a+\\ln b\\).",
+              "correct": "لا توجد خاصية عامة للجمع داخل ln.",
+              "reason": "الخاصية الأساسية تخص الجداء فقط."
+            },
+            {
+              "wrong": "\\(\\ln(a-b)=\\ln a-\\ln b\\).",
+              "correct": "لا توجد خاصية عامة للطرح داخل ln.",
+              "reason": "الفرق خارج ln يقابل خارجًا داخل ln، لا طرحًا."
+            },
+            {
+              "wrong": "\\(\\ln(a^2)=(\\ln a)^2\\).",
+              "correct": "\\(\\ln(a^2)=2\\ln a\\) إذا a>0.",
+              "reason": "الأس يصبح معاملًا."
+            },
+            {
+              "wrong": "\\(\\ln(1/a)=1/\\ln a\\).",
+              "correct": "\\(\\ln(1/a)=-\\ln a\\).",
+              "reason": "المقلوب يغير الإشارة."
+            },
+            {
+              "wrong": "تفكيك \\(\\ln(uv)\\) عندما u وv سالبان.",
+              "correct": "لا يفكك إلا إذا كان كل عامل موجبًا.",
+              "reason": "ln(u) وln(v) غير معرفين إذا كانا سالبين."
+            }
+          ],
+          "memory_tip": "الخصائص للجداء والخارج والقوة فقط.",
+          "quick_check": {
+            "question": "صحح \\(\\ln(x+1)=\\ln x+\\ln1\\).",
+            "answer": "الكتابة خاطئة؛ لا توجد خاصية للجمع.",
+            "explanation": "\\(\\ln1=0\\)، لكن ذلك لا يجعل المساواة صحيحة.",
+            "wrong_answer_help": "راجع العمليات التي تملك خصائص."
+          },
+          "pre_question": {
+            "prompt": "أي عبارة خاطئة؟",
+            "options": [
+              "\\(\\ln(a+b)=\\ln a+\\ln b\\)",
+              "\\(\\ln(ab)=\\ln a+\\ln b\\)",
+              "\\(\\ln(a/b)=\\ln a-\\ln b\\)"
+            ],
+            "correct_index": 0,
+            "feedback_correct": "صحيح، لا توجد خاصية للجمع.",
+            "feedback_wrong": "الخاصيتان الأخريان صحيحتان مع شروط الإيجابية.",
+            "hint": "حدد العملية داخل ln."
+          },
+          "takeaway": "لا تخترع خاصية للجمع أو الطرح.",
+          "attempt_instruction": "قارن كل صيغة بجدول الخصائص.",
+          "stage_ui": {
+            "one_idea_only": true,
+            "show_understood_button": true,
+            "understood_label": "فهمت، انتقل",
+            "show_quick_check": true,
+            "transition_message": "سننجز تطبيقًا شاملًا يجمع النشر والتجميع."
+          }
+        }
+      },
+      {
+        "id": "step_12",
+        "type": "worked_example",
+        "title": "تطبيق شامل",
+        "content": {
+          "teacher": "نطبق الخصائص مع احترام المجال.",
+          "statement": "لتكن \\(A=\\ln(4x^2)-\\ln(2x)+\\frac12\\ln x\\)، حيث \\(x>0\\). بسط A ثم اكتبها على شكل لوغاريتم واحد.",
+          "steps": [
+            {
+              "title": "نشر الحدود",
+              "details": [
+                "\\(\\ln(4x^2)=\\ln4+2\\ln x\\).",
+                "\\(\\ln(2x)=\\ln2+\\ln x\\)."
+              ]
+            },
+            {
+              "title": "التجميع",
+              "details": [
+                "\\(A=\\ln4+2\\ln x-\\ln2-\\ln x+\\frac12\\ln x\\).",
+                "\\(A=\\ln2+\\frac32\\ln x\\)."
+              ]
+            },
+            {
+              "title": "لوغاريتم واحد",
+              "details": [
+                "\\(\\frac32\\ln x=\\ln(x^{3/2})\\).",
+                "\\(A=\\ln(2x^{3/2})\\)."
+              ]
+            }
+          ],
+          "final_answer": "\\(A=\\ln2+\\frac32\\ln x=\\ln(2x^{3/2})\\).",
+          "why": "المثال يبين أن النشر والتجميع عمليتان عكسيتان.",
+          "how_to_think": "اختر الشكل المطلوب في السؤال: مجموع مبسط أو لوغاريتم واحد.",
+          "attention": "شرط x>0 ضروري لكل الحدود.",
+          "quick_check": {
+            "question": "إذا كان \\(x=e^2\\)، فما قيمة A؟",
+            "answer": "\\(\\ln2+3\\).",
+            "explanation": "\\(\\frac32\\ln(e^2)=3\\).",
+            "wrong_answer_help": "استعمل ln(e^2)=2."
+          },
+          "pre_question": {
+            "prompt": "ما قيمة \\(\\ln4-\\ln2\\)؟",
+            "options": [
+              "\\(\\ln2\\)",
+              "\\(\\ln6\\)",
+              "2"
+            ],
+            "correct_index": 0,
+            "feedback_correct": "صحيح، الفرق يتحول إلى لوغاريتم الخارج 4/2.",
+            "feedback_wrong": "لا تطرح داخل ln مباشرة.",
+            "hint": "استعمل خاصية الخارج."
+          },
+          "takeaway": "النشر يبسط البنية، والتجميع يعطي لوغاريتمًا واحدًا.",
+          "attempt_instruction": "اكتب كل خاصية استعملتها.",
+          "stage_ui": {
+            "one_idea_only": true,
+            "show_understood_button": true,
+            "understood_label": "فهمت، انتقل",
+            "show_quick_check": true,
+            "transition_message": "بقي التقويم النهائي للمحور."
+          }
+        }
+      },
+      {
+        "id": "step_13",
+        "type": "final_assessment",
+        "title": "تقويم ختامي",
+        "content": {
+          "teacher": "حل مع كتابة الشروط والخاصية المستعملة.",
+          "question": "1) بسط \\(\\ln(5e^3)\\). 2) بسط \\(\\ln(a^4/b^2)\\) حيث a>0 وb>0. 3) اكتب \\(2\\ln x-\\ln3\\) على شكل لوغاريتم واحد حيث x>0. 4) هل المساواة \\(\\ln((x-1)(x+2))=\\ln(x-1)+\\ln(x+2)\\) صحيحة على كل مجال الطرف الأيسر؟ علل.",
+          "skill": "استعمال خصائص الجداء والخارج والقوة مع احترام المجال.",
+          "expected_answer": {
+            "1": "\\(\\ln5+3\\).",
+            "2": "\\(4\\ln a-2\\ln b\\).",
+            "3": "\\(\\ln(x^2/3)\\).",
+            "4": "لا؛ التفكيك يتطلب x-1>0 وx+2>0، أي x>1، بينما الطرف الأيسر معرف أيضًا عندما x<-2."
+          },
+          "success_criteria": [
+            "استعمل خاصية الجداء في السؤال الأول.",
+            "استعمل الخارج والقوة في السؤال الثاني.",
+            "حوّل المعامل إلى قوة قبل التجميع.",
+            "كتب شروط المجال بدقة.",
+            "ميز بين مجال الطرف الأصلي ومجال الطرف المفكك."
+          ],
+          "hint_levels": [
+            "في السؤال الثاني: ابدأ بالخارج.",
+            "في السؤال الثالث: 2lnx=ln(x^2).",
+            "في السؤال الرابع: قارن المجالين."
+          ],
+          "explanation": "التقويم لا يختبر حفظ الصيغ فقط، بل اختيارها الصحيح واحترام شروطها.",
+          "quick_check": {
+            "question": "ما القواعد الثلاث الكبرى؟",
+            "answer": "جداء→مجموع، خارج→فرق، قوة→معامل.",
+            "explanation": "هذه خلاصة الخصائص الجبرية.",
+            "wrong_answer_help": "راجع جدول الخصائص."
+          },
+          "pre_question": {
+            "prompt": "ما أول شيء نتحقق منه؟",
+            "options": [
+              "المجال والإيجابية",
+              "لون القلم",
+              "قيمة e التقريبية"
+            ],
+            "correct_index": 0,
+            "feedback_correct": "صحيح، الخصائص لا تطبق دون شروط المجال.",
+            "feedback_wrong": "الخطوات الجبرية تأتي بعد التأكد من التعريف.",
+            "hint": "افحص ما داخل كل ln."
+          },
+          "takeaway": "الخاصية الصحيحة + الشرط الصحيح = حل صحيح.",
+          "attempt_instruction": "اكتب الشروط قبل التبسيط.",
+          "stage_ui": {
+            "one_idea_only": false,
+            "show_understood_button": true,
+            "understood_label": "أنهيت التقويم",
+            "show_quick_check": true,
+            "transition_message": "أحسنت! أصبحت قادرًا على نشر وتجميع التعابير اللوغاريتمية بطريقة صحيحة."
+          },
+          "memory_tip": "جداء–مجموع، خارج–فرق، قوة–معامل، مع مجال موجب."
+        }
+      }
+    ],
+    "lesson_summary": {
+      "key_ideas": [
+        "\\(\\ln(ab)=\\ln a+\\ln b\\) إذا a>0 وb>0.",
+        "\\(\\ln(1/a)=-\\ln a\\).",
+        "\\(\\ln(a/b)=\\ln a-\\ln b\\).",
+        "\\(\\ln(a^n)=n\\ln a\\).",
+        "\\(\\ln(\\sqrt a)=\\frac12\\ln a\\).",
+        "لا توجد خاصية عامة لـln(a+b) أو ln(a-b).",
+        "يجب فحص المجال قبل تفكيك اللوغاريتم."
+      ],
+      "method_template": [
+        "حدد المجال وشروط الإيجابية.",
+        "في النشر: خارج ثم جداء ثم قوة.",
+        "في التجميع: معامل ثم مجموع ثم فرق.",
+        "بسط القيم الأساسية.",
+        "راجع أن الطرفين لهما المجال المناسب."
+      ],
+      "memory_tip": "اللوغاريتم يحول الضرب إلى جمع، والقسمة إلى طرح، والأس إلى معامل."
+    },
+    "dynamic_profile": {
+      "lesson_profile": "algebraic_rules_methods_tables",
+      "profile_reason": "المحور جَبري ويعتمد على صيغ تحويل، شروط مجال، أمثلة نشر وتجميع وجداول مقارنة.",
+      "recommended_ui": {
+        "step_mode": true,
+        "show_progress": true,
+        "show_graphs_inline": false,
+        "show_tables_inline": true,
+        "enable_mathjax": true,
+        "allow_re_explain": true,
+        "re_explain_options": [
+          "أعد شرح خاصية الجداء",
+          "أعطني مثالًا على الخارج",
+          "اشرح لماذا الأس ينزل",
+          "ساعدني في التجميع",
+          "اشرح شروط المجال"
+        ]
+      }
+    },
+    "schema_version": "lesson-v7",
+    "content_status": "ready",
+    "pedagogical_style": {
+      "language_level": "عربية مبسطة مناسبة لتلميذ البكالوريا",
+      "explanation_density": "متوسطة",
+      "example_policy": "مثال مباشر بعد كل خاصية ثم تطبيق شامل",
+      "proof_policy": "تبرير مبسط انطلاقًا من خواص الأسية",
+      "bac_focus": true
+    },
+    "lesson_intro": {
+      "hook": "كيف يتحول جداء كبير داخل ln إلى مجموع بسيط؟",
+      "estimated_time_text": "حوالي 60 دقيقة",
+      "start_instruction": "ابدأ بالخاصية الأساسية ثم انتقل إلى النتائج واحدةً واحدة."
+    },
+    "support_path": {
+      "when_stuck": [
+        "حدد العملية الرئيسية داخل ln.",
+        "راجع شروط الإيجابية.",
+        "استعمل الجدول: جداء/خارج/قوة.",
+        "اكتب التحويل في خطوة مستقلة."
+      ],
+      "minimal_prerequisite_review": [
+        "\\(D_{\\ln}=]0,+\\infty[\\).",
+        "\\(\\ln1=0\\).",
+        "\\(\\ln(e^x)=x\\).",
+        "\\(e^{u+v}=e^ue^v\\)."
+      ]
+    },
+    "method_decision_tree": {
+      "start": "ما العملية الأساسية في التعبير؟",
+      "branches": [
+        {
+          "if": "جداء داخل ln",
+          "then": "تحقق من إيجابية كل عامل ثم حوّله إلى مجموع."
+        },
+        {
+          "if": "خارج داخل ln",
+          "then": "تحقق من إيجابية البسط والمقام ثم حوّله إلى فرق."
+        },
+        {
+          "if": "قوة داخل ln",
+          "then": "أنزل الأس أمام ln."
+        },
+        {
+          "if": "مجموع لوغاريتمات",
+          "then": "حوّله إلى لوغاريتم جداء."
+        },
+        {
+          "if": "فرق لوغاريتمات",
+          "then": "حوّله إلى لوغاريتم خارج."
+        }
+      ]
+    },
+    "lesson_closure": {
+      "final_message": "أصبحت الآن قادرًا على نشر وتجميع التعابير اللوغاريتمية مع احترام شروط المجال.",
+      "next_axis_suggestion": "إشارة الدالة اللوغاريتمية واتجاه تغيرها وتمثيلها البياني."
+    },
+    "quality_review": {
+      "single_axis_focus": true,
+      "no_unnecessary_topics": true,
+      "graphs_needed_and_included": false,
+      "tables_needed_and_included": true,
+      "all_quick_checks_have_answers": true,
+      "all_steps_have_takeaway": true,
+      "latex_reviewed": true,
+      "json_validated": true
+    },
+    "ui_preferences": {
+      "rtl": true,
+      "font_family": "Tajawal, Cairo, sans-serif",
+      "compact_cards": true,
+      "max_content_width": "900px",
+      "table_scroll_on_mobile": true,
+      "show_sidebar": true
+    },
+    "lesson_map": [
+      {
+        "step_id": "step_1",
+        "label": "فكرة الخصائص"
+      },
+      {
+        "step_id": "step_2",
+        "label": "الجداء"
+      },
+      {
+        "step_id": "step_3",
+        "label": "المقلوب"
+      },
+      {
+        "step_id": "step_4",
+        "label": "الخارج"
+      },
+      {
+        "step_id": "step_5",
+        "label": "القوة"
+      },
+      {
+        "step_id": "step_6",
+        "label": "الجذر"
+      },
+      {
+        "step_id": "step_7",
+        "label": "جدول الخصائص"
+      },
+      {
+        "step_id": "step_8",
+        "label": "النشر"
+      },
+      {
+        "step_id": "step_9",
+        "label": "التجميع"
+      },
+      {
+        "step_id": "step_10",
+        "label": "المجال"
+      },
+      {
+        "step_id": "step_11",
+        "label": "الأخطاء"
+      },
+      {
+        "step_id": "step_12",
+        "label": "تطبيق شامل"
+      },
+      {
+        "step_id": "step_13",
+        "label": "التقويم"
+      }
+    ],
+    "presentation": {
+      "mode": "one_step_per_screen",
+      "show_intro_first": true,
+      "show_summary_after_assessment": true,
+      "graph_rendering": "series_data",
+      "math_rendering": "MathJax"
+    }
+  }
+}

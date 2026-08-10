@@ -1,0 +1,263 @@
+{
+  "schema_version": "4.5-bac-source",
+  "version": "1.0-2009-math-ex04-a",
+  "language": "ar",
+  "direction": "rtl",
+  "year": 2009,
+  "session": "unspecified",
+  "subject": "math",
+  "chapter_code": "derivatives",
+  "chapter_title": "الاشتقاقية ودراسة الدوال",
+  "exercise_number": 4,
+  "branches": [
+    {
+      "code": "math",
+      "name": "شعبة رياضيات"
+    }
+  ],
+  "source_pages": [
+    2
+  ],
+  "variant": "A",
+  "title": "تمرين 4 - بكالوريا 2009 - دراسة دالة كسرية على [1,5]",
+  "statement": "تمرين 4: (6 نقاط)\n1) نعرف الدالة العددية \\(f\\) على المجال \\([1,5]\\) بالعبارة: \\(f(x)=\\frac{1}{2}\\left(x+\\frac{5}{x}\\right)\\).\nليكن \\((C)\\) تمثيلها البياني في المستوى المنسوب إلى المعلم المتعامد والمتجانس \\((O;\\vec{i},\\vec{j})\\).\nالوحدة على المحورين \\(3cm\\).\nأ- ادرس تغيرات الدالة \\(f\\).\nب- أنشئ المنحنى البياني \\((C)\\) والمستقيم \\((\\Delta)\\) الذي معادلته \\(y=x\\) في نفس المعلم.",
+  "figures": [],
+  "questions": [
+    {
+      "id": "2009_math_ex04a_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "أ- ادرس تغيرات الدالة \\(f\\).",
+      "solution": {
+        "strategy": "نشتق ثم ندرس إشارة المشتقة على المجال [1,5].",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "اشتقاق الدالة",
+            "explanation": "\\(f(x)=\\frac12\\left(x+\\frac5x\\right)\\)، ومنه \\(f'(x)=\\frac12\\left(1-\\frac5{x^2}\\right)=\\frac{x^2-5}{2x^2}\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "إشارة المشتقة",
+            "explanation": "على \\([1,5]\\)، المقام موجب. إشارة \\(f'\\) هي إشارة \\(x^2-5\\): سالبة إذا \\(1\\le x<\\sqrt5\\)، منعدمة عند \\(x=\\sqrt5\\)، وموجبة إذا \\(\\sqrt5<x\\le5\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "حساب القيم المهمة",
+            "explanation": "\\(f(1)=3\\)، \\(f(\\sqrt5)=\\sqrt5\\)، و\\(f(5)=3\\)."
+          },
+          {
+            "step_number": 4,
+            "title": "النتيجة",
+            "explanation": "الدالة متناقصة على \\([1,\\sqrt5]\\) ثم متزايدة على \\([\\sqrt5,5]\\)، وقيمتها الدنيا هي \\(\\sqrt5\\).",
+            "result": "القيمة الدنيا عند \\(x=\\sqrt5\\)."
+          }
+        ],
+        "final_answer": "متناقصة على \\([1,\\sqrt5]\\) ثم متزايدة على \\([\\sqrt5,5]\\)، و\\(f(\\sqrt5)=\\sqrt5\\).",
+        "figures": [
+          {
+            "id": "2009_ex04a_variation_table",
+            "type": "variation_table",
+            "title": "جدول تغيرات f على [1,5]",
+            "domain": "[1,5]",
+            "rows": [
+              {
+                "label": "x",
+                "cells": [
+                  "1",
+                  "",
+                  "\\sqrt{5}",
+                  "",
+                  "5"
+                ]
+              },
+              {
+                "label": "f'(x)",
+                "cells": [
+                  "",
+                  "-",
+                  "0",
+                  "+",
+                  ""
+                ]
+              },
+              {
+                "label": "f(x)",
+                "cells": [
+                  "3",
+                  "↘",
+                  "\\sqrt{5}",
+                  "↗",
+                  "3"
+                ]
+              }
+            ]
+          }
+        ],
+        "common_mistakes": [],
+        "hints": [],
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2009_math_ex04a_q2",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "ب- أنشئ المنحنى البياني \\((C)\\) والمستقيم \\((\\Delta)\\) الذي معادلته \\(y=x\\) في نفس المعلم.",
+      "solution": {
+        "strategy": "نستعمل جدول التغيرات ونقاطًا سهلة ثم نرسم المستقيم.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "نقاط أساسية",
+            "explanation": "نضع \\(A(1,3)\\)، \\(M(\\sqrt5,\\sqrt5)\\) وهي نقطة القيمة الدنيا، و\\(B(5,3)\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "شكل المنحنى",
+            "explanation": "يهبط المنحنى من A إلى M ثم يصعد من M إلى B وفق جدول التغيرات."
+          },
+          {
+            "step_number": 3,
+            "title": "رسم المستقيم",
+            "explanation": "المستقيم \\(y=x\\) يمر من الأصل ومن \\(M(\\sqrt5,\\sqrt5)\\).",
+            "result": "الشكل النهائي موجود في graph JSON."
+          }
+        ],
+        "final_answer": "تم تضمين رسم \\((C)\\) و\\((\\Delta):y=x\\) في JSON.",
+        "figures": [
+          {
+            "id": "2009_ex04a_graph",
+            "type": "cartesian_graph",
+            "title": "المنحنى (C) والمستقيم (Δ): y=x",
+            "x_range": [
+              0,
+              5.5
+            ],
+            "y_range": [
+              0,
+              5.5
+            ],
+            "axes": {
+              "x_label": "x",
+              "y_label": "y",
+              "grid": true,
+              "equal_scale": true
+            },
+            "series": [
+              {
+                "id": "C",
+                "label": "(C): f(x)=1/2(x+5/x)",
+                "kind": "curve",
+                "formula": "y=\\frac12\\left(x+\\frac5x\\right)",
+                "domain": "[1,5]",
+                "points": [
+                  {
+                    "x": 1,
+                    "y": 3.0
+                  },
+                  {
+                    "x": 1.25,
+                    "y": 2.625
+                  },
+                  {
+                    "x": 1.5,
+                    "y": 2.416667
+                  },
+                  {
+                    "x": 2,
+                    "y": 2.25
+                  },
+                  {
+                    "x": 2.236068,
+                    "y": 2.236068
+                  },
+                  {
+                    "x": 2.5,
+                    "y": 2.25
+                  },
+                  {
+                    "x": 3,
+                    "y": 2.333333
+                  },
+                  {
+                    "x": 4,
+                    "y": 2.625
+                  },
+                  {
+                    "x": 5,
+                    "y": 3.0
+                  }
+                ]
+              },
+              {
+                "id": "Delta",
+                "label": "(Δ): y=x",
+                "kind": "line",
+                "formula": "y=x",
+                "points": [
+                  {
+                    "x": 0,
+                    "y": 0
+                  },
+                  {
+                    "x": 5.5,
+                    "y": 5.5
+                  }
+                ]
+              }
+            ],
+            "annotations": [
+              {
+                "type": "point",
+                "x": 1,
+                "y": 3,
+                "label": "A(1,3)"
+              },
+              {
+                "type": "point",
+                "x": 2.236068,
+                "y": 2.236068,
+                "label": "M(√5,√5) - minimum"
+              },
+              {
+                "type": "point",
+                "x": 5,
+                "y": 3,
+                "label": "B(5,3)"
+              }
+            ]
+          }
+        ],
+        "common_mistakes": [],
+        "hints": [],
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    }
+  ],
+  "source_reference": {
+    "file": "2008 (2).pdf",
+    "statement_pages": [
+      2
+    ],
+    "source_faithful_statement": true,
+    "note": "التمرين العلوي في صفحة 2009؛ حُوّلت الرموز إلى LaTeX فقط."
+  },
+  "display": {
+    "layout": "question_by_question",
+    "show_statement_first": true,
+    "show_solution_after_click": true,
+    "show_solution_figures": true,
+    "math_renderer": "katex_or_mathjax"
+  },
+  "review_status": {
+    "statement_compared_with_original_pdf": true,
+    "solution_created_step_by_step": true,
+    "json_validated": true,
+    "react_ready": true
+  },
+  "solution_pedagogy": {
+    "style": "guided_step_by_step",
+    "audience": "3AS_bac_student"
+  }
+}

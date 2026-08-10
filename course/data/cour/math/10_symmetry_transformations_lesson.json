@@ -1,0 +1,1086 @@
+{
+  "tag": "symmetry_transformations",
+  "title": "التناظر وتحويلات المنحنيات",
+  "order": 10,
+  "is_active": true,
+  "branches": [
+    "math",
+    "science",
+    "math_tech"
+  ],
+  "content": {
+    "version": 2,
+    "language": "ar",
+    "direction": "rtl",
+    "chapter_code": "functions",
+    "chapter_title": "دراسة الدوال",
+    "axis_tag": "symmetry_transformations",
+    "axis_title": "التناظر وتحويلات المنحنيات",
+    "estimated_minutes": 85,
+    "difficulty": "medium",
+    "source_note": "يركز هذا المحور على الزوجية والفردية، ومحور أو مركز التناظر، والانسحابات والانعكاسات. تم استبعاد تحويلات القيمة المطلقة لأنها تدرس في محور مستقل.",
+    "lesson_goal": "أن يحدد التلميذ شفعية الدالة وعناصر تناظر منحناها، ويستنتج تمثيل دالة جديدة انطلاقًا من منحنى دالة مرجعية باستعمال الانسحاب والانعكاس والقيمة المطلقة، ويربط كل تحويل جبري بتحويل هندسي صحيح.",
+    "prerequisites": [
+      "معرفة مفهوم الدالة ومجال تعريفها.",
+      "معرفة التمثيل البياني للدالة.",
+      "إتقان التعويض في عبارة دالة.",
+      "معرفة الإحداثيات في معلم متعامد ومتجانس.",
+      "معرفة الانسحاب والتناظر المحوري والتناظر المركزي.",
+      "معرفة دالة القيمة المطلقة وتمثيلها القطعي."
+    ],
+    "learning_outcomes": [
+      "يتحقق من تناظر مجال تعريف الدالة بالنسبة إلى الصفر.",
+      "يميز بين الدالة الزوجية والدالة الفردية.",
+      "يستنتج محور تناظر منحنى دالة زوجية.",
+      "يستنتج مركز تناظر منحنى دالة فردية.",
+      "يثبت أن نقطة ω(α,β) مركز تناظر لمنحنى.",
+      "يثبت أن المستقيم x=α محور تناظر لمنحنى.",
+      "يستنتج منحنى f(x)+k من منحنى f.",
+      "يستنتج منحنى f(x+b) من منحنى f.",
+      "يستنتج منحنى f(x+b)+k بانسحاب واحد.",
+      "يستنتج منحنيات -f(x)، f(-x)، و-f(-x).",
+      "يحدد شعاع الانسحاب الصحيح واتجاهه.",
+      "يتجنب الخلط بين التحويل داخل المتغير والتحويل خارج الدالة."
+    ],
+    "learning_path": [
+      {
+        "id": "step_1",
+        "type": "motivation",
+        "title": "هل يجب رسم كل دالة من البداية؟",
+        "content": {
+          "teacher": "عندما نعرف منحنى دالة f، يمكننا رسم عدد كبير من الدوال المرتبطة بها دون إعادة دراسة كاملة. يكفي فهم كيف تغير العبارة إحداثيات نقاط المنحنى.",
+          "examples": [
+            "\\(f(x)+2\\) يرفع المنحنى.",
+            "\\(f(x-3)\\) ينقل المنحنى أفقيًا.",
+            "\\(-f(x)\\) يعكس المنحنى بالنسبة إلى محور الفواصل."
+          ],
+          "goal": "ربط كل تعديل جبري بحركة هندسية واضحة.",
+          "bac_relevance": "تظهر هذه الأسئلة في نهاية دراسة الدالة، وفي استنتاج منحنيات جديدة والمناقشة البيانية.",
+          "why": "التحويل يحافظ على شكل أساسي للمنحنى ويغير موضعه أو اتجاهه.",
+          "how_to_think": "اسأل: هل التغيير وقع خارج f أم داخل المتغير x؟",
+          "attention": "التغيير داخل القوس يكون اتجاهه الأفقي عكس الإشارة الظاهرة.",
+          "quick_check": {
+            "question": "هل f(x)+k تحويل أفقي أم عمودي؟",
+            "answer": "تحويل عمودي."
+          },
+          "visualization": {
+            "type": "interactive_curve_transform",
+            "renderer": "jsx_svg_or_recharts",
+            "title": "تحويل منحنى مرجعي",
+            "base_function": {
+              "expression": "x^2",
+              "latex": "\\(f(x)=x^2\\)",
+              "domain": [
+                -4,
+                4
+              ]
+            },
+            "controls": [
+              {
+                "name": "horizontal_shift",
+                "symbol": "b",
+                "min": -3,
+                "max": 3,
+                "step": 0.5,
+                "default": 0
+              },
+              {
+                "name": "vertical_shift",
+                "symbol": "k",
+                "min": -3,
+                "max": 3,
+                "step": 0.5,
+                "default": 0
+              },
+              {
+                "name": "reflect_x_axis",
+                "type": "boolean",
+                "default": false
+              },
+              {
+                "name": "reflect_y_axis",
+                "type": "boolean",
+                "default": false
+              }
+            ],
+            "transformed_expression_template": "vertical_sign*f(horizontal_sign*x+b)+k",
+            "show_base_curve": true,
+            "show_transformed_curve": true,
+            "show_translation_vector": true,
+            "axes": {
+              "x_min": -5,
+              "x_max": 5,
+              "y_min": -5,
+              "y_max": 12
+            }
+          }
+        }
+      },
+      {
+        "id": "step_2",
+        "type": "concept",
+        "title": "تناظر مجال التعريف",
+        "content": {
+          "teacher": "قبل دراسة الزوجية أو الفردية يجب أن يكون مجال تعريف الدالة متناظرًا بالنسبة إلى الصفر.",
+          "condition": "\\(x\\in D_f\\Longrightarrow -x\\in D_f\\)",
+          "examples": [
+            {
+              "domain": "\\(\\mathbb{R}\\)",
+              "symmetric": true
+            },
+            {
+              "domain": "\\([-3,3]\\)",
+              "symmetric": true
+            },
+            {
+              "domain": "\\(\\mathbb{R}\\setminus\\{0\\}\\)",
+              "symmetric": true
+            },
+            {
+              "domain": "\\([0,+\\infty[\\)",
+              "symmetric": false
+            }
+          ],
+          "why": "لا يمكن مقارنة f(x) وf(-x) إذا كانت إحدى القيمتين غير معرفة.",
+          "how_to_think": "اختبر المجال قبل العبارة.",
+          "attention": "حتى لو تحققت علاقة جبرية في جزء من المجال، لا نصف الدالة بالزوجية أو الفردية إذا لم يكن المجال متناظرًا.",
+          "quick_check": {
+            "question": "هل المجال [0,+∞[ متناظر بالنسبة إلى الصفر؟",
+            "answer": "لا."
+          }
+        }
+      },
+      {
+        "id": "step_3",
+        "type": "definition",
+        "title": "الدالة الزوجية",
+        "content": {
+          "teacher": "تكون f زوجية إذا كان مجالها متناظرًا بالنسبة إلى الصفر وكانت قيمة الدالة لا تتغير عند تعويض x بـ -x.",
+          "definition": "\\(f(-x)=f(x)\\)",
+          "geometric_interpretation": "منحنى الدالة الزوجية متناظر بالنسبة إلى محور التراتيب.",
+          "point_mapping": "\\((x,f(x))\\mapsto(-x,f(x))\\)",
+          "example": "\\(f(x)=x^2\\) لأن \\((-x)^2=x^2\\).",
+          "why": "النقطتان ذواتا الفاصلتين المتعاكستين لهما الترتيب نفسه.",
+          "how_to_think": "بدّل x بـ -x ثم بسط.",
+          "attention": "العلاقة المطلوبة هي f(-x)=f(x)، وليست f(-x)=-f(x).",
+          "quick_check": {
+            "question": "ما محور تناظر منحنى دالة زوجية؟",
+            "answer": "محور التراتيب."
+          },
+          "visualization": {
+            "type": "even_function_symmetry",
+            "renderer": "jsx_svg_or_recharts",
+            "function": {
+              "expression": "x^2-1",
+              "domain": [
+                -4,
+                4
+              ]
+            },
+            "symmetry_axis": {
+              "equation": "x=0"
+            },
+            "movable_point": {
+              "control": {
+                "name": "a",
+                "min": 0,
+                "max": 3.5,
+                "step": 0.1,
+                "default": 2
+              },
+              "point_1": {
+                "x_expression": "a",
+                "y_expression": "a^2-1"
+              },
+              "point_2": {
+                "x_expression": "-a",
+                "y_expression": "a^2-1"
+              }
+            },
+            "show_reflection_segment": true,
+            "axes": {
+              "x_min": -4,
+              "x_max": 4,
+              "y_min": -3,
+              "y_max": 12
+            }
+          }
+        }
+      },
+      {
+        "id": "step_4",
+        "type": "definition",
+        "title": "الدالة الفردية",
+        "content": {
+          "teacher": "تكون f فردية إذا كان مجالها متناظرًا بالنسبة إلى الصفر وتغيرت إشارة قيمة الدالة عند تعويض x بـ -x.",
+          "definition": "\\(f(-x)=-f(x)\\)",
+          "equivalent_form": "\\(f(-x)+f(x)=0\\)",
+          "geometric_interpretation": "منحنى الدالة الفردية يقبل مبدأ المعلم مركز تناظر.",
+          "point_mapping": "\\((x,f(x))\\mapsto(-x,-f(x))\\)",
+          "example": "\\(f(x)=x^3\\) لأن \\((-x)^3=-x^3\\).",
+          "why": "كل نقطة من المنحنى تقابلها نقطة معاكسة بالنسبة إلى الأصل.",
+          "how_to_think": "بدّل x بـ -x وابحث هل النتيجة هي -f(x).",
+          "attention": "إذا كانت f معرفة عند الصفر وفردية، فإن f(0)=0.",
+          "quick_check": {
+            "question": "ما مركز تناظر منحنى دالة فردية؟",
+            "answer": "مبدأ المعلم O."
+          },
+          "visualization": {
+            "type": "odd_function_symmetry",
+            "renderer": "jsx_svg_or_recharts",
+            "function": {
+              "expression": "x^3-x",
+              "domain": [
+                -2.5,
+                2.5
+              ]
+            },
+            "symmetry_center": {
+              "x": 0,
+              "y": 0
+            },
+            "movable_point": {
+              "control": {
+                "name": "a",
+                "min": 0,
+                "max": 2.2,
+                "step": 0.1,
+                "default": 1.7
+              },
+              "point_1": {
+                "x_expression": "a",
+                "y_expression": "a^3-a"
+              },
+              "point_2": {
+                "x_expression": "-a",
+                "y_expression": "-(a^3-a)"
+              }
+            },
+            "show_center_segment": true,
+            "axes": {
+              "x_min": -2.5,
+              "x_max": 2.5,
+              "y_min": -10,
+              "y_max": 10
+            }
+          }
+        }
+      },
+      {
+        "id": "step_5",
+        "type": "comparison",
+        "title": "التمييز بين الزوجية والفردية",
+        "content": {
+          "table": [
+            {
+              "property": "العلاقة",
+              "even": "\\(f(-x)=f(x)\\)",
+              "odd": "\\(f(-x)=-f(x)\\)"
+            },
+            {
+              "property": "التناظر",
+              "even": "محور التراتيب",
+              "odd": "مبدأ المعلم"
+            },
+            {
+              "property": "تحويل النقطة",
+              "even": "\\((x,y)\\to(-x,y)\\)",
+              "odd": "\\((x,y)\\to(-x,-y)\\)"
+            },
+            {
+              "property": "مثال",
+              "even": "\\(x^2\\)",
+              "odd": "\\(x^3\\)"
+            }
+          ],
+          "memory_tip": "زوجية: نفس y. فردية: عكس x وعكس y.",
+          "quick_check": {
+            "question": "إذا كان f(-x)+f(x)=0، فما نوع الدالة؟",
+            "answer": "فردية."
+          }
+        }
+      },
+      {
+        "id": "step_6",
+        "type": "worked_example",
+        "title": "مثال على دراسة الشفعية",
+        "content": {
+          "statement": "ادرس شفعية الدالة \\(f(x)=x^4-3x^2+2\\).",
+          "steps": [
+            {
+              "step_number": 1,
+              "title": "المجال",
+              "calculation": "\\(D_f=\\mathbb{R}\\)",
+              "result": "المجال متناظر بالنسبة إلى الصفر."
+            },
+            {
+              "step_number": 2,
+              "title": "حساب f(-x)",
+              "calculation": "\\(f(-x)=(-x)^4-3(-x)^2+2\\)",
+              "result": "نعوض كل x بـ -x."
+            },
+            {
+              "step_number": 3,
+              "title": "التبسيط",
+              "calculation": "\\(f(-x)=x^4-3x^2+2=f(x)\\)",
+              "result": "تحققت علاقة الزوجية."
+            }
+          ],
+          "final_conclusion": "الدالة f زوجية، ومنحناها متناظر بالنسبة إلى محور التراتيب.",
+          "attention": "يجب ذكر تناظر المجال قبل النتيجة."
+        }
+      },
+      {
+        "id": "step_7",
+        "type": "rule",
+        "title": "مركز تناظر عام ω(α,β)",
+        "content": {
+          "teacher": "لا يقتصر مركز التناظر على مبدأ المعلم. يمكن إثبات أن النقطة ω(α,β) مركز تناظر لمنحنى f بعلاقة عامة.",
+          "criterion": "\\(f(2\\alpha-x)+f(x)=2\\beta\\)",
+          "equivalent_form": "\\(f(2\\alpha-x)=2\\beta-f(x)\\)",
+          "point_mapping": "\\((x,f(x))\\mapsto(2\\alpha-x,2\\beta-f(x))\\)",
+          "why": "النقطة ω هي منتصف النقطتين المتناظرتين.",
+          "how_to_think": "عوض x بالنظير 2α-x ثم اجمع القيمتين.",
+          "attention": "عندما α=0 وβ=0 نعود إلى شرط الدالة الفردية.",
+          "quick_check": {
+            "question": "ما العلاقة التي تثبت أن ω(α,β) مركز تناظر؟",
+            "answer": "\\(f(2\\alpha-x)+f(x)=2\\beta\\)."
+          }
+        }
+      },
+      {
+        "id": "step_8",
+        "type": "worked_example",
+        "title": "مثال على مركز تناظر غير الأصل",
+        "content": {
+          "statement": "بيّن أن النقطة \\(\\omega(1,2)\\) مركز تناظر لمنحنى \\(f(x)=(x-1)^3+2\\).",
+          "steps": [
+            {
+              "step_number": 1,
+              "title": "نحسب النظير الجبري للفاصلة",
+              "calculation": "\\(2\\alpha-x=2-x\\)",
+              "result": "لأن α=1."
+            },
+            {
+              "step_number": 2,
+              "title": "نحسب f(2-x)",
+              "calculation": "\\(f(2-x)=((2-x)-1)^3+2=(1-x)^3+2\\)",
+              "result": "\\(f(2-x)=-(x-1)^3+2\\)."
+            },
+            {
+              "step_number": 3,
+              "title": "نجمع",
+              "calculation": "\\(f(2-x)+f(x)=4=2\\beta\\)",
+              "result": "تحقق الشرط."
+            }
+          ],
+          "final_conclusion": "\\(\\omega(1,2)\\) مركز تناظر للمنحنى.",
+          "visualization": {
+            "type": "general_center_symmetry",
+            "renderer": "jsx_svg_or_recharts",
+            "function": {
+              "expression": "(x-1)^3+2",
+              "domain": [
+                -1.5,
+                3.5
+              ]
+            },
+            "center": {
+              "x": 1,
+              "y": 2,
+              "label": "ω(1,2)"
+            },
+            "movable_point": {
+              "control": {
+                "name": "a",
+                "min": -1,
+                "max": 3,
+                "step": 0.1,
+                "default": 2.2
+              },
+              "point_1": {
+                "x_expression": "a",
+                "y_expression": "(a-1)^3+2"
+              },
+              "point_2": {
+                "x_expression": "2-a",
+                "y_expression": "4-((a-1)^3+2)"
+              }
+            },
+            "show_midpoint": true,
+            "axes": {
+              "x_min": -1.5,
+              "x_max": 3.5,
+              "y_min": -8,
+              "y_max": 12
+            }
+          }
+        }
+      },
+      {
+        "id": "step_9",
+        "type": "rule",
+        "title": "محور تناظر عام x=α",
+        "content": {
+          "teacher": "يكون المستقيم x=α محور تناظر للمنحنى إذا كانت قيم الدالة متساوية عند فاصلتين متناظرتين بالنسبة إلى α.",
+          "criterion": "\\(f(2\\alpha-x)=f(x)\\)",
+          "point_mapping": "\\((x,f(x))\\mapsto(2\\alpha-x,f(x))\\)",
+          "why": "الفاصلتان تبعدان المسافة نفسها عن المستقيم x=α.",
+          "how_to_think": "عوض x بـ 2α-x وتحقق من بقاء قيمة الدالة نفسها.",
+          "attention": "عندما α=0 نحصل على شرط الدالة الزوجية.",
+          "quick_check": {
+            "question": "ما شرط محور التناظر x=α؟",
+            "answer": "\\(f(2\\alpha-x)=f(x)\\)."
+          }
+        }
+      },
+      {
+        "id": "step_10",
+        "type": "worked_example",
+        "title": "مثال على محور تناظر غير محور التراتيب",
+        "content": {
+          "statement": "بيّن أن المستقيم \\(x=2\\) محور تناظر لمنحنى \\(f(x)=(x-2)^2+1\\).",
+          "steps": [
+            {
+              "step_number": 1,
+              "title": "الفاصلة المتناظرة",
+              "calculation": "\\(2\\alpha-x=4-x\\)",
+              "result": "لأن α=2."
+            },
+            {
+              "step_number": 2,
+              "title": "حساب الصورة",
+              "calculation": "\\(f(4-x)=((4-x)-2)^2+1=(2-x)^2+1\\)",
+              "result": "\\((2-x)^2=(x-2)^2\\)."
+            },
+            {
+              "step_number": 3,
+              "title": "المقارنة",
+              "calculation": "\\(f(4-x)=f(x)\\)",
+              "result": "تحقق شرط محور التناظر."
+            }
+          ],
+          "final_conclusion": "المستقيم x=2 محور تناظر للمنحنى.",
+          "visualization": {
+            "type": "general_axis_symmetry",
+            "renderer": "jsx_svg_or_recharts",
+            "function": {
+              "expression": "(x-2)^2+1",
+              "domain": [
+                -1,
+                5
+              ]
+            },
+            "symmetry_axis": {
+              "x": 2,
+              "label": "x=2"
+            },
+            "movable_point_pair": {
+              "control": {
+                "name": "d",
+                "min": 0,
+                "max": 2.5,
+                "step": 0.1,
+                "default": 1.5
+              },
+              "point_1": {
+                "x_expression": "2+d",
+                "y_expression": "d^2+1"
+              },
+              "point_2": {
+                "x_expression": "2-d",
+                "y_expression": "d^2+1"
+              }
+            },
+            "axes": {
+              "x_min": -1,
+              "x_max": 5,
+              "y_min": 0,
+              "y_max": 10
+            }
+          }
+        }
+      },
+      {
+        "id": "step_11",
+        "type": "rule",
+        "title": "الانسحاب العمودي: h(x)=f(x)+k",
+        "content": {
+          "teacher": "إضافة العدد k إلى قيم الدالة تغير كل ترتيب y إلى y+k دون تغيير الفاصلة.",
+          "transformation": "\\(h(x)=f(x)+k\\)",
+          "vector": "\\(\\vec{v}=(0,k)\\)",
+          "point_mapping": "\\((x,y)\\mapsto(x,y+k)\\)",
+          "cases": [
+            {
+              "condition": "k>0",
+              "effect": "انتقال إلى الأعلى."
+            },
+            {
+              "condition": "k<0",
+              "effect": "انتقال إلى الأسفل."
+            }
+          ],
+          "why": "التعديل وقع خارج الدالة، لذلك يؤثر في الترتيب.",
+          "how_to_think": "خارج f يعني حركة عمودية.",
+          "attention": "شكل المنحنى لا يتغير.",
+          "quick_check": {
+            "question": "كيف نحصل على منحنى f(x)-3؟",
+            "answer": "ننقل منحنى f ثلاث وحدات إلى الأسفل."
+          },
+          "visualization": {
+            "type": "vertical_translation",
+            "renderer": "jsx_svg_or_recharts",
+            "base_function": {
+              "expression": "x^2",
+              "domain": [
+                -3,
+                3
+              ]
+            },
+            "transformed_function": {
+              "expression": "x^2+k"
+            },
+            "control": {
+              "name": "k",
+              "min": -4,
+              "max": 4,
+              "step": 0.5,
+              "default": 2
+            },
+            "vector_expression": "(0,k)",
+            "show_corresponding_points": true,
+            "axes": {
+              "x_min": -4,
+              "x_max": 4,
+              "y_min": -5,
+              "y_max": 12
+            }
+          }
+        }
+      },
+      {
+        "id": "step_12",
+        "type": "rule",
+        "title": "الانسحاب الأفقي: h(x)=f(x+b)",
+        "content": {
+          "teacher": "إضافة b داخل متغير الدالة تنقل المنحنى أفقيًا في الاتجاه المعاكس للإشارة.",
+          "transformation": "\\(h(x)=f(x+b)\\)",
+          "vector": "\\(\\vec{v}=(-b,0)\\)",
+          "point_mapping": "\\((x,y)\\mapsto(x-b,y)\\)",
+          "cases": [
+            {
+              "condition": "b>0",
+              "effect": "انتقال نحو اليسار بمقدار b."
+            },
+            {
+              "condition": "b<0",
+              "effect": "انتقال نحو اليمين بمقدار |b|."
+            }
+          ],
+          "why": "للحصول على القيمة القديمة f(a)، يجب أن يكون x+b=a، أي x=a-b.",
+          "how_to_think": "داخل القوس: اعكس الإشارة.",
+          "attention": "f(x+2) تتحرك لليسار لا لليمين.",
+          "quick_check": {
+            "question": "ما اتجاه انتقال f(x-3)؟",
+            "answer": "ثلاث وحدات نحو اليمين."
+          },
+          "visualization": {
+            "type": "horizontal_translation",
+            "renderer": "jsx_svg_or_recharts",
+            "base_function": {
+              "expression": "x^2",
+              "domain": [
+                -4,
+                4
+              ]
+            },
+            "transformed_function": {
+              "expression": "(x+b)^2"
+            },
+            "control": {
+              "name": "b",
+              "min": -3,
+              "max": 3,
+              "step": 0.5,
+              "default": 2
+            },
+            "vector_expression": "(-b,0)",
+            "show_vertex_path": true,
+            "axes": {
+              "x_min": -6,
+              "x_max": 6,
+              "y_min": -2,
+              "y_max": 12
+            }
+          }
+        }
+      },
+      {
+        "id": "step_13",
+        "type": "rule",
+        "title": "انسحاب أفقي وعمودي معًا",
+        "content": {
+          "teacher": "عند جمع التحويلين نحصل على انسحاب واحد.",
+          "transformation": "\\(h(x)=f(x+b)+k\\)",
+          "vector": "\\(\\vec{v}=(-b,k)\\)",
+          "point_mapping": "\\((x,y)\\mapsto(x-b,y+k)\\)",
+          "why": "التحويل داخل f أفقي، وخارجها عمودي.",
+          "how_to_think": "الإحداثي الأفقي يأخذ -b، والعمودي يأخذ k.",
+          "attention": "لا تكتب الشعاع (b,k).",
+          "quick_check": {
+            "question": "ما شعاع الانتقال من f إلى f(x-2)+3؟",
+            "answer": "\\((2,3)\\)."
+          }
+        }
+      },
+      {
+        "id": "step_14",
+        "type": "rule",
+        "title": "الانعكاس بالنسبة إلى محور الفواصل",
+        "content": {
+          "teacher": "تغيير إشارة قيم الدالة يعكس كل ترتيب y إلى -y.",
+          "transformation": "\\(h(x)=-f(x)\\)",
+          "symmetry": "تناظر محوري بالنسبة إلى محور الفواصل.",
+          "point_mapping": "\\((x,y)\\mapsto(x,-y)\\)",
+          "why": "الفاصلة تبقى نفسها والترتيب يغير إشارته.",
+          "how_to_think": "ناقص خارج f يعني انعكاسًا رأسيًا.",
+          "attention": "هذا ليس انعكاسًا بالنسبة إلى محور التراتيب.",
+          "quick_check": {
+            "question": "ما صورة النقطة (2,3) عند الانتقال من f إلى -f؟",
+            "answer": "(2,-3)."
+          },
+          "visualization": {
+            "type": "reflection_x_axis",
+            "renderer": "jsx_svg_or_recharts",
+            "base_function": {
+              "expression": "x^2-2",
+              "domain": [
+                -3,
+                3
+              ]
+            },
+            "transformed_function": {
+              "expression": "-(x^2-2)"
+            },
+            "axis": "x_axis",
+            "show_point_reflection": true,
+            "axes": {
+              "x_min": -4,
+              "x_max": 4,
+              "y_min": -8,
+              "y_max": 8
+            }
+          }
+        }
+      },
+      {
+        "id": "step_15",
+        "type": "rule",
+        "title": "الانعكاس بالنسبة إلى محور التراتيب",
+        "content": {
+          "teacher": "تعويض x بـ -x يعكس فاصلة كل نقطة ويحافظ على ترتيبها.",
+          "transformation": "\\(h(x)=f(-x)\\)",
+          "symmetry": "تناظر محوري بالنسبة إلى محور التراتيب.",
+          "point_mapping": "\\((x,y)\\mapsto(-x,y)\\)",
+          "why": "تغيرت إشارة المدخل فقط.",
+          "how_to_think": "ناقص داخل المتغير يعني انعكاسًا أفقيًا.",
+          "attention": "لا تخلط بين f(-x) و-f(x).",
+          "quick_check": {
+            "question": "ما صورة النقطة (2,3) عند الانتقال إلى f(-x)؟",
+            "answer": "(-2,3)."
+          },
+          "visualization": {
+            "type": "reflection_y_axis",
+            "renderer": "jsx_svg_or_recharts",
+            "base_function": {
+              "expression": "(x-1)^2",
+              "domain": [
+                -3,
+                5
+              ]
+            },
+            "transformed_function": {
+              "expression": "(-x-1)^2"
+            },
+            "axis": "y_axis",
+            "show_vertex_mapping": true,
+            "axes": {
+              "x_min": -5,
+              "x_max": 5,
+              "y_min": -2,
+              "y_max": 12
+            }
+          }
+        }
+      },
+      {
+        "id": "step_16",
+        "type": "rule",
+        "title": "التناظر بالنسبة إلى مبدأ المعلم",
+        "content": {
+          "teacher": "الجمع بين الانعكاس حول محور التراتيب والانعكاس حول محور الفواصل يعطي تناظرًا مركزيًا بالنسبة إلى الأصل.",
+          "transformation": "\\(h(x)=-f(-x)\\)",
+          "symmetry": "تناظر مركزي بالنسبة إلى مبدأ المعلم.",
+          "point_mapping": "\\((x,y)\\mapsto(-x,-y)\\)",
+          "why": "تتغير إشارة الفاصلة والترتيب معًا.",
+          "how_to_think": "ناقص داخل f وناقص خارجها.",
+          "attention": "إذا كانت f فردية، فإن -f(-x)=f(x).",
+          "quick_check": {
+            "question": "ما صورة النقطة (2,3) بالتناظر المركزي حول الأصل؟",
+            "answer": "(-2,-3)."
+          }
+        }
+      },
+      {
+        "id": "step_17",
+        "type": "worked_example",
+        "title": "مثال مركب على التحويلات",
+        "content": {
+          "statement": "انطلاقًا من منحنى \\(f(x)=x^2\\)، صف بناء منحنى \\(h(x)=-(x-2)^2+3\\).",
+          "steps": [
+            {
+              "step_number": 1,
+              "title": "الانتقال الأفقي",
+              "calculation": "\\(f(x-2)=(x-2)^2\\)",
+              "result": "انسحاب وحدتين نحو اليمين."
+            },
+            {
+              "step_number": 2,
+              "title": "الانعكاس",
+              "calculation": "\\(-f(x-2)=-(x-2)^2\\)",
+              "result": "تناظر بالنسبة إلى محور الفواصل."
+            },
+            {
+              "step_number": 3,
+              "title": "الانتقال العمودي",
+              "calculation": "\\(-f(x-2)+3\\)",
+              "result": "انسحاب ثلاث وحدات إلى الأعلى."
+            }
+          ],
+          "final_conclusion": "نقل القطع المكافئ وحدتين يمينًا، ثم عكسه حول محور الفواصل، ثم رفعه ثلاث وحدات. رأس المنحنى هو (2,3).",
+          "visualization": {
+            "type": "multi_step_transform",
+            "renderer": "jsx_svg_or_recharts",
+            "steps": [
+              {
+                "id": 1,
+                "expression": "x^2",
+                "label": "المنحنى المرجعي"
+              },
+              {
+                "id": 2,
+                "expression": "(x-2)^2",
+                "label": "انسحاب يمينًا"
+              },
+              {
+                "id": 3,
+                "expression": "-(x-2)^2",
+                "label": "انعكاس حول محور الفواصل"
+              },
+              {
+                "id": 4,
+                "expression": "-(x-2)^2+3",
+                "label": "رفع إلى الأعلى"
+              }
+            ],
+            "step_control": {
+              "type": "slider",
+              "min": 1,
+              "max": 4,
+              "default": 1
+            },
+            "show_previous_curve_ghost": true,
+            "axes": {
+              "x_min": -3,
+              "x_max": 6,
+              "y_min": -8,
+              "y_max": 8
+            }
+          }
+        }
+      },
+      {
+        "id": "step_18",
+        "type": "method",
+        "title": "منهجية استنتاج منحنى محول",
+        "content": {
+          "algorithm": [
+            {
+              "step_number": 1,
+              "instruction": "حدد الدالة المرجعية f."
+            },
+            {
+              "step_number": 2,
+              "instruction": "حدد التغييرات الواقعة داخل f.",
+              "why": "تنتج تحولات أفقية أو انعكاسًا حول محور التراتيب."
+            },
+            {
+              "step_number": 3,
+              "instruction": "حدد التغييرات الواقعة خارج f.",
+              "why": "تنتج تحولات عمودية أو انعكاسًا حول محور الفواصل."
+            },
+            {
+              "step_number": 4,
+              "instruction": "نفذ التحويلات بترتيب واضح."
+            },
+            {
+              "step_number": 5,
+              "instruction": "تتبع نقاطًا مميزة مثل الرأس، التقاطعات، والمراكز."
+            }
+          ],
+          "memory_tip": "داخل f للفواصل، وخارج f للتراتيب.",
+          "attention": "في f(x+b) اتجاه الانتقال هو -b."
+        }
+      }
+    ],
+    "graph": {
+      "engine_hint": "ينفذ هذا المحور باستعمال مكون React عام لتحويل المنحنيات، يدعم الانسحاب والانعكاس والقيمة المطلقة والتناظر العام. يمكن استعمال SVG أو Recharts أو Plotly.",
+      "coordinate_system": "cartesian",
+      "default_direction": "ltr_for_graph_rtl_for_text",
+      "transformation_model": {
+        "base_expression": "string",
+        "operations": [
+          {
+            "type": "translate",
+            "dx": "number",
+            "dy": "number"
+          },
+          {
+            "type": "reflect",
+            "axis": "x|y|origin"
+          },
+          {
+            "type": "absolute_input",
+            "source_side": "positive|negative"
+          },
+          {
+            "type": "absolute_output"
+          }
+        ]
+      },
+      "series": [
+        {
+          "id": "even_symmetry",
+          "type": "symmetry",
+          "function": "x^2-1",
+          "symmetry": {
+            "type": "axis",
+            "x": 0
+          }
+        },
+        {
+          "id": "odd_symmetry",
+          "type": "symmetry",
+          "function": "x^3-x",
+          "symmetry": {
+            "type": "center",
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "general_axis",
+          "type": "symmetry",
+          "function": "(x-2)^2+1",
+          "symmetry": {
+            "type": "axis",
+            "x": 2
+          }
+        },
+        {
+          "id": "general_center",
+          "type": "symmetry",
+          "function": "(x-1)^3+2",
+          "symmetry": {
+            "type": "center",
+            "x": 1,
+            "y": 2
+          }
+        },
+        {
+          "id": "translation",
+          "type": "transform",
+          "function": "x^2",
+          "transformed": "(x+b)^2+k",
+          "controls": [
+            "b",
+            "k"
+          ]
+        },
+        {
+          "id": "absolute_input",
+          "type": "transform",
+          "function": "(x-1)^2-2",
+          "transformed": "(abs(x)-1)^2-2"
+        },
+        {
+          "id": "absolute_output",
+          "type": "transform",
+          "function": "x^2-2",
+          "transformed": "abs(x^2-2)"
+        }
+      ],
+      "react_rendering_notes": [
+        "اعرض المنحنى المرجعي والمحور المحول في الرسم نفسه.",
+        "استعمل نمط خط مختلف للمنحنى المرجعي والمنحنى الناتج.",
+        "أظهر شعاع الانسحاب بسهم يحمل الإحداثيين dx وdy.",
+        "أظهر نقاطًا متناظرة مرتبطة بقطعة مستقيمة.",
+        "في التناظر المركزي أظهر مركز القطعة الواصل بين النقطتين.",
+        "في f(|x|) أخف الجزء غير المستعمل من المنحنى المرجعي.",
+        "في |f(x)| ميز الأجزاء التي ستنعكس قبل تطبيق التحويل.",
+        "اسمح بعرض خطوات التحويل واحدة بعد أخرى.",
+        "لا تستعمل eval مباشرة؛ استعمل parser رياضيًا آمنًا.",
+        "اجعل مجالات الرسم والمحاور قابلة للتخصيص من JSON."
+      ]
+    },
+    "final_assessment": {
+      "question": "لتكن \\(f(x)=(x-1)^2-2\\). 1) أثبت أن المستقيم x=1 محور تناظر لمنحناها. 2) صف بناء منحنى \\(g(x)=-f(x+2)+3\\) انطلاقًا من منحنى f. 3) صف بناء منحنى \\(h(x)=|f(x)|\\).",
+      "skill": "إثبات محور تناظر وتحليل تحويلات مركبة وقيمة مطلقة.",
+      "expected_answer": "نحسب f(2-x)=((2-x)-1)^2-2=(1-x)^2-2=(x-1)^2-2=f(x)، ومنه x=1 محور تناظر. لبناء g نبدأ بـ f(x+2): انسحاب وحدتين إلى اليسار، ثم الانعكاس بالنسبة إلى محور الفواصل بسبب الإشارة السالبة، ثم الرفع ثلاث وحدات. ولرسم h نحتفظ بأجزاء منحنى f الواقعة فوق محور الفواصل ونعكس الأجزاء الواقعة تحته إلى الأعلى.",
+      "success_criteria": [
+        "يستعمل العلاقة f(2α-x)=f(x).",
+        "يحدد α=1 بصورة صحيحة.",
+        "يفسر f(x+2) كحركة نحو اليسار.",
+        "يفسر الإشارة السالبة الخارجية كانعكاس حول محور الفواصل.",
+        "يفسر +3 كانسحاب عمودي إلى الأعلى.",
+        "يصف |f(x)| انطلاقًا من إشارة قيم f.",
+        "يذكر النقاط الثابتة الواقعة على محور الفواصل."
+      ],
+      "hint_levels": [
+        "في محور التناظر استعمل 2α-x.",
+        "حلل التحويلات داخل f ثم خارجها.",
+        "القيمة المطلقة خارج f تؤثر في y."
+      ],
+      "explanation": [
+        "\\(f(2-x)=f(x)\\)، إذن x=1 محور تناظر.",
+        "\\(f(x+2)\\): وحدتان إلى اليسار.",
+        "\\(-f(x+2)\\): انعكاس حول محور الفواصل.",
+        "\\(-f(x+2)+3\\): ثلاث وحدات إلى الأعلى.",
+        "\\(|f(x)|\\): انعكاس الأجزاء السالبة إلى الأعلى."
+      ]
+    },
+    "lesson_summary": {
+      "key_ideas": [
+        "الزوجية والفردية.",
+        "محور ومركز التناظر العامان.",
+        "الانسحابات.",
+        "الانعكاسات.",
+        "تحويلات القيمة المطلقة."
+      ],
+      "method_template": [
+        "المجال → العلاقة → نوع التناظر أو التحويل → تحويل النقاط → الرسم."
+      ],
+      "memory_tip": "داخل f أفقي، وخارج f عمودي."
+    },
+    "dynamic_profile": {
+      "lesson_profile": "highly_visual_transformational_bac_oriented",
+      "profile_reason": "المحور يعتمد أساسًا على مشاهدة انتقال النقاط والمنحنيات وربط التعديل الجبري بالحركة الهندسية، ولذلك يحتاج إلى رسوم تفاعلية وخطوات متتابعة.",
+      "recommended_ui_blocks": [
+        "مقارنة الزوجية والفردية",
+        "نقاط متناظرة تفاعلية",
+        "منحنى مرجعي ومنحنى محول",
+        "متحكمات الانسحاب",
+        "بطاقة تحويل النقطة",
+        "عرض خطوة بخطوة",
+        "تطبيق موجه",
+        "تقييم نهائي"
+      ]
+    },
+    "schema_version": "2.0",
+    "content_status": "ready_for_production",
+    "pedagogical_style": {
+      "target": "تلميذ السنة الثالثة ثانوي في الجزائر",
+      "language_level": "عربية مبسطة مع الرموز الرياضية الرسمية",
+      "explanation_method": "تحويل النقاط ثم استنتاج تحويل المنحنى",
+      "platform_ready": true,
+      "requires_teacher_intervention": false
+    },
+    "lesson_intro": {
+      "welcome": "في هذا المحور ستتعلم كيف ترسم منحنيات جديدة بسرعة انطلاقًا من منحنى معروف.",
+      "big_idea": "كل تغيير في عبارة الدالة يقابله تغيير محدد في إحداثيات نقاط المنحنى.",
+      "student_promise": "بعد الدرس ستستطيع تحديد التناظر وتنفيذ الانسحابات والانعكاسات وتحويلات القيمة المطلقة."
+    },
+    "support_path": {
+      "if_student_does_not_understand": [
+        {
+          "issue": "أخلط بين الزوجية والفردية.",
+          "action": "اعرض نقطة ونظيرها في كل حالة: نفس y للزوجية، وعكس x وy للفردية."
+        },
+        {
+          "issue": "أخطئ في اتجاه f(x+b).",
+          "action": "حرّك رأس منحنى x² مع منزلق b وأظهر أن موضعه هو -b."
+        },
+        {
+          "issue": "أخلط بين -f(x) وf(-x).",
+          "action": "اعرض التحويلين في رسمين متجاورين مع تحويل الإحداثيات."
+        },
+        {
+          "issue": "لا أفهم f(|x|).",
+          "action": "أخفِ الجزء الأيسر أولًا ثم انسخ الجزء الأيمن بالانعكاس."
+        },
+        {
+          "issue": "لا أفهم |f(x)|.",
+          "action": "ميز الجزء تحت محور الفواصل ثم اقلبه إلى الأعلى بصورة متحركة."
+        }
+      ]
+    },
+    "method_decision_tree": {
+      "start_question": "ما شكل العبارة الجديدة؟",
+      "branches": [
+        {
+          "condition": "\\(f(-x)\\)",
+          "result": "انعكاس حول محور التراتيب."
+        },
+        {
+          "condition": "\\(-f(x)\\)",
+          "result": "انعكاس حول محور الفواصل."
+        },
+        {
+          "condition": "\\(-f(-x)\\)",
+          "result": "تناظر مركزي حول الأصل."
+        },
+        {
+          "condition": "\\(f(x+b)+k\\)",
+          "result": "انسحاب شعاعه (-b,k)."
+        },
+        {
+          "condition": "\\(f(|x|)\\)",
+          "result": "خذ الجزء الأيمن وانسخه إلى اليسار."
+        },
+        {
+          "condition": "\\(f(-|x|)\\)",
+          "result": "خذ الجزء الأيسر وانسخه إلى اليمين."
+        },
+        {
+          "condition": "\\(|f(x)|\\)",
+          "result": "اعكس الأجزاء الواقعة تحت محور الفواصل."
+        },
+        {
+          "condition": "إثبات تناظر",
+          "action": "افحص المجال ثم استعمل العلاقة الجبرية المناسبة."
+        }
+      ],
+      "golden_rule": "التغيير داخل f يؤثر في الفاصلة، والتغيير خارج f يؤثر في الترتيب."
+    },
+    "lesson_closure": {
+      "final_message": "لا تحفظ الرسومات؛ تتبع مصير كل نقطة من المنحنى.",
+      "essential_reflex": "حدد ما يحدث لـ x وما يحدث لـ y.",
+      "ready_for_next_lesson": "المحور التالي: المناقشة البيانية."
+    },
+    "quality_review": {
+      "mathematical_accuracy_checked": true,
+      "pedagogical_progression_checked": true,
+      "latex_consistency_checked": true,
+      "json_validity_checked": true,
+      "empty_text_values_removed": true,
+      "important_corrections": [
+        "تم اشتراط تناظر المجال قبل الحكم على الزوجية أو الفردية.",
+        "تم تثبيت إشارة شعاع الانسحاب الأفقي.",
+        "تم التفريق بين -f(x) وf(-x).",
+        "تم التفريق بين f(|x|) وf(-|x|) و|f(x)|.",
+        "تم إدراج محور ومركز تناظر عامين كما وردا في المصدر.",
+        "أضيفت مواصفات رسوم تفاعلية قابلة للتنفيذ في React."
+      ]
+    }
+  }
+}

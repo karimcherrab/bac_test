@@ -1,0 +1,342 @@
+{
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2012-electrical-verified",
+  "language": "ar",
+  "direction": "rtl",
+  "year": 2012,
+  "session": "ordinary",
+  "chapter_code": "electrical_phenomena_evolution",
+  "chapter_title": "تطور دراسة ظواهر كهربائية",
+  "exercise_number": 18,
+  "source_page": 7,
+  "source_pages": [
+    7
+  ],
+  "solution_source_pages": [
+    28
+  ],
+
+  "branches": [
+    {
+      "code": "math",
+      "name": "شعبة رياضيات"
+    },
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "title": "التمرين 18 — بكالوريا الجزائر 2012 — شعبة رياضيات وتقني رياضي",
+  "axis_tags": [
+    "capacitor_fundamental_relations",
+    "rc_capacitor_charging",
+    "rc_capacitor_discharge",
+    "rc_time_constant_graphical_analysis"
+  ],
+  "questions": [
+    {
+      "id": "2012_elec_ex18_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "أولا: المكثفة في البداية فارغة. نضع في اللحظة \\(t=0\\) البادلة \\(K\\) في الوضع (1)، فتشحن المكثفة بالمولد \\(G\\) الذي يعطي تياراً ثابتاً شدته \\(i=0.31mA\\). بواسطة جهاز ExAO نتابع تطور التوتر \\(u_{AB}\\) بدلالة الزمن (الشكل 24أ). أ- أعط عبارة التوتر \\(u_{AB}\\) بدلالة شدة التيار \\(i\\)، وسعة المكثفة \\(C\\)، والزمن \\(t\\). ب- جد قيمة سعة المكثفة \\(C\\).",
+      "solution": {
+        "strategy": "بما أن تيار الشحن ثابت، تكون الشحنة q=it ومن ثم يتغير التوتر خطياً مع الزمن.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "العلاقة الزمنية",
+            "explanation": "\\[q=i\\,t,\\qquad q=C u_{AB}\\Rightarrow \\boxed{u_{AB}(t)=\\frac{i}{C}t}\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "ميل البيان",
+            "explanation": "من الشكل 24أ: \\[a=\\frac{\\Delta u}{\\Delta t}=\\frac{1.0-0.2}{17.5-0}\\approx5.71\\times10^{-2}V.s^{-1}\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب C",
+            "explanation": "بما أن \\(a=i/C\\): \\[C=\\frac{i}{a}=\\frac{0.31\\times10^{-3}}{5.71\\times10^{-2}}\\approx\\boxed{5.4\\times10^{-3}F=5.4mF}\\]"
+          }
+        ],
+        "final_answer": "\\(u_{AB}=it/C\\)، و\\(C\\approx5.4mF\\)."
+      }
+    },
+    {
+      "id": "2012_elec_ex18_q2",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "ثانيا: عندما يصبح التوتر بين طرفي المكثفة مساوياً للقيمة \\(U_0=1.6V\\)، نضع البادلة \\(K\\) في الوضع (2) في لحظة نعتبرها من جديد \\(t=0\\)، فتفرغ المكثفة في ناقل أومي مقاومته \\(R=1k\\Omega\\). أ- جد المعادلة التفاضلية التي يحققها \\(u_{AB}\\)، علماً أن حلها \\(u_{AB}=U_0e^{-t/\\tau}\\). ب- أثناء التفريغ سمح جهاز ExAO بالحصول على البيان (الشكل 24ب). جد بيانياً قيمة ثابت الزمن \\(\\tau\\) للدارة، ثم استنتج قيمة سعة المكثفة \\(C\\).",
+      "solution": {
+        "strategy": "نطبق قانون جمع التوترات أثناء التفريغ، ثم نستعمل ميل البيان الخطي ln(U0/uAB).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "المعادلة التفاضلية",
+            "explanation": "\\[u_{AB}+u_R=0\\Rightarrow \\boxed{RC\\frac{du_{AB}}{dt}+u_{AB}=0}\\] أو \\[\\frac{du_{AB}}{dt}+\\frac1{RC}u_{AB}=0\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "تحويل الحل",
+            "explanation": "من \\(u_{AB}=U_0e^{-t/\\tau}\\): \\[\\ln\\left(\\frac{U_0}{u_{AB}}\\right)=\\frac{t}{\\tau}\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "ميل الشكل 24ب",
+            "explanation": "من التصحيح ميل المستقيم \\[a\\approx0.187s^{-1}\\] ومنه \\[\\tau=\\frac1a\\approx\\boxed{5.36s\\approx5.4s}\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "السعة",
+            "explanation": "\\[C=\\frac{\\tau}{R}=\\frac{5.4}{1000}=\\boxed{5.4\\times10^{-3}F=5.4mF}\\]"
+          }
+        ],
+        "final_answer": "\\(\\tau\\approx5.4s\\)، \\(C\\approx5.4mF\\)، وهي نفس النتيجة بالطريقتين."
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "تجميعية_عمورة_للبكالوريات_السابقة_الوحدة_3(1).pdf",
+    "statement_figure_policy": "الشكل أو البيان الموجود أصلاً في موضوع البكالوريا يظهر مع نص التمرين. الرسم المطلوب من التلميذ لا يكشف قبل فتح الحل.",
+    "solution_figure_policy": "تضاف الرسومات الضرورية داخل الحل فقط عند طلبها أو عند الحاجة المباشرة لفهم الاستغلال.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  },
+  "statement": "اقترح أستاذ على تلامذته تعيين سعة مكثفة \\(C\\) بطريقتين مختلفتين:\n\nالطريقة الأولى: شحن المكثفة بتيار مستمر ثابت الشدة.\nالطريقة الثانية: تفريغ المكثفة في ناقل أومي.\n\nلهذا الغرض تم تحقيق التركيب المرفق.",
+  "figures": [
+    {
+      "diagram_type": "bac_2012_ex18_statement_circuit",
+      "title": "التركيب التجريبي",
+      "description": "التركيب الأصلي المستعمل لطريقتي الشحن والتفريغ.",
+      "svg": "<svg viewBox=\"0 0 920 430\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"تركيب التمرين 18 بكالوريا 2012\">\n <defs><marker id=\"i18\" markerWidth=\"10\" markerHeight=\"10\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L0,6 L9,3z\" fill=\"#111827\"/></marker></defs>\n <rect x=\"35\" y=\"25\" width=\"850\" height=\"340\" rx=\"22\" fill=\"#fff\" stroke=\"#cbd5e1\" stroke-width=\"2\"/>\n <path d=\"M170 100 H690\" stroke=\"#111827\" stroke-width=\"5\" fill=\"none\"/>\n <path d=\"M170 315 H690\" stroke=\"#111827\" stroke-width=\"5\" fill=\"none\"/>\n <line x1=\"170\" y1=\"100\" x2=\"170\" y2=\"315\" stroke=\"#111827\" stroke-width=\"5\"/>\n <line x1=\"690\" y1=\"100\" x2=\"690\" y2=\"315\" stroke=\"#111827\" stroke-width=\"5\"/>\n\n <circle cx=\"405\" cy=\"100\" r=\"34\" fill=\"#fff\" stroke=\"#111827\" stroke-width=\"4\"/>\n <text x=\"395\" y=\"108\" font-size=\"24\" font-family=\"Arial\">G</text>\n <line x1=\"470\" y1=\"62\" x2=\"545\" y2=\"62\" stroke=\"#111827\" stroke-width=\"4\" marker-end=\"url(#i18)\"/>\n <text x=\"500\" y=\"48\" font-size=\"22\" font-family=\"Arial\">i</text>\n\n <circle cx=\"170\" cy=\"215\" r=\"28\" fill=\"#fff\" stroke=\"#111827\" stroke-width=\"4\"/>\n <text x=\"146\" y=\"223\" font-size=\"19\" font-family=\"Arial\">mA</text>\n\n <rect x=\"300\" y=\"190\" width=\"105\" height=\"48\" rx=\"6\" fill=\"#fff\" stroke=\"#111827\" stroke-width=\"3\"/>\n <text x=\"346\" y=\"222\" font-size=\"23\" font-family=\"Arial\">R</text>\n\n <line x1=\"470\" y1=\"265\" x2=\"470\" y2=\"315\" stroke=\"#111827\" stroke-width=\"5\"/>\n <line x1=\"440\" y1=\"265\" x2=\"500\" y2=\"265\" stroke=\"#111827\" stroke-width=\"6\"/>\n <line x1=\"440\" y1=\"230\" x2=\"500\" y2=\"230\" stroke=\"#111827\" stroke-width=\"6\"/>\n <line x1=\"470\" y1=\"230\" x2=\"470\" y2=\"190\" stroke=\"#111827\" stroke-width=\"5\"/>\n <text x=\"510\" y=\"252\" font-size=\"24\" font-family=\"Arial\">C</text>\n <text x=\"143\" y=\"335\" font-size=\"22\" font-family=\"Arial\">B</text>\n <text x=\"487\" y=\"188\" font-size=\"22\" font-family=\"Arial\">A</text>\n\n <circle cx=\"630\" cy=\"100\" r=\"5\" fill=\"#111827\"/>\n <circle cx=\"630\" cy=\"190\" r=\"5\" fill=\"#111827\"/>\n <circle cx=\"630\" cy=\"235\" r=\"5\" fill=\"#111827\"/>\n <line x1=\"608\" y1=\"100\" x2=\"630\" y2=\"100\" stroke=\"#111827\" stroke-width=\"5\"/>\n <line x1=\"630\" y1=\"150\" x2=\"630\" y2=\"185\" stroke=\"#111827\" stroke-width=\"5\"/>\n <line x1=\"630\" y1=\"150\" x2=\"605\" y2=\"122\" stroke=\"#111827\" stroke-width=\"5\"/>\n <text x=\"650\" y=\"192\" font-size=\"22\" font-family=\"Arial\">1</text>\n <text x=\"650\" y=\"242\" font-size=\"22\" font-family=\"Arial\">2</text>\n <text x=\"595\" y=\"160\" font-size=\"22\" font-family=\"Arial\">K</text>\n</svg>",
+      "render_mode": "inline",
+      "responsive": true
+    },
+    {
+      "title": "الشكل 24أ — u_AB=f(t)",
+      "description": "أثناء الشحن بتيار ثابت، يكون تطور توتر المكثفة خطيًا تقريبًا.",
+      "x_label": "t (s)",
+      "y_label": "u_AB (V)",
+      "x_domain": [
+        0,
+        30
+      ],
+      "y_domain": [
+        0,
+        2
+      ],
+      "series": [
+        {
+          "name": "u_AB",
+          "data": [
+            {
+              "x": 0,
+              "y": 0.0
+            },
+            {
+              "x": 5,
+              "y": 0.286
+            },
+            {
+              "x": 10,
+              "y": 0.571
+            },
+            {
+              "x": 15,
+              "y": 0.857
+            },
+            {
+              "x": 20,
+              "y": 1.143
+            },
+            {
+              "x": 25,
+              "y": 1.429
+            },
+            {
+              "x": 28,
+              "y": 1.6
+            }
+          ]
+        }
+      ],
+      "settings": {
+        "show_grid": true,
+        "show_axes": true,
+        "show_legend": false,
+        "show_point_labels": false,
+        "connect_points": true
+      }
+    },
+    {
+      "title": "الشكل 24ب — ln(U₀/u_AB)=f(t)",
+      "description": "البيان الخطي المستعمل لاستخراج ثابت الزمن أثناء التفريغ.",
+      "x_label": "t (s)",
+      "y_label": "ln(U₀/u_AB)",
+      "x_domain": [
+        0,
+        25
+      ],
+      "y_domain": [
+        0,
+        5
+      ],
+      "series": [
+        {
+          "name": "ln(U₀/u_AB)",
+          "data": [
+            {
+              "x": 0,
+              "y": 0.0
+            },
+            {
+              "x": 5,
+              "y": 0.935
+            },
+            {
+              "x": 10,
+              "y": 1.87
+            },
+            {
+              "x": 15,
+              "y": 2.805
+            },
+            {
+              "x": 20,
+              "y": 3.74
+            },
+            {
+              "x": 25,
+              "y": 4.675
+            }
+          ]
+        }
+      ],
+      "settings": {
+        "show_grid": true,
+        "show_axes": true,
+        "show_legend": false,
+        "show_point_labels": false,
+        "connect_points": true
+      }
+    }
+  ],
+  "statement_graphs": [
+    {
+      "diagram_type": "bac_2012_ex18_statement_circuit",
+      "title": "التركيب التجريبي",
+      "description": "التركيب الأصلي المستعمل لطريقتي الشحن والتفريغ.",
+      "svg": "<svg viewBox=\"0 0 920 430\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"تركيب التمرين 18 بكالوريا 2012\">\n <defs><marker id=\"i18\" markerWidth=\"10\" markerHeight=\"10\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L0,6 L9,3z\" fill=\"#111827\"/></marker></defs>\n <rect x=\"35\" y=\"25\" width=\"850\" height=\"340\" rx=\"22\" fill=\"#fff\" stroke=\"#cbd5e1\" stroke-width=\"2\"/>\n <path d=\"M170 100 H690\" stroke=\"#111827\" stroke-width=\"5\" fill=\"none\"/>\n <path d=\"M170 315 H690\" stroke=\"#111827\" stroke-width=\"5\" fill=\"none\"/>\n <line x1=\"170\" y1=\"100\" x2=\"170\" y2=\"315\" stroke=\"#111827\" stroke-width=\"5\"/>\n <line x1=\"690\" y1=\"100\" x2=\"690\" y2=\"315\" stroke=\"#111827\" stroke-width=\"5\"/>\n\n <circle cx=\"405\" cy=\"100\" r=\"34\" fill=\"#fff\" stroke=\"#111827\" stroke-width=\"4\"/>\n <text x=\"395\" y=\"108\" font-size=\"24\" font-family=\"Arial\">G</text>\n <line x1=\"470\" y1=\"62\" x2=\"545\" y2=\"62\" stroke=\"#111827\" stroke-width=\"4\" marker-end=\"url(#i18)\"/>\n <text x=\"500\" y=\"48\" font-size=\"22\" font-family=\"Arial\">i</text>\n\n <circle cx=\"170\" cy=\"215\" r=\"28\" fill=\"#fff\" stroke=\"#111827\" stroke-width=\"4\"/>\n <text x=\"146\" y=\"223\" font-size=\"19\" font-family=\"Arial\">mA</text>\n\n <rect x=\"300\" y=\"190\" width=\"105\" height=\"48\" rx=\"6\" fill=\"#fff\" stroke=\"#111827\" stroke-width=\"3\"/>\n <text x=\"346\" y=\"222\" font-size=\"23\" font-family=\"Arial\">R</text>\n\n <line x1=\"470\" y1=\"265\" x2=\"470\" y2=\"315\" stroke=\"#111827\" stroke-width=\"5\"/>\n <line x1=\"440\" y1=\"265\" x2=\"500\" y2=\"265\" stroke=\"#111827\" stroke-width=\"6\"/>\n <line x1=\"440\" y1=\"230\" x2=\"500\" y2=\"230\" stroke=\"#111827\" stroke-width=\"6\"/>\n <line x1=\"470\" y1=\"230\" x2=\"470\" y2=\"190\" stroke=\"#111827\" stroke-width=\"5\"/>\n <text x=\"510\" y=\"252\" font-size=\"24\" font-family=\"Arial\">C</text>\n <text x=\"143\" y=\"335\" font-size=\"22\" font-family=\"Arial\">B</text>\n <text x=\"487\" y=\"188\" font-size=\"22\" font-family=\"Arial\">A</text>\n\n <circle cx=\"630\" cy=\"100\" r=\"5\" fill=\"#111827\"/>\n <circle cx=\"630\" cy=\"190\" r=\"5\" fill=\"#111827\"/>\n <circle cx=\"630\" cy=\"235\" r=\"5\" fill=\"#111827\"/>\n <line x1=\"608\" y1=\"100\" x2=\"630\" y2=\"100\" stroke=\"#111827\" stroke-width=\"5\"/>\n <line x1=\"630\" y1=\"150\" x2=\"630\" y2=\"185\" stroke=\"#111827\" stroke-width=\"5\"/>\n <line x1=\"630\" y1=\"150\" x2=\"605\" y2=\"122\" stroke=\"#111827\" stroke-width=\"5\"/>\n <text x=\"650\" y=\"192\" font-size=\"22\" font-family=\"Arial\">1</text>\n <text x=\"650\" y=\"242\" font-size=\"22\" font-family=\"Arial\">2</text>\n <text x=\"595\" y=\"160\" font-size=\"22\" font-family=\"Arial\">K</text>\n</svg>",
+      "render_mode": "inline",
+      "responsive": true
+    },
+    {
+      "title": "الشكل 24أ — u_AB=f(t)",
+      "description": "أثناء الشحن بتيار ثابت، يكون تطور توتر المكثفة خطيًا تقريبًا.",
+      "x_label": "t (s)",
+      "y_label": "u_AB (V)",
+      "x_domain": [
+        0,
+        30
+      ],
+      "y_domain": [
+        0,
+        2
+      ],
+      "series": [
+        {
+          "name": "u_AB",
+          "data": [
+            {
+              "x": 0,
+              "y": 0.0
+            },
+            {
+              "x": 5,
+              "y": 0.286
+            },
+            {
+              "x": 10,
+              "y": 0.571
+            },
+            {
+              "x": 15,
+              "y": 0.857
+            },
+            {
+              "x": 20,
+              "y": 1.143
+            },
+            {
+              "x": 25,
+              "y": 1.429
+            },
+            {
+              "x": 28,
+              "y": 1.6
+            }
+          ]
+        }
+      ],
+      "settings": {
+        "show_grid": true,
+        "show_axes": true,
+        "show_legend": false,
+        "show_point_labels": false,
+        "connect_points": true
+      }
+    },
+    {
+      "title": "الشكل 24ب — ln(U₀/u_AB)=f(t)",
+      "description": "البيان الخطي المستعمل لاستخراج ثابت الزمن أثناء التفريغ.",
+      "x_label": "t (s)",
+      "y_label": "ln(U₀/u_AB)",
+      "x_domain": [
+        0,
+        25
+      ],
+      "y_domain": [
+        0,
+        5
+      ],
+      "series": [
+        {
+          "name": "ln(U₀/u_AB)",
+          "data": [
+            {
+              "x": 0,
+              "y": 0.0
+            },
+            {
+              "x": 5,
+              "y": 0.935
+            },
+            {
+              "x": 10,
+              "y": 1.87
+            },
+            {
+              "x": 15,
+              "y": 2.805
+            },
+            {
+              "x": 20,
+              "y": 3.74
+            },
+            {
+              "x": 25,
+              "y": 4.675
+            }
+          ]
+        }
+      ],
+      "settings": {
+        "show_grid": true,
+        "show_axes": true,
+        "show_legend": false,
+        "show_point_labels": false,
+        "connect_points": true
+      }
+    }
+  ]
+}

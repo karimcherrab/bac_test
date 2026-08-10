@@ -1,0 +1,311 @@
+{
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2017-electrical-verified",
+  "language": "ar",
+  "direction": "rtl",
+  "year": 2017,
+  "session": "ordinary",
+  "chapter_code": "electrical_phenomena_evolution",
+  "chapter_title": "تطور دراسة ظواهر كهربائية",
+  "exercise_number": 43,
+  "source_page": 18,
+  "source_pages": [
+    18
+  ],
+  "solution_source_pages": [
+    38
+  ],
+
+  "branches": [
+    {
+      "code": "math",
+      "name": "شعبة رياضيات"
+    },
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "title": "التمرين 43 — بكالوريا الجزائر 2017 — رياضيات وتقني رياضي (الدورة الاستثنائية)",
+  "axis_tags": [
+    "rl_current_decay",
+    "joule_power_energy"
+  ],
+  "questions": [
+    {
+      "id": "2017_elec_ex43_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "عند t=0 نفتح K. ما الظاهرة التي تحدث؟",
+      "solution": {
+        "strategy": "الوشيعة تعارض الانقطاع المفاجئ.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الظاهرة",
+            "explanation": "التحريض الذاتي: ينقطع التيار تدريجياً."
+          }
+        ],
+        "final_answer": "التحريض الذاتي."
+      }
+    },
+    {
+      "id": "2017_elec_ex43_q2",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "بتطبيق قانون جمع التوترات جد المعادلة التفاضلية لـu_R(t).",
+      "solution": {
+        "strategy": "حلقة R والوشيعة بعد فتح القاطعة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "المعادلة",
+            "explanation": "\\[\\frac{du_R}{dt}+\\frac{R+r}{L}u_R=0\\]"
+          }
+        ],
+        "final_answer": "uR'+(R+r)uR/L=0."
+      }
+    },
+    {
+      "id": "2017_elec_ex43_q3",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "إذا كان u_R=Ae^{-t/α}، حدّد A وα ثم استنتج i(t).",
+      "solution": {
+        "strategy": "نستعمل uR=Ri.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الثوابت",
+            "explanation": "A=RI0، وα=τ=L/(R+r)."
+          },
+          {
+            "step_number": 2,
+            "title": "التيار",
+            "explanation": "\\[i(t)=I_0e^{-t/\\tau}\\]"
+          }
+        ],
+        "final_answer": "A=RI0، α=τ."
+      }
+    },
+    {
+      "id": "2017_elec_ex43_q4",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "اكتب عبارة الاستطاعة اللحظية P(t) المحولة في R.",
+      "solution": {
+        "strategy": "P=Ri².",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "العبارة",
+            "explanation": "\\[P(t)=RI_0^2e^{-2t/\\tau}=P_{max}e^{-2t/\\tau}\\]"
+          }
+        ],
+        "final_answer": "P=Pmax e^-2t/τ."
+      }
+    },
+    {
+      "id": "2017_elec_ex43_q5",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "من الشكل 73: برهن خاصية المماس ثم استنتج τ وI0 وr وL.",
+      "solution": {
+        "strategy": "نستعمل مشتقة P والقيمة العظمى.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "المماس",
+            "explanation": "P'(0)=-2Pmax/τ، لذلك يقطع المماس محور الزمن عند τ/2."
+          },
+          {
+            "step_number": 2,
+            "title": "τ",
+            "explanation": "من البيان τ/2=5ms، إذن τ=10ms."
+          },
+          {
+            "step_number": 3,
+            "title": "I0",
+            "explanation": "Pmax=0.50W ⇒ I0=√(0.50/50)=0.10A."
+          },
+          {
+            "step_number": 4,
+            "title": "r",
+            "explanation": "r=E/I0-R=10Ω."
+          },
+          {
+            "step_number": 5,
+            "title": "L",
+            "explanation": "L=τ(R+r)=0.60H."
+          }
+        ],
+        "final_answer": "τ=10ms، I0=0.10A، r=10Ω، L=0.60H."
+      }
+    },
+    {
+      "id": "2017_elec_ex43_q6",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "أثبت أن زمن تناقص الاستطاعة إلى النصف هو t1/2=(τ/2)ln2 ثم احسبه.",
+      "solution": {
+        "strategy": "نضع P=Pmax/2.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "النتيجة",
+            "explanation": "\\[t_{1/2}=\\frac{\\tau}{2}\\ln2\\approx3.47ms\\]"
+          }
+        ],
+        "final_answer": "t1/2≈3.47ms."
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "تجميعية_عمورة_للبكالوريات_السابقة_الوحدة_3(1).pdf",
+    "statement_figure_policy": "الشكل المعطى في الموضوع يظهر مع نص التمرين، والرسم المطلوب كإجابة يظهر داخل الحل فقط.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  },
+  "statement": "دارة RL مع مولد مثالي E=6V، وشيعة (L,r)، ناقل أومي R=50Ω، قاطعة K وصمام ثنائي. نغلق القاطعة مدة كافية لإقامة التيار، ثم نفتح K عند لحظة نعتبرها t=0.",
+  "figures": [
+    {
+      "diagram_type": "ex43_circuit",
+      "title": "الشكل 72",
+      "description": "الشكل 72",
+      "svg": "<svg viewBox=\"0 0 800 320\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"25\" y=\"20\" width=\"750\" height=\"260\" rx=\"18\" fill=\"white\" stroke=\"#cbd5e1\"/><path d=\"M130 80 H650 V240 H130 Z\" fill=\"none\" stroke=\"#111827\" stroke-width=\"5\"/><circle cx=\"130\" cy=\"160\" r=\"30\" fill=\"white\" stroke=\"#111827\" stroke-width=\"4\"/><text x=\"118\" y=\"168\" font-size=\"22\">E</text><rect x=\"250\" y=\"55\" width=\"100\" height=\"50\" fill=\"white\" stroke=\"#111827\" stroke-width=\"3\"/><text x=\"270\" y=\"87\" font-size=\"20\">R=50Ω</text><line x1=\"430\" y1=\"80\" x2=\"430\" y2=\"130\" stroke=\"#111827\" stroke-width=\"5\"/><line x1=\"400\" y1=\"130\" x2=\"460\" y2=\"130\" stroke=\"#111827\" stroke-width=\"6\"/><line x1=\"400\" y1=\"165\" x2=\"460\" y2=\"165\" stroke=\"#111827\" stroke-width=\"6\"/><text x=\"475\" y=\"155\" font-size=\"22\">C/L</text><text x=\"560\" y=\"70\" font-size=\"20\">K</text></svg>",
+      "render_mode": "inline",
+      "responsive": true
+    },
+    {
+      "title": "الشكل 73 — P(t)",
+      "description": "الشكل 73 — P(t)",
+      "x_label": "t(ms)",
+      "y_label": "P(W)",
+      "x_domain": [
+        0,
+        40
+      ],
+      "y_domain": [
+        0,
+        0.55
+      ],
+      "series": [
+        {
+          "name": "P",
+          "data": [
+            {
+              "x": 0,
+              "y": 0.5
+            },
+            {
+              "x": 2,
+              "y": 0.3352
+            },
+            {
+              "x": 5,
+              "y": 0.1839
+            },
+            {
+              "x": 10,
+              "y": 0.0677
+            },
+            {
+              "x": 15,
+              "y": 0.0249
+            },
+            {
+              "x": 20,
+              "y": 0.0092
+            },
+            {
+              "x": 30,
+              "y": 0.0012
+            },
+            {
+              "x": 40,
+              "y": 0.0002
+            }
+          ]
+        }
+      ],
+      "settings": {
+        "show_grid": true,
+        "show_axes": true,
+        "show_legend": false,
+        "show_point_labels": false,
+        "connect_points": true
+      }
+    }
+  ],
+  "statement_graphs": [
+    {
+      "diagram_type": "ex43_circuit",
+      "title": "الشكل 72",
+      "description": "الشكل 72",
+      "svg": "<svg viewBox=\"0 0 800 320\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"25\" y=\"20\" width=\"750\" height=\"260\" rx=\"18\" fill=\"white\" stroke=\"#cbd5e1\"/><path d=\"M130 80 H650 V240 H130 Z\" fill=\"none\" stroke=\"#111827\" stroke-width=\"5\"/><circle cx=\"130\" cy=\"160\" r=\"30\" fill=\"white\" stroke=\"#111827\" stroke-width=\"4\"/><text x=\"118\" y=\"168\" font-size=\"22\">E</text><rect x=\"250\" y=\"55\" width=\"100\" height=\"50\" fill=\"white\" stroke=\"#111827\" stroke-width=\"3\"/><text x=\"270\" y=\"87\" font-size=\"20\">R=50Ω</text><line x1=\"430\" y1=\"80\" x2=\"430\" y2=\"130\" stroke=\"#111827\" stroke-width=\"5\"/><line x1=\"400\" y1=\"130\" x2=\"460\" y2=\"130\" stroke=\"#111827\" stroke-width=\"6\"/><line x1=\"400\" y1=\"165\" x2=\"460\" y2=\"165\" stroke=\"#111827\" stroke-width=\"6\"/><text x=\"475\" y=\"155\" font-size=\"22\">C/L</text><text x=\"560\" y=\"70\" font-size=\"20\">K</text></svg>",
+      "render_mode": "inline",
+      "responsive": true
+    },
+    {
+      "title": "الشكل 73 — P(t)",
+      "description": "الشكل 73 — P(t)",
+      "x_label": "t(ms)",
+      "y_label": "P(W)",
+      "x_domain": [
+        0,
+        40
+      ],
+      "y_domain": [
+        0,
+        0.55
+      ],
+      "series": [
+        {
+          "name": "P",
+          "data": [
+            {
+              "x": 0,
+              "y": 0.5
+            },
+            {
+              "x": 2,
+              "y": 0.3352
+            },
+            {
+              "x": 5,
+              "y": 0.1839
+            },
+            {
+              "x": 10,
+              "y": 0.0677
+            },
+            {
+              "x": 15,
+              "y": 0.0249
+            },
+            {
+              "x": 20,
+              "y": 0.0092
+            },
+            {
+              "x": 30,
+              "y": 0.0012
+            },
+            {
+              "x": 40,
+              "y": 0.0002
+            }
+          ]
+        }
+      ],
+      "settings": {
+        "show_grid": true,
+        "show_axes": true,
+        "show_legend": false,
+        "show_point_labels": false,
+        "connect_points": true
+      }
+    }
+  ]
+}

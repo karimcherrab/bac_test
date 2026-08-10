@@ -1,0 +1,424 @@
+{
+  "schema_version": "4.5-bac-source",
+  "version": "1.0-2008-math-ex04",
+  "language": "ar",
+  "direction": "rtl",
+  "year": 2008,
+  "session": "unspecified",
+  "subject": "math",
+  "chapter_code": "derivatives",
+  "chapter_title": "الاشتقاقية ودراسة الدوال",
+  "exercise_number": 4,
+  "branches": [
+    {
+      "code": "math",
+      "name": "شعبة رياضيات"
+    }
+  ],
+  "source_pages": [
+    1
+  ],
+  "title": "تمرين 4 - بكالوريا 2008 - دالة الجذر التربيعي والاشتقاقية",
+  "statement": "تمرين 4: (6 نقاط)\nنعتبر الدالة \\(f\\) المعرفة على المجال \\([1;+\\infty[\\) بالعبارة: \\(f(x)=3+\\sqrt{x-1}\\).\nيرمز \\((C)\\) إلى منحنى \\(f\\) في المستوى المزود بالمعلم المتعامد والمتجانس \\((O;\\vec{i},\\vec{j})\\).\n(الوحدة على المحورين \\(2cm\\)).\n1) احسب \\(\\displaystyle \\lim_{x\\to1}\\frac{f(x)-f(1)}{x-1}\\) وفسر النتيجة هندسيا.\n- ادرس تغيرات الدالة \\(f\\).\n- باستعمال منحنى دالة \"الجذر التربيعي\"، أنشئ المنحنى \\((C)\\).\n- ارسم في نفس المعلم المستقيم \\((D)\\) الذي معادلته: \\(y=x\\).",
+  "figures": [],
+  "questions": [
+    {
+      "id": "2008_math_ex04_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "احسب \\(\\displaystyle \\lim_{x\\to1}\\frac{f(x)-f(1)}{x-1}\\) وفسر النتيجة هندسيا.",
+      "solution": {
+        "strategy": "نحسب أولًا \\(f(1)\\)، ثم نبسط معدل التغير.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب قيمة f(1)",
+            "explanation": "لدينا \\(f(1)=3+\\sqrt{1-1}=3\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "تبسيط الكسر",
+            "explanation": "\\(\\frac{f(x)-f(1)}{x-1}=\\frac{\\sqrt{x-1}}{x-1}=\\frac{1}{\\sqrt{x-1}}\\) لأن \\(x>1\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "حساب النهاية",
+            "explanation": "عندما \\(x\\to1^+\\) فإن \\(\\sqrt{x-1}\\to0^+\\)، ومنه \\(\\frac{1}{\\sqrt{x-1}}\\to+\\infty\\)."
+          },
+          {
+            "step_number": 4,
+            "title": "التفسير الهندسي",
+            "explanation": "معدل التغير يتجه إلى \\(+\\infty\\)، لذلك للمنحنى \\((C)\\) نصف مماس رأسي عند النقطة \\(A(1,3)\\)، موازٍ لمحور التراتيب.",
+            "result": "\\(\\lim=+\\infty\\)، ونصف المماس عند \\(A\\) رأسي."
+          }
+        ],
+        "final_answer": "\\(\\displaystyle \\lim_{x\\to1^+}\\frac{f(x)-f(1)}{x-1}=+\\infty\\). هندسيًا: للمنحنى نصف مماس رأسي عند \\(A(1,3)\\).",
+        "figures": [],
+        "common_mistakes": [],
+        "hints": [],
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2008_math_ex04_q2",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "ادرس تغيرات الدالة \\(f\\).",
+      "solution": {
+        "strategy": "نشتق على المجال المفتوح ثم نستنتج اتجاه التغير.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الاشتقاق",
+            "explanation": "لكل \\(x>1\\): \\(f'(x)=\\frac{1}{2\\sqrt{x-1}}\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "إشارة المشتقة",
+            "explanation": "بما أن \\(\\sqrt{x-1}>0\\) فإن \\(f'(x)>0\\) لكل \\(x>1\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "قيم الحدود",
+            "explanation": "\\(f(1)=3\\)، و\\(\\lim_{x\\to+\\infty}f(x)=+\\infty\\)."
+          },
+          {
+            "step_number": 4,
+            "title": "الاستنتاج",
+            "explanation": "إذن \\(f\\) متزايدة تمامًا على \\([1,+\\infty[\\).",
+            "result": "تزداد من \\(3\\) إلى \\(+\\infty\\)."
+          }
+        ],
+        "final_answer": "الدالة \\(f\\) متزايدة تمامًا على \\([1,+\\infty[\\).",
+        "figures": [
+          {
+            "id": "2008_ex04_variation_table",
+            "type": "variation_table",
+            "title": "جدول تغيرات الدالة f",
+            "domain": "[1,+\\infty[",
+            "rows": [
+              {
+                "label": "x",
+                "cells": [
+                  "1",
+                  "",
+                  "+\\infty"
+                ]
+              },
+              {
+                "label": "f'(x)",
+                "cells": [
+                  "غير معرفة عند 1",
+                  "+",
+                  ""
+                ]
+              },
+              {
+                "label": "f(x)",
+                "cells": [
+                  "3",
+                  "↗",
+                  "+\\infty"
+                ]
+              }
+            ],
+            "notes": [
+              "الدالة متزايدة تمامًا على \\(]1,+\\infty[\\)، ومتصلة من اليمين عند \\(x=1\\)."
+            ]
+          }
+        ],
+        "common_mistakes": [],
+        "hints": [],
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2008_math_ex04_q3",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "باستعمال منحنى دالة \"الجذر التربيعي\"، أنشئ المنحنى \\((C)\\).",
+      "solution": {
+        "strategy": "نستعمل التحويل الهندسي لمنحنى \\(y=\\sqrt{x}\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تحديد التحويل",
+            "explanation": "\\(f(x)=3+\\sqrt{x-1}\\): التعويض \\(x\\mapsto x-1\\) يعني إزاحة وحدة واحدة نحو اليمين، وإضافة \\(3\\) تعني إزاحة 3 وحدات إلى الأعلى."
+          },
+          {
+            "step_number": 2,
+            "title": "نقطة البداية",
+            "explanation": "منحنى الجذر يبدأ من \\((0,0)\\)، لذلك يبدأ \\((C)\\) من \\(A(1,3)\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "الرسم",
+            "explanation": "نرسم نفس شكل منحنى الجذر بعد ترجمته بالشعاع \\((1,3)\\).",
+            "result": "المنحنى موضح في الشكل JSON المرفق."
+          }
+        ],
+        "final_answer": "\\((C)\\) هو صورة منحنى \\(y=\\sqrt{x}\\) بترجمة شعاعها \\((1,3)\\).",
+        "figures": [
+          {
+            "id": "2008_ex04_graph",
+            "type": "cartesian_graph",
+            "title": "المنحنى (C) والمستقيم (D): y=x",
+            "x_range": [
+              0,
+              10
+            ],
+            "y_range": [
+              0,
+              8
+            ],
+            "axes": {
+              "x_label": "x",
+              "y_label": "y",
+              "grid": true,
+              "equal_scale": true
+            },
+            "series": [
+              {
+                "id": "C",
+                "label": "(C): f(x)=3+\\sqrt{x-1}",
+                "kind": "curve",
+                "formula": "y=3+\\sqrt{x-1}",
+                "domain": "[1,+\\infty[",
+                "points": [
+                  {
+                    "x": 1,
+                    "y": 3.0
+                  },
+                  {
+                    "x": 1.1,
+                    "y": 3.316228
+                  },
+                  {
+                    "x": 1.25,
+                    "y": 3.5
+                  },
+                  {
+                    "x": 1.5,
+                    "y": 3.707107
+                  },
+                  {
+                    "x": 2,
+                    "y": 4.0
+                  },
+                  {
+                    "x": 3,
+                    "y": 4.414214
+                  },
+                  {
+                    "x": 5,
+                    "y": 5.0
+                  },
+                  {
+                    "x": 7,
+                    "y": 5.44949
+                  },
+                  {
+                    "x": 10,
+                    "y": 6.0
+                  }
+                ]
+              },
+              {
+                "id": "D",
+                "label": "(D): y=x",
+                "kind": "line",
+                "formula": "y=x",
+                "points": [
+                  {
+                    "x": 0,
+                    "y": 0
+                  },
+                  {
+                    "x": 8,
+                    "y": 8
+                  }
+                ]
+              }
+            ],
+            "annotations": [
+              {
+                "type": "point",
+                "x": 1,
+                "y": 3,
+                "label": "A(1,3)"
+              },
+              {
+                "type": "vertical_tangent",
+                "x": 1,
+                "from_y": 3,
+                "to_y": 7,
+                "label": "نصف مماس رأسي عند A"
+              }
+            ],
+            "construction_hint": "منحنى \\(y=\\sqrt{x}\\) يُترجم بالشعاع \\((1,3)\\) للحصول على \\(C\\)."
+          }
+        ],
+        "common_mistakes": [],
+        "hints": [],
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2008_math_ex04_q4",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "ارسم في نفس المعلم المستقيم \\((D)\\) الذي معادلته: \\(y=x\\).",
+      "solution": {
+        "strategy": "يكفي تحديد نقطتين من المستقيم ثم رسمه.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "اختيار نقطتين",
+            "explanation": "المستقيم \\(y=x\\) يمر مثلًا بالنقطتين \\((0,0)\\) و\\((5,5)\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "الرسم",
+            "explanation": "نصل بين النقطتين بخط مستقيم في نفس المعلم الذي رسم فيه \\((C)\\).",
+            "result": "تم تضمين المستقيم \\((D)\\) في الشكل JSON."
+          }
+        ],
+        "final_answer": "المستقيم \\((D):y=x\\) مرسوم مع \\((C)\\) في نفس المعلم.",
+        "figures": [
+          {
+            "id": "2008_ex04_graph",
+            "type": "cartesian_graph",
+            "title": "المنحنى (C) والمستقيم (D): y=x",
+            "x_range": [
+              0,
+              10
+            ],
+            "y_range": [
+              0,
+              8
+            ],
+            "axes": {
+              "x_label": "x",
+              "y_label": "y",
+              "grid": true,
+              "equal_scale": true
+            },
+            "series": [
+              {
+                "id": "C",
+                "label": "(C): f(x)=3+\\sqrt{x-1}",
+                "kind": "curve",
+                "formula": "y=3+\\sqrt{x-1}",
+                "domain": "[1,+\\infty[",
+                "points": [
+                  {
+                    "x": 1,
+                    "y": 3.0
+                  },
+                  {
+                    "x": 1.1,
+                    "y": 3.316228
+                  },
+                  {
+                    "x": 1.25,
+                    "y": 3.5
+                  },
+                  {
+                    "x": 1.5,
+                    "y": 3.707107
+                  },
+                  {
+                    "x": 2,
+                    "y": 4.0
+                  },
+                  {
+                    "x": 3,
+                    "y": 4.414214
+                  },
+                  {
+                    "x": 5,
+                    "y": 5.0
+                  },
+                  {
+                    "x": 7,
+                    "y": 5.44949
+                  },
+                  {
+                    "x": 10,
+                    "y": 6.0
+                  }
+                ]
+              },
+              {
+                "id": "D",
+                "label": "(D): y=x",
+                "kind": "line",
+                "formula": "y=x",
+                "points": [
+                  {
+                    "x": 0,
+                    "y": 0
+                  },
+                  {
+                    "x": 8,
+                    "y": 8
+                  }
+                ]
+              }
+            ],
+            "annotations": [
+              {
+                "type": "point",
+                "x": 1,
+                "y": 3,
+                "label": "A(1,3)"
+              },
+              {
+                "type": "vertical_tangent",
+                "x": 1,
+                "from_y": 3,
+                "to_y": 7,
+                "label": "نصف مماس رأسي عند A"
+              }
+            ],
+            "construction_hint": "منحنى \\(y=\\sqrt{x}\\) يُترجم بالشعاع \\((1,3)\\) للحصول على \\(C\\)."
+          }
+        ],
+        "common_mistakes": [],
+        "hints": [],
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    }
+  ],
+  "source_reference": {
+    "file": "2008 (2).pdf",
+    "statement_pages": [
+      1
+    ],
+    "source_faithful_statement": true,
+    "note": "نُقل نص التمرين من الصورة الأصلية مع تحويل الرموز الرياضية إلى LaTeX فقط."
+  },
+  "display": {
+    "layout": "question_by_question",
+    "show_statement_first": true,
+    "show_solution_after_click": true,
+    "show_solution_figures": true,
+    "math_renderer": "katex_or_mathjax"
+  },
+  "review_status": {
+    "statement_compared_with_original_pdf": true,
+    "source_figures_checked": true,
+    "solution_created_step_by_step": true,
+    "json_validated": true,
+    "react_ready": true
+  },
+  "solution_pedagogy": {
+    "style": "guided_step_by_step",
+    "audience": "3AS_bac_student",
+    "principles": [
+      "العلاقة أولًا ثم الحساب ثم الاستنتاج.",
+      "إظهار جدول التغيرات عندما يكون مطلوبًا.",
+      "إرفاق الرسم في JSON عندما يطلب التمرين إنشاء منحنى."
+    ]
+  }
+}

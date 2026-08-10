@@ -1,0 +1,1212 @@
+{
+  "version": 1,
+  "language": "ar",
+  "direction": "rtl",
+  "subject_code": "phy",
+  "chapter_code": "electrical_phenomena_evolution",
+  "tag": "rl_current_establishment_differential_equation",
+  "title": "إقامة التيار في دارة RL والمعادلة التفاضلية — تمارين مستقلة",
+  "question_count": 15,
+  "scope_note": "15 تمرينًا مستقلة خاصة بالمحور التاسع: تركيب RL، القيم الابتدائية والنهائية، إنشاء المعادلة التفاضلية، الشكل المعياري، I∞، الحل الأسي، ثابت الزمن، التحقق من الحل، وتوترا المقاومة والوشيعة. الاستغلال البياني العددي التفصيلي لاستخراج τ وL وr وE مؤجل للمحور العاشر.",
+  "questions": [
+    {
+      "id": "rl_current_establishment_01",
+      "year": null,
+      "exercise": "تمرين مستقل خاص بالمحور التاسع",
+      "number": "1",
+      "title": "الحالة الابتدائية بعد غلق القاطعة",
+      "text": "دارة RL كانت مفتوحة مدة كافية، ثم أغلقت القاطعة عند \\(t=0\\).\nحدد مباشرة بعد الغلق:\n1) \\(i(0)\\)\n2) \\(u_R(0)\\)\n3) \\(u_b(0)\\)",
+      "standalone_text": "دارة RL كانت مفتوحة مدة كافية، ثم أغلقت القاطعة عند \\(t=0\\).\nحدد مباشرة بعد الغلق:\n1) \\(i(0)\\)\n2) \\(u_R(0)\\)\n3) \\(u_b(0)\\)",
+      "skill": "القيم الابتدائية",
+      "difficulty": "easy",
+      "is_standalone": true,
+      "source_reference": {
+        "axis_tag": "rl_current_establishment_differential_equation",
+        "label": "مبني مباشرة على محتوى محور إقامة التيار في دارة RL والمعادلة التفاضلية"
+      },
+      "solution": {
+        "title": "الحل: الحالة الابتدائية بعد غلق القاطعة",
+        "main_idea": "تيار الوشيعة لا يتغير فجأة.",
+        "detailed_explanation": "نحدد الحالة الفيزيائية أولًا، ثم نكتب قانون الدارة والعلاقات المناسبة، وبعدها نعوض ونحسب خطوة بخطوة.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "شدة التيار",
+            "explanation": "قبل الغلق لا يوجد تيار، وبسبب استمرارية تيار الوشيعة: \\(i(0)=0\\).",
+            "rule_used": "استمرارية التيار",
+            "why": "الوشيعة تمنع قفزة التيار.",
+            "result": "\\(i(0)=0\\)"
+          },
+          {
+            "order": 2,
+            "title": "توتر المقاومة",
+            "explanation": "\\(u_R(0)=Ri(0)=0\\).",
+            "rule_used": "قانون أوم",
+            "why": "التيار الابتدائي منعدم.",
+            "result": "\\(u_R(0)=0\\)"
+          },
+          {
+            "order": 3,
+            "title": "توتر الوشيعة",
+            "explanation": "من \\(E=u_R+u_b\\): بما أن \\(u_R(0)=0\\)، فإن \\(u_b(0)=E\\).",
+            "rule_used": "قانون جمع التوترات",
+            "why": "توتر المولد يقع على الوشيعة لحظة الغلق.",
+            "result": "\\(u_b(0)=E\\)"
+          }
+        ],
+        "final_answer": "\\(\\boxed{i(0)=0,\\ u_R(0)=0,\\ u_b(0)=E}\\).",
+        "verification": "نتحقق من الحالة الابتدائية i(0)=0 ومن النظام الدائم di/dt=0 عندما يلزم، ومن تجانس الوحدات.",
+        "hints": [
+          {
+            "level": 1,
+            "hint": "ابدأ بقانون جمع التوترات أو بالحالة الابتدائية/النهائية حسب السؤال."
+          },
+          {
+            "level": 2,
+            "hint": "العلاقة الأساسية: \\(L\\frac{di}{dt}+(R+r)i=E\\)."
+          }
+        ],
+        "bac_writing": [
+          "اكتب القانون المستعمل.",
+          "عوّض العلاقات قبل الحساب.",
+          "وحّد الوحدات.",
+          "أظهر الحسابات الأساسية.",
+          "ضع النتيجة النهائية بوضوح."
+        ],
+        "understanding_check": [],
+        "presentation": {
+          "show_one_step_at_a_time": true
+        }
+      }
+    },
+    {
+      "id": "rl_current_establishment_02",
+      "year": null,
+      "exercise": "تمرين مستقل خاص بالمحور التاسع",
+      "number": "2",
+      "title": "إنشاء المعادلة التفاضلية",
+      "text": "تتكون الدارة المبينة من مولد ثابت \\(E\\)، مقاومة \\(R\\)، ووشيعة حقيقية \\((L,r)\\) موصولة على التسلسل.\nأنشئ المعادلة التفاضلية التي تحققها شدة التيار \\(i(t)\\).",
+      "standalone_text": "تتكون الدارة المبينة من مولد ثابت \\(E\\)، مقاومة \\(R\\)، ووشيعة حقيقية \\((L,r)\\) موصولة على التسلسل.\nأنشئ المعادلة التفاضلية التي تحققها شدة التيار \\(i(t)\\).",
+      "skill": "إنشاء المعادلة التفاضلية",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "source_reference": {
+        "axis_tag": "rl_current_establishment_differential_equation",
+        "label": "مبني مباشرة على محتوى محور إقامة التيار في دارة RL والمعادلة التفاضلية"
+      },
+      "solution": {
+        "title": "الحل: إنشاء المعادلة التفاضلية",
+        "main_idea": "نطبق قانون جمع التوترات ثم نعوض توتر المقاومة والوشيعة.",
+        "detailed_explanation": "نحدد الحالة الفيزيائية أولًا، ثم نكتب قانون الدارة والعلاقات المناسبة، وبعدها نعوض ونحسب خطوة بخطوة.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "قانون الدارة",
+            "explanation": "\\(E=u_R+u_b\\).",
+            "rule_used": "قانون جمع التوترات",
+            "why": "العناصر موصولة على التسلسل.",
+            "result": "\\(E=u_R+u_b\\)"
+          },
+          {
+            "order": 2,
+            "title": "التعويض",
+            "explanation": "\\(u_R=Ri\\) و \\(u_b=ri+L\\frac{di}{dt}\\).",
+            "rule_used": "علاقات العناصر",
+            "why": "نعبر عن التوترات بدلالة i.",
+            "result": "\\(E=Ri+ri+L\\frac{di}{dt}\\)"
+          },
+          {
+            "order": 3,
+            "title": "الترتيب",
+            "explanation": "نجمع الحدين \\(Ri+ri=(R+r)i\\).",
+            "rule_used": "تبسيط جبري",
+            "why": "للحصول على الشكل المطلوب.",
+            "result": "\\(L\\frac{di}{dt}+(R+r)i=E\\)"
+          }
+        ],
+        "final_answer": "\\(\\boxed{L\\frac{di}{dt}+(R+r)i=E}\\).",
+        "verification": "نتحقق من الحالة الابتدائية i(0)=0 ومن النظام الدائم di/dt=0 عندما يلزم، ومن تجانس الوحدات.",
+        "hints": [
+          {
+            "level": 1,
+            "hint": "ابدأ بقانون جمع التوترات أو بالحالة الابتدائية/النهائية حسب السؤال."
+          },
+          {
+            "level": 2,
+            "hint": "العلاقة الأساسية: \\(L\\frac{di}{dt}+(R+r)i=E\\)."
+          }
+        ],
+        "bac_writing": [
+          "اكتب القانون المستعمل.",
+          "عوّض العلاقات قبل الحساب.",
+          "وحّد الوحدات.",
+          "أظهر الحسابات الأساسية.",
+          "ضع النتيجة النهائية بوضوح."
+        ],
+        "understanding_check": [],
+        "presentation": {
+          "show_one_step_at_a_time": true
+        }
+      },
+      "graph_data": {
+        "title": "دارة RL التسلسلية",
+        "description": "مولد E ومقاومة R ووشيعة حقيقية (L,r) وقاطعة K.",
+        "svg": "\n<svg viewBox=\"0 0 940 450\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"دارة RL تحتوي على مولد ومقاومة ووشيعة حقيقية\">\n <defs>\n  <marker id=\"arr9i\" markerWidth=\"10\" markerHeight=\"10\" refX=\"8\" refY=\"3\" orient=\"auto\">\n   <path d=\"M0,0 L0,6 L9,3z\" fill=\"#4f46e5\"/>\n  </marker>\n  <marker id=\"arr9u\" markerWidth=\"10\" markerHeight=\"10\" refX=\"8\" refY=\"3\" orient=\"auto\">\n   <path d=\"M0,0 L0,6 L9,3z\" fill=\"#dc2626\"/>\n  </marker>\n </defs>\n <rect x=\"35\" y=\"30\" width=\"870\" height=\"360\" rx=\"24\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"2\"/>\n <path d=\"M170 115 H755 V315 H170 Z\" fill=\"none\" stroke=\"#334155\" stroke-width=\"5\"/>\n\n <line x1=\"145\" y1=\"180\" x2=\"195\" y2=\"180\" stroke=\"#111827\" stroke-width=\"4\"/>\n <line x1=\"155\" y1=\"230\" x2=\"185\" y2=\"230\" stroke=\"#111827\" stroke-width=\"4\"/>\n <text x=\"112\" y=\"186\" font-size=\"28\" font-family=\"Arial\">+</text>\n <text x=\"112\" y=\"240\" font-size=\"30\" font-family=\"Arial\">−</text>\n <text x=\"104\" y=\"273\" font-size=\"24\" font-family=\"Arial\">E</text>\n\n <line x1=\"275\" y1=\"115\" x2=\"315\" y2=\"115\" stroke=\"#334155\" stroke-width=\"5\"/>\n <line x1=\"335\" y1=\"115\" x2=\"375\" y2=\"115\" stroke=\"#334155\" stroke-width=\"5\"/>\n <line x1=\"315\" y1=\"115\" x2=\"340\" y2=\"90\" stroke=\"#111827\" stroke-width=\"5\"/>\n <text x=\"315\" y=\"76\" font-size=\"22\" font-family=\"Arial\">K</text>\n\n <rect x=\"410\" y=\"89\" width=\"105\" height=\"52\" rx=\"8\" fill=\"#fff\" stroke=\"#111827\" stroke-width=\"3\"/>\n <text x=\"450\" y=\"124\" font-size=\"26\" font-family=\"Arial\">R</text>\n\n <path d=\"M565 115 c0 -38 45 -38 45 0 c0 -38 45 -38 45 0 c0 -38 45 -38 45 0 c0 -38 45 -38 45 0\"\n       fill=\"none\" stroke=\"#111827\" stroke-width=\"5\"/>\n <text x=\"630\" y=\"70\" font-size=\"24\" font-family=\"Arial\">L , r</text>\n\n <line x1=\"220\" y1=\"72\" x2=\"385\" y2=\"72\" stroke=\"#4f46e5\" stroke-width=\"5\" marker-end=\"url(#arr9i)\"/>\n <text x=\"290\" y=\"54\" font-size=\"24\" font-family=\"Arial\" fill=\"#3730a3\">i(t)</text>\n\n <line x1=\"515\" y1=\"165\" x2=\"410\" y2=\"165\" stroke=\"#dc2626\" stroke-width=\"4\" marker-end=\"url(#arr9u)\"/>\n <text x=\"445\" y=\"196\" font-size=\"22\" font-family=\"Arial\" fill=\"#991b1b\">u_R</text>\n\n <line x1=\"730\" y1=\"165\" x2=\"565\" y2=\"165\" stroke=\"#dc2626\" stroke-width=\"4\" marker-end=\"url(#arr9u)\"/>\n <text x=\"620\" y=\"196\" font-size=\"22\" font-family=\"Arial\" fill=\"#991b1b\">u_b</text>\n\n <text x=\"290\" y=\"356\" font-size=\"25\" font-family=\"Arial\" font-weight=\"700\">E = u_R + u_b</text>\n</svg>\n",
+        "render_mode": "inline_exercise",
+        "responsive": true,
+        "diagram_type": "rl_series_circuit"
+      }
+    },
+    {
+      "id": "rl_current_establishment_03",
+      "year": null,
+      "exercise": "تمرين مستقل خاص بالمحور التاسع",
+      "number": "3",
+      "title": "كتابة الشكل المعياري",
+      "text": "تحقق شدة التيار المعادلة:\n\\[\nL\\frac{di}{dt}+(R+r)i=E.\n\\]\nاكتبها على الشكل المعياري \\(\\frac{di}{dt}+ai=b\\)، ثم حدد \\(a\\) و\\(b\\).",
+      "standalone_text": "تحقق شدة التيار المعادلة:\n\\[\nL\\frac{di}{dt}+(R+r)i=E.\n\\]\nاكتبها على الشكل المعياري \\(\\frac{di}{dt}+ai=b\\)، ثم حدد \\(a\\) و\\(b\\).",
+      "skill": "الشكل المعياري",
+      "difficulty": "easy",
+      "is_standalone": true,
+      "source_reference": {
+        "axis_tag": "rl_current_establishment_differential_equation",
+        "label": "مبني مباشرة على محتوى محور إقامة التيار في دارة RL والمعادلة التفاضلية"
+      },
+      "solution": {
+        "title": "الحل: كتابة الشكل المعياري",
+        "main_idea": "نقسم جميع حدود المعادلة على L.",
+        "detailed_explanation": "نحدد الحالة الفيزيائية أولًا، ثم نكتب قانون الدارة والعلاقات المناسبة، وبعدها نعوض ونحسب خطوة بخطوة.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "القسمة على L",
+            "explanation": "\\(\\frac{di}{dt}+\\frac{R+r}{L}i=\\frac{E}{L}\\).",
+            "rule_used": "قسمة طرفي المعادلة",
+            "why": "معامل المشتقة يصبح 1.",
+            "result": "\\(\\frac{di}{dt}+\\frac{R+r}{L}i=\\frac{E}{L}\\)"
+          },
+          {
+            "order": 2,
+            "title": "المعاملان",
+            "explanation": "بالمقارنة مع \\(\\frac{di}{dt}+ai=b\\).",
+            "rule_used": "مطابقة المعاملات",
+            "why": "قراءة مباشرة.",
+            "result": "\\(a=\\frac{R+r}{L},\\ b=\\frac{E}{L}\\)"
+          }
+        ],
+        "final_answer": "\\(\\boxed{a=\\frac{R+r}{L},\\quad b=\\frac{E}{L}}\\).",
+        "verification": "نتحقق من الحالة الابتدائية i(0)=0 ومن النظام الدائم di/dt=0 عندما يلزم، ومن تجانس الوحدات.",
+        "hints": [
+          {
+            "level": 1,
+            "hint": "ابدأ بقانون جمع التوترات أو بالحالة الابتدائية/النهائية حسب السؤال."
+          },
+          {
+            "level": 2,
+            "hint": "العلاقة الأساسية: \\(L\\frac{di}{dt}+(R+r)i=E\\)."
+          }
+        ],
+        "bac_writing": [
+          "اكتب القانون المستعمل.",
+          "عوّض العلاقات قبل الحساب.",
+          "وحّد الوحدات.",
+          "أظهر الحسابات الأساسية.",
+          "ضع النتيجة النهائية بوضوح."
+        ],
+        "understanding_check": [],
+        "presentation": {
+          "show_one_step_at_a_time": true
+        }
+      }
+    },
+    {
+      "id": "rl_current_establishment_04",
+      "year": null,
+      "exercise": "تمرين مستقل خاص بالمحور التاسع",
+      "number": "4",
+      "title": "حساب التيار النهائي",
+      "text": "دارة RL لها:\n\\[\nE=12V,\\quad R=50\\Omega,\\quad r=10\\Omega.\n\\]\nاحسب شدة التيار في النظام الدائم \\(I_\\infty\\).",
+      "standalone_text": "دارة RL لها:\n\\[\nE=12V,\\quad R=50\\Omega,\\quad r=10\\Omega.\n\\]\nاحسب شدة التيار في النظام الدائم \\(I_\\infty\\).",
+      "skill": "التيار النهائي",
+      "difficulty": "easy",
+      "is_standalone": true,
+      "source_reference": {
+        "axis_tag": "rl_current_establishment_differential_equation",
+        "label": "مبني مباشرة على محتوى محور إقامة التيار في دارة RL والمعادلة التفاضلية"
+      },
+      "solution": {
+        "title": "الحل: حساب التيار النهائي",
+        "main_idea": "في النظام الدائم يصبح di/dt=0.",
+        "detailed_explanation": "نحدد الحالة الفيزيائية أولًا، ثم نكتب قانون الدارة والعلاقات المناسبة، وبعدها نعوض ونحسب خطوة بخطوة.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "النظام الدائم",
+            "explanation": "\\(\\frac{di}{dt}=0\\).",
+            "rule_used": "تيار ثابت",
+            "why": "انتهت المرحلة الانتقالية.",
+            "result": "\\((R+r)I_\\infty=E\\)"
+          },
+          {
+            "order": 2,
+            "title": "التعويض",
+            "explanation": "\\(I_\\infty=\\frac{12}{50+10}\\).",
+            "rule_used": "علاقة التيار النهائي",
+            "why": "المقاومة الكلية R+r.",
+            "result": "\\(I_\\infty=\\frac{12}{60}=0.20A\\)"
+          }
+        ],
+        "final_answer": "\\(\\boxed{I_\\infty=0.20A}\\).",
+        "verification": "نتحقق من الحالة الابتدائية i(0)=0 ومن النظام الدائم di/dt=0 عندما يلزم، ومن تجانس الوحدات.",
+        "hints": [
+          {
+            "level": 1,
+            "hint": "ابدأ بقانون جمع التوترات أو بالحالة الابتدائية/النهائية حسب السؤال."
+          },
+          {
+            "level": 2,
+            "hint": "العلاقة الأساسية: \\(L\\frac{di}{dt}+(R+r)i=E\\)."
+          }
+        ],
+        "bac_writing": [
+          "اكتب القانون المستعمل.",
+          "عوّض العلاقات قبل الحساب.",
+          "وحّد الوحدات.",
+          "أظهر الحسابات الأساسية.",
+          "ضع النتيجة النهائية بوضوح."
+        ],
+        "understanding_check": [],
+        "presentation": {
+          "show_one_step_at_a_time": true
+        }
+      }
+    },
+    {
+      "id": "rl_current_establishment_05",
+      "year": null,
+      "exercise": "تمرين مستقل خاص بالمحور التاسع",
+      "number": "5",
+      "title": "تحديد ثابت الزمن",
+      "text": "دارة RL تحتوي على:\n\\[\nL=0.60H,\\quad R=25\\Omega,\\quad r=5\\Omega.\n\\]\nاحسب ثابت الزمن \\(\\tau\\).",
+      "standalone_text": "دارة RL تحتوي على:\n\\[\nL=0.60H,\\quad R=25\\Omega,\\quad r=5\\Omega.\n\\]\nاحسب ثابت الزمن \\(\\tau\\).",
+      "skill": "ثابت الزمن RL",
+      "difficulty": "easy",
+      "is_standalone": true,
+      "source_reference": {
+        "axis_tag": "rl_current_establishment_differential_equation",
+        "label": "مبني مباشرة على محتوى محور إقامة التيار في دارة RL والمعادلة التفاضلية"
+      },
+      "solution": {
+        "title": "الحل: تحديد ثابت الزمن",
+        "main_idea": "نستعمل \\(\\tau=\\frac{L}{R+r}\\).",
+        "detailed_explanation": "نحدد الحالة الفيزيائية أولًا، ثم نكتب قانون الدارة والعلاقات المناسبة، وبعدها نعوض ونحسب خطوة بخطوة.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "المقاومة الكلية",
+            "explanation": "\\(R+r=25+5=30\\Omega\\).",
+            "rule_used": "توصيل تسلسلي",
+            "why": "تدخل المقاومتان في ثابت الزمن.",
+            "result": "\\(R+r=30\\Omega\\)"
+          },
+          {
+            "order": 2,
+            "title": "الحساب",
+            "explanation": "\\(\\tau=\\frac{0.60}{30}=0.020s\\).",
+            "rule_used": "ثابت الزمن",
+            "why": "H/Ω تعطي s.",
+            "result": "\\(\\tau=20ms\\)"
+          }
+        ],
+        "final_answer": "\\(\\boxed{\\tau=0.020s=20ms}\\).",
+        "verification": "نتحقق من الحالة الابتدائية i(0)=0 ومن النظام الدائم di/dt=0 عندما يلزم، ومن تجانس الوحدات.",
+        "hints": [
+          {
+            "level": 1,
+            "hint": "ابدأ بقانون جمع التوترات أو بالحالة الابتدائية/النهائية حسب السؤال."
+          },
+          {
+            "level": 2,
+            "hint": "العلاقة الأساسية: \\(L\\frac{di}{dt}+(R+r)i=E\\)."
+          }
+        ],
+        "bac_writing": [
+          "اكتب القانون المستعمل.",
+          "عوّض العلاقات قبل الحساب.",
+          "وحّد الوحدات.",
+          "أظهر الحسابات الأساسية.",
+          "ضع النتيجة النهائية بوضوح."
+        ],
+        "understanding_check": [],
+        "presentation": {
+          "show_one_step_at_a_time": true
+        }
+      }
+    },
+    {
+      "id": "rl_current_establishment_06",
+      "year": null,
+      "exercise": "تمرين مستقل خاص بالمحور التاسع",
+      "number": "6",
+      "title": "استخراج الذاتية من ثابت الزمن",
+      "text": "لدارة RL:\n\\[\nR=40\\Omega,\\quad r=10\\Omega,\\quad \\tau=8.0ms.\n\\]\nاحسب ذاتية الوشيعة \\(L\\).",
+      "standalone_text": "لدارة RL:\n\\[\nR=40\\Omega,\\quad r=10\\Omega,\\quad \\tau=8.0ms.\n\\]\nاحسب ذاتية الوشيعة \\(L\\).",
+      "skill": "استخراج L",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "source_reference": {
+        "axis_tag": "rl_current_establishment_differential_equation",
+        "label": "مبني مباشرة على محتوى محور إقامة التيار في دارة RL والمعادلة التفاضلية"
+      },
+      "solution": {
+        "title": "الحل: استخراج الذاتية من ثابت الزمن",
+        "main_idea": "نعزل L من علاقة ثابت الزمن.",
+        "detailed_explanation": "نحدد الحالة الفيزيائية أولًا، ثم نكتب قانون الدارة والعلاقات المناسبة، وبعدها نعوض ونحسب خطوة بخطوة.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "تحويل الزمن",
+            "explanation": "\\(8.0ms=8.0\\times10^{-3}s\\).",
+            "rule_used": "تحويل الوحدات",
+            "why": "يجب استعمال SI.",
+            "result": "\\(\\tau=0.008s\\)"
+          },
+          {
+            "order": 2,
+            "title": "عزل L",
+            "explanation": "\\(L=\\tau(R+r)\\).",
+            "rule_used": "\\(\\tau=L/(R+r)\\)",
+            "why": "المطلوب L.",
+            "result": "\\(L=0.008(40+10)\\)"
+          },
+          {
+            "order": 3,
+            "title": "الحساب",
+            "explanation": "\\(L=0.008\\times50=0.40H\\).",
+            "rule_used": "تعويض",
+            "why": "النتيجة بالهنري.",
+            "result": "\\(L=0.40H\\)"
+          }
+        ],
+        "final_answer": "\\(\\boxed{L=0.40H}\\).",
+        "verification": "نتحقق من الحالة الابتدائية i(0)=0 ومن النظام الدائم di/dt=0 عندما يلزم، ومن تجانس الوحدات.",
+        "hints": [
+          {
+            "level": 1,
+            "hint": "ابدأ بقانون جمع التوترات أو بالحالة الابتدائية/النهائية حسب السؤال."
+          },
+          {
+            "level": 2,
+            "hint": "العلاقة الأساسية: \\(L\\frac{di}{dt}+(R+r)i=E\\)."
+          }
+        ],
+        "bac_writing": [
+          "اكتب القانون المستعمل.",
+          "عوّض العلاقات قبل الحساب.",
+          "وحّد الوحدات.",
+          "أظهر الحسابات الأساسية.",
+          "ضع النتيجة النهائية بوضوح."
+        ],
+        "understanding_check": [],
+        "presentation": {
+          "show_one_step_at_a_time": true
+        }
+      }
+    },
+    {
+      "id": "rl_current_establishment_07",
+      "year": null,
+      "exercise": "تمرين مستقل خاص بالمحور التاسع",
+      "number": "7",
+      "title": "عبارة شدة التيار",
+      "text": "دارة RL لها:\n\\[\nE=10V,\\quad R=40\\Omega,\\quad r=10\\Omega,\\quad L=0.50H.\n\\]\nاكتب العبارة العددية لشدة التيار \\(i(t)\\) أثناء إقامته.",
+      "standalone_text": "دارة RL لها:\n\\[\nE=10V,\\quad R=40\\Omega,\\quad r=10\\Omega,\\quad L=0.50H.\n\\]\nاكتب العبارة العددية لشدة التيار \\(i(t)\\) أثناء إقامته.",
+      "skill": "الحل الأسي",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "source_reference": {
+        "axis_tag": "rl_current_establishment_differential_equation",
+        "label": "مبني مباشرة على محتوى محور إقامة التيار في دارة RL والمعادلة التفاضلية"
+      },
+      "solution": {
+        "title": "الحل: عبارة شدة التيار",
+        "main_idea": "نحسب I∞ وτ ثم نعوض في الحل الأسي.",
+        "detailed_explanation": "نحدد الحالة الفيزيائية أولًا، ثم نكتب قانون الدارة والعلاقات المناسبة، وبعدها نعوض ونحسب خطوة بخطوة.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "التيار النهائي",
+            "explanation": "\\(I_\\infty=\\frac{10}{40+10}=0.20A\\).",
+            "rule_used": "النظام الدائم",
+            "why": "القيمة التي يتجه إليها التيار.",
+            "result": "\\(I_\\infty=0.20A\\)"
+          },
+          {
+            "order": 2,
+            "title": "ثابت الزمن",
+            "explanation": "\\(\\tau=\\frac{0.50}{50}=0.010s\\).",
+            "rule_used": "ثابت الزمن",
+            "why": "يحدد سرعة التطور.",
+            "result": "\\(\\tau=0.010s\\)"
+          },
+          {
+            "order": 3,
+            "title": "العبارة",
+            "explanation": "\\(i(t)=I_\\infty(1-e^{-t/\\tau})\\).",
+            "rule_used": "حل إقامة التيار",
+            "why": "نعوض القيم المحسوبة.",
+            "result": "\\(i(t)=0.20(1-e^{-t/0.010})\\,A\\)"
+          }
+        ],
+        "final_answer": "\\(\\boxed{i(t)=0.20(1-e^{-t/0.010})\\,A}\\).",
+        "verification": "نتحقق من الحالة الابتدائية i(0)=0 ومن النظام الدائم di/dt=0 عندما يلزم، ومن تجانس الوحدات.",
+        "hints": [
+          {
+            "level": 1,
+            "hint": "ابدأ بقانون جمع التوترات أو بالحالة الابتدائية/النهائية حسب السؤال."
+          },
+          {
+            "level": 2,
+            "hint": "العلاقة الأساسية: \\(L\\frac{di}{dt}+(R+r)i=E\\)."
+          }
+        ],
+        "bac_writing": [
+          "اكتب القانون المستعمل.",
+          "عوّض العلاقات قبل الحساب.",
+          "وحّد الوحدات.",
+          "أظهر الحسابات الأساسية.",
+          "ضع النتيجة النهائية بوضوح."
+        ],
+        "understanding_check": [],
+        "presentation": {
+          "show_one_step_at_a_time": true
+        }
+      }
+    },
+    {
+      "id": "rl_current_establishment_08",
+      "year": null,
+      "exercise": "تمرين مستقل خاص بالمحور التاسع",
+      "number": "8",
+      "title": "حساب التيار عند ثابت الزمن",
+      "text": "في دارة RL:\n\\[\nI_\\infty=0.30A,\\qquad \\tau=20ms.\n\\]\nاحسب \\(i(\\tau)\\) باستعمال:\n\\[\ni(t)=I_\\infty(1-e^{-t/\\tau}).\n\\]",
+      "standalone_text": "في دارة RL:\n\\[\nI_\\infty=0.30A,\\qquad \\tau=20ms.\n\\]\nاحسب \\(i(\\tau)\\) باستعمال:\n\\[\ni(t)=I_\\infty(1-e^{-t/\\tau}).\n\\]",
+      "skill": "استغلال الحل الأسي",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "source_reference": {
+        "axis_tag": "rl_current_establishment_differential_equation",
+        "label": "مبني مباشرة على محتوى محور إقامة التيار في دارة RL والمعادلة التفاضلية"
+      },
+      "solution": {
+        "title": "الحل: حساب التيار عند ثابت الزمن",
+        "main_idea": "عند t=τ يصبح الأس -1.",
+        "detailed_explanation": "نحدد الحالة الفيزيائية أولًا، ثم نكتب قانون الدارة والعلاقات المناسبة، وبعدها نعوض ونحسب خطوة بخطوة.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "التعويض",
+            "explanation": "\\(i(\\tau)=0.30(1-e^{-1})\\).",
+            "rule_used": "الحل الأسي",
+            "why": "لأن \\(\tau/\tau=1\\).",
+            "result": "\\(i(\\tau)=0.30(1-0.3679)\\)"
+          },
+          {
+            "order": 2,
+            "title": "الحساب",
+            "explanation": "\\(i(\\tau)\\approx0.30\\times0.6321\\).",
+            "rule_used": "حساب عددي",
+            "why": "التيار بلغ نحو 63% من قيمته النهائية.",
+            "result": "\\(i(\\tau)\\approx0.190A\\)"
+          }
+        ],
+        "final_answer": "\\(\\boxed{i(\\tau)\\approx0.190A}\\).",
+        "verification": "نتحقق من الحالة الابتدائية i(0)=0 ومن النظام الدائم di/dt=0 عندما يلزم، ومن تجانس الوحدات.",
+        "hints": [
+          {
+            "level": 1,
+            "hint": "ابدأ بقانون جمع التوترات أو بالحالة الابتدائية/النهائية حسب السؤال."
+          },
+          {
+            "level": 2,
+            "hint": "العلاقة الأساسية: \\(L\\frac{di}{dt}+(R+r)i=E\\)."
+          }
+        ],
+        "bac_writing": [
+          "اكتب القانون المستعمل.",
+          "عوّض العلاقات قبل الحساب.",
+          "وحّد الوحدات.",
+          "أظهر الحسابات الأساسية.",
+          "ضع النتيجة النهائية بوضوح."
+        ],
+        "understanding_check": [],
+        "presentation": {
+          "show_one_step_at_a_time": true
+        }
+      }
+    },
+    {
+      "id": "rl_current_establishment_09",
+      "year": null,
+      "exercise": "تمرين مستقل خاص بالمحور التاسع",
+      "number": "9",
+      "title": "التحقق من الحل المقترح",
+      "text": "نعطي:\n\\[\ni(t)=I_\\infty(1-e^{-t/\\tau}),\n\\quad I_\\infty=\\frac{E}{R+r},\n\\quad \\tau=\\frac{L}{R+r}.\n\\]\nتحقق أن هذه العبارة تحقق:\n\\[\nL\\frac{di}{dt}+(R+r)i=E.\n\\]",
+      "standalone_text": "نعطي:\n\\[\ni(t)=I_\\infty(1-e^{-t/\\tau}),\n\\quad I_\\infty=\\frac{E}{R+r},\n\\quad \\tau=\\frac{L}{R+r}.\n\\]\nتحقق أن هذه العبارة تحقق:\n\\[\nL\\frac{di}{dt}+(R+r)i=E.\n\\]",
+      "skill": "التحقق من حل المعادلة",
+      "difficulty": "hard",
+      "is_standalone": true,
+      "source_reference": {
+        "axis_tag": "rl_current_establishment_differential_equation",
+        "label": "مبني مباشرة على محتوى محور إقامة التيار في دارة RL والمعادلة التفاضلية"
+      },
+      "solution": {
+        "title": "الحل: التحقق من الحل المقترح",
+        "main_idea": "نشتق ثم نعوض ونستعمل تعريف I∞ وτ.",
+        "detailed_explanation": "نحدد الحالة الفيزيائية أولًا، ثم نكتب قانون الدارة والعلاقات المناسبة، وبعدها نعوض ونحسب خطوة بخطوة.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "المشتقة",
+            "explanation": "\\(\\frac{di}{dt}=\\frac{I_\\infty}{\\tau}e^{-t/\\tau}\\).",
+            "rule_used": "اشتقاق الأسية",
+            "why": "مشتقة \\(1-e^{-t/\tau}\\) موجبة.",
+            "result": "\\(i'=\\frac{I_\\infty}{\\tau}e^{-t/\\tau}\\)"
+          },
+          {
+            "order": 2,
+            "title": "التعويض",
+            "explanation": "\\(Li'+(R+r)i=L\\frac{I_\\infty}{\\tau}e^{-t/\\tau}+(R+r)I_\\infty(1-e^{-t/\\tau})\\).",
+            "rule_used": "تعويض",
+            "why": "نضع الحل ومشتقته في الطرف الأيسر.",
+            "result": ""
+          },
+          {
+            "order": 3,
+            "title": "استعمال τ",
+            "explanation": "\\(\\frac{L}{\\tau}=R+r\\).",
+            "rule_used": "تعريف ثابت الزمن",
+            "why": "يسمح بتوحيد العامل.",
+            "result": "\\((R+r)I_\\infty e^{-t/\\tau}+(R+r)I_\\infty(1-e^{-t/\\tau})\\)"
+          },
+          {
+            "order": 4,
+            "title": "التبسيط",
+            "explanation": "الحدان الأسيان يتلاشيان، فنحصل على \\((R+r)I_\\infty=E\\).",
+            "rule_used": "تعريف I∞",
+            "why": "إذن الحل يحقق المعادلة.",
+            "result": "\\(E\\)"
+          }
+        ],
+        "final_answer": "\\(\\boxed{i(t)=I_\\infty(1-e^{-t/\\tau})}\\) يحقق المعادلة التفاضلية.",
+        "verification": "نتحقق من الحالة الابتدائية i(0)=0 ومن النظام الدائم di/dt=0 عندما يلزم، ومن تجانس الوحدات.",
+        "hints": [
+          {
+            "level": 1,
+            "hint": "ابدأ بقانون جمع التوترات أو بالحالة الابتدائية/النهائية حسب السؤال."
+          },
+          {
+            "level": 2,
+            "hint": "العلاقة الأساسية: \\(L\\frac{di}{dt}+(R+r)i=E\\)."
+          }
+        ],
+        "bac_writing": [
+          "اكتب القانون المستعمل.",
+          "عوّض العلاقات قبل الحساب.",
+          "وحّد الوحدات.",
+          "أظهر الحسابات الأساسية.",
+          "ضع النتيجة النهائية بوضوح."
+        ],
+        "understanding_check": [],
+        "presentation": {
+          "show_one_step_at_a_time": true
+        }
+      }
+    },
+    {
+      "id": "rl_current_establishment_10",
+      "year": null,
+      "exercise": "تمرين مستقل خاص بالمحور التاسع",
+      "number": "10",
+      "title": "توتر المقاومة أثناء إقامة التيار",
+      "text": "في دارة RL:\n\\[\nR=30\\Omega,\\quad I_\\infty=0.20A,\\quad \\tau=10ms.\n\\]\nأوجد عبارة \\(u_R(t)\\)، ثم احسب قيمتها النهائية.",
+      "standalone_text": "في دارة RL:\n\\[\nR=30\\Omega,\\quad I_\\infty=0.20A,\\quad \\tau=10ms.\n\\]\nأوجد عبارة \\(u_R(t)\\)، ثم احسب قيمتها النهائية.",
+      "skill": "توتر المقاومة",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "source_reference": {
+        "axis_tag": "rl_current_establishment_differential_equation",
+        "label": "مبني مباشرة على محتوى محور إقامة التيار في دارة RL والمعادلة التفاضلية"
+      },
+      "solution": {
+        "title": "الحل: توتر المقاومة أثناء إقامة التيار",
+        "main_idea": "بما أن uR=Ri فإن له نفس شكل تطور التيار.",
+        "detailed_explanation": "نحدد الحالة الفيزيائية أولًا، ثم نكتب قانون الدارة والعلاقات المناسبة، وبعدها نعوض ونحسب خطوة بخطوة.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "العبارة",
+            "explanation": "\\(u_R(t)=RI_\\infty(1-e^{-t/\\tau})\\).",
+            "rule_used": "قانون أوم",
+            "why": "نعوض عبارة i(t).",
+            "result": "\\(u_R(t)=30(0.20)(1-e^{-t/0.010})\\)"
+          },
+          {
+            "order": 2,
+            "title": "التبسيط",
+            "explanation": "\\(30\\times0.20=6\\).",
+            "rule_used": "حساب",
+            "why": "سعة التوتر النهائية.",
+            "result": "\\(u_R(t)=6(1-e^{-t/0.010})V\\)"
+          },
+          {
+            "order": 3,
+            "title": "النهاية",
+            "explanation": "عندما \\(t\\to\\infty\\)، فإن \\(e^{-t/\\tau}\\to0\\).",
+            "rule_used": "نهاية الأسية",
+            "why": "الوصول للنظام الدائم.",
+            "result": "\\(u_R(\\infty)=6V\\)"
+          }
+        ],
+        "final_answer": "\\(\\boxed{u_R(t)=6(1-e^{-t/0.010})V,\\quad u_R(\\infty)=6V}\\).",
+        "verification": "نتحقق من الحالة الابتدائية i(0)=0 ومن النظام الدائم di/dt=0 عندما يلزم، ومن تجانس الوحدات.",
+        "hints": [
+          {
+            "level": 1,
+            "hint": "ابدأ بقانون جمع التوترات أو بالحالة الابتدائية/النهائية حسب السؤال."
+          },
+          {
+            "level": 2,
+            "hint": "العلاقة الأساسية: \\(L\\frac{di}{dt}+(R+r)i=E\\)."
+          }
+        ],
+        "bac_writing": [
+          "اكتب القانون المستعمل.",
+          "عوّض العلاقات قبل الحساب.",
+          "وحّد الوحدات.",
+          "أظهر الحسابات الأساسية.",
+          "ضع النتيجة النهائية بوضوح."
+        ],
+        "understanding_check": [],
+        "presentation": {
+          "show_one_step_at_a_time": true
+        }
+      }
+    },
+    {
+      "id": "rl_current_establishment_11",
+      "year": null,
+      "exercise": "تمرين مستقل خاص بالمحور التاسع",
+      "number": "11",
+      "title": "توتر الوشيعة في البداية والنهاية",
+      "text": "لدارة:\n\\[\nE=12V,\\quad R=50\\Omega,\\quad r=10\\Omega.\n\\]\nاحسب \\(u_b(0)\\) و\\(u_b(\\infty)\\).",
+      "standalone_text": "لدارة:\n\\[\nE=12V,\\quad R=50\\Omega,\\quad r=10\\Omega.\n\\]\nاحسب \\(u_b(0)\\) و\\(u_b(\\infty)\\).",
+      "skill": "توتر الوشيعة",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "source_reference": {
+        "axis_tag": "rl_current_establishment_differential_equation",
+        "label": "مبني مباشرة على محتوى محور إقامة التيار في دارة RL والمعادلة التفاضلية"
+      },
+      "solution": {
+        "title": "الحل: توتر الوشيعة في البداية والنهاية",
+        "main_idea": "في البداية uR=0، وفي النهاية يبقى أثر r فقط.",
+        "detailed_explanation": "نحدد الحالة الفيزيائية أولًا، ثم نكتب قانون الدارة والعلاقات المناسبة، وبعدها نعوض ونحسب خطوة بخطوة.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "البداية",
+            "explanation": "\\(i(0)=0\\Rightarrow u_R(0)=0\\)، ومن \\(E=u_R+u_b\\): \\(u_b(0)=12V\\).",
+            "rule_used": "الحالة الابتدائية",
+            "why": "كل توتر المولد على الوشيعة.",
+            "result": "\\(u_b(0)=12V\\)"
+          },
+          {
+            "order": 2,
+            "title": "التيار النهائي",
+            "explanation": "\\(I_\\infty=\\frac{12}{60}=0.20A\\).",
+            "rule_used": "النظام الدائم",
+            "why": "لا بد من حسابه قبل ub النهائي.",
+            "result": "\\(I_\\infty=0.20A\\)"
+          },
+          {
+            "order": 3,
+            "title": "النهاية",
+            "explanation": "\\(u_b(\\infty)=rI_\\infty=10\\times0.20\\).",
+            "rule_used": "وشيعة حقيقية في النظام الدائم",
+            "why": "الحد التحريضي منعدم.",
+            "result": "\\(u_b(\\infty)=2V\\)"
+          }
+        ],
+        "final_answer": "\\(\\boxed{u_b(0)=12V,\\quad u_b(\\infty)=2V}\\).",
+        "verification": "نتحقق من الحالة الابتدائية i(0)=0 ومن النظام الدائم di/dt=0 عندما يلزم، ومن تجانس الوحدات.",
+        "hints": [
+          {
+            "level": 1,
+            "hint": "ابدأ بقانون جمع التوترات أو بالحالة الابتدائية/النهائية حسب السؤال."
+          },
+          {
+            "level": 2,
+            "hint": "العلاقة الأساسية: \\(L\\frac{di}{dt}+(R+r)i=E\\)."
+          }
+        ],
+        "bac_writing": [
+          "اكتب القانون المستعمل.",
+          "عوّض العلاقات قبل الحساب.",
+          "وحّد الوحدات.",
+          "أظهر الحسابات الأساسية.",
+          "ضع النتيجة النهائية بوضوح."
+        ],
+        "understanding_check": [],
+        "presentation": {
+          "show_one_step_at_a_time": true
+        }
+      }
+    },
+    {
+      "id": "rl_current_establishment_12",
+      "year": null,
+      "exercise": "تمرين مستقل خاص بالمحور التاسع",
+      "number": "12",
+      "title": "وشيعة مثالية في دارة RL",
+      "text": "نعتبر نفس دارة RL لكن الوشيعة مثالية، أي \\(r=0\\).\n\n1) اكتب المعادلة التفاضلية.\n2) أعط \\(I_\\infty\\).\n3) أعط \\(\\tau\\).",
+      "standalone_text": "نعتبر نفس دارة RL لكن الوشيعة مثالية، أي \\(r=0\\).\n\n1) اكتب المعادلة التفاضلية.\n2) أعط \\(I_\\infty\\).\n3) أعط \\(\\tau\\).",
+      "skill": "الحالة المثالية",
+      "difficulty": "easy",
+      "is_standalone": true,
+      "source_reference": {
+        "axis_tag": "rl_current_establishment_differential_equation",
+        "label": "مبني مباشرة على محتوى محور إقامة التيار في دارة RL والمعادلة التفاضلية"
+      },
+      "solution": {
+        "title": "الحل: وشيعة مثالية في دارة RL",
+        "main_idea": "الوشيعة المثالية تعني فقط وضع r=0 مع بقاء L.",
+        "detailed_explanation": "نحدد الحالة الفيزيائية أولًا، ثم نكتب قانون الدارة والعلاقات المناسبة، وبعدها نعوض ونحسب خطوة بخطوة.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "المعادلة",
+            "explanation": "بوضع \\(r=0\\): \\(L\\frac{di}{dt}+Ri=E\\).",
+            "rule_used": "وشيعة مثالية",
+            "why": "لا توجد مقاومة داخلية.",
+            "result": "\\(L\\frac{di}{dt}+Ri=E\\)"
+          },
+          {
+            "order": 2,
+            "title": "التيار النهائي",
+            "explanation": "\\(I_\\infty=\\frac{E}{R}\\).",
+            "rule_used": "النظام الدائم",
+            "why": "di/dt=0.",
+            "result": "\\(I_\\infty=E/R\\)"
+          },
+          {
+            "order": 3,
+            "title": "ثابت الزمن",
+            "explanation": "\\(\\tau=\\frac{L}{R}\\).",
+            "rule_used": "تعريف τ",
+            "why": "نعوض r=0.",
+            "result": "\\(\\tau=L/R\\)"
+          }
+        ],
+        "final_answer": "\\(\\boxed{L\\frac{di}{dt}+Ri=E,\\ I_\\infty=\\frac ER,\\ \\tau=\\frac LR}\\).",
+        "verification": "نتحقق من الحالة الابتدائية i(0)=0 ومن النظام الدائم di/dt=0 عندما يلزم، ومن تجانس الوحدات.",
+        "hints": [
+          {
+            "level": 1,
+            "hint": "ابدأ بقانون جمع التوترات أو بالحالة الابتدائية/النهائية حسب السؤال."
+          },
+          {
+            "level": 2,
+            "hint": "العلاقة الأساسية: \\(L\\frac{di}{dt}+(R+r)i=E\\)."
+          }
+        ],
+        "bac_writing": [
+          "اكتب القانون المستعمل.",
+          "عوّض العلاقات قبل الحساب.",
+          "وحّد الوحدات.",
+          "أظهر الحسابات الأساسية.",
+          "ضع النتيجة النهائية بوضوح."
+        ],
+        "understanding_check": [],
+        "presentation": {
+          "show_one_step_at_a_time": true
+        }
+      }
+    },
+    {
+      "id": "rl_current_establishment_13",
+      "year": null,
+      "exercise": "تمرين مستقل خاص بالمحور التاسع",
+      "number": "13",
+      "title": "تمييز منحنى إقامة التيار",
+      "text": "يبين الشكل تطورًا نوعيًا في دارة RL بعد غلق القاطعة.\n\n1) أي منحنى يمثل \\(i(t)/I_\\infty\\)؟\n2) ما قيمته عند \\(t=0\\) وإلى أي قيمة يتجه؟\n3) ماذا يحدث للجزء التحريضي من توتر الوشيعة مع الزمن؟",
+      "standalone_text": "يبين الشكل تطورًا نوعيًا في دارة RL بعد غلق القاطعة.\n\n1) أي منحنى يمثل \\(i(t)/I_\\infty\\)؟\n2) ما قيمته عند \\(t=0\\) وإلى أي قيمة يتجه؟\n3) ماذا يحدث للجزء التحريضي من توتر الوشيعة مع الزمن؟",
+      "skill": "القراءة النوعية للمنحنى",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "source_reference": {
+        "axis_tag": "rl_current_establishment_differential_equation",
+        "label": "مبني مباشرة على محتوى محور إقامة التيار في دارة RL والمعادلة التفاضلية"
+      },
+      "solution": {
+        "title": "الحل: تمييز منحنى إقامة التيار",
+        "main_idea": "التيار يرتفع من الصفر، بينما التأثير التحريضي يتناقص.",
+        "detailed_explanation": "نحدد الحالة الفيزيائية أولًا، ثم نكتب قانون الدارة والعلاقات المناسبة، وبعدها نعوض ونحسب خطوة بخطوة.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "منحنى التيار",
+            "explanation": "هو المنحنى المتزايد الذي يبدأ من 0 ويتجه إلى 1.",
+            "rule_used": "شكل الحل الأسي",
+            "why": "i يبدأ من الصفر ويتجه إلى I∞.",
+            "result": "\\(i(0)/I_\\infty=0,\\quad i(\\infty)/I_\\infty=1\\)"
+          },
+          {
+            "order": 2,
+            "title": "الجزء التحريضي",
+            "explanation": "هو المتناقص من قيمة عظمى نحو الصفر.",
+            "rule_used": "\\(Ldi/dt\\)",
+            "why": "معدل تغير التيار يتناقص حتى ينعدم.",
+            "result": "\\(Ldi/dt\\to0\\)"
+          }
+        ],
+        "final_answer": "التيار هو المنحنى المتزايد \\(0\\to1\\)، والجزء التحريضي يتناقص نحو الصفر.",
+        "verification": "نتحقق من الحالة الابتدائية i(0)=0 ومن النظام الدائم di/dt=0 عندما يلزم، ومن تجانس الوحدات.",
+        "hints": [
+          {
+            "level": 1,
+            "hint": "ابدأ بقانون جمع التوترات أو بالحالة الابتدائية/النهائية حسب السؤال."
+          },
+          {
+            "level": 2,
+            "hint": "العلاقة الأساسية: \\(L\\frac{di}{dt}+(R+r)i=E\\)."
+          }
+        ],
+        "bac_writing": [
+          "اكتب القانون المستعمل.",
+          "عوّض العلاقات قبل الحساب.",
+          "وحّد الوحدات.",
+          "أظهر الحسابات الأساسية.",
+          "ضع النتيجة النهائية بوضوح."
+        ],
+        "understanding_check": [],
+        "presentation": {
+          "show_one_step_at_a_time": true
+        }
+      },
+      "graph_data": {
+        "title": "التطور النوعي في دارة RL بعد غلق القاطعة",
+        "description": "تزداد شدة التيار تدريجيًا من الصفر نحو قيمتها النهائية، بينما يتناقص الجزء التحريضي من توتر الوشيعة.",
+        "x_label": "t / τ",
+        "y_label": "قيمة نسبية",
+        "x_domain": [
+          0,
+          5
+        ],
+        "y_domain": [
+          0,
+          1.08
+        ],
+        "series": [
+          {
+            "name": "i(t) / I_∞",
+            "data": [
+              {
+                "x": 0,
+                "y": 0.0
+              },
+              {
+                "x": 0.25,
+                "y": 0.2212
+              },
+              {
+                "x": 0.5,
+                "y": 0.3935
+              },
+              {
+                "x": 0.75,
+                "y": 0.5276
+              },
+              {
+                "x": 1,
+                "y": 0.6321
+              },
+              {
+                "x": 1.5,
+                "y": 0.7769
+              },
+              {
+                "x": 2,
+                "y": 0.8647
+              },
+              {
+                "x": 2.5,
+                "y": 0.9179
+              },
+              {
+                "x": 3,
+                "y": 0.9502
+              },
+              {
+                "x": 4,
+                "y": 0.9817
+              },
+              {
+                "x": 5,
+                "y": 0.9933
+              }
+            ]
+          },
+          {
+            "name": "u_L(t) / u_L(0)",
+            "data": [
+              {
+                "x": 0,
+                "y": 1.0
+              },
+              {
+                "x": 0.25,
+                "y": 0.7788
+              },
+              {
+                "x": 0.5,
+                "y": 0.6065
+              },
+              {
+                "x": 0.75,
+                "y": 0.4724
+              },
+              {
+                "x": 1,
+                "y": 0.3679
+              },
+              {
+                "x": 1.5,
+                "y": 0.2231
+              },
+              {
+                "x": 2,
+                "y": 0.1353
+              },
+              {
+                "x": 2.5,
+                "y": 0.0821
+              },
+              {
+                "x": 3,
+                "y": 0.0498
+              },
+              {
+                "x": 4,
+                "y": 0.0183
+              },
+              {
+                "x": 5,
+                "y": 0.0067
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "show_grid": true,
+          "show_axes": true,
+          "show_legend": true,
+          "show_point_labels": false,
+          "connect_points": true
+        }
+      }
+    },
+    {
+      "id": "rl_current_establishment_14",
+      "year": null,
+      "exercise": "تمرين مستقل خاص بالمحور التاسع",
+      "number": "14",
+      "title": "تأثير المقاومة على سرعة إقامة التيار",
+      "text": "نستعمل نفس الوشيعة \\(L=0.40H\\) في دارتين:\n- الدارة A: \\(R+r=20\\Omega\\)\n- الدارة B: \\(R+r=80\\Omega\\)\n\nاحسب \\(\\tau\\) لكل دارة، وحدد أيهما يصل إلى النظام الدائم أسرع.",
+      "standalone_text": "نستعمل نفس الوشيعة \\(L=0.40H\\) في دارتين:\n- الدارة A: \\(R+r=20\\Omega\\)\n- الدارة B: \\(R+r=80\\Omega\\)\n\nاحسب \\(\\tau\\) لكل دارة، وحدد أيهما يصل إلى النظام الدائم أسرع.",
+      "skill": "تفسير ثابت الزمن",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "source_reference": {
+        "axis_tag": "rl_current_establishment_differential_equation",
+        "label": "مبني مباشرة على محتوى محور إقامة التيار في دارة RL والمعادلة التفاضلية"
+      },
+      "solution": {
+        "title": "الحل: تأثير المقاومة على سرعة إقامة التيار",
+        "main_idea": "عند ثبات L، زيادة المقاومة الكلية تصغر τ.",
+        "detailed_explanation": "نحدد الحالة الفيزيائية أولًا، ثم نكتب قانون الدارة والعلاقات المناسبة، وبعدها نعوض ونحسب خطوة بخطوة.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "الدارة A",
+            "explanation": "\\(\\tau_A=\\frac{0.40}{20}=0.020s\\).",
+            "rule_used": "ثابت الزمن",
+            "why": "تعويض مباشر.",
+            "result": "\\(\\tau_A=20ms\\)"
+          },
+          {
+            "order": 2,
+            "title": "الدارة B",
+            "explanation": "\\(\\tau_B=\\frac{0.40}{80}=0.005s\\).",
+            "rule_used": "ثابت الزمن",
+            "why": "تعويض مباشر.",
+            "result": "\\(\\tau_B=5ms\\)"
+          },
+          {
+            "order": 3,
+            "title": "المقارنة",
+            "explanation": "الدارة ذات ثابت الزمن الأصغر تتطور أسرع.",
+            "rule_used": "معنى τ",
+            "why": "τ يقيس سرعة المرحلة الانتقالية.",
+            "result": "\\(\\tau_B<\\tau_A\\Rightarrow B\\) أسرع"
+          }
+        ],
+        "final_answer": "\\(\\boxed{\\tau_A=20ms,\\ \\tau_B=5ms}\\)، إذن الدارة B أسرع في إقامة التيار.",
+        "verification": "نتحقق من الحالة الابتدائية i(0)=0 ومن النظام الدائم di/dt=0 عندما يلزم، ومن تجانس الوحدات.",
+        "hints": [
+          {
+            "level": 1,
+            "hint": "ابدأ بقانون جمع التوترات أو بالحالة الابتدائية/النهائية حسب السؤال."
+          },
+          {
+            "level": 2,
+            "hint": "العلاقة الأساسية: \\(L\\frac{di}{dt}+(R+r)i=E\\)."
+          }
+        ],
+        "bac_writing": [
+          "اكتب القانون المستعمل.",
+          "عوّض العلاقات قبل الحساب.",
+          "وحّد الوحدات.",
+          "أظهر الحسابات الأساسية.",
+          "ضع النتيجة النهائية بوضوح."
+        ],
+        "understanding_check": [],
+        "presentation": {
+          "show_one_step_at_a_time": true
+        }
+      }
+    },
+    {
+      "id": "rl_current_establishment_15",
+      "year": null,
+      "exercise": "تمرين مستقل خاص بالمحور التاسع",
+      "number": "15",
+      "title": "تمرين شامل على إقامة التيار في RL",
+      "text": "لدارة RL تسلسلية:\n\\[\nE=12V,\\quad R=40\\Omega,\\quad r=20\\Omega,\\quad L=0.30H.\n\\]\nتغلق القاطعة عند \\(t=0\\)، وكانت الدارة بدون تيار قبل الغلق.\n\n1) أعط \\(i(0)\\)، \\(u_R(0)\\) و\\(u_b(0)\\).\n2) أنشئ المعادلة التفاضلية العددية التي تحققها \\(i(t)\\).\n3) احسب \\(I_\\infty\\).\n4) احسب \\(\\tau\\).\n5) اكتب العبارة العددية لـ \\(i(t)\\).\n6) احسب \\(u_R(\\infty)\\) و\\(u_b(\\infty)\\).\n7) تحقق من قانون جمع التوترات في النظام الدائم.",
+      "standalone_text": "لدارة RL تسلسلية:\n\\[\nE=12V,\\quad R=40\\Omega,\\quad r=20\\Omega,\\quad L=0.30H.\n\\]\nتغلق القاطعة عند \\(t=0\\)، وكانت الدارة بدون تيار قبل الغلق.\n\n1) أعط \\(i(0)\\)، \\(u_R(0)\\) و\\(u_b(0)\\).\n2) أنشئ المعادلة التفاضلية العددية التي تحققها \\(i(t)\\).\n3) احسب \\(I_\\infty\\).\n4) احسب \\(\\tau\\).\n5) اكتب العبارة العددية لـ \\(i(t)\\).\n6) احسب \\(u_R(\\infty)\\) و\\(u_b(\\infty)\\).\n7) تحقق من قانون جمع التوترات في النظام الدائم.",
+      "skill": "تركيب مهارات المحور التاسع",
+      "difficulty": "hard",
+      "is_standalone": true,
+      "source_reference": {
+        "axis_tag": "rl_current_establishment_differential_equation",
+        "label": "مبني مباشرة على محتوى محور إقامة التيار في دارة RL والمعادلة التفاضلية"
+      },
+      "solution": {
+        "title": "الحل: تمرين شامل على إقامة التيار في RL",
+        "main_idea": "نجمع القيم الابتدائية، المعادلة، النظام الدائم والحل الأسي في تسلسل واحد.",
+        "detailed_explanation": "نحدد الحالة الفيزيائية أولًا، ثم نكتب قانون الدارة والعلاقات المناسبة، وبعدها نعوض ونحسب خطوة بخطوة.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "البداية",
+            "explanation": "\\(i(0)=0\\)، لذلك \\(u_R(0)=0\\)، ومن قانون الدارة \\(u_b(0)=E=12V\\).",
+            "rule_used": "استمرارية التيار",
+            "why": "الدارة كانت بدون تيار.",
+            "result": "\\(i(0)=0,\\ u_R(0)=0,\\ u_b(0)=12V\\)"
+          },
+          {
+            "order": 2,
+            "title": "المعادلة",
+            "explanation": "\\(0.30\\frac{di}{dt}+(40+20)i=12\\).",
+            "rule_used": "معادلة RL",
+            "why": "تعويض القيم.",
+            "result": "\\(0.30\\frac{di}{dt}+60i=12\\)"
+          },
+          {
+            "order": 3,
+            "title": "التيار النهائي",
+            "explanation": "\\(I_\\infty=\\frac{12}{60}=0.20A\\).",
+            "rule_used": "النظام الدائم",
+            "why": "di/dt=0.",
+            "result": "\\(I_\\infty=0.20A\\)"
+          },
+          {
+            "order": 4,
+            "title": "ثابت الزمن",
+            "explanation": "\\(\\tau=\\frac{0.30}{60}=0.005s\\).",
+            "rule_used": "ثابت الزمن",
+            "why": "L/(R+r).",
+            "result": "\\(\\tau=5ms\\)"
+          },
+          {
+            "order": 5,
+            "title": "الحل",
+            "explanation": "\\(i(t)=0.20(1-e^{-t/0.005})A\\).",
+            "rule_used": "الحل الأسي",
+            "why": "تعويض I∞ وτ.",
+            "result": "\\(i(t)=0.20(1-e^{-t/0.005})A\\)"
+          },
+          {
+            "order": 6,
+            "title": "توتر المقاومة النهائي",
+            "explanation": "\\(u_R(\\infty)=RI_\\infty=40\\times0.20=8V\\).",
+            "rule_used": "قانون أوم",
+            "why": "التيار ثابت.",
+            "result": "\\(u_R(\\infty)=8V\\)"
+          },
+          {
+            "order": 7,
+            "title": "توتر الوشيعة النهائي",
+            "explanation": "\\(u_b(\\infty)=rI_\\infty=20\\times0.20=4V\\).",
+            "rule_used": "وشيعة حقيقية",
+            "why": "الجزء التحريضي منعدم.",
+            "result": "\\(u_b(\\infty)=4V\\)"
+          },
+          {
+            "order": 8,
+            "title": "التحقق",
+            "explanation": "\\(u_R+u_b=8+4=12V=E\\).",
+            "rule_used": "قانون جمع التوترات",
+            "why": "تأكيد صحة النتائج.",
+            "result": "\\(8+4=12V\\)"
+          }
+        ],
+        "final_answer": "\\(\\boxed{i(0)=0,\\ I_\\infty=0.20A,\\ \\tau=5ms,\\ i(t)=0.20(1-e^{-t/0.005})A,\\ u_R(\\infty)=8V,\\ u_b(\\infty)=4V}\\).",
+        "verification": "نتحقق من الحالة الابتدائية i(0)=0 ومن النظام الدائم di/dt=0 عندما يلزم، ومن تجانس الوحدات.",
+        "hints": [
+          {
+            "level": 1,
+            "hint": "ابدأ بقانون جمع التوترات أو بالحالة الابتدائية/النهائية حسب السؤال."
+          },
+          {
+            "level": 2,
+            "hint": "العلاقة الأساسية: \\(L\\frac{di}{dt}+(R+r)i=E\\)."
+          }
+        ],
+        "bac_writing": [
+          "اكتب القانون المستعمل.",
+          "عوّض العلاقات قبل الحساب.",
+          "وحّد الوحدات.",
+          "أظهر الحسابات الأساسية.",
+          "ضع النتيجة النهائية بوضوح."
+        ],
+        "understanding_check": [],
+        "presentation": {
+          "show_one_step_at_a_time": true
+        }
+      },
+      "graph_data": {
+        "title": "دارة RL التسلسلية",
+        "description": "مولد E ومقاومة R ووشيعة حقيقية (L,r) وقاطعة K.",
+        "svg": "\n<svg viewBox=\"0 0 940 450\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"دارة RL تحتوي على مولد ومقاومة ووشيعة حقيقية\">\n <defs>\n  <marker id=\"arr9i\" markerWidth=\"10\" markerHeight=\"10\" refX=\"8\" refY=\"3\" orient=\"auto\">\n   <path d=\"M0,0 L0,6 L9,3z\" fill=\"#4f46e5\"/>\n  </marker>\n  <marker id=\"arr9u\" markerWidth=\"10\" markerHeight=\"10\" refX=\"8\" refY=\"3\" orient=\"auto\">\n   <path d=\"M0,0 L0,6 L9,3z\" fill=\"#dc2626\"/>\n  </marker>\n </defs>\n <rect x=\"35\" y=\"30\" width=\"870\" height=\"360\" rx=\"24\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"2\"/>\n <path d=\"M170 115 H755 V315 H170 Z\" fill=\"none\" stroke=\"#334155\" stroke-width=\"5\"/>\n\n <line x1=\"145\" y1=\"180\" x2=\"195\" y2=\"180\" stroke=\"#111827\" stroke-width=\"4\"/>\n <line x1=\"155\" y1=\"230\" x2=\"185\" y2=\"230\" stroke=\"#111827\" stroke-width=\"4\"/>\n <text x=\"112\" y=\"186\" font-size=\"28\" font-family=\"Arial\">+</text>\n <text x=\"112\" y=\"240\" font-size=\"30\" font-family=\"Arial\">−</text>\n <text x=\"104\" y=\"273\" font-size=\"24\" font-family=\"Arial\">E</text>\n\n <line x1=\"275\" y1=\"115\" x2=\"315\" y2=\"115\" stroke=\"#334155\" stroke-width=\"5\"/>\n <line x1=\"335\" y1=\"115\" x2=\"375\" y2=\"115\" stroke=\"#334155\" stroke-width=\"5\"/>\n <line x1=\"315\" y1=\"115\" x2=\"340\" y2=\"90\" stroke=\"#111827\" stroke-width=\"5\"/>\n <text x=\"315\" y=\"76\" font-size=\"22\" font-family=\"Arial\">K</text>\n\n <rect x=\"410\" y=\"89\" width=\"105\" height=\"52\" rx=\"8\" fill=\"#fff\" stroke=\"#111827\" stroke-width=\"3\"/>\n <text x=\"450\" y=\"124\" font-size=\"26\" font-family=\"Arial\">R</text>\n\n <path d=\"M565 115 c0 -38 45 -38 45 0 c0 -38 45 -38 45 0 c0 -38 45 -38 45 0 c0 -38 45 -38 45 0\"\n       fill=\"none\" stroke=\"#111827\" stroke-width=\"5\"/>\n <text x=\"630\" y=\"70\" font-size=\"24\" font-family=\"Arial\">L , r</text>\n\n <line x1=\"220\" y1=\"72\" x2=\"385\" y2=\"72\" stroke=\"#4f46e5\" stroke-width=\"5\" marker-end=\"url(#arr9i)\"/>\n <text x=\"290\" y=\"54\" font-size=\"24\" font-family=\"Arial\" fill=\"#3730a3\">i(t)</text>\n\n <line x1=\"515\" y1=\"165\" x2=\"410\" y2=\"165\" stroke=\"#dc2626\" stroke-width=\"4\" marker-end=\"url(#arr9u)\"/>\n <text x=\"445\" y=\"196\" font-size=\"22\" font-family=\"Arial\" fill=\"#991b1b\">u_R</text>\n\n <line x1=\"730\" y1=\"165\" x2=\"565\" y2=\"165\" stroke=\"#dc2626\" stroke-width=\"4\" marker-end=\"url(#arr9u)\"/>\n <text x=\"620\" y=\"196\" font-size=\"22\" font-family=\"Arial\" fill=\"#991b1b\">u_b</text>\n\n <text x=\"290\" y=\"356\" font-size=\"25\" font-family=\"Arial\" font-weight=\"700\">E = u_R + u_b</text>\n</svg>\n",
+        "render_mode": "inline_exercise",
+        "responsive": true,
+        "diagram_type": "rl_series_circuit"
+      }
+    }
+  ],
+  "rendering_profile": {
+    "diagram_style": "bac_clean",
+    "rule": "الرسم يظهر فقط عندما يكون جزءًا لازمًا لفهم السؤال أو قراءة التطور. لا تضاف رسومات زخرفية أو منحنيات لا يطلبها التمرين."
+  }
+}

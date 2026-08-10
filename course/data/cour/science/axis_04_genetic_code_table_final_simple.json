@@ -1,0 +1,472 @@
+{
+  "tag": "genetic_code_and_code_table",
+  "title": "الشفرة الوراثية واستغلال جدول الشفرة",
+  "order": 4,
+  "is_active": true,
+  "branches": [
+    "math"
+  ],
+  "content": {
+    "language": "ar",
+    "direction": "rtl",
+    "chapter_code": "protein_synthesis",
+    "chapter_title": "آلية تركيب البروتين",
+    "axis_tag": "genetic_code_and_code_table",
+    "estimated_minutes": 25,
+    "difficulty": "easy",
+    "lesson_goal": "أن يفهم التلميذ كيف تُقرأ رسالة ARNm على شكل رامزات، وكيف يستعمل جدول الشفرة الوراثية لتحويل هذه الرامزات إلى أحماض أمينية.",
+    "prerequisites": [
+      "معرفة أن الاستنساخ ينتج ARNm يحمل نسخة من معلومة المورثة.",
+      "معرفة أن ARNm يتكون من القواعد A وU وC وG."
+    ],
+    "learning_outcomes": [
+      "يفهم معنى الرامزة والشفرة الوراثية.",
+      "يعرف أن كل رامزة تتكون من ثلاث نيكليوتيدات متتالية على ARNm.",
+      "يستعمل جدول الشفرة الوراثية انطلاقا من ARNm.",
+      "يتعرف على AUG كرامزة انطلاق وتشفر للميثيونين.",
+      "يتعرف على UAA وUAG وUGA كرامزات توقف.",
+      "يحول تسلسلا بسيطا من ARNm إلى تتابع أحماض أمينية.",
+      "يتجنب أخطاء إطار القراءة وT/U ورامزات التوقف."
+    ],
+    "learning_path": [
+      {
+        "id": "step_1",
+        "type": "problem",
+        "component": "DiscoveryQuestion",
+        "title": "لدينا رسالة... كيف تقرؤها الخلية؟",
+        "content": {
+          "question": "بعد الاستنساخ أصبح لدينا ARNm مثل: AUGGCUUUUUGA. كيف تتحول هذه الحروف إلى ترتيب محدد من الأحماض الأمينية؟",
+          "teacher": "الخلية لا تقرأ القواعد واحدة واحدة. تقسم الرسالة إلى مجموعات من ثلاث قواعد، ولكل مجموعة معنى محدد.",
+          "action": {
+            "label": "اكتشف طريقة القراءة",
+            "next_step": "step_2"
+          }
+        }
+      },
+      {
+        "id": "step_2",
+        "type": "scientific_animation",
+        "component": "ScientificAnimation",
+        "title": "شاهد كيف تُقرأ رسالة ARNm",
+        "content": {
+          "instruction": "ركز على طريقة تقسيم الرسالة.",
+          "frames": [
+            {
+              "order": 1,
+              "title": "رسالة ARNm",
+              "description": "تظهر الرسالة AUGGCUUUUUGA كسلسلة متصلة من القواعد.",
+              "highlight": [
+                "mrna"
+              ]
+            },
+            {
+              "order": 2,
+              "title": "نحدد بداية القراءة",
+              "description": "تظهر AUG كبداية للجزء المترجم.",
+              "highlight": [
+                "AUG"
+              ]
+            },
+            {
+              "order": 3,
+              "title": "نقرأ ثلاثا ثلاثا",
+              "description": "تقسم الرسالة إلى: AUG | GCU | UUU | UGA.",
+              "highlight": [
+                "AUG",
+                "GCU",
+                "UUU",
+                "UGA"
+              ]
+            },
+            {
+              "order": 4,
+              "title": "كل ثلاثية لها معنى",
+              "description": "كل مجموعة من ثلاث قواعد تسمى رامزة، ونستعمل جدول الشفرة لمعرفة معناها.",
+              "highlight": [
+                "codons",
+                "genetic_code_table"
+              ]
+            },
+            {
+              "order": 5,
+              "title": "من الرسالة إلى أحماض أمينية",
+              "description": "يعطينا الجدول: AUG → Met، GCU → Ala، UUU → Phe، ثم UGA → توقف.",
+              "highlight": [
+                "Met",
+                "Ala",
+                "Phe",
+                "STOP"
+              ]
+            }
+          ],
+          "controls": [
+            "previous",
+            "play",
+            "next",
+            "restart"
+          ],
+          "takeaway": "ARNm يُقرأ ثلاث قواعد ثلاث قواعد، وكل ثلاثية تسمى رامزة."
+        }
+      },
+      {
+        "id": "step_3",
+        "type": "short_explanation",
+        "component": "ShortExplanation",
+        "title": "مفهومان فقط قبل التطبيق",
+        "content": {
+          "blocks": [
+            {
+              "title": "الرامزة",
+              "text": "ثلاث نيكليوتيدات متتالية على ARNm، مثل AUG أو GCU."
+            },
+            {
+              "title": "الشفرة الوراثية",
+              "text": "هي العلاقة التي تربط رامزات ARNm بالأحماض الأمينية التي تدل عليها."
+            }
+          ],
+          "memory_tip": "3 قواعد على ARNm = رامزة واحدة.",
+          "attention": "جدول الشفرة يُستعمل مع ARNm، لذلك نجد فيه U وليس T."
+        }
+      },
+      {
+        "id": "step_4",
+        "type": "interactive_diagram",
+        "component": "InteractiveDiagram",
+        "title": "كيف أستعمل جدول الشفرة؟",
+        "content": {
+          "instruction": "اختر رامزة، ثم اتبع قواعدها الثلاث بالترتيب داخل الجدول.",
+          "diagram": {
+            "scene": "genetic_code_table_guided",
+            "examples": [
+              {
+                "codon": "AUG",
+                "reading": [
+                  "A",
+                  "U",
+                  "G"
+                ],
+                "result": "Met",
+                "arabic_result": "ميثيونين"
+              },
+              {
+                "codon": "GCU",
+                "reading": [
+                  "G",
+                  "C",
+                  "U"
+                ],
+                "result": "Ala",
+                "arabic_result": "ألانين"
+              },
+              {
+                "codon": "UUU",
+                "reading": [
+                  "U",
+                  "U",
+                  "U"
+                ],
+                "result": "Phe",
+                "arabic_result": "فينيل ألانين"
+              }
+            ],
+            "hotspots": [
+              {
+                "id": "first_base",
+                "label": "القاعدة الأولى",
+                "description": "ابدأ دائما بالقاعدة الأولى من الرامزة."
+              },
+              {
+                "id": "second_base",
+                "label": "القاعدة الثانية",
+                "description": "انتقل بعدها إلى القاعدة الثانية."
+              },
+              {
+                "id": "third_base",
+                "label": "القاعدة الثالثة",
+                "description": "حدد القاعدة الثالثة لتحصل على الحمض الأميني."
+              }
+            ]
+          },
+          "render_mode": "guided_table_reading",
+          "takeaway": "لا تحفظ الجدول. تعلم فقط كيف تصل من الرامزة إلى الحمض الأميني."
+        }
+      },
+      {
+        "id": "step_5",
+        "type": "key_rule",
+        "component": "KeyRuleCard",
+        "title": "إشارتا البداية والتوقف",
+        "content": {
+          "rule": "AUG رامزة انطلاق وتشفر للميثيونين، أما UAA وUAG وUGA فهي رامزات توقف ولا تشفر لأحماض أمينية.",
+          "start": {
+            "codon": "AUG",
+            "meaning": "انطلاق + Met"
+          },
+          "stop": [
+            {
+              "codon": "UAA",
+              "meaning": "توقف"
+            },
+            {
+              "codon": "UAG",
+              "meaning": "توقف"
+            },
+            {
+              "codon": "UGA",
+              "meaning": "توقف"
+            }
+          ],
+          "memory_tip": "AUG = ابدأ، UAA/UAG/UGA = توقف.",
+          "attention": "رامزة التوقف لا نكتب مقابلها حمضا أمينيا."
+        }
+      },
+      {
+        "id": "step_6",
+        "type": "sequence_exercise",
+        "component": "GeneticCodeExercise",
+        "title": "الآن اقرأ الرسالة بنفسك",
+        "content": {
+          "instruction": "قسم ARNm إلى رامزات، ثم حدد الحمض الأميني الموافق لكل رامزة.",
+          "mrna": "AUGCCAUUCUAA",
+          "student_steps": [
+            {
+              "label": "قسّم الرسالة",
+              "expected": "AUG | CCA | UUC | UAA"
+            },
+            {
+              "label": "استعمل جدول الشفرة",
+              "expected": "AUG → Met، CCA → Pro، UUC → Phe، UAA → Stop"
+            },
+            {
+              "label": "اكتب السلسلة",
+              "expected": "Met – Pro – Phe"
+            }
+          ],
+          "final_answer": "Met – Pro – Phe",
+          "explanation": "نتوقف عند UAA لأنها رامزة توقف، لذلك لا تدخل في السلسلة الببتيدية.",
+          "takeaway": "قسّم → ابحث في الجدول → اكتب الأحماض الأمينية → توقف."
+        }
+      },
+      {
+        "id": "step_7",
+        "type": "concept",
+        "component": "ConceptCard",
+        "title": "ملاحظة مهمة عن الشفرة",
+        "content": {
+          "teacher": "قد نجد رامزات مختلفة تشير إلى الحمض الأميني نفسه. مثلا بعض الأحماض الأمينية لها أكثر من رامزة.",
+          "key_idea": "الشفرة الوراثية متدهورة: يمكن لعدة رامزات أن تشفر الحمض الأميني نفسه.",
+          "second_idea": "لكن الرامزة الواحدة لا تعطي حمضين أمينيين مختلفين.",
+          "memory_tip": "عدة رامزات ← قد تعطي نفس الحمض الأميني؛ رامزة واحدة ← لها معنى واحد.",
+          "attention": "هذه خاصية للشفرة، وليست دعوة لحفظ جميع الرامزات."
+        }
+      },
+      {
+        "id": "step_8",
+        "type": "quick_check",
+        "component": "QuickCheck",
+        "title": "تأكد من الفكرة قبل البكالوريا",
+        "content": {
+          "questions": [
+            {
+              "id": "qc1",
+              "question": "ما الرامزة؟",
+              "choices": [
+                "ثلاث قواعد متتالية على ARNm",
+                "قاعدة واحدة على ADN",
+                "ثلاثة أحماض أمينية"
+              ],
+              "correct_answer": "ثلاث قواعد متتالية على ARNm",
+              "explanation": "الرسالة تُقرأ على شكل ثلاثيات."
+            },
+            {
+              "id": "qc2",
+              "question": "أي جزيئة نقرأ رامزاتها باستعمال جدول الشفرة؟",
+              "choices": [
+                "ARNm",
+                "ADN",
+                "البروتين"
+              ],
+              "correct_answer": "ARNm",
+              "explanation": "جدول الشفرة مبني على رامزات ARNm."
+            },
+            {
+              "id": "qc3",
+              "question": "ماذا نفعل عندما نصل إلى UGA؟",
+              "choices": [
+                "نتوقف",
+                "نضيف حمضا أمينيا",
+                "نبدأ الاستنساخ"
+              ],
+              "correct_answer": "نتوقف",
+              "explanation": "UGA إحدى رامزات التوقف."
+            }
+          ]
+        }
+      },
+      {
+        "id": "step_9",
+        "type": "bac_method",
+        "component": "BacMethodCard",
+        "title": "طريقة حل سؤال الشفرة الوراثية",
+        "content": {
+          "skill": "تحديد السلسلة الببتيدية انطلاقا من ARNm",
+          "method": [
+            {
+              "label": "1. حدد القراءة",
+              "text": "حدد الجزء المطلوب قراءته، وابحث عن AUG إذا كان السؤال يطلب بداية الترجمة."
+            },
+            {
+              "label": "2. قسم",
+              "text": "قسم ARNm إلى رامزات من ثلاث قواعد دون تغيير نقطة البداية."
+            },
+            {
+              "label": "3. اقرأ الجدول",
+              "text": "حدد الحمض الأميني الموافق لكل رامزة."
+            },
+            {
+              "label": "4. توقف",
+              "text": "عند UAA أو UAG أو UGA تتوقف القراءة."
+            }
+          ],
+          "bac_sentence": "نقسم تسلسل ARNm إلى رامزات ثلاثية، ثم نستعمل جدول الشفرة لتحديد الحمض الأميني الموافق لكل رامزة، وتتوقف القراءة عند رامزة التوقف.",
+          "common_mistakes": [
+            "استعمال ADN مباشرة في جدول الشفرة.",
+            "كتابة T بدل U في ARNm.",
+            "تغيير بداية تقسيم الرامزات.",
+            "اعتبار رامزة التوقف حمضا أمينيا.",
+            "الاستمرار بعد رامزة التوقف."
+          ]
+        }
+      },
+      {
+        "id": "step_10",
+        "type": "bac_application",
+        "component": "BacApplication",
+        "title": "تطبيق بنمط البكالوريا",
+        "content": {
+          "document": {
+            "type": "mrna_sequence_with_code_table",
+            "statement": "لدينا الجزء التالي من ARNm: AUG UGG GCU UUU UAG. باستعمال جدول الشفرة، حدد السلسلة الببتيدية الموافقة."
+          },
+          "questions": [
+            {
+              "id": "bac_q1",
+              "question": "حدد رامزة الانطلاق ورامزة التوقف.",
+              "expected_answer": "رامزة الانطلاق AUG ورامزة التوقف UAG."
+            },
+            {
+              "id": "bac_q2",
+              "question": "استعمل جدول الشفرة لتحديد الأحماض الأمينية.",
+              "expected_answer": "AUG → Met، UGG → Trp، GCU → Ala، UUU → Phe."
+            },
+            {
+              "id": "bac_q3",
+              "question": "اكتب السلسلة الببتيدية.",
+              "expected_answer": "Met – Trp – Ala – Phe."
+            }
+          ]
+        }
+      },
+      {
+        "id": "step_11",
+        "type": "final_visual_map",
+        "component": "InteractiveSummaryMap",
+        "title": "الخلاصة في مسار واحد",
+        "content": {
+          "map": [
+            {
+              "node": "ARNm",
+              "relation": "يُقرأ على شكل",
+              "target": "رامزات"
+            },
+            {
+              "node": "الرامزة",
+              "relation": "تتكون من",
+              "target": "3 قواعد"
+            },
+            {
+              "node": "الرامزة",
+              "relation": "نبحث عنها في",
+              "target": "جدول الشفرة"
+            },
+            {
+              "node": "جدول الشفرة",
+              "relation": "يعطي",
+              "target": "الحمض الأميني"
+            },
+            {
+              "node": "AUG",
+              "relation": "تعني",
+              "target": "انطلاق + Met"
+            },
+            {
+              "node": "UAA / UAG / UGA",
+              "relation": "تعني",
+              "target": "توقف"
+            }
+          ],
+          "memory_tip": "ARNm → 3 قواعد → رامزة → جدول → حمض أميني.",
+          "next_axis_bridge": {
+            "question": "عرفنا أن كل رامزة تحدد حمضا أمينيا. لكن من يجلب الحمض الأميني المناسب إلى مكان تركيب البروتين؟",
+            "next_concept": "ARNt وتنشيط الأحماض الأمينية"
+          }
+        }
+      },
+      {
+        "id": "step_12",
+        "type": "quiz",
+        "component": "FinalQuiz",
+        "title": "اختبار نهاية المحور",
+        "content": {
+          "questions": [
+            {
+              "id": "q1",
+              "question": "كم قاعدة تحتوي الرامزة؟",
+              "choices": [
+                "3",
+                "2",
+                "4"
+              ],
+              "correct_answer": "3",
+              "explanation": "كل رامزة تتكون من ثلاث نيكليوتيدات."
+            },
+            {
+              "id": "q2",
+              "question": "ما معنى AUG؟",
+              "choices": [
+                "رامزة انطلاق وتشفر للميثيونين",
+                "رامزة توقف",
+                "جزء من ADN"
+              ],
+              "correct_answer": "رامزة انطلاق وتشفر للميثيونين",
+              "explanation": "AUG تحدد بداية الترجمة وتشفر لـ Met."
+            },
+            {
+              "id": "q3",
+              "question": "أي مجموعة تمثل رامزات التوقف؟",
+              "choices": [
+                "UAA، UAG، UGA",
+                "AUG، UAA، UGG",
+                "GCU، UUU، CCA"
+              ],
+              "correct_answer": "UAA، UAG، UGA",
+              "explanation": "هذه هي رامزات التوقف الثلاث."
+            },
+            {
+              "id": "q4",
+              "question": "ARNm هو AUG GCU UGA. ما السلسلة الناتجة إذا كان GCU يشفر Ala؟",
+              "choices": [
+                "Met – Ala",
+                "Met – Ala – Stop",
+                "Ala – Met"
+              ],
+              "correct_answer": "Met – Ala",
+              "explanation": "UGA إشارة توقف وليست حمضا أمينيا."
+            }
+          ],
+          "mastery_threshold": 3
+        }
+      }
+    ]
+  }
+}

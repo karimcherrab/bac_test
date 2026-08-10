@@ -1,0 +1,212 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.1-bac-source-faithful",
+  "version": "4.1-verified-statement-and-solution-figures",
+  "session": "ordinary",
+  "year": 2008,
+  "chapter_code": "electrical_phenomena_evolution",
+  "chapter_title": "تطور دراسة ظواهر كهربائية",
+  "axis_tags": [
+    "inductor_fundamental_relations",
+    "rl_current_establishment_differential_equation",
+    "rl_time_constant_graphical_analysis",
+    "inductor_energy_rl_energy_balance"
+  ],
+  "branches": [
+    {
+      "code": "math",
+      "name": "شعبة رياضيات"
+    },
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "exercise_number": 1,
+  "source_pages": [
+    1
+  ],
+  "solution_source_pages": [
+    21
+  ],
+  "title": "التمرين 1 — بكالوريا الجزائر 2008 — دراسة وشيعة",
+  "statement": "بغرض معرفة سلوك ومميزات وشيعة مقاومتها \\(r\\) وذاتيتها \\(L\\)، نربطها على التسلسل بمولد ذي توتر كهربائي ثابت \\(E=4.5\\,V\\) وقاطعة \\(K\\).",
+  "figures": [
+    {
+      "diagram_type": "bac_2008_ex01_statement_circuit",
+      "title": "الشكل 1 — مخطط الدارة",
+      "description": "دارة موضوع البكالوريا: مولد E وقاطعة K ووشيعة (L,r) على التسلسل.",
+      "svg": "<svg viewBox=\"0 0 900 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"الشكل 1 دارة وشيعة مع مولد وقاطعة\">\n  <rect x=\"35\" y=\"25\" width=\"830\" height=\"285\" rx=\"20\" fill=\"#fff\" stroke=\"#cbd5e1\" stroke-width=\"2\"/>\n  <path d=\"M155 90 H680 V245 H155\" fill=\"none\" stroke=\"#111827\" stroke-width=\"5\"/>\n  <path d=\"M330 90 c0 -34 42 -34 42 0 c0 -34 42 -34 42 0 c0 -34 42 -34 42 0 c0 -34 42 -34 42 0\" fill=\"none\" stroke=\"#111827\" stroke-width=\"5\"/>\n  <text x=\"398\" y=\"52\" font-size=\"24\" font-family=\"Arial\">L,r</text>\n  <text x=\"292\" y=\"81\" font-size=\"23\" font-family=\"Arial\">B</text>\n  <text x=\"520\" y=\"81\" font-size=\"23\" font-family=\"Arial\">A</text>\n  <line x1=\"245\" y1=\"245\" x2=\"310\" y2=\"245\" stroke=\"#111827\" stroke-width=\"5\"/>\n  <line x1=\"337\" y1=\"245\" x2=\"405\" y2=\"245\" stroke=\"#111827\" stroke-width=\"5\"/>\n  <line x1=\"310\" y1=\"245\" x2=\"342\" y2=\"220\" stroke=\"#111827\" stroke-width=\"5\"/>\n  <text x=\"309\" y=\"285\" font-size=\"24\" font-family=\"Arial\">K</text>\n  <circle cx=\"575\" cy=\"245\" r=\"34\" fill=\"#fff\" stroke=\"#111827\" stroke-width=\"4\"/>\n  <text x=\"565\" y=\"253\" font-size=\"23\" font-family=\"Arial\">E</text>\n  <text x=\"530\" y=\"253\" font-size=\"25\" font-family=\"Arial\">−</text>\n  <text x=\"615\" y=\"253\" font-size=\"25\" font-family=\"Arial\">+</text>\n  <text x=\"690\" y=\"170\" font-size=\"22\" font-family=\"Arial\">E = 4.5 V</text>\n</svg>",
+      "render_mode": "inline",
+      "responsive": true
+    }
+  ],
+  "questions": [
+    {
+      "id": "2008_elec_ex01_q1",
+      "text": "1) انقل مخطط الدارة على ورقة الإجابة وبيّن عليه جهة مرور التيار الكهربائي وجهتي السهمين اللذين يمثلان التوتر الكهربائي بين طرفي الوشيعة وبين طرفي المولد.",
+      "axis_tags": [
+        "inductor_fundamental_relations",
+        "rl_current_establishment_differential_equation",
+        "rl_time_constant_graphical_analysis",
+        "inductor_energy_rl_energy_balance"
+      ],
+      "display_order": 1,
+      "content_type": "question",
+      "solution": {
+        "strategy": "نرسم الدارة نفسها ونختار جهة التيار من القطب الموجب للمولد عبر الوشيعة ثم القاطعة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "جهة التيار",
+            "explanation": "التيار الاصطلاحي يخرج من القطب الموجب للمولد ويتجه نحو الوشيعة ثم يعود إلى القطب السالب.",
+            "graph_data": {
+              "diagram_type": "bac_2008_ex01_solution_orientation",
+              "title": "توجيه الدارة",
+              "description": "نفس الدارة مع اعتماد جهة التيار والتوتر كما في التصحيح.",
+              "svg": "<svg viewBox=\"0 0 900 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"الشكل 1 دارة وشيعة مع مولد وقاطعة\">\n  <rect x=\"35\" y=\"25\" width=\"830\" height=\"285\" rx=\"20\" fill=\"#fff\" stroke=\"#cbd5e1\" stroke-width=\"2\"/>\n  <path d=\"M155 90 H680 V245 H155\" fill=\"none\" stroke=\"#111827\" stroke-width=\"5\"/>\n  <path d=\"M330 90 c0 -34 42 -34 42 0 c0 -34 42 -34 42 0 c0 -34 42 -34 42 0 c0 -34 42 -34 42 0\" fill=\"none\" stroke=\"#111827\" stroke-width=\"5\"/>\n  <text x=\"398\" y=\"52\" font-size=\"24\" font-family=\"Arial\">L,r</text>\n  <text x=\"292\" y=\"81\" font-size=\"23\" font-family=\"Arial\">B</text>\n  <text x=\"520\" y=\"81\" font-size=\"23\" font-family=\"Arial\">A</text>\n  <line x1=\"245\" y1=\"245\" x2=\"310\" y2=\"245\" stroke=\"#111827\" stroke-width=\"5\"/>\n  <line x1=\"337\" y1=\"245\" x2=\"405\" y2=\"245\" stroke=\"#111827\" stroke-width=\"5\"/>\n  <line x1=\"310\" y1=\"245\" x2=\"342\" y2=\"220\" stroke=\"#111827\" stroke-width=\"5\"/>\n  <text x=\"309\" y=\"285\" font-size=\"24\" font-family=\"Arial\">K</text>\n  <circle cx=\"575\" cy=\"245\" r=\"34\" fill=\"#fff\" stroke=\"#111827\" stroke-width=\"4\"/>\n  <text x=\"565\" y=\"253\" font-size=\"23\" font-family=\"Arial\">E</text>\n  <text x=\"530\" y=\"253\" font-size=\"25\" font-family=\"Arial\">−</text>\n  <text x=\"615\" y=\"253\" font-size=\"25\" font-family=\"Arial\">+</text>\n  <text x=\"690\" y=\"170\" font-size=\"22\" font-family=\"Arial\">E = 4.5 V</text>\n</svg>",
+              "render_mode": "inline",
+              "responsive": true
+            }
+          },
+          {
+            "step_number": 2,
+            "title": "توجيه التوترات",
+            "explanation": "نوجه \\(u_{AB}\\) بين طرفي الوشيعة وفق التوجيه المعتمد في التصحيح، وتوتر المولد \\(E\\) من القطب السالب نحو القطب الموجب."
+          }
+        ],
+        "final_answer": "يُعتمد اتجاه التيار والتوترات كما في مخطط التصحيح.",
+        "verification": "يجب أن تكون التوجيهات منسجمة مع قانون جمع التوترات."
+      }
+    },
+    {
+      "id": "2008_elec_ex01_q2",
+      "text": "2) في اللحظة \\(t=0\\) نغلق القاطعة \\(K\\): أ- بتطبيق قانون جمع التوترات، أوجد المعادلة التفاضلية التي تعطي الشدة اللحظية \\(i(t)\\) للتيار الكهربائي المار في الدارة. ب- بيّن أن المعادلة التفاضلية السابقة تقبل حلاً من الشكل: \\(i(t)=I_0\\left(1-e^{-\\frac{r}{L}t}\\right)\\)، حيث \\(I_0\\) هي الشدة العظمى للتيار الكهربائي المار في الدارة.",
+      "axis_tags": [
+        "inductor_fundamental_relations",
+        "rl_current_establishment_differential_equation",
+        "rl_time_constant_graphical_analysis",
+        "inductor_energy_rl_energy_balance"
+      ],
+      "display_order": 2,
+      "content_type": "question",
+      "solution": {
+        "strategy": "نستعمل علاقة توتر الوشيعة الحقيقية ثم قانون جمع التوترات، وبعدها نتحقق بالتعويض من الحل المقترح.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "توتر الوشيعة",
+            "explanation": "\\[u_{AB}=L\\frac{di}{dt}+ri\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "قانون جمع التوترات",
+            "explanation": "\\[u_{AB}=E\\Rightarrow L\\frac{di}{dt}+ri=E\\] ومنه \\[\\frac{di}{dt}+\\frac{r}{L}i-\\frac{E}{L}=0\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "مشتقة الحل المقترح",
+            "explanation": "إذا \\[i(t)=I_0\\left(1-e^{-\\frac rL t}\\right)\\] فإن \\[\\frac{di}{dt}=I_0\\frac rL e^{-\\frac rL t}\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "التحقق",
+            "explanation": "بالتعويض في المعادلة، ومع \\(I_0=E/r\\)، تختزل الحدود الأسية ويصبح الطرف الأيسر صفراً، إذن الحل يحقق المعادلة."
+          }
+        ],
+        "final_answer": "\\(L\\dfrac{di}{dt}+ri=E\\)، والحل المقترح صحيح بشرط \\(I_0=E/r\\)."
+      }
+    },
+    {
+      "id": "2008_elec_ex01_q3",
+      "text": "3) تعطى الشدة اللحظية للتيار الكهربائي بالعبارة: \\(i(t)=0.45\\left(1-e^{-10t}\\right)\\) بالأمبير، حيث \\(t\\) بالثانية. احسب: أ- الشدة العظمى \\(I_0\\). ب- المقاومة \\(r\\) للوشيعة. ج- الذاتية \\(L\\) للوشيعة. د- ثابت الزمن \\(\\tau\\) المميز للدارة.",
+      "axis_tags": [
+        "inductor_fundamental_relations",
+        "rl_current_establishment_differential_equation",
+        "rl_time_constant_graphical_analysis",
+        "inductor_energy_rl_energy_balance"
+      ],
+      "display_order": 3,
+      "content_type": "question",
+      "solution": {
+        "strategy": "نقارن العبارة العددية بالشكل النظري ونستعمل حالة النظام الدائم.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الشدة العظمى",
+            "explanation": "من \\[i(t)=0.45(1-e^{-10t})\\] نقرأ مباشرة \\[I_0=0.45\\,A\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "المقاومة الداخلية",
+            "explanation": "في النظام الدائم \\(di/dt=0\\)، لذا \\[E=rI_0\\Rightarrow r=\\frac{4.5}{0.45}=10\\,\\Omega\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الذاتية",
+            "explanation": "بالمقارنة: \\[\\frac rL=10\\,s^{-1}\\Rightarrow L=\\frac{r}{10}=1\\,H\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "ثابت الزمن",
+            "explanation": "\\[\\tau=\\frac{L}{r}=\\frac{1}{10}=0.10\\,s\\]"
+          }
+        ],
+        "final_answer": "\\(I_0=0.45\\,A\\)، \\(r=10\\,\\Omega\\)، \\(L=1\\,H\\)، \\(\\tau=0.10\\,s\\).",
+        "verification": "تتطابق القيم مع تصحيح التجميعية."
+      }
+    },
+    {
+      "id": "2008_elec_ex01_q4",
+      "text": "4) أ- ما قيمة الطاقة المخزنة في الوشيعة في حالة النظام الدائم؟ ب- اكتب عبارة التوتر الكهربائي اللحظي بين طرفي الوشيعة. ج- احسب قيمة التوتر الكهربائي بين طرفي الوشيعة في اللحظة \\(t=0.3\\,s\\).",
+      "axis_tags": [
+        "inductor_fundamental_relations",
+        "rl_current_establishment_differential_equation",
+        "rl_time_constant_graphical_analysis",
+        "inductor_energy_rl_energy_balance"
+      ],
+      "display_order": 4,
+      "content_type": "question",
+      "solution": {
+        "strategy": "نستعمل طاقة الوشيعة، ثم نعوض عبارة التيار في توتر الوشيعة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الطاقة في النظام الدائم",
+            "explanation": "\\[E_L=\\frac12LI_0^2=\\frac12\\times1\\times(0.45)^2=0.10125\\,J\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "عبارة التوتر",
+            "explanation": "\\[u_{AB}=L\\frac{di}{dt}+ri\\] ومع \\(i(t)=0.45(1-e^{-10t})\\) و\\(L=1\\), \\(r=10\\): \\[u_{AB}(t)=4.5e^{-10t}\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "عند t=0.3 s",
+            "explanation": "\\[u_{AB}(0.3)=4.5e^{-3}\\approx0.224\\,V\\]"
+          }
+        ],
+        "final_answer": "\\(E_L=0.10125\\,J\\)، \\(u_{AB}(t)=4.5e^{-10t}\\,V\\)، و\\(u_{AB}(0.3)\\approx0.224\\,V\\)."
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "statement_figure_policy": "يعرض في نص التمرين فقط الشكل الموجود فعلا في موضوع البكالوريا الأصلي.",
+    "solution_figure_policy": "يعرض داخل الحل الرسم الموجود في التصحيح أو الرسم المطلوب صراحة لإنجاز الحل، ولا يضاف رسم زخرفي.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)",
+    "statement_figures_embedded": true
+  },
+  "statement_graphs": [
+    {
+      "diagram_type": "bac_2008_ex01_statement_circuit",
+      "title": "الشكل 1 — مخطط الدارة",
+      "description": "دارة موضوع البكالوريا: مولد E وقاطعة K ووشيعة (L,r) على التسلسل.",
+      "svg": "<svg viewBox=\"0 0 900 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"الشكل 1 دارة وشيعة مع مولد وقاطعة\">\n  <rect x=\"35\" y=\"25\" width=\"830\" height=\"285\" rx=\"20\" fill=\"#fff\" stroke=\"#cbd5e1\" stroke-width=\"2\"/>\n  <path d=\"M155 90 H680 V245 H155\" fill=\"none\" stroke=\"#111827\" stroke-width=\"5\"/>\n  <path d=\"M330 90 c0 -34 42 -34 42 0 c0 -34 42 -34 42 0 c0 -34 42 -34 42 0 c0 -34 42 -34 42 0\" fill=\"none\" stroke=\"#111827\" stroke-width=\"5\"/>\n  <text x=\"398\" y=\"52\" font-size=\"24\" font-family=\"Arial\">L,r</text>\n  <text x=\"292\" y=\"81\" font-size=\"23\" font-family=\"Arial\">B</text>\n  <text x=\"520\" y=\"81\" font-size=\"23\" font-family=\"Arial\">A</text>\n  <line x1=\"245\" y1=\"245\" x2=\"310\" y2=\"245\" stroke=\"#111827\" stroke-width=\"5\"/>\n  <line x1=\"337\" y1=\"245\" x2=\"405\" y2=\"245\" stroke=\"#111827\" stroke-width=\"5\"/>\n  <line x1=\"310\" y1=\"245\" x2=\"342\" y2=\"220\" stroke=\"#111827\" stroke-width=\"5\"/>\n  <text x=\"309\" y=\"285\" font-size=\"24\" font-family=\"Arial\">K</text>\n  <circle cx=\"575\" cy=\"245\" r=\"34\" fill=\"#fff\" stroke=\"#111827\" stroke-width=\"4\"/>\n  <text x=\"565\" y=\"253\" font-size=\"23\" font-family=\"Arial\">E</text>\n  <text x=\"530\" y=\"253\" font-size=\"25\" font-family=\"Arial\">−</text>\n  <text x=\"615\" y=\"253\" font-size=\"25\" font-family=\"Arial\">+</text>\n  <text x=\"690\" y=\"170\" font-size=\"22\" font-family=\"Arial\">E = 4.5 V</text>\n</svg>",
+      "render_mode": "inline",
+      "responsive": true
+    }
+  ]
+}

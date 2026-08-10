@@ -1,0 +1,237 @@
+{
+  "tag": "function_sign",
+  "title": "دراسة إشارة الدالة",
+  "order": 7,
+  "is_active": true,
+  "branches": [
+    "math",
+    "science",
+    "math_tech"
+  ],
+  "content": {
+    "version": 1,
+    "language": "ar",
+    "direction": "rtl",
+    "chapter_code": "functions",
+    "chapter_title": "دراسة الدوال",
+    "axis_tag": "function_sign",
+    "axis_title": "دراسة إشارة الدالة",
+    "estimated_minutes": 55,
+    "difficulty": "easy_to_medium",
+    "source_note": "محور مبسط ومنظم لمنصة تعليمية موجهة إلى البكالوريا الجزائرية.",
+    "lesson_goal": "أن يدرس التلميذ إشارة الدالة جبريًا وبيانيًا ويستعملها في المتراجحات.",
+    "prerequisites": [
+      "حل المعادلات",
+      "جدول إشارة جداء وخارج",
+      "قراءة منحنى"
+    ],
+    "learning_outcomes": [
+      "يجد جذور الدالة",
+      "يبني جدول الإشارة",
+      "يربط الإشارة بالمنحنى",
+      "يحل f(x)>0 وf(x)<0"
+    ],
+    "learning_path": [
+      {
+        "id": "step_1",
+        "type": "concept",
+        "title": "المعنى البياني",
+        "content": {
+          "rules": [
+            "فوق محور الفواصل: f(x)>0.",
+            "تحت محور الفواصل: f(x)<0.",
+            "على المحور: f(x)=0."
+          ],
+          "quick_check": {
+            "question": "إذا كان المنحنى تحت محور x، فما إشارة f؟",
+            "answer": "سالبة."
+          }
+        }
+      },
+      {
+        "id": "step_2",
+        "type": "method",
+        "title": "المنهجية الجبرية",
+        "content": {
+          "method": [
+            "حدد المجال.",
+            "حل f(x)=0.",
+            "حلّل العبارة إلى عوامل إن أمكن.",
+            "أنشئ جدول الإشارة.",
+            "اكتب الحل على شكل مجالات."
+          ],
+          "attention": "احترم القيم الممنوعة في الدوال الناطقة."
+        }
+      },
+      {
+        "id": "step_3",
+        "type": "worked_example",
+        "title": "مثال كثير حدود",
+        "content": {
+          "statement": "ادرس إشارة f(x)=(x-1)(x+2).",
+          "result": {
+            "zeros": [
+              -2,
+              1
+            ],
+            "sign_intervals": [
+              {
+                "interval": "]-∞,-2[",
+                "sign": "+"
+              },
+              {
+                "interval": "{-2}",
+                "sign": "0"
+              },
+              {
+                "interval": "]-2,1[",
+                "sign": "-"
+              },
+              {
+                "interval": "{1}",
+                "sign": "0"
+              },
+              {
+                "interval": "]1,+∞[",
+                "sign": "+"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "step_4",
+        "type": "sign_table",
+        "title": "جدول الإشارة",
+        "content": {
+          "table": {
+            "type": "sign_table",
+            "renderer": "jsx_svg_or_html_table",
+            "critical_x": [
+              "-∞",
+              "-2",
+              "1",
+              "+∞"
+            ],
+            "rows": [
+              {
+                "label": "x+2",
+                "signs": [
+                  "-",
+                  "0",
+                  "+",
+                  "+"
+                ]
+              },
+              {
+                "label": "x-1",
+                "signs": [
+                  "-",
+                  "-",
+                  "0",
+                  "+"
+                ]
+              },
+              {
+                "label": "f(x)",
+                "signs": [
+                  "+",
+                  "0",
+                  "-",
+                  "0",
+                  "+"
+                ]
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "graph": {
+      "engine_hint": "الرسم اختياري ويستعمل للتوضيح.",
+      "coordinate_system": "cartesian",
+      "series": [],
+      "react_rendering_notes": [
+        "استعمل parser رياضيًا آمنًا بدل eval.",
+        "اجعل مجال الرسم قابلًا للتخصيص.",
+        "ادعم اتجاه RTL."
+      ]
+    },
+    "final_assessment": {
+      "question": "حل (x-1)(x+2)≤0.",
+      "expected_answer": "\\([-2,1]\\).",
+      "success_criteria": [
+        "استعمال جدول الإشارة",
+        "اختيار السالب والصفر",
+        "كتابة المجال الصحيح"
+      ],
+      "hint_levels": [
+        "ابحث عن المجال الذي تكون فيه الإشارة سالبة أو منعدمة."
+      ]
+    },
+    "lesson_summary": {
+      "key_ideas": [
+        "الجذور نقاط تبدل محتملة للإشارة.",
+        "إشارة الجداء من إشارات العوامل.",
+        "الحل البياني يقرأ من موضع المنحنى."
+      ],
+      "method_template": [
+        "المجال.",
+        "الجذور.",
+        "جدول الإشارة.",
+        "مجالات الحل."
+      ]
+    },
+    "dynamic_profile": {
+      "lesson_profile": "شرح بسيط ثم تطبيق موجه ثم سؤال بكالوريا",
+      "profile_reason": "المتعلم يحتاج إلى فهم الفكرة، ثم حفظ المنهجية، ثم استعمالها في تمرين."
+    },
+    "schema_version": "3.0",
+    "content_status": "ready",
+    "pedagogical_style": "simple_progressive_bac_oriented",
+    "lesson_intro": {
+      "title": "الإشارة تجيب: فوق الصفر أم تحته؟",
+      "teacher": "دراسة إشارة f تعني تحديد أين تكون قيمها موجبة أو سالبة أو منعدمة.",
+      "central_idea": "الجذور تقسم المجال إلى فترات ندرس عليها الإشارة.",
+      "memory_tip": "حل f(x)=0 أولًا."
+    },
+    "support_path": {
+      "when_student_stuck": [
+        "أعد قراءة الفكرة المركزية.",
+        "طبّق المثال القصير خطوة بخطوة.",
+        "استعمل التلميح الأول قبل إظهار الحل."
+      ],
+      "quick_actions": [
+        "أعد الشرح",
+        "أعطني مثالًا",
+        "اعرض الخطوات",
+        "أعطني تلميحًا"
+      ]
+    },
+    "method_decision_tree": {
+      "start_question": "ما نوع السؤال؟",
+      "branches": [
+        {
+          "condition": "سؤال مباشر",
+          "action": "طبق القاعدة الأساسية."
+        },
+        {
+          "condition": "سؤال مركب",
+          "action": "قسّم المطلوب إلى خطوات."
+        }
+      ],
+      "golden_rule": "حدد نوع السؤال قبل البدء."
+    },
+    "lesson_closure": {
+      "student_message": "لا تنتقل إلى المحور التالي حتى تستطيع تطبيق المنهجية دون مساعدة.",
+      "mastery_rule": "نجاح في الاختبار القصير ثم حل تمرين تطبيقي مستقل."
+    },
+    "quality_review": {
+      "simple_arabic": true,
+      "rtl_ready": true,
+      "latex_ready": true,
+      "react_visualization_ready": true,
+      "bac_oriented": true
+    }
+  }
+}

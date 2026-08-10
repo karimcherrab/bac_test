@@ -1,0 +1,328 @@
+{
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2015-electrical-verified",
+  "language": "ar",
+  "direction": "rtl",
+  "year": 2015,
+  "session": "ordinary",
+  "chapter_code": "electrical_phenomena_evolution",
+  "chapter_title": "تطور دراسة ظواهر كهربائية",
+  "exercise_number": 33,
+  "source_page": 13,
+  "source_pages": [
+    13
+  ],
+  "solution_source_pages": [
+    34
+  ],
+
+  "branches": [
+    {
+      "code": "science",
+      "name": "شعبة علوم تجريبية"
+    }
+  ],
+  "title": "التمرين 33 — بكالوريا الجزائر 2015 — شعبة علوم تجريبية",
+  "axis_tags": [
+    "rc_capacitor_charging",
+    "rc_differential_equation_solution",
+    "rc_time_constant_graphical_analysis"
+  ],
+  "questions": [
+    {
+      "id": "2015_elec_ex33_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) في غياب جهاز الحاسوب، ما هو الجهاز البديل الممكن استخدامه للقيام بعملية المتابعة؟",
+      "solution": {
+        "strategy": "الظاهرة سريعة، لذلك نحتاج جهازاً يسجل التطور الزمني.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الجهاز",
+            "explanation": "\\[\\boxed{\\text{راسم اهتزازات ذو ذاكرة}}\\]"
+          }
+        ],
+        "final_answer": "راسم اهتزازات ذو ذاكرة."
+      }
+    },
+    {
+      "id": "2015_elec_ex33_q2",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2) أعد رسم مخطط الدارة وبيّن عليه طريقة توصيل هذا الجهاز بالدارة لمتابعة تطور \\(u_C(t)\\).",
+      "solution": {
+        "strategy": "يربط الراسم على التفرع بين طرفي المكثفة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التوصيل",
+            "explanation": "يوصل المدخل Y بالطرف العلوي للمكثفة والمرجع M بالطرف السفلي.",
+            "graph_data": {
+              "diagram_type": "bac_2015_ex33_solution_scope",
+              "title": "توصيل الراسم",
+              "description": "توصيل راسم الاهتزاز على طرفي المكثفة.",
+              "svg": "<svg viewBox=\"0 0 820 350\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"ربط راسم اهتزاز بدارة RC\">\n <path d=\"M145 85 H650 V265 H145 Z\" fill=\"none\" stroke=\"#111827\" stroke-width=\"5\"/>\n <circle cx=\"145\" cy=\"175\" r=\"31\" fill=\"#fff\" stroke=\"#111827\" stroke-width=\"4\"/><text x=\"134\" y=\"183\" font-size=\"22\">E</text>\n <rect x=\"550\" y=\"105\" width=\"80\" height=\"50\" rx=\"6\" fill=\"#fff\" stroke=\"#111827\" stroke-width=\"3\"/><text x=\"570\" y=\"137\" font-size=\"21\">R</text>\n <line x1=\"590\" y1=\"155\" x2=\"590\" y2=\"200\" stroke=\"#111827\" stroke-width=\"5\"/>\n <line x1=\"560\" y1=\"200\" x2=\"620\" y2=\"200\" stroke=\"#111827\" stroke-width=\"6\"/><line x1=\"560\" y1=\"235\" x2=\"620\" y2=\"235\" stroke=\"#111827\" stroke-width=\"6\"/><line x1=\"590\" y1=\"235\" x2=\"590\" y2=\"265\" stroke=\"#111827\" stroke-width=\"5\"/><text x=\"635\" y=\"225\" font-size=\"23\">C</text>\n <text x=\"650\" y=\"195\" font-size=\"21\">Y</text><text x=\"650\" y=\"252\" font-size=\"21\">M</text>\n <line x1=\"650\" y1=\"200\" x2=\"700\" y2=\"200\" stroke=\"#111827\" stroke-width=\"3\"/><line x1=\"650\" y1=\"265\" x2=\"700\" y2=\"265\" stroke=\"#111827\" stroke-width=\"3\"/>\n</svg>",
+              "render_mode": "inline",
+              "responsive": true
+            }
+          }
+        ],
+        "final_answer": "الراسم موصول على التفرع بين طرفي C."
+      }
+    },
+    {
+      "id": "2015_elec_ex33_q3",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "3) بتطبيق قانون جمع التوترات، أوجد المعادلة التفاضلية التي يحققها التوتر الكهربائي \\(u_C(t)\\).",
+      "solution": {
+        "strategy": "نكتب E=uC+uR.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "المعادلة",
+            "explanation": "\\[E=u_C+Ri=u_C+RC\\frac{du_C}{dt}\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "الشكل المعياري",
+            "explanation": "\\[\\boxed{\\frac{du_C}{dt}+\\frac{u_C}{RC}=\\frac{E}{RC}}\\]"
+          }
+        ],
+        "final_answer": "\\(RCu_C'+u_C=E\\)."
+      }
+    },
+    {
+      "id": "2015_elec_ex33_q4",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "4) تحقق من أن العبارة \\(u_C(t)=E(1-e^{-t/\\tau})\\) هي حل للمعادلة التفاضلية السابقة حيث \\(\\tau=RC\\).",
+      "solution": {
+        "strategy": "نشتق ثم نعوض.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "المشتقة",
+            "explanation": "\\[u_C'=\\frac E\\tau e^{-t/\\tau}\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "التحقق",
+            "explanation": "مع \\(\\tau=RC\\): \\[RCu_C'+u_C=Ee^{-t/\\tau}+E(1-e^{-t/\\tau})=E\\]"
+          }
+        ],
+        "final_answer": "الحل صحيح."
+      }
+    },
+    {
+      "id": "2015_elec_ex33_q5",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "5) بيّن أن \\(u_C(\\tau)=0.63E\\)، ثم حدّد بيانياً قيمة كل من \\(E\\) و\\(\\tau\\).",
+      "solution": {
+        "strategy": "نعوض t=τ ثم نقرأ البيان.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "البرهان",
+            "explanation": "\\[u_C(\\tau)=E(1-e^{-1})\\approx\\boxed{0.63E}\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "E",
+            "explanation": "من القيمة النهائية للبيان: \\[\\boxed{E=2V}\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "τ",
+            "explanation": "\\[0.63E=1.26V\\] وبالإسقاط على الشكل 53 نجد \\[\\boxed{\\tau\\in[6,7]ms}\\]؛ نستعمل تقريبياً \\(\\tau\\approx6ms\\) كما في التصحيح العددي."
+          }
+        ],
+        "final_answer": "\\(E=2V\\)، و\\(\\tau\\approx6ms\\) (قراءة بين 6 و7ms)."
+      }
+    },
+    {
+      "id": "2015_elec_ex33_q6",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "6) استنتج قيمة السعة \\(C\\) للمكثفة.",
+      "solution": {
+        "strategy": "نستعمل τ=RC.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الحساب",
+            "explanation": "باستعمال \\(\\tau=6ms\\) و\\(R=100\\Omega\\): \\[C=\\frac\\tau R=\\frac{6\\times10^{-3}}{100}=\\boxed{60\\mu F}\\]"
+          }
+        ],
+        "final_answer": "\\(C=60\\mu F\\)."
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "تجميعية_عمورة_للبكالوريات_السابقة_الوحدة_3(1).pdf",
+    "statement_figure_policy": "الشكل أو البيان المعطى في موضوع البكالوريا يعرض مع نص التمرين. إذا طلب السؤال إعادة رسم الدارة فتبقى الدارة الأصلية المعطاة ظاهرة لأنها جزء من الموضوع، ويضاف داخل الحل فقط الرسم الموجه أو توصيل جهاز القياس.",
+    "solution_figure_policy": "الرسومات التوجيهية أو رسومات التوصيل التي تمثل جزءاً من الحل توضع داخل خطوات الحل.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  },
+  "statement": "نحقق التركيبة الكهربائية الموضحة بالشكل 52، حيث المولد ثابت التوتر قوته المحركة الكهربائية \\(E\\). يسمح جهاز إعلام آلي مزود ببرمجية مناسبة بمتابعة التطور الزمني للتوتر الكهربائي المطبق بين طرفي المكثفة. المكثفة فارغة في البداية. عند اللحظة \\(t=0\\) نغلق القاطعة \\(K\\) ونباشر المتابعة، فيعطي الحاسوب المنحنى \\(u_C=f(t)\\) المبين في الشكل 53.",
+  "figures": [
+    {
+      "diagram_type": "bac_2015_ex33_statement_circuit",
+      "title": "الشكل 52 — دارة RC",
+      "description": "التركيبة الأصلية.",
+      "svg": "<svg viewBox=\"0 0 820 350\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"الشكل 52 دارة RC\">\n <path d=\"M145 85 H650 V265 H145 Z\" fill=\"none\" stroke=\"#111827\" stroke-width=\"5\"/>\n <circle cx=\"145\" cy=\"175\" r=\"31\" fill=\"#fff\" stroke=\"#111827\" stroke-width=\"4\"/><text x=\"134\" y=\"183\" font-size=\"22\">E</text>\n <text x=\"104\" y=\"145\" font-size=\"23\">+</text><text x=\"104\" y=\"225\" font-size=\"23\">−</text>\n <line x1=\"270\" y1=\"85\" x2=\"315\" y2=\"85\" stroke=\"#111827\" stroke-width=\"5\"/><line x1=\"340\" y1=\"85\" x2=\"385\" y2=\"85\" stroke=\"#111827\" stroke-width=\"5\"/><line x1=\"315\" y1=\"85\" x2=\"343\" y2=\"60\" stroke=\"#111827\" stroke-width=\"5\"/><text x=\"320\" y=\"47\" font-size=\"22\">K</text>\n <rect x=\"550\" y=\"110\" width=\"80\" height=\"50\" rx=\"6\" fill=\"#fff\" stroke=\"#111827\" stroke-width=\"3\"/><text x=\"570\" y=\"142\" font-size=\"21\">R=100Ω</text>\n <line x1=\"590\" y1=\"160\" x2=\"590\" y2=\"205\" stroke=\"#111827\" stroke-width=\"5\"/>\n <line x1=\"560\" y1=\"205\" x2=\"620\" y2=\"205\" stroke=\"#111827\" stroke-width=\"6\"/><line x1=\"560\" y1=\"240\" x2=\"620\" y2=\"240\" stroke=\"#111827\" stroke-width=\"6\"/>\n <line x1=\"590\" y1=\"240\" x2=\"590\" y2=\"265\" stroke=\"#111827\" stroke-width=\"5\"/><text x=\"635\" y=\"230\" font-size=\"23\">C</text>\n <text x=\"635\" y=\"190\" font-size=\"20\">u_C</text>\n</svg>",
+      "render_mode": "inline",
+      "responsive": true
+    },
+    {
+      "title": "الشكل 53 — u_C=f(t)",
+      "description": "منحنى الشحن؛ القيمة النهائية E≈2V، وثابت الزمن بين 6 و7ms.",
+      "x_label": "t (ms)",
+      "y_label": "u_C (V)",
+      "x_domain": [
+        0,
+        40
+      ],
+      "y_domain": [
+        0,
+        2.5
+      ],
+      "series": [
+        {
+          "name": "u_C(t)",
+          "data": [
+            {
+              "x": 0,
+              "y": 0.0
+            },
+            {
+              "x": 2,
+              "y": 0.53
+            },
+            {
+              "x": 4,
+              "y": 0.919
+            },
+            {
+              "x": 6,
+              "y": 1.205
+            },
+            {
+              "x": 7,
+              "y": 1.319
+            },
+            {
+              "x": 10,
+              "y": 1.571
+            },
+            {
+              "x": 15,
+              "y": 1.801
+            },
+            {
+              "x": 20,
+              "y": 1.908
+            },
+            {
+              "x": 30,
+              "y": 1.98
+            },
+            {
+              "x": 40,
+              "y": 1.996
+            }
+          ]
+        }
+      ],
+      "settings": {
+        "show_grid": true,
+        "show_axes": true,
+        "show_legend": false,
+        "show_point_labels": false,
+        "connect_points": true
+      }
+    }
+  ],
+  "statement_graphs": [
+    {
+      "diagram_type": "bac_2015_ex33_statement_circuit",
+      "title": "الشكل 52 — دارة RC",
+      "description": "التركيبة الأصلية.",
+      "svg": "<svg viewBox=\"0 0 820 350\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"الشكل 52 دارة RC\">\n <path d=\"M145 85 H650 V265 H145 Z\" fill=\"none\" stroke=\"#111827\" stroke-width=\"5\"/>\n <circle cx=\"145\" cy=\"175\" r=\"31\" fill=\"#fff\" stroke=\"#111827\" stroke-width=\"4\"/><text x=\"134\" y=\"183\" font-size=\"22\">E</text>\n <text x=\"104\" y=\"145\" font-size=\"23\">+</text><text x=\"104\" y=\"225\" font-size=\"23\">−</text>\n <line x1=\"270\" y1=\"85\" x2=\"315\" y2=\"85\" stroke=\"#111827\" stroke-width=\"5\"/><line x1=\"340\" y1=\"85\" x2=\"385\" y2=\"85\" stroke=\"#111827\" stroke-width=\"5\"/><line x1=\"315\" y1=\"85\" x2=\"343\" y2=\"60\" stroke=\"#111827\" stroke-width=\"5\"/><text x=\"320\" y=\"47\" font-size=\"22\">K</text>\n <rect x=\"550\" y=\"110\" width=\"80\" height=\"50\" rx=\"6\" fill=\"#fff\" stroke=\"#111827\" stroke-width=\"3\"/><text x=\"570\" y=\"142\" font-size=\"21\">R=100Ω</text>\n <line x1=\"590\" y1=\"160\" x2=\"590\" y2=\"205\" stroke=\"#111827\" stroke-width=\"5\"/>\n <line x1=\"560\" y1=\"205\" x2=\"620\" y2=\"205\" stroke=\"#111827\" stroke-width=\"6\"/><line x1=\"560\" y1=\"240\" x2=\"620\" y2=\"240\" stroke=\"#111827\" stroke-width=\"6\"/>\n <line x1=\"590\" y1=\"240\" x2=\"590\" y2=\"265\" stroke=\"#111827\" stroke-width=\"5\"/><text x=\"635\" y=\"230\" font-size=\"23\">C</text>\n <text x=\"635\" y=\"190\" font-size=\"20\">u_C</text>\n</svg>",
+      "render_mode": "inline",
+      "responsive": true
+    },
+    {
+      "title": "الشكل 53 — u_C=f(t)",
+      "description": "منحنى الشحن؛ القيمة النهائية E≈2V، وثابت الزمن بين 6 و7ms.",
+      "x_label": "t (ms)",
+      "y_label": "u_C (V)",
+      "x_domain": [
+        0,
+        40
+      ],
+      "y_domain": [
+        0,
+        2.5
+      ],
+      "series": [
+        {
+          "name": "u_C(t)",
+          "data": [
+            {
+              "x": 0,
+              "y": 0.0
+            },
+            {
+              "x": 2,
+              "y": 0.53
+            },
+            {
+              "x": 4,
+              "y": 0.919
+            },
+            {
+              "x": 6,
+              "y": 1.205
+            },
+            {
+              "x": 7,
+              "y": 1.319
+            },
+            {
+              "x": 10,
+              "y": 1.571
+            },
+            {
+              "x": 15,
+              "y": 1.801
+            },
+            {
+              "x": 20,
+              "y": 1.908
+            },
+            {
+              "x": 30,
+              "y": 1.98
+            },
+            {
+              "x": 40,
+              "y": 1.996
+            }
+          ]
+        }
+      ],
+      "settings": {
+        "show_grid": true,
+        "show_axes": true,
+        "show_legend": false,
+        "show_point_labels": false,
+        "connect_points": true
+      }
+    }
+  ]
+}

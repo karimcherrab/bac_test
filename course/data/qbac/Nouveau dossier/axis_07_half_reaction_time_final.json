@@ -1,0 +1,1497 @@
+{
+  "tag": "half_reaction_time",
+  "title": "زمن نصف التفاعل",
+  "order": 7,
+  "is_active": true,
+  "branches": [
+    "math",
+    "science",
+    "math_tech"
+  ],
+  "content": {
+    "schema_version": "5.0",
+    "version": 1,
+    "language": "ar",
+    "direction": "rtl",
+    "math_format": "LaTeX",
+    "chapter_code": "chemical_kinetics",
+    "chapter_title": "المتابعة الزمنية لتطور تحول كيميائي",
+    "axis_tag": "half_reaction_time",
+    "axis_title": "زمن نصف التفاعل",
+    "difficulty": "easy_to_medium",
+    "estimated_duration": "75 إلى 90 دقيقة",
+    "estimated_minutes": 85,
+    "source_note": "يركز المحور على تعريف زمن نصف التفاعل، استخراجه من منحنى التقدم، ثم من كميات فيزيائية مرتبطة خطيًا بالتقدم مثل حجم الغاز والضغط والناقلية والتركيز والكتلة، مع مقارنة سرعة التحولات. لا يتناول العوامل الحركية بالتفصيل لأنها محور لاحق.",
+    "lesson_goal": "أن يفهم التلميذ معنى زمن نصف التفاعل، ويستخرجه من مختلف منحنيات المتابعة دون الخلط بين نصف التقدم ونصف الزمن، ويستعمله لمقارنة سرعة التحولات في تمارين البكالوريا.",
+    "prerequisites": [
+      "فهم تقدم التفاعل x.",
+      "التمييز بين x_f وx_max.",
+      "قراءة منحنى زمني.",
+      "فهم العلاقة الخطية بين كمية مقاسة والتقدم.",
+      "معرفة طرق المتابعة الزمنية."
+    ],
+    "learning_outcomes": [
+      "يعرف زمن نصف التفاعل تعريفًا صحيحًا.",
+      "يميز بين x_f/2 وx_max/2.",
+      "يفهم أن t₁/₂ ليس نصف زمن النهاية.",
+      "يستخرجه من منحنى x=f(t).",
+      "يحسب القيمة النصفية لكمية متزايدة.",
+      "يحسب القيمة النصفية لكمية متناقصة.",
+      "يستخرجه من حجم الغاز.",
+      "يستخرجه من الضغط.",
+      "يستخرجه من الناقلية أو الكتلة.",
+      "يفهم شرط العلاقة الخطية.",
+      "يميز بين نصف التقدم ونصف كمية المتفاعل.",
+      "يقارن سرعة تحولَين باستعمال t₁/₂.",
+      "يتجنب الأخطاء الشائعة.",
+      "يحل تمرين بكالوريا كاملًا."
+    ],
+    "lesson_map": [
+      {
+        "part": 1,
+        "title": "تعريف زمن نصف التفاعل",
+        "focus": "نصف التقدم النهائي"
+      },
+      {
+        "part": 2,
+        "title": "الاستخراج من منحنى التقدم",
+        "focus": "القيمة النصفية والإسقاط"
+      },
+      {
+        "part": 3,
+        "title": "الاستخراج من طرق المتابعة",
+        "focus": "الضغط والحجم والتركيز والناقلية والكتلة"
+      },
+      {
+        "part": 4,
+        "title": "المقارنة والبكالوريا",
+        "focus": "الأسرع والأخطاء"
+      },
+      {
+        "part": 5,
+        "title": "التثبيت",
+        "focus": "Quiz وتقويم ختامي"
+      }
+    ],
+    "lesson_strategy": {
+      "main_idea": "زمن نصف التفاعل هو الزمن اللازم لبلوغ نصف التقدم النهائي.",
+      "bac_skill": "تحديد القيمة النصفية الصحيحة ثم إسقاطها على محور الزمن.",
+      "common_obstacle": "الخلط بين نصف التقدم ونصف الزمن، أو أخذ نصف القيمة النهائية لكمية تبدأ من قيمة غير صفرية.",
+      "teaching_sequence": "سبب الاستعمال ← التعريف ← منحنى x ← تحول تام وغير تام ← كميات المتابعة ← المقارنة ← بكالوريا ← Quiz.",
+      "interaction_model": "محاولة ثم شرح وتغذية راجعة.",
+      "screen_rule": "فكرة واحدة في كل شاشة.",
+      "diagram_display_rule": "يظهر الرسم قبل سؤال القراءة البيانية."
+    },
+    "learning_path": [
+      {
+        "id": "step_1",
+        "type": "motivation",
+        "title": "لماذا نحتاج إلى زمن نصف التفاعل؟",
+        "content": {
+          "teacher": "أحيانًا يصعب تحديد اللحظة التي ينتهي عندها التفاعل بدقة، لأن المنحنى يقترب تدريجيًا من قيمته النهائية. لذلك نستعمل زمنًا واضحًا وسهل القراءة: الزمن اللازم لبلوغ نصف التقدم النهائي.",
+          "central_idea": "زمن نصف التفاعل يعطي مقياسًا عمليًا لسرعة التحول.",
+          "bac_relevance": "في البكالوريا يطلب غالبًا تعريفه، استخراجه من منحنى، أو مقارنة تحولَين باستعماله.",
+          "pre_question": {
+            "prompt": "لماذا لا نعتمد دائمًا على زمن نهاية التفاعل؟",
+            "options": [
+              "لأن النهاية قد تكون تقريبية وصعبة القراءة",
+              "لأن الزمن لا يقاس",
+              "لأن التقدم ينقص"
+            ],
+            "correct_index": 0,
+            "feedback_correct": "صحيح، نهاية المنحنى غالبًا تدريجية.",
+            "feedback_wrong": "المنحنى لا يتوقف فجأة عادة.",
+            "hint": "فكر في الجزء شبه الأفقي."
+          },
+          "quick_check": {
+            "question": "ما فائدة t₁/₂؟",
+            "answer": "إعطاء زمن مميز يسمح بوصف سرعة التحول ومقارنة التحولات.",
+            "explanation": "هو أسهل وأدق من تقدير نهاية التفاعل في كثير من الحالات.",
+            "wrong_answer_help": "يرتبط ببلوغ نصف التقدم النهائي."
+          },
+          "takeaway": "t₁/₂ زمن مميز وسهل الاستعمال للمقارنة."
+        }
+      },
+      {
+        "id": "step_2",
+        "type": "definition",
+        "title": "التعريف البسيط لزمن نصف التفاعل",
+        "content": {
+          "teacher": "زمن نصف التفاعل هو الزمن الذي يصبح فيه تقدم التفاعل مساويًا لنصف التقدم النهائي.",
+          "diagram": {
+            "title": "تعريف زمن نصف التفاعل",
+            "description": "نأخذ نصف التقدم النهائي ثم نبحث عن الزمن الموافق.",
+            "alt_text": "مخطط من xf إلى xf/2 ثم t نصف.",
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"1050\" height=\"420\" viewBox=\"0 0 1050 420\">\n  <rect width=\"100%\" height=\"100%\" fill=\"white\"/>\n  <text x=\"525\" y=\"45\" text-anchor=\"middle\" font-size=\"30\" font-family=\"Arial\" fill=\"#111827\">تعريف زمن نصف التفاعل</text>\n\n  <rect x=\"75\" y=\"115\" width=\"260\" height=\"160\" rx=\"24\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"3\"/>\n  <text x=\"205\" y=\"165\" text-anchor=\"middle\" font-size=\"25\" font-family=\"Arial\" fill=\"#1e3a8a\">التقدم النهائي</text>\n  <text x=\"205\" y=\"225\" text-anchor=\"middle\" font-size=\"32\" font-family=\"Arial\" fill=\"#111827\">x_f</text>\n\n  <line x1=\"335\" y1=\"195\" x2=\"455\" y2=\"195\" stroke=\"#111827\" stroke-width=\"5\"/>\n  <polygon points=\"455,195 428,178 428,212\" fill=\"#111827\"/>\n  <text x=\"395\" y=\"160\" text-anchor=\"middle\" font-size=\"21\" font-family=\"Arial\" fill=\"#475569\">نأخذ النصف</text>\n\n  <rect x=\"455\" y=\"115\" width=\"260\" height=\"160\" rx=\"24\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"3\"/>\n  <text x=\"585\" y=\"165\" text-anchor=\"middle\" font-size=\"25\" font-family=\"Arial\" fill=\"#14532d\">نصف التقدم النهائي</text>\n  <text x=\"585\" y=\"225\" text-anchor=\"middle\" font-size=\"32\" font-family=\"Arial\" fill=\"#111827\">x_f / 2</text>\n\n  <line x1=\"715\" y1=\"195\" x2=\"825\" y2=\"195\" stroke=\"#111827\" stroke-width=\"5\"/>\n  <polygon points=\"825,195 798,178 798,212\" fill=\"#111827\"/>\n\n  <rect x=\"825\" y=\"100\" width=\"180\" height=\"190\" rx=\"24\" fill=\"#fefce8\" stroke=\"#ca8a04\" stroke-width=\"3\"/>\n  <text x=\"915\" y=\"150\" text-anchor=\"middle\" font-size=\"24\" font-family=\"Arial\" fill=\"#854d0e\">الزمن الموافق</text>\n  <text x=\"915\" y=\"215\" text-anchor=\"middle\" font-size=\"34\" font-family=\"Arial\" fill=\"#111827\">t₁/₂</text>\n  <text x=\"915\" y=\"255\" text-anchor=\"middle\" font-size=\"19\" font-family=\"Arial\" fill=\"#475569\">x(t₁/₂)=x_f/2</text>\n\n  <text x=\"525\" y=\"360\" text-anchor=\"middle\" font-size=\"23\" font-family=\"Arial\" fill=\"#334155\">زمن نصف التفاعل لا يعني نصف مدة التفاعل، بل الزمن الذي يبلغ فيه التقدم نصف قيمته النهائية</text>\n</svg>",
+            "render_mode": "inline_step",
+            "responsive": true
+          },
+          "definition": "\\(x(t_{1/2})=\\frac{x_f}{2}\\)",
+          "attention": "إذا كان التحول تامًا فإن \\(x_f=x_{max}\\)، وعندها يمكن كتابة \\(x(t_{1/2})=x_{max}/2\\).",
+          "pre_question": {
+            "prompt": "عند t₁/₂، كم يبلغ التقدم؟",
+            "options": [
+              "x_f/2",
+              "x_f",
+              "0"
+            ],
+            "correct_index": 0,
+            "feedback_correct": "صحيح.",
+            "feedback_wrong": "هو نصف التقدم النهائي.",
+            "hint": "ركز على كلمة نصف."
+          },
+          "quick_check": {
+            "question": "هل نستعمل x_max دائمًا في التعريف؟",
+            "answer": "لا، الأصل هو x_f. نستعمل x_max فقط عندما يكون التحول تامًا.",
+            "explanation": "التحول غير التام قد يكون فيه x_f أصغر من x_max.",
+            "wrong_answer_help": "ميز بين النهائي والأعظمي."
+          },
+          "takeaway": "التعريف الأصلي: x عند t₁/₂ يساوي x_f/2.",
+          "graph_position": "before_question"
+        }
+      },
+      {
+        "id": "step_3",
+        "type": "concept",
+        "title": "لا تخلط بين نصف التفاعل ونصف مدة التفاعل",
+        "content": {
+          "teacher": "زمن نصف التفاعل لا يعني نصف الزمن الذي ينتهي عنده التفاعل. هو مرتبط بنصف التقدم النهائي، وليس بنصف مدة التجربة.",
+          "comparison": [
+            {
+              "wrong": "\\(t_{1/2}=t_f/2\\)",
+              "status": "ليست قاعدة عامة"
+            },
+            {
+              "correct": "\\(x(t_{1/2})=x_f/2\\)",
+              "status": "التعريف الصحيح"
+            }
+          ],
+          "pre_question": {
+            "prompt": "إذا انتهت التجربة تقريبًا عند 100 s، هل t₁/₂ يساوي 50 s دائمًا؟",
+            "options": [
+              "لا",
+              "نعم دائمًا"
+            ],
+            "correct_index": 0,
+            "feedback_correct": "صحيح.",
+            "feedback_wrong": "يعتمد t₁/₂ على شكل المنحنى.",
+            "hint": "نبحث عن نصف التقدم لا نصف الزمن."
+          },
+          "quick_check": {
+            "question": "ما الذي ننصفه؟",
+            "answer": "التقدم النهائي، لا الزمن النهائي.",
+            "explanation": "ثم نقرأ الزمن الموافق.",
+            "wrong_answer_help": "ابدأ بـx_f."
+          },
+          "takeaway": "ننصف التقدم، ثم نقرأ الزمن."
+        }
+      },
+      {
+        "id": "step_4",
+        "type": "visual_method",
+        "title": "استخراج t₁/₂ من منحنى x=f(t)",
+        "content": {
+          "teacher": "نقرأ التقدم النهائي x_f، نحسب نصفه، نرسم خطًا أفقيًا حتى المنحنى، ثم نسقط عموديًا على محور الزمن.",
+          "diagram": {
+            "title": "الطريقة البيانية",
+            "description": "قراءة t نصف من منحنى التقدم.",
+            "alt_text": "منحنى تقدم مع خط أفقي عند xf/2 وإسقاط على الزمن.",
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"980\" height=\"540\" viewBox=\"0 0 980 540\">\n  <rect width=\"100%\" height=\"100%\" fill=\"white\"/>\n  <text x=\"490\" y=\"42\" text-anchor=\"middle\" font-size=\"29\" font-family=\"Arial\" fill=\"#111827\">استخراج t₁/₂ من منحنى x=f(t)</text>\n\n  <line x1=\"90\" y1=\"455\" x2=\"900\" y2=\"455\" stroke=\"#111827\" stroke-width=\"3\"/>\n  <line x1=\"90\" y1=\"455\" x2=\"90\" y2=\"80\" stroke=\"#111827\" stroke-width=\"3\"/>\n  <text x=\"895\" y=\"495\" text-anchor=\"end\" font-size=\"22\" font-family=\"Arial\">الزمن t</text>\n  <text x=\"110\" y=\"105\" font-size=\"22\" font-family=\"Arial\">التقدم x</text>\n\n  <path d=\"M90 455 C210 240, 390 135, 850 115\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"5\"/>\n\n  <line x1=\"90\" y1=\"115\" x2=\"850\" y2=\"115\" stroke=\"#94a3b8\" stroke-width=\"2\" stroke-dasharray=\"8 7\"/>\n  <text x=\"125\" y=\"100\" font-size=\"21\" font-family=\"Arial\" fill=\"#475569\">x_f</text>\n\n  <line x1=\"90\" y1=\"285\" x2=\"430\" y2=\"285\" stroke=\"#16a34a\" stroke-width=\"4\" stroke-dasharray=\"9 7\"/>\n  <text x=\"125\" y=\"270\" font-size=\"21\" font-family=\"Arial\" fill=\"#14532d\">x_f/2</text>\n\n  <line x1=\"430\" y1=\"285\" x2=\"430\" y2=\"455\" stroke=\"#16a34a\" stroke-width=\"4\" stroke-dasharray=\"9 7\"/>\n  <circle cx=\"430\" cy=\"285\" r=\"8\" fill=\"#dc2626\"/>\n  <text x=\"430\" y=\"490\" text-anchor=\"middle\" font-size=\"22\" font-family=\"Arial\" fill=\"#991b1b\">t₁/₂</text>\n\n  <rect x=\"600\" y=\"320\" width=\"300\" height=\"100\" rx=\"18\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"3\"/>\n  <text x=\"750\" y=\"360\" text-anchor=\"middle\" font-size=\"22\" font-family=\"Arial\">1. نقرأ x_f</text>\n  <text x=\"750\" y=\"395\" text-anchor=\"middle\" font-size=\"22\" font-family=\"Arial\">2. نأخذ x_f/2 ثم نسقط على الزمن</text>\n</svg>",
+            "render_mode": "inline_step",
+            "responsive": true
+          },
+          "algorithm": [
+            "حدد القيمة النهائية \\(x_f\\).",
+            "احسب \\(x_f/2\\).",
+            "حدد هذه القيمة على محور التقدم.",
+            "ارسم خطًا أفقيًا حتى المنحنى.",
+            "من نقطة التقاطع أسقط عموديًا على محور الزمن.",
+            "اقرأ \\(t_{1/2}\\) مع وحدته."
+          ],
+          "pre_question": {
+            "prompt": "ما أول خطوة؟",
+            "options": [
+              "قراءة x_f",
+              "قسمة الزمن النهائي على 2",
+              "رسم مماس"
+            ],
+            "correct_index": 0,
+            "feedback_correct": "صحيح.",
+            "feedback_wrong": "لا نبدأ بالزمن.",
+            "hint": "نحتاج نصف القيمة النهائية."
+          },
+          "quick_check": {
+            "question": "هل نحتاج إلى رسم مماس؟",
+            "answer": "لا، نحتاج خطوط إسقاط أفقي وعمودي.",
+            "explanation": "المماس خاص بحساب السرعة.",
+            "wrong_answer_help": "هنا نبحث عن قيمة لا عن ميل."
+          },
+          "takeaway": "x_f ثم x_f/2 ثم إسقاط على الزمن.",
+          "graph_position": "before_question"
+        }
+      },
+      {
+        "id": "step_5",
+        "type": "graph_reading",
+        "title": "مثال من منحنى التقدم",
+        "content": {
+          "teacher": "إذا كانت القيمة النهائية للتقدم \\(x_f=0.12mol\\)، فإننا نبحث عن الزمن الذي يصبح فيه \\(x=0.06mol\\).",
+          "graph": {
+            "title": "تقدم التفاعل بدلالة الزمن",
+            "type": "time_series",
+            "coordinate_system": {
+              "x_label": "الزمن t",
+              "y_label": "التقدم x"
+            },
+            "series": [
+              {
+                "id": "progress",
+                "label": "\\(x=f(t)\\)",
+                "kind": "curve",
+                "data": [
+                  {
+                    "t": 0.0,
+                    "x": 0.0
+                  },
+                  {
+                    "t": 0.5,
+                    "x": 0.0125
+                  },
+                  {
+                    "t": 1.0,
+                    "x": 0.023698
+                  },
+                  {
+                    "t": 1.5,
+                    "x": 0.033729
+                  },
+                  {
+                    "t": 2.0,
+                    "x": 0.042716
+                  },
+                  {
+                    "t": 2.5,
+                    "x": 0.050766
+                  },
+                  {
+                    "t": 3.0,
+                    "x": 0.057978
+                  },
+                  {
+                    "t": 3.5,
+                    "x": 0.064438
+                  },
+                  {
+                    "t": 4.0,
+                    "x": 0.070226
+                  },
+                  {
+                    "t": 4.5,
+                    "x": 0.075411
+                  },
+                  {
+                    "t": 5.0,
+                    "x": 0.080055
+                  },
+                  {
+                    "t": 5.5,
+                    "x": 0.084216
+                  },
+                  {
+                    "t": 6.0,
+                    "x": 0.087944
+                  },
+                  {
+                    "t": 6.5,
+                    "x": 0.091283
+                  },
+                  {
+                    "t": 7.0,
+                    "x": 0.094274
+                  },
+                  {
+                    "t": 7.5,
+                    "x": 0.096954
+                  },
+                  {
+                    "t": 8.0,
+                    "x": 0.099355
+                  },
+                  {
+                    "t": 8.5,
+                    "x": 0.101505
+                  },
+                  {
+                    "t": 9.0,
+                    "x": 0.103432
+                  },
+                  {
+                    "t": 9.5,
+                    "x": 0.105158
+                  },
+                  {
+                    "t": 10.0,
+                    "x": 0.106704
+                  },
+                  {
+                    "t": 10.5,
+                    "x": 0.108089
+                  },
+                  {
+                    "t": 11.0,
+                    "x": 0.109329
+                  },
+                  {
+                    "t": 11.5,
+                    "x": 0.110441
+                  },
+                  {
+                    "t": 12.0,
+                    "x": 0.111437
+                  },
+                  {
+                    "t": 12.5,
+                    "x": 0.112329
+                  },
+                  {
+                    "t": 13.0,
+                    "x": 0.113128
+                  },
+                  {
+                    "t": 13.5,
+                    "x": 0.113844
+                  },
+                  {
+                    "t": 14.0,
+                    "x": 0.114485
+                  },
+                  {
+                    "t": 14.5,
+                    "x": 0.115059
+                  },
+                  {
+                    "t": 15.0,
+                    "x": 0.115574
+                  },
+                  {
+                    "t": 15.5,
+                    "x": 0.116035
+                  },
+                  {
+                    "t": 16.0,
+                    "x": 0.116448
+                  },
+                  {
+                    "t": 16.5,
+                    "x": 0.116818
+                  },
+                  {
+                    "t": 17.0,
+                    "x": 0.11715
+                  },
+                  {
+                    "t": 17.5,
+                    "x": 0.117446
+                  },
+                  {
+                    "t": 18.0,
+                    "x": 0.117712
+                  },
+                  {
+                    "t": 18.5,
+                    "x": 0.117951
+                  },
+                  {
+                    "t": 19.0,
+                    "x": 0.118164
+                  },
+                  {
+                    "t": 19.5,
+                    "x": 0.118355
+                  },
+                  {
+                    "t": 20.0,
+                    "x": 0.118527
+                  }
+                ]
+              }
+            ],
+            "reference_lines": [
+              {
+                "axis": "y",
+                "value": 0.12,
+                "label": "\\(x_f\\)"
+              },
+              {
+                "axis": "y",
+                "value": 0.06,
+                "label": "\\(x_f/2\\)"
+              }
+            ],
+            "render_mode": "inline_step",
+            "responsive": true
+          },
+          "worked_example": {
+            "final_progress": "\\(x_f=0.12mol\\)",
+            "half_progress": "\\(x_f/2=0.06mol\\)",
+            "reading": "\\(t_{1/2}\\approx3.2s\\) حسب بيانات المنحنى."
+          },
+          "pre_question": {
+            "prompt": "ما القيمة التي نبحث عنها على المحور العمودي؟",
+            "options": [
+              "0.06 mol",
+              "0.12 mol",
+              "3.2 mol"
+            ],
+            "correct_index": 0,
+            "feedback_correct": "صحيح.",
+            "feedback_wrong": "هي نصف 0.12.",
+            "hint": "اقسم x_f على 2."
+          },
+          "quick_check": {
+            "question": "ما وحدة t₁/₂؟",
+            "answer": "نفس وحدة الزمن في المحور الأفقي.",
+            "explanation": "قد تكون s أو min حسب التمرين.",
+            "wrong_answer_help": "اقرأ وحدة المحور."
+          },
+          "takeaway": "اقرأ الزمن المقابل لنصف القيمة النهائية.",
+          "graph_position": "before_question"
+        }
+      },
+      {
+        "id": "step_6",
+        "type": "comparison",
+        "title": "إذا كان التحول تامًا أو غير تام",
+        "content": {
+          "teacher": "في التحول التام يبلغ التقدم قيمته الأعظمية، لذلك \\(x_f=x_{max}\\). أما في التحول غير التام فالتقدم النهائي أصغر من التقدم الأعظمي.",
+          "cases": [
+            {
+              "case": "تحول تام",
+              "half_condition": "\\(x(t_{1/2})=x_{max}/2\\)"
+            },
+            {
+              "case": "تحول غير تام",
+              "half_condition": "\\(x(t_{1/2})=x_f/2\\)"
+            }
+          ],
+          "attention": "لا تستبدل x_f بـx_max إلا إذا أثبت التمرين أو ذكر أن التحول تام.",
+          "pre_question": {
+            "prompt": "تحول غير تام: أي قيمة ننصف؟",
+            "options": [
+              "x_f",
+              "x_max دائمًا",
+              "الزمن النهائي"
+            ],
+            "correct_index": 0,
+            "feedback_correct": "صحيح.",
+            "feedback_wrong": "التعريف مرتبط بالحالة النهائية الفعلية.",
+            "hint": "لا تفترض تمام التحول."
+          },
+          "quick_check": {
+            "question": "متى يسمح باستعمال x_max/2؟",
+            "answer": "عندما يكون التحول تامًا.",
+            "explanation": "عندها يتساوى x_f وx_max.",
+            "wrong_answer_help": "ابحث عن عبارة التحول تام."
+          },
+          "takeaway": "الأصل x_f/2، وx_max/2 فقط في التحول التام."
+        }
+      },
+      {
+        "id": "step_7",
+        "type": "concept",
+        "title": "هل t₁/₂ هو الزمن اللازم لاستهلاك نصف كل متفاعل؟",
+        "content": {
+          "teacher": "عند t₁/₂ يكون التقدم نصف قيمته النهائية. لذلك يكون مقدار الاستهلاك الناتج عن التفاعل نصف الاستهلاك النهائي، لكن الكمية المتبقية من المتفاعل ليست دائمًا نصف كميته الابتدائية، خاصة إذا كان فائضًا.",
+          "example": {
+            "initial": "\\(n_0(A)=0.10mol\\)",
+            "final": "\\(n_f(A)=0.04mol\\)",
+            "at_half_time": "\\(n(A,t_{1/2})=0.10-\\frac{0.10-0.04}{2}=0.07mol\\)",
+            "conclusion": "0.07 mol ليست نصف 0.10 mol."
+          },
+          "pre_question": {
+            "prompt": "هل تبقى دائمًا نصف كمية المتفاعل الابتدائية عند t₁/₂؟",
+            "options": [
+              "لا",
+              "نعم دائمًا"
+            ],
+            "correct_index": 0,
+            "feedback_correct": "صحيح.",
+            "feedback_wrong": "نصف التفاعل يتعلق بالتقدم لا مباشرة بالكمية الابتدائية.",
+            "hint": "قد يكون المتفاعل فائضًا."
+          },
+          "quick_check": {
+            "question": "ما الذي يصبح نصف قيمته النهائية؟",
+            "answer": "التقدم x، أو مقدار التغير المرتبط به.",
+            "explanation": "ليس بالضرورة كمية النوع نفسها.",
+            "wrong_answer_help": "ارجع إلى جدول التقدم."
+          },
+          "takeaway": "نصف التقدم لا يعني نصف كل كمية ابتدائية."
+        }
+      },
+      {
+        "id": "step_8",
+        "type": "visual_relation",
+        "title": "استخراج t₁/₂ من كمية فيزيائية متزايدة أو متناقصة",
+        "content": {
+          "teacher": "إذا كانت الكمية المقاسة Y مرتبطة خطيًا بالتقدم وفق \\(Y=Y_0+Kx\\)، فإن قيمتها عند نصف التفاعل هي متوسط قيمتيها الابتدائية والنهائية.",
+          "diagram": {
+            "title": "القيمة النصفية للكمية المقاسة",
+            "description": "متوسط القيمة الابتدائية والنهائية عند وجود علاقة خطية مع التقدم.",
+            "alt_text": "ثلاث بطاقات توضح الكمية المتزايدة والمتناقصة والشرط الخطي.",
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"1100\" height=\"460\" viewBox=\"0 0 1100 460\">\n  <rect width=\"100%\" height=\"100%\" fill=\"white\"/>\n  <text x=\"550\" y=\"45\" text-anchor=\"middle\" font-size=\"30\" font-family=\"Arial\" fill=\"#111827\">زمن نصف التفاعل من كمية فيزيائية مرتبطة خطيًا بالتقدم</text>\n\n  <rect x=\"70\" y=\"110\" width=\"300\" height=\"210\" rx=\"24\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"3\"/>\n  <text x=\"220\" y=\"160\" text-anchor=\"middle\" font-size=\"24\" font-family=\"Arial\" fill=\"#1e3a8a\">كمية متزايدة Y(t)</text>\n  <text x=\"220\" y=\"220\" text-anchor=\"middle\" font-size=\"24\" font-family=\"Arial\">Y₁/₂ = (Y₀ + Y_f)/2</text>\n  <text x=\"220\" y=\"275\" text-anchor=\"middle\" font-size=\"20\" font-family=\"Arial\" fill=\"#475569\">مثل الضغط أو حجم الغاز</text>\n\n  <rect x=\"400\" y=\"110\" width=\"300\" height=\"210\" rx=\"24\" fill=\"#fef2f2\" stroke=\"#dc2626\" stroke-width=\"3\"/>\n  <text x=\"550\" y=\"160\" text-anchor=\"middle\" font-size=\"24\" font-family=\"Arial\" fill=\"#991b1b\">كمية متناقصة Y(t)</text>\n  <text x=\"550\" y=\"220\" text-anchor=\"middle\" font-size=\"24\" font-family=\"Arial\">Y₁/₂ = (Y₀ + Y_f)/2</text>\n  <text x=\"550\" y=\"275\" text-anchor=\"middle\" font-size=\"20\" font-family=\"Arial\" fill=\"#475569\">مثل تركيز متفاعل أو الكتلة</text>\n\n  <rect x=\"730\" y=\"110\" width=\"300\" height=\"210\" rx=\"24\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"3\"/>\n  <text x=\"880\" y=\"160\" text-anchor=\"middle\" font-size=\"24\" font-family=\"Arial\" fill=\"#14532d\">الشرط الأساسي</text>\n  <text x=\"880\" y=\"220\" text-anchor=\"middle\" font-size=\"23\" font-family=\"Arial\">Y = Y₀ + Kx</text>\n  <text x=\"880\" y=\"275\" text-anchor=\"middle\" font-size=\"20\" font-family=\"Arial\" fill=\"#475569\">علاقة خطية مع التقدم</text>\n\n  <text x=\"550\" y=\"390\" text-anchor=\"middle\" font-size=\"23\" font-family=\"Arial\" fill=\"#334155\">لا نأخذ Y_f/2 إلا إذا كانت القيمة الابتدائية Y₀ تساوي صفرًا</text>\n</svg>",
+            "render_mode": "inline_step",
+            "responsive": true
+          },
+          "derivation": [
+            "\\(Y(t)=Y_0+Kx(t)\\)",
+            "\\(Y_f=Y_0+Kx_f\\)",
+            "\\(Y(t_{1/2})=Y_0+K\\frac{x_f}{2}=\\frac{Y_0+Y_f}{2}\\)"
+          ],
+          "important_rule": "\\(Y_{1/2}=\\frac{Y_0+Y_f}{2}\\)",
+          "attention": "لا نستعمل \\(Y_f/2\\) إلا إذا كانت \\(Y_0=0\\).",
+          "pre_question": {
+            "prompt": "إذا كانت Y₀ غير منعدمة، ما القيمة الصحيحة عند t₁/₂؟",
+            "options": [
+              "(Y₀+Y_f)/2",
+              "Y_f/2 دائمًا",
+              "Y₀/2"
+            ],
+            "correct_index": 0,
+            "feedback_correct": "صحيح.",
+            "feedback_wrong": "يجب أخذ القيمة الابتدائية في الحسبان.",
+            "hint": "استعمل المتوسط."
+          },
+          "quick_check": {
+            "question": "ما الشرط الضروري لهذه القاعدة؟",
+            "answer": "أن تكون Y مرتبطة خطيًا بالتقدم x.",
+            "explanation": "أي من الشكل Y=Y₀+Kx.",
+            "wrong_answer_help": "ليست قاعدة لأي منحنى عشوائي."
+          },
+          "takeaway": "في العلاقة الخطية: القيمة النصفية هي متوسط البداية والنهاية.",
+          "graph_position": "before_question"
+        }
+      },
+      {
+        "id": "step_9",
+        "type": "worked_example",
+        "title": "مثال من منحنى الضغط",
+        "content": {
+          "statement": "يزداد الضغط من \\(P_0=1.0bar\\) إلى \\(P_f=5.0bar\\)، وهو مرتبط خطيًا بالتقدم.",
+          "steps": [
+            {
+              "step_number": 1,
+              "title": "حساب الضغط عند نصف التفاعل",
+              "calculation": "\\(P_{1/2}=\\frac{P_0+P_f}{2}=\\frac{1.0+5.0}{2}=3.0bar\\)"
+            },
+            {
+              "step_number": 2,
+              "title": "قراءة الزمن",
+              "instruction": "نحدد 3.0 bar على المحور العمودي ثم نقرأ الزمن الموافق."
+            }
+          ],
+          "pre_question": {
+            "prompt": "هل نأخذ P_f/2=2.5 bar؟",
+            "options": [
+              "لا",
+              "نعم"
+            ],
+            "correct_index": 0,
+            "feedback_correct": "صحيح.",
+            "feedback_wrong": "الضغط الابتدائي لا يساوي صفرًا.",
+            "hint": "استعمل متوسط P₀ وP_f."
+          },
+          "quick_check": {
+            "question": "متى يمكن استعمال P_f/2؟",
+            "answer": "عندما يكون P_0=0 بالنسبة إلى الكمية المدروسة أو نستعمل تغير الضغط المناسب.",
+            "explanation": "الأصل هو المتوسط.",
+            "wrong_answer_help": "تحقق من قيمة البداية."
+          },
+          "takeaway": "للضغط ذي بداية غير صفرية: متوسط P₀ وP_f."
+        }
+      },
+      {
+        "id": "step_10",
+        "type": "worked_example",
+        "title": "مثال من منحنى تركيز متفاعل",
+        "content": {
+          "statement": "ينخفض تركيز المتفاعل A من \\([A]_0=0.40mol.L^{-1}\\) إلى \\([A]_f=0.16mol.L^{-1}\\)، والعلاقة خطية مع التقدم.",
+          "steps": [
+            {
+              "step_number": 1,
+              "title": "القيمة عند نصف التفاعل",
+              "calculation": "\\([A]_{1/2}=\\frac{0.40+0.16}{2}=0.28mol.L^{-1}\\)"
+            },
+            {
+              "step_number": 2,
+              "title": "قراءة الزمن",
+              "instruction": "نقرأ الزمن الموافق للتركيز 0.28 mol.L⁻¹."
+            }
+          ],
+          "graph": {
+            "title": "تركيز متفاعل بدلالة الزمن",
+            "type": "time_series",
+            "coordinate_system": {
+              "x_label": "الزمن t",
+              "y_label": "تركيز المتفاعل [A]"
+            },
+            "series": [
+              {
+                "id": "reactant",
+                "label": "\\([A]=f(t)\\)",
+                "kind": "curve",
+                "data": [
+                  {
+                    "t": 0.0,
+                    "y": 0.4
+                  },
+                  {
+                    "t": 0.5,
+                    "y": 0.375
+                  },
+                  {
+                    "t": 1.0,
+                    "y": 0.352605
+                  },
+                  {
+                    "t": 1.5,
+                    "y": 0.332542
+                  },
+                  {
+                    "t": 2.0,
+                    "y": 0.314569
+                  },
+                  {
+                    "t": 2.5,
+                    "y": 0.298468
+                  },
+                  {
+                    "t": 3.0,
+                    "y": 0.284044
+                  },
+                  {
+                    "t": 3.5,
+                    "y": 0.271123
+                  },
+                  {
+                    "t": 4.0,
+                    "y": 0.259548
+                  },
+                  {
+                    "t": 4.5,
+                    "y": 0.249178
+                  },
+                  {
+                    "t": 5.0,
+                    "y": 0.239889
+                  },
+                  {
+                    "t": 5.5,
+                    "y": 0.231567
+                  },
+                  {
+                    "t": 6.0,
+                    "y": 0.224112
+                  },
+                  {
+                    "t": 6.5,
+                    "y": 0.217434
+                  },
+                  {
+                    "t": 7.0,
+                    "y": 0.211451
+                  },
+                  {
+                    "t": 7.5,
+                    "y": 0.206092
+                  },
+                  {
+                    "t": 8.0,
+                    "y": 0.201291
+                  },
+                  {
+                    "t": 8.5,
+                    "y": 0.19699
+                  },
+                  {
+                    "t": 9.0,
+                    "y": 0.193137
+                  },
+                  {
+                    "t": 9.5,
+                    "y": 0.189685
+                  },
+                  {
+                    "t": 10.0,
+                    "y": 0.186593
+                  },
+                  {
+                    "t": 10.5,
+                    "y": 0.183823
+                  },
+                  {
+                    "t": 11.0,
+                    "y": 0.181341
+                  },
+                  {
+                    "t": 11.5,
+                    "y": 0.179118
+                  },
+                  {
+                    "t": 12.0,
+                    "y": 0.177127
+                  },
+                  {
+                    "t": 12.5,
+                    "y": 0.175343
+                  },
+                  {
+                    "t": 13.0,
+                    "y": 0.173745
+                  },
+                  {
+                    "t": 13.5,
+                    "y": 0.172313
+                  },
+                  {
+                    "t": 14.0,
+                    "y": 0.17103
+                  },
+                  {
+                    "t": 14.5,
+                    "y": 0.169881
+                  },
+                  {
+                    "t": 15.0,
+                    "y": 0.168852
+                  },
+                  {
+                    "t": 15.5,
+                    "y": 0.16793
+                  },
+                  {
+                    "t": 16.0,
+                    "y": 0.167104
+                  },
+                  {
+                    "t": 16.5,
+                    "y": 0.166364
+                  },
+                  {
+                    "t": 17.0,
+                    "y": 0.165701
+                  },
+                  {
+                    "t": 17.5,
+                    "y": 0.165107
+                  },
+                  {
+                    "t": 18.0,
+                    "y": 0.164575
+                  },
+                  {
+                    "t": 18.5,
+                    "y": 0.164099
+                  },
+                  {
+                    "t": 19.0,
+                    "y": 0.163672
+                  },
+                  {
+                    "t": 19.5,
+                    "y": 0.163289
+                  },
+                  {
+                    "t": 20.0,
+                    "y": 0.162947
+                  }
+                ]
+              }
+            ],
+            "reference_lines": [
+              {
+                "axis": "y",
+                "value": 0.28,
+                "label": "\\([A]_{1/2}\\)"
+              }
+            ],
+            "render_mode": "inline_step",
+            "responsive": true
+          },
+          "pre_question": {
+            "prompt": "هل نأخذ نصف التركيز الابتدائي 0.20؟",
+            "options": [
+              "لا",
+              "نعم"
+            ],
+            "correct_index": 0,
+            "feedback_correct": "صحيح.",
+            "feedback_wrong": "التركيز النهائي ليس صفرًا.",
+            "hint": "استعمل متوسط البداية والنهاية."
+          },
+          "quick_check": {
+            "question": "لماذا التركيز عند نصف التفاعل ليس نصف [A]₀؟",
+            "answer": "لأن المتفاعل لم يختف كليًا في النهاية.",
+            "explanation": "قيمته النهائية غير منعدمة.",
+            "wrong_answer_help": "قد يكون متفاعلًا فائضًا أو التحول غير تام."
+          },
+          "takeaway": "للكمية المتناقصة أيضًا نستعمل متوسط البداية والنهاية.",
+          "graph_position": "before_question"
+        }
+      },
+      {
+        "id": "step_11",
+        "type": "method",
+        "title": "زمن نصف التفاعل من حجم الغاز",
+        "content": {
+          "teacher": "إذا لم يكن الغاز موجودًا في البداية وكان حجمه متناسبًا مع التقدم، فإن الحجم عند نصف التفاعل يساوي نصف الحجم النهائي.",
+          "cases": [
+            {
+              "condition": "\\(V_g(0)=0\\)",
+              "rule": "\\(V_g(t_{1/2})=V_{g,f}/2\\)"
+            },
+            {
+              "condition": "\\(V_g(0)\\neq0\\)",
+              "rule": "\\(V_g(t_{1/2})=(V_{g,0}+V_{g,f})/2\\)"
+            }
+          ],
+          "attention": "لا تخلط بين حجم الغاز وحجم المزيج التفاعلي.",
+          "pre_question": {
+            "prompt": "حجم الغاز يبدأ من صفر ويصل إلى 1.20 L. ما الحجم عند t₁/₂؟",
+            "options": [
+              "0.60 L",
+              "1.20 L",
+              "0.30 L"
+            ],
+            "correct_index": 0,
+            "feedback_correct": "صحيح.",
+            "feedback_wrong": "البداية صفر، لذلك نأخذ نصف النهائي.",
+            "hint": "1.20÷2."
+          },
+          "quick_check": {
+            "question": "هل نحتاج إلى الحجم المولي لاستخراج t₁/₂ من المنحنى؟",
+            "answer": "ليس دائمًا، إذا كان Vg متناسبًا مباشرة مع x يمكن استعمال نصف القيمة النهائية.",
+            "explanation": "الحجم المولي يلزم عند تحويل الحجم إلى كمية مادة.",
+            "wrong_answer_help": "للإسقاط البياني قد تكفي النسبة."
+          },
+          "takeaway": "إذا بدأ الغاز من صفر: نصف الحجم النهائي يعطي t₁/₂."
+        }
+      },
+      {
+        "id": "step_12",
+        "type": "method",
+        "title": "زمن نصف التفاعل من الناقلية أو الكتلة",
+        "content": {
+          "teacher": "إذا كانت الناقلية أو الكتلة مرتبطة خطيًا بالتقدم، نأخذ متوسط القيمة الابتدائية والنهائية ثم نقرأ الزمن.",
+          "cases": [
+            {
+              "measurement": "الناقلية",
+              "rule": "\\(\\sigma_{1/2}=\\frac{\\sigma_0+\\sigma_f}{2}\\)"
+            },
+            {
+              "measurement": "الكتلة",
+              "rule": "\\(m_{1/2}=\\frac{m_0+m_f}{2}\\)"
+            }
+          ],
+          "attention": "اتجاه المنحنى لا يغير القاعدة؛ المتوسط يصلح للمتزايد والمتناقص عند العلاقة الخطية.",
+          "pre_question": {
+            "prompt": "تنقص الكتلة من 12.0 g إلى 9.0 g. ما m عند t₁/₂؟",
+            "options": [
+              "10.5 g",
+              "6.0 g",
+              "4.5 g"
+            ],
+            "correct_index": 0,
+            "feedback_correct": "صحيح.",
+            "feedback_wrong": "خذ متوسط البداية والنهاية.",
+            "hint": "(12+9)/2."
+          },
+          "quick_check": {
+            "question": "هل نأخذ نصف الكتلة النهائية؟",
+            "answer": "لا.",
+            "explanation": "القيمة الابتدائية غير صفرية.",
+            "wrong_answer_help": "استعمل المتوسط."
+          },
+          "takeaway": "σ أو m عند نصف التفاعل = متوسط البداية والنهاية."
+        }
+      },
+      {
+        "id": "step_13",
+        "type": "comparison",
+        "title": "مقارنة سرعة تحولَين باستعمال t₁/₂",
+        "content": {
+          "teacher": "عند مقارنة تحولَين في شروط متقاربة، التحول ذو زمن نصف التفاعل الأصغر يكون أسرع.",
+          "diagram": {
+            "title": "المقارنة باستعمال زمن نصف التفاعل",
+            "description": "زمن نصف أصغر يعني وصولًا أسرع إلى نصف التقدم.",
+            "alt_text": "بطاقتان لزمن نصف 25 ثانية و60 ثانية.",
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"1050\" height=\"430\" viewBox=\"0 0 1050 430\">\n  <rect width=\"100%\" height=\"100%\" fill=\"white\"/>\n  <text x=\"525\" y=\"45\" text-anchor=\"middle\" font-size=\"30\" font-family=\"Arial\" fill=\"#111827\">مقارنة تحولَين باستعمال t₁/₂</text>\n\n  <rect x=\"75\" y=\"110\" width=\"400\" height=\"210\" rx=\"25\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"3\"/>\n  <text x=\"275\" y=\"165\" text-anchor=\"middle\" font-size=\"25\" font-family=\"Arial\" fill=\"#1e3a8a\">التحول الأول</text>\n  <text x=\"275\" y=\"225\" text-anchor=\"middle\" font-size=\"32\" font-family=\"Arial\">t₁/₂ = 25 s</text>\n  <text x=\"275\" y=\"275\" text-anchor=\"middle\" font-size=\"21\" font-family=\"Arial\" fill=\"#475569\">يبلغ النصف بسرعة أكبر</text>\n\n  <rect x=\"575\" y=\"110\" width=\"400\" height=\"210\" rx=\"25\" fill=\"#fefce8\" stroke=\"#ca8a04\" stroke-width=\"3\"/>\n  <text x=\"775\" y=\"165\" text-anchor=\"middle\" font-size=\"25\" font-family=\"Arial\" fill=\"#854d0e\">التحول الثاني</text>\n  <text x=\"775\" y=\"225\" text-anchor=\"middle\" font-size=\"32\" font-family=\"Arial\">t₁/₂ = 60 s</text>\n  <text x=\"775\" y=\"275\" text-anchor=\"middle\" font-size=\"21\" font-family=\"Arial\" fill=\"#475569\">أبطأ من التحول الأول</text>\n\n  <text x=\"525\" y=\"380\" text-anchor=\"middle\" font-size=\"24\" font-family=\"Arial\" fill=\"#14532d\">عند نفس الشروط العامة: أصغر t₁/₂ يعني تحولًا أسرع</text>\n</svg>",
+            "render_mode": "inline_step",
+            "responsive": true
+          },
+          "rule": "إذا \\(t_{1/2,1}<t_{1/2,2}\\) فإن التحول الأول أسرع.",
+          "attention": "يجب مقارنة تحولات قابلة للمقارنة وتحديد الشروط التجريبية.",
+          "pre_question": {
+            "prompt": "تحول A له t₁/₂=20 s وتحول B له 50 s. أيهما أسرع؟",
+            "options": [
+              "A",
+              "B",
+              "متساويان"
+            ],
+            "correct_index": 0,
+            "feedback_correct": "صحيح.",
+            "feedback_wrong": "الأصغر يبلغ نصف التقدم أولًا.",
+            "hint": "قارن الزمنين."
+          },
+          "quick_check": {
+            "question": "هل t₁/₂ الأكبر يعني سرعة أكبر؟",
+            "answer": "لا، يعني أن التحول يحتاج وقتًا أطول لبلوغ النصف.",
+            "explanation": "إذن هو أبطأ.",
+            "wrong_answer_help": "العلاقة عكسية في المقارنة."
+          },
+          "takeaway": "أصغر t₁/₂ يعني تحولًا أسرع.",
+          "graph_position": "before_question"
+        }
+      },
+      {
+        "id": "step_14",
+        "type": "concept",
+        "title": "العلاقة بين t₁/₂ وشكل المنحنى",
+        "content": {
+          "teacher": "المنحنى الأسرع يرتفع أو ينخفض بسرعة أكبر ويصل إلى القيمة النصفية في زمن أقصر.",
+          "comparison_rules": [
+            "منحنى x أكثر انحدارًا في البداية غالبًا يملك t₁/₂ أصغر.",
+            "الوصول المبكر إلى نصف القيمة النهائية يعني تحولًا أسرع.",
+            "لا نقارن القيم النهائية وحدها، بل الزمن اللازم لبلوغ النصف."
+          ],
+          "pre_question": {
+            "prompt": "منحنيان لهما نفس x_f، وأحدهما يصل x_f/2 أولًا. أيهما أسرع؟",
+            "options": [
+              "الذي يصل أولًا",
+              "الآخر",
+              "لا يمكن المقارنة"
+            ],
+            "correct_index": 0,
+            "feedback_correct": "صحيح.",
+            "feedback_wrong": "t₁/₂ لديه أصغر.",
+            "hint": "راقب زمن بلوغ النصف."
+          },
+          "quick_check": {
+            "question": "هل x_f الأكبر يعني دائمًا تحولًا أسرع؟",
+            "answer": "لا.",
+            "explanation": "x_f يصف مقدار التقدم النهائي، أما السرعة فتتعلق بالزمن.",
+            "wrong_answer_help": "قارن t₁/₂ أو الميل."
+          },
+          "takeaway": "نقارن زمن بلوغ النصف، لا القيمة النهائية فقط."
+        }
+      },
+      {
+        "id": "step_15",
+        "type": "bac_connection",
+        "title": "كيف يظهر هذا المحور في البكالوريا؟",
+        "content": {
+          "question_types": [
+            {
+              "type": "عرّف زمن نصف التفاعل",
+              "method": "اكتب \\(x(t_{1/2})=x_f/2\\)."
+            },
+            {
+              "type": "استخرج t₁/₂ من منحنى x",
+              "method": "اقرأ x_f ثم خذ نصفه وأسقط على الزمن."
+            },
+            {
+              "type": "استخرجه من الضغط أو الناقلية أو التركيز",
+              "method": "اكتب علاقة الكمية بالتقدم، ثم استعمل متوسط البداية والنهاية إذا كانت خطية."
+            },
+            {
+              "type": "قارن تحولَين",
+              "method": "الأصغر t₁/₂ هو الأسرع."
+            },
+            {
+              "type": "حدد القيمة عند t₁/₂",
+              "method": "استعمل جدول التقدم أو علاقة Y=Y₀+Kx."
+            },
+            {
+              "type": "صحح عبارة خاطئة",
+              "method": "ارفض t_f/2 أو Y_f/2 عند وجود قيمة ابتدائية غير صفرية."
+            }
+          ],
+          "answer_template": [
+            "حسب التعريف: \\(x(t_{1/2})=x_f/2\\).",
+            "من المنحنى نقرأ \\(x_f=...\\)، إذن \\(x_f/2=...\\).",
+            "الزمن الموافق هو \\(t_{1/2}=...\\).",
+            "بما أن t₁/₂ أصغر، فالتحول أسرع."
+          ],
+          "pre_question": {
+            "prompt": "ما أول جملة في سؤال تعريف t₁/₂؟",
+            "options": [
+              "هو الزمن الذي يصبح فيه x=x_f/2",
+              "هو نصف زمن التجربة",
+              "هو زمن نهاية التفاعل"
+            ],
+            "correct_index": 0,
+            "feedback_correct": "صحيح.",
+            "feedback_wrong": "هذا هو التعريف العلمي.",
+            "hint": "ابدأ بالتقدم."
+          },
+          "quick_check": {
+            "question": "ما أكثر خطأ شائع عند منحنى ضغط يبدأ من قيمة غير صفرية؟",
+            "answer": "أخذ P_f/2 بدل (P_0+P_f)/2.",
+            "explanation": "يجب مراعاة القيمة الابتدائية.",
+            "wrong_answer_help": "اكتب العلاقة الخطية أولًا."
+          },
+          "takeaway": "تعريف، قيمة نصفية، إسقاط، وحدة، مقارنة."
+        }
+      },
+      {
+        "id": "step_16",
+        "type": "common_mistakes",
+        "title": "الأخطاء الشائعة",
+        "content": {
+          "mistakes": [
+            {
+              "mistake": "كتابة t₁/₂=t_f/2.",
+              "correction": "نصف التقدم لا نصف الزمن."
+            },
+            {
+              "mistake": "استعمال x_max/2 دون إثبات تمام التحول.",
+              "correction": "الأصل x_f/2."
+            },
+            {
+              "mistake": "أخذ Y_f/2 مع Y_0 غير منعدمة.",
+              "correction": "استعمل (Y_0+Y_f)/2 عند العلاقة الخطية."
+            },
+            {
+              "mistake": "القول إن نصف كمية كل متفاعل تبقى.",
+              "correction": "ارجع إلى جدول التقدم."
+            },
+            {
+              "mistake": "نسيان وحدة الزمن.",
+              "correction": "اكتب s أو min حسب المحور."
+            },
+            {
+              "mistake": "المقارنة بين x_f بدل t₁/₂.",
+              "correction": "الأسرع هو صاحب زمن النصف الأصغر."
+            },
+            {
+              "mistake": "رسم مماس بدل خطوط الإسقاط.",
+              "correction": "المماس للسرعة، والإسقاط لزمن النصف."
+            }
+          ],
+          "pre_question": {
+            "prompt": "أي عبارة خاطئة؟",
+            "options": [
+              "t₁/₂ هو الزمن الموافق لـx_f/2",
+              "t₁/₂ يساوي نصف زمن النهاية دائمًا",
+              "الأصغر t₁/₂ أسرع"
+            ],
+            "correct_index": 1,
+            "feedback_correct": "صحيح، هذه العبارة خاطئة.",
+            "feedback_wrong": "نصف التفاعل لا يعني نصف الزمن.",
+            "hint": "ركز على التعريف."
+          },
+          "quick_check": {
+            "question": "إذا كان Y₀=2 وY_f=8، ما Y عند t₁/₂؟",
+            "answer": "5.",
+            "explanation": "المتوسط هو (2+8)/2.",
+            "wrong_answer_help": "ليس 4."
+          },
+          "takeaway": "راجع دائمًا البداية والنهاية والعلاقة بالتقدم."
+        }
+      },
+      {
+        "id": "step_17",
+        "type": "mini_quiz",
+        "title": "اختبار قصير: زمن نصف التفاعل",
+        "content": {
+          "questions": [
+            {
+              "question": "ما تعريف t₁/₂؟",
+              "choices": [
+                "الزمن الذي فيه x=x_f/2",
+                "نصف زمن التجربة",
+                "زمن توقف الساعة"
+              ],
+              "correct_answer": "الزمن الذي فيه x=x_f/2",
+              "explanation": "التعريف مرتبط بالتقدم النهائي."
+            },
+            {
+              "question": "متى نستعمل x_max/2؟",
+              "choices": [
+                "عندما يكون التحول تامًا",
+                "دائمًا",
+                "عندما يكون غير تام"
+              ],
+              "correct_answer": "عندما يكون التحول تامًا",
+              "explanation": "عندها x_f=x_max."
+            },
+            {
+              "question": "إذا x_f=0.10 mol، ما قيمة x عند t₁/₂؟",
+              "choices": [
+                "0.05 mol",
+                "0.10 mol",
+                "0.20 mol"
+              ],
+              "correct_answer": "0.05 mol",
+              "explanation": "نأخذ نصف التقدم النهائي."
+            },
+            {
+              "question": "هل t₁/₂=t_f/2 دائمًا؟",
+              "choices": [
+                "لا",
+                "نعم"
+              ],
+              "correct_answer": "لا",
+              "explanation": "يعتمد على شكل المنحنى."
+            },
+            {
+              "question": "إذا P₀=1 bar وP_f=5 bar، ما P عند t₁/₂؟",
+              "choices": [
+                "3 bar",
+                "2.5 bar",
+                "5 bar"
+              ],
+              "correct_answer": "3 bar",
+              "explanation": "نأخذ متوسط البداية والنهاية."
+            },
+            {
+              "question": "إذا بدأ حجم الغاز من صفر ووصل إلى 1.4 L، ما حجمه عند t₁/₂؟",
+              "choices": [
+                "0.7 L",
+                "1.4 L",
+                "0.35 L"
+              ],
+              "correct_answer": "0.7 L",
+              "explanation": "البداية صفر، لذلك نصف النهائي."
+            },
+            {
+              "question": "تحولان لهما t₁/₂=20 s و60 s. الأسرع هو:",
+              "choices": [
+                "الأول",
+                "الثاني",
+                "متساويان"
+              ],
+              "correct_answer": "الأول",
+              "explanation": "الأصغر زمنًا أسرع."
+            },
+            {
+              "question": "هل تبقى نصف الكمية الابتدائية لكل متفاعل عند t₁/₂؟",
+              "choices": [
+                "لا",
+                "نعم دائمًا"
+              ],
+              "correct_answer": "لا",
+              "explanation": "نصف التقدم لا يعني نصف كل كمية."
+            },
+            {
+              "question": "القاعدة Y₁/₂=(Y₀+Y_f)/2 تتطلب:",
+              "choices": [
+                "علاقة خطية بين Y وx",
+                "أي علاقة عشوائية",
+                "أن يكون الزمن بالدقائق"
+              ],
+              "correct_answer": "علاقة خطية بين Y وx",
+              "explanation": "مثل Y=Y₀+Kx."
+            },
+            {
+              "question": "لإيجاد t₁/₂ من منحنى x نستخدم:",
+              "choices": [
+                "إسقاطًا أفقيًا وعموديًا",
+                "مماسًا",
+                "مساحة تحت المنحنى"
+              ],
+              "correct_answer": "إسقاطًا أفقيًا وعموديًا",
+              "explanation": "المماس خاص بالسرعة."
+            }
+          ],
+          "scoring": {
+            "total": 10,
+            "mastery_threshold": 8,
+            "levels": [
+              {
+                "score": "9-10",
+                "level": "متقن",
+                "message": "جاهز لحل أسئلة زمن نصف التفاعل."
+              },
+              {
+                "score": "7-8",
+                "level": "جيد جدًا",
+                "message": "راجع فقط الكميات ذات البداية غير الصفرية."
+              },
+              {
+                "score": "5-6",
+                "level": "متوسط",
+                "message": "راجع الفرق بين x_f وx_max."
+              },
+              {
+                "score": "0-4",
+                "level": "يحتاج مراجعة",
+                "message": "أعد الدرس من التعريف وطريقة المنحنى."
+              }
+            ]
+          },
+          "takeaway": "نصف التقدم، لا نصف الزمن."
+        }
+      },
+      {
+        "id": "step_18",
+        "type": "summary",
+        "title": "الخلاصة التي تحفظها",
+        "content": {
+          "key_ideas": [
+            "زمن نصف التفاعل يحقق \\(x(t_{1/2})=x_f/2\\).",
+            "في التحول التام يمكن استعمال \\(x_{max}/2\\).",
+            "لا يساوي t_f/2 بالضرورة.",
+            "من منحنى x: نقرأ x_f ثم نصفه ثم نسقط على الزمن.",
+            "إذا كانت Y=Y₀+Kx، فإن \\(Y_{1/2}=(Y₀+Y_f)/2\\).",
+            "إذا كانت القيمة الابتدائية صفرًا، تصبح القيمة النصفية نصف النهائية.",
+            "نصف التفاعل لا يعني نصف كل كمية ابتدائية.",
+            "أصغر t₁/₂ يعني تحولًا أسرع.",
+            "المماس للسرعة، والإسقاط لزمن النصف.",
+            "الوحدة هي وحدة الزمن في المحور."
+          ],
+          "method_template": [
+            "حدد x_f أو القيمة النهائية للكمية.",
+            "تحقق هل العلاقة مع x خطية.",
+            "احسب القيمة عند نصف التفاعل.",
+            "حددها على المحور العمودي.",
+            "أسقط على محور الزمن.",
+            "اكتب t₁/₂ ووحدته.",
+            "للمقارنة: الأصغر أسرع."
+          ],
+          "memory_tip": "نصف القيمة النهائية للتقدم، ثم الزمن الموافق.",
+          "takeaway": "تعريف صحيح + قيمة نصفية صحيحة + إسقاط صحيح."
+        }
+      }
+    ],
+    "final_assessment": {
+      "title": "تقويم ختامي: استخراج زمن نصف التفاعل من الضغط",
+      "type": "final_assessment",
+      "statement": "نتابع تحولًا كيميائيًا داخل وعاء مغلق بقياس الضغط. يرتبط الضغط بالتقدم بالعلاقة \\(P(t)=P_0+Kx(t)\\). من المنحنى نجد \\(P_0=1.2bar\\) و\\(P_f=4.8bar\\). يقرأ الزمن الموافق للضغط \\(3.0bar\\) مساويًا تقريبًا \\(42s\\). التقدم النهائي \\(x_f=0.080mol\\).",
+      "questions": [
+        "عرّف زمن نصف التفاعل.",
+        "احسب التقدم عند t₁/₂.",
+        "برهن أن الضغط عند t₁/₂ يساوي متوسط P₀ وP_f.",
+        "احسب P عند t₁/₂.",
+        "استنتج t₁/₂ من المعطيات.",
+        "هل يجوز استعمال P_f/2؟ علل.",
+        "إذا كان تحول آخر يملك t₁/₂=70s، فأيهما أسرع؟",
+        "هل يعني t₁/₂ أن نصف مدة التفاعل قد انقضت؟",
+        "إذا كان التحول تامًا وx_max=0.080mol، ما العلاقة بين x_f وx_max؟"
+      ],
+      "answers": [
+        "هو الزمن الذي يصبح فيه التقدم مساويًا لنصف التقدم النهائي: \\(x(t_{1/2})=x_f/2\\).",
+        "\\(x(t_{1/2})=0.080/2=0.040mol\\).",
+        "من \\(P=P_0+Kx\\) و\\(P_f=P_0+Kx_f\\)، عند x=x_f/2 نحصل على \\(P_{1/2}=P_0+(P_f-P_0)/2=(P_0+P_f)/2\\).",
+        "\\(P_{1/2}=(1.2+4.8)/2=3.0bar\\).",
+        "\\(t_{1/2}\\approx42s\\).",
+        "لا، لأن الضغط الابتدائي غير منعدم؛ الصحيح هو متوسط البداية والنهاية.",
+        "التحول الأول أسرع لأن 42s أصغر من 70s.",
+        "لا، هو مرتبط بنصف التقدم لا بنصف زمن النهاية.",
+        "بما أن التحول تام: \\(x_f=x_{max}=0.080mol\\)."
+      ],
+      "success_criteria": [
+        "تعريف صحيح باستعمال x_f.",
+        "حساب نصف التقدم.",
+        "اشتقاق متوسط الضغط.",
+        "قراءة الزمن بوحدته.",
+        "رفض P_f/2 مع التعليل.",
+        "مقارنة صحيحة باستعمال أصغر t₁/₂.",
+        "التمييز بين نصف التقدم ونصف الزمن."
+      ],
+      "grading": {
+        "total_points": 18,
+        "distribution": [
+          {
+            "question": 1,
+            "points": 2
+          },
+          {
+            "question": 2,
+            "points": 2
+          },
+          {
+            "question": 3,
+            "points": 3
+          },
+          {
+            "question": 4,
+            "points": 2
+          },
+          {
+            "question": 5,
+            "points": 1
+          },
+          {
+            "question": 6,
+            "points": 2
+          },
+          {
+            "question": 7,
+            "points": 2
+          },
+          {
+            "question": 8,
+            "points": 2
+          },
+          {
+            "question": 9,
+            "points": 2
+          }
+        ],
+        "mastery_levels": [
+          {
+            "score": "16-18",
+            "level": "متقن",
+            "message": "قادر على حل أسئلة زمن نصف التفاعل في البكالوريا."
+          },
+          {
+            "score": "12-15",
+            "level": "جيد جدًا",
+            "message": "راجع فقط الكميات ذات القيمة الابتدائية غير الصفرية."
+          },
+          {
+            "score": "8-11",
+            "level": "متوسط",
+            "message": "راجع طريقة المنحنى والفرق بين x_f وx_max."
+          },
+          {
+            "score": "0-7",
+            "level": "يحتاج مراجعة",
+            "message": "أعد الدرس من تعريف t₁/₂."
+          }
+        ]
+      },
+      "hint_levels": [
+        "ابدأ بالتعريف x(t₁/₂)=x_f/2.",
+        "استعمل P=P₀+Kx.",
+        "عند نصف التقدم يكون تغير الضغط نصف تغيره النهائي.",
+        "الأصغر t₁/₂ هو الأسرع."
+      ],
+      "attempt_instruction": "حل التمرين على ورقة ثم افتح التصحيح."
+    },
+    "lesson_summary": {
+      "key_ideas": [
+        "t₁/₂ مرتبط بنصف التقدم النهائي.",
+        "في التحول التام يمكن استعمال نصف التقدم الأعظمي.",
+        "للكميات الخطية نأخذ متوسط البداية والنهاية.",
+        "زمن النصف الأصغر يدل على تحول أسرع.",
+        "القراءة البيانية تعتمد على الإسقاط لا المماس."
+      ],
+      "method_template": [
+        "حدد القيمة النهائية.",
+        "احسب القيمة النصفية الصحيحة.",
+        "حددها على المحور العمودي.",
+        "أسقط على محور الزمن.",
+        "اكتب الوحدة.",
+        "قارن الأزمنة عند الحاجة."
+      ],
+      "memory_tip": "نصف التقدم ثم الزمن الموافق."
+    },
+    "lesson_intro": {
+      "welcome": "في هذا المحور ستتعلم كيف تجد زمنًا مميزًا من أي منحنى متابعة تقريبًا.",
+      "big_idea": "لا نبحث عن نصف الزمن، بل عن الزمن الذي بلغ فيه التفاعل نصف تقدمه النهائي.",
+      "student_promise": "بعد إنهاء المحور ستستطيع استخراج t₁/₂ من التقدم أو الضغط أو الحجم أو التركيز أو الناقلية."
+    },
+    "support_path": {
+      "if_student_does_not_understand": [
+        {
+          "problem": "أخلط بين t₁/₂ وt_f/2",
+          "action": "اكتب التعريف دائمًا: x(t₁/₂)=x_f/2."
+        },
+        {
+          "problem": "لا أعرف أي قيمة أستعمل من منحنى الضغط",
+          "action": "إذا كان P مرتبطًا خطيًا بـx، استعمل (P₀+P_f)/2."
+        },
+        {
+          "problem": "أستعمل x_max دائمًا",
+          "action": "استعمل x_f، ولا تستعمل x_max إلا إذا كان التحول تامًا."
+        },
+        {
+          "problem": "أظن أن نصف كل متفاعل يبقى",
+          "action": "ارجع إلى جدول التقدم وعوض x=x_f/2."
+        }
+      ]
+    },
+    "method_decision_tree": {
+      "start_question": "كيف أستخرج t₁/₂؟",
+      "branches": [
+        {
+          "condition": "هل المنحنى x=f(t)؟",
+          "yes": "اقرأ x_f، خذ x_f/2، ثم أسقط على الزمن.",
+          "no": "انتقل للسؤال التالي."
+        },
+        {
+          "condition": "هل الكمية Y مرتبطة خطيًا بـx؟",
+          "yes": "احسب (Y₀+Y_f)/2 ثم اقرأ الزمن.",
+          "no": "استخرج x أولًا من العلاقة المعطاة."
+        },
+        {
+          "condition": "هل التحول تام؟",
+          "yes": "يمكن استعمال x_max/2.",
+          "no": "استعمل x_f/2."
+        },
+        {
+          "condition": "هل المطلوب مقارنة تحولَين؟",
+          "yes": "الأصغر t₁/₂ هو الأسرع.",
+          "no": "اكتب القيمة والوحدة."
+        }
+      ],
+      "golden_rule": "لا تنصف الزمن؛ انصف التقدم النهائي أو التغير الفيزيائي المرتبط به."
+    },
+    "lesson_closure": {
+      "final_message": "أصبحت تعرف أن زمن نصف التفاعل يقرأ من نصف التقدم أو من متوسط القيمة الابتدائية والنهائية لكمية مرتبطة خطيًا به.",
+      "essential_reflex": "حدد البداية والنهاية، احسب القيمة النصفية الصحيحة، ثم اقرأ الزمن.",
+      "ready_for_next_lesson": true,
+      "next_lesson": "العوامل الحركية المؤثرة في سرعة التحول"
+    },
+    "content_status": "ready_for_production",
+    "pedagogical_style": {
+      "target": "تلميذ السنة الثالثة ثانوي المقبل على البكالوريا الجزائرية",
+      "language_level": "عربية بسيطة وواضحة",
+      "explanation_method": "تعريف ثم منحنى ثم كميات المتابعة ثم مقارنة ثم Quiz",
+      "platform_ready": true,
+      "requires_teacher_intervention": false
+    },
+    "quality_review": {
+      "json_validity_checked": true,
+      "scientific_accuracy_checked": true,
+      "pedagogical_progression_checked": true,
+      "latex_consistency_checked": true,
+      "inline_svg_checked": true,
+      "graph_data_checked": true,
+      "axis_scope_checked": true,
+      "quiz_checked": true,
+      "final_assessment_checked": true,
+      "important_corrections": [
+        "اعتماد x_f/2 في التعريف بدل x_max/2 بصورة مطلقة.",
+        "التأكيد أن t₁/₂ ليس نصف زمن النهاية.",
+        "إضافة قاعدة متوسط البداية والنهاية للكميات المرتبطة خطيًا بالتقدم.",
+        "التمييز بين نصف التقدم ونصف الكمية الابتدائية للمتفاعل.",
+        "ربط المقارنة بين التحولات بأصغر زمن نصف."
+      ]
+    },
+    "ui_preferences": {
+      "one_step_per_screen": true,
+      "ask_before_explain": true,
+      "require_attempt_before_solution": true,
+      "explain_wrong_answers": true,
+      "show_step_takeaway": true,
+      "show_progress": true,
+      "support_actions": [
+        "أعد الشرح",
+        "أعطني مثالًا أبسط",
+        "اشرحها بخطوات",
+        "تحقق من فهمي",
+        "أعطني تلميحًا"
+      ]
+    },
+    "presentation": {
+      "mode": "single_step",
+      "show_progress": true,
+      "require_understood_confirmation": true,
+      "show_transition_between_steps": true,
+      "compact_explanation": true,
+      "max_main_ideas_per_screen": 1
+    }
+  }
+}

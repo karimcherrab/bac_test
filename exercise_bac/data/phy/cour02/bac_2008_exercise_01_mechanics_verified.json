@@ -1,0 +1,216 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.1-bac-source-faithful",
+  "version": "4.1-verified-statement-and-solution-figures",
+  "session": "ordinary",
+  "year": 2008,
+  "chapter_code": "mechanical_system_evolution",
+  "chapter_title": "تطور جملة ميكانيكية",
+  "axis_tags": [
+    "satellites_planets_kepler"
+  ],
+  "branches": [
+    {
+      "code": "math",
+      "name": "شعبة رياضيات"
+    },
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "exercise_number": 1,
+  "source_pages": [
+    1
+  ],
+  "solution_source_pages": [
+    25
+  ],
+  "title": "التمرين 1 — بكالوريا 2008 — قمر صناعي حول الأرض",
+  "statement": "يدور قمر اصطناعي كتلته \\(m\\) حول الأرض بحركة منتظمة، فيرسم مدارًا دائريًا نصف قطره \\(r\\)، ومركزه هو نفس مركز الأرض.\n\nيعطى: ثابت الجذب العام \\(G=6.67\\times10^{-11}\\,SI\\)، كتلة الأرض \\(M_T=5.97\\times10^{24}\\,kg\\)، و\\(\\pi^2=10\\).",
+  "questions": [
+    {
+      "id": "2008_ex01_q1",
+      "text": "1) مثّل قوة جذب الأرض للقمر الاصطناعي واكتب عبارة قيمتها بدلالة \\(M_T\\)، \\(m\\)، \\(G\\) و\\(r\\). باستعمال التحليل البعدي أوجد وحدة ثابت الجذب العام \\(G\\) في الجملة الدولية.",
+      "axis_tags": [
+        "satellites_planets_kepler"
+      ],
+      "display_order": 1,
+      "content_type": "question",
+      "solution": {
+        "strategy": "نطبق قانون الجذب العام ثم نستخرج أبعاد ووحدة G.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "اتجاه القوة",
+            "explanation": "تطبق القوة على القمر، وحاملها المستقيم الواصل بين مركزي الأرض والقمر، وجهتها نحو مركز الأرض.",
+            "graph_data": {
+              "diagram_type": "satellite_earth_force",
+              "title": "تمثيل قوة جذب الأرض للقمر الاصطناعي",
+              "description": "الرسم مطابق لفكرة التصحيح: الأرض في المركز، القمر S على المدار، وشعاع القوة من S نحو O."
+            }
+          },
+          {
+            "step_number": 2,
+            "title": "قيمة القوة",
+            "explanation": "\\[F=G\\frac{mM_T}{r^2}\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "وحدة G",
+            "explanation": "\\[G=\\frac{Fr^2}{mM_T}\\Rightarrow [G]=N\\,m^2\\,kg^{-2}=m^3\\,kg^{-1}\\,s^{-2}\\]"
+          }
+        ],
+        "final_answer": "\\(F=G\\dfrac{mM_T}{r^2}\\)، ووحدة \\(G\\): \\(m^3\\,kg^{-1}\\,s^{-2}\\).",
+        "verification": "اتجاه القوة نحو مركز الأرض.",
+        "common_mistakes": [
+          "توجيه القوة بعيدًا عن الأرض.",
+          "استعمال الارتفاع بدل المسافة بين المركزين."
+        ],
+        "hints": [
+          "ارسم المستقيم الواصل بين المركزين."
+        ]
+      }
+    },
+    {
+      "id": "2008_ex01_q2",
+      "text": "2) بيّن أن عبارة السرعة الخطية \\(v\\) للقمر الاصطناعي في المرجع المركزي الأرضي تعطى بـ: \\(v=\\sqrt{\\dfrac{GM_T}{r}}\\).",
+      "axis_tags": [
+        "satellites_planets_kepler"
+      ],
+      "display_order": 2,
+      "content_type": "question",
+      "solution": {
+        "strategy": "نساوي قوة الجذب بالمحصلة الناظمية.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التسارع الناظمي",
+            "explanation": "\\[a_n=\\frac{v^2}{r}\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "القانون الثاني لنيوتن",
+            "explanation": "\\[G\\frac{mM_T}{r^2}=m\\frac{v^2}{r}\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "استخراج السرعة",
+            "explanation": "بعد الاختزال: \\[v^2=\\frac{GM_T}{r}\\Rightarrow v=\\sqrt{\\frac{GM_T}{r}}\\]"
+          }
+        ],
+        "final_answer": "\\(v=\\sqrt{\\dfrac{GM_T}{r}}\\).",
+        "verification": "كتلة القمر تختزل.",
+        "common_mistakes": [
+          "إضافة قوة مركزية مستقلة.",
+          "نسيان مربع السرعة."
+        ],
+        "hints": [
+          "قوة الجذب هي المحصلة الناظمية."
+        ]
+      }
+    },
+    {
+      "id": "2008_ex01_q3",
+      "text": "3) اكتب عبارة \\(v\\) بدلالة \\(r\\) و\\(T\\)، حيث \\(T\\) دور القمر الاصطناعي.",
+      "axis_tags": [
+        "satellites_planets_kepler"
+      ],
+      "display_order": 3,
+      "content_type": "question",
+      "solution": {
+        "strategy": "المسافة في دورة كاملة هي محيط المدار.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "المسافة",
+            "explanation": "\\[d=2\\pi r\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "السرعة",
+            "explanation": "\\[v=\\frac{d}{T}=\\frac{2\\pi r}{T}\\]"
+          }
+        ],
+        "final_answer": "\\(v=\\dfrac{2\\pi r}{T}\\).",
+        "verification": "الأبعاد تعطي m/s."
+      }
+    },
+    {
+      "id": "2008_ex01_q4",
+      "text": "4) اكتب عبارة دور القمر الاصطناعي حول الأرض بدلالة \\(G\\)، \\(M_T\\) و\\(r\\).",
+      "axis_tags": [
+        "satellites_planets_kepler"
+      ],
+      "display_order": 4,
+      "content_type": "question",
+      "solution": {
+        "strategy": "نعوض عبارة السرعة المدارية في علاقة الدور.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "العلاقتان",
+            "explanation": "\\[T=\\frac{2\\pi r}{v},\\qquad v=\\sqrt{\\frac{GM_T}{r}}\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "النتيجة",
+            "explanation": "\\[T=2\\pi\\sqrt{\\frac{r^3}{GM_T}}\\]"
+          }
+        ],
+        "final_answer": "\\(T=2\\pi\\sqrt{\\dfrac{r^3}{GM_T}}\\).",
+        "verification": "الدور يزداد مع r."
+      }
+    },
+    {
+      "id": "2008_ex01_q5",
+      "text": "5) أ- بيّن أن النسبة \\(\\dfrac{T^2}{r^3}\\) ثابتة لأي قمر يدور حول الأرض، ثم احسب قيمتها في الجملة الدولية. ب- إذا كان نصف قطر مدار قمر اصطناعي \\(r=2.66\\times10^4\\,km\\)، احسب دور حركته.",
+      "axis_tags": [
+        "satellites_planets_kepler"
+      ],
+      "display_order": 5,
+      "content_type": "question",
+      "solution": {
+        "strategy": "نربع عبارة الدور ثم نعوض عدديًا.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الثابت",
+            "explanation": "\\[\\frac{T^2}{r^3}=\\frac{4\\pi^2}{GM_T}=k\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "القيمة",
+            "explanation": "\\[k=\\frac{40}{6.67\\times10^{-11}\\times5.97\\times10^{24}}\\approx9.9\\times10^{-14}\\,s^2m^{-3}\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "تحويل نصف القطر",
+            "explanation": "\\[r=2.66\\times10^4\\,km=2.66\\times10^7\\,m\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "الدور",
+            "explanation": "\\[T=\\sqrt{kr^3}\\approx4.32\\times10^4\\,s=12\\,h\\]"
+          }
+        ],
+        "final_answer": "\\(T^2/r^3=9.9\\times10^{-14}\\,s^2m^{-3}\\)، و\\(T\\approx12\\,h\\).",
+        "verification": "النتيجة توافق حل التجميعية.",
+        "common_mistakes": [
+          "نسيان تحويل km إلى m."
+        ],
+        "hints": [
+          "استعمل T²=kr³."
+        ]
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "statement_figure_policy": "يعرض في نص التمرين فقط الشكل الموجود فعلا في موضوع البكالوريا الأصلي.",
+    "solution_figure_policy": "يعرض داخل الحل الرسم الموجود في التصحيح أو الرسم المطلوب صراحة لإنجاز الحل، ولا يضاف رسم زخرفي.",
+    "renderer": "GraphRenderer"
+  }
+}

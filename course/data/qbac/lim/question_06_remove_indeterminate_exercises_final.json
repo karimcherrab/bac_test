@@ -1,0 +1,217 @@
+{
+  "version": 1,
+  "language": "ar",
+  "direction": "rtl",
+  "tag": "remove_indeterminate",
+  "title": "تمارين طرق إزالة حالات عدم التعيين",
+    "subject_code": "phy",
+  "chapter_code": "limits_continuity",
+  "question_count": 4,
+  "questions": [
+    {
+      "id": "remove_03",
+      "number": "45",
+      "text": "احسب \\(\\lim_{x\\to1}\\frac{x^3-1}{x-1}\\).",
+      "skill": "التحليل والاختزال",
+      "difficulty": "easy",
+      "solution": {
+        "strategy": "نحدد حالة عدم التعيين، ثم نحلل فرق المكعبين ونختزل العامل المشترك.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "تحديد الحالة",
+            "explanation": "نعوض مباشرة بالعدد 1.",
+            "calculation": "\\(\\frac{1^3-1}{1-1}=\\frac{0}{0}\\)",
+            "result": "حالة عدم تعيين من الشكل \\(0/0\\)."
+          },
+          {
+            "order": 2,
+            "title": "تحليل البسط",
+            "explanation": "نستعمل متطابقة فرق مكعبين.",
+            "calculation": "\\(x^3-1=(x-1)(x^2+x+1)\\)",
+            "result": "ظهر العامل المشترك \\(x-1\\)."
+          },
+          {
+            "order": 3,
+            "title": "الاختزال",
+            "explanation": "من أجل \\(x\\ne1\\)، نختزل العامل \\(x-1\\).",
+            "calculation": "\\(\\frac{(x-1)(x^2+x+1)}{x-1}=x^2+x+1\\)",
+            "result": "زالت حالة عدم التعيين."
+          },
+          {
+            "order": 4,
+            "title": "حساب النهاية",
+            "explanation": "نعوض الآن في العبارة المبسطة.",
+            "calculation": "\\(1^2+1+1=3\\)",
+            "result": "\\(\\lim_{x\\to1}\\frac{x^3-1}{x-1}=3\\)"
+          }
+        ],
+        "final_answer": "\\(\\boxed{3}\\)",
+        "common_mistakes": [
+          {
+            "mistake": "اختزال \\(x-1\\) قبل تحليل البسط.",
+            "correction": "الاختزال يكون بين عاملين؛ لذلك نحلل البسط أولًا."
+          }
+        ],
+        "hints": [
+          "التعويض يعطي \\(0/0\\).",
+          "استعمل \\(a^3-b^3=(a-b)(a^2+ab+b^2)\\)."
+        ]
+      }
+    },
+    {
+      "id": "remove_01",
+      "number": "84-1",
+      "text": "احسب \\(\\lim_{x\\to0}\\frac{\\sqrt{x+1}-1}{x}\\).",
+      "skill": "استعمال المرافق في حالة 0/0",
+      "difficulty": "medium",
+      "solution": {
+        "strategy": "نضرب البسط والمقام في مرافق البسط، ثم نختزل العامل المسبب للصفر.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "تحديد الحالة",
+            "explanation": "نعوض بالصفر.",
+            "calculation": "\\(\\frac{\\sqrt{1}-1}{0}=\\frac{0}{0}\\)",
+            "result": "حالة عدم تعيين."
+          },
+          {
+            "order": 2,
+            "title": "الضرب في المرافق",
+            "explanation": "مرافق \\(\\sqrt{x+1}-1\\) هو \\(\\sqrt{x+1}+1\\).",
+            "calculation": "\\(\\frac{\\sqrt{x+1}-1}{x}\\times\\frac{\\sqrt{x+1}+1}{\\sqrt{x+1}+1}\\)",
+            "result": "نستعمل فرق مربعين في البسط."
+          },
+          {
+            "order": 3,
+            "title": "التبسيط",
+            "explanation": "فرق المربعين يساوي \\(x+1-1=x\\).",
+            "calculation": "\\(\\frac{x}{x(\\sqrt{x+1}+1)}=\\frac{1}{\\sqrt{x+1}+1}\\)، من أجل \\(x\\ne0\\)",
+            "result": "زالت حالة عدم التعيين."
+          },
+          {
+            "order": 4,
+            "title": "حساب النهاية",
+            "explanation": "نعوض بالصفر في العبارة المبسطة.",
+            "calculation": "\\(\\frac{1}{\\sqrt{1}+1}=\\frac12\\)",
+            "result": "\\(\\frac12\\)"
+          }
+        ],
+        "final_answer": "\\(\\boxed{\\frac12}\\)",
+        "common_mistakes": [
+          {
+            "mistake": "الضرب في المرافق في البسط فقط.",
+            "correction": "نضرب البسط والمقام في المرافق نفسه حتى لا تتغير قيمة الكسر."
+          }
+        ],
+        "hints": [
+          "مرافق الفرق هو المجموع.",
+          "استعمل \\((a-b)(a+b)=a^2-b^2\\)."
+        ]
+      }
+    },
+    {
+      "id": "remove_04",
+      "number": "83-1",
+      "text": "احسب \\(\\lim_{x\\to+\\infty}(\\sqrt{x^2+1}-\\sqrt{x^2-1})\\).",
+      "skill": "استعمال المرافق في حالة ∞-∞",
+      "difficulty": "medium",
+      "solution": {
+        "strategy": "نضرب العبارة في مرافقها لتحويل فرق الجذرين إلى كسر ذي نهاية معينة.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "تحديد الحالة",
+            "explanation": "كل جذر يؤول إلى زائد ما لا نهاية.",
+            "calculation": "\\(+\\infty-(+\\infty)\\)",
+            "result": "حالة عدم تعيين من الشكل \\(\\infty-\\infty\\)."
+          },
+          {
+            "order": 2,
+            "title": "استعمال المرافق",
+            "explanation": "مرافق الفرق هو مجموع الجذرين.",
+            "calculation": "\\((\\sqrt{x^2+1}-\\sqrt{x^2-1})\\frac{\\sqrt{x^2+1}+\\sqrt{x^2-1}}{\\sqrt{x^2+1}+\\sqrt{x^2-1}}\\)",
+            "result": "يتحول البسط إلى فرق مربعين."
+          },
+          {
+            "order": 3,
+            "title": "التبسيط",
+            "explanation": "نحسب فرق ما تحت الجذرين.",
+            "calculation": "\\(\\frac{(x^2+1)-(x^2-1)}{\\sqrt{x^2+1}+\\sqrt{x^2-1}}=\\frac{2}{\\sqrt{x^2+1}+\\sqrt{x^2-1}}\\)",
+            "result": "زالت حالة عدم التعيين."
+          },
+          {
+            "order": 4,
+            "title": "حساب النهاية",
+            "explanation": "المقام يؤول إلى زائد ما لا نهاية، والبسط ثابت.",
+            "calculation": "\\(\\frac{2}{+\\infty}=0\\)",
+            "result": "\\(0\\)"
+          }
+        ],
+        "final_answer": "\\(\\boxed{0}\\)",
+        "common_mistakes": [
+          {
+            "mistake": "اعتبار \\(\\infty-\\infty=0\\) مباشرة.",
+            "correction": "يجب أولًا استعمال المرافق وإزالة حالة عدم التعيين."
+          }
+        ],
+        "hints": [
+          "اضرب في مجموع الجذرين.",
+          "فرق ما تحت الجذرين يساوي 2."
+        ]
+      }
+    },
+    {
+      "id": "bac_2008_topic_1_exercise_4_2_c_oblique_difference",
+      "number": "2-c-2",
+      "year": 2008,
+      "text": "لتكن \\(f(x)=\\frac{x^3+3x^2+3x+2}{(x+1)^2}\\). احسب \\(\\lim_{x\\to+\\infty}[f(x)-(x+1)]\\).",
+      "skill": "إعادة كتابة فرق من الشكل ∞-∞",
+      "difficulty": "medium",
+      "solution": {
+        "strategy": "نعيد كتابة البسط باستعمال \\((x+1)^3\\)، ثم نبسط الفرق قبل حساب النهاية.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "تحديد الحالة",
+            "explanation": "عند زائد ما لا نهاية، كل من \\(f(x)\\) و\\(x+1\\) غير محدود.",
+            "calculation": "\\(+\\infty-(+\\infty)\\)",
+            "result": "حالة عدم تعيين."
+          },
+          {
+            "order": 2,
+            "title": "إعادة كتابة البسط",
+            "explanation": "نلاحظ علاقة البسط بمتطابقة المكعب.",
+            "calculation": "\\(x^3+3x^2+3x+2=(x+1)^3+1\\)",
+            "result": "\\(f(x)=\\frac{(x+1)^3+1}{(x+1)^2}\\)"
+          },
+          {
+            "order": 3,
+            "title": "تبسيط الدالة",
+            "explanation": "نفصل الكسر إلى حدين.",
+            "calculation": "\\(f(x)=x+1+\\frac{1}{(x+1)^2}\\)",
+            "result": "\\(f(x)-(x+1)=\\frac{1}{(x+1)^2}\\)"
+          },
+          {
+            "order": 4,
+            "title": "حساب النهاية",
+            "explanation": "المقام يكبر دون حد.",
+            "calculation": "\\(\\lim_{x\\to+\\infty}\\frac{1}{(x+1)^2}=0\\)",
+            "result": "\\(0\\)"
+          }
+        ],
+        "final_answer": "\\(\\boxed{\\lim_{x\\to+\\infty}[f(x)-(x+1)]=0}\\)",
+        "common_mistakes": [
+          {
+            "mistake": "نسيان العدد 1 عند إعادة كتابة البسط.",
+            "correction": "\\(x^3+3x^2+3x+2=(x+1)^3+1\\)."
+          }
+        ],
+        "hints": [
+          "قارن البسط مع \\((x+1)^3\\).",
+          "اكتب الدالة على شكل \\(x+1+\\text{باقٍ}\\)."
+        ]
+      }
+    }
+  ]
+}

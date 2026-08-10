@@ -1,0 +1,257 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.1-bac-source-faithful",
+  "version": "4.1-verified-statement-and-solution-figures",
+  "session": "ordinary",
+  "year": 2017,
+  "chapter_code": "mechanical_system_evolution",
+  "chapter_title": "تطور جملة ميكانيكية",
+  "exercise_number": 54,
+
+  "branches": [
+    {
+      "code": "science",
+      "name": "شعبة علوم تجريبية"
+    }
+  ],
+  "axis_tags": [
+    "vertical_fall_in_fluid",
+    "mechanical_energy_data_analysis"
+  ],
+  "source_pages": [
+    21
+  ],
+  "solution_source_pages": [
+    45,
+    46
+  ],
+  "title": "التمرين 54 — بكالوريا 2017 — سقوط كرية في الهواء",
+  "statement": "خلال حصة الأعمال المخبرية كلف الأستاذ ثلاث مجموعات بدراسة سقوط كرية في الهواء كتلتها \\(m\\) وحجمها \\(V\\) انطلاقًا من السكون. عرضت المجموعات تمثيلات مختلفة للقوى: الثقل، دافعة أرخميدس، وقوة الاحتكاك.\n\n1- بعد المناقشة رفض أحد التمثيلات. حدد التمثيل المرفوض، ثم اكتب المعادلة التفاضلية للسرعة للحالتين المتبقيتين، وأعط عبارة التسارع الابتدائي.\n2- باستعمال منحنى \\(v(t)\\)، حدد التسارع الابتدائي واستنتج التمثيل الصحيح.\n3- عين السرعة الحدية.\n4- جد عبارتها بدلالة \\(m,k,g,V\\)، ثم احسب \\(k\\).\n5- احسب محصلة القوى عند \\(t=1.5s\\) بطريقتين.\n\nالمعطيات: \\(f=kv\\)، \\(g=9.80m/s^2\\)، \\(m=2.6g\\)، \\(\\rho_{air}=1.3kg/m^3\\)، \\(V=3.6\\times10^{-4}m^3\\).",
+  "questions": [
+    {
+      "id": "2017_ex54_q1",
+      "text": "1) حدد التمثيل المرفوض واكتب المعادلتين الممكنتين.",
+      "axis_tags": [
+        "vertical_fall_in_fluid"
+      ],
+      "display_order": 1,
+      "content_type": "question",
+      "solution": {
+        "strategy": "نراجع اتجاه القوى في السقوط.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التمثيل المرفوض",
+            "explanation": "التمثيل الذي يجعل دافعة أرخميدس نحو الأسفل مرفوض، لأنها دائمًا نحو الأعلى.",
+            "graph_data": {
+              "diagram_type": "fall_force_candidates_2017",
+              "title": "مقارنة تمثيلات القوى",
+              "description": "التصحيح يرفض التمثيل 3 لأن دافعة أرخميدس لا تتجه نحو الأسفل."
+            }
+          },
+          {
+            "step_number": 2,
+            "title": "مع الدافعة",
+            "explanation": "\\[\\frac{dv}{dt}+\\frac{k}{m}v=g\\left(1-\\frac{\\rho V}{m}\\right)\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "دون الدافعة",
+            "explanation": "\\[\\frac{dv}{dt}+\\frac{k}{m}v=g\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "التسارع الابتدائي",
+            "explanation": "\\[a_0=g(1-\\rho V/m)\\] أو \\(a_0=g\\) حسب النموذج."
+          }
+        ],
+        "final_answer": "التمثيل ذو دافعة أرخميدس المتجهة للأسفل مرفوض.",
+        "verification": "",
+        "common_mistakes": [],
+        "hints": [],
+        "methodology": {
+          "goal": "حل السؤال بدقة وبطريقة بسيطة ومنظمة.",
+          "method": "تحديد الجملة والمرجع، جرد القوى، كتابة القانون الحرفي، تحويل الوحدات، التعويض، ثم الاستنتاج.",
+          "bac_template": [
+            "تحديد الجملة الميكانيكية والمرجع والمعلم.",
+            "تمثيل القوى الخارجية واتجاهاتها.",
+            "كتابة القانون أو العلاقة قبل التعويض.",
+            "تحويل الوحدات إلى النظام الدولي.",
+            "إجراء الحساب وكتابة الوحدة.",
+            "صياغة استنتاج فيزيائي واضح."
+          ]
+        }
+      }
+    },
+    {
+      "id": "2017_ex54_q2",
+      "text": "2) استنتج التمثيل الصحيح والسرعة الحدية وثابت k.",
+      "axis_tags": [
+        "vertical_fall_in_fluid",
+        "mechanical_energy_data_analysis"
+      ],
+      "display_order": 2,
+      "content_type": "question",
+      "solution": {
+        "strategy": "نقرأ ميل المماس عند الأصل والمنصة النهائية.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التسارع الابتدائي",
+            "explanation": "من المنحنى \\(a_0\\approx8m/s^2<g\\)، إذن دافعة أرخميدس غير مهملة."
+          },
+          {
+            "step_number": 2,
+            "title": "السرعة الحدية",
+            "explanation": "\\[v_{lim}=6m/s\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "العبارة",
+            "explanation": "\\[v_{lim}=\\frac{mg}{k}\\left(1-\\frac{\\rho V}{m}\\right)\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "الثابت",
+            "explanation": "\\[k\\approx3.48e-03kg/s\\]"
+          }
+        ],
+        "final_answer": "التمثيل الصحيح يتضمن الثقل والدافعة والاحتكاك، و\\(v_{lim}=6m/s\\)، و\\(k\\approx3.48e-03kg/s\\).",
+        "verification": "مطابق تقريبًا للحل: 3.84×10⁻³ kg/s.",
+        "common_mistakes": [],
+        "hints": [],
+        "methodology": {
+          "goal": "حل السؤال بدقة وبطريقة بسيطة ومنظمة.",
+          "method": "تحديد الجملة والمرجع، جرد القوى، كتابة القانون الحرفي، تحويل الوحدات، التعويض، ثم الاستنتاج.",
+          "bac_template": [
+            "تحديد الجملة الميكانيكية والمرجع والمعلم.",
+            "تمثيل القوى الخارجية واتجاهاتها.",
+            "كتابة القانون أو العلاقة قبل التعويض.",
+            "تحويل الوحدات إلى النظام الدولي.",
+            "إجراء الحساب وكتابة الوحدة.",
+            "صياغة استنتاج فيزيائي واضح."
+          ]
+        }
+      }
+    },
+    {
+      "id": "2017_ex54_q3",
+      "text": "3) احسب محصلة القوى عند t=1.5s.",
+      "axis_tags": [
+        "vertical_fall_in_fluid",
+        "mechanical_energy_data_analysis"
+      ],
+      "display_order": 3,
+      "content_type": "question",
+      "solution": {
+        "strategy": "نستعمل إما الميل أو مجموع القوى.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "بالبيان",
+            "explanation": "من ميل المماس قرب \\(1.5s\\): \\(a\\approx1.07m/s^2\\)، ومنه \\(F=ma\\approx2.8\\times10^{-3}N\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "بالقوى",
+            "explanation": "\\[F=mg-\\rho Vg-kv\\] فنجد النتيجة نفسها."
+          }
+        ],
+        "final_answer": "\\(F\\approx2.8\\times10^{-3}N\\).",
+        "verification": "مطابق للحل.",
+        "common_mistakes": [],
+        "hints": [],
+        "methodology": {
+          "goal": "حل السؤال بدقة وبطريقة بسيطة ومنظمة.",
+          "method": "تحديد الجملة والمرجع، جرد القوى، كتابة القانون الحرفي، تحويل الوحدات، التعويض، ثم الاستنتاج.",
+          "bac_template": [
+            "تحديد الجملة الميكانيكية والمرجع والمعلم.",
+            "تمثيل القوى الخارجية واتجاهاتها.",
+            "كتابة القانون أو العلاقة قبل التعويض.",
+            "تحويل الوحدات إلى النظام الدولي.",
+            "إجراء الحساب وكتابة الوحدة.",
+            "صياغة استنتاج فيزيائي واضح."
+          ]
+        }
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "statement_figure_policy": "يعرض فقط الشكل أو البيان الموجود فعلا في نص البكالوريا.",
+    "solution_figure_policy": "يعرض الرسم الموجود في التصحيح أو الرسم المطلوب صراحة لإنجاز السؤال.",
+    "renderer": "GraphRenderer"
+  },
+  "statement_graphs": [
+    {
+      "diagram_type": "fall_force_candidates_2017",
+      "title": "تمثيلات المجموعات الثلاث للقوى",
+      "description": "المجموعة 1: P للأسفل وΠ وf للأعلى؛ المجموعة 2: P للأسفل وf للأعلى؛ المجموعة 3: P وΠ للأسفل وf للأعلى."
+    },
+    {
+      "title": "الشكل 63 — سرعة الكرية بدلالة الزمن",
+      "x_label": "t (s)",
+      "y_label": "v (m/s)",
+      "x_domain": [
+        0,
+        3
+      ],
+      "y_domain": [
+        0,
+        6.5
+      ],
+      "show_grid": true,
+      "series": [
+        {
+          "id": "curve",
+          "label": "v(t)",
+          "type": "line",
+          "data": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 0.5,
+              "y": 3.3
+            },
+            {
+              "x": 1,
+              "y": 4.8
+            },
+            {
+              "x": 1.5,
+              "y": 5.5
+            },
+            {
+              "x": 2,
+              "y": 5.8
+            },
+            {
+              "x": 3,
+              "y": 6
+            }
+          ]
+        },
+        {
+          "id": "terminal",
+          "label": "vlim",
+          "type": "horizontal_line",
+          "dashed": true,
+          "data": [
+            {
+              "x": 0,
+              "y": 6
+            },
+            {
+              "x": 3,
+              "y": 6
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

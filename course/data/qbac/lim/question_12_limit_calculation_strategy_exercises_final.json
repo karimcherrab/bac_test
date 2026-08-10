@@ -1,0 +1,246 @@
+{
+  "version": 1,
+  "language": "ar",
+  "direction": "rtl",
+  "tag": "limit_calculation_strategy",
+  "title": "تمارين استراتيجية حساب النهايات",
+    "subject_code": "phy",
+  "chapter_code": "limits_continuity",
+  "question_count": 5,
+  "questions": [
+    {
+      "id": "strategy_02",
+      "number": "24-أ",
+      "text": "احسب \\(\\lim_{x\\to4^+}\\frac{x+1}{\\sqrt{x}-2}\\).",
+      "skill": "اختيار الطريقة المناسبة قبل الحساب",
+      "difficulty": "medium",
+      "solution": {
+        "strategy": "نحدد جهة الاقتراب، ثم نحسب نهاية البسط والمقام مع الانتباه إلى إشارة الصفر.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "تحديد نوع النهاية",
+            "explanation": "النهاية عند العدد 4 من اليمين، لذلك يجب تحديد إشارة المقام.",
+            "calculation": "\\(x\\to4^+\\)",
+            "result": "نهاية جانبية."
+          },
+          {
+            "order": 2,
+            "title": "نهاية البسط",
+            "explanation": "نعوض مباشرة في البسط.",
+            "calculation": "\\(x+1\\to5\\)",
+            "result": "البسط يؤول إلى عدد موجب غير منعدم."
+          },
+          {
+            "order": 3,
+            "title": "نهاية المقام",
+            "explanation": "عندما يقترب x من 4 من اليمين يكون \\(\\sqrt{x}>2\\).",
+            "calculation": "\\(\\sqrt{x}-2\\to0^+\\)",
+            "result": "المقام يؤول إلى صفر موجب."
+          },
+          {
+            "order": 4,
+            "title": "النتيجة",
+            "explanation": "عدد موجب غير منعدم على صفر موجب يعطي زائد ما لا نهاية.",
+            "calculation": "\\(\\frac{5}{0^+}=+\\infty\\)",
+            "result": "\\(\\lim_{x\\to4^+}\\frac{x+1}{\\sqrt{x}-2}=+\\infty\\)"
+          }
+        ],
+        "final_answer": "\\(\\boxed{+\\infty}\\)",
+        "common_mistakes": [
+          {
+            "mistake": "كتابة \\(5/0\\) دون تحديد الإشارة.",
+            "correction": "يجب كتابة \\(0^+\\) لأن النهاية من اليمين."
+          }
+        ],
+        "hints": [
+          "احسب نهاية البسط.",
+          "حدد إشارة \\(\\sqrt{x}-2\\) قرب 4 من اليمين."
+        ]
+      }
+    },
+    {
+      "id": "strategy_03",
+      "number": "33",
+      "text": "احسب \\(\\lim_{x\\to+\\infty}\\frac{\\cos x}{x+1}\\).",
+      "skill": "اختيار الطريقة المناسبة قبل الحساب",
+      "difficulty": "medium",
+      "solution": {
+        "strategy": "نستعمل محدودية جيب التمام ثم نطبق مبرهنة الحصر.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "استعمال محدودية جيب التمام",
+            "explanation": "لدينا دائمًا \\(|\\cos x|\\le1\\).",
+            "calculation": "\\(\\left|\\frac{\\cos x}{x+1}\\right|\\le\\frac1{x+1}\\)",
+            "result": "القيمة المطلقة للدالة محصورة بحد موجب."
+          },
+          {
+            "order": 2,
+            "title": "نهاية الحد المقارن",
+            "explanation": "عند زائد ما لا نهاية يكبر المقام دون حد.",
+            "calculation": "\\(\\lim_{x\\to+\\infty}\\frac1{x+1}=0\\)",
+            "result": "الحد المقارن يؤول إلى الصفر."
+          },
+          {
+            "order": 3,
+            "title": "تطبيق الحصر",
+            "explanation": "بما أن القيمة المطلقة محصورة بكمية تؤول إلى الصفر، فإن الدالة تؤول إلى الصفر.",
+            "calculation": "\\(-\\frac1{x+1}\\le\\frac{\\cos x}{x+1}\\le\\frac1{x+1}\\)",
+            "result": "\\(\\lim_{x\\to+\\infty}\\frac{\\cos x}{x+1}=0\\)"
+          }
+        ],
+        "final_answer": "\\(\\boxed{0}\\)",
+        "common_mistakes": [
+          {
+            "mistake": "القول إن \\(\\cos x\\to0\\) عند المالانهاية.",
+            "correction": "جيب التمام متذبذب؛ نستعمل فقط أنه محصور بين -1 و1."
+          }
+        ],
+        "hints": [
+          "ابدأ من \\(|\\cos x|\\le1\\).",
+          "قارن بـ\\(1/(x+1)\\)."
+        ]
+      }
+    },
+    {
+      "id": "strategy_04",
+      "number": "45",
+      "text": "احسب \\(\\lim_{x\\to1}\\frac{x^3-1}{x-1}\\).",
+      "skill": "اختيار الطريقة المناسبة قبل الحساب",
+      "difficulty": "medium",
+      "solution": {
+        "strategy": "نجرب التعويض، نشخص حالة \\(0/0\\)، ثم نحلل ونختزل.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "التعويض المباشر",
+            "explanation": "نعوض x بالعدد 1.",
+            "calculation": "\\(\\frac{1^3-1}{1-1}=\\frac00\\)",
+            "result": "حالة عدم تعيين من الشكل \\(0/0\\)."
+          },
+          {
+            "order": 2,
+            "title": "تحليل البسط",
+            "explanation": "نستعمل فرق المكعبين.",
+            "calculation": "\\(x^3-1=(x-1)(x^2+x+1)\\)",
+            "result": "ظهر العامل المشترك \\(x-1\\)."
+          },
+          {
+            "order": 3,
+            "title": "الاختزال",
+            "explanation": "من أجل \\(x\\ne1\\) نختزل العامل المشترك.",
+            "calculation": "\\(\\frac{(x-1)(x^2+x+1)}{x-1}=x^2+x+1\\)",
+            "result": "زالت حالة عدم التعيين."
+          },
+          {
+            "order": 4,
+            "title": "الحساب النهائي",
+            "explanation": "نعوض في العبارة المبسطة.",
+            "calculation": "\\(1^2+1+1=3\\)",
+            "result": "\\(\\lim_{x\\to1}\\frac{x^3-1}{x-1}=3\\)"
+          }
+        ],
+        "final_answer": "\\(\\boxed{3}\\)",
+        "common_mistakes": [
+          {
+            "mistake": "اختزال x مع x³ أو اختزال حدود غير مضروبة.",
+            "correction": "الاختزال يكون بين عوامل بعد التحليل فقط."
+          }
+        ],
+        "hints": [
+          "شخص الشكل بعد التعويض.",
+          "حلل فرق المكعبين."
+        ]
+      }
+    },
+    {
+      "id": "strategy_05",
+      "number": "83-1",
+      "text": "احسب \\(\\lim_{x\\to+\\infty}(\\sqrt{x^2+1}-\\sqrt{x^2-1})\\).",
+      "skill": "اختيار الطريقة المناسبة قبل الحساب",
+      "difficulty": "medium",
+      "solution": {
+        "strategy": "نشخص حالة \\(\\infty-\\infty\\)، ثم نستعمل المرافق.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "التشخيص",
+            "explanation": "كل جذر يؤول إلى زائد ما لا نهاية.",
+            "calculation": "\\(+\\infty-(+\\infty)\\)",
+            "result": "حالة عدم تعيين."
+          },
+          {
+            "order": 2,
+            "title": "الضرب في المرافق",
+            "explanation": "نضرب ونقسم على مجموع الجذرين.",
+            "calculation": "\\(\\frac{(x^2+1)-(x^2-1)}{\\sqrt{x^2+1}+\\sqrt{x^2-1}}\\)",
+            "result": "\\(\\frac2{\\sqrt{x^2+1}+\\sqrt{x^2-1}}\\)"
+          },
+          {
+            "order": 3,
+            "title": "حساب النهاية",
+            "explanation": "المقام يؤول إلى زائد ما لا نهاية.",
+            "calculation": "\\(\\frac2{+\\infty}=0\\)",
+            "result": "\\(\\lim_{x\\to+\\infty}(\\sqrt{x^2+1}-\\sqrt{x^2-1})=0\\)"
+          }
+        ],
+        "final_answer": "\\(\\boxed{0}\\)",
+        "common_mistakes": [
+          {
+            "mistake": "كتابة \\(\\infty-\\infty=0\\) مباشرة.",
+            "correction": "يجب أولًا إزالة حالة عدم التعيين بالمرافق."
+          }
+        ],
+        "hints": [
+          "حدد حالة عدم التعيين.",
+          "استعمل مجموع الجذرين كمرافق."
+        ]
+      }
+    },
+    {
+      "id": "strategy_06",
+      "number": "91-1",
+      "text": "احسب \\(\\lim_{x\\to+\\infty}\\sqrt{\\frac{x-1}{2x-4}}\\).",
+      "skill": "اختيار الطريقة المناسبة قبل الحساب",
+      "difficulty": "medium",
+      "solution": {
+        "strategy": "نحسب نهاية الدالة الداخلية، ثم نطبق دالة الجذر.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "تحديد الداخل",
+            "explanation": "العبارة داخل الجذر هي دالة ناطقة.",
+            "calculation": "\\(u(x)=\\frac{x-1}{2x-4}\\)",
+            "result": "نحسب نهاية u أولًا."
+          },
+          {
+            "order": 2,
+            "title": "نهاية الداخل",
+            "explanation": "درجتا البسط والمقام متساويتان.",
+            "calculation": "\\(\\lim_{x\\to+\\infty}\\frac{x-1}{2x-4}=\\frac12\\)",
+            "result": "\\(u(x)\\to\\frac12\\)"
+          },
+          {
+            "order": 3,
+            "title": "تطبيق الدالة الخارجية",
+            "explanation": "نطبق الجذر على نهاية الداخل.",
+            "calculation": "\\(\\sqrt{u(x)}\\to\\sqrt{\\frac12}=\\frac1{\\sqrt2}\\)",
+            "result": "\\(\\lim_{x\\to+\\infty}\\sqrt{\\frac{x-1}{2x-4}}=\\frac1{\\sqrt2}\\)"
+          }
+        ],
+        "final_answer": "\\(\\boxed{\\frac1{\\sqrt2}}\\)",
+        "common_mistakes": [
+          {
+            "mistake": "محاولة تطبيق الجذر قبل حساب نهاية الداخل.",
+            "correction": "في الدالة المركبة نحسب الداخل أولًا ثم الخارج."
+          }
+        ],
+        "hints": [
+          "احسب نهاية الكسر داخل الجذر.",
+          "بعدها طبق دالة الجذر."
+        ]
+      }
+    }
+  ]
+}

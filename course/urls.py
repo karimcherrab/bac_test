@@ -9,6 +9,7 @@ from .views import (
     ChapterListView,
     SubjectDetailView,
     SubjectListView, AxisQuestionSummaryListView, AxisQuestionListView, QuestionDetailView, SubjectByBranchView,
+    QuestionSimpleSolutionAPIView,
 )
 
 
@@ -101,6 +102,18 @@ urlpatterns = [
         "subjects/my-branch/",
         SubjectByBranchView.as_view(),
         name="subjects-by-student-branch",
+    ),
+
+    path(
+        "questions/<int:question_id>/simple-solution/",
+        QuestionSimpleSolutionAPIView.as_view(),
+        name="question-simple-solution",
+    ),
+
+    path(
+        "questions/<int:question_id>/simple-solution/",
+        QuestionSimpleSolutionAPIView.as_view(),
+        name="question-simple-solution",
     ),
 
 ]

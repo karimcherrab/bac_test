@@ -113,7 +113,10 @@ class ExerciseGenerationService:
 
         for attempt in range(1, self.MAX_GENERATION_ATTEMPTS + 1):
             compact_mode = attempt > 1
+            subject_kind, subject_name = self._subject_info(axis)
             prompt = build_bac_like_exercise_prompt(
+                subject_kind=subject_kind,
+                subject_name=subject_name,
                 axis_title=axis.title,
                 axis_tag=axis.tag,
                 lesson_context=lesson_context,
@@ -128,6 +131,7 @@ class ExerciseGenerationService:
             try:
                 generated = self.generator.generate_one(
                     prompt=prompt,
+                    subject_kind=subject_kind,
                     max_output_tokens=3200 if compact_mode else 3800,
                 )
                 graph_ready = ensure_graph_payload(
@@ -206,6 +210,17 @@ class ExerciseGenerationService:
             "model_name": model_name,
             "raw_ai_response": raw_ai_response,
         }
+
+
+    @staticmethod
+    def _subject_info(axis: Axis) -> tuple[str, str]:
+        subject = getattr(getattr(axis, "chapter", None), "subject", None)
+        name = str(getattr(subject, "name", "") or "").strip()
+        code = str(getattr(subject, "code", "") or "").strip()
+        source = f"{code} {name}".lower()
+        if any(token in source for token in ("phys", "physics", "فيزياء")):
+            return "physics", name or "الفيزياء"
+        return "math", name or "الرياضيات"
 
     @staticmethod
     def _get_axis(axis_id: int) -> Axis:

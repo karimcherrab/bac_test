@@ -1,0 +1,1296 @@
+{
+  "version": 1,
+  "language": "ar",
+  "direction": "rtl",
+  "subject_code": "phy",
+  "chapter_code": "electrical_phenomena_evolution",
+  "tag": "rl_time_constant_graphical_analysis",
+  "title": "ثابت الزمن والاستغلال البياني في دارة RL — تمارين مستقلة",
+  "question_count": 15,
+  "scope_note": "15 تمرينًا مستقلة خاصة بالمحور العاشر، مركزة على القراءة والاستغلال البياني: 63%، المماس عند الأصل، I∞، r، L، E، منحنيات uR وub والتحقق من معقولية النتائج.",
+  "questions": [
+    {
+      "id": "rl_graphical_analysis_01",
+      "year": null,
+      "exercise": "تمرين مستقل خاص بالمحور العاشر",
+      "number": "1",
+      "title": "التحليل البعدي لثابت الزمن",
+      "text": "لدارة RL يكون:\n\\[\n\\tau=\\frac{L}{R+r}.\n\\]\nأثبت بالتحليل البعدي أن \\(\\tau\\) يقاس بالثانية.",
+      "standalone_text": "لدارة RL يكون:\n\\[\n\\tau=\\frac{L}{R+r}.\n\\]\nأثبت بالتحليل البعدي أن \\(\\tau\\) يقاس بالثانية.",
+      "skill": "التحليل البعدي",
+      "difficulty": "easy",
+      "is_standalone": true,
+      "source_reference": {
+        "axis_tag": "rl_time_constant_graphical_analysis",
+        "label": "مبني مباشرة على محتوى محور ثابت الزمن والاستغلال البياني في دارة RL"
+      },
+      "solution": {
+        "title": "الحل: التحليل البعدي لثابت الزمن",
+        "main_idea": "نستعمل وحدتي الذاتية والمقاومة.",
+        "detailed_explanation": "نبدأ بقراءة ما يعطيه البيان مباشرة، ثم نستعمل علاقات دارة RL لاستخراج المجهول خطوة بخطوة.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "وحدة L",
+            "explanation": "من \\(u_L=L\\frac{di}{dt}\\): \\([L]=V\\cdot s/A\\).",
+            "rule_used": "علاقة الوشيعة",
+            "why": "عزل وحدة L.",
+            "result": "\\([L]=V.s/A\\)"
+          },
+          {
+            "order": 2,
+            "title": "وحدة المقاومة",
+            "explanation": "\\([R]=V/A\\).",
+            "rule_used": "قانون أوم",
+            "why": "R وr لهما نفس الوحدة.",
+            "result": "\\([R+r]=V/A\\)"
+          },
+          {
+            "order": 3,
+            "title": "وحدة τ",
+            "explanation": "\\([\\tau]=(V.s/A)/(V/A)=s\\).",
+            "rule_used": "تحليل بعدي",
+            "why": "تختزل V وA.",
+            "result": "\\([\\tau]=s\\)"
+          }
+        ],
+        "final_answer": "\\(\\boxed{[\\tau]=s}\\).",
+        "verification": "نتحقق من الوحدات، ومن أن r≥0 وL>0، ومن توافق القيم الابتدائية والنهائية مع طبيعة المنحنى.",
+        "hints": [
+          {
+            "level": 1,
+            "hint": "حدد أولًا نوع المنحنى والقيمة النهائية."
+          },
+          {
+            "level": 2,
+            "hint": "تذكر: \\(i(\\tau)\\approx0.63I_\\infty\\)، و\\(\\tau=L/(R+r)\\)."
+          }
+        ],
+        "bac_writing": [
+          "حدد المحورين ووحداتهما.",
+          "اقرأ القيمة النهائية بوضوح.",
+          "بيّن طريقة استخراج τ.",
+          "حوّل ms إلى s قبل حساب L.",
+          "اكتب العلاقة ثم التعويض ثم النتيجة."
+        ],
+        "presentation": {
+          "show_one_step_at_a_time": true
+        }
+      }
+    },
+    {
+      "id": "rl_graphical_analysis_02",
+      "year": null,
+      "exercise": "تمرين مستقل خاص بالمحور العاشر",
+      "number": "2",
+      "title": "استخراج τ بطريقة 63%",
+      "text": "يمثل البيان تطور \\(i/I_\\infty\\) بدلالة \\(t/\\tau\\).\nاستعمل طريقة \\(63\\%\\) لتحديد الموضع الموافق لثابت الزمن.",
+      "standalone_text": "يمثل البيان تطور \\(i/I_\\infty\\) بدلالة \\(t/\\tau\\).\nاستعمل طريقة \\(63\\%\\) لتحديد الموضع الموافق لثابت الزمن.",
+      "skill": "طريقة 63%",
+      "difficulty": "easy",
+      "is_standalone": true,
+      "source_reference": {
+        "axis_tag": "rl_time_constant_graphical_analysis",
+        "label": "مبني مباشرة على محتوى محور ثابت الزمن والاستغلال البياني في دارة RL"
+      },
+      "solution": {
+        "title": "الحل: استخراج τ بطريقة 63%",
+        "main_idea": "عند t=τ يبلغ التيار 63% تقريبًا من قيمته النهائية.",
+        "detailed_explanation": "نبدأ بقراءة ما يعطيه البيان مباشرة، ثم نستعمل علاقات دارة RL لاستخراج المجهول خطوة بخطوة.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "القيمة المرجعية",
+            "explanation": "\\(i(\\tau)=0.63I_\\infty\\).",
+            "rule_used": "خاصية الحل الأسي",
+            "why": "هذه الخاصية تحدد τ مباشرة.",
+            "result": "\\(i/I_\\infty=0.63\\)"
+          },
+          {
+            "order": 2,
+            "title": "القراءة البيانية",
+            "explanation": "من المستوى 0.63 نصل إلى المنحنى ثم نسقط على محور الزمن.",
+            "rule_used": "قراءة بيان",
+            "why": "الإسقاط يعطي الزمن الموافق.",
+            "result": "\\(t/\\tau=1\\)"
+          }
+        ],
+        "final_answer": "\\(\\boxed{t=\\tau}\\).",
+        "verification": "نتحقق من الوحدات، ومن أن r≥0 وL>0، ومن توافق القيم الابتدائية والنهائية مع طبيعة المنحنى.",
+        "hints": [
+          {
+            "level": 1,
+            "hint": "حدد أولًا نوع المنحنى والقيمة النهائية."
+          },
+          {
+            "level": 2,
+            "hint": "تذكر: \\(i(\\tau)\\approx0.63I_\\infty\\)، و\\(\\tau=L/(R+r)\\)."
+          }
+        ],
+        "bac_writing": [
+          "حدد المحورين ووحداتهما.",
+          "اقرأ القيمة النهائية بوضوح.",
+          "بيّن طريقة استخراج τ.",
+          "حوّل ms إلى s قبل حساب L.",
+          "اكتب العلاقة ثم التعويض ثم النتيجة."
+        ],
+        "presentation": {
+          "show_one_step_at_a_time": true
+        }
+      },
+      "graph_data": {
+        "title": "تحديد ثابت الزمن من منحنى شدة التيار",
+        "description": "عند t = τ تبلغ شدة التيار تقريبًا 63% من قيمتها النهائية I∞.",
+        "x_label": "t / τ",
+        "y_label": "i / I∞",
+        "x_domain": [
+          0,
+          5
+        ],
+        "y_domain": [
+          0,
+          1.08
+        ],
+        "series": [
+          {
+            "name": "i(t) / I∞",
+            "data": [
+              {
+                "x": 0,
+                "y": 0.0
+              },
+              {
+                "x": 0.25,
+                "y": 0.2212
+              },
+              {
+                "x": 0.5,
+                "y": 0.3935
+              },
+              {
+                "x": 0.75,
+                "y": 0.5276
+              },
+              {
+                "x": 1,
+                "y": 0.6321
+              },
+              {
+                "x": 1.5,
+                "y": 0.7769
+              },
+              {
+                "x": 2,
+                "y": 0.8647
+              },
+              {
+                "x": 2.5,
+                "y": 0.9179
+              },
+              {
+                "x": 3,
+                "y": 0.9502
+              },
+              {
+                "x": 4,
+                "y": 0.9817
+              },
+              {
+                "x": 5,
+                "y": 0.9933
+              }
+            ]
+          },
+          {
+            "name": "i = 0.63 I∞",
+            "data": [
+              {
+                "x": 0,
+                "y": 0.63
+              },
+              {
+                "x": 5,
+                "y": 0.63
+              }
+            ]
+          },
+          {
+            "name": "t = τ",
+            "data": [
+              {
+                "x": 1,
+                "y": 0
+              },
+              {
+                "x": 1,
+                "y": 0.6321
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "show_grid": true,
+          "show_axes": true,
+          "show_legend": true,
+          "show_point_labels": false,
+          "connect_points": true
+        }
+      }
+    },
+    {
+      "id": "rl_graphical_analysis_03",
+      "year": null,
+      "exercise": "تمرين مستقل خاص بالمحور العاشر",
+      "number": "3",
+      "title": "تحديد τ من منحنى عددي",
+      "text": "من منحنى شدة التيار نقرأ:\n\\[\nI_\\infty=0.40A.\n\\]\nويبلغ التيار \\(0.252A\\) عند \\(t=12ms\\).\nحدد ثابت الزمن \\(\\tau\\).",
+      "standalone_text": "من منحنى شدة التيار نقرأ:\n\\[\nI_\\infty=0.40A.\n\\]\nويبلغ التيار \\(0.252A\\) عند \\(t=12ms\\).\nحدد ثابت الزمن \\(\\tau\\).",
+      "skill": "طريقة 63%",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "source_reference": {
+        "axis_tag": "rl_time_constant_graphical_analysis",
+        "label": "مبني مباشرة على محتوى محور ثابت الزمن والاستغلال البياني في دارة RL"
+      },
+      "solution": {
+        "title": "الحل: تحديد τ من منحنى عددي",
+        "main_idea": "نقارن القيمة المعطاة بـ 0.63I∞.",
+        "detailed_explanation": "نبدأ بقراءة ما يعطيه البيان مباشرة، ثم نستعمل علاقات دارة RL لاستخراج المجهول خطوة بخطوة.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "حساب 63%",
+            "explanation": "\\(0.63I_\\infty=0.63\\times0.40=0.252A\\).",
+            "rule_used": "طريقة 63%",
+            "why": "القيمة توافق تمامًا التيار المعطى.",
+            "result": "\\(0.63I_\\infty=0.252A\\)"
+          },
+          {
+            "order": 2,
+            "title": "استخراج τ",
+            "explanation": "الزمن الموافق لـ \\(0.63I_\\infty\\) هو \\(\\tau\\).",
+            "rule_used": "تعريف بياني",
+            "why": "المعطى يقول إن ذلك يحدث عند 12 ms.",
+            "result": "\\(\\tau=12ms\\)"
+          }
+        ],
+        "final_answer": "\\(\\boxed{\\tau=12ms}\\).",
+        "verification": "نتحقق من الوحدات، ومن أن r≥0 وL>0، ومن توافق القيم الابتدائية والنهائية مع طبيعة المنحنى.",
+        "hints": [
+          {
+            "level": 1,
+            "hint": "حدد أولًا نوع المنحنى والقيمة النهائية."
+          },
+          {
+            "level": 2,
+            "hint": "تذكر: \\(i(\\tau)\\approx0.63I_\\infty\\)، و\\(\\tau=L/(R+r)\\)."
+          }
+        ],
+        "bac_writing": [
+          "حدد المحورين ووحداتهما.",
+          "اقرأ القيمة النهائية بوضوح.",
+          "بيّن طريقة استخراج τ.",
+          "حوّل ms إلى s قبل حساب L.",
+          "اكتب العلاقة ثم التعويض ثم النتيجة."
+        ],
+        "presentation": {
+          "show_one_step_at_a_time": true
+        }
+      }
+    },
+    {
+      "id": "rl_graphical_analysis_04",
+      "year": null,
+      "exercise": "تمرين مستقل خاص بالمحور العاشر",
+      "number": "4",
+      "title": "طريقة المماس عند الأصل",
+      "text": "يبين الشكل منحنى إقامة التيار في دارة RL والمماس المرسوم عند \\(t=0\\).\nاشرح كيف نستخرج \\(\\tau\\) باستعمال هذا المماس.",
+      "standalone_text": "يبين الشكل منحنى إقامة التيار في دارة RL والمماس المرسوم عند \\(t=0\\).\nاشرح كيف نستخرج \\(\\tau\\) باستعمال هذا المماس.",
+      "skill": "المماس عند الأصل",
+      "difficulty": "easy",
+      "is_standalone": true,
+      "source_reference": {
+        "axis_tag": "rl_time_constant_graphical_analysis",
+        "label": "مبني مباشرة على محتوى محور ثابت الزمن والاستغلال البياني في دارة RL"
+      },
+      "solution": {
+        "title": "الحل: طريقة المماس عند الأصل",
+        "main_idea": "تقاطع مماس الأصل مع الأفقية النهائية I∞ يحدد τ.",
+        "detailed_explanation": "نبدأ بقراءة ما يعطيه البيان مباشرة، ثم نستعمل علاقات دارة RL لاستخراج المجهول خطوة بخطوة.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "المماس",
+            "explanation": "نرسم المماس للمنحنى عند الأصل فقط.",
+            "rule_used": "طريقة المماس",
+            "why": "ميل البداية يحمل المعلومة الزمنية.",
+            "result": ""
+          },
+          {
+            "order": 2,
+            "title": "التقاطع",
+            "explanation": "نمد المماس حتى يقطع المستقيم \\(i=I_\\infty\\).",
+            "rule_used": "إنشاء بياني",
+            "why": "نقطة التقاطع هي المرجع.",
+            "result": ""
+          },
+          {
+            "order": 3,
+            "title": "الإسقاط",
+            "explanation": "نسقط نقطة التقاطع عموديًا على محور الزمن.",
+            "rule_used": "قراءة بيان",
+            "why": "الزمن المقروء هو ثابت الزمن.",
+            "result": "\\(t=\\tau\\)"
+          }
+        ],
+        "final_answer": "الزمن الناتج عن إسقاط تقاطع مماس الأصل مع \\(i=I_\\infty\\) هو \\(\\boxed{\\tau}\\).",
+        "verification": "نتحقق من الوحدات، ومن أن r≥0 وL>0، ومن توافق القيم الابتدائية والنهائية مع طبيعة المنحنى.",
+        "hints": [
+          {
+            "level": 1,
+            "hint": "حدد أولًا نوع المنحنى والقيمة النهائية."
+          },
+          {
+            "level": 2,
+            "hint": "تذكر: \\(i(\\tau)\\approx0.63I_\\infty\\)، و\\(\\tau=L/(R+r)\\)."
+          }
+        ],
+        "bac_writing": [
+          "حدد المحورين ووحداتهما.",
+          "اقرأ القيمة النهائية بوضوح.",
+          "بيّن طريقة استخراج τ.",
+          "حوّل ms إلى s قبل حساب L.",
+          "اكتب العلاقة ثم التعويض ثم النتيجة."
+        ],
+        "presentation": {
+          "show_one_step_at_a_time": true
+        }
+      },
+      "graph_data": {
+        "title": "طريقة المماس في دارة RL",
+        "description": "تقاطع المماس عند الأصل مع المستوى النهائي I∞ يعطي τ.",
+        "svg": "\n<svg viewBox=\"0 0 920 470\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"تحديد ثابت الزمن في دارة RL بطريقة المماس عند الأصل\">\n  <rect x=\"45\" y=\"30\" width=\"830\" height=\"390\" rx=\"22\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"2\"/>\n  <line x1=\"120\" y1=\"370\" x2=\"815\" y2=\"370\" stroke=\"#334155\" stroke-width=\"4\"/>\n  <line x1=\"120\" y1=\"370\" x2=\"120\" y2=\"75\" stroke=\"#334155\" stroke-width=\"4\"/>\n  <text x=\"825\" y=\"380\" font-size=\"24\" font-family=\"Arial\">t</text>\n  <text x=\"82\" y=\"82\" font-size=\"24\" font-family=\"Arial\">i</text>\n\n  <line x1=\"120\" y1=\"105\" x2=\"785\" y2=\"105\" stroke=\"#64748b\" stroke-width=\"3\" stroke-dasharray=\"10 9\"/>\n  <text x=\"65\" y=\"112\" font-size=\"23\" font-family=\"Arial\">I∞</text>\n\n  <path d=\"M120 370 C190 270 270 190 365 145 C480 100 630 105 785 105\"\n        fill=\"none\" stroke=\"#4f46e5\" stroke-width=\"6\"/>\n\n  <line x1=\"120\" y1=\"370\" x2=\"405\" y2=\"105\" stroke=\"#dc2626\" stroke-width=\"4\"/>\n  <line x1=\"405\" y1=\"105\" x2=\"405\" y2=\"370\" stroke=\"#dc2626\" stroke-width=\"3\" stroke-dasharray=\"8 8\"/>\n  <text x=\"387\" y=\"405\" font-size=\"25\" font-family=\"Arial\" fill=\"#991b1b\">τ</text>\n  <text x=\"220\" y=\"275\" font-size=\"22\" font-family=\"Arial\" fill=\"#991b1b\">tangente à t=0</text>\n</svg>\n",
+        "render_mode": "inline_step",
+        "responsive": true,
+        "diagram_type": "rl_tau_tangent"
+      }
+    },
+    {
+      "id": "rl_graphical_analysis_05",
+      "year": null,
+      "exercise": "تمرين مستقل خاص بالمحور العاشر",
+      "number": "5",
+      "title": "استخراج r من القيمة النهائية للتيار",
+      "text": "في تجربة RL:\n\\[\nE=12V,\\quad R=50\\Omega.\n\\]\nومن البيان نقرأ:\n\\[\nI_\\infty=0.20A.\n\\]\nاحسب المقاومة الداخلية \\(r\\) للوشيعة.",
+      "standalone_text": "في تجربة RL:\n\\[\nE=12V,\\quad R=50\\Omega.\n\\]\nومن البيان نقرأ:\n\\[\nI_\\infty=0.20A.\n\\]\nاحسب المقاومة الداخلية \\(r\\) للوشيعة.",
+      "skill": "استخراج r",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "source_reference": {
+        "axis_tag": "rl_time_constant_graphical_analysis",
+        "label": "مبني مباشرة على محتوى محور ثابت الزمن والاستغلال البياني في دارة RL"
+      },
+      "solution": {
+        "title": "الحل: استخراج r من القيمة النهائية للتيار",
+        "main_idea": "القيمة النهائية تكشف المقاومة الكلية.",
+        "detailed_explanation": "نبدأ بقراءة ما يعطيه البيان مباشرة، ثم نستعمل علاقات دارة RL لاستخراج المجهول خطوة بخطوة.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "المقاومة الكلية",
+            "explanation": "\\(R+r=\\frac{E}{I_\\infty}=\\frac{12}{0.20}=60\\Omega\\).",
+            "rule_used": "التيار النهائي",
+            "why": "في النظام الدائم الدارة مقاومية.",
+            "result": "\\(R+r=60\\Omega\\)"
+          },
+          {
+            "order": 2,
+            "title": "عزل r",
+            "explanation": "\\(r=60-50=10\\Omega\\).",
+            "rule_used": "طرح R",
+            "why": "المطلوب المقاومة الداخلية فقط.",
+            "result": "\\(r=10\\Omega\\)"
+          }
+        ],
+        "final_answer": "\\(\\boxed{r=10\\Omega}\\).",
+        "verification": "نتحقق من الوحدات، ومن أن r≥0 وL>0، ومن توافق القيم الابتدائية والنهائية مع طبيعة المنحنى.",
+        "hints": [
+          {
+            "level": 1,
+            "hint": "حدد أولًا نوع المنحنى والقيمة النهائية."
+          },
+          {
+            "level": 2,
+            "hint": "تذكر: \\(i(\\tau)\\approx0.63I_\\infty\\)، و\\(\\tau=L/(R+r)\\)."
+          }
+        ],
+        "bac_writing": [
+          "حدد المحورين ووحداتهما.",
+          "اقرأ القيمة النهائية بوضوح.",
+          "بيّن طريقة استخراج τ.",
+          "حوّل ms إلى s قبل حساب L.",
+          "اكتب العلاقة ثم التعويض ثم النتيجة."
+        ],
+        "presentation": {
+          "show_one_step_at_a_time": true
+        }
+      }
+    },
+    {
+      "id": "rl_graphical_analysis_06",
+      "year": null,
+      "exercise": "تمرين مستقل خاص بالمحور العاشر",
+      "number": "6",
+      "title": "استخراج L بعد قراءة τ",
+      "text": "من بيان دارة RL استخرجنا:\n\\[\n\\tau=10ms.\n\\]\nكما أن:\n\\[\nR=50\\Omega,\\quad r=10\\Omega.\n\\]\nاحسب الذاتية \\(L\\).",
+      "standalone_text": "من بيان دارة RL استخرجنا:\n\\[\n\\tau=10ms.\n\\]\nكما أن:\n\\[\nR=50\\Omega,\\quad r=10\\Omega.\n\\]\nاحسب الذاتية \\(L\\).",
+      "skill": "استخراج L",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "source_reference": {
+        "axis_tag": "rl_time_constant_graphical_analysis",
+        "label": "مبني مباشرة على محتوى محور ثابت الزمن والاستغلال البياني في دارة RL"
+      },
+      "solution": {
+        "title": "الحل: استخراج L بعد قراءة τ",
+        "main_idea": "نحوّل الزمن إلى الثانية ثم نستعمل L=τ(R+r).",
+        "detailed_explanation": "نبدأ بقراءة ما يعطيه البيان مباشرة، ثم نستعمل علاقات دارة RL لاستخراج المجهول خطوة بخطوة.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "التحويل",
+            "explanation": "\\(10ms=0.010s\\).",
+            "rule_used": "SI",
+            "why": "الهنري يتطلب الثانية والأوم.",
+            "result": "\\(\\tau=0.010s\\)"
+          },
+          {
+            "order": 2,
+            "title": "المقاومة الكلية",
+            "explanation": "\\(R+r=60\\Omega\\).",
+            "rule_used": "جمع المقاومات",
+            "why": "الدارة تسلسلية.",
+            "result": "\\(60\\Omega\\)"
+          },
+          {
+            "order": 3,
+            "title": "الذاتية",
+            "explanation": "\\(L=0.010\\times60=0.60H\\).",
+            "rule_used": "\\(L=\tau(R+r)\\)",
+            "why": "تعويض مباشر.",
+            "result": "\\(L=0.60H\\)"
+          }
+        ],
+        "final_answer": "\\(\\boxed{L=0.60H}\\).",
+        "verification": "نتحقق من الوحدات، ومن أن r≥0 وL>0، ومن توافق القيم الابتدائية والنهائية مع طبيعة المنحنى.",
+        "hints": [
+          {
+            "level": 1,
+            "hint": "حدد أولًا نوع المنحنى والقيمة النهائية."
+          },
+          {
+            "level": 2,
+            "hint": "تذكر: \\(i(\\tau)\\approx0.63I_\\infty\\)، و\\(\\tau=L/(R+r)\\)."
+          }
+        ],
+        "bac_writing": [
+          "حدد المحورين ووحداتهما.",
+          "اقرأ القيمة النهائية بوضوح.",
+          "بيّن طريقة استخراج τ.",
+          "حوّل ms إلى s قبل حساب L.",
+          "اكتب العلاقة ثم التعويض ثم النتيجة."
+        ],
+        "presentation": {
+          "show_one_step_at_a_time": true
+        }
+      }
+    },
+    {
+      "id": "rl_graphical_analysis_07",
+      "year": null,
+      "exercise": "تمرين مستقل خاص بالمحور العاشر",
+      "number": "7",
+      "title": "استخراج r وL من بيان i(t)",
+      "text": "لدارة RL:\n\\[\nE=12V,\\quad R=50\\Omega.\n\\]\nتعطي القراءة البيانية:\n\\[\nI_\\infty=0.20A,\\qquad \\tau=10ms.\n\\]\nاستنتج \\(r\\) و\\(L\\).",
+      "standalone_text": "لدارة RL:\n\\[\nE=12V,\\quad R=50\\Omega.\n\\]\nتعطي القراءة البيانية:\n\\[\nI_\\infty=0.20A,\\qquad \\tau=10ms.\n\\]\nاستنتج \\(r\\) و\\(L\\).",
+      "skill": "استغلال كامل لمنحنى i(t)",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "source_reference": {
+        "axis_tag": "rl_time_constant_graphical_analysis",
+        "label": "مبني مباشرة على محتوى محور ثابت الزمن والاستغلال البياني في دارة RL"
+      },
+      "solution": {
+        "title": "الحل: استخراج r وL من بيان i(t)",
+        "main_idea": "نستخرج r من الهضبة ثم L من τ.",
+        "detailed_explanation": "نبدأ بقراءة ما يعطيه البيان مباشرة، ثم نستعمل علاقات دارة RL لاستخراج المجهول خطوة بخطوة.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "r",
+            "explanation": "\\(r=\\frac{12}{0.20}-50=60-50=10\\Omega\\).",
+            "rule_used": "\\(r=E/I_\\infty-R\\)",
+            "why": "I∞ تعطي المقاومة الكلية.",
+            "result": "\\(r=10\\Omega\\)"
+          },
+          {
+            "order": 2,
+            "title": "تحويل τ",
+            "explanation": "\\(10ms=0.010s\\).",
+            "rule_used": "تحويل",
+            "why": "قبل حساب L.",
+            "result": "\\(0.010s\\)"
+          },
+          {
+            "order": 3,
+            "title": "L",
+            "explanation": "\\(L=0.010(50+10)=0.60H\\).",
+            "rule_used": "\\(L=\tau(R+r)\\)",
+            "why": "تعويض القيم.",
+            "result": "\\(L=0.60H\\)"
+          }
+        ],
+        "final_answer": "\\(\\boxed{r=10\\Omega,\\quad L=0.60H}\\).",
+        "verification": "نتحقق من الوحدات، ومن أن r≥0 وL>0، ومن توافق القيم الابتدائية والنهائية مع طبيعة المنحنى.",
+        "hints": [
+          {
+            "level": 1,
+            "hint": "حدد أولًا نوع المنحنى والقيمة النهائية."
+          },
+          {
+            "level": 2,
+            "hint": "تذكر: \\(i(\\tau)\\approx0.63I_\\infty\\)، و\\(\\tau=L/(R+r)\\)."
+          }
+        ],
+        "bac_writing": [
+          "حدد المحورين ووحداتهما.",
+          "اقرأ القيمة النهائية بوضوح.",
+          "بيّن طريقة استخراج τ.",
+          "حوّل ms إلى s قبل حساب L.",
+          "اكتب العلاقة ثم التعويض ثم النتيجة."
+        ],
+        "presentation": {
+          "show_one_step_at_a_time": true
+        }
+      }
+    },
+    {
+      "id": "rl_graphical_analysis_08",
+      "year": null,
+      "exercise": "تمرين مستقل خاص بالمحور العاشر",
+      "number": "8",
+      "title": "استخراج E وr من منحنى u_b",
+      "text": "يمثل البيان توتر الوشيعة الحقيقية \\(u_b(t)\\).\nمن القراءة نجد:\n\\[\nu_b(0)=10V,\\qquad u_b(\\infty)=2V.\n\\]\nإذا كان:\n\\[\nI_\\infty=0.20A,\n\\]\nاستنتج \\(E\\) و\\(r\\).",
+      "standalone_text": "يمثل البيان توتر الوشيعة الحقيقية \\(u_b(t)\\).\nمن القراءة نجد:\n\\[\nu_b(0)=10V,\\qquad u_b(\\infty)=2V.\n\\]\nإذا كان:\n\\[\nI_\\infty=0.20A,\n\\]\nاستنتج \\(E\\) و\\(r\\).",
+      "skill": "استغلال منحنى توتر الوشيعة",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "source_reference": {
+        "axis_tag": "rl_time_constant_graphical_analysis",
+        "label": "مبني مباشرة على محتوى محور ثابت الزمن والاستغلال البياني في دارة RL"
+      },
+      "solution": {
+        "title": "الحل: استخراج E وr من منحنى u_b",
+        "main_idea": "قيمة البداية تعطي E والنهاية تعطي rI∞.",
+        "detailed_explanation": "نبدأ بقراءة ما يعطيه البيان مباشرة، ثم نستعمل علاقات دارة RL لاستخراج المجهول خطوة بخطوة.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "المولد",
+            "explanation": "\\(u_b(0)=E\\Rightarrow E=10V\\).",
+            "rule_used": "الحالة الابتدائية",
+            "why": "uR(0)=0.",
+            "result": "\\(E=10V\\)"
+          },
+          {
+            "order": 2,
+            "title": "المقاومة الداخلية",
+            "explanation": "\\(u_b(\\infty)=rI_\\infty\\Rightarrow r=\\frac{2}{0.20}=10\\Omega\\).",
+            "rule_used": "النظام الدائم",
+            "why": "الجزء التحريضي يختفي.",
+            "result": "\\(r=10\\Omega\\)"
+          }
+        ],
+        "final_answer": "\\(\\boxed{E=10V,\\quad r=10\\Omega}\\).",
+        "verification": "نتحقق من الوحدات، ومن أن r≥0 وL>0، ومن توافق القيم الابتدائية والنهائية مع طبيعة المنحنى.",
+        "hints": [
+          {
+            "level": 1,
+            "hint": "حدد أولًا نوع المنحنى والقيمة النهائية."
+          },
+          {
+            "level": 2,
+            "hint": "تذكر: \\(i(\\tau)\\approx0.63I_\\infty\\)، و\\(\\tau=L/(R+r)\\)."
+          }
+        ],
+        "bac_writing": [
+          "حدد المحورين ووحداتهما.",
+          "اقرأ القيمة النهائية بوضوح.",
+          "بيّن طريقة استخراج τ.",
+          "حوّل ms إلى s قبل حساب L.",
+          "اكتب العلاقة ثم التعويض ثم النتيجة."
+        ],
+        "presentation": {
+          "show_one_step_at_a_time": true
+        }
+      },
+      "graph_data": {
+        "title": "التطور النوعي لتوتر الوشيعة",
+        "description": "توتر الوشيعة الحقيقية ينطلق من E ثم يتناقص نحو القيمة rI∞ في النظام الدائم.",
+        "x_label": "t / τ",
+        "y_label": "قيمة نسبية",
+        "x_domain": [
+          0,
+          5
+        ],
+        "y_domain": [
+          0,
+          1.08
+        ],
+        "series": [
+          {
+            "name": "الجزء التحريضي النسبي",
+            "data": [
+              {
+                "x": 0,
+                "y": 1.0
+              },
+              {
+                "x": 0.25,
+                "y": 0.7788
+              },
+              {
+                "x": 0.5,
+                "y": 0.6065
+              },
+              {
+                "x": 0.75,
+                "y": 0.4724
+              },
+              {
+                "x": 1,
+                "y": 0.3679
+              },
+              {
+                "x": 1.5,
+                "y": 0.2231
+              },
+              {
+                "x": 2,
+                "y": 0.1353
+              },
+              {
+                "x": 2.5,
+                "y": 0.0821
+              },
+              {
+                "x": 3,
+                "y": 0.0498
+              },
+              {
+                "x": 4,
+                "y": 0.0183
+              },
+              {
+                "x": 5,
+                "y": 0.0067
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "show_grid": true,
+          "show_axes": true,
+          "show_legend": true,
+          "show_point_labels": false,
+          "connect_points": true
+        }
+      }
+    },
+    {
+      "id": "rl_graphical_analysis_09",
+      "year": null,
+      "exercise": "تمرين مستقل خاص بالمحور العاشر",
+      "number": "9",
+      "title": "استخراج I∞ من منحنى u_R",
+      "text": "يسجل جهاز الاقتناء توتر المقاومة \\(u_R(t)\\) في دارة RL.\nإذا كانت:\n\\[\nR=40\\Omega\n\\]\nوكانت الهضبة النهائية للمنحنى:\n\\[\nu_R(\\infty)=8V,\n\\]\nاحسب \\(I_\\infty\\).",
+      "standalone_text": "يسجل جهاز الاقتناء توتر المقاومة \\(u_R(t)\\) في دارة RL.\nإذا كانت:\n\\[\nR=40\\Omega\n\\]\nوكانت الهضبة النهائية للمنحنى:\n\\[\nu_R(\\infty)=8V,\n\\]\nاحسب \\(I_\\infty\\).",
+      "skill": "متابعة التيار بواسطة uR",
+      "difficulty": "easy",
+      "is_standalone": true,
+      "source_reference": {
+        "axis_tag": "rl_time_constant_graphical_analysis",
+        "label": "مبني مباشرة على محتوى محور ثابت الزمن والاستغلال البياني في دارة RL"
+      },
+      "solution": {
+        "title": "الحل: استخراج I∞ من منحنى u_R",
+        "main_idea": "نطبق قانون أوم على المقاومة.",
+        "detailed_explanation": "نبدأ بقراءة ما يعطيه البيان مباشرة، ثم نستعمل علاقات دارة RL لاستخراج المجهول خطوة بخطوة.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "العلاقة",
+            "explanation": "\\(I_\\infty=\\frac{u_R(\\infty)}{R}\\).",
+            "rule_used": "قانون أوم",
+            "why": "uR=Ri.",
+            "result": ""
+          },
+          {
+            "order": 2,
+            "title": "الحساب",
+            "explanation": "\\(I_\\infty=\\frac{8}{40}=0.20A\\).",
+            "rule_used": "تعويض",
+            "why": "قسمة الفولت على الأوم تعطي الأمبير.",
+            "result": "\\(I_\\infty=0.20A\\)"
+          }
+        ],
+        "final_answer": "\\(\\boxed{I_\\infty=0.20A}\\).",
+        "verification": "نتحقق من الوحدات، ومن أن r≥0 وL>0، ومن توافق القيم الابتدائية والنهائية مع طبيعة المنحنى.",
+        "hints": [
+          {
+            "level": 1,
+            "hint": "حدد أولًا نوع المنحنى والقيمة النهائية."
+          },
+          {
+            "level": 2,
+            "hint": "تذكر: \\(i(\\tau)\\approx0.63I_\\infty\\)، و\\(\\tau=L/(R+r)\\)."
+          }
+        ],
+        "bac_writing": [
+          "حدد المحورين ووحداتهما.",
+          "اقرأ القيمة النهائية بوضوح.",
+          "بيّن طريقة استخراج τ.",
+          "حوّل ms إلى s قبل حساب L.",
+          "اكتب العلاقة ثم التعويض ثم النتيجة."
+        ],
+        "presentation": {
+          "show_one_step_at_a_time": true
+        }
+      },
+      "graph_data": {
+        "title": "متابعة i(t) بواسطة قياس u_R(t)",
+        "description": "يمكن لجهاز ExAO أو راسم الاهتزاز تسجيل u_R(t)، ثم نحصل على التيار من قانون أوم.",
+        "svg": "\n<svg viewBox=\"0 0 960 430\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"قياس التوترات في دارة RL بواسطة جهاز اقتناء\">\n  <defs>\n    <marker id=\"m10\" markerWidth=\"10\" markerHeight=\"10\" refX=\"8\" refY=\"3\" orient=\"auto\">\n      <path d=\"M0,0 L0,6 L9,3 z\" fill=\"#4f46e5\"/>\n    </marker>\n  </defs>\n  <rect x=\"35\" y=\"30\" width=\"890\" height=\"350\" rx=\"24\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"2\"/>\n  <path d=\"M160 120 H710 V305 H160 Z\" fill=\"none\" stroke=\"#334155\" stroke-width=\"5\"/>\n\n  <line x1=\"135\" y1=\"185\" x2=\"185\" y2=\"185\" stroke=\"#111827\" stroke-width=\"4\"/>\n  <line x1=\"145\" y1=\"230\" x2=\"175\" y2=\"230\" stroke=\"#111827\" stroke-width=\"4\"/>\n  <text x=\"103\" y=\"192\" font-size=\"27\" font-family=\"Arial\">+</text>\n  <text x=\"104\" y=\"239\" font-size=\"28\" font-family=\"Arial\">−</text>\n  <text x=\"98\" y=\"272\" font-size=\"23\" font-family=\"Arial\">E</text>\n\n  <rect x=\"365\" y=\"94\" width=\"110\" height=\"52\" rx=\"8\" fill=\"#fff\" stroke=\"#111827\" stroke-width=\"3\"/>\n  <text x=\"408\" y=\"128\" font-size=\"25\" font-family=\"Arial\">R</text>\n\n  <path d=\"M540 120 c0 -35 42 -35 42 0 c0 -35 42 -35 42 0 c0 -35 42 -35 42 0 c0 -35 42 -35 42 0\"\n        fill=\"none\" stroke=\"#111827\" stroke-width=\"5\"/>\n  <text x=\"600\" y=\"76\" font-size=\"22\" font-family=\"Arial\">L,r</text>\n\n  <rect x=\"745\" y=\"115\" width=\"140\" height=\"110\" rx=\"16\" fill=\"#eef2ff\" stroke=\"#818cf8\" stroke-width=\"3\"/>\n  <path d=\"M765 175 C780 140 800 210 820 165 C840 135 855 195 870 150\" fill=\"none\" stroke=\"#4f46e5\" stroke-width=\"3\"/>\n  <text x=\"755\" y=\"255\" font-size=\"19\" font-family=\"Arial\">ExAO / oscilloscope</text>\n\n  <line x1=\"420\" y1=\"150\" x2=\"420\" y2=\"270\" stroke=\"#4f46e5\" stroke-width=\"3\"/>\n  <line x1=\"420\" y1=\"270\" x2=\"745\" y2=\"270\" stroke=\"#4f46e5\" stroke-width=\"3\" marker-end=\"url(#m10)\"/>\n  <text x=\"470\" y=\"295\" font-size=\"20\" font-family=\"Arial\" fill=\"#3730a3\">u_R(t) ⇒ i(t)=u_R/R</text>\n</svg>\n",
+        "render_mode": "inline_step",
+        "responsive": true,
+        "diagram_type": "rl_voltage_measurement"
+      }
+    },
+    {
+      "id": "rl_graphical_analysis_10",
+      "year": null,
+      "exercise": "تمرين مستقل خاص بالمحور العاشر",
+      "number": "10",
+      "title": "استخراج r من منحنى u_R",
+      "text": "في دارة RL:\n\\[\nE=12V,\\quad R=40\\Omega.\n\\]\nمن منحنى \\(u_R(t)\\) نقرأ:\n\\[\nu_R(\\infty)=8V.\n\\]\nاحسب \\(I_\\infty\\) ثم \\(r\\).",
+      "standalone_text": "في دارة RL:\n\\[\nE=12V,\\quad R=40\\Omega.\n\\]\nمن منحنى \\(u_R(t)\\) نقرأ:\n\\[\nu_R(\\infty)=8V.\n\\]\nاحسب \\(I_\\infty\\) ثم \\(r\\).",
+      "skill": "uR ثم r",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "source_reference": {
+        "axis_tag": "rl_time_constant_graphical_analysis",
+        "label": "مبني مباشرة على محتوى محور ثابت الزمن والاستغلال البياني في دارة RL"
+      },
+      "solution": {
+        "title": "الحل: استخراج r من منحنى u_R",
+        "main_idea": "نحوّل الهضبة إلى تيار ثم نستعمل I∞.",
+        "detailed_explanation": "نبدأ بقراءة ما يعطيه البيان مباشرة، ثم نستعمل علاقات دارة RL لاستخراج المجهول خطوة بخطوة.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "التيار النهائي",
+            "explanation": "\\(I_\\infty=8/40=0.20A\\).",
+            "rule_used": "قانون أوم",
+            "why": "الهضبة تخص uR.",
+            "result": "\\(I_\\infty=0.20A\\)"
+          },
+          {
+            "order": 2,
+            "title": "المقاومة الكلية",
+            "explanation": "\\(R+r=12/0.20=60\\Omega\\).",
+            "rule_used": "\\(I_\\infty=E/(R+r)\\)",
+            "why": "عزل المقاومة الكلية.",
+            "result": "\\(R+r=60\\Omega\\)"
+          },
+          {
+            "order": 3,
+            "title": "r",
+            "explanation": "\\(r=60-40=20\\Omega\\).",
+            "rule_used": "طرح R",
+            "why": "المطلوب المقاومة الداخلية.",
+            "result": "\\(r=20\\Omega\\)"
+          }
+        ],
+        "final_answer": "\\(\\boxed{I_\\infty=0.20A,\\quad r=20\\Omega}\\).",
+        "verification": "نتحقق من الوحدات، ومن أن r≥0 وL>0، ومن توافق القيم الابتدائية والنهائية مع طبيعة المنحنى.",
+        "hints": [
+          {
+            "level": 1,
+            "hint": "حدد أولًا نوع المنحنى والقيمة النهائية."
+          },
+          {
+            "level": 2,
+            "hint": "تذكر: \\(i(\\tau)\\approx0.63I_\\infty\\)، و\\(\\tau=L/(R+r)\\)."
+          }
+        ],
+        "bac_writing": [
+          "حدد المحورين ووحداتهما.",
+          "اقرأ القيمة النهائية بوضوح.",
+          "بيّن طريقة استخراج τ.",
+          "حوّل ms إلى s قبل حساب L.",
+          "اكتب العلاقة ثم التعويض ثم النتيجة."
+        ],
+        "presentation": {
+          "show_one_step_at_a_time": true
+        }
+      }
+    },
+    {
+      "id": "rl_graphical_analysis_11",
+      "year": null,
+      "exercise": "تمرين مستقل خاص بالمحور العاشر",
+      "number": "11",
+      "title": "تمييز منحنيي u_R وu_b",
+      "text": "يعطي تسجيل دارة RL منحنيين غير مسميين:\n- المنحنى (1) يبدأ من \\(0V\\) ويزداد نحو \\(8V\\).\n- المنحنى (2) يبدأ من \\(12V\\) ويتناقص نحو \\(4V\\).\n\nحدد أيهما يمثل \\(u_R(t)\\) وأيهما يمثل \\(u_b(t)\\).",
+      "standalone_text": "يعطي تسجيل دارة RL منحنيين غير مسميين:\n- المنحنى (1) يبدأ من \\(0V\\) ويزداد نحو \\(8V\\).\n- المنحنى (2) يبدأ من \\(12V\\) ويتناقص نحو \\(4V\\).\n\nحدد أيهما يمثل \\(u_R(t)\\) وأيهما يمثل \\(u_b(t)\\).",
+      "skill": "تمييز المنحنيات",
+      "difficulty": "easy",
+      "is_standalone": true,
+      "source_reference": {
+        "axis_tag": "rl_time_constant_graphical_analysis",
+        "label": "مبني مباشرة على محتوى محور ثابت الزمن والاستغلال البياني في دارة RL"
+      },
+      "solution": {
+        "title": "الحل: تمييز منحنيي u_R وu_b",
+        "main_idea": "نعتمد على القيم الابتدائية لا على شكل المنحنى فقط.",
+        "detailed_explanation": "نبدأ بقراءة ما يعطيه البيان مباشرة، ثم نستعمل علاقات دارة RL لاستخراج المجهول خطوة بخطوة.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "المنحنى 1",
+            "explanation": "\\(u_R(0)=Ri(0)=0\\)، إذن المنحنى الذي يبدأ من الصفر هو \\(u_R\\).",
+            "rule_used": "الحالة الابتدائية",
+            "why": "i(0)=0.",
+            "result": "\\((1)=u_R(t)\\)"
+          },
+          {
+            "order": 2,
+            "title": "المنحنى 2",
+            "explanation": "\\(u_b(0)=E=12V\\)، إذن المنحنى الذي يبدأ من 12V هو \\(u_b\\).",
+            "rule_used": "توتر الوشيعة عند البداية",
+            "why": "كل توتر المولد على الوشيعة.",
+            "result": "\\((2)=u_b(t)\\)"
+          }
+        ],
+        "final_answer": "\\(\\boxed{(1):u_R(t),\\quad (2):u_b(t)}\\).",
+        "verification": "نتحقق من الوحدات، ومن أن r≥0 وL>0، ومن توافق القيم الابتدائية والنهائية مع طبيعة المنحنى.",
+        "hints": [
+          {
+            "level": 1,
+            "hint": "حدد أولًا نوع المنحنى والقيمة النهائية."
+          },
+          {
+            "level": 2,
+            "hint": "تذكر: \\(i(\\tau)\\approx0.63I_\\infty\\)، و\\(\\tau=L/(R+r)\\)."
+          }
+        ],
+        "bac_writing": [
+          "حدد المحورين ووحداتهما.",
+          "اقرأ القيمة النهائية بوضوح.",
+          "بيّن طريقة استخراج τ.",
+          "حوّل ms إلى s قبل حساب L.",
+          "اكتب العلاقة ثم التعويض ثم النتيجة."
+        ],
+        "presentation": {
+          "show_one_step_at_a_time": true
+        }
+      }
+    },
+    {
+      "id": "rl_graphical_analysis_12",
+      "year": null,
+      "exercise": "تمرين مستقل خاص بالمحور العاشر",
+      "number": "12",
+      "title": "خطأ 37% أم 63%؟",
+      "text": "طالب أراد استخراج \\(\\tau\\) من منحنى التيار الصاعد \\(i(t)\\)، فبحث عن الزمن الموافق لـ \\(0.37I_\\infty\\).\nهل طريقته صحيحة؟ صححها.",
+      "standalone_text": "طالب أراد استخراج \\(\\tau\\) من منحنى التيار الصاعد \\(i(t)\\)، فبحث عن الزمن الموافق لـ \\(0.37I_\\infty\\).\nهل طريقته صحيحة؟ صححها.",
+      "skill": "اختيار النسبة الصحيحة",
+      "difficulty": "easy",
+      "is_standalone": true,
+      "source_reference": {
+        "axis_tag": "rl_time_constant_graphical_analysis",
+        "label": "مبني مباشرة على محتوى محور ثابت الزمن والاستغلال البياني في دارة RL"
+      },
+      "solution": {
+        "title": "الحل: خطأ 37% أم 63%؟",
+        "main_idea": "منحنى إقامة التيار يستعمل 63% عند t=τ.",
+        "detailed_explanation": "نبدأ بقراءة ما يعطيه البيان مباشرة، ثم نستعمل علاقات دارة RL لاستخراج المجهول خطوة بخطوة.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "التحقق",
+            "explanation": "\\(i(\\tau)=I_\\infty(1-e^{-1})\\approx0.63I_\\infty\\).",
+            "rule_used": "الحل الأسي",
+            "why": "0.37 تمثل \\(e^{-1}\\) لا التيار الصاعد نفسه.",
+            "result": ""
+          },
+          {
+            "order": 2,
+            "title": "التصحيح",
+            "explanation": "يجب تحديد \\(0.63I_\\infty\\) ثم قراءة الزمن الموافق.",
+            "rule_used": "طريقة 63%",
+            "why": "هذا الزمن هو τ.",
+            "result": "\\(i(\\tau)\\approx0.63I_\\infty\\)"
+          }
+        ],
+        "final_answer": "الطريقة غير صحيحة؛ الصحيح هو \\(\\boxed{i(\\tau)\\approx0.63I_\\infty}\\).",
+        "verification": "نتحقق من الوحدات، ومن أن r≥0 وL>0، ومن توافق القيم الابتدائية والنهائية مع طبيعة المنحنى.",
+        "hints": [
+          {
+            "level": 1,
+            "hint": "حدد أولًا نوع المنحنى والقيمة النهائية."
+          },
+          {
+            "level": 2,
+            "hint": "تذكر: \\(i(\\tau)\\approx0.63I_\\infty\\)، و\\(\\tau=L/(R+r)\\)."
+          }
+        ],
+        "bac_writing": [
+          "حدد المحورين ووحداتهما.",
+          "اقرأ القيمة النهائية بوضوح.",
+          "بيّن طريقة استخراج τ.",
+          "حوّل ms إلى s قبل حساب L.",
+          "اكتب العلاقة ثم التعويض ثم النتيجة."
+        ],
+        "presentation": {
+          "show_one_step_at_a_time": true
+        }
+      }
+    },
+    {
+      "id": "rl_graphical_analysis_13",
+      "year": null,
+      "exercise": "تمرين مستقل خاص بالمحور العاشر",
+      "number": "13",
+      "title": "التحقق من قراءة بيانية",
+      "text": "في دارة:\n\\[\nE=9V,\\quad R=30\\Omega.\n\\]\nقرأ تلميذ من البيان:\n\\[\nI_\\infty=0.40A.\n\\]\nاستعمل العلاقة الفيزيائية لتتحقق هل القراءة ممكنة لو كانت الوشيعة الحقيقية ذات \\(r\\ge0\\).",
+      "standalone_text": "في دارة:\n\\[\nE=9V,\\quad R=30\\Omega.\n\\]\nقرأ تلميذ من البيان:\n\\[\nI_\\infty=0.40A.\n\\]\nاستعمل العلاقة الفيزيائية لتتحقق هل القراءة ممكنة لو كانت الوشيعة الحقيقية ذات \\(r\\ge0\\).",
+      "skill": "التحقق من معقولية القراءة",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "source_reference": {
+        "axis_tag": "rl_time_constant_graphical_analysis",
+        "label": "مبني مباشرة على محتوى محور ثابت الزمن والاستغلال البياني في دارة RL"
+      },
+      "solution": {
+        "title": "الحل: التحقق من قراءة بيانية",
+        "main_idea": "نحسب r؛ القيمة السالبة تكشف قراءة غير ممكنة.",
+        "detailed_explanation": "نبدأ بقراءة ما يعطيه البيان مباشرة، ثم نستعمل علاقات دارة RL لاستخراج المجهول خطوة بخطوة.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "حساب r",
+            "explanation": "\\(r=\\frac{E}{I_\\infty}-R=\\frac{9}{0.40}-30\\).",
+            "rule_used": "علاقة النظام الدائم",
+            "why": "اختبار القراءة.",
+            "result": "\\(r=22.5-30=-7.5\\Omega\\)"
+          },
+          {
+            "order": 2,
+            "title": "الاستنتاج",
+            "explanation": "مقاومة الوشيعة لا يمكن أن تكون سالبة في هذا النموذج.",
+            "rule_used": "شرط فيزيائي",
+            "why": "إذن القراءة أو الوحدات خاطئة.",
+            "result": "\\(I_\\infty=0.40A\\) غير متوافقة مع المعطيات"
+          }
+        ],
+        "final_answer": "\\(\\boxed{\\text{القراءة غير ممكنة؛ يجب مراجعة البيان أو الوحدات.}}\\)",
+        "verification": "نتحقق من الوحدات، ومن أن r≥0 وL>0، ومن توافق القيم الابتدائية والنهائية مع طبيعة المنحنى.",
+        "hints": [
+          {
+            "level": 1,
+            "hint": "حدد أولًا نوع المنحنى والقيمة النهائية."
+          },
+          {
+            "level": 2,
+            "hint": "تذكر: \\(i(\\tau)\\approx0.63I_\\infty\\)، و\\(\\tau=L/(R+r)\\)."
+          }
+        ],
+        "bac_writing": [
+          "حدد المحورين ووحداتهما.",
+          "اقرأ القيمة النهائية بوضوح.",
+          "بيّن طريقة استخراج τ.",
+          "حوّل ms إلى s قبل حساب L.",
+          "اكتب العلاقة ثم التعويض ثم النتيجة."
+        ],
+        "presentation": {
+          "show_one_step_at_a_time": true
+        }
+      }
+    },
+    {
+      "id": "rl_graphical_analysis_14",
+      "year": null,
+      "exercise": "تمرين مستقل خاص بالمحور العاشر",
+      "number": "14",
+      "title": "تأثير L وR على ثابت الزمن",
+      "text": "لدارتين RL:\n- A: \\(L=0.50H\\)، \\(R+r=50\\Omega\\)\n- B: \\(L=0.50H\\)، \\(R+r=100\\Omega\\)\n\nاحسب \\(\\tau_A,\\tau_B\\)، وحدد أي منحنى للتيار يصل إلى الهضبة أسرع.",
+      "standalone_text": "لدارتين RL:\n- A: \\(L=0.50H\\)، \\(R+r=50\\Omega\\)\n- B: \\(L=0.50H\\)، \\(R+r=100\\Omega\\)\n\nاحسب \\(\\tau_A,\\tau_B\\)، وحدد أي منحنى للتيار يصل إلى الهضبة أسرع.",
+      "skill": "تفسير ثابت الزمن",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "source_reference": {
+        "axis_tag": "rl_time_constant_graphical_analysis",
+        "label": "مبني مباشرة على محتوى محور ثابت الزمن والاستغلال البياني في دارة RL"
+      },
+      "solution": {
+        "title": "الحل: تأثير L وR على ثابت الزمن",
+        "main_idea": "ثابت الزمن الأصغر يعني تطورًا أسرع.",
+        "detailed_explanation": "نبدأ بقراءة ما يعطيه البيان مباشرة، ثم نستعمل علاقات دارة RL لاستخراج المجهول خطوة بخطوة.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "A",
+            "explanation": "\\(\\tau_A=0.50/50=0.010s=10ms\\).",
+            "rule_used": "ثابت الزمن",
+            "why": "تعويض.",
+            "result": "\\(\\tau_A=10ms\\)"
+          },
+          {
+            "order": 2,
+            "title": "B",
+            "explanation": "\\(\\tau_B=0.50/100=0.005s=5ms\\).",
+            "rule_used": "ثابت الزمن",
+            "why": "تعويض.",
+            "result": "\\(\\tau_B=5ms\\)"
+          },
+          {
+            "order": 3,
+            "title": "المقارنة",
+            "explanation": "B تصل إلى الهضبة أسرع لأن ثابت زمنها أصغر.",
+            "rule_used": "معنى τ",
+            "why": "كلما صغر τ كان الانتقال أسرع.",
+            "result": "\\(B\\) أسرع"
+          }
+        ],
+        "final_answer": "\\(\\boxed{\\tau_A=10ms,\\ \\tau_B=5ms,\\ B\\text{ أسرع}}\\).",
+        "verification": "نتحقق من الوحدات، ومن أن r≥0 وL>0، ومن توافق القيم الابتدائية والنهائية مع طبيعة المنحنى.",
+        "hints": [
+          {
+            "level": 1,
+            "hint": "حدد أولًا نوع المنحنى والقيمة النهائية."
+          },
+          {
+            "level": 2,
+            "hint": "تذكر: \\(i(\\tau)\\approx0.63I_\\infty\\)، و\\(\\tau=L/(R+r)\\)."
+          }
+        ],
+        "bac_writing": [
+          "حدد المحورين ووحداتهما.",
+          "اقرأ القيمة النهائية بوضوح.",
+          "بيّن طريقة استخراج τ.",
+          "حوّل ms إلى s قبل حساب L.",
+          "اكتب العلاقة ثم التعويض ثم النتيجة."
+        ],
+        "presentation": {
+          "show_one_step_at_a_time": true
+        }
+      }
+    },
+    {
+      "id": "rl_graphical_analysis_15",
+      "year": null,
+      "exercise": "تمرين مستقل خاص بالمحور العاشر",
+      "number": "15",
+      "title": "تمرين بكالوريا شامل على البيان RL",
+      "text": "ندرس دارة RL تحتوي على مقاومة \\(R=40\\Omega\\) ووشيعة حقيقية.\nمن التسجيلات التجريبية نستنتج:\n\\[\nu_b(0)=12V,\\qquad u_R(\\infty)=8V,\n\\]\nكما أن طريقة \\(63\\%\\) تعطي:\n\\[\n\\tau=5ms.\n\\]\n\n1) استنتج توتر المولد \\(E\\).\n2) احسب \\(I_\\infty\\).\n3) احسب المقاومة الداخلية \\(r\\).\n4) احسب الذاتية \\(L\\).\n5) احسب \\(u_b(\\infty)\\).\n6) تحقق من قانون جمع التوترات في النظام الدائم.",
+      "standalone_text": "ندرس دارة RL تحتوي على مقاومة \\(R=40\\Omega\\) ووشيعة حقيقية.\nمن التسجيلات التجريبية نستنتج:\n\\[\nu_b(0)=12V,\\qquad u_R(\\infty)=8V,\n\\]\nكما أن طريقة \\(63\\%\\) تعطي:\n\\[\n\\tau=5ms.\n\\]\n\n1) استنتج توتر المولد \\(E\\).\n2) احسب \\(I_\\infty\\).\n3) احسب المقاومة الداخلية \\(r\\).\n4) احسب الذاتية \\(L\\).\n5) احسب \\(u_b(\\infty)\\).\n6) تحقق من قانون جمع التوترات في النظام الدائم.",
+      "skill": "استغلال بياني شامل",
+      "difficulty": "hard",
+      "is_standalone": true,
+      "source_reference": {
+        "axis_tag": "rl_time_constant_graphical_analysis",
+        "label": "مبني مباشرة على محتوى محور ثابت الزمن والاستغلال البياني في دارة RL"
+      },
+      "solution": {
+        "title": "الحل: تمرين بكالوريا شامل على البيان RL",
+        "main_idea": "نقرأ E من بداية ub، ثم I∞ من uR، وبعدها r وL.",
+        "detailed_explanation": "نبدأ بقراءة ما يعطيه البيان مباشرة، ثم نستعمل علاقات دارة RL لاستخراج المجهول خطوة بخطوة.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "E",
+            "explanation": "\\(E=u_b(0)=12V\\).",
+            "rule_used": "بداية توتر الوشيعة",
+            "why": "i(0)=0.",
+            "result": "\\(E=12V\\)"
+          },
+          {
+            "order": 2,
+            "title": "I∞",
+            "explanation": "\\(I_\\infty=u_R(\\infty)/R=8/40=0.20A\\).",
+            "rule_used": "قانون أوم",
+            "why": "الهضبة النهائية لـuR.",
+            "result": "\\(I_\\infty=0.20A\\)"
+          },
+          {
+            "order": 3,
+            "title": "r",
+            "explanation": "\\(r=E/I_\\infty-R=12/0.20-40=20\\Omega\\).",
+            "rule_used": "النظام الدائم",
+            "why": "استخراج المقاومة الداخلية.",
+            "result": "\\(r=20\\Omega\\)"
+          },
+          {
+            "order": 4,
+            "title": "L",
+            "explanation": "\\(\\tau=5ms=0.005s\\)، ثم \\(L=\\tau(R+r)=0.005(60)=0.30H\\).",
+            "rule_used": "ثابت الزمن",
+            "why": "بعد توحيد الوحدات.",
+            "result": "\\(L=0.30H\\)"
+          },
+          {
+            "order": 5,
+            "title": "ub النهائي",
+            "explanation": "\\(u_b(\\infty)=rI_\\infty=20\\times0.20=4V\\).",
+            "rule_used": "النظام الدائم",
+            "why": "يبقى أثر r.",
+            "result": "\\(u_b(\\infty)=4V\\)"
+          },
+          {
+            "order": 6,
+            "title": "التحقق",
+            "explanation": "\\(u_R(\\infty)+u_b(\\infty)=8+4=12V=E\\).",
+            "rule_used": "قانون جمع التوترات",
+            "why": "النتائج متوافقة.",
+            "result": "\\(8+4=12V\\)"
+          }
+        ],
+        "final_answer": "\\(\\boxed{E=12V,\\ I_\\infty=0.20A,\\ r=20\\Omega,\\ L=0.30H,\\ u_b(\\infty)=4V}\\).",
+        "verification": "نتحقق من الوحدات، ومن أن r≥0 وL>0، ومن توافق القيم الابتدائية والنهائية مع طبيعة المنحنى.",
+        "hints": [
+          {
+            "level": 1,
+            "hint": "حدد أولًا نوع المنحنى والقيمة النهائية."
+          },
+          {
+            "level": 2,
+            "hint": "تذكر: \\(i(\\tau)\\approx0.63I_\\infty\\)، و\\(\\tau=L/(R+r)\\)."
+          }
+        ],
+        "bac_writing": [
+          "حدد المحورين ووحداتهما.",
+          "اقرأ القيمة النهائية بوضوح.",
+          "بيّن طريقة استخراج τ.",
+          "حوّل ms إلى s قبل حساب L.",
+          "اكتب العلاقة ثم التعويض ثم النتيجة."
+        ],
+        "presentation": {
+          "show_one_step_at_a_time": true
+        }
+      },
+      "graph_data": {
+        "title": "تحديد ثابت الزمن من منحنى شدة التيار",
+        "description": "عند t = τ تبلغ شدة التيار تقريبًا 63% من قيمتها النهائية I∞.",
+        "x_label": "t / τ",
+        "y_label": "i / I∞",
+        "x_domain": [
+          0,
+          5
+        ],
+        "y_domain": [
+          0,
+          1.08
+        ],
+        "series": [
+          {
+            "name": "i(t) / I∞",
+            "data": [
+              {
+                "x": 0,
+                "y": 0.0
+              },
+              {
+                "x": 0.25,
+                "y": 0.2212
+              },
+              {
+                "x": 0.5,
+                "y": 0.3935
+              },
+              {
+                "x": 0.75,
+                "y": 0.5276
+              },
+              {
+                "x": 1,
+                "y": 0.6321
+              },
+              {
+                "x": 1.5,
+                "y": 0.7769
+              },
+              {
+                "x": 2,
+                "y": 0.8647
+              },
+              {
+                "x": 2.5,
+                "y": 0.9179
+              },
+              {
+                "x": 3,
+                "y": 0.9502
+              },
+              {
+                "x": 4,
+                "y": 0.9817
+              },
+              {
+                "x": 5,
+                "y": 0.9933
+              }
+            ]
+          },
+          {
+            "name": "i = 0.63 I∞",
+            "data": [
+              {
+                "x": 0,
+                "y": 0.63
+              },
+              {
+                "x": 5,
+                "y": 0.63
+              }
+            ]
+          },
+          {
+            "name": "t = τ",
+            "data": [
+              {
+                "x": 1,
+                "y": 0
+              },
+              {
+                "x": 1,
+                "y": 0.6321
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "show_grid": true,
+          "show_axes": true,
+          "show_legend": true,
+          "show_point_labels": false,
+          "connect_points": true
+        }
+      }
+    }
+  ],
+  "rendering_profile": {
+    "diagram_style": "bac_clean",
+    "rule": "لا يظهر الرسم إلا في التمارين التي تعتمد عليه فعلًا. تستعمل رسومات المحور الأصلية الخاصة بـ63% والمماس وu_b وقياس u_R، ولا تكرر رسومات إنشاء معادلة RL من المحور التاسع."
+  }
+}

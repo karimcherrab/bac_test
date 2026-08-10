@@ -1,0 +1,264 @@
+{
+  "tag": "curve_construction",
+  "title": "بناء ورسم منحنى الدالة",
+  "order": 11,
+  "is_active": true,
+  "branches": [
+    "math",
+    "science",
+    "math_tech"
+  ],
+  "content": {
+    "version": 1,
+    "language": "ar",
+    "direction": "rtl",
+    "chapter_code": "functions",
+    "chapter_title": "دراسة الدوال",
+    "axis_tag": "curve_construction",
+    "axis_title": "بناء ورسم منحنى الدالة",
+    "estimated_minutes": 80,
+    "difficulty": "medium_to_hard",
+    "source_note": "محور مبسط ومنظم لمنصة تعليمية موجهة إلى البكالوريا الجزائرية.",
+    "lesson_goal": "أن يجمع التلميذ نتائج الدراسة في رسم دقيق ومنظم للمنحنى.",
+    "prerequisites": [
+      "النهايات",
+      "المقاربات",
+      "التغيرات",
+      "الإشارة",
+      "المماس",
+      "الوضعية النسبية"
+    ],
+    "learning_outcomes": [
+      "ينظم معطيات الرسم",
+      "يضع النقاط والمقاربات",
+      "يحترم اتجاه التغير",
+      "يرسم الفروع دون تناقض"
+    ],
+    "learning_path": [
+      {
+        "id": "step_1",
+        "type": "checklist",
+        "title": "بطاقة الرسم",
+        "content": {
+          "items": [
+            "مجال التعريف.",
+            "نهايات أطراف المجال.",
+            "المستقيمات المقاربة.",
+            "جدول التغيرات.",
+            "الجذور والتقاطعات.",
+            "القيم الحدية.",
+            "المماسات المهمة.",
+            "الوضعية النسبية."
+          ],
+          "attention": "لا تبدأ برسم خط متصل قبل تحديد الفروع."
+        }
+      },
+      {
+        "id": "step_2",
+        "type": "method",
+        "title": "ترتيب البناء",
+        "content": {
+          "method": [
+            "ارسم المعلم والمقاربات بخط متقطع.",
+            "ضع النقاط المؤكدة.",
+            "ضع المماسات إن وجدت.",
+            "ارسم كل فرع وفق أسهم جدول التغيرات.",
+            "راجع الوضعية بالنسبة للمقاربات والمحاور."
+          ]
+        }
+      },
+      {
+        "id": "step_3",
+        "type": "variation_table",
+        "title": "مثال جدول قبل الرسم",
+        "content": {
+          "table": {
+            "type": "variation_table",
+            "renderer": "jsx_svg_or_html_table",
+            "columns": [
+              {
+                "x": "-∞",
+                "function_value": "-∞",
+                "arrow": "up"
+              },
+              {
+                "x": "-1",
+                "function_value": "2",
+                "point_type": "maximum"
+              },
+              {
+                "x": "1",
+                "function_value": "-2",
+                "point_type": "minimum"
+              },
+              {
+                "x": "+∞",
+                "function_value": "+∞",
+                "arrow": "up"
+              }
+            ],
+            "interval_signs": [
+              {
+                "from": "-∞",
+                "to": "-1",
+                "sign": "+"
+              },
+              {
+                "from": "-1",
+                "to": "1",
+                "sign": "-"
+              },
+              {
+                "from": "1",
+                "to": "+∞",
+                "sign": "+"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "step_4",
+        "type": "visualization",
+        "title": "الرسم النهائي",
+        "content": {
+          "visualization": {
+            "type": "study_to_curve",
+            "renderer": "jsx_svg_or_recharts",
+            "function": {
+              "expression": "x^3-3*x",
+              "domain": [
+                -2.5,
+                2.5
+              ],
+              "sample_step": 0.03
+            },
+            "special_points": [
+              {
+                "x": -1,
+                "y": 2
+              },
+              {
+                "x": 0,
+                "y": 0
+              },
+              {
+                "x": 1,
+                "y": -2
+              }
+            ],
+            "show_direction_arrows": true,
+            "show_extrema": true,
+            "axes": {
+              "x_min": -2.5,
+              "x_max": 2.5,
+              "y_min": -5,
+              "y_max": 5
+            }
+          }
+        }
+      },
+      {
+        "id": "step_5",
+        "type": "common_mistakes",
+        "title": "أخطاء الرسم",
+        "content": {
+          "mistakes": [
+            "قطع المقارب العمودي دون مبرر.",
+            "عكس سهم التزايد أو التناقص.",
+            "نسيان فرع من المجال.",
+            "وضع قيمة حدية في إحداثيات خاطئة.",
+            "رسم منحنى يخالف إشارة الدالة."
+          ]
+        }
+      }
+    ],
+    "graph": {
+      "engine_hint": "الرسم اختياري ويستعمل للتوضيح.",
+      "coordinate_system": "cartesian",
+      "series": [],
+      "react_rendering_notes": [
+        "استعمل parser رياضيًا آمنًا بدل eval.",
+        "اجعل مجال الرسم قابلًا للتخصيص.",
+        "ادعم اتجاه RTL."
+      ]
+    },
+    "final_assessment": {
+      "question": "ما العناصر الثلاثة التي يجب وضعها قبل رسم شكل الفرع؟",
+      "expected_answer": "المقاربات، النقاط المميزة، واتجاه التغير.",
+      "success_criteria": [
+        "المقاربات",
+        "النقاط",
+        "اتجاه التغير"
+      ],
+      "hint_levels": [
+        "ابدأ بما هو مؤكد حسابيًا."
+      ]
+    },
+    "lesson_summary": {
+      "key_ideas": [
+        "الرسم يلخص كامل الدراسة.",
+        "المقاربات ترسم أولًا.",
+        "الجدول يحدد اتجاه الفروع.",
+        "النقاط المؤكدة تمنع التخمين."
+      ],
+      "method_template": [
+        "جهّز بطاقة المعطيات.",
+        "ارسم العناصر الثابتة.",
+        "ارسم الفروع بالتدريج.",
+        "راجع كل نتيجة."
+      ]
+    },
+    "dynamic_profile": {
+      "lesson_profile": "شرح بسيط ثم تطبيق موجه ثم سؤال بكالوريا",
+      "profile_reason": "المتعلم يحتاج إلى فهم الفكرة، ثم حفظ المنهجية، ثم استعمالها في تمرين."
+    },
+    "schema_version": "3.0",
+    "content_status": "ready",
+    "pedagogical_style": "simple_progressive_bac_oriented",
+    "lesson_intro": {
+      "title": "الرسم نتيجة للدراسة وليس تخمينًا",
+      "teacher": "قبل الرسم يجب جمع المجال، النهايات، المقاربات، التغيرات، النقاط والمماسات.",
+      "central_idea": "كل نتيجة حسابية تتحول إلى معلومة هندسية.",
+      "memory_tip": "مجال، مقاربات، نقاط، أسهم، ثم رسم."
+    },
+    "support_path": {
+      "when_student_stuck": [
+        "أعد قراءة الفكرة المركزية.",
+        "طبّق المثال القصير خطوة بخطوة.",
+        "استعمل التلميح الأول قبل إظهار الحل."
+      ],
+      "quick_actions": [
+        "أعد الشرح",
+        "أعطني مثالًا",
+        "اعرض الخطوات",
+        "أعطني تلميحًا"
+      ]
+    },
+    "method_decision_tree": {
+      "start_question": "ما نوع السؤال؟",
+      "branches": [
+        {
+          "condition": "سؤال مباشر",
+          "action": "طبق القاعدة الأساسية."
+        },
+        {
+          "condition": "سؤال مركب",
+          "action": "قسّم المطلوب إلى خطوات."
+        }
+      ],
+      "golden_rule": "حدد نوع السؤال قبل البدء."
+    },
+    "lesson_closure": {
+      "student_message": "لا تنتقل إلى المحور التالي حتى تستطيع تطبيق المنهجية دون مساعدة.",
+      "mastery_rule": "نجاح في الاختبار القصير ثم حل تمرين تطبيقي مستقل."
+    },
+    "quality_review": {
+      "simple_arabic": true,
+      "rtl_ready": true,
+      "latex_ready": true,
+      "react_visualization_ready": true,
+      "bac_oriented": true
+    }
+  }
+}

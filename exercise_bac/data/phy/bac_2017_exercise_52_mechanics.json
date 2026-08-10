@@ -1,0 +1,183 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "3.2-bac-question-detailed",
+  "version": "3.2-detailed-organized",
+  "session": "exceptional",
+  "year": 2017,
+  "chapter_code": "mechanical_system_evolution",
+  "chapter_title": "تطور جملة ميكانيكية",
+  "exercise_number": 52,
+  "branch": {
+    "code": "math_mathtech",
+    "name": "شعبتا رياضيات وتقني رياضي"
+  },
+  "branch_code": "math_mathtech",
+  "branches": [
+    {
+      "code": "math",
+      "name": "شعبة رياضيات"
+    },
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "axis_tags": [
+    "circular_path_motion",
+    "straight_inclined_motion_friction",
+    "mechanical_energy_data_analysis"
+  ],
+  "source_pages": [
+    20
+  ],
+  "solution_source_pages": [
+    44,
+    45
+  ],
+  "title": "التمرين 52 — بكالوريا 2017 الاستثنائية — ربع دائرة وطريق أفقي خشن",
+  "statement": "يتألف طريق من جزئين: \\(AB\\) ربع دائرة شاقولي أملس نصف قطره \\(r\\) ومركزه \\(O\\)، و\\(BC\\) طريق أفقي خشن طوله \\(1m\\)، تكافئ الاحتكاكات عليه قوة ثابتة \\(f\\). نترك كرية نقطية كتلتها \\(m=0.5kg\\) دون سرعة ابتدائية من نقطة \\(M\\) على القوس، بحيث يصنع شعاع موضعها \\(OM\\) زاوية \\(\\theta\\) مع شاقول \\(O\\).\n\nI- مثل القوى على \\(AB\\)، ثم أوجد \\(v_B^2\\) بدلالة \\(\\theta\\). ادرس الحركة على \\(BC\\)، وأثبت أن \\(v_C^2=a\\cos\\theta+b\\).\nII- بتغيير \\(\\theta\\) تحصلنا على البيان \\(v_C^2=f(\\cos\\theta)\\). اكتب معادلته، ثم استنتج \\(r\\) و\\(f\\)، وحدد أصغر زاوية تمكن الكرة من الوصول إلى \\(C\\).",
+  "statement_graph_data": {
+    "title": "vC² بدلالة cosθ",
+    "x_label": "cosθ",
+    "y_label": "vC² (m²/s²)",
+    "x_domain": [
+      0,
+      1
+    ],
+    "y_domain": [
+      0,
+      11
+    ],
+    "show_grid": true,
+    "series": [
+      {
+        "id": "line",
+        "label": "vC²",
+        "type": "line",
+        "data": [
+          {
+            "x": 0,
+            "y": 9
+          },
+          {
+            "x": 0.5,
+            "y": 14
+          },
+          {
+            "x": 1,
+            "y": 19
+          }
+        ]
+      }
+    ]
+  },
+  "questions": [
+    {
+      "id": "2017_ex52_q1",
+      "text": "1) أوجد vB² وادرس الحركة على BC.",
+      "axis_tags": [
+        "circular_path_motion",
+        "straight_inclined_motion_friction"
+      ],
+      "display_order": 1,
+      "content_type": "question",
+      "solution": {
+        "strategy": "نستعمل الطاقة على القوس ونيوتن على BC.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "على AB",
+            "explanation": "\\[v_B^2=2gr(1-\\cos\\theta)\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "على BC",
+            "explanation": "\\[-f=ma\\Rightarrow a=-f/m\\] ثابت، إذن الحركة مستقيمة متباطئة بانتظام."
+          },
+          {
+            "step_number": 3,
+            "title": "عند C",
+            "explanation": "\\[v_C^2=v_B^2-2\\frac{f}{m}BC\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "الصيغة",
+            "explanation": "\\[v_C^2=-2gr\\cos\\theta+2\\left(gr-\\frac{f}{m}BC\\right)\\]"
+          }
+        ],
+        "detailed_explanation": "حل مفصل وبسيط وفق منهجية البكالوريا.",
+        "final_answer": "\\(a=-f/m\\)، و\\(v_C^2=a_1\\cos\\theta+b_1\\).",
+        "verification": "",
+        "common_mistakes": [],
+        "hints": [],
+        "solution_style": "الفكرة، القانون، التعويض العددي، النتيجة، ثم الاستنتاج.",
+        "methodology": {
+          "goal": "حل السؤال بدقة وبطريقة بسيطة ومنظمة.",
+          "method": "تحديد الجملة والمرجع، جرد القوى، كتابة القانون الحرفي، تحويل الوحدات، التعويض، ثم الاستنتاج.",
+          "bac_template": [
+            "تحديد الجملة الميكانيكية والمرجع والمعلم.",
+            "تمثيل القوى الخارجية واتجاهاتها.",
+            "كتابة القانون أو العلاقة قبل التعويض.",
+            "تحويل الوحدات إلى النظام الدولي.",
+            "إجراء الحساب وكتابة الوحدة.",
+            "صياغة استنتاج فيزيائي واضح."
+          ]
+        }
+      }
+    },
+    {
+      "id": "2017_ex52_q2",
+      "text": "2) استنتج r وf وأصغر زاوية.",
+      "axis_tags": [
+        "mechanical_energy_data_analysis",
+        "circular_path_motion"
+      ],
+      "display_order": 2,
+      "content_type": "question",
+      "solution": {
+        "strategy": "نقارن معادلة البيان بالعلاقة النظرية.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "معادلة البيان",
+            "explanation": "وفق الحل: \\[v_C^2=10\\cos\\theta+9\\] مع اختيار اتجاه الزاوية في الرسم."
+          },
+          {
+            "step_number": 2,
+            "title": "نصف القطر",
+            "explanation": "بالمطابقة \\(2gr=10\\Rightarrow r=0.5m\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "الاحتكاك",
+            "explanation": "\\[2(gr-fBC/m)=9\\Rightarrow f=0.25N\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "أصغر زاوية",
+            "explanation": "عند الوصول الحدي \\(v_C=0\\): \\[\\cos\\theta=0.9\\Rightarrow\\theta\\approx25.84^\\circ\\]"
+          }
+        ],
+        "detailed_explanation": "حل مفصل وبسيط وفق منهجية البكالوريا.",
+        "final_answer": "\\(r=0.5m\\)، \\(f=0.25N\\)، و\\(\\theta_{min}\\approx25.84^\\circ\\).",
+        "verification": "مطابق للحل.",
+        "common_mistakes": [],
+        "hints": [],
+        "solution_style": "الفكرة، القانون، التعويض العددي، النتيجة، ثم الاستنتاج.",
+        "methodology": {
+          "goal": "حل السؤال بدقة وبطريقة بسيطة ومنظمة.",
+          "method": "تحديد الجملة والمرجع، جرد القوى، كتابة القانون الحرفي، تحويل الوحدات، التعويض، ثم الاستنتاج.",
+          "bac_template": [
+            "تحديد الجملة الميكانيكية والمرجع والمعلم.",
+            "تمثيل القوى الخارجية واتجاهاتها.",
+            "كتابة القانون أو العلاقة قبل التعويض.",
+            "تحويل الوحدات إلى النظام الدولي.",
+            "إجراء الحساب وكتابة الوحدة.",
+            "صياغة استنتاج فيزيائي واضح."
+          ]
+        }
+      }
+    }
+  ]
+}

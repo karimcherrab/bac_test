@@ -1,0 +1,443 @@
+{
+  "schema_version": "4.5-bac-source",
+  "version": "1.0-2009-math-ex04-b",
+  "language": "ar",
+  "direction": "rtl",
+  "year": 2009,
+  "session": "unspecified",
+  "subject": "math",
+  "chapter_code": "derivatives",
+  "chapter_title": "الاشتقاقية ودراسة الدوال",
+  "exercise_number": 4,
+  "branches": [
+    {
+      "code": "math",
+      "name": "شعبة رياضيات"
+    }
+  ],
+  "source_pages": [
+    2
+  ],
+  "variant": "B",
+  "title": "تمرين 4 - بكالوريا 2009 - دالة جذرية ومقارب ومماس",
+  "statement": "تمرين 4: (7 نقاط)\n\\(f\\) الدالة العددية المعرفة على المجال \\(]-1;+\\infty[\\) كما يأتي: \\(f(x)=x-\\frac{2}{\\sqrt{x+1}}\\).\n\\((C_f)\\) منحنى الدالة \\(f\\) في المستوى المنسوب إلى المعلم المتعامد والمتجانس \\((O;\\vec{i},\\vec{j})\\).\n(1) ادرس تغيرات الدالة \\(f\\).\n(2) أ- بين أن المنحنى \\((C_f)\\) يقبل مستقيمين مقاربين أحدهما \\((D)\\) معادلته: \\(y=x\\).\nب- ادرس الوضعية النسبية للمنحنى \\((C_f)\\) و \\((D)\\).\n(3) أ- بين أن \\((C_f)\\) يقطع محور الفواصل في نقطة وحيدة فاصلتها \\(x_0\\) بحيث: \\(1.3<x_0<1.4\\).\nب- عين معادلة \\((\\Delta)\\) مماسا للمنحنى \\((C_f)\\) في نقطة تقاطعه مع محور التراتيب.\nجـ- ارسم \\((\\Delta)\\) و \\((C_f)\\) في نفس المعلم.",
+  "figures": [],
+  "questions": [
+    {
+      "id": "2009_math_ex04b_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "(1) ادرس تغيرات الدالة \\(f\\).",
+      "solution": {
+        "strategy": "نحسب المشتقة والنهايات عند طرفي المجال.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "اشتقاق الدالة",
+            "explanation": "\\(f(x)=x-2(x+1)^{-1/2}\\)، لذلك \\(f'(x)=1+(x+1)^{-3/2}=1+\\frac{1}{(x+1)^{3/2}}\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "إشارة المشتقة",
+            "explanation": "لكل \\(x>-1\\)، لدينا \\((x+1)^{3/2}>0\\)، ومنه \\(f'(x)>0\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "النهايات",
+            "explanation": "عند \\(x\\to-1^+\\): \\(\\frac{2}{\\sqrt{x+1}}\\to+\\infty\\) فيكون \\(f(x)\\to-\\infty\\). وعند \\(x\\to+\\infty\\): \\(f(x)\\to+\\infty\\)."
+          },
+          {
+            "step_number": 4,
+            "title": "الاستنتاج",
+            "explanation": "إذن \\(f\\) متزايدة تمامًا على \\(]-1,+\\infty[\\).",
+            "result": "من \\(-\\infty\\) إلى \\(+\\infty\\)."
+          }
+        ],
+        "final_answer": "الدالة \\(f\\) متزايدة تمامًا على \\(]-1,+\\infty[\\).",
+        "figures": [
+          {
+            "id": "2009_ex04b_variation_table",
+            "type": "variation_table",
+            "title": "جدول تغيرات f على ]-1,+∞[",
+            "domain": "]-1,+\\infty[",
+            "rows": [
+              {
+                "label": "x",
+                "cells": [
+                  "-1",
+                  "",
+                  "+\\infty"
+                ]
+              },
+              {
+                "label": "f'(x)",
+                "cells": [
+                  "",
+                  "+",
+                  ""
+                ]
+              },
+              {
+                "label": "f(x)",
+                "cells": [
+                  "-\\infty",
+                  "↗",
+                  "+\\infty"
+                ]
+              }
+            ],
+            "notes": [
+              "\\(f'(x)=1+\\frac{1}{(x+1)^{3/2}}>0\\) على كامل المجال."
+            ]
+          }
+        ],
+        "common_mistakes": [],
+        "hints": [],
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2009_math_ex04b_q2a",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "(2) أ- بين أن المنحنى \\((C_f)\\) يقبل مستقيمين مقاربين أحدهما \\((D)\\) معادلته: \\(y=x\\).",
+      "solution": {
+        "strategy": "نبحث عن مقارب عند حد المجال ثم ندرس الفرق \\(f(x)-x\\) عند +∞.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "المقارب الرأسي",
+            "explanation": "\\(\\lim_{x\\to-1^+}f(x)=-\\infty\\)، إذن المستقيم \\(x=-1\\) مقارب رأسي للمنحنى."
+          },
+          {
+            "step_number": 2,
+            "title": "المقارب المائل",
+            "explanation": "\\(f(x)-x=-\\frac{2}{\\sqrt{x+1}}\\)، و\\(\\lim_{x\\to+\\infty}[f(x)-x]=0\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "النتيجة",
+            "explanation": "إذن \\((D):y=x\\) مقارب مائل عند \\(+\\infty\\)، والمستقيم الثاني هو \\(x=-1\\).",
+            "result": "المقاربان: \\(x=-1\\) و\\(y=x\\)."
+          }
+        ],
+        "final_answer": "المقاربان هما \\(x=-1\\) و\\((D):y=x\\).",
+        "figures": [],
+        "common_mistakes": [],
+        "hints": [],
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2009_math_ex04b_q2b",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "(2) ب- ادرس الوضعية النسبية للمنحنى \\((C_f)\\) و \\((D)\\).",
+      "solution": {
+        "strategy": "ندرس إشارة الفرق \\(f(x)-x\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب الفرق",
+            "explanation": "\\(f(x)-x=-\\frac{2}{\\sqrt{x+1}}\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "دراسة الإشارة",
+            "explanation": "لكل \\(x>-1\\)، المقام موجب، وبالتالي \\(f(x)-x<0\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "الاستنتاج",
+            "explanation": "إذن \\(f(x)<x\\) على كامل المجال، أي أن \\((C_f)\\) يقع أسفل المستقيم \\((D)\\).",
+            "result": "\\((C_f)\\) أسفل \\((D)\\)."
+          }
+        ],
+        "final_answer": "المنحنى \\((C_f)\\) يقع أسفل \\((D):y=x\\) على \\(]-1,+\\infty[\\).",
+        "figures": [],
+        "common_mistakes": [],
+        "hints": [],
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2009_math_ex04b_q3a",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "(3) أ- بين أن \\((C_f)\\) يقطع محور الفواصل في نقطة وحيدة فاصلتها \\(x_0\\) بحيث: \\(1.3<x_0<1.4\\).",
+      "solution": {
+        "strategy": "نستعمل الاستمرارية والرتابة ثم نتحقق من تغير الإشارة بين 1.3 و1.4.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الوحدانية",
+            "explanation": "الدالة \\(f\\) مستمرة ومتزايدة تمامًا على \\(]-1,+\\infty[\\)، لذلك لا يمكن أن يكون للمعادلة \\(f(x)=0\\) أكثر من حل واحد."
+          },
+          {
+            "step_number": 2,
+            "title": "التحقق عند 1.3",
+            "explanation": "\\(f(1.3)=1.3-\\frac{2}{\\sqrt{2.3}}\\approx-0.01859<0\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "التحقق عند 1.4",
+            "explanation": "\\(f(1.4)=1.4-\\frac{2}{\\sqrt{2.4}}\\approx0.10901>0\\)."
+          },
+          {
+            "step_number": 4,
+            "title": "الاستنتاج",
+            "explanation": "بفضل الاستمرارية يوجد حل \\(x_0\\in]1.3,1.4[\\)، وبفضل الرتابة هو وحيد. عدديًا \\(x_0\\approx1.3146\\).",
+            "result": "\\(1.3<x_0<1.4\\)، و\\(x_0\\approx1.3146\\)."
+          }
+        ],
+        "final_answer": "يقطع \\((C_f)\\) محور الفواصل مرة واحدة عند \\(x_0\\in]1.3,1.4[\\)، تقريبيًا \\(x_0\\approx1.3146\\).",
+        "figures": [],
+        "common_mistakes": [],
+        "hints": [],
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2009_math_ex04b_q3b",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "(3) ب- عين معادلة \\((\\Delta)\\) مماسا للمنحنى \\((C_f)\\) في نقطة تقاطعه مع محور التراتيب.",
+      "solution": {
+        "strategy": "نحدد نقطة التقاطع مع محور y ثم ميل المماس.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "نقطة التقاطع مع محور التراتيب",
+            "explanation": "على محور التراتيب \\(x=0\\)، وبالتالي \\(f(0)=0-2=-2\\). إذن نقطة التماس هي \\(A(0,-2)\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "ميل المماس",
+            "explanation": "\\(f'(0)=1+\\frac{1}{1^{3/2}}=2\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "معادلة المماس",
+            "explanation": "\\(y=f'(0)(x-0)+f(0)=2x-2\\).",
+            "result": "\\((\\Delta):y=2x-2\\)."
+          }
+        ],
+        "final_answer": "\\((\\Delta):y=2x-2\\).",
+        "figures": [],
+        "common_mistakes": [],
+        "hints": [],
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2009_math_ex04b_q3c",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "(3) جـ- ارسم \\((\\Delta)\\) و \\((C_f)\\) في نفس المعلم.",
+      "solution": {
+        "strategy": "نستعمل جدول التغيرات والمقاربات والنقاط المميزة والمماس.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "المقاربات",
+            "explanation": "نرسم \\(x=-1\\) و\\(D:y=x\\) كدليلين لشكل المنحنى."
+          },
+          {
+            "step_number": 2,
+            "title": "النقاط المميزة",
+            "explanation": "نضع \\(A(0,-2)\\) و\\(B(x_0,0)\\) حيث \\(x_0\\approx1.3146\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "المماس",
+            "explanation": "نرسم \\((\\Delta):y=2x-2\\) المار بالنقطة A."
+          },
+          {
+            "step_number": 4,
+            "title": "المنحنى",
+            "explanation": "نرسم منحنى متزايدًا، يهبط إلى \\(-\\infty\\) قرب \\(x=-1\\)، ويبقى أسفل \\(y=x\\) ويقترب منه عند \\(+\\infty\\).",
+            "result": "الشكل الكامل موجود في graph JSON."
+          }
+        ],
+        "final_answer": "تم تضمين الرسم الكامل في JSON.",
+        "figures": [
+          {
+            "id": "2009_ex04b_graph",
+            "type": "cartesian_graph",
+            "title": "المنحنى (C_f)، المقاربان، والمماس (Δ)",
+            "x_range": [
+              -1,
+              8
+            ],
+            "y_range": [
+              -8,
+              8
+            ],
+            "axes": {
+              "x_label": "x",
+              "y_label": "y",
+              "grid": true,
+              "equal_scale": false
+            },
+            "series": [
+              {
+                "id": "Cf",
+                "label": "(C_f): f(x)=x-2/√(x+1)",
+                "kind": "curve",
+                "formula": "y=x-\\frac{2}{\\sqrt{x+1}}",
+                "domain": "]-1,+\\infty[",
+                "points": [
+                  {
+                    "x": -0.95,
+                    "y": -9.894272
+                  },
+                  {
+                    "x": -0.8,
+                    "y": -5.272136
+                  },
+                  {
+                    "x": -0.5,
+                    "y": -3.328427
+                  },
+                  {
+                    "x": 0,
+                    "y": -2.0
+                  },
+                  {
+                    "x": 0.5,
+                    "y": -1.132993
+                  },
+                  {
+                    "x": 1,
+                    "y": -0.414214
+                  },
+                  {
+                    "x": 1.314596,
+                    "y": -0.0
+                  },
+                  {
+                    "x": 1.5,
+                    "y": 0.235089
+                  },
+                  {
+                    "x": 2,
+                    "y": 0.845299
+                  },
+                  {
+                    "x": 3,
+                    "y": 2.0
+                  },
+                  {
+                    "x": 5,
+                    "y": 4.183503
+                  },
+                  {
+                    "x": 8,
+                    "y": 7.333333
+                  }
+                ]
+              },
+              {
+                "id": "D",
+                "label": "(D): y=x",
+                "kind": "line",
+                "formula": "y=x",
+                "points": [
+                  {
+                    "x": -1,
+                    "y": -1
+                  },
+                  {
+                    "x": 8,
+                    "y": 8
+                  }
+                ]
+              },
+              {
+                "id": "Delta",
+                "label": "(Δ): y=2x-2",
+                "kind": "line",
+                "formula": "y=2x-2",
+                "points": [
+                  {
+                    "x": -1,
+                    "y": -4
+                  },
+                  {
+                    "x": 5,
+                    "y": 8
+                  }
+                ]
+              }
+            ],
+            "asymptotes": [
+              {
+                "type": "vertical",
+                "equation": "x=-1",
+                "label": "المقارب الرأسي"
+              },
+              {
+                "type": "oblique",
+                "equation": "y=x",
+                "label": "(D) المقارب المائل عند +∞"
+              }
+            ],
+            "annotations": [
+              {
+                "type": "point",
+                "x": 0,
+                "y": -2,
+                "label": "A(0,-2) - نقطة التماس مع (Δ)"
+              },
+              {
+                "type": "point",
+                "x": 1.314596,
+                "y": 0,
+                "label": "B(x₀,0), x₀≈1.3146"
+              }
+            ],
+            "relative_position": {
+              "reference": "D: y=x",
+              "expression": "f(x)-x=-2/√(x+1)<0",
+              "conclusion": "(C_f) يقع أسفل (D) على كامل المجال."
+            }
+          }
+        ],
+        "common_mistakes": [],
+        "hints": [],
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    }
+  ],
+  "source_reference": {
+    "file": "2008 (2).pdf",
+    "statement_pages": [
+      2
+    ],
+    "source_faithful_statement": true,
+    "note": "التمرين السفلي في صفحة 2009؛ حُوّلت الرموز إلى LaTeX فقط."
+  },
+  "display": {
+    "layout": "question_by_question",
+    "show_statement_first": true,
+    "show_solution_after_click": true,
+    "show_solution_figures": true,
+    "math_renderer": "katex_or_mathjax"
+  },
+  "review_status": {
+    "statement_compared_with_original_pdf": true,
+    "solution_created_step_by_step": true,
+    "json_validated": true,
+    "react_ready": true
+  },
+  "solution_pedagogy": {
+    "style": "guided_step_by_step",
+    "audience": "3AS_bac_student",
+    "principles": [
+      "إظهار المشتقة وإشارتها قبل جدول التغيرات.",
+      "إثبات المقارب باستعمال النهاية المناسبة.",
+      "إثبات وجود ووحدانية الجذر بالاستمرارية والرتابة.",
+      "إرفاق الرسم بصيغة JSON قابلة للرسم في React."
+    ]
+  }
+}

@@ -1,0 +1,306 @@
+{
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2016-electrical-verified",
+  "language": "ar",
+  "direction": "rtl",
+  "year": 2016,
+  "session": "ordinary",
+  "chapter_code": "electrical_phenomena_evolution",
+  "chapter_title": "تطور دراسة ظواهر كهربائية",
+  "exercise_number": 38,
+  "source_page": 15,
+  "source_pages": [
+    15
+  ],
+  "solution_source_pages": [
+    35
+  ],
+
+  "branches": [
+    {
+      "code": "science",
+      "name": "شعبة علوم تجريبية"
+    }
+  ],
+  "title": "التمرين 38 — بكالوريا الجزائر 2016 — شعبة علوم تجريبية (الدورة العادية)",
+  "axis_tags": [
+    "rc_capacitor_discharge",
+    "rc_differential_equation_solution",
+    "rc_log_linearization",
+    "rc_energy"
+  ],
+  "questions": [
+    {
+      "id": "2016_elec_ex38_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) ما هي إشارة شدة التيار الكهربائي المبين في الدارة؟ علل.",
+      "solution": {
+        "strategy": "نقارن الاتجاه الحقيقي بجهة السهم.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الإشارة",
+            "explanation": "أثناء التفريغ يكون التيار الحقيقي عكس الجهة الاصطلاحية المرسومة، لذا \\(\\boxed{i<0}\\)."
+          }
+        ],
+        "final_answer": "سالبة."
+      }
+    },
+    {
+      "id": "2016_elec_ex38_q2",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2) بيّن أن المعادلة التفاضلية التي يحققها \\(u_C\\) تكتب \\(u_C+\\frac1\\alpha\\frac{du_C}{dt}=0\\).",
+      "solution": {
+        "strategy": "نطبق قانون التوترات في حلقة التفريغ.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "القانون",
+            "explanation": "\\[u_C+u_R=0\\Rightarrow u_C+RC\\frac{du_C}{dt}=0\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "المطابقة",
+            "explanation": "\\[\\boxed{\\alpha=\\frac1{RC}}\\]"
+          }
+        ],
+        "final_answer": "\\(\\alpha=1/(RC)\\)."
+      }
+    },
+    {
+      "id": "2016_elec_ex38_q3",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "3) إذا كان الحل \\(u_C=Ae^{-\\alpha t}\\)، أوجد \\(A\\) و\\(\\alpha\\) بدلالة \\(R,C,E\\).",
+      "solution": {
+        "strategy": "نستعمل المعادلة والشرط الابتدائي.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "α",
+            "explanation": "\\(\\boxed{\\alpha=1/(RC)}\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "A",
+            "explanation": "عند t=0: \\(u_C(0)=E\\)، إذن \\(\\boxed{A=E}\\)."
+          }
+        ],
+        "final_answer": "\\(A=E,\\alpha=1/(RC)\\)."
+      }
+    },
+    {
+      "id": "2016_elec_ex38_q4",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "4) من الشكل 62: أ- استنتج بيانياً عبارة \\(\\ln u_C=f(t)\\). ب- استنتج \\(\\alpha,C,E\\).",
+      "solution": {
+        "strategy": "نقرأ ميل المستقيم ومرتبة الأصل.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "المعادلة",
+            "explanation": "\\[\\boxed{\\ln u_C=-50t+1.8}\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "α",
+            "explanation": "\\(\\boxed{\\alpha=50s^{-1}}\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "E",
+            "explanation": "\\(\\ln E=1.8\\Rightarrow E\\approx\\boxed{6V}\\)."
+          },
+          {
+            "step_number": 4,
+            "title": "C",
+            "explanation": "\\[C=\\frac1{R\\alpha}=\\frac1{10^4\\times50}=\\boxed{2\\mu F}\\]"
+          }
+        ],
+        "final_answer": "\\(\\alpha=50s^{-1},E=6V,C=2\\mu F\\)."
+      }
+    },
+    {
+      "id": "2016_elec_ex38_q5",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "5) احسب الطاقة المحولة إلى الناقل الأومي عند \\(t=2.5\\tau\\). ماذا تستنتج؟",
+      "solution": {
+        "strategy": "الطاقة المحولة هي نقصان طاقة المكثفة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الحساب",
+            "explanation": "\\[E_J=\\frac12CE^2-\\frac12CE^2e^{-5}=\\frac12CE^2(1-e^{-5})\\approx\\frac12CE^2\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "الاستنتاج",
+            "explanation": "عند \\(2.5\\tau\\) تكون الطاقة المخزنة قد تحولت تقريباً كلياً إلى حرارة بفعل جول."
+          }
+        ],
+        "final_answer": "تقريباً كل طاقة المكثفة تحولت إلى الناقل الأومي."
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "تجميعية_عمورة_للبكالوريات_السابقة_الوحدة_3(1).pdf",
+    "statement_figure_policy": "كل شكل أو بيان معطى في الموضوع يوضع مع نص التمرين. الرسم المطلوب من التلميذ يوضع داخل الحل فقط.",
+    "solution_figure_policy": "الرسم الذي يمثل إجابة سؤال أو توصيل جهاز قياس يوضع داخل خطوات الحل.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  },
+  "statement": "لدراسة تفريغ مكثفة نركب الدارة بالشكل 61: مولد ثابت E، ناقل أومي \\(R=10k\\Omega\\)، مكثفة C وبادلة K. نضع البادلة في الوضع (1) حتى النظام الدائم ثم ننقلها إلى الوضع (2) عند t=0. يمثل الشكل 62 تغيرات \\(\\ln u_C\\) بدلالة الزمن.",
+  "figures": [
+    {
+      "diagram_type": "ex38_statement_circuit",
+      "title": "الشكل 61 — دارة التفريغ",
+      "description": "دارة شحن ثم تفريغ المكثفة.",
+      "svg": "<svg viewBox=\"0 0 820 360\" xmlns=\"http://www.w3.org/2000/svg\">\n    <path d=\"M140 80 H650 V285 H140 Z\" fill=\"none\" stroke=\"#111827\" stroke-width=\"5\"/>\n    <circle cx=\"140\" cy=\"185\" r=\"30\" fill=\"white\" stroke=\"#111827\" stroke-width=\"4\"/><text x=\"130\" y=\"193\" font-size=\"22\">E</text>\n    <line x1=\"245\" y1=\"80\" x2=\"290\" y2=\"80\" stroke=\"#111827\" stroke-width=\"5\"/><line x1=\"315\" y1=\"80\" x2=\"360\" y2=\"80\" stroke=\"#111827\" stroke-width=\"5\"/><line x1=\"290\" y1=\"80\" x2=\"318\" y2=\"56\" stroke=\"#111827\" stroke-width=\"5\"/><text x=\"295\" y=\"45\" font-size=\"21\">K</text>\n    <rect x=\"400\" y=\"55\" width=\"100\" height=\"50\" rx=\"5\" fill=\"white\" stroke=\"#111827\" stroke-width=\"3\"/><text x=\"430\" y=\"87\" font-size=\"20\">R=10kΩ</text>\n    <line x1=\"610\" y1=\"80\" x2=\"610\" y2=\"145\" stroke=\"#111827\" stroke-width=\"5\"/><line x1=\"580\" y1=\"145\" x2=\"640\" y2=\"145\" stroke=\"#111827\" stroke-width=\"6\"/><line x1=\"580\" y1=\"180\" x2=\"640\" y2=\"180\" stroke=\"#111827\" stroke-width=\"6\"/><line x1=\"610\" y1=\"180\" x2=\"610\" y2=\"285\" stroke=\"#111827\" stroke-width=\"5\"/><text x=\"655\" y=\"170\" font-size=\"22\">C</text></svg>",
+      "render_mode": "inline",
+      "responsive": true
+    },
+    {
+      "title": "الشكل 62 — ln(u_C)=f(t)",
+      "description": "المستقيم المعطى في الموضوع.",
+      "x_label": "t (s)",
+      "y_label": "ln(u_C)",
+      "x_domain": [
+        0,
+        0.1
+      ],
+      "y_domain": [
+        -3.5,
+        2
+      ],
+      "series": [
+        {
+          "name": "ln(u_C)",
+          "data": [
+            {
+              "x": 0,
+              "y": 1.8
+            },
+            {
+              "x": 0.01,
+              "y": 1.3
+            },
+            {
+              "x": 0.02,
+              "y": 0.8
+            },
+            {
+              "x": 0.03,
+              "y": 0.3
+            },
+            {
+              "x": 0.04,
+              "y": -0.2
+            },
+            {
+              "x": 0.05,
+              "y": -0.7
+            },
+            {
+              "x": 0.06,
+              "y": -1.2
+            },
+            {
+              "x": 0.08,
+              "y": -2.2
+            },
+            {
+              "x": 0.1,
+              "y": -3.2
+            }
+          ]
+        }
+      ],
+      "settings": {
+        "show_grid": true,
+        "show_axes": true,
+        "show_legend": false,
+        "show_point_labels": false,
+        "connect_points": true
+      }
+    }
+  ],
+  "statement_graphs": [
+    {
+      "diagram_type": "ex38_statement_circuit",
+      "title": "الشكل 61 — دارة التفريغ",
+      "description": "دارة شحن ثم تفريغ المكثفة.",
+      "svg": "<svg viewBox=\"0 0 820 360\" xmlns=\"http://www.w3.org/2000/svg\">\n    <path d=\"M140 80 H650 V285 H140 Z\" fill=\"none\" stroke=\"#111827\" stroke-width=\"5\"/>\n    <circle cx=\"140\" cy=\"185\" r=\"30\" fill=\"white\" stroke=\"#111827\" stroke-width=\"4\"/><text x=\"130\" y=\"193\" font-size=\"22\">E</text>\n    <line x1=\"245\" y1=\"80\" x2=\"290\" y2=\"80\" stroke=\"#111827\" stroke-width=\"5\"/><line x1=\"315\" y1=\"80\" x2=\"360\" y2=\"80\" stroke=\"#111827\" stroke-width=\"5\"/><line x1=\"290\" y1=\"80\" x2=\"318\" y2=\"56\" stroke=\"#111827\" stroke-width=\"5\"/><text x=\"295\" y=\"45\" font-size=\"21\">K</text>\n    <rect x=\"400\" y=\"55\" width=\"100\" height=\"50\" rx=\"5\" fill=\"white\" stroke=\"#111827\" stroke-width=\"3\"/><text x=\"430\" y=\"87\" font-size=\"20\">R=10kΩ</text>\n    <line x1=\"610\" y1=\"80\" x2=\"610\" y2=\"145\" stroke=\"#111827\" stroke-width=\"5\"/><line x1=\"580\" y1=\"145\" x2=\"640\" y2=\"145\" stroke=\"#111827\" stroke-width=\"6\"/><line x1=\"580\" y1=\"180\" x2=\"640\" y2=\"180\" stroke=\"#111827\" stroke-width=\"6\"/><line x1=\"610\" y1=\"180\" x2=\"610\" y2=\"285\" stroke=\"#111827\" stroke-width=\"5\"/><text x=\"655\" y=\"170\" font-size=\"22\">C</text></svg>",
+      "render_mode": "inline",
+      "responsive": true
+    },
+    {
+      "title": "الشكل 62 — ln(u_C)=f(t)",
+      "description": "المستقيم المعطى في الموضوع.",
+      "x_label": "t (s)",
+      "y_label": "ln(u_C)",
+      "x_domain": [
+        0,
+        0.1
+      ],
+      "y_domain": [
+        -3.5,
+        2
+      ],
+      "series": [
+        {
+          "name": "ln(u_C)",
+          "data": [
+            {
+              "x": 0,
+              "y": 1.8
+            },
+            {
+              "x": 0.01,
+              "y": 1.3
+            },
+            {
+              "x": 0.02,
+              "y": 0.8
+            },
+            {
+              "x": 0.03,
+              "y": 0.3
+            },
+            {
+              "x": 0.04,
+              "y": -0.2
+            },
+            {
+              "x": 0.05,
+              "y": -0.7
+            },
+            {
+              "x": 0.06,
+              "y": -1.2
+            },
+            {
+              "x": 0.08,
+              "y": -2.2
+            },
+            {
+              "x": 0.1,
+              "y": -3.2
+            }
+          ]
+        }
+      ],
+      "settings": {
+        "show_grid": true,
+        "show_axes": true,
+        "show_legend": false,
+        "show_point_labels": false,
+        "connect_points": true
+      }
+    }
+  ]
+}

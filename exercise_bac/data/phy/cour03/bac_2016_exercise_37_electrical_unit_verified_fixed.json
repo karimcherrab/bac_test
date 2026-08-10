@@ -1,0 +1,362 @@
+{
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2016-electrical-verified",
+  "language": "ar",
+  "direction": "rtl",
+  "year": 2016,
+  "session": "ordinary",
+  "chapter_code": "electrical_phenomena_evolution",
+  "chapter_title": "تطور دراسة ظواهر كهربائية",
+  "exercise_number": 37,
+  "source_page": 14,
+  "source_pages": [
+    14,
+    15
+  ],
+  "solution_source_pages": [
+    35
+  ],
+
+  "branches": [
+    {
+      "code": "science",
+      "name": "شعبة علوم تجريبية"
+    }
+  ],
+  "title": "التمرين 37 — بكالوريا الجزائر 2016 — شعبة علوم تجريبية (الدورة العادية)",
+  "axis_tags": [
+    "rc_capacitor_charging",
+    "rc_current_differential_equation",
+    "rc_time_constant_graphical_analysis"
+  ],
+  "questions": [
+    {
+      "id": "2016_elec_ex37_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) أرفق كل منحنى بالمدخل الموافق له مع التبرير.",
+      "solution": {
+        "strategy": "نحدد التوتر المقاس في كل مدخل.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "Y1",
+            "explanation": "يعطي توتر \\(R_2\\): \\(u_1=R_2i\\)، وهو متناقص، إذن المنحنى \\(\\boxed{(b)}\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "Y2",
+            "explanation": "يعطي \\(u_2=E-u_1\\)، وهو متزايد، إذن المنحنى \\(\\boxed{(a)}\\)."
+          }
+        ],
+        "final_answer": "Y1↔(b)، Y2↔(a)."
+      }
+    },
+    {
+      "id": "2016_elec_ex37_q2",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2) اكتب المعادلة التفاضلية التي تحققها الشدة \\(i(t)\\) للتيار الكهربائي في الدارة.",
+      "solution": {
+        "strategy": "نشتق قانون التوترات.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "المعادلة",
+            "explanation": "\\[\\boxed{\\frac{di}{dt}+\\frac1{(R_1+R_2)C}i=0}\\]"
+          }
+        ],
+        "final_answer": "المعادلة كما هو مبين."
+      }
+    },
+    {
+      "id": "2016_elec_ex37_q3",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "3) أوجد عبارة الشدة \\(I_0\\) للتيار الأعظمي المار بالدارة.",
+      "solution": {
+        "strategy": "عند t=0 تكون uC=0.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "I0",
+            "explanation": "\\[\\boxed{I_0=\\frac{E}{R_1+R_2}}\\]"
+          }
+        ],
+        "final_answer": "\\(I_0=E/(R_1+R_2)\\)."
+      }
+    },
+    {
+      "id": "2016_elec_ex37_q4",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "4) استنتج عند اللحظة \\(t=0\\) عبارة التوتر بين طرفي \\(R_2\\) بدلالة \\(E,R_1,R_2\\).",
+      "solution": {
+        "strategy": "uR2=R2 I0.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "العبارة",
+            "explanation": "\\[\\boxed{u_{R_2}(0)=\\frac{R_2E}{R_1+R_2}}\\]"
+          }
+        ],
+        "final_answer": "\\(u_{R2}(0)=R_2E/(R_1+R_2)\\)."
+      }
+    },
+    {
+      "id": "2016_elec_ex37_q5",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "5) اعتماداً على البيانين استنتج قيمة كل من \\(E,I_0,R_2,C\\).",
+      "solution": {
+        "strategy": "نقرأ القيم الابتدائية وثابت الزمن.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "E",
+            "explanation": "من (a): \\(\\boxed{E=6.3V}\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "I0",
+            "explanation": "\\[I_0=\\frac{E-u_1(0)}{R_1}=\\frac{6.3-2.3}{1000}=\\boxed{4mA}\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "R2",
+            "explanation": "\\[R_2=\\frac{u_1(0)}{I_0}=\\frac{2.3}{4\\times10^{-3}}=\\boxed{575\\Omega}\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "C",
+            "explanation": "من البيان \\(\\tau=7.5s\\)، لذلك \\[C=\\frac{7.5}{1000+575}\\approx\\boxed{4.8\\times10^{-3}F}\\]"
+          }
+        ],
+        "final_answer": "\\(E=6.3V,I_0=4mA,R_2=575\\Omega,C\\approx4.8mF\\)."
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "تجميعية_عمورة_للبكالوريات_السابقة_الوحدة_3(1).pdf",
+    "statement_figure_policy": "كل شكل أو بيان معطى في الموضوع يوضع مع نص التمرين. الرسم المطلوب من التلميذ يوضع داخل الحل فقط.",
+    "solution_figure_policy": "الرسم الذي يمثل إجابة سؤال أو توصيل جهاز قياس يوضع داخل خطوات الحل.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  },
+  "statement": "نركب الدارة الموضحة بالشكل 59: مولد ثابت E، مكثفة غير مشحونة C، ناقلان أوميان \\(R_1=1k\\Omega\\) و\\(R_2\\) مجهولة، وقاطعة K. نوصلها براسم اهتزاز ذي ذاكرة كما هو موضح، ثم نغلق K عند t=0 فنشاهد المنحنيين (a) و(b) في الشكل 60.",
+  "figures": [
+    {
+      "diagram_type": "ex37_statement_circuit",
+      "title": "الشكل 59 — الدارة",
+      "description": "دارة القياس بمدخلي Y1 وY2.",
+      "svg": "<svg viewBox=\"0 0 820 360\" xmlns=\"http://www.w3.org/2000/svg\">\n    <path d=\"M140 80 H650 V285 H140 Z\" fill=\"none\" stroke=\"#111827\" stroke-width=\"5\"/>\n    <circle cx=\"140\" cy=\"185\" r=\"30\" fill=\"white\" stroke=\"#111827\" stroke-width=\"4\"/><text x=\"130\" y=\"193\" font-size=\"22\">E</text>\n    <line x1=\"245\" y1=\"80\" x2=\"290\" y2=\"80\" stroke=\"#111827\" stroke-width=\"5\"/><line x1=\"315\" y1=\"80\" x2=\"360\" y2=\"80\" stroke=\"#111827\" stroke-width=\"5\"/><line x1=\"290\" y1=\"80\" x2=\"318\" y2=\"56\" stroke=\"#111827\" stroke-width=\"5\"/><text x=\"295\" y=\"45\" font-size=\"21\">K</text>\n    <rect x=\"400\" y=\"55\" width=\"100\" height=\"50\" rx=\"5\" fill=\"white\" stroke=\"#111827\" stroke-width=\"3\"/><text x=\"430\" y=\"87\" font-size=\"20\">R₁=1kΩ</text>\n    <line x1=\"610\" y1=\"80\" x2=\"610\" y2=\"145\" stroke=\"#111827\" stroke-width=\"5\"/><line x1=\"580\" y1=\"145\" x2=\"640\" y2=\"145\" stroke=\"#111827\" stroke-width=\"6\"/><line x1=\"580\" y1=\"180\" x2=\"640\" y2=\"180\" stroke=\"#111827\" stroke-width=\"6\"/><line x1=\"610\" y1=\"180\" x2=\"610\" y2=\"285\" stroke=\"#111827\" stroke-width=\"5\"/><text x=\"655\" y=\"170\" font-size=\"22\">C</text><rect x=\"525\" y=\"225\" width=\"100\" height=\"45\" rx=\"5\" fill=\"white\" stroke=\"#111827\" stroke-width=\"3\"/><text x=\"555\" y=\"254\" font-size=\"20\">R₂</text></svg>",
+      "render_mode": "inline",
+      "responsive": true
+    },
+    {
+      "title": "الشكل 60",
+      "description": "المنحنيان (a) و(b) المشاهدان على الراسم.",
+      "x_label": "t (s)",
+      "y_label": "u (V)",
+      "x_domain": [
+        0,
+        30
+      ],
+      "y_domain": [
+        0,
+        6.6
+      ],
+      "series": [
+        {
+          "name": "(a)",
+          "data": [
+            {
+              "x": 0,
+              "y": 4.0
+            },
+            {
+              "x": 2.5,
+              "y": 4.652
+            },
+            {
+              "x": 5,
+              "y": 5.119
+            },
+            {
+              "x": 7.5,
+              "y": 5.454
+            },
+            {
+              "x": 10,
+              "y": 5.694
+            },
+            {
+              "x": 15,
+              "y": 5.989
+            },
+            {
+              "x": 22.5,
+              "y": 6.185
+            },
+            {
+              "x": 30,
+              "y": 6.258
+            }
+          ]
+        },
+        {
+          "name": "(b)",
+          "data": [
+            {
+              "x": 0,
+              "y": 2.3
+            },
+            {
+              "x": 2.5,
+              "y": 1.648
+            },
+            {
+              "x": 5,
+              "y": 1.181
+            },
+            {
+              "x": 7.5,
+              "y": 0.846
+            },
+            {
+              "x": 10,
+              "y": 0.606
+            },
+            {
+              "x": 15,
+              "y": 0.311
+            },
+            {
+              "x": 22.5,
+              "y": 0.115
+            },
+            {
+              "x": 30,
+              "y": 0.042
+            }
+          ]
+        }
+      ],
+      "settings": {
+        "show_grid": true,
+        "show_axes": true,
+        "show_legend": true,
+        "show_point_labels": false,
+        "connect_points": true
+      }
+    }
+  ],
+  "statement_graphs": [
+    {
+      "diagram_type": "ex37_statement_circuit",
+      "title": "الشكل 59 — الدارة",
+      "description": "دارة القياس بمدخلي Y1 وY2.",
+      "svg": "<svg viewBox=\"0 0 820 360\" xmlns=\"http://www.w3.org/2000/svg\">\n    <path d=\"M140 80 H650 V285 H140 Z\" fill=\"none\" stroke=\"#111827\" stroke-width=\"5\"/>\n    <circle cx=\"140\" cy=\"185\" r=\"30\" fill=\"white\" stroke=\"#111827\" stroke-width=\"4\"/><text x=\"130\" y=\"193\" font-size=\"22\">E</text>\n    <line x1=\"245\" y1=\"80\" x2=\"290\" y2=\"80\" stroke=\"#111827\" stroke-width=\"5\"/><line x1=\"315\" y1=\"80\" x2=\"360\" y2=\"80\" stroke=\"#111827\" stroke-width=\"5\"/><line x1=\"290\" y1=\"80\" x2=\"318\" y2=\"56\" stroke=\"#111827\" stroke-width=\"5\"/><text x=\"295\" y=\"45\" font-size=\"21\">K</text>\n    <rect x=\"400\" y=\"55\" width=\"100\" height=\"50\" rx=\"5\" fill=\"white\" stroke=\"#111827\" stroke-width=\"3\"/><text x=\"430\" y=\"87\" font-size=\"20\">R₁=1kΩ</text>\n    <line x1=\"610\" y1=\"80\" x2=\"610\" y2=\"145\" stroke=\"#111827\" stroke-width=\"5\"/><line x1=\"580\" y1=\"145\" x2=\"640\" y2=\"145\" stroke=\"#111827\" stroke-width=\"6\"/><line x1=\"580\" y1=\"180\" x2=\"640\" y2=\"180\" stroke=\"#111827\" stroke-width=\"6\"/><line x1=\"610\" y1=\"180\" x2=\"610\" y2=\"285\" stroke=\"#111827\" stroke-width=\"5\"/><text x=\"655\" y=\"170\" font-size=\"22\">C</text><rect x=\"525\" y=\"225\" width=\"100\" height=\"45\" rx=\"5\" fill=\"white\" stroke=\"#111827\" stroke-width=\"3\"/><text x=\"555\" y=\"254\" font-size=\"20\">R₂</text></svg>",
+      "render_mode": "inline",
+      "responsive": true
+    },
+    {
+      "title": "الشكل 60",
+      "description": "المنحنيان (a) و(b) المشاهدان على الراسم.",
+      "x_label": "t (s)",
+      "y_label": "u (V)",
+      "x_domain": [
+        0,
+        30
+      ],
+      "y_domain": [
+        0,
+        6.6
+      ],
+      "series": [
+        {
+          "name": "(a)",
+          "data": [
+            {
+              "x": 0,
+              "y": 4.0
+            },
+            {
+              "x": 2.5,
+              "y": 4.652
+            },
+            {
+              "x": 5,
+              "y": 5.119
+            },
+            {
+              "x": 7.5,
+              "y": 5.454
+            },
+            {
+              "x": 10,
+              "y": 5.694
+            },
+            {
+              "x": 15,
+              "y": 5.989
+            },
+            {
+              "x": 22.5,
+              "y": 6.185
+            },
+            {
+              "x": 30,
+              "y": 6.258
+            }
+          ]
+        },
+        {
+          "name": "(b)",
+          "data": [
+            {
+              "x": 0,
+              "y": 2.3
+            },
+            {
+              "x": 2.5,
+              "y": 1.648
+            },
+            {
+              "x": 5,
+              "y": 1.181
+            },
+            {
+              "x": 7.5,
+              "y": 0.846
+            },
+            {
+              "x": 10,
+              "y": 0.606
+            },
+            {
+              "x": 15,
+              "y": 0.311
+            },
+            {
+              "x": 22.5,
+              "y": 0.115
+            },
+            {
+              "x": 30,
+              "y": 0.042
+            }
+          ]
+        }
+      ],
+      "settings": {
+        "show_grid": true,
+        "show_axes": true,
+        "show_legend": true,
+        "show_point_labels": false,
+        "connect_points": true
+      }
+    }
+  ]
+}

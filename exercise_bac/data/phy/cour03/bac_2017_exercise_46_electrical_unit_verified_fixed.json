@@ -1,0 +1,425 @@
+{
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2017-electrical-verified",
+  "language": "ar",
+  "direction": "rtl",
+  "year": 2017,
+  "session": "ordinary",
+  "chapter_code": "electrical_phenomena_evolution",
+  "chapter_title": "تطور دراسة ظواهر كهربائية",
+  "exercise_number": 46,
+  "source_page": 19,
+  "source_pages": [
+    19,
+    20
+  ],
+  "solution_source_pages": [
+    39,
+    40
+  ],
+
+  "branches": [
+    {
+      "code": "science",
+      "name": "شعبة علوم تجريبية"
+    }
+  ],
+  "title": "التمرين 46 — بكالوريا الجزائر 2017 — علوم تجريبية (الدورة الاستثنائية)",
+  "axis_tags": [
+    "rc_capacitor_charging",
+    "rl_current_establishment_differential_equation"
+  ],
+  "questions": [
+    {
+      "id": "2017_elec_ex46_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) في الوضع (1): ما الظاهرة؟ مثّل الاتجاهات، جد معادلة uC، وبيّن أن uC=E(1-e^{-t/(RC)}) حل لها.",
+      "solution": {
+        "strategy": "الوضع الأول شحن RC.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الظاهرة",
+            "explanation": "شحن المكثفة."
+          },
+          {
+            "step_number": 2,
+            "title": "المعادلة",
+            "explanation": "\\[\\frac{du_C}{dt}+\\frac1{RC}u_C=\\frac E{RC}\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "التحقق",
+            "explanation": "باشتقاق الحل والتعويض تتحقق المعادلة."
+          }
+        ],
+        "final_answer": "شحن RC."
+      }
+    },
+    {
+      "id": "2017_elec_ex46_q2",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2) في الوضع (2): جد المعادلة التفاضلية لـi(t). إذا كان i=Ae^{-Rt/L}+B فجد A وB.",
+      "solution": {
+        "strategy": "دارة RL.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "المعادلة",
+            "explanation": "\\[\\frac{di}{dt}+\\frac RL i=\\frac EL\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "B",
+            "explanation": "في النظام الدائم B=E/R."
+          },
+          {
+            "step_number": 3,
+            "title": "A",
+            "explanation": "من i(0)=0 نحصل على A=-E/R."
+          }
+        ],
+        "final_answer": "A=-E/R، B=E/R."
+      }
+    },
+    {
+      "id": "2017_elec_ex46_q3",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "3) من البيانين: أرفق كل منحنى بالوضع المناسب واستنتج E وR وC وL.",
+      "solution": {
+        "strategy": "نقرأ القيم النهائية والثوابت الزمنية.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الإسناد",
+            "explanation": "(a) يمثل تيار RL في الوضع (2)، و(b) يمثل uC في الوضع (1)."
+          },
+          {
+            "step_number": 2,
+            "title": "E",
+            "explanation": "من (b): E=6V."
+          },
+          {
+            "step_number": 3,
+            "title": "R",
+            "explanation": "من (a): Imax=12mA ⇒ R=500Ω."
+          },
+          {
+            "step_number": 4,
+            "title": "C",
+            "explanation": "من (b): τb=5ms ⇒ C=τ/R=10µF."
+          },
+          {
+            "step_number": 5,
+            "title": "L",
+            "explanation": "من (a): τa=0.5ms ⇒ L=Rτ=0.25H."
+          }
+        ],
+        "final_answer": "E=6V، R=500Ω، C=10µF، L=0.25H."
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "تجميعية_عمورة_للبكالوريات_السابقة_الوحدة_3(1).pdf",
+    "statement_figure_policy": "الشكل المعطى في الموضوع يظهر مع نص التمرين، والرسم المطلوب كإجابة يظهر داخل الحل فقط.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  },
+  "statement": "نحقق الدارة في الشكل 83 باستعمال مولد مثالي E، ناقلين أوميين R1 وR2 حيث R1=R2=R، مكثفة فارغة C، وشيعة صافية L وبادلة K. في الوضع (1) نحصل على دارة RC، وفي الوضع (2) على دارة RL. يمثل الشكل 84 البيانين (a) و(b).",
+  "figures": [
+    {
+      "diagram_type": "ex46_circuit",
+      "title": "الشكل 83",
+      "description": "الشكل 83",
+      "svg": "<svg viewBox=\"0 0 800 320\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"25\" y=\"20\" width=\"750\" height=\"260\" rx=\"18\" fill=\"white\" stroke=\"#cbd5e1\"/><path d=\"M130 80 H650 V240 H130 Z\" fill=\"none\" stroke=\"#111827\" stroke-width=\"5\"/><circle cx=\"130\" cy=\"160\" r=\"30\" fill=\"white\" stroke=\"#111827\" stroke-width=\"4\"/><text x=\"118\" y=\"168\" font-size=\"22\">E</text><rect x=\"250\" y=\"55\" width=\"100\" height=\"50\" fill=\"white\" stroke=\"#111827\" stroke-width=\"3\"/><text x=\"270\" y=\"87\" font-size=\"20\">R1/R2</text><line x1=\"430\" y1=\"80\" x2=\"430\" y2=\"130\" stroke=\"#111827\" stroke-width=\"5\"/><line x1=\"400\" y1=\"130\" x2=\"460\" y2=\"130\" stroke=\"#111827\" stroke-width=\"6\"/><line x1=\"400\" y1=\"165\" x2=\"460\" y2=\"165\" stroke=\"#111827\" stroke-width=\"6\"/><text x=\"475\" y=\"155\" font-size=\"22\">C/L</text><text x=\"560\" y=\"70\" font-size=\"20\">K</text></svg>",
+      "render_mode": "inline",
+      "responsive": true
+    },
+    {
+      "title": "الشكل 84 — البيان (a)",
+      "description": "الشكل 84 — البيان (a)",
+      "x_label": "t(ms)",
+      "y_label": "i(mA)",
+      "x_domain": [
+        0,
+        15
+      ],
+      "y_domain": [
+        0,
+        13
+      ],
+      "series": [
+        {
+          "name": "a",
+          "data": [
+            {
+              "x": 0,
+              "y": 0.0
+            },
+            {
+              "x": 0.25,
+              "y": 4.722
+            },
+            {
+              "x": 0.5,
+              "y": 7.585
+            },
+            {
+              "x": 1,
+              "y": 10.376
+            },
+            {
+              "x": 2,
+              "y": 11.78
+            },
+            {
+              "x": 3,
+              "y": 11.97
+            },
+            {
+              "x": 5,
+              "y": 11.999
+            },
+            {
+              "x": 8,
+              "y": 12.0
+            },
+            {
+              "x": 10,
+              "y": 12.0
+            },
+            {
+              "x": 15,
+              "y": 12.0
+            }
+          ]
+        }
+      ],
+      "settings": {
+        "show_grid": true,
+        "show_axes": true,
+        "show_legend": false,
+        "show_point_labels": false,
+        "connect_points": true
+      }
+    },
+    {
+      "title": "الشكل 84 — البيان (b)",
+      "description": "الشكل 84 — البيان (b)",
+      "x_label": "t(ms)",
+      "y_label": "uC(V)",
+      "x_domain": [
+        0,
+        15
+      ],
+      "y_domain": [
+        0,
+        6.5
+      ],
+      "series": [
+        {
+          "name": "b",
+          "data": [
+            {
+              "x": 0,
+              "y": 0.0
+            },
+            {
+              "x": 0.25,
+              "y": 0.293
+            },
+            {
+              "x": 0.5,
+              "y": 0.571
+            },
+            {
+              "x": 1,
+              "y": 1.088
+            },
+            {
+              "x": 2,
+              "y": 1.978
+            },
+            {
+              "x": 3,
+              "y": 2.707
+            },
+            {
+              "x": 5,
+              "y": 3.793
+            },
+            {
+              "x": 8,
+              "y": 4.789
+            },
+            {
+              "x": 10,
+              "y": 5.188
+            },
+            {
+              "x": 15,
+              "y": 5.701
+            }
+          ]
+        }
+      ],
+      "settings": {
+        "show_grid": true,
+        "show_axes": true,
+        "show_legend": false,
+        "show_point_labels": false,
+        "connect_points": true
+      }
+    }
+  ],
+  "statement_graphs": [
+    {
+      "diagram_type": "ex46_circuit",
+      "title": "الشكل 83",
+      "description": "الشكل 83",
+      "svg": "<svg viewBox=\"0 0 800 320\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"25\" y=\"20\" width=\"750\" height=\"260\" rx=\"18\" fill=\"white\" stroke=\"#cbd5e1\"/><path d=\"M130 80 H650 V240 H130 Z\" fill=\"none\" stroke=\"#111827\" stroke-width=\"5\"/><circle cx=\"130\" cy=\"160\" r=\"30\" fill=\"white\" stroke=\"#111827\" stroke-width=\"4\"/><text x=\"118\" y=\"168\" font-size=\"22\">E</text><rect x=\"250\" y=\"55\" width=\"100\" height=\"50\" fill=\"white\" stroke=\"#111827\" stroke-width=\"3\"/><text x=\"270\" y=\"87\" font-size=\"20\">R1/R2</text><line x1=\"430\" y1=\"80\" x2=\"430\" y2=\"130\" stroke=\"#111827\" stroke-width=\"5\"/><line x1=\"400\" y1=\"130\" x2=\"460\" y2=\"130\" stroke=\"#111827\" stroke-width=\"6\"/><line x1=\"400\" y1=\"165\" x2=\"460\" y2=\"165\" stroke=\"#111827\" stroke-width=\"6\"/><text x=\"475\" y=\"155\" font-size=\"22\">C/L</text><text x=\"560\" y=\"70\" font-size=\"20\">K</text></svg>",
+      "render_mode": "inline",
+      "responsive": true
+    },
+    {
+      "title": "الشكل 84 — البيان (a)",
+      "description": "الشكل 84 — البيان (a)",
+      "x_label": "t(ms)",
+      "y_label": "i(mA)",
+      "x_domain": [
+        0,
+        15
+      ],
+      "y_domain": [
+        0,
+        13
+      ],
+      "series": [
+        {
+          "name": "a",
+          "data": [
+            {
+              "x": 0,
+              "y": 0.0
+            },
+            {
+              "x": 0.25,
+              "y": 4.722
+            },
+            {
+              "x": 0.5,
+              "y": 7.585
+            },
+            {
+              "x": 1,
+              "y": 10.376
+            },
+            {
+              "x": 2,
+              "y": 11.78
+            },
+            {
+              "x": 3,
+              "y": 11.97
+            },
+            {
+              "x": 5,
+              "y": 11.999
+            },
+            {
+              "x": 8,
+              "y": 12.0
+            },
+            {
+              "x": 10,
+              "y": 12.0
+            },
+            {
+              "x": 15,
+              "y": 12.0
+            }
+          ]
+        }
+      ],
+      "settings": {
+        "show_grid": true,
+        "show_axes": true,
+        "show_legend": false,
+        "show_point_labels": false,
+        "connect_points": true
+      }
+    },
+    {
+      "title": "الشكل 84 — البيان (b)",
+      "description": "الشكل 84 — البيان (b)",
+      "x_label": "t(ms)",
+      "y_label": "uC(V)",
+      "x_domain": [
+        0,
+        15
+      ],
+      "y_domain": [
+        0,
+        6.5
+      ],
+      "series": [
+        {
+          "name": "b",
+          "data": [
+            {
+              "x": 0,
+              "y": 0.0
+            },
+            {
+              "x": 0.25,
+              "y": 0.293
+            },
+            {
+              "x": 0.5,
+              "y": 0.571
+            },
+            {
+              "x": 1,
+              "y": 1.088
+            },
+            {
+              "x": 2,
+              "y": 1.978
+            },
+            {
+              "x": 3,
+              "y": 2.707
+            },
+            {
+              "x": 5,
+              "y": 3.793
+            },
+            {
+              "x": 8,
+              "y": 4.789
+            },
+            {
+              "x": 10,
+              "y": 5.188
+            },
+            {
+              "x": 15,
+              "y": 5.701
+            }
+          ]
+        }
+      ],
+      "settings": {
+        "show_grid": true,
+        "show_axes": true,
+        "show_legend": false,
+        "show_point_labels": false,
+        "connect_points": true
+      }
+    }
+  ]
+}

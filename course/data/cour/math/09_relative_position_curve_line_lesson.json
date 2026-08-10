@@ -1,0 +1,212 @@
+{
+  "tag": "relative_position_curve_line",
+  "title": "الوضعية النسبية بين منحنى ومستقيم",
+  "order": 9,
+  "is_active": true,
+  "branches": [
+    "math",
+    "science",
+    "math_tech"
+  ],
+  "content": {
+    "version": 1,
+    "language": "ar",
+    "direction": "rtl",
+    "chapter_code": "functions",
+    "chapter_title": "دراسة الدوال",
+    "axis_tag": "relative_position_curve_line",
+    "axis_title": "الوضعية النسبية بين منحنى ومستقيم",
+    "estimated_minutes": 55,
+    "difficulty": "medium",
+    "source_note": "محور مبسط ومنظم لمنصة تعليمية موجهة إلى البكالوريا الجزائرية.",
+    "lesson_goal": "أن يحدد التلميذ هل المنحنى فوق المستقيم أو تحته باستعمال إشارة الفرق.",
+    "prerequisites": [
+      "دراسة إشارة دالة",
+      "معادلة مستقيم",
+      "المقاربات"
+    ],
+    "learning_outcomes": [
+      "يشكل دالة الفرق",
+      "يدرس إشارتها",
+      "يحدد نقاط التقاطع",
+      "يكتب الوضعية النسبية بدقة"
+    ],
+    "learning_path": [
+      {
+        "id": "step_1",
+        "type": "rule",
+        "title": "قاعدة المقارنة",
+        "content": {
+          "rules": [
+            {
+              "condition": "\\(f(x)-(ax+b)>0\\)",
+              "conclusion": "C_f فوق المستقيم."
+            },
+            {
+              "condition": "\\(f(x)-(ax+b)<0\\)",
+              "conclusion": "C_f تحت المستقيم."
+            },
+            {
+              "condition": "\\(f(x)-(ax+b)=0\\)",
+              "conclusion": "نقطة تقاطع."
+            }
+          ]
+        }
+      },
+      {
+        "id": "step_2",
+        "type": "method",
+        "title": "المنهجية",
+        "content": {
+          "method": [
+            "احسب g(x)=f(x)-(ax+b).",
+            "حل g(x)=0.",
+            "ادرس إشارة g.",
+            "ترجم الإشارة إلى وضعية هندسية."
+          ],
+          "attention": "لا تدرس إشارة f وحدها."
+        }
+      },
+      {
+        "id": "step_3",
+        "type": "worked_example",
+        "title": "مثال",
+        "content": {
+          "statement": "قارن f(x)=x² مع المستقيم d:y=2x.",
+          "solution": "f(x)-2x=x(x-2).",
+          "result": [
+            "المنحنى فوق d على ]-∞,0[∪]2,+∞[.",
+            "المنحنى تحت d على ]0,2[.",
+            "يتقاطعان عند x=0 وx=2."
+          ]
+        }
+      },
+      {
+        "id": "step_4",
+        "type": "visualization",
+        "title": "منحنى ومستقيم",
+        "content": {
+          "visualization": {
+            "type": "curve_line_relative_position",
+            "renderer": "jsx_svg_or_recharts",
+            "curves": [
+              {
+                "id": "f",
+                "expression": "x^2",
+                "label": "C_f"
+              },
+              {
+                "id": "d",
+                "expression": "2*x",
+                "label": "d:y=2x"
+              }
+            ],
+            "intersection_points": [
+              {
+                "x": 0,
+                "y": 0
+              },
+              {
+                "x": 2,
+                "y": 4
+              }
+            ],
+            "shade_relative_regions": true,
+            "axes": {
+              "x_min": -2,
+              "x_max": 4,
+              "y_min": -2,
+              "y_max": 10
+            }
+          }
+        }
+      }
+    ],
+    "graph": {
+      "engine_hint": "الرسم اختياري ويستعمل للتوضيح.",
+      "coordinate_system": "cartesian",
+      "series": [],
+      "react_rendering_notes": [
+        "استعمل parser رياضيًا آمنًا بدل eval.",
+        "اجعل مجال الرسم قابلًا للتخصيص.",
+        "ادعم اتجاه RTL."
+      ]
+    },
+    "final_assessment": {
+      "question": "إذا كان f(x)-(x+1)<0 على I، فما الوضعية؟",
+      "expected_answer": "منحنى f يقع تحت المستقيم y=x+1 على I.",
+      "success_criteria": [
+        "ذكر المنحنى",
+        "ذكر تحت",
+        "ذكر المستقيم والمجال"
+      ],
+      "hint_levels": [
+        "الفرق منحنى ناقص مستقيم سالب."
+      ]
+    },
+    "lesson_summary": {
+      "key_ideas": [
+        "المقارنة تتم بدراسة الفرق.",
+        "صفر الفرق يعطي التقاطع.",
+        "إشارة الفرق تحدد فوق أو تحت."
+      ],
+      "method_template": [
+        "كوّن الفرق.",
+        "حلل الإشارة.",
+        "اكتب التقاطعات.",
+        "اكتب الوضعية النسبية."
+      ]
+    },
+    "dynamic_profile": {
+      "lesson_profile": "شرح بسيط ثم تطبيق موجه ثم سؤال بكالوريا",
+      "profile_reason": "المتعلم يحتاج إلى فهم الفكرة، ثم حفظ المنهجية، ثم استعمالها في تمرين."
+    },
+    "schema_version": "3.0",
+    "content_status": "ready",
+    "pedagogical_style": "simple_progressive_bac_oriented",
+    "lesson_intro": {
+      "title": "قارن الترتيبين باستعمال الفرق",
+      "teacher": "لمقارنة منحنى f مع مستقيم y=ax+b ندرس إشارة f(x)-(ax+b).",
+      "central_idea": "فرق موجب: المنحنى فوق المستقيم. فرق سالب: تحته.",
+      "memory_tip": "منحنى − مستقيم."
+    },
+    "support_path": {
+      "when_student_stuck": [
+        "أعد قراءة الفكرة المركزية.",
+        "طبّق المثال القصير خطوة بخطوة.",
+        "استعمل التلميح الأول قبل إظهار الحل."
+      ],
+      "quick_actions": [
+        "أعد الشرح",
+        "أعطني مثالًا",
+        "اعرض الخطوات",
+        "أعطني تلميحًا"
+      ]
+    },
+    "method_decision_tree": {
+      "start_question": "ما نوع السؤال؟",
+      "branches": [
+        {
+          "condition": "سؤال مباشر",
+          "action": "طبق القاعدة الأساسية."
+        },
+        {
+          "condition": "سؤال مركب",
+          "action": "قسّم المطلوب إلى خطوات."
+        }
+      ],
+      "golden_rule": "حدد نوع السؤال قبل البدء."
+    },
+    "lesson_closure": {
+      "student_message": "لا تنتقل إلى المحور التالي حتى تستطيع تطبيق المنهجية دون مساعدة.",
+      "mastery_rule": "نجاح في الاختبار القصير ثم حل تمرين تطبيقي مستقل."
+    },
+    "quality_review": {
+      "simple_arabic": true,
+      "rtl_ready": true,
+      "latex_ready": true,
+      "react_visualization_ready": true,
+      "bac_oriented": true
+    }
+  }
+}

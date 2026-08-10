@@ -1,0 +1,446 @@
+{
+  "version": 1,
+  "language": "ar",
+  "direction": "rtl",
+  "tag": "comparison_limits",
+  "title": "تمارين النهايات بالمقارنة والحصر",
+  "subject_code": "math",
+  "chapter_code": "limits_continuity",
+  "question_count": 12,
+  "questions": [
+    {
+      "id": "comparison_01",
+      "number": "1",
+      "text": "أثبت باستعمال المقارنة أن \\(\\lim_{x\\to+\\infty}(x^2+\\sqrt{x})=+\\infty\\).",
+      "skill": "المقارنة نحو زائد ما لا نهاية",
+      "difficulty": "easy",
+      "solution": {
+        "strategy": "نبحث عن حد سفلي بسيط يؤول إلى زائد ما لا نهاية.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "بناء المقارنة",
+            "explanation": "من أجل \\(x\\ge0\\)، لدينا \\(\\sqrt{x}\\ge0\\).",
+            "calculation": "\\(x^2+\\sqrt{x}\\ge x^2\\)",
+            "result": "وجدنا حدًا سفليًا للدالة."
+          },
+          {
+            "order": 2,
+            "title": "نهاية الحد السفلي",
+            "explanation": "نعلم أن \\(x^2\\to+\\infty\\).",
+            "calculation": "\\(\\lim_{x\\to+\\infty}x^2=+\\infty\\)",
+            "result": "الحد السفلي يؤول إلى زائد ما لا نهاية."
+          },
+          {
+            "order": 3,
+            "title": "تطبيق المقارنة",
+            "explanation": "الدالة أكبر من دالة تؤول إلى زائد ما لا نهاية.",
+            "calculation": "\\(x^2+\\sqrt{x}\\ge x^2\\)",
+            "result": "النهاية تساوي \\(+\\infty\\)."
+          }
+        ],
+        "final_answer": "\\(\\lim_{x\\to+\\infty}(x^2+\\sqrt{x})=+\\infty\\).",
+        "common_mistakes": [
+          {
+            "mistake": "البحث عن حد علوي لإثبات النهاية \\(+\\infty\\).",
+            "correction": "نحتاج إلى حد سفلي يؤول إلى \\(+\\infty\\)."
+          }
+        ],
+        "hints": [
+          "استعمل أن \\(\\sqrt{x}\\ge0\\)."
+        ]
+      }
+    },
+    {
+      "id": "comparison_02",
+      "number": "2",
+      "text": "أثبت أن \\(\\lim_{x\\to+\\infty}(x^4+3x+2)=+\\infty\\) باستعمال المقارنة.",
+      "skill": "اختيار حد سفلي بسيط",
+      "difficulty": "easy",
+      "solution": {
+        "strategy": "نقارن العبارة بالحد \\(x^4\\).",
+        "steps": [
+          {
+            "order": 1,
+            "title": "المتراجحة",
+            "explanation": "من أجل \\(x\\ge0\\)، لدينا \\(3x+2\\ge0\\).",
+            "calculation": "\\(x^4+3x+2\\ge x^4\\)",
+            "result": "الدالة أكبر من \\(x^4\\)."
+          },
+          {
+            "order": 2,
+            "title": "نهاية الدالة المقارنة",
+            "explanation": "\\(x^4\\) قوة زوجية موجبة وتكبر دون حد.",
+            "calculation": "\\(x^4\\to+\\infty\\)",
+            "result": "الحد السفلي يؤول إلى \\(+\\infty\\)."
+          },
+          {
+            "order": 3,
+            "title": "الاستنتاج",
+            "explanation": "نطبق مبرهنة المقارنة.",
+            "calculation": "\\(x^4+3x+2\\ge x^4\\)",
+            "result": "النهاية \\(+\\infty\\)."
+          }
+        ],
+        "final_answer": "\\(\\lim_{x\\to+\\infty}(x^4+3x+2)=+\\infty\\).",
+        "hints": [
+          "قارن العبارة بـ\\(x^4\\)."
+        ]
+      }
+    },
+    {
+      "id": "comparison_03",
+      "number": "3",
+      "text": "استعمل محدودية دالة الجيب لإثبات أن \\(\\lim_{x\\to+\\infty}(x^2-\\sin x)=+\\infty\\).",
+      "skill": "المقارنة باستعمال دالة محدودة",
+      "difficulty": "medium",
+      "solution": {
+        "strategy": "نستعمل \\(-1\\le\\sin x\\le1\\) لبناء حد سفلي.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "محدودية الجيب",
+            "explanation": "لدينا دائمًا \\(\\sin x\\le1\\).",
+            "calculation": "\\(-\\sin x\\ge-1\\)",
+            "result": "يمكن بناء حد سفلي."
+          },
+          {
+            "order": 2,
+            "title": "بناء المقارنة",
+            "explanation": "نضيف \\(x^2\\) إلى الطرفين.",
+            "calculation": "\\(x^2-\\sin x\\ge x^2-1\\)",
+            "result": "الحد السفلي هو \\(x^2-1\\)."
+          },
+          {
+            "order": 3,
+            "title": "الاستنتاج",
+            "explanation": "بما أن \\(x^2-1\\to+\\infty\\)، نطبق المقارنة.",
+            "calculation": "\\(\\lim_{x\\to+\\infty}(x^2-\\sin x)=+\\infty\\)",
+            "result": "النهاية \\(+\\infty\\)."
+          }
+        ],
+        "final_answer": "\\(\\lim_{x\\to+\\infty}(x^2-\\sin x)=+\\infty\\).",
+        "common_mistakes": [
+          {
+            "mistake": "القول إن \\(\\sin x\\to0\\) عند المالانهاية.",
+            "correction": "دالة الجيب متذبذبة؛ نستعمل فقط محدوديتها."
+          }
+        ],
+        "hints": [
+          "استعمل \\(\\sin x\\le1\\)."
+        ]
+      }
+    },
+    {
+      "id": "comparison_04",
+      "number": "4",
+      "text": "إذا كان \\(f(x)\\ge2x^3-x\\) من أجل \\(x\\ge1\\)، حدّد \\(\\lim_{x\\to+\\infty}f(x)\\).",
+      "skill": "تطبيق مبرهنة المقارنة من متراجحة معطاة",
+      "difficulty": "easy",
+      "solution": {
+        "strategy": "نحسب نهاية الحد السفلي ثم نطبق المقارنة.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "نهاية الحد السفلي",
+            "explanation": "الحد الأعلى درجة في \\(2x^3-x\\) هو \\(2x^3\\).",
+            "calculation": "\\(2x^3-x\\to+\\infty\\)",
+            "result": "الحد السفلي يؤول إلى \\(+\\infty\\)."
+          },
+          {
+            "order": 2,
+            "title": "تطبيق المقارنة",
+            "explanation": "لدينا \\(f(x)\\ge2x^3-x\\).",
+            "calculation": "\\(f(x)\\ge2x^3-x\\)",
+            "result": "الدالة \\(f\\) تؤول إلى \\(+\\infty\\)."
+          }
+        ],
+        "final_answer": "\\(\\lim_{x\\to+\\infty}f(x)=+\\infty\\).",
+        "hints": [
+          "احسب نهاية الطرف الموجود تحت \\(f(x)\\)."
+        ]
+      }
+    },
+    {
+      "id": "comparison_05",
+      "number": "5",
+      "text": "أثبت أن \\(\\lim_{x\\to+\\infty}(-x^2-\\sqrt{x})=-\\infty\\).",
+      "skill": "المقارنة نحو ناقص ما لا نهاية",
+      "difficulty": "easy",
+      "solution": {
+        "strategy": "نبحث عن حد علوي يؤول إلى ناقص ما لا نهاية.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "بناء المقارنة",
+            "explanation": "من أجل \\(x\\ge0\\)، لدينا \\(-\\sqrt{x}\\le0\\).",
+            "calculation": "\\(-x^2-\\sqrt{x}\\le-x^2\\)",
+            "result": "وجدنا حدًا علويًا."
+          },
+          {
+            "order": 2,
+            "title": "نهاية الحد العلوي",
+            "explanation": "لدينا \\(-x^2\\to-\\infty\\).",
+            "calculation": "\\(\\lim_{x\\to+\\infty}(-x^2)=-\\infty\\)",
+            "result": "الحد العلوي ينزل دون حد."
+          },
+          {
+            "order": 3,
+            "title": "تطبيق المقارنة",
+            "explanation": "الدالة أصغر من حد علوي يؤول إلى \\(-\\infty\\).",
+            "calculation": "\\(-x^2-\\sqrt{x}\\le-x^2\\)",
+            "result": "النهاية \\(-\\infty\\)."
+          }
+        ],
+        "final_answer": "\\(\\lim_{x\\to+\\infty}(-x^2-\\sqrt{x})=-\\infty\\).",
+        "hints": [
+          "لإثبات \\(-\\infty\\) نحتاج حدًا علويًا."
+        ]
+      }
+    },
+    {
+      "id": "comparison_06",
+      "number": "6",
+      "text": "إذا كان \\(f(x)\\le-3x^4+2\\) من أجل \\(x\\ge0\\)، حدّد نهاية \\(f\\) عند \\(+\\infty\\).",
+      "skill": "تطبيق المقارنة نحو ناقص ما لا نهاية",
+      "difficulty": "easy",
+      "solution": {
+        "strategy": "نحسب نهاية الحد العلوي ثم نطبق مبرهنة المقارنة.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "نهاية الحد العلوي",
+            "explanation": "الحد الأعلى درجة هو \\(-3x^4\\).",
+            "calculation": "\\(-3x^4+2\\to-\\infty\\)",
+            "result": "الحد العلوي يؤول إلى \\(-\\infty\\)."
+          },
+          {
+            "order": 2,
+            "title": "الاستنتاج",
+            "explanation": "بما أن \\(f(x)\\le-3x^4+2\\)، فإن \\(f\\) تنزل دون حد.",
+            "calculation": "\\(f(x)\\le-3x^4+2\\)",
+            "result": "\\(f(x)\\to-\\infty\\)."
+          }
+        ],
+        "final_answer": "\\(\\lim_{x\\to+\\infty}f(x)=-\\infty\\).",
+        "hints": [
+          "استعمل الحد العلوي المعطى."
+        ]
+      }
+    },
+    {
+      "id": "comparison_07",
+      "number": "7",
+      "text": "إذا كان من أجل \\(x>0\\): \\(-\\frac1x\\le f(x)\\le\\frac1x\\)، احسب \\(\\lim_{x\\to+\\infty}f(x)\\).",
+      "skill": "تطبيق مباشر لمبرهنة الحصر",
+      "difficulty": "easy",
+      "solution": {
+        "strategy": "نحسب نهاية طرفي الحصر ثم نطبق المبرهنة.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "نهاية الطرفين",
+            "explanation": "من المرجعيات الأساسية \\(1/x\\to0\\).",
+            "calculation": "\\(-\\frac1x\\to0,\\quad \\frac1x\\to0\\)",
+            "result": "طرفا الحصر لهما النهاية نفسها."
+          },
+          {
+            "order": 2,
+            "title": "تطبيق الحصر",
+            "explanation": "الدالة محصورة بين دالتين تؤولان إلى الصفر.",
+            "calculation": "\\(-\\frac1x\\le f(x)\\le\\frac1x\\)",
+            "result": "\\(f(x)\\to0\\)."
+          }
+        ],
+        "final_answer": "\\(\\lim_{x\\to+\\infty}f(x)=0\\).",
+        "hints": [
+          "احسب نهاية طرفي الحصر."
+        ]
+      }
+    },
+    {
+      "id": "comparison_08",
+      "number": "8",
+      "text": "إذا كان \\(3-\\frac1x\\le f(x)\\le3+\\frac1x\\) من أجل \\(x>0\\)، احسب نهاية \\(f\\) عند \\(+\\infty\\).",
+      "skill": "الحصر حول عدد حقيقي",
+      "difficulty": "easy",
+      "solution": {
+        "strategy": "نحسب نهاية الحد الأدنى والحد الأعلى.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "نهاية طرفي الحصر",
+            "explanation": "بما أن \\(1/x\\to0\\)، فإن الطرفين يؤولان إلى \\(3\\).",
+            "calculation": "\\(3-\\frac1x\\to3,\\quad3+\\frac1x\\to3\\)",
+            "result": "الطرفان لهما النهاية نفسها."
+          },
+          {
+            "order": 2,
+            "title": "تطبيق الحصر",
+            "explanation": "الدالة \\(f\\) محصورة بين الطرفين.",
+            "calculation": "\\(3-\\frac1x\\le f(x)\\le3+\\frac1x\\)",
+            "result": "\\(f(x)\\to3\\)."
+          }
+        ],
+        "final_answer": "\\(\\lim_{x\\to+\\infty}f(x)=3\\).",
+        "hints": [
+          "استعمل أن \\(1/x\\to0\\)."
+        ]
+      }
+    },
+    {
+      "id": "comparison_09",
+      "number": "9",
+      "text": "إذا كان \\(|f(x)|\\le\\frac1{x^2+1}\\)، احسب \\(\\lim_{x\\to+\\infty}f(x)\\).",
+      "skill": "الحصر باستعمال القيمة المطلقة",
+      "difficulty": "medium",
+      "solution": {
+        "strategy": "نحوّل متراجحة القيمة المطلقة إلى حصر.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "تحويل القيمة المطلقة",
+            "explanation": "من \\(|f(x)|\\le g(x)\\) نستنتج \\(-g(x)\\le f(x)\\le g(x)\\).",
+            "calculation": "\\(-\\frac1{x^2+1}\\le f(x)\\le\\frac1{x^2+1}\\)",
+            "result": "حصلنا على حصر للدالة."
+          },
+          {
+            "order": 2,
+            "title": "نهاية الطرفين",
+            "explanation": "\\(1/(x^2+1)\\to0\\).",
+            "calculation": "\\(-\\frac1{x^2+1}\\to0,\\quad\\frac1{x^2+1}\\to0\\)",
+            "result": "طرفا الحصر يؤولان إلى الصفر."
+          },
+          {
+            "order": 3,
+            "title": "الاستنتاج",
+            "explanation": "نطبق مبرهنة الحصر.",
+            "calculation": "\\(\\lim_{x\\to+\\infty}f(x)=0\\)",
+            "result": "النهاية تساوي \\(0\\)."
+          }
+        ],
+        "final_answer": "\\(\\lim_{x\\to+\\infty}f(x)=0\\).",
+        "hints": [
+          "حوّل القيمة المطلقة إلى متراجحتين."
+        ]
+      }
+    },
+    {
+      "id": "comparison_10",
+      "number": "10",
+      "text": "إذا كان \\(|f(x)-2|\\le\\frac3x\\) من أجل \\(x>0\\)، احسب نهاية \\(f\\) عند \\(+\\infty\\).",
+      "skill": "استعمال القيمة المطلقة لإثبات نهاية عددية",
+      "difficulty": "medium",
+      "solution": {
+        "strategy": "نحوّل المتراجحة إلى حصر حول العدد \\(2\\).",
+        "steps": [
+          {
+            "order": 1,
+            "title": "تحويل المتراجحة",
+            "explanation": "نكتب المتراجحة بدون قيمة مطلقة.",
+            "calculation": "\\(-\\frac3x\\le f(x)-2\\le\\frac3x\\)",
+            "result": "حصلنا على حصر للفرق."
+          },
+          {
+            "order": 2,
+            "title": "إضافة العدد 2",
+            "explanation": "نضيف \\(2\\) إلى الأطراف الثلاثة.",
+            "calculation": "\\(2-\\frac3x\\le f(x)\\le2+\\frac3x\\)",
+            "result": "الدالة محصورة حول \\(2\\)."
+          },
+          {
+            "order": 3,
+            "title": "تطبيق الحصر",
+            "explanation": "لأن \\(3/x\\to0\\)، فإن الطرفين يؤولان إلى \\(2\\).",
+            "calculation": "\\(\\lim_{x\\to+\\infty}f(x)=2\\)",
+            "result": "النهاية تساوي \\(2\\)."
+          }
+        ],
+        "final_answer": "\\(\\lim_{x\\to+\\infty}f(x)=2\\).",
+        "hints": [
+          "أضف العدد \\(2\\) بعد إزالة القيمة المطلقة."
+        ]
+      }
+    },
+    {
+      "id": "comparison_11",
+      "number": "11",
+      "text": "احسب باستعمال الحصر \\(\\lim_{x\\to+\\infty}\\frac{\\sin x}{x}\\).",
+      "skill": "حصر دالة مثلثية محدودة",
+      "difficulty": "medium",
+      "solution": {
+        "strategy": "نستعمل \\(|\\sin x|\\le1\\).",
+        "steps": [
+          {
+            "order": 1,
+            "title": "بناء الحصر",
+            "explanation": "من أجل \\(x>0\\)، لدينا \\(|\\sin x|/x\\le1/x\\).",
+            "calculation": "\\(\\left|\\frac{\\sin x}{x}\\right|\\le\\frac1x\\)",
+            "result": "\\(-1/x\\le\\sin x/x\\le1/x\\)."
+          },
+          {
+            "order": 2,
+            "title": "نهاية الحد المقارن",
+            "explanation": "\\(1/x\\to0\\).",
+            "calculation": "\\(-\\frac1x\\to0,\\quad\\frac1x\\to0\\)",
+            "result": "طرفا الحصر يؤولان إلى الصفر."
+          },
+          {
+            "order": 3,
+            "title": "الاستنتاج",
+            "explanation": "نطبق مبرهنة الحصر.",
+            "calculation": "\\(\\lim_{x\\to+\\infty}\\frac{\\sin x}{x}=0\\)",
+            "result": "النهاية تساوي \\(0\\)."
+          }
+        ],
+        "final_answer": "\\(\\lim_{x\\to+\\infty}\\frac{\\sin x}{x}=0\\).",
+        "common_mistakes": [
+          {
+            "mistake": "القول إن \\(\\sin x\\) له نهاية عند المالانهاية.",
+            "correction": "نستعمل فقط أن \\(|\\sin x|\\le1\\)."
+          }
+        ],
+        "hints": [
+          "ابدأ من \\(|\\sin x|\\le1\\)."
+        ]
+      }
+    },
+    {
+      "id": "comparison_12",
+      "number": "12",
+      "text": "احسب باستعمال الحصر \\(\\lim_{x\\to+\\infty}\\frac{\\cos x}{x^2}\\).",
+      "skill": "دالة محدودة مضروبة في دالة تؤول إلى الصفر",
+      "difficulty": "medium",
+      "solution": {
+        "strategy": "نستعمل محدودية جيب التمام ثم نحصر القيمة المطلقة.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "محدودية جيب التمام",
+            "explanation": "لدينا دائمًا \\(|\\cos x|\\le1\\).",
+            "calculation": "\\(\\left|\\frac{\\cos x}{x^2}\\right|\\le\\frac1{x^2}\\)",
+            "result": "القيمة المطلقة محصورة بدالة موجبة."
+          },
+          {
+            "order": 2,
+            "title": "نهاية الحد المقارن",
+            "explanation": "\\(1/x^2\\to0\\).",
+            "calculation": "\\(\\frac1{x^2}\\to0\\)",
+            "result": "الحد المقارن يؤول إلى الصفر."
+          },
+          {
+            "order": 3,
+            "title": "الاستنتاج",
+            "explanation": "نطبق الحصر.",
+            "calculation": "\\(-\\frac1{x^2}\\le\\frac{\\cos x}{x^2}\\le\\frac1{x^2}\\)",
+            "result": "النهاية تساوي \\(0\\)."
+          }
+        ],
+        "final_answer": "\\(\\lim_{x\\to+\\infty}\\frac{\\cos x}{x^2}=0\\).",
+        "hints": [
+          "استعمل \\(|\\cos x|\\le1\\)."
+        ]
+      }
+    }
+  ]
+}

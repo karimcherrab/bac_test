@@ -1,0 +1,194 @@
+{
+  "tag": "graphical_equations_inequalities",
+  "title": "حل المعادلات والمتراجحات بيانياً",
+  "order": 12,
+  "is_active": true,
+  "branches": [
+    "math",
+    "science",
+    "math_tech"
+  ],
+  "content": {
+    "version": 1,
+    "language": "ar",
+    "direction": "rtl",
+    "chapter_code": "functions",
+    "chapter_title": "دراسة الدوال",
+    "axis_tag": "graphical_equations_inequalities",
+    "axis_title": "حل المعادلات والمتراجحات بيانياً",
+    "estimated_minutes": 55,
+    "difficulty": "medium",
+    "source_note": "محور مبسط ومنظم لمنصة تعليمية موجهة إلى البكالوريا الجزائرية.",
+    "lesson_goal": "أن يحول التلميذ المعادلة أو المتراجحة إلى مقارنة بين منحنيين ويقرأ الحلول من الرسم.",
+    "prerequisites": [
+      "قراءة المنحنيات",
+      "إشارة الدالة",
+      "نقاط التقاطع"
+    ],
+    "learning_outcomes": [
+      "يحل f(x)=k",
+      "يحل f(x)=g(x)",
+      "يحل f(x)>g(x)",
+      "يكتب الحلول كمجالات"
+    ],
+    "learning_path": [
+      {
+        "id": "step_1",
+        "type": "rule",
+        "title": "حل f(x)=k",
+        "content": {
+          "rule": "الحلول هي فواصل تقاطع C_f مع المستقيم y=k.",
+          "attention": "اكتب الفواصل لا التراتيب."
+        }
+      },
+      {
+        "id": "step_2",
+        "type": "rule",
+        "title": "حل f(x)=g(x)",
+        "content": {
+          "rule": "الحلول هي فواصل نقاط تقاطع C_f وC_g."
+        }
+      },
+      {
+        "id": "step_3",
+        "type": "rule",
+        "title": "حل المتراجحات",
+        "content": {
+          "rules": [
+            {
+              "inequality": "\\(f(x)>g(x)\\)",
+              "reading": "C_f فوق C_g."
+            },
+            {
+              "inequality": "\\(f(x)<g(x)\\)",
+              "reading": "C_f تحت C_g."
+            }
+          ],
+          "attention": "تحقق من إدراج نقاط التقاطع حسب وجود = في المتراجحة."
+        }
+      },
+      {
+        "id": "step_4",
+        "type": "visualization",
+        "title": "مثال تفاعلي",
+        "content": {
+          "visualization": {
+            "type": "two_curve_equation_inequality",
+            "renderer": "jsx_svg_or_recharts",
+            "curves": [
+              {
+                "id": "f",
+                "expression": "x^2-2",
+                "label": "f(x)=x²-2"
+              },
+              {
+                "id": "g",
+                "expression": "x",
+                "label": "g(x)=x"
+              }
+            ],
+            "intersection_detection": {
+              "method": "numeric_root_finding",
+              "equation": "x^2-2-x=0",
+              "tolerance": 0.0001
+            },
+            "show_intersections": true,
+            "show_above_below_intervals": true,
+            "axes": {
+              "x_min": -3,
+              "x_max": 4,
+              "y_min": -4,
+              "y_max": 8
+            }
+          }
+        }
+      }
+    ],
+    "graph": {
+      "engine_hint": "الرسم اختياري ويستعمل للتوضيح.",
+      "coordinate_system": "cartesian",
+      "series": [],
+      "react_rendering_notes": [
+        "استعمل parser رياضيًا آمنًا بدل eval.",
+        "اجعل مجال الرسم قابلًا للتخصيص.",
+        "ادعم اتجاه RTL."
+      ]
+    },
+    "final_assessment": {
+      "question": "كيف نحل بيانياً f(x)≥g(x)؟",
+      "expected_answer": "نأخذ فواصل النقاط التي يكون فيها C_f فوق C_g أو منطبقًا عليه.",
+      "success_criteria": [
+        "ذكر فوق",
+        "ذكر نقاط التساوي",
+        "ذكر الفواصل"
+      ],
+      "hint_levels": [
+        "الرمز ≥ يجمع الأكبر والمساوي."
+      ]
+    },
+    "lesson_summary": {
+      "key_ideas": [
+        "حل المعادلة هو فاصلة تقاطع.",
+        "المتراجحة تُقرأ من ترتيب المنحنيين.",
+        "النقاط الحدية تُدرج فقط مع ≤ أو ≥."
+      ],
+      "method_template": [
+        "حدد المنحنيين.",
+        "استخرج التقاطعات.",
+        "حدد الأعلى أو الأسفل.",
+        "اكتب الحل كمجالات."
+      ]
+    },
+    "dynamic_profile": {
+      "lesson_profile": "شرح بسيط ثم تطبيق موجه ثم سؤال بكالوريا",
+      "profile_reason": "المتعلم يحتاج إلى فهم الفكرة، ثم حفظ المنهجية، ثم استعمالها في تمرين."
+    },
+    "schema_version": "3.0",
+    "content_status": "ready",
+    "pedagogical_style": "simple_progressive_bac_oriented",
+    "lesson_intro": {
+      "title": "المعادلة تعني تقاطعًا والمتراجحة تعني فوق أو تحت",
+      "teacher": "الحلول البيانية تُقرأ من علاقة منحنيين، لا من الحساب الجبري وحده.",
+      "central_idea": "المساواة تقاطع، والأكبر هو المنحنى الأعلى.",
+      "memory_tip": "= تقاطع، > فوق، < تحت."
+    },
+    "support_path": {
+      "when_student_stuck": [
+        "أعد قراءة الفكرة المركزية.",
+        "طبّق المثال القصير خطوة بخطوة.",
+        "استعمل التلميح الأول قبل إظهار الحل."
+      ],
+      "quick_actions": [
+        "أعد الشرح",
+        "أعطني مثالًا",
+        "اعرض الخطوات",
+        "أعطني تلميحًا"
+      ]
+    },
+    "method_decision_tree": {
+      "start_question": "ما نوع السؤال؟",
+      "branches": [
+        {
+          "condition": "سؤال مباشر",
+          "action": "طبق القاعدة الأساسية."
+        },
+        {
+          "condition": "سؤال مركب",
+          "action": "قسّم المطلوب إلى خطوات."
+        }
+      ],
+      "golden_rule": "حدد نوع السؤال قبل البدء."
+    },
+    "lesson_closure": {
+      "student_message": "لا تنتقل إلى المحور التالي حتى تستطيع تطبيق المنهجية دون مساعدة.",
+      "mastery_rule": "نجاح في الاختبار القصير ثم حل تمرين تطبيقي مستقل."
+    },
+    "quality_review": {
+      "simple_arabic": true,
+      "rtl_ready": true,
+      "latex_ready": true,
+      "react_visualization_ready": true,
+      "bac_oriented": true
+    }
+  }
+}

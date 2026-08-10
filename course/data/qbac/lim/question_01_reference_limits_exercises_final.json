@@ -1,0 +1,176 @@
+{
+  "tag": "reference_limits",
+  "title": "تمارين المرجعيات الأساسية في النهايات",
+  "subject_code": "phy",
+  "chapter_code": "limits_continuity",
+  "question_count": 5,
+
+  "questions": [
+    {
+      "id": "reference_01",
+      "number": "3",
+      "text": "أثبت باستعمال التعريف أن:\n\\[\n\\lim_{x\\to+\\infty}\\frac{1}{x-1}=0.\n\\]",
+      "skill": "إثبات نهاية الصفر بالتعريف",
+      "difficulty": "medium",
+      "solution": {
+        "strategy": "نستعمل تعريف النهاية الصفرية عند زائد ما لا نهاية.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "كتابة الشرط",
+            "explanation": "نفرض \\(x>1\\).",
+            "calculation": "\\[\\left|\\frac1{x-1}\\right|=\\frac1{x-1}\\]",
+            "result": "العبارة موجبة."
+          },
+          {
+            "order": 2,
+            "title": "حل المتراجحة",
+            "explanation": "نطلب أن يكون المقلوب أصغر من \\(\\varepsilon\\).",
+            "calculation": "\\[\\frac1{x-1}<\\varepsilon\\iff x>1+\\frac1\\varepsilon\\]",
+            "result": "نختار حدًا مناسبًا."
+          },
+          {
+            "order": 3,
+            "title": "اختيار A",
+            "explanation": "نأخذ قيمة تضمن الشرط.",
+            "calculation": "\\[A=1+\\frac1\\varepsilon\\]",
+            "result": "إذا \\(x>A\\) تحقق المطلوب."
+          }
+        ],
+        "final_answer": "\\[\\boxed{\\lim_{x\\to+\\infty}\\frac1{x-1}=0}\\]",
+        "common_mistakes": [
+          {
+            "mistake": "اختيار A ثابتًا لا يعتمد على ε.",
+            "correction": "يجب أن يعتمد A على ε."
+          }
+        ],
+        "hints": [
+          "ابدأ من المتراجحة المطلوبة.",
+          "اعكس المقلوب بعد التأكد من الإيجابية."
+        ]
+      }
+    },
+    {
+      "id": "reference_02",
+      "number": "4",
+      "text": "لتكن \\(f(x)=2x-3\\). أثبت باستعمال التعريف أن:\n\\[\n\\lim_{x\\to+\\infty}f(x)=+\\infty.\n\\]",
+      "skill": "إثبات نهاية غير منتهية بالتعريف",
+      "difficulty": "medium",
+      "solution": {
+        "strategy": "نستعمل تعريف النهاية \\(+\\infty\\).",
+        "steps": [
+          {
+            "order": 1,
+            "title": "حل المتراجحة",
+            "explanation": "نحل بالنسبة إلى x.",
+            "calculation": "\\[2x-3>M\\iff x>\\frac{M+3}{2}\\]",
+            "result": "ظهر حد مناسب."
+          },
+          {
+            "order": 2,
+            "title": "اختيار A",
+            "explanation": "نأخذ الحد الناتج.",
+            "calculation": "\\[A=\\frac{M+3}{2}\\]",
+            "result": "إذا \\(x>A\\) فإن \\(f(x)>M\\)."
+          }
+        ],
+        "final_answer": "\\[\\boxed{\\lim_{x\\to+\\infty}(2x-3)=+\\infty}\\]",
+        "hints": [
+          "حوّل الشرط f(x)>M إلى شرط على x."
+        ]
+      }
+    },
+    {
+      "id": "reference_03",
+      "number": "5",
+      "text": "لتكن \\(f(x)=\\sqrt{1-x}\\) معرفة على \\(]-\\infty,1]\\). أثبت أن:\n\\[\n\\lim_{x\\to-\\infty}f(x)=+\\infty.\n\\]",
+      "skill": "نهاية جذر عند ناقص ما لا نهاية",
+      "difficulty": "medium",
+      "solution": {
+        "strategy": "نستعمل تعريف النهاية غير المنتهية مع مراعاة أن الدالة موجبة.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "تربيع الشرط",
+            "explanation": "لأن الطرفين موجبان.",
+            "calculation": "\\[\\sqrt{1-x}>M\\iff 1-x>M^2\\]",
+            "result": "تحولت إلى متراجحة خطية."
+          },
+          {
+            "order": 2,
+            "title": "عزل x",
+            "explanation": "نحل المتراجحة.",
+            "calculation": "\\[x<1-M^2\\]",
+            "result": "نختار حدًا يساريًا."
+          },
+          {
+            "order": 3,
+            "title": "الاستنتاج",
+            "explanation": "إذا \\(x<1-M^2\\) فإن \\(f(x)>M\\).",
+            "calculation": "\\[B=1-M^2\\]",
+            "result": "تحقق تعريف النهاية عند \\(-\\infty\\)."
+          }
+        ],
+        "final_answer": "\\[\\boxed{\\lim_{x\\to-\\infty}\\sqrt{1-x}=+\\infty}\\]",
+        "hints": [
+          "ابدأ من √(1-x)>M.",
+          "يمكن التربيع لأن القيم موجبة."
+        ]
+      }
+    },
+    {
+      "id": "reference_04",
+      "number": "18-أ",
+      "text": "احسب نهايتي الدالة:\n\\[\nf(x)=2x^3-x+1\n\\]\nعند \\(-\\infty\\) وعند \\(+\\infty\\).",
+      "skill": "استعمال نهاية القوة الفردية",
+      "difficulty": "easy",
+      "solution": {
+        "strategy": "نحدد الحد الغالب.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "عند +∞",
+            "explanation": "القوة الفردية موجبة.",
+            "calculation": "\\[2x^3\\to+\\infty\\]",
+            "result": "\\(f(x)\\to+\\infty\\)."
+          },
+          {
+            "order": 2,
+            "title": "عند -∞",
+            "explanation": "القوة الفردية سالبة.",
+            "calculation": "\\[2x^3\\to-\\infty\\]",
+            "result": "\\(f(x)\\to-\\infty\\)."
+          }
+        ],
+        "final_answer": "\\[\\boxed{\\lim_{x\\to-\\infty}f(x)=-\\infty,\\quad \\lim_{x\\to+\\infty}f(x)=+\\infty}\\]"
+      }
+    },
+    {
+      "id": "reference_05",
+      "number": "18-ب",
+      "text": "احسب نهايتي الدالة:\n\\[\nf(x)=-3x^4+2x+4\n\\]\nعند \\(-\\infty\\) وعند \\(+\\infty\\).",
+      "skill": "استعمال نهاية القوة الزوجية",
+      "difficulty": "easy",
+      "solution": {
+        "strategy": "نستعمل الحد الأعلى درجة.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "الحد الغالب",
+            "explanation": "نركز على \\(-3x^4\\).",
+            "calculation": "\\[-3x^4\\to-\\infty\\]",
+            "result": "في الجهتين."
+          },
+          {
+            "order": 2,
+            "title": "النتيجة",
+            "explanation": "الحدود الأقل درجة لا تغير السلوك.",
+            "calculation": "\\[f(x)\\sim-3x^4\\]",
+            "result": "\\(f(x)\\to-\\infty\\)."
+          }
+        ],
+        "final_answer": "\\[\\boxed{\\lim_{x\\to\\pm\\infty}f(x)=-\\infty}\\]"
+      }
+    }
+  ]
+}

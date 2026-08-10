@@ -1,5 +1,6 @@
 from rest_framework import serializers
 
+from exercise_bac.models import ExerciseBac
 from .models import (
     Axis,
     Branch,
@@ -211,49 +212,209 @@ class SubjectCreateSerializer(serializers.ModelSerializer):
         subject.branches.set(branches)
 
         return subject
-class SubjectDetailSerializer(serializers.ModelSerializer):
-    branches = serializers.SerializerMethodField()
-    chapters = serializers.SerializerMethodField()
+from django.db.models import Q
+
+from rest_framework import serializers
+
+from course.models import (
+    Subject,
+    Axis,
+    Question,
+)
+
+
+
+from rest_framework import serializers
+
+from course.models import (
+    Subject,
+    Axis,
+    Question,
+)
+
+# عدّل اسم التطبيق إذا كان مختلفًا عندك
+
+
+class SubjectDetailSerializer(
+    serializers.ModelSerializer,
+):
+    user_branch = serializers.SerializerMethodField()
+    statistics = serializers.SerializerMethodField()
 
     class Meta:
         model = Subject
+
         fields = [
             "id",
             "code",
             "name",
             "description",
-            "branches",
-            "chapters",
+            "user_branch",
+            "statistics",
         ]
 
-    def get_branches(self, obj):
-        branches = obj.branches.all().order_by(
-            "name",
+    # =========================================================
+    # Student
+    # =========================================================
+
+    def get_student(self):
+        request = self.context.get(
+            "request",
         )
 
-        return [
-            {
-                "id": branch.id,
-                "code": branch.code,
-                "name": branch.name,
-            }
-            for branch in branches
-        ]
+        if not request:
+            return None
 
-    def get_chapters(self, obj):
-        chapters = obj.chapters.filter(
-            is_active=True,
-        ).order_by(
-            "order",
-            "title",
+        student = getattr(
+            request,
+            "user",
+            None,
         )
 
-        return ChapterSummarySerializer(
-            chapters,
-            many=True,
-            context=self.context,
-        ).data
+        if not student:
+            return None
 
+        if not getattr(
+            student,
+            "is_authenticated",
+            False,
+        ):
+            return None
+
+        return student
+
+    # =========================================================
+    # Student branch
+    # =========================================================
+
+    def get_student_branch(self):
+        student = self.get_student()
+
+        if not student:
+            return None
+
+        return getattr(
+            student,
+            "branch",
+            None,
+        )
+
+    # =========================================================
+    # User branch
+    # =========================================================
+
+    def get_user_branch(
+        self,
+        obj,
+    ):
+        branch = self.get_student_branch()
+
+        if not branch:
+            return None
+
+        return {
+            "id": branch.id,
+            "code": branch.code,
+            "name": branch.name,
+        }
+
+    # =========================================================
+    # Statistics
+    # =========================================================
+
+    def get_statistics(
+        self,
+        obj,
+    ):
+        # =====================================================
+        # 1. Chapters count
+        # =====================================================
+
+        chapters_count = (
+            obj.chapters
+            .filter(
+                is_active=True,
+            )
+            .count()
+        )
+
+        # =====================================================
+        # 2. Axes / lessons count
+        # =====================================================
+        #
+        # نحسب جميع المحاور التابعة لهذه المادة.
+        #
+
+        axes_count = (
+            Axis.objects
+            .filter(
+                chapter__subject=obj,
+                chapter__is_active=True,
+                is_active=True,
+            )
+            .distinct()
+            .count()
+        )
+
+        # =====================================================
+        # 3. Exercises / Questions count
+        # =====================================================
+        #
+        # جميع الأسئلة الموجودة داخل محاور هذه المادة.
+        #
+
+        exercises_count = (
+            Question.objects
+            .filter(
+                axis__chapter__subject=obj,
+                axis__chapter__is_active=True,
+                axis__is_active=True,
+                is_active=True,
+            )
+            .distinct()
+            .count()
+        )
+
+        # =====================================================
+        # 4. Complete BAC Exercises count
+        # =====================================================
+        #
+        # المهم:
+        # لا نقوم بفلترة branches هنا.
+        #
+        # كل ExerciseBac مرتبط بـ Chapter.
+        # وكل Chapter مرتبط بـ Subject.
+        #
+        # لذلك نحسب جميع تمارين البكالوريا
+        # التابعة لفصول هذه المادة.
+        #
+
+        bac_exercises_count = (
+            ExerciseBac.objects
+            .filter(
+                chapter__subject=obj,
+                is_active=True,
+            )
+            .count()
+        )
+
+        # =====================================================
+        # Response
+        # =====================================================
+
+        return {
+            "chapters_count":
+                chapters_count,
+
+            "axes_count":
+                axes_count,
+
+            "exercises_count":
+                exercises_count,
+
+            "bac_exercises_count":
+                bac_exercises_count,
+        }
 
 class BranchSerializer(serializers.ModelSerializer):
     subjects_count = serializers.SerializerMethodField()
@@ -419,10 +580,14 @@ class QuestionSummarySerializer(serializers.ModelSerializer):
 
 class QuestionDetailSerializer(serializers.ModelSerializer):
     """
-    Question complète avec sa solution JSON.
+    Question complète avec :
+    - solution JSON
+    - graph_data JSON
+    - documents JSON
 
-    La structure de `solution` reste libre et peut changer
-    selon le type de question.
+    Documents fonctionne dans les deux cas :
+    1. Question.documents existe dans le Model
+    2. documents est sauvegardé dans metadata["documents"]
     """
 
     solution = serializers.JSONField(
@@ -433,12 +598,31 @@ class QuestionDetailSerializer(serializers.ModelSerializer):
         read_only=True,
     )
 
+    # =========================================================
+    # DOCUMENTS
+    # =========================================================
+
+    documents = serializers.SerializerMethodField()
+
+    has_documents = serializers.SerializerMethodField()
+
+    document_count = serializers.SerializerMethodField()
+
+    # =========================================================
+    # STATES
+    # =========================================================
+
     has_solution = serializers.SerializerMethodField()
+
     has_graph = serializers.SerializerMethodField()
 
     displayed_text = serializers.CharField(
         read_only=True,
     )
+
+    # =========================================================
+    # AXIS
+    # =========================================================
 
     axis_id = serializers.IntegerField(
         source="axis.id",
@@ -455,6 +639,10 @@ class QuestionDetailSerializer(serializers.ModelSerializer):
         read_only=True,
     )
 
+    # =========================================================
+    # CHAPTER
+    # =========================================================
+
     chapter_id = serializers.IntegerField(
         source="axis.chapter.id",
         read_only=True,
@@ -470,6 +658,10 @@ class QuestionDetailSerializer(serializers.ModelSerializer):
         read_only=True,
     )
 
+    # =========================================================
+    # SUBJECT
+    # =========================================================
+
     subject_id = serializers.IntegerField(
         source="axis.chapter.subject.id",
         read_only=True,
@@ -484,6 +676,10 @@ class QuestionDetailSerializer(serializers.ModelSerializer):
         source="axis.chapter.subject.name",
         read_only=True,
     )
+
+    # =========================================================
+    # BRANCH
+    # =========================================================
 
     branch = serializers.SerializerMethodField()
 
@@ -521,6 +717,11 @@ class QuestionDetailSerializer(serializers.ModelSerializer):
             "images",
             "metadata",
 
+            # Documents
+            "documents",
+            "has_documents",
+            "document_count",
+
             # États
             "is_standalone",
             "is_active",
@@ -544,18 +745,80 @@ class QuestionDetailSerializer(serializers.ModelSerializer):
             # Branche
             "branch",
 
-            # Graphe JSON
+            # Graphe
             "graph_data",
             "has_graph",
 
-            # Solution JSON
+            # Solution
             "solution",
             "has_solution",
-
-
         ]
 
         read_only_fields = fields
+
+    # =========================================================
+    # DOCUMENTS
+    # =========================================================
+
+    def _get_documents(self, obj):
+        """
+        Récupère les documents depuis :
+
+        1. obj.documents si le Model possède ce champ
+        2. metadata["documents"] sinon
+        """
+
+        # -----------------------------------------------------
+        # 1. Champ direct dans Question
+        # -----------------------------------------------------
+
+        if hasattr(obj, "documents"):
+            documents = getattr(
+                obj,
+                "documents",
+                None,
+            )
+
+            if isinstance(documents, list):
+                return documents
+
+        # -----------------------------------------------------
+        # 2. Fallback metadata
+        # -----------------------------------------------------
+
+        metadata = getattr(
+            obj,
+            "metadata",
+            None,
+        )
+
+        if isinstance(metadata, dict):
+            documents = metadata.get(
+                "documents",
+                [],
+            )
+
+            if isinstance(documents, list):
+                return documents
+
+        return []
+
+    def get_documents(self, obj):
+        return self._get_documents(obj)
+
+    def get_has_documents(self, obj):
+        return len(
+            self._get_documents(obj)
+        ) > 0
+
+    def get_document_count(self, obj):
+        return len(
+            self._get_documents(obj)
+        )
+
+    # =========================================================
+    # SOLUTION
+    # =========================================================
 
     def get_has_solution(self, obj):
         return bool(
@@ -563,11 +826,19 @@ class QuestionDetailSerializer(serializers.ModelSerializer):
             and len(obj.solution) > 0
         )
 
+    # =========================================================
+    # GRAPH
+    # =========================================================
+
     def get_has_graph(self, obj):
         return bool(
             isinstance(obj.graph_data, dict)
             and len(obj.graph_data) > 0
         )
+
+    # =========================================================
+    # BRANCH
+    # =========================================================
 
     def get_branch(self, obj):
         if obj.branch is None:
@@ -839,3 +1110,60 @@ class AxisQuestionsSerializer(serializers.ModelSerializer):
             many=True,
             context=self.context,
         ).data
+
+
+# ============================================================
+# AI - حل التمرين بطريقة شديدة التبسيط
+# ============================================================
+
+class QuestionSimpleSolutionRequestSerializer(serializers.Serializer):
+    # الحقل اختياري؛ question_id يأتي من URL.
+    regenerate = serializers.BooleanField(required=False, default=False)
+
+
+class SimpleGivenItemSerializer(serializers.Serializer):
+    label = serializers.CharField(allow_blank=True)
+    value = serializers.CharField(allow_blank=True)
+    meaning = serializers.CharField(allow_blank=True)
+
+
+class SimpleSolutionStepSerializer(serializers.Serializer):
+    order = serializers.IntegerField(min_value=1)
+    title = serializers.CharField()
+    explanation = serializers.CharField(allow_blank=True)
+    formula = serializers.CharField(allow_blank=True)
+    calculation = serializers.CharField(allow_blank=True)
+    result = serializers.CharField(allow_blank=True)
+
+
+class SimpleSolutionPayloadSerializer(serializers.Serializer):
+    teacher_intro = serializers.CharField()
+    what_is_given = SimpleGivenItemSerializer(many=True)
+    what_is_required = serializers.CharField(allow_blank=True)
+    idea = serializers.CharField(allow_blank=True)
+    steps = SimpleSolutionStepSerializer(many=True)
+    final_answer = serializers.CharField()
+    verification = serializers.CharField(allow_blank=True)
+    memory_tip = serializers.CharField(allow_blank=True)
+
+
+class QuestionSimpleSolutionResponseSerializer(serializers.Serializer):
+    success = serializers.BooleanField()
+    exists = serializers.BooleanField()
+    saved = serializers.BooleanField()
+    source = serializers.ChoiceField(choices=["saved", "generated", "none"])
+    question_id = serializers.IntegerField()
+    subject = serializers.CharField(allow_blank=True)
+    model = serializers.CharField(allow_blank=True)
+    simple_solution = SimpleSolutionPayloadSerializer(
+        required=False,
+        allow_null=True,
+    )
+    created_at = serializers.DateTimeField(
+        required=False,
+        allow_null=True,
+    )
+    updated_at = serializers.DateTimeField(
+        required=False,
+        allow_null=True,
+    )

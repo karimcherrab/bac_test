@@ -1,0 +1,549 @@
+{
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2017-electrical-verified",
+  "language": "ar",
+  "direction": "rtl",
+  "year": 2017,
+  "session": "ordinary",
+  "chapter_code": "electrical_phenomena_evolution",
+  "chapter_title": "تطور دراسة ظواهر كهربائية",
+  "exercise_number": 44,
+  "source_page": 18,
+  "source_pages": [
+    18,
+    19
+  ],
+  "solution_source_pages": [
+    38,
+    39
+  ],
+
+  "branches": [
+    {
+      "code": "math",
+      "name": "شعبة رياضيات"
+    },
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "title": "التمرين 44 — بكالوريا الجزائر 2017 — رياضيات وتقني رياضي (الدورة الاستثنائية)",
+  "axis_tags": [
+    "rl_time_constant_graphical_analysis",
+    "inductor_energy_rl_energy_balance",
+    "lc_free_oscillations"
+  ],
+  "questions": [
+    {
+      "id": "2017_elec_ex44_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "I-1) حدّد المنحنى الموافق لكل حالة مع التعليل.",
+      "solution": {
+        "strategy": "وجود النواة يزيد الذاتية وثابت الزمن.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "النتيجة",
+            "explanation": "τa=4ms وτb=16ms، لذا (a) بدون النواة و(b) مع النواة."
+          }
+        ],
+        "final_answer": "a بدون نواة، b مع نواة."
+      }
+    },
+    {
+      "id": "2017_elec_ex44_q2",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "I-2) احسب مقاومة الوشيعة ثم ذاتيتها في كل تجربة.",
+      "solution": {
+        "strategy": "من I0=0.12A وR=40Ω.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "r",
+            "explanation": "r=6/0.12-40=10Ω."
+          },
+          {
+            "step_number": 2,
+            "title": "بدون النواة",
+            "explanation": "L=4ms×50Ω=0.20H."
+          },
+          {
+            "step_number": 3,
+            "title": "مع النواة",
+            "explanation": "L=16ms×50Ω=0.80H."
+          }
+        ],
+        "final_answer": "r=10Ω، L=0.20H و0.80H."
+      }
+    },
+    {
+      "id": "2017_elec_ex44_q3",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "I-3) احسب الطاقة الأعظمية المخزنة في الوشيعة في التجربتين وبرر الاختلاف.",
+      "solution": {
+        "strategy": "EL=1/2LI0².",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "مع النواة",
+            "explanation": "5.76×10^-3 J."
+          },
+          {
+            "step_number": 2,
+            "title": "بدون النواة",
+            "explanation": "1.44×10^-3 J."
+          },
+          {
+            "step_number": 3,
+            "title": "السبب",
+            "explanation": "الاختلاف ناتج عن اختلاف الذاتية L."
+          }
+        ],
+        "final_answer": "5.76mJ و1.44mJ."
+      }
+    },
+    {
+      "id": "2017_elec_ex44_q4",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "II-1) احسب سعة المكثفة.",
+      "solution": {
+        "strategy": "C=Q/U0.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الحساب",
+            "explanation": "C=2.5µC/5V=0.5µF."
+          }
+        ],
+        "final_answer": "C=0.5µF."
+      }
+    },
+    {
+      "id": "2017_elec_ex44_q5",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "II-2) حدّد نمط الاهتزازات، واستنتج ذاتية الوشيعة الجديدة، وهل هي مماثلة للوشيعة السابقة؟",
+      "solution": {
+        "strategy": "نستعمل منحنى طاقة المكثفة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "النمط",
+            "explanation": "اهتزازات حرة غير متخامدة ودورية."
+          },
+          {
+            "step_number": 2,
+            "title": "T0",
+            "explanation": "من منحنى الطاقة T0/2=1ms ⇒ T0=2ms."
+          },
+          {
+            "step_number": 3,
+            "title": "L",
+            "explanation": "L'=T0²/(4π²C)=0.20H."
+          },
+          {
+            "step_number": 4,
+            "title": "المقارنة",
+            "explanation": "غير مماثلة لأن مقاومتها هنا معدومة تقريباً رغم تساوي الذاتية مع إحدى الحالتين."
+          }
+        ],
+        "final_answer": "T0=2ms، L'=0.20H."
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "تجميعية_عمورة_للبكالوريات_السابقة_الوحدة_3(1).pdf",
+    "statement_figure_policy": "الشكل المعطى في الموضوع يظهر مع نص التمرين، والرسم المطلوب كإجابة يظهر داخل الحل فقط.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  },
+  "statement": "I- تجربتان على وشيعة في دارة الشكل 74: الأولى بوجود نواة حديدية والثانية بعد سحبها، والشكل 75 يعطي منحنيي التيار. II- تربط وشيعة أخرى مع مكثفة تحمل Q=2.5µC ومشحونة كلياً تحت U0=5V كما في الشكل 76، والشكل 77 يعطي طاقة المكثفة.",
+  "figures": [
+    {
+      "diagram_type": "ex44_rl",
+      "title": "الشكل 74",
+      "description": "الشكل 74",
+      "svg": "<svg viewBox=\"0 0 800 320\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"25\" y=\"20\" width=\"750\" height=\"260\" rx=\"18\" fill=\"white\" stroke=\"#cbd5e1\"/><path d=\"M130 80 H650 V240 H130 Z\" fill=\"none\" stroke=\"#111827\" stroke-width=\"5\"/><circle cx=\"130\" cy=\"160\" r=\"30\" fill=\"white\" stroke=\"#111827\" stroke-width=\"4\"/><text x=\"118\" y=\"168\" font-size=\"22\">E</text><rect x=\"250\" y=\"55\" width=\"100\" height=\"50\" fill=\"white\" stroke=\"#111827\" stroke-width=\"3\"/><text x=\"270\" y=\"87\" font-size=\"20\">R=40Ω</text><line x1=\"430\" y1=\"80\" x2=\"430\" y2=\"130\" stroke=\"#111827\" stroke-width=\"5\"/><line x1=\"400\" y1=\"130\" x2=\"460\" y2=\"130\" stroke=\"#111827\" stroke-width=\"6\"/><line x1=\"400\" y1=\"165\" x2=\"460\" y2=\"165\" stroke=\"#111827\" stroke-width=\"6\"/><text x=\"475\" y=\"155\" font-size=\"22\">C/L</text><text x=\"560\" y=\"70\" font-size=\"20\">K</text></svg>",
+      "render_mode": "inline",
+      "responsive": true
+    },
+    {
+      "title": "الشكل 75 — تيار الوشيعة",
+      "description": "الشكل 75 — تيار الوشيعة",
+      "x_label": "t(ms)",
+      "y_label": "i(mA)",
+      "x_domain": [
+        0,
+        40
+      ],
+      "y_domain": [
+        0,
+        130
+      ],
+      "series": [
+        {
+          "name": "(a) بدون نواة",
+          "data": [
+            {
+              "x": 0,
+              "y": 0.0
+            },
+            {
+              "x": 2,
+              "y": 47.22
+            },
+            {
+              "x": 4,
+              "y": 75.85
+            },
+            {
+              "x": 8,
+              "y": 103.76
+            },
+            {
+              "x": 12,
+              "y": 114.03
+            },
+            {
+              "x": 16,
+              "y": 117.8
+            },
+            {
+              "x": 24,
+              "y": 119.7
+            },
+            {
+              "x": 32,
+              "y": 119.96
+            },
+            {
+              "x": 40,
+              "y": 119.99
+            }
+          ]
+        },
+        {
+          "name": "(b) مع نواة",
+          "data": [
+            {
+              "x": 0,
+              "y": 0.0
+            },
+            {
+              "x": 2,
+              "y": 14.1
+            },
+            {
+              "x": 4,
+              "y": 26.54
+            },
+            {
+              "x": 8,
+              "y": 47.22
+            },
+            {
+              "x": 12,
+              "y": 63.32
+            },
+            {
+              "x": 16,
+              "y": 75.85
+            },
+            {
+              "x": 24,
+              "y": 93.22
+            },
+            {
+              "x": 32,
+              "y": 103.76
+            },
+            {
+              "x": 40,
+              "y": 110.15
+            }
+          ]
+        }
+      ],
+      "settings": {
+        "show_grid": true,
+        "show_axes": true,
+        "show_legend": true,
+        "show_point_labels": false,
+        "connect_points": true
+      }
+    },
+    {
+      "diagram_type": "ex44_lc",
+      "title": "الشكل 76",
+      "description": "الشكل 76",
+      "svg": "<svg viewBox=\"0 0 800 320\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"25\" y=\"20\" width=\"750\" height=\"260\" rx=\"18\" fill=\"white\" stroke=\"#cbd5e1\"/><path d=\"M130 80 H650 V240 H130 Z\" fill=\"none\" stroke=\"#111827\" stroke-width=\"5\"/><circle cx=\"130\" cy=\"160\" r=\"30\" fill=\"white\" stroke=\"#111827\" stroke-width=\"4\"/><text x=\"118\" y=\"168\" font-size=\"22\">E</text><rect x=\"250\" y=\"55\" width=\"100\" height=\"50\" fill=\"white\" stroke=\"#111827\" stroke-width=\"3\"/><text x=\"270\" y=\"87\" font-size=\"20\">LC</text><line x1=\"430\" y1=\"80\" x2=\"430\" y2=\"130\" stroke=\"#111827\" stroke-width=\"5\"/><line x1=\"400\" y1=\"130\" x2=\"460\" y2=\"130\" stroke=\"#111827\" stroke-width=\"6\"/><line x1=\"400\" y1=\"165\" x2=\"460\" y2=\"165\" stroke=\"#111827\" stroke-width=\"6\"/><text x=\"475\" y=\"155\" font-size=\"22\">C/L</text><text x=\"560\" y=\"70\" font-size=\"20\">K</text></svg>",
+      "render_mode": "inline",
+      "responsive": true
+    },
+    {
+      "title": "الشكل 77 — طاقة المكثفة",
+      "description": "الشكل 77 — طاقة المكثفة",
+      "x_label": "t(ms)",
+      "y_label": "EC(µJ)",
+      "x_domain": [
+        0,
+        2.25
+      ],
+      "y_domain": [
+        0,
+        6.8
+      ],
+      "series": [
+        {
+          "name": "EC",
+          "data": [
+            {
+              "x": 0.0,
+              "y": 6.25
+            },
+            {
+              "x": 0.25,
+              "y": 3.125
+            },
+            {
+              "x": 0.5,
+              "y": 0.0
+            },
+            {
+              "x": 0.75,
+              "y": 3.125
+            },
+            {
+              "x": 1.0,
+              "y": 6.25
+            },
+            {
+              "x": 1.25,
+              "y": 3.125
+            },
+            {
+              "x": 1.5,
+              "y": 0.0
+            },
+            {
+              "x": 1.75,
+              "y": 3.125
+            },
+            {
+              "x": 2.0,
+              "y": 6.25
+            },
+            {
+              "x": 2.25,
+              "y": 3.125
+            }
+          ]
+        }
+      ],
+      "settings": {
+        "show_grid": true,
+        "show_axes": true,
+        "show_legend": false,
+        "show_point_labels": false,
+        "connect_points": true
+      }
+    }
+  ],
+  "statement_graphs": [
+    {
+      "diagram_type": "ex44_rl",
+      "title": "الشكل 74",
+      "description": "الشكل 74",
+      "svg": "<svg viewBox=\"0 0 800 320\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"25\" y=\"20\" width=\"750\" height=\"260\" rx=\"18\" fill=\"white\" stroke=\"#cbd5e1\"/><path d=\"M130 80 H650 V240 H130 Z\" fill=\"none\" stroke=\"#111827\" stroke-width=\"5\"/><circle cx=\"130\" cy=\"160\" r=\"30\" fill=\"white\" stroke=\"#111827\" stroke-width=\"4\"/><text x=\"118\" y=\"168\" font-size=\"22\">E</text><rect x=\"250\" y=\"55\" width=\"100\" height=\"50\" fill=\"white\" stroke=\"#111827\" stroke-width=\"3\"/><text x=\"270\" y=\"87\" font-size=\"20\">R=40Ω</text><line x1=\"430\" y1=\"80\" x2=\"430\" y2=\"130\" stroke=\"#111827\" stroke-width=\"5\"/><line x1=\"400\" y1=\"130\" x2=\"460\" y2=\"130\" stroke=\"#111827\" stroke-width=\"6\"/><line x1=\"400\" y1=\"165\" x2=\"460\" y2=\"165\" stroke=\"#111827\" stroke-width=\"6\"/><text x=\"475\" y=\"155\" font-size=\"22\">C/L</text><text x=\"560\" y=\"70\" font-size=\"20\">K</text></svg>",
+      "render_mode": "inline",
+      "responsive": true
+    },
+    {
+      "title": "الشكل 75 — تيار الوشيعة",
+      "description": "الشكل 75 — تيار الوشيعة",
+      "x_label": "t(ms)",
+      "y_label": "i(mA)",
+      "x_domain": [
+        0,
+        40
+      ],
+      "y_domain": [
+        0,
+        130
+      ],
+      "series": [
+        {
+          "name": "(a) بدون نواة",
+          "data": [
+            {
+              "x": 0,
+              "y": 0.0
+            },
+            {
+              "x": 2,
+              "y": 47.22
+            },
+            {
+              "x": 4,
+              "y": 75.85
+            },
+            {
+              "x": 8,
+              "y": 103.76
+            },
+            {
+              "x": 12,
+              "y": 114.03
+            },
+            {
+              "x": 16,
+              "y": 117.8
+            },
+            {
+              "x": 24,
+              "y": 119.7
+            },
+            {
+              "x": 32,
+              "y": 119.96
+            },
+            {
+              "x": 40,
+              "y": 119.99
+            }
+          ]
+        },
+        {
+          "name": "(b) مع نواة",
+          "data": [
+            {
+              "x": 0,
+              "y": 0.0
+            },
+            {
+              "x": 2,
+              "y": 14.1
+            },
+            {
+              "x": 4,
+              "y": 26.54
+            },
+            {
+              "x": 8,
+              "y": 47.22
+            },
+            {
+              "x": 12,
+              "y": 63.32
+            },
+            {
+              "x": 16,
+              "y": 75.85
+            },
+            {
+              "x": 24,
+              "y": 93.22
+            },
+            {
+              "x": 32,
+              "y": 103.76
+            },
+            {
+              "x": 40,
+              "y": 110.15
+            }
+          ]
+        }
+      ],
+      "settings": {
+        "show_grid": true,
+        "show_axes": true,
+        "show_legend": true,
+        "show_point_labels": false,
+        "connect_points": true
+      }
+    },
+    {
+      "diagram_type": "ex44_lc",
+      "title": "الشكل 76",
+      "description": "الشكل 76",
+      "svg": "<svg viewBox=\"0 0 800 320\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"25\" y=\"20\" width=\"750\" height=\"260\" rx=\"18\" fill=\"white\" stroke=\"#cbd5e1\"/><path d=\"M130 80 H650 V240 H130 Z\" fill=\"none\" stroke=\"#111827\" stroke-width=\"5\"/><circle cx=\"130\" cy=\"160\" r=\"30\" fill=\"white\" stroke=\"#111827\" stroke-width=\"4\"/><text x=\"118\" y=\"168\" font-size=\"22\">E</text><rect x=\"250\" y=\"55\" width=\"100\" height=\"50\" fill=\"white\" stroke=\"#111827\" stroke-width=\"3\"/><text x=\"270\" y=\"87\" font-size=\"20\">LC</text><line x1=\"430\" y1=\"80\" x2=\"430\" y2=\"130\" stroke=\"#111827\" stroke-width=\"5\"/><line x1=\"400\" y1=\"130\" x2=\"460\" y2=\"130\" stroke=\"#111827\" stroke-width=\"6\"/><line x1=\"400\" y1=\"165\" x2=\"460\" y2=\"165\" stroke=\"#111827\" stroke-width=\"6\"/><text x=\"475\" y=\"155\" font-size=\"22\">C/L</text><text x=\"560\" y=\"70\" font-size=\"20\">K</text></svg>",
+      "render_mode": "inline",
+      "responsive": true
+    },
+    {
+      "title": "الشكل 77 — طاقة المكثفة",
+      "description": "الشكل 77 — طاقة المكثفة",
+      "x_label": "t(ms)",
+      "y_label": "EC(µJ)",
+      "x_domain": [
+        0,
+        2.25
+      ],
+      "y_domain": [
+        0,
+        6.8
+      ],
+      "series": [
+        {
+          "name": "EC",
+          "data": [
+            {
+              "x": 0.0,
+              "y": 6.25
+            },
+            {
+              "x": 0.25,
+              "y": 3.125
+            },
+            {
+              "x": 0.5,
+              "y": 0.0
+            },
+            {
+              "x": 0.75,
+              "y": 3.125
+            },
+            {
+              "x": 1.0,
+              "y": 6.25
+            },
+            {
+              "x": 1.25,
+              "y": 3.125
+            },
+            {
+              "x": 1.5,
+              "y": 0.0
+            },
+            {
+              "x": 1.75,
+              "y": 3.125
+            },
+            {
+              "x": 2.0,
+              "y": 6.25
+            },
+            {
+              "x": 2.25,
+              "y": 3.125
+            }
+          ]
+        }
+      ],
+      "settings": {
+        "show_grid": true,
+        "show_axes": true,
+        "show_legend": false,
+        "show_point_labels": false,
+        "connect_points": true
+      }
+    }
+  ]
+}

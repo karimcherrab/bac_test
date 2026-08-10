@@ -1,0 +1,561 @@
+{
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2017-electrical-verified",
+  "language": "ar",
+  "direction": "rtl",
+  "year": 2017,
+  "session": "ordinary",
+  "chapter_code": "electrical_phenomena_evolution",
+  "chapter_title": "تطور دراسة ظواهر كهربائية",
+  "exercise_number": 45,
+  "source_page": 19,
+  "source_pages": [
+    19
+  ],
+  "solution_source_pages": [
+    39
+  ],
+
+  "branches": [
+    {
+      "code": "science",
+      "name": "شعبة علوم تجريبية"
+    }
+  ],
+  "title": "التمرين 45 — بكالوريا الجزائر 2017 — علوم تجريبية (الدورة العادية)",
+  "axis_tags": [
+    "rc_capacitor_charging",
+    "lc_free_oscillations",
+    "rc_energy"
+  ],
+  "questions": [
+    {
+      "id": "2017_elec_ex45_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) أعد رسم دارة الشحن موضحاً الجهة الاصطلاحية للتيار والتوتر بين طرفي كل عنصر.",
+      "solution": {
+        "strategy": "نوجه دارة RC.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التوجيه",
+            "explanation": "التيار الاصطلاحي يخرج من المولد ويمر عبر R نحو C.",
+            "graph_data": {
+              "diagram_type": "ex45_oriented",
+              "title": "دارة الشحن الموجهة",
+              "description": "دارة الشحن الموجهة",
+              "svg": "<svg viewBox=\"0 0 800 320\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"25\" y=\"20\" width=\"750\" height=\"260\" rx=\"18\" fill=\"white\" stroke=\"#cbd5e1\"/><path d=\"M130 80 H650 V240 H130 Z\" fill=\"none\" stroke=\"#111827\" stroke-width=\"5\"/><circle cx=\"130\" cy=\"160\" r=\"30\" fill=\"white\" stroke=\"#111827\" stroke-width=\"4\"/><text x=\"118\" y=\"168\" font-size=\"22\">E</text><rect x=\"250\" y=\"55\" width=\"100\" height=\"50\" fill=\"white\" stroke=\"#111827\" stroke-width=\"3\"/><text x=\"270\" y=\"87\" font-size=\"20\">R</text><line x1=\"430\" y1=\"80\" x2=\"430\" y2=\"130\" stroke=\"#111827\" stroke-width=\"5\"/><line x1=\"400\" y1=\"130\" x2=\"460\" y2=\"130\" stroke=\"#111827\" stroke-width=\"6\"/><line x1=\"400\" y1=\"165\" x2=\"460\" y2=\"165\" stroke=\"#111827\" stroke-width=\"6\"/><text x=\"475\" y=\"155\" font-size=\"22\">C/L</text><text x=\"560\" y=\"70\" font-size=\"20\">K</text></svg>",
+              "render_mode": "inline",
+              "responsive": true
+            }
+          }
+        ],
+        "final_answer": "كما في الرسم."
+      }
+    },
+    {
+      "id": "2017_elec_ex45_q2",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2) باستعمال قانون جمع التوترات اكتب المعادلة التفاضلية للشحنة q(t).",
+      "solution": {
+        "strategy": "E=uR+uC.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "المعادلة",
+            "explanation": "\\[\\frac{dq}{dt}+\\frac1{RC}q=\\frac ER\\]"
+          }
+        ],
+        "final_answer": "dq/dt+q/(RC)=E/R."
+      }
+    },
+    {
+      "id": "2017_elec_ex45_q3",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "3) إذا كان q(t)=A(1-e^{-bt})، جد A وb.",
+      "solution": {
+        "strategy": "المطابقة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الثوابت",
+            "explanation": "A=CE=Qmax، وb=1/(RC)."
+          }
+        ],
+        "final_answer": "A=CE، b=1/(RC)."
+      }
+    },
+    {
+      "id": "2017_elec_ex45_q4",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "4) جد عبارة شدة التيار i(t).",
+      "solution": {
+        "strategy": "i=dq/dt.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "العبارة",
+            "explanation": "\\[i(t)=\\frac ER e^{-t/(RC)}\\]"
+          }
+        ],
+        "final_answer": "i=(E/R)e^-t/RC."
+      }
+    },
+    {
+      "id": "2017_elec_ex45_q5",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "5) باستعمال البيان: احسب R، ثم بيّن أن C=2µF.",
+      "solution": {
+        "strategy": "قراءة I0 وτ.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "R",
+            "explanation": "I0=4.8mA ⇒ R=E/I0=1250Ω."
+          },
+          {
+            "step_number": 2,
+            "title": "C",
+            "explanation": "من المماس τ=2.5ms، ومنه C=τ/R=2µF."
+          }
+        ],
+        "final_answer": "R=1250Ω، C=2µF."
+      }
+    },
+    {
+      "id": "2017_elec_ex45_q6",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "6) في الوضع (2): بيّن معادلة LC، اختر المنحنى الموافق، احسب L وطاقة المكثفة عند t=0 وt=T/4، وفسر التغير.",
+      "solution": {
+        "strategy": "الوشيعة مثالية فلا يحدث تخامد.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "المعادلة",
+            "explanation": "\\[\\frac{d^2u_C}{dt^2}+\\frac1{LC}u_C=0\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "المنحنى",
+            "explanation": "المنحنى الصحيح هو الشكل 81 لأنه جيبي غير متخامد."
+          },
+          {
+            "step_number": 3,
+            "title": "L",
+            "explanation": "من T0=2.8ms: L=0.10H."
+          },
+          {
+            "step_number": 4,
+            "title": "الطاقة عند 0",
+            "explanation": "EC(0)=1/2 CE²=3.6×10^-5J."
+          },
+          {
+            "step_number": 5,
+            "title": "عند T/4",
+            "explanation": "uC=0 ⇒ EC=0."
+          },
+          {
+            "step_number": 6,
+            "title": "التفسير",
+            "explanation": "انتقلت الطاقة من المكثفة إلى الوشيعة دون ضياع."
+          }
+        ],
+        "final_answer": "الشكل81، L=0.10H، EC(0)=3.6×10^-5J، EC(T/4)=0."
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "تجميعية_عمورة_للبكالوريات_السابقة_الوحدة_3(1).pdf",
+    "statement_figure_policy": "الشكل المعطى في الموضوع يظهر مع نص التمرين، والرسم المطلوب كإجابة يظهر داخل الحل فقط.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  },
+  "statement": "نحقق الدارة في الشكل 78: مولد E=6V، ناقل أومي مقاومته R، مكثفة غير مشحونة سعتها C، وشيعة ذاتيتها L ومقاومتها مهملة، وبادلة K. يعطي الشكل 79 تغيرات شدة التيار أثناء شحن المكثفة. بعد إتمام الشحن ننقل البادلة إلى الوضع (2).",
+  "figures": [
+    {
+      "diagram_type": "ex45_circuit",
+      "title": "الشكل 78",
+      "description": "الشكل 78",
+      "svg": "<svg viewBox=\"0 0 800 320\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"25\" y=\"20\" width=\"750\" height=\"260\" rx=\"18\" fill=\"white\" stroke=\"#cbd5e1\"/><path d=\"M130 80 H650 V240 H130 Z\" fill=\"none\" stroke=\"#111827\" stroke-width=\"5\"/><circle cx=\"130\" cy=\"160\" r=\"30\" fill=\"white\" stroke=\"#111827\" stroke-width=\"4\"/><text x=\"118\" y=\"168\" font-size=\"22\">E</text><rect x=\"250\" y=\"55\" width=\"100\" height=\"50\" fill=\"white\" stroke=\"#111827\" stroke-width=\"3\"/><text x=\"270\" y=\"87\" font-size=\"20\">R</text><line x1=\"430\" y1=\"80\" x2=\"430\" y2=\"130\" stroke=\"#111827\" stroke-width=\"5\"/><line x1=\"400\" y1=\"130\" x2=\"460\" y2=\"130\" stroke=\"#111827\" stroke-width=\"6\"/><line x1=\"400\" y1=\"165\" x2=\"460\" y2=\"165\" stroke=\"#111827\" stroke-width=\"6\"/><text x=\"475\" y=\"155\" font-size=\"22\">C/L</text><text x=\"560\" y=\"70\" font-size=\"20\">K</text></svg>",
+      "render_mode": "inline",
+      "responsive": true
+    },
+    {
+      "title": "الشكل 79 — i(t)",
+      "description": "الشكل 79 — i(t)",
+      "x_label": "t(ms)",
+      "y_label": "i(mA)",
+      "x_domain": [
+        0,
+        10
+      ],
+      "y_domain": [
+        0,
+        5.2
+      ],
+      "series": [
+        {
+          "name": "i",
+          "data": [
+            {
+              "x": 0,
+              "y": 4.8
+            },
+            {
+              "x": 0.5,
+              "y": 3.93
+            },
+            {
+              "x": 1,
+              "y": 3.218
+            },
+            {
+              "x": 1.5,
+              "y": 2.634
+            },
+            {
+              "x": 2,
+              "y": 2.157
+            },
+            {
+              "x": 2.5,
+              "y": 1.766
+            },
+            {
+              "x": 4,
+              "y": 0.969
+            },
+            {
+              "x": 6,
+              "y": 0.435
+            },
+            {
+              "x": 8,
+              "y": 0.196
+            },
+            {
+              "x": 10,
+              "y": 0.088
+            }
+          ]
+        }
+      ],
+      "settings": {
+        "show_grid": true,
+        "show_axes": true,
+        "show_legend": false,
+        "show_point_labels": false,
+        "connect_points": true
+      }
+    },
+    {
+      "title": "الشكل 81 — uC(t)",
+      "description": "الشكل 81 — uC(t)",
+      "x_label": "t(ms)",
+      "y_label": "uC(V)",
+      "x_domain": [
+        0,
+        7
+      ],
+      "y_domain": [
+        -6.5,
+        6.5
+      ],
+      "series": [
+        {
+          "name": "uC",
+          "data": [
+            {
+              "x": 0.0,
+              "y": 6.0
+            },
+            {
+              "x": 0.35,
+              "y": 4.243
+            },
+            {
+              "x": 0.7,
+              "y": 0.0
+            },
+            {
+              "x": 1.0499999999999998,
+              "y": -4.243
+            },
+            {
+              "x": 1.4,
+              "y": -6.0
+            },
+            {
+              "x": 1.75,
+              "y": -4.243
+            },
+            {
+              "x": 2.0999999999999996,
+              "y": -0.0
+            },
+            {
+              "x": 2.4499999999999997,
+              "y": 4.243
+            },
+            {
+              "x": 2.8,
+              "y": 6.0
+            },
+            {
+              "x": 3.15,
+              "y": 4.243
+            },
+            {
+              "x": 3.5,
+              "y": -0.0
+            },
+            {
+              "x": 3.8499999999999996,
+              "y": -4.243
+            },
+            {
+              "x": 4.199999999999999,
+              "y": -6.0
+            },
+            {
+              "x": 4.55,
+              "y": -4.243
+            },
+            {
+              "x": 4.8999999999999995,
+              "y": -0.0
+            },
+            {
+              "x": 5.25,
+              "y": 4.243
+            },
+            {
+              "x": 5.6,
+              "y": 6.0
+            },
+            {
+              "x": 5.949999999999999,
+              "y": 4.243
+            },
+            {
+              "x": 6.3,
+              "y": 0.0
+            },
+            {
+              "x": 6.6499999999999995,
+              "y": -4.243
+            },
+            {
+              "x": 7.0,
+              "y": -6.0
+            }
+          ]
+        }
+      ],
+      "settings": {
+        "show_grid": true,
+        "show_axes": true,
+        "show_legend": false,
+        "show_point_labels": false,
+        "connect_points": true
+      }
+    }
+  ],
+  "statement_graphs": [
+    {
+      "diagram_type": "ex45_circuit",
+      "title": "الشكل 78",
+      "description": "الشكل 78",
+      "svg": "<svg viewBox=\"0 0 800 320\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"25\" y=\"20\" width=\"750\" height=\"260\" rx=\"18\" fill=\"white\" stroke=\"#cbd5e1\"/><path d=\"M130 80 H650 V240 H130 Z\" fill=\"none\" stroke=\"#111827\" stroke-width=\"5\"/><circle cx=\"130\" cy=\"160\" r=\"30\" fill=\"white\" stroke=\"#111827\" stroke-width=\"4\"/><text x=\"118\" y=\"168\" font-size=\"22\">E</text><rect x=\"250\" y=\"55\" width=\"100\" height=\"50\" fill=\"white\" stroke=\"#111827\" stroke-width=\"3\"/><text x=\"270\" y=\"87\" font-size=\"20\">R</text><line x1=\"430\" y1=\"80\" x2=\"430\" y2=\"130\" stroke=\"#111827\" stroke-width=\"5\"/><line x1=\"400\" y1=\"130\" x2=\"460\" y2=\"130\" stroke=\"#111827\" stroke-width=\"6\"/><line x1=\"400\" y1=\"165\" x2=\"460\" y2=\"165\" stroke=\"#111827\" stroke-width=\"6\"/><text x=\"475\" y=\"155\" font-size=\"22\">C/L</text><text x=\"560\" y=\"70\" font-size=\"20\">K</text></svg>",
+      "render_mode": "inline",
+      "responsive": true
+    },
+    {
+      "title": "الشكل 79 — i(t)",
+      "description": "الشكل 79 — i(t)",
+      "x_label": "t(ms)",
+      "y_label": "i(mA)",
+      "x_domain": [
+        0,
+        10
+      ],
+      "y_domain": [
+        0,
+        5.2
+      ],
+      "series": [
+        {
+          "name": "i",
+          "data": [
+            {
+              "x": 0,
+              "y": 4.8
+            },
+            {
+              "x": 0.5,
+              "y": 3.93
+            },
+            {
+              "x": 1,
+              "y": 3.218
+            },
+            {
+              "x": 1.5,
+              "y": 2.634
+            },
+            {
+              "x": 2,
+              "y": 2.157
+            },
+            {
+              "x": 2.5,
+              "y": 1.766
+            },
+            {
+              "x": 4,
+              "y": 0.969
+            },
+            {
+              "x": 6,
+              "y": 0.435
+            },
+            {
+              "x": 8,
+              "y": 0.196
+            },
+            {
+              "x": 10,
+              "y": 0.088
+            }
+          ]
+        }
+      ],
+      "settings": {
+        "show_grid": true,
+        "show_axes": true,
+        "show_legend": false,
+        "show_point_labels": false,
+        "connect_points": true
+      }
+    },
+    {
+      "title": "الشكل 81 — uC(t)",
+      "description": "الشكل 81 — uC(t)",
+      "x_label": "t(ms)",
+      "y_label": "uC(V)",
+      "x_domain": [
+        0,
+        7
+      ],
+      "y_domain": [
+        -6.5,
+        6.5
+      ],
+      "series": [
+        {
+          "name": "uC",
+          "data": [
+            {
+              "x": 0.0,
+              "y": 6.0
+            },
+            {
+              "x": 0.35,
+              "y": 4.243
+            },
+            {
+              "x": 0.7,
+              "y": 0.0
+            },
+            {
+              "x": 1.0499999999999998,
+              "y": -4.243
+            },
+            {
+              "x": 1.4,
+              "y": -6.0
+            },
+            {
+              "x": 1.75,
+              "y": -4.243
+            },
+            {
+              "x": 2.0999999999999996,
+              "y": -0.0
+            },
+            {
+              "x": 2.4499999999999997,
+              "y": 4.243
+            },
+            {
+              "x": 2.8,
+              "y": 6.0
+            },
+            {
+              "x": 3.15,
+              "y": 4.243
+            },
+            {
+              "x": 3.5,
+              "y": -0.0
+            },
+            {
+              "x": 3.8499999999999996,
+              "y": -4.243
+            },
+            {
+              "x": 4.199999999999999,
+              "y": -6.0
+            },
+            {
+              "x": 4.55,
+              "y": -4.243
+            },
+            {
+              "x": 4.8999999999999995,
+              "y": -0.0
+            },
+            {
+              "x": 5.25,
+              "y": 4.243
+            },
+            {
+              "x": 5.6,
+              "y": 6.0
+            },
+            {
+              "x": 5.949999999999999,
+              "y": 4.243
+            },
+            {
+              "x": 6.3,
+              "y": 0.0
+            },
+            {
+              "x": 6.6499999999999995,
+              "y": -4.243
+            },
+            {
+              "x": 7.0,
+              "y": -6.0
+            }
+          ]
+        }
+      ],
+      "settings": {
+        "show_grid": true,
+        "show_axes": true,
+        "show_legend": false,
+        "show_point_labels": false,
+        "connect_points": true
+      }
+    }
+  ]
+}

@@ -79,7 +79,7 @@ class Command(BaseCommand):
         parser.add_argument(
             "--subject-name",
             type=str,
-            default="الرياضيات",
+            default="الفيزياء",
             help=(
                 "Nom utilisé si la matière "
                 "doit être créée."
@@ -100,10 +100,10 @@ class Command(BaseCommand):
         parser.add_argument(
             "--chapter-title",
             type=str,
-            default="المتتاليات العددية",
+            default=None,
             help=(
-                "Titre utilisé si le chapitre "
-                "doit être créé."
+                "Titre du chapitre. S'il est absent, "
+                "le programme utilise content.chapter_title."
             ),
         )
 
@@ -178,9 +178,14 @@ class Command(BaseCommand):
             "chapter_code"
         ]
 
-        chapter_title = options[
+        explicit_chapter_title = options.get(
             "chapter_title"
-        ].strip()
+        )
+
+        if explicit_chapter_title:
+            explicit_chapter_title = (
+                explicit_chapter_title.strip()
+            )
 
         chapter_order = options["chapter_order"]
         replace_content = options["replace_content"]
@@ -251,7 +256,7 @@ class Command(BaseCommand):
                     explicit_chapter_code=(
                         explicit_chapter_code
                     ),
-                    chapter_title=chapter_title,
+                    explicit_chapter_title=explicit_chapter_title,
                     chapter_order=chapter_order,
                     replace_content=replace_content,
                     dry_run=dry_run,
@@ -372,7 +377,7 @@ class Command(BaseCommand):
         subject_code: str,
         subject_name: str,
         explicit_chapter_code: str | None,
-        chapter_title: str,
+        explicit_chapter_title: str | None,
         chapter_order: int,
         replace_content: bool,
         dry_run: bool,
@@ -478,7 +483,7 @@ class Command(BaseCommand):
                     explicit_chapter_code=(
                         explicit_chapter_code
                     ),
-                    chapter_title=chapter_title,
+                    explicit_chapter_title=explicit_chapter_title,
                     chapter_order=chapter_order,
                     replace_content=replace_content,
                 )
@@ -501,7 +506,7 @@ class Command(BaseCommand):
         subject: Subject,
         branches_by_code: dict[str, Branch],
         explicit_chapter_code: str | None,
-        chapter_title: str,
+        explicit_chapter_title: str | None,
         chapter_order: int,
         replace_content: bool,
     ) -> str:
@@ -539,6 +544,31 @@ class Command(BaseCommand):
                 f"'{axis_data['tag']}' est vide."
             )
 
+        content_chapter_title = content.get(
+            "chapter_title"
+        )
+
+        chapter_title = (
+            explicit_chapter_title
+            or content_chapter_title
+        )
+
+        if not isinstance(chapter_title, str):
+            raise CommandError(
+                "Impossible de déterminer le titre du chapitre "
+                f"pour l'axe '{axis_data['tag']}'. "
+                "Ajoute content.chapter_title dans le JSON "
+                "ou utilise --chapter-title."
+            )
+
+        chapter_title = chapter_title.strip()
+
+        if not chapter_title:
+            raise CommandError(
+                "Le titre du chapitre est vide "
+                f"pour l'axe '{axis_data['tag']}'."
+            )
+
         chapter, chapter_created = (
             Chapter.objects.get_or_create(
                 subject=subject,
@@ -558,6 +588,35 @@ class Command(BaseCommand):
                     f"{chapter.code} - {chapter.title}"
                 )
             )
+        else:
+            chapter_fields_to_update = []
+
+            if chapter.title != chapter_title:
+                chapter.title = chapter_title
+                chapter_fields_to_update.append(
+                    "title"
+                )
+
+            if (
+                hasattr(chapter, "is_active")
+                and not chapter.is_active
+            ):
+                chapter.is_active = True
+                chapter_fields_to_update.append(
+                    "is_active"
+                )
+
+            if chapter_fields_to_update:
+                chapter.save(
+                    update_fields=chapter_fields_to_update
+                )
+
+                self.stdout.write(
+                    self.style.WARNING(
+                        "  Chapitre mis à jour : "
+                        f"{chapter.code} - {chapter.title}"
+                    )
+                )
 
         axis_branches = [
             branches_by_code[code]

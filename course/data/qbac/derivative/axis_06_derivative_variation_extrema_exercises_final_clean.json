@@ -1,0 +1,3537 @@
+{
+  "version": 1,
+  "language": "ar",
+  "direction": "rtl",
+  "subject_code": "math",
+
+  "chapter_code": "derivatives",
+  "tag": "derivative_variation_extrema",
+  "title": "إشارة المشتقة، جدول التغيرات والقيم الحدية",
+  "question_count": 14,
+  "questions": [
+    {
+      "id": "variation_bac_01",
+      "title": "دالة متزايدة على المجال كله",
+      "text": "لتكن الدالة \\(f(x)=x^3+x\\) المعرفة على \\(\\mathbb{R}\\). ادرس اتجاه تغير \\(f\\) وشكل جدول تغيراتها.",
+      "skill": "إثبات التزايد التام على مجال كامل",
+      "difficulty": "easy",
+      "solution": {
+        "steps": [
+          {
+            "number": "1",
+            "order": 1,
+            "title": "حساب المشتقة",
+            "explanation": "الدالة كثيرة حدود وقابلة للاشتقاق على \\(\\mathbb{R}\\).",
+            "calculation": "\\(f'(x)=3x^2+1\\)",
+            "result": "\\(f'(x)>0\\) لكل \\(x\\)",
+            "conclusion": "المشتقة موجبة دائمًا.",
+            "sign_tables": [
+              {
+                "id": "sign_5957926041296714819",
+                "title": "جدول إشارة المشتقة",
+                "variable": "x",
+                "critical_points": [
+                  "-\\infty",
+                  "+\\infty"
+                ],
+                "rows": [
+                  {
+                    "label": "\\(f'(x)\\)",
+                    "values": [
+                      ""
+                    ],
+                    "signs": [
+                      "+"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "number": "2",
+            "order": 2,
+            "title": "استنتاج التغير",
+            "explanation": "المشتقة الموجبة تعني أن الدالة متزايدة تمامًا.",
+            "result": "\\(f\\) متزايدة تمامًا على \\(\\mathbb{R}\\)",
+            "conclusion": "جدول التغيرات يحتوي سهمًا صاعدًا واحدًا.",
+            "variation_tables": [
+              {
+                "id": "variation_5484509018108500812",
+                "title": "جدول تغيرات الدالة",
+                "variable": "x",
+                "domain": "\\(\\mathbb{R}\\)",
+                "critical_points": [
+                  "-\\infty",
+                  "+\\infty"
+                ],
+                "derivative_row": {
+                  "label": "\\(f'(x)\\)",
+                  "values": [
+                    ""
+                  ],
+                  "signs": [
+                    "+"
+                  ]
+                },
+                "function_row": {
+                  "label": "\\(f(x)\\)",
+                  "values": [
+                    "-\\infty",
+                    "+\\infty"
+                  ],
+                  "variations": [
+                    "increasing"
+                  ]
+                },
+                "react_data": {
+                  "renderer": "VariationTableSvg",
+                  "viewBox": "0 0 720 300",
+                  "width": 720,
+                  "height": 300,
+                  "rtl": false,
+                  "rows": [
+                    {
+                      "key": "x",
+                      "label": "x",
+                      "y": 75
+                    },
+                    {
+                      "key": "derivative",
+                      "label": "\\(f'(x)\\)",
+                      "y": 145
+                    },
+                    {
+                      "key": "function",
+                      "label": "\\(f(x)\\)",
+                      "y": 245
+                    }
+                  ],
+                  "horizontal_lines": [
+                    {
+                      "x1": 20,
+                      "x2": 700,
+                      "y": 100
+                    },
+                    {
+                      "x1": 20,
+                      "x2": 700,
+                      "y": 180
+                    }
+                  ],
+                  "vertical_lines": [
+                    {
+                      "x": 120.0,
+                      "y1": 35,
+                      "y2": 275,
+                      "style": "solid"
+                    },
+                    {
+                      "x": 680.0,
+                      "y1": 35,
+                      "y2": 275,
+                      "style": "solid"
+                    }
+                  ],
+                  "x_labels": [
+                    {
+                      "text": "-\\infty",
+                      "x": 120.0,
+                      "y": 75
+                    },
+                    {
+                      "text": "+\\infty",
+                      "x": 680.0,
+                      "y": 75
+                    }
+                  ],
+                  "derivative_signs": [
+                    {
+                      "text": "+",
+                      "x": 400.0,
+                      "y": 145
+                    }
+                  ],
+                  "function_values": [
+                    {
+                      "text": "-\\infty",
+                      "x": 120.0,
+                      "y": 245
+                    },
+                    {
+                      "text": "+\\infty",
+                      "x": 680.0,
+                      "y": 245
+                    }
+                  ],
+                  "arrows": [
+                    {
+                      "from": {
+                        "x": 142.0,
+                        "y": 275
+                      },
+                      "to": {
+                        "x": 658.0,
+                        "y": 215
+                      },
+                      "direction": "increasing",
+                      "marker_end": "arrow"
+                    }
+                  ],
+                  "excluded_points": [],
+                  "accessibility": {
+                    "title": "جدول تغيرات الدالة",
+                    "description": "جدول تغيرات مرسوم بأسهم صاعدة ونازلة انطلاقًا من إشارة المشتقة."
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "final_answer": "\\(f\\) متزايدة تمامًا على \\(\\mathbb{R}\\).",
+        "verification": "لا توجد قيمة تجعل \\(3x^2+1\\le0\\).",
+        "common_mistakes": [
+          {
+            "mistake": "دراسة إشارة الدالة بدل إشارة مشتقتها.",
+            "correction": "اتجاه التغير يحدد من إشارة \\(f'(x)\\)، وليس من إشارة \\(f(x)\\)."
+          }
+        ],
+        "hints": [
+          "ابدأ بتحديد مجال تعريف الدالة.",
+          "احسب المشتقة وابحث عن جذورها.",
+          "حوّل جدول إشارة المشتقة إلى أسهم تغير للدالة."
+        ],
+        "variation_tables": [
+          {
+            "id": "variation_5484509018108500812",
+            "title": "جدول تغيرات الدالة",
+            "variable": "x",
+            "domain": "\\(\\mathbb{R}\\)",
+            "critical_points": [
+              "-\\infty",
+              "+\\infty"
+            ],
+            "derivative_row": {
+              "label": "\\(f'(x)\\)",
+              "values": [
+                ""
+              ],
+              "signs": [
+                "+"
+              ]
+            },
+            "function_row": {
+              "label": "\\(f(x)\\)",
+              "values": [
+                "-\\infty",
+                "+\\infty"
+              ],
+              "variations": [
+                "increasing"
+              ]
+            },
+            "react_data": {
+              "renderer": "VariationTableSvg",
+              "viewBox": "0 0 720 300",
+              "width": 720,
+              "height": 300,
+              "rtl": false,
+              "rows": [
+                {
+                  "key": "x",
+                  "label": "x",
+                  "y": 75
+                },
+                {
+                  "key": "derivative",
+                  "label": "\\(f'(x)\\)",
+                  "y": 145
+                },
+                {
+                  "key": "function",
+                  "label": "\\(f(x)\\)",
+                  "y": 245
+                }
+              ],
+              "horizontal_lines": [
+                {
+                  "x1": 20,
+                  "x2": 700,
+                  "y": 100
+                },
+                {
+                  "x1": 20,
+                  "x2": 700,
+                  "y": 180
+                }
+              ],
+              "vertical_lines": [
+                {
+                  "x": 120.0,
+                  "y1": 35,
+                  "y2": 275,
+                  "style": "solid"
+                },
+                {
+                  "x": 680.0,
+                  "y1": 35,
+                  "y2": 275,
+                  "style": "solid"
+                }
+              ],
+              "x_labels": [
+                {
+                  "text": "-\\infty",
+                  "x": 120.0,
+                  "y": 75
+                },
+                {
+                  "text": "+\\infty",
+                  "x": 680.0,
+                  "y": 75
+                }
+              ],
+              "derivative_signs": [
+                {
+                  "text": "+",
+                  "x": 400.0,
+                  "y": 145
+                }
+              ],
+              "function_values": [
+                {
+                  "text": "-\\infty",
+                  "x": 120.0,
+                  "y": 245
+                },
+                {
+                  "text": "+\\infty",
+                  "x": 680.0,
+                  "y": 245
+                }
+              ],
+              "arrows": [
+                {
+                  "from": {
+                    "x": 142.0,
+                    "y": 275
+                  },
+                  "to": {
+                    "x": 658.0,
+                    "y": 215
+                  },
+                  "direction": "increasing",
+                  "marker_end": "arrow"
+                }
+              ],
+              "excluded_points": [],
+              "accessibility": {
+                "title": "جدول تغيرات الدالة",
+                "description": "جدول تغيرات مرسوم بأسهم صاعدة ونازلة انطلاقًا من إشارة المشتقة."
+              }
+            },
+            "show_derivative_signs": true,
+            "show_function_values": true
+          }
+        ],
+        "sign_tables": [
+          {
+            "id": "sign_5957926041296714819",
+            "title": "جدول إشارة المشتقة",
+            "variable": "x",
+            "critical_points": [
+              "-\\infty",
+              "+\\infty"
+            ],
+            "rows": [
+              {
+                "label": "\\(f'(x)\\)",
+                "values": [
+                  ""
+                ],
+                "signs": [
+                  "+"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "variation_bac_02",
+      "title": "دالة متناقصة على المجال كله",
+      "text": "لتكن \\(g(x)=-x^3-2x+1\\). ادرس اتجاه تغيرها على \\(\\mathbb{R}\\).",
+      "skill": "إثبات التناقص التام",
+      "difficulty": "easy",
+      "solution": {
+        "steps": [
+          {
+            "number": "1",
+            "order": 1,
+            "title": "حساب المشتقة",
+            "explanation": "نشتق حدًا حدًا.",
+            "calculation": "\\(g'(x)=-3x^2-2\\)",
+            "result": "\\(g'(x)<0\\) لكل \\(x\\)",
+            "conclusion": "المشتقة سالبة دائمًا.",
+            "sign_tables": [
+              {
+                "id": "sign_7514109996049801894",
+                "title": "جدول إشارة المشتقة",
+                "variable": "x",
+                "critical_points": [
+                  "-\\infty",
+                  "+\\infty"
+                ],
+                "rows": [
+                  {
+                    "label": "\\(g'(x)\\)",
+                    "values": [
+                      ""
+                    ],
+                    "signs": [
+                      "-"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "number": "2",
+            "order": 2,
+            "title": "التغير",
+            "explanation": "كلما كانت المشتقة سالبة كانت الدالة متناقصة.",
+            "result": "\\(g\\) متناقصة تمامًا",
+            "conclusion": "لا توجد نقطة حرجة.",
+            "variation_tables": [
+              {
+                "id": "variation_3257804256909572184",
+                "title": "جدول تغيرات الدالة",
+                "variable": "x",
+                "domain": "\\(\\mathbb{R}\\)",
+                "critical_points": [
+                  "-\\infty",
+                  "+\\infty"
+                ],
+                "derivative_row": {
+                  "label": "\\(g'(x)\\)",
+                  "values": [
+                    ""
+                  ],
+                  "signs": [
+                    "-"
+                  ]
+                },
+                "function_row": {
+                  "label": "\\(g(x)\\)",
+                  "values": [
+                    "+\\infty",
+                    "-\\infty"
+                  ],
+                  "variations": [
+                    "decreasing"
+                  ]
+                },
+                "react_data": {
+                  "renderer": "VariationTableSvg",
+                  "viewBox": "0 0 720 300",
+                  "width": 720,
+                  "height": 300,
+                  "rtl": false,
+                  "rows": [
+                    {
+                      "key": "x",
+                      "label": "x",
+                      "y": 75
+                    },
+                    {
+                      "key": "derivative",
+                      "label": "\\(g'(x)\\)",
+                      "y": 145
+                    },
+                    {
+                      "key": "function",
+                      "label": "\\(g(x)\\)",
+                      "y": 245
+                    }
+                  ],
+                  "horizontal_lines": [
+                    {
+                      "x1": 20,
+                      "x2": 700,
+                      "y": 100
+                    },
+                    {
+                      "x1": 20,
+                      "x2": 700,
+                      "y": 180
+                    }
+                  ],
+                  "vertical_lines": [
+                    {
+                      "x": 120.0,
+                      "y1": 35,
+                      "y2": 275,
+                      "style": "solid"
+                    },
+                    {
+                      "x": 680.0,
+                      "y1": 35,
+                      "y2": 275,
+                      "style": "solid"
+                    }
+                  ],
+                  "x_labels": [
+                    {
+                      "text": "-\\infty",
+                      "x": 120.0,
+                      "y": 75
+                    },
+                    {
+                      "text": "+\\infty",
+                      "x": 680.0,
+                      "y": 75
+                    }
+                  ],
+                  "derivative_signs": [
+                    {
+                      "text": "-",
+                      "x": 400.0,
+                      "y": 145
+                    }
+                  ],
+                  "function_values": [
+                    {
+                      "text": "+\\infty",
+                      "x": 120.0,
+                      "y": 245
+                    },
+                    {
+                      "text": "-\\infty",
+                      "x": 680.0,
+                      "y": 245
+                    }
+                  ],
+                  "arrows": [
+                    {
+                      "from": {
+                        "x": 142.0,
+                        "y": 215
+                      },
+                      "to": {
+                        "x": 658.0,
+                        "y": 275
+                      },
+                      "direction": "decreasing",
+                      "marker_end": "arrow"
+                    }
+                  ],
+                  "excluded_points": [],
+                  "accessibility": {
+                    "title": "جدول تغيرات الدالة",
+                    "description": "جدول تغيرات مرسوم بأسهم صاعدة ونازلة انطلاقًا من إشارة المشتقة."
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "final_answer": "\\(g\\) متناقصة تمامًا على \\(\\mathbb{R}\\).",
+        "verification": "لدينا \\(-3x^2-2\\le-2<0\\).",
+        "common_mistakes": [
+          {
+            "mistake": "دراسة إشارة الدالة بدل إشارة مشتقتها.",
+            "correction": "اتجاه التغير يحدد من إشارة \\(f'(x)\\)، وليس من إشارة \\(f(x)\\)."
+          }
+        ],
+        "hints": [
+          "ابدأ بتحديد مجال تعريف الدالة.",
+          "احسب المشتقة وابحث عن جذورها.",
+          "حوّل جدول إشارة المشتقة إلى أسهم تغير للدالة."
+        ],
+        "variation_tables": [
+          {
+            "id": "variation_3257804256909572184",
+            "title": "جدول تغيرات الدالة",
+            "variable": "x",
+            "domain": "\\(\\mathbb{R}\\)",
+            "critical_points": [
+              "-\\infty",
+              "+\\infty"
+            ],
+            "derivative_row": {
+              "label": "\\(g'(x)\\)",
+              "values": [
+                ""
+              ],
+              "signs": [
+                "-"
+              ]
+            },
+            "function_row": {
+              "label": "\\(g(x)\\)",
+              "values": [
+                "+\\infty",
+                "-\\infty"
+              ],
+              "variations": [
+                "decreasing"
+              ]
+            },
+            "react_data": {
+              "renderer": "VariationTableSvg",
+              "viewBox": "0 0 720 300",
+              "width": 720,
+              "height": 300,
+              "rtl": false,
+              "rows": [
+                {
+                  "key": "x",
+                  "label": "x",
+                  "y": 75
+                },
+                {
+                  "key": "derivative",
+                  "label": "\\(g'(x)\\)",
+                  "y": 145
+                },
+                {
+                  "key": "function",
+                  "label": "\\(g(x)\\)",
+                  "y": 245
+                }
+              ],
+              "horizontal_lines": [
+                {
+                  "x1": 20,
+                  "x2": 700,
+                  "y": 100
+                },
+                {
+                  "x1": 20,
+                  "x2": 700,
+                  "y": 180
+                }
+              ],
+              "vertical_lines": [
+                {
+                  "x": 120.0,
+                  "y1": 35,
+                  "y2": 275,
+                  "style": "solid"
+                },
+                {
+                  "x": 680.0,
+                  "y1": 35,
+                  "y2": 275,
+                  "style": "solid"
+                }
+              ],
+              "x_labels": [
+                {
+                  "text": "-\\infty",
+                  "x": 120.0,
+                  "y": 75
+                },
+                {
+                  "text": "+\\infty",
+                  "x": 680.0,
+                  "y": 75
+                }
+              ],
+              "derivative_signs": [
+                {
+                  "text": "-",
+                  "x": 400.0,
+                  "y": 145
+                }
+              ],
+              "function_values": [
+                {
+                  "text": "+\\infty",
+                  "x": 120.0,
+                  "y": 245
+                },
+                {
+                  "text": "-\\infty",
+                  "x": 680.0,
+                  "y": 245
+                }
+              ],
+              "arrows": [
+                {
+                  "from": {
+                    "x": 142.0,
+                    "y": 215
+                  },
+                  "to": {
+                    "x": 658.0,
+                    "y": 275
+                  },
+                  "direction": "decreasing",
+                  "marker_end": "arrow"
+                }
+              ],
+              "excluded_points": [],
+              "accessibility": {
+                "title": "جدول تغيرات الدالة",
+                "description": "جدول تغيرات مرسوم بأسهم صاعدة ونازلة انطلاقًا من إشارة المشتقة."
+              }
+            },
+            "show_derivative_signs": true,
+            "show_function_values": true
+          }
+        ],
+        "sign_tables": [
+          {
+            "id": "sign_7514109996049801894",
+            "title": "جدول إشارة المشتقة",
+            "variable": "x",
+            "critical_points": [
+              "-\\infty",
+              "+\\infty"
+            ],
+            "rows": [
+              {
+                "label": "\\(g'(x)\\)",
+                "values": [
+                  ""
+                ],
+                "signs": [
+                  "-"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "variation_bac_07",
+      "title": "دراسة إشارة مشتقة دالة كسرية محللة",
+      "text": "لتكن \\(f\\) قابلة للاشتقاق على \\(\\mathbb{R}\\setminus\\{-1\\}\\) وتحقق \\(f'(x)=\\frac{(x+3)(x-1)}{(x+1)^2}\\). ادرس إشارة \\(f'\\) واستنتج مجالات التزايد والتناقص.",
+      "skill": "دراسة إشارة خارج قسمة",
+      "difficulty": "medium",
+      "solution": {
+        "steps": [
+          {
+            "number": "1",
+            "order": 1,
+            "title": "القيم الخاصة",
+            "explanation": "جذرا البسط هما -3 و1، والقيمة -1 ممنوعة.",
+            "result": "النقاط المرتبة: -3، -1، 1",
+            "conclusion": "نبني جدول الإشارة."
+          },
+          {
+            "number": "2",
+            "order": 2,
+            "title": "الإشارة والتغير",
+            "explanation": "نستعمل إشارة جداء عاملين.",
+            "result": "موجب خارج [-3,1] وسالب داخله مع فصل المجال عند -1",
+            "conclusion": "نستنتج التغيرات.",
+            "variation_tables": [
+              {
+                "id": "variation_react_07",
+                "title": "مخطط اتجاه تغير الدالة",
+                "variable": "x",
+                "domain": "\\(\\mathbb{R}\\setminus\\{-1\\}\\)",
+                "critical_points": [
+                  "-\\infty",
+                  "-3",
+                  "-1",
+                  "1",
+                  "+\\infty"
+                ],
+                "derivative_row": {
+                  "label": "\\(f'(x)\\)",
+                  "signs": [
+                    "+",
+                    "0",
+                    "-",
+                    "غير معرفة",
+                    "-",
+                    "0",
+                    "+"
+                  ]
+                },
+                "function_row": {
+                  "label": "\\(f(x)\\)",
+                  "values": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                  ],
+                  "variations": [
+                    "increasing",
+                    "decreasing",
+                    "decreasing",
+                    "increasing"
+                  ]
+                },
+                "react_data": {
+                  "renderer": "VariationTableSvg",
+                  "viewBox": "0 0 820 300",
+                  "width": 820,
+                  "height": 300,
+                  "rtl": false,
+                  "rows": [
+                    {
+                      "key": "x",
+                      "label": "x",
+                      "y": 75
+                    },
+                    {
+                      "key": "derivative",
+                      "label": "\\(f'(x)\\)",
+                      "y": 145
+                    },
+                    {
+                      "key": "function",
+                      "label": "\\(f(x)\\)",
+                      "y": 245
+                    }
+                  ],
+                  "horizontal_lines": [
+                    {
+                      "x1": 20,
+                      "x2": 800,
+                      "y": 100
+                    },
+                    {
+                      "x1": 20,
+                      "x2": 800,
+                      "y": 180
+                    }
+                  ],
+                  "vertical_lines": [
+                    {
+                      "x": 120.0,
+                      "y1": 35,
+                      "y2": 275,
+                      "style": "solid"
+                    },
+                    {
+                      "x": 285.0,
+                      "y1": 35,
+                      "y2": 275,
+                      "style": "solid"
+                    },
+                    {
+                      "x": 450.0,
+                      "y1": 35,
+                      "y2": 275,
+                      "style": "double"
+                    },
+                    {
+                      "x": 615.0,
+                      "y1": 35,
+                      "y2": 275,
+                      "style": "solid"
+                    },
+                    {
+                      "x": 780.0,
+                      "y1": 35,
+                      "y2": 275,
+                      "style": "solid"
+                    }
+                  ],
+                  "x_labels": [
+                    {
+                      "text": "-\\infty",
+                      "x": 120.0,
+                      "y": 75
+                    },
+                    {
+                      "text": "-3",
+                      "x": 285.0,
+                      "y": 75
+                    },
+                    {
+                      "text": "-1",
+                      "x": 450.0,
+                      "y": 75
+                    },
+                    {
+                      "text": "1",
+                      "x": 615.0,
+                      "y": 75
+                    },
+                    {
+                      "text": "+\\infty",
+                      "x": 780.0,
+                      "y": 75
+                    }
+                  ],
+                  "derivative_signs": [],
+                  "function_values": [],
+                  "arrows": [
+                    {
+                      "from": {
+                        "x": 142.0,
+                        "y": 275
+                      },
+                      "to": {
+                        "x": 263.0,
+                        "y": 215
+                      },
+                      "direction": "increasing",
+                      "marker_end": "arrow"
+                    },
+                    {
+                      "from": {
+                        "x": 307.0,
+                        "y": 215
+                      },
+                      "to": {
+                        "x": 428.0,
+                        "y": 275
+                      },
+                      "direction": "decreasing",
+                      "marker_end": "arrow"
+                    },
+                    {
+                      "from": {
+                        "x": 472.0,
+                        "y": 215
+                      },
+                      "to": {
+                        "x": 593.0,
+                        "y": 275
+                      },
+                      "direction": "decreasing",
+                      "marker_end": "arrow"
+                    },
+                    {
+                      "from": {
+                        "x": 637.0,
+                        "y": 275
+                      },
+                      "to": {
+                        "x": 758.0,
+                        "y": 215
+                      },
+                      "direction": "increasing",
+                      "marker_end": "arrow"
+                    }
+                  ],
+                  "excluded_points": [
+                    {
+                      "value": "-1",
+                      "x": 450.0
+                    }
+                  ],
+                  "accessibility": {
+                    "title": "مخطط اتجاه تغير الدالة",
+                    "description": "جدول تغيرات مرسوم بأسهم صاعدة ونازلة انطلاقًا من إشارة المشتقة."
+                  }
+                },
+                "show_derivative_signs": true,
+                "show_function_values": false
+              }
+            ],
+            "sign_tables": [
+              {
+                "id": "sign_132701287189868974",
+                "title": "جدول إشارة المشتقة",
+                "variable": "x",
+                "critical_points": [
+                  "-\\infty",
+                  "-3",
+                  "-1",
+                  "+\\infty"
+                ],
+                "rows": [
+                  {
+                    "label": "\\(f'(x)\\)",
+                    "values": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ],
+                    "signs": [
+                      "+",
+                      "0",
+                      "-",
+                      "|",
+                      "+"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "final_answer": "الدالة متزايدة على \\(]-\\infty,-3]\\) و\\([1,+\\infty[\\)، ومتناقصة على \\([-3,-1[\\) و\\(]-1,1]\\).",
+        "verification": "المقام لا يغير الإشارة لأنه موجب تمامًا على مجال التعريف.",
+        "common_mistakes": [
+          {
+            "mistake": "دراسة إشارة الدالة بدل إشارة مشتقتها.",
+            "correction": "اتجاه التغير يحدد من إشارة \\(f'(x)\\)، وليس من إشارة \\(f(x)\\)."
+          }
+        ],
+        "hints": [
+          "ابدأ بتحديد مجال تعريف الدالة.",
+          "احسب المشتقة وابحث عن جذورها.",
+          "حوّل جدول إشارة المشتقة إلى أسهم تغير للدالة."
+        ],
+        "variation_tables": [
+          {
+            "id": "variation_react_07",
+            "title": "مخطط اتجاه تغير الدالة",
+            "variable": "x",
+            "domain": "\\(\\mathbb{R}\\setminus\\{-1\\}\\)",
+            "critical_points": [
+              "-\\infty",
+              "-3",
+              "-1",
+              "1",
+              "+\\infty"
+            ],
+            "derivative_row": {
+              "label": "\\(f'(x)\\)",
+              "signs": [
+                "+",
+                "0",
+                "-",
+                "غير معرفة",
+                "-",
+                "0",
+                "+"
+              ]
+            },
+            "function_row": {
+              "label": "\\(f(x)\\)",
+              "values": [
+                null,
+                null,
+                null,
+                null,
+                null
+              ],
+              "variations": [
+                "increasing",
+                "decreasing",
+                "decreasing",
+                "increasing"
+              ]
+            },
+            "react_data": {
+              "renderer": "VariationTableSvg",
+              "viewBox": "0 0 820 300",
+              "width": 820,
+              "height": 300,
+              "rtl": false,
+              "rows": [
+                {
+                  "key": "x",
+                  "label": "x",
+                  "y": 75
+                },
+                {
+                  "key": "derivative",
+                  "label": "\\(f'(x)\\)",
+                  "y": 145
+                },
+                {
+                  "key": "function",
+                  "label": "\\(f(x)\\)",
+                  "y": 245
+                }
+              ],
+              "horizontal_lines": [
+                {
+                  "x1": 20,
+                  "x2": 800,
+                  "y": 100
+                },
+                {
+                  "x1": 20,
+                  "x2": 800,
+                  "y": 180
+                }
+              ],
+              "vertical_lines": [
+                {
+                  "x": 120.0,
+                  "y1": 35,
+                  "y2": 275,
+                  "style": "solid"
+                },
+                {
+                  "x": 285.0,
+                  "y1": 35,
+                  "y2": 275,
+                  "style": "solid"
+                },
+                {
+                  "x": 450.0,
+                  "y1": 35,
+                  "y2": 275,
+                  "style": "double"
+                },
+                {
+                  "x": 615.0,
+                  "y1": 35,
+                  "y2": 275,
+                  "style": "solid"
+                },
+                {
+                  "x": 780.0,
+                  "y1": 35,
+                  "y2": 275,
+                  "style": "solid"
+                }
+              ],
+              "x_labels": [
+                {
+                  "text": "-\\infty",
+                  "x": 120.0,
+                  "y": 75
+                },
+                {
+                  "text": "-3",
+                  "x": 285.0,
+                  "y": 75
+                },
+                {
+                  "text": "-1",
+                  "x": 450.0,
+                  "y": 75
+                },
+                {
+                  "text": "1",
+                  "x": 615.0,
+                  "y": 75
+                },
+                {
+                  "text": "+\\infty",
+                  "x": 780.0,
+                  "y": 75
+                }
+              ],
+              "derivative_signs": [],
+              "function_values": [],
+              "arrows": [
+                {
+                  "from": {
+                    "x": 142.0,
+                    "y": 275
+                  },
+                  "to": {
+                    "x": 263.0,
+                    "y": 215
+                  },
+                  "direction": "increasing",
+                  "marker_end": "arrow"
+                },
+                {
+                  "from": {
+                    "x": 307.0,
+                    "y": 215
+                  },
+                  "to": {
+                    "x": 428.0,
+                    "y": 275
+                  },
+                  "direction": "decreasing",
+                  "marker_end": "arrow"
+                },
+                {
+                  "from": {
+                    "x": 472.0,
+                    "y": 215
+                  },
+                  "to": {
+                    "x": 593.0,
+                    "y": 275
+                  },
+                  "direction": "decreasing",
+                  "marker_end": "arrow"
+                },
+                {
+                  "from": {
+                    "x": 637.0,
+                    "y": 275
+                  },
+                  "to": {
+                    "x": 758.0,
+                    "y": 215
+                  },
+                  "direction": "increasing",
+                  "marker_end": "arrow"
+                }
+              ],
+              "excluded_points": [
+                {
+                  "value": "-1",
+                  "x": 450.0
+                }
+              ],
+              "accessibility": {
+                "title": "مخطط اتجاه تغير الدالة",
+                "description": "جدول تغيرات مرسوم بأسهم صاعدة ونازلة انطلاقًا من إشارة المشتقة."
+              }
+            },
+            "show_derivative_signs": true,
+            "show_function_values": false
+          }
+        ],
+        "sign_tables": [
+          {
+            "id": "sign_132701287189868974",
+            "title": "جدول إشارة المشتقة",
+            "variable": "x",
+            "critical_points": [
+              "-\\infty",
+              "-3",
+              "-1",
+              "+\\infty"
+            ],
+            "rows": [
+              {
+                "label": "\\(f'(x)\\)",
+                "values": [
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                "signs": [
+                  "+",
+                  "0",
+                  "-",
+                  "|",
+                  "+"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "variation_bac_14",
+      "title": "دراسة تغير دالة كسرية من صيغة مشتقتها",
+      "text": "لتكن \\(f\\) معرفة على \\(\\mathbb{R}\\setminus\\{-1\\}\\)، وقابلة للاشتقاق على مجالها، وتحقق \\(f'(x)=\\frac{(x+3)(x-1)}{(x+1)^2}\\). ادرس اتجاه تغير \\(f\\) على كل مجال من مجالات تعريفها.",
+      "skill": "تنظيم جدول إشارة مع قيمة ممنوعة",
+      "difficulty": "medium",
+      "solution": {
+        "steps": [
+          {
+            "number": "1",
+            "order": 1,
+            "title": "ترتيب القيم",
+            "explanation": "نرتب -3 و-1 و1.",
+            "result": "-3 < -1 < 1",
+            "conclusion": "نراعي فصل المجال عند -1."
+          },
+          {
+            "number": "2",
+            "order": 2,
+            "title": "الإشارة",
+            "explanation": "المقام مربع موجب.",
+            "result": "إشارة المشتقة هي إشارة \\((x+3)(x-1)\\)",
+            "conclusion": "نستنتج التغيرات.",
+            "variation_tables": [
+              {
+                "id": "variation_react_14",
+                "title": "مخطط اتجاه تغير الدالة",
+                "variable": "x",
+                "domain": "\\(\\mathbb{R}\\setminus\\{-1\\}\\)",
+                "critical_points": [
+                  "-\\infty",
+                  "-3",
+                  "-1",
+                  "1",
+                  "+\\infty"
+                ],
+                "derivative_row": {
+                  "label": "\\(f'(x)\\)",
+                  "signs": [
+                    "+",
+                    "0",
+                    "-",
+                    "غير معرفة",
+                    "-",
+                    "0",
+                    "+"
+                  ]
+                },
+                "function_row": {
+                  "label": "\\(f(x)\\)",
+                  "values": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                  ],
+                  "variations": [
+                    "increasing",
+                    "decreasing",
+                    "decreasing",
+                    "increasing"
+                  ]
+                },
+                "react_data": {
+                  "renderer": "VariationTableSvg",
+                  "viewBox": "0 0 820 300",
+                  "width": 820,
+                  "height": 300,
+                  "rtl": false,
+                  "rows": [
+                    {
+                      "key": "x",
+                      "label": "x",
+                      "y": 75
+                    },
+                    {
+                      "key": "derivative",
+                      "label": "\\(f'(x)\\)",
+                      "y": 145
+                    },
+                    {
+                      "key": "function",
+                      "label": "\\(f(x)\\)",
+                      "y": 245
+                    }
+                  ],
+                  "horizontal_lines": [
+                    {
+                      "x1": 20,
+                      "x2": 800,
+                      "y": 100
+                    },
+                    {
+                      "x1": 20,
+                      "x2": 800,
+                      "y": 180
+                    }
+                  ],
+                  "vertical_lines": [
+                    {
+                      "x": 120.0,
+                      "y1": 35,
+                      "y2": 275,
+                      "style": "solid"
+                    },
+                    {
+                      "x": 285.0,
+                      "y1": 35,
+                      "y2": 275,
+                      "style": "solid"
+                    },
+                    {
+                      "x": 450.0,
+                      "y1": 35,
+                      "y2": 275,
+                      "style": "double"
+                    },
+                    {
+                      "x": 615.0,
+                      "y1": 35,
+                      "y2": 275,
+                      "style": "solid"
+                    },
+                    {
+                      "x": 780.0,
+                      "y1": 35,
+                      "y2": 275,
+                      "style": "solid"
+                    }
+                  ],
+                  "x_labels": [
+                    {
+                      "text": "-\\infty",
+                      "x": 120.0,
+                      "y": 75
+                    },
+                    {
+                      "text": "-3",
+                      "x": 285.0,
+                      "y": 75
+                    },
+                    {
+                      "text": "-1",
+                      "x": 450.0,
+                      "y": 75
+                    },
+                    {
+                      "text": "1",
+                      "x": 615.0,
+                      "y": 75
+                    },
+                    {
+                      "text": "+\\infty",
+                      "x": 780.0,
+                      "y": 75
+                    }
+                  ],
+                  "derivative_signs": [],
+                  "function_values": [],
+                  "arrows": [
+                    {
+                      "from": {
+                        "x": 142.0,
+                        "y": 275
+                      },
+                      "to": {
+                        "x": 263.0,
+                        "y": 215
+                      },
+                      "direction": "increasing",
+                      "marker_end": "arrow"
+                    },
+                    {
+                      "from": {
+                        "x": 307.0,
+                        "y": 215
+                      },
+                      "to": {
+                        "x": 428.0,
+                        "y": 275
+                      },
+                      "direction": "decreasing",
+                      "marker_end": "arrow"
+                    },
+                    {
+                      "from": {
+                        "x": 472.0,
+                        "y": 215
+                      },
+                      "to": {
+                        "x": 593.0,
+                        "y": 275
+                      },
+                      "direction": "decreasing",
+                      "marker_end": "arrow"
+                    },
+                    {
+                      "from": {
+                        "x": 637.0,
+                        "y": 275
+                      },
+                      "to": {
+                        "x": 758.0,
+                        "y": 215
+                      },
+                      "direction": "increasing",
+                      "marker_end": "arrow"
+                    }
+                  ],
+                  "excluded_points": [
+                    {
+                      "value": "-1",
+                      "x": 450.0
+                    }
+                  ],
+                  "accessibility": {
+                    "title": "مخطط اتجاه تغير الدالة",
+                    "description": "جدول تغيرات مرسوم بأسهم صاعدة ونازلة انطلاقًا من إشارة المشتقة."
+                  }
+                },
+                "show_derivative_signs": true,
+                "show_function_values": false
+              }
+            ],
+            "sign_tables": [
+              {
+                "id": "sign_2071070871842705602",
+                "title": "جدول إشارة المشتقة",
+                "variable": "x",
+                "critical_points": [
+                  "-\\infty",
+                  "-3",
+                  "-1",
+                  "1",
+                  "+\\infty"
+                ],
+                "rows": [
+                  {
+                    "label": "\\(f'(x)\\)",
+                    "values": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ],
+                    "signs": [
+                      "+",
+                      "0",
+                      "-",
+                      "|",
+                      "-",
+                      "0",
+                      "+"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "final_answer": "الدالة متزايدة على \\(]-\\infty,-3]\\) و\\([1,+\\infty[\\)، ومتناقصة على \\([-3,-1[\\) و\\(]-1,1]\\).",
+        "verification": "القيمة الممنوعة تقسم مجال التناقص إلى مجالين منفصلين.",
+        "common_mistakes": [
+          {
+            "mistake": "دراسة إشارة الدالة بدل إشارة مشتقتها.",
+            "correction": "اتجاه التغير يحدد من إشارة \\(f'(x)\\)، وليس من إشارة \\(f(x)\\)."
+          }
+        ],
+        "hints": [
+          "ابدأ بتحديد مجال تعريف الدالة.",
+          "احسب المشتقة وابحث عن جذورها.",
+          "حوّل جدول إشارة المشتقة إلى أسهم تغير للدالة."
+        ],
+        "variation_tables": [
+          {
+            "id": "variation_react_14",
+            "title": "مخطط اتجاه تغير الدالة",
+            "variable": "x",
+            "domain": "\\(\\mathbb{R}\\setminus\\{-1\\}\\)",
+            "critical_points": [
+              "-\\infty",
+              "-3",
+              "-1",
+              "1",
+              "+\\infty"
+            ],
+            "derivative_row": {
+              "label": "\\(f'(x)\\)",
+              "signs": [
+                "+",
+                "0",
+                "-",
+                "غير معرفة",
+                "-",
+                "0",
+                "+"
+              ]
+            },
+            "function_row": {
+              "label": "\\(f(x)\\)",
+              "values": [
+                null,
+                null,
+                null,
+                null,
+                null
+              ],
+              "variations": [
+                "increasing",
+                "decreasing",
+                "decreasing",
+                "increasing"
+              ]
+            },
+            "react_data": {
+              "renderer": "VariationTableSvg",
+              "viewBox": "0 0 820 300",
+              "width": 820,
+              "height": 300,
+              "rtl": false,
+              "rows": [
+                {
+                  "key": "x",
+                  "label": "x",
+                  "y": 75
+                },
+                {
+                  "key": "derivative",
+                  "label": "\\(f'(x)\\)",
+                  "y": 145
+                },
+                {
+                  "key": "function",
+                  "label": "\\(f(x)\\)",
+                  "y": 245
+                }
+              ],
+              "horizontal_lines": [
+                {
+                  "x1": 20,
+                  "x2": 800,
+                  "y": 100
+                },
+                {
+                  "x1": 20,
+                  "x2": 800,
+                  "y": 180
+                }
+              ],
+              "vertical_lines": [
+                {
+                  "x": 120.0,
+                  "y1": 35,
+                  "y2": 275,
+                  "style": "solid"
+                },
+                {
+                  "x": 285.0,
+                  "y1": 35,
+                  "y2": 275,
+                  "style": "solid"
+                },
+                {
+                  "x": 450.0,
+                  "y1": 35,
+                  "y2": 275,
+                  "style": "double"
+                },
+                {
+                  "x": 615.0,
+                  "y1": 35,
+                  "y2": 275,
+                  "style": "solid"
+                },
+                {
+                  "x": 780.0,
+                  "y1": 35,
+                  "y2": 275,
+                  "style": "solid"
+                }
+              ],
+              "x_labels": [
+                {
+                  "text": "-\\infty",
+                  "x": 120.0,
+                  "y": 75
+                },
+                {
+                  "text": "-3",
+                  "x": 285.0,
+                  "y": 75
+                },
+                {
+                  "text": "-1",
+                  "x": 450.0,
+                  "y": 75
+                },
+                {
+                  "text": "1",
+                  "x": 615.0,
+                  "y": 75
+                },
+                {
+                  "text": "+\\infty",
+                  "x": 780.0,
+                  "y": 75
+                }
+              ],
+              "derivative_signs": [],
+              "function_values": [],
+              "arrows": [
+                {
+                  "from": {
+                    "x": 142.0,
+                    "y": 275
+                  },
+                  "to": {
+                    "x": 263.0,
+                    "y": 215
+                  },
+                  "direction": "increasing",
+                  "marker_end": "arrow"
+                },
+                {
+                  "from": {
+                    "x": 307.0,
+                    "y": 215
+                  },
+                  "to": {
+                    "x": 428.0,
+                    "y": 275
+                  },
+                  "direction": "decreasing",
+                  "marker_end": "arrow"
+                },
+                {
+                  "from": {
+                    "x": 472.0,
+                    "y": 215
+                  },
+                  "to": {
+                    "x": 593.0,
+                    "y": 275
+                  },
+                  "direction": "decreasing",
+                  "marker_end": "arrow"
+                },
+                {
+                  "from": {
+                    "x": 637.0,
+                    "y": 275
+                  },
+                  "to": {
+                    "x": 758.0,
+                    "y": 215
+                  },
+                  "direction": "increasing",
+                  "marker_end": "arrow"
+                }
+              ],
+              "excluded_points": [
+                {
+                  "value": "-1",
+                  "x": 450.0
+                }
+              ],
+              "accessibility": {
+                "title": "مخطط اتجاه تغير الدالة",
+                "description": "جدول تغيرات مرسوم بأسهم صاعدة ونازلة انطلاقًا من إشارة المشتقة."
+              }
+            },
+            "show_derivative_signs": true,
+            "show_function_values": false
+          }
+        ],
+        "sign_tables": [
+          {
+            "id": "sign_2071070871842705602",
+            "title": "جدول إشارة المشتقة",
+            "variable": "x",
+            "critical_points": [
+              "-\\infty",
+              "-3",
+              "-1",
+              "1",
+              "+\\infty"
+            ],
+            "rows": [
+              {
+                "label": "\\(f'(x)\\)",
+                "values": [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                "signs": [
+                  "+",
+                  "0",
+                  "-",
+                  "|",
+                  "-",
+                  "0",
+                  "+"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "extrema_bac_01",
+      "title": "قيمة عظمى وقيمة صغرى لدالة تكعيبية",
+      "text": "لتكن الدالة \\(f(x)=x^3-3x+2\\). ادرس تغيراتها، ثم عين قيمتها العظمى المحلية وقيمتها الصغرى المحلية وفواصل تحققهما.",
+      "skill": "استخراج القيم الحدية من تغير إشارة المشتقة",
+      "difficulty": "medium",
+      "solution": {
+        "steps": [
+          {
+            "number": "1",
+            "order": 1,
+            "title": "حساب المشتقة",
+            "explanation": "نشتق كثير الحدود ثم نحلل النتيجة.",
+            "calculation": "\\(f'(x)=3x^2-3=3(x-1)(x+1)\\)",
+            "result": "تنعدم المشتقة عند \\(-1\\) و\\(1\\).",
+            "conclusion": "ننتقل إلى جدول الإشارة.",
+            "sign_tables": [
+              {
+                "id": "sign_01",
+                "title": "جدول إشارة المشتقة",
+                "variable": "x",
+                "critical_points": [
+                  "-\\infty",
+                  "-1",
+                  "1",
+                  "+\\infty"
+                ],
+                "rows": [
+                  {
+                    "label": "\\(f'(x)\\)",
+                    "values": [
+                      "",
+                      "0",
+                      "",
+                      "0",
+                      ""
+                    ],
+                    "signs": [
+                      "+",
+                      "0",
+                      "-",
+                      "0",
+                      "+"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "number": "2",
+            "order": 2,
+            "title": "دراسة التغير",
+            "explanation": "المشتقة موجبة خارج المجال بين الجذرين وسالبة داخله.",
+            "result": "الدالة متزايدة ثم متناقصة ثم متزايدة.",
+            "conclusion": "نحسب صور النقط الحرجة.",
+            "variation_tables": [
+              {
+                "id": "variation_01",
+                "title": "جدول تغيرات الدالة",
+                "variable": "x",
+                "domain": "\\(\\mathbb{R}\\)",
+                "critical_points": [
+                  "-\\infty",
+                  "-1",
+                  "1",
+                  "+\\infty"
+                ],
+                "derivative_row": {
+                  "label": "\\(f'(x)\\)",
+                  "values": [
+                    "",
+                    "0",
+                    "",
+                    "0",
+                    ""
+                  ],
+                  "signs": [
+                    "+",
+                    "0",
+                    "-",
+                    "0",
+                    "+"
+                  ]
+                },
+                "function_row": {
+                  "label": "\\(f(x)\\)",
+                  "values": [
+                    "-\\infty",
+                    "4",
+                    "0",
+                    "+\\infty"
+                  ],
+                  "variations": [
+                    "increasing",
+                    "decreasing",
+                    "increasing"
+                  ]
+                },
+                "react_data": {
+                  "schema_version": "1.0",
+                  "renderer": "VariationTableSvg",
+                  "direction": "rtl",
+                  "view_box": "0 0 900 310",
+                  "layout": {
+                    "label_width": 110,
+                    "header_height": 62,
+                    "derivative_height": 72,
+                    "function_height": 150
+                  },
+                  "points": [
+                    {
+                      "index": 0,
+                      "x": "−∞",
+                      "function_value": "−∞",
+                      "is_excluded": false
+                    },
+                    {
+                      "index": 1,
+                      "x": "-1",
+                      "function_value": "4",
+                      "is_excluded": false
+                    },
+                    {
+                      "index": 2,
+                      "x": "1",
+                      "function_value": "0",
+                      "is_excluded": false
+                    },
+                    {
+                      "index": 3,
+                      "x": "+∞",
+                      "function_value": "+∞",
+                      "is_excluded": false
+                    }
+                  ],
+                  "segments": [
+                    {
+                      "index": 0,
+                      "from_index": 0,
+                      "to_index": 1,
+                      "from_x": "−∞",
+                      "to_x": "-1",
+                      "from_value": "−∞",
+                      "to_value": "4",
+                      "derivative_sign": "+",
+                      "direction": "increasing",
+                      "arrow": "↗"
+                    },
+                    {
+                      "index": 1,
+                      "from_index": 1,
+                      "to_index": 2,
+                      "from_x": "-1",
+                      "to_x": "1",
+                      "from_value": "4",
+                      "to_value": "0",
+                      "derivative_sign": "-",
+                      "direction": "decreasing",
+                      "arrow": "↘"
+                    },
+                    {
+                      "index": 2,
+                      "from_index": 2,
+                      "to_index": 3,
+                      "from_x": "1",
+                      "to_x": "+∞",
+                      "from_value": "0",
+                      "to_value": "+∞",
+                      "derivative_sign": "+",
+                      "direction": "increasing",
+                      "arrow": "↗"
+                    }
+                  ],
+                  "show_derivative_row": true,
+                  "show_function_values": true
+                }
+              }
+            ]
+          },
+          {
+            "number": "3",
+            "order": 3,
+            "title": "حساب القيم الحدية",
+            "explanation": "نحسب صورتي -1 و1.",
+            "calculation": "\\(f(-1)=4\\), \\(f(1)=0\\)",
+            "result": "القيمة العظمى المحلية 4 والصغرى المحلية 0.",
+            "conclusion": "الفاصلتان هما -1 و1."
+          }
+        ],
+        "final_answer": "القيمة العظمى المحلية هي \\(4\\) وتتحقق عند \\(x=-1\\)، والقيمة الصغرى المحلية هي \\(0\\) وتتحقق عند \\(x=1\\).",
+        "verification": "المشتقة تتغير من موجب إلى سالب عند -1، ومن سالب إلى موجب عند 1.",
+        "common_mistakes": [
+          {
+            "mistake": "كتابة فاصلة النقطة الحرجة باعتبارها القيمة الحدية.",
+            "correction": "القيمة الحدية هي \\(f(a)\\)، أما \\(a\\) فهي فاصلة تحققها."
+          },
+          {
+            "mistake": "اعتبار كل حل للمعادلة \\(f'(x)=0\\) قيمة عظمى أو صغرى.",
+            "correction": "يجب فحص تغير إشارة المشتقة قبل النقطة وبعدها."
+          }
+        ],
+        "hints": [
+          "حدد مجال الدالة ومجال اشتقاقها.",
+          "ابحث عن جذور المشتقة والقيم الممنوعة.",
+          "تغير الإشارة من موجب إلى سالب يعطي عظمى، ومن سالب إلى موجب يعطي صغرى."
+        ],
+        "variation_tables": [
+          {
+            "id": "variation_01",
+            "title": "جدول تغيرات الدالة",
+            "variable": "x",
+            "domain": "\\(\\mathbb{R}\\)",
+            "critical_points": [
+              "-\\infty",
+              "-1",
+              "1",
+              "+\\infty"
+            ],
+            "derivative_row": {
+              "label": "\\(f'(x)\\)",
+              "values": [
+                "",
+                "0",
+                "",
+                "0",
+                ""
+              ],
+              "signs": [
+                "+",
+                "0",
+                "-",
+                "0",
+                "+"
+              ]
+            },
+            "function_row": {
+              "label": "\\(f(x)\\)",
+              "values": [
+                "-\\infty",
+                "4",
+                "0",
+                "+\\infty"
+              ],
+              "variations": [
+                "increasing",
+                "decreasing",
+                "increasing"
+              ]
+            },
+            "react_data": {
+              "schema_version": "1.0",
+              "renderer": "VariationTableSvg",
+              "direction": "rtl",
+              "view_box": "0 0 900 310",
+              "layout": {
+                "label_width": 110,
+                "header_height": 62,
+                "derivative_height": 72,
+                "function_height": 150
+              },
+              "points": [
+                {
+                  "index": 0,
+                  "x": "−∞",
+                  "function_value": "−∞",
+                  "is_excluded": false
+                },
+                {
+                  "index": 1,
+                  "x": "-1",
+                  "function_value": "4",
+                  "is_excluded": false
+                },
+                {
+                  "index": 2,
+                  "x": "1",
+                  "function_value": "0",
+                  "is_excluded": false
+                },
+                {
+                  "index": 3,
+                  "x": "+∞",
+                  "function_value": "+∞",
+                  "is_excluded": false
+                }
+              ],
+              "segments": [
+                {
+                  "index": 0,
+                  "from_index": 0,
+                  "to_index": 1,
+                  "from_x": "−∞",
+                  "to_x": "-1",
+                  "from_value": "−∞",
+                  "to_value": "4",
+                  "derivative_sign": "+",
+                  "direction": "increasing",
+                  "arrow": "↗"
+                },
+                {
+                  "index": 1,
+                  "from_index": 1,
+                  "to_index": 2,
+                  "from_x": "-1",
+                  "to_x": "1",
+                  "from_value": "4",
+                  "to_value": "0",
+                  "derivative_sign": "-",
+                  "direction": "decreasing",
+                  "arrow": "↘"
+                },
+                {
+                  "index": 2,
+                  "from_index": 2,
+                  "to_index": 3,
+                  "from_x": "1",
+                  "to_x": "+∞",
+                  "from_value": "0",
+                  "to_value": "+∞",
+                  "derivative_sign": "+",
+                  "direction": "increasing",
+                  "arrow": "↗"
+                }
+              ],
+              "show_derivative_row": true,
+              "show_function_values": true
+            }
+          }
+        ],
+        "sign_tables": [
+          {
+            "id": "sign_01",
+            "title": "جدول إشارة المشتقة",
+            "variable": "x",
+            "critical_points": [
+              "-\\infty",
+              "-1",
+              "1",
+              "+\\infty"
+            ],
+            "rows": [
+              {
+                "label": "\\(f'(x)\\)",
+                "values": [
+                  "",
+                  "0",
+                  "",
+                  "0",
+                  ""
+                ],
+                "signs": [
+                  "+",
+                  "0",
+                  "-",
+                  "0",
+                  "+"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "extrema_bac_04",
+      "title": "انعدام المشتقة دون قيمة حدية",
+      "text": "لتكن \\(f(x)=x^3\\). ادرس تغيراتها، ثم بين أن النقطة ذات الفاصلة \\(0\\) ليست نقطة قيمة عظمى ولا صغرى رغم أن \\(f'(0)=0\\).",
+      "skill": "تمييز النقطة الساكنة عن القيمة الحدية",
+      "difficulty": "medium",
+      "solution": {
+        "steps": [
+          {
+            "number": "1",
+            "order": 1,
+            "title": "حساب المشتقة",
+            "explanation": "نحسب المشتقة.",
+            "calculation": "\\(f'(x)=3x^2\\ge0\\)",
+            "result": "تنعدم فقط عند الصفر.",
+            "conclusion": "إشارة المشتقة موجبة على الجهتين.",
+            "sign_tables": [
+              {
+                "id": "sign_04",
+                "title": "جدول إشارة المشتقة",
+                "variable": "x",
+                "critical_points": [
+                  "-\\infty",
+                  "0",
+                  "+\\infty"
+                ],
+                "rows": [
+                  {
+                    "label": "\\(f'(x)\\)",
+                    "values": [
+                      "",
+                      "0",
+                      ""
+                    ],
+                    "signs": [
+                      "+",
+                      "0",
+                      "+"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "number": "2",
+            "order": 2,
+            "title": "استنتاج التغير",
+            "explanation": "عدم تغير الإشارة يعني استمرار التزايد.",
+            "result": "الدالة متزايدة على \\(\\mathbb{R}\\).",
+            "conclusion": "لا توجد قيمة حدية عند الصفر.",
+            "variation_tables": [
+              {
+                "id": "variation_04",
+                "title": "جدول تغيرات الدالة",
+                "variable": "x",
+                "domain": "\\(\\mathbb{R}\\)",
+                "critical_points": [
+                  "-\\infty",
+                  "0",
+                  "+\\infty"
+                ],
+                "derivative_row": {
+                  "label": "\\(f'(x)\\)",
+                  "values": [
+                    "",
+                    "0",
+                    ""
+                  ],
+                  "signs": [
+                    "+",
+                    "0",
+                    "+"
+                  ]
+                },
+                "function_row": {
+                  "label": "\\(f(x)\\)",
+                  "values": [
+                    "-\\infty",
+                    "0",
+                    "+\\infty"
+                  ],
+                  "variations": [
+                    "increasing",
+                    "increasing"
+                  ]
+                },
+                "react_data": {
+                  "schema_version": "1.0",
+                  "renderer": "VariationTableSvg",
+                  "direction": "rtl",
+                  "view_box": "0 0 900 310",
+                  "layout": {
+                    "label_width": 110,
+                    "header_height": 62,
+                    "derivative_height": 72,
+                    "function_height": 150
+                  },
+                  "points": [
+                    {
+                      "index": 0,
+                      "x": "−∞",
+                      "function_value": "−∞",
+                      "is_excluded": false
+                    },
+                    {
+                      "index": 1,
+                      "x": "0",
+                      "function_value": "0",
+                      "is_excluded": false
+                    },
+                    {
+                      "index": 2,
+                      "x": "+∞",
+                      "function_value": "+∞",
+                      "is_excluded": false
+                    }
+                  ],
+                  "segments": [
+                    {
+                      "index": 0,
+                      "from_index": 0,
+                      "to_index": 1,
+                      "from_x": "−∞",
+                      "to_x": "0",
+                      "from_value": "−∞",
+                      "to_value": "0",
+                      "derivative_sign": "+",
+                      "direction": "increasing",
+                      "arrow": "↗"
+                    },
+                    {
+                      "index": 1,
+                      "from_index": 1,
+                      "to_index": 2,
+                      "from_x": "0",
+                      "to_x": "+∞",
+                      "from_value": "0",
+                      "to_value": "+∞",
+                      "derivative_sign": "+",
+                      "direction": "increasing",
+                      "arrow": "↗"
+                    }
+                  ],
+                  "show_derivative_row": true,
+                  "show_function_values": true
+                }
+              }
+            ]
+          }
+        ],
+        "final_answer": "لا توجد قيمة عظمى أو صغرى عند \\(x=0\\)، لأن المشتقة موجبة قبل الصفر وبعده.",
+        "verification": "يمكن مقارنة \\(f(-1)=-1\\)، \\(f(0)=0\\)، \\(f(1)=1\\).",
+        "common_mistakes": [
+          {
+            "mistake": "كتابة فاصلة النقطة الحرجة باعتبارها القيمة الحدية.",
+            "correction": "القيمة الحدية هي \\(f(a)\\)، أما \\(a\\) فهي فاصلة تحققها."
+          },
+          {
+            "mistake": "اعتبار كل حل للمعادلة \\(f'(x)=0\\) قيمة عظمى أو صغرى.",
+            "correction": "يجب فحص تغير إشارة المشتقة قبل النقطة وبعدها."
+          }
+        ],
+        "hints": [
+          "حدد مجال الدالة ومجال اشتقاقها.",
+          "ابحث عن جذور المشتقة والقيم الممنوعة.",
+          "تغير الإشارة من موجب إلى سالب يعطي عظمى، ومن سالب إلى موجب يعطي صغرى."
+        ],
+        "variation_tables": [
+          {
+            "id": "variation_04",
+            "title": "جدول تغيرات الدالة",
+            "variable": "x",
+            "domain": "\\(\\mathbb{R}\\)",
+            "critical_points": [
+              "-\\infty",
+              "0",
+              "+\\infty"
+            ],
+            "derivative_row": {
+              "label": "\\(f'(x)\\)",
+              "values": [
+                "",
+                "0",
+                ""
+              ],
+              "signs": [
+                "+",
+                "0",
+                "+"
+              ]
+            },
+            "function_row": {
+              "label": "\\(f(x)\\)",
+              "values": [
+                "-\\infty",
+                "0",
+                "+\\infty"
+              ],
+              "variations": [
+                "increasing",
+                "increasing"
+              ]
+            },
+            "react_data": {
+              "schema_version": "1.0",
+              "renderer": "VariationTableSvg",
+              "direction": "rtl",
+              "view_box": "0 0 900 310",
+              "layout": {
+                "label_width": 110,
+                "header_height": 62,
+                "derivative_height": 72,
+                "function_height": 150
+              },
+              "points": [
+                {
+                  "index": 0,
+                  "x": "−∞",
+                  "function_value": "−∞",
+                  "is_excluded": false
+                },
+                {
+                  "index": 1,
+                  "x": "0",
+                  "function_value": "0",
+                  "is_excluded": false
+                },
+                {
+                  "index": 2,
+                  "x": "+∞",
+                  "function_value": "+∞",
+                  "is_excluded": false
+                }
+              ],
+              "segments": [
+                {
+                  "index": 0,
+                  "from_index": 0,
+                  "to_index": 1,
+                  "from_x": "−∞",
+                  "to_x": "0",
+                  "from_value": "−∞",
+                  "to_value": "0",
+                  "derivative_sign": "+",
+                  "direction": "increasing",
+                  "arrow": "↗"
+                },
+                {
+                  "index": 1,
+                  "from_index": 1,
+                  "to_index": 2,
+                  "from_x": "0",
+                  "to_x": "+∞",
+                  "from_value": "0",
+                  "to_value": "+∞",
+                  "derivative_sign": "+",
+                  "direction": "increasing",
+                  "arrow": "↗"
+                }
+              ],
+              "show_derivative_row": true,
+              "show_function_values": true
+            }
+          }
+        ],
+        "sign_tables": [
+          {
+            "id": "sign_04",
+            "title": "جدول إشارة المشتقة",
+            "variable": "x",
+            "critical_points": [
+              "-\\infty",
+              "0",
+              "+\\infty"
+            ],
+            "rows": [
+              {
+                "label": "\\(f'(x)\\)",
+                "values": [
+                  "",
+                  "0",
+                  ""
+                ],
+                "signs": [
+                  "+",
+                  "0",
+                  "+"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "extrema_bac_05",
+      "title": "استخراج القيم الحدية من مشتقة معطاة",
+      "text": "لتكن \\(f\\) دالة قابلة للاشتقاق على \\(\\mathbb{R}\\) بحيث \\(f'(x)=2(x-1)(x-3)\\)، ونعلم أن \\(f(1)=5\\) و\\(f(3)=-3\\). أنشئ جدول تغيرات \\(f\\) واستنتج قيمها الحدية المحلية.",
+      "skill": "بناء جدول تغيرات من مشتقة معطاة",
+      "difficulty": "easy",
+      "solution": {
+        "steps": [
+          {
+            "number": "1",
+            "order": 1,
+            "title": "إشارة المشتقة",
+            "explanation": "نرتب الجذرين 1 و3 ثم نحدد إشارة الجداء.",
+            "result": "موجبة، سالبة، موجبة.",
+            "conclusion": "نستنتج اتجاه التغير.",
+            "sign_tables": [
+              {
+                "id": "sign_05",
+                "title": "جدول إشارة المشتقة",
+                "variable": "x",
+                "critical_points": [
+                  "-\\infty",
+                  "1",
+                  "3",
+                  "+\\infty"
+                ],
+                "rows": [
+                  {
+                    "label": "\\(f'(x)\\)",
+                    "values": [
+                      "",
+                      "0",
+                      "",
+                      "0",
+                      ""
+                    ],
+                    "signs": [
+                      "+",
+                      "0",
+                      "-",
+                      "0",
+                      "+"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "number": "2",
+            "order": 2,
+            "title": "إدراج الصور",
+            "explanation": "نضع القيم المعطاة في سطر الدالة.",
+            "result": "عظمى محلية 5 وصغرى محلية -3.",
+            "conclusion": "يكتمل جدول التغيرات.",
+            "variation_tables": [
+              {
+                "id": "variation_05",
+                "title": "جدول تغيرات الدالة",
+                "variable": "x",
+                "domain": "\\(\\mathbb{R}\\)",
+                "critical_points": [
+                  "-\\infty",
+                  "1",
+                  "3",
+                  "+\\infty"
+                ],
+                "derivative_row": {
+                  "label": "\\(f'(x)\\)",
+                  "values": [
+                    "",
+                    "0",
+                    "",
+                    "0",
+                    ""
+                  ],
+                  "signs": [
+                    "+",
+                    "0",
+                    "-",
+                    "0",
+                    "+"
+                  ]
+                },
+                "function_row": {
+                  "label": "\\(f(x)\\)",
+                  "values": [
+                    "-\\infty",
+                    "5",
+                    "-3",
+                    "+\\infty"
+                  ],
+                  "variations": [
+                    "increasing",
+                    "decreasing",
+                    "increasing"
+                  ]
+                },
+                "react_data": {
+                  "schema_version": "1.0",
+                  "renderer": "VariationTableSvg",
+                  "direction": "rtl",
+                  "view_box": "0 0 900 310",
+                  "layout": {
+                    "label_width": 110,
+                    "header_height": 62,
+                    "derivative_height": 72,
+                    "function_height": 150
+                  },
+                  "points": [
+                    {
+                      "index": 0,
+                      "x": "−∞",
+                      "function_value": "−∞",
+                      "is_excluded": false
+                    },
+                    {
+                      "index": 1,
+                      "x": "1",
+                      "function_value": "5",
+                      "is_excluded": false
+                    },
+                    {
+                      "index": 2,
+                      "x": "3",
+                      "function_value": "-3",
+                      "is_excluded": false
+                    },
+                    {
+                      "index": 3,
+                      "x": "+∞",
+                      "function_value": "+∞",
+                      "is_excluded": false
+                    }
+                  ],
+                  "segments": [
+                    {
+                      "index": 0,
+                      "from_index": 0,
+                      "to_index": 1,
+                      "from_x": "−∞",
+                      "to_x": "1",
+                      "from_value": "−∞",
+                      "to_value": "5",
+                      "derivative_sign": "+",
+                      "direction": "increasing",
+                      "arrow": "↗"
+                    },
+                    {
+                      "index": 1,
+                      "from_index": 1,
+                      "to_index": 2,
+                      "from_x": "1",
+                      "to_x": "3",
+                      "from_value": "5",
+                      "to_value": "-3",
+                      "derivative_sign": "-",
+                      "direction": "decreasing",
+                      "arrow": "↘"
+                    },
+                    {
+                      "index": 2,
+                      "from_index": 2,
+                      "to_index": 3,
+                      "from_x": "3",
+                      "to_x": "+∞",
+                      "from_value": "-3",
+                      "to_value": "+∞",
+                      "derivative_sign": "+",
+                      "direction": "increasing",
+                      "arrow": "↗"
+                    }
+                  ],
+                  "show_derivative_row": true,
+                  "show_function_values": true
+                }
+              }
+            ]
+          }
+        ],
+        "final_answer": "القيمة العظمى المحلية هي \\(5\\) عند \\(x=1\\)، والصغرى المحلية هي \\(-3\\) عند \\(x=3\\).",
+        "verification": "تغير الإشارة يحدد نوع كل قيمة حدية.",
+        "common_mistakes": [
+          {
+            "mistake": "كتابة فاصلة النقطة الحرجة باعتبارها القيمة الحدية.",
+            "correction": "القيمة الحدية هي \\(f(a)\\)، أما \\(a\\) فهي فاصلة تحققها."
+          },
+          {
+            "mistake": "اعتبار كل حل للمعادلة \\(f'(x)=0\\) قيمة عظمى أو صغرى.",
+            "correction": "يجب فحص تغير إشارة المشتقة قبل النقطة وبعدها."
+          }
+        ],
+        "hints": [
+          "حدد مجال الدالة ومجال اشتقاقها.",
+          "ابحث عن جذور المشتقة والقيم الممنوعة.",
+          "تغير الإشارة من موجب إلى سالب يعطي عظمى، ومن سالب إلى موجب يعطي صغرى."
+        ],
+        "variation_tables": [
+          {
+            "id": "variation_05",
+            "title": "جدول تغيرات الدالة",
+            "variable": "x",
+            "domain": "\\(\\mathbb{R}\\)",
+            "critical_points": [
+              "-\\infty",
+              "1",
+              "3",
+              "+\\infty"
+            ],
+            "derivative_row": {
+              "label": "\\(f'(x)\\)",
+              "values": [
+                "",
+                "0",
+                "",
+                "0",
+                ""
+              ],
+              "signs": [
+                "+",
+                "0",
+                "-",
+                "0",
+                "+"
+              ]
+            },
+            "function_row": {
+              "label": "\\(f(x)\\)",
+              "values": [
+                "-\\infty",
+                "5",
+                "-3",
+                "+\\infty"
+              ],
+              "variations": [
+                "increasing",
+                "decreasing",
+                "increasing"
+              ]
+            },
+            "react_data": {
+              "schema_version": "1.0",
+              "renderer": "VariationTableSvg",
+              "direction": "rtl",
+              "view_box": "0 0 900 310",
+              "layout": {
+                "label_width": 110,
+                "header_height": 62,
+                "derivative_height": 72,
+                "function_height": 150
+              },
+              "points": [
+                {
+                  "index": 0,
+                  "x": "−∞",
+                  "function_value": "−∞",
+                  "is_excluded": false
+                },
+                {
+                  "index": 1,
+                  "x": "1",
+                  "function_value": "5",
+                  "is_excluded": false
+                },
+                {
+                  "index": 2,
+                  "x": "3",
+                  "function_value": "-3",
+                  "is_excluded": false
+                },
+                {
+                  "index": 3,
+                  "x": "+∞",
+                  "function_value": "+∞",
+                  "is_excluded": false
+                }
+              ],
+              "segments": [
+                {
+                  "index": 0,
+                  "from_index": 0,
+                  "to_index": 1,
+                  "from_x": "−∞",
+                  "to_x": "1",
+                  "from_value": "−∞",
+                  "to_value": "5",
+                  "derivative_sign": "+",
+                  "direction": "increasing",
+                  "arrow": "↗"
+                },
+                {
+                  "index": 1,
+                  "from_index": 1,
+                  "to_index": 2,
+                  "from_x": "1",
+                  "to_x": "3",
+                  "from_value": "5",
+                  "to_value": "-3",
+                  "derivative_sign": "-",
+                  "direction": "decreasing",
+                  "arrow": "↘"
+                },
+                {
+                  "index": 2,
+                  "from_index": 2,
+                  "to_index": 3,
+                  "from_x": "3",
+                  "to_x": "+∞",
+                  "from_value": "-3",
+                  "to_value": "+∞",
+                  "derivative_sign": "+",
+                  "direction": "increasing",
+                  "arrow": "↗"
+                }
+              ],
+              "show_derivative_row": true,
+              "show_function_values": true
+            }
+          }
+        ],
+        "sign_tables": [
+          {
+            "id": "sign_05",
+            "title": "جدول إشارة المشتقة",
+            "variable": "x",
+            "critical_points": [
+              "-\\infty",
+              "1",
+              "3",
+              "+\\infty"
+            ],
+            "rows": [
+              {
+                "label": "\\(f'(x)\\)",
+                "values": [
+                  "",
+                  "0",
+                  "",
+                  "0",
+                  ""
+                ],
+                "signs": [
+                  "+",
+                  "0",
+                  "-",
+                  "0",
+                  "+"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "extrema_bac_07",
+      "title": "القيم الحدية في دالة كسرية",
+      "text": "لتكن \\(f(x)=x+\\frac{1}{x-1}\\) على \\(\\mathbb{R}\\setminus\\{1\\}\\). ادرس تغيراتها، ثم عين القيم الحدية المحلية إن وجدت.",
+      "skill": "إدراج قيمة ممنوعة في جدول التغيرات",
+      "difficulty": "hard",
+      "solution": {
+        "steps": [
+          {
+            "number": "1",
+            "order": 1,
+            "title": "حساب المشتقة",
+            "explanation": "نشتق ثم نوحد المقام.",
+            "calculation": "\\(f'(x)=1-\\frac1{(x-1)^2}=\\frac{x(x-2)}{(x-1)^2}\\)",
+            "result": "الجذران 0 و2، والقيمة 1 ممنوعة.",
+            "conclusion": "نبني جدول الإشارة."
+          },
+          {
+            "number": "2",
+            "order": 2,
+            "title": "إشارة المشتقة",
+            "explanation": "المقام مربع موجب.",
+            "result": "المشتقة موجبة خارج [0,2] وسالبة داخله مع فصل عند 1.",
+            "conclusion": "نستنتج القيم الحدية.",
+            "sign_tables": [
+              {
+                "id": "sign_07",
+                "title": "جدول إشارة المشتقة",
+                "variable": "x",
+                "critical_points": [
+                  "-\\infty",
+                  "0",
+                  "1",
+                  "2",
+                  "+\\infty"
+                ],
+                "rows": [
+                  {
+                    "label": "\\(f'(x)\\)",
+                    "values": [
+                      "",
+                      "0",
+                      "",
+                      "|",
+                      "",
+                      "0",
+                      ""
+                    ],
+                    "signs": [
+                      "+",
+                      "0",
+                      "-",
+                      "|",
+                      "-",
+                      "0",
+                      "+"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "number": "3",
+            "order": 3,
+            "title": "حساب الصور",
+            "explanation": "نحسب صور الجذرين.",
+            "calculation": "\\(f(0)=-1\\), \\(f(2)=3\\)",
+            "result": "عظمى محلية -1 وصغرى محلية 3.",
+            "conclusion": "كل قيمة على فرع مختلف."
+          }
+        ],
+        "final_answer": "القيمة العظمى المحلية هي \\(-1\\) عند \\(x=0\\)، والقيمة الصغرى المحلية هي \\(3\\) عند \\(x=2\\).",
+        "verification": "المشتقة تتغير من موجب إلى سالب عند 0، ومن سالب إلى موجب عند 2.",
+        "common_mistakes": [
+          {
+            "mistake": "كتابة فاصلة النقطة الحرجة باعتبارها القيمة الحدية.",
+            "correction": "القيمة الحدية هي \\(f(a)\\)، أما \\(a\\) فهي فاصلة تحققها."
+          },
+          {
+            "mistake": "اعتبار كل حل للمعادلة \\(f'(x)=0\\) قيمة عظمى أو صغرى.",
+            "correction": "يجب فحص تغير إشارة المشتقة قبل النقطة وبعدها."
+          }
+        ],
+        "hints": [
+          "حدد مجال الدالة ومجال اشتقاقها.",
+          "ابحث عن جذور المشتقة والقيم الممنوعة.",
+          "تغير الإشارة من موجب إلى سالب يعطي عظمى، ومن سالب إلى موجب يعطي صغرى."
+        ],
+        "sign_tables": [
+          {
+            "id": "sign_07",
+            "title": "جدول إشارة المشتقة",
+            "variable": "x",
+            "critical_points": [
+              "-\\infty",
+              "0",
+              "1",
+              "2",
+              "+\\infty"
+            ],
+            "rows": [
+              {
+                "label": "\\(f'(x)\\)",
+                "values": [
+                  "",
+                  "0",
+                  "",
+                  "|",
+                  "",
+                  "0",
+                  ""
+                ],
+                "signs": [
+                  "+",
+                  "0",
+                  "-",
+                  "|",
+                  "-",
+                  "0",
+                  "+"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "extrema_bac_08",
+      "title": "قيمة صغرى لدالة جذرية",
+      "text": "لتكن \\(f(x)=x\\sqrt{x+1}\\) على \\([-1,+\\infty[\\). ادرس تغيراتها واستنتج قيمتها الصغرى.",
+      "skill": "تعيين قيمة صغرى لدالة جذرية",
+      "difficulty": "hard",
+      "solution": {
+        "steps": [
+          {
+            "number": "1",
+            "order": 1,
+            "title": "مجال الاشتقاق",
+            "explanation": "المقام موجب على \\(]-1,+\\infty[\\).",
+            "result": "إشارة المشتقة هي إشارة \\(3x+2\\).",
+            "conclusion": "تنعدم عند \\(-\\frac23\\)."
+          },
+          {
+            "number": "2",
+            "order": 2,
+            "title": "الإشارة",
+            "explanation": "نحدد الإشارة قبل الجذر وبعده.",
+            "result": "سالبة ثم موجبة.",
+            "conclusion": "توجد قيمة صغرى.",
+            "sign_tables": [
+              {
+                "id": "sign_08",
+                "title": "جدول إشارة المشتقة",
+                "variable": "x",
+                "critical_points": [
+                  "-1",
+                  "-2/3",
+                  "+\\infty"
+                ],
+                "rows": [
+                  {
+                    "label": "\\(f'(x)\\)",
+                    "values": [
+                      "",
+                      "0",
+                      ""
+                    ],
+                    "signs": [
+                      "-",
+                      "0",
+                      "+"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "number": "3",
+            "order": 3,
+            "title": "حساب القيمة",
+            "explanation": "نحسب الصورة.",
+            "calculation": "\\(f(-\\frac23)=-\\frac{2}{3\\sqrt3}\\)",
+            "result": "القيمة الصغرى هي \\(-\\frac{2}{3\\sqrt3}\\).",
+            "conclusion": "تتحقق عند \\(-\\frac23\\)."
+          }
+        ],
+        "final_answer": "القيمة الصغرى هي \\(-\\frac{2}{3\\sqrt3}\\)، وتتحقق عند \\(x=-\\frac23\\).",
+        "verification": "المشتقة تتغير من السالب إلى الموجب.",
+        "common_mistakes": [
+          {
+            "mistake": "كتابة فاصلة النقطة الحرجة باعتبارها القيمة الحدية.",
+            "correction": "القيمة الحدية هي \\(f(a)\\)، أما \\(a\\) فهي فاصلة تحققها."
+          },
+          {
+            "mistake": "اعتبار كل حل للمعادلة \\(f'(x)=0\\) قيمة عظمى أو صغرى.",
+            "correction": "يجب فحص تغير إشارة المشتقة قبل النقطة وبعدها."
+          }
+        ],
+        "hints": [
+          "حدد مجال الدالة ومجال اشتقاقها.",
+          "ابحث عن جذور المشتقة والقيم الممنوعة.",
+          "تغير الإشارة من موجب إلى سالب يعطي عظمى، ومن سالب إلى موجب يعطي صغرى."
+        ],
+        "sign_tables": [
+          {
+            "id": "sign_08",
+            "title": "جدول إشارة المشتقة",
+            "variable": "x",
+            "critical_points": [
+              "-1",
+              "-2/3",
+              "+\\infty"
+            ],
+            "rows": [
+              {
+                "label": "\\(f'(x)\\)",
+                "values": [
+                  "",
+                  "0",
+                  ""
+                ],
+                "signs": [
+                  "-",
+                  "0",
+                  "+"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "extrema_bac_09",
+      "title": "القيم القصوى على مجال مغلق",
+      "text": "لتكن \\(f(x)=x^3-3x\\) على المجال \\([-2,2]\\). عين القيمة العظمى والقيمة الصغرى للدالة على هذا المجال.",
+      "skill": "تعيين القيم القصوى المطلقة على مجال مغلق",
+      "difficulty": "medium",
+      "solution": {
+        "steps": [
+          {
+            "number": "1",
+            "order": 1,
+            "title": "النقط المرشحة",
+            "explanation": "نحل \\(f'(x)=0\\).",
+            "calculation": "\\(f'(x)=3(x-1)(x+1)\\)",
+            "result": "النقط الحرجة -1 و1.",
+            "conclusion": "نضيف الطرفين -2 و2."
+          },
+          {
+            "number": "2",
+            "order": 2,
+            "title": "حساب القيم",
+            "explanation": "نحسب الصور الأربع.",
+            "calculation": "\\(f(-2)=-2\\), \\(f(-1)=2\\), \\(f(1)=-2\\), \\(f(2)=2\\)",
+            "result": "أكبر قيمة 2 وأصغر قيمة -2.",
+            "conclusion": "قد تتحقق القيمة في أكثر من نقطة."
+          }
+        ],
+        "final_answer": "القيمة العظمى على \\([-2,2]\\) هي \\(2\\) وتتحقق عند \\(x=-1\\) و\\(x=2\\). والقيمة الصغرى هي \\(-2\\) وتتحقق عند \\(x=-2\\) و\\(x=1\\).",
+        "verification": "تمت مقارنة جميع المرشحين: الطرفان والنقط الحرجة.",
+        "common_mistakes": [
+          {
+            "mistake": "كتابة فاصلة النقطة الحرجة باعتبارها القيمة الحدية.",
+            "correction": "القيمة الحدية هي \\(f(a)\\)، أما \\(a\\) فهي فاصلة تحققها."
+          },
+          {
+            "mistake": "اعتبار كل حل للمعادلة \\(f'(x)=0\\) قيمة عظمى أو صغرى.",
+            "correction": "يجب فحص تغير إشارة المشتقة قبل النقطة وبعدها."
+          }
+        ],
+        "hints": [
+          "حدد مجال الدالة ومجال اشتقاقها.",
+          "ابحث عن جذور المشتقة والقيم الممنوعة.",
+          "تغير الإشارة من موجب إلى سالب يعطي عظمى، ومن سالب إلى موجب يعطي صغرى."
+        ]
+      }
+    },
+    {
+      "id": "extrema_bac_12",
+      "title": "قراءة القيم الحدية من جدول تغيرات",
+      "text": "لدالة \\(f\\) معرفة على \\([-4,5]\\) جدول تغيرات يفيد بأنها: متزايدة من \\(f(-4)=1\\) إلى \\(f(-1)=6\\)، ثم متناقصة إلى \\(f(3)=-2\\)، ثم متزايدة إلى \\(f(5)=4\\). عين القيم العظمى والصغرى المحلية، ثم القيم القصوى على المجال.",
+      "skill": "قراءة جدول التغيرات واستخراج القيم الحدية",
+      "difficulty": "easy",
+      "solution": {
+        "steps": [
+          {
+            "number": "1",
+            "order": 1,
+            "title": "القيم المحلية",
+            "explanation": "التزايد ثم التناقص عند -1 يعطي عظمى، والتناقص ثم التزايد عند 3 يعطي صغرى.",
+            "result": "عظمى محلية 6 وصغرى محلية -2.",
+            "conclusion": "نحدد القيم المطلقة."
+          },
+          {
+            "number": "2",
+            "order": 2,
+            "title": "المقارنة على المجال",
+            "explanation": "نقارن 1 و6 و-2 و4.",
+            "result": "أكبر قيمة 6 وأصغر قيمة -2.",
+            "conclusion": "القيم المحلية هنا هي أيضًا مطلقة."
+          }
+        ],
+        "final_answer": "القيمة العظمى المحلية والمطلقة هي \\(6\\) عند \\(x=-1\\)، والقيمة الصغرى المحلية والمطلقة هي \\(-2\\) عند \\(x=3\\).",
+        "verification": "المقارنة تشمل قيم الطرفين والقيم الحرجة.",
+        "common_mistakes": [
+          {
+            "mistake": "كتابة فاصلة النقطة الحرجة باعتبارها القيمة الحدية.",
+            "correction": "القيمة الحدية هي \\(f(a)\\)، أما \\(a\\) فهي فاصلة تحققها."
+          },
+          {
+            "mistake": "اعتبار كل حل للمعادلة \\(f'(x)=0\\) قيمة عظمى أو صغرى.",
+            "correction": "يجب فحص تغير إشارة المشتقة قبل النقطة وبعدها."
+          }
+        ],
+        "hints": [
+          "حدد مجال الدالة ومجال اشتقاقها.",
+          "ابحث عن جذور المشتقة والقيم الممنوعة.",
+          "تغير الإشارة من موجب إلى سالب يعطي عظمى، ومن سالب إلى موجب يعطي صغرى."
+        ]
+      }
+    },
+    {
+      "id": "extrema_bac_13",
+      "title": "إثبات متراجحة باستعمال قيمة صغرى",
+      "text": "لتكن \\(f(x)=x^2-6x+10\\). باستعمال جدول التغيرات، أثبت أن \\(f(x)\\ge1\\) لكل \\(x\\in\\mathbb{R}\\).",
+      "skill": "استعمال القيمة الصغرى لإثبات متراجحة",
+      "difficulty": "medium",
+      "solution": {
+        "steps": [
+          {
+            "number": "1",
+            "order": 1,
+            "title": "دراسة التغير",
+            "explanation": "نحسب المشتقة.",
+            "calculation": "\\(f'(x)=2x-6=2(x-3)\\)",
+            "result": "الدالة متناقصة قبل 3 ومتزايدة بعده.",
+            "conclusion": "لها قيمة صغرى عند 3."
+          },
+          {
+            "number": "2",
+            "order": 2,
+            "title": "حساب الصغرى",
+            "explanation": "نعوض x=3.",
+            "calculation": "\\(f(3)=9-18+10=1\\)",
+            "result": "القيمة الصغرى هي 1.",
+            "conclusion": "إذن كل قيم الدالة أكبر أو تساوي 1."
+          }
+        ],
+        "final_answer": "لكل \\(x\\in\\mathbb{R}\\)، لدينا \\(f(x)\\ge1\\)، وتتحقق المساواة عند \\(x=3\\).",
+        "verification": "يمكن التحقق أيضًا بكتابة \\(f(x)=(x-3)^2+1\\).",
+        "common_mistakes": [
+          {
+            "mistake": "كتابة فاصلة النقطة الحرجة باعتبارها القيمة الحدية.",
+            "correction": "القيمة الحدية هي \\(f(a)\\)، أما \\(a\\) فهي فاصلة تحققها."
+          },
+          {
+            "mistake": "اعتبار كل حل للمعادلة \\(f'(x)=0\\) قيمة عظمى أو صغرى.",
+            "correction": "يجب فحص تغير إشارة المشتقة قبل النقطة وبعدها."
+          }
+        ],
+        "hints": [
+          "حدد مجال الدالة ومجال اشتقاقها.",
+          "ابحث عن جذور المشتقة والقيم الممنوعة.",
+          "تغير الإشارة من موجب إلى سالب يعطي عظمى، ومن سالب إلى موجب يعطي صغرى."
+        ]
+      }
+    },
+    {
+      "id": "extrema_bac_14",
+      "title": "عدد حلول معادلة باستعمال القيم الحدية",
+      "text": "لتكن \\(f(x)=x^3-3x+2\\). باستعمال جدول تغيراتها، ناقش حسب قيم العدد الحقيقي \\(m\\) عدد حلول المعادلة \\(f(x)=m\\).",
+      "skill": "مناقشة عدد الحلول انطلاقًا من جدول التغيرات",
+      "difficulty": "hard",
+      "solution": {
+        "steps": [
+          {
+            "number": "1",
+            "order": 1,
+            "title": "استعمال القيم الحدية",
+            "explanation": "نستعمل النتائج: عظمى محلية 4 وصغرى محلية 0.",
+            "result": "المستويات الحرجة هما 0 و4.",
+            "conclusion": "عدد التقاطعات يتغير عندهما."
+          },
+          {
+            "number": "2",
+            "order": 2,
+            "title": "المناقشة",
+            "explanation": "نقارن m بالقيمتين 0 و4.",
+            "result": "إذا \\(0<m<4\\) توجد ثلاثة حلول؛ إذا \\(m=0\\) أو \\(m=4\\) حلان أحدهما مضاعف؛ وإلا حل واحد.",
+            "conclusion": "هذه هي المناقشة الكاملة."
+          }
+        ],
+        "final_answer": "المعادلة تقبل ثلاثة حلول إذا \\(0<m<4\\)، وحلين إذا \\(m=0\\) أو \\(m=4\\)، وحلًا واحدًا إذا \\(m<0\\) أو \\(m>4\\).",
+        "verification": "يوافق كل حل نقطة تقاطع المنحنى مع المستقيم الأفقي \\(y=m\\).",
+        "common_mistakes": [
+          {
+            "mistake": "كتابة فاصلة النقطة الحرجة باعتبارها القيمة الحدية.",
+            "correction": "القيمة الحدية هي \\(f(a)\\)، أما \\(a\\) فهي فاصلة تحققها."
+          },
+          {
+            "mistake": "اعتبار كل حل للمعادلة \\(f'(x)=0\\) قيمة عظمى أو صغرى.",
+            "correction": "يجب فحص تغير إشارة المشتقة قبل النقطة وبعدها."
+          }
+        ],
+        "hints": [
+          "حدد مجال الدالة ومجال اشتقاقها.",
+          "ابحث عن جذور المشتقة والقيم الممنوعة.",
+          "تغير الإشارة من موجب إلى سالب يعطي عظمى، ومن سالب إلى موجب يعطي صغرى."
+        ]
+      }
+    },
+    {
+      "id": "extrema_bac_15",
+      "title": "تمرين شامل في القيم الحدية وجدول التغيرات",
+      "text": "لتكن \\(f(x)=x^3-3x^2-9x+7\\). 1) احسب \\(f'(x)\\) وحللها. 2) ادرس إشارة المشتقة. 3) أنشئ جدول تغيرات \\(f\\). 4) عين القيم العظمى والصغرى المحلية. 5) ناقش عدد حلول المعادلة \\(f(x)=m\\) حسب قيم \\(m\\).",
+      "skill": "حل تمرين شامل وفق منهجية البكالوريا",
+      "difficulty": "hard",
+      "solution": {
+        "steps": [
+          {
+            "number": "1",
+            "order": 1,
+            "title": "حساب المشتقة",
+            "explanation": "نشتق ونحلل.",
+            "calculation": "\\(f'(x)=3x^2-6x-9=3(x+1)(x-3)\\)",
+            "result": "الجذران -1 و3.",
+            "conclusion": "ننتقل إلى جدول الإشارة."
+          },
+          {
+            "number": "2",
+            "order": 2,
+            "title": "الإشارة والتغير",
+            "explanation": "المشتقة موجبة خارج الجذرين وسالبة بينهما.",
+            "result": "تزايد ثم تناقص ثم تزايد.",
+            "conclusion": "نحسب الصور.",
+            "variation_tables": [
+              {
+                "id": "variation_15",
+                "title": "جدول تغيرات الدالة",
+                "variable": "x",
+                "domain": "\\(\\mathbb{R}\\)",
+                "critical_points": [
+                  "-\\infty",
+                  "-1",
+                  "3",
+                  "+\\infty"
+                ],
+                "derivative_row": {
+                  "label": "\\(f'(x)\\)",
+                  "values": [
+                    "",
+                    "0",
+                    "",
+                    "0",
+                    ""
+                  ],
+                  "signs": [
+                    "+",
+                    "0",
+                    "-",
+                    "0",
+                    "+"
+                  ]
+                },
+                "function_row": {
+                  "label": "\\(f(x)\\)",
+                  "values": [
+                    "-\\infty",
+                    "12",
+                    "-20",
+                    "+\\infty"
+                  ],
+                  "variations": [
+                    "increasing",
+                    "decreasing",
+                    "increasing"
+                  ]
+                },
+                "react_data": {
+                  "schema_version": "1.0",
+                  "renderer": "VariationTableSvg",
+                  "direction": "rtl",
+                  "view_box": "0 0 900 310",
+                  "layout": {
+                    "label_width": 110,
+                    "header_height": 62,
+                    "derivative_height": 72,
+                    "function_height": 150
+                  },
+                  "points": [
+                    {
+                      "index": 0,
+                      "x": "−∞",
+                      "function_value": "−∞",
+                      "is_excluded": false
+                    },
+                    {
+                      "index": 1,
+                      "x": "-1",
+                      "function_value": "12",
+                      "is_excluded": false
+                    },
+                    {
+                      "index": 2,
+                      "x": "3",
+                      "function_value": "-20",
+                      "is_excluded": false
+                    },
+                    {
+                      "index": 3,
+                      "x": "+∞",
+                      "function_value": "+∞",
+                      "is_excluded": false
+                    }
+                  ],
+                  "segments": [
+                    {
+                      "index": 0,
+                      "from_index": 0,
+                      "to_index": 1,
+                      "from_x": "−∞",
+                      "to_x": "-1",
+                      "from_value": "−∞",
+                      "to_value": "12",
+                      "derivative_sign": "+",
+                      "direction": "increasing",
+                      "arrow": "↗"
+                    },
+                    {
+                      "index": 1,
+                      "from_index": 1,
+                      "to_index": 2,
+                      "from_x": "-1",
+                      "to_x": "3",
+                      "from_value": "12",
+                      "to_value": "-20",
+                      "derivative_sign": "-",
+                      "direction": "decreasing",
+                      "arrow": "↘"
+                    },
+                    {
+                      "index": 2,
+                      "from_index": 2,
+                      "to_index": 3,
+                      "from_x": "3",
+                      "to_x": "+∞",
+                      "from_value": "-20",
+                      "to_value": "+∞",
+                      "derivative_sign": "+",
+                      "direction": "increasing",
+                      "arrow": "↗"
+                    }
+                  ],
+                  "show_derivative_row": true,
+                  "show_function_values": true
+                }
+              }
+            ],
+            "sign_tables": [
+              {
+                "id": "sign_15",
+                "title": "جدول إشارة المشتقة",
+                "variable": "x",
+                "critical_points": [
+                  "-\\infty",
+                  "-1",
+                  "3",
+                  "+\\infty"
+                ],
+                "rows": [
+                  {
+                    "label": "\\(f'(x)\\)",
+                    "values": [
+                      "",
+                      "0",
+                      "",
+                      "0",
+                      ""
+                    ],
+                    "signs": [
+                      "+",
+                      "0",
+                      "-",
+                      "0",
+                      "+"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "number": "3",
+            "order": 3,
+            "title": "القيم الحدية",
+            "explanation": "نحسب القيم عند -1 و3.",
+            "calculation": "\\(f(-1)=12\\), \\(f(3)=-20\\)",
+            "result": "عظمى محلية 12 وصغرى محلية -20.",
+            "conclusion": "تحدد هاتان القيمتان المناقشة."
+          },
+          {
+            "number": "4",
+            "order": 4,
+            "title": "عدد الحلول",
+            "explanation": "نقارن m بالقيمتين -20 و12.",
+            "result": "ثلاثة حلول بينهما، حلان عندهما، وحل واحد خارجهما.",
+            "conclusion": "تمت المناقشة."
+          }
+        ],
+        "final_answer": "القيمة العظمى المحلية \\(12\\) عند \\(x=-1\\)، والصغرى المحلية \\(-20\\) عند \\(x=3\\). المعادلة \\(f(x)=m\\) تقبل ثلاثة حلول إذا \\(-20<m<12\\)، وحلين إذا \\(m=-20\\) أو \\(m=12\\)، وحلًا واحدًا خارج ذلك.",
+        "verification": "جدول التغيرات يبين عدد تقاطعات كل مستقيم أفقي مع المنحنى.",
+        "common_mistakes": [
+          {
+            "mistake": "كتابة فاصلة النقطة الحرجة باعتبارها القيمة الحدية.",
+            "correction": "القيمة الحدية هي \\(f(a)\\)، أما \\(a\\) فهي فاصلة تحققها."
+          },
+          {
+            "mistake": "اعتبار كل حل للمعادلة \\(f'(x)=0\\) قيمة عظمى أو صغرى.",
+            "correction": "يجب فحص تغير إشارة المشتقة قبل النقطة وبعدها."
+          }
+        ],
+        "hints": [
+          "حدد مجال الدالة ومجال اشتقاقها.",
+          "ابحث عن جذور المشتقة والقيم الممنوعة.",
+          "تغير الإشارة من موجب إلى سالب يعطي عظمى، ومن سالب إلى موجب يعطي صغرى."
+        ],
+        "variation_tables": [
+          {
+            "id": "variation_15",
+            "title": "جدول تغيرات الدالة",
+            "variable": "x",
+            "domain": "\\(\\mathbb{R}\\)",
+            "critical_points": [
+              "-\\infty",
+              "-1",
+              "3",
+              "+\\infty"
+            ],
+            "derivative_row": {
+              "label": "\\(f'(x)\\)",
+              "values": [
+                "",
+                "0",
+                "",
+                "0",
+                ""
+              ],
+              "signs": [
+                "+",
+                "0",
+                "-",
+                "0",
+                "+"
+              ]
+            },
+            "function_row": {
+              "label": "\\(f(x)\\)",
+              "values": [
+                "-\\infty",
+                "12",
+                "-20",
+                "+\\infty"
+              ],
+              "variations": [
+                "increasing",
+                "decreasing",
+                "increasing"
+              ]
+            },
+            "react_data": {
+              "schema_version": "1.0",
+              "renderer": "VariationTableSvg",
+              "direction": "rtl",
+              "view_box": "0 0 900 310",
+              "layout": {
+                "label_width": 110,
+                "header_height": 62,
+                "derivative_height": 72,
+                "function_height": 150
+              },
+              "points": [
+                {
+                  "index": 0,
+                  "x": "−∞",
+                  "function_value": "−∞",
+                  "is_excluded": false
+                },
+                {
+                  "index": 1,
+                  "x": "-1",
+                  "function_value": "12",
+                  "is_excluded": false
+                },
+                {
+                  "index": 2,
+                  "x": "3",
+                  "function_value": "-20",
+                  "is_excluded": false
+                },
+                {
+                  "index": 3,
+                  "x": "+∞",
+                  "function_value": "+∞",
+                  "is_excluded": false
+                }
+              ],
+              "segments": [
+                {
+                  "index": 0,
+                  "from_index": 0,
+                  "to_index": 1,
+                  "from_x": "−∞",
+                  "to_x": "-1",
+                  "from_value": "−∞",
+                  "to_value": "12",
+                  "derivative_sign": "+",
+                  "direction": "increasing",
+                  "arrow": "↗"
+                },
+                {
+                  "index": 1,
+                  "from_index": 1,
+                  "to_index": 2,
+                  "from_x": "-1",
+                  "to_x": "3",
+                  "from_value": "12",
+                  "to_value": "-20",
+                  "derivative_sign": "-",
+                  "direction": "decreasing",
+                  "arrow": "↘"
+                },
+                {
+                  "index": 2,
+                  "from_index": 2,
+                  "to_index": 3,
+                  "from_x": "3",
+                  "to_x": "+∞",
+                  "from_value": "-20",
+                  "to_value": "+∞",
+                  "derivative_sign": "+",
+                  "direction": "increasing",
+                  "arrow": "↗"
+                }
+              ],
+              "show_derivative_row": true,
+              "show_function_values": true
+            }
+          }
+        ],
+        "sign_tables": [
+          {
+            "id": "sign_15",
+            "title": "جدول إشارة المشتقة",
+            "variable": "x",
+            "critical_points": [
+              "-\\infty",
+              "-1",
+              "3",
+              "+\\infty"
+            ],
+            "rows": [
+              {
+                "label": "\\(f'(x)\\)",
+                "values": [
+                  "",
+                  "0",
+                  "",
+                  "0",
+                  ""
+                ],
+                "signs": [
+                  "+",
+                  "0",
+                  "-",
+                  "0",
+                  "+"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

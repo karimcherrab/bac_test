@@ -1,0 +1,454 @@
+{
+  "version": 1,
+  "language": "ar",
+  "direction": "rtl",
+  "tag": "limit_calculation_strategy",
+  "title": "تمارين استراتيجية حساب النهايات",
+  "subject_code": "math",
+  "chapter_code": "limits_continuity",
+  "question_count": 12,
+  "questions": [
+    {
+      "id": "strategy_01",
+      "number": "1",
+      "text": "احسب \\(\\lim_{x\\to2}(x^2+3x-1)\\) باتباع خطوات الاستراتيجية.",
+      "skill": "التعرف على نهاية مباشرة عند عدد حقيقي",
+      "difficulty": "easy",
+      "solution": {
+        "strategy": "نحدد موضع النهاية ونوع الدالة، ثم نجرب التعويض المباشر.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "التعرف",
+            "explanation": "النهاية عند عدد حقيقي، والعبارة كثيرة حدود.",
+            "calculation": "\\(x\\to2\\)",
+            "result": "نجرب التعويض المباشر."
+          },
+          {
+            "order": 2,
+            "title": "الحساب المباشر",
+            "explanation": "كثيرة الحدود تقبل التعويض.",
+            "calculation": "\\(2^2+3\\times2-1=4+6-1=9\\)",
+            "result": "النهاية تساوي \\(9\\)."
+          }
+        ],
+        "final_answer": "\\(\\lim_{x\\to2}(x^2+3x-1)=9\\).",
+        "hints": [
+          "هذه نهاية مباشرة؛ لا تحتاج إلى تحويل."
+        ]
+      }
+    },
+    {
+      "id": "strategy_02",
+      "number": "2",
+      "text": "احسب \\(\\lim_{x\\to4^+}\\frac{x+1}{\\sqrt{x}-2}\\).",
+      "skill": "دراسة الإشارة في نهاية جانبية",
+      "difficulty": "easy",
+      "solution": {
+        "strategy": "نحدد نهاية البسط والمقام مع الانتباه إلى جهة الصفر.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "نهاية البسط",
+            "explanation": "نعوض مباشرة.",
+            "calculation": "\\(x+1\\to5\\)",
+            "result": "البسط موجب وغير منعدم."
+          },
+          {
+            "order": 2,
+            "title": "نهاية المقام",
+            "explanation": "من اليمين يكون \\(\\sqrt{x}>2\\).",
+            "calculation": "\\(\\sqrt{x}-2\\to0^+\\)",
+            "result": "المقام يؤول إلى صفر موجب."
+          },
+          {
+            "order": 3,
+            "title": "النتيجة",
+            "explanation": "عدد موجب على صفر موجب يعطي زائد ما لا نهاية.",
+            "calculation": "\\(\\frac5{0^+}=+\\infty\\)",
+            "result": "النهاية \\(+\\infty\\)."
+          }
+        ],
+        "final_answer": "\\(\\lim_{x\\to4^+}\\frac{x+1}{\\sqrt{x}-2}=+\\infty\\).",
+        "common_mistakes": [
+          {
+            "mistake": "كتابة \\(5/0\\) دون تحديد الإشارة.",
+            "correction": "في النهاية الجانبية يجب كتابة \\(0^+\\) أو \\(0^-\\)."
+          }
+        ],
+        "hints": [
+          "حدد إشارة \\(\\sqrt{x}-2\\) من اليمين."
+        ]
+      }
+    },
+    {
+      "id": "strategy_03",
+      "number": "3",
+      "text": "احسب \\(\\lim_{x\\to3}\\frac{x^2-9}{x-3}\\).",
+      "skill": "تشخيص صفر على صفر واختيار التحليل",
+      "difficulty": "easy",
+      "solution": {
+        "strategy": "نجرب التعويض، ثم نحلل فرق مربعين ونختزل.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "التشخيص",
+            "explanation": "التعويض المباشر يعطي حالة عدم تعيين.",
+            "calculation": "\\(\\frac{3^2-9}{3-3}=\\frac00\\)",
+            "result": "الحالة هي \\(0/0\\)."
+          },
+          {
+            "order": 2,
+            "title": "اختيار الطريقة",
+            "explanation": "البسط فرق مربعين.",
+            "calculation": "\\(x^2-9=(x-3)(x+3)\\)",
+            "result": "نستعمل التحليل والاختزال."
+          },
+          {
+            "order": 3,
+            "title": "التبسيط والحساب",
+            "explanation": "نختزل \\(x-3\\) ثم نعوض.",
+            "calculation": "\\(\\frac{(x-3)(x+3)}{x-3}=x+3\\to6\\)",
+            "result": "النهاية تساوي \\(6\\)."
+          }
+        ],
+        "final_answer": "\\(\\lim_{x\\to3}\\frac{x^2-9}{x-3}=6\\).",
+        "hints": [
+          "حلل فرق المربعين."
+        ]
+      }
+    },
+    {
+      "id": "strategy_04",
+      "number": "4",
+      "text": "احسب \\(\\lim_{x\\to1}\\frac{x^3-1}{x-1}\\).",
+      "skill": "تشخيص صفر على صفر واستعمال فرق المكعبين",
+      "difficulty": "easy",
+      "solution": {
+        "strategy": "نشخص الحالة ثم نحلل فرق المكعبين.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "التشخيص",
+            "explanation": "التعويض يعطي \\(0/0\\).",
+            "calculation": "\\(\\frac{1^3-1}{1-1}=\\frac00\\)",
+            "result": "حالة عدم تعيين."
+          },
+          {
+            "order": 2,
+            "title": "التحليل",
+            "explanation": "نستعمل متطابقة فرق المكعبين.",
+            "calculation": "\\(x^3-1=(x-1)(x^2+x+1)\\)",
+            "result": "ظهر العامل المشترك."
+          },
+          {
+            "order": 3,
+            "title": "الحساب النهائي",
+            "explanation": "نختزل ثم نعوض.",
+            "calculation": "\\(x^2+x+1\\to1+1+1=3\\)",
+            "result": "النهاية تساوي \\(3\\)."
+          }
+        ],
+        "final_answer": "\\(\\lim_{x\\to1}\\frac{x^3-1}{x-1}=3\\).",
+        "hints": [
+          "استعمل فرق المكعبين."
+        ]
+      }
+    },
+    {
+      "id": "strategy_05",
+      "number": "5",
+      "text": "احسب \\(\\lim_{x\\to0}\\frac{\\sqrt{x+1}-1}{x}\\).",
+      "skill": "اختيار المرافق في حالة صفر على صفر",
+      "difficulty": "medium",
+      "solution": {
+        "strategy": "نشخص \\(0/0\\)، ثم نستعمل مرافق البسط.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "التشخيص",
+            "explanation": "بالتعويض نحصل على صفر على صفر.",
+            "calculation": "\\(\\frac{\\sqrt1-1}{0}=\\frac00\\)",
+            "result": "حالة عدم تعيين."
+          },
+          {
+            "order": 2,
+            "title": "اختيار الطريقة",
+            "explanation": "العبارة تحتوي فرقًا جذريًا.",
+            "calculation": "\\(\\frac{\\sqrt{x+1}-1}{x}\\times\\frac{\\sqrt{x+1}+1}{\\sqrt{x+1}+1}\\)",
+            "result": "نستعمل المرافق."
+          },
+          {
+            "order": 3,
+            "title": "التبسيط والحساب",
+            "explanation": "البسط يصبح \\(x\\)، ثم نختزل.",
+            "calculation": "\\(\\frac1{\\sqrt{x+1}+1}\\to\\frac12\\)",
+            "result": "النهاية تساوي \\(1/2\\)."
+          }
+        ],
+        "final_answer": "\\(\\lim_{x\\to0}\\frac{\\sqrt{x+1}-1}{x}=\\frac12\\).",
+        "hints": [
+          "فرق جذري يعطي غالبًا طريقة المرافق."
+        ]
+      }
+    },
+    {
+      "id": "strategy_06",
+      "number": "6",
+      "text": "احسب \\(\\lim_{x\\to0}\\left(\\frac1x-\\frac1{x+x^2}\\right)\\).",
+      "skill": "اختيار توحيد المقامات في فرق كسرين",
+      "difficulty": "medium",
+      "solution": {
+        "strategy": "نشخص فرق مالانهايتين، ثم نوحد المقامات.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "التشخيص",
+            "explanation": "كل كسر غير محدود قرب الصفر.",
+            "calculation": "\\(\\infty-\\infty\\)",
+            "result": "حالة عدم تعيين."
+          },
+          {
+            "order": 2,
+            "title": "اختيار الطريقة",
+            "explanation": "العبارة فرق كسرين، لذلك نوحد المقامات.",
+            "calculation": "\\(\\frac1x-\\frac1{x(1+x)}=\\frac{1+x-1}{x(1+x)}\\)",
+            "result": "\\(\\frac{x}{x(1+x)}\\)."
+          },
+          {
+            "order": 3,
+            "title": "التبسيط والحساب",
+            "explanation": "نختزل \\(x\\) ثم نعوض.",
+            "calculation": "\\(\\frac1{1+x}\\to1\\)",
+            "result": "النهاية تساوي \\(1\\)."
+          }
+        ],
+        "final_answer": "\\(\\lim_{x\\to0}\\left(\\frac1x-\\frac1{x+x^2}\\right)=1\\).",
+        "hints": [
+          "في فرق كسرين ابدأ بتوحيد المقامات."
+        ]
+      }
+    },
+    {
+      "id": "strategy_07",
+      "number": "7",
+      "text": "احسب \\(\\lim_{x\\to+\\infty}\\frac{3x^2+x-1}{2x^2+5}\\).",
+      "skill": "تشخيص مالانهاية على مالانهاية ومقارنة الدرجات",
+      "difficulty": "easy",
+      "solution": {
+        "strategy": "نحدد نوع الدالة، نشخص \\(\\infty/\\infty\\)، ثم نقارن الدرجات.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "التشخيص",
+            "explanation": "البسط والمقام يؤولان إلى زائد ما لا نهاية.",
+            "calculation": "\\(\\frac{+\\infty}{+\\infty}\\)",
+            "result": "حالة عدم تعيين."
+          },
+          {
+            "order": 2,
+            "title": "اختيار الطريقة",
+            "explanation": "درجتا البسط والمقام متساويتان.",
+            "calculation": "\\(\\deg P=\\deg Q=2\\)",
+            "result": "نستعمل نسبة المعاملين الرئيسيين."
+          },
+          {
+            "order": 3,
+            "title": "الحساب",
+            "explanation": "المعامل الرئيسي في البسط \\(3\\)، وفي المقام \\(2\\).",
+            "calculation": "\\(\\frac32\\)",
+            "result": "النهاية تساوي \\(3/2\\)."
+          }
+        ],
+        "final_answer": "\\(\\lim_{x\\to+\\infty}\\frac{3x^2+x-1}{2x^2+5}=\\frac32\\).",
+        "hints": [
+          "قارن درجتي البسط والمقام."
+        ]
+      }
+    },
+    {
+      "id": "strategy_08",
+      "number": "8",
+      "text": "احسب \\(\\lim_{x\\to+\\infty}\\frac{2x+1}{x^3-4}\\).",
+      "skill": "استعمال مقارنة الدرجات عندما تكون درجة البسط أصغر",
+      "difficulty": "easy",
+      "solution": {
+        "strategy": "نقارن درجتي البسط والمقام.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "تحديد الدرجتين",
+            "explanation": "درجة البسط \\(1\\)، ودرجة المقام \\(3\\).",
+            "calculation": "\\(1<3\\)",
+            "result": "المقام ينمو أسرع."
+          },
+          {
+            "order": 2,
+            "title": "الاستنتاج",
+            "explanation": "عندما تكون درجة البسط أصغر تكون النهاية صفرًا.",
+            "calculation": "\\(\\frac{2x}{x^3}=\\frac2{x^2}\\to0\\)",
+            "result": "النهاية تساوي \\(0\\)."
+          }
+        ],
+        "final_answer": "\\(\\lim_{x\\to+\\infty}\\frac{2x+1}{x^3-4}=0\\).",
+        "hints": [
+          "درجة المقام أكبر."
+        ]
+      }
+    },
+    {
+      "id": "strategy_09",
+      "number": "9",
+      "text": "احسب \\(\\lim_{x\\to+\\infty}(\\sqrt{x^2+1}-\\sqrt{x^2-1})\\).",
+      "skill": "اختيار المرافق في حالة مالانهاية ناقص مالانهاية",
+      "difficulty": "medium",
+      "solution": {
+        "strategy": "نشخص \\(\\infty-\\infty\\)، ثم نستعمل مرافق الفرق.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "التشخيص",
+            "explanation": "كل جذر يؤول إلى زائد ما لا نهاية.",
+            "calculation": "\\(+\\infty-(+\\infty)\\)",
+            "result": "حالة عدم تعيين."
+          },
+          {
+            "order": 2,
+            "title": "الضرب في المرافق",
+            "explanation": "نضرب ونقسم على مجموع الجذرين.",
+            "calculation": "\\(\\frac{(x^2+1)-(x^2-1)}{\\sqrt{x^2+1}+\\sqrt{x^2-1}}\\)",
+            "result": "\\(\\frac2{\\sqrt{x^2+1}+\\sqrt{x^2-1}}\\)."
+          },
+          {
+            "order": 3,
+            "title": "الحساب النهائي",
+            "explanation": "المقام يؤول إلى زائد ما لا نهاية.",
+            "calculation": "\\(\\frac2{+\\infty}=0\\)",
+            "result": "النهاية تساوي \\(0\\)."
+          }
+        ],
+        "final_answer": "\\(\\lim_{x\\to+\\infty}(\\sqrt{x^2+1}-\\sqrt{x^2-1})=0\\).",
+        "hints": [
+          "فرق جذور عند المالانهاية يعالج بالمرافق."
+        ]
+      }
+    },
+    {
+      "id": "strategy_10",
+      "number": "10",
+      "text": "احسب \\(\\lim_{x\\to0^+}x\\times\\frac1{\\sqrt{x}}\\).",
+      "skill": "تحويل صفر في مالانهاية إلى عبارة بسيطة",
+      "difficulty": "easy",
+      "solution": {
+        "strategy": "نشخص \\(0\\times\\infty\\)، ثم نبسط الجداء جبريًا.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "التشخيص",
+            "explanation": "العامل الأول يؤول إلى الصفر، والثاني إلى زائد ما لا نهاية.",
+            "calculation": "\\(0\\times(+\\infty)\\)",
+            "result": "حالة عدم تعيين."
+          },
+          {
+            "order": 2,
+            "title": "التبسيط",
+            "explanation": "من أجل \\(x>0\\)، لدينا \\(x=(\\sqrt{x})^2\\).",
+            "calculation": "\\(x\\times\\frac1{\\sqrt{x}}=\\sqrt{x}\\)",
+            "result": "زالت حالة عدم التعيين."
+          },
+          {
+            "order": 3,
+            "title": "النهاية",
+            "explanation": "\\(\\sqrt{x}\\to0\\) عند \\(0^+\\).",
+            "calculation": "\\(\\lim_{x\\to0^+}\\sqrt{x}=0\\)",
+            "result": "النهاية تساوي \\(0\\)."
+          }
+        ],
+        "final_answer": "\\(\\lim_{x\\to0^+}x\\times\\frac1{\\sqrt{x}}=0\\).",
+        "hints": [
+          "بسّط \\(x/\\sqrt{x}\\)."
+        ]
+      }
+    },
+    {
+      "id": "strategy_11",
+      "number": "11",
+      "text": "احسب \\(\\lim_{x\\to+\\infty}\\sqrt{\\frac{x-1}{2x-4}}\\).",
+      "skill": "استعمال قاعدة الدالة المركبة من الداخل إلى الخارج",
+      "difficulty": "medium",
+      "solution": {
+        "strategy": "نحدد الدالة الداخلية، نحسب نهايتها، ثم نطبق الجذر.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "تحديد الداخل",
+            "explanation": "الدالة الداخلية هي الكسر.",
+            "calculation": "\\(u(x)=\\frac{x-1}{2x-4}\\)",
+            "result": "نحسب نهاية \\(u\\) أولًا."
+          },
+          {
+            "order": 2,
+            "title": "نهاية الداخل",
+            "explanation": "درجتا البسط والمقام متساويتان.",
+            "calculation": "\\(u(x)\\to\\frac12\\)",
+            "result": "الداخل يؤول إلى عدد موجب."
+          },
+          {
+            "order": 3,
+            "title": "تطبيق الخارج",
+            "explanation": "نطبق دالة الجذر على النتيجة.",
+            "calculation": "\\(\\sqrt{\\frac12}=\\frac1{\\sqrt2}\\)",
+            "result": "النهاية تساوي \\(1/\\sqrt2\\)."
+          }
+        ],
+        "final_answer": "\\(\\lim_{x\\to+\\infty}\\sqrt{\\frac{x-1}{2x-4}}=\\frac1{\\sqrt2}\\).",
+        "hints": [
+          "في الدالة المركبة: الداخل ثم الخارج."
+        ]
+      }
+    },
+    {
+      "id": "strategy_12",
+      "number": "12",
+      "text": "احسب \\(\\lim_{x\\to+\\infty}\\frac{\\cos x}{x+1}\\).",
+      "skill": "اختيار الحصر مع دالة محدودة",
+      "difficulty": "medium",
+      "solution": {
+        "strategy": "نستعمل محدودية جيب التمام والقيمة المطلقة ثم نطبق الحصر.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "بناء الحصر",
+            "explanation": "لدينا دائمًا \\(|\\cos x|\\le1\\).",
+            "calculation": "\\(\\left|\\frac{\\cos x}{x+1}\\right|\\le\\frac1{x+1}\\)",
+            "result": "القيمة المطلقة محصورة بحد موجب."
+          },
+          {
+            "order": 2,
+            "title": "نهاية الحد المقارن",
+            "explanation": "عندما \\(x\\to+\\infty\\)، فإن \\(1/(x+1)\\to0\\).",
+            "calculation": "\\(\\frac1{x+1}\\to0\\)",
+            "result": "الحد المقارن يؤول إلى الصفر."
+          },
+          {
+            "order": 3,
+            "title": "الاستنتاج",
+            "explanation": "نطبق مبرهنة الحصر.",
+            "calculation": "\\(-\\frac1{x+1}\\le\\frac{\\cos x}{x+1}\\le\\frac1{x+1}\\)",
+            "result": "النهاية تساوي \\(0\\)."
+          }
+        ],
+        "final_answer": "\\(\\lim_{x\\to+\\infty}\\frac{\\cos x}{x+1}=0\\).",
+        "common_mistakes": [
+          {
+            "mistake": "القول إن \\(\\cos x\\to0\\).",
+            "correction": "جيب التمام لا يملك نهاية عند المالانهاية؛ نستعمل محدوديته فقط."
+          }
+        ],
+        "hints": [
+          "ابدأ من \\(|\\cos x|\\le1\\)."
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,283 @@
+{
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2016-electrical-verified",
+  "language": "ar",
+  "direction": "rtl",
+  "year": 2016,
+  "session": "ordinary",
+  "chapter_code": "electrical_phenomena_evolution",
+  "chapter_title": "تطور دراسة ظواهر كهربائية",
+  "exercise_number": 39,
+  "source_page": 15,
+  "source_pages": [
+    15
+  ],
+  "solution_source_pages": [
+    35,
+    36
+  ],
+
+  "branches": [
+    {
+      "code": "science",
+      "name": "شعبة علوم تجريبية"
+    }
+  ],
+  "title": "التمرين 39 — بكالوريا الجزائر 2016 — شعبة علوم تجريبية (الدورة الجزئية)",
+  "axis_tags": [
+    "rc_capacitor_charging",
+    "rc_differential_equation_solution",
+    "rc_time_constant",
+    "rc_energy",
+    "capacitor_association"
+  ],
+  "questions": [
+    {
+      "id": "2016_elec_ex39_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "I-1) بيّن على الشكل جهة التيار الكهربائي ومثّل بسهم كل من التوترين \\(u_{AB}\\) و\\(u_{BD}\\).",
+      "solution": {
+        "strategy": "نوجه التيار من القطب الموجب للمولد أثناء الشحن.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التوجيه",
+            "explanation": "يمر التيار من المولد نحو A ثم R ثم المكثفة. يمثل \\(u_{AB}\\) توتر المقاومة و\\(u_{BD}=u_C\\) توتر المكثفة.",
+            "graph_data": {
+              "diagram_type": "ex39_solution_oriented",
+              "title": "الشكل الموجه",
+              "description": "توجيه الدارة أثناء الشحن.",
+              "svg": "<svg viewBox=\"0 0 820 360\" xmlns=\"http://www.w3.org/2000/svg\">\n    <path d=\"M140 80 H650 V285 H140 Z\" fill=\"none\" stroke=\"#111827\" stroke-width=\"5\"/>\n    <circle cx=\"140\" cy=\"185\" r=\"30\" fill=\"white\" stroke=\"#111827\" stroke-width=\"4\"/><text x=\"130\" y=\"193\" font-size=\"22\">E</text>\n    <line x1=\"245\" y1=\"80\" x2=\"290\" y2=\"80\" stroke=\"#111827\" stroke-width=\"5\"/><line x1=\"315\" y1=\"80\" x2=\"360\" y2=\"80\" stroke=\"#111827\" stroke-width=\"5\"/><line x1=\"290\" y1=\"80\" x2=\"318\" y2=\"56\" stroke=\"#111827\" stroke-width=\"5\"/><text x=\"295\" y=\"45\" font-size=\"21\">K</text>\n    <rect x=\"400\" y=\"55\" width=\"100\" height=\"50\" rx=\"5\" fill=\"white\" stroke=\"#111827\" stroke-width=\"3\"/><text x=\"430\" y=\"87\" font-size=\"20\">R=10kΩ</text>\n    <line x1=\"610\" y1=\"80\" x2=\"610\" y2=\"145\" stroke=\"#111827\" stroke-width=\"5\"/><line x1=\"580\" y1=\"145\" x2=\"640\" y2=\"145\" stroke=\"#111827\" stroke-width=\"6\"/><line x1=\"580\" y1=\"180\" x2=\"640\" y2=\"180\" stroke=\"#111827\" stroke-width=\"6\"/><line x1=\"610\" y1=\"180\" x2=\"610\" y2=\"285\" stroke=\"#111827\" stroke-width=\"5\"/><text x=\"655\" y=\"170\" font-size=\"22\">C</text></svg>",
+              "render_mode": "inline",
+              "responsive": true
+            }
+          }
+        ],
+        "final_answer": "التوجيه كما في الرسم."
+      }
+    },
+    {
+      "id": "2016_elec_ex39_q2",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "I-2) باستعمال قانون جمع التوترات، جد المعادلة التفاضلية لتطور \\(u_{BD}(t)\\).",
+      "solution": {
+        "strategy": "uBD=uC.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "المعادلة",
+            "explanation": "\\[\\boxed{\\frac{du_{BD}}{dt}+\\frac1{RC}u_{BD}=\\frac{E}{RC}}\\]"
+          }
+        ],
+        "final_answer": "المعادلة كما هو مبين."
+      }
+    },
+    {
+      "id": "2016_elec_ex39_q3",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "I-3) تقبل المعادلة حلاً \\(u_{BD}(t)=E+Ae^{-bt}\\). جد \\(A\\) و\\(b\\).",
+      "solution": {
+        "strategy": "المطابقة والشرط الابتدائي.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "b",
+            "explanation": "\\(\\boxed{b=1/(RC)}\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "A",
+            "explanation": "\\(u_{BD}(0)=0\\Rightarrow E+A=0\\Rightarrow\\boxed{A=-E}\\)."
+          }
+        ],
+        "final_answer": "\\(A=-E,b=1/(RC)\\)."
+      }
+    },
+    {
+      "id": "2016_elec_ex39_q4",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "I-4) أعط عبارة ثابت الزمن، ماذا يمثل عملياً؟ احسب قيمته.",
+      "solution": {
+        "strategy": "τ=RC.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "العبارة",
+            "explanation": "\\(\\boxed{\\tau=RC}\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "المعنى",
+            "explanation": "الزمن اللازم لبلوغ \\(u_C\\) نحو 63% من قيمته النهائية أثناء الشحن."
+          },
+          {
+            "step_number": 3,
+            "title": "القيمة",
+            "explanation": "\\[\\tau=10^4\\times100\\times10^{-9}=\\boxed{10^{-3}s=1ms}\\]"
+          }
+        ],
+        "final_answer": "\\(\\tau=1ms\\)."
+      }
+    },
+    {
+      "id": "2016_elec_ex39_q5",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "I-5) بيّن كيفية ربط راسم اهتزاز ذي ذاكرة لمشاهدة \\(u_{BD}(t)\\)، ثم مثّل شكلاً تقريبياً لتطوره.",
+      "solution": {
+        "strategy": "الراسم يوصل على طرفي المكثفة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الربط",
+            "explanation": "يوصل مدخل Y بين B وD، والمرجع عند D."
+          },
+          {
+            "step_number": 2,
+            "title": "الشكل",
+            "explanation": "منحنى شحن أسي من 0 نحو E، ويمر عند t=τ بالقيمة 0.63E.",
+            "graph_data": {
+              "title": "uBD(t)",
+              "description": "تمثيل كيفي للشحن.",
+              "x_label": "t (ms)",
+              "y_label": "uBD(V)",
+              "x_domain": [
+                0,
+                5
+              ],
+              "y_domain": [
+                0,
+                5.5
+              ],
+              "series": [
+                {
+                  "name": "uBD",
+                  "data": [
+                    {
+                      "x": 0,
+                      "y": 0.0
+                    },
+                    {
+                      "x": 0.5,
+                      "y": 1.967
+                    },
+                    {
+                      "x": 1,
+                      "y": 3.161
+                    },
+                    {
+                      "x": 2,
+                      "y": 4.323
+                    },
+                    {
+                      "x": 3,
+                      "y": 4.751
+                    },
+                    {
+                      "x": 4,
+                      "y": 4.908
+                    },
+                    {
+                      "x": 5,
+                      "y": 4.966
+                    }
+                  ]
+                }
+              ],
+              "settings": {
+                "show_grid": true,
+                "show_axes": true,
+                "show_legend": false,
+                "show_point_labels": false,
+                "connect_points": true
+              }
+            }
+          }
+        ],
+        "final_answer": "شحن أسي من 0 إلى E."
+      }
+    },
+    {
+      "id": "2016_elec_ex39_q6",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "II-1) احسب الطاقة الكهربائية المخزنة في المكثفة في بداية التفريغ، وعلى أي شكل تستهلك في الدارة؟",
+      "solution": {
+        "strategy": "EC=1/2CE².",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الطاقة",
+            "explanation": "\\[E_C=\\frac12(100\\times10^{-9})(5)^2=\\boxed{1.25\\times10^{-6}J}\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "الاستهلاك",
+            "explanation": "تتحول إلى حرارة في الناقل الأومي بفعل جول."
+          }
+        ],
+        "final_answer": "\\(1.25\\mu J\\)، وتستهلك حرارياً بفعل جول."
+      }
+    },
+    {
+      "id": "2016_elec_ex39_q7",
+      "display_order": 7,
+      "content_type": "question",
+      "text": "II-2) بعد تفريغ المكثفة كلياً نربط معها مكثفة أخرى فارغة \\(C'\\) ثم نعيد البادلة إلى الوضع (1). أ- كيف يجب ربطها حتى تصبح الطاقة النهائية \\(3.75\\times10^{-6}J\\)؟ ب- احسب \\(C'\\).",
+      "solution": {
+        "strategy": "نحسب السعة المكافئة من الطاقة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "Ceq",
+            "explanation": "\\[C_{eq}=\\frac{2E_C'}{E^2}=\\frac{2(3.75\\times10^{-6})}{25}=\\boxed{300nF}\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "نوع الربط",
+            "explanation": "بما أن \\(C_{eq}>C\\)، فالربط على التفرع."
+          },
+          {
+            "step_number": 3,
+            "title": "C'",
+            "explanation": "\\[C'=C_{eq}-C=300-100=\\boxed{200nF}\\]"
+          }
+        ],
+        "final_answer": "ربط على التفرع، \\(C'=200nF\\)."
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "تجميعية_عمورة_للبكالوريات_السابقة_الوحدة_3(1).pdf",
+    "statement_figure_policy": "كل شكل أو بيان معطى في الموضوع يوضع مع نص التمرين. الرسم المطلوب من التلميذ يوضع داخل الحل فقط.",
+    "solution_figure_policy": "الرسم الذي يمثل إجابة سؤال أو توصيل جهاز قياس يوضع داخل خطوات الحل.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  },
+  "statement": "تتألف الدارة في الشكل 63 من مكثفة فارغة \\(C=100nF\\)، ناقل أومي \\(R=10k\\Omega\\)، مولد مثالي \\(E=5V\\) وبادلة K. في الجزء I توضع البادلة في الوضع (1) لشحن المكثفة، ثم في الجزء II تفرغ كلياً وتضاف مكثفة أخرى \\(C'\\).",
+  "figures": [
+    {
+      "diagram_type": "ex39_statement_circuit",
+      "title": "الشكل 63 — الدارة",
+      "description": "دارة ببادلة للشحن والتفريغ.",
+      "svg": "<svg viewBox=\"0 0 820 360\" xmlns=\"http://www.w3.org/2000/svg\">\n    <path d=\"M140 80 H650 V285 H140 Z\" fill=\"none\" stroke=\"#111827\" stroke-width=\"5\"/>\n    <circle cx=\"140\" cy=\"185\" r=\"30\" fill=\"white\" stroke=\"#111827\" stroke-width=\"4\"/><text x=\"130\" y=\"193\" font-size=\"22\">E</text>\n    <line x1=\"245\" y1=\"80\" x2=\"290\" y2=\"80\" stroke=\"#111827\" stroke-width=\"5\"/><line x1=\"315\" y1=\"80\" x2=\"360\" y2=\"80\" stroke=\"#111827\" stroke-width=\"5\"/><line x1=\"290\" y1=\"80\" x2=\"318\" y2=\"56\" stroke=\"#111827\" stroke-width=\"5\"/><text x=\"295\" y=\"45\" font-size=\"21\">K</text>\n    <rect x=\"400\" y=\"55\" width=\"100\" height=\"50\" rx=\"5\" fill=\"white\" stroke=\"#111827\" stroke-width=\"3\"/><text x=\"430\" y=\"87\" font-size=\"20\">R=10kΩ</text>\n    <line x1=\"610\" y1=\"80\" x2=\"610\" y2=\"145\" stroke=\"#111827\" stroke-width=\"5\"/><line x1=\"580\" y1=\"145\" x2=\"640\" y2=\"145\" stroke=\"#111827\" stroke-width=\"6\"/><line x1=\"580\" y1=\"180\" x2=\"640\" y2=\"180\" stroke=\"#111827\" stroke-width=\"6\"/><line x1=\"610\" y1=\"180\" x2=\"610\" y2=\"285\" stroke=\"#111827\" stroke-width=\"5\"/><text x=\"655\" y=\"170\" font-size=\"22\">C</text></svg>",
+      "render_mode": "inline",
+      "responsive": true
+    }
+  ],
+  "statement_graphs": [
+    {
+      "diagram_type": "ex39_statement_circuit",
+      "title": "الشكل 63 — الدارة",
+      "description": "دارة ببادلة للشحن والتفريغ.",
+      "svg": "<svg viewBox=\"0 0 820 360\" xmlns=\"http://www.w3.org/2000/svg\">\n    <path d=\"M140 80 H650 V285 H140 Z\" fill=\"none\" stroke=\"#111827\" stroke-width=\"5\"/>\n    <circle cx=\"140\" cy=\"185\" r=\"30\" fill=\"white\" stroke=\"#111827\" stroke-width=\"4\"/><text x=\"130\" y=\"193\" font-size=\"22\">E</text>\n    <line x1=\"245\" y1=\"80\" x2=\"290\" y2=\"80\" stroke=\"#111827\" stroke-width=\"5\"/><line x1=\"315\" y1=\"80\" x2=\"360\" y2=\"80\" stroke=\"#111827\" stroke-width=\"5\"/><line x1=\"290\" y1=\"80\" x2=\"318\" y2=\"56\" stroke=\"#111827\" stroke-width=\"5\"/><text x=\"295\" y=\"45\" font-size=\"21\">K</text>\n    <rect x=\"400\" y=\"55\" width=\"100\" height=\"50\" rx=\"5\" fill=\"white\" stroke=\"#111827\" stroke-width=\"3\"/><text x=\"430\" y=\"87\" font-size=\"20\">R=10kΩ</text>\n    <line x1=\"610\" y1=\"80\" x2=\"610\" y2=\"145\" stroke=\"#111827\" stroke-width=\"5\"/><line x1=\"580\" y1=\"145\" x2=\"640\" y2=\"145\" stroke=\"#111827\" stroke-width=\"6\"/><line x1=\"580\" y1=\"180\" x2=\"640\" y2=\"180\" stroke=\"#111827\" stroke-width=\"6\"/><line x1=\"610\" y1=\"180\" x2=\"610\" y2=\"285\" stroke=\"#111827\" stroke-width=\"5\"/><text x=\"655\" y=\"170\" font-size=\"22\">C</text></svg>",
+      "render_mode": "inline",
+      "responsive": true
+    }
+  ]
+}

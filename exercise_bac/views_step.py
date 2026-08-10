@@ -3,9 +3,7 @@ from django.shortcuts import get_object_or_404
 
 from rest_framework import status
 from rest_framework.generics import GenericAPIView
-from rest_framework.permissions import (
-    IsAuthenticated,
-)
+from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 
 from exercise_bac.models import (
@@ -15,7 +13,6 @@ from exercise_bac.models import (
 from exercise_bac.serializers_step import (
     BacStepReExplanationHistoryQuerySerializer,
     BacStepReExplanationHistoryResponseSerializer,
-    BacStepReExplanationItemSerializer,
     BacStepReExplanationRequestSerializer,
     BacStepReExplanationResponseSerializer,
 )
@@ -25,18 +22,22 @@ from exercise_bac.services.step_reexplanation_service import (
 )
 
 
-class BacStepReExplanationAPIView(
-    GenericAPIView
-):
-    permission_classes = [
-        IsAuthenticated,
-    ]
+class BacStepReExplanationAPIView(GenericAPIView):
+    """
+    نفس endpoint القديم، لكن الشرح أصبح للسؤال كاملًا وليس لخطوة واحدة.
 
-    serializer_class = (
-        BacStepReExplanationRequestSerializer
-    )
+    ملاحظة مهمة:
+    - نحتفظ باسم الـ endpoint القديم حتى لا نحتاج إلى تعديل urls.py.
+    - step_number=0 يستعمل داخليًا للدلالة على أن الشرح يخص السؤال كاملًا.
+    - الـ frontend يرسل step_number=1 فقط للتوافق مع serializer القديم،
+      لكننا لا نستعمل هذه القيمة لاختيار خطوة.
+    """
 
-    MAX_HISTORY_PER_STEP = 3
+    permission_classes = [IsAuthenticated]
+    serializer_class = BacStepReExplanationRequestSerializer
+
+    MAX_HISTORY_PER_QUESTION = 3
+    QUESTION_SCOPE_STEP_NUMBER = 0
 
     @staticmethod
     def _find_question(
@@ -49,44 +50,12 @@ class BacStepReExplanationAPIView(
 
             stored_id = str(
                 question.get("id", "")
-            )
+            ).strip()
 
-            if stored_id == str(question_id):
+            if stored_id == str(question_id).strip():
                 return question
 
         return None
-
-    @staticmethod
-    def _find_step(
-        steps: list,
-        step_number: int,
-    ):
-        for index, step in enumerate(steps):
-            if not isinstance(step, dict):
-                continue
-
-            stored_number = step.get(
-                "step_number",
-                index + 1,
-            )
-
-            try:
-                stored_number = int(
-                    stored_number
-                )
-            except (TypeError, ValueError):
-                stored_number = index + 1
-
-            if stored_number == step_number:
-                previous_step = (
-                    steps[index - 1]
-                    if index > 0
-                    else None
-                )
-
-                return step, previous_step
-
-        return None, None
 
     @classmethod
     def _get_history_queryset(
@@ -95,7 +64,6 @@ class BacStepReExplanationAPIView(
         student,
         exercise,
         question_id,
-        step_number,
     ):
         return (
             BacStepReExplanation.objects
@@ -103,14 +71,10 @@ class BacStepReExplanationAPIView(
                 student=student,
                 exercise=exercise,
                 question_id=str(question_id),
-                step_number=step_number,
+                step_number=cls.QUESTION_SCOPE_STEP_NUMBER,
             )
-            .select_related(
-                "exercise",
-            )
-            .order_by(
-                "-created_at",
-            )
+            .select_related("exercise")
+            .order_by("-created_at")
         )
 
     @classmethod
@@ -120,18 +84,15 @@ class BacStepReExplanationAPIView(
         student,
         exercise,
         question_id,
-        step_number,
     ):
         """
-        الاحتفاظ بآخر 3 شروحات فقط
-        لنفس الطالب ونفس الخطوة.
+        الاحتفاظ بآخر 3 شروحات فقط لنفس السؤال.
         """
         history_ids = list(
             cls._get_history_queryset(
                 student=student,
                 exercise=exercise,
                 question_id=question_id,
-                step_number=step_number,
             ).values_list(
                 "id",
                 flat=True,
@@ -139,7 +100,7 @@ class BacStepReExplanationAPIView(
         )
 
         ids_to_delete = history_ids[
-            cls.MAX_HISTORY_PER_STEP:
+            cls.MAX_HISTORY_PER_QUESTION:
         ]
 
         if ids_to_delete:
@@ -154,21 +115,14 @@ class BacStepReExplanationAPIView(
 
     def get(self, request):
         """
-        جلب الشروحات المحفوظة للطالب.
+        جلب الشروحات المحفوظة على مستوى السؤال.
 
         أمثلة:
-
-        GET /api/bac/exercises/re-explain-step/
-            ?exercise_id=1
-
-        GET /api/bac/exercises/re-explain-step/
-            ?exercise_id=1
-            &question_id=q1
+        GET /api/bac/exercises/re-explain-step/?exercise_id=1
 
         GET /api/bac/exercises/re-explain-step/
             ?exercise_id=1
             &question_id=q1
-            &step_number=2
         """
         query_serializer = (
             BacStepReExplanationHistoryQuerySerializer(
@@ -180,9 +134,7 @@ class BacStepReExplanationAPIView(
             raise_exception=True
         )
 
-        validated = (
-            query_serializer.validated_data
-        )
+        validated = query_serializer.validated_data
 
         exercise = get_object_or_404(
             ExerciseBac.objects.all(),
@@ -195,31 +147,19 @@ class BacStepReExplanationAPIView(
             .filter(
                 student=request.user,
                 exercise=exercise,
+                step_number=self.QUESTION_SCOPE_STEP_NUMBER,
             )
-            .select_related(
-                "exercise",
-            )
-            .order_by(
-                "-created_at",
-            )
+            .select_related("exercise")
+            .order_by("-created_at")
         )
 
         question_id = validated.get(
             "question_id"
         )
 
-        step_number = validated.get(
-            "step_number"
-        )
-
         if question_id:
             queryset = queryset.filter(
-                question_id=question_id,
-            )
-
-        if step_number is not None:
-            queryset = queryset.filter(
-                step_number=step_number,
+                question_id=str(question_id),
             )
 
         explanations = list(queryset)
@@ -242,6 +182,20 @@ class BacStepReExplanationAPIView(
         )
 
     def post(self, request):
+        """
+        إنشاء شرح مبسط للسؤال كاملًا.
+
+        الـ request يبقى متوافقًا مع serializer القديم:
+        {
+            "exercise_id": 1,
+            "question_id": "q1",
+            "step_number": 1,
+            "request_type": "very_simple",
+            "force_regenerate": false
+        }
+
+        لكن step_number لا يحدد خطوة بعد الآن.
+        """
         serializer = self.get_serializer(
             data=request.data
         )
@@ -260,13 +214,9 @@ class BacStepReExplanationAPIView(
             is_active=True,
         )
 
-        question_id = validated[
-            "question_id"
-        ]
-
-        step_number = validated[
-            "step_number"
-        ]
+        question_id = str(
+            validated["question_id"]
+        )
 
         request_type = validated.get(
             "request_type",
@@ -288,8 +238,7 @@ class BacStepReExplanationAPIView(
                 {
                     "detail": (
                         "La question demandée "
-                        "n'existe pas dans cet "
-                        "exercice."
+                        "n'existe pas dans cet exercice."
                     )
                 },
                 status=status.HTTP_404_NOT_FOUND,
@@ -310,37 +259,11 @@ class BacStepReExplanationAPIView(
                 status=status.HTTP_404_NOT_FOUND,
             )
 
-        steps = solution.get(
-            "steps",
-            [],
-        )
-
-        if not isinstance(steps, list):
-            steps = []
-
-        step, previous_step = self._find_step(
-            steps,
-            step_number,
-        )
-
-        if step is None:
-            return Response(
-                {
-                    "detail": (
-                        "L'étape demandée "
-                        "n'existe pas dans "
-                        "la solution."
-                    )
-                },
-                status=status.HTTP_404_NOT_FOUND,
-            )
-
         history_queryset = (
             self._get_history_queryset(
                 student=request.user,
                 exercise=exercise,
                 question_id=question_id,
-                step_number=step_number,
             )
         )
 
@@ -349,7 +272,7 @@ class BacStepReExplanationAPIView(
         if existing and not force_regenerate:
             history = list(
                 history_queryset[
-                    :self.MAX_HISTORY_PER_STEP
+                    :self.MAX_HISTORY_PER_QUESTION
                 ]
             )
 
@@ -360,7 +283,9 @@ class BacStepReExplanationAPIView(
                 "history_id": existing.id,
                 "exercise_id": exercise.id,
                 "question_id": question_id,
-                "step_number": step_number,
+                "step_number": (
+                    self.QUESTION_SCOPE_STEP_NUMBER
+                ),
                 "request_type": (
                     existing.request_type
                 ),
@@ -398,21 +323,7 @@ class BacStepReExplanationAPIView(
                             "",
                         )
                     ),
-                    strategy=str(
-                        solution.get(
-                            "strategy",
-                            "",
-                        )
-                    ),
-                    step=step,
-                    previous_step=(
-                        previous_step
-                        if isinstance(
-                            previous_step,
-                            dict,
-                        )
-                        else None
-                    ),
+                    solution=solution,
                 )
             )
 
@@ -421,7 +332,7 @@ class BacStepReExplanationAPIView(
                 {
                     "detail": (
                         "تعذر إنشاء شرح مبسط "
-                        "لهذه الخطوة."
+                        "لهذا السؤال."
                     ),
                     "error": str(exc),
                 },
@@ -430,12 +341,17 @@ class BacStepReExplanationAPIView(
                 ),
             )
 
-        step_title = str(
-            step.get(
+        question_title = str(
+            question.get(
                 "title",
                 "",
             )
         ).strip()
+
+        if not question_title:
+            question_title = (
+                f"شرح السؤال {question_id}"
+            )
 
         with transaction.atomic():
             saved_explanation = (
@@ -444,12 +360,15 @@ class BacStepReExplanationAPIView(
                     student=request.user,
                     exercise=exercise,
                     question_id=question_id,
-                    step_number=step_number,
-                    step_title=step_title,
-                    request_type=request_type,
-                    explanation=(
-                        result.explanation
+
+                    # 0 = شرح السؤال كاملًا
+                    step_number=(
+                        self.QUESTION_SCOPE_STEP_NUMBER
                     ),
+
+                    step_title=question_title,
+                    request_type=request_type,
+                    explanation=result.explanation,
                     model=result.model,
                 )
             )
@@ -458,7 +377,6 @@ class BacStepReExplanationAPIView(
                 student=request.user,
                 exercise=exercise,
                 question_id=question_id,
-                step_number=step_number,
             )
 
         history = list(
@@ -466,9 +384,8 @@ class BacStepReExplanationAPIView(
                 student=request.user,
                 exercise=exercise,
                 question_id=question_id,
-                step_number=step_number,
             )[
-                :self.MAX_HISTORY_PER_STEP
+                :self.MAX_HISTORY_PER_QUESTION
             ]
         )
 
@@ -476,12 +393,12 @@ class BacStepReExplanationAPIView(
             "success": True,
             "saved": True,
             "from_cache": False,
-            "history_id": (
-                saved_explanation.id
-            ),
+            "history_id": saved_explanation.id,
             "exercise_id": exercise.id,
             "question_id": question_id,
-            "step_number": step_number,
+            "step_number": (
+                self.QUESTION_SCOPE_STEP_NUMBER
+            ),
             "request_type": request_type,
             "model": result.model,
             "explanation": result.explanation,

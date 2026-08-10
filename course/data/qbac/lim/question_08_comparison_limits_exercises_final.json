@@ -1,0 +1,232 @@
+{
+  "version": 1,
+  "language": "ar",
+  "direction": "rtl",
+  "tag": "comparison_limits",
+  "title": "تمارين النهايات بالمقارنة والحصر",
+  "subject_code": "phy",
+  "chapter_code": "limits_continuity",
+  "question_count": 5,
+  "questions": [
+    {
+      "id": "comparison_01",
+      "number": "33",
+      "text": "بيّن أن \\(-\\frac1{x+1}\\le\\frac{\\cos x}{x+1}\\le\\frac1{x+1}\\) من أجل \\(x>-1\\)، ثم احسب النهاية عند \\(+\\infty\\).",
+      "skill": "اختيار حدود مناسبة وتطبيق مبرهنة الحصر",
+      "difficulty": "medium",
+      "solution": {
+        "strategy": "نستعمل محدودية جيب التمام، ثم نطبق مبرهنة الحصر.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "بناء الحصر",
+            "explanation": "لدينا دائمًا \\(-1\\leq\\cos x\\leq1\\). وبما أن \\(x+1>0\\)، نقسم دون تغيير اتجاه المتراجحات.",
+            "calculation": "\\[-\\frac{1}{x+1}\\leq\\frac{\\cos x}{x+1}\\leq\\frac{1}{x+1}\\]",
+            "result": "حصرنا الدالة بين عبارتين بسيطتين."
+          },
+          {
+            "order": 2,
+            "title": "نهاية طرفي الحصر",
+            "explanation": "عند زائد ما لا نهاية، يؤول مقلوب \\(x+1\\) إلى الصفر.",
+            "calculation": "\\[\\lim_{x\\to+\\infty}-\\frac1{x+1}=0,\\qquad \\lim_{x\\to+\\infty}\\frac1{x+1}=0\\]",
+            "result": "طرفا الحصر لهما النهاية نفسها."
+          },
+          {
+            "order": 3,
+            "title": "تطبيق مبرهنة الحصر",
+            "explanation": "الدالة محصورة بين دالتين تؤولان إلى الصفر.",
+            "calculation": "\\[\\lim_{x\\to+\\infty}\\frac{\\cos x}{x+1}=0\\]",
+            "result": "\\(0\\)"
+          }
+        ],
+        "final_answer": "\\[\\boxed{\\lim_{x\\to+\\infty}\\frac{\\cos x}{x+1}=0}\\]",
+        "common_mistakes": [
+          {
+            "mistake": "القول إن \\(\\cos x\\to0\\) عند المالانهاية.",
+            "correction": "جيب التمام لا يملك نهاية عند المالانهاية؛ نستعمل فقط \\(|\\cos x|\\le1\\)."
+          }
+        ],
+        "hints": [
+          "ابدأ من \\(-1\\leq\\cos x\\leq1\\).",
+          "اقسم على \\(x+1>0\\)."
+        ]
+      }
+    },
+    {
+      "id": "comparison_02",
+      "number": "34",
+      "text": "إذا كان \\(x>1\\) و\\(\\frac{3x+\\cos x}{x}\\le f(x)\\le\\frac{3x+7}{x-1}\\)، احسب \\(\\lim_{x\\to+\\infty}f(x)\\).",
+      "skill": "اختيار حدود مناسبة وتطبيق مبرهنة الحصر",
+      "difficulty": "medium",
+      "solution": {
+        "strategy": "نحسب نهاية طرفي الحصر، ثم نطبق مبرهنة الحصر.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "نهاية الطرف الأيسر",
+            "explanation": "نفصل الكسر إلى حد ثابت وحد يؤول إلى الصفر.",
+            "calculation": "\\[\\frac{3x+\\cos x}{x}=3+\\frac{\\cos x}{x}\\]",
+            "result": "بما أن \\(|\\cos x/x|\\leq1/x\\)، فإن الطرف الأيسر يؤول إلى \\(3\\)."
+          },
+          {
+            "order": 2,
+            "title": "نهاية الطرف الأيمن",
+            "explanation": "درجتا البسط والمقام متساويتان.",
+            "calculation": "\\[\\lim_{x\\to+\\infty}\\frac{3x+7}{x-1}=3\\]",
+            "result": "الطرف الأيمن يؤول إلى \\(3\\)."
+          },
+          {
+            "order": 3,
+            "title": "الاستنتاج",
+            "explanation": "الدالة \\(f\\) محصورة بين دالتين لهما النهاية نفسها.",
+            "calculation": "\\[\\frac{3x+\\cos x}{x}\\leq f(x)\\leq\\frac{3x+7}{x-1}\\]",
+            "result": "\\(\\lim_{x\\to+\\infty}f(x)=3\\)."
+          }
+        ],
+        "final_answer": "\\[\\boxed{\\lim_{x\\to+\\infty}f(x)=3}\\]",
+        "common_mistakes": [
+          {
+            "mistake": "إعطاء النهاية من أحد طرفي الحصر فقط.",
+            "correction": "يجب التحقق من أن الطرفين يؤولان إلى القيمة نفسها."
+          }
+        ],
+        "hints": [
+          "اكتب الطرف الأيسر على شكل \\(3+\\cos x/x\\).",
+          "احسب نهاية الطرف الأيمن باستعمال نسبة المعاملين الرئيسيين."
+        ]
+      }
+    },
+    {
+      "id": "comparison_03",
+      "number": "35",
+      "text": "إذا كان \\(x\\ge0\\) و\\(|f(x)-3|\\le\\frac1{x^2+1}\\)، احسب \\(\\lim_{x\\to+\\infty}f(x)\\).",
+      "skill": "اختيار حدود مناسبة وتطبيق مبرهنة الحصر",
+      "difficulty": "medium",
+      "solution": {
+        "strategy": "نحوّل متراجحة القيمة المطلقة إلى حصر حول العدد 3.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "تحويل القيمة المطلقة",
+            "explanation": "من الخاصية \\(|A|\\leq b\\) نستنتج \\(-b\\leq A\\leq b\\).",
+            "calculation": "\\[-\\frac1{x^2+1}\\leq f(x)-3\\leq\\frac1{x^2+1}\\]",
+            "result": "حصلنا على حصر للفرق \\(f(x)-3\\)."
+          },
+          {
+            "order": 2,
+            "title": "إضافة العدد 3",
+            "explanation": "نضيف 3 إلى أطراف المتراجحة.",
+            "calculation": "\\[3-\\frac1{x^2+1}\\leq f(x)\\leq3+\\frac1{x^2+1}\\]",
+            "result": "أصبحت الدالة محصورة حول العدد 3."
+          },
+          {
+            "order": 3,
+            "title": "تطبيق الحصر",
+            "explanation": "لأن \\(1/(x^2+1)\\to0\\)، فإن طرفي الحصر يؤولان إلى 3.",
+            "calculation": "\\[\\lim_{x\\to+\\infty}f(x)=3\\]",
+            "result": "\\(3\\)"
+          }
+        ],
+        "final_answer": "\\[\\boxed{\\lim_{x\\to+\\infty}f(x)=3}\\]",
+        "common_mistakes": [
+          {
+            "mistake": "الاستنتاج مباشرة أن \\(f(x)-3=0\\).",
+            "correction": "المتراجحة تعني أن الفرق يقترب من الصفر، وليس أنه يساويه دائمًا."
+          }
+        ],
+        "hints": [
+          "حوّل متراجحة القيمة المطلقة إلى متراجحتين.",
+          "أضف العدد 3 إلى جميع الأطراف."
+        ]
+      }
+    },
+    {
+      "id": "comparison_04",
+      "number": "37",
+      "text": "إذا كان \\(x>0\\) و\\(f(x)\\ge\\frac12x^4+x\\)، حدد نهاية \\(f\\) عند \\(+\\infty\\).",
+      "skill": "اختيار حدود مناسبة وتطبيق مبرهنة الحصر",
+      "difficulty": "medium",
+      "solution": {
+        "strategy": "نستعمل حدًا سفليًا يؤول إلى زائد ما لا نهاية.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "اختيار الحد السفلي",
+            "explanation": "المتراجحة معطاة مباشرة.",
+            "calculation": "\\[f(x)\\geq\\frac12x^4+x\\]",
+            "result": "الدالة تقع فوق عبارة بسيطة."
+          },
+          {
+            "order": 2,
+            "title": "نهاية الحد السفلي",
+            "explanation": "كل من \\(x^4\\) و\\(x\\) يؤول إلى زائد ما لا نهاية.",
+            "calculation": "\\[\\lim_{x\\to+\\infty}\\left(\\frac12x^4+x\\right)=+\\infty\\]",
+            "result": "الحد السفلي يؤول إلى زائد ما لا نهاية."
+          },
+          {
+            "order": 3,
+            "title": "تطبيق المقارنة",
+            "explanation": "دالة أكبر من حد سفلي يصعد دون حد تصعد هي أيضًا دون حد.",
+            "calculation": "\\[\\lim_{x\\to+\\infty}f(x)=+\\infty\\]",
+            "result": "\\(+\\infty\\)"
+          }
+        ],
+        "final_answer": "\\[\\boxed{\\lim_{x\\to+\\infty}f(x)=+\\infty}\\]",
+        "common_mistakes": [
+          {
+            "mistake": "البحث عن حد علوي لإثبات نهاية \\(+\\infty\\).",
+            "correction": "لإثبات \\(+\\infty\\) نحتاج حدًا سفليًا يؤول إلى \\(+\\infty\\)."
+          }
+        ],
+        "hints": [
+          "استعمل المتراجحة المعطاة.",
+          "احسب نهاية \\(\\frac12x^4+x\\)."
+        ]
+      }
+    },
+    {
+      "id": "comparison_06",
+      "number": "39",
+      "text": "استعمل المقارنة لحساب \\(\\lim_{x\\to+\\infty}(x^2-\\sin 3x)\\).",
+      "skill": "اختيار حدود مناسبة وتطبيق مبرهنة الحصر",
+      "difficulty": "medium",
+      "solution": {
+        "strategy": "نستعمل محدودية دالة الجيب لبناء حد سفلي مناسب.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "استعمال محدودية الجيب",
+            "explanation": "لدينا دائمًا \\(-1\\leq\\sin(3x)\\leq1\\).",
+            "calculation": "\\[-\\sin(3x)\\geq-1\\]",
+            "result": "نستطيع مقارنة العبارة بـ\\(x^2-1\\)."
+          },
+          {
+            "order": 2,
+            "title": "بناء المقارنة",
+            "explanation": "نضيف \\(x^2\\) إلى الطرفين.",
+            "calculation": "\\[x^2-\\sin(3x)\\geq x^2-1\\]",
+            "result": "حصلنا على حد سفلي."
+          },
+          {
+            "order": 3,
+            "title": "تطبيق المقارنة",
+            "explanation": "بما أن \\(x^2-1\\to+\\infty\\)، فإن العبارة المطلوبة تؤول إلى زائد ما لا نهاية.",
+            "calculation": "\\[\\lim_{x\\to+\\infty}(x^2-\\sin(3x))=+\\infty\\]",
+            "result": "\\(+\\infty\\)"
+          }
+        ],
+        "final_answer": "\\[\\boxed{\\lim_{x\\to+\\infty}(x^2-\\sin(3x))=+\\infty}\\]",
+        "common_mistakes": [
+          {
+            "mistake": "القول إن \\(\\sin(3x)\\) له نهاية عند زائد ما لا نهاية.",
+            "correction": "دالة الجيب متذبذبة، لكننا نستعمل محدوديتها فقط."
+          }
+        ],
+        "hints": [
+          "استعمل \\(-1\\leq\\sin(3x)\\leq1\\).",
+          "ابحث عن حد سفلي يؤول إلى \\(+\\infty\\)."
+        ]
+      }
+    }
+  ]
+}

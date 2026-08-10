@@ -1,0 +1,192 @@
+{
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2011-electrical-verified",
+  "language": "ar",
+  "direction": "rtl",
+  "year": 2011,
+  "session": "ordinary",
+  "chapter_code": "electrical_phenomena_evolution",
+  "chapter_title": "تطور دراسة ظواهر كهربائية",
+  "exercise_number": 17,
+  "source_page": 7,
+  "source_pages": [
+    7
+  ],
+  "solution_source_pages": [
+    28
+  ],
+
+  "branches": [
+    {
+      "code": "science",
+      "name": "شعبة علوم تجريبية"
+    }
+  ],
+  "title": "التمرين 17 — بكالوريا الجزائر 2011 — شعبة علوم تجريبية",
+  "axis_tags": [
+    "rc_capacitor_discharge",
+    "rc_differential_equation_solution",
+    "rc_time_constant_graphical_analysis"
+  ],
+  "questions": [
+    {
+      "id": "2011_elec_ex17_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) ارسم مخطط دارة التفريغ.",
+      "solution": {
+        "strategy": "نوصل المكثفة المشحونة مع الناقل الأومي والقاطعة في حلقة تفريغ.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "المخطط",
+            "explanation": "مخطط التفريغ المطلوب يظهر هنا فقط لأنه مطلوب من التلميذ في السؤال.",
+            "graph_data": {
+              "diagram_type": "bac_2011_ex17_solution_discharge_circuit",
+              "title": "دارة التفريغ",
+              "description": "مخطط مكثفة مشحونة تفرغ في مقاومة.",
+              "svg": "<svg viewBox=\"0 0 800 330\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M140 80 H640 V245 H140 Z\" fill=\"none\" stroke=\"#111827\" stroke-width=\"5\"/>\n<line x1=\"140\" y1=\"80\" x2=\"140\" y2=\"245\" stroke=\"#111827\" stroke-width=\"5\"/>\n<line x1=\"430\" y1=\"80\" x2=\"430\" y2=\"135\" stroke=\"#111827\" stroke-width=\"5\"/>\n<line x1=\"400\" y1=\"135\" x2=\"460\" y2=\"135\" stroke=\"#111827\" stroke-width=\"6\"/><line x1=\"400\" y1=\"170\" x2=\"460\" y2=\"170\" stroke=\"#111827\" stroke-width=\"6\"/>\n<line x1=\"430\" y1=\"170\" x2=\"430\" y2=\"245\" stroke=\"#111827\" stroke-width=\"5\"/><text x=\"475\" y=\"160\" font-size=\"23\">C</text>\n<rect x=\"250\" y=\"220\" width=\"95\" height=\"50\" rx=\"5\" fill=\"white\" stroke=\"#111827\" stroke-width=\"3\"/><text x=\"287\" y=\"253\" font-size=\"22\">R</text>\n<circle cx=\"140\" cy=\"165\" r=\"31\" fill=\"white\" stroke=\"#111827\" stroke-width=\"4\"/><text x=\"129\" y=\"173\" font-size=\"22\">E</text>\n<circle cx=\"520\" cy=\"80\" r=\"5\"/><circle cx=\"585\" cy=\"80\" r=\"5\"/><line x1=\"520\" y1=\"80\" x2=\"585\" y2=\"55\" stroke=\"#111827\" stroke-width=\"5\"/><text x=\"545\" y=\"42\" font-size=\"22\">K</text>\n</svg>",
+              "render_mode": "inline",
+              "responsive": true
+            }
+          }
+        ],
+        "final_answer": "دارة تفريغ RC."
+      }
+    },
+    {
+      "id": "2011_elec_ex17_q2",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2) أ- كيف يتم ربط جهاز الفولطمتر في الدارة؟ ب- ارسم المنحنى \\(u_C=f(t)\\) اعتمادا على الجدول. ج- عيّن بيانيا ثابت الزمن \\(\\tau\\). د- احسب سعة المكثفة \\(C\\).",
+      "solution": {
+        "strategy": "الفولطمتر على التفرع، ثم نمثل القياسات ونقرأ τ عند 0.37E.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "ربط الفولطمتر",
+            "explanation": "يوصل الفولطمتر على التفرع بين طرفي المكثفة."
+          },
+          {
+            "step_number": 2,
+            "title": "الرسم",
+            "explanation": "نمثل نقاط الجدول ونصلها بمنحنى أسي متناقص.",
+            "graph_data": {
+              "title": "u_C=f(t) من جدول القياسات",
+              "description": "الرسم المطلوب في السؤال 2-ب، لذلك يوضع داخل الحل ولا يكشف في نص التمرين.",
+              "x_label": "t (ms)",
+              "y_label": "u_C (V)",
+              "x_domain": [
+                0,
+                120
+              ],
+              "y_domain": [
+                0,
+                6.5
+              ],
+              "series": [
+                {
+                  "name": "u_C",
+                  "data": [
+                    {
+                      "x": 0,
+                      "y": 6
+                    },
+                    {
+                      "x": 10,
+                      "y": 4.91
+                    },
+                    {
+                      "x": 20,
+                      "y": 4.02
+                    },
+                    {
+                      "x": 30,
+                      "y": 3.21
+                    },
+                    {
+                      "x": 40,
+                      "y": 2.69
+                    },
+                    {
+                      "x": 60,
+                      "y": 1.81
+                    },
+                    {
+                      "x": 80,
+                      "y": 1.21
+                    },
+                    {
+                      "x": 100,
+                      "y": 0.81
+                    },
+                    {
+                      "x": 120,
+                      "y": 0.54
+                    }
+                  ]
+                }
+              ],
+              "settings": {
+                "show_grid": true,
+                "show_axes": true,
+                "show_legend": false,
+                "show_point_labels": false,
+                "connect_points": true
+              }
+            }
+          },
+          {
+            "step_number": 3,
+            "title": "ثابت الزمن",
+            "explanation": "\\(0.37E=2.22V\\). من الرسم أو المماس نجد \\[\\boxed{\\tau\\approx50ms}\\] (التصحيح يقبل تقريباً 48–52ms)."
+          },
+          {
+            "step_number": 4,
+            "title": "السعة",
+            "explanation": "\\[C=\\frac{\\tau}{R}=\\frac{50\\times10^{-3}}{4\\times10^3}=\\boxed{12.5\\mu F}\\]"
+          }
+        ],
+        "final_answer": "\\(\\tau\\approx50ms\\)، \\(C=12.5\\mu F\\)."
+      }
+    },
+    {
+      "id": "2011_elec_ex17_q3",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "3) أ- بتطبيق قانون جمع التوترات، اكتب المعادلة التفاضلية للتوتر \\(u_C(t)\\). ب- تقبل المعادلة العبارة \\(u_C(t)=Ae^{-\\alpha t}\\) حلا لها. عيّن \\(A\\) و\\(\\alpha\\).",
+      "solution": {
+        "strategy": "نكتب معادلة تفريغ RC ثم نطابق الحل الأسي.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "المعادلة",
+            "explanation": "\\[u_C+u_R=0\\Rightarrow \\boxed{\\frac{du_C}{dt}+\\frac1{RC}u_C=0}\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "α",
+            "explanation": "بالمقارنة \\[\\boxed{\\alpha=\\frac1{RC}=\\frac1\\tau=20s^{-1}}\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "A",
+            "explanation": "عند \\(t=0\\): \\(u_C(0)=E=6V\\)، لذا \\[\\boxed{A=6V}\\]"
+          }
+        ],
+        "final_answer": "\\(A=6V\\)، \\(\\alpha=20s^{-1}\\)."
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "تجميعية_عمورة_للبكالوريات_السابقة_الوحدة_3(1).pdf",
+    "statement_figure_policy": "الشكل الموجود في الموضوع يظهر مع نص التمرين. الرسم الذي يطلب السؤال إنشاؤه لا يظهر قبل الحل.",
+    "solution_figure_policy": "الرسم المطلوب أو المساعد يوضع داخل خطوة الحل فقط.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  },
+  "statement": "مكثفة سعتها \\(C\\) شحنت كليا تحت توتر ثابت \\(E=6V\\). من أجل معرفة سعتها \\(C\\) نقوم بتفريغها في ناقل أومي مقاومته \\(R=4k\\Omega\\). لمتابعة تطور التوتر \\(u_C(t)\\) نستعمل فولطمتر رقمي وميقاتية إلكترونية. نسجل: \\(t(ms)=0,10,20,30,40,60,80,100,120\\)، و\\(u_C(V)=6.00,4.91,4.02,3.21,2.69,1.81,1.21,0.81,0.54\\).",
+  "figures": [],
+  "statement_graphs": []
+}

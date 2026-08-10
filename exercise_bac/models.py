@@ -7,7 +7,7 @@ from course.models import Branch, Chapter
 class ExerciseBac(models.Model):
     code = models.CharField(
         max_length=150,
-        unique=True,
+
         db_index=True,
         verbose_name="Code unique",
     )

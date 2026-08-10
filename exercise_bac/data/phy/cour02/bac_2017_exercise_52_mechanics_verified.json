@@ -1,0 +1,195 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.1-bac-source-faithful",
+  "version": "4.1-verified-statement-and-solution-figures",
+  "session": "exceptional",
+  "year": 2017,
+  "chapter_code": "mechanical_system_evolution",
+  "chapter_title": "تطور جملة ميكانيكية",
+  "exercise_number": 52,
+
+  "branches": [
+    {
+      "code": "math",
+      "name": "شعبة رياضيات"
+    },
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "axis_tags": [
+    "circular_path_motion",
+    "straight_inclined_motion_friction",
+    "mechanical_energy_data_analysis"
+  ],
+  "source_pages": [
+    20
+  ],
+  "solution_source_pages": [
+    44,
+    45
+  ],
+  "title": "التمرين 52 — بكالوريا 2017 الاستثنائية — ربع دائرة وطريق أفقي خشن",
+  "statement": "يتألف طريق من جزئين: \\(AB\\) ربع دائرة شاقولي أملس نصف قطره \\(r\\) ومركزه \\(O\\)، و\\(BC\\) طريق أفقي خشن طوله \\(1m\\)، تكافئ الاحتكاكات عليه قوة ثابتة \\(f\\). نترك كرية نقطية كتلتها \\(m=0.5kg\\) دون سرعة ابتدائية من نقطة \\(M\\) على القوس، بحيث يصنع شعاع موضعها \\(OM\\) زاوية \\(\\theta\\) مع شاقول \\(O\\).\n\nI- مثل القوى على \\(AB\\)، ثم أوجد \\(v_B^2\\) بدلالة \\(\\theta\\). ادرس الحركة على \\(BC\\)، وأثبت أن \\(v_C^2=a\\cos\\theta+b\\).\nII- بتغيير \\(\\theta\\) تحصلنا على البيان \\(v_C^2=f(\\cos\\theta)\\). اكتب معادلته، ثم استنتج \\(r\\) و\\(f\\)، وحدد أصغر زاوية تمكن الكرة من الوصول إلى \\(C\\).",
+  "questions": [
+    {
+      "id": "2017_ex52_q1",
+      "text": "1) أوجد vB² وادرس الحركة على BC.",
+      "axis_tags": [
+        "circular_path_motion",
+        "straight_inclined_motion_friction"
+      ],
+      "display_order": 1,
+      "content_type": "question",
+      "solution": {
+        "strategy": "نستعمل الطاقة على القوس ونيوتن على BC.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "على AB",
+            "explanation": "\\[v_B^2=2gr(1-\\cos\\theta)\\]",
+            "graph_data": {
+              "diagram_type": "quarter_circle_forces_2017",
+              "title": "القوى على الكرية في الجزء AB",
+              "description": "كما في التصحيح: الثقل P ورد فعل المسلك R."
+            }
+          },
+          {
+            "step_number": 2,
+            "title": "على BC",
+            "explanation": "\\[-f=ma\\Rightarrow a=-f/m\\] ثابت، إذن الحركة مستقيمة متباطئة بانتظام.",
+            "graph_data": {
+              "diagram_type": "rough_horizontal_forces_2017",
+              "title": "القوى على BC",
+              "description": "كما في التصحيح: P وR وf، والاحتكاك معاكس لجهة الحركة."
+            }
+          },
+          {
+            "step_number": 3,
+            "title": "عند C",
+            "explanation": "\\[v_C^2=v_B^2-2\\frac{f}{m}BC\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "الصيغة",
+            "explanation": "\\[v_C^2=-2gr\\cos\\theta+2\\left(gr-\\frac{f}{m}BC\\right)\\]"
+          }
+        ],
+        "final_answer": "\\(a=-f/m\\)، و\\(v_C^2=a_1\\cos\\theta+b_1\\).",
+        "verification": "",
+        "common_mistakes": [],
+        "hints": [],
+        "methodology": {
+          "goal": "حل السؤال بدقة وبطريقة بسيطة ومنظمة.",
+          "method": "تحديد الجملة والمرجع، جرد القوى، كتابة القانون الحرفي، تحويل الوحدات، التعويض، ثم الاستنتاج.",
+          "bac_template": [
+            "تحديد الجملة الميكانيكية والمرجع والمعلم.",
+            "تمثيل القوى الخارجية واتجاهاتها.",
+            "كتابة القانون أو العلاقة قبل التعويض.",
+            "تحويل الوحدات إلى النظام الدولي.",
+            "إجراء الحساب وكتابة الوحدة.",
+            "صياغة استنتاج فيزيائي واضح."
+          ]
+        }
+      }
+    },
+    {
+      "id": "2017_ex52_q2",
+      "text": "2) استنتج r وf وأصغر زاوية.",
+      "axis_tags": [
+        "mechanical_energy_data_analysis",
+        "circular_path_motion"
+      ],
+      "display_order": 2,
+      "content_type": "question",
+      "solution": {
+        "strategy": "نقارن معادلة البيان بالعلاقة النظرية.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "معادلة البيان",
+            "explanation": "وفق الحل: \\[v_C^2=10\\cos\\theta+9\\] مع اختيار اتجاه الزاوية في الرسم."
+          },
+          {
+            "step_number": 2,
+            "title": "نصف القطر",
+            "explanation": "بالمطابقة \\(2gr=10\\Rightarrow r=0.5m\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "الاحتكاك",
+            "explanation": "\\[2(gr-fBC/m)=9\\Rightarrow f=0.25N\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "أصغر زاوية",
+            "explanation": "عند الوصول الحدي \\(v_C=0\\): \\[\\cos\\theta=0.9\\Rightarrow\\theta\\approx25.84^\\circ\\]"
+          }
+        ],
+        "final_answer": "\\(r=0.5m\\)، \\(f=0.25N\\)، و\\(\\theta_{min}\\approx25.84^\\circ\\).",
+        "verification": "مطابق للحل.",
+        "common_mistakes": [],
+        "hints": [],
+        "methodology": {
+          "goal": "حل السؤال بدقة وبطريقة بسيطة ومنظمة.",
+          "method": "تحديد الجملة والمرجع، جرد القوى، كتابة القانون الحرفي، تحويل الوحدات، التعويض، ثم الاستنتاج.",
+          "bac_template": [
+            "تحديد الجملة الميكانيكية والمرجع والمعلم.",
+            "تمثيل القوى الخارجية واتجاهاتها.",
+            "كتابة القانون أو العلاقة قبل التعويض.",
+            "تحويل الوحدات إلى النظام الدولي.",
+            "إجراء الحساب وكتابة الوحدة.",
+            "صياغة استنتاج فيزيائي واضح."
+          ]
+        }
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "statement_figure_policy": "يعرض فقط الشكل أو البيان الموجود فعلا في نص البكالوريا.",
+    "solution_figure_policy": "يعرض الرسم الموجود في التصحيح أو الرسم المطلوب صراحة لإنجاز السؤال.",
+    "renderer": "GraphRenderer"
+  },
+  "statement_graphs": [
+    {
+      "diagram_type": "quarter_circle_rough_2017",
+      "title": "الشكل 60 — ربع دائرة AB والطريق الخشن BC",
+      "description": "ربع دائرة مركزها O ونصف قطرها r، الموضع M والزاوية θ، ثم الجزء الأفقي الخشن BC."
+    },
+    {
+      "title": "الشكل 61 — vC² بدلالة cosθ",
+      "x_label": "cosθ",
+      "y_label": "vC² (m²/s²)",
+      "x_domain": [
+        0,
+        1
+      ],
+      "y_domain": [
+        0,
+        10
+      ],
+      "show_grid": true,
+      "series": [
+        {
+          "id": "line",
+          "label": "vC²",
+          "type": "line",
+          "data": [
+            {
+              "x": 0,
+              "y": 9
+            },
+            {
+              "x": 0.9,
+              "y": 0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

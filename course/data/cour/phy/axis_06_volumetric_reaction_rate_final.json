@@ -1,0 +1,1466 @@
+{
+  "tag": "volumetric_reaction_rate",
+  "title": "السرعة الحجمية للتحول الكيميائي",
+  "order": 6,
+  "is_active": true,
+  "branches": [
+    "math",
+    "science",
+    "math_tech"
+  ],
+  "content": {
+    "schema_version": "5.0",
+    "version": 1,
+    "language": "ar",
+    "direction": "rtl",
+    "math_format": "LaTeX",
+    "chapter_code": "chemical_kinetics",
+    "chapter_title": "المتابعة الزمنية لتطور تحول كيميائي",
+    "axis_tag": "volumetric_reaction_rate",
+    "axis_title": "السرعة الحجمية للتحول الكيميائي",
+    "difficulty": "medium",
+    "estimated_duration": "90 إلى 110 دقيقة",
+    "estimated_minutes": 100,
+    "source_note": "يركز هذا المحور على تعريف السرعة الحجمية، السرعة المتوسطة واللحظية، استخراج ميل المماس، والربط بمنحنيات التقدم والتركيز والحجم والضغط والناقلية والكتلة. لا يتناول زمن نصف التفاعل أو العوامل الحركية بالتفصيل لأنهما محوران لاحقان.",
+    "lesson_goal": "أن يفهم التلميذ السرعة الحجمية ويحسبها من منحنيات مختلفة باستعمال المماس والمعاملات الستوكيومترية والوحدات الصحيحة، حتى يحل أسئلة البكالوريا.",
+    "prerequisites": [
+      "تقدم التفاعل.",
+      "طرق المتابعة الزمنية.",
+      "قراءة المنحنيات.",
+      "مفهوم المشتقة وميل المماس.",
+      "تحويل mL إلى L."
+    ],
+    "learning_outcomes": [
+      "تعريف السرعة الحجمية.",
+      "تمييز المتوسطة واللحظية.",
+      "استخراج ميل المماس.",
+      "الحساب من x(t).",
+      "الحساب من تراكيز الأنواع.",
+      "مراعاة المعامل والإشارة.",
+      "الحساب من Vg أو P أو σ أو m.",
+      "مقارنة السرعات.",
+      "حل تمرين بكالوريا."
+    ],
+    "lesson_map": [
+      {
+        "part": 1,
+        "title": "التعريف والوحدة",
+        "focus": "معنى السرعة الحجمية"
+      },
+      {
+        "part": 2,
+        "title": "القاطع والمماس",
+        "focus": "المتوسطة واللحظية"
+      },
+      {
+        "part": 3,
+        "title": "سرعات الأنواع",
+        "focus": "الإشارة والمعامل"
+      },
+      {
+        "part": 4,
+        "title": "طرق المتابعة",
+        "focus": "الحجم والضغط والناقلية والكتلة"
+      },
+      {
+        "part": 5,
+        "title": "البكالوريا",
+        "focus": "الأخطاء وQuiz"
+      }
+    ],
+    "lesson_strategy": {
+      "main_idea": "السرعة الحجمية هي ميل التقدم مقسومًا على الحجم.",
+      "bac_skill": "العلاقة ثم المماس ثم الحجم والمعامل والوحدة.",
+      "common_obstacle": "نسيان القسمة على الحجم أو المعامل.",
+      "teaching_sequence": "فهم ← قانون ← مماس ← تراكيز ← قياسات ← بكالوريا ← Quiz.",
+      "interaction_model": "محاولة ثم شرح.",
+      "screen_rule": "فكرة واحدة في كل شاشة.",
+      "diagram_display_rule": "الرسم قبل السؤال البياني."
+    },
+    "learning_path": [
+      {
+        "id": "step_1",
+        "type": "motivation",
+        "title": "ماذا يعني أن تحولًا أسرع؟",
+        "content": {
+          "teacher": "التحول الأسرع يحقق مقدارًا أكبر من التقدم خلال المدة نفسها.",
+          "example": "خلال 10 s: تفاعل يحقق 0.05 mol أسرع من تفاعل يحقق 0.02 mol.",
+          "central_idea": "السرعة تقارن تغير التقدم بالزمن.",
+          "pre_question": {
+            "prompt": "في نفس المدة، أي تحول أسرع؟",
+            "options": [
+              "صاحب Δx الأكبر",
+              "صاحب Δx الأصغر",
+              "لا فرق"
+            ],
+            "correct_index": 0,
+            "feedback_correct": "صحيح.",
+            "feedback_wrong": "قارن مقدار التقدم.",
+            "hint": "المدة نفسها."
+          },
+          "quick_check": {
+            "question": "هل المدة وحدها تكفي؟",
+            "answer": "لا، نحتاج مقدار تغير التقدم.",
+            "explanation": "السرعة تعتمد على Δx وΔt.",
+            "wrong_answer_help": "ابحث عن التغير."
+          },
+          "takeaway": "سرعة التحول = تقدم خلال زمن."
+        }
+      },
+      {
+        "id": "step_2",
+        "type": "definition",
+        "title": "تعريف السرعة الحجمية",
+        "content": {
+          "teacher": "سرعة التفاعل هي dx/dt. والسرعة الحجمية هي سرعة التفاعل منسوبة إلى حجم المزيج.",
+          "diagram": {
+            "title": "تعريف السرعة الحجمية",
+            "description": "التقدم ثم الميل ثم القسمة على الحجم.",
+            "alt_text": "مخطط السرعة الحجمية.",
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"1050\" height=\"390\" viewBox=\"0 0 1050 390\">\n<rect width=\"100%\" height=\"100%\" fill=\"white\"/>\n<text x=\"525\" y=\"42\" text-anchor=\"middle\" font-size=\"30\" font-family=\"Arial\">من التقدم إلى السرعة الحجمية</text>\n<rect x=\"60\" y=\"110\" width=\"250\" height=\"140\" rx=\"22\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"3\"/>\n<text x=\"185\" y=\"165\" text-anchor=\"middle\" font-size=\"25\" font-family=\"Arial\">x(t)</text>\n<line x1=\"310\" y1=\"180\" x2=\"445\" y2=\"180\" stroke=\"#111827\" stroke-width=\"5\"/>\n<polygon points=\"445,180 418,163 418,197\" fill=\"#111827\"/>\n<text x=\"377\" y=\"150\" text-anchor=\"middle\" font-size=\"20\" font-family=\"Arial\">الميل</text>\n<rect x=\"445\" y=\"110\" width=\"250\" height=\"140\" rx=\"22\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"3\"/>\n<text x=\"570\" y=\"165\" text-anchor=\"middle\" font-size=\"26\" font-family=\"Arial\">dx/dt</text>\n<line x1=\"695\" y1=\"180\" x2=\"820\" y2=\"180\" stroke=\"#111827\" stroke-width=\"5\"/>\n<polygon points=\"820,180 793,163 793,197\" fill=\"#111827\"/>\n<text x=\"757\" y=\"150\" text-anchor=\"middle\" font-size=\"20\" font-family=\"Arial\">÷ V</text>\n<rect x=\"820\" y=\"95\" width=\"190\" height=\"170\" rx=\"22\" fill=\"#fefce8\" stroke=\"#ca8a04\" stroke-width=\"3\"/>\n<text x=\"915\" y=\"145\" text-anchor=\"middle\" font-size=\"23\" font-family=\"Arial\">السرعة الحجمية</text>\n<text x=\"915\" y=\"195\" text-anchor=\"middle\" font-size=\"25\" font-family=\"Arial\">v=(1/V)dx/dt</text>\n<text x=\"915\" y=\"235\" text-anchor=\"middle\" font-size=\"19\" font-family=\"Arial\">mol·L⁻¹·s⁻¹</text>\n<text x=\"525\" y=\"330\" text-anchor=\"middle\" font-size=\"22\" font-family=\"Arial\">معدل تقدم التفاعل في وحدة الزمن ووحدة الحجم</text>\n</svg>",
+            "render_mode": "inline_step",
+            "responsive": true
+          },
+          "relations": [
+            "\\(v_r=\\frac{dx}{dt}\\)",
+            "\\(v_{vol}=\\frac{1}{V}\\frac{dx}{dt}\\)"
+          ],
+          "pre_question": {
+            "prompt": "لماذا نقسم على V؟",
+            "options": [
+              "للحصول على سرعة لكل وحدة حجم",
+              "لإلغاء الزمن",
+              "لتغيير x"
+            ],
+            "correct_index": 0,
+            "feedback_correct": "صحيح.",
+            "feedback_wrong": "السرعة الحجمية منسوبة إلى الحجم.",
+            "hint": "فكر في لكل لتر."
+          },
+          "quick_check": {
+            "question": "ما الفرق بين dx/dt و(1/V)dx/dt؟",
+            "answer": "الأولى سرعة التفاعل والثانية السرعة الحجمية.",
+            "explanation": "الثانية تحتوي عامل الحجم.",
+            "wrong_answer_help": "ابحث عن 1/V."
+          },
+          "takeaway": "السرعة الحجمية = سرعة التفاعل ÷ الحجم.",
+          "graph_position": "before_question"
+        }
+      },
+      {
+        "id": "step_3",
+        "type": "units",
+        "title": "وحدة السرعة الحجمية",
+        "content": {
+          "teacher": "إذا كان x بالمول وV باللتر وt بالثانية، تكون الوحدة mol·L⁻¹·s⁻¹.",
+          "units": [
+            "\\(mol.L^{-1}.s^{-1}\\)",
+            "\\(mol.L^{-1}.min^{-1}\\)"
+          ],
+          "attention": "حوّل mL إلى L ووحّد وحدة الزمن.",
+          "pre_question": {
+            "prompt": "ما الوحدة الصحيحة؟",
+            "options": [
+              "mol·L⁻¹·s⁻¹",
+              "mol·s⁻¹",
+              "L·mol⁻¹"
+            ],
+            "correct_index": 0,
+            "feedback_correct": "صحيح.",
+            "feedback_wrong": "لا تنس الحجم.",
+            "hint": "mol/L/s."
+          },
+          "quick_check": {
+            "question": "ماذا تمثل mol·s⁻¹؟",
+            "answer": "سرعة التفاعل لا السرعة الحجمية.",
+            "explanation": "لا تحتوي L⁻¹.",
+            "wrong_answer_help": "راجع الأبعاد."
+          },
+          "takeaway": "يجب أن تظهر وحدة الحجم في المقام."
+        }
+      },
+      {
+        "id": "step_4",
+        "type": "comparison",
+        "title": "المتوسطة واللحظية",
+        "content": {
+          "teacher": "المتوسطة بين لحظتين، واللحظية عند لحظة واحدة.",
+          "relations": [
+            "\\(\\bar v=\\frac{1}{V}\\frac{x_2-x_1}{t_2-t_1}\\)",
+            "\\(v(t)=\\frac{1}{V}\\frac{dx}{dt}\\)"
+          ],
+          "pre_question": {
+            "prompt": "أي سرعة بين t1 وt2؟",
+            "options": [
+              "المتوسطة",
+              "اللحظية"
+            ],
+            "correct_index": 0,
+            "feedback_correct": "صحيح.",
+            "feedback_wrong": "اللحظية عند نقطة.",
+            "hint": "وجود لحظتين."
+          },
+          "quick_check": {
+            "question": "كيف نحصل على اللحظية بيانيًا؟",
+            "answer": "من ميل المماس.",
+            "explanation": "المشتقة هي ميل المماس.",
+            "wrong_answer_help": "لا تستعمل قاطعًا بعيدًا."
+          },
+          "takeaway": "قاطع للمتوسطة، مماس للحظية."
+        }
+      },
+      {
+        "id": "step_5",
+        "type": "method",
+        "title": "حساب السرعة المتوسطة",
+        "content": {
+          "teacher": "نحسب فرق التقدم وفرق الزمن ثم نقسم على الحجم.",
+          "algorithm": [
+            "حدد x1 وx2.",
+            "احسب Δx.",
+            "احسب Δt.",
+            "طبق Δx/(VΔt).",
+            "اكتب الوحدة."
+          ],
+          "example": "إذا x1=0.030 mol وx2=0.066 mol وV=0.200 L وΔt=30 s، فإن \\(\\bar v=6.0\\times10^{-3}mol.L^{-1}.s^{-1}\\).",
+          "pre_question": {
+            "prompt": "هل نستعمل x2+x1؟",
+            "options": [
+              "لا، الفرق",
+              "نعم"
+            ],
+            "correct_index": 0,
+            "feedback_correct": "صحيح.",
+            "feedback_wrong": "السرعة تعتمد على التغير.",
+            "hint": "اكتب Δx."
+          },
+          "quick_check": {
+            "question": "لماذا نحول 200 mL إلى 0.200 L؟",
+            "answer": "لتفادي خطأ بعامل 1000.",
+            "explanation": "العلاقة تستعمل L.",
+            "wrong_answer_help": "وحّد الوحدات."
+          },
+          "takeaway": "المتوسطة = Δx/(VΔt)."
+        }
+      },
+      {
+        "id": "step_6",
+        "type": "visual_method",
+        "title": "طريقة المماس",
+        "content": {
+          "teacher": "عند اللحظة المطلوبة نرسم المماس، نختار نقطتين واضحتين عليه، نحسب ميله، ثم نقسم على V.",
+          "diagram": {
+            "title": "استخراج السرعة من المماس",
+            "description": "مثلث Δx وΔt على المماس.",
+            "alt_text": "منحنى مع مماس.",
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"950\" height=\"520\" viewBox=\"0 0 950 520\">\n<rect width=\"100%\" height=\"100%\" fill=\"white\"/>\n<text x=\"475\" y=\"42\" text-anchor=\"middle\" font-size=\"29\" font-family=\"Arial\">استخراج السرعة اللحظية من المماس</text>\n<line x1=\"90\" y1=\"430\" x2=\"870\" y2=\"430\" stroke=\"#111827\" stroke-width=\"3\"/>\n<line x1=\"90\" y1=\"430\" x2=\"90\" y2=\"80\" stroke=\"#111827\" stroke-width=\"3\"/>\n<text x=\"865\" y=\"470\" text-anchor=\"end\" font-size=\"22\" font-family=\"Arial\">الزمن t</text>\n<text x=\"110\" y=\"105\" font-size=\"22\" font-family=\"Arial\">التقدم x</text>\n<path d=\"M90 430 C220 225,390 145,820 115\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"5\"/>\n<circle cx=\"380\" cy=\"190\" r=\"8\" fill=\"#dc2626\"/>\n<line x1=\"190\" y1=\"305\" x2=\"690\" y2=\"75\" stroke=\"#dc2626\" stroke-width=\"4\"/>\n<text x=\"675\" y=\"100\" font-size=\"21\" font-family=\"Arial\" fill=\"#991b1b\">المماس</text>\n<line x1=\"235\" y1=\"285\" x2=\"235\" y2=\"350\" stroke=\"#16a34a\" stroke-width=\"3\" stroke-dasharray=\"8 7\"/>\n<line x1=\"235\" y1=\"350\" x2=\"530\" y2=\"350\" stroke=\"#16a34a\" stroke-width=\"3\" stroke-dasharray=\"8 7\"/>\n<line x1=\"530\" y1=\"350\" x2=\"530\" y2=\"150\" stroke=\"#16a34a\" stroke-width=\"3\" stroke-dasharray=\"8 7\"/>\n<text x=\"382\" y=\"385\" text-anchor=\"middle\" font-size=\"21\" font-family=\"Arial\" fill=\"#14532d\">Δt</text>\n<text x=\"550\" y=\"255\" font-size=\"21\" font-family=\"Arial\" fill=\"#14532d\">Δx</text>\n<rect x=\"575\" y=\"355\" width=\"300\" height=\"95\" rx=\"18\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"3\"/>\n<text x=\"725\" y=\"395\" text-anchor=\"middle\" font-size=\"24\" font-family=\"Arial\">ميل المماس = Δx / Δt</text>\n<text x=\"725\" y=\"430\" text-anchor=\"middle\" font-size=\"21\" font-family=\"Arial\">ثم نقسم على V</text>\n</svg>",
+            "render_mode": "inline_step",
+            "responsive": true
+          },
+          "algorithm": [
+            "حدد اللحظة.",
+            "ارسم المماس.",
+            "اختر نقطتين على المماس.",
+            "احسب Δx/Δt.",
+            "اقسم على V."
+          ],
+          "pre_question": {
+            "prompt": "أين نختار النقطتين؟",
+            "options": [
+              "على المماس",
+              "على أي مكان من المنحنى"
+            ],
+            "correct_index": 0,
+            "feedback_correct": "صحيح.",
+            "feedback_wrong": "نقطتا المنحنى تعطيان متوسطًا.",
+            "hint": "اللحظية من المماس."
+          },
+          "quick_check": {
+            "question": "ماذا يمثل ميل المماس على x=f(t)؟",
+            "answer": "dx/dt.",
+            "explanation": "ثم نقسم على V.",
+            "wrong_answer_help": "هو سرعة التفاعل."
+          },
+          "takeaway": "ميل المماس ثم ÷V.",
+          "graph_position": "before_question"
+        }
+      },
+      {
+        "id": "step_7",
+        "type": "worked_example",
+        "title": "مثال بياني",
+        "content": {
+          "statement": "مماس يمر بـA(20s,0.030mol) وB(60s,0.078mol)، وV=0.250L.",
+          "steps": [
+            {
+              "step_number": 1,
+              "title": "الميل",
+              "calculation": "\\(dx/dt=(0.078-0.030)/(60-20)=1.2\\times10^{-3}mol.s^{-1}\\)"
+            },
+            {
+              "step_number": 2,
+              "title": "السرعة الحجمية",
+              "calculation": "\\(v=1.2\\times10^{-3}/0.250=4.8\\times10^{-3}mol.L^{-1}.s^{-1}\\)"
+            }
+          ],
+          "pre_question": {
+            "prompt": "النتيجة الأولى قبل ÷V تمثل:",
+            "options": [
+              "سرعة التفاعل",
+              "السرعة الحجمية"
+            ],
+            "correct_index": 0,
+            "feedback_correct": "صحيح.",
+            "feedback_wrong": "لا تحتوي L⁻¹.",
+            "hint": "راجع الوحدة."
+          },
+          "quick_check": {
+            "question": "ما الوحدة النهائية؟",
+            "answer": "mol·L⁻¹·s⁻¹.",
+            "explanation": "بعد القسمة على الحجم.",
+            "wrong_answer_help": "أضف L⁻¹."
+          },
+          "takeaway": "لا تتوقف عند الميل."
+        }
+      },
+      {
+        "id": "step_8",
+        "type": "graph_reading",
+        "title": "لماذا تقل السرعة مع الزمن؟",
+        "content": {
+          "teacher": "يكون منحنى x أكثر انحدارًا في البداية ثم يتسطح، لذلك تقل السرعة تدريجيًا.",
+          "graph": {
+            "title": "x=f(t)",
+            "type": "time_series",
+            "coordinate_system": {
+              "x_label": "t",
+              "y_label": "x"
+            },
+            "series": [
+              {
+                "id": "x",
+                "label": "x=f(t)",
+                "kind": "curve",
+                "data": [
+                  {
+                    "t": 0.0,
+                    "y": 0.0
+                  },
+                  {
+                    "t": 0.5,
+                    "y": 0.0125
+                  },
+                  {
+                    "t": 1.0,
+                    "y": 0.023698
+                  },
+                  {
+                    "t": 1.5,
+                    "y": 0.033729
+                  },
+                  {
+                    "t": 2.0,
+                    "y": 0.042716
+                  },
+                  {
+                    "t": 2.5,
+                    "y": 0.050766
+                  },
+                  {
+                    "t": 3.0,
+                    "y": 0.057978
+                  },
+                  {
+                    "t": 3.5,
+                    "y": 0.064438
+                  },
+                  {
+                    "t": 4.0,
+                    "y": 0.070226
+                  },
+                  {
+                    "t": 4.5,
+                    "y": 0.075411
+                  },
+                  {
+                    "t": 5.0,
+                    "y": 0.080055
+                  },
+                  {
+                    "t": 5.5,
+                    "y": 0.084216
+                  },
+                  {
+                    "t": 6.0,
+                    "y": 0.087944
+                  },
+                  {
+                    "t": 6.5,
+                    "y": 0.091283
+                  },
+                  {
+                    "t": 7.0,
+                    "y": 0.094274
+                  },
+                  {
+                    "t": 7.5,
+                    "y": 0.096954
+                  },
+                  {
+                    "t": 8.0,
+                    "y": 0.099355
+                  },
+                  {
+                    "t": 8.5,
+                    "y": 0.101505
+                  },
+                  {
+                    "t": 9.0,
+                    "y": 0.103432
+                  },
+                  {
+                    "t": 9.5,
+                    "y": 0.105158
+                  },
+                  {
+                    "t": 10.0,
+                    "y": 0.106704
+                  },
+                  {
+                    "t": 10.5,
+                    "y": 0.108089
+                  },
+                  {
+                    "t": 11.0,
+                    "y": 0.109329
+                  },
+                  {
+                    "t": 11.5,
+                    "y": 0.110441
+                  },
+                  {
+                    "t": 12.0,
+                    "y": 0.111437
+                  },
+                  {
+                    "t": 12.5,
+                    "y": 0.112329
+                  },
+                  {
+                    "t": 13.0,
+                    "y": 0.113128
+                  },
+                  {
+                    "t": 13.5,
+                    "y": 0.113844
+                  },
+                  {
+                    "t": 14.0,
+                    "y": 0.114485
+                  },
+                  {
+                    "t": 14.5,
+                    "y": 0.115059
+                  },
+                  {
+                    "t": 15.0,
+                    "y": 0.115574
+                  },
+                  {
+                    "t": 15.5,
+                    "y": 0.116035
+                  },
+                  {
+                    "t": 16.0,
+                    "y": 0.116448
+                  },
+                  {
+                    "t": 16.5,
+                    "y": 0.116818
+                  },
+                  {
+                    "t": 17.0,
+                    "y": 0.11715
+                  },
+                  {
+                    "t": 17.5,
+                    "y": 0.117446
+                  },
+                  {
+                    "t": 18.0,
+                    "y": 0.117712
+                  },
+                  {
+                    "t": 18.5,
+                    "y": 0.117951
+                  },
+                  {
+                    "t": 19.0,
+                    "y": 0.118164
+                  },
+                  {
+                    "t": 19.5,
+                    "y": 0.118355
+                  },
+                  {
+                    "t": 20.0,
+                    "y": 0.118527
+                  }
+                ]
+              }
+            ],
+            "render_mode": "inline_step",
+            "responsive": true
+          },
+          "interpretation": [
+            "البداية: ميل كبير.",
+            "مع الزمن: الميل يقل.",
+            "النهاية: الميل يقترب من الصفر."
+          ],
+          "pre_question": {
+            "prompt": "أين السرعة أكبر؟",
+            "options": [
+              "في البداية",
+              "عند الجزء الأفقي",
+              "متساوية"
+            ],
+            "correct_index": 0,
+            "feedback_correct": "صحيح.",
+            "feedback_wrong": "الميل أكبر أولًا.",
+            "hint": "قارن الانحدار."
+          },
+          "quick_check": {
+            "question": "ماذا تصبح السرعة قرب النهاية؟",
+            "answer": "تقترب من الصفر.",
+            "explanation": "المماس شبه أفقي.",
+            "wrong_answer_help": "ميل الأفقي صفر."
+          },
+          "takeaway": "كلما قل الميل قلت السرعة.",
+          "graph_position": "before_question"
+        }
+      },
+      {
+        "id": "step_9",
+        "type": "concept",
+        "title": "إشارة السرعة",
+        "content": {
+          "teacher": "x يزداد، لذلك السرعة الحجمية غير سالبة. لكن تركيز المتفاعل ينقص فتكون مشتقته سالبة.",
+          "rules": [
+            "\\(v\\ge0\\)",
+            "\\(d[A]/dt<0\\) لمتفاعل",
+            "\\(d[C]/dt>0\\) لناتج"
+          ],
+          "pre_question": {
+            "prompt": "إشارة d[A]/dt لمتفاعل يختفي؟",
+            "options": [
+              "سالبة",
+              "موجبة",
+              "صفر دائمًا"
+            ],
+            "correct_index": 0,
+            "feedback_correct": "صحيح.",
+            "feedback_wrong": "المنحنى متناقص.",
+            "hint": "الميل سالب."
+          },
+          "quick_check": {
+            "question": "لماذا نضع سالبًا أمام d[A]/dt؟",
+            "answer": "لجعل سرعة الاختفاء موجبة.",
+            "explanation": "المشتقة نفسها سالبة.",
+            "wrong_answer_help": "السالب يعكس الإشارة."
+          },
+          "takeaway": "سرعة التفاعل موجبة، ومشتقة المتفاعل سالبة."
+        }
+      },
+      {
+        "id": "step_10",
+        "type": "visual_relation",
+        "title": "سرعة الاختفاء والتشكل",
+        "content": {
+          "teacher": "عند ثبات الحجم، نحسب السرعة من تركيز أي نوع مع مراعاة الإشارة والمعامل.",
+          "diagram": {
+            "title": "علاقات الأنواع",
+            "description": "متفاعلات سالبة ونواتج موجبة.",
+            "alt_text": "علاقات السرعة حسب الأنواع.",
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"1080\" height=\"430\" viewBox=\"0 0 1080 430\">\n<rect width=\"100%\" height=\"100%\" fill=\"white\"/>\n<text x=\"540\" y=\"42\" text-anchor=\"middle\" font-size=\"29\" font-family=\"Arial\">السرعة من تراكيز الأنواع</text>\n<rect x=\"345\" y=\"75\" width=\"390\" height=\"80\" rx=\"20\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"3\"/>\n<text x=\"540\" y=\"125\" text-anchor=\"middle\" font-size=\"26\" font-family=\"Arial\">aA + bB → cC + dD</text>\n<rect x=\"40\" y=\"220\" width=\"235\" height=\"130\" rx=\"20\" fill=\"#fef2f2\" stroke=\"#dc2626\" stroke-width=\"3\"/>\n<text x=\"157\" y=\"265\" text-anchor=\"middle\" font-size=\"21\" font-family=\"Arial\">اختفاء A</text>\n<text x=\"157\" y=\"310\" text-anchor=\"middle\" font-size=\"21\" font-family=\"Arial\">v=-(1/a)d[A]/dt</text>\n<rect x=\"295\" y=\"220\" width=\"235\" height=\"130\" rx=\"20\" fill=\"#fef2f2\" stroke=\"#dc2626\" stroke-width=\"3\"/>\n<text x=\"412\" y=\"265\" text-anchor=\"middle\" font-size=\"21\" font-family=\"Arial\">اختفاء B</text>\n<text x=\"412\" y=\"310\" text-anchor=\"middle\" font-size=\"21\" font-family=\"Arial\">v=-(1/b)d[B]/dt</text>\n<rect x=\"550\" y=\"220\" width=\"235\" height=\"130\" rx=\"20\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"3\"/>\n<text x=\"667\" y=\"265\" text-anchor=\"middle\" font-size=\"21\" font-family=\"Arial\">تشكل C</text>\n<text x=\"667\" y=\"310\" text-anchor=\"middle\" font-size=\"21\" font-family=\"Arial\">v=(1/c)d[C]/dt</text>\n<rect x=\"805\" y=\"220\" width=\"235\" height=\"130\" rx=\"20\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"3\"/>\n<text x=\"922\" y=\"265\" text-anchor=\"middle\" font-size=\"21\" font-family=\"Arial\">تشكل D</text>\n<text x=\"922\" y=\"310\" text-anchor=\"middle\" font-size=\"21\" font-family=\"Arial\">v=(1/d)d[D]/dt</text>\n</svg>",
+            "render_mode": "inline_step",
+            "responsive": true
+          },
+          "relations": [
+            "\\(v=-\\frac1a\\frac{d[A]}{dt}\\)",
+            "\\(v=-\\frac1b\\frac{d[B]}{dt}\\)",
+            "\\(v=\\frac1c\\frac{d[C]}{dt}\\)",
+            "\\(v=\\frac1d\\frac{d[D]}{dt}\\)"
+          ],
+          "condition": "هذه العلاقات بدلالة التركيز تفترض ثبات حجم المزيج.",
+          "pre_question": {
+            "prompt": "في 2A→B، العلاقة الصحيحة؟",
+            "options": [
+              "v=-(1/2)d[A]/dt",
+              "v=-2d[A]/dt",
+              "v=d[A]/dt"
+            ],
+            "correct_index": 0,
+            "feedback_correct": "صحيح.",
+            "feedback_wrong": "اقسم على المعامل.",
+            "hint": "متفاعل وسالب ومعامله 2."
+          },
+          "quick_check": {
+            "question": "لماذا نقسم على المعامل؟",
+            "answer": "للحصول على سرعة التفاعل نفسها مهما كان النوع.",
+            "explanation": "الأنواع تتغير بنسب مختلفة.",
+            "wrong_answer_help": "راجع المعادلة."
+          },
+          "takeaway": "إشارة حسب النوع وقسمة على المعامل.",
+          "graph_position": "before_question"
+        }
+      },
+      {
+        "id": "step_11",
+        "type": "worked_example",
+        "title": "مثال من تركيز متفاعل",
+        "content": {
+          "statement": "في 2A+B→C، ميل مماس [A](t) يساوي -0.040 mol·L⁻¹·s⁻¹.",
+          "steps": [
+            {
+              "step_number": 1,
+              "calculation": "\\(v=-\\frac12d[A]/dt\\)"
+            },
+            {
+              "step_number": 2,
+              "calculation": "\\(v=-\\frac12(-0.040)=0.020mol.L^{-1}.s^{-1}\\)"
+            }
+          ],
+          "pre_question": {
+            "prompt": "لماذا نقسم على 2؟",
+            "options": [
+              "لأن معامل A=2",
+              "لأن V=2L",
+              "لأن A ناتج"
+            ],
+            "correct_index": 0,
+            "feedback_correct": "صحيح.",
+            "feedback_wrong": "راجع المعادلة.",
+            "hint": "المعامل أمام A."
+          },
+          "quick_check": {
+            "question": "هل النتيجة موجبة؟",
+            "answer": "نعم.",
+            "explanation": "السالبان يتلاشيان.",
+            "wrong_answer_help": "سرعة التفاعل غير سالبة."
+          },
+          "takeaway": "سرعة اختفاء النوع ليست دائمًا سرعة التفاعل."
+        }
+      },
+      {
+        "id": "step_12",
+        "type": "graph_reading",
+        "title": "السرعة من منحنى تركيز متفاعل",
+        "content": {
+          "teacher": "نحسب ميل المماس السالب ثم نطبق العامل -1/a.",
+          "graph": {
+            "title": "[A]=f(t)",
+            "type": "time_series",
+            "coordinate_system": {
+              "x_label": "t",
+              "y_label": "[A]"
+            },
+            "series": [
+              {
+                "id": "c",
+                "label": "[A]=f(t)",
+                "kind": "curve",
+                "data": [
+                  {
+                    "t": 0.0,
+                    "y": 0.4
+                  },
+                  {
+                    "t": 0.5,
+                    "y": 0.375
+                  },
+                  {
+                    "t": 1.0,
+                    "y": 0.352605
+                  },
+                  {
+                    "t": 1.5,
+                    "y": 0.332542
+                  },
+                  {
+                    "t": 2.0,
+                    "y": 0.314569
+                  },
+                  {
+                    "t": 2.5,
+                    "y": 0.298468
+                  },
+                  {
+                    "t": 3.0,
+                    "y": 0.284044
+                  },
+                  {
+                    "t": 3.5,
+                    "y": 0.271123
+                  },
+                  {
+                    "t": 4.0,
+                    "y": 0.259548
+                  },
+                  {
+                    "t": 4.5,
+                    "y": 0.249178
+                  },
+                  {
+                    "t": 5.0,
+                    "y": 0.239889
+                  },
+                  {
+                    "t": 5.5,
+                    "y": 0.231567
+                  },
+                  {
+                    "t": 6.0,
+                    "y": 0.224112
+                  },
+                  {
+                    "t": 6.5,
+                    "y": 0.217434
+                  },
+                  {
+                    "t": 7.0,
+                    "y": 0.211451
+                  },
+                  {
+                    "t": 7.5,
+                    "y": 0.206092
+                  },
+                  {
+                    "t": 8.0,
+                    "y": 0.201291
+                  },
+                  {
+                    "t": 8.5,
+                    "y": 0.19699
+                  },
+                  {
+                    "t": 9.0,
+                    "y": 0.193137
+                  },
+                  {
+                    "t": 9.5,
+                    "y": 0.189685
+                  },
+                  {
+                    "t": 10.0,
+                    "y": 0.186593
+                  },
+                  {
+                    "t": 10.5,
+                    "y": 0.183823
+                  },
+                  {
+                    "t": 11.0,
+                    "y": 0.181341
+                  },
+                  {
+                    "t": 11.5,
+                    "y": 0.179118
+                  },
+                  {
+                    "t": 12.0,
+                    "y": 0.177127
+                  },
+                  {
+                    "t": 12.5,
+                    "y": 0.175343
+                  },
+                  {
+                    "t": 13.0,
+                    "y": 0.173745
+                  },
+                  {
+                    "t": 13.5,
+                    "y": 0.172313
+                  },
+                  {
+                    "t": 14.0,
+                    "y": 0.17103
+                  },
+                  {
+                    "t": 14.5,
+                    "y": 0.169881
+                  },
+                  {
+                    "t": 15.0,
+                    "y": 0.168852
+                  },
+                  {
+                    "t": 15.5,
+                    "y": 0.16793
+                  },
+                  {
+                    "t": 16.0,
+                    "y": 0.167104
+                  },
+                  {
+                    "t": 16.5,
+                    "y": 0.166364
+                  },
+                  {
+                    "t": 17.0,
+                    "y": 0.165701
+                  },
+                  {
+                    "t": 17.5,
+                    "y": 0.165107
+                  },
+                  {
+                    "t": 18.0,
+                    "y": 0.164575
+                  },
+                  {
+                    "t": 18.5,
+                    "y": 0.164099
+                  },
+                  {
+                    "t": 19.0,
+                    "y": 0.163672
+                  },
+                  {
+                    "t": 19.5,
+                    "y": 0.163289
+                  },
+                  {
+                    "t": 20.0,
+                    "y": 0.162947
+                  }
+                ]
+              }
+            ],
+            "render_mode": "inline_step",
+            "responsive": true
+          },
+          "algorithm": [
+            "اقرأ معامل A.",
+            "احسب ميل المماس.",
+            "اضرب في -1/a.",
+            "اكتب الوحدة."
+          ],
+          "pre_question": {
+            "prompt": "إشارة الميل؟",
+            "options": [
+              "سالبة",
+              "موجبة"
+            ],
+            "correct_index": 0,
+            "feedback_correct": "صحيح.",
+            "feedback_wrong": "المنحنى يتناقص.",
+            "hint": "انظر إلى الاتجاه."
+          },
+          "quick_check": {
+            "question": "متى يقترب الميل من الصفر؟",
+            "answer": "قرب النهاية.",
+            "explanation": "المنحنى يصبح أفقيًا.",
+            "wrong_answer_help": "التركيز ثابت تقريبًا."
+          },
+          "takeaway": "ميل سالب ثم عامل سالب.",
+          "graph_position": "before_question"
+        }
+      },
+      {
+        "id": "step_13",
+        "type": "method",
+        "title": "السرعة من منحنى ناتج",
+        "content": {
+          "teacher": "للناتج يكون الميل موجبًا ونقسم على معامله.",
+          "relation": "\\(v=\\frac1c\\frac{d[C]}{dt}\\)",
+          "example": "في A→3C، إذا d[C]/dt=0.090 فإن v=0.030 mol·L⁻¹·s⁻¹.",
+          "pre_question": {
+            "prompt": "في A→3C، سرعة تشكل C تساوي:",
+            "options": [
+              "3 مرات سرعة التفاعل",
+              "سرعة التفاعل نفسها"
+            ],
+            "correct_index": 0,
+            "feedback_correct": "صحيح.",
+            "feedback_wrong": "معامل C=3.",
+            "hint": "راجع النسبة."
+          },
+          "quick_check": {
+            "question": "إشارة d[C]/dt؟",
+            "answer": "موجبة.",
+            "explanation": "الناتج يزداد.",
+            "wrong_answer_help": "منحناه متزايد."
+          },
+          "takeaway": "للناتج: الميل ÷ المعامل."
+        }
+      },
+      {
+        "id": "step_14",
+        "type": "method",
+        "title": "السرعة من حجم غاز",
+        "content": {
+          "teacher": "نكتب x بدلالة حجم الغاز ثم نشتق.",
+          "derivation": [
+            "\\(x=\\frac{V_g}{\\nu_gV_M}\\)",
+            "\\(v=\\frac{1}{V\\nu_gV_M}\\frac{dV_g}{dt}\\)"
+          ],
+          "attention": "V حجم المزيج، Vg حجم الغاز، VM الحجم المولي.",
+          "pre_question": {
+            "prompt": "أي V في العامل 1/V؟",
+            "options": [
+              "حجم المزيج",
+              "حجم الغاز",
+              "الحجم المولي"
+            ],
+            "correct_index": 0,
+            "feedback_correct": "صحيح.",
+            "feedback_wrong": "السرعة الحجمية منسوبة للمزيج.",
+            "hint": "لا تخلط الرموز."
+          },
+          "quick_check": {
+            "question": "ما الذي نأخذه من منحنى Vg؟",
+            "answer": "ميل المماس dVg/dt.",
+            "explanation": "ثم نعوض في العلاقة.",
+            "wrong_answer_help": "اللحظية من المماس."
+          },
+          "takeaway": "اكتب العلاقة قبل أخذ الميل."
+        }
+      },
+      {
+        "id": "step_15",
+        "type": "method",
+        "title": "السرعة من الضغط أو الناقلية",
+        "content": {
+          "teacher": "إذا كانت الكمية مرتبطة خطيًا بـx، نشتق العلاقة.",
+          "cases": [
+            {
+              "measurement": "الضغط",
+              "relation": "\\(P=P_0+K_px\\)",
+              "rate": "\\(v=\\frac{1}{VK_p}\\frac{dP}{dt}\\)"
+            },
+            {
+              "measurement": "الناقلية",
+              "relation": "\\(\\sigma=\\sigma_0+K_\\sigma x\\)",
+              "rate": "\\(v=\\frac{1}{VK_\\sigma}\\frac{d\\sigma}{dt}\\)"
+            }
+          ],
+          "attention": "إذا كان K سالبًا تكون مشتقة القياس سالبة لكن v موجبة.",
+          "pre_question": {
+            "prompt": "إذا σ=σ0-50x، إشارة dσ/dt؟",
+            "options": [
+              "سالبة",
+              "موجبة"
+            ],
+            "correct_index": 0,
+            "feedback_correct": "صحيح.",
+            "feedback_wrong": "x يزداد ومعامله سالب.",
+            "hint": "اشتق العلاقة."
+          },
+          "quick_check": {
+            "question": "هل نحفظ K؟",
+            "answer": "لا، يستنتج أو يعطى في التمرين.",
+            "explanation": "يعتمد على المعطيات.",
+            "wrong_answer_help": "ابدأ من العلاقة."
+          },
+          "takeaway": "علاقة خطية ثم اشتقاق."
+        }
+      },
+      {
+        "id": "step_16",
+        "type": "method",
+        "title": "السرعة من الكتلة",
+        "content": {
+          "teacher": "عند خروج غاز من جملة مفتوحة تنقص الكتلة.",
+          "derivation": [
+            "\\(m_g=m_0-m(t)\\)",
+            "\\(n_g=\\frac{m_0-m(t)}{M_g}=\\nu_gx\\)",
+            "\\(v=-\\frac{1}{V\\nu_gM_g}\\frac{dm}{dt}\\)"
+          ],
+          "pre_question": {
+            "prompt": "إشارة dm/dt؟",
+            "options": [
+              "سالبة",
+              "موجبة"
+            ],
+            "correct_index": 0,
+            "feedback_correct": "صحيح.",
+            "feedback_wrong": "الكتلة تنقص.",
+            "hint": "ميل منحنى متناقص."
+          },
+          "quick_check": {
+            "question": "لماذا تبقى v موجبة؟",
+            "answer": "لوجود الإشارة السالبة في العلاقة.",
+            "explanation": "سالب × سالب يعطي موجبًا.",
+            "wrong_answer_help": "راجع الاشتقاق."
+          },
+          "takeaway": "منحنى كتلة متناقص يعطي سرعة موجبة."
+        }
+      },
+      {
+        "id": "step_17",
+        "type": "bac_connection",
+        "title": "كيف يظهر المحور في البكالوريا؟",
+        "content": {
+          "question_types": [
+            {
+              "type": "تعريف السرعة الحجمية",
+              "method": "اكتب القانون والمعنى والوحدة."
+            },
+            {
+              "type": "سرعة متوسطة",
+              "method": "استعمل Δx/Δt."
+            },
+            {
+              "type": "سرعة لحظية",
+              "method": "ميل المماس ثم ÷V."
+            },
+            {
+              "type": "من تركيز نوع",
+              "method": "راع الإشارة والمعامل."
+            },
+            {
+              "type": "من حجم أو ضغط أو ناقلية",
+              "method": "اكتب علاقة القياس بـx ثم اشتق."
+            },
+            {
+              "type": "مقارنة سرعتين",
+              "method": "قارن ميل المماسين."
+            }
+          ],
+          "pre_question": {
+            "prompt": "أول خطوة مع منحنى σ؟",
+            "options": [
+              "كتابة σ بدلالة x",
+              "القسمة مباشرة على V",
+              "حساب xmax"
+            ],
+            "correct_index": 0,
+            "feedback_correct": "صحيح.",
+            "feedback_wrong": "لا يمكن تحويل ميل σ دون العلاقة.",
+            "hint": "اربط القياس بالتقدم."
+          },
+          "quick_check": {
+            "question": "ما العناصر الأساسية للحل؟",
+            "answer": "العلاقة، الميل، الحجم، المعامل، الوحدة.",
+            "explanation": "هذه تمنح العلامة كاملة.",
+            "wrong_answer_help": "لا تكتب النتيجة فقط."
+          },
+          "takeaway": "العلاقة ثم المماس ثم التعويض ثم الوحدة."
+        }
+      },
+      {
+        "id": "step_18",
+        "type": "common_mistakes",
+        "title": "الأخطاء الشائعة",
+        "content": {
+          "mistakes": [
+            {
+              "mistake": "نقطتان من المنحنى بدل المماس.",
+              "correction": "استعمل المماس للحظية."
+            },
+            {
+              "mistake": "نسيان ÷V.",
+              "correction": "الميل وحده سرعة تفاعل."
+            },
+            {
+              "mistake": "استعمال Vg بدل V.",
+              "correction": "V هو حجم المزيج."
+            },
+            {
+              "mistake": "نسيان المعامل.",
+              "correction": "اقسم حسب المعادلة."
+            },
+            {
+              "mistake": "سرعة سالبة.",
+              "correction": "راجع الإشارة."
+            },
+            {
+              "mistake": "خلط s وmin.",
+              "correction": "وحّد الزمن."
+            }
+          ],
+          "pre_question": {
+            "prompt": "ميل بوحدة mol·s⁻¹ يمثل:",
+            "options": [
+              "سرعة التفاعل",
+              "السرعة الحجمية"
+            ],
+            "correct_index": 0,
+            "feedback_correct": "صحيح.",
+            "feedback_wrong": "لا يحتوي L⁻¹.",
+            "hint": "راجع الوحدة."
+          },
+          "quick_check": {
+            "question": "إذا ظهرت سرعة سالبة؟",
+            "answer": "راجع الإشارة والمعامل.",
+            "explanation": "v يجب أن تكون غير سالبة.",
+            "wrong_answer_help": "ابحث عن متفاعل أو K سالب."
+          },
+          "takeaway": "تحقق من المماس والحجم والمعامل والإشارة والوحدة."
+        }
+      },
+      {
+        "id": "step_19",
+        "type": "mini_quiz",
+        "title": "اختبار قصير",
+        "content": {
+          "questions": [
+            {
+              "question": "تعريف v؟",
+              "choices": [
+                "(1/V)dx/dt",
+                "Vdx/dt",
+                "xV/t"
+              ],
+              "correct_answer": "(1/V)dx/dt",
+              "explanation": "سرعة التفاعل لكل حجم."
+            },
+            {
+              "question": "الوحدة؟",
+              "choices": [
+                "mol·L⁻¹·s⁻¹",
+                "mol·s⁻¹",
+                "L·s⁻¹"
+              ],
+              "correct_answer": "mol·L⁻¹·s⁻¹",
+              "explanation": "mol/L/s."
+            },
+            {
+              "question": "المتوسطة من؟",
+              "choices": [
+                "قاطع",
+                "مماس",
+                "قيمة x"
+              ],
+              "correct_answer": "قاطع",
+              "explanation": "Δx/Δt."
+            },
+            {
+              "question": "اللحظية من؟",
+              "choices": [
+                "ميل المماس",
+                "مساحة المنحنى",
+                "القيمة النهائية"
+              ],
+              "correct_answer": "ميل المماس",
+              "explanation": "المشتقة."
+            },
+            {
+              "question": "في 2A→B؟",
+              "choices": [
+                "v=-(1/2)d[A]/dt",
+                "v=-2d[A]/dt",
+                "v=d[A]/dt"
+              ],
+              "correct_answer": "v=-(1/2)d[A]/dt",
+              "explanation": "سالب وقسمة على 2."
+            },
+            {
+              "question": "قرب النهاية؟",
+              "choices": [
+                "v تقترب من الصفر",
+                "v تزيد",
+                "v سالبة"
+              ],
+              "correct_answer": "v تقترب من الصفر",
+              "explanation": "المنحنى أفقي."
+            },
+            {
+              "question": "n_g=0.06 ومعامل الغاز 2؟",
+              "choices": [
+                "x=0.03",
+                "x=0.06",
+                "x=0.12"
+              ],
+              "correct_answer": "x=0.03",
+              "explanation": "n=2x."
+            },
+            {
+              "question": "dm/dt لمنحنى كتلة متناقص؟",
+              "choices": [
+                "سالب",
+                "موجب"
+              ],
+              "correct_answer": "سالب",
+              "explanation": "الكتلة تنقص."
+            },
+            {
+              "question": "أكبر سرعة عند؟",
+              "choices": [
+                "المماس الأكثر انحدارًا",
+                "الأقرب للأفقي",
+                "أكبر x"
+              ],
+              "correct_answer": "المماس الأكثر انحدارًا",
+              "explanation": "السرعة هي الميل."
+            },
+            {
+              "question": "أول خطوة مع P أو σ؟",
+              "choices": [
+                "كتابة العلاقة بـx",
+                "القسمة على الزمن",
+                "حساب xmax"
+              ],
+              "correct_answer": "كتابة العلاقة بـx",
+              "explanation": "ثم نشتق."
+            }
+          ],
+          "scoring": {
+            "total": 10,
+            "mastery_threshold": 8,
+            "levels": [
+              {
+                "score": "9-10",
+                "level": "متقن",
+                "message": "جاهز للبكالوريا."
+              },
+              {
+                "score": "7-8",
+                "level": "جيد جدًا",
+                "message": "راجع المعاملات."
+              },
+              {
+                "score": "5-6",
+                "level": "متوسط",
+                "message": "راجع المماس."
+              },
+              {
+                "score": "0-4",
+                "level": "يحتاج مراجعة",
+                "message": "أعد التعريف."
+              }
+            ]
+          },
+          "takeaway": "ميل، حجم، معامل، إشارة، وحدة."
+        }
+      },
+      {
+        "id": "step_20",
+        "type": "summary",
+        "title": "الخلاصة",
+        "content": {
+          "key_ideas": [
+            "\\(v=(1/V)dx/dt\\).",
+            "القاطع للمتوسطة.",
+            "المماس للحظية.",
+            "المتفاعل: سالب ÷ المعامل.",
+            "الناتج: موجب ÷ المعامل.",
+            "اكتب علاقة القياس بـx قبل الاشتقاق.",
+            "السرعة تقل مع الزمن.",
+            "الوحدة أساسية."
+          ],
+          "method_template": [
+            "حدد الكمية.",
+            "اكتب علاقتها بـx.",
+            "حدد متوسط أم لحظي.",
+            "احسب الفرق أو الميل.",
+            "اقسم على V.",
+            "راع المعامل والإشارة.",
+            "اكتب الوحدة."
+          ],
+          "memory_tip": "علاقة → ميل → حجم → معامل → وحدة.",
+          "takeaway": "كل حساب سرعة يبدأ بفهم المنحنى."
+        }
+      }
+    ],
+    "final_assessment": {
+      "title": "تقويم ختامي",
+      "type": "final_assessment",
+      "statement": "نتابع تحولًا بقياس حجم غاز معامله 1. حجم المزيج V=200mL وVM=24.0L·mol⁻¹. عند t=40s يمر مماس Vg=f(t) بالنقطتين A(20s,0.48L) وB(70s,1.08L).",
+      "questions": [
+        "اكتب x بدلالة Vg.",
+        "استنتج علاقة v.",
+        "احسب dVg/dt.",
+        "حوّل V إلى L.",
+        "احسب v عند 40s.",
+        "حدد الوحدة.",
+        "فسر لماذا السرعة أكبر في البداية.",
+        "ماذا يحدث إذا كان معامل الغاز 2؟",
+        "اذكر خطأين شائعين."
+      ],
+      "answers": [
+        "\\(x=V_g/V_M\\).",
+        "\\(v=\\frac{1}{VV_M}\\frac{dV_g}{dt}\\).",
+        "\\(0.012L.s^{-1}\\).",
+        "\\(0.200L\\).",
+        "\\(2.5\\times10^{-3}mol.L^{-1}.s^{-1}\\).",
+        "mol·L⁻¹·s⁻¹.",
+        "لأن ميل المنحنى وتراكيز المتفاعلات أكبر في البداية.",
+        "تقسم النتيجة على 2.",
+        "نسيان تحويل mL، نسيان V، نسيان المعامل، أو اختيار نقاط ليست على المماس."
+      ],
+      "success_criteria": [
+        "علاقة صحيحة.",
+        "ميل صحيح.",
+        "تحويل الوحدات.",
+        "نتيجة موجبة.",
+        "معامل صحيح.",
+        "تفسير بياني."
+      ],
+      "grading": {
+        "total_points": 18,
+        "distribution": [
+          {
+            "question": 1,
+            "points": 2
+          },
+          {
+            "question": 2,
+            "points": 3
+          },
+          {
+            "question": 3,
+            "points": 2
+          },
+          {
+            "question": 4,
+            "points": 1
+          },
+          {
+            "question": 5,
+            "points": 3
+          },
+          {
+            "question": 6,
+            "points": 1
+          },
+          {
+            "question": 7,
+            "points": 2
+          },
+          {
+            "question": 8,
+            "points": 2
+          },
+          {
+            "question": 9,
+            "points": 2
+          }
+        ]
+      },
+      "hint_levels": [
+        "ابدأ بـn=Vg/VM.",
+        "اشتق بالنسبة للزمن.",
+        "استعمل نقطتين على المماس.",
+        "حوّل 200mL."
+      ],
+      "attempt_instruction": "حل على ورقة ثم افتح التصحيح."
+    },
+    "lesson_summary": {
+      "key_ideas": [
+        "الميل يعطي سرعة التغير.",
+        "القسمة على V تعطي السرعة الحجمية.",
+        "المعاملات والإشارات أساسية.",
+        "الوحدة والتحويل ضروريان."
+      ],
+      "method_template": [
+        "علاقة.",
+        "ميل.",
+        "حجم.",
+        "معامل.",
+        "وحدة."
+      ],
+      "memory_tip": "علاقة → ميل → حجم → معامل → وحدة."
+    },
+    "lesson_intro": {
+      "welcome": "ستتعلم كيف تحول شكل المنحنى إلى سرعة عددية.",
+      "big_idea": "الميل يخبرنا بسرعة التغير.",
+      "student_promise": "ستحسب السرعة من مختلف منحنيات البكالوريا."
+    },
+    "support_path": {
+      "if_student_does_not_understand": [
+        {
+          "problem": "الفرق بين السرعتين",
+          "action": "dx/dt سرعة تفاعل، وبعد ÷V تصبح حجمية."
+        },
+        {
+          "problem": "المماس",
+          "action": "اختر نقطتين على خط المماس واحسب Δy/Δt."
+        },
+        {
+          "problem": "سرعة سالبة",
+          "action": "راجع الإشارة والمعامل."
+        },
+        {
+          "problem": "V وVg وVM",
+          "action": "V للمزيج، Vg للغاز، VM الحجم المولي."
+        }
+      ]
+    },
+    "method_decision_tree": {
+      "start_question": "كيف أحسب v؟",
+      "branches": [
+        {
+          "condition": "منحنى x؟",
+          "yes": "ميل المماس ثم ÷V.",
+          "no": "تابع."
+        },
+        {
+          "condition": "منحنى تركيز؟",
+          "yes": "الميل ثم الإشارة والمعامل.",
+          "no": "تابع."
+        },
+        {
+          "condition": "منحنى Vg أو P أو σ أو m؟",
+          "yes": "اكتب العلاقة بـx ثم اشتق.",
+          "no": "راجع المعطيات."
+        },
+        {
+          "condition": "متوسطة؟",
+          "yes": "استعمل Δ.",
+          "no": "استعمل المماس."
+        }
+      ],
+      "golden_rule": "لا تحسب الميل قبل معرفة معنى الكمية وعلاقتها بـx."
+    },
+    "lesson_closure": {
+      "final_message": "حساب السرعة يبدأ دائمًا من العلاقة الصحيحة.",
+      "essential_reflex": "اكتب العلاقة، احسب الميل، اقسم على الحجم، راع المعامل والوحدة.",
+      "ready_for_next_lesson": true,
+      "next_lesson": "زمن نصف التفاعل"
+    },
+    "content_status": "ready_for_production",
+    "pedagogical_style": {
+      "target": "تلميذ بكالوريا جزائرية",
+      "language_level": "عربية بسيطة",
+      "explanation_method": "فكرة ثم قانون ثم مماس ثم تطبيقات ثم Quiz",
+      "platform_ready": true,
+      "requires_teacher_intervention": false
+    },
+    "quality_review": {
+      "json_validity_checked": true,
+      "scientific_accuracy_checked": true,
+      "pedagogical_progression_checked": true,
+      "latex_consistency_checked": true,
+      "inline_svg_checked": true,
+      "graph_data_checked": true,
+      "axis_scope_checked": true,
+      "quiz_checked": true,
+      "final_assessment_checked": true
+    },
+    "ui_preferences": {
+      "one_step_per_screen": true,
+      "ask_before_explain": true,
+      "require_attempt_before_solution": true,
+      "explain_wrong_answers": true,
+      "show_step_takeaway": true,
+      "show_progress": true,
+      "support_actions": [
+        "أعد الشرح",
+        "أعطني مثالًا أبسط",
+        "اشرحها بخطوات",
+        "تحقق من فهمي",
+        "أعطني تلميحًا"
+      ]
+    },
+    "presentation": {
+      "mode": "single_step",
+      "show_progress": true,
+      "require_understood_confirmation": true,
+      "show_transition_between_steps": true,
+      "compact_explanation": true,
+      "max_main_ideas_per_screen": 1
+    }
+  }
+}

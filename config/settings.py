@@ -42,7 +42,63 @@ DEBUG = os.getenv(
     "False",
 ).lower() == "true"
 
+import os
 
+
+
+# مدة صلاحية رابط التحقق: 24 ساعة
+EMAIL_VERIFICATION_MAX_AGE = int(
+    os.getenv(
+        "EMAIL_VERIFICATION_MAX_AGE",
+        "86400",
+    )
+)
+
+
+# أثناء التطوير يمكنك استعمال Console Backend
+# وسيظهر رابط التفعيل داخل Terminal.
+EMAIL_BACKEND = os.getenv(
+    "EMAIL_BACKEND",
+    "django.core.mail.backends.console.EmailBackend",
+)
+
+
+DEFAULT_FROM_EMAIL = os.getenv(
+    "DEFAULT_FROM_EMAIL",
+    "Bac Academy <no-reply@bacacademy.com>",
+)
+
+
+# إعدادات SMTP للإنتاج
+EMAIL_HOST = os.getenv(
+    "EMAIL_HOST",
+    "smtp.gmail.com",
+)
+
+EMAIL_PORT = int(
+    os.getenv(
+        "EMAIL_PORT",
+        "587",
+    )
+)
+
+EMAIL_USE_TLS = (
+    os.getenv(
+        "EMAIL_USE_TLS",
+        "True",
+    ).lower()
+    == "true"
+)
+
+EMAIL_HOST_USER = os.getenv(
+    "EMAIL_HOST_USER",
+    "",
+)
+
+EMAIL_HOST_PASSWORD = os.getenv(
+    "EMAIL_HOST_PASSWORD",
+    "",
+)
 
 # Application definition
 
@@ -107,17 +163,17 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 DATABASE_URL = os.getenv("DATABASE_URL")
 
-if DATABASE_URL:
-    DATABASES = {
-        "default": dj_database_url.parse(
-            DATABASE_URL,
-            conn_max_age=600,
-            conn_health_checks=True,
-            ssl_require=not DEBUG,
-        )
-    }
-else:
-    DATABASES = {
+# if DATABASE_URL:
+#     DATABASES = {
+#         "default": dj_database_url.parse(
+#             DATABASE_URL,
+#             conn_max_age=600,
+#             conn_health_checks=True,
+#             ssl_require=not DEBUG,
+#         )
+#     }
+# else:
+DATABASES = {
         "default": {
             "ENGINE": "django.db.backends.postgresql",
             "NAME": os.getenv(
@@ -183,6 +239,7 @@ SIMPLE_JWT = {
     "ACCESS_TOKEN_LIFETIME": timedelta(minutes=60*24),
     "REFRESH_TOKEN_LIFETIME": timedelta(days=7),
     "AUTH_HEADER_TYPES": ("Bearer",),
+
 }
 REST_FRAMEWORK = {
     # add drf_spectacular settings for swagger documentation

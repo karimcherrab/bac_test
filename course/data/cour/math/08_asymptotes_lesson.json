@@ -1,0 +1,208 @@
+{
+  "tag": "asymptotes",
+  "title": "المستقيمات المقاربة",
+  "order": 8,
+  "is_active": true,
+  "branches": [
+    "math",
+    "science",
+    "math_tech"
+  ],
+  "content": {
+    "version": 1,
+    "language": "ar",
+    "direction": "rtl",
+    "chapter_code": "functions",
+    "chapter_title": "دراسة الدوال",
+    "axis_tag": "asymptotes",
+    "axis_title": "المستقيمات المقاربة",
+    "estimated_minutes": 65,
+    "difficulty": "medium",
+    "source_note": "محور مبسط ومنظم لمنصة تعليمية موجهة إلى البكالوريا الجزائرية.",
+    "lesson_goal": "أن يستعمل التلميذ النهايات التي درسها سابقًا لإثبات المقاربات وتفسيرها بيانيًا.",
+    "prerequisites": [
+      "حساب النهايات",
+      "مجال التعريف",
+      "معادلة مستقيم"
+    ],
+    "learning_outcomes": [
+      "يثبت المقارب العمودي",
+      "يثبت المقارب الأفقي",
+      "يثبت المقارب المائل",
+      "يفسر النتائج بيانيًا"
+    ],
+    "learning_path": [
+      {
+        "id": "step_1",
+        "type": "rule",
+        "title": "المقارب العمودي",
+        "content": {
+          "rule": "إذا كانت \\(\\lim_{x\\to a}f(x)=\\pm\\infty\\) فإن \\(x=a\\) مقارب عمودي.",
+          "attention": "يجب تحديد الجهة اليمنى أو اليسرى عند الحاجة."
+        }
+      },
+      {
+        "id": "step_2",
+        "type": "rule",
+        "title": "المقارب الأفقي",
+        "content": {
+          "rule": "إذا كانت \\(\\lim_{x\\to\\pm\\infty}f(x)=L\\) فإن \\(y=L\\) مقارب أفقي في الجهة المدروسة."
+        }
+      },
+      {
+        "id": "step_3",
+        "type": "rule",
+        "title": "المقارب المائل",
+        "content": {
+          "rule": "إذا كانت \\(\\lim_{x\\to\\pm\\infty}[f(x)-(ax+b)]=0\\) فإن \\(y=ax+b\\) مقارب مائل.",
+          "method": [
+            "اقترح أو احسب a وb.",
+            "ادرس الفرق f(x)-(ax+b).",
+            "أثبت أن النهاية صفر."
+          ]
+        }
+      },
+      {
+        "id": "step_4",
+        "type": "worked_example",
+        "title": "مثال شامل",
+        "content": {
+          "statement": "لدالة f(x)=x+1+1/(x-2).",
+          "results": [
+            "x=2 مقارب عمودي لأن 1/(x-2) يتجه إلى ±∞.",
+            "y=x+1 مقارب مائل لأن f(x)-(x+1)=1/(x-2)→0 عند ±∞."
+          ]
+        }
+      },
+      {
+        "id": "step_5",
+        "type": "visualization",
+        "title": "منحنى مع مقارباته",
+        "content": {
+          "visualization": {
+            "type": "function_with_asymptotes",
+            "renderer": "jsx_svg_or_recharts",
+            "function": {
+              "expression": "x+1+1/(x-2)",
+              "domain_segments": [
+                [
+                  -5,
+                  1.95
+                ],
+                [
+                  2.05,
+                  7
+                ]
+              ],
+              "sample_step": 0.03
+            },
+            "asymptotes": [
+              {
+                "type": "vertical",
+                "equation": "x=2",
+                "x": 2
+              },
+              {
+                "type": "oblique",
+                "equation": "y=x+1",
+                "expression": "x+1"
+              }
+            ],
+            "axes": {
+              "x_min": -5,
+              "x_max": 7,
+              "y_min": -8,
+              "y_max": 10
+            }
+          }
+        }
+      }
+    ],
+    "graph": {
+      "engine_hint": "الرسم اختياري ويستعمل للتوضيح.",
+      "coordinate_system": "cartesian",
+      "series": [],
+      "react_rendering_notes": [
+        "استعمل parser رياضيًا آمنًا بدل eval.",
+        "اجعل مجال الرسم قابلًا للتخصيص.",
+        "ادعم اتجاه RTL."
+      ]
+    },
+    "final_assessment": {
+      "question": "إذا كان lim[f(x)-(2x-3)]=0 عند +∞، فما المقارب؟",
+      "expected_answer": "\\(y=2x-3\\) مقارب مائل عند +∞.",
+      "success_criteria": [
+        "كتابة المعادلة",
+        "ذكر أنه مائل",
+        "ذكر الجهة"
+      ],
+      "hint_levels": [
+        "الفرق مع مستقيم يتجه إلى صفر."
+      ]
+    },
+    "lesson_summary": {
+      "key_ideas": [
+        "نهاية لا نهائية عند a تعطي x=a.",
+        "نهاية منتهية عند اللانهاية تعطي y=L.",
+        "نهاية الفرق صفر تعطي مقاربًا مائلًا."
+      ],
+      "method_template": [
+        "حدد الجهة.",
+        "اكتب النهاية المناسبة.",
+        "استنتج معادلة المقارب.",
+        "فسر هندسيًا."
+      ]
+    },
+    "dynamic_profile": {
+      "lesson_profile": "شرح بسيط ثم تطبيق موجه ثم سؤال بكالوريا",
+      "profile_reason": "المتعلم يحتاج إلى فهم الفكرة، ثم حفظ المنهجية، ثم استعمالها في تمرين."
+    },
+    "schema_version": "3.0",
+    "content_status": "ready",
+    "pedagogical_style": "simple_progressive_bac_oriented",
+    "lesson_intro": {
+      "title": "المقارب مستقيم يقترب منه المنحنى",
+      "teacher": "المقارب يصف سلوك المنحنى قرب قيمة ممنوعة أو عند اللانهاية.",
+      "central_idea": "نوع النهاية يحدد نوع المقارب.",
+      "memory_tip": "عند عدد: عمودي، عند اللانهاية: أفقي أو مائل."
+    },
+    "support_path": {
+      "when_student_stuck": [
+        "أعد قراءة الفكرة المركزية.",
+        "طبّق المثال القصير خطوة بخطوة.",
+        "استعمل التلميح الأول قبل إظهار الحل."
+      ],
+      "quick_actions": [
+        "أعد الشرح",
+        "أعطني مثالًا",
+        "اعرض الخطوات",
+        "أعطني تلميحًا"
+      ]
+    },
+    "method_decision_tree": {
+      "start_question": "ما نوع السؤال؟",
+      "branches": [
+        {
+          "condition": "سؤال مباشر",
+          "action": "طبق القاعدة الأساسية."
+        },
+        {
+          "condition": "سؤال مركب",
+          "action": "قسّم المطلوب إلى خطوات."
+        }
+      ],
+      "golden_rule": "حدد نوع السؤال قبل البدء."
+    },
+    "lesson_closure": {
+      "student_message": "لا تنتقل إلى المحور التالي حتى تستطيع تطبيق المنهجية دون مساعدة.",
+      "mastery_rule": "نجاح في الاختبار القصير ثم حل تمرين تطبيقي مستقل."
+    },
+    "quality_review": {
+      "simple_arabic": true,
+      "rtl_ready": true,
+      "latex_ready": true,
+      "react_visualization_ready": true,
+      "bac_oriented": true
+    }
+  }
+}

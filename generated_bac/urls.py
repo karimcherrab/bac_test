@@ -5,6 +5,7 @@ from .views import (
     GenerateBacSolutionAPIView,
     GeneratedBacExerciseDetailAPIView,
     MyGeneratedBacExercisesAPIView,
+    ReExplainBacQuestionSolutionAPIView,
 )
 
 app_name = "generated_bac"
@@ -29,5 +30,10 @@ urlpatterns = [
         "<int:exercise_id>/generate-solution/",
         GenerateBacSolutionAPIView.as_view(),
         name="generate-solution",
+    ),
+    path(
+        "<int:exercise_id>/questions/<str:question_id>/re-explain-solution/",
+        ReExplainBacQuestionSolutionAPIView.as_view(),
+        name="re-explain-question-solution",
     ),
 ]

@@ -142,3 +142,84 @@ class GeneratedBacExercise(models.Model):
     @property
     def has_solution(self):
         return bool(self.solution)
+
+
+class GeneratedBacQuestionReExplanation(models.Model):
+    """
+    تاريخ إعادة شرح حل سؤال واحد.
+
+    كل ضغطة على زر "لم أفهم الحل" تنشئ سجلًا جديدًا،
+    لذلك يمكن للطالب الرجوع لاحقًا ومشاهدة كل الشروحات السابقة.
+    """
+
+    student = models.ForeignKey(
+        Student,
+        on_delete=models.CASCADE,
+        related_name="generated_bac_re_explanations",
+        verbose_name="الطالب",
+    )
+
+    generated_exercise = models.ForeignKey(
+        GeneratedBacExercise,
+        on_delete=models.CASCADE,
+        related_name="re_explanations",
+        verbose_name="التمرين المولد",
+    )
+
+    question_id = models.CharField(
+        max_length=80,
+        db_index=True,
+        verbose_name="معرف السؤال",
+    )
+
+    attempt_number = models.PositiveIntegerField(
+        default=1,
+        verbose_name="رقم إعادة الشرح",
+    )
+
+    explanation = models.JSONField(
+        default=dict,
+        verbose_name="إعادة الشرح",
+    )
+
+    model_name = models.CharField(
+        max_length=150,
+        blank=True,
+        default="",
+    )
+
+    created_at = models.DateTimeField(
+        auto_now_add=True,
+        db_index=True,
+    )
+
+    class Meta:
+        db_table = "generated_bac_question_re_explanation"
+        ordering = ["question_id", "attempt_number", "created_at"]
+        indexes = [
+            models.Index(
+                fields=[
+                    "student",
+                    "generated_exercise",
+                    "question_id",
+                ],
+                name="gen_bac_reexp_lookup_idx",
+            ),
+        ]
+        constraints = [
+            models.UniqueConstraint(
+                fields=[
+                    "generated_exercise",
+                    "question_id",
+                    "attempt_number",
+                ],
+                name="uniq_gen_bac_reexp_attempt",
+            ),
+        ]
+
+    def __str__(self):
+        return (
+            f"{self.generated_exercise_id} - "
+            f"{self.question_id} - "
+            f"attempt {self.attempt_number}"
+        )

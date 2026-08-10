@@ -206,10 +206,6 @@ class BacReferenceSelector:
                         question.get("text", ""),
                         750,
                     ),
-                    "axis_tags": question.get(
-                        "axis_tags",
-                        [],
-                    ),
                     "method_goal": methodology.get(
                         "goal",
                         "",
@@ -251,7 +247,6 @@ class BacReferenceSelector:
             "title": exercise.title,
             "branch_codes": exercise.branch_codes,
             "chapter_id": exercise.chapter_id,
-            "axis_tags": exercise.axis_tags,
             "statement": self._truncate(
                 content.get("statement", ""),
                 1500,

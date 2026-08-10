@@ -99,6 +99,7 @@ class Axis(models.Model):
 
     tag = models.CharField(
         max_length=100,
+        unique=True,
     )
 
     title = models.CharField(
@@ -585,3 +586,71 @@ from django.db import models
 #             f"{self.exercise_number} - "
 #             f"{self.title}"
 #         )
+
+
+# ============================================================
+# AI - حل مبسط محفوظ لكل طالب ولكل سؤال
+# ============================================================
+
+class StudentQuestionSimpleSolution(models.Model):
+    """
+    يحتفظ بآخر حل مبسط أنشأه الذكاء الاصطناعي لطالب محدد ولسؤال محدد.
+
+    لكل زوج (student, question) يوجد سجل واحد فقط.
+    عند إعادة التوليد يتم تحديث نفس السجل بدل إنشاء سجل جديد.
+    """
+
+    student = models.ForeignKey(
+        Student,
+        on_delete=models.CASCADE,
+        related_name="question_simple_solutions",
+    )
+
+    question = models.ForeignKey(
+        Question,
+        on_delete=models.CASCADE,
+        related_name="student_simple_solutions",
+    )
+
+    solution = models.JSONField(
+        default=dict,
+        blank=True,
+    )
+
+    model_name = models.CharField(
+        max_length=150,
+        blank=True,
+        default="",
+    )
+
+    raw_response = models.JSONField(
+        default=dict,
+        blank=True,
+    )
+
+    created_at = models.DateTimeField(
+        auto_now_add=True,
+    )
+
+    updated_at = models.DateTimeField(
+        auto_now=True,
+    )
+
+    class Meta:
+        db_table = "student_question_simple_solutions"
+        ordering = ["-updated_at"]
+        constraints = [
+            models.UniqueConstraint(
+                fields=["student", "question"],
+                name="unique_student_question_simple_solution",
+            ),
+        ]
+        indexes = [
+            models.Index(
+                fields=["student", "question"],
+                name="stud_q_simple_sol_idx",
+            ),
+        ]
+
+    def __str__(self):
+        return f"{self.student_id} - {self.question_id}"

@@ -2,33 +2,21 @@ from rest_framework import serializers
 
 from course.models import Branch, Chapter
 
-from .models import GeneratedBacExercise
+from .models import (
+    GeneratedBacExercise,
+    GeneratedBacQuestionReExplanation,
+)
 
 
 class GenerateBacExerciseRequestSerializer(serializers.Serializer):
-    """
-    التلميذ يرسل الوحدة والشعبة فقط.
-
-    references_count اختياري، ويمكن عدم إرساله.
-    selection_strategy اختياري، والوضع الافتراضي يختار
-    تمارين عشوائية مع تنويع السنوات.
-    """
-
-    chapter_id = serializers.IntegerField(
-        min_value=1,
-    )
-
-    branch_code = serializers.CharField(
-        max_length=100,
-    )
-
+    chapter_id = serializers.IntegerField(min_value=1)
+    branch_code = serializers.CharField(max_length=100)
     references_count = serializers.IntegerField(
         min_value=1,
         max_value=3,
         default=1,
         required=False,
     )
-
     selection_strategy = serializers.ChoiceField(
         choices=[
             "diverse_random",
@@ -41,45 +29,60 @@ class GenerateBacExerciseRequestSerializer(serializers.Serializer):
 
     def validate_chapter_id(self, value):
         if not Chapter.objects.filter(
-            id=value,
+            id=value
         ).exists():
             raise serializers.ValidationError(
                 "الوحدة غير موجودة."
             )
-
         return value
 
     def validate_branch_code(self, value):
         value = value.strip()
-
         if not value:
             raise serializers.ValidationError(
                 "رمز الشعبة مطلوب."
             )
-
         if not Branch.objects.filter(
-            code=value,
+            code=value
         ).exists():
             raise serializers.ValidationError(
                 "الشعبة غير موجودة."
             )
-
         return value
 
 
-class GenerateBacSolutionRequestSerializer(serializers.Serializer):
+class GenerateBacSolutionRequestSerializer(
+    serializers.Serializer
+):
     regenerate = serializers.BooleanField(
         default=False,
         required=False,
     )
 
 
-class GeneratedBacExerciseSerializer(serializers.ModelSerializer):
+class GeneratedBacQuestionReExplanationSerializer(
+    serializers.ModelSerializer
+):
+    class Meta:
+        model = GeneratedBacQuestionReExplanation
+        fields = [
+            "id",
+            "question_id",
+            "attempt_number",
+            "explanation",
+            "created_at",
+        ]
+
+
+class GeneratedBacExerciseSerializer(
+    serializers.ModelSerializer
+):
     chapter = serializers.SerializerMethodField()
     branch = serializers.SerializerMethodField()
     has_solution = serializers.BooleanField(
-        read_only=True,
+        read_only=True
     )
+    re_explanations = serializers.SerializerMethodField()
 
     class Meta:
         model = GeneratedBacExercise
@@ -93,6 +96,7 @@ class GeneratedBacExerciseSerializer(serializers.ModelSerializer):
             "selection_strategy",
             "chapter",
             "branch",
+            "re_explanations",
             "created_at",
             "updated_at",
         ]
@@ -118,3 +122,18 @@ class GeneratedBacExerciseSerializer(serializers.ModelSerializer):
             "code": obj.branch.code,
             "name": obj.branch.name,
         }
+
+    def get_re_explanations(self, obj):
+        # إذا استعملنا prefetch_related سيستفيد Django منه تلقائيًا.
+        queryset = obj.re_explanations.all().order_by(
+            "question_id",
+            "attempt_number",
+            "created_at",
+        )
+
+        return (
+            GeneratedBacQuestionReExplanationSerializer(
+                queryset,
+                many=True,
+            ).data
+        )

@@ -178,16 +178,38 @@ class SubjectListView(BaseStudentAPIView):
             },
             status=status.HTTP_201_CREATED,
         )
-class SubjectDetailView(BaseStudentAPIView):
+
+
+from django.shortcuts import (
+    get_object_or_404,
+)
+
+from rest_framework import status
+
+from rest_framework.response import (
+    Response,
+)
+
+from course.models import Subject
+
+from course.serializers import (
+    SubjectDetailSerializer,
+)
+
+
+
+class SubjectDetailView(
+    BaseStudentAPIView,
+):
     serializer_class = SubjectDetailSerializer
 
-    def get(self, request, subject_id):
+    def get(
+        self,
+        request,
+        subject_id,
+    ):
         subject = get_object_or_404(
-            Subject.objects.prefetch_related(
-                "branches",
-                "chapters",
-                "chapters__axes",
-            ),
+            Subject,
             id=subject_id,
         )
 
@@ -201,7 +223,6 @@ class SubjectDetailView(BaseStudentAPIView):
             },
             status=status.HTTP_200_OK,
         )
-
 
 class SubjectByBranchView(BaseStudentAPIView):
     serializer_class = SubjectSummarySerializer
@@ -260,7 +281,7 @@ class SubjectByBranchView(BaseStudentAPIView):
                 "subjects": serializer.data,
             },
             status=status.HTTP_200_OK,
-        ) 
+        )
 
 
 
@@ -701,7 +722,11 @@ from .serializers import (
 
 class AxisQuestionListView(BaseStudentAPIView):
     """
-    Retourne toutes les questions d'un axe avec leur solution JSON.
+    Retourne toutes les questions d'un axe avec :
+
+    - solution
+    - graph_data
+    - documents
 
     URL :
     GET /api/course/axes/<axis_id>/questions/
@@ -712,12 +737,66 @@ class AxisQuestionListView(BaseStudentAPIView):
     ?question_type=bac
     ?has_solution=true
     ?has_graph=true
+    ?has_documents=true
     ?is_standalone=true
     """
 
     serializer_class = QuestionDetailSerializer
 
+    TRUE_VALUES = {
+        "true",
+        "1",
+        "yes",
+        "oui",
+    }
+
+    FALSE_VALUES = {
+        "false",
+        "0",
+        "no",
+        "non",
+    }
+
+    def parse_boolean_param(
+        self,
+        value,
+        parameter_name,
+    ):
+        """
+        Convertit un paramètre query en bool.
+
+        Retourne :
+        - True
+        - False
+        - None si paramètre absent
+
+        Lève ValueError si valeur invalide.
+        """
+
+        if value is None:
+            return None
+
+        normalized = (
+            str(value)
+            .strip()
+            .lower()
+        )
+
+        if normalized in self.TRUE_VALUES:
+            return True
+
+        if normalized in self.FALSE_VALUES:
+            return False
+
+        raise ValueError(
+            f"{parameter_name} doit être true ou false."
+        )
+
     def get(self, request, axis_id):
+        # =====================================================
+        # AXIS
+        # =====================================================
+
         axis = get_object_or_404(
             Axis.objects.select_related(
                 "chapter",
@@ -727,6 +806,10 @@ class AxisQuestionListView(BaseStudentAPIView):
             is_active=True,
             chapter__is_active=True,
         )
+
+        # =====================================================
+        # QUERYSET
+        # =====================================================
 
         questions = (
             Question.objects
@@ -741,6 +824,10 @@ class AxisQuestionListView(BaseStudentAPIView):
                 is_active=True,
             )
         )
+
+        # =====================================================
+        # PARAMS
+        # =====================================================
 
         year = request.query_params.get(
             "year"
@@ -762,15 +849,26 @@ class AxisQuestionListView(BaseStudentAPIView):
             "has_graph"
         )
 
+        has_documents = request.query_params.get(
+            "has_documents"
+        )
+
         is_standalone = request.query_params.get(
             "is_standalone"
         )
 
-        # Filtre année
+        # =====================================================
+        # YEAR
+        # =====================================================
+
         if year:
             try:
                 parsed_year = int(year)
-            except ValueError:
+
+            except (
+                TypeError,
+                ValueError,
+            ):
                 return Response(
                     {
                         "detail": (
@@ -785,8 +883,17 @@ class AxisQuestionListView(BaseStudentAPIView):
                 year=parsed_year,
             )
 
-        # Filtre difficulté
+        # =====================================================
+        # DIFFICULTY
+        # =====================================================
+
         if difficulty:
+            difficulty = (
+                difficulty
+                .strip()
+                .lower()
+            )
+
             allowed_difficulties = {
                 choice[0]
                 for choice in Question.DIFFICULTY_CHOICES
@@ -807,8 +914,17 @@ class AxisQuestionListView(BaseStudentAPIView):
                 difficulty=difficulty,
             )
 
-        # Filtre type de question
+        # =====================================================
+        # QUESTION TYPE
+        # =====================================================
+
         if question_type:
+            question_type = (
+                question_type
+                .strip()
+                .lower()
+            )
+
             allowed_types = {
                 choice[0]
                 for choice in Question.QUESTION_TYPE_CHOICES
@@ -829,118 +945,134 @@ class AxisQuestionListView(BaseStudentAPIView):
                 question_type=question_type,
             )
 
-        # Filtre présence de solution
-        if has_solution is not None:
-            normalized_has_solution = (
-                has_solution
-                .strip()
-                .lower()
+        # =====================================================
+        # HAS SOLUTION
+        # =====================================================
+
+        try:
+            parsed_has_solution = (
+                self.parse_boolean_param(
+                    has_solution,
+                    "has_solution",
+                )
             )
 
-            if normalized_has_solution in {
-                "true",
-                "1",
-                "yes",
-            }:
-                questions = questions.exclude(
+        except ValueError as exc:
+            return Response(
+                {
+                    "detail": str(exc)
+                },
+                status=status.HTTP_400_BAD_REQUEST,
+            )
+
+        if parsed_has_solution is True:
+            questions = (
+                questions
+                .exclude(
                     solution={},
                 )
-
-            elif normalized_has_solution in {
-                "false",
-                "0",
-                "no",
-            }:
-                questions = questions.filter(
-                    Q(solution={})
-                    | Q(solution__isnull=True)
+                .exclude(
+                    solution__isnull=True,
                 )
-
-            else:
-                return Response(
-                    {
-                        "detail": (
-                            "has_solution doit être "
-                            "true ou false."
-                        )
-                    },
-                    status=status.HTTP_400_BAD_REQUEST,
-                )
-
-        # Filtre présence de graphe
-        if has_graph is not None:
-            normalized_has_graph = (
-                has_graph
-                .strip()
-                .lower()
             )
 
-            if normalized_has_graph in {
-                "true",
-                "1",
-                "yes",
-            }:
-                questions = questions.exclude(
+        elif parsed_has_solution is False:
+            questions = questions.filter(
+                Q(solution={})
+                | Q(solution__isnull=True)
+            )
+
+        # =====================================================
+        # HAS GRAPH
+        # =====================================================
+
+        try:
+            parsed_has_graph = (
+                self.parse_boolean_param(
+                    has_graph,
+                    "has_graph",
+                )
+            )
+
+        except ValueError as exc:
+            return Response(
+                {
+                    "detail": str(exc)
+                },
+                status=status.HTTP_400_BAD_REQUEST,
+            )
+
+        if parsed_has_graph is True:
+            questions = (
+                questions
+                .exclude(
                     graph_data={},
                 )
-
-            elif normalized_has_graph in {
-                "false",
-                "0",
-                "no",
-            }:
-                questions = questions.filter(
-                    Q(graph_data={})
-                    | Q(graph_data__isnull=True)
+                .exclude(
+                    graph_data__isnull=True,
                 )
-
-            else:
-                return Response(
-                    {
-                        "detail": (
-                            "has_graph doit être "
-                            "true ou false."
-                        )
-                    },
-                    status=status.HTTP_400_BAD_REQUEST,
-                )
-
-        # Filtre question autonome
-        if is_standalone is not None:
-            normalized_is_standalone = (
-                is_standalone
-                .strip()
-                .lower()
             )
 
-            if normalized_is_standalone in {
-                "true",
-                "1",
-                "yes",
-            }:
-                questions = questions.filter(
-                    is_standalone=True,
-                )
+        elif parsed_has_graph is False:
+            questions = questions.filter(
+                Q(graph_data={})
+                | Q(graph_data__isnull=True)
+            )
 
-            elif normalized_is_standalone in {
-                "false",
-                "0",
-                "no",
-            }:
-                questions = questions.filter(
-                    is_standalone=False,
-                )
+        # =====================================================
+        # HAS DOCUMENTS
+        # =====================================================
 
-            else:
-                return Response(
-                    {
-                        "detail": (
-                            "is_standalone doit être "
-                            "true ou false."
-                        )
-                    },
-                    status=status.HTTP_400_BAD_REQUEST,
+        try:
+            parsed_has_documents = (
+                self.parse_boolean_param(
+                    has_documents,
+                    "has_documents",
                 )
+            )
+
+        except ValueError as exc:
+            return Response(
+                {
+                    "detail": str(exc)
+                },
+                status=status.HTTP_400_BAD_REQUEST,
+            )
+
+        if parsed_has_documents is not None:
+            questions = self.filter_by_documents(
+                questions=questions,
+                has_documents=parsed_has_documents,
+            )
+
+        # =====================================================
+        # IS STANDALONE
+        # =====================================================
+
+        try:
+            parsed_is_standalone = (
+                self.parse_boolean_param(
+                    is_standalone,
+                    "is_standalone",
+                )
+            )
+
+        except ValueError as exc:
+            return Response(
+                {
+                    "detail": str(exc)
+                },
+                status=status.HTTP_400_BAD_REQUEST,
+            )
+
+        if parsed_is_standalone is not None:
+            questions = questions.filter(
+                is_standalone=parsed_is_standalone,
+            )
+
+        # =====================================================
+        # ORDER
+        # =====================================================
 
         questions = questions.order_by(
             "year",
@@ -949,8 +1081,18 @@ class AxisQuestionListView(BaseStudentAPIView):
             "id",
         )
 
+        # Important :
+        # évaluer le queryset une seule fois.
+        questions_list = list(
+            questions
+        )
+
+        # =====================================================
+        # SERIALIZATION
+        # =====================================================
+
         serializer = self.get_serializer(
-            questions,
+            questions_list,
             many=True,
         )
 
@@ -959,23 +1101,160 @@ class AxisQuestionListView(BaseStudentAPIView):
             context=self.get_serializer_context(),
         ).data
 
+        # =====================================================
+        # DOCUMENT STATS
+        # =====================================================
+
+        questions_with_documents = sum(
+            1
+            for question in questions_list
+            if self.question_has_documents(
+                question
+            )
+        )
+
+        # =====================================================
+        # RESPONSE
+        # =====================================================
+
         return Response(
             {
                 "axis": axis_data,
+
                 "filters": {
                     "year": year,
                     "difficulty": difficulty,
                     "question_type": question_type,
                     "has_solution": has_solution,
                     "has_graph": has_graph,
+                    "has_documents": has_documents,
                     "is_standalone": is_standalone,
                 },
-                "count": questions.count(),
+
+                "count": len(
+                    questions_list
+                ),
+
+                "documents_stats": {
+                    "with_documents": (
+                        questions_with_documents
+                    ),
+                    "without_documents": (
+                        len(questions_list)
+                        - questions_with_documents
+                    ),
+                },
+
                 "questions": serializer.data,
             },
             status=status.HTTP_200_OK,
         )
 
+    # =========================================================
+    # DOCUMENT HELPERS
+    # =========================================================
+
+    def get_question_documents(
+        self,
+        question,
+    ):
+        """
+        Même logique que le serializer.
+
+        Supporte :
+        - Question.documents
+        - metadata["documents"]
+        """
+
+        if hasattr(
+            question,
+            "documents",
+        ):
+            documents = getattr(
+                question,
+                "documents",
+                None,
+            )
+
+            if isinstance(
+                documents,
+                list,
+            ):
+                return documents
+
+        metadata = getattr(
+            question,
+            "metadata",
+            None,
+        )
+
+        if isinstance(
+            metadata,
+            dict,
+        ):
+            documents = metadata.get(
+                "documents",
+                [],
+            )
+
+            if isinstance(
+                documents,
+                list,
+            ):
+                return documents
+
+        return []
+
+    def question_has_documents(
+        self,
+        question,
+    ):
+        return bool(
+            self.get_question_documents(
+                question
+            )
+        )
+
+    def filter_by_documents(
+        self,
+        questions,
+        has_documents,
+    ):
+        """
+        Fonctionne même si documents est uniquement
+        stocké dans metadata.
+
+        Comme metadata contient du JSON complexe,
+        on récupère les IDs puis on filtre le queryset.
+        """
+
+        matching_ids = []
+
+        for question in questions.only(
+            "id",
+            "metadata",
+        ):
+            documents = (
+                self.get_question_documents(
+                    question
+                )
+            )
+
+            current_has_documents = bool(
+                documents
+            )
+
+            if (
+                current_has_documents
+                == has_documents
+            ):
+                matching_ids.append(
+                    question.id
+                )
+
+        return questions.filter(
+            id__in=matching_ids,
+        )
 
 class QuestionDetailView(BaseStudentAPIView):
     """
@@ -1339,5 +1618,238 @@ class ReExplainStepAPIView(GenericAPIView):
             # لا نرسل تفاصيل الاستثناء الداخلية إلى الواجهة في production.
             return Response(
                 {"error": "حدث خطأ أثناء إنشاء الشرح. أعد المحاولة."},
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            )
+
+
+# ============================================================
+# AI - حل سؤال Question بطريقة شديدة التبسيط + الحفظ للطالب
+# ============================================================
+
+from django.db import transaction
+
+from .models import StudentQuestionSimpleSolution
+from .serializers import (
+    QuestionSimpleSolutionRequestSerializer,
+    QuestionSimpleSolutionResponseSerializer,
+)
+from .resolution.simple_solution_service import (
+    SimpleQuestionSolutionError,
+    SimpleQuestionSolutionParsingError,
+    SimpleQuestionSolutionService,
+)
+
+
+class QuestionSimpleSolutionAPIView(BaseStudentAPIView):
+    """
+    GET /api/course/questions/<question_id>/simple-solution/
+        يرجع الحل المبسط المحفوظ للطالب الحالي إن وجد.
+
+    POST /api/course/questions/<question_id>/simple-solution/
+        body اختياري:
+        {"regenerate": false}
+
+        - إذا كان الحل محفوظًا و regenerate=false: يعيد المحفوظ بدون AI.
+        - إذا لم يوجد حل: يولد حلاً ويحفظه.
+        - إذا regenerate=true: يولد حلاً جديدًا ويحدث السجل المحفوظ.
+    """
+
+    serializer_class = QuestionSimpleSolutionRequestSerializer
+
+    @staticmethod
+    def _get_question(question_id):
+        return get_object_or_404(
+            Question.objects.select_related(
+                "axis",
+                "axis__chapter",
+                "axis__chapter__subject",
+                "branch",
+            ),
+            id=question_id,
+            is_active=True,
+            axis__is_active=True,
+            axis__chapter__is_active=True,
+        )
+
+    def _build_response_data(
+        self,
+        *,
+        question,
+        saved_solution=None,
+        source="none",
+    ):
+        exists = saved_solution is not None
+
+        response_data = {
+            "success": True,
+            "exists": exists,
+            "saved": exists,
+            "source": source if exists else "none",
+            "question_id": question.id,
+            "subject": question.axis.chapter.subject.name,
+            "model": (
+                saved_solution.model_name
+                if saved_solution is not None
+                else ""
+            ),
+            "simple_solution": (
+                saved_solution.solution
+                if saved_solution is not None
+                else None
+            ),
+            "created_at": (
+                saved_solution.created_at
+                if saved_solution is not None
+                else None
+            ),
+            "updated_at": (
+                saved_solution.updated_at
+                if saved_solution is not None
+                else None
+            ),
+        }
+
+        output = QuestionSimpleSolutionResponseSerializer(
+            data=response_data,
+        )
+        output.is_valid(raise_exception=True)
+        return output.data
+
+    @extend_schema(
+        responses={200: QuestionSimpleSolutionResponseSerializer},
+    )
+    def get(self, request, question_id):
+        question = self._get_question(question_id)
+
+        saved_solution = (
+            StudentQuestionSimpleSolution.objects
+            .filter(
+                student=request.user,
+                question=question,
+            )
+            .first()
+        )
+
+        return Response(
+            self._build_response_data(
+                question=question,
+                saved_solution=saved_solution,
+                source="saved" if saved_solution else "none",
+            ),
+            status=status.HTTP_200_OK,
+        )
+
+    @extend_schema(
+        request=QuestionSimpleSolutionRequestSerializer,
+        responses={
+            200: QuestionSimpleSolutionResponseSerializer,
+            201: QuestionSimpleSolutionResponseSerializer,
+        },
+    )
+    def post(self, request, question_id):
+        serializer = self.get_serializer(
+            data=request.data or {},
+        )
+        serializer.is_valid(raise_exception=True)
+
+        regenerate = serializer.validated_data.get(
+            "regenerate",
+            False,
+        )
+
+        question = self._get_question(question_id)
+
+        existing = (
+            StudentQuestionSimpleSolution.objects
+            .filter(
+                student=request.user,
+                question=question,
+            )
+            .first()
+        )
+
+        # مهم: إذا كان الحل موجودًا لا نستدعي AI مرة أخرى.
+        if existing is not None and not regenerate:
+            return Response(
+                self._build_response_data(
+                    question=question,
+                    saved_solution=existing,
+                    source="saved",
+                ),
+                status=status.HTTP_200_OK,
+            )
+
+        try:
+            generated = SimpleQuestionSolutionService().generate(
+                question=question,
+            )
+
+            with transaction.atomic():
+                saved_solution, created = (
+                    StudentQuestionSimpleSolution.objects
+                    .update_or_create(
+                        student=request.user,
+                        question=question,
+                        defaults={
+                            "solution": generated.solution,
+                            "model_name": generated.model_name,
+                            "raw_response": generated.raw_response,
+                        },
+                    )
+                )
+
+            return Response(
+                self._build_response_data(
+                    question=question,
+                    saved_solution=saved_solution,
+                    source="generated",
+                ),
+                status=(
+                    status.HTTP_201_CREATED
+                    if created
+                    else status.HTTP_200_OK
+                ),
+            )
+
+        except SimpleQuestionSolutionParsingError as exc:
+            logger.warning(
+                "Simple solution parsing failed question=%s student=%s: %s",
+                question.id,
+                request.user.pk,
+                exc,
+            )
+            return Response(
+                {
+                    "success": False,
+                    "detail": "تم إنشاء جواب غير مكتمل. أعد المحاولة.",
+                },
+                status=status.HTTP_502_BAD_GATEWAY,
+            )
+
+        except SimpleQuestionSolutionError as exc:
+            logger.exception(
+                "Simple solution generation failed question=%s student=%s",
+                question.id,
+                request.user.pk,
+            )
+            return Response(
+                {
+                    "success": False,
+                    "detail": str(exc),
+                },
+                status=status.HTTP_502_BAD_GATEWAY,
+            )
+
+        except Exception:
+            logger.exception(
+                "Unexpected simple solution error question=%s student=%s",
+                question.id,
+                request.user.pk,
+            )
+            return Response(
+                {
+                    "success": False,
+                    "detail": "حدث خطأ أثناء إنشاء الحل المبسط. أعد المحاولة.",
+                },
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR,
             )

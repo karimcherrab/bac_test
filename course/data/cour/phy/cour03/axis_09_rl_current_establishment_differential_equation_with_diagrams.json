@@ -1,0 +1,629 @@
+{
+  "tag": "rl_current_establishment_differential_equation",
+  "title": "إقامة التيار في دارة RL والمعادلة التفاضلية",
+  "order": 9,
+  "is_active": true,
+  "branches": [
+    "math",
+    "science",
+    "math_tech"
+  ],
+  "content": {
+    "language": "ar",
+    "direction": "rtl",
+    "chapter_code": "electrical_phenomena_evolution",
+    "axis_tag": "rl_current_establishment_differential_equation",
+    "chapter_title": "تطور دراسة ظواهر كهربائية",
+    "estimated_minutes": 60,
+    "difficulty": "medium",
+    "lesson_goal": "أن يفهم التلميذ مرحلة إقامة التيار في دارة RL، وينشئ المعادلة التفاضلية لشدة التيار، ويحدد القيم الابتدائية والنهائية، ويتعرف على الحل الأسي وثابت الزمن تمهيدًا للاستغلال البياني في المحور التالي.",
+    "prerequisites": [
+      "معرفة العلاقة \\(u_b=ri+L\\frac{di}{dt}\\) للوشيعة الحقيقية.",
+      "معرفة قانون أوم \\(u_R=Ri\\).",
+      "معرفة قانون جمع التوترات.",
+      "معرفة أن شدة التيار في الوشيعة لا تتغير فجأة."
+    ],
+    "learning_outcomes": [
+      "يتعرف على تركيب دارة RL التسلسلية.",
+      "يحدد الحالة الابتدائية بعد غلق القاطعة.",
+      "ينشئ المعادلة \\(L\\frac{di}{dt}+(R+r)i=E\\).",
+      "يستخرج شدة التيار النهائية \\(I_\\infty\\).",
+      "يفهم شكل الحل الأسي لإقامة التيار.",
+      "يعرف ثابت الزمن \\(\\tau=L/(R+r)\\).",
+      "يتحقق من حل معطى للمعادلة التفاضلية.",
+      "يستنتج تطور توتري المقاومة والوشيعة."
+    ],
+    "figure_policy": "تستعمل الرسومات لفهم تركيب دارة RL والحالتين الابتدائية والنهائية ومسار إنشاء المعادلة وشكل التطور النوعي. يؤجل الاستخراج البياني التفصيلي لـτ وL وr إلى المحور العاشر.",
+    "learning_path": [
+      {
+        "id": "step_1",
+        "type": "motivation",
+        "title": "لماذا لا يظهر التيار فورًا في دارة RL؟",
+        "content": {
+          "teacher": "عند غلق دارة تحتوي على وشيعة لا تقفز شدة التيار مباشرة إلى قيمتها النهائية. الوشيعة تعارض تغير التيار، لذلك تبدأ الشدة من قيمة ابتدائية ثم تتزايد تدريجيًا.",
+          "central_idea": "في دارة RL يكون المقدار المتطور أساسًا هو شدة التيار \\(i(t)\\).",
+          "takeaway": "غلق القاطعة يبدأ مرحلة انتقالية قبل الوصول إلى النظام الدائم."
+        }
+      },
+      {
+        "id": "step_2",
+        "type": "concept",
+        "title": "تركيب دارة RL",
+        "content": {
+          "teacher": "ندرس دارة تحتوي على مولد توتر ثابت \\(E\\)، ناقل أومي مقاومته \\(R\\)، وشيعة حقيقية ذاتيتها \\(L\\) ومقاومتها الداخلية \\(r\\)، وقاطعة \\(K\\). العناصر موصولة على التسلسل.",
+          "components": [
+            {
+              "name": "المولد",
+              "role": "يفرض توترًا ثابتًا \\(E\\)."
+            },
+            {
+              "name": "المقاومة R",
+              "role": "تساهم في تحديد شدة التيار النهائية وسرعة التطور."
+            },
+            {
+              "name": "الوشيعة (L,r)",
+              "role": "تعارض تغير التيار ولها أيضًا مقاومة داخلية."
+            },
+            {
+              "name": "القاطعة K",
+              "role": "لحظة غلقها نختارها عادة \\(t=0\\)."
+            }
+          ],
+          "graph_data": {
+            "title": "دارة RL المدروسة",
+            "description": "دارة تسلسلية تحتوي على مولد ومقاومة ووشيعة حقيقية \\((L,r)\\).",
+            "svg": "\n<svg viewBox=\"0 0 940 450\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"دارة RL تحتوي على مولد ومقاومة ووشيعة حقيقية\">\n <defs>\n  <marker id=\"arr9i\" markerWidth=\"10\" markerHeight=\"10\" refX=\"8\" refY=\"3\" orient=\"auto\">\n   <path d=\"M0,0 L0,6 L9,3z\" fill=\"#4f46e5\"/>\n  </marker>\n  <marker id=\"arr9u\" markerWidth=\"10\" markerHeight=\"10\" refX=\"8\" refY=\"3\" orient=\"auto\">\n   <path d=\"M0,0 L0,6 L9,3z\" fill=\"#dc2626\"/>\n  </marker>\n </defs>\n <rect x=\"35\" y=\"30\" width=\"870\" height=\"360\" rx=\"24\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"2\"/>\n <path d=\"M170 115 H755 V315 H170 Z\" fill=\"none\" stroke=\"#334155\" stroke-width=\"5\"/>\n\n <line x1=\"145\" y1=\"180\" x2=\"195\" y2=\"180\" stroke=\"#111827\" stroke-width=\"4\"/>\n <line x1=\"155\" y1=\"230\" x2=\"185\" y2=\"230\" stroke=\"#111827\" stroke-width=\"4\"/>\n <text x=\"112\" y=\"186\" font-size=\"28\" font-family=\"Arial\">+</text>\n <text x=\"112\" y=\"240\" font-size=\"30\" font-family=\"Arial\">−</text>\n <text x=\"104\" y=\"273\" font-size=\"24\" font-family=\"Arial\">E</text>\n\n <line x1=\"275\" y1=\"115\" x2=\"315\" y2=\"115\" stroke=\"#334155\" stroke-width=\"5\"/>\n <line x1=\"335\" y1=\"115\" x2=\"375\" y2=\"115\" stroke=\"#334155\" stroke-width=\"5\"/>\n <line x1=\"315\" y1=\"115\" x2=\"340\" y2=\"90\" stroke=\"#111827\" stroke-width=\"5\"/>\n <text x=\"315\" y=\"76\" font-size=\"22\" font-family=\"Arial\">K</text>\n\n <rect x=\"410\" y=\"89\" width=\"105\" height=\"52\" rx=\"8\" fill=\"#fff\" stroke=\"#111827\" stroke-width=\"3\"/>\n <text x=\"450\" y=\"124\" font-size=\"26\" font-family=\"Arial\">R</text>\n\n <path d=\"M565 115 c0 -38 45 -38 45 0 c0 -38 45 -38 45 0 c0 -38 45 -38 45 0 c0 -38 45 -38 45 0\"\n       fill=\"none\" stroke=\"#111827\" stroke-width=\"5\"/>\n <text x=\"630\" y=\"70\" font-size=\"24\" font-family=\"Arial\">L , r</text>\n\n <line x1=\"220\" y1=\"72\" x2=\"385\" y2=\"72\" stroke=\"#4f46e5\" stroke-width=\"5\" marker-end=\"url(#arr9i)\"/>\n <text x=\"290\" y=\"54\" font-size=\"24\" font-family=\"Arial\" fill=\"#3730a3\">i(t)</text>\n\n <line x1=\"515\" y1=\"165\" x2=\"410\" y2=\"165\" stroke=\"#dc2626\" stroke-width=\"4\" marker-end=\"url(#arr9u)\"/>\n <text x=\"445\" y=\"196\" font-size=\"22\" font-family=\"Arial\" fill=\"#991b1b\">u_R</text>\n\n <line x1=\"730\" y1=\"165\" x2=\"565\" y2=\"165\" stroke=\"#dc2626\" stroke-width=\"4\" marker-end=\"url(#arr9u)\"/>\n <text x=\"620\" y=\"196\" font-size=\"22\" font-family=\"Arial\" fill=\"#991b1b\">u_b</text>\n\n <text x=\"290\" y=\"356\" font-size=\"25\" font-family=\"Arial\" font-weight=\"700\">E = u_R + u_b</text>\n</svg>\n",
+            "render_mode": "inline_step",
+            "responsive": true,
+            "diagram_type": "rl_series_circuit"
+          },
+          "takeaway": "في الوشيعة الحقيقية يجب عدم نسيان المقاومة الداخلية \\(r\\)."
+        }
+      },
+      {
+        "id": "step_3",
+        "type": "concept",
+        "title": "الحالة الابتدائية عند t = 0",
+        "content": {
+          "teacher": "قبل غلق القاطعة لا يمر تيار. وبما أن شدة التيار في الوشيعة لا تتغير فجأة، فإنها تبقى معدومة مباشرة بعد الغلق.",
+          "relations": [
+            {
+              "title": "التيار الابتدائي",
+              "formula": "\\(i(0)=0\\)",
+              "meaning": "التيار يبدأ من الصفر."
+            },
+            {
+              "title": "توتر المقاومة",
+              "formula": "\\(u_R(0)=Ri(0)=0\\)",
+              "meaning": "لا يوجد تيار في اللحظة الأولى."
+            },
+            {
+              "title": "توتر الوشيعة",
+              "formula": "\\(u_b(0)=E\\)",
+              "meaning": "توتر المولد يقع تقريبًا كله بين طرفي الوشيعة عند اللحظة الأولى."
+            }
+          ],
+          "takeaway": "البداية في RL: التيار صفر وتأثير الوشيعة التحريضي أعظمي."
+        }
+      },
+      {
+        "id": "step_4",
+        "type": "method",
+        "title": "إنشاء المعادلة التفاضلية لدارة RL",
+        "content": {
+          "teacher": "نطبق قانون جمع التوترات ثم نعوض العلاقات الخاصة بالمقاومة والوشيعة الحقيقية.",
+          "algorithm": [
+            "نكتب \\(E=u_R+u_b\\).",
+            "نعوض \\(u_R=Ri\\).",
+            "نعوض \\(u_b=ri+L\\frac{di}{dt}\\).",
+            "نجمع الحدود التي تحتوي على \\(i\\)."
+          ],
+          "relations": [
+            {
+              "title": "المعادلة التفاضلية",
+              "formula": "\\(L\\frac{di}{dt}+(R+r)i=E\\)",
+              "meaning": "المعادلة التي تحققها شدة التيار في دارة RL."
+            },
+            {
+              "title": "الشكل المعياري",
+              "formula": "\\(\\frac{di}{dt}+\\frac{R+r}{L}i=\\frac{E}{L}\\)",
+              "meaning": "نفس المعادلة بعد القسمة على \\(L\\)."
+            }
+          ],
+          "graph_data": {
+            "title": "مسار بناء معادلة RL",
+            "description": "ننتقل من قانون جمع التوترات إلى المعادلة التفاضلية بالتعويض المباشر.",
+            "svg": "\n<svg viewBox=\"0 0 1000 330\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"خطوات إنشاء معادلة دارة RL\">\n <defs><marker id=\"f9\" markerWidth=\"10\" markerHeight=\"10\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L0,6 L9,3z\" fill=\"#4f46e5\"/></marker></defs>\n <rect x=\"25\" y=\"30\" width=\"950\" height=\"240\" rx=\"24\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"2\"/>\n <rect x=\"55\" y=\"100\" width=\"190\" height=\"80\" rx=\"15\" fill=\"#eef2ff\" stroke=\"#818cf8\" stroke-width=\"2\"/>\n <rect x=\"290\" y=\"100\" width=\"190\" height=\"80\" rx=\"15\" fill=\"#f0fdf4\" stroke=\"#86efac\" stroke-width=\"2\"/>\n <rect x=\"525\" y=\"100\" width=\"190\" height=\"80\" rx=\"15\" fill=\"#fff7ed\" stroke=\"#fdba74\" stroke-width=\"2\"/>\n <rect x=\"760\" y=\"90\" width=\"180\" height=\"100\" rx=\"15\" fill=\"#fef2f2\" stroke=\"#fca5a5\" stroke-width=\"2\"/>\n <text x=\"83\" y=\"147\" font-size=\"21\" font-family=\"Arial\">E = u_R + u_b</text>\n <text x=\"325\" y=\"147\" font-size=\"21\" font-family=\"Arial\">u_R = Ri</text>\n <text x=\"548\" y=\"137\" font-size=\"20\" font-family=\"Arial\">u_b = ri</text>\n <text x=\"542\" y=\"165\" font-size=\"20\" font-family=\"Arial\">+ L di/dt</text>\n <text x=\"780\" y=\"130\" font-size=\"19\" font-family=\"Arial\">L di/dt</text>\n <text x=\"775\" y=\"160\" font-size=\"19\" font-family=\"Arial\">+(R+r)i=E</text>\n <line x1=\"245\" y1=\"140\" x2=\"282\" y2=\"140\" stroke=\"#4f46e5\" stroke-width=\"4\" marker-end=\"url(#f9)\"/>\n <line x1=\"480\" y1=\"140\" x2=\"517\" y2=\"140\" stroke=\"#4f46e5\" stroke-width=\"4\" marker-end=\"url(#f9)\"/>\n <line x1=\"715\" y1=\"140\" x2=\"752\" y2=\"140\" stroke=\"#4f46e5\" stroke-width=\"4\" marker-end=\"url(#f9)\"/>\n</svg>\n",
+            "render_mode": "inline_step",
+            "responsive": true,
+            "diagram_type": "rl_equation_derivation"
+          },
+          "attention": "إذا كانت الوشيعة مثالية فقط، نضع \\(r=0\\).",
+          "takeaway": "\\(L i'+(R+r)i=E\\)."
+        }
+      },
+      {
+        "id": "step_5",
+        "type": "concept",
+        "title": "النظام الدائم والقيمة النهائية للتيار",
+        "content": {
+          "teacher": "بعد مدة كافية تصبح شدة التيار ثابتة، وبالتالي \\(di/dt=0\\). عندها يختفي الحد التحريضي.",
+          "steps": [
+            "في النظام الدائم: \\(di/dt=0\\).",
+            "تصبح المعادلة \\((R+r)I_\\infty=E\\).",
+            "إذن نستخرج شدة التيار النهائية."
+          ],
+          "relations": [
+            {
+              "title": "التيار النهائي",
+              "formula": "\\(I_\\infty=\\frac{E}{R+r}\\)",
+              "meaning": "القيمة القصوى التي يستقر عندها التيار."
+            }
+          ],
+          "attention": "إذا أهملت \\(r\\) رغم أن التمرين يعطيها، ستحصل على قيمة نهائية خاطئة.",
+          "takeaway": "في النهاية تصبح الوشيعة الحقيقية مكافئة من ناحية التوتر المستمر لمقاومتها الداخلية r."
+        }
+      },
+      {
+        "id": "step_6",
+        "type": "comparison",
+        "title": "البداية والنهاية في نظرة واحدة",
+        "content": {
+          "teacher": "مقارنة الحالتين تسهل كثيرًا حل أسئلة البكالوريا المتعلقة بالقيم الابتدائية والنهائية.",
+          "graph_data": {
+            "title": "الحالة الانتقالية في دارة RL",
+            "description": "في البداية يكون التيار منعدمًا، وفي النظام الدائم يصبح ثابتًا ويختفي الجزء التحريضي من توتر الوشيعة.",
+            "svg": "\n<svg viewBox=\"0 0 960 400\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"الحالة الابتدائية والنظام الدائم في دارة RL\">\n <rect x=\"30\" y=\"30\" width=\"430\" height=\"310\" rx=\"22\" fill=\"#eef2ff\" stroke=\"#818cf8\" stroke-width=\"2\"/>\n <rect x=\"500\" y=\"30\" width=\"430\" height=\"310\" rx=\"22\" fill=\"#f0fdf4\" stroke=\"#86efac\" stroke-width=\"2\"/>\n\n <text x=\"170\" y=\"78\" font-size=\"27\" font-family=\"Arial\" font-weight=\"700\">t = 0⁺</text>\n <text x=\"595\" y=\"78\" font-size=\"27\" font-family=\"Arial\" font-weight=\"700\">régime permanent</text>\n\n <text x=\"90\" y=\"130\" font-size=\"23\" font-family=\"Arial\">i(0)=0</text>\n <text x=\"90\" y=\"175\" font-size=\"23\" font-family=\"Arial\">u_R(0)=0</text>\n <text x=\"90\" y=\"220\" font-size=\"23\" font-family=\"Arial\">u_b(0)=E</text>\n <text x=\"90\" y=\"270\" font-size=\"20\" font-family=\"Arial\" fill=\"#3730a3\">effet inductif maximal</text>\n\n <text x=\"545\" y=\"130\" font-size=\"23\" font-family=\"Arial\">di/dt = 0</text>\n <text x=\"545\" y=\"175\" font-size=\"23\" font-family=\"Arial\">I∞ = E/(R+r)</text>\n <text x=\"545\" y=\"220\" font-size=\"23\" font-family=\"Arial\">u_b = r I∞</text>\n <text x=\"545\" y=\"270\" font-size=\"20\" font-family=\"Arial\" fill=\"#166534\">effet inductif nul</text>\n</svg>\n",
+            "render_mode": "inline_step",
+            "responsive": true,
+            "diagram_type": "rl_initial_final_states"
+          },
+          "cases": [
+            {
+              "state": "\\(t=0\\)",
+              "current": "\\(i=0\\)",
+              "coil": "\\(u_b=E\\)"
+            },
+            {
+              "state": "النظام الدائم",
+              "current": "\\(I_\\infty=E/(R+r)\\)",
+              "coil": "\\(u_b=rI_\\infty\\)"
+            }
+          ],
+          "takeaway": "البداية تحددها خاصية عدم قفز التيار، والنهاية تحددها \\(di/dt=0\\)."
+        }
+      },
+      {
+        "id": "step_7",
+        "type": "concept",
+        "title": "شكل الحل المتوقع",
+        "content": {
+          "teacher": "المعادلة من الرتبة الأولى بمعاملات ثابتة، لذلك نتوقع أن يرتفع التيار من الصفر نحو قيمة ثابتة بشكل أسي.",
+          "relations": [
+            {
+              "title": "شكل الحل",
+              "formula": "\\(i(t)=I_\\infty\\left(1-e^{-t/\\tau}\\right)\\)",
+              "meaning": "يبدأ من الصفر ويتجه نحو \\(I_\\infty\\)."
+            }
+          ],
+          "central_idea": "الحل في RL يشبه رياضيًا شحن المكثفة، لكن المقدار الذي يرتفع هنا هو شدة التيار.",
+          "takeaway": "في RL: التيار يرتفع أسيًا نحو قيمته النهائية."
+        }
+      },
+      {
+        "id": "step_8",
+        "type": "concept",
+        "title": "ثابت الزمن في دارة RL",
+        "content": {
+          "teacher": "بمقارنة المعادلة مع الشكل المعياري يظهر المقدار الزمني المميز للدارة.",
+          "relations": [
+            {
+              "title": "ثابت الزمن",
+              "formula": "\\(\\tau=\\frac{L}{R+r}\\)",
+              "meaning": "يميز سرعة إقامة التيار في الدارة."
+            }
+          ],
+          "symbols": [
+            {
+              "symbol": "\\(L\\)",
+              "meaning": "الذاتية بالهنري H."
+            },
+            {
+              "symbol": "\\(R+r\\)",
+              "meaning": "المقاومة الكلية على التسلسل بالأوم Ω."
+            },
+            {
+              "symbol": "\\(\\tau\\)",
+              "meaning": "ثابت الزمن بالثانية s."
+            }
+          ],
+          "attention": "التفصيل البياني لاستخراج \\(\\tau\\) و\\(L\\) سيعالج في المحور التالي.",
+          "takeaway": "في RL: \\(\\tau=L/(R+r)\\)."
+        }
+      },
+      {
+        "id": "step_9",
+        "type": "method",
+        "title": "التحقق من حل شدة التيار",
+        "content": {
+          "teacher": "إذا أعطاك التمرين حلاً مقترحًا، نتحقق منه بالطريقة نفسها التي استعملناها في RC: نشتقه ثم نعوض في المعادلة.",
+          "algorithm": [
+            "نكتب \\(i(t)=I_\\infty(1-e^{-t/\\tau})\\).",
+            "نشتق: \\(\\frac{di}{dt}=\\frac{I_\\infty}{\\tau}e^{-t/\\tau}\\).",
+            "نعوض في \\(L\\frac{di}{dt}+(R+r)i\\).",
+            "نستعمل \\(\\tau=L/(R+r)\\) و\\(I_\\infty=E/(R+r)\\).",
+            "بعد التبسيط نحصل على \\(E\\)."
+          ],
+          "takeaway": "اشتق + عوض + استعمل تعريفات \\(I_\\infty\\) و\\(\\tau\\)."
+        }
+      },
+      {
+        "id": "step_10",
+        "type": "method",
+        "title": "عبارة توتر المقاومة",
+        "content": {
+          "teacher": "بما أن \\(u_R=Ri\\)، فإن توتر المقاومة يتطور بالشكل نفسه الذي يتطور به التيار.",
+          "relations": [
+            {
+              "title": "توتر المقاومة",
+              "formula": "\\(u_R(t)=R I_\\infty(1-e^{-t/\\tau})\\)",
+              "meaning": "يرتفع من الصفر نحو \\(R I_\\infty\\)."
+            }
+          ],
+          "checks": [
+            "\\(u_R(0)=0\\).",
+            "\\(u_R(\\infty)=RI_\\infty\\)."
+          ],
+          "takeaway": "منحنى \\(u_R(t)\\) يمكن أن يستعمل لمتابعة التيار لأن \\(u_R=Ri\\)."
+        }
+      },
+      {
+        "id": "step_11",
+        "type": "method",
+        "title": "عبارة توتر الوشيعة الحقيقية",
+        "content": {
+          "teacher": "يمكن حساب توتر الوشيعة من قانون الدارة \\(u_b=E-u_R\\)، أو مباشرة من \\(ri+Ldi/dt\\).",
+          "relations": [
+            {
+              "title": "من قانون الدارة",
+              "formula": "\\(u_b(t)=E-u_R(t)\\)",
+              "meaning": "طريقة عملية وسريعة."
+            },
+            {
+              "title": "في النظام الدائم",
+              "formula": "\\(u_b(\\infty)=rI_\\infty\\)",
+              "meaning": "يبقى فقط التوتر المقاومي الداخلي."
+            },
+            {
+              "title": "في البداية",
+              "formula": "\\(u_b(0)=E\\)",
+              "meaning": "لأن التيار الابتدائي صفر."
+            }
+          ],
+          "takeaway": "توتر الوشيعة ينخفض من E نحو \\(rI_\\infty\\) إذا كانت الوشيعة حقيقية."
+        }
+      },
+      {
+        "id": "step_12",
+        "type": "graph_reading",
+        "title": "الشكل النوعي لمنحنيات RL",
+        "content": {
+          "teacher": "منحنى التيار يرتفع من الصفر نحو القيمة النهائية، بينما يتناقص الجزء التحريضي من توتر الوشيعة مع الزمن.",
+          "graph_data": {
+            "title": "التطور النوعي في دارة RL بعد غلق القاطعة",
+            "description": "تزداد شدة التيار تدريجيًا من الصفر نحو قيمتها النهائية، بينما يتناقص الجزء التحريضي من توتر الوشيعة.",
+            "x_label": "t / τ",
+            "y_label": "قيمة نسبية",
+            "x_domain": [
+              0,
+              5
+            ],
+            "y_domain": [
+              0,
+              1.08
+            ],
+            "series": [
+              {
+                "name": "i(t) / I_∞",
+                "data": [
+                  {
+                    "x": 0,
+                    "y": 0.0
+                  },
+                  {
+                    "x": 0.25,
+                    "y": 0.2212
+                  },
+                  {
+                    "x": 0.5,
+                    "y": 0.3935
+                  },
+                  {
+                    "x": 0.75,
+                    "y": 0.5276
+                  },
+                  {
+                    "x": 1,
+                    "y": 0.6321
+                  },
+                  {
+                    "x": 1.5,
+                    "y": 0.7769
+                  },
+                  {
+                    "x": 2,
+                    "y": 0.8647
+                  },
+                  {
+                    "x": 2.5,
+                    "y": 0.9179
+                  },
+                  {
+                    "x": 3,
+                    "y": 0.9502
+                  },
+                  {
+                    "x": 4,
+                    "y": 0.9817
+                  },
+                  {
+                    "x": 5,
+                    "y": 0.9933
+                  }
+                ]
+              },
+              {
+                "name": "u_L(t) / u_L(0)",
+                "data": [
+                  {
+                    "x": 0,
+                    "y": 1.0
+                  },
+                  {
+                    "x": 0.25,
+                    "y": 0.7788
+                  },
+                  {
+                    "x": 0.5,
+                    "y": 0.6065
+                  },
+                  {
+                    "x": 0.75,
+                    "y": 0.4724
+                  },
+                  {
+                    "x": 1,
+                    "y": 0.3679
+                  },
+                  {
+                    "x": 1.5,
+                    "y": 0.2231
+                  },
+                  {
+                    "x": 2,
+                    "y": 0.1353
+                  },
+                  {
+                    "x": 2.5,
+                    "y": 0.0821
+                  },
+                  {
+                    "x": 3,
+                    "y": 0.0498
+                  },
+                  {
+                    "x": 4,
+                    "y": 0.0183
+                  },
+                  {
+                    "x": 5,
+                    "y": 0.0067
+                  }
+                ]
+              }
+            ],
+            "settings": {
+              "show_grid": true,
+              "show_axes": true,
+              "show_legend": true,
+              "show_point_labels": false,
+              "connect_points": true
+            }
+          },
+          "observations": [
+            "\\(i(t)\\) متزايدة نحو \\(I_\\infty\\).",
+            "معدل تغير التيار يكون كبيرًا في البداية ثم يتناقص.",
+            "عندما يستقر التيار يختفي التوتر التحريضي \\(Ldi/dt\\)."
+          ],
+          "attention": "الرسم نوعي بقيم نسبية. استخراج القيم العددية لـ\\(\\tau\\) و\\(L\\) سيكون في المحور التالي.",
+          "takeaway": "استقرار التيار يعني اختفاء الجزء التحريضي."
+        }
+      },
+      {
+        "id": "step_13",
+        "type": "worked_example",
+        "title": "مثال: القيم الابتدائية والنهائية",
+        "content": {
+          "teacher": "دارة فيها \\(E=12V\\)، \\(R=50\\Omega\\)، ووشيعة مقاومتها الداخلية \\(r=10\\Omega\\). احسب التيار الابتدائي، التيار النهائي، وتوتر الوشيعة في النظام الدائم.",
+          "steps": [
+            {
+              "text": "مباشرة بعد الغلق: \\(i(0)=0\\)."
+            },
+            {
+              "text": "\\(I_\\infty=\\frac{E}{R+r}=\\frac{12}{60}=0.20A\\)."
+            },
+            {
+              "text": "في النظام الدائم: \\(u_b=rI_\\infty=10\\times0.20=2V\\)."
+            },
+            {
+              "text": "كما أن \\(u_R=RI_\\infty=50\\times0.20=10V\\)، ومنه \\(u_R+u_b=12V\\)."
+            }
+          ],
+          "final_answer": "\\(i(0)=0\\)، \\(I_\\infty=0.20A\\)، \\(u_b(\\infty)=2V\\).",
+          "takeaway": "في النظام الدائم استعمل \\(di/dt=0\\) قبل أي حساب."
+        }
+      },
+      {
+        "id": "step_14",
+        "type": "summary",
+        "title": "خلاصة المحور",
+        "content": {
+          "remember": [
+            "دارة RL المدروسة تحتوي على \\(E\\)، \\(R\\) ووشيعة \\((L,r)\\).",
+            "في البداية: \\(i(0)=0\\).",
+            "قانون الدارة: \\(E=u_R+u_b\\).",
+            "المعادلة التفاضلية: \\(L\\frac{di}{dt}+(R+r)i=E\\).",
+            "في النظام الدائم: \\(di/dt=0\\).",
+            "\\(I_\\infty=E/(R+r)\\).",
+            "الحل: \\(i(t)=I_\\infty(1-e^{-t/\\tau})\\).",
+            "ثابت الزمن: \\(\\tau=L/(R+r)\\).",
+            "\\(u_R=Ri\\).",
+            "\\(u_b(0)=E\\) و\\(u_b(\\infty)=rI_\\infty\\)."
+          ],
+          "method_template": [
+            "حدد R وr وL واتجاه التيار.",
+            "اكتب قانون جمع التوترات.",
+            "عوّض \\(u_R=Ri\\) و\\(u_b=ri+Ldi/dt\\).",
+            "استعمل \\(i(0)=0\\) في البداية.",
+            "استعمل \\(di/dt=0\\) في النظام الدائم.",
+            "استنتج \\(I_\\infty\\) ثم بقية التوترات."
+          ],
+          "memory_tip": "RL: التيار يبدأ من 0 ويصعد نحو \\(E/(R+r)\\).",
+          "takeaway": "المحور التالي سيستعمل المنحنيات لاستخراج \\(\\tau\\)، \\(r\\)، \\(L\\) و\\(E\\)."
+        }
+      },
+      {
+        "id": "step_15",
+        "type": "quiz",
+        "title": "اختبار الفهم",
+        "content": {
+          "instruction": "أجب عن الأسئلة قبل الانتقال إلى الاستغلال البياني لدارة RL.",
+          "questions": [
+            {
+              "id": "q1",
+              "question": "ما قيمة التيار مباشرة بعد غلق دارة RL كانت بدون تيار؟",
+              "choices": [
+                "0",
+                "\\(E/R\\)",
+                "\\(E/(R+r)\\)"
+              ],
+              "correct_answer": "0",
+              "hint": "التيار في الوشيعة لا يقفز.",
+              "explanation": "لذلك \\(i(0)=0\\)."
+            },
+            {
+              "id": "q2",
+              "question": "ما قانون الدارة؟",
+              "choices": [
+                "\\(E=u_R+u_b\\)",
+                "\\(E=u_R-u_b\\) دائمًا",
+                "\\(u_R=u_b=0\\)"
+              ],
+              "correct_answer": "\\(E=u_R+u_b\\)",
+              "hint": "طبق قانون جمع التوترات حسب التوجيه المختار.",
+              "explanation": "توتر المولد يتوزع على المقاومة والوشيعة."
+            },
+            {
+              "id": "q3",
+              "question": "ما المعادلة التفاضلية الصحيحة للوشيعة الحقيقية؟",
+              "choices": [
+                "\\(L\\frac{di}{dt}+(R+r)i=E\\)",
+                "\\(RC\\frac{di}{dt}+i=E\\)",
+                "\\(Li=E\\)"
+              ],
+              "correct_answer": "\\(L\\frac{di}{dt}+(R+r)i=E\\)",
+              "hint": "اجمع مقاومة R ومقاومة الوشيعة r.",
+              "explanation": "بالتعويض في قانون الدارة نحصل على هذه المعادلة."
+            },
+            {
+              "id": "q4",
+              "question": "ما التيار النهائي؟",
+              "choices": [
+                "\\(E/(R+r)\\)",
+                "\\(E/R\\) دائمًا",
+                "\\(L/E\\)"
+              ],
+              "correct_answer": "\\(E/(R+r)\\)",
+              "hint": "في النهاية di/dt=0.",
+              "explanation": "تصبح الدارة مقاومية بمقاومة كلية R+r."
+            },
+            {
+              "id": "q5",
+              "question": "ما ثابت الزمن في دارة RL؟",
+              "choices": [
+                "\\(L/(R+r)\\)",
+                "\\(L(R+r)\\)",
+                "\\((R+r)/L\\)"
+              ],
+              "correct_answer": "\\(L/(R+r)\\)",
+              "hint": "يجب أن تكون وحدته ثانية.",
+              "explanation": "\\(\\tau=L/(R+r)\\)."
+            },
+            {
+              "id": "q6",
+              "question": "ما شكل التيار أثناء إقامة التيار؟",
+              "choices": [
+                "\\(I_\\infty(1-e^{-t/\\tau})\\)",
+                "\\(I_\\infty e^{-t/\\tau}\\)",
+                "\\(I_\\infty t\\)"
+              ],
+              "correct_answer": "\\(I_\\infty(1-e^{-t/\\tau})\\)",
+              "hint": "يبدأ من الصفر ويتجه إلى I∞.",
+              "explanation": "هذا هو الحل الذي يحقق البداية والنهاية."
+            },
+            {
+              "id": "q7",
+              "question": "ماذا يحدث للجزء التحريضي من توتر الوشيعة في النظام الدائم؟",
+              "choices": [
+                "ينعدم",
+                "يزداد دون حد",
+                "يساوي E دائمًا"
+              ],
+              "correct_answer": "ينعدم",
+              "hint": "di/dt=0.",
+              "explanation": "الحد \\(Ldi/dt\\) يصبح صفرًا."
+            },
+            {
+              "id": "q8",
+              "question": "ما توتر الوشيعة الحقيقية في النظام الدائم؟",
+              "choices": [
+                "\\(rI_\\infty\\)",
+                "0 دائمًا",
+                "\\(RI_\\infty\\)"
+              ],
+              "correct_answer": "\\(rI_\\infty\\)",
+              "hint": "يبقى أثر مقاومتها الداخلية.",
+              "explanation": "بعد زوال الأثر التحريضي يبقى التوتر المقاومي ri."
+            },
+            {
+              "id": "q9",
+              "question": "إذا كانت الوشيعة مثالية، ماذا نضع؟",
+              "choices": [
+                "\\(r=0\\)",
+                "\\(L=0\\)",
+                "\\(R=0\\) دائمًا"
+              ],
+              "correct_answer": "\\(r=0\\)",
+              "hint": "المثالية تعني إهمال مقاومة السلك.",
+              "explanation": "تبقى الذاتية L ولا توجد مقاومة داخلية."
+            },
+            {
+              "id": "q10",
+              "question": "ما المقارنة الصحيحة بين RC وRL؟",
+              "choices": [
+                "في RC يتطور uC، وفي RL يتطور i تدريجيًا",
+                "في كليهما التيار يقفز فورًا",
+                "في RL لا توجد مرحلة انتقالية"
+              ],
+              "correct_answer": "في RC يتطور uC، وفي RL يتطور i تدريجيًا",
+              "hint": "فكر في المقدار الذي لا يتغير فجأة.",
+              "explanation": "المكثفة تمنع قفزة توترها، والوشيعة تمنع قفزة تيارها."
+            }
+          ],
+          "mastery_threshold": 8,
+          "takeaway": "إذا أجبت عن 8 أسئلة صحيحة على الأقل فأنت جاهز للاستغلال البياني وثابت الزمن في دارة RL."
+        }
+      }
+    ]
+  }
+}

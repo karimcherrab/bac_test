@@ -1,0 +1,151 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.1-bac-source-faithful",
+  "version": "4.1-verified-statement-and-solution-figures",
+  "session": "ordinary",
+  "year": 2008,
+  "chapter_code": "electrical_phenomena_evolution",
+  "chapter_title": "تطور دراسة ظواهر كهربائية",
+  "axis_tags": [
+    "rc_capacitor_charging",
+    "rc_differential_equation_solution",
+    "rc_time_constant_graphical_analysis",
+    "rc_capacitor_discharge"
+  ],
+  "branches": [
+    {
+      "code": "math",
+      "name": "شعبة رياضيات"
+    },
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "exercise_number": 2,
+  "source_pages": [
+    1
+  ],
+  "solution_source_pages": [
+    21
+  ],
+  "title": "التمرين 2 — بكالوريا الجزائر 2008 — دراسة ثنائي القطب RC",
+  "statement": "في حصة للأعمال المخبرية اقترح الأستاذ على تلاميذه مخطط الدارة الممثلة في الشكل 2 لدراسة ثنائي القطب \\(RC\\). تتكون الدارة من: مولد توتر كهربائي ثابت \\(E=12\\,V\\)، مكثفة غير مشحونة سعتها \\(C=1.0\\,\\mu F\\)، ناقل أومي مقاومته \\(R=5\\times10^3\\,\\Omega\\)، وبادلة \\(K\\).",
+  "figures": [
+    {
+      "diagram_type": "bac_2008_ex02_statement_circuit",
+      "title": "الشكل 2 — دارة RC مع البادلة",
+      "description": "مخطط الدارة كما في موضوع 2008.",
+      "svg": "<svg viewBox=\"0 0 900 430\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"الشكل 2 دارة RC مع بادلة\">\n  <rect x=\"35\" y=\"25\" width=\"830\" height=\"340\" rx=\"20\" fill=\"#fff\" stroke=\"#cbd5e1\" stroke-width=\"2\"/>\n  <path d=\"M170 100 H310\" stroke=\"#111827\" stroke-width=\"5\" fill=\"none\"/>\n  <path d=\"M590 100 H720 V315 H170 V100\" stroke=\"#111827\" stroke-width=\"5\" fill=\"none\"/>\n  <line x1=\"350\" y1=\"96\" x2=\"405\" y2=\"135\" stroke=\"#111827\" stroke-width=\"5\"/>\n  <circle cx=\"330\" cy=\"100\" r=\"5\" fill=\"#111827\"/>\n  <circle cx=\"425\" cy=\"100\" r=\"5\" fill=\"#111827\"/>\n  <circle cx=\"520\" cy=\"100\" r=\"5\" fill=\"#111827\"/>\n  <text x=\"315\" y=\"75\" font-size=\"22\" font-family=\"Arial\">1</text>\n  <text x=\"415\" y=\"75\" font-size=\"22\" font-family=\"Arial\">0</text>\n  <text x=\"510\" y=\"75\" font-size=\"22\" font-family=\"Arial\">2</text>\n  <text x=\"404\" y=\"145\" font-size=\"22\" font-family=\"Arial\">A</text>\n  <line x1=\"425\" y1=\"135\" x2=\"425\" y2=\"170\" stroke=\"#111827\" stroke-width=\"5\"/>\n  <line x1=\"395\" y1=\"170\" x2=\"455\" y2=\"170\" stroke=\"#111827\" stroke-width=\"6\"/>\n  <line x1=\"395\" y1=\"205\" x2=\"455\" y2=\"205\" stroke=\"#111827\" stroke-width=\"6\"/>\n  <text x=\"470\" y=\"195\" font-size=\"25\" font-family=\"Arial\">C</text>\n  <text x=\"402\" y=\"235\" font-size=\"22\" font-family=\"Arial\">B</text>\n  <rect x=\"385\" y=\"245\" width=\"80\" height=\"48\" rx=\"6\" fill=\"#fff\" stroke=\"#111827\" stroke-width=\"3\"/>\n  <text x=\"418\" y=\"277\" font-size=\"23\" font-family=\"Arial\">R</text>\n  <text x=\"405\" y=\"335\" font-size=\"22\" font-family=\"Arial\">M</text>\n  <line x1=\"520\" y1=\"100\" x2=\"720\" y2=\"100\" stroke=\"#111827\" stroke-width=\"5\"/>\n  <line x1=\"170\" y1=\"100\" x2=\"170\" y2=\"315\" stroke=\"#111827\" stroke-width=\"5\"/>\n  <line x1=\"145\" y1=\"185\" x2=\"195\" y2=\"185\" stroke=\"#111827\" stroke-width=\"4\"/>\n  <line x1=\"155\" y1=\"230\" x2=\"185\" y2=\"230\" stroke=\"#111827\" stroke-width=\"4\"/>\n  <text x=\"100\" y=\"213\" font-size=\"24\" font-family=\"Arial\">E</text>\n  <text x=\"210\" y=\"210\" font-size=\"21\" font-family=\"Arial\">12 V</text>\n</svg>",
+      "render_mode": "inline",
+      "responsive": true
+    }
+  ],
+  "questions": [
+    {
+      "id": "2008_elec_ex02_q1",
+      "text": "1) نجعل البادلة في اللحظة \\(t=0\\) على الوضع (1). أ- ماذا يحدث للمكثفة؟ ب- كيف يمكن عمليًا مشاهدة التطور الزمني للتوتر الكهربائي \\(u_{AB}\\)؟ ج- بيّن أن المعادلة التفاضلية التي تحكم اشتغال الدارة الكهربائية عبارتها: \\(RC\\frac{du_{AB}}{dt}+u_{AB}=E\\). د- أعط عبارة الثابت المميز للدارة \\(\\tau\\)، وبيّن باستعمال التحليل البعدي أنه يقدر بالثانية في النظام الدولي. هـ- بيّن أن العبارة \\(u_{AB}(t)=E\\left(1-e^{-t/\\tau}\\right)\\) حل للمعادلة التفاضلية. و- ارسم شكل المنحنى البياني \\(u_{AB}=f(t)\\) وبيّن كيفية تحديد \\(\\tau\\) من البيان. ي- قارن بين قيمة التوتر \\(u_{AB}\\) في اللحظة \\(t=5\\tau\\) و\\(E\\). ماذا تستنتج؟",
+      "axis_tags": [
+        "rc_capacitor_charging",
+        "rc_differential_equation_solution",
+        "rc_time_constant_graphical_analysis",
+        "rc_capacitor_discharge"
+      ],
+      "display_order": 1,
+      "content_type": "question",
+      "solution": {
+        "strategy": "نطبق قوانين RC ونستعمل الحل الأسي ثم نستغل خاصية 63% و5τ.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الظاهرة",
+            "explanation": "عند الوضع (1) تشحن المكثفة."
+          },
+          {
+            "step_number": 2,
+            "title": "المشاهدة العملية",
+            "explanation": "يمكن مشاهدة \\(u_{AB}(t)\\) بواسطة راسم اهتزاز مهبطي ذي ذاكرة أو جهاز إعلام آلي مزود ببطاقة اقتناء."
+          },
+          {
+            "step_number": 3,
+            "title": "إنشاء المعادلة",
+            "explanation": "قانون التوترات: \\[u_{AB}+Ri-E=0\\] ومع \\[i=C\\frac{du_{AB}}{dt}\\] نحصل على \\[RC\\frac{du_{AB}}{dt}+u_{AB}=E\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "ثابت الزمن والتحليل البعدي",
+            "explanation": "\\[\\tau=RC\\] ومن \\([R]=[U][I]^{-1}\\) و\\([C]=[T][I][U]^{-1}\\) نجد \\([\\tau]=[T]\\)، أي الثانية."
+          },
+          {
+            "step_number": 5,
+            "title": "التحقق من الحل",
+            "explanation": "\\[u_{AB}=E(1-e^{-t/\\tau}),\\qquad \\frac{du_{AB}}{dt}=\\frac{E}{\\tau}e^{-t/\\tau}\\] وبما أن \\(\\tau=RC\\)، فإن التعويض يعطي \\(E\\) في الطرفين."
+          },
+          {
+            "step_number": 6,
+            "title": "تحديد τ بيانيًا",
+            "explanation": "على منحنى الشحن نحدد المستوى \\(u_{AB}=0.63E\\)؛ الزمن الموافق له هو \\(\\tau\\). ويمكن أيضًا استعمال مماس المنحنى عند المبدأ."
+          },
+          {
+            "step_number": 7,
+            "title": "عند 5τ",
+            "explanation": "\\[u_{AB}(5\\tau)=E(1-e^{-5})\\approx0.993E\\approx0.99E\\] ولـ\\(E=12V\\): \\(u_{AB}\\approx11.9V\\). إذن تعتبر المكثفة مشحونة عمليًا بنسبة نحو 99%."
+          }
+        ],
+        "final_answer": "المكثفة تشحن؛ \\(RCu'_{AB}+u_{AB}=E\\)، \\(\\tau=RC\\)، وعند \\(5\\tau\\) تكون مشحونة عمليًا."
+      }
+    },
+    {
+      "id": "2008_elec_ex02_q2",
+      "text": "2) بعد الانتهاء من الدراسة السابقة، نجعل البادلة في الوضع (2). أ- ماذا يحدث للمكثفة؟ ب- احسب قيمة الطاقة الأعظمية المحولة في الدارة الكهربائية.",
+      "axis_tags": [
+        "rc_capacitor_charging",
+        "rc_differential_equation_solution",
+        "rc_time_constant_graphical_analysis",
+        "rc_capacitor_discharge"
+      ],
+      "display_order": 2,
+      "content_type": "question",
+      "solution": {
+        "strategy": "في الوضع (2) تفرغ المكثفة، والطاقة الأعظمية المحولة هي الطاقة التي كانت مخزنة فيها عند نهاية الشحن.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التفريغ",
+            "explanation": "عند نقل البادلة إلى الوضع (2) تبدأ المكثفة في التفريغ عبر المقاومة."
+          },
+          {
+            "step_number": 2,
+            "title": "الطاقة الابتدائية المخزنة",
+            "explanation": "\\[E_{C,max}=\\frac12CE^2\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "التعويض",
+            "explanation": "\\[E_{C,max}=\\frac12\\times1.0\\times10^{-6}\\times12^2=7.2\\times10^{-5}\\,J\\]"
+          }
+        ],
+        "final_answer": "تفرغ المكثفة، والطاقة الأعظمية المحولة \\(7.2\\times10^{-5}\\,J\\)."
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "statement_figure_policy": "يعرض في نص التمرين فقط الشكل الموجود فعلا في موضوع البكالوريا الأصلي.",
+    "solution_figure_policy": "يعرض داخل الحل الرسم الموجود في التصحيح أو الرسم المطلوب صراحة لإنجاز الحل، ولا يضاف رسم زخرفي.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)",
+    "statement_figures_embedded": true
+  },
+  "statement_graphs": [
+    {
+      "diagram_type": "bac_2008_ex02_statement_circuit",
+      "title": "الشكل 2 — دارة RC مع البادلة",
+      "description": "مخطط الدارة كما في موضوع 2008.",
+      "svg": "<svg viewBox=\"0 0 900 430\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"الشكل 2 دارة RC مع بادلة\">\n  <rect x=\"35\" y=\"25\" width=\"830\" height=\"340\" rx=\"20\" fill=\"#fff\" stroke=\"#cbd5e1\" stroke-width=\"2\"/>\n  <path d=\"M170 100 H310\" stroke=\"#111827\" stroke-width=\"5\" fill=\"none\"/>\n  <path d=\"M590 100 H720 V315 H170 V100\" stroke=\"#111827\" stroke-width=\"5\" fill=\"none\"/>\n  <line x1=\"350\" y1=\"96\" x2=\"405\" y2=\"135\" stroke=\"#111827\" stroke-width=\"5\"/>\n  <circle cx=\"330\" cy=\"100\" r=\"5\" fill=\"#111827\"/>\n  <circle cx=\"425\" cy=\"100\" r=\"5\" fill=\"#111827\"/>\n  <circle cx=\"520\" cy=\"100\" r=\"5\" fill=\"#111827\"/>\n  <text x=\"315\" y=\"75\" font-size=\"22\" font-family=\"Arial\">1</text>\n  <text x=\"415\" y=\"75\" font-size=\"22\" font-family=\"Arial\">0</text>\n  <text x=\"510\" y=\"75\" font-size=\"22\" font-family=\"Arial\">2</text>\n  <text x=\"404\" y=\"145\" font-size=\"22\" font-family=\"Arial\">A</text>\n  <line x1=\"425\" y1=\"135\" x2=\"425\" y2=\"170\" stroke=\"#111827\" stroke-width=\"5\"/>\n  <line x1=\"395\" y1=\"170\" x2=\"455\" y2=\"170\" stroke=\"#111827\" stroke-width=\"6\"/>\n  <line x1=\"395\" y1=\"205\" x2=\"455\" y2=\"205\" stroke=\"#111827\" stroke-width=\"6\"/>\n  <text x=\"470\" y=\"195\" font-size=\"25\" font-family=\"Arial\">C</text>\n  <text x=\"402\" y=\"235\" font-size=\"22\" font-family=\"Arial\">B</text>\n  <rect x=\"385\" y=\"245\" width=\"80\" height=\"48\" rx=\"6\" fill=\"#fff\" stroke=\"#111827\" stroke-width=\"3\"/>\n  <text x=\"418\" y=\"277\" font-size=\"23\" font-family=\"Arial\">R</text>\n  <text x=\"405\" y=\"335\" font-size=\"22\" font-family=\"Arial\">M</text>\n  <line x1=\"520\" y1=\"100\" x2=\"720\" y2=\"100\" stroke=\"#111827\" stroke-width=\"5\"/>\n  <line x1=\"170\" y1=\"100\" x2=\"170\" y2=\"315\" stroke=\"#111827\" stroke-width=\"5\"/>\n  <line x1=\"145\" y1=\"185\" x2=\"195\" y2=\"185\" stroke=\"#111827\" stroke-width=\"4\"/>\n  <line x1=\"155\" y1=\"230\" x2=\"185\" y2=\"230\" stroke=\"#111827\" stroke-width=\"4\"/>\n  <text x=\"100\" y=\"213\" font-size=\"24\" font-family=\"Arial\">E</text>\n  <text x=\"210\" y=\"210\" font-size=\"21\" font-family=\"Arial\">12 V</text>\n</svg>",
+      "render_mode": "inline",
+      "responsive": true
+    }
+  ]
+}

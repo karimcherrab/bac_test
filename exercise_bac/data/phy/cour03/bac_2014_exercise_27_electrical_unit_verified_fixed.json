@@ -1,0 +1,348 @@
+{
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2014-electrical-verified",
+  "language": "ar",
+  "direction": "rtl",
+  "year": 2014,
+  "session": "ordinary",
+  "chapter_code": "electrical_phenomena_evolution",
+  "chapter_title": "تطور دراسة ظواهر كهربائية",
+  "exercise_number": 27,
+  "source_page": 10,
+  "source_pages": [
+    10,
+    11
+  ],
+  "solution_source_pages": [
+    31
+  ],
+
+  "branches": [
+    {
+      "code": "math",
+      "name": "شعبة رياضيات"
+    },
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "title": "التمرين 27 — بكالوريا الجزائر 2014 — شعبة رياضيات وتقني رياضي",
+  "axis_tags": [
+    "rc_capacitor_discharge",
+    "rc_differential_equation_solution",
+    "rc_time_constant_graphical_analysis",
+    "rc_model_exploitation_physical_quantities"
+  ],
+  "questions": [
+    {
+      "id": "2014_elec_ex27_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "I) 1- بيّن أن الشحنة الكهربائية \\(q(t)\\) تحقق المعادلة التفاضلية \\(\\frac{dq(t)}{dt}=-\\alpha q(t)\\)، وأعط عبارة الثابت \\(\\alpha\\) بدلالة المقادير المميزة لعناصر الدارة.",
+      "solution": {
+        "strategy": "في الوضع (2) تكون المكثفة في حالة تفريغ عبر المقاومة R.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "قانون التوترات",
+            "explanation": "أثناء التفريغ: \\[u_R+u_C=0\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "التحويل إلى q",
+            "explanation": "\\[u_C=\\frac qC,\\qquad u_R=Ri=R\\frac{dq}{dt}\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "المعادلة",
+            "explanation": "\\[\\frac qC+R\\frac{dq}{dt}=0\\Rightarrow \\boxed{\\frac{dq}{dt}=-\\frac1{RC}q}\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "الثابت",
+            "explanation": "بالمطابقة: \\[\\boxed{\\alpha=\\frac1{RC}}\\]"
+          }
+        ],
+        "final_answer": "\\(dq/dt=-q/(RC)\\)، و\\(\\alpha=1/(RC)\\)."
+      }
+    },
+    {
+      "id": "2014_elec_ex27_q2",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "I) 2- علماً بأن العبارة \\(q(t)=Q_0e^{-\\alpha t}\\) حل للمعادلة التفاضلية، حدّد عبارة \\(Q_0\\) واحسب قيمتها.",
+      "solution": {
+        "strategy": "Q0 هي الشحنة الابتدائية عندما تكون المكثفة مشحونة كلياً تحت التوتر E.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "العبارة",
+            "explanation": "\\[\\boxed{Q_0=CE}\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "الحساب",
+            "explanation": "\\[Q_0=470\\times10^{-9}\\times6=\\boxed{2.82\\times10^{-6}C}\\]"
+          }
+        ],
+        "final_answer": "\\(Q_0=2.82\\mu C\\)."
+      }
+    },
+    {
+      "id": "2014_elec_ex27_q3",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "I) 3- جد العبارة الحرفية لشدة التيار الكهربائي \\(i(t)\\) في الدارة.",
+      "solution": {
+        "strategy": "نشتق q(t). الإشارة السالبة تعكس أن اتجاه تيار التفريغ معاكس لاتجاه الشحن المختار.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الاشتقاق",
+            "explanation": "\\[i(t)=\\frac{dq}{dt}=-\\alpha Q_0e^{-\\alpha t}\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "باستعمال RC",
+            "explanation": "\\[\\boxed{i(t)=-\\frac{E}{R}e^{-t/(RC)}}\\]"
+          }
+        ],
+        "final_answer": "\\(i(t)=-\\frac ER e^{-t/(RC)}\\)."
+      }
+    },
+    {
+      "id": "2014_elec_ex27_q4",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "II) 1- يمثل الشكل 41 منحنى تطور التوتر الكهربائي بين طرفي المكثفة عندما تكون البادلة في الوضع (2). أ- حدّد اللحظة \\(t_1\\) التي تتحول فيها البادلة آلياً ولأول مرة من الوضع (2) إلى الوضع (1)، مبيناً الطريقة. ب- عيّن ثابت الزمن \\(\\tau\\) للدارة. ج- استنتج قيمة المقاومة \\(R\\) للناقل الأومي.",
+      "solution": {
+        "strategy": "نبحث عن 36.8% من التوتر الابتدائي، وهي أيضاً خاصية ثابت الزمن في التفريغ.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "قيمة التوتر المطلوبة",
+            "explanation": "\\[u_C=0.368E=0.368\\times6\\approx2.2V\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "قراءة t1",
+            "explanation": "من الشكل 41 الزمن الموافق لـ\\(2.2V\\) هو \\[\\boxed{t_1=0.8s}\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "ثابت الزمن",
+            "explanation": "في التفريغ \\(u_C(\\tau)=0.37E\\)، لذلك \\[\\boxed{\\tau=0.8s}\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "المقاومة",
+            "explanation": "\\[R=\\frac{\\tau}{C}=\\frac{0.8}{470\\times10^{-9}}\\approx\\boxed{1.7\\times10^6\\Omega}\\]"
+          }
+        ],
+        "final_answer": "\\(t_1=0.8s\\)، \\(\\tau=0.8s\\)، \\(R\\approx1.7M\\Omega\\)."
+      }
+    },
+    {
+      "id": "2014_elec_ex27_q5",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "II) 2- إن الإشارات الكهربائية المتسببة في التقلص العضلي دورية ودورها \\(\\Delta t=t_1-t_0\\). حدّد عدد تقلصات القلب المفروضة من طرف الجهاز في الدقيقة الواحدة.",
+      "solution": {
+        "strategy": "كل إشارة تقابل مدة 0.8s، لذا نحسب عدد الفترات في 60s.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الحساب",
+            "explanation": "\\[N=\\frac{60}{0.8}=\\boxed{75}\\]"
+          }
+        ],
+        "final_answer": "75 تقلصاً في الدقيقة."
+      }
+    },
+    {
+      "id": "2014_elec_ex27_q6",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "II) 3- ما قيمة الطاقة المحررة من طرف المكثفة خلال إشارة كهربائية واحدة؟",
+      "solution": {
+        "strategy": "الطاقة المحررة هي الفرق بين طاقة المكثفة في بداية التفريغ وطاقة المكثفة عند صدور الإشارة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "العبارة",
+            "explanation": "\\[E_{lib}=\\frac12CE^2-\\frac12Cu_C^2=\\frac12C(E^2-u_C^2)\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "التعويض",
+            "explanation": "عند الإشارة \\(u_C\\approx2.2V\\): \\[E_{lib}=\\frac12\\times470\\times10^{-9}(6^2-2.2^2)\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "النتيجة",
+            "explanation": "\\[\\boxed{E_{lib}\\approx7.32\\times10^{-6}J}\\]"
+          }
+        ],
+        "final_answer": "\\(E_{lib}\\approx7.32\\mu J\\)."
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "تجميعية_عمورة_للبكالوريات_السابقة_الوحدة_3(1).pdf",
+    "statement_figure_policy": "كل شكل أو بيان معطى أصلاً في نص البكالوريا يعرض مع التمرين. إذا كان السؤال يطلب رسم دارة أو توصيل جهاز فلا يكشف الرسم قبل فتح الحل.",
+    "solution_figure_policy": "تضاف الرسومات المطلوبة أو المساعدة داخل خطوات الحل فقط.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  },
+  "statement": "عند عجز القلب عن أداء وظيفته تسمح الجراحة بوضع منشط قلبي اصطناعي في الصدر يجبر القلب على النبض بانتظام بإرسال إشارات كهربائية. ينمذج المنشط بالدارة الكهربائية المبينة في الشكل 40، حيث سعة المكثفة \\(C=470nF\\) والقوة المحركة الكهربائية للمولد \\(E=6V\\).\n\nنضع البادلة في الوضع (1) لمدة طويلة. عند اللحظة \\(t=0\\) نضع البادلة في الوضع (2) وندرس تطور شحنة المكثفة \\(q\\). عندما يصبح التوتر الكهربائي \\(u_{AB}\\) مساوياً لـ36.8% من قيمته الابتدائية تتحول البادلة آلياً من الوضع (2) إلى الوضع (1)، فتصدر إشارة كهربائية تساعد في تقلص العضلة القلبية.",
+  "figures": [
+    {
+      "diagram_type": "bac_2014_ex27_statement_circuit",
+      "title": "الشكل 40 — نموذج المنشط القلبي",
+      "description": "الدارة الأصلية للمنشط القلبي.",
+      "svg": "<svg viewBox=\"0 0 900 390\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"الشكل 40 نموذج المنشط القلبي\">\n <defs>\n  <marker id=\"i27\" markerWidth=\"10\" markerHeight=\"10\" refX=\"8\" refY=\"3\" orient=\"auto\">\n   <path d=\"M0,0 L0,6 L9,3z\" fill=\"#111827\"/>\n  </marker>\n </defs>\n <rect x=\"35\" y=\"25\" width=\"830\" height=\"310\" rx=\"22\" fill=\"#fff\" stroke=\"#cbd5e1\" stroke-width=\"2\"/>\n <path d=\"M155 95 H290\" fill=\"none\" stroke=\"#111827\" stroke-width=\"5\"/>\n <path d=\"M565 95 H715 V285 H155 V95\" fill=\"none\" stroke=\"#111827\" stroke-width=\"5\"/>\n\n <circle cx=\"155\" cy=\"190\" r=\"34\" fill=\"#fff\" stroke=\"#111827\" stroke-width=\"4\"/>\n <text x=\"143\" y=\"198\" font-size=\"23\" font-family=\"Arial\">E</text>\n <text x=\"110\" y=\"165\" font-size=\"25\" font-family=\"Arial\">+</text>\n <text x=\"111\" y=\"230\" font-size=\"25\" font-family=\"Arial\">−</text>\n\n <circle cx=\"305\" cy=\"95\" r=\"5\" fill=\"#111827\"/>\n <circle cx=\"400\" cy=\"95\" r=\"5\" fill=\"#111827\"/>\n <circle cx=\"495\" cy=\"95\" r=\"5\" fill=\"#111827\"/>\n <line x1=\"325\" y1=\"92\" x2=\"380\" y2=\"130\" stroke=\"#111827\" stroke-width=\"5\"/>\n <text x=\"288\" y=\"67\" font-size=\"22\" font-family=\"Arial\">(1)</text>\n <text x=\"390\" y=\"67\" font-size=\"22\" font-family=\"Arial\">K</text>\n <text x=\"480\" y=\"67\" font-size=\"22\" font-family=\"Arial\">(2)</text>\n\n <line x1=\"400\" y1=\"130\" x2=\"400\" y2=\"170\" stroke=\"#111827\" stroke-width=\"5\"/>\n <line x1=\"370\" y1=\"170\" x2=\"430\" y2=\"170\" stroke=\"#111827\" stroke-width=\"6\"/>\n <line x1=\"370\" y1=\"205\" x2=\"430\" y2=\"205\" stroke=\"#111827\" stroke-width=\"6\"/>\n <line x1=\"400\" y1=\"205\" x2=\"400\" y2=\"285\" stroke=\"#111827\" stroke-width=\"5\"/>\n <text x=\"445\" y=\"195\" font-size=\"24\" font-family=\"Arial\">C=470nF</text>\n <text x=\"370\" y=\"152\" font-size=\"21\" font-family=\"Arial\">A</text>\n <text x=\"370\" y=\"232\" font-size=\"21\" font-family=\"Arial\">B</text>\n\n <rect x=\"640\" y=\"160\" width=\"75\" height=\"60\" rx=\"7\" fill=\"#fff\" stroke=\"#111827\" stroke-width=\"3\"/>\n <text x=\"668\" y=\"198\" font-size=\"24\" font-family=\"Arial\">R</text>\n\n <line x1=\"540\" y1=\"115\" x2=\"540\" y2=\"205\" stroke=\"#111827\" stroke-width=\"4\" marker-end=\"url(#i27)\"/>\n <text x=\"555\" y=\"165\" font-size=\"22\" font-family=\"Arial\">i</text>\n</svg>",
+      "render_mode": "inline",
+      "responsive": true
+    },
+    {
+      "title": "الشكل 41 — u_C=f(t)",
+      "description": "منحنى تفريغ المكثفة في الوضع (2). عند 36.8% من 6V أي حوالي 2.2V نجد t₁≈0.8s.",
+      "x_label": "t (s)",
+      "y_label": "u_C (V)",
+      "x_domain": [
+        0,
+        2.0
+      ],
+      "y_domain": [
+        0,
+        6.5
+      ],
+      "series": [
+        {
+          "name": "u_C(t)",
+          "data": [
+            {
+              "x": 0,
+              "y": 6.0
+            },
+            {
+              "x": 0.2,
+              "y": 4.673
+            },
+            {
+              "x": 0.4,
+              "y": 3.639
+            },
+            {
+              "x": 0.6,
+              "y": 2.834
+            },
+            {
+              "x": 0.8,
+              "y": 2.207
+            },
+            {
+              "x": 1.0,
+              "y": 1.719
+            },
+            {
+              "x": 1.2,
+              "y": 1.339
+            },
+            {
+              "x": 1.6,
+              "y": 0.812
+            },
+            {
+              "x": 2.0,
+              "y": 0.493
+            }
+          ]
+        }
+      ],
+      "settings": {
+        "show_grid": true,
+        "show_axes": true,
+        "show_legend": false,
+        "show_point_labels": false,
+        "connect_points": true
+      }
+    }
+  ],
+  "statement_graphs": [
+    {
+      "diagram_type": "bac_2014_ex27_statement_circuit",
+      "title": "الشكل 40 — نموذج المنشط القلبي",
+      "description": "الدارة الأصلية للمنشط القلبي.",
+      "svg": "<svg viewBox=\"0 0 900 390\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"الشكل 40 نموذج المنشط القلبي\">\n <defs>\n  <marker id=\"i27\" markerWidth=\"10\" markerHeight=\"10\" refX=\"8\" refY=\"3\" orient=\"auto\">\n   <path d=\"M0,0 L0,6 L9,3z\" fill=\"#111827\"/>\n  </marker>\n </defs>\n <rect x=\"35\" y=\"25\" width=\"830\" height=\"310\" rx=\"22\" fill=\"#fff\" stroke=\"#cbd5e1\" stroke-width=\"2\"/>\n <path d=\"M155 95 H290\" fill=\"none\" stroke=\"#111827\" stroke-width=\"5\"/>\n <path d=\"M565 95 H715 V285 H155 V95\" fill=\"none\" stroke=\"#111827\" stroke-width=\"5\"/>\n\n <circle cx=\"155\" cy=\"190\" r=\"34\" fill=\"#fff\" stroke=\"#111827\" stroke-width=\"4\"/>\n <text x=\"143\" y=\"198\" font-size=\"23\" font-family=\"Arial\">E</text>\n <text x=\"110\" y=\"165\" font-size=\"25\" font-family=\"Arial\">+</text>\n <text x=\"111\" y=\"230\" font-size=\"25\" font-family=\"Arial\">−</text>\n\n <circle cx=\"305\" cy=\"95\" r=\"5\" fill=\"#111827\"/>\n <circle cx=\"400\" cy=\"95\" r=\"5\" fill=\"#111827\"/>\n <circle cx=\"495\" cy=\"95\" r=\"5\" fill=\"#111827\"/>\n <line x1=\"325\" y1=\"92\" x2=\"380\" y2=\"130\" stroke=\"#111827\" stroke-width=\"5\"/>\n <text x=\"288\" y=\"67\" font-size=\"22\" font-family=\"Arial\">(1)</text>\n <text x=\"390\" y=\"67\" font-size=\"22\" font-family=\"Arial\">K</text>\n <text x=\"480\" y=\"67\" font-size=\"22\" font-family=\"Arial\">(2)</text>\n\n <line x1=\"400\" y1=\"130\" x2=\"400\" y2=\"170\" stroke=\"#111827\" stroke-width=\"5\"/>\n <line x1=\"370\" y1=\"170\" x2=\"430\" y2=\"170\" stroke=\"#111827\" stroke-width=\"6\"/>\n <line x1=\"370\" y1=\"205\" x2=\"430\" y2=\"205\" stroke=\"#111827\" stroke-width=\"6\"/>\n <line x1=\"400\" y1=\"205\" x2=\"400\" y2=\"285\" stroke=\"#111827\" stroke-width=\"5\"/>\n <text x=\"445\" y=\"195\" font-size=\"24\" font-family=\"Arial\">C=470nF</text>\n <text x=\"370\" y=\"152\" font-size=\"21\" font-family=\"Arial\">A</text>\n <text x=\"370\" y=\"232\" font-size=\"21\" font-family=\"Arial\">B</text>\n\n <rect x=\"640\" y=\"160\" width=\"75\" height=\"60\" rx=\"7\" fill=\"#fff\" stroke=\"#111827\" stroke-width=\"3\"/>\n <text x=\"668\" y=\"198\" font-size=\"24\" font-family=\"Arial\">R</text>\n\n <line x1=\"540\" y1=\"115\" x2=\"540\" y2=\"205\" stroke=\"#111827\" stroke-width=\"4\" marker-end=\"url(#i27)\"/>\n <text x=\"555\" y=\"165\" font-size=\"22\" font-family=\"Arial\">i</text>\n</svg>",
+      "render_mode": "inline",
+      "responsive": true
+    },
+    {
+      "title": "الشكل 41 — u_C=f(t)",
+      "description": "منحنى تفريغ المكثفة في الوضع (2). عند 36.8% من 6V أي حوالي 2.2V نجد t₁≈0.8s.",
+      "x_label": "t (s)",
+      "y_label": "u_C (V)",
+      "x_domain": [
+        0,
+        2.0
+      ],
+      "y_domain": [
+        0,
+        6.5
+      ],
+      "series": [
+        {
+          "name": "u_C(t)",
+          "data": [
+            {
+              "x": 0,
+              "y": 6.0
+            },
+            {
+              "x": 0.2,
+              "y": 4.673
+            },
+            {
+              "x": 0.4,
+              "y": 3.639
+            },
+            {
+              "x": 0.6,
+              "y": 2.834
+            },
+            {
+              "x": 0.8,
+              "y": 2.207
+            },
+            {
+              "x": 1.0,
+              "y": 1.719
+            },
+            {
+              "x": 1.2,
+              "y": 1.339
+            },
+            {
+              "x": 1.6,
+              "y": 0.812
+            },
+            {
+              "x": 2.0,
+              "y": 0.493
+            }
+          ]
+        }
+      ],
+      "settings": {
+        "show_grid": true,
+        "show_axes": true,
+        "show_legend": false,
+        "show_point_labels": false,
+        "connect_points": true
+      }
+    }
+  ]
+}

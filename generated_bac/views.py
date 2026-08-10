@@ -20,16 +20,6 @@ from .services.generation_service import (
 
 
 def get_authenticated_student(request) -> Student:
-    """
-    يدعم حالتين:
-
-    1. request.user نفسه Student.
-    2. request.user لديه علاقة student.
-
-    عدّل هذه الدالة فقط إذا كانت بنية الحسابات
-    عندك مختلفة.
-    """
-
     if isinstance(request.user, Student):
         return request.user
 
@@ -47,14 +37,25 @@ def get_authenticated_student(request) -> Student:
     )
 
 
+def generated_queryset():
+    return (
+        GeneratedBacExercise.objects
+        .select_related(
+            "chapter",
+            "branch",
+        )
+        .prefetch_related(
+            "re_explanations",
+        )
+    )
+
+
 class GenerateBacExerciseAPIView(APIView):
     permission_classes = [IsAuthenticated]
 
     def post(self, request):
-        serializer = (
-            GenerateBacExerciseRequestSerializer(
-                data=request.data,
-            )
+        serializer = GenerateBacExerciseRequestSerializer(
+            data=request.data,
         )
         serializer.is_valid(
             raise_exception=True,
@@ -72,6 +73,12 @@ class GenerateBacExerciseAPIView(APIView):
                     **serializer.validated_data,
                 )
             )
+
+            generated = generated_queryset().get(
+                id=generated.id,
+                student=student,
+            )
+
         except BacGenerationError as exc:
             return Response(
                 {
@@ -131,11 +138,7 @@ class GenerateBacSolutionAPIView(APIView):
             )
 
             generated = get_object_or_404(
-                GeneratedBacExercise.objects
-                .select_related(
-                    "chapter",
-                    "branch",
-                ),
+                generated_queryset(),
                 id=exercise_id,
                 student=student,
             )
@@ -152,6 +155,12 @@ class GenerateBacSolutionAPIView(APIView):
                     ),
                 )
             )
+
+            generated = generated_queryset().get(
+                id=generated.id,
+                student=student,
+            )
+
         except BacGenerationError as exc:
             return Response(
                 {
@@ -188,6 +197,90 @@ class GenerateBacSolutionAPIView(APIView):
         )
 
 
+class ReExplainBacQuestionSolutionAPIView(APIView):
+    """
+    يعيد شرح حل سؤال واحد ويخزن كل محاولة في قاعدة البيانات.
+
+    لا يعمل قبل إنشاء الحل الكامل للتمرين.
+    """
+
+    permission_classes = [IsAuthenticated]
+
+    def post(
+        self,
+        request,
+        exercise_id,
+        question_id,
+    ):
+        try:
+            student = get_authenticated_student(
+                request
+            )
+
+            generated = get_object_or_404(
+                generated_queryset(),
+                id=exercise_id,
+                student=student,
+            )
+
+            BacExerciseGenerationService().re_explain_solution_question(
+                generated_exercise=generated,
+                student=student,
+                question_id=str(question_id),
+            )
+
+            # نعيد التمرين كاملًا حتى تتحدث الواجهة مباشرة
+            # ويكون re_explanations متزامنًا مع قاعدة البيانات.
+            generated = generated_queryset().get(
+                id=generated.id,
+                student=student,
+            )
+
+        except BacGenerationError as exc:
+            return Response(
+                {
+                    "detail": str(exc),
+                    "code": (
+                        "bac_solution_re_explanation_failed"
+                    ),
+                },
+                status=(
+                    status.HTTP_422_UNPROCESSABLE_ENTITY
+                ),
+            )
+        except ValueError as exc:
+            return Response(
+                {
+                    "detail": str(exc),
+                    "code": "invalid_question_solution",
+                },
+                status=(
+                    status.HTTP_422_UNPROCESSABLE_ENTITY
+                ),
+            )
+        except Exception:
+            return Response(
+                {
+                    "detail": (
+                        "تعذر إعادة شرح الحل حاليًا."
+                    ),
+                    "code": (
+                        "unexpected_re_explanation_error"
+                    ),
+                },
+                status=(
+                    status.HTTP_500_INTERNAL_SERVER_ERROR
+                ),
+            )
+
+        return Response(
+            GeneratedBacExerciseSerializer(
+                generated
+            ).data,
+            status=status.HTTP_201_CREATED,
+        )
+
+
 class GeneratedBacExerciseDetailAPIView(APIView):
     permission_classes = [IsAuthenticated]
 
@@ -209,11 +302,7 @@ class GeneratedBacExerciseDetailAPIView(APIView):
             )
 
         generated = get_object_or_404(
-            GeneratedBacExercise.objects
-            .select_related(
-                "chapter",
-                "branch",
-            ),
+            generated_queryset(),
             id=exercise_id,
             student=student,
         )
@@ -242,19 +331,13 @@ class MyGeneratedBacExercisesAPIView(APIView):
                 ),
             )
 
-        queryset = (
-            GeneratedBacExercise.objects
-            .filter(student=student)
-            .select_related(
-                "chapter",
-                "branch",
-            )
+        queryset = generated_queryset().filter(
+            student=student
         )
 
         chapter_id = request.query_params.get(
             "chapter_id",
         )
-
         branch_code = request.query_params.get(
             "branch_code",
         )

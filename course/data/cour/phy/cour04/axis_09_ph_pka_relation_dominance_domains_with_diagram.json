@@ -1,0 +1,414 @@
+{
+  "tag": "ph_pka_relation_dominance_domains",
+  "title": "العلاقة بين pH و pKa ومجالات التغلب",
+  "order": 9,
+  "is_active": true,
+  "branches": [
+    "math",
+    "science",
+    "math_tech"
+  ],
+  "content": {
+    "language": "ar",
+    "direction": "rtl",
+    "chapter_code": "chemical_equilibrium",
+    "axis_tag": "ph_pka_relation_dominance_domains",
+    "chapter_title": "تطور جملة كيميائية نحو حالة التوازن",
+    "estimated_minutes": 40,
+    "difficulty": "medium",
+    "lesson_goal": "أن يستعمل التلميذ العلاقة بين pH وpKa لتحديد النسبة بين الحمض HA وأساسه المرافق A⁻، ثم يحدد النوع الكيميائي الغالب ويرسم ويستغل مخطط مجالات التغلب.",
+    "prerequisites": [
+      "معرفة الثنائية حمض/أساس HA/A⁻.",
+      "معرفة ثابت الحموضة Ka وpKa.",
+      "معرفة pH وتركيز H₃O⁺.",
+      "فهم معنى التركيز والنوع الكيميائي الغالب.",
+      "استعمال اللوغاريتم العشري."
+    ],
+    "learning_outcomes": [
+      "يستنتج ويستعمل العلاقة بين pH وpKa.",
+      "يحسب النسبة [A⁻]/[HA] انطلاقًا من pH وpKa.",
+      "يحدد النوع الغالب عندما pH<pKa.",
+      "يحدد حالة تساوي التركيزين عندما pH=pKa.",
+      "يحدد النوع الغالب عندما pH>pKa.",
+      "يرسم مخطط مجالات التغلب لثنائية HA/A⁻.",
+      "يستغل مخطط التغلب لتحديد الصيغة الغالبة عند pH معلوم.",
+      "يتجنب الخلط بين قوة الحمض والنوع الغالب داخل محلول معين."
+    ],
+    "learning_path": [
+      {
+        "id": "step_1",
+        "type": "motivation",
+        "title": "هل يوجد الحمض أم الأساس المرافق أكثر في المحلول؟",
+        "content": {
+          "teacher": "في محلول يحتوي على ثنائية حمض/أساس HA/A⁻ يمكن أن توجد الصيغتان معًا. لكن حسب قيمة pH قد تكون إحدى الصيغتين أكثر من الأخرى. لمعرفة الصيغة الغالبة نقارن pH مع pKa.",
+          "central_idea": "مقارنة pH وpKa تسمح بتحديد النوع الغالب داخل الثنائية.",
+          "takeaway": "لا نحتاج إلى حساب كل التركيزات دائمًا؛ أحيانًا تكفي مقارنة pH وpKa."
+        }
+      },
+      {
+        "id": "step_2",
+        "type": "derivation",
+        "title": "العلاقة بين pH وpKa",
+        "content": {
+          "teacher": "نبدأ من عبارة ثابت الحموضة للثنائية HA/A⁻ ثم نستعمل تعريفي pH وpKa.",
+          "starting_relation": "\\(K_a=\\frac{[A^-][H_3O^+]}{[HA]}\\)",
+          "steps": [
+            "\\(K_a=[H_3O^+]\\frac{[A^-]}{[HA]}\\)",
+            "\\(-\\log K_a=-\\log[H_3O^+]-\\log\\left(\\frac{[A^-]}{[HA]}\\right)\\)",
+            "\\(pK_a=pH-\\log\\left(\\frac{[A^-]}{[HA]}\\right)\\)",
+            "\\(pH=pK_a+\\log\\left(\\frac{[A^-]}{[HA]}\\right)\\)"
+          ],
+          "final_relation": "\\(pH=pK_a+\\log\\left(\\frac{[A^-]}{[HA]}\\right)\\)",
+          "attention": "هذه العلاقة تخص الثنائية HA/A⁻ في حالة التوازن المدروسة.",
+          "takeaway": "العلاقة الأساسية: pH = pKa + log([A⁻]/[HA])."
+        }
+      },
+      {
+        "id": "step_3",
+        "type": "law",
+        "title": "فهم العلاقة بدل حفظها فقط",
+        "content": {
+          "law_guides": [
+            {
+              "title": "علاقة pH وpKa",
+              "why": "تسمح بربط حموضة الوسط بنسبة وجود الأساس A⁻ إلى الحمض HA.",
+              "symbols": [
+                {
+                  "symbol": "\\(pH\\)",
+                  "meaning": "حموضة المحلول."
+                },
+                {
+                  "symbol": "\\(pK_a\\)",
+                  "meaning": "خاصية للثنائية HA/A⁻ عند درجة الحرارة المدروسة."
+                },
+                {
+                  "symbol": "\\([A^-]\\)",
+                  "meaning": "تركيز الأساس المرافق."
+                },
+                {
+                  "symbol": "\\([HA]\\)",
+                  "meaning": "تركيز الحمض."
+                }
+              ],
+              "law": "\\(pH=pK_a+\\log\\left(\\frac{[A^-]}{[HA]}\\right)\\)",
+              "meaning": "الفرق pH-pKa يحدد هل نسبة [A⁻]/[HA] أكبر أو أصغر أو مساوية لـ1.",
+              "how_to_use": [
+                "احسب أو استخرج pH.",
+                "حدد pKa للثنائية.",
+                "قارن pH مع pKa.",
+                "استنتج النوع الغالب، أو احسب النسبة إذا طلبت."
+              ],
+              "warning": "لا تستعمل pKa لثنائية أخرى."
+            }
+          ],
+          "takeaway": "إشارة pH-pKa هي التي تحدد أي الصيغتين أكثر."
+        }
+      },
+      {
+        "id": "step_4",
+        "type": "concept",
+        "title": "الحالات الثلاث لمجال التغلب",
+        "content": {
+          "teacher": "من العلاقة السابقة تظهر ثلاث حالات بسيطة.",
+          "cases": [
+            {
+              "condition": "\\(pH<pK_a\\)",
+              "deduction": "\\([A^-]<[HA]\\)",
+              "dominant_species": "الحمض HA هو الغالب."
+            },
+            {
+              "condition": "\\(pH=pK_a\\)",
+              "deduction": "\\([A^-]=[HA]\\)",
+              "dominant_species": "لا توجد صفة غالبة؛ التركيزان متساويان."
+            },
+            {
+              "condition": "\\(pH>pK_a\\)",
+              "deduction": "\\([A^-]>[HA]\\)",
+              "dominant_species": "الأساس A⁻ هو الغالب."
+            }
+          ],
+          "takeaway": "pH أقل: الحمض يغلب. pH أكبر: الأساس يغلب."
+        }
+      },
+      {
+        "id": "step_5",
+        "type": "diagram",
+        "title": "مخطط مجالات التغلب",
+        "content": {
+          "teacher": "نمثل قيمة pKa على محور pH. على يسارها يكون HA غالبًا، وعلى يمينها يكون A⁻ غالبًا، وعند pH=pKa يتساوى التركيزان.",
+          "graph": {
+            "id": "ph_pka_dominance_diagram",
+            "type": "diagram",
+            "diagram_type": "educational_diagram",
+            "title": "مجالات تغلب HA وA⁻",
+            "description": "مخطط يبين النوع الغالب حسب مقارنة pH مع pKa.",
+            "svg": "<svg viewBox=\"0 0 1120 430\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"مخطط مجالات تغلب الحمض HA والأساس A- حسب pH و pKa\">\n  <rect x=\"20\" y=\"20\" width=\"1080\" height=\"390\" rx=\"28\" fill=\"#ffffff\" stroke=\"#c7d2fe\" stroke-width=\"2\"/>\n  <text x=\"560\" y=\"60\" text-anchor=\"middle\" font-size=\"25\" font-weight=\"700\" fill=\"#0f172a\">\n    مخطط مجالات التغلب للثنائية HA / A⁻\n  </text>\n\n  <line x1=\"100\" y1=\"220\" x2=\"1020\" y2=\"220\" stroke=\"#334155\" stroke-width=\"4\"/>\n  <line x1=\"560\" y1=\"180\" x2=\"560\" y2=\"265\" stroke=\"#111827\" stroke-width=\"4\"/>\n\n  <rect x=\"100\" y=\"125\" width=\"460\" height=\"72\" rx=\"18\" fill=\"#fee2e2\"/>\n  <rect x=\"560\" y=\"125\" width=\"460\" height=\"72\" rx=\"18\" fill=\"#dbeafe\"/>\n\n  <text x=\"330\" y=\"168\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"700\" fill=\"#991b1b\">الحمض HA هو الغالب</text>\n  <text x=\"790\" y=\"168\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"700\" fill=\"#1e40af\">الأساس A⁻ هو الغالب</text>\n\n  <text x=\"100\" y=\"255\" text-anchor=\"middle\" font-size=\"18\" fill=\"#475569\">pH منخفض</text>\n  <text x=\"1020\" y=\"255\" text-anchor=\"middle\" font-size=\"18\" fill=\"#475569\">pH مرتفع</text>\n  <text x=\"560\" y=\"295\" text-anchor=\"middle\" font-size=\"21\" font-weight=\"700\" fill=\"#0f172a\">pH = pKₐ</text>\n  <text x=\"560\" y=\"330\" text-anchor=\"middle\" font-size=\"18\" fill=\"#475569\">[HA] = [A⁻] : لا توجد صفة غالبة</text>\n\n  <text x=\"330\" y=\"365\" text-anchor=\"middle\" font-size=\"18\" fill=\"#991b1b\">pH &lt; pKₐ ⇒ [HA] &gt; [A⁻]</text>\n  <text x=\"790\" y=\"365\" text-anchor=\"middle\" font-size=\"18\" fill=\"#1e40af\">pH &gt; pKₐ ⇒ [A⁻] &gt; [HA]</text>\n</svg>",
+            "alt_text": "على محور pH: عندما يكون pH أصغر من pKa يغلب الحمض HA، وعند التساوي تكون تراكيز HA وA- متساوية، وعندما يكون pH أكبر من pKa يغلب الأساس A-.",
+            "render_mode": "inline_step",
+            "responsive": true
+          },
+          "method": [
+            "ارسم محور pH.",
+            "ضع قيمة pKa كنقطة فصل.",
+            "اكتب HA في المجال pH<pKa.",
+            "اكتب A⁻ في المجال pH>pKa.",
+            "عند pH=pKa اكتب [HA]=[A⁻]."
+          ],
+          "takeaway": "pKa هي الحد الفاصل بين مجالي التغلب."
+        }
+      },
+      {
+        "id": "step_6",
+        "type": "worked_example",
+        "title": "مثال: تحديد النوع الغالب",
+        "content": {
+          "statement": "لثنائية \\(HA/A^-\\) لدينا \\(pK_a=4.2\\). حدد النوع الغالب في محلول pH له يساوي 3.0، ثم في محلول آخر pH له يساوي 5.0.",
+          "steps": [
+            "عند \\(pH=3.0\\): لدينا \\(3.0<4.2\\)، إذن \\(HA\\) هو الغالب.",
+            "عند \\(pH=5.0\\): لدينا \\(5.0>4.2\\)، إذن \\(A^-\\) هو الغالب."
+          ],
+          "final_answer": "عند pH=3.0 يغلب HA، وعند pH=5.0 يغلب A⁻.",
+          "attention": "لا تحتاج إلى حساب التركيزات إذا كان المطلوب فقط تحديد النوع الغالب."
+        }
+      },
+      {
+        "id": "step_7",
+        "type": "method",
+        "title": "حساب النسبة [A⁻]/[HA]",
+        "content": {
+          "teacher": "إذا لم يطلب السؤال النوع الغالب فقط، بل طلب نسبة التركيزين، نستخرجها مباشرة من العلاقة.",
+          "relations": [
+            "\\(pH-pK_a=\\log\\left(\\frac{[A^-]}{[HA]}\\right)\\)",
+            "\\(\\frac{[A^-]}{[HA]}=10^{pH-pK_a}\\)"
+          ],
+          "algorithm": [
+            "احسب الفرق pH-pKa.",
+            "استعمل \\(10^{pH-pK_a}\\).",
+            "فسر النتيجة: أكبر من 1 يعني A⁻ أكثر، وأصغر من 1 يعني HA أكثر."
+          ],
+          "takeaway": "النسبة = 10^(pH-pKa)."
+        }
+      },
+      {
+        "id": "step_8",
+        "type": "worked_example",
+        "title": "مثال: كم مرة يكون أحد الشكلين أكثر؟",
+        "content": {
+          "statement": "لثنائية \\(HA/A^-\\)، إذا كان \\(pK_a=4.0\\) و\\(pH=5.0\\)، احسب \\([A^-]/[HA]\\).",
+          "steps": [
+            "\\(\\frac{[A^-]}{[HA]}=10^{pH-pK_a}\\)",
+            "\\(\\frac{[A^-]}{[HA]}=10^{5.0-4.0}=10\\)"
+          ],
+          "final_answer": "\\([A^-]=10[HA]\\)، وبالتالي A⁻ هو النوع الغالب.",
+          "takeaway": "فرق وحدة واحدة في pH-pKa يعطي نسبة 10."
+        }
+      },
+      {
+        "id": "step_9",
+        "type": "concept",
+        "title": "لا تخلط بين قوة الحمض ومجال التغلب",
+        "content": {
+          "teacher": "قيمة pKa تستعمل في المحور السابق لمقارنة قوة الأحماض، أما هنا فنقارن pH للمحلول مع pKa للثنائية لمعرفة الصيغة الغالبة.",
+          "comparison": [
+            {
+              "question": "أي حمض أقوى؟",
+              "method": "قارن قيم pKa للأحماض: الأصغر pKa يعني حمضًا أقوى."
+            },
+            {
+              "question": "أي صيغة هي الغالبة في محلول؟",
+              "method": "قارن pH المحلول مع pKa للثنائية."
+            }
+          ],
+          "attention": "كون HA حمضًا ضعيفًا أو قويًا نسبيًا لا يكفي وحده لتحديد هل HA أم A⁻ هو الغالب في محلول معين.",
+          "takeaway": "القوة: نقارن pKa مع pKa. التغلب: نقارن pH مع pKa."
+        }
+      },
+      {
+        "id": "step_10",
+        "type": "method",
+        "title": "طريقة البكالوريا في أسئلة مجالات التغلب",
+        "content": {
+          "teacher": "تأتي الأسئلة غالبًا في صورة: حدد النوع الغالب، ارسم مخطط التغلب، أو استنتج pKa من علاقة أو بيان.",
+          "algorithm": [
+            "حدد الثنائية HA/A⁻.",
+            "استخرج قيمة pKa.",
+            "استخرج أو احسب pH للمحلول.",
+            "إذا طلب النوع الغالب: قارن pH وpKa.",
+            "إذا طلب المخطط: ضع pKa على محور pH وحدد HA يسارها وA⁻ يمينها.",
+            "إذا طلب نسبة التركيزين: استعمل \\([A^-]/[HA]=10^{pH-pK_a}\\).",
+            "اكتب الاستنتاج مع اسم أو صيغة النوع الغالب."
+          ],
+          "answer_templates": [
+            "بما أن \\(pH<pK_a\\)، فإن \\([HA]>[A^-]\\)، ومنه HA هو النوع الغالب.",
+            "بما أن \\(pH>pK_a\\)، فإن \\([A^-]>[HA]\\)، ومنه A⁻ هو النوع الغالب.",
+            "بما أن \\(pH=pK_a\\)، فإن \\([HA]=[A^-]\\)."
+          ],
+          "takeaway": "حدد الثنائية → قارن pH وpKa → استنتج."
+        }
+      },
+      {
+        "id": "step_11",
+        "type": "common_mistakes",
+        "title": "أخطاء يجب تجنبها",
+        "content": {
+          "mistakes": [
+            {
+              "title": "عكس مجالي التغلب",
+              "wrong": "إذا كان pH<pKa فإن A⁻ هو الغالب.",
+              "correct": "إذا كان pH<pKa فإن HA هو الغالب."
+            },
+            {
+              "title": "اعتبار pH=pKa مجالًا للحمض",
+              "wrong": "عند pH=pKa يكون HA غالبًا.",
+              "correct": "عند pH=pKa يكون [HA]=[A⁻] ولا توجد صفة غالبة."
+            },
+            {
+              "title": "الخلط بين مقارنة القوة والتغلب",
+              "wrong": "نقارن pH لحمضين لتحديد أيهما أقوى.",
+              "correct": "قوة الأحماض تقارن عبر Ka أوpKa، أما التغلب في محلول فيحدد بمقارنة pH مع pKa."
+            },
+            {
+              "title": "قلب النسبة في العلاقة",
+              "wrong": "\\(pH=pK_a+\\log([HA]/[A^-])\\)",
+              "correct": "\\(pH=pK_a+\\log([A^-]/[HA])\\)."
+            }
+          ],
+          "takeaway": "يسار pKa: HA، يمين pKa: A⁻."
+        }
+      },
+      {
+        "id": "step_12",
+        "type": "summary",
+        "title": "خلاصة المحور",
+        "content": {
+          "remember": [
+            "\\(pH=pK_a+\\log\\left(\\frac{[A^-]}{[HA]}\\right)\\).",
+            "\\(\\frac{[A^-]}{[HA]}=10^{pH-pK_a}\\).",
+            "\\(pH<pK_a\\Rightarrow[HA]>[A^-]\\): الحمض غالب.",
+            "\\(pH=pK_a\\Rightarrow[HA]=[A^-]\\): لا توجد صفة غالبة.",
+            "\\(pH>pK_a\\Rightarrow[A^-]>[HA]\\): الأساس غالب.",
+            "pKa تمثل الحد الفاصل في مخطط مجالات التغلب."
+          ],
+          "method_template": [
+            "حدد الثنائية.",
+            "حدد pKa.",
+            "حدد pH.",
+            "قارن pH وpKa.",
+            "استنتج النوع الغالب.",
+            "إذا طلبت النسبة، استعمل 10^(pH-pKa)."
+          ],
+          "memory_tip": "pH أصغر من pKa: الحمض. pH أكبر من pKa: الأساس.",
+          "takeaway": "مقارنة واحدة بين pH وpKa تكفي غالبًا لتحديد الصيغة الغالبة."
+        }
+      },
+      {
+        "id": "step_13",
+        "type": "quiz",
+        "title": "اختبار الفهم",
+        "content": {
+          "instruction": "أجب عن الأسئلة للتأكد من فهمك للمحور.",
+          "questions": [
+            {
+              "id": "q1",
+              "question": "ما العلاقة الصحيحة للثنائية \\(HA/A^-\\)؟",
+              "choices": [
+                "\\(pH=pK_a+\\log([A^-]/[HA])\\)",
+                "\\(pH=pK_a+\\log([HA]/[A^-])\\)",
+                "\\(pH=pK_a-[H_3O^+]\\)"
+              ],
+              "correct_answer": "\\(pH=pK_a+\\log([A^-]/[HA])\\)",
+              "hint": "الأساس المرافق في بسط النسبة.",
+              "explanation": "هذه هي العلاقة المستنتجة من عبارة Ka."
+            },
+            {
+              "id": "q2",
+              "question": "إذا كان \\(pH<pK_a\\)، فما النوع الغالب؟",
+              "choices": [
+                "HA",
+                "A⁻",
+                "التركيزان متساويان"
+              ],
+              "correct_answer": "HA",
+              "hint": "الوسط الأكثر حمضية يفضل الصيغة الحمضية.",
+              "explanation": "عند pH<pKa تكون [HA]>[A⁻]."
+            },
+            {
+              "id": "q3",
+              "question": "إذا كان \\(pH>pK_a\\)، فما النوع الغالب؟",
+              "choices": [
+                "A⁻",
+                "HA",
+                "H₂O فقط"
+              ],
+              "correct_answer": "A⁻",
+              "hint": "انظر إلى يمين pKa في مخطط التغلب.",
+              "explanation": "عند pH>pKa تكون [A⁻]>[HA]."
+            },
+            {
+              "id": "q4",
+              "question": "ماذا يحدث عند \\(pH=pK_a\\)؟",
+              "choices": [
+                "\\([HA]=[A^-]\\)",
+                "\\([HA]=0\\)",
+                "\\([A^-]=0\\)"
+              ],
+              "correct_answer": "\\([HA]=[A^-]\\)",
+              "hint": "عندها log النسبة يساوي صفرًا.",
+              "explanation": "يلزم أن تكون [A⁻]/[HA]=1، أي التركيزان متساويان."
+            },
+            {
+              "id": "q5",
+              "question": "إذا كان \\(pH-pK_a=1\\)، فما قيمة \\([A^-]/[HA]\\)؟",
+              "choices": [
+                "10",
+                "1",
+                "0.1"
+              ],
+              "correct_answer": "10",
+              "hint": "استعمل 10^(pH-pKa).",
+              "explanation": "\\([A^-]/[HA]=10^1=10\\)."
+            },
+            {
+              "id": "q6",
+              "question": "لثنائية pKa لها 4.5 ومحلول pH له 3.5، أي صيغة تغلب؟",
+              "choices": [
+                "HA",
+                "A⁻",
+                "لا توجد صفة غالبة"
+              ],
+              "correct_answer": "HA",
+              "hint": "3.5 أصغر من 4.5.",
+              "explanation": "pH<pKa ولذلك الحمض HA هو الغالب."
+            },
+            {
+              "id": "q7",
+              "question": "في مخطط التغلب، أين نضع A⁻ بالنسبة إلى pKa؟",
+              "choices": [
+                "في مجال pH>pKa",
+                "في مجال pH<pKa",
+                "فقط عند pH=pKa"
+              ],
+              "correct_answer": "في مجال pH>pKa",
+              "hint": "A⁻ هي الصيغة الأساسية.",
+              "explanation": "الصيغة الأساسية A⁻ تغلب في المجال الذي يكون فيه pH أكبر من pKa."
+            },
+            {
+              "id": "q8",
+              "question": "ما الفرق بين سؤال قوة الحمض وسؤال النوع الغالب؟",
+              "choices": [
+                "القوة تقارن عبر Ka أوpKa، والتغلب عبر مقارنة pH مع pKa",
+                "لا يوجد فرق",
+                "كلاهما يحدد فقط من قيمة pH"
+              ],
+              "correct_answer": "القوة تقارن عبر Ka أوpKa، والتغلب عبر مقارنة pH مع pKa",
+              "hint": "هذا يمنع الخلط بين المحورين 8 و9.",
+              "explanation": "pKa يقارن قوة الأحماض، بينما pH بالنسبة إلى pKa يحدد الصيغة الغالبة داخل محلول."
+            }
+          ],
+          "mastery_threshold": 6,
+          "takeaway": "إذا أجبت عن 6 أسئلة صحيحة على الأقل فقد أتقنت العلاقة بين pH وpKa ومجالات التغلب."
+        }
+      }
+    ]
+  }
+}

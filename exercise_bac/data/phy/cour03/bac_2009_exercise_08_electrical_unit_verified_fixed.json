@@ -1,0 +1,304 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2009-electrical-verified",
+  "session": "ordinary",
+  "year": 2009,
+  "chapter_code": "electrical_phenomena_evolution",
+  "chapter_title": "تطور دراسة ظواهر كهربائية",
+  "axis_tags": [
+    "capacitor_fundamental_relations",
+    "rc_capacitor_discharge",
+    "rc_differential_equation_solution",
+    "rc_time_constant_graphical_analysis"
+  ],
+
+  "branches": [
+    {
+      "code": "science",
+      "name": "شعبة علوم تجريبية"
+    }
+  ],
+  "exercise_number": 8,
+  "source_page": 3,
+  "source_pages": [
+    3
+  ],
+  "solution_source_pages": [
+    24,
+    25
+  ],
+  "title": "التمرين 8 — بكالوريا الجزائر 2009 — شعبة علوم تجريبية",
+  "statement": "لدينا مكثفة سعتها \\(C=1.0\\times10^{-1}\\,\\mu F\\) مشحونة مسبقاً بشحنة كهربائية مقدارها \\(q=0.6\\times10^{-6}\\,C\\)، وناقل أومي مقاومته \\(R=15\\,k\\Omega\\). نحقق دارة كهربائية على التسلسل باستعمال المكثفة والناقل الأومي وقاطعة \\(K\\). في اللحظة \\(t=0\\) نغلق القاطعة.",
+  "questions": [
+    {
+      "id": "2009_elec_ex08_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) ارسم مخطط الدارة الموصوفة سابقاً.",
+      "axis_tags": [
+        "rc_capacitor_discharge"
+      ],
+      "statement_graphs": [
+        {
+          "diagram_type": "bac_2009_ex08_question_circuit",
+          "title": "المخطط المطلوب",
+          "description": "مخطط دارة التفريغ المطلوب رسمه في السؤال.",
+          "svg": "<svg viewBox=\"0 0 850 340\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"دارة تفريغ مكثفة التمرين 8\">\n  <defs><marker id=\"a8i\" markerWidth=\"10\" markerHeight=\"10\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L0,6 L9,3z\" fill=\"#111827\"/></marker></defs>\n  <rect x=\"35\" y=\"25\" width=\"780\" height=\"265\" rx=\"20\" fill=\"#fff\" stroke=\"#cbd5e1\" stroke-width=\"2\"/>\n  <path d=\"M145 95 H675 V245 H145 Z\" fill=\"none\" stroke=\"#111827\" stroke-width=\"5\"/>\n\n  <rect x=\"260\" y=\"70\" width=\"110\" height=\"50\" rx=\"7\" fill=\"#fff\" stroke=\"#111827\" stroke-width=\"3\"/>\n  <text x=\"310\" y=\"103\" font-size=\"25\" font-family=\"Arial\">R</text>\n\n  <line x1=\"470\" y1=\"95\" x2=\"515\" y2=\"95\" stroke=\"#111827\" stroke-width=\"5\"/>\n  <line x1=\"515\" y1=\"65\" x2=\"515\" y2=\"125\" stroke=\"#111827\" stroke-width=\"6\"/>\n  <line x1=\"550\" y1=\"65\" x2=\"550\" y2=\"125\" stroke=\"#111827\" stroke-width=\"6\"/>\n  <line x1=\"550\" y1=\"95\" x2=\"600\" y2=\"95\" stroke=\"#111827\" stroke-width=\"5\"/>\n  <text x=\"525\" y=\"54\" font-size=\"24\" font-family=\"Arial\">C</text>\n  <text x=\"492\" y=\"150\" font-size=\"23\" font-family=\"Arial\">+</text>\n  <text x=\"562\" y=\"150\" font-size=\"23\" font-family=\"Arial\">−</text>\n\n  <line x1=\"240\" y1=\"245\" x2=\"285\" y2=\"245\" stroke=\"#111827\" stroke-width=\"5\"/>\n  <line x1=\"310\" y1=\"245\" x2=\"360\" y2=\"245\" stroke=\"#111827\" stroke-width=\"5\"/>\n  <line x1=\"285\" y1=\"245\" x2=\"313\" y2=\"220\" stroke=\"#111827\" stroke-width=\"5\"/>\n  <text x=\"290\" y=\"282\" font-size=\"23\" font-family=\"Arial\">K</text>\n\n  <line x1=\"675\" y1=\"205\" x2=\"675\" y2=\"125\" stroke=\"#111827\" stroke-width=\"4\" marker-end=\"url(#a8i)\"/>\n  <text x=\"690\" y=\"170\" font-size=\"23\" font-family=\"Arial\">i</text>\n</svg>",
+          "render_mode": "inline",
+          "responsive": true
+        }
+      ],
+      "solution": {
+        "strategy": "نضع المكثفة والمقاومة والقاطعة على التسلسل دون مولد لأن المكثفة مشحونة مسبقاً.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "رسم الدارة",
+            "explanation": "المخطط هو حلقة تسلسلية تحتوي على R وC وK.",
+            "graph_data": {
+              "diagram_type": "bac_2009_ex08_solution_circuit",
+              "title": "رسم مخطط الدارة",
+              "description": "الرسم الموافق للتصحيح.",
+              "svg": "<svg viewBox=\"0 0 850 340\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"دارة تفريغ مكثفة التمرين 8\">\n  <defs><marker id=\"a8i\" markerWidth=\"10\" markerHeight=\"10\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L0,6 L9,3z\" fill=\"#111827\"/></marker></defs>\n  <rect x=\"35\" y=\"25\" width=\"780\" height=\"265\" rx=\"20\" fill=\"#fff\" stroke=\"#cbd5e1\" stroke-width=\"2\"/>\n  <path d=\"M145 95 H675 V245 H145 Z\" fill=\"none\" stroke=\"#111827\" stroke-width=\"5\"/>\n\n  <rect x=\"260\" y=\"70\" width=\"110\" height=\"50\" rx=\"7\" fill=\"#fff\" stroke=\"#111827\" stroke-width=\"3\"/>\n  <text x=\"310\" y=\"103\" font-size=\"25\" font-family=\"Arial\">R</text>\n\n  <line x1=\"470\" y1=\"95\" x2=\"515\" y2=\"95\" stroke=\"#111827\" stroke-width=\"5\"/>\n  <line x1=\"515\" y1=\"65\" x2=\"515\" y2=\"125\" stroke=\"#111827\" stroke-width=\"6\"/>\n  <line x1=\"550\" y1=\"65\" x2=\"550\" y2=\"125\" stroke=\"#111827\" stroke-width=\"6\"/>\n  <line x1=\"550\" y1=\"95\" x2=\"600\" y2=\"95\" stroke=\"#111827\" stroke-width=\"5\"/>\n  <text x=\"525\" y=\"54\" font-size=\"24\" font-family=\"Arial\">C</text>\n  <text x=\"492\" y=\"150\" font-size=\"23\" font-family=\"Arial\">+</text>\n  <text x=\"562\" y=\"150\" font-size=\"23\" font-family=\"Arial\">−</text>\n\n  <line x1=\"240\" y1=\"245\" x2=\"285\" y2=\"245\" stroke=\"#111827\" stroke-width=\"5\"/>\n  <line x1=\"310\" y1=\"245\" x2=\"360\" y2=\"245\" stroke=\"#111827\" stroke-width=\"5\"/>\n  <line x1=\"285\" y1=\"245\" x2=\"313\" y2=\"220\" stroke=\"#111827\" stroke-width=\"5\"/>\n  <text x=\"290\" y=\"282\" font-size=\"23\" font-family=\"Arial\">K</text>\n\n  <line x1=\"675\" y1=\"205\" x2=\"675\" y2=\"125\" stroke=\"#111827\" stroke-width=\"4\" marker-end=\"url(#a8i)\"/>\n  <text x=\"690\" y=\"170\" font-size=\"23\" font-family=\"Arial\">i</text>\n</svg>",
+              "render_mode": "inline",
+              "responsive": true
+            }
+          }
+        ],
+        "final_answer": "دارة تسلسلية R-C-K دون مولد."
+      }
+    },
+    {
+      "id": "2009_elec_ex08_q2",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2) مثّل على المخطط جهة مرور التيار الكهربائي في الدارة.",
+      "axis_tags": [
+        "rc_capacitor_discharge"
+      ],
+      "solution": {
+        "strategy": "المكثفة المشحونة هي مصدر الطاقة أثناء التفريغ، فيخرج التيار الاصطلاحي من لبوسها الموجب عبر المقاومة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الاتجاه",
+            "explanation": "نوجه التيار من اللبوس الموجب للمكثفة نحو المقاومة ثم يعود إلى اللبوس السالب."
+          }
+        ],
+        "final_answer": "اتجاه التيار هو اتجاه تفريغ المكثفة من اللبوس الموجب عبر R."
+      }
+    },
+    {
+      "id": "2009_elec_ex08_q3",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "3) أوجد علاقة بين \\(u_R\\) و\\(u_C\\).",
+      "axis_tags": [
+        "rc_capacitor_discharge"
+      ],
+      "solution": {
+        "strategy": "لا يوجد مولد في الحلقة، لذا مجموع التوترات يساوي صفراً.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "قانون التوترات",
+            "explanation": "\\[u_C+u_R=0\\Rightarrow \\boxed{u_C=-u_R}\\]"
+          }
+        ],
+        "final_answer": "\\(u_C=-u_R\\)."
+      }
+    },
+    {
+      "id": "2009_elec_ex08_q4",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "4) بالاعتماد على قانون جمع التوترات، أوجد المعادلة التفاضلية بدلالة \\(u_C\\).",
+      "axis_tags": [
+        "rc_capacitor_discharge",
+        "rc_differential_equation_solution"
+      ],
+      "solution": {
+        "strategy": "نعوض uR=Ri ثم نستعمل علاقة التيار بمشتقة توتر المكثفة وفق التوجيه الموافق للتفريغ.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "من قانون الدارة",
+            "explanation": "\\[u_C+u_R=0\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "التعويض",
+            "explanation": "\\[u_R=Ri,\\qquad i=C\\frac{du_C}{dt}\\] وفق الاتفاقية المستعملة في التصحيح."
+          },
+          {
+            "step_number": 3,
+            "title": "المعادلة",
+            "explanation": "\\[\\boxed{RC\\frac{du_C}{dt}+u_C=0}\\] أي \\[\\boxed{\\frac{du_C}{dt}+\\frac1{RC}u_C=0}\\]"
+          }
+        ],
+        "final_answer": "\\(RCu_C'+u_C=0\\)."
+      }
+    },
+    {
+      "id": "2009_elec_ex08_q5",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "5) إن حل المعادلة التفاضلية السابقة هو من الشكل \\(u_C=a\\,e^{bt}\\)، حيث \\(a\\) و\\(b\\) ثابتان. عيّن قيمة كل منهما.",
+      "axis_tags": [
+        "rc_capacitor_discharge",
+        "rc_differential_equation_solution"
+      ],
+      "solution": {
+        "strategy": "نعوض الحل الأسي في المعادلة ثم نستعمل الشرط الابتدائي المحسوب من q/C.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تحديد b",
+            "explanation": "من \\(u_C=a e^{bt}\\): \\(u_C'=ab e^{bt}\\). بالتعويض: \\[ab e^{bt}+\\frac1{RC}a e^{bt}=0\\Rightarrow \\boxed{b=-\\frac1{RC}}\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب RC",
+            "explanation": "\\[RC=15\\times10^3\\times1.0\\times10^{-7}=1.5\\times10^{-3}s\\] ومنه \\[\\boxed{b=-666.7\\,s^{-1}}\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "تحديد a",
+            "explanation": "عند \\(t=0\\): \\[u_C(0)=\\frac{q_0}{C}=\\frac{0.6\\times10^{-6}}{1.0\\times10^{-7}}=6V\\] لذا \\[\\boxed{a=6V}\\]"
+          }
+        ],
+        "final_answer": "\\(a=6V\\)، \\(b=-666.7s^{-1}\\)."
+      }
+    },
+    {
+      "id": "2009_elec_ex08_q6",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "6) اكتب العبارة الزمنية للتوتر \\(u_C\\).",
+      "axis_tags": [
+        "rc_capacitor_discharge"
+      ],
+      "solution": {
+        "strategy": "نعوض a وb في الحل العام.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "العبارة",
+            "explanation": "\\[\\boxed{u_C(t)=6e^{-666.7t}}\\quad(V)\\] أو \\[u_C(t)=6e^{-t/(1.5\\,ms)}\\]"
+          }
+        ],
+        "final_answer": "\\(u_C(t)=6e^{-666.7t}\\,V\\)."
+      }
+    },
+    {
+      "id": "2009_elec_ex08_q7",
+      "display_order": 7,
+      "content_type": "question",
+      "text": "7) إن العبارة الزمنية \\(u_C=f(t)\\) تسمح برسم البيان (الشكل 9). اشرح على البيان الطريقة المتبعة للتأكد من القيم المحسوبة سابقاً في السؤال 5.",
+      "axis_tags": [
+        "rc_time_constant_graphical_analysis",
+        "rc_capacitor_discharge"
+      ],
+      "solution": {
+        "strategy": "نتحقق بيانياً من a بالقيمة الابتدائية، ومن b عبر ثابت الزمن.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التحقق من a",
+            "explanation": "عند \\(t=0\\) يقرأ من البيان \\(u_C(0)=6V\\)، إذن \\(a=6V\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "استخراج τ",
+            "explanation": "في التفريغ: عند \\(t=\\tau\\) يصبح \\(u_C=0.37U_0\\). هنا \\[0.37\\times6=2.22V\\] ومن البيان الزمن الموافق هو \\[\\boxed{\\tau=1.5\\times10^{-3}s}\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "التحقق من b",
+            "explanation": "\\[b=-\\frac1\\tau=-\\frac1{1.5\\times10^{-3}}=-666.7\\,s^{-1}\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "الرسم",
+            "explanation": "المنحنى أسي متناقص من 6V نحو الصفر.",
+            "graph_data": {
+              "title": "الشكل 9 — u_C=f(t)",
+              "description": "منحنى التفريغ الموافق للعبارة u_C(t)=6e^{-666.7t}; عند t=τ=1.5ms تكون u_C≈0.37U0=2.22V.",
+              "x_label": "t (s)",
+              "y_label": "u_C (V)",
+              "x_domain": [
+                0,
+                0.006
+              ],
+              "y_domain": [
+                0,
+                6.4
+              ],
+              "series": [
+                {
+                  "name": "u_C(t)",
+                  "data": [
+                    {
+                      "x": 0,
+                      "y": 6.0
+                    },
+                    {
+                      "x": 0.0005,
+                      "y": 4.299
+                    },
+                    {
+                      "x": 0.001,
+                      "y": 3.081
+                    },
+                    {
+                      "x": 0.0015,
+                      "y": 2.207
+                    },
+                    {
+                      "x": 0.002,
+                      "y": 1.582
+                    },
+                    {
+                      "x": 0.003,
+                      "y": 0.812
+                    },
+                    {
+                      "x": 0.004,
+                      "y": 0.417
+                    },
+                    {
+                      "x": 0.005,
+                      "y": 0.214
+                    },
+                    {
+                      "x": 0.006,
+                      "y": 0.11
+                    }
+                  ]
+                }
+              ],
+              "settings": {
+                "show_grid": true,
+                "show_axes": true,
+                "show_legend": false,
+                "show_point_labels": false,
+                "connect_points": true
+              }
+            }
+          }
+        ],
+        "final_answer": "بيانياً نجد \\(a=6V\\)، \\(\\tau=1.5ms\\)، ومنه \\(b=-666.7s^{-1}\\)."
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "تجميعية_عمورة_للبكالوريات_السابقة_الوحدة_3(1).pdf",
+    "statement_figure_policy": "إذا كان الشكل موجوداً في نص البكالوريا يوضع في statement_graphs. إذا كان السؤال يطلب رسم الدارة ولا يعطي شكلاً، لا يظهر الرسم قبل السؤال بل يوضع كحل للسؤال.",
+    "solution_figure_policy": "تضاف الرسومات اللازمة في خطوات الحل فقط، مع الحفاظ على معنى الشكل الأصلي أو شكل التصحيح.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  }
+}

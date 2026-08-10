@@ -1,0 +1,352 @@
+{
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2010-electrical-verified",
+  "language": "ar",
+  "direction": "rtl",
+  "year": 2010,
+  "session": "ordinary",
+  "chapter_code": "electrical_phenomena_evolution",
+  "chapter_title": "تطور دراسة ظواهر كهربائية",
+  "exercise_number": 11,
+  "source_page": 4,
+  "source_pages": [
+    4,
+    5
+  ],
+  "solution_source_pages": [
+    25,
+    26
+  ],
+
+  "branches": [
+    {
+      "code": "math",
+      "name": "شعبة رياضيات"
+    },
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "title": "التمرين 11 — بكالوريا الجزائر 2010 — شعبة رياضيات وتقني رياضي",
+  "axis_tags": [
+    "rc_capacitor_charging",
+    "rc_differential_equation_solution",
+    "rc_time_constant_graphical_analysis",
+    "rc_model_exploitation_physical_quantities"
+  ],
+  "questions": [
+    {
+      "id": "2010_elec_ex11_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) عملياً يكتمل شحن المكثفة عندما يبلغ التوتر بين طرفيها 99% من توتر المولد. اعتماداً على البيان: أ- عيّن قيمة ثابت الزمن \\(\\tau\\) وقيمة توتر المولد ثم احسب سعة المكثفة \\(C\\). ب- حدد المدة الزمنية \\(t'\\) لاكتمال الشحن. ج- ما العلاقة بين \\(t'\\) و\\(\\tau\\)؟",
+      "solution": {
+        "strategy": "نقرأ E وτ من منحنى الشحن ثم نستعمل τ=RC وقاعدة 5τ.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "القراءة البيانية",
+            "explanation": "من البيان: \\[\\boxed{E=14.8V},\\qquad \\boxed{\\tau=14ms}\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "السعة",
+            "explanation": "\\[C=\\frac{\\tau}{R}=\\frac{14\\times10^{-3}}{500}=\\boxed{28\\mu F}\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "زمن اكتمال الشحن",
+            "explanation": "99% من E يساوي \\(14.65V\\)، ومن البيان نجد تقريباً \\[\\boxed{t'=70ms}\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "العلاقة",
+            "explanation": "\\[\\boxed{t'=5\\tau}\\]"
+          }
+        ],
+        "final_answer": "\\(E=14.8V\\)، \\(\\tau=14ms\\)، \\(C=28\\mu F\\)، \\(t'=70ms=5\\tau\\)."
+      }
+    },
+    {
+      "id": "2010_elec_ex11_q2",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2) بتطبيق قانون جمع التوترات أوجد المعادلة التفاضلية بدلالة \\(u_C(t)\\)، ثم بيّن أنها تقبل حلاً من الشكل \\(u_C(t)=E(1-e^{-t/\\tau})\\).",
+      "solution": {
+        "strategy": "نستعمل uR=Ri وi=C duC/dt، ثم نتحقق من الحل.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "المعادلة",
+            "explanation": "\\[E=u_C+Ri=u_C+RC\\frac{du_C}{dt}\\Rightarrow \\boxed{RCu_C'+u_C=E}\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "المشتقة",
+            "explanation": "للحل المعطى: \\[u_C'=\\frac{E}{\\tau}e^{-t/\\tau}\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "التحقق",
+            "explanation": "وبما أن \\(\\tau=RC\\): \\[RCu_C'+u_C=Ee^{-t/\\tau}+E(1-e^{-t/\\tau})=E\\]"
+          }
+        ],
+        "final_answer": "المعادلة \\(RCu_C'+u_C=E\\) والحل المعطى صحيح."
+      }
+    },
+    {
+      "id": "2010_elec_ex11_q3",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "3) أوجد قيمة الطاقة الكهربائية المخزنة \\(E_C\\) في المكثفة عند اللحظات: \\(t_0=0\\)، \\(t_1=\\tau\\)، و\\(t_2=5\\tau\\).",
+      "solution": {
+        "strategy": "نحسب uC في كل لحظة ثم نستعمل EC=1/2 C uC².",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "عند t=0",
+            "explanation": "\\[u_C=0\\Rightarrow \\boxed{E_C(0)=0}\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "عند t=τ",
+            "explanation": "\\[u_C(\\tau)\\approx0.63E\\] ومنه \\[E_C(\\tau)=\\frac12C(0.63E)^2\\approx\\boxed{1.21\\times10^{-3}J}\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "عند 5τ",
+            "explanation": "\\[u_C(5\\tau)\\approx0.99E\\] ومنه \\[E_C(5\\tau)\\approx\\frac12C(0.99E)^2\\approx\\boxed{3.0\\times10^{-3}J}\\]"
+          }
+        ],
+        "final_answer": "\\(0\\)، \\(1.21mJ\\)، \\(3.0mJ\\) تقريباً."
+      }
+    },
+    {
+      "id": "2010_elec_ex11_q4",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "4) توقع، برسم كيفي، شكل المنحنى \\(E_C=f(t)\\).",
+      "solution": {
+        "strategy": "بما أن الطاقة تتناسب مع مربع uC، فهي تبدأ من الصفر وتزداد نحو قيمة نهائية ثابتة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الشكل",
+            "explanation": "المنحنى متزايد، تقاربي، يبدأ من الصفر ويتجه نحو \\(E_{C,max}=\\frac12CE^2\\approx3.07mJ\\).",
+            "graph_data": {
+              "title": "الشكل الكيفي لـ E_C=f(t)",
+              "description": "تزداد طاقة المكثفة من الصفر نحو القيمة النهائية.",
+              "x_label": "t (ms)",
+              "y_label": "E_C (J)",
+              "x_domain": [
+                0,
+                70
+              ],
+              "y_domain": [
+                0,
+                0.0034
+              ],
+              "series": [
+                {
+                  "name": "E_C",
+                  "data": [
+                    {
+                      "x": 0,
+                      "y": 0.0
+                    },
+                    {
+                      "x": 14,
+                      "y": 0.0012253
+                    },
+                    {
+                      "x": 28,
+                      "y": 0.0022927
+                    },
+                    {
+                      "x": 42,
+                      "y": 0.0027688
+                    },
+                    {
+                      "x": 56,
+                      "y": 0.0029553
+                    },
+                    {
+                      "x": 70,
+                      "y": 0.0030254
+                    }
+                  ]
+                }
+              ],
+              "settings": {
+                "show_grid": true,
+                "show_axes": true,
+                "show_legend": false,
+                "show_point_labels": false,
+                "connect_points": true
+              }
+            }
+          }
+        ],
+        "final_answer": "منحنى طاقة متزايد نحو قيمة نهائية ≈3.07mJ."
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "تجميعية_عمورة_للبكالوريات_السابقة_الوحدة_3(1).pdf",
+    "statement_figure_policy": "الشكل الموجود في الموضوع يظهر مع نص التمرين. إذا طلب السؤال إنشاء رسم جديد فلا يكشف قبل فتح الحل.",
+    "solution_figure_policy": "الرسم المطلوب أو الرسم المساعد يوضع داخل خطوة الحل فقط.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  },
+  "statement": "نربط على التسلسل العناصر الكهربائية التالية:\n\n• ناقل أومي مقاومته \\(R=500\\Omega\\).\n• مكثفة سعتها \\(C\\) غير مشحونة.\n• مولد ذو توتر كهربائي ثابت \\(E\\).\n• قاطعة \\(K\\) (الشكل 13).\n\nمكنت متابعة تطور التوتر الكهربائي \\(u_C(t)\\) بين لبوسي المكثفة من رسم البيان (الشكل 14).",
+  "figures": [
+    {
+      "diagram_type": "bac_2010_ex11_statement_circuit",
+      "title": "الشكل 13 — دارة RC",
+      "description": "دارة التمرين كما في الموضوع.",
+      "svg": "<svg viewBox=\"0 0 900 350\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"الشكل 13 دارة شحن مكثفة\">\n <rect x=\"35\" y=\"25\" width=\"830\" height=\"270\" rx=\"20\" fill=\"#fff\" stroke=\"#cbd5e1\" stroke-width=\"2\"/>\n <path d=\"M160 90 H690 V250 H160 Z\" fill=\"none\" stroke=\"#111827\" stroke-width=\"5\"/>\n <circle cx=\"160\" cy=\"170\" r=\"33\" fill=\"#fff\" stroke=\"#111827\" stroke-width=\"4\"/>\n <text x=\"150\" y=\"178\" font-size=\"23\" font-family=\"Arial\">E</text>\n <line x1=\"330\" y1=\"250\" x2=\"380\" y2=\"250\" stroke=\"#111827\" stroke-width=\"5\"/>\n <line x1=\"380\" y1=\"220\" x2=\"380\" y2=\"280\" stroke=\"#111827\" stroke-width=\"6\"/>\n <line x1=\"415\" y1=\"220\" x2=\"415\" y2=\"280\" stroke=\"#111827\" stroke-width=\"6\"/>\n <line x1=\"415\" y1=\"250\" x2=\"465\" y2=\"250\" stroke=\"#111827\" stroke-width=\"5\"/>\n <text x=\"386\" y=\"210\" font-size=\"25\" font-family=\"Arial\">C</text>\n <rect x=\"500\" y=\"225\" width=\"105\" height=\"50\" rx=\"7\" fill=\"#fff\" stroke=\"#111827\" stroke-width=\"3\"/>\n <text x=\"545\" y=\"258\" font-size=\"24\" font-family=\"Arial\">R</text>\n <line x1=\"520\" y1=\"90\" x2=\"565\" y2=\"90\" stroke=\"#111827\" stroke-width=\"5\"/>\n <line x1=\"590\" y1=\"90\" x2=\"640\" y2=\"90\" stroke=\"#111827\" stroke-width=\"5\"/>\n <line x1=\"565\" y1=\"90\" x2=\"593\" y2=\"65\" stroke=\"#111827\" stroke-width=\"5\"/>\n <text x=\"570\" y=\"52\" font-size=\"22\" font-family=\"Arial\">K</text>\n <text x=\"320\" y=\"286\" font-size=\"21\" font-family=\"Arial\">A</text>\n <text x=\"430\" y=\"286\" font-size=\"21\" font-family=\"Arial\">B</text>\n <text x=\"620\" y=\"286\" font-size=\"21\" font-family=\"Arial\">D</text>\n</svg>",
+      "render_mode": "inline",
+      "responsive": true
+    },
+    {
+      "title": "الشكل 14 — u_C=f(t)",
+      "description": "منحنى الشحن الأصلي؛ يقرأ منه E≈14.8V وτ≈14ms.",
+      "x_label": "t (ms)",
+      "y_label": "u_C (V)",
+      "x_domain": [
+        0,
+        70
+      ],
+      "y_domain": [
+        0,
+        16
+      ],
+      "series": [
+        {
+          "name": "u_C(t)",
+          "data": [
+            {
+              "x": 0,
+              "y": 0.0
+            },
+            {
+              "x": 5,
+              "y": 4.445
+            },
+            {
+              "x": 10,
+              "y": 7.555
+            },
+            {
+              "x": 14,
+              "y": 9.355
+            },
+            {
+              "x": 20,
+              "y": 11.253
+            },
+            {
+              "x": 30,
+              "y": 13.064
+            },
+            {
+              "x": 40,
+              "y": 13.95
+            },
+            {
+              "x": 50,
+              "y": 14.384
+            },
+            {
+              "x": 70,
+              "y": 14.7
+            }
+          ]
+        }
+      ],
+      "settings": {
+        "show_grid": true,
+        "show_axes": true,
+        "show_legend": false,
+        "show_point_labels": false,
+        "connect_points": true
+      }
+    }
+  ],
+  "statement_graphs": [
+    {
+      "diagram_type": "bac_2010_ex11_statement_circuit",
+      "title": "الشكل 13 — دارة RC",
+      "description": "دارة التمرين كما في الموضوع.",
+      "svg": "<svg viewBox=\"0 0 900 350\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"الشكل 13 دارة شحن مكثفة\">\n <rect x=\"35\" y=\"25\" width=\"830\" height=\"270\" rx=\"20\" fill=\"#fff\" stroke=\"#cbd5e1\" stroke-width=\"2\"/>\n <path d=\"M160 90 H690 V250 H160 Z\" fill=\"none\" stroke=\"#111827\" stroke-width=\"5\"/>\n <circle cx=\"160\" cy=\"170\" r=\"33\" fill=\"#fff\" stroke=\"#111827\" stroke-width=\"4\"/>\n <text x=\"150\" y=\"178\" font-size=\"23\" font-family=\"Arial\">E</text>\n <line x1=\"330\" y1=\"250\" x2=\"380\" y2=\"250\" stroke=\"#111827\" stroke-width=\"5\"/>\n <line x1=\"380\" y1=\"220\" x2=\"380\" y2=\"280\" stroke=\"#111827\" stroke-width=\"6\"/>\n <line x1=\"415\" y1=\"220\" x2=\"415\" y2=\"280\" stroke=\"#111827\" stroke-width=\"6\"/>\n <line x1=\"415\" y1=\"250\" x2=\"465\" y2=\"250\" stroke=\"#111827\" stroke-width=\"5\"/>\n <text x=\"386\" y=\"210\" font-size=\"25\" font-family=\"Arial\">C</text>\n <rect x=\"500\" y=\"225\" width=\"105\" height=\"50\" rx=\"7\" fill=\"#fff\" stroke=\"#111827\" stroke-width=\"3\"/>\n <text x=\"545\" y=\"258\" font-size=\"24\" font-family=\"Arial\">R</text>\n <line x1=\"520\" y1=\"90\" x2=\"565\" y2=\"90\" stroke=\"#111827\" stroke-width=\"5\"/>\n <line x1=\"590\" y1=\"90\" x2=\"640\" y2=\"90\" stroke=\"#111827\" stroke-width=\"5\"/>\n <line x1=\"565\" y1=\"90\" x2=\"593\" y2=\"65\" stroke=\"#111827\" stroke-width=\"5\"/>\n <text x=\"570\" y=\"52\" font-size=\"22\" font-family=\"Arial\">K</text>\n <text x=\"320\" y=\"286\" font-size=\"21\" font-family=\"Arial\">A</text>\n <text x=\"430\" y=\"286\" font-size=\"21\" font-family=\"Arial\">B</text>\n <text x=\"620\" y=\"286\" font-size=\"21\" font-family=\"Arial\">D</text>\n</svg>",
+      "render_mode": "inline",
+      "responsive": true
+    },
+    {
+      "title": "الشكل 14 — u_C=f(t)",
+      "description": "منحنى الشحن الأصلي؛ يقرأ منه E≈14.8V وτ≈14ms.",
+      "x_label": "t (ms)",
+      "y_label": "u_C (V)",
+      "x_domain": [
+        0,
+        70
+      ],
+      "y_domain": [
+        0,
+        16
+      ],
+      "series": [
+        {
+          "name": "u_C(t)",
+          "data": [
+            {
+              "x": 0,
+              "y": 0.0
+            },
+            {
+              "x": 5,
+              "y": 4.445
+            },
+            {
+              "x": 10,
+              "y": 7.555
+            },
+            {
+              "x": 14,
+              "y": 9.355
+            },
+            {
+              "x": 20,
+              "y": 11.253
+            },
+            {
+              "x": 30,
+              "y": 13.064
+            },
+            {
+              "x": 40,
+              "y": 13.95
+            },
+            {
+              "x": 50,
+              "y": 14.384
+            },
+            {
+              "x": 70,
+              "y": 14.7
+            }
+          ]
+        }
+      ],
+      "settings": {
+        "show_grid": true,
+        "show_axes": true,
+        "show_legend": false,
+        "show_point_labels": false,
+        "connect_points": true
+      }
+    }
+  ]
+}

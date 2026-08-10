@@ -1,0 +1,1204 @@
+{
+  "tag": "chemical_transformation_modeling",
+  "title": "نمذجة التحول الكيميائي",
+  "order": 3,
+  "is_active": true,
+  "branches": [
+    "math",
+    "science",
+    "math_tech"
+  ],
+  "content": {
+    "schema_version": "5.0",
+    "version": 1,
+    "language": "ar",
+    "direction": "rtl",
+    "math_format": "LaTeX",
+    "chapter_code": "chemical_kinetics",
+    "chapter_title": "المتابعة الزمنية لتطور تحول كيميائي",
+    "axis_tag": "chemical_transformation_modeling",
+    "axis_title": "نمذجة التحول الكيميائي",
+    "difficulty": "easy_to_medium",
+    "estimated_duration": "80 إلى 95 دقيقة",
+    "estimated_minutes": 90,
+    "source_note": "بُني هذا المحور اعتمادًا على درس الوحدة الأولى وتجميعية تمارين البكالوريا المرفقة، مع التركيز على حساب كميات المادة الابتدائية، جدول التقدم، التقدم الأعظمي والنهائي، المتفاعل المحد والفائض، والتركيب المولي.",
+    "lesson_goal": "أن يفهم التلميذ معنى تقدم التفاعل وجدول التقدم، ثم يحسب xmax وxf ويحدد المتفاعل المحد والفائض والتركيب المولي، حتى يحل أسئلة البكالوريا المتكررة.",
+    "prerequisites": [
+      "قراءة معادلة موزونة.",
+      "معرفة كمية المادة ووحدتها mol.",
+      "استعمال n=m/M وn=cV وn=Vg/VM.",
+      "التمييز بين المتفاعلات والنواتج."
+    ],
+    "learning_outcomes": [
+      "يفهم معنى x.",
+      "يبني جدول تقدم.",
+      "يحسب n₀.",
+      "يكتب الكميات بدلالة x.",
+      "يحسب xmax.",
+      "يحدد المحد والفائض.",
+      "يميز xf عن xmax.",
+      "يحسب التركيب عند t وفي النهاية.",
+      "يحل سؤال بكالوريا كامل."
+    ],
+    "lesson_map": [
+      {
+        "part": 1,
+        "title": "من المعادلة إلى الكميات",
+        "focus": "المعاملات وn₀"
+      },
+      {
+        "part": 2,
+        "title": "فهم x",
+        "focus": "الاستهلاك والتشكل"
+      },
+      {
+        "part": 3,
+        "title": "جدول التقدم",
+        "focus": "ابتدائي، أثناء، نهائي"
+      },
+      {
+        "part": 4,
+        "title": "xmax والمحدد",
+        "focus": "المقارنة والفائض"
+      },
+      {
+        "part": 5,
+        "title": "xf والتركيب",
+        "focus": "الاستثمار التجريبي"
+      },
+      {
+        "part": 6,
+        "title": "التثبيت",
+        "focus": "الأخطاء والQuiz"
+      }
+    ],
+    "lesson_strategy": {
+      "main_idea": "كلما تقدم التفاعل بمقدار x، تغيرت كميات الأنواع حسب معاملات المعادلة.",
+      "bac_skill": "جدول التقدم، xmax، xf، المحد، والتركيب المولي.",
+      "common_obstacle": "الخلط بين المعامل والكمية، وبين xf وxmax، أو مقارنة n₀ دون القسمة على المعامل.",
+      "teaching_sequence": "فكرة بسيطة ← x ← جدول ← مثال ← xmax ← المحد ← xf ← التركيب ← بكالوريا ← Quiz.",
+      "interaction_model": "محاولة ثم شرح قصير وتغذية راجعة.",
+      "screen_rule": "فكرة واحدة في كل شاشة.",
+      "diagram_display_rule": "يظهر الجدول أو المخطط قبل السؤال عند الحاجة."
+    },
+    "learning_path": [
+      {
+        "id": "step_1",
+        "type": "motivation",
+        "title": "لماذا نحتاج إلى نمذجة التحول الكيميائي؟",
+        "content": {
+          "teacher": "المعادلة الكيميائية تخبرنا من يتفاعل وماذا يتشكل، لكنها لا تخبرنا مباشرة كم بقي من كل نوع. لذلك نستعمل جدول التقدم لتحويل المعادلة إلى حسابات على كميات المادة.",
+          "example": "في تفاعل معدن مع حمض نريد معرفة كمية المعدن المستهلكة وكمية الغاز المتشكلة.",
+          "central_idea": "المعادلة تقول من يتفاعل، وجدول التقدم يقول كم يتغير.",
+          "bac_relevance": "من أكثر الأسئلة تكرارًا: أنشئ جدول تقدم، عين المتفاعل المحد، واحسب التركيب النهائي.",
+          "pre_question": {
+            "prompt": "ما الذي تضيفه النمذجة إلى المعادلة؟",
+            "options": [
+              "ألوان المواد",
+              "تطور كميات المادة",
+              "اسم الجهاز"
+            ],
+            "correct_index": 1,
+            "feedback_correct": "صحيح، النمذجة تصف الكميات.",
+            "feedback_wrong": "المعادلة وحدها لا تعطي الكميات المتبقية.",
+            "hint": "فكر في سؤال: كم استهلك وكم تشكل؟"
+          },
+          "quick_check": {
+            "question": "ما الهدف من جدول التقدم؟",
+            "answer": "معرفة كميات المادة في حالات مختلفة.",
+            "explanation": "يربط بين البداية وأثناء التحول والنهاية.",
+            "wrong_answer_help": "فكر في قبل وأثناء وبعد التفاعل."
+          },
+          "takeaway": "النمذجة = وصف كمي للتحول.",
+          "memory_tip": "المعادلة: من؟ الجدول: كم؟"
+        }
+      },
+      {
+        "id": "step_2",
+        "type": "concept",
+        "title": "ماذا تعني معاملات المعادلة؟",
+        "content": {
+          "teacher": "في المعادلة \\(aA+bB\rightarrow cC+dD\\)، تحدد المعاملات نسب الاستهلاك والتشكل.",
+          "general_equation": "\\(aA+bB\\rightarrow cC+dD\\)",
+          "example": {
+            "equation": "\\(2H_2+O_2\\rightarrow2H_2O\\)",
+            "reading": "كل 2 mol من H₂ تتفاعل مع 1 mol من O₂ فتتشكل 2 mol من H₂O."
+          },
+          "attention": "المعامل نسبة ثابتة في المعادلة، وليس كمية المادة الابتدائية.",
+          "pre_question": {
+            "prompt": "في \\(2H_2+O_2\\rightarrow2H_2O\\)، كم mol من O₂ يلزم لكل 2 mol من H₂؟",
+            "options": [
+              "1",
+              "2",
+              "3"
+            ],
+            "correct_index": 0,
+            "feedback_correct": "صحيح.",
+            "feedback_wrong": "اقرأ المعامل أمام O₂.",
+            "hint": "المعامل غير المكتوب يساوي 1."
+          },
+          "quick_check": {
+            "question": "هل المعامل 2 يعني أن لدينا دائمًا 2 mol؟",
+            "answer": "لا، هو نسبة ستوكيومترية فقط.",
+            "explanation": "الكمية الفعلية تأتي من معطيات التمرين.",
+            "wrong_answer_help": "ميز بين المعامل وn₀."
+          },
+          "takeaway": "المعاملات تحدد نسب التغير."
+        }
+      },
+      {
+        "id": "step_3",
+        "type": "definition",
+        "title": "ما هو تقدم التفاعل x؟",
+        "content": {
+          "teacher": "تقدم التفاعل \\(x\\) مقدار بوحدة mol يقيس مدى حدوث التفاعل. يبدأ من الصفر ويزداد حتى يصل إلى قيمة نهائية.",
+          "states": [
+            {
+              "state": "ابتدائية",
+              "value": "\\(x=0\\)"
+            },
+            {
+              "state": "أثناء التحول",
+              "value": "\\(0<x<x_f\\)"
+            },
+            {
+              "state": "نهائية",
+              "value": "\\(x=x_f\\)"
+            }
+          ],
+          "attention": "x ليس زمنًا؛ وحدته mol.",
+          "pre_question": {
+            "prompt": "ما قيمة x في البداية؟",
+            "options": [
+              "0",
+              "1",
+              "xmax دائمًا"
+            ],
+            "correct_index": 0,
+            "feedback_correct": "صحيح.",
+            "feedback_wrong": "لم يحدث التفاعل بعد.",
+            "hint": "البداية تعني عدم تقدم."
+          },
+          "quick_check": {
+            "question": "ما وحدة x؟",
+            "answer": "mol.",
+            "explanation": "لأنه يصف تغير كميات المادة.",
+            "wrong_answer_help": "لا تخلطه مع الزمن."
+          },
+          "takeaway": "x عداد لتقدم التفاعل."
+        }
+      },
+      {
+        "id": "step_4",
+        "type": "concept",
+        "title": "كيف تتغير الكميات بدلالة x؟",
+        "content": {
+          "teacher": "المتفاعلات تُستهلك فتنقص، والنواتج تتشكل فتزداد. مقدار التغير يساوي المعامل مضروبًا في x.",
+          "relations": [
+            "\\(n(A)=n_0(A)-ax\\)",
+            "\\(n(B)=n_0(B)-bx\\)",
+            "\\(n(C)=n_0(C)+cx\\)",
+            "\\(n(D)=n_0(D)+dx\\)"
+          ],
+          "sign_rule": "المتفاعل ناقص، والناتج زائد.",
+          "pre_question": {
+            "prompt": "في \\(2A+B\\rightarrow C\\)، ما كمية A أثناء التحول؟",
+            "options": [
+              "n₀(A)-2x",
+              "n₀(A)-x",
+              "2x"
+            ],
+            "correct_index": 0,
+            "feedback_correct": "صحيح.",
+            "feedback_wrong": "A متفاعل ومعامله 2.",
+            "hint": "ناقص للمتفاعل ومعامله 2."
+          },
+          "quick_check": {
+            "question": "لماذا نكتب +cx للناتج؟",
+            "answer": "لأنه يتشكل وتزداد كميته.",
+            "explanation": "النواتج تزيد مع التقدم.",
+            "wrong_answer_help": "حدد هل النوع متفاعل أم ناتج."
+          },
+          "takeaway": "متفاعل −، ناتج +، والمعامل يضرب في x."
+        }
+      },
+      {
+        "id": "step_5",
+        "type": "visual_method",
+        "title": "البنية العامة لجدول التقدم",
+        "content": {
+          "teacher": "يتكون جدول التقدم من ثلاث حالات: ابتدائية، أثناء التحول، ونهائية.",
+          "diagram": {
+            "title": "جدول تقدم عام",
+            "description": "للتفاعل aA+bB→cC+dD",
+            "alt_text": "جدول يبين كميات المتفاعلات والنواتج في ثلاث حالات.",
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"1100\" height=\"520\" viewBox=\"0 0 1100 520\"><rect width=\"100%\" height=\"100%\" fill=\"white\"/><text x=\"550\" y=\"45\" text-anchor=\"middle\" font-size=\"30\" font-family=\"Arial\" fill=\"#111827\">جدول تقدم التفاعل العام</text><rect x=\"40\" y=\"80\" width=\"1020\" height=\"360\" rx=\"18\" fill=\"#fff\" stroke=\"#cbd5e1\" stroke-width=\"2\"/><line x1=\"40\" y1=\"150\" x2=\"1060\" y2=\"150\" stroke=\"#94a3b8\" stroke-width=\"2\"/><line x1=\"40\" y1=\"245\" x2=\"1060\" y2=\"245\" stroke=\"#94a3b8\" stroke-width=\"2\"/><line x1=\"40\" y1=\"340\" x2=\"1060\" y2=\"340\" stroke=\"#94a3b8\" stroke-width=\"2\"/><line x1=\"210\" y1=\"80\" x2=\"210\" y2=\"440\" stroke=\"#94a3b8\" stroke-width=\"2\"/><line x1=\"430\" y1=\"80\" x2=\"430\" y2=\"440\" stroke=\"#94a3b8\" stroke-width=\"2\"/><line x1=\"650\" y1=\"80\" x2=\"650\" y2=\"440\" stroke=\"#94a3b8\" stroke-width=\"2\"/><line x1=\"850\" y1=\"80\" x2=\"850\" y2=\"440\" stroke=\"#94a3b8\" stroke-width=\"2\"/><rect x=\"40\" y=\"80\" width=\"1020\" height=\"70\" fill=\"#eff6ff\"/><rect x=\"40\" y=\"150\" width=\"170\" height=\"290\" fill=\"#f8fafc\"/><g font-family=\"Arial\" font-size=\"22\" fill=\"#111827\" text-anchor=\"middle\"><text x=\"125\" y=\"125\">الحالة</text><text x=\"320\" y=\"125\">A</text><text x=\"540\" y=\"125\">B</text><text x=\"750\" y=\"125\">C</text><text x=\"955\" y=\"125\">D</text><text x=\"125\" y=\"205\">ابتدائية</text><text x=\"320\" y=\"205\">n₀(A)</text><text x=\"540\" y=\"205\">n₀(B)</text><text x=\"750\" y=\"205\">0</text><text x=\"955\" y=\"205\">0</text><text x=\"125\" y=\"300\">أثناء التحول</text><text x=\"320\" y=\"300\">n₀(A)-a x</text><text x=\"540\" y=\"300\">n₀(B)-b x</text><text x=\"750\" y=\"300\">c x</text><text x=\"955\" y=\"300\">d x</text><text x=\"125\" y=\"395\">نهائية</text><text x=\"320\" y=\"395\">n₀(A)-a x_f</text><text x=\"540\" y=\"395\">n₀(B)-b x_f</text><text x=\"750\" y=\"395\">c x_f</text><text x=\"955\" y=\"395\">d x_f</text></g><text x=\"550\" y=\"485\" text-anchor=\"middle\" font-size=\"24\" font-family=\"Arial\" fill=\"#334155\">للمعادلة: aA + bB → cC + dD</text></svg>",
+            "render_mode": "inline_step",
+            "responsive": true
+          },
+          "table": {
+            "equation": "\\(aA+bB\\rightarrow cC+dD\\)",
+            "rows": [
+              {
+                "state": "ابتدائية",
+                "progress": "0",
+                "A": "n₀(A)",
+                "B": "n₀(B)",
+                "C": "0",
+                "D": "0"
+              },
+              {
+                "state": "أثناء",
+                "progress": "x",
+                "A": "n₀(A)-ax",
+                "B": "n₀(B)-bx",
+                "C": "cx",
+                "D": "dx"
+              },
+              {
+                "state": "نهائية",
+                "progress": "x_f",
+                "A": "n₀(A)-ax_f",
+                "B": "n₀(B)-bx_f",
+                "C": "cx_f",
+                "D": "dx_f"
+              }
+            ]
+          },
+          "pre_question": {
+            "prompt": "في أي سطر نكتب العلاقات بدلالة x؟",
+            "options": [
+              "الابتدائي",
+              "أثناء التحول",
+              "العنوان"
+            ],
+            "correct_index": 1,
+            "feedback_correct": "صحيح.",
+            "feedback_wrong": "السطر الابتدائي يستعمل x=0.",
+            "hint": "ابحث عن الحالة المتغيرة."
+          },
+          "quick_check": {
+            "question": "ما الفرق بين سطر أثناء التحول والنهائي؟",
+            "answer": "نستعمل x أثناء التحول وx_f في النهاية.",
+            "explanation": "السطر النهائي حالة خاصة من السطر العام.",
+            "wrong_answer_help": "استبدل x بقيمته النهائية."
+          },
+          "takeaway": "ابتدائي، أثناء، نهائي.",
+          "graph_position": "before_question"
+        }
+      },
+      {
+        "id": "step_6",
+        "type": "method",
+        "title": "كيف نحسب كميات المادة الابتدائية؟",
+        "content": {
+          "teacher": "قبل الجدول نحول جميع المعطيات إلى كمية مادة بالمول.",
+          "formulas": [
+            {
+              "case": "كتلة",
+              "formula": "\\(n=\\frac{m}{M}\\)"
+            },
+            {
+              "case": "محلول",
+              "formula": "\\(n=cV\\)"
+            },
+            {
+              "case": "غاز",
+              "formula": "\\(n=\\frac{V_g}{V_M}\\)"
+            },
+            {
+              "case": "جسيمات",
+              "formula": "\\(n=\\frac{N}{N_A}\\)"
+            }
+          ],
+          "unit_attention": [
+            "حوّل mL إلى L في n=cV.",
+            "استعمل وحدات متوافقة في Vg وVM."
+          ],
+          "pre_question": {
+            "prompt": "لدينا 50 mL محلول. ما أول خطوة قبل n=cV؟",
+            "options": [
+              "تحويلها إلى 0.050 L",
+              "الضرب في 50",
+              "تحويل c إلى g"
+            ],
+            "correct_index": 0,
+            "feedback_correct": "صحيح.",
+            "feedback_wrong": "الحجم يجب أن يكون باللتر.",
+            "hint": "اقسم على 1000."
+          },
+          "quick_check": {
+            "question": "احسب n إذا c=0.20 mol/L وV=0.050 L.",
+            "answer": "0.010 mol.",
+            "explanation": "n=cV.",
+            "wrong_answer_help": "تأكد من وحدة الحجم."
+          },
+          "takeaway": "حوّل إلى mol قبل الجدول."
+        }
+      },
+      {
+        "id": "step_7",
+        "type": "worked_example",
+        "title": "مثال موجه: بناء جدول تقدم",
+        "content": {
+          "teacher": "نتفاعل 0.10 mol من Fe مع 0.30 mol من H₃O⁺ وفق: \\(Fe+2H_3O^+\\rightarrow Fe^{2+}+H_2+2H_2O\\).",
+          "steps": [
+            {
+              "step_number": 1,
+              "title": "المعاملات",
+              "result": "Fe:1، H₃O⁺:2، Fe²⁺:1، H₂:1"
+            },
+            {
+              "step_number": 2,
+              "title": "ابتدائي",
+              "result": "0.10، 0.30، 0، 0"
+            },
+            {
+              "step_number": 3,
+              "title": "أثناء",
+              "result": "0.10-x، 0.30-2x، x، x"
+            }
+          ],
+          "progress_table": {
+            "columns": [
+              "الحالة",
+              "x",
+              "Fe",
+              "H₃O⁺",
+              "Fe²⁺",
+              "H₂"
+            ],
+            "rows": [
+              [
+                "ابتدائية",
+                "0",
+                "0.10",
+                "0.30",
+                "0",
+                "0"
+              ],
+              [
+                "أثناء",
+                "x",
+                "0.10-x",
+                "0.30-2x",
+                "x",
+                "x"
+              ],
+              [
+                "نهائية",
+                "x_f",
+                "0.10-x_f",
+                "0.30-2x_f",
+                "x_f",
+                "x_f"
+              ]
+            ],
+            "unit": "mol"
+          },
+          "pre_question": {
+            "prompt": "لماذا نكتب 0.30-2x؟",
+            "options": [
+              "لأنه ناتج",
+              "لأنه متفاعل معامله 2",
+              "لأن حجمه 2 L"
+            ],
+            "correct_index": 1,
+            "feedback_correct": "صحيح.",
+            "feedback_wrong": "انظر إلى المعامل.",
+            "hint": "متفاعل ومعامله 2."
+          },
+          "quick_check": {
+            "question": "ما كمية H₂ عند تقدم x؟",
+            "answer": "x mol.",
+            "explanation": "معامله 1.",
+            "wrong_answer_help": "الناتج يزيد بمعامله."
+          },
+          "takeaway": "اقرأ المعامل ثم ضع الإشارة الصحيحة."
+        }
+      },
+      {
+        "id": "step_8",
+        "type": "concept",
+        "title": "لماذا لا يمكن أن تصبح كمية المتفاعل سالبة؟",
+        "content": {
+          "teacher": "كمية المادة لا يمكن أن تكون سالبة، لذلك يفرض كل متفاعل شرطًا على x.",
+          "conditions": [
+            "\\(n_0(A)-ax\\ge0\\Rightarrow x\\le\\frac{n_0(A)}{a}\\)",
+            "\\(n_0(B)-bx\\ge0\\Rightarrow x\\le\\frac{n_0(B)}{b}\\)"
+          ],
+          "pre_question": {
+            "prompt": "إذا n(A)=0.12-3x، فما الشرط؟",
+            "options": [
+              "x≤0.04",
+              "x≤0.12",
+              "x≥0.12"
+            ],
+            "correct_index": 0,
+            "feedback_correct": "صحيح.",
+            "feedback_wrong": "اقسم 0.12 على 3.",
+            "hint": "حل 0.12-3x≥0."
+          },
+          "quick_check": {
+            "question": "لماذا نأخذ أصغر حد؟",
+            "answer": "لأن أول متفاعل ينفد يوقف التفاعل.",
+            "explanation": "لا يمكن الاستمرار بعد نفاد متفاعل.",
+            "wrong_answer_help": "فكر في الذي ينتهي أولًا."
+          },
+          "takeaway": "عدم السلبية يقود إلى xmax."
+        }
+      },
+      {
+        "id": "step_9",
+        "type": "definition",
+        "title": "ما هو التقدم الأعظمي x_max؟",
+        "content": {
+          "teacher": "هو أكبر تقدم ممكن انطلاقًا من الكميات الابتدائية والمعادلة.",
+          "definition": "\\(x_{max}=\\min\\left(\\frac{n_0(A)}{a},\\frac{n_0(B)}{b},...\\right)\\)",
+          "diagram": {
+            "title": "تحديد xmax",
+            "description": "نحسب النسبة لكل متفاعل ونختار الأصغر.",
+            "alt_text": "مخطط مقارنة n0 على المعامل.",
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"1000\" height=\"430\" viewBox=\"0 0 1000 430\"><rect width=\"100%\" height=\"100%\" fill=\"white\"/><text x=\"500\" y=\"48\" text-anchor=\"middle\" font-size=\"30\" font-family=\"Arial\" fill=\"#111827\">كيف نحدد المتفاعل المحد؟</text><rect x=\"70\" y=\"100\" width=\"350\" height=\"110\" rx=\"22\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"3\"/><text x=\"245\" y=\"145\" text-anchor=\"middle\" font-size=\"25\" font-family=\"Arial\" fill=\"#1e3a8a\">للمتفاعل A</text><text x=\"245\" y=\"185\" text-anchor=\"middle\" font-size=\"27\" font-family=\"Arial\">xₘₐₓ = n₀(A) / a</text><rect x=\"580\" y=\"100\" width=\"350\" height=\"110\" rx=\"22\" fill=\"#fef2f2\" stroke=\"#dc2626\" stroke-width=\"3\"/><text x=\"755\" y=\"145\" text-anchor=\"middle\" font-size=\"25\" font-family=\"Arial\" fill=\"#991b1b\">للمتفاعل B</text><text x=\"755\" y=\"185\" text-anchor=\"middle\" font-size=\"27\" font-family=\"Arial\">xₘₐₓ = n₀(B) / b</text><line x1=\"420\" y1=\"155\" x2=\"580\" y2=\"155\" stroke=\"#111827\" stroke-width=\"4\"/><text x=\"500\" y=\"140\" text-anchor=\"middle\" font-size=\"22\" font-family=\"Arial\">نقارن</text><rect x=\"250\" y=\"270\" width=\"500\" height=\"100\" rx=\"22\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"3\"/><text x=\"500\" y=\"312\" text-anchor=\"middle\" font-size=\"26\" font-family=\"Arial\" fill=\"#14532d\">أصغر قيمة هي xₘₐₓ</text><text x=\"500\" y=\"350\" text-anchor=\"middle\" font-size=\"24\" font-family=\"Arial\" fill=\"#14532d\">وصاحبها هو المتفاعل المحد</text></svg>",
+            "render_mode": "inline_step",
+            "responsive": true
+          },
+          "pre_question": {
+            "prompt": "إذا كانت النسب 0.05 و0.08 mol، فما xmax؟",
+            "options": [
+              "0.05",
+              "0.08",
+              "0.13"
+            ],
+            "correct_index": 0,
+            "feedback_correct": "صحيح.",
+            "feedback_wrong": "نأخذ الأصغر.",
+            "hint": "استعمل min."
+          },
+          "quick_check": {
+            "question": "هل نجمع النسب؟",
+            "answer": "لا، نأخذ أصغرها.",
+            "explanation": "الأصغر هو الحد الفعلي للتقدم.",
+            "wrong_answer_help": "كل متفاعل يفرض حدًا."
+          },
+          "takeaway": "xmax = أصغر n₀/المعامل.",
+          "graph_position": "before_question"
+        }
+      },
+      {
+        "id": "step_10",
+        "type": "definition",
+        "title": "من هو المتفاعل المحد؟",
+        "content": {
+          "teacher": "هو المتفاعل الذي ينفد أولًا عند بلوغ xmax، وهو صاحب أصغر قيمة n₀/المعامل.",
+          "rule": "المحدد = صاحب أصغر \\(\\frac{n_0}{\\nu}\\)",
+          "attention": "ليس بالضرورة صاحب أصغر n₀ وحدها.",
+          "example": {
+            "Fe": "0.10/1=0.10",
+            "H3O+": "0.30/2=0.15",
+            "conclusion": "Fe هو المحد."
+          },
+          "pre_question": {
+            "prompt": "ما القاعدة الصحيحة؟",
+            "options": [
+              "أصغر n₀ فقط",
+              "أصغر n₀/المعامل",
+              "أكبر معامل"
+            ],
+            "correct_index": 1,
+            "feedback_correct": "صحيح.",
+            "feedback_wrong": "يجب مراعاة المعامل.",
+            "hint": "اقسم قبل المقارنة."
+          },
+          "quick_check": {
+            "question": "إذا n₀(A)=0.20 ومعامله 4، وn₀(B)=0.08 ومعامله 1، فمن المحد؟",
+            "answer": "A.",
+            "explanation": "0.20/4=0.05 أصغر من 0.08.",
+            "wrong_answer_help": "لا تقارن n₀ مباشرة."
+          },
+          "takeaway": "المحدد ينفد أولًا."
+        }
+      },
+      {
+        "id": "step_11",
+        "type": "concept",
+        "title": "ما هو المتفاعل الفائض؟",
+        "content": {
+          "teacher": "هو المتفاعل الذي تبقى منه كمية موجبة في النهاية.",
+          "formula": "\\(n_f=n_0-\\nu x_{max}\\)",
+          "example": {
+            "calculation": "\\(n_f(H_3O^+)=0.30-2(0.10)=0.10\\,mol\\)",
+            "conclusion": "H₃O⁺ فائض."
+          },
+          "pre_question": {
+            "prompt": "كيف نعرف أن متفاعلًا فائض؟",
+            "options": [
+              "كميته النهائية موجبة",
+              "كميته سالبة",
+              "معامله 1"
+            ],
+            "correct_index": 0,
+            "feedback_correct": "صحيح.",
+            "feedback_wrong": "الفائض لا ينفد.",
+            "hint": "احسب nf."
+          },
+          "quick_check": {
+            "question": "ما كمية المحد في النهاية لتحول تام؟",
+            "answer": "صفر.",
+            "explanation": "لأنه ينفد.",
+            "wrong_answer_help": "اسم المحد يعني أنه ينتهي أولًا."
+          },
+          "takeaway": "المحدد ينفد، والفائض يبقى."
+        }
+      },
+      {
+        "id": "step_12",
+        "type": "comparison",
+        "title": "لا تخلط بين x_f وx_max",
+        "content": {
+          "teacher": "xmax قيمة نظرية من البداية، أما xf فهي القيمة الفعلية في النهاية.",
+          "comparisons": [
+            {
+              "concept": "xmax",
+              "meaning": "أكبر تقدم ممكن نظريًا",
+              "source": "من n₀ والمعاملات"
+            },
+            {
+              "concept": "xf",
+              "meaning": "التقدم الفعلي النهائي",
+              "source": "من قياس أو منحنى"
+            }
+          ],
+          "cases": [
+            "\\(x_f=x_{max}\\): تحول تام",
+            "\\(x_f<x_{max}\\): تحول غير تام"
+          ],
+          "pre_question": {
+            "prompt": "إذا كان التحول تامًا؟",
+            "options": [
+              "xf=xmax",
+              "xf=0",
+              "xf>xmax"
+            ],
+            "correct_index": 0,
+            "feedback_correct": "صحيح.",
+            "feedback_wrong": "بلغ أقصى تقدم ممكن.",
+            "hint": "اربط التام بالقيمة القصوى."
+          },
+          "quick_check": {
+            "question": "إذا xf=0.04 وxmax=0.05، هل التحول تام؟",
+            "answer": "لا.",
+            "explanation": "xf<xmax.",
+            "wrong_answer_help": "قارن القيمتين."
+          },
+          "takeaway": "xmax نظري، xf فعلي."
+        }
+      },
+      {
+        "id": "step_13",
+        "type": "method",
+        "title": "كيف أستخرج x_f من قياس تجريبي؟",
+        "content": {
+          "teacher": "نكتب كمية النوع من القياس، ثم نساويها بعلاقتها في جدول التقدم.",
+          "cases": [
+            {
+              "measured": "حجم غاز",
+              "relation": "\\(n_g=\\frac{V_g}{V_M}=\\nu_g x\\)"
+            },
+            {
+              "measured": "كتلة ناتج",
+              "relation": "\\(\\frac{m}{M}=\\nu x\\)"
+            },
+            {
+              "measured": "تركيز",
+              "relation": "\\([X]V=n_0\\pm\\nu x\\)"
+            }
+          ],
+          "algorithm": [
+            "حدد النوع المقاس.",
+            "حوّل القياس إلى كمية مادة.",
+            "اكتب علاقة الجدول.",
+            "ساوِ العبارتين.",
+            "استنتج xf."
+          ],
+          "pre_question": {
+            "prompt": "إذا n(H₂)=x ووجدنا n(H₂)=0.06 mol، فما xf؟",
+            "options": [
+              "0.06",
+              "0.03",
+              "0.12"
+            ],
+            "correct_index": 0,
+            "feedback_correct": "صحيح.",
+            "feedback_wrong": "معامل H₂ يساوي 1.",
+            "hint": "n(H₂)=x."
+          },
+          "quick_check": {
+            "question": "ما أهم خطوة قبل التعويض؟",
+            "answer": "كتابة العلاقة بين القياس وx.",
+            "explanation": "العلاقة تمنع اختيار قانون خاطئ.",
+            "wrong_answer_help": "ابدأ من الجدول."
+          },
+          "takeaway": "القياس + علاقة الجدول = xf."
+        }
+      },
+      {
+        "id": "step_14",
+        "type": "method",
+        "title": "كيف نحسب التركيب المولي عند لحظة t؟",
+        "content": {
+          "teacher": "إذا عرفنا x(t)، نعوضه في سطر أثناء التحول للحصول على كمية كل نوع عند تلك اللحظة.",
+          "general_rule": "\\(n_i(t)=n_{i,0}+\\nu_i x(t)\\)",
+          "example": {
+            "given": "x(t)=0.04 mol",
+            "results": [
+              "n(Fe)=0.10-0.04=0.06 mol",
+              "n(H₃O⁺)=0.30-2(0.04)=0.22 mol",
+              "n(Fe²⁺)=0.04 mol",
+              "n(H₂)=0.04 mol"
+            ]
+          },
+          "attention": "في لحظة وسطية نستعمل x(t)، وليس xf أو xmax.",
+          "pre_question": {
+            "prompt": "لحساب التركيب عند لحظة t نستعمل؟",
+            "options": [
+              "x(t)",
+              "xmax دائمًا",
+              "0"
+            ],
+            "correct_index": 0,
+            "feedback_correct": "صحيح.",
+            "feedback_wrong": "كل لحظة لها تقدمها.",
+            "hint": "ابحث عن تقدم اللحظة."
+          },
+          "quick_check": {
+            "question": "كيف نحصل على التركيب النهائي؟",
+            "answer": "نعوض x=xf.",
+            "explanation": "السطر النهائي حالة خاصة.",
+            "wrong_answer_help": "استبدل x بـ xf."
+          },
+          "takeaway": "اعرف x ثم عوض في جميع العلاقات."
+        }
+      },
+      {
+        "id": "step_15",
+        "type": "worked_example",
+        "title": "مثال بكالوريا كامل",
+        "content": {
+          "teacher": "لدينا n₀(Mg)=0.080 mol وn₀(H₃O⁺)=0.120 mol، والتفاعل: \\(Mg+2H_3O^+\\rightarrow Mg^{2+}+H_2+2H_2O\\). التحول تام.",
+          "steps": [
+            {
+              "step_number": 1,
+              "title": "النسب",
+              "calculation": "0.080/1=0.080 و0.120/2=0.060"
+            },
+            {
+              "step_number": 2,
+              "title": "xmax",
+              "result": "0.060 mol"
+            },
+            {
+              "step_number": 3,
+              "title": "المحدد",
+              "result": "H₃O⁺"
+            },
+            {
+              "step_number": 4,
+              "title": "التمام",
+              "result": "xf=xmax=0.060 mol"
+            },
+            {
+              "step_number": 5,
+              "title": "النهائي",
+              "results": [
+                "nf(Mg)=0.020 mol",
+                "nf(H₃O⁺)=0",
+                "nf(Mg²⁺)=0.060 mol",
+                "nf(H₂)=0.060 mol"
+              ]
+            }
+          ],
+          "pre_question": {
+            "prompt": "من المحد؟",
+            "options": [
+              "Mg",
+              "H₃O⁺",
+              "كلاهما فائض"
+            ],
+            "correct_index": 1,
+            "feedback_correct": "صحيح.",
+            "feedback_wrong": "0.060 هي الأصغر.",
+            "hint": "قارن النسب."
+          },
+          "quick_check": {
+            "question": "ما كمية H₂ النهائية؟",
+            "answer": "0.060 mol.",
+            "explanation": "معامله 1.",
+            "wrong_answer_help": "n(H₂)=xf."
+          },
+          "takeaway": "قارن، حدد، ثم عوض."
+        }
+      },
+      {
+        "id": "step_16",
+        "type": "bac_connection",
+        "title": "كيف يظهر هذا المحور في البكالوريا؟",
+        "content": {
+          "teacher": "تتغير صيغة السؤال لكن المنهجية ثابتة.",
+          "question_types": [
+            {
+              "type": "أنشئ جدول تقدم",
+              "method": "احسب n₀ ثم اكتب n₀±νx."
+            },
+            {
+              "type": "عين المتفاعل المحد",
+              "method": "قارن n₀/ν."
+            },
+            {
+              "type": "احسب xf",
+              "method": "اربط القياس بعلاقة الجدول."
+            },
+            {
+              "type": "جد التركيب عند t",
+              "method": "عوض x(t)."
+            },
+            {
+              "type": "هل التحول تام؟",
+              "method": "قارن xf وxmax."
+            },
+            {
+              "type": "النقاوة أو النسبة الكتلية",
+              "method": "استخرج الكتلة النقية من xf ثم احسب النسبة."
+            }
+          ],
+          "decision_tree": [
+            "حوّل المعطيات إلى mol.",
+            "أنشئ جدول التقدم.",
+            "احسب xmax إذا طلب المحد.",
+            "استخرج xf من القياس أو من تمام التحول.",
+            "عوض في الجدول."
+          ],
+          "pre_question": {
+            "prompt": "إذا أعطاك حجم غاز نهائيًا، ما أول خطوة؟",
+            "options": [
+              "تحويله إلى كمية مادة",
+              "جمعه مع الكتلة",
+              "اختيار الأكبر"
+            ],
+            "correct_index": 0,
+            "feedback_correct": "صحيح.",
+            "feedback_wrong": "الحجم يرتبط بالتقدم عبر كمية المادة.",
+            "hint": "استعمل n=V/VM."
+          },
+          "quick_check": {
+            "question": "ما الأداة المركزية هنا؟",
+            "answer": "جدول التقدم.",
+            "explanation": "منه نشتق كل العلاقات.",
+            "wrong_answer_help": "كل سؤال يعود إلى الجدول."
+          },
+          "takeaway": "ابدأ دائمًا بجدول منظم."
+        }
+      },
+      {
+        "id": "step_17",
+        "type": "common_mistakes",
+        "title": "أخطاء شائعة يجب تجنبها",
+        "content": {
+          "teacher": "هذه الأخطاء تسقط نقاطًا سهلة.",
+          "mistakes": [
+            {
+              "mistake": "نسيان تحويل mL إلى L",
+              "correction": "حوّل قبل n=cV."
+            },
+            {
+              "mistake": "كتابة -x لكل المتفاعلات",
+              "correction": "اكتب -νx."
+            },
+            {
+              "mistake": "اختيار المحد من أصغر n₀",
+              "correction": "قارن n₀/ν."
+            },
+            {
+              "mistake": "اعتبار xf=xmax دائمًا",
+              "correction": "فقط إذا كان التحول تامًا."
+            },
+            {
+              "mistake": "الحصول على كمية سالبة",
+              "correction": "راجع x والمحدد."
+            },
+            {
+              "mistake": "استعمال xmax عند لحظة وسطية",
+              "correction": "استعمل x(t)."
+            },
+            {
+              "mistake": "نسيان mol",
+              "correction": "اكتب الوحدة."
+            }
+          ],
+          "pre_question": {
+            "prompt": "ما المقارنة الصحيحة للمحدد؟",
+            "options": [
+              "n₀",
+              "n₀/ν",
+              "الكتل فقط"
+            ],
+            "correct_index": 1,
+            "feedback_correct": "صحيح.",
+            "feedback_wrong": "يجب مراعاة المعامل.",
+            "hint": "اقسم قبل المقارنة."
+          },
+          "quick_check": {
+            "question": "ماذا يعني ظهور كمية سالبة؟",
+            "answer": "وجود خطأ في الحساب أو في قيمة x.",
+            "explanation": "كمية المادة لا تكون سالبة.",
+            "wrong_answer_help": "راجع شروط عدم السلبية."
+          },
+          "takeaway": "الوحدات والمعاملات والمقارنة الصحيحة أساس الحل."
+        }
+      },
+      {
+        "id": "step_18",
+        "type": "mini_quiz",
+        "title": "اختبار قصير: نمذجة التحول الكيميائي",
+        "content": {
+          "teacher": "أجب عن الأسئلة دون الرجوع للدرس.",
+          "questions": [
+            {
+              "question": "ما وحدة x؟",
+              "choices": [
+                "mol",
+                "s",
+                "L"
+              ],
+              "correct_answer": "mol",
+              "explanation": "لأنه يصف تغير كمية المادة."
+            },
+            {
+              "question": "في 2A+B→C، ما n(A) أثناء التحول؟",
+              "choices": [
+                "n₀(A)-2x",
+                "n₀(A)-x",
+                "2x"
+              ],
+              "correct_answer": "n₀(A)-2x",
+              "explanation": "A متفاعل ومعامله 2."
+            },
+            {
+              "question": "كيف نحسب xmax؟",
+              "choices": [
+                "نجمع النسب",
+                "نأخذ أصغر n₀/ν",
+                "نأخذ الأكبر"
+              ],
+              "correct_answer": "نأخذ أصغر n₀/ν",
+              "explanation": "المحدد ينفد أولًا."
+            },
+            {
+              "question": "من هو المتفاعل المحد؟",
+              "choices": [
+                "الذي يبقى",
+                "الذي ينفد أولًا",
+                "الناتج الأكبر"
+              ],
+              "correct_answer": "الذي ينفد أولًا",
+              "explanation": "هو الذي يوقف التفاعل."
+            },
+            {
+              "question": "متى يكون التحول تامًا؟",
+              "choices": [
+                "xf=xmax",
+                "xf=0",
+                "xf>xmax"
+              ],
+              "correct_answer": "xf=xmax",
+              "explanation": "بلغ أقصى تقدم ممكن."
+            },
+            {
+              "question": "لحساب تركيب لحظة t نستعمل؟",
+              "choices": [
+                "x(t)",
+                "xmax دائمًا",
+                "0"
+              ],
+              "correct_answer": "x(t)",
+              "explanation": "كل لحظة لها تقدم خاص."
+            },
+            {
+              "question": "إذا nf(A)>0 فإن A؟",
+              "choices": [
+                "فائض",
+                "محد",
+                "ناتج"
+              ],
+              "correct_answer": "فائض",
+              "explanation": "بقي منه مقدار."
+            },
+            {
+              "question": "ما أول خطوة قبل الجدول؟",
+              "choices": [
+                "تحويل المعطيات إلى mol",
+                "حساب السرعة",
+                "اختيار أصغر كتلة"
+              ],
+              "correct_answer": "تحويل المعطيات إلى mol",
+              "explanation": "الجدول يكتب بكميات المادة."
+            }
+          ],
+          "scoring": {
+            "total": 8,
+            "mastery_threshold": 6,
+            "levels": [
+              {
+                "score": "8",
+                "level": "متقن",
+                "message": "جاهز للبكالوريا."
+              },
+              {
+                "score": "6-7",
+                "level": "جيد جدًا",
+                "message": "راجع الفرق بين xf وxmax."
+              },
+              {
+                "score": "4-5",
+                "level": "متوسط",
+                "message": "راجع جدول التقدم."
+              },
+              {
+                "score": "0-3",
+                "level": "يحتاج مراجعة",
+                "message": "أعد الدرس من معنى x."
+              }
+            ]
+          },
+          "takeaway": "جدول، مقارنة، تعويض."
+        }
+      },
+      {
+        "id": "step_19",
+        "type": "summary",
+        "title": "الخلاصة التي تحفظها",
+        "content": {
+          "teacher": "كل سؤال في هذا المحور يعود إلى جدول التقدم.",
+          "key_ideas": [
+            "x يقيس تقدم التفاعل.",
+            "المعاملات تحدد التغيرات.",
+            "المتفاعلات n₀-νx والنواتج n₀+νx.",
+            "xmax أصغر n₀/ν.",
+            "صاحب الأصغر هو المحد.",
+            "الفائض تبقى كميته موجبة.",
+            "في التحول التام xf=xmax.",
+            "تركيب لحظة t يحسب بـx(t)."
+          ],
+          "method_template": [
+            "حوّل إلى mol.",
+            "أنشئ الجدول.",
+            "احسب xmax.",
+            "حدد المحد والفائض.",
+            "استخرج xf.",
+            "عوض.",
+            "تحقق."
+          ],
+          "memory_tip": "حوّل، جدول، قارن، عوض، تحقق.",
+          "takeaway": "جدول التقدم هو قلب المحور."
+        }
+      }
+    ],
+    "final_assessment": {
+      "title": "تقويم ختامي: نمذجة تحول كيميائي",
+      "type": "final_assessment",
+      "statement": "ندخل 2.40 g من Mg في 200 mL من محلول حمضي تركيزه 0.15 mol.L⁻¹. التفاعل: Mg+2H₃O⁺→Mg²⁺+H₂+2H₂O. يعطى M(Mg)=24 g.mol⁻¹، والتحول تام.",
+      "questions": [
+        "احسب n₀(Mg).",
+        "احسب n₀(H₃O⁺).",
+        "أنشئ جدول التقدم.",
+        "احسب xmax.",
+        "عين المحد والفائض.",
+        "استنتج xf.",
+        "احسب التركيب النهائي.",
+        "إذا VM=24 L.mol⁻¹ احسب حجم H₂."
+      ],
+      "answers": [
+        "0.100 mol.",
+        "0.030 mol.",
+        "Mg:0.100-x، H₃O⁺:0.030-2x، Mg²⁺:x، H₂:x.",
+        "xmax=min(0.100,0.015)=0.015 mol.",
+        "H₃O⁺ محد وMg فائض.",
+        "xf=0.015 mol.",
+        "Mg:0.085، H₃O⁺:0، Mg²⁺:0.015، H₂:0.015 mol.",
+        "V(H₂)=0.015×24=0.36 L."
+      ],
+      "success_criteria": [
+        "تحويل mL إلى L.",
+        "حساب n₀ صحيح.",
+        "احترام المعامل 2.",
+        "تحديد المحد بمقارنة n₀/ν.",
+        "حساب التركيب النهائي."
+      ],
+      "grading": {
+        "total_points": 16,
+        "distribution": [
+          {
+            "question": 1,
+            "points": 2
+          },
+          {
+            "question": 2,
+            "points": 2
+          },
+          {
+            "question": 3,
+            "points": 3
+          },
+          {
+            "question": 4,
+            "points": 2
+          },
+          {
+            "question": 5,
+            "points": 2
+          },
+          {
+            "question": 6,
+            "points": 1
+          },
+          {
+            "question": 7,
+            "points": 3
+          },
+          {
+            "question": 8,
+            "points": 1
+          }
+        ]
+      },
+      "hint_levels": [
+        "حوّل 200 mL إلى 0.200 L.",
+        "قارن 0.100/1 و0.030/2.",
+        "المحدد صاحب الأصغر.",
+        "في التحول التام xf=xmax."
+      ],
+      "attempt_instruction": "حل على ورقة ثم افتح التصحيح."
+    },
+    "lesson_summary": {
+      "key_ideas": [
+        "x يصف التقدم.",
+        "الجدول يصف الحالات الثلاث.",
+        "xmax من أصغر n₀/ν.",
+        "المحدد ينفد أولًا.",
+        "التركيب يحسب بالتعويض."
+      ],
+      "method_template": [
+        "احسب n₀.",
+        "أنشئ الجدول.",
+        "احسب xmax.",
+        "حدد المحد.",
+        "استخرج xf.",
+        "عوض.",
+        "تحقق."
+      ],
+      "memory_tip": "حوّل إلى mol ← جدول ← أصغر نسبة ← عوض."
+    },
+    "lesson_intro": {
+      "welcome": "سنفهم جدول التقدم بدل حفظه.",
+      "big_idea": "كل تقدم x يغير الكميات حسب المعاملات.",
+      "student_promise": "ستستطيع إنشاء الجدول وتحديد المحد وحساب التركيب النهائي."
+    },
+    "support_path": {
+      "if_student_does_not_understand": [
+        {
+          "problem": "لا أفهم x",
+          "action": "اعتبره عدادًا لكمية التفاعل التي حدثت."
+        },
+        {
+          "problem": "أخلط المعامل وn₀",
+          "action": "المعامل من المعادلة وn₀ من المعطيات."
+        },
+        {
+          "problem": "أخطئ في الإشارات",
+          "action": "متفاعل ناقص، ناتج زائد."
+        },
+        {
+          "problem": "أخطئ في المحد",
+          "action": "قارن n₀/المعامل."
+        },
+        {
+          "problem": "أخلط xf وxmax",
+          "action": "xmax نظري وxf فعلي."
+        }
+      ]
+    },
+    "method_decision_tree": {
+      "start_question": "كيف أتعامل مع تمرين النمذجة؟",
+      "branches": [
+        {
+          "condition": "هل المعطيات بالمول؟",
+          "yes": "انتقل للجدول.",
+          "no": "حوّلها إلى mol."
+        },
+        {
+          "condition": "هل يطلب المحد؟",
+          "yes": "قارن n₀/ν.",
+          "no": "تابع."
+        },
+        {
+          "condition": "هل التحول تام؟",
+          "yes": "xf=xmax.",
+          "no": "استخرج xf من القياس."
+        },
+        {
+          "condition": "هل المطلوب عند t؟",
+          "yes": "استعمل x(t).",
+          "no": "استعمل xf."
+        }
+      ],
+      "golden_rule": "المعامل يحدد التغير، وأصغر n₀/ν يحدد النهاية."
+    },
+    "lesson_closure": {
+      "final_message": "جدول التقدم ترجمة مباشرة للمعادلة إلى كميات.",
+      "essential_reflex": "حوّل، جدول، قارن، عوض، تحقق.",
+      "ready_for_next_lesson": true,
+      "next_lesson": "تحضير المحاليل والتمديد"
+    },
+    "content_status": "ready_for_production",
+    "pedagogical_style": {
+      "target": "تلميذ السنة الثالثة ثانوي المقبل على البكالوريا الجزائرية",
+      "language_level": "عربية بسيطة وواضحة",
+      "explanation_method": "فكرة بسيطة ثم مثال ثم منهجية بكالوريا ثم Quiz",
+      "platform_ready": true,
+      "requires_teacher_intervention": false
+    },
+    "quality_review": {
+      "json_validity_checked": true,
+      "scientific_accuracy_checked": true,
+      "pedagogical_progression_checked": true,
+      "latex_consistency_checked": true,
+      "inline_svg_checked": true,
+      "axis_scope_checked": true,
+      "quiz_checked": true,
+      "final_assessment_checked": true
+    },
+    "ui_preferences": {
+      "one_step_per_screen": true,
+      "ask_before_explain": true,
+      "require_attempt_before_solution": true,
+      "explain_wrong_answers": true,
+      "show_step_takeaway": true,
+      "show_progress": true,
+      "support_actions": [
+        "أعد الشرح",
+        "أعطني مثالًا أبسط",
+        "اشرحها بخطوات",
+        "تحقق من فهمي",
+        "أعطني تلميحًا"
+      ]
+    },
+    "presentation": {
+      "mode": "single_step",
+      "show_progress": true,
+      "require_understood_confirmation": true,
+      "show_transition_between_steps": true,
+      "compact_explanation": true,
+      "max_main_ideas_per_screen": 1
+    }
+  }
+}

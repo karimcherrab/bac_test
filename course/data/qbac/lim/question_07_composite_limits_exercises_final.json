@@ -1,0 +1,188 @@
+{
+  "version": 1,
+  "language": "ar",
+  "direction": "rtl",
+  "tag": "composite_limits",
+  "title": "تمارين نهاية الدالة المركبة",
+    "subject_code": "phy",
+  "chapter_code": "limits_continuity",
+  "question_count": 4,
+  "questions": [
+    {
+      "id": "composite_01",
+      "number": "91-1",
+      "text": "احسب \\(\\lim_{x\\to+\\infty}\\sqrt{\\frac{x-1}{2x-4}}\\).",
+      "skill": "حساب نهاية الدالة الداخلية ثم تطبيق دالة الجذر",
+      "difficulty": "medium",
+      "solution": {
+        "strategy": "نحسب نهاية العبارة داخل الجذر أولًا، ثم نطبق نهاية دالة الجذر.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "تحديد الدالة الداخلية",
+            "explanation": "العبارة الموجودة داخل الجذر هي الدالة الداخلية.",
+            "calculation": "\\(u(x)=\\frac{x-1}{2x-4}\\)",
+            "result": "الدالة الخارجية هي \\(f(t)=\\sqrt{t}\\)."
+          },
+          {
+            "order": 2,
+            "title": "حساب نهاية الداخل",
+            "explanation": "درجتا البسط والمقام متساويتان، لذلك النهاية هي نسبة المعاملين الرئيسيين.",
+            "calculation": "\\(\\lim_{x\\to+\\infty}\\frac{x-1}{2x-4}=\\frac12\\)",
+            "result": "\\(u(x)\\to\\frac12\\)."
+          },
+          {
+            "order": 3,
+            "title": "تطبيق الدالة الخارجية",
+            "explanation": "نطبق الجذر على نهاية الداخل.",
+            "calculation": "\\(\\sqrt{u(x)}\\to\\sqrt{\\frac12}=\\frac1{\\sqrt2}\\)",
+            "result": "\\(\\lim_{x\\to+\\infty}\\sqrt{\\frac{x-1}{2x-4}}=\\frac1{\\sqrt2}\\)."
+          }
+        ],
+        "final_answer": "\\(\\boxed{\\lim_{x\\to+\\infty}\\sqrt{\\frac{x-1}{2x-4}}=\\frac1{\\sqrt2}}\\)",
+        "common_mistakes": [
+          {
+            "mistake": "تطبيق الجذر قبل حساب نهاية الكسر الداخلي.",
+            "correction": "نحسب نهاية الداخل أولًا، ثم نطبق الجذر على النتيجة."
+          }
+        ],
+        "hints": [
+          "ابدأ بنهاية الكسر الموجود داخل الجذر.",
+          "درجتا البسط والمقام متساويتان."
+        ]
+      }
+    },
+    {
+      "id": "composite_02",
+      "number": "91-2",
+      "text": "احسب \\(\\lim_{x\\to+\\infty}\\sqrt{\\frac{x}{x^2-1}}\\).",
+      "skill": "حساب نهاية داخلية تؤول إلى الصفر ثم تطبيق الجذر",
+      "difficulty": "medium",
+      "solution": {
+        "strategy": "نحسب نهاية الكسر داخل الجذر، ثم نستعمل أن جذر مقدار موجب يؤول إلى الصفر يؤول إلى الصفر.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "تحديد الداخل",
+            "explanation": "الدالة الداخلية هي الكسر الموجود تحت الجذر.",
+            "calculation": "\\(u(x)=\\frac{x}{x^2-1}\\)",
+            "result": "نبدأ بحساب نهاية \\(u(x)\\)."
+          },
+          {
+            "order": 2,
+            "title": "حساب نهاية الداخل",
+            "explanation": "درجة البسط أصغر من درجة المقام، لذلك نهاية الكسر هي صفر.",
+            "calculation": "\\(\\lim_{x\\to+\\infty}\\frac{x}{x^2-1}=0\\)",
+            "result": "قرب زائد ما لا نهاية يكون الكسر موجبًا، إذن \\(u(x)\to0^+\\)."
+          },
+          {
+            "order": 3,
+            "title": "تطبيق الجذر",
+            "explanation": "عندما يؤول مقدار موجب إلى الصفر، يؤول جذره إلى الصفر.",
+            "calculation": "\\(\\sqrt{u(x)}\\to\\sqrt{0}=0\\)",
+            "result": "\\(\\lim_{x\\to+\\infty}\\sqrt{\\frac{x}{x^2-1}}=0\\)."
+          }
+        ],
+        "final_answer": "\\(\\boxed{\\lim_{x\\to+\\infty}\\sqrt{\\frac{x}{x^2-1}}=0}\\)",
+        "common_mistakes": [
+          {
+            "mistake": "اعتبار الجذر حالة عدم تعيين لأن الداخل يؤول إلى الصفر.",
+            "correction": "الجذر معرف لقيم الداخل الموجبة، و\\(\\sqrt{0}=0\\)."
+          }
+        ],
+        "hints": [
+          "احسب نهاية الكسر قبل الجذر.",
+          "قارن درجتي البسط والمقام."
+        ]
+      }
+    },
+    {
+      "id": "composite_03",
+      "number": "91-3",
+      "text": "احسب \\(\\lim_{x\\to-\\infty}\\sqrt{9x^2-x+3}\\).",
+      "skill": "تمييز جهة نهاية الداخل عن جهة المتغير",
+      "difficulty": "medium",
+      "solution": {
+        "strategy": "نحسب نهاية كثيرة الحدود داخل الجذر، ثم نطبق النهاية المرجعية للجذر.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "تحديد الداخل",
+            "explanation": "الدالة الداخلية هي كثيرة الحدود الموجودة تحت الجذر.",
+            "calculation": "\\(u(x)=9x^2-x+3\\)",
+            "result": "الدالة الخارجية هي الجذر التربيعي."
+          },
+          {
+            "order": 2,
+            "title": "حساب نهاية الداخل",
+            "explanation": "الحد الأعلى درجة هو \\(9x^2\\)، وهو يؤول إلى زائد ما لا نهاية عند ناقص ما لا نهاية.",
+            "calculation": "\\(9x^2-x+3\\to+\\infty\\)",
+            "result": "\\(u(x)\\to+\\infty\\)."
+          },
+          {
+            "order": 3,
+            "title": "تطبيق الجذر",
+            "explanation": "جذر مقدار موجب يزداد دون حد يزداد أيضًا دون حد.",
+            "calculation": "\\(\\sqrt{u(x)}\\to+\\infty\\)",
+            "result": "\\(\\lim_{x\\to-\\infty}\\sqrt{9x^2-x+3}=+\\infty\\)."
+          }
+        ],
+        "final_answer": "\\(\\boxed{\\lim_{x\\to-\\infty}\\sqrt{9x^2-x+3}=+\\infty}\\)",
+        "common_mistakes": [
+          {
+            "mistake": "القول إن داخل الجذر يؤول إلى ناقص ما لا نهاية لأن \\(x\to-\\infty\\).",
+            "correction": "الحد الغالب هو \\(9x^2\\)، لذلك الداخل يؤول إلى \\(+\\infty\\)."
+          }
+        ],
+        "hints": [
+          "حدد الحد الأعلى درجة داخل الجذر.",
+          "تذكر أن \\(x^2\to+\\infty\\) عند \\(x\to-\\infty\\)."
+        ]
+      }
+    },
+    {
+      "id": "bac_2016_topic_1_exercise_2_I_1_a",
+      "number": "I-1-a",
+      "text": "لتكن الدالة العددية \\(f\\) المعرفة على المجال \\([0,+\\infty[\\) بما يأتي:\n\\[\nf(x)=\\sqrt{2x+8}.\n\\]\nاحسب:\n\\[\n\\lim_{x\\to+\\infty}f(x).\n\\]",
+      "skill": "حساب نهاية دالة مركبة تحتوي على الجذر عند زائد ما لا نهاية",
+      "difficulty": "easy",
+      "solution": {
+        "strategy": "نحسب نهاية العبارة داخل الجذر، ثم نطبق نهاية دالة الجذر.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "تحديد الداخل والخارج",
+            "explanation": "الداخل هو \\(2x+8\\)، والخارج هو دالة الجذر.",
+            "calculation": "\\(u(x)=2x+8,\\qquad f(t)=\\sqrt{t}\\)",
+            "result": "نبدأ بنهاية \\(u(x)\\)."
+          },
+          {
+            "order": 2,
+            "title": "حساب نهاية الداخل",
+            "explanation": "عندما يكبر \\(x\\)، فإن \\(2x+8\\) يكبر دون حد.",
+            "calculation": "\\(\\lim_{x\\to+\\infty}(2x+8)=+\\infty\\)",
+            "result": "\\(u(x)\\to+\\infty\\)."
+          },
+          {
+            "order": 3,
+            "title": "تطبيق الجذر",
+            "explanation": "عندما يؤول \\(t\\) إلى زائد ما لا نهاية، فإن \\(\\sqrt{t}\\) يؤول إلى زائد ما لا نهاية.",
+            "calculation": "\\(\\lim_{t\\to+\\infty}\\sqrt{t}=+\\infty\\)",
+            "result": "\\(\\lim_{x\\to+\\infty}\\sqrt{2x+8}=+\\infty\\)."
+          }
+        ],
+        "final_answer": "\\(\\boxed{\\lim_{x\\to+\\infty}f(x)=+\\infty}\\)",
+        "common_mistakes": [
+          {
+            "mistake": "القول إن \\(\\sqrt{+\\infty}\\) حالة عدم تعيين.",
+            "correction": "ليست حالة عدم تعيين؛ الجذر يحافظ على الاتجاه \\(+\\infty\\)."
+          }
+        ],
+        "hints": [
+          "حدد العبارة داخل الجذر.",
+          "احسب نهاية \\(2x+8\\) أولًا."
+        ]
+      }
+    }
+  ]
+}

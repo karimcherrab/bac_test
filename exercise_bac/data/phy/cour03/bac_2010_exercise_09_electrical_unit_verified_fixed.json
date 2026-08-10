@@ -1,0 +1,263 @@
+{
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2010-electrical-verified",
+  "language": "ar",
+  "direction": "rtl",
+  "year": 2010,
+  "session": "ordinary",
+  "chapter_code": "electrical_phenomena_evolution",
+  "chapter_title": "تطور دراسة ظواهر كهربائية",
+  "exercise_number": 9,
+  "source_page": 3,
+  "source_pages": [
+    3,
+    4
+  ],
+  "solution_source_pages": [
+    24,
+    25
+  ],
+
+  "branches": [
+    {
+      "code": "math",
+      "name": "شعبة رياضيات"
+    },
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "title": "التمرين 9 — بكالوريا الجزائر 2010 — شعبة رياضيات وتقني رياضي",
+  "axis_tags": [
+    "rc_capacitor_charging",
+    "rc_capacitor_discharge",
+    "rc_differential_equation_solution",
+    "rc_time_constant_graphical_analysis"
+  ],
+  "questions": [
+    {
+      "id": "2010_elec_ex09_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) أ- ارسم البيان \\(u_C=f(t)\\). ب- عيّن بيانياً قيمة ثابت الزمن \\(\\tau\\) لثنائي القطب \\(RC\\) واستنتج قيمة السعة \\(C\\) للمكثفة.",
+      "solution": {
+        "strategy": "نرسم القياسات، ثم نستخرج τ من 63% من القيمة النهائية أو من المماس عند الأصل.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "رسم البيان",
+            "explanation": "القيم المعطاة تعطي منحنى شحن أسي يتجه نحو \\(E=5V\\).",
+            "graph_data": {
+              "title": "البيان u_C=f(t) من القياسات",
+              "description": "تمثيل القيم التجريبية المعطاة في نص التمرين.",
+              "x_label": "t (ms)",
+              "y_label": "u_C (V)",
+              "x_domain": [
+                0,
+                80
+              ],
+              "y_domain": [
+                0,
+                5.4
+              ],
+              "series": [
+                {
+                  "name": "u_C",
+                  "data": [
+                    {
+                      "x": 0,
+                      "y": 0
+                    },
+                    {
+                      "x": 4,
+                      "y": 1.0
+                    },
+                    {
+                      "x": 8,
+                      "y": 2.0
+                    },
+                    {
+                      "x": 16,
+                      "y": 3.3
+                    },
+                    {
+                      "x": 20,
+                      "y": 3.8
+                    },
+                    {
+                      "x": 24,
+                      "y": 4.1
+                    },
+                    {
+                      "x": 32,
+                      "y": 4.5
+                    },
+                    {
+                      "x": 40,
+                      "y": 4.8
+                    },
+                    {
+                      "x": 48,
+                      "y": 4.9
+                    },
+                    {
+                      "x": 60,
+                      "y": 5.0
+                    },
+                    {
+                      "x": 68,
+                      "y": 5.0
+                    },
+                    {
+                      "x": 80,
+                      "y": 5.0
+                    }
+                  ]
+                }
+              ],
+              "settings": {
+                "show_grid": true,
+                "show_axes": true,
+                "show_legend": false,
+                "show_point_labels": false,
+                "connect_points": true
+              }
+            }
+          },
+          {
+            "step_number": 2,
+            "title": "قراءة ثابت الزمن",
+            "explanation": "من البيان، عند \\(u_C=0.63E=3.15V\\) أو بطريقة المماس نجد تقريباً \\[\\boxed{\\tau=15ms}\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب السعة",
+            "explanation": "\\[C=\\frac{\\tau}{R}=\\frac{15\\times10^{-3}}{120}=1.25\\times10^{-4}F=\\boxed{125\\,\\mu F}\\]"
+          }
+        ],
+        "final_answer": "\\(\\tau\\approx15ms\\)، \\(C=125\\mu F\\)."
+      }
+    },
+    {
+      "id": "2010_elec_ex09_q2",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2) كيف تتغير قيمة ثابت الزمن \\(\\tau\\) في الحالتين؟ الحالة (أ): مكثفة سعتها \\(C'>C\\) و\\(R=120\\Omega\\). الحالة (ب): مكثفة سعتها \\(C''=C\\) و\\(R'<120\\Omega\\). ارسم كيفياً في نفس المعلم المنحنيين المعبرين عن \\(u_C(t)\\) في الحالتين.",
+      "solution": {
+        "strategy": "نستعمل τ=RC؛ زيادة C تزيد τ، وخفض R ينقص τ.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الحالة أ",
+            "explanation": "\\[\\tau'=RC'>RC=\\tau\\] لذلك يكون الشحن أبطأ، والمنحنى إلى يمين المنحنى الأصلي."
+          },
+          {
+            "step_number": 2,
+            "title": "الحالة ب",
+            "explanation": "\\[\\tau''=R'C<R C=\\tau\\] لذلك يكون الشحن أسرع، والمنحنى إلى يسار المنحنى الأصلي."
+          },
+          {
+            "step_number": 3,
+            "title": "القيمة النهائية",
+            "explanation": "في الحالتين تبقى القيمة النهائية \\(u_C(\\infty)=E=5V\\)."
+          }
+        ],
+        "final_answer": "\\(\\tau'>\\tau\\) في (أ)، و\\(\\tau''<\\tau\\) في (ب)."
+      }
+    },
+    {
+      "id": "2010_elec_ex09_q3",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "3) أ- بيّن أن المعادلة التفاضلية المعبرة عن \\(q(t)\\) تعطى بـ \\(\\frac{dq}{dt}+\\frac{1}{RC}q=\\frac ER\\). ب- يعطى حل المعادلة بالعبارة \\(q(t)=Ae^{\\alpha t}+\\beta\\)، حيث \\(A,\\alpha,\\beta\\) ثوابت يطلب تعيينها علماً أن \\(q(0)=0\\).",
+      "solution": {
+        "strategy": "ننطلق من قانون جمع التوترات، ثم نعوض الحل العام ونستعمل الشرط الابتدائي.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "المعادلة",
+            "explanation": "\\[E=u_C+u_R=\\frac qC+R\\frac{dq}{dt}\\] ومنه \\[\\boxed{\\frac{dq}{dt}+\\frac1{RC}q=\\frac ER}\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "تحديد α وβ",
+            "explanation": "بالتعويض بـ \\(q=Ae^{\\alpha t}+\\beta\\): \\[\\boxed{\\alpha=-\\frac1{RC}},\\qquad \\boxed{\\beta=CE=Q_{max}}\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "تحديد A",
+            "explanation": "من \\(q(0)=0\\): \\[A+\\beta=0\\Rightarrow \\boxed{A=-CE}\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "الحل النهائي",
+            "explanation": "\\[\\boxed{q(t)=CE\\left(1-e^{-t/(RC)}\\right)}\\]"
+          }
+        ],
+        "final_answer": "\\(A=-CE\\)، \\(\\alpha=-1/(RC)\\)، \\(\\beta=CE\\)."
+      }
+    },
+    {
+      "id": "2010_elec_ex09_q4",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "4) المكثفة مشحونة، نضع البادلة في الوضع (2) في لحظة نعتبرها \\(t=0\\): أ- احسب الطاقة الكهربائية المخزنة \\(E_0\\) في المكثفة عند \\(t=0\\). ب- ما الزمن الذي من أجله تصبح الطاقة المخزنة \\(E=E_0/2\\)؟",
+      "solution": {
+        "strategy": "نحسب الطاقة الابتدائية ثم نستعمل تناقص توتر التفريغ أسيًا.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الطاقة الابتدائية",
+            "explanation": "\\[E_0=\\frac12CE^2=\\frac12\\times1.25\\times10^{-4}\\times5^2\\approx\\boxed{1.56\\times10^{-3}J}\\] وهي تقارب \\(1.55mJ\\) في التصحيح."
+          },
+          {
+            "step_number": 2,
+            "title": "أثناء التفريغ",
+            "explanation": "\\[u_C(t)=Ee^{-t/\\tau},\\qquad E_C(t)=\\frac12CE^2e^{-2t/\\tau}=E_0e^{-2t/\\tau}\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "شرط نصف الطاقة",
+            "explanation": "\\[E_0e^{-2t/\\tau}=\\frac{E_0}{2}\\Rightarrow t=\\frac{\\tau\\ln2}{2}\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "القيمة",
+            "explanation": "مع \\(\\tau\\approx15ms\\): \\[t\\approx\\frac{15\\ln2}{2}=\\boxed{5.2ms}\\]"
+          }
+        ],
+        "final_answer": "\\(E_0\\approx1.55mJ\\)، والزمن \\(t\\approx5.2ms\\)."
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "تجميعية_عمورة_للبكالوريات_السابقة_الوحدة_3(1).pdf",
+    "statement_figure_policy": "الشكل الموجود في الموضوع يظهر مع نص التمرين. إذا طلب السؤال إنشاء رسم جديد فلا يكشف قبل فتح الحل.",
+    "solution_figure_policy": "الرسم المطلوب أو الرسم المساعد يوضع داخل خطوة الحل فقط.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  },
+  "statement": "بغرض شحن مكثفة فارغة سعتها \\(C\\)، نصلها على التسلسل مع العناصر الكهربائية التالية:\n\n• مولد ذو توتر كهربائي ثابت \\(E=5V\\) ومقاومته الداخلية مهملة.\n• ناقل أومي مقاومته \\(R=120\\,\\Omega\\).\n• بادلة \\(K\\) (الشكل 10).\n\nلمتابعة تطور التوتر الكهربائي \\(u_C\\) بين طرفي المكثفة بدلالة الزمن، نوصل مقياس فولط-متر رقمي بين طرفي المكثفة. في اللحظة \\(t=0\\) نضع البادلة في الوضع (1)، وبالتصوير المتعاقب سجلنا:\n\n\\(t(ms): 0,4,8,16,20,24,32,40,48,60,68,80\\)\n\n\\(u_C(V): 0,1.0,2.0,3.3,3.8,4.1,4.5,4.8,4.9,5.0,5.0,5.0\\)",
+  "figures": [
+    {
+      "diagram_type": "bac_2010_ex09_statement_circuit",
+      "title": "الشكل 10 — دارة RC ذات بادلة",
+      "description": "دارة الشحن والتفريغ كما في موضوع 2010.",
+      "svg": "<svg viewBox=\"0 0 900 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"الشكل 10 دارة RC\">\n <rect x=\"35\" y=\"25\" width=\"830\" height=\"285\" rx=\"20\" fill=\"#fff\" stroke=\"#cbd5e1\" stroke-width=\"2\"/>\n <path d=\"M150 105 H690\" fill=\"none\" stroke=\"#111827\" stroke-width=\"5\"/>\n <path d=\"M150 255 H690\" fill=\"none\" stroke=\"#111827\" stroke-width=\"5\"/>\n <line x1=\"150\" y1=\"105\" x2=\"150\" y2=\"255\" stroke=\"#111827\" stroke-width=\"5\"/>\n <circle cx=\"350\" cy=\"105\" r=\"34\" fill=\"#fff\" stroke=\"#111827\" stroke-width=\"4\"/>\n <text x=\"340\" y=\"113\" font-size=\"23\" font-family=\"Arial\">E</text>\n <line x1=\"465\" y1=\"255\" x2=\"505\" y2=\"255\" stroke=\"#111827\" stroke-width=\"5\"/>\n <line x1=\"505\" y1=\"225\" x2=\"505\" y2=\"285\" stroke=\"#111827\" stroke-width=\"6\"/>\n <line x1=\"540\" y1=\"225\" x2=\"540\" y2=\"285\" stroke=\"#111827\" stroke-width=\"6\"/>\n <line x1=\"540\" y1=\"255\" x2=\"585\" y2=\"255\" stroke=\"#111827\" stroke-width=\"5\"/>\n <text x=\"515\" y=\"213\" font-size=\"25\" font-family=\"Arial\">C</text>\n <rect x=\"335\" y=\"230\" width=\"90\" height=\"50\" rx=\"7\" fill=\"#fff\" stroke=\"#111827\" stroke-width=\"3\"/>\n <text x=\"371\" y=\"263\" font-size=\"24\" font-family=\"Arial\">R</text>\n <line x1=\"690\" y1=\"105\" x2=\"690\" y2=\"160\" stroke=\"#111827\" stroke-width=\"5\"/>\n <circle cx=\"690\" cy=\"180\" r=\"5\" fill=\"#111827\"/>\n <circle cx=\"690\" cy=\"225\" r=\"5\" fill=\"#111827\"/>\n <line x1=\"650\" y1=\"195\" x2=\"683\" y2=\"180\" stroke=\"#111827\" stroke-width=\"5\"/>\n <text x=\"720\" y=\"186\" font-size=\"21\" font-family=\"Arial\">(1)</text>\n <text x=\"720\" y=\"232\" font-size=\"21\" font-family=\"Arial\">(2)</text>\n <text x=\"640\" y=\"145\" font-size=\"22\" font-family=\"Arial\">K</text>\n</svg>",
+      "render_mode": "inline",
+      "responsive": true
+    }
+  ],
+  "statement_graphs": [
+    {
+      "diagram_type": "bac_2010_ex09_statement_circuit",
+      "title": "الشكل 10 — دارة RC ذات بادلة",
+      "description": "دارة الشحن والتفريغ كما في موضوع 2010.",
+      "svg": "<svg viewBox=\"0 0 900 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"الشكل 10 دارة RC\">\n <rect x=\"35\" y=\"25\" width=\"830\" height=\"285\" rx=\"20\" fill=\"#fff\" stroke=\"#cbd5e1\" stroke-width=\"2\"/>\n <path d=\"M150 105 H690\" fill=\"none\" stroke=\"#111827\" stroke-width=\"5\"/>\n <path d=\"M150 255 H690\" fill=\"none\" stroke=\"#111827\" stroke-width=\"5\"/>\n <line x1=\"150\" y1=\"105\" x2=\"150\" y2=\"255\" stroke=\"#111827\" stroke-width=\"5\"/>\n <circle cx=\"350\" cy=\"105\" r=\"34\" fill=\"#fff\" stroke=\"#111827\" stroke-width=\"4\"/>\n <text x=\"340\" y=\"113\" font-size=\"23\" font-family=\"Arial\">E</text>\n <line x1=\"465\" y1=\"255\" x2=\"505\" y2=\"255\" stroke=\"#111827\" stroke-width=\"5\"/>\n <line x1=\"505\" y1=\"225\" x2=\"505\" y2=\"285\" stroke=\"#111827\" stroke-width=\"6\"/>\n <line x1=\"540\" y1=\"225\" x2=\"540\" y2=\"285\" stroke=\"#111827\" stroke-width=\"6\"/>\n <line x1=\"540\" y1=\"255\" x2=\"585\" y2=\"255\" stroke=\"#111827\" stroke-width=\"5\"/>\n <text x=\"515\" y=\"213\" font-size=\"25\" font-family=\"Arial\">C</text>\n <rect x=\"335\" y=\"230\" width=\"90\" height=\"50\" rx=\"7\" fill=\"#fff\" stroke=\"#111827\" stroke-width=\"3\"/>\n <text x=\"371\" y=\"263\" font-size=\"24\" font-family=\"Arial\">R</text>\n <line x1=\"690\" y1=\"105\" x2=\"690\" y2=\"160\" stroke=\"#111827\" stroke-width=\"5\"/>\n <circle cx=\"690\" cy=\"180\" r=\"5\" fill=\"#111827\"/>\n <circle cx=\"690\" cy=\"225\" r=\"5\" fill=\"#111827\"/>\n <line x1=\"650\" y1=\"195\" x2=\"683\" y2=\"180\" stroke=\"#111827\" stroke-width=\"5\"/>\n <text x=\"720\" y=\"186\" font-size=\"21\" font-family=\"Arial\">(1)</text>\n <text x=\"720\" y=\"232\" font-size=\"21\" font-family=\"Arial\">(2)</text>\n <text x=\"640\" y=\"145\" font-size=\"22\" font-family=\"Arial\">K</text>\n</svg>",
+      "render_mode": "inline",
+      "responsive": true
+    }
+  ]
+}

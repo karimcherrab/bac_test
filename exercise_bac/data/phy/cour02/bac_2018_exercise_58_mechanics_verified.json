@@ -1,0 +1,365 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.1-bac-source-faithful",
+  "version": "4.1-verified-statement-and-solution-figures",
+  "session": "ordinary",
+  "year": 2018,
+  "chapter_code": "mechanical_system_evolution",
+  "chapter_title": "تطور جملة ميكانيكية",
+  "exercise_number": 58,
+
+  "branches": [
+    {
+      "code": "math",
+      "name": "شعبة رياضيات"
+    },
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "axis_tags": [
+    "vertical_fall_in_fluid",
+    "free_fall_motion",
+    "mechanical_energy_data_analysis"
+  ],
+  "source_pages": [
+    23
+  ],
+  "solution_source_pages": [
+    47,
+    48
+  ],
+  "title": "التمرين 58 — بكالوريا 2018 — سقوط بالون مطاطي في الهواء",
+  "statement": "بالون مطاطي كروي الشكل مملوء بالهواء، كتلته \\(m=20g\\)، يترك ليسقط في الهواء دون سرعة ابتدائية عند \\(t=0\\) وفق محور شاقولي \\(Oz\\) موجه نحو الأسفل. تمكننا بالتصوير المتعاقب من رسم منحنى تغير السرعة \\(v(t)\\). يخضع البالون أثناء حركته لقوة احتكاك \\(\\vec f=-k\\vec v\\).\n\n1- مثل القوى المؤثرة في حالتي الانطلاق وخلال الحركة.\n2- بتطبيق القانون الثاني لنيوتن، بين أن المعادلة التفاضلية تكتب \\[\\frac{dv}{dt}+Av=B\\]وحدد \\(A\\) بدلالة \\(k,m\\)، و\\(B\\) بدلالة \\(g\\) والكتلتين الحجميتين للهواء والبالون. ما مدلول \\(B\\)؟\n3- باستعمال المنحنى، جد السرعة الحدية، التسارع الابتدائي، ثابت الزمن \\(\\tau\\)، والثابت \\(k\\)، ثم شدة دافعة أرخميدس.\n4- نملأ البالون بالماء بحيث تهمل باقي القوى أمام الثقل. ما طبيعة السقوط؟ ومثل كيفيًا منحنى السرعة.\n\nيعطى: \\(g=10m/s^2\\).",
+  "statement_graph_data": {
+    "title": "الشكل 66 — تغير سرعة البالون بدلالة الزمن",
+    "x_label": "t (s)",
+    "y_label": "v (m/s)",
+    "x_domain": [
+      0,
+      4
+    ],
+    "y_domain": [
+      0,
+      3.3
+    ],
+    "show_grid": true,
+    "series": [
+      {
+        "id": "curve",
+        "label": "v(t)",
+        "type": "line",
+        "data": [
+          {
+            "x": 0,
+            "y": 0
+          },
+          {
+            "x": 0.5,
+            "y": 1.18
+          },
+          {
+            "x": 1,
+            "y": 1.9
+          },
+          {
+            "x": 2,
+            "y": 2.59
+          },
+          {
+            "x": 3,
+            "y": 2.85
+          },
+          {
+            "x": 4,
+            "y": 2.95
+          }
+        ]
+      },
+      {
+        "id": "initial_tangent",
+        "label": "مماس البداية",
+        "type": "line",
+        "dashed": true,
+        "data": [
+          {
+            "x": 0,
+            "y": 0
+          },
+          {
+            "x": 1,
+            "y": 3
+          }
+        ]
+      }
+    ]
+  },
+  "questions": [
+    {
+      "id": "2018_ex58_q1",
+      "text": "1) مثل القوى واكتب المعادلة التفاضلية.",
+      "axis_tags": [
+        "vertical_fall_in_fluid"
+      ],
+      "display_order": 1,
+      "content_type": "question",
+      "solution": {
+        "strategy": "نختار الأسفل موجبًا ونطبق نيوتن.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "القوى",
+            "explanation": "الثقل إلى الأسفل، ودافعة أرخميدس والاحتكاك إلى الأعلى.",
+            "graph_data": {
+              "diagram_type": "balloon_forces_2018",
+              "title": "تمثيل القوى على البالون",
+              "description": "كما في التصحيح: عند t=0 الثقل P ودافعة أرخميدس Π؛ وخلال الحركة تضاف قوة الاحتكاك f نحو الأعلى."
+            }
+          },
+          {
+            "step_number": 2,
+            "title": "معادلة نيوتن",
+            "explanation": "\\[mg-kv-\\rho_aVg=m\\frac{dv}{dt}\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الترتيب",
+            "explanation": "\\[\\frac{dv}{dt}+\\frac{k}{m}v=g\\left(1-\\frac{\\rho_a}{\\rho}\\right)\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "الثابتان",
+            "explanation": "\\[A=\\frac{k}{m},\\qquad B=g\\left(1-\\frac{\\rho_a}{\\rho}\\right)\\]"
+          },
+          {
+            "step_number": 5,
+            "title": "مدلول B",
+            "explanation": "يمثل التسارع الابتدائي لأن \\(v(0)=0\\)."
+          }
+        ],
+        "final_answer": "\\(A=k/m\\)، و\\(B=g(1-\\rho_a/\\rho)\\).",
+        "verification": "",
+        "common_mistakes": [],
+        "hints": [],
+        "methodology": {
+          "goal": "حل السؤال بدقة وبطريقة بسيطة ومنظمة.",
+          "method": "تحديد الجملة والمرجع، جرد القوى، كتابة القانون الحرفي، تحويل الوحدات، التعويض، ثم الاستنتاج.",
+          "bac_template": [
+            "تحديد الجملة والمرجع والمعلم.",
+            "تمثيل القوى الخارجية واتجاهاتها.",
+            "كتابة القانون أو العلاقة قبل التعويض.",
+            "تحويل المعطيات إلى النظام الدولي.",
+            "الحساب مع إرفاق النتيجة بوحدتها.",
+            "صياغة استنتاج فيزيائي واضح."
+          ]
+        }
+      }
+    },
+    {
+      "id": "2018_ex58_q2",
+      "text": "2) استخرج vL وa0 وτ وk ودافعة أرخميدس.",
+      "axis_tags": [
+        "vertical_fall_in_fluid",
+        "mechanical_energy_data_analysis"
+      ],
+      "display_order": 2,
+      "content_type": "question",
+      "solution": {
+        "strategy": "نقرأ المنحنى ونستعمل خصائص النظام الدائم.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "السرعة الحدية",
+            "explanation": "\\[v_L=3m/s\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "التسارع الابتدائي",
+            "explanation": "من ميل المماس عند الأصل: \\[a_0=3m/s^2\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "ثابت الزمن",
+            "explanation": "من المنحنى: \\[\\tau=1s\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "معامل الاحتكاك",
+            "explanation": "\\[\\tau=\\frac{m}k\\Rightarrow k=0.02kg/s\\]"
+          },
+          {
+            "step_number": 5,
+            "title": "دافعة أرخميدس",
+            "explanation": "في النظام الدائم: \\[mg-kv_L-\\Pi=0\\Rightarrow\\Pi=0.14N\\]"
+          }
+        ],
+        "final_answer": "\\(v_L=3m/s\\)، \\(a_0=3m/s^2\\)، \\(\\tau=1s\\)، \\(k=0.02kg/s\\)، و\\(\\Pi=0.14N\\).",
+        "verification": "مطابق للحل.",
+        "common_mistakes": [],
+        "hints": [],
+        "methodology": {
+          "goal": "حل السؤال بدقة وبطريقة بسيطة ومنظمة.",
+          "method": "تحديد الجملة والمرجع، جرد القوى، كتابة القانون الحرفي، تحويل الوحدات، التعويض، ثم الاستنتاج.",
+          "bac_template": [
+            "تحديد الجملة والمرجع والمعلم.",
+            "تمثيل القوى الخارجية واتجاهاتها.",
+            "كتابة القانون أو العلاقة قبل التعويض.",
+            "تحويل المعطيات إلى النظام الدولي.",
+            "الحساب مع إرفاق النتيجة بوحدتها.",
+            "صياغة استنتاج فيزيائي واضح."
+          ]
+        },
+        "graphs": [
+          {
+            "title": "استغلال الشكل 66 — vL وa₀ وτ",
+            "x_label": "t (s)",
+            "y_label": "v (m/s)",
+            "x_domain": [
+              0,
+              4
+            ],
+            "y_domain": [
+              0,
+              3.3
+            ],
+            "show_grid": true,
+            "series": [
+              {
+                "id": "curve",
+                "label": "v(t)",
+                "type": "line",
+                "data": [
+                  {
+                    "x": 0,
+                    "y": 0
+                  },
+                  {
+                    "x": 0.5,
+                    "y": 1.18
+                  },
+                  {
+                    "x": 1,
+                    "y": 1.9
+                  },
+                  {
+                    "x": 2,
+                    "y": 2.59
+                  },
+                  {
+                    "x": 3,
+                    "y": 2.85
+                  },
+                  {
+                    "x": 4,
+                    "y": 2.95
+                  }
+                ]
+              },
+              {
+                "id": "initial_tangent",
+                "label": "مماس البداية",
+                "type": "line",
+                "dashed": true,
+                "data": [
+                  {
+                    "x": 0,
+                    "y": 0
+                  },
+                  {
+                    "x": 1,
+                    "y": 3
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "2018_ex58_q3",
+      "text": "3) ما طبيعة السقوط عند ملء البالون بالماء؟",
+      "axis_tags": [
+        "free_fall_motion"
+      ],
+      "display_order": 3,
+      "content_type": "question",
+      "solution": {
+        "strategy": "عند إهمال جميع القوى أمام الثقل يصبح السقوط حرًا.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الطبيعة",
+            "explanation": "سقوط حر مستقيم متسارع بانتظام."
+          },
+          {
+            "step_number": 2,
+            "title": "التسارع",
+            "explanation": "\\[a=g\\] ثابت."
+          },
+          {
+            "step_number": 3,
+            "title": "السرعة",
+            "explanation": "\\[v=gt\\]، لذلك البيان مستقيم يمر بالمبدأ."
+          }
+        ],
+        "final_answer": "السقوط حر، ومنحنى السرعة مستقيم متزايد يمر بالمبدأ.",
+        "verification": "",
+        "common_mistakes": [],
+        "hints": [],
+        "methodology": {
+          "goal": "حل السؤال بدقة وبطريقة بسيطة ومنظمة.",
+          "method": "تحديد الجملة والمرجع، جرد القوى، كتابة القانون الحرفي، تحويل الوحدات، التعويض، ثم الاستنتاج.",
+          "bac_template": [
+            "تحديد الجملة والمرجع والمعلم.",
+            "تمثيل القوى الخارجية واتجاهاتها.",
+            "كتابة القانون أو العلاقة قبل التعويض.",
+            "تحويل المعطيات إلى النظام الدولي.",
+            "الحساب مع إرفاق النتيجة بوحدتها.",
+            "صياغة استنتاج فيزيائي واضح."
+          ]
+        },
+        "graph_data": {
+          "title": "الرسم المطلوب — v(t) في حالة السقوط الحر",
+          "x_label": "t",
+          "y_label": "v",
+          "x_domain": [
+            0,
+            2
+          ],
+          "y_domain": [
+            0,
+            20
+          ],
+          "show_grid": true,
+          "series": [
+            {
+              "id": "free",
+              "label": "v=gt",
+              "type": "line",
+              "data": [
+                {
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "x": 2,
+                  "y": 20
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "statement_figure_policy": "يعرض فقط الشكل أو البيان الموجود فعلا في نص البكالوريا، ولا نعرض في النص رسما يطلب السؤال من التلميذ إنجازه.",
+    "solution_figure_policy": "يعرض الرسم الموجود في التصحيح أو الرسم المطلوب صراحة لإنجاز السؤال.",
+    "renderer": "GraphRenderer"
+  }
+}

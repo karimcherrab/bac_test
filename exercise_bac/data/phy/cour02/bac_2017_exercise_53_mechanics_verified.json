@@ -1,0 +1,155 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.1-bac-source-faithful",
+  "version": "4.1-verified-statement-and-solution-figures",
+  "session": "exceptional",
+  "year": 2017,
+  "chapter_code": "mechanical_system_evolution",
+  "chapter_title": "تطور جملة ميكانيكية",
+  "exercise_number": 53,
+
+  "branches": [
+    {
+      "code": "math",
+      "name": "شعبة رياضيات"
+    },
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "axis_tags": [
+    "circular_path_motion",
+    "projectile_motion",
+    "mechanical_energy_data_analysis"
+  ],
+  "source_pages": [
+    20,
+    21
+  ],
+  "solution_source_pages": [
+    45
+  ],
+  "title": "التمرين 53 — بكالوريا 2017 الاستثنائية — كرة مضرب صغيرة على نصف دائرة",
+  "statement": "نهمل الاحتكاك وتأثير الهواء. قذف لاعب كرة مضرب صغيرة كتلتها \\(m=45g\\) من النقطة \\(A\\) لكي تسقط في الحفرة عند \\(N\\)، مرورًا بالمواضع \\(B,C,D\\). المسلك \\(BCD\\) نصف دائرة مركزها \\(O\\) ونصف قطرها \\(r=0.50m\\)، والنقطة \\(D\\) تنتمي للشاقول المار من \\(B\\).\n\n1- الحالة الأولى: محاولة فاشلة لم تتجاوز الكرة النقطة \\(C\\). أوجد سرعة القذف عند \\(A\\).\n2- الحالة الثانية: بلغت الكرة النقطة \\(D\\) بسرعة \\(v_D=6.71m/s\\).\nأ- أوجد سرعة القذف عند \\(A\\).\nب- بين أن \\(R=m(v_A^2/r-5g)\\)، ثم احسبها.\nج- بين أن فاصلة الارتطام بالمستوى الأفقي المار بـ\\(A\\) تعطى بـ \\(x=2v_D\\sqrt{r/g}\\).\nد- هل وفق اللاعب في رميته؟ علل.\n\nيعطى: \\(AB=2.00m\\)، \\(AN=1.00m\\)، \\(g=10m/s^2\\).",
+  "questions": [
+    {
+      "id": "2017_ex53_q1",
+      "text": "1) احسب سرعة القذف في المحاولة الفاشلة.",
+      "axis_tags": [
+        "mechanical_energy_data_analysis",
+        "circular_path_motion"
+      ],
+      "display_order": 1,
+      "content_type": "question",
+      "solution": {
+        "strategy": "نطبق انحفاظ الطاقة حتى النقطة C.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الطاقة",
+            "explanation": "في الحالة الحدية تصل الكرة إلى C بسرعة منعدمة."
+          },
+          {
+            "step_number": 2,
+            "title": "السرعة",
+            "explanation": "\\[\\frac12mv_A^2=mgr\\Rightarrow v_A=\\sqrt{2gr}\\approx3.16m/s\\]"
+          }
+        ],
+        "final_answer": "\\(v_A\\approx3.16m/s\\).",
+        "verification": "مطابق للحل: 3.16 m/s.",
+        "common_mistakes": [],
+        "hints": [],
+        "methodology": {
+          "goal": "حل السؤال بدقة وبطريقة بسيطة ومنظمة.",
+          "method": "تحديد الجملة والمرجع، جرد القوى، كتابة القانون الحرفي، تحويل الوحدات، التعويض، ثم الاستنتاج.",
+          "bac_template": [
+            "تحديد الجملة الميكانيكية والمرجع والمعلم.",
+            "تمثيل القوى الخارجية واتجاهاتها.",
+            "كتابة القانون أو العلاقة قبل التعويض.",
+            "تحويل الوحدات إلى النظام الدولي.",
+            "إجراء الحساب وكتابة الوحدة.",
+            "صياغة استنتاج فيزيائي واضح."
+          ]
+        }
+      }
+    },
+    {
+      "id": "2017_ex53_q2",
+      "text": "2) في المحاولة الثانية احسب vA وR والمدى، ثم احكم على الرمية.",
+      "axis_tags": [
+        "circular_path_motion",
+        "projectile_motion",
+        "mechanical_energy_data_analysis"
+      ],
+      "display_order": 2,
+      "content_type": "question",
+      "solution": {
+        "strategy": "نستعمل الطاقة ثم نيوتن عند D ثم القذف الأفقي.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "سرعة A",
+            "explanation": "\\[v_A=\\sqrt{4gr+v_D^2}\\approx8.06m/s\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "رد الفعل",
+            "explanation": "\\[R=m\\left(\\frac{v_A^2}r-5g\\right)\\approx3.60N\\]",
+            "graph_data": {
+              "diagram_type": "half_circle_force_D_2017",
+              "title": "القوى عند النقطة D",
+              "description": "كما في التصحيح: الثقل P ورد فعل المسلك R عند D."
+            }
+          },
+          {
+            "step_number": 3,
+            "title": "المدى",
+            "explanation": "\\[x=2v_D\\sqrt{r/g}\\approx3.00m\\]",
+            "graph_data": {
+              "diagram_type": "horizontal_launch_D_2017",
+              "title": "القذف الأفقي من D",
+              "description": "كما في التصحيح: السرعة vD أفقية، الثقل P شاقولي، والارتفاع عن المستوى المار بـA يساوي 2r."
+            }
+          },
+          {
+            "step_number": 4,
+            "title": "الحكم",
+            "explanation": "المسافة المطلوبة \\(BN=BA+AN=3.00m\\)، وهي تساوي المدى، لذلك نجحت الرمية."
+          }
+        ],
+        "final_answer": "\\(v_A\\approx8.06m/s\\)، \\(R\\approx3.60N\\)، و\\(x\\approx3.00m\\).",
+        "verification": "مطابق للحل.",
+        "common_mistakes": [],
+        "hints": [],
+        "methodology": {
+          "goal": "حل السؤال بدقة وبطريقة بسيطة ومنظمة.",
+          "method": "تحديد الجملة والمرجع، جرد القوى، كتابة القانون الحرفي، تحويل الوحدات، التعويض، ثم الاستنتاج.",
+          "bac_template": [
+            "تحديد الجملة الميكانيكية والمرجع والمعلم.",
+            "تمثيل القوى الخارجية واتجاهاتها.",
+            "كتابة القانون أو العلاقة قبل التعويض.",
+            "تحويل الوحدات إلى النظام الدولي.",
+            "إجراء الحساب وكتابة الوحدة.",
+            "صياغة استنتاج فيزيائي واضح."
+          ]
+        }
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "statement_figure_policy": "يعرض فقط الشكل أو البيان الموجود فعلا في نص البكالوريا.",
+    "solution_figure_policy": "يعرض الرسم الموجود في التصحيح أو الرسم المطلوب صراحة لإنجاز السؤال.",
+    "renderer": "GraphRenderer"
+  },
+  "statement_graphs": [
+    {
+      "diagram_type": "tennis_half_circle_2017",
+      "title": "الشكل 62 — مسلك كرة المضرب",
+      "description": "المواضع B,C,D على نصف دائرة مركزها O، النقاط A وN على المستوى الأفقي، والمعلم عند D."
+    }
+  ]
+}

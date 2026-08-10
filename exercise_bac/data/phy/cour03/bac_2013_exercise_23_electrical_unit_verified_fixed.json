@@ -1,0 +1,313 @@
+{
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2013-electrical-verified",
+  "language": "ar",
+  "direction": "rtl",
+  "year": 2013,
+  "session": "ordinary",
+  "chapter_code": "electrical_phenomena_evolution",
+  "chapter_title": "تطور دراسة ظواهر كهربائية",
+  "exercise_number": 23,
+  "source_page": 9,
+  "source_pages": [
+    9
+  ],
+  "solution_source_pages": [
+    30
+  ],
+
+  "branches": [
+    {
+      "code": "math",
+      "name": "شعبة رياضيات"
+    },
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "title": "التمرين 23 — بكالوريا الجزائر 2013 — شعبة رياضيات وتقني رياضي",
+  "axis_tags": [
+    "rc_capacitor_discharge",
+    "rc_differential_equation_solution",
+    "rc_time_constant_graphical_analysis",
+    "rc_model_exploitation_physical_quantities"
+  ],
+  "questions": [
+    {
+      "id": "2013_elec_ex23_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) أ- بتطبيق قانون جمع التوترات، جد المعادلة التفاضلية للتوتر الكهربائي \\(u_C(t)\\) بين طرفي المكثفة. ب- حل المعادلة التفاضلية السابقة يعطى من الشكل \\(u_C(t)=Ae^{\\alpha t}\\)، حيث \\(A\\) و\\(\\alpha\\) ثابتان يطلب كتابة عبارتيهما.",
+      "solution": {
+        "strategy": "نكتب معادلة تفريغ RC ثم نطابق الحل الأسي مع الشرط الابتدائي.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "المعادلة التفاضلية",
+            "explanation": "أثناء التفريغ: \\[u_R+u_C=0\\] ومع \\(u_R=Ri\\) و\\(i=C\\frac{du_C}{dt}\\): \\[\\boxed{RC\\frac{du_C}{dt}+u_C=0}\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "تحديد α",
+            "explanation": "بالتعويض بـ \\(u_C=Ae^{\\alpha t}\\): \\[\\alpha+\\frac1{RC}=0\\Rightarrow \\boxed{\\alpha=-\\frac1{RC}}\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "تحديد A",
+            "explanation": "عند \\(t=0\\): \\(u_C(0)=E=12V\\)، إذن \\[\\boxed{A=E}\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "الحل",
+            "explanation": "\\[\\boxed{u_C(t)=Ee^{-t/(RC)}}\\]"
+          }
+        ],
+        "final_answer": "\\(A=E\\)، \\(\\alpha=-1/(RC)\\)، و\\(u_C(t)=Ee^{-t/(RC)}\\)."
+      }
+    },
+    {
+      "id": "2013_elec_ex23_q2",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2) اكتب العبارة اللحظية \\(E_C(t)\\) للطاقة المخزنة في المكثفة.",
+      "solution": {
+        "strategy": "نستعمل علاقة طاقة المكثفة ثم نعوض uC(t).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "العلاقة",
+            "explanation": "\\[E_C(t)=\\frac12C[u_C(t)]^2\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "التعويض",
+            "explanation": "\\[\\boxed{E_C(t)=\\frac12CE^2e^{-2t/(RC)}}\\]"
+          }
+        ],
+        "final_answer": "\\(E_C(t)=\\frac12CE^2e^{-2t/(RC)}\\)."
+      }
+    },
+    {
+      "id": "2013_elec_ex23_q3",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "3) يمثل الشكل 35 تطور الطاقة المخزنة في المكثفة بدلالة الزمن. أ- استنتج قيمة \\(E_{C0}\\) الطاقة المخزنة العظمى في المكثفة. ب- من الشكل 35، بيّن أن المماس للمنحنى في اللحظة \\(t=0ms\\) يقطع محور الأزمنة في اللحظة \\(t=\\tau/2\\). ج- احسب ثابت الزمن \\(\\tau\\)، ثم استنتج سعة المكثفة \\(C\\).",
+      "solution": {
+        "strategy": "نقرأ الطاقة الابتدائية، ثم نشتق علاقة الطاقة لإثبات خاصية المماس، وبعدها نستخرج τ وC.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الطاقة العظمى",
+            "explanation": "من البيان: \\[\\boxed{E_{C0}=140\\mu J}\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "معادلة المماس عند الأصل",
+            "explanation": "بما أن \\[E_C(t)=\\frac12CE^2e^{-2t/\\tau}\\] فإن \\[\\left.\\frac{dE_C}{dt}\\right|_{t=0}=-\\frac{CE^2}{\\tau}\\] ومع \\(E_C(0)=\\frac12CE^2\\)، تكون معادلة المماس \\[E_C(t)=-\\frac{CE^2}{\\tau}t+\\frac12CE^2\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "تقاطع المماس مع محور الزمن",
+            "explanation": "بوضع \\(E_C=0\\): \\[t=\\boxed{\\frac\\tau2}\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "قراءة τ",
+            "explanation": "من الشكل يقطع المماس محور الزمن عند \\(1ms\\)، إذن \\[\\boxed{\\tau=2ms}\\]"
+          },
+          {
+            "step_number": 5,
+            "title": "حساب C",
+            "explanation": "\\[C=\\frac{\\tau}{R}=\\frac{2\\times10^{-3}}{10^3}=\\boxed{2\\times10^{-6}F=2\\mu F}\\]"
+          }
+        ],
+        "final_answer": "\\(E_{C0}=140\\mu J\\)، \\(\\tau=2ms\\)، \\(C=2\\mu F\\)."
+      }
+    },
+    {
+      "id": "2013_elec_ex23_q4",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "4) أثبت أن زمن تناقص الطاقة إلى النصف هو \\(t_{1/2}=\\frac{\\tau}{2}\\ln2\\)، ثم احسب قيمته.",
+      "solution": {
+        "strategy": "نضع E_C(t1/2)=E_C0/2 في العبارة الأسية للطاقة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "شرط نصف الطاقة",
+            "explanation": "\\[E_{C0}e^{-2t_{1/2}/\\tau}=\\frac{E_{C0}}2\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "الحل",
+            "explanation": "\\[e^{-2t_{1/2}/\\tau}=\\frac12\\Rightarrow \\boxed{t_{1/2}=\\frac\\tau2\\ln2}\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "القيمة العددية",
+            "explanation": "\\[t_{1/2}=\\frac{2ms}{2}\\ln2\\approx\\boxed{0.693ms}\\]"
+          }
+        ],
+        "final_answer": "\\(t_{1/2}=0.693ms\\)."
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "تجميعية_عمورة_للبكالوريات_السابقة_الوحدة_3(1).pdf",
+    "statement_figure_policy": "الشكل أو البيان الموجود أصلاً في موضوع البكالوريا يظهر مع نص التمرين. الرسم المطلوب من التلميذ لا يظهر قبل الحل.",
+    "solution_figure_policy": "تضاف الرسومات المطلوبة أو المساعدة داخل خطوات الحل فقط.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  },
+  "statement": "مكثفة سعتها \\(C\\) شحنت كلياً تحت توتر كهربائي ثابت \\(E=12V\\). لمعرفة سعتها \\(C\\) نحقق الدارة الكهربائية (الشكل–34)، حيث \\(R=1k\\Omega\\). في اللحظة \\(t=0ms\\) نغلق القاطعة \\(K\\).",
+  "figures": [
+    {
+      "diagram_type": "bac_2013_ex23_statement_circuit",
+      "title": "الشكل 34 — دارة التفريغ",
+      "description": "دارة التفريغ الأصلية في الموضوع.",
+      "svg": "<svg viewBox=\"0 0 850 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"الشكل 34 دارة تفريغ مكثفة\">\n  <rect x=\"35\" y=\"25\" width=\"780\" height=\"285\" rx=\"20\" fill=\"#fff\" stroke=\"#cbd5e1\" stroke-width=\"2\"/>\n  <path d=\"M150 90 H630 V260 H150 Z\" fill=\"none\" stroke=\"#111827\" stroke-width=\"5\"/>\n  <line x1=\"325\" y1=\"90\" x2=\"365\" y2=\"90\" stroke=\"#111827\" stroke-width=\"5\"/>\n  <line x1=\"390\" y1=\"90\" x2=\"430\" y2=\"90\" stroke=\"#111827\" stroke-width=\"5\"/>\n  <line x1=\"365\" y1=\"90\" x2=\"393\" y2=\"65\" stroke=\"#111827\" stroke-width=\"5\"/>\n  <text x=\"370\" y=\"50\" font-size=\"22\" font-family=\"Arial\">K</text>\n\n  <line x1=\"525\" y1=\"90\" x2=\"525\" y2=\"145\" stroke=\"#111827\" stroke-width=\"5\"/>\n  <line x1=\"495\" y1=\"145\" x2=\"555\" y2=\"145\" stroke=\"#111827\" stroke-width=\"6\"/>\n  <line x1=\"495\" y1=\"180\" x2=\"555\" y2=\"180\" stroke=\"#111827\" stroke-width=\"6\"/>\n  <line x1=\"525\" y1=\"180\" x2=\"525\" y2=\"220\" stroke=\"#111827\" stroke-width=\"5\"/>\n  <text x=\"565\" y=\"170\" font-size=\"24\" font-family=\"Arial\">C</text>\n\n  <rect x=\"485\" y=\"220\" width=\"80\" height=\"48\" rx=\"7\" fill=\"#fff\" stroke=\"#111827\" stroke-width=\"3\"/>\n  <text x=\"510\" y=\"252\" font-size=\"22\" font-family=\"Arial\">R=1kΩ</text>\n\n  <text x=\"150\" y=\"300\" font-size=\"21\" font-family=\"Arial\">U₀ = E = 12 V</text>\n</svg>",
+      "render_mode": "inline",
+      "responsive": true
+    },
+    {
+      "title": "الشكل 35 — E_C=f(t)",
+      "description": "تطور الطاقة المخزنة في المكثفة أثناء التفريغ. من البيان E_C0≈140µJ.",
+      "x_label": "t (ms)",
+      "y_label": "E_C (µJ)",
+      "x_domain": [
+        0,
+        6
+      ],
+      "y_domain": [
+        0,
+        150
+      ],
+      "series": [
+        {
+          "name": "E_C(t)",
+          "data": [
+            {
+              "x": 0,
+              "y": 140.0
+            },
+            {
+              "x": 0.5,
+              "y": 84.914
+            },
+            {
+              "x": 1,
+              "y": 51.503
+            },
+            {
+              "x": 1.5,
+              "y": 31.238
+            },
+            {
+              "x": 2,
+              "y": 18.947
+            },
+            {
+              "x": 3,
+              "y": 6.97
+            },
+            {
+              "x": 4,
+              "y": 2.564
+            },
+            {
+              "x": 5,
+              "y": 0.943
+            },
+            {
+              "x": 6,
+              "y": 0.347
+            }
+          ]
+        }
+      ],
+      "settings": {
+        "show_grid": true,
+        "show_axes": true,
+        "show_legend": false,
+        "show_point_labels": false,
+        "connect_points": true
+      }
+    }
+  ],
+  "statement_graphs": [
+    {
+      "diagram_type": "bac_2013_ex23_statement_circuit",
+      "title": "الشكل 34 — دارة التفريغ",
+      "description": "دارة التفريغ الأصلية في الموضوع.",
+      "svg": "<svg viewBox=\"0 0 850 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"الشكل 34 دارة تفريغ مكثفة\">\n  <rect x=\"35\" y=\"25\" width=\"780\" height=\"285\" rx=\"20\" fill=\"#fff\" stroke=\"#cbd5e1\" stroke-width=\"2\"/>\n  <path d=\"M150 90 H630 V260 H150 Z\" fill=\"none\" stroke=\"#111827\" stroke-width=\"5\"/>\n  <line x1=\"325\" y1=\"90\" x2=\"365\" y2=\"90\" stroke=\"#111827\" stroke-width=\"5\"/>\n  <line x1=\"390\" y1=\"90\" x2=\"430\" y2=\"90\" stroke=\"#111827\" stroke-width=\"5\"/>\n  <line x1=\"365\" y1=\"90\" x2=\"393\" y2=\"65\" stroke=\"#111827\" stroke-width=\"5\"/>\n  <text x=\"370\" y=\"50\" font-size=\"22\" font-family=\"Arial\">K</text>\n\n  <line x1=\"525\" y1=\"90\" x2=\"525\" y2=\"145\" stroke=\"#111827\" stroke-width=\"5\"/>\n  <line x1=\"495\" y1=\"145\" x2=\"555\" y2=\"145\" stroke=\"#111827\" stroke-width=\"6\"/>\n  <line x1=\"495\" y1=\"180\" x2=\"555\" y2=\"180\" stroke=\"#111827\" stroke-width=\"6\"/>\n  <line x1=\"525\" y1=\"180\" x2=\"525\" y2=\"220\" stroke=\"#111827\" stroke-width=\"5\"/>\n  <text x=\"565\" y=\"170\" font-size=\"24\" font-family=\"Arial\">C</text>\n\n  <rect x=\"485\" y=\"220\" width=\"80\" height=\"48\" rx=\"7\" fill=\"#fff\" stroke=\"#111827\" stroke-width=\"3\"/>\n  <text x=\"510\" y=\"252\" font-size=\"22\" font-family=\"Arial\">R=1kΩ</text>\n\n  <text x=\"150\" y=\"300\" font-size=\"21\" font-family=\"Arial\">U₀ = E = 12 V</text>\n</svg>",
+      "render_mode": "inline",
+      "responsive": true
+    },
+    {
+      "title": "الشكل 35 — E_C=f(t)",
+      "description": "تطور الطاقة المخزنة في المكثفة أثناء التفريغ. من البيان E_C0≈140µJ.",
+      "x_label": "t (ms)",
+      "y_label": "E_C (µJ)",
+      "x_domain": [
+        0,
+        6
+      ],
+      "y_domain": [
+        0,
+        150
+      ],
+      "series": [
+        {
+          "name": "E_C(t)",
+          "data": [
+            {
+              "x": 0,
+              "y": 140.0
+            },
+            {
+              "x": 0.5,
+              "y": 84.914
+            },
+            {
+              "x": 1,
+              "y": 51.503
+            },
+            {
+              "x": 1.5,
+              "y": 31.238
+            },
+            {
+              "x": 2,
+              "y": 18.947
+            },
+            {
+              "x": 3,
+              "y": 6.97
+            },
+            {
+              "x": 4,
+              "y": 2.564
+            },
+            {
+              "x": 5,
+              "y": 0.943
+            },
+            {
+              "x": 6,
+              "y": 0.347
+            }
+          ]
+        }
+      ],
+      "settings": {
+        "show_grid": true,
+        "show_axes": true,
+        "show_legend": false,
+        "show_point_labels": false,
+        "connect_points": true
+      }
+    }
+  ]
+}

@@ -58,6 +58,9 @@ def _style(statement: str) -> dict[str, Any]:
                 "التمثيل البياني",
             )
         ),
+        "has_table_wording": any(word in statement for word in ("الجدول", "جدول", "القيم التجريبية", "القياسات")),
+        "has_circuit_wording": any(word in statement for word in ("دارة", "الدائرة الكهربائية", "المخطط الكهربائي", "RC", "RL")),
+        "has_diagram_wording": any(word in statement for word in ("الشكل", "المخطط", "المسار", "الشعاع", "القوة")),
     }
 
 

@@ -1,0 +1,251 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2009-electrical-verified",
+  "session": "ordinary",
+  "year": 2009,
+  "chapter_code": "electrical_phenomena_evolution",
+  "chapter_title": "تطور دراسة ظواهر كهربائية",
+  "axis_tags": [
+    "inductor_fundamental_relations",
+    "rl_current_establishment_differential_equation",
+    "rl_time_constant_graphical_analysis",
+    "inductor_energy_rl_energy_balance"
+  ],
+
+  "branches": [
+    {
+      "code": "math",
+      "name": "شعبة رياضيات"
+    },
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "exercise_number": 5,
+  "source_page": 2,
+  "source_pages": [
+    2
+  ],
+  "solution_source_pages": [
+    22,
+    23
+  ],
+  "title": "التمرين 5 — بكالوريا الجزائر 2009 — شعبة رياضيات وتقني رياضي",
+  "statement": "نربط على التسلسل العناصر الكهربائية التالية:\n\n• مولد ذو توتر ثابت \\(E=12\\,V\\).\n• وشيعة ذاتيتها \\(L=300\\,mH\\) ومقاومتها \\(r=10\\,\\Omega\\).\n• ناقل أومي مقاومته \\(R=110\\,\\Omega\\).\n• قاطعة \\(K\\) (الشكل 7).",
+  "figures": [
+    {
+      "diagram_type": "bac_2009_ex05_statement_circuit",
+      "title": "الشكل 7 — الدارة الكهربائية",
+      "description": "الدارة الأصلية للتمرين: مولد، وشيعة حقيقية، مقاومة وقاطعة موصولة على التسلسل.",
+      "svg": "<svg viewBox=\"0 0 920 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"الشكل 7 دارة RL بكالوريا 2009\">\n  <defs>\n    <marker id=\"arr5\" markerWidth=\"10\" markerHeight=\"10\" refX=\"8\" refY=\"3\" orient=\"auto\">\n      <path d=\"M0,0 L0,6 L9,3 z\" fill=\"#111827\"/>\n    </marker>\n  </defs>\n  <rect x=\"35\" y=\"25\" width=\"850\" height=\"285\" rx=\"20\" fill=\"#fff\" stroke=\"#cbd5e1\" stroke-width=\"2\"/>\n  <path d=\"M150 95 H735 V255 H150 Z\" fill=\"none\" stroke=\"#111827\" stroke-width=\"5\"/>\n\n  <rect x=\"500\" y=\"70\" width=\"115\" height=\"50\" rx=\"7\" fill=\"#fff\" stroke=\"#111827\" stroke-width=\"3\"/>\n  <text x=\"550\" y=\"103\" font-size=\"25\" font-family=\"Arial\">R</text>\n  <text x=\"630\" y=\"88\" font-size=\"22\" font-family=\"Arial\">A</text>\n  <text x=\"470\" y=\"88\" font-size=\"22\" font-family=\"Arial\">B</text>\n\n  <path d=\"M245 95 c0 -34 42 -34 42 0 c0 -34 42 -34 42 0 c0 -34 42 -34 42 0 c0 -34 42 -34 42 0\"\n        fill=\"none\" stroke=\"#111827\" stroke-width=\"5\"/>\n  <text x=\"315\" y=\"51\" font-size=\"23\" font-family=\"Arial\">L,r</text>\n  <text x=\"215\" y=\"88\" font-size=\"22\" font-family=\"Arial\">C</text>\n\n  <circle cx=\"360\" cy=\"255\" r=\"34\" fill=\"#fff\" stroke=\"#111827\" stroke-width=\"4\"/>\n  <text x=\"350\" y=\"263\" font-size=\"23\" font-family=\"Arial\">E</text>\n  <line x1=\"325\" y1=\"205\" x2=\"395\" y2=\"205\" stroke=\"#111827\" stroke-width=\"4\" marker-end=\"url(#arr5)\"/>\n\n  <line x1=\"650\" y1=\"255\" x2=\"695\" y2=\"255\" stroke=\"#111827\" stroke-width=\"5\"/>\n  <line x1=\"720\" y1=\"255\" x2=\"755\" y2=\"255\" stroke=\"#111827\" stroke-width=\"5\"/>\n  <line x1=\"695\" y1=\"255\" x2=\"723\" y2=\"230\" stroke=\"#111827\" stroke-width=\"5\"/>\n  <text x=\"700\" y=\"295\" font-size=\"23\" font-family=\"Arial\">K</text>\n\n  <text x=\"665\" y=\"217\" font-size=\"21\" font-family=\"Arial\">E = 12 V</text>\n</svg>",
+      "render_mode": "inline",
+      "responsive": true
+    }
+  ],
+  "statement_graphs": [
+    {
+      "diagram_type": "bac_2009_ex05_statement_circuit",
+      "title": "الشكل 7 — الدارة الكهربائية",
+      "description": "الدارة الأصلية للتمرين: مولد، وشيعة حقيقية، مقاومة وقاطعة موصولة على التسلسل.",
+      "svg": "<svg viewBox=\"0 0 920 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"الشكل 7 دارة RL بكالوريا 2009\">\n  <defs>\n    <marker id=\"arr5\" markerWidth=\"10\" markerHeight=\"10\" refX=\"8\" refY=\"3\" orient=\"auto\">\n      <path d=\"M0,0 L0,6 L9,3 z\" fill=\"#111827\"/>\n    </marker>\n  </defs>\n  <rect x=\"35\" y=\"25\" width=\"850\" height=\"285\" rx=\"20\" fill=\"#fff\" stroke=\"#cbd5e1\" stroke-width=\"2\"/>\n  <path d=\"M150 95 H735 V255 H150 Z\" fill=\"none\" stroke=\"#111827\" stroke-width=\"5\"/>\n\n  <rect x=\"500\" y=\"70\" width=\"115\" height=\"50\" rx=\"7\" fill=\"#fff\" stroke=\"#111827\" stroke-width=\"3\"/>\n  <text x=\"550\" y=\"103\" font-size=\"25\" font-family=\"Arial\">R</text>\n  <text x=\"630\" y=\"88\" font-size=\"22\" font-family=\"Arial\">A</text>\n  <text x=\"470\" y=\"88\" font-size=\"22\" font-family=\"Arial\">B</text>\n\n  <path d=\"M245 95 c0 -34 42 -34 42 0 c0 -34 42 -34 42 0 c0 -34 42 -34 42 0 c0 -34 42 -34 42 0\"\n        fill=\"none\" stroke=\"#111827\" stroke-width=\"5\"/>\n  <text x=\"315\" y=\"51\" font-size=\"23\" font-family=\"Arial\">L,r</text>\n  <text x=\"215\" y=\"88\" font-size=\"22\" font-family=\"Arial\">C</text>\n\n  <circle cx=\"360\" cy=\"255\" r=\"34\" fill=\"#fff\" stroke=\"#111827\" stroke-width=\"4\"/>\n  <text x=\"350\" y=\"263\" font-size=\"23\" font-family=\"Arial\">E</text>\n  <line x1=\"325\" y1=\"205\" x2=\"395\" y2=\"205\" stroke=\"#111827\" stroke-width=\"4\" marker-end=\"url(#arr5)\"/>\n\n  <line x1=\"650\" y1=\"255\" x2=\"695\" y2=\"255\" stroke=\"#111827\" stroke-width=\"5\"/>\n  <line x1=\"720\" y1=\"255\" x2=\"755\" y2=\"255\" stroke=\"#111827\" stroke-width=\"5\"/>\n  <line x1=\"695\" y1=\"255\" x2=\"723\" y2=\"230\" stroke=\"#111827\" stroke-width=\"5\"/>\n  <text x=\"700\" y=\"295\" font-size=\"23\" font-family=\"Arial\">K</text>\n\n  <text x=\"665\" y=\"217\" font-size=\"21\" font-family=\"Arial\">E = 12 V</text>\n</svg>",
+      "render_mode": "inline",
+      "responsive": true
+    }
+  ],
+  "questions": [
+    {
+      "id": "2009_elec_ex05_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) في اللحظة \\(t=0\\,s\\) نغلق القاطعة \\(K\\). أوجد المعادلة التفاضلية التي تعطي شدة التيار الكهربائي المار في الدارة.",
+      "axis_tags": [
+        "rl_current_establishment_differential_equation"
+      ],
+      "solution": {
+        "strategy": "نطبق قانون جمع التوترات على الدارة ثم نستعمل علاقة توتر المقاومة والوشيعة الحقيقية.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "قانون جمع التوترات",
+            "explanation": "\\[E=u_R+u_{BC}\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "التعويض بالعلاقات",
+            "explanation": "\\[u_R=Ri,\\qquad u_{BC}=ri+L\\frac{di}{dt}\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "المعادلة التفاضلية",
+            "explanation": "إذن: \\[E=(R+r)i+L\\frac{di}{dt}\\] أي \\[\\boxed{\\frac{di}{dt}+\\frac{R+r}{L}i=\\frac{E}{L}}\\]"
+          }
+        ],
+        "final_answer": "\\(L\\dfrac{di}{dt}+(R+r)i=E\\)."
+      }
+    },
+    {
+      "id": "2009_elec_ex05_q2",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2) كيف يكون سلوك الوشيعة في النظام الدائم؟ وما هي عندئذ عبارة شدة التيار الكهربائي \\(I_0\\) الذي يجتاز الدارة؟",
+      "axis_tags": [
+        "inductor_fundamental_relations",
+        "rl_current_establishment_differential_equation"
+      ],
+      "solution": {
+        "strategy": "في النظام الدائم تصبح شدة التيار ثابتة وبالتالي ينعدم الحد التحريضي.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "النظام الدائم",
+            "explanation": "\\[\\frac{di}{dt}=0\\] لذلك تسلك الوشيعة الحقيقية سلوك ناقل أومي مقاومته \\(r\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "التيار النهائي",
+            "explanation": "\\[E=(R+r)I_0\\Rightarrow \\boxed{I_0=\\frac{E}{R+r}}\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "القيمة العددية",
+            "explanation": "\\[I_0=\\frac{12}{110+10}=0.10\\,A\\]"
+          }
+        ],
+        "final_answer": "\\(I_0=0.10\\,A\\)."
+      }
+    },
+    {
+      "id": "2009_elec_ex05_q3",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "3) باعتبار العلاقة \\(i=A\\left(1-e^{-t/\\tau}\\right)\\) حلاً للمعادلة التفاضلية المطلوبة في السؤال 1: أ- أوجد العبارة الحرفية لكل من \\(A\\) و\\(\\tau\\). ب- استنتج عبارة التوتر الكهربائي \\(u_{BC}\\) بين طرفي الوشيعة.",
+      "axis_tags": [
+        "rl_current_establishment_differential_equation",
+        "rl_time_constant_graphical_analysis"
+      ],
+      "solution": {
+        "strategy": "نعوض الحل في المعادلة التفاضلية ونطابق الحد الثابت والحد الأسي، ثم نستعمل علاقة توتر الوشيعة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "مشتقة التيار",
+            "explanation": "\\[\\frac{di}{dt}=\\frac{A}{\\tau}e^{-t/\\tau}\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "تحديد A وτ",
+            "explanation": "بالتعويض في \\(\\frac{di}{dt}+\\frac{R+r}{L}i=\\frac{E}{L}\\) نجد: \\[\\boxed{A=\\frac{E}{R+r}},\\qquad \\boxed{\\tau=\\frac{L}{R+r}}\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "توتر الوشيعة",
+            "explanation": "\\[u_{BC}=L\\frac{di}{dt}+ri\\] ومنه: \\[\\boxed{u_{BC}(t)=E e^{-\\frac{R+r}{L}t}+\\frac{Er}{R+r}\\left(1-e^{-\\frac{R+r}{L}t}\\right)}\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "شكل مبسط بالقيم",
+            "explanation": "لأن \\(\\tau=0.300/120=2.5\\times10^{-3}s\\): \\[u_{BC}(t)=1+11e^{-400t}\\quad(V)\\]"
+          }
+        ],
+        "final_answer": "\\(A=E/(R+r)\\)، \\(\\tau=L/(R+r)\\)، و\\(u_{BC}(t)=1+11e^{-400t}\\,V\\)."
+      }
+    },
+    {
+      "id": "2009_elec_ex05_q4",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "4) أ- احسب قيمة التوتر الكهربائي \\(u_{BC}\\) في النظام الدائم. ب- ارسم كيفياً شكل البيان \\(u_{BC}=f(t)\\).",
+      "axis_tags": [
+        "rl_time_constant_graphical_analysis"
+      ],
+      "solution": {
+        "strategy": "نستعمل الحالة النهائية ثم نمثل المنحنى المتناقص الموافق لعبارة التوتر.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "القيمة النهائية",
+            "explanation": "في النظام الدائم \\(di/dt=0\\)، لذا \\[u_{BC}(\\infty)=rI_0=10\\times0.10=\\boxed{1\\,V}\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "القيمة الابتدائية",
+            "explanation": "عند \\(t=0\\): \\[i(0)=0\\Rightarrow u_{BC}(0)=E=12\\,V\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الرسم",
+            "explanation": "إذن البيان أسي متناقص يبدأ من 12 V ويقترب من 1 V.",
+            "graph_data": {
+              "title": "الرسم الكيفي للتوتر u_BC(t)",
+              "description": "يتناقص توتر الوشيعة من 12 V لحظة الغلق نحو 1 V في النظام الدائم.",
+              "x_label": "t (s)",
+              "y_label": "u_BC (V)",
+              "x_domain": [
+                0,
+                0.015
+              ],
+              "y_domain": [
+                0,
+                13
+              ],
+              "series": [
+                {
+                  "name": "u_BC(t)",
+                  "data": [
+                    {
+                      "x": 0,
+                      "y": 12.0
+                    },
+                    {
+                      "x": 0.001,
+                      "y": 8.374
+                    },
+                    {
+                      "x": 0.0025,
+                      "y": 5.047
+                    },
+                    {
+                      "x": 0.005,
+                      "y": 2.489
+                    },
+                    {
+                      "x": 0.0075,
+                      "y": 1.548
+                    },
+                    {
+                      "x": 0.01,
+                      "y": 1.201
+                    },
+                    {
+                      "x": 0.015,
+                      "y": 1.027
+                    }
+                  ]
+                }
+              ],
+              "settings": {
+                "show_grid": true,
+                "show_axes": true,
+                "show_legend": false,
+                "show_point_labels": false,
+                "connect_points": true
+              }
+            }
+          }
+        ],
+        "final_answer": "\\(u_{BC}(\\infty)=1\\,V\\)، والبيان أسي متناقص من 12 V إلى 1 V."
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "تجميعية_عمورة_للبكالوريات_السابقة_الوحدة_3(1).pdf",
+    "statement_figure_policy": "إذا كان الشكل موجوداً في نص البكالوريا يوضع في statement_graphs. إذا كان السؤال يطلب رسم الدارة ولا يعطي شكلاً، لا يظهر الرسم قبل السؤال بل يوضع كحل للسؤال.",
+    "solution_figure_policy": "تضاف الرسومات اللازمة في خطوات الحل فقط، مع الحفاظ على معنى الشكل الأصلي أو شكل التصحيح.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  }
+}

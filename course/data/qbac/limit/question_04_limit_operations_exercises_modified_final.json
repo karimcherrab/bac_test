@@ -1,0 +1,390 @@
+{
+  "version": 1,
+  "language": "ar",
+  "direction": "rtl",
+  "tag": "limit_operations",
+  "title": "تمارين العمليات على النهايات",
+  "subject_code": "math",
+  "chapter_code": "limits_continuity",
+  "question_count": 12,
+  "questions": [
+    {
+      "id": "operations_01",
+      "number": "1",
+      "text": "احسب \\(\\lim_{x\\to+\\infty}\\left(x^2+\\frac{1}{x}\\right)\\).",
+      "skill": "تطبيق قاعدة الجمع على نهايتين معينتين",
+      "difficulty": "easy",
+      "solution": {
+        "strategy": "نحسب نهاية كل جزء ثم نطبق قاعدة الجمع.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "نهاية كل جزء",
+            "explanation": "عند \\(+\\infty\\)، فإن \\(x^2\\to+\\infty\\) و\\(1/x\\to0\\).",
+            "calculation": "\\(x^2\\to+\\infty,\\quad \\frac1x\\to0\\)",
+            "result": "الصيغة الناتجة هي \\(+\\infty+0\\)."
+          },
+          {
+            "order": 2,
+            "title": "تطبيق قاعدة الجمع",
+            "explanation": "إضافة الصفر لا تغير النهاية غير المنتهية.",
+            "calculation": "\\(+\\infty+0=+\\infty\\)",
+            "result": "النهاية تساوي \\(+\\infty\\)."
+          }
+        ],
+        "final_answer": "\\(\\lim_{x\\to+\\infty}\\left(x^2+\\frac1x\\right)=+\\infty\\).",
+        "common_mistakes": [
+          {
+            "mistake": "اعتبار \\(+\\infty+0\\) حالة عدم تعيين.",
+            "correction": "هذه صيغة معينة ونتيجتها \\(+\\infty\\)."
+          }
+        ],
+        "hints": [
+          "احسب نهاية \\(x^2\\) ونهاية \\(1/x\\) منفصلتين."
+        ]
+      }
+    },
+    {
+      "id": "operations_02",
+      "number": "2",
+      "text": "احسب \\(\\lim_{x\\to-\\infty}\\left(x^3-5\\right)\\).",
+      "skill": "تطبيق قاعدة الطرح مع عدد حقيقي",
+      "difficulty": "easy",
+      "solution": {
+        "strategy": "نحسب نهاية \\(x^3\\)، ثم نطرح العدد الثابت.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "نهاية الجزء المتغير",
+            "explanation": "القوة الفردية تحتفظ بإشارة \\(x\\).",
+            "calculation": "\\(x^3\\to-\\infty\\)",
+            "result": "الجزء الأول يؤول إلى \\(-\\infty\\)."
+          },
+          {
+            "order": 2,
+            "title": "تطبيق الطرح",
+            "explanation": "طرح عدد حقيقي من \\(-\\infty\\) لا يغير الاتجاه.",
+            "calculation": "\\(-\\infty-5=-\\infty\\)",
+            "result": "النهاية تساوي \\(-\\infty\\)."
+          }
+        ],
+        "final_answer": "\\(\\lim_{x\\to-\\infty}(x^3-5)=-\\infty\\).",
+        "hints": [
+          "ابدأ بنهاية \\(x^3\\)."
+        ]
+      }
+    },
+    {
+      "id": "operations_03",
+      "number": "3",
+      "text": "احسب \\(\\lim_{x\\to+\\infty}\\left(2x^4+3\\sqrt{x}\\right)\\).",
+      "skill": "جمع نهايتين موجبتين غير منتهيتين",
+      "difficulty": "easy",
+      "solution": {
+        "strategy": "نحسب نهاية كل حد ثم نجمع.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "نهايتا الحدين",
+            "explanation": "عند \\(+\\infty\\)، يزداد كل من \\(x^4\\) و\\(\\sqrt{x}\\) دون حد.",
+            "calculation": "\\(2x^4\\to+\\infty,\\quad 3\\sqrt{x}\\to+\\infty\\)",
+            "result": "لدينا مجموع نهايتين لهما الإشارة نفسها."
+          },
+          {
+            "order": 2,
+            "title": "الجمع",
+            "explanation": "مجموع نهايتين تؤولان إلى \\(+\\infty\\) يساوي \\(+\\infty\\).",
+            "calculation": "\\(+\\infty+(+\\infty)=+\\infty\\)",
+            "result": "النهاية تساوي \\(+\\infty\\)."
+          }
+        ],
+        "final_answer": "\\(\\lim_{x\\to+\\infty}(2x^4+3\\sqrt{x})=+\\infty\\).",
+        "hints": [
+          "النهايتان لهما الإشارة الموجبة نفسها."
+        ]
+      }
+    },
+    {
+      "id": "operations_04",
+      "number": "4",
+      "text": "احسب \\(\\lim_{x\\to-\\infty}\\left(-2x^3+\\frac{4}{x}\\right)\\).",
+      "skill": "جمع نهاية غير منتهية مع نهاية صفرية",
+      "difficulty": "easy",
+      "solution": {
+        "strategy": "نحسب نهاية كل جزء مع مراعاة إشارة الثابت.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "نهاية الحد الأول",
+            "explanation": "عند \\(-\\infty\\)، فإن \\(x^3\\to-\\infty\\)، وضربه في \\(-2\\) يعطي \\(+\\infty\\).",
+            "calculation": "\\(-2x^3\\to+\\infty\\)",
+            "result": "الحد الأول يؤول إلى \\(+\\infty\\)."
+          },
+          {
+            "order": 2,
+            "title": "نهاية الحد الثاني والجمع",
+            "explanation": "\\(4/x\\to0\\)، ثم نطبق قاعدة الجمع.",
+            "calculation": "\\(+\\infty+0=+\\infty\\)",
+            "result": "النهاية تساوي \\(+\\infty\\)."
+          }
+        ],
+        "final_answer": "\\(\\lim_{x\\to-\\infty}\\left(-2x^3+\\frac4x\\right)=+\\infty\\).",
+        "hints": [
+          "انتبه إلى الإشارة السالبة أمام \\(2x^3\\)."
+        ]
+      }
+    },
+    {
+      "id": "operations_05",
+      "number": "5",
+      "text": "احسب \\(\\lim_{x\\to-\\infty}\\left[-3(x^2+1)\\right]\\).",
+      "skill": "الضرب في ثابت سالب",
+      "difficulty": "easy",
+      "solution": {
+        "strategy": "نحسب نهاية ما داخل القوس ثم نضرب في الثابت.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "نهاية ما داخل القوس",
+            "explanation": "عند \\(-\\infty\\)، فإن \\(x^2\\to+\\infty\\).",
+            "calculation": "\\(x^2+1\\to+\\infty\\)",
+            "result": "ما داخل القوس يؤول إلى \\(+\\infty\\)."
+          },
+          {
+            "order": 2,
+            "title": "الضرب في الثابت",
+            "explanation": "الثابت \\(-3\\) سالب، لذلك يعكس الإشارة.",
+            "calculation": "\\((-3)\\times(+\\infty)=-\\infty\\)",
+            "result": "النهاية تساوي \\(-\\infty\\)."
+          }
+        ],
+        "final_answer": "\\(\\lim_{x\\to-\\infty}[-3(x^2+1)]=-\\infty\\).",
+        "hints": [
+          "احسب الداخل أولًا، ثم طبق إشارة \\(-3\\)."
+        ]
+      }
+    },
+    {
+      "id": "operations_06",
+      "number": "6",
+      "text": "احسب \\(\\lim_{x\\to+\\infty}\\left(x^2\\cdot\\frac{3}{x}\\right)\\).",
+      "skill": "تطبيق قاعدة الضرب في حالة معينة",
+      "difficulty": "easy",
+      "solution": {
+        "strategy": "نحسب نهاية العاملين ثم نحدد نهاية الجداء.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "نهايتا العاملين",
+            "explanation": "لدينا \\(x^2\\to+\\infty\\)، و\\(3/x\\to0^+\\).",
+            "calculation": "\\(x^2\\to+\\infty,\\quad \\frac3x\\to0^+\\)",
+            "result": "الصيغة الظاهرية هي \\(\\infty\\times0\\)، وهي غير معينة مباشرة."
+          },
+          {
+            "order": 2,
+            "title": "تبسيط العبارة",
+            "explanation": "قبل تطبيق القواعد نختصر العبارة جبريًا.",
+            "calculation": "\\(x^2\\cdot\\frac3x=3x\\)",
+            "result": "\\(3x\\to+\\infty\\)."
+          }
+        ],
+        "final_answer": "\\(\\lim_{x\\to+\\infty}\\left(x^2\\cdot\\frac3x\\right)=+\\infty\\).",
+        "common_mistakes": [
+          {
+            "mistake": "كتابة \\(0\\times\\infty=0\\).",
+            "correction": "هذه حالة عدم تعيين؛ هنا نبسط العبارة أولًا إلى \\(3x\\)."
+          }
+        ],
+        "hints": [
+          "اختصر \\(x^2/x\\) قبل حساب النهاية."
+        ]
+      }
+    },
+    {
+      "id": "operations_07",
+      "number": "7",
+      "text": "احسب \\(\\lim_{x\\to+\\infty}\\frac{5}{x^2+1}\\).",
+      "skill": "قسمة عدد حقيقي على مقدار يؤول إلى المالانهاية",
+      "difficulty": "easy",
+      "solution": {
+        "strategy": "نحدد نهاية البسط ونهاية المقام.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "نهايتا البسط والمقام",
+            "explanation": "البسط ثابت يساوي \\(5\\)، والمقام يؤول إلى \\(+\\infty\\).",
+            "calculation": "\\(5\\to5,\\quad x^2+1\\to+\\infty\\)",
+            "result": "لدينا عدد حقيقي على مالانهاية."
+          },
+          {
+            "order": 2,
+            "title": "تطبيق قاعدة القسمة",
+            "explanation": "عدد حقيقي مقسوم على مقدار غير محدود يؤول إلى الصفر.",
+            "calculation": "\\(\\frac5{+\\infty}=0\\)",
+            "result": "النهاية تساوي \\(0\\)."
+          }
+        ],
+        "final_answer": "\\(\\lim_{x\\to+\\infty}\\frac5{x^2+1}=0\\).",
+        "hints": [
+          "افحص نهاية المقام أولًا."
+        ]
+      }
+    },
+    {
+      "id": "operations_08",
+      "number": "8",
+      "text": "احسب \\(\\lim_{x\\to2^+}\\frac{3}{x-2}\\).",
+      "skill": "قسمة عدد موجب على صفر موجب",
+      "difficulty": "medium",
+      "solution": {
+        "strategy": "نحدد إشارة البسط وجهة اقتراب المقام من الصفر.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "نهاية المقام",
+            "explanation": "عند الاقتراب من \\(2\\) من اليمين، يكون \\(x-2>0\\).",
+            "calculation": "\\(x-2\\to0^+\\)",
+            "result": "المقام يؤول إلى صفر موجب."
+          },
+          {
+            "order": 2,
+            "title": "تحديد إشارة الخارج",
+            "explanation": "البسط موجب غير منعدم، والمقام موجب صغير جدًا.",
+            "calculation": "\\(\\frac3{0^+}=+\\infty\\)",
+            "result": "النهاية تساوي \\(+\\infty\\)."
+          }
+        ],
+        "final_answer": "\\(\\lim_{x\\to2^+}\\frac3{x-2}=+\\infty\\).",
+        "hints": [
+          "حدد هل \\(x-2\\to0^+\\) أم \\(0^-\\)."
+        ]
+      }
+    },
+    {
+      "id": "operations_09",
+      "number": "9",
+      "text": "احسب \\(\\lim_{x\\to2^-}\\frac{3}{x-2}\\).",
+      "skill": "قسمة عدد موجب على صفر سالب",
+      "difficulty": "medium",
+      "solution": {
+        "strategy": "نحدد جهة اقتراب المقام من الصفر ثم نطبق قاعدة الإشارة.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "نهاية المقام",
+            "explanation": "عند الاقتراب من \\(2\\) من اليسار، يكون \\(x-2<0\\).",
+            "calculation": "\\(x-2\\to0^-\\)",
+            "result": "المقام يؤول إلى صفر سالب."
+          },
+          {
+            "order": 2,
+            "title": "نهاية الخارج",
+            "explanation": "عدد موجب على عدد سالب قريب من الصفر يعطي قيمًا سالبة كبيرة.",
+            "calculation": "\\(\\frac3{0^-}=-\\infty\\)",
+            "result": "النهاية تساوي \\(-\\infty\\)."
+          }
+        ],
+        "final_answer": "\\(\\lim_{x\\to2^-}\\frac3{x-2}=-\\infty\\).",
+        "hints": [
+          "من اليسار يكون \\(x-2\\) سالبًا."
+        ]
+      }
+    },
+    {
+      "id": "operations_10",
+      "number": "10",
+      "text": "احسب \\(\\lim_{x\\to1^+}\\frac{-4}{x-1}\\).",
+      "skill": "قسمة عدد سالب على صفر موجب",
+      "difficulty": "medium",
+      "solution": {
+        "strategy": "نحدد إشارة كل من البسط والمقام.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "نهاية المقام",
+            "explanation": "من اليمين، يكون \\(x-1\\) موجبًا صغيرًا.",
+            "calculation": "\\(x-1\\to0^+\\)",
+            "result": "المقام موجب وقريب من الصفر."
+          },
+          {
+            "order": 2,
+            "title": "قاعدة الإشارة",
+            "explanation": "سالب على موجب يساوي سالب، والقيمة المطلقة تكبر دون حد.",
+            "calculation": "\\(\\frac{-4}{0^+}=-\\infty\\)",
+            "result": "النهاية تساوي \\(-\\infty\\)."
+          }
+        ],
+        "final_answer": "\\(\\lim_{x\\to1^+}\\frac{-4}{x-1}=-\\infty\\).",
+        "hints": [
+          "البسط سالب والمقام يقترب من \\(0^+\\)."
+        ]
+      }
+    },
+    {
+      "id": "operations_11",
+      "number": "11",
+      "text": "حدّد نوع الصيغة الناتجة دون إزالة عدم التعيين: \\(\\lim_{x\\to+\\infty}(x^2-x^2)\\).",
+      "skill": "التعرف على حالة عدم التعيين من النوع مالانهاية ناقص مالانهاية",
+      "difficulty": "medium",
+      "solution": {
+        "strategy": "نحسب نهاية كل جزء ثم نسمي الصيغة فقط.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "نهايتا الجزأين",
+            "explanation": "عند \\(+\\infty\\)، فإن كلًا من \\(x^2\\) و\\(x^2\\) يؤول إلى \\(+\\infty\\).",
+            "calculation": "\\(+\\infty-(+\\infty)\\)",
+            "result": "ظهرت الصيغة \\(\\infty-\\infty\\)."
+          },
+          {
+            "order": 2,
+            "title": "تسمية الصيغة",
+            "explanation": "هذه حالة عدم تعيين، فلا نطبق الطرح مباشرة.",
+            "calculation": "\\(\\infty-\\infty\\)",
+            "result": "حالة عدم تعيين."
+          }
+        ],
+        "final_answer": "الصيغة الناتجة هي \\(\\infty-\\infty\\)، وهي حالة عدم تعيين.",
+        "common_mistakes": [
+          {
+            "mistake": "كتابة \\(+\\infty-(+\\infty)=0\\).",
+            "correction": "لا يجوز طرح رمزي المالانهاية كعددين حقيقيين."
+          }
+        ],
+        "hints": [
+          "المطلوب التعرف على الصيغة فقط."
+        ]
+      }
+    },
+    {
+      "id": "operations_12",
+      "number": "12",
+      "text": "حدّد نوع الصيغة الناتجة دون حلها: \\(\\lim_{x\\to+\\infty}\\frac{x^2+1}{x+3}\\).",
+      "skill": "التعرف على حالة عدم التعيين من النوع مالانهاية على مالانهاية",
+      "difficulty": "medium",
+      "solution": {
+        "strategy": "نحسب نهاية البسط والمقام ثم نسمي الصيغة.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "نهاية البسط والمقام",
+            "explanation": "عند \\(+\\infty\\)، يؤول البسط والمقام كلاهما إلى \\(+\\infty\\).",
+            "calculation": "\\(x^2+1\\to+\\infty,\\quad x+3\\to+\\infty\\)",
+            "result": "الصيغة الناتجة هي \\(\\infty/\\infty\\)."
+          },
+          {
+            "order": 2,
+            "title": "تسمية الصيغة",
+            "explanation": "هذه حالة عدم تعيين، ولا تكفي قاعدة القسمة المباشرة.",
+            "calculation": "\\(\\frac{\\infty}{\\infty}\\)",
+            "result": "حالة عدم تعيين."
+          }
+        ],
+        "final_answer": "الصيغة الناتجة هي \\(\\infty/\\infty\\)، وهي حالة عدم تعيين.",
+        "hints": [
+          "لا تحسب النهاية؛ سمِّ الصيغة فقط."
+        ]
+      }
+    }
+  ]
+}

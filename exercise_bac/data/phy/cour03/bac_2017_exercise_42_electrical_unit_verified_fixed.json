@@ -1,0 +1,405 @@
+{
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2017-electrical-verified",
+  "language": "ar",
+  "direction": "rtl",
+  "year": 2017,
+  "session": "ordinary",
+  "chapter_code": "electrical_phenomena_evolution",
+  "chapter_title": "تطور دراسة ظواهر كهربائية",
+  "exercise_number": 42,
+  "source_page": 17,
+  "source_pages": [
+    17
+  ],
+  "solution_source_pages": [
+    37,
+    38
+  ],
+
+  "branches": [
+    {
+      "code": "math",
+      "name": "شعبة رياضيات"
+    },
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "title": "التمرين 42 — بكالوريا الجزائر 2017 — رياضيات وتقني رياضي (الدورة العادية)",
+  "axis_tags": [
+    "rc_capacitor_charging",
+    "rc_energy",
+    "lc_free_oscillations"
+  ],
+  "questions": [
+    {
+      "id": "2017_elec_ex42_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "في الوضع (1): ما الظاهرة التي تحدث؟ وضح اتجاه التيار والتوترين uC وuR.",
+      "solution": {
+        "strategy": "الوضع الأول للشحن.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الظاهرة",
+            "explanation": "شحن المكثفة."
+          }
+        ],
+        "final_answer": "شحن المكثفة."
+      }
+    },
+    {
+      "id": "2017_elec_ex42_q2",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "اكتب المعادلة التفاضلية لـuC، وحدد A وB وα في uC=A+B e^{-αt}.",
+      "solution": {
+        "strategy": "معادلة RC.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "المعادلة",
+            "explanation": "\\[\\frac{du_C}{dt}+\\frac1{RC}u_C=\\frac E{RC}\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "الثوابت",
+            "explanation": "A=E، B=-E، α=1/(RC)، ووحدة α هي s^{-1}."
+          }
+        ],
+        "final_answer": "A=E، B=-E، α=1/(RC)."
+      }
+    },
+    {
+      "id": "2017_elec_ex42_q3",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "باستغلال البيانين أوجد τ وE وC وR.",
+      "solution": {
+        "strategy": "نستعمل قراءات التصحيح.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "النتائج",
+            "explanation": "τ=0.5s، E=9V، C≈49.4µF، R≈10.1kΩ."
+          }
+        ],
+        "final_answer": "τ=0.5s، E=9V، C≈49.4µF، R≈10.1kΩ."
+      }
+    },
+    {
+      "id": "2017_elec_ex42_q4",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "في الوضع (2): اكتب معادلة LC واستنتج T0 وL من الشكل 71.",
+      "solution": {
+        "strategy": "دارة LC مثالية.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "المعادلة",
+            "explanation": "\\[\\frac{d^2u_C}{dt^2}+\\frac1{LC}u_C=0\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "الدور",
+            "explanation": "من منحنى الطاقة: T0=2ms."
+          },
+          {
+            "step_number": 3,
+            "title": "L",
+            "explanation": "\\[L\\approx2mH\\]"
+          }
+        ],
+        "final_answer": "T0=2ms، L≈2mH."
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "تجميعية_عمورة_للبكالوريات_السابقة_الوحدة_3(1).pdf",
+    "statement_figure_policy": "الشكل المعطى في الموضوع يظهر مع نص التمرين، والرسم المطلوب كإجابة يظهر داخل الحل فقط.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  },
+  "statement": "التركيب في الشكل 69 مكوّن من مولد مثالي E، مكثفة فارغة C، ناقل أومي R متغيرة، وشيعة L مقاومتها مهملة وبادلة K. في الوضع (1) ندرس الشحن، وبعد الشحن نجعل R=0 وننقل البادلة إلى الوضع (2).",
+  "figures": [
+    {
+      "diagram_type": "ex42_circuit",
+      "title": "الشكل 69",
+      "description": "الشكل 69",
+      "svg": "<svg viewBox=\"0 0 800 320\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"25\" y=\"20\" width=\"750\" height=\"260\" rx=\"18\" fill=\"white\" stroke=\"#cbd5e1\"/><path d=\"M130 80 H650 V240 H130 Z\" fill=\"none\" stroke=\"#111827\" stroke-width=\"5\"/><circle cx=\"130\" cy=\"160\" r=\"30\" fill=\"white\" stroke=\"#111827\" stroke-width=\"4\"/><text x=\"118\" y=\"168\" font-size=\"22\">E</text><rect x=\"250\" y=\"55\" width=\"100\" height=\"50\" fill=\"white\" stroke=\"#111827\" stroke-width=\"3\"/><text x=\"270\" y=\"87\" font-size=\"20\">R</text><line x1=\"430\" y1=\"80\" x2=\"430\" y2=\"130\" stroke=\"#111827\" stroke-width=\"5\"/><line x1=\"400\" y1=\"130\" x2=\"460\" y2=\"130\" stroke=\"#111827\" stroke-width=\"6\"/><line x1=\"400\" y1=\"165\" x2=\"460\" y2=\"165\" stroke=\"#111827\" stroke-width=\"6\"/><text x=\"475\" y=\"155\" font-size=\"22\">C/L</text><text x=\"560\" y=\"70\" font-size=\"20\">K</text></svg>",
+      "render_mode": "inline",
+      "responsive": true
+    },
+    {
+      "title": "الشكل 70 — طاقة المكثفة",
+      "description": "الشكل 70 — طاقة المكثفة",
+      "x_label": "t(s)",
+      "y_label": "EC(10^-3J)",
+      "x_domain": [
+        0,
+        3
+      ],
+      "y_domain": [
+        0,
+        2.2
+      ],
+      "series": [
+        {
+          "name": "EC",
+          "data": [
+            {
+              "x": 0,
+              "y": 0.0
+            },
+            {
+              "x": 0.25,
+              "y": 0.31
+            },
+            {
+              "x": 0.5,
+              "y": 0.799
+            },
+            {
+              "x": 0.75,
+              "y": 1.207
+            },
+            {
+              "x": 1,
+              "y": 1.495
+            },
+            {
+              "x": 1.5,
+              "y": 1.806
+            },
+            {
+              "x": 2,
+              "y": 1.927
+            },
+            {
+              "x": 3,
+              "y": 1.99
+            }
+          ]
+        }
+      ],
+      "settings": {
+        "show_grid": true,
+        "show_axes": true,
+        "show_legend": false,
+        "show_point_labels": false,
+        "connect_points": true
+      }
+    },
+    {
+      "title": "الشكل 71 — طاقة LC",
+      "description": "الشكل 71 — طاقة LC",
+      "x_label": "t(ms)",
+      "y_label": "EC(10^-3J)",
+      "x_domain": [
+        0,
+        2.25
+      ],
+      "y_domain": [
+        0,
+        2.2
+      ],
+      "series": [
+        {
+          "name": "EC",
+          "data": [
+            {
+              "x": 0.0,
+              "y": 2.0
+            },
+            {
+              "x": 0.25,
+              "y": 1.0
+            },
+            {
+              "x": 0.5,
+              "y": 0.0
+            },
+            {
+              "x": 0.75,
+              "y": 1.0
+            },
+            {
+              "x": 1.0,
+              "y": 2.0
+            },
+            {
+              "x": 1.25,
+              "y": 1.0
+            },
+            {
+              "x": 1.5,
+              "y": 0.0
+            },
+            {
+              "x": 1.75,
+              "y": 1.0
+            },
+            {
+              "x": 2.0,
+              "y": 2.0
+            },
+            {
+              "x": 2.25,
+              "y": 1.0
+            }
+          ]
+        }
+      ],
+      "settings": {
+        "show_grid": true,
+        "show_axes": true,
+        "show_legend": false,
+        "show_point_labels": false,
+        "connect_points": true
+      }
+    }
+  ],
+  "statement_graphs": [
+    {
+      "diagram_type": "ex42_circuit",
+      "title": "الشكل 69",
+      "description": "الشكل 69",
+      "svg": "<svg viewBox=\"0 0 800 320\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"25\" y=\"20\" width=\"750\" height=\"260\" rx=\"18\" fill=\"white\" stroke=\"#cbd5e1\"/><path d=\"M130 80 H650 V240 H130 Z\" fill=\"none\" stroke=\"#111827\" stroke-width=\"5\"/><circle cx=\"130\" cy=\"160\" r=\"30\" fill=\"white\" stroke=\"#111827\" stroke-width=\"4\"/><text x=\"118\" y=\"168\" font-size=\"22\">E</text><rect x=\"250\" y=\"55\" width=\"100\" height=\"50\" fill=\"white\" stroke=\"#111827\" stroke-width=\"3\"/><text x=\"270\" y=\"87\" font-size=\"20\">R</text><line x1=\"430\" y1=\"80\" x2=\"430\" y2=\"130\" stroke=\"#111827\" stroke-width=\"5\"/><line x1=\"400\" y1=\"130\" x2=\"460\" y2=\"130\" stroke=\"#111827\" stroke-width=\"6\"/><line x1=\"400\" y1=\"165\" x2=\"460\" y2=\"165\" stroke=\"#111827\" stroke-width=\"6\"/><text x=\"475\" y=\"155\" font-size=\"22\">C/L</text><text x=\"560\" y=\"70\" font-size=\"20\">K</text></svg>",
+      "render_mode": "inline",
+      "responsive": true
+    },
+    {
+      "title": "الشكل 70 — طاقة المكثفة",
+      "description": "الشكل 70 — طاقة المكثفة",
+      "x_label": "t(s)",
+      "y_label": "EC(10^-3J)",
+      "x_domain": [
+        0,
+        3
+      ],
+      "y_domain": [
+        0,
+        2.2
+      ],
+      "series": [
+        {
+          "name": "EC",
+          "data": [
+            {
+              "x": 0,
+              "y": 0.0
+            },
+            {
+              "x": 0.25,
+              "y": 0.31
+            },
+            {
+              "x": 0.5,
+              "y": 0.799
+            },
+            {
+              "x": 0.75,
+              "y": 1.207
+            },
+            {
+              "x": 1,
+              "y": 1.495
+            },
+            {
+              "x": 1.5,
+              "y": 1.806
+            },
+            {
+              "x": 2,
+              "y": 1.927
+            },
+            {
+              "x": 3,
+              "y": 1.99
+            }
+          ]
+        }
+      ],
+      "settings": {
+        "show_grid": true,
+        "show_axes": true,
+        "show_legend": false,
+        "show_point_labels": false,
+        "connect_points": true
+      }
+    },
+    {
+      "title": "الشكل 71 — طاقة LC",
+      "description": "الشكل 71 — طاقة LC",
+      "x_label": "t(ms)",
+      "y_label": "EC(10^-3J)",
+      "x_domain": [
+        0,
+        2.25
+      ],
+      "y_domain": [
+        0,
+        2.2
+      ],
+      "series": [
+        {
+          "name": "EC",
+          "data": [
+            {
+              "x": 0.0,
+              "y": 2.0
+            },
+            {
+              "x": 0.25,
+              "y": 1.0
+            },
+            {
+              "x": 0.5,
+              "y": 0.0
+            },
+            {
+              "x": 0.75,
+              "y": 1.0
+            },
+            {
+              "x": 1.0,
+              "y": 2.0
+            },
+            {
+              "x": 1.25,
+              "y": 1.0
+            },
+            {
+              "x": 1.5,
+              "y": 0.0
+            },
+            {
+              "x": 1.75,
+              "y": 1.0
+            },
+            {
+              "x": 2.0,
+              "y": 2.0
+            },
+            {
+              "x": 2.25,
+              "y": 1.0
+            }
+          ]
+        }
+      ],
+      "settings": {
+        "show_grid": true,
+        "show_axes": true,
+        "show_legend": false,
+        "show_point_labels": false,
+        "connect_points": true
+      }
+    }
+  ]
+}

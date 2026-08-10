@@ -1,0 +1,363 @@
+{
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2011-electrical-verified",
+  "language": "ar",
+  "direction": "rtl",
+  "year": 2011,
+  "session": "ordinary",
+  "chapter_code": "electrical_phenomena_evolution",
+  "chapter_title": "تطور دراسة ظواهر كهربائية",
+  "exercise_number": 14,
+  "source_page": 5,
+  "source_pages": [
+    5,
+    6
+  ],
+  "solution_source_pages": [
+    26,
+    27
+  ],
+
+  "branches": [
+    {
+      "code": "math",
+      "name": "شعبة رياضيات"
+    },
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "title": "التمرين 14 — بكالوريا الجزائر 2011 — شعبة رياضيات وتقني رياضي",
+  "axis_tags": [
+    "rc_capacitor_charging",
+    "rc_capacitor_discharge",
+    "rc_differential_equation_solution",
+    "rc_time_constant_graphical_analysis"
+  ],
+  "questions": [
+    {
+      "id": "2011_elec_ex14_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "أولا: نضع البادلة على الوضع 1. 1) أ- أعد رسم الدارة مبينا جهة انتقال حامِلات الشحنة وطبيعتها، وحدد شحنة كل لبوس وجهة التيار. ب- ذكّر بالعلاقات بين \\(i(t)\\) و\\(q(t)\\)، وبين \\(q(t)\\) و\\(u_C(t)\\)، ثم استنتج العلاقة بين \\(i(t)\\) و\\(u_C(t)\\).",
+      "solution": {
+        "strategy": "نستعمل التعريفات الأساسية للمكثفة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حاملات الشحنة",
+            "explanation": "حاملات الشحنة في الأسلاك المعدنية هي الإلكترونات، وحركتها عكس اتجاه التيار الاصطلاحي."
+          },
+          {
+            "step_number": 2,
+            "title": "العلاقات",
+            "explanation": "\\[i(t)=\\frac{dq}{dt},\\qquad q(t)=C\\,u_C(t)\\] ومنه \\[\\boxed{i(t)=C\\frac{du_C}{dt}}\\]"
+          }
+        ],
+        "final_answer": "\\(i=dq/dt\\)، \\(q=Cu_C\\)، \\(i=Cdu_C/dt\\)."
+      }
+    },
+    {
+      "id": "2011_elec_ex14_q2",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2) أ- أوجد العلاقة بين \\(u_R(t)\\) و\\(u_C(t)\\)، وبيّن أن المعادلة التفاضلية التي يحققها \\(u_C(t)\\) من الشكل \\(\\tau_1\\frac{du_C}{dt}+u_C=A\\). ب- أوجد القيمة العددية لكل من \\(\\tau_1\\) و\\(A\\). ج- أوجد من المعادلة وحدة \\(\\tau_1\\) وعرّفه.",
+      "solution": {
+        "strategy": "نطبق قانون جمع التوترات أثناء الشحن.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "قانون التوترات",
+            "explanation": "\\[u_R+u_C=E\\Rightarrow RC\\frac{du_C}{dt}+u_C=E\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "الثوابت",
+            "explanation": "إذن \\[\\boxed{\\tau_1=RC=200\\times250\\times10^{-6}=0.05s},\\qquad \\boxed{A=E=6V}\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الوحدة والمدلول",
+            "explanation": "من المعادلة، \\([\\tau_1]=s\\). وهو ثابت الزمن: المدة اللازمة لبلوغ \\(u_C\\) نحو 63% من قيمته النهائية أثناء الشحن."
+          }
+        ],
+        "final_answer": "\\(\\tau_1=0.05s\\)، \\(A=6V\\)."
+      }
+    },
+    {
+      "id": "2011_elec_ex14_q3",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "3) أ- اقرأ على المنحنى (الشكل 19) قيمة ثابت الزمن \\(\\tau_1\\) وقارنها بالقيمة المحسوبة. ب- حدد بيانيا المدة الزمنية الصغرى \\(\\Delta t\\) اللازمة لاعتبار المكثفة عمليا مشحونة، وقارنها مع \\(\\tau_1\\).",
+      "solution": {
+        "strategy": "نستعمل قراءة 63% وقاعدة 5τ.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "ثابت الزمن",
+            "explanation": "بيانيا \\[\\boxed{\\tau_1=0.05s}\\] وهي مطابقة للقيمة المحسوبة."
+          },
+          {
+            "step_number": 2,
+            "title": "اكتمال الشحن",
+            "explanation": "بيانيا \\[\\boxed{\\Delta t=0.25s}\\] وبالتالي \\[\\boxed{\\Delta t=5\\tau_1}\\]"
+          }
+        ],
+        "final_answer": "\\(\\tau_1=0.05s\\)، \\(\\Delta t=0.25s=5\\tau_1\\)."
+      }
+    },
+    {
+      "id": "2011_elec_ex14_q4",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "ثانيا: نضع البادلة على الوضع 2. أ- ما الظاهرة الفيزيائية التي تحدث؟ اكتب المعادلة التفاضلية الموافقة لـ \\(u_C(t)\\). ب- احسب \\(\\tau_2\\) وقارنها بـ \\(\\tau_1\\). ماذا تستنتج؟ ج- مثل بشكل تقريبي منحنى تغير \\(u_C(t)\\).",
+      "solution": {
+        "strategy": "في الوضع 2 تفرغ المكثفة عبر الناقلين الأوميين، أي المقاومة المكافئة 2R.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الظاهرة والمعادلة",
+            "explanation": "تحدث ظاهرة تفريغ المكثفة. \\[\\boxed{2RC\\frac{du_C}{dt}+u_C=0}\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "ثابت الزمن",
+            "explanation": "\\[\\tau_2=2RC=\\boxed{0.10s}=2\\tau_1\\] إذن مدة التفريغ المميزة ضعف مدة الشحن."
+          },
+          {
+            "step_number": 3,
+            "title": "المنحنى",
+            "explanation": "يبدأ من \\(E=6V\\) ويتناقص أسيا نحو الصفر.",
+            "graph_data": {
+              "title": "منحنى التفريغ التقريبي",
+              "description": "تفريغ أسي بثابت زمن 0.10s.",
+              "x_label": "t (s)",
+              "y_label": "u_C (V)",
+              "x_domain": [
+                0,
+                0.5
+              ],
+              "y_domain": [
+                0,
+                6.5
+              ],
+              "series": [
+                {
+                  "name": "u_C",
+                  "data": [
+                    {
+                      "x": 0,
+                      "y": 6.0
+                    },
+                    {
+                      "x": 0.05,
+                      "y": 3.639
+                    },
+                    {
+                      "x": 0.1,
+                      "y": 2.207
+                    },
+                    {
+                      "x": 0.15,
+                      "y": 1.339
+                    },
+                    {
+                      "x": 0.2,
+                      "y": 0.812
+                    },
+                    {
+                      "x": 0.3,
+                      "y": 0.299
+                    },
+                    {
+                      "x": 0.4,
+                      "y": 0.11
+                    },
+                    {
+                      "x": 0.5,
+                      "y": 0.04
+                    }
+                  ]
+                }
+              ],
+              "settings": {
+                "show_grid": true,
+                "show_axes": true,
+                "show_legend": false,
+                "show_point_labels": false,
+                "connect_points": true
+              }
+            }
+          }
+        ],
+        "final_answer": "\\(\\tau_2=0.10s=2\\tau_1\\)."
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "تجميعية_عمورة_للبكالوريات_السابقة_الوحدة_3(1).pdf",
+    "statement_figure_policy": "الشكل الموجود في الموضوع يظهر مع نص التمرين. الرسم الذي يطلب السؤال إنشاؤه لا يظهر قبل الحل.",
+    "solution_figure_policy": "الرسم المطلوب أو المساعد يوضع داخل خطوة الحل فقط.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  },
+  "statement": "نحقق الدارة (الشكل–18) والتي تتكون من مولد لتوتر ثابت \\(E=6.0V\\)، ومكثفة سعتها \\(C=250\\mu F\\)، وناقلين أوميين متماثلين مقاومة كل منهما \\(R=200\\Omega\\)، وبادلة \\(K\\). ندرس أولا الشحن في الوضع (1)، ثم التفريغ في الوضع (2).",
+  "figures": [
+    {
+      "diagram_type": "bac_2011_ex14_statement_circuit",
+      "title": "الشكل 18 — الدارة",
+      "description": "دارة ذات بادلة وناقلين أوميين متماثلين.",
+      "svg": "<svg viewBox=\"0 0 800 360\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M120 80 H650\" stroke=\"#111827\" stroke-width=\"5\" fill=\"none\"/>\n<path d=\"M120 270 H650\" stroke=\"#111827\" stroke-width=\"5\" fill=\"none\"/>\n<line x1=\"120\" y1=\"80\" x2=\"120\" y2=\"270\" stroke=\"#111827\" stroke-width=\"5\"/>\n<circle cx=\"120\" cy=\"175\" r=\"32\" fill=\"white\" stroke=\"#111827\" stroke-width=\"4\"/><text x=\"109\" y=\"183\" font-size=\"24\">E</text>\n<line x1=\"360\" y1=\"80\" x2=\"360\" y2=\"135\" stroke=\"#111827\" stroke-width=\"5\"/>\n<line x1=\"330\" y1=\"135\" x2=\"390\" y2=\"135\" stroke=\"#111827\" stroke-width=\"6\"/>\n<line x1=\"330\" y1=\"170\" x2=\"390\" y2=\"170\" stroke=\"#111827\" stroke-width=\"6\"/>\n<line x1=\"360\" y1=\"170\" x2=\"360\" y2=\"205\" stroke=\"#111827\" stroke-width=\"5\"/>\n<rect x=\"320\" y=\"205\" width=\"80\" height=\"50\" rx=\"5\" fill=\"white\" stroke=\"#111827\" stroke-width=\"3\"/><text x=\"350\" y=\"238\" font-size=\"23\">R</text>\n<rect x=\"570\" y=\"165\" width=\"80\" height=\"50\" rx=\"5\" fill=\"white\" stroke=\"#111827\" stroke-width=\"3\"/><text x=\"600\" y=\"198\" font-size=\"23\">R</text>\n<circle cx=\"300\" cy=\"80\" r=\"5\"/><circle cx=\"420\" cy=\"80\" r=\"5\"/><line x1=\"300\" y1=\"80\" x2=\"350\" y2=\"50\" stroke=\"#111827\" stroke-width=\"5\"/>\n<line x1=\"420\" y1=\"80\" x2=\"470\" y2=\"50\" stroke=\"#111827\" stroke-width=\"5\"/><text x=\"365\" y=\"42\" font-size=\"23\">K: 1 / 2</text><text x=\"405\" y=\"155\" font-size=\"23\">C</text>\n</svg>",
+      "render_mode": "inline",
+      "responsive": true
+    },
+    {
+      "title": "الشكل 19 — u_C=f(t)",
+      "description": "منحنى شحن المكثفة في الوضع 1؛ منه τ₁≈0.05s.",
+      "x_label": "t (s)",
+      "y_label": "u_C (V)",
+      "x_domain": [
+        0,
+        0.35
+      ],
+      "y_domain": [
+        0,
+        6.5
+      ],
+      "series": [
+        {
+          "name": "u_C",
+          "data": [
+            {
+              "x": 0,
+              "y": 0.0
+            },
+            {
+              "x": 0.025,
+              "y": 2.361
+            },
+            {
+              "x": 0.05,
+              "y": 3.793
+            },
+            {
+              "x": 0.075,
+              "y": 4.661
+            },
+            {
+              "x": 0.1,
+              "y": 5.188
+            },
+            {
+              "x": 0.15,
+              "y": 5.701
+            },
+            {
+              "x": 0.2,
+              "y": 5.89
+            },
+            {
+              "x": 0.25,
+              "y": 5.96
+            },
+            {
+              "x": 0.3,
+              "y": 5.985
+            },
+            {
+              "x": 0.35,
+              "y": 5.995
+            }
+          ]
+        }
+      ],
+      "settings": {
+        "show_grid": true,
+        "show_axes": true,
+        "show_legend": false,
+        "show_point_labels": false,
+        "connect_points": true
+      }
+    }
+  ],
+  "statement_graphs": [
+    {
+      "diagram_type": "bac_2011_ex14_statement_circuit",
+      "title": "الشكل 18 — الدارة",
+      "description": "دارة ذات بادلة وناقلين أوميين متماثلين.",
+      "svg": "<svg viewBox=\"0 0 800 360\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M120 80 H650\" stroke=\"#111827\" stroke-width=\"5\" fill=\"none\"/>\n<path d=\"M120 270 H650\" stroke=\"#111827\" stroke-width=\"5\" fill=\"none\"/>\n<line x1=\"120\" y1=\"80\" x2=\"120\" y2=\"270\" stroke=\"#111827\" stroke-width=\"5\"/>\n<circle cx=\"120\" cy=\"175\" r=\"32\" fill=\"white\" stroke=\"#111827\" stroke-width=\"4\"/><text x=\"109\" y=\"183\" font-size=\"24\">E</text>\n<line x1=\"360\" y1=\"80\" x2=\"360\" y2=\"135\" stroke=\"#111827\" stroke-width=\"5\"/>\n<line x1=\"330\" y1=\"135\" x2=\"390\" y2=\"135\" stroke=\"#111827\" stroke-width=\"6\"/>\n<line x1=\"330\" y1=\"170\" x2=\"390\" y2=\"170\" stroke=\"#111827\" stroke-width=\"6\"/>\n<line x1=\"360\" y1=\"170\" x2=\"360\" y2=\"205\" stroke=\"#111827\" stroke-width=\"5\"/>\n<rect x=\"320\" y=\"205\" width=\"80\" height=\"50\" rx=\"5\" fill=\"white\" stroke=\"#111827\" stroke-width=\"3\"/><text x=\"350\" y=\"238\" font-size=\"23\">R</text>\n<rect x=\"570\" y=\"165\" width=\"80\" height=\"50\" rx=\"5\" fill=\"white\" stroke=\"#111827\" stroke-width=\"3\"/><text x=\"600\" y=\"198\" font-size=\"23\">R</text>\n<circle cx=\"300\" cy=\"80\" r=\"5\"/><circle cx=\"420\" cy=\"80\" r=\"5\"/><line x1=\"300\" y1=\"80\" x2=\"350\" y2=\"50\" stroke=\"#111827\" stroke-width=\"5\"/>\n<line x1=\"420\" y1=\"80\" x2=\"470\" y2=\"50\" stroke=\"#111827\" stroke-width=\"5\"/><text x=\"365\" y=\"42\" font-size=\"23\">K: 1 / 2</text><text x=\"405\" y=\"155\" font-size=\"23\">C</text>\n</svg>",
+      "render_mode": "inline",
+      "responsive": true
+    },
+    {
+      "title": "الشكل 19 — u_C=f(t)",
+      "description": "منحنى شحن المكثفة في الوضع 1؛ منه τ₁≈0.05s.",
+      "x_label": "t (s)",
+      "y_label": "u_C (V)",
+      "x_domain": [
+        0,
+        0.35
+      ],
+      "y_domain": [
+        0,
+        6.5
+      ],
+      "series": [
+        {
+          "name": "u_C",
+          "data": [
+            {
+              "x": 0,
+              "y": 0.0
+            },
+            {
+              "x": 0.025,
+              "y": 2.361
+            },
+            {
+              "x": 0.05,
+              "y": 3.793
+            },
+            {
+              "x": 0.075,
+              "y": 4.661
+            },
+            {
+              "x": 0.1,
+              "y": 5.188
+            },
+            {
+              "x": 0.15,
+              "y": 5.701
+            },
+            {
+              "x": 0.2,
+              "y": 5.89
+            },
+            {
+              "x": 0.25,
+              "y": 5.96
+            },
+            {
+              "x": 0.3,
+              "y": 5.985
+            },
+            {
+              "x": 0.35,
+              "y": 5.995
+            }
+          ]
+        }
+      ],
+      "settings": {
+        "show_grid": true,
+        "show_axes": true,
+        "show_legend": false,
+        "show_point_labels": false,
+        "connect_points": true
+      }
+    }
+  ]
+}

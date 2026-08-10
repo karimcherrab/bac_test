@@ -1,0 +1,272 @@
+{
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2016-electrical-verified",
+  "language": "ar",
+  "direction": "rtl",
+  "year": 2016,
+  "session": "ordinary",
+  "chapter_code": "electrical_phenomena_evolution",
+  "chapter_title": "تطور دراسة ظواهر كهربائية",
+  "exercise_number": 36,
+  "source_page": 14,
+  "source_pages": [
+    14
+  ],
+  "solution_source_pages": [
+    34,
+    35
+  ],
+
+  "branches": [
+    {
+      "code": "math",
+      "name": "شعبة رياضيات"
+    },
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "title": "التمرين 36 — بكالوريا الجزائر 2016 — شعبة رياضيات وتقني رياضي",
+  "axis_tags": [
+    "rc_capacitor_charging",
+    "rc_current_differential_equation",
+    "rc_time_constant_graphical_analysis",
+    "rc_energy"
+  ],
+  "questions": [
+    {
+      "id": "2016_elec_ex36_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) أ- أعط تفسيراً مجهرياً للظاهرة التي تحدث في المكثفة. ب- جد المعادلة التفاضلية للشدة \\(i(t)\\). ج- إذا كان \\(i(t)=\\alpha e^{-\\beta t}\\)، جد \\(\\alpha\\) و\\(\\beta\\).",
+      "solution": {
+        "strategy": "نفسر الشحن ثم نطبق قانون التوترات.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التفسير",
+            "explanation": "عند غلق القاطعة تنتقل الإلكترونات وتتراكم شحنتان متعاكستان على لبوسي المكثفة، فيزداد توترها تدريجياً حتى يبلغ E ويتوقف التيار."
+          },
+          {
+            "step_number": 2,
+            "title": "المعادلة",
+            "explanation": "\\[(R_1+R_2)i+u_C=E\\Rightarrow \\boxed{\\frac{di}{dt}+\\frac{1}{(R_1+R_2)C}i=0}\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الثابتان",
+            "explanation": "\\[\\boxed{\\alpha=\\frac{E}{R_1+R_2}},\\qquad \\boxed{\\beta=\\frac1{(R_1+R_2)C}}\\]"
+          }
+        ],
+        "final_answer": "\\(\\alpha=E/(R_1+R_2),\\beta=1/((R_1+R_2)C)\\)."
+      }
+    },
+    {
+      "id": "2016_elec_ex36_q2",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2) اعتماداً على البيان أوجد قيمة كل من ثابت الزمن \\(\\tau\\)، سعة المكثفة \\(C\\)، والتوتر \\(E\\).",
+      "solution": {
+        "strategy": "نقرأ τ وI0 من البيان.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "τ",
+            "explanation": "من البيان: \\(\\boxed{\\tau=0.5s}\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "C",
+            "explanation": "\\[C=\\frac\\tau{R_1+R_2}=\\frac{0.5}{5000}=\\boxed{100\\mu F}\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "E",
+            "explanation": "\\(I_0=2mA\\)، إذن \\[E=(R_1+R_2)I_0=5000(2\\times10^{-3})=\\boxed{10V}\\]"
+          }
+        ],
+        "final_answer": "\\(\\tau=0.5s,C=100\\mu F,E=10V\\)."
+      }
+    },
+    {
+      "id": "2016_elec_ex36_q3",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "3) أعط العبارة اللحظية للطاقة المخزنة في المكثفة \\(E_C(t)\\) واحسب قيمتها العظمى.",
+      "solution": {
+        "strategy": "نستعمل uC=E(1-e^-t/τ).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "العبارة",
+            "explanation": "\\[\\boxed{E_C(t)=\\frac12CE^2(1-e^{-t/\\tau})^2}\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "العظمى",
+            "explanation": "\\[E_{C,max}=\\frac12CE^2=\\frac12(100\\times10^{-6})(10)^2=\\boxed{5\\times10^{-3}J}\\]"
+          }
+        ],
+        "final_answer": "\\(E_{C,max}=5\\times10^{-3}J\\)."
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "تجميعية_عمورة_للبكالوريات_السابقة_الوحدة_3(1).pdf",
+    "statement_figure_policy": "كل شكل أو بيان معطى في الموضوع يوضع مع نص التمرين. الرسم المطلوب من التلميذ يوضع داخل الحل فقط.",
+    "solution_figure_policy": "الرسم الذي يمثل إجابة سؤال أو توصيل جهاز قياس يوضع داخل خطوات الحل.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  },
+  "statement": "نربط مكثفة غير مشحونة سعتها \\(C\\) على التسلسل مع مولد توتر ثابت \\(E\\)، قاطعة \\(K\\)، وناقلين أوميين \\(R_1=1k\\Omega\\) و\\(R_2=4k\\Omega\\) كما في الشكل 57. نغلق القاطعة عند \\(t=0\\). بواسطة لاقط شدة التيار نحصل على منحنى الشكل 58.",
+  "figures": [
+    {
+      "diagram_type": "ex36_statement_circuit",
+      "title": "الشكل 57 — الدارة",
+      "description": "دارة RC بمقاومتين على التسلسل.",
+      "svg": "<svg viewBox=\"0 0 820 360\" xmlns=\"http://www.w3.org/2000/svg\">\n    <path d=\"M140 80 H650 V285 H140 Z\" fill=\"none\" stroke=\"#111827\" stroke-width=\"5\"/>\n    <circle cx=\"140\" cy=\"185\" r=\"30\" fill=\"white\" stroke=\"#111827\" stroke-width=\"4\"/><text x=\"130\" y=\"193\" font-size=\"22\">E</text>\n    <line x1=\"245\" y1=\"80\" x2=\"290\" y2=\"80\" stroke=\"#111827\" stroke-width=\"5\"/><line x1=\"315\" y1=\"80\" x2=\"360\" y2=\"80\" stroke=\"#111827\" stroke-width=\"5\"/><line x1=\"290\" y1=\"80\" x2=\"318\" y2=\"56\" stroke=\"#111827\" stroke-width=\"5\"/><text x=\"295\" y=\"45\" font-size=\"21\">K</text>\n    <rect x=\"400\" y=\"55\" width=\"100\" height=\"50\" rx=\"5\" fill=\"white\" stroke=\"#111827\" stroke-width=\"3\"/><text x=\"430\" y=\"87\" font-size=\"20\">R₁=1kΩ</text>\n    <line x1=\"610\" y1=\"80\" x2=\"610\" y2=\"145\" stroke=\"#111827\" stroke-width=\"5\"/><line x1=\"580\" y1=\"145\" x2=\"640\" y2=\"145\" stroke=\"#111827\" stroke-width=\"6\"/><line x1=\"580\" y1=\"180\" x2=\"640\" y2=\"180\" stroke=\"#111827\" stroke-width=\"6\"/><line x1=\"610\" y1=\"180\" x2=\"610\" y2=\"285\" stroke=\"#111827\" stroke-width=\"5\"/><text x=\"655\" y=\"170\" font-size=\"22\">C</text><rect x=\"525\" y=\"225\" width=\"100\" height=\"45\" rx=\"5\" fill=\"white\" stroke=\"#111827\" stroke-width=\"3\"/><text x=\"555\" y=\"254\" font-size=\"20\">R₂</text></svg>",
+      "render_mode": "inline",
+      "responsive": true
+    },
+    {
+      "title": "الشكل 58 — i=f(t)",
+      "description": "تطور شدة التيار أثناء شحن المكثفة.",
+      "x_label": "t (s)",
+      "y_label": "i (mA)",
+      "x_domain": [
+        0,
+        3
+      ],
+      "y_domain": [
+        0,
+        2.2
+      ],
+      "series": [
+        {
+          "name": "i",
+          "data": [
+            {
+              "x": 0,
+              "y": 2.0
+            },
+            {
+              "x": 0.25,
+              "y": 1.213
+            },
+            {
+              "x": 0.5,
+              "y": 0.736
+            },
+            {
+              "x": 0.75,
+              "y": 0.446
+            },
+            {
+              "x": 1,
+              "y": 0.271
+            },
+            {
+              "x": 1.5,
+              "y": 0.1
+            },
+            {
+              "x": 2,
+              "y": 0.037
+            },
+            {
+              "x": 2.5,
+              "y": 0.013
+            },
+            {
+              "x": 3,
+              "y": 0.005
+            }
+          ]
+        }
+      ],
+      "settings": {
+        "show_grid": true,
+        "show_axes": true,
+        "show_legend": false,
+        "show_point_labels": false,
+        "connect_points": true
+      }
+    }
+  ],
+  "statement_graphs": [
+    {
+      "diagram_type": "ex36_statement_circuit",
+      "title": "الشكل 57 — الدارة",
+      "description": "دارة RC بمقاومتين على التسلسل.",
+      "svg": "<svg viewBox=\"0 0 820 360\" xmlns=\"http://www.w3.org/2000/svg\">\n    <path d=\"M140 80 H650 V285 H140 Z\" fill=\"none\" stroke=\"#111827\" stroke-width=\"5\"/>\n    <circle cx=\"140\" cy=\"185\" r=\"30\" fill=\"white\" stroke=\"#111827\" stroke-width=\"4\"/><text x=\"130\" y=\"193\" font-size=\"22\">E</text>\n    <line x1=\"245\" y1=\"80\" x2=\"290\" y2=\"80\" stroke=\"#111827\" stroke-width=\"5\"/><line x1=\"315\" y1=\"80\" x2=\"360\" y2=\"80\" stroke=\"#111827\" stroke-width=\"5\"/><line x1=\"290\" y1=\"80\" x2=\"318\" y2=\"56\" stroke=\"#111827\" stroke-width=\"5\"/><text x=\"295\" y=\"45\" font-size=\"21\">K</text>\n    <rect x=\"400\" y=\"55\" width=\"100\" height=\"50\" rx=\"5\" fill=\"white\" stroke=\"#111827\" stroke-width=\"3\"/><text x=\"430\" y=\"87\" font-size=\"20\">R₁=1kΩ</text>\n    <line x1=\"610\" y1=\"80\" x2=\"610\" y2=\"145\" stroke=\"#111827\" stroke-width=\"5\"/><line x1=\"580\" y1=\"145\" x2=\"640\" y2=\"145\" stroke=\"#111827\" stroke-width=\"6\"/><line x1=\"580\" y1=\"180\" x2=\"640\" y2=\"180\" stroke=\"#111827\" stroke-width=\"6\"/><line x1=\"610\" y1=\"180\" x2=\"610\" y2=\"285\" stroke=\"#111827\" stroke-width=\"5\"/><text x=\"655\" y=\"170\" font-size=\"22\">C</text><rect x=\"525\" y=\"225\" width=\"100\" height=\"45\" rx=\"5\" fill=\"white\" stroke=\"#111827\" stroke-width=\"3\"/><text x=\"555\" y=\"254\" font-size=\"20\">R₂</text></svg>",
+      "render_mode": "inline",
+      "responsive": true
+    },
+    {
+      "title": "الشكل 58 — i=f(t)",
+      "description": "تطور شدة التيار أثناء شحن المكثفة.",
+      "x_label": "t (s)",
+      "y_label": "i (mA)",
+      "x_domain": [
+        0,
+        3
+      ],
+      "y_domain": [
+        0,
+        2.2
+      ],
+      "series": [
+        {
+          "name": "i",
+          "data": [
+            {
+              "x": 0,
+              "y": 2.0
+            },
+            {
+              "x": 0.25,
+              "y": 1.213
+            },
+            {
+              "x": 0.5,
+              "y": 0.736
+            },
+            {
+              "x": 0.75,
+              "y": 0.446
+            },
+            {
+              "x": 1,
+              "y": 0.271
+            },
+            {
+              "x": 1.5,
+              "y": 0.1
+            },
+            {
+              "x": 2,
+              "y": 0.037
+            },
+            {
+              "x": 2.5,
+              "y": 0.013
+            },
+            {
+              "x": 3,
+              "y": 0.005
+            }
+          ]
+        }
+      ],
+      "settings": {
+        "show_grid": true,
+        "show_axes": true,
+        "show_legend": false,
+        "show_point_labels": false,
+        "connect_points": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,151 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.1-bac-source-faithful",
+  "version": "4.1-verified-statement-and-solution-figures",
+  "session": "ordinary",
+  "year": 2017,
+  "chapter_code": "mechanical_system_evolution",
+  "chapter_title": "تطور جملة ميكانيكية",
+  "exercise_number": 50,
+
+  "branches": [
+    {
+      "code": "math",
+      "name": "شعبة رياضيات"
+    },
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "axis_tags": [
+    "satellites_planets_kepler"
+  ],
+  "source_pages": [
+    19
+  ],
+  "solution_source_pages": [
+    44
+  ],
+  "title": "التمرين 50 — بكالوريا 2017 — أقمار Galileo",
+  "statement": "لمنافسة النظام الأمريكي في التموقع الدقيق GPS والتحرر منه، وضع الاتحاد الأوروبي نظامه الخاص المسمى Galileo والمتكون من 30 قمرًا اصطناعيًا، يرسم كل واحد منها مسارًا يمكن اعتباره دائريًا حول الأرض على ارتفاع \\(h=23616\\,km\\) من سطحها. تتم دراسة حركة أحد الأقمار الاصطناعية \\((S)\\) في المرجع المركزي الأرضي الذي يمكن اعتباره غاليليًا.\n\n1- اكتب العبارة الشعاعية لقوة جذب الأرض المؤثرة على القمر بدلالة \\(G,M_T,m_S,R_T,h\\)، ومثلها على الشكل.\n2- أ- بتطبيق القانون الثاني لنيوتن، أوجد عبارة السرعة المدارية ثم احسبها.\nب- اكتب عبارة الدور \\(T\\) بدلالة \\(R_T,h,v\\)، ثم احسبه.\nج- هل يمكن اعتبار القمر جيومستقرًا؟ برر.\n\nيعطى: \\(M_T=5.972\\times10^{24}\\,kg\\)، \\(R_T=6371\\,km\\)، \\(G=6.67\\times10^{-11}\\,SI\\).",
+  "questions": [
+    {
+      "id": "2017_ex50_q1",
+      "text": "1) اكتب العبارة الشعاعية لقوة الجذب ومثلها.",
+      "axis_tags": [
+        "satellites_planets_kepler"
+      ],
+      "display_order": 1,
+      "content_type": "question",
+      "solution": {
+        "strategy": "نستعمل قانون الجذب العام.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "العبارة",
+            "explanation": "\\[\\vec F_{T/S}=-G\\frac{M_Tm_S}{(R_T+h)^2}\\vec n\\] حيث \\(\\vec n\\) موجه من مركز الأرض نحو القمر.",
+            "graph_data": {
+              "diagram_type": "galileo_force_2017",
+              "title": "تمثيل قوة جذب الأرض للقمر",
+              "description": "كما في التصحيح: قوة الجذب F(T/S) موجهة من القمر نحو مركز الأرض."
+            }
+          },
+          {
+            "step_number": 2,
+            "title": "الاتجاه",
+            "explanation": "القوة مطبقة في مركز عطالة القمر وموجهة نحو مركز الأرض."
+          }
+        ],
+        "final_answer": "\\(\\vec F_{T/S}=-G\\dfrac{M_Tm_S}{(R_T+h)^2}\\vec n\\).",
+        "verification": "",
+        "common_mistakes": [],
+        "hints": [],
+        "methodology": {
+          "goal": "حل السؤال بدقة وبطريقة بسيطة ومنظمة.",
+          "method": "تحديد الجملة والمرجع، جرد القوى، كتابة القانون الحرفي، تحويل الوحدات، التعويض، ثم الاستنتاج.",
+          "bac_template": [
+            "تحديد الجملة الميكانيكية والمرجع والمعلم.",
+            "تمثيل القوى الخارجية واتجاهاتها.",
+            "كتابة القانون أو العلاقة قبل التعويض.",
+            "تحويل الوحدات إلى النظام الدولي.",
+            "إجراء الحساب وكتابة الوحدة.",
+            "صياغة استنتاج فيزيائي واضح."
+          ]
+        }
+      }
+    },
+    {
+      "id": "2017_ex50_q2",
+      "text": "2) احسب السرعة المدارية والدور، ثم تحقق هل القمر جيومستقر.",
+      "axis_tags": [
+        "satellites_planets_kepler"
+      ],
+      "display_order": 2,
+      "content_type": "question",
+      "solution": {
+        "strategy": "نساوي قوة الجذب بالتسارع الناظمي ثم نحسب الدور.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "السرعة",
+            "explanation": "\\[v=\\sqrt{\\frac{GM_T}{R_T+h}}\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "القيمة",
+            "explanation": "\\[v\\approx3644.65\\,m\\,s^{-1}\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الدور",
+            "explanation": "\\[T=\\frac{2\\pi(R_T+h)}{v}\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "القيمة",
+            "explanation": "\\[T\\approx51696\\,s\\approx14.36\\,h\\]"
+          },
+          {
+            "step_number": 5,
+            "title": "الاستنتاج",
+            "explanation": "الدور لا يساوي 24 h، لذلك القمر غير جيومستقر."
+          }
+        ],
+        "final_answer": "\\(v\\approx3645\\,m/s\\)، \\(T\\approx14.36\\,h\\)، والقمر غير جيومستقر.",
+        "verification": "مطابق للحل الموجود في التجميعية.",
+        "common_mistakes": [
+          "استعمال h بدل R+h."
+        ],
+        "hints": [],
+        "methodology": {
+          "goal": "حل السؤال بدقة وبطريقة بسيطة ومنظمة.",
+          "method": "تحديد الجملة والمرجع، جرد القوى، كتابة القانون الحرفي، تحويل الوحدات، التعويض، ثم الاستنتاج.",
+          "bac_template": [
+            "تحديد الجملة الميكانيكية والمرجع والمعلم.",
+            "تمثيل القوى الخارجية واتجاهاتها.",
+            "كتابة القانون أو العلاقة قبل التعويض.",
+            "تحويل الوحدات إلى النظام الدولي.",
+            "إجراء الحساب وكتابة الوحدة.",
+            "صياغة استنتاج فيزيائي واضح."
+          ]
+        }
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "statement_figure_policy": "يعرض فقط الشكل أو البيان الموجود فعلا في نص البكالوريا.",
+    "solution_figure_policy": "يعرض الرسم الموجود في التصحيح أو الرسم المطلوب صراحة لإنجاز السؤال.",
+    "renderer": "GraphRenderer"
+  },
+  "statement_graphs": [
+    {
+      "diagram_type": "galileo_orbit_2017",
+      "title": "الشكل 57 — قمر Galileo حول الأرض",
+      "description": "الأرض T بنصف القطر RT وكتلتها MT، القمر S على ارتفاع h، والشعاع الناظمي نحو المركز."
+    }
+  ]
+}

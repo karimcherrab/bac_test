@@ -74,10 +74,11 @@ class Command(BaseCommand):
         parser.add_argument(
             "--chapter-code",
             type=str,
-            default="sequences",
+            default=None,
             help=(
-                "Code du chapitre auquel rattacher les exercices. "
-                "Valeur par défaut : sequences."
+                "Override optionnel du chapitre pour tous les fichiers. "
+                "Sans cette option, chaque fichier utilise son propre "
+                "champ chapter_code."
             ),
         )
 
@@ -100,7 +101,9 @@ class Command(BaseCommand):
         create_missing_branches = options[
             "create_missing_branches"
         ]
-        chapter_code = options["chapter_code"].strip()
+        chapter_code_override = options.get("chapter_code")
+        if isinstance(chapter_code_override, str):
+            chapter_code_override = chapter_code_override.strip() or None
 
         if not folder.exists():
             raise CommandError(
@@ -112,14 +115,9 @@ class Command(BaseCommand):
                 f"Le chemin n'est pas un dossier : {folder}"
             )
 
-        if not chapter_code:
-            raise CommandError(
-                "Le code du chapitre ne peut pas être vide."
-            )
-
-        chapter = self.get_chapter(
-            chapter_code=chapter_code,
-        )
+        # Le chapitre n'est plus résolu globalement ici.
+        # Par défaut, chaque JSON choisit son chapitre via chapter_code.
+        # --chapter-code reste disponible uniquement comme override global.
 
         # Vérifie avant l'import que la table intermédiaire
         # du ManyToManyField ExerciseBac.branches existe.
@@ -138,13 +136,6 @@ class Command(BaseCommand):
             raise CommandError(
                 f"Aucun fichier JSON trouvé dans : {folder}"
             )
-
-        self.stdout.write(
-            self.style.MIGRATE_HEADING(
-                "Chapitre sélectionné : "
-                f"{chapter.title} ({chapter.code})"
-            )
-        )
 
         self.stdout.write(
             self.style.MIGRATE_HEADING(
@@ -167,7 +158,7 @@ class Command(BaseCommand):
                     json_file=json_file,
                     update_existing=update_existing,
                     dry_run=dry_run,
-                    chapter=chapter,
+                    chapter_code_override=chapter_code_override,
                     create_missing_branches=(
                         create_missing_branches
                     ),
@@ -261,21 +252,26 @@ class Command(BaseCommand):
         self,
         chapter_code: str,
     ) -> Chapter:
+        normalized_code = chapter_code.strip().lower()
+
         try:
             return (
                 Chapter.objects
                 .select_related("subject")
-                .get(code=chapter_code)
+                .get(code=normalized_code)
             )
         except Chapter.DoesNotExist as exc:
             raise CommandError(
                 "Le chapitre avec le code "
-                f"'{chapter_code}' est introuvable."
+                f"'{normalized_code}' est introuvable. "
+                "Vérifiez Chapter.code dans la base et le "
+                "champ chapter_code du JSON."
             ) from exc
         except Chapter.MultipleObjectsReturned as exc:
             raise CommandError(
                 "Plusieurs chapitres utilisent le code "
-                f"'{chapter_code}'. Le code doit être unique."
+                f"'{normalized_code}'. Chapter.code doit être "
+                "unique pour permettre un ingest fiable."
             ) from exc
 
     def import_file(
@@ -283,7 +279,7 @@ class Command(BaseCommand):
         json_file: Path,
         update_existing: bool,
         dry_run: bool,
-        chapter: Chapter,
+        chapter_code_override: str | None,
         create_missing_branches: bool,
     ) -> dict[str, Any]:
         data = self.read_json_file(
@@ -297,6 +293,27 @@ class Command(BaseCommand):
 
         code = normalized_data["code"]
         branch_specs = normalized_data["branches"]
+
+        json_chapter_code = normalized_data["chapter_code"]
+        selected_chapter_code = (
+            chapter_code_override or json_chapter_code
+        )
+
+        chapter = self.get_chapter(
+            chapter_code=selected_chapter_code,
+        )
+
+        if (
+            chapter_code_override
+            and chapter_code_override != json_chapter_code
+        ):
+            self.stdout.write(
+                self.style.WARNING(
+                    f"[OVERRIDE CHAPITRE] {json_file.name}: "
+                    f"JSON={json_chapter_code} -> "
+                    f"utilisé={chapter_code_override}"
+                )
+            )
 
         existing_exercise = (
             ExerciseBac.objects
@@ -569,12 +586,26 @@ class Command(BaseCommand):
         source_page = data.get(
             "source_page"
         )
+        chapter_code = data.get("chapter_code")
 
         branch_specs = self.extract_branch_specs(
             data=data,
         )
 
         errors: list[str] = []
+
+        if not isinstance(chapter_code, str) or not chapter_code.strip():
+            errors.append(
+                "chapter_code est obligatoire et doit être une chaîne non vide."
+            )
+        elif not re.fullmatch(
+            r"[a-z0-9_-]+",
+            chapter_code.strip().lower(),
+        ):
+            errors.append(
+                "chapter_code invalide. Utilisez uniquement "
+                "a-z, 0-9, _ ou -."
+            )
 
         if not isinstance(year, int):
             errors.append(
@@ -715,6 +746,8 @@ class Command(BaseCommand):
                 f"- {formatted_errors}"
             )
 
+        normalized_chapter_code = chapter_code.strip().lower()
+
         normalized_axis_tags = self.normalize_string_list(
             values=axis_tags,
         )
@@ -727,6 +760,7 @@ class Command(BaseCommand):
 
         code = self.normalize_code(
             value=data.get("code"),
+            chapter_code=normalized_chapter_code,
             year=year,
             exercise_number=exercise_number,
             branch_codes=[
@@ -751,6 +785,7 @@ class Command(BaseCommand):
         normalized_content.pop("branch_code", None)
 
         normalized_content["code"] = code
+        normalized_content["chapter_code"] = normalized_chapter_code
         normalized_content["branch_codes"] = [
             item["code"]
             for item in branch_specs
@@ -776,6 +811,7 @@ class Command(BaseCommand):
 
         return {
             "code": code,
+            "chapter_code": normalized_chapter_code,
             "branches": canonical_branches,
             "year": year,
             "exercise_number": exercise_number,
@@ -913,25 +949,42 @@ class Command(BaseCommand):
     def normalize_code(
         self,
         value: Any,
+        chapter_code: str,
         year: int,
         exercise_number: int,
         branch_codes: list[str],
     ) -> str:
-        if isinstance(value, str) and value.strip():
-            code = value.strip()
-        else:
-            branch_part = "_".join(
-                sorted(branch_codes)
-            )
+        """
+        Génère toujours un code canonique unique qui contient
+        la/les filière(s), le chapitre, l'année et le numéro
+        de l'exercice.
 
-            code = (
-                f"bac_{branch_part}_{year}_"
-                f"exercise_{exercise_number:02d}"
-            )
+        Exemple :
+        bac_science_electrical_phenomena_evolution_2008_exercise_03
+
+        Le champ ``code`` éventuellement présent dans le JSON
+        n'est volontairement pas réutilisé afin d'éviter de
+        conserver un ancien format sans chapitre.
+        """
+        branch_part = "_".join(
+            sorted(branch_codes)
+        )
+
+        normalized_chapter_code = (
+            chapter_code.strip().lower()
+        )
+
+        code = (
+            f"bac_{branch_part}_"
+            f"{normalized_chapter_code}_"
+            f"{year}_"
+            f"exercise_{exercise_number:02d}"
+        )
 
         if len(code) > 150:
             raise ExerciseJSONValidationError(
-                "code ne peut pas dépasser 150 caractères."
+                "code ne peut pas dépasser 150 caractères. "
+                f"Code généré : {code}"
             )
 
         return code
@@ -1308,3 +1361,4 @@ class Command(BaseCommand):
                     "Aucune erreur détectée."
                 )
             )
+

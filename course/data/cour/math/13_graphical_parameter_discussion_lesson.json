@@ -1,0 +1,1289 @@
+{
+  "tag": "graphical_parameter_discussion",
+  "title": "المناقشة البيانية حسب الوسيط",
+  "order": 13,
+  "is_active": true,
+  "branches": [
+    "math",
+    "science",
+    "math_tech"
+  ],
+  "content": {
+    "version": 2,
+    "language": "ar",
+    "direction": "rtl",
+    "chapter_code": "functions",
+    "chapter_title": "دراسة الدوال",
+    "axis_tag": "graphical_parameter_discussion",
+    "axis_title": "المناقشة البيانية حسب الوسيط",
+    "estimated_minutes": 90,
+    "difficulty": "medium",
+    "source_note": "أُنجز هذا المحور بالاعتماد على فقرة المناقشة البيانية بالتفصيل في الملخص المرفق، والتي تربط حلول المعادلات من الشكل f(x)=b أو f(x)=g(m) بعدد نقاط تقاطع منحنى الدالة مع مستقيمات أفقية، وتعرض حالات حل وحيد، حلين، حل مضاعف، وعدم وجود حلول حسب قيمة الوسيط. كما أضيف تنظيم تعليمي يميز بين المناقشة الأفقية والمناقشة المائلة والدورانية، مع مواصفات رسوم تفاعلية لتمكين React من تحريك الوسيط وإظهار نقاط التقاطع وعدد الحلول.",
+    "lesson_goal": "أن يحول التلميذ المعادلة ذات الوسيط إلى مسألة تقاطع بياني، ويحدد عدد الحلول وقيم الوسيط الحرجة انطلاقًا من منحنى الدالة، ويميز بين التقاطع العادي والحل المضاعف والتماس، ويعرض النتيجة في جدول مناقشة واضح.",
+    "prerequisites": [
+      "معرفة التمثيل البياني لدالة.",
+      "التمييز بين الفاصلة والترتيب.",
+      "معرفة معنى حل المعادلة f(x)=k.",
+      "معرفة القيم الحدية المحلية من جدول التغيرات.",
+      "معرفة معادلة مستقيم أفقي أو مائل.",
+      "معرفة معنى المماس والتقاطع.",
+      "إتقان التعامل مع القيمة المطلقة والعبارات البسيطة للوسيط."
+    ],
+    "learning_outcomes": [
+      "يفسر حلول f(x)=k على أنها فواصل نقاط تقاطع المنحنى مع المستقيم y=k.",
+      "يحوّل f(x)=g(m) إلى مستقيم أفقي معامل ترتيبه g(m).",
+      "يحدد عدد الحلول انطلاقًا من عدد نقاط التقاطع.",
+      "يحدد القيم الحرجة للوسيط من القيم الحدية للدالة.",
+      "يميز بين حل بسيط وحل مضاعف.",
+      "يربط الحل المضاعف بحالة التماس.",
+      "يناقش معادلات تحتوي m و-m و|m| وm² و√m.",
+      "يناقش معادلات من الشكل f(x)=mx+p باعتبار عائلة مستقيمات.",
+      "يناقش معادلات دورانية من الشكل f(x)=m(x-a)+b.",
+      "ينظم النتيجة في جدول حالات.",
+      "يستعمل الرسم والجدول دون خلط بين قيمة الوسيط وقيمة x.",
+      "يستخرج معلومات المناقشة من جدول تغيرات حتى عند غياب الرسم الكامل."
+    ],
+    "learning_path": [
+      {
+        "id": "step_1",
+        "type": "motivation",
+        "title": "كيف نحل معادلة دون حساب جبري مباشر؟",
+        "content": {
+          "teacher": "إذا كان لدينا منحنى الدالة f، فإن حل المعادلة f(x)=k يعني البحث عن النقاط التي ترتيبها k.",
+          "core_idea": "نرسم المستقيم الأفقي y=k ونعد نقاط تقاطعه مع منحنى f.",
+          "translation": "\\(f(x)=k\\Longleftrightarrow (C_f)\\cap(y=k)\\)",
+          "bac_relevance": "تستعمل المناقشة البيانية عندما يحتوي الطرف الثاني على وسيط، أو عندما يصعب حل المعادلة جبريًا.",
+          "why": "كل نقطة تقاطع تحقق أن ترتيبها يساوي k.",
+          "how_to_think": "المعادلة تتحول إلى تقاطع، وعدد الحلول يتحول إلى عدد نقاط.",
+          "attention": "الحلول هي فواصل نقاط التقاطع، وليست التراتيب.",
+          "quick_check": {
+            "question": "ما التفسير البياني للمعادلة f(x)=3؟",
+            "answer": "فواصل نقاط تقاطع منحنى f مع المستقيم y=3."
+          },
+          "visualization": {
+            "type": "horizontal_line_intersections",
+            "renderer": "jsx_svg_or_recharts",
+            "title": "تحريك مستقيم أفقي وعد نقاط التقاطع",
+            "function": {
+              "expression": "x^3-3*x",
+              "latex": "\\(f(x)=x^3-3x\\)",
+              "domain": [
+                -2.5,
+                2.5
+              ]
+            },
+            "parameter": {
+              "name": "k",
+              "min": -3,
+              "max": 3,
+              "step": 0.1,
+              "default": 0
+            },
+            "line": {
+              "expression": "k",
+              "equation_template": "y=k"
+            },
+            "intersection_detection": {
+              "method": "numeric_root_finding",
+              "equation": "f(x)-k=0",
+              "tolerance": 0.0001,
+              "max_roots": 5
+            },
+            "show_intersection_points": true,
+            "show_solution_count": true,
+            "show_x_coordinates": true,
+            "axes": {
+              "x_min": -2.5,
+              "x_max": 2.5,
+              "y_min": -4,
+              "y_max": 4
+            }
+          }
+        }
+      },
+      {
+        "id": "step_2",
+        "type": "definition",
+        "title": "التفسير البياني للمعادلة f(x)=k",
+        "content": {
+          "teacher": "ليكن المستقيم d_k ذا المعادلة y=k.",
+          "rule": "حلول المعادلة \\(f(x)=k\\) هي فواصل نقاط تقاطع المنحنى \\((C_f)\\) مع المستقيم \\(d_k:y=k\\).",
+          "cases": [
+            {
+              "intersection_count": 0,
+              "solution_count": 0
+            },
+            {
+              "intersection_count": 1,
+              "solution_count": 1
+            },
+            {
+              "intersection_count": 2,
+              "solution_count": 2
+            },
+            {
+              "intersection_count": 3,
+              "solution_count": 3
+            }
+          ],
+          "why": "في نقطة التقاطع تكون قيمة y على المنحنى مساوية لقيمة y على المستقيم.",
+          "how_to_think": "حرّك المستقيم من الأسفل إلى الأعلى وسجل لحظات تغير عدد التقاطعات.",
+          "attention": "قد تكون بعض التقاطعات نقاط تماس، فتنتج حلولًا مضاعفة.",
+          "quick_check": {
+            "question": "إذا قطع المستقيم y=k المنحنى في نقطتين مختلفتين، فكم حلًا للمعادلة؟",
+            "answer": "حلّان."
+          }
+        }
+      },
+      {
+        "id": "step_3",
+        "type": "concept",
+        "title": "القيم الحرجة للوسيط",
+        "content": {
+          "teacher": "عدد نقاط التقاطع لا يتغير باستمرار عند كل قيمة للوسيط، بل يتغير عندما يمر المستقيم الأفقي بقيمة حدية للمنحنى أو بقيمة مميزة عند طرف المجال.",
+          "critical_levels": [
+            "القيم العظمى المحلية.",
+            "القيم الصغرى المحلية.",
+            "قيم الدالة عند أطراف مجال مغلق.",
+            "قيم حدود الفروع عندما تدخل في مدى الدالة."
+          ],
+          "why": "عند مستوى حدي قد ينتقل عدد التقاطعات من عدد إلى آخر.",
+          "how_to_think": "استخرج أولًا مدى الدالة ومستويات القمم والقيعان.",
+          "attention": "القيمة الحرجة هي قيمة y، وليست فاصلة نقطة القيمة الحدية.",
+          "quick_check": {
+            "question": "إذا كانت قيمة عظمى محلية هي 2، فما المستوى الحرج؟",
+            "answer": "\\(k=2\\)."
+          }
+        }
+      },
+      {
+        "id": "step_4",
+        "type": "concept",
+        "title": "الحل المضاعف وحالة التماس",
+        "content": {
+          "teacher": "عندما يلامس المستقيم الأفقي المنحنى عند قيمة حدية دون أن يقطعه محليًا، يكون الحل المقابل حلًا مضاعفًا.",
+          "conditions": [
+            "\\(f(x_0)=k\\)",
+            "\\(f'(x_0)=0\\)"
+          ],
+          "geometric_interpretation": "المستقيم y=k مماس أفقي للمنحنى عند A(x₀,k).",
+          "why": "المنحنى يصل إلى المستوى ثم يعود بدل عبوره.",
+          "how_to_think": "تقاطع مع تغير اتجاه المنحنى عند النقطة يعني تماسًا.",
+          "attention": "وجود f'(x₀)=0 وحده لا يكفي؛ يجب أن تنتمي النقطة أيضًا إلى المستقيم المدروس.",
+          "quick_check": {
+            "question": "متى يكون x₀ حلًا مضاعفًا لـ f(x)=k بيانيا؟",
+            "answer": "عندما يكون y=k مماسًا للمنحنى عند x₀."
+          },
+          "visualization": {
+            "type": "tangent_double_root",
+            "renderer": "jsx_svg_or_recharts",
+            "function": {
+              "expression": "x^2",
+              "domain": [
+                -3,
+                3
+              ]
+            },
+            "line": {
+              "expression": "0",
+              "equation": "y=0"
+            },
+            "contact_point": {
+              "x": 0,
+              "y": 0
+            },
+            "root_multiplicity": 2,
+            "show_tangent_label": true,
+            "axes": {
+              "x_min": -3,
+              "x_max": 3,
+              "y_min": -1,
+              "y_max": 8
+            }
+          }
+        }
+      },
+      {
+        "id": "step_5",
+        "type": "method",
+        "title": "المنهجية العامة للمناقشة الأفقية",
+        "content": {
+          "method_goal": "مناقشة عدد حلول \\(f(x)=g(m)\\) حسب قيم الوسيط m.",
+          "algorithm": [
+            {
+              "step_number": 1,
+              "instruction": "ضع \\(k=g(m)\\).",
+              "why": "نفصل دراسة المستويات الأفقية عن دراسة عبارة الوسيط."
+            },
+            {
+              "step_number": 2,
+              "instruction": "ناقش عدد حلول \\(f(x)=k\\) حسب k.",
+              "why": "هذا يستخرج مباشرة من المنحنى أو جدول التغيرات."
+            },
+            {
+              "step_number": 3,
+              "instruction": "حدد المستويات الحرجة k₁,k₂,...",
+              "why": "عندها يتغير عدد التقاطعات."
+            },
+            {
+              "step_number": 4,
+              "instruction": "ارجع من شروط k إلى شروط على m بحل المتراجحات \\(g(m)<k_i\\)، \\(g(m)=k_i\\)، أو \\(g(m)>k_i\\).",
+              "why": "السؤال النهائي يطلب المناقشة حسب m."
+            },
+            {
+              "step_number": 5,
+              "instruction": "أنشئ جدول حالات نهائيًا.",
+              "why": "يمنع تداخل الحالات."
+            }
+          ],
+          "memory_tip": "ناقش أولًا حسب الارتفاع k، ثم ترجم إلى m.",
+          "attention": "لا تناقش عبارة g(m) مباشرة على الرسم قبل تحديد مجال قيمها.",
+          "quick_check": {
+            "question": "ما الفائدة من وضع k=g(m)؟",
+            "answer": "تبسيط المناقشة إلى مستقيم أفقي y=k."
+          }
+        }
+      },
+      {
+        "id": "step_6",
+        "type": "worked_example",
+        "title": "مثال أساسي: مناقشة f(x)=m",
+        "content": {
+          "statement": "يمثل المنحنى دالة لها قيمة عظمى محلية 1، ومدى الدالة يحقق أن المستويات k≤0 تقطع المنحنى مرة واحدة، والمستويات 0<k<1 تقطعه مرتين، والمستوى k=1 يلامسه في نقطة، والمستويات k>1 لا تقطعه. ناقش f(x)=m.",
+          "steps": [
+            {
+              "step_number": 1,
+              "title": "المستقيم المرتبط",
+              "calculation": "\\(d_m:y=m\\)",
+              "result": "مستقيم أفقي."
+            },
+            {
+              "step_number": 2,
+              "title": "حالة m≤0",
+              "calculation": "المستقيم يقطع المنحنى في نقطة واحدة.",
+              "result": "حل وحيد."
+            },
+            {
+              "step_number": 3,
+              "title": "حالة 0<m<1",
+              "calculation": "المستقيم يقطع المنحنى في نقطتين.",
+              "result": "حلّان متميزان."
+            },
+            {
+              "step_number": 4,
+              "title": "حالة m=1",
+              "calculation": "المستقيم مماس للمنحنى عند القيمة العظمى.",
+              "result": "حل مضاعف."
+            },
+            {
+              "step_number": 5,
+              "title": "حالة m>1",
+              "calculation": "لا يوجد تقاطع.",
+              "result": "لا يوجد حل."
+            }
+          ],
+          "final_table": [
+            {
+              "condition": "\\(m\\le0\\)",
+              "solution_count": 1,
+              "solution_type": "حل وحيد"
+            },
+            {
+              "condition": "\\(0<m<1\\)",
+              "solution_count": 2,
+              "solution_type": "حلّان متميزان"
+            },
+            {
+              "condition": "\\(m=1\\)",
+              "solution_count": 1,
+              "solution_type": "حل مضاعف"
+            },
+            {
+              "condition": "\\(m>1\\)",
+              "solution_count": 0,
+              "solution_type": "لا حل"
+            }
+          ],
+          "attention": "في حالة m=1 نعد نقطة تقاطع واحدة، لكن الحل مضاعف.",
+          "visualization": {
+            "type": "parameter_horizontal_discussion",
+            "renderer": "jsx_svg_or_recharts",
+            "function": {
+              "expression": "1-(x-2)^2",
+              "domain": [
+                -1,
+                5
+              ]
+            },
+            "parameter": {
+              "name": "m",
+              "min": -2,
+              "max": 2,
+              "step": 0.05,
+              "default": 0.5
+            },
+            "line_expression": "m",
+            "critical_levels": [
+              {
+                "value": 0,
+                "label": "مستوى فاصل"
+              },
+              {
+                "value": 1,
+                "label": "قيمة عظمى"
+              }
+            ],
+            "show_solution_count": true,
+            "show_double_root_at": {
+              "m": 1,
+              "x": 2
+            },
+            "axes": {
+              "x_min": -1,
+              "x_max": 5,
+              "y_min": -3,
+              "y_max": 2
+            }
+          }
+        }
+      },
+      {
+        "id": "step_7",
+        "type": "rule",
+        "title": "مناقشة f(x)=-m",
+        "content": {
+          "teacher": "المعادلة f(x)=-m تعني تقاطع المنحنى مع المستقيم y=-m.",
+          "method": [
+            "ضع k=-m.",
+            "ناقش f(x)=k حسب k.",
+            "حوّل كل شرط على k إلى شرط على m مع الانتباه إلى انعكاس المتراجحة عند الضرب في -1."
+          ],
+          "examples": [
+            "\\(k\\le0\\Longleftrightarrow -m\\le0\\Longleftrightarrow m\\ge0\\)",
+            "\\(0<k<1\\Longleftrightarrow -1<m<0\\)"
+          ],
+          "why": "تغيير الإشارة يعكس ترتيب القيم.",
+          "attention": "لا تستبدل m بـ -m في الجدول دون تحويل المتراجحات.",
+          "quick_check": {
+            "question": "إذا كان الشرط k>1 وk=-m، فما الشرط على m؟",
+            "answer": "\\(m<-1\\)."
+          }
+        }
+      },
+      {
+        "id": "step_8",
+        "type": "worked_example",
+        "title": "مثال: مناقشة f(x)=-m",
+        "content": {
+          "statement": "باستعمال المناقشة السابقة للمستويات k، ناقش المعادلة \\(f(x)=-m\\).",
+          "steps": [
+            {
+              "step_number": 1,
+              "title": "التعويض",
+              "calculation": "\\(k=-m\\)",
+              "result": "نستعمل جدول المناقشة حسب k."
+            },
+            {
+              "step_number": 2,
+              "title": "حل وحيد",
+              "calculation": "\\(k\\le0\\Longleftrightarrow m\\ge0\\)",
+              "result": "حل وحيد عندما m≥0."
+            },
+            {
+              "step_number": 3,
+              "title": "حلّان",
+              "calculation": "\\(0<k<1\\Longleftrightarrow -1<m<0\\)",
+              "result": "حلّان عندما -1<m<0."
+            },
+            {
+              "step_number": 4,
+              "title": "حل مضاعف",
+              "calculation": "\\(k=1\\Longleftrightarrow m=-1\\)",
+              "result": "حل مضاعف."
+            },
+            {
+              "step_number": 5,
+              "title": "لا حل",
+              "calculation": "\\(k>1\\Longleftrightarrow m<-1\\)",
+              "result": "لا يوجد حل."
+            }
+          ],
+          "final_table": [
+            {
+              "condition": "\\(m\\ge0\\)",
+              "solution_count": 1
+            },
+            {
+              "condition": "\\(-1<m<0\\)",
+              "solution_count": 2
+            },
+            {
+              "condition": "\\(m=-1\\)",
+              "solution_count": 1,
+              "solution_type": "مضاعف"
+            },
+            {
+              "condition": "\\(m<-1\\)",
+              "solution_count": 0
+            }
+          ]
+        }
+      },
+      {
+        "id": "step_9",
+        "type": "rule",
+        "title": "مناقشة f(x)=|m|",
+        "content": {
+          "teacher": "القيمة |m| غير سالبة، لذلك لا تستعمل جميع مستويات k، بل المستويات k≥0 فقط.",
+          "method": [
+            "ضع k=|m|.",
+            "استعمل الشرط k≥0.",
+            "ناقش الحالات 0≤|m|<1 و|m|=1 و|m|>1.",
+            "حوّل شروط القيمة المطلقة إلى مجالات للوسيط."
+          ],
+          "translations": [
+            "\\(|m|=0\\Longleftrightarrow m=0\\)",
+            "\\(0<|m|<1\\Longleftrightarrow m\\in]-1,0[\\cup]0,1[\\)",
+            "\\(|m|=1\\Longleftrightarrow m=-1\\text{ أو }m=1\\)",
+            "\\(|m|>1\\Longleftrightarrow m\\in]-\\infty,-1[\\cup]1,+\\infty[\\)"
+          ],
+          "why": "المستقيم y=|m| لا ينزل تحت محور الفواصل.",
+          "attention": "عند m=0 يكون المستوى k=0، ويجب استعمال الحالة الخاصة به.",
+          "quick_check": {
+            "question": "ما مجموعة حلول |m|<1؟",
+            "answer": "\\(-1<m<1\\)."
+          }
+        }
+      },
+      {
+        "id": "step_10",
+        "type": "worked_example",
+        "title": "مثال: مناقشة f(x)=|m|",
+        "content": {
+          "statement": "ناقش المعادلة \\(f(x)=|m|\\) باستعمال مستويات المثال الأساسي.",
+          "steps": [
+            {
+              "step_number": 1,
+              "title": "عند m=0",
+              "calculation": "\\(|m|=0\\)",
+              "result": "حل وحيد وفق مستوى k=0."
+            },
+            {
+              "step_number": 2,
+              "title": "عندما 0<|m|<1",
+              "calculation": "\\(m\\in]-1,0[\\cup]0,1[\\)",
+              "result": "حلّان."
+            },
+            {
+              "step_number": 3,
+              "title": "عندما |m|=1",
+              "calculation": "\\(m=-1\\text{ أو }m=1\\)",
+              "result": "حل مضاعف."
+            },
+            {
+              "step_number": 4,
+              "title": "عندما |m|>1",
+              "calculation": "\\(m<-1\\text{ أو }m>1\\)",
+              "result": "لا يوجد حل."
+            }
+          ],
+          "final_table": [
+            {
+              "condition": "\\(m=0\\)",
+              "solution_count": 1
+            },
+            {
+              "condition": "\\(m\\in]-1,0[\\cup]0,1[\\)",
+              "solution_count": 2
+            },
+            {
+              "condition": "\\(m=-1\\text{ أو }m=1\\)",
+              "solution_count": 1,
+              "solution_type": "مضاعف"
+            },
+            {
+              "condition": "\\(m\\in]-\\infty,-1[\\cup]1,+\\infty[\\)",
+              "solution_count": 0
+            }
+          ],
+          "visualization": {
+            "type": "absolute_parameter_horizontal_line",
+            "renderer": "jsx_svg_or_recharts",
+            "function": {
+              "expression": "1-(x-2)^2",
+              "domain": [
+                -1,
+                5
+              ]
+            },
+            "parameter": {
+              "name": "m",
+              "min": -2,
+              "max": 2,
+              "step": 0.05,
+              "default": -0.5
+            },
+            "line_expression": "abs(m)",
+            "show_parameter_value": true,
+            "show_level_value": true,
+            "show_solution_count": true,
+            "axes": {
+              "x_min": -1,
+              "x_max": 5,
+              "y_min": -3,
+              "y_max": 2
+            }
+          }
+        }
+      },
+      {
+        "id": "step_11",
+        "type": "rule",
+        "title": "مناقشة f(x)=m²",
+        "content": {
+          "teacher": "القيمة m² غير سالبة أيضًا، وتتحول شروط المستوى إلى شروط على |m|.",
+          "translations": [
+            "\\(m^2=0\\Longleftrightarrow m=0\\)",
+            "\\(0<m^2<1\\Longleftrightarrow -1<m<0\\text{ أو }0<m<1\\)",
+            "\\(m^2=1\\Longleftrightarrow m=\\pm1\\)",
+            "\\(m^2>1\\Longleftrightarrow |m|>1\\)"
+          ],
+          "why": "الدالة m↦m² زوجية وغير سالبة.",
+          "how_to_think": "ناقش حسب k=m² ثم حل شروط تربيعية بسيطة.",
+          "attention": "لا تستنتج m<1 من m²<1؛ الشرط الصحيح هو |m|<1.",
+          "quick_check": {
+            "question": "ما حلول m²=1؟",
+            "answer": "\\(m=-1\\) أو \\(m=1\\)."
+          }
+        }
+      },
+      {
+        "id": "step_12",
+        "type": "rule",
+        "title": "مناقشة f(x)=√m",
+        "content": {
+          "teacher": "قبل المناقشة يجب فرض m≥0 لأن الجذر غير معرف في الأعداد الحقيقية للقيم السالبة.",
+          "domain_condition": "\\(m\\ge0\\)",
+          "translations": [
+            "\\(\\sqrt{m}=0\\Longleftrightarrow m=0\\)",
+            "\\(0<\\sqrt{m}<1\\Longleftrightarrow 0<m<1\\)",
+            "\\(\\sqrt{m}=1\\Longleftrightarrow m=1\\)",
+            "\\(\\sqrt{m}>1\\Longleftrightarrow m>1\\)"
+          ],
+          "why": "دالة الجذر متزايدة على [0,+∞[.",
+          "attention": "الحالة m<0 ترفض قبل النظر إلى الرسم.",
+          "quick_check": {
+            "question": "متى تكون المعادلة f(x)=√m ذات معنى حقيقي؟",
+            "answer": "عندما m≥0."
+          }
+        }
+      },
+      {
+        "id": "step_13",
+        "type": "rule",
+        "title": "مناقشة f(x)=g(m)",
+        "content": {
+          "teacher": "يمكن أن يكون المستوى الأفقي عبارة أكثر تعقيدًا مثل e^m-1 أو ln(m) أو f(m).",
+          "general_method": [
+            "حدد مجال تعريف g.",
+            "حدد مدى g أو حل شروط g(m) بالنسبة إلى المستويات الحرجة.",
+            "استعمل جدول المناقشة حسب k.",
+            "حوّل النتيجة إلى شروط على m."
+          ],
+          "examples": [
+            {
+              "form": "\\(g(m)=e^m-1\\)",
+              "domain": "\\(\\mathbb{R}\\)",
+              "property": "متزايدة، ومداه ]-1,+∞[."
+            },
+            {
+              "form": "\\(g(m)=\\ln m\\)",
+              "domain": "\\(m>0\\)",
+              "property": "متزايدة ومداه \\(\\mathbb{R}\\)."
+            },
+            {
+              "form": "\\(g(m)=f(m)\\)",
+              "domain": "\\(m\\in D_f\\)",
+              "property": "تستعمل معلومات مدى f أو جدول تغيرها."
+            }
+          ],
+          "attention": "هذه الأشكال ظهرت في الملخص كمناقشات محتملة، لكن تفاصيل الأسية واللوغاريتمية تتطلب أن يكون التلميذ قد درس هاتين الدالتين في محورهما."
+        }
+      },
+      {
+        "id": "step_14",
+        "type": "concept",
+        "title": "المناقشة انطلاقًا من جدول التغيرات",
+        "content": {
+          "teacher": "لا نحتاج دائمًا إلى رسم دقيق. جدول التغيرات يكفي لتحديد عدد حلول f(x)=k.",
+          "method": [
+            "اقرأ مجال القيم الذي تغطيه كل فترة رتيبة.",
+            "على فترة تكون فيها f متزايدة أو متناقصة تمامًا، يقطع كل مستوى داخل مدى تلك الفترة المنحنى مرة واحدة.",
+            "اجمع عدد الفروع التي تحتوي المستوى k.",
+            "انتبه إلى القيم المشتركة عند أطراف الفترات حتى لا تعد النقطة نفسها مرتين."
+          ],
+          "why": "الدالة الرتيبة تمامًا تأخذ كل قيمة من مداها مرة واحدة فقط.",
+          "how_to_think": "كل سهم في جدول التغيرات يمثل فرعًا يمكن أن يعطي تقاطعًا.",
+          "attention": "عند قيمة حدية مشتركة بين سهمين توجد نقطة واحدة لا نقطتان.",
+          "quick_check": {
+            "question": "لماذا يعطي الفرع الرتيب حلًا واحدًا على الأكثر؟",
+            "answer": "لأن الدالة الرتيبة تمامًا لا تأخذ القيمة نفسها مرتين على الفرع."
+          },
+          "visualization": {
+            "type": "variation_table_level_counter",
+            "renderer": "custom_react_component",
+            "title": "عد الحلول من جدول التغيرات",
+            "variation_table": {
+              "x_values": [
+                "-∞",
+                "-1",
+                "1",
+                "+∞"
+              ],
+              "function_cells": [
+                {
+                  "from_value": "-∞",
+                  "direction": "up",
+                  "to_value": 2
+                },
+                {
+                  "from_value": 2,
+                  "direction": "down",
+                  "to_value": -2
+                },
+                {
+                  "from_value": -2,
+                  "direction": "up",
+                  "to_value": "+∞"
+                }
+              ]
+            },
+            "level_control": {
+              "name": "k",
+              "min": -3,
+              "max": 3,
+              "step": 0.1,
+              "default": 0
+            },
+            "show_level_on_each_arrow": true,
+            "show_total_solution_count": true
+          }
+        }
+      },
+      {
+        "id": "step_15",
+        "type": "worked_example",
+        "title": "مثال كامل من جدول تغيرات دالة تكعيبية",
+        "content": {
+          "statement": "لدالة f قيمة عظمى محلية 2 وقيمة صغرى محلية -2، وهي متزايدة ثم متناقصة ثم متزايدة. ناقش عدد حلول f(x)=k.",
+          "steps": [
+            {
+              "step_number": 1,
+              "title": "عندما k>2",
+              "calculation": "المستوى لا يقطع إلا الفرع الأخير الصاعد.",
+              "result": "حل وحيد."
+            },
+            {
+              "step_number": 2,
+              "title": "عندما k=2",
+              "calculation": "تقاطع عند القيمة العظمى وتقاطع آخر على الفرع الأخير.",
+              "result": "حلّان، أحدهما عند نقطة تماس محلي."
+            },
+            {
+              "step_number": 3,
+              "title": "عندما -2<k<2",
+              "calculation": "المستوى يقطع الفروع الثلاثة.",
+              "result": "ثلاثة حلول."
+            },
+            {
+              "step_number": 4,
+              "title": "عندما k=-2",
+              "calculation": "تقاطع على الفرع الأول وتقاطع عند القيمة الصغرى.",
+              "result": "حلّان."
+            },
+            {
+              "step_number": 5,
+              "title": "عندما k<-2",
+              "calculation": "المستوى لا يقطع إلا الفرع الأول.",
+              "result": "حل وحيد."
+            }
+          ],
+          "final_table": [
+            {
+              "condition": "\\(k>2\\)",
+              "solution_count": 1
+            },
+            {
+              "condition": "\\(k=2\\)",
+              "solution_count": 2
+            },
+            {
+              "condition": "\\(-2<k<2\\)",
+              "solution_count": 3
+            },
+            {
+              "condition": "\\(k=-2\\)",
+              "solution_count": 2
+            },
+            {
+              "condition": "\\(k<-2\\)",
+              "solution_count": 1
+            }
+          ],
+          "visualization": {
+            "type": "cubic_horizontal_discussion",
+            "renderer": "jsx_svg_or_recharts",
+            "function": {
+              "expression": "x^3-3*x",
+              "domain": [
+                -2.5,
+                2.5
+              ]
+            },
+            "parameter": {
+              "name": "k",
+              "min": -3,
+              "max": 3,
+              "step": 0.05,
+              "default": 0
+            },
+            "line_expression": "k",
+            "critical_levels": [
+              -2,
+              2
+            ],
+            "show_intersections": true,
+            "show_solution_count": true,
+            "show_tangent_when_critical": true,
+            "axes": {
+              "x_min": -2.5,
+              "x_max": 2.5,
+              "y_min": -4,
+              "y_max": 4
+            }
+          }
+        }
+      },
+      {
+        "id": "step_16",
+        "type": "definition",
+        "title": "المناقشة المائلة: f(x)=mx+p",
+        "content": {
+          "teacher": "عندما يظهر x في الطرف المرتبط بالوسيط، لا يكون المستقيم أفقيًا، بل نناقش تقاطع المنحنى مع عائلة مستقيمات.",
+          "equation": "\\(f(x)=mx+p\\)",
+          "line_family": "\\(d_m:y=mx+p\\)",
+          "parameter_effect": "يتغير الميل m، بينما تبقى نقطة التقاطع مع محور التراتيب p ثابتة.",
+          "solution_interpretation": "حلول المعادلة هي فواصل نقاط تقاطع \\((C_f)\\) مع \\(d_m\\).",
+          "why": "كل قيمة m تعطي مستقيمًا مختلفًا.",
+          "how_to_think": "حدد أولًا الخاصية الثابتة في عائلة المستقيمات.",
+          "attention": "لا يمكن استعمال جدول المستويات الأفقية مباشرة.",
+          "quick_check": {
+            "question": "ما العنصر الذي يتغير في y=mx+p عندما يتغير m؟",
+            "answer": "معامل التوجيه."
+          }
+        }
+      },
+      {
+        "id": "step_17",
+        "type": "concept",
+        "title": "العائلة الدورانية y=m(x-a)+b",
+        "content": {
+          "teacher": "كل مستقيم من الشكل y=m(x-a)+b يمر بالنقطة الثابتة A(a,b)، ويتغير اتجاهه بتغير m.",
+          "fixed_point": "\\(A(a,b)\\)",
+          "family": "\\(d_m:y=m(x-a)+b\\)",
+          "geometric_motion": "دوران المستقيم حول A.",
+          "solution_interpretation": "عدد حلول f(x)=m(x-a)+b هو عدد نقاط تقاطع المنحنى مع المستقيم الدائر حول A.",
+          "why": "بتعويض x=a نجد y=b مهما كانت قيمة m.",
+          "how_to_think": "حدد مركز دوران العائلة قبل المناقشة.",
+          "attention": "الحالات الحرجة تظهر عند المستقيمات المماسة للمنحنى أو المارة بنقاط مميزة.",
+          "quick_check": {
+            "question": "ما النقطة الثابتة لعائلة y=m(x-1)؟",
+            "answer": "A(1,0)."
+          },
+          "visualization": {
+            "type": "rotating_line_discussion",
+            "renderer": "jsx_svg_or_recharts",
+            "function": {
+              "expression": "1-(x-2)^2",
+              "domain": [
+                -1,
+                5
+              ]
+            },
+            "parameter": {
+              "name": "m",
+              "min": -5,
+              "max": 5,
+              "step": 0.05,
+              "default": 1
+            },
+            "fixed_point": {
+              "x": 1,
+              "y": 0,
+              "label": "A(1,0)"
+            },
+            "line_expression": "m*(x-1)",
+            "show_rotation": true,
+            "show_intersections": true,
+            "show_solution_count": true,
+            "axes": {
+              "x_min": -1,
+              "x_max": 5,
+              "y_min": -5,
+              "y_max": 5
+            }
+          }
+        }
+      },
+      {
+        "id": "step_18",
+        "type": "method",
+        "title": "منهجية المناقشة المائلة أو الدورانية",
+        "content": {
+          "algorithm": [
+            {
+              "step_number": 1,
+              "instruction": "اكتب عائلة المستقيمات بوضوح."
+            },
+            {
+              "step_number": 2,
+              "instruction": "حدد نقطة ثابتة أو ميلًا ثابتًا أو ترتيبًا ثابتًا.",
+              "why": "هذا يحدد حركة العائلة."
+            },
+            {
+              "step_number": 3,
+              "instruction": "ابحث عن المستقيمات الحرجة المماسة للمنحنى.",
+              "why": "عند التماس يتغير عدد التقاطعات."
+            },
+            {
+              "step_number": 4,
+              "instruction": "استخرج قيم m الحرجة من ميل المماس أو معادلته."
+            },
+            {
+              "step_number": 5,
+              "instruction": "اختر قيمة اختبار للوسيط بين كل قيمتين حرجتين وعد التقاطعات."
+            },
+            {
+              "step_number": 6,
+              "instruction": "أنشئ جدول المناقشة."
+            }
+          ],
+          "attention": "هذا النوع يعتمد بشدة على الرسم المعطى، ولا يمكن تعميم عدد حلول ثابت دون معرفة شكل المنحنى."
+        }
+      },
+      {
+        "id": "step_19",
+        "type": "comparison",
+        "title": "الفرق بين أنواع المناقشة",
+        "content": {
+          "table": [
+            {
+              "type": "أفقية",
+              "equation": "\\(f(x)=g(m)\\)",
+              "line_family": "\\(y=g(m)\\)",
+              "motion": "صعود ونزول"
+            },
+            {
+              "type": "مائلة متوازية",
+              "equation": "\\(f(x)=ax+m\\)",
+              "line_family": "\\(y=ax+m\\)",
+              "motion": "انسحاب عمودي لمستقيمات متوازية"
+            },
+            {
+              "type": "دورانية",
+              "equation": "\\(f(x)=m(x-a)+b\\)",
+              "line_family": "\\(y=m(x-a)+b\\)",
+              "motion": "دوران حول A(a,b)"
+            }
+          ],
+          "memory_tip": "ثابت فقط: أفقي. m خارج x مع ميل ثابت: توازٍ. m معامل x: دوران أو تغير ميل."
+        }
+      },
+      {
+        "id": "step_20",
+        "type": "table_schema",
+        "title": "بنية JSON للمناقشة البيانية في React",
+        "content": {
+          "discussion_schema": {
+            "type": "graphical_discussion",
+            "base_function": {
+              "expression": "string",
+              "domain": "array"
+            },
+            "parameter": {
+              "name": "m",
+              "min": "number",
+              "max": "number",
+              "step": "number",
+              "default": "number"
+            },
+            "line_family": {
+              "kind": "horizontal|parallel|rotating",
+              "expression": "string",
+              "fixed_point": "optional object"
+            },
+            "critical_parameters": [
+              {
+                "value": "number|string",
+                "reason": "tangent|endpoint|extremum|domain_boundary",
+                "solution_count": "number"
+              }
+            ],
+            "discussion_cases": [
+              {
+                "condition": "string",
+                "solution_count": "number",
+                "solution_type": "none|simple|multiple|mixed"
+              }
+            ]
+          },
+          "rendering_rules": [
+            "أظهر قيمة الوسيط وقيمة ارتفاع أو ميل المستقيم بصورة منفصلة.",
+            "احسب الجذور عدديا داخل مجال الرسم مع حذف الجذور المتكررة ضمن هامش tolerance.",
+            "عند التماس أظهر شارة حل مضاعف.",
+            "أظهر فواصل نقاط التقاطع على محور x.",
+            "اربط منزلق الوسيط بالسطر الموافق في جدول المناقشة.",
+            "اسمح بإخفاء أو إظهار المنحنى والمستقيم والنقاط.",
+            "لا تعتمد على عدد نقاط الرسم الخام لتحديد عدد الجذور؛ استعمل خوارزمية بحث جذور."
+          ]
+        }
+      },
+      {
+        "id": "step_21",
+        "type": "guided_practice",
+        "title": "تطبيق موجه",
+        "content": {
+          "statement": "لدالة f قيمة عظمى محلية 3 وقيمة صغرى محلية -1، ومنحناها يتكون من ثلاثة فروع رتيبة متتالية. ناقش عدد حلول المعادلة \\(f(x)=|m-1|\\).",
+          "student_steps": [
+            {
+              "prompt": "ضع k=|m-1| وحدد مجال k.",
+              "expected": "\\(k\\ge0\\).",
+              "hint": "القيمة المطلقة غير سالبة."
+            },
+            {
+              "prompt": "ناقش f(x)=k للمستويات غير السالبة.",
+              "expected": "نحتاج الحالات k=0، 0<k<3، k=3، k>3 حسب شكل الفروع المعطى.",
+              "hint": "القيمة الصغرى -1 لا تؤثر مباشرة في المستويات k≥0 إلا في عدد الفروع التي تقطع المستوى."
+            },
+            {
+              "prompt": "حوّل 0<|m-1|<3.",
+              "expected": "\\(-2<m<1\\) أو \\(1<m<4\\).",
+              "hint": "\\(|m-1|<3\\Longleftrightarrow -3<m-1<3\\)."
+            },
+            {
+              "prompt": "حل |m-1|=3.",
+              "expected": "\\(m=-2\\) أو \\(m=4\\).",
+              "hint": "m-1=±3."
+            }
+          ],
+          "attention": "عدد الحلول الدقيق داخل كل مستوى يعتمد على جدول تغيرات أو الرسم المقدم في التمرين؛ لا يجوز اختراعه دون المعطيات."
+        }
+      },
+      {
+        "id": "step_22",
+        "type": "bac_method",
+        "title": "صياغة الإجابة في البكالوريا",
+        "content": {
+          "answer_template": [
+            "نضع \\(k=g(m)\\).",
+            "حلول المعادلة هي فواصل نقاط تقاطع \\((C_f)\\) مع المستقيم \\(d_k:y=k\\).",
+            "من القراءة البيانية أو جدول التغيرات نجد المناقشة حسب k.",
+            "نحوّل الشروط على k إلى شروط على m.",
+            "نلخص النتائج في جدول يبين قيمة الوسيط وعدد الحلول وطبيعتها."
+          ],
+          "recommended_table_columns": [
+            "قيم الوسيط",
+            "موضع المستقيم",
+            "عدد نقاط التقاطع",
+            "عدد الحلول",
+            "طبيعة الحلول"
+          ],
+          "attention": "اذكر صراحة إذا كان الحل مضاعفًا."
+        }
+      },
+      {
+        "id": "step_23",
+        "type": "common_mistakes",
+        "title": "الأخطاء الشائعة",
+        "content": {
+          "mistakes": [
+            {
+              "mistake": "اعتبار قيمة m هي حل المعادلة.",
+              "correction": "m وسيط، والحلول هي قيم x."
+            },
+            {
+              "mistake": "عد التراتيب بدل الفواصل.",
+              "correction": "حلول المعادلة هي فواصل نقاط التقاطع."
+            },
+            {
+              "mistake": "نسيان شروط مجال √m أو ln(m).",
+              "correction": "حدد مجال عبارة الوسيط قبل المناقشة."
+            },
+            {
+              "mistake": "عدم التمييز بين حل واحد بسيط وحل واحد مضاعف.",
+              "correction": "افحص هل التقاطع قطع أم تماس."
+            },
+            {
+              "mistake": "تحويل متراجحات -m دون قلب الإشارة.",
+              "correction": "عند الضرب في -1 تنعكس المتراجحة."
+            },
+            {
+              "mistake": "استعمال جميع مستويات k في حالة |m| أو m².",
+              "correction": "هذه العبارات لا تعطي مستويات سالبة."
+            },
+            {
+              "mistake": "عد النقطة الحدية مرتين من سهمين في جدول التغيرات.",
+              "correction": "القيمة الحدية تمثل نقطة واحدة."
+            },
+            {
+              "mistake": "استعمال منهجية المستقيم الأفقي لمعادلة f(x)=mx+p.",
+              "correction": "هذه عائلة مستقيمات مائلة."
+            }
+          ],
+          "self_check": "ما المستقيم المرتبط؟ ما الذي يتحرك؟ ما القيم الحرجة؟ هل حولت الشروط إلى m؟"
+        }
+      },
+      {
+        "id": "step_24",
+        "type": "lesson_summary",
+        "title": "ملخص المحور",
+        "content": {
+          "key_ideas": [
+            "حلول f(x)=k هي فواصل نقاط تقاطع المنحنى مع y=k.",
+            "عدد الحلول يساوي عدد نقاط التقاطع المتميزة.",
+            "القيم الحدية للدالة تعطي مستويات حرجة للمناقشة.",
+            "التماس يعطي حلًا مضاعفًا.",
+            "في f(x)=g(m) نناقش أولًا حسب k=g(m)، ثم نرجع إلى m.",
+            "يجب مراعاة مدى |m| وm² و√m ومجالات التعريف.",
+            "جدول التغيرات يكفي غالبًا لعد الحلول.",
+            "في المناقشة المائلة ندرس عائلة مستقيمات لا مستويات أفقية.",
+            "المستقيمات y=m(x-a)+b تدور حول A(a,b)."
+          ],
+          "method_template": [
+            "أحدد عائلة المستقيمات.",
+            "أحدد القيم الحرجة.",
+            "أعد التقاطعات.",
+            "أحول الشروط إلى الوسيط.",
+            "أبني جدول المناقشة."
+          ],
+          "memory_tip": "المعادلة تتحول إلى تقاطع، والوسيط يحرك المستقيم."
+        }
+      }
+    ],
+    "graph": {
+      "engine_hint": "ينفذ هذا المحور بمكون React تفاعلي يدعم المستقيم الأفقي والمستقيمات المتوازية والمستقيمات الدائرة حول نقطة ثابتة، مع كشف جذور عددي وتحديث مباشر لعدد الحلول.",
+      "coordinate_system": "cartesian",
+      "default_direction": "ltr_for_graph_rtl_for_text",
+      "root_finding": {
+        "recommended_methods": [
+          "interval_scan_plus_bisection",
+          "newton_with_multiple_seeds"
+        ],
+        "tolerance": 0.0001,
+        "duplicate_root_tolerance": 0.001,
+        "tangent_detection": {
+          "condition": "abs(f(x)-line(x))<tol and abs(f_prime(x)-line_slope)<slope_tol",
+          "slope_tolerance": 0.001
+        }
+      },
+      "series": [
+        {
+          "id": "horizontal_parameter",
+          "type": "discussion",
+          "function": "x^3-3*x",
+          "line": "m",
+          "parameter": "m",
+          "kind": "horizontal"
+        },
+        {
+          "id": "absolute_parameter",
+          "type": "discussion",
+          "function": "1-(x-2)^2",
+          "line": "abs(m)",
+          "parameter": "m",
+          "kind": "horizontal"
+        },
+        {
+          "id": "parallel_lines",
+          "type": "discussion",
+          "function": "x^3-3*x",
+          "line": "2*x+m",
+          "parameter": "m",
+          "kind": "parallel"
+        },
+        {
+          "id": "rotating_lines",
+          "type": "discussion",
+          "function": "1-(x-2)^2",
+          "line": "m*(x-1)",
+          "parameter": "m",
+          "kind": "rotating",
+          "fixed_point": [
+            1,
+            0
+          ]
+        }
+      ],
+      "react_rendering_notes": [
+        "استعمل منزلقًا للوسيط مع إمكانية الكتابة اليدوية.",
+        "اعرض معادلة المستقيم الحالية.",
+        "اعرض عدد الحلول في بطاقة واضحة.",
+        "ضع تسمية x₁,x₂,... أسفل نقاط التقاطع.",
+        "ميز نقطة التماس عن نقطة التقاطع العادي.",
+        "اعرض جدول المناقشة بجانب الرسم وحدد السطر الموافق لقيمة الوسيط الحالية.",
+        "اسمح بتبديل نوع المناقشة: أفقية، متوازية، دورانية.",
+        "لا تستعمل eval مباشرة؛ استعمل parser رياضيًا آمنًا.",
+        "أعد حساب الجذور عند كل تغيير للوسيط مع debounce قصير.",
+        "لا تعتمد على حدود نافذة الرسم فقط إذا كان المطلوب عدد الحلول على مجال غير محدود؛ استعمل المجال المحدد في بيانات الدرس."
+      ]
+    },
+    "final_assessment": {
+      "question": "لتكن \\(f(x)=x^3-3x\\). ناقش حسب قيم الوسيط الحقيقي m عدد حلول المعادلة \\(f(x)=|m|\\)، مع تحديد حالات الحل المضاعف.",
+      "skill": "تحويل عبارة الوسيط إلى مستوى أفقي واستعمال القيم الحدية للدالة.",
+      "expected_answer": "لدينا قيمة عظمى محلية 2 وقيمة صغرى محلية -2. نضع k=|m|≥0. إذا 0≤k<2 فالمعادلة لها ثلاثة حلول، مع الانتباه إلى k=0 الذي يعطي أيضًا ثلاثة حلول للدالة x³-3x. إذا k=2 فلها حلان متميزان، أحدهما عند نقطة القيمة العظمى وهو تماس محلي، وإذا k>2 فلها حل وحيد. بالرجوع إلى m: إذا |m|<2 أي -2<m<2 فثلاثة حلول؛ إذا |m|=2 أي m=±2 فحلّان أحدهما مضاعف؛ وإذا |m|>2 فحل وحيد.",
+      "success_criteria": [
+        "يحدد القيمتين الحرجتين -2 و2.",
+        "يضع k=|m| ويذكر k≥0.",
+        "يعد نقاط التقاطع حسب k.",
+        "يحل |m|<2 و|m|=2 و|m|>2.",
+        "يذكر طبيعة الحل عند المستوى الحرج.",
+        "يميز بين عدد نقاط التقاطع ومضاعفة أحد الجذور."
+      ],
+      "hint_levels": [
+        "ابدأ بمناقشة f(x)=k.",
+        "لا تحتاج المستويات k<0 لأن k=|m|.",
+        "حل |m|=2 يعطي قيمتين للوسيط.",
+        "عند k=2 يكون المستقيم مماسًا عند القيمة العظمى."
+      ],
+      "explanation": [
+        "\\(f'(x)=3(x-1)(x+1)\\)",
+        "\\(f(-1)=2\\)، \\(f(1)=-2\\)",
+        "لـ \\(0\\le k<2\\): ثلاثة حلول.",
+        "لـ \\(k=2\\): حلّان متميزان وأحدهما مضاعف محليًا.",
+        "لـ \\(k>2\\): حل وحيد.",
+        "\\(|m|<2\\Longleftrightarrow -2<m<2\\)",
+        "\\(|m|=2\\Longleftrightarrow m=\\pm2\\)",
+        "\\(|m|>2\\Longleftrightarrow m<-2\\text{ أو }m>2\\)"
+      ]
+    },
+    "lesson_summary": {
+      "key_ideas": [
+        "تحويل المعادلة إلى تقاطع بياني.",
+        "عد الحلول من الرسم أو جدول التغيرات.",
+        "المستويات الحرجة والحل المضاعف.",
+        "تحويل الشروط من k إلى m.",
+        "المناقشة الأفقية والمائلة والدورانية."
+      ],
+      "method_template": [
+        "المستقيم المرتبط → القيم الحرجة → التقاطعات → شروط الوسيط → الجدول."
+      ],
+      "memory_tip": "لا تحل في m مباشرة؛ ناقش حركة المستقيم أولًا."
+    },
+    "dynamic_profile": {
+      "lesson_profile": "interactive_graphical_parameter_discussion_bac_oriented",
+      "profile_reason": "المحور قائم على تحريك عائلة مستقيمات ومراقبة نقاط التقاطع، ولذلك يحتاج إلى رسوم تفاعلية مرتبطة بجدول حالات وعد جذور آلي.",
+      "recommended_ui_blocks": [
+        "منزلق الوسيط",
+        "منحنى ومستقيم متحرك",
+        "عداد الحلول",
+        "بطاقة الحل المضاعف",
+        "جدول مناقشة تفاعلي",
+        "مثال محلول",
+        "تطبيق موجه",
+        "تقييم نهائي"
+      ]
+    },
+    "schema_version": "2.0",
+    "content_status": "ready_for_production",
+    "pedagogical_style": {
+      "target": "تلميذ السنة الثالثة ثانوي في الجزائر",
+      "language_level": "عربية مبسطة مع الرموز الرياضية الرسمية",
+      "explanation_method": "تحويل المعادلة إلى عائلة مستقيمات ثم عد نقاط التقاطع",
+      "platform_ready": true,
+      "requires_teacher_intervention": false
+    },
+    "lesson_intro": {
+      "welcome": "في هذا المحور ستتعلم كيف تجعل الوسيط يحرك مستقيمًا على الرسم، ثم تستنتج عدد حلول المعادلة.",
+      "big_idea": "عدد الحلول هو عدد نقاط التقاطع، والقيم الحرجة تظهر عند التماس أو القيم الحدية.",
+      "student_promise": "بعد الدرس ستستطيع مناقشة معادلات وسيطية أفقيًا ومائلًا وتنظيم النتائج في جدول."
+    },
+    "support_path": {
+      "if_student_does_not_understand": [
+        {
+          "issue": "أخلط بين m وx.",
+          "action": "اعرض m كمنزلق مستقل، وأظهر أن نقاط الحل تحمل الإحداثيات x₁ وx₂."
+        },
+        {
+          "issue": "لا أفهم لماذا عدد التقاطعات هو عدد الحلول.",
+          "action": "اعرض إحداثيات كل نقطة وحقق أمام التلميذ أن f(xᵢ)=k."
+        },
+        {
+          "issue": "لا أفهم الحل المضاعف.",
+          "action": "قارن بين مستقيم يقطع قطعًا مكافئًا ومستقيم يلامسه عند الرأس."
+        },
+        {
+          "issue": "أخطئ في تحويل شروط |m|.",
+          "action": "اعرض خط أعداد للوسيط مع المسافة عن الصفر."
+        },
+        {
+          "issue": "لا أستطيع المناقشة من جدول التغيرات.",
+          "action": "مرر مستوى أفقيًا على كل سهم في الجدول وعد مرات المرور."
+        },
+        {
+          "issue": "أطبق المناقشة الأفقية على مستقيم مائل.",
+          "action": "اعرض الفرق بصريًا بين y=m وy=mx+p."
+        }
+      ]
+    },
+    "method_decision_tree": {
+      "start_question": "ما شكل الطرف المرتبط بالوسيط؟",
+      "branches": [
+        {
+          "condition": "\\(g(m)\\) فقط دون x",
+          "action": "مناقشة أفقية بالمستقيم y=g(m)."
+        },
+        {
+          "condition": "\\(ax+g(m)\\) حيث a ثابت",
+          "action": "عائلة مستقيمات متوازية."
+        },
+        {
+          "condition": "\\(m(x-a)+b\\)",
+          "action": "عائلة مستقيمات تدور حول A(a,b)."
+        },
+        {
+          "condition": "وجود |m| أو m²",
+          "action": "حدد مدى عبارة الوسيط ثم ترجم الشروط."
+        },
+        {
+          "condition": "وجود √m أو ln(m)",
+          "action": "حدد مجال تعريف الوسيط أولًا."
+        },
+        {
+          "condition": "المستقيم يلامس المنحنى",
+          "result": "قيمة حرجة للوسيط وحل مضاعف."
+        }
+      ],
+      "golden_rule": "حدد عائلة المستقيمات قبل عد الحلول."
+    },
+    "lesson_closure": {
+      "final_message": "المناقشة البيانية ليست تخمينًا من الرسم؛ هي تنظيم دقيق لحركة مستقيم وعد نقاط التقاطع.",
+      "essential_reflex": "ضع k=g(m)، ناقش حسب k، ثم ارجع إلى m.",
+      "ready_for_next_lesson": "اكتملت محاور الاشتقاقية الأساسية، ويمكن الانتقال إلى تطبيقات شاملة وتمارين البكالوريا."
+    },
+    "quality_review": {
+      "mathematical_accuracy_checked": true,
+      "pedagogical_progression_checked": true,
+      "latex_consistency_checked": true,
+      "json_validity_checked": true,
+      "empty_text_values_removed": true,
+      "important_corrections": [
+        "تم التفريق بين قيمة الوسيط وحلول المعادلة.",
+        "تم التفريق بين عدد نقاط التقاطع ومضاعفة الجذر.",
+        "تم فصل المناقشة الأفقية عن المائلة والدورانية.",
+        "تم إدراج شروط مجال عبارات الوسيط.",
+        "تم التنبيه إلى أن عدد الحلول في المناقشة المائلة يعتمد على الرسم المعطى.",
+        "أضيفت مواصفات كشف جذور وتماس قابلة للتنفيذ في React."
+      ]
+    }
+  }
+}

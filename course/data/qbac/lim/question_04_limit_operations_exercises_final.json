@@ -1,0 +1,130 @@
+{
+  "version": 1,
+  "language": "ar",
+  "direction": "rtl",
+  "tag": "limit_operations",
+  "title": "تمارين العمليات على النهايات",
+    "subject_code": "phy",
+  "chapter_code": "limits_continuity",
+  "question_count": 3,
+  "questions": [
+    {
+      "id": "operations_01",
+      "number": "23-أ",
+      "text": "احسب \\(\\lim_{x\\to+\\infty}(2x^2+\\sqrt{x}+1)\\).",
+      "skill": "تطبيق قواعد الجمع والطرح والقسمة",
+      "difficulty": "medium",
+      "solution": {
+        "strategy": "نحسب نهاية كل حد، ثم نطبق قاعدة الجمع.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "نهاية الحدود",
+            "explanation": "عندما يؤول x إلى زائد ما لا نهاية، فإن كل حد من الحدود الثلاثة له نهاية معلومة.",
+            "calculation": "\\(2x^2\\to+\\infty\\)، و\\(\\sqrt{x}\\to+\\infty\\)، و\\(1\\to1\\)",
+            "result": "نحصل على مجموع حدود موجبة."
+          },
+          {
+            "order": 2,
+            "title": "تطبيق قاعدة الجمع",
+            "explanation": "مجموع حدود تؤول إلى زائد ما لا نهاية يبقى زائد ما لا نهاية.",
+            "calculation": "\\(+\\infty+(+\\infty)+1=+\\infty\\)",
+            "result": "\\(\\lim_{x\\to+\\infty}(2x^2+\\sqrt{x}+1)=+\\infty\\)"
+          }
+        ],
+        "final_answer": "\\(\\boxed{\\lim_{x\\to+\\infty}(2x^2+\\sqrt{x}+1)=+\\infty}\\)",
+        "common_mistakes": [
+          {
+            "mistake": "اعتبار مجموع حدود موجبة غير محدودة حالة عدم تعيين.",
+            "correction": "\\(+\\infty+(+\\infty)\\) حالة معينة ونتيجتها \\(+\\infty\\)."
+          }
+        ],
+        "hints": [
+          "احسب نهاية كل حد على حدة.",
+          "لاحظ أن جميع الحدود موجبة عند زائد ما لا نهاية."
+        ]
+      }
+    },
+    {
+      "id": "operations_02",
+      "number": "23-ب",
+      "text": "احسب نهايتي \\(f(x)=\\frac1{x-1}+2\\sqrt{x}\\) عند \\(+\\infty\\) وعند \\(1^+\\).",
+      "skill": "تطبيق قواعد الجمع والطرح والقسمة",
+      "difficulty": "medium",
+      "solution": {
+        "strategy": "نحسب نهاية كل جزء في كل حالة، ثم نطبق قاعدة الجمع.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "عند زائد ما لا نهاية",
+            "explanation": "الكسر يؤول إلى الصفر، والجذر يؤول إلى زائد ما لا نهاية.",
+            "calculation": "\\(\\frac{1}{x-1}\\to0\\)، و\\(2\\sqrt{x}\\to+\\infty\\)",
+            "result": "\\(0+(+\\infty)=+\\infty\\)"
+          },
+          {
+            "order": 2,
+            "title": "عند واحد من اليمين",
+            "explanation": "عندما يقترب x من 1 من اليمين، فإن x-1 يؤول إلى صفر موجب.",
+            "calculation": "\\(\\frac{1}{x-1}\\to+\\infty\\)، و\\(2\\sqrt{x}\\to2\\)",
+            "result": "\\(+\\infty+2=+\\infty\\)"
+          }
+        ],
+        "final_answer": "\\(\\boxed{\\lim_{x\\to+\\infty}f(x)=+\\infty\\quad\\text{و}\\quad\\lim_{x\\to1^+}f(x)=+\\infty}\\)",
+        "common_mistakes": [
+          {
+            "mistake": "إهمال جهة الاقتراب عند x يقترب من 1.",
+            "correction": "من اليمين يكون \\(x-1>0\\)، لذلك \\(1/(x-1)\\to+\\infty\\)."
+          }
+        ],
+        "hints": [
+          "احسب نهاية الكسر ونهاية الجذر منفصلتين.",
+          "عند 1 من اليمين، حدد إشارة x-1."
+        ]
+      }
+    },
+    {
+      "id": "operations_03",
+      "number": "24-أ",
+      "text": "احسب \\(\\lim_{x\\to4^+}\\frac{x+1}{\\sqrt{x}-2}\\).",
+      "skill": "تطبيق قواعد الجمع والطرح والقسمة",
+      "difficulty": "medium",
+      "solution": {
+        "strategy": "نحسب نهاية البسط ونهاية المقام، ثم نحدد إشارة الخارج.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "نهاية البسط",
+            "explanation": "نعوض مباشرة لأن البسط دالة بسيطة.",
+            "calculation": "\\(x+1\\to4+1=5\\)",
+            "result": "البسط يؤول إلى عدد موجب غير منعدم."
+          },
+          {
+            "order": 2,
+            "title": "نهاية المقام",
+            "explanation": "عند الاقتراب من 4 من اليمين تكون \\(\\sqrt{x}>2\\).",
+            "calculation": "\\(\\sqrt{x}-2\\to0^+\\)",
+            "result": "المقام يؤول إلى صفر موجب."
+          },
+          {
+            "order": 3,
+            "title": "نهاية الخارج",
+            "explanation": "عدد موجب غير منعدم على صفر موجب يعطي زائد ما لا نهاية.",
+            "calculation": "\\(\\frac{5}{0^+}=+\\infty\\)",
+            "result": "\\(\\lim_{x\\to4^+}\\frac{x+1}{\\sqrt{x}-2}=+\\infty\\)"
+          }
+        ],
+        "final_answer": "\\(\\boxed{\\lim_{x\\to4^+}\\frac{x+1}{\\sqrt{x}-2}=+\\infty}\\)",
+        "common_mistakes": [
+          {
+            "mistake": "كتابة 5 على 0 دون تحديد الإشارة.",
+            "correction": "يجب تحديد أن المقام يؤول إلى \\(0^+\\) حتى نعرف أن النهاية \\(+\\infty\\)."
+          }
+        ],
+        "hints": [
+          "احسب نهاية البسط.",
+          "حدد إشارة \\(\\sqrt{x}-2\\) عندما x أكبر قليلًا من 4."
+        ]
+      }
+    }
+  ]
+}

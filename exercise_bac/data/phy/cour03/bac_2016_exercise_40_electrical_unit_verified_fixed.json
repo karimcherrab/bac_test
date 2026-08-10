@@ -1,0 +1,437 @@
+{
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2016-electrical-verified",
+  "language": "ar",
+  "direction": "rtl",
+  "year": 2016,
+  "session": "ordinary",
+  "chapter_code": "electrical_phenomena_evolution",
+  "chapter_title": "تطور دراسة ظواهر كهربائية",
+  "exercise_number": 40,
+  "source_page": 15,
+  "source_pages": [
+    15,
+    16
+  ],
+  "solution_source_pages": [
+    36
+  ],
+
+  "branches": [
+    {
+      "code": "science",
+      "name": "شعبة علوم تجريبية"
+    }
+  ],
+  "title": "التمرين 40 — بكالوريا الجزائر 2016 — شعبة علوم تجريبية (الدورة الجزئية)",
+  "axis_tags": [
+    "rc_capacitor_charging",
+    "rc_differential_equation_solution",
+    "rc_resistance_effect_time_constant",
+    "capacitor_association"
+  ],
+  "questions": [
+    {
+      "id": "2016_elec_ex40_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) ارسم مخطط الدارة موضحاً كيفية ربط راسم الاهتزاز لمتابعة تطور التوتر بين طرفي كل من المكثفة والمولد.",
+      "solution": {
+        "strategy": "دارة RC وقياسان متوازيان.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الرسم",
+            "explanation": "يوصل أحد المدخلين على طرفي المكثفة والآخر على طرفي المولد مع مرجع مشترك.",
+            "graph_data": {
+              "diagram_type": "ex40_solution_scope",
+              "title": "دارة القياس",
+              "description": "دارة RC مع توصيل الراسم.",
+              "svg": "<svg viewBox=\"0 0 820 360\" xmlns=\"http://www.w3.org/2000/svg\">\n    <path d=\"M140 80 H650 V285 H140 Z\" fill=\"none\" stroke=\"#111827\" stroke-width=\"5\"/>\n    <circle cx=\"140\" cy=\"185\" r=\"30\" fill=\"white\" stroke=\"#111827\" stroke-width=\"4\"/><text x=\"130\" y=\"193\" font-size=\"22\">E</text>\n    <line x1=\"245\" y1=\"80\" x2=\"290\" y2=\"80\" stroke=\"#111827\" stroke-width=\"5\"/><line x1=\"315\" y1=\"80\" x2=\"360\" y2=\"80\" stroke=\"#111827\" stroke-width=\"5\"/><line x1=\"290\" y1=\"80\" x2=\"318\" y2=\"56\" stroke=\"#111827\" stroke-width=\"5\"/><text x=\"295\" y=\"45\" font-size=\"21\">K</text>\n    <rect x=\"400\" y=\"55\" width=\"100\" height=\"50\" rx=\"5\" fill=\"white\" stroke=\"#111827\" stroke-width=\"3\"/><text x=\"430\" y=\"87\" font-size=\"20\">R متغيرة</text>\n    <line x1=\"610\" y1=\"80\" x2=\"610\" y2=\"145\" stroke=\"#111827\" stroke-width=\"5\"/><line x1=\"580\" y1=\"145\" x2=\"640\" y2=\"145\" stroke=\"#111827\" stroke-width=\"6\"/><line x1=\"580\" y1=\"180\" x2=\"640\" y2=\"180\" stroke=\"#111827\" stroke-width=\"6\"/><line x1=\"610\" y1=\"180\" x2=\"610\" y2=\"285\" stroke=\"#111827\" stroke-width=\"5\"/><text x=\"655\" y=\"170\" font-size=\"22\">C</text></svg>",
+              "render_mode": "inline",
+              "responsive": true
+            }
+          }
+        ],
+        "final_answer": "التوصيل على طرفي C والمولد."
+      }
+    },
+    {
+      "id": "2016_elec_ex40_q2",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2) نغلق القاطعة عند t=0 ومن أجل \\(R=R_1\\) يظهر الشكل 64. أ- جد المعادلة التفاضلية لـ\\(u_C\\). ب- إذا كان \\(u_C=A(1-e^{-Bt})\\)، جد A وB واحسبهما من البيان. ج- مثل كيفياً \\(u_C=f(t)\\) من أجل \\(R>R_1\\).",
+      "solution": {
+        "strategy": "نطبق قانون التوترات ونستغل البيان.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "المعادلة",
+            "explanation": "\\[\\boxed{\\frac{du_C}{dt}+\\frac1{R_1C}u_C=\\frac{E}{R_1C}}\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "A وB",
+            "explanation": "\\[\\boxed{A=E},\\qquad\\boxed{B=\\frac1{R_1C}}\\] ومن الشكل: \\(A=\\boxed{12V}\\)، \\(\\tau=4ms\\Rightarrow B=\\boxed{250s^{-1}}\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "R>R1",
+            "explanation": "تزداد \\(\\tau=RC\\)، لذلك يكون منحنى الشحن أبطأ مع نفس القيمة النهائية E.",
+            "graph_data": {
+              "title": "تأثير زيادة R",
+              "description": "تمثيل كيفي؛ كلا المنحنيين يصلان إلى 12V.",
+              "x_label": "t(ms)",
+              "y_label": "uC(V)",
+              "x_domain": [
+                0,
+                20
+              ],
+              "y_domain": [
+                0,
+                13
+              ],
+              "series": [
+                {
+                  "name": "R1",
+                  "data": [
+                    {
+                      "x": 0,
+                      "y": 0.0
+                    },
+                    {
+                      "x": 2,
+                      "y": 4.722
+                    },
+                    {
+                      "x": 4,
+                      "y": 7.585
+                    },
+                    {
+                      "x": 6,
+                      "y": 9.322
+                    },
+                    {
+                      "x": 8,
+                      "y": 10.376
+                    },
+                    {
+                      "x": 12,
+                      "y": 11.403
+                    },
+                    {
+                      "x": 16,
+                      "y": 11.78
+                    },
+                    {
+                      "x": 20,
+                      "y": 11.919
+                    }
+                  ]
+                },
+                {
+                  "name": "R>R1",
+                  "data": [
+                    {
+                      "x": 0,
+                      "y": 0.0
+                    },
+                    {
+                      "x": 2,
+                      "y": 2.654
+                    },
+                    {
+                      "x": 4,
+                      "y": 4.722
+                    },
+                    {
+                      "x": 6,
+                      "y": 6.332
+                    },
+                    {
+                      "x": 8,
+                      "y": 7.585
+                    },
+                    {
+                      "x": 12,
+                      "y": 9.322
+                    },
+                    {
+                      "x": 16,
+                      "y": 10.376
+                    },
+                    {
+                      "x": 20,
+                      "y": 11.015
+                    }
+                  ]
+                }
+              ],
+              "settings": {
+                "show_grid": true,
+                "show_axes": true,
+                "show_legend": true,
+                "show_point_labels": false,
+                "connect_points": true
+              }
+            }
+          }
+        ],
+        "final_answer": "A=12V، B=250s⁻¹؛ زيادة R تبطئ الشحن."
+      }
+    },
+    {
+      "id": "2016_elec_ex40_q3",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "3) نغير R ونحسب ثابت الزمن \\(\\tau\\) فنحصل على الشكل 65. أ- استنتج قيمة C وR1. ب- المكثفة السابقة مكافئة لمكثفتين: \\(C_1=1\\mu F\\) و\\(C_2\\) مجهولة. بيّن كيفية الربط واستنتج \\(C_2\\).",
+      "solution": {
+        "strategy": "ميل τ(R) يساوي C، ثم τ=R1C.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "C",
+            "explanation": "من ميل الشكل 65 كما في التصحيح: \\[C=\\frac{(3.2-1.6)\\times10^{-3}}{(1-0.5)\\times10^3}=\\boxed{3.2\\mu F}\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "R1",
+            "explanation": "\\[R_1=\\frac{\\tau}{C}=\\frac{0.004}{3.2\\times10^{-6}}=\\boxed{1250\\Omega}\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الربط",
+            "explanation": "بما أن \\(C=3.2\\mu F>C_1=1\\mu F\\)، فالربط على التفرع."
+          },
+          {
+            "step_number": 4,
+            "title": "C2",
+            "explanation": "\\[C_2=C-C_1=3.2-1=\\boxed{2.2\\mu F}\\]"
+          }
+        ],
+        "final_answer": "\\(C=3.2\\mu F,R_1=1250\\Omega\\)، الربط تفرع و\\(C_2=2.2\\mu F\\)."
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "تجميعية_عمورة_للبكالوريات_السابقة_الوحدة_3(1).pdf",
+    "statement_figure_policy": "كل شكل أو بيان معطى في الموضوع يوضع مع نص التمرين. الرسم المطلوب من التلميذ يوضع داخل الحل فقط.",
+    "solution_figure_policy": "الرسم الذي يمثل إجابة سؤال أو توصيل جهاز قياس يوضع داخل خطوات الحل.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  },
+  "statement": "نريد دراسة تأثير مقاومة ناقل أومي على تطور التوتر \\(u_C(t)\\) بين طرفي مكثفة باستعمال راسم اهتزاز بذاكرة. تتألف الدارة من مكثفة فارغة سعتها C مجهولة، ناقل أومي مقاومته R متغيرة، مولد ذي توتر ثابت E وقاطعة K. من أجل \\(R=R_1\\) يظهر الشكل 64، ثم بتغيير R وحساب ثابت الزمن نحصل على الشكل 65.",
+  "figures": [
+    {
+      "title": "الشكل 64",
+      "description": "منحنى الشحن من أجل R=R1؛ من البيان A=12V وτ=4ms.",
+      "x_label": "t (ms)",
+      "y_label": "u_C(V)",
+      "x_domain": [
+        0,
+        15
+      ],
+      "y_domain": [
+        0,
+        13
+      ],
+      "series": [
+        {
+          "name": "R=R1",
+          "data": [
+            {
+              "x": 0,
+              "y": 0.0
+            },
+            {
+              "x": 1,
+              "y": 2.654
+            },
+            {
+              "x": 2,
+              "y": 4.722
+            },
+            {
+              "x": 2.5,
+              "y": 5.577
+            },
+            {
+              "x": 3,
+              "y": 6.332
+            },
+            {
+              "x": 4,
+              "y": 7.585
+            },
+            {
+              "x": 5,
+              "y": 8.562
+            },
+            {
+              "x": 7.5,
+              "y": 10.16
+            },
+            {
+              "x": 10,
+              "y": 11.015
+            },
+            {
+              "x": 15,
+              "y": 11.718
+            }
+          ]
+        }
+      ],
+      "settings": {
+        "show_grid": true,
+        "show_axes": true,
+        "show_legend": false,
+        "show_point_labels": false,
+        "connect_points": true
+      }
+    },
+    {
+      "title": "الشكل 65 — τ=f(R)",
+      "description": "العلاقة الخطية المستعملة لاستخراج C.",
+      "x_label": "R (kΩ)",
+      "y_label": "τ (ms)",
+      "x_domain": [
+        0,
+        1.2
+      ],
+      "y_domain": [
+        0,
+        4
+      ],
+      "series": [
+        {
+          "name": "τ(R)",
+          "data": [
+            {
+              "x": 0.5,
+              "y": 1
+            },
+            {
+              "x": 1,
+              "y": 3.2
+            }
+          ]
+        }
+      ],
+      "settings": {
+        "show_grid": true,
+        "show_axes": true,
+        "show_legend": false,
+        "show_point_labels": false,
+        "connect_points": true
+      }
+    }
+  ],
+  "statement_graphs": [
+    {
+      "title": "الشكل 64",
+      "description": "منحنى الشحن من أجل R=R1؛ من البيان A=12V وτ=4ms.",
+      "x_label": "t (ms)",
+      "y_label": "u_C(V)",
+      "x_domain": [
+        0,
+        15
+      ],
+      "y_domain": [
+        0,
+        13
+      ],
+      "series": [
+        {
+          "name": "R=R1",
+          "data": [
+            {
+              "x": 0,
+              "y": 0.0
+            },
+            {
+              "x": 1,
+              "y": 2.654
+            },
+            {
+              "x": 2,
+              "y": 4.722
+            },
+            {
+              "x": 2.5,
+              "y": 5.577
+            },
+            {
+              "x": 3,
+              "y": 6.332
+            },
+            {
+              "x": 4,
+              "y": 7.585
+            },
+            {
+              "x": 5,
+              "y": 8.562
+            },
+            {
+              "x": 7.5,
+              "y": 10.16
+            },
+            {
+              "x": 10,
+              "y": 11.015
+            },
+            {
+              "x": 15,
+              "y": 11.718
+            }
+          ]
+        }
+      ],
+      "settings": {
+        "show_grid": true,
+        "show_axes": true,
+        "show_legend": false,
+        "show_point_labels": false,
+        "connect_points": true
+      }
+    },
+    {
+      "title": "الشكل 65 — τ=f(R)",
+      "description": "العلاقة الخطية المستعملة لاستخراج C.",
+      "x_label": "R (kΩ)",
+      "y_label": "τ (ms)",
+      "x_domain": [
+        0,
+        1.2
+      ],
+      "y_domain": [
+        0,
+        4
+      ],
+      "series": [
+        {
+          "name": "τ(R)",
+          "data": [
+            {
+              "x": 0.5,
+              "y": 1
+            },
+            {
+              "x": 1,
+              "y": 3.2
+            }
+          ]
+        }
+      ],
+      "settings": {
+        "show_grid": true,
+        "show_axes": true,
+        "show_legend": false,
+        "show_point_labels": false,
+        "connect_points": true
+      }
+    }
+  ]
+}

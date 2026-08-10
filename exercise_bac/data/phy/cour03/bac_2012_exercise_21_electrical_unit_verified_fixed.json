@@ -1,0 +1,406 @@
+{
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2012-electrical-verified",
+  "language": "ar",
+  "direction": "rtl",
+  "year": 2012,
+  "session": "ordinary",
+  "chapter_code": "electrical_phenomena_evolution",
+  "chapter_title": "تطور دراسة ظواهر كهربائية",
+  "exercise_number": 21,
+  "source_page": 8,
+  "source_pages": [
+    8,
+    9
+  ],
+  "solution_source_pages": [
+    29
+  ],
+
+  "branches": [
+    {
+      "code": "science",
+      "name": "شعبة علوم تجريبية"
+    }
+  ],
+  "title": "التمرين 21 — بكالوريا الجزائر 2012 — شعبة علوم تجريبية",
+  "axis_tags": [
+    "rl_current_establishment_differential_equation",
+    "rl_time_constant_graphical_analysis"
+  ],
+  "questions": [
+    {
+      "id": "2012_elec_ex21_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) نتابع تطور التوتر الكهربائي \\(u_R\\) بين طرفي الناقل الأومي باستعمال راسم اهتزاز مهبطي ذي ذاكرة. أ- أعد رسم الدارة ثم بيّن عليها كيفية ربط راسم الاهتزاز المهبطي. ب- متابعة تطور \\(u_R(t)\\) مكنتنا من متابعة تطور شدة التيار \\(i(t)\\) المار في الدارة. فسّر ذلك.",
+      "solution": {
+        "strategy": "نقيس uR لأن R ثابتة وuR=Ri.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الربط",
+            "explanation": "يوصل مدخل الراسم بين طرفي المقاومة R، مع اختيار المرجع المشترك على طرفها السفلي."
+          },
+          {
+            "step_number": 2,
+            "title": "التفسير",
+            "explanation": "\\[u_R=Ri\\Rightarrow \\boxed{i=\\frac{u_R}{R}}\\] وبما أن \\(R\\) ثابتة، فتغيرات \\(u_R\\) لها نفس شكل تغيرات \\(i\\)."
+          }
+        ],
+        "final_answer": "\\(i=u_R/R\\)، لذلك تتبع uR هو تتبع مباشر للتيار."
+      }
+    },
+    {
+      "id": "2012_elec_ex21_q2",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2) نغلق القاطعة: أ- جد المعادلة التفاضلية لشدة التيار الكهربائي \\(i(t)\\) المار في الدارة. ب- علماً أن حلها من الشكل \\(i(t)=A(1-e^{-t/\\tau})\\)، جد عبارتي \\(A\\) و\\(\\tau\\). ماذا يمثلان؟",
+      "solution": {
+        "strategy": "نطبق قانون جمع التوترات ثم نطابق الحل الأسي.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "المعادلة",
+            "explanation": "\\[E=u_b+u_R=L\\frac{di}{dt}+(R+r)i\\] ومنه \\[\\boxed{\\frac{di}{dt}+\\frac{R+r}{L}i=\\frac EL}\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "A وτ",
+            "explanation": "بالتعويض في الحل: \\[\\boxed{A=\\frac{E}{R+r}=I_0},\\qquad \\boxed{\\tau=\\frac{L}{R+r}}\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "المدلول",
+            "explanation": "\\(A\\) تمثل شدة التيار الأعظمية في النظام الدائم، و\\(\\tau\\) ثابت الزمن المميز للدارة."
+          }
+        ],
+        "final_answer": "\\(A=E/(R+r)\\)، \\(\\tau=L/(R+r)\\)."
+      }
+    },
+    {
+      "id": "2012_elec_ex21_q3",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "3) بالاعتماد على الشكل 31 والجدول: أ- أنسب كل تجربة إلى المنحنى البياني الموافق لها مع التعليل. ب- جد قيمة المقاومة \\(r\\) للوشيعة.",
+      "solution": {
+        "strategy": "نقارن القيم النهائية I0 ثم ثوابت الزمن.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تمييز التجربة 1",
+            "explanation": "للتجربة 1 مقاومة خارجية أكبر \\(R=290\\Omega\\)، لذا \\(I_{01}=E/(R+r)\\) أصغر من التجربتين 2 و3. لذلك \\(\\boxed{\\text{التجربة 1}\\to\\text{المنحنى 3}}\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "تمييز التجربتين 2 و3",
+            "explanation": "لهما نفس \\(R=190\\Omega\\)، إذن نفس \\(I_0\\). لكن \\(L_3=40mH>L_2=20mH\\)، وبالتالي \\(\\tau_3>\\tau_2\\). لذا الأسرع هو المنحنى 1 للتجربة 2، والأبطأ هو المنحنى 2 للتجربة 3."
+          },
+          {
+            "step_number": 3,
+            "title": "المقاومة الداخلية",
+            "explanation": "من البيان للتجربة 3 يقرأ تقريباً \\[\\tau_3=0.20ms\\]، ومن \\[\\tau_3=\\frac{L_3}{R_3+r}\\] نحصل على \\[r=\\frac{L_3}{\\tau_3}-R_3=\\frac{40\\times10^{-3}}{0.20\\times10^{-3}}-190=\\boxed{10\\Omega}\\]"
+          }
+        ],
+        "final_answer": "التجربة 1→المنحنى 3، التجربة 2→المنحنى 1، التجربة 3→المنحنى 2، و\\(r=10\\Omega\\)."
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "تجميعية_عمورة_للبكالوريات_السابقة_الوحدة_3(1).pdf",
+    "statement_figure_policy": "الشكل أو البيان الموجود أصلاً في موضوع البكالوريا يظهر مع نص التمرين. الرسم المطلوب من التلميذ لا يكشف قبل فتح الحل.",
+    "solution_figure_policy": "تضاف الرسومات الضرورية داخل الحل فقط عند طلبها أو عند الحاجة المباشرة لفهم الاستغلال.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  },
+  "statement": "لدراسة تطور شدة التيار الكهربائي \\(i(t)\\) المار في ثنائي قطب \\(RL\\) بدلالة الزمن، وتأثير المقدارين \\(R\\) و\\(L\\) على هذا التطور، نركب الدارة الكهربائية (الشكل–30).\n\nتتكون الدارة من ثنائي القطب المكون من الناقل الأومي \\(R\\) والوشيعة \\((L,r)\\)، ومولد للتوتر المستمر قوته المحركة الكهربائية \\(E\\).\n\nننجز ثلاث تجارب مختلفة باستعمال وشيعة مقاومتها \\(r\\) ثابتة تقريباً وذاتيتها \\(L\\) قابلة للتغيير ونواقل أومية مختلفة. قيم العناصر المستعملة:\n\n• التجربة 1: \\(L=30mH\\)، \\(R=290\\Omega\\).\n• التجربة 2: \\(L=20mH\\)، \\(R=190\\Omega\\).\n• التجربة 3: \\(L=40mH\\)، \\(R=190\\Omega\\).\n\nيبين الشكل 31 منحنيات تطور شدة التيار بالنسبة للتجارب الثلاث.",
+  "figures": [
+    {
+      "diagram_type": "bac_2012_ex21_statement_circuit",
+      "title": "الشكل 30 — دارة RL",
+      "description": "الدارة المستعملة لدراسة تأثير R وL.",
+      "svg": "<svg viewBox=\"0 0 820 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"الشكل 30 ثنائي قطب RL\">\n <defs><marker id=\"a21\" markerWidth=\"10\" markerHeight=\"10\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L0,6 L9,3z\" fill=\"#111827\"/></marker></defs>\n <rect x=\"35\" y=\"25\" width=\"750\" height=\"285\" rx=\"20\" fill=\"#fff\" stroke=\"#cbd5e1\" stroke-width=\"2\"/>\n <path d=\"M160 80 H625 V270 H160 Z\" fill=\"none\" stroke=\"#111827\" stroke-width=\"5\"/>\n <circle cx=\"160\" cy=\"175\" r=\"32\" fill=\"#fff\" stroke=\"#111827\" stroke-width=\"4\"/>\n <text x=\"149\" y=\"183\" font-size=\"23\" font-family=\"Arial\">E</text>\n <line x1=\"310\" y1=\"80\" x2=\"355\" y2=\"80\" stroke=\"#111827\" stroke-width=\"5\"/>\n <line x1=\"380\" y1=\"80\" x2=\"425\" y2=\"80\" stroke=\"#111827\" stroke-width=\"5\"/>\n <line x1=\"355\" y1=\"80\" x2=\"383\" y2=\"55\" stroke=\"#111827\" stroke-width=\"5\"/>\n <text x=\"360\" y=\"43\" font-size=\"22\" font-family=\"Arial\">K</text>\n <path d=\"M600 105 c-30 0 -30 34 0 34 c-30 0 -30 34 0 34 c-30 0 -30 34 0 34\" fill=\"none\" stroke=\"#111827\" stroke-width=\"5\"/>\n <text x=\"640\" y=\"160\" font-size=\"22\" font-family=\"Arial\">L,r</text>\n <rect x=\"565\" y=\"220\" width=\"75\" height=\"50\" rx=\"7\" fill=\"#fff\" stroke=\"#111827\" stroke-width=\"3\"/>\n <text x=\"595\" y=\"252\" font-size=\"22\" font-family=\"Arial\">R</text>\n <line x1=\"215\" y1=\"45\" x2=\"290\" y2=\"45\" stroke=\"#111827\" stroke-width=\"4\" marker-end=\"url(#a21)\"/>\n <text x=\"245\" y=\"32\" font-size=\"22\" font-family=\"Arial\">i</text>\n</svg>",
+      "render_mode": "inline",
+      "responsive": true
+    },
+    {
+      "title": "الشكل 31 — منحنيات التجارب الثلاث",
+      "description": "المنحنيات النوعية كما في الموضوع: المنحنيان 1 و2 لهما نفس الشدة النهائية، والمنحنى 3 له شدة نهائية أصغر.",
+      "x_label": "t (ms)",
+      "y_label": "i (mA)",
+      "x_domain": [
+        0,
+        0.45
+      ],
+      "y_domain": [
+        0,
+        33
+      ],
+      "series": [
+        {
+          "name": "المنحنى 1",
+          "data": [
+            {
+              "x": 0,
+              "y": 0.0
+            },
+            {
+              "x": 0.03,
+              "y": 11.8
+            },
+            {
+              "x": 0.06,
+              "y": 18.96
+            },
+            {
+              "x": 0.1,
+              "y": 24.33
+            },
+            {
+              "x": 0.15,
+              "y": 27.54
+            },
+            {
+              "x": 0.2,
+              "y": 28.93
+            },
+            {
+              "x": 0.3,
+              "y": 29.8
+            },
+            {
+              "x": 0.45,
+              "y": 29.98
+            }
+          ]
+        },
+        {
+          "name": "المنحنى 2",
+          "data": [
+            {
+              "x": 0,
+              "y": 0.0
+            },
+            {
+              "x": 0.03,
+              "y": 7.78
+            },
+            {
+              "x": 0.06,
+              "y": 13.54
+            },
+            {
+              "x": 0.1,
+              "y": 18.96
+            },
+            {
+              "x": 0.15,
+              "y": 23.31
+            },
+            {
+              "x": 0.2,
+              "y": 25.94
+            },
+            {
+              "x": 0.3,
+              "y": 28.51
+            },
+            {
+              "x": 0.45,
+              "y": 29.67
+            }
+          ]
+        },
+        {
+          "name": "المنحنى 3",
+          "data": [
+            {
+              "x": 0,
+              "y": 0.0
+            },
+            {
+              "x": 0.03,
+              "y": 5.18
+            },
+            {
+              "x": 0.06,
+              "y": 9.02
+            },
+            {
+              "x": 0.1,
+              "y": 12.64
+            },
+            {
+              "x": 0.15,
+              "y": 15.54
+            },
+            {
+              "x": 0.2,
+              "y": 17.29
+            },
+            {
+              "x": 0.3,
+              "y": 19.0
+            },
+            {
+              "x": 0.45,
+              "y": 19.78
+            }
+          ]
+        }
+      ],
+      "settings": {
+        "show_grid": true,
+        "show_axes": true,
+        "show_legend": true,
+        "show_point_labels": false,
+        "connect_points": true
+      }
+    }
+  ],
+  "statement_graphs": [
+    {
+      "diagram_type": "bac_2012_ex21_statement_circuit",
+      "title": "الشكل 30 — دارة RL",
+      "description": "الدارة المستعملة لدراسة تأثير R وL.",
+      "svg": "<svg viewBox=\"0 0 820 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"الشكل 30 ثنائي قطب RL\">\n <defs><marker id=\"a21\" markerWidth=\"10\" markerHeight=\"10\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L0,6 L9,3z\" fill=\"#111827\"/></marker></defs>\n <rect x=\"35\" y=\"25\" width=\"750\" height=\"285\" rx=\"20\" fill=\"#fff\" stroke=\"#cbd5e1\" stroke-width=\"2\"/>\n <path d=\"M160 80 H625 V270 H160 Z\" fill=\"none\" stroke=\"#111827\" stroke-width=\"5\"/>\n <circle cx=\"160\" cy=\"175\" r=\"32\" fill=\"#fff\" stroke=\"#111827\" stroke-width=\"4\"/>\n <text x=\"149\" y=\"183\" font-size=\"23\" font-family=\"Arial\">E</text>\n <line x1=\"310\" y1=\"80\" x2=\"355\" y2=\"80\" stroke=\"#111827\" stroke-width=\"5\"/>\n <line x1=\"380\" y1=\"80\" x2=\"425\" y2=\"80\" stroke=\"#111827\" stroke-width=\"5\"/>\n <line x1=\"355\" y1=\"80\" x2=\"383\" y2=\"55\" stroke=\"#111827\" stroke-width=\"5\"/>\n <text x=\"360\" y=\"43\" font-size=\"22\" font-family=\"Arial\">K</text>\n <path d=\"M600 105 c-30 0 -30 34 0 34 c-30 0 -30 34 0 34 c-30 0 -30 34 0 34\" fill=\"none\" stroke=\"#111827\" stroke-width=\"5\"/>\n <text x=\"640\" y=\"160\" font-size=\"22\" font-family=\"Arial\">L,r</text>\n <rect x=\"565\" y=\"220\" width=\"75\" height=\"50\" rx=\"7\" fill=\"#fff\" stroke=\"#111827\" stroke-width=\"3\"/>\n <text x=\"595\" y=\"252\" font-size=\"22\" font-family=\"Arial\">R</text>\n <line x1=\"215\" y1=\"45\" x2=\"290\" y2=\"45\" stroke=\"#111827\" stroke-width=\"4\" marker-end=\"url(#a21)\"/>\n <text x=\"245\" y=\"32\" font-size=\"22\" font-family=\"Arial\">i</text>\n</svg>",
+      "render_mode": "inline",
+      "responsive": true
+    },
+    {
+      "title": "الشكل 31 — منحنيات التجارب الثلاث",
+      "description": "المنحنيات النوعية كما في الموضوع: المنحنيان 1 و2 لهما نفس الشدة النهائية، والمنحنى 3 له شدة نهائية أصغر.",
+      "x_label": "t (ms)",
+      "y_label": "i (mA)",
+      "x_domain": [
+        0,
+        0.45
+      ],
+      "y_domain": [
+        0,
+        33
+      ],
+      "series": [
+        {
+          "name": "المنحنى 1",
+          "data": [
+            {
+              "x": 0,
+              "y": 0.0
+            },
+            {
+              "x": 0.03,
+              "y": 11.8
+            },
+            {
+              "x": 0.06,
+              "y": 18.96
+            },
+            {
+              "x": 0.1,
+              "y": 24.33
+            },
+            {
+              "x": 0.15,
+              "y": 27.54
+            },
+            {
+              "x": 0.2,
+              "y": 28.93
+            },
+            {
+              "x": 0.3,
+              "y": 29.8
+            },
+            {
+              "x": 0.45,
+              "y": 29.98
+            }
+          ]
+        },
+        {
+          "name": "المنحنى 2",
+          "data": [
+            {
+              "x": 0,
+              "y": 0.0
+            },
+            {
+              "x": 0.03,
+              "y": 7.78
+            },
+            {
+              "x": 0.06,
+              "y": 13.54
+            },
+            {
+              "x": 0.1,
+              "y": 18.96
+            },
+            {
+              "x": 0.15,
+              "y": 23.31
+            },
+            {
+              "x": 0.2,
+              "y": 25.94
+            },
+            {
+              "x": 0.3,
+              "y": 28.51
+            },
+            {
+              "x": 0.45,
+              "y": 29.67
+            }
+          ]
+        },
+        {
+          "name": "المنحنى 3",
+          "data": [
+            {
+              "x": 0,
+              "y": 0.0
+            },
+            {
+              "x": 0.03,
+              "y": 5.18
+            },
+            {
+              "x": 0.06,
+              "y": 9.02
+            },
+            {
+              "x": 0.1,
+              "y": 12.64
+            },
+            {
+              "x": 0.15,
+              "y": 15.54
+            },
+            {
+              "x": 0.2,
+              "y": 17.29
+            },
+            {
+              "x": 0.3,
+              "y": 19.0
+            },
+            {
+              "x": 0.45,
+              "y": 19.78
+            }
+          ]
+        }
+      ],
+      "settings": {
+        "show_grid": true,
+        "show_axes": true,
+        "show_legend": true,
+        "show_point_labels": false,
+        "connect_points": true
+      }
+    }
+  ]
+}

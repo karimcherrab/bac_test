@@ -1,0 +1,378 @@
+{
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2010-electrical-verified",
+  "language": "ar",
+  "direction": "rtl",
+  "year": 2010,
+  "session": "ordinary",
+  "chapter_code": "electrical_phenomena_evolution",
+  "chapter_title": "تطور دراسة ظواهر كهربائية",
+  "exercise_number": 13,
+  "source_page": 5,
+  "source_pages": [
+    5
+  ],
+  "solution_source_pages": [
+    26
+  ],
+
+  "branches": [
+    {
+      "code": "science",
+      "name": "شعبة علوم تجريبية"
+    }
+  ],
+  "title": "التمرين 13 — بكالوريا الجزائر 2010 — شعبة علوم تجريبية",
+  "axis_tags": [
+    "rc_capacitor_charging",
+    "rc_time_constant_graphical_analysis",
+    "rc_model_exploitation_physical_quantities"
+  ],
+  "questions": [
+    {
+      "id": "2010_elec_ex13_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) اقترح مخططاً للدارة موضحاً اتجاه التيار، ثم مثّل بسهم كلاً من التوترين \\(u_R\\) و\\(u_C\\).",
+      "solution": {
+        "strategy": "نرسم دارة شحن RC تسلسلية مع المولد والقاطعة، ثم نوجه التيار والتوترات.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "المخطط والتوجيه",
+            "explanation": "يخرج التيار الاصطلاحي من القطب الموجب للمولد ويمر عبر المكثفة والمقاومة وفق توجيه الدارة.",
+            "graph_data": {
+              "diagram_type": "bac_2010_ex13_solution_circuit",
+              "title": "المخطط المقترح",
+              "description": "الرسم الذي يطلبه السؤال؛ لا يظهر قبل فتح الحل.",
+              "svg": "<svg viewBox=\"0 0 820 350\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"مخطط دارة التمرين 13\">\n <defs>\n  <marker id=\"i13\" markerWidth=\"10\" markerHeight=\"10\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L0,6 L9,3z\" fill=\"#111827\"/></marker>\n  <marker id=\"u13\" markerWidth=\"10\" markerHeight=\"10\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L0,6 L9,3z\" fill=\"#dc2626\"/></marker>\n </defs>\n <path d=\"M150 90 H650 V255 H150 Z\" fill=\"none\" stroke=\"#111827\" stroke-width=\"5\"/>\n <circle cx=\"150\" cy=\"170\" r=\"32\" fill=\"#fff\" stroke=\"#111827\" stroke-width=\"4\"/>\n <text x=\"140\" y=\"178\" font-size=\"23\" font-family=\"Arial\">E</text>\n <line x1=\"415\" y1=\"90\" x2=\"415\" y2=\"145\" stroke=\"#111827\" stroke-width=\"5\"/>\n <line x1=\"385\" y1=\"145\" x2=\"445\" y2=\"145\" stroke=\"#111827\" stroke-width=\"6\"/>\n <line x1=\"385\" y1=\"180\" x2=\"445\" y2=\"180\" stroke=\"#111827\" stroke-width=\"6\"/>\n <line x1=\"415\" y1=\"180\" x2=\"415\" y2=\"205\" stroke=\"#111827\" stroke-width=\"5\"/>\n <rect x=\"375\" y=\"205\" width=\"80\" height=\"45\" rx=\"6\" fill=\"#fff\" stroke=\"#111827\" stroke-width=\"3\"/>\n <text x=\"405\" y=\"235\" font-size=\"23\" font-family=\"Arial\">R</text>\n <text x=\"465\" y=\"168\" font-size=\"23\" font-family=\"Arial\">C</text>\n <line x1=\"240\" y1=\"55\" x2=\"330\" y2=\"55\" stroke=\"#111827\" stroke-width=\"4\" marker-end=\"url(#i13)\"/>\n <text x=\"278\" y=\"40\" font-size=\"22\" font-family=\"Arial\">i</text>\n <line x1=\"485\" y1=\"180\" x2=\"485\" y2=\"135\" stroke=\"#dc2626\" stroke-width=\"4\" marker-end=\"url(#u13)\"/>\n <text x=\"500\" y=\"160\" font-size=\"22\" font-family=\"Arial\" fill=\"#991b1b\">u_C</text>\n <line x1=\"500\" y1=\"250\" x2=\"500\" y2=\"205\" stroke=\"#dc2626\" stroke-width=\"4\" marker-end=\"url(#u13)\"/>\n <text x=\"515\" y=\"232\" font-size=\"22\" font-family=\"Arial\" fill=\"#991b1b\">u_R</text>\n <text x=\"390\" y=\"132\" font-size=\"20\" font-family=\"Arial\">A</text>\n <text x=\"390\" y=\"198\" font-size=\"20\" font-family=\"Arial\">B</text>\n</svg>",
+              "render_mode": "inline",
+              "responsive": true
+            }
+          }
+        ],
+        "final_answer": "دارة RC تسلسلية مع اتجاه i وتوجيه uC وuR كما في الرسم."
+      }
+    },
+    {
+      "id": "2010_elec_ex13_q2",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2) عيّن قيمة ثابت الزمن \\(\\tau\\) للدارة وما مدلوله الفيزيائي؟ استنتج قيمة سعة المكثفة \\(C\\).",
+      "solution": {
+        "strategy": "نقرأ τ عند 63% من القيمة النهائية ثم نستعمل τ=RC.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "القراءة",
+            "explanation": "من الشكل 17 نجد \\[\\boxed{\\tau=1ms}\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "المدلول",
+            "explanation": "هو الزمن اللازم ليبلغ توتر/شحنة المكثفة أثناء الشحن نحو 63% من القيمة النهائية."
+          },
+          {
+            "step_number": 3,
+            "title": "السعة",
+            "explanation": "\\[C=\\frac{\\tau}{R}=\\frac{10^{-3}}{100}=10^{-5}F=\\boxed{10\\mu F}\\]"
+          }
+        ],
+        "final_answer": "\\(\\tau=1ms\\)، \\(C=10\\mu F\\)."
+      }
+    },
+    {
+      "id": "2010_elec_ex13_q3",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "3) احسب شحنة المكثفة عند بلوغ الدارة للنظام الدائم.",
+      "solution": {
+        "strategy": "في النظام الدائم uC=E، لذا q=CE.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الحساب",
+            "explanation": "\\[q_{max}=CE=10^{-5}\\times5=\\boxed{5\\times10^{-5}C}\\]"
+          }
+        ],
+        "final_answer": "\\(q_{max}=5\\times10^{-5}C\\)."
+      }
+    },
+    {
+      "id": "2010_elec_ex13_q4",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "4) لو استبدلنا المكثفة السابقة بمكثفة أخرى سعتها \\(C'=2C\\)، ارسم كيفياً في نفس المعلم السابق شكل المنحنى \\(u_{C'}=g(t)\\) الذي يمكن مشاهدته على شاشة الجهاز مع التعليل.",
+      "solution": {
+        "strategy": "مضاعفة C تضاعف ثابت الزمن بينما تبقى القيمة النهائية مساوية لتوتر المولد.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "ثابت الزمن الجديد",
+            "explanation": "\\[\\tau'=RC'=R(2C)=2\\tau=\\boxed{2ms}\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "شكل المنحنى",
+            "explanation": "المنحنى الجديد أبطأ ويقع إلى يمين المنحنى الأصلي، لكنه يتجه إلى نفس القيمة النهائية \\(5V\\).",
+            "graph_data": {
+              "title": "تأثير مضاعفة السعة",
+              "description": "المنحنى الأصلي C أسرع؛ عند C'=2C يصبح τ'=2τ فتكون عملية الشحن أبطأ مع نفس القيمة النهائية E.",
+              "x_label": "t (ms)",
+              "y_label": "u_C (V)",
+              "x_domain": [
+                0,
+                8
+              ],
+              "y_domain": [
+                0,
+                5.4
+              ],
+              "series": [
+                {
+                  "name": "C",
+                  "data": [
+                    {
+                      "x": 0,
+                      "y": 0.0
+                    },
+                    {
+                      "x": 0.5,
+                      "y": 1.967
+                    },
+                    {
+                      "x": 1,
+                      "y": 3.161
+                    },
+                    {
+                      "x": 2,
+                      "y": 4.323
+                    },
+                    {
+                      "x": 3,
+                      "y": 4.751
+                    },
+                    {
+                      "x": 4,
+                      "y": 4.908
+                    },
+                    {
+                      "x": 5,
+                      "y": 4.966
+                    },
+                    {
+                      "x": 6,
+                      "y": 4.988
+                    },
+                    {
+                      "x": 8,
+                      "y": 4.998
+                    }
+                  ]
+                },
+                {
+                  "name": "C'=2C",
+                  "data": [
+                    {
+                      "x": 0,
+                      "y": 0.0
+                    },
+                    {
+                      "x": 0.5,
+                      "y": 1.106
+                    },
+                    {
+                      "x": 1,
+                      "y": 1.967
+                    },
+                    {
+                      "x": 2,
+                      "y": 3.161
+                    },
+                    {
+                      "x": 3,
+                      "y": 3.884
+                    },
+                    {
+                      "x": 4,
+                      "y": 4.323
+                    },
+                    {
+                      "x": 5,
+                      "y": 4.59
+                    },
+                    {
+                      "x": 6,
+                      "y": 4.751
+                    },
+                    {
+                      "x": 8,
+                      "y": 4.908
+                    }
+                  ]
+                }
+              ],
+              "settings": {
+                "show_grid": true,
+                "show_axes": true,
+                "show_legend": true,
+                "show_point_labels": false,
+                "connect_points": true
+              }
+            }
+          }
+        ],
+        "final_answer": "\\(\\tau'=2\\tau\\)، لذا الشحن أبطأ مع نفس النهاية 5V."
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "تجميعية_عمورة_للبكالوريات_السابقة_الوحدة_3(1).pdf",
+    "statement_figure_policy": "الشكل الموجود في الموضوع يظهر مع نص التمرين. إذا طلب السؤال إنشاء رسم جديد فلا يكشف قبل فتح الحل.",
+    "solution_figure_policy": "الرسم المطلوب أو الرسم المساعد يوضع داخل خطوة الحل فقط.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  },
+  "statement": "نحقق دارة كهربائية على التسلسل تتكون من:\n\n• ناقل أومي مقاومته \\(R=100\\Omega\\).\n• مكثفة سعتها \\(C\\).\n• مولد ذو توتر كهربائي ثابت \\(E=5V\\).\n• قاطعة \\(K\\).\n\nنوصل طرفي المكثفة \\(A\\) و\\(B\\) إلى واجهة دخول لجهاز إعلام آلي، وعولجت المعطيات ببرمجية Microsoft Excel، وتحصلنا على المنحنى البياني \\(u_C=u_{AB}=f(t)\\) (الشكل 17).",
+  "figures": [
+    {
+      "title": "الشكل 17 — u_C=f(t)",
+      "description": "منحنى الشحن المعطى في الموضوع؛ منه τ≈1ms والقيمة النهائية 5V.",
+      "x_label": "t (ms)",
+      "y_label": "u_C (V)",
+      "x_domain": [
+        0,
+        5
+      ],
+      "y_domain": [
+        0,
+        5.4
+      ],
+      "series": [
+        {
+          "name": "u_C(t)",
+          "data": [
+            {
+              "x": 0,
+              "y": 0.0
+            },
+            {
+              "x": 0.25,
+              "y": 1.106
+            },
+            {
+              "x": 0.5,
+              "y": 1.967
+            },
+            {
+              "x": 0.75,
+              "y": 2.638
+            },
+            {
+              "x": 1,
+              "y": 3.161
+            },
+            {
+              "x": 1.5,
+              "y": 3.884
+            },
+            {
+              "x": 2,
+              "y": 4.323
+            },
+            {
+              "x": 3,
+              "y": 4.751
+            },
+            {
+              "x": 4,
+              "y": 4.908
+            },
+            {
+              "x": 5,
+              "y": 4.966
+            }
+          ]
+        }
+      ],
+      "settings": {
+        "show_grid": true,
+        "show_axes": true,
+        "show_legend": false,
+        "show_point_labels": false,
+        "connect_points": true
+      }
+    }
+  ],
+  "statement_graphs": [
+    {
+      "title": "الشكل 17 — u_C=f(t)",
+      "description": "منحنى الشحن المعطى في الموضوع؛ منه τ≈1ms والقيمة النهائية 5V.",
+      "x_label": "t (ms)",
+      "y_label": "u_C (V)",
+      "x_domain": [
+        0,
+        5
+      ],
+      "y_domain": [
+        0,
+        5.4
+      ],
+      "series": [
+        {
+          "name": "u_C(t)",
+          "data": [
+            {
+              "x": 0,
+              "y": 0.0
+            },
+            {
+              "x": 0.25,
+              "y": 1.106
+            },
+            {
+              "x": 0.5,
+              "y": 1.967
+            },
+            {
+              "x": 0.75,
+              "y": 2.638
+            },
+            {
+              "x": 1,
+              "y": 3.161
+            },
+            {
+              "x": 1.5,
+              "y": 3.884
+            },
+            {
+              "x": 2,
+              "y": 4.323
+            },
+            {
+              "x": 3,
+              "y": 4.751
+            },
+            {
+              "x": 4,
+              "y": 4.908
+            },
+            {
+              "x": 5,
+              "y": 4.966
+            }
+          ]
+        }
+      ],
+      "settings": {
+        "show_grid": true,
+        "show_axes": true,
+        "show_legend": false,
+        "show_point_labels": false,
+        "connect_points": true
+      }
+    }
+  ]
+}

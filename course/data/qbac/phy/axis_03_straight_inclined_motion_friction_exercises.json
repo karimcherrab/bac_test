@@ -1,0 +1,1747 @@
+{
+  "version": 6,
+  "language": "ar",
+  "direction": "rtl",
+  "subject_code": "phy",
+  "chapter_code": "mechanical_system_evolution",
+  "tag": "straight_inclined_motion_friction",
+  "title": "تمارين محور: الحركة على مسار مستقيم ومائل مع الاحتكاك",
+  "question_count": 15,
+  "scope_note": "تمارين مستقلة تغطي فقط المحور الثالث: الحركة المستقيمة المنتظمة والمتغيرة بانتظام، السطح الأفقي والمائل الأملس والخشن، تفكيك الثقل، الاحتكاك، التسارع، المعادلات الزمنية، العلاقة المستقلة عن الزمن، ومسافات الاستجابة والكبح والتوقف.",
+  "questions": [
+    {
+      "id": "straight_inclined_motion_friction_01",
+      "year": null,
+      "exercise": "تمرين مستقل",
+      "number": "1",
+      "title": "تمييز نوع الحركة المستقيمة",
+      "text": "لدينا ثلاث حركات على مسار مستقيم:\nA) السرعة ثابتة وتساوي \\(5m/s\\).\nB) السرعة تزداد من \\(2m/s\\) إلى \\(8m/s\\) بانتظام.\nC) السرعة تنقص من \\(10m/s\\) إلى \\(0\\) بانتظام.\nصنّف كل حركة.",
+      "standalone_text": "لدينا ثلاث حركات على مسار مستقيم: سرعة ثابتة، سرعة تزداد بانتظام، وسرعة تنقص بانتظام. صنّفها.",
+      "skill": "تمييز أنواع الحركة المستقيمة",
+      "difficulty": "easy",
+      "is_standalone": true,
+      "solution": {
+        "title": "الحل المفصل: أنواع الحركة المستقيمة",
+        "main_idea": "نقارن تغير قيمة السرعة مع الزمن.",
+        "detailed_explanation": "إذا بقيت السرعة ثابتة فالحركة منتظمة. وإذا زادت بانتظام فهي متسارعة بانتظام، وإذا نقصت بانتظام فهي متباطئة بانتظام.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "A",
+            "explanation": "السرعة ثابتة.",
+            "rule_used": "الحركة المستقيمة المنتظمة لها سرعة ثابتة.",
+            "why": "لا تتغير قيمة السرعة.",
+            "result": "A منتظمة."
+          },
+          {
+            "order": 2,
+            "title": "B",
+            "explanation": "السرعة تزداد بانتظام.",
+            "rule_used": "تزايد السرعة بانتظام يعني تسارعًا ثابتًا في جهة الحركة.",
+            "why": "قيمة السرعة ترتفع.",
+            "result": "B متسارعة بانتظام."
+          },
+          {
+            "order": 3,
+            "title": "C",
+            "explanation": "السرعة تنقص بانتظام.",
+            "rule_used": "انخفاض السرعة بانتظام يعني تسارعًا ثابتًا عكس جهة السرعة.",
+            "why": "قيمة السرعة تتناقص.",
+            "result": "C متباطئة بانتظام."
+          }
+        ],
+        "final_answer": "A منتظمة، B متسارعة بانتظام، C متباطئة بانتظام.",
+        "verification": "التصنيف يعتمد على تغير قيمة السرعة.",
+        "hints": [
+          {
+            "level": 1,
+            "hint": "راقب هل السرعة ثابتة أم تزداد أم تنقص."
+          }
+        ],
+        "bac_writing": [
+          "نحدد الجهة الموجبة قبل كتابة الإشارات.",
+          "نستعمل معادلات الحركة فقط عندما يكون التسارع ثابتًا.",
+          "نكتب الوحدة مع كل نتيجة عددية."
+        ],
+        "understanding_check": [],
+        "presentation": {
+          "show_one_step_at_a_time": true
+        }
+      }
+    },
+    {
+      "id": "straight_inclined_motion_friction_02",
+      "year": 2013,
+      "exercise": "مقتبس ومبسّط من بكالوريا",
+      "number": "2",
+      "title": "التباطؤ على سطح أفقي خشن",
+      "text": "جسم كتلته \\(2kg\\) يتحرك نحو اليمين فوق سطح أفقي خشن. قوة الاحتكاك ثابتة \\(4N\\). احسب التسارع وحدد طبيعة الحركة.",
+      "standalone_text": "جسم كتلته 2kg يتحرك نحو اليمين فوق سطح خشن باحتكاك 4N. احسب التسارع وطبيعة الحركة.",
+      "skill": "دراسة حركة مستقيمة أفقية مع الاحتكاك",
+      "difficulty": "easy",
+      "is_standalone": true,
+      "solution": {
+        "title": "الحل المفصل: سطح أفقي خشن",
+        "main_idea": "الاحتكاك يعاكس الحركة.",
+        "detailed_explanation": "نختار Ox نحو اليمين، فيكون الاحتكاك سالبًا.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "الإسقاط",
+            "explanation": "\\[-f=ma\\]",
+            "rule_used": "القانون الثاني لنيوتن.",
+            "why": "الاحتكاك نحو اليسار.",
+            "result": "\\(a=-f/m\\)."
+          },
+          {
+            "order": 2,
+            "title": "الحساب",
+            "explanation": "\\[a=-4/2=-2m/s^2\\]",
+            "rule_used": "تعويض عددي.",
+            "why": "المحصلة عكس الحركة.",
+            "result": "\\(a=-2m/s^2\\)."
+          },
+          {
+            "order": 3,
+            "title": "الطبيعة",
+            "explanation": "التسارع ثابت وعكس السرعة.",
+            "rule_used": "a عكس v يعني تباطؤًا.",
+            "why": "قيمة السرعة تنقص.",
+            "result": "حركة متباطئة بانتظام."
+          }
+        ],
+        "final_answer": "\\(a=-2m/s^2\\)، والحركة متباطئة بانتظام.",
+        "verification": "الإشارة السالبة منطقية لأن التسارع عكس Ox.",
+        "hints": [
+          {
+            "level": 1,
+            "hint": "الاحتكاك عكس الحركة."
+          }
+        ],
+        "bac_writing": [
+          "نحدد الجهة الموجبة قبل كتابة الإشارات.",
+          "نستعمل معادلات الحركة فقط عندما يكون التسارع ثابتًا.",
+          "نكتب الوحدة مع كل نتيجة عددية."
+        ],
+        "understanding_check": [],
+        "presentation": {
+          "show_one_step_at_a_time": true
+        },
+        "graph_data": {
+          "id": "force_horizontal",
+          "title": "القوى على سطح أفقي خشن",
+          "coordinate_system": {
+            "x_min": -5,
+            "x_max": 5,
+            "y_min": -4,
+            "y_max": 4,
+            "x_step": 1,
+            "y_step": 1,
+            "x_label": "Ox",
+            "y_label": "Oy",
+            "show_grid": false
+          },
+          "series": [
+            {
+              "id": "surface",
+              "label": "السطح",
+              "type": "line",
+              "data": [
+                {
+                  "x": -4.5,
+                  "y": -1
+                },
+                {
+                  "x": 4.5,
+                  "y": -1
+                }
+              ]
+            },
+            {
+              "id": "v",
+              "label": "v",
+              "type": "line",
+              "data": [
+                {
+                  "x": 0,
+                  "y": 0,
+                  "label": "G"
+                },
+                {
+                  "x": 4,
+                  "y": 0,
+                  "label": "v"
+                }
+              ]
+            },
+            {
+              "id": "f",
+              "label": "f",
+              "type": "line",
+              "data": [
+                {
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "x": -3,
+                  "y": 0,
+                  "label": "f"
+                }
+              ]
+            },
+            {
+              "id": "P",
+              "label": "P",
+              "type": "line",
+              "data": [
+                {
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "x": 0,
+                  "y": -3,
+                  "label": "P"
+                }
+              ]
+            },
+            {
+              "id": "R",
+              "label": "R",
+              "type": "line",
+              "data": [
+                {
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "x": 0,
+                  "y": 3,
+                  "label": "R"
+                }
+              ]
+            }
+          ],
+          "settings": {
+            "show_grid": false,
+            "show_axes": true,
+            "show_legend": true,
+            "show_point_labels": true,
+            "connect_points": true
+          }
+        }
+      }
+    },
+    {
+      "id": "straight_inclined_motion_friction_03",
+      "year": 2008,
+      "exercise": "مقتبس ومبسّط من بكالوريا",
+      "number": "3",
+      "title": "انزلاق جسم على مستوى مائل أملس",
+      "text": "جسم كتلته \\(1.2kg\\) يترك من السكون على مستوى مائل أملس بزاوية \\(30^\\circ\\). نأخذ \\(g=10m/s^2\\). مثل القوى، احسب التسارع ورد الفعل.",
+      "standalone_text": "جسم 1.2kg على مستوى مائل أملس 30°. احسب التسارع ورد الفعل.",
+      "skill": "المستوى المائل الأملس وتفكيك الثقل",
+      "difficulty": "easy",
+      "is_standalone": true,
+      "solution": {
+        "title": "الحل المفصل: مستوى مائل أملس",
+        "main_idea": "المركبة الموازية للثقل هي سبب الحركة.",
+        "detailed_explanation": "لا يوجد احتكاك على السطح الأملس.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "التسارع",
+            "explanation": "\\[mg\\sin30=ma\\Rightarrow a=5m/s^2\\]",
+            "rule_used": "قانون نيوتن على المحور الموازي.",
+            "why": "لا احتكاك.",
+            "result": "a=5."
+          },
+          {
+            "order": 2,
+            "title": "رد الفعل",
+            "explanation": "\\[R=mg\\cos30\\approx10.39N\\]",
+            "rule_used": "الإسقاط العمودي.",
+            "why": "لا تسارع عمودي.",
+            "result": "R≈10.39N."
+          }
+        ],
+        "final_answer": "\\(a=5m/s^2\\) و\\(R\\approx10.39N\\).",
+        "verification": "التسارع لا يعتمد على الكتلة في السطح الأملس.",
+        "hints": [
+          {
+            "level": 1,
+            "hint": "الموازي sin والعمودي cos."
+          }
+        ],
+        "bac_writing": [
+          "نحدد الجهة الموجبة قبل كتابة الإشارات.",
+          "نستعمل معادلات الحركة فقط عندما يكون التسارع ثابتًا.",
+          "نكتب الوحدة مع كل نتيجة عددية."
+        ],
+        "understanding_check": [],
+        "presentation": {
+          "show_one_step_at_a_time": true
+        },
+        "graph_data": {
+          "id": "incline_smooth",
+          "title": "تفكيك الثقل على مستوى مائل",
+          "coordinate_system": {
+            "x_min": 0,
+            "x_max": 10,
+            "y_min": 0,
+            "y_max": 7,
+            "x_step": 1,
+            "y_step": 1,
+            "x_label": "",
+            "y_label": "",
+            "show_grid": false
+          },
+          "series": [
+            {
+              "id": "incline",
+              "label": "المستوى",
+              "type": "line",
+              "data": [
+                {
+                  "x": 1,
+                  "y": 1
+                },
+                {
+                  "x": 9,
+                  "y": 5.6
+                }
+              ]
+            },
+            {
+              "id": "P",
+              "label": "P",
+              "type": "line",
+              "data": [
+                {
+                  "x": 5,
+                  "y": 3.3,
+                  "label": "G"
+                },
+                {
+                  "x": 5,
+                  "y": 0.4,
+                  "label": "P"
+                }
+              ]
+            },
+            {
+              "id": "R",
+              "label": "R",
+              "type": "line",
+              "data": [
+                {
+                  "x": 5,
+                  "y": 3.3
+                },
+                {
+                  "x": 3.5,
+                  "y": 5.9,
+                  "label": "R"
+                }
+              ]
+            },
+            {
+              "id": "Ppar",
+              "label": "mg sin α",
+              "type": "line",
+              "dashed": true,
+              "data": [
+                {
+                  "x": 5,
+                  "y": 3.3
+                },
+                {
+                  "x": 2.4,
+                  "y": 1.8,
+                  "label": "mg sin α"
+                }
+              ]
+            },
+            {
+              "id": "Pperp",
+              "label": "mg cos α",
+              "type": "line",
+              "dashed": true,
+              "data": [
+                {
+                  "x": 5,
+                  "y": 3.3
+                },
+                {
+                  "x": 6.5,
+                  "y": 0.7,
+                  "label": "mg cos α"
+                }
+              ]
+            }
+          ],
+          "annotations": [
+            {
+              "x": 2.3,
+              "y": 1.8,
+              "text": "α=30°"
+            }
+          ],
+          "settings": {
+            "show_grid": false,
+            "show_axes": false,
+            "show_legend": true,
+            "show_point_labels": true,
+            "connect_points": true
+          }
+        }
+      }
+    },
+    {
+      "id": "straight_inclined_motion_friction_04",
+      "year": 2015,
+      "exercise": "مقتبس ومبسّط من بكالوريا",
+      "number": "4",
+      "title": "انزلاق على مستوى مائل خشن",
+      "text": "جسم كتلته \\(2kg\\) ينزلق إلى أسفل مستوى مائل \\(30^\\circ\\) وتؤثر عليه قوة احتكاك \\(4N\\). احسب التسارع وقارنه بالحالة الأملس.",
+      "standalone_text": "جسم 2kg ينزلق على مستوى مائل 30° مع احتكاك 4N. احسب التسارع.",
+      "skill": "المستوى المائل الخشن",
+      "difficulty": "easy",
+      "is_standalone": true,
+      "solution": {
+        "title": "الحل المفصل: مستوى مائل خشن",
+        "main_idea": "الاحتكاك يقلل المحصلة عندما يعاكس الانزلاق.",
+        "detailed_explanation": "نختار أسفل المستوى موجبًا.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "المعادلة",
+            "explanation": "\\[mg\\sin30-f=ma\\]",
+            "rule_used": "قانون نيوتن.",
+            "why": "الاحتكاك عكس النزول.",
+            "result": "المعادلة."
+          },
+          {
+            "order": 2,
+            "title": "الحساب",
+            "explanation": "\\[a=(10-4)/2=3m/s^2\\]",
+            "rule_used": "تعويض.",
+            "why": "المحصلة 6N.",
+            "result": "a=3."
+          },
+          {
+            "order": 3,
+            "title": "المقارنة",
+            "explanation": "في الحالة الأملس a=5m/s².",
+            "rule_used": "a=g sinα.",
+            "why": "الاحتكاك خفّض التسارع.",
+            "result": "الخشن أبطأ."
+          }
+        ],
+        "final_answer": "\\(a=3m/s^2\\)، وهي أصغر من الحالة الأملس.",
+        "verification": "القيمة أصغر من g sin30.",
+        "hints": [
+          {
+            "level": 1,
+            "hint": "الاحتكاك إلى أعلى المستوى."
+          }
+        ],
+        "bac_writing": [
+          "نحدد الجهة الموجبة قبل كتابة الإشارات.",
+          "نستعمل معادلات الحركة فقط عندما يكون التسارع ثابتًا.",
+          "نكتب الوحدة مع كل نتيجة عددية."
+        ],
+        "understanding_check": [],
+        "presentation": {
+          "show_one_step_at_a_time": true
+        },
+        "graph_data": {
+          "id": "incline_rough",
+          "title": "قوى جسم على مستوى مائل خشن",
+          "coordinate_system": {
+            "x_min": 0,
+            "x_max": 10,
+            "y_min": 0,
+            "y_max": 7,
+            "x_step": 1,
+            "y_step": 1,
+            "x_label": "",
+            "y_label": "",
+            "show_grid": false
+          },
+          "series": [
+            {
+              "id": "incline",
+              "label": "المستوى",
+              "type": "line",
+              "data": [
+                {
+                  "x": 1,
+                  "y": 1
+                },
+                {
+                  "x": 9,
+                  "y": 5.6
+                }
+              ]
+            },
+            {
+              "id": "P",
+              "label": "P",
+              "type": "line",
+              "data": [
+                {
+                  "x": 5,
+                  "y": 3.3,
+                  "label": "G"
+                },
+                {
+                  "x": 5,
+                  "y": 0.4,
+                  "label": "P"
+                }
+              ]
+            },
+            {
+              "id": "R",
+              "label": "R",
+              "type": "line",
+              "data": [
+                {
+                  "x": 5,
+                  "y": 3.3
+                },
+                {
+                  "x": 3.5,
+                  "y": 5.9,
+                  "label": "R"
+                }
+              ]
+            },
+            {
+              "id": "Ppar",
+              "label": "mg sin α",
+              "type": "line",
+              "dashed": true,
+              "data": [
+                {
+                  "x": 5,
+                  "y": 3.3
+                },
+                {
+                  "x": 2.4,
+                  "y": 1.8,
+                  "label": "mg sin α"
+                }
+              ]
+            },
+            {
+              "id": "Pperp",
+              "label": "mg cos α",
+              "type": "line",
+              "dashed": true,
+              "data": [
+                {
+                  "x": 5,
+                  "y": 3.3
+                },
+                {
+                  "x": 6.5,
+                  "y": 0.7,
+                  "label": "mg cos α"
+                }
+              ]
+            },
+            {
+              "id": "f",
+              "label": "f",
+              "type": "line",
+              "data": [
+                {
+                  "x": 5,
+                  "y": 3.3
+                },
+                {
+                  "x": 7.2,
+                  "y": 4.6,
+                  "label": "f"
+                }
+              ]
+            }
+          ],
+          "annotations": [
+            {
+              "x": 2.3,
+              "y": 1.8,
+              "text": "α=30°"
+            }
+          ],
+          "settings": {
+            "show_grid": false,
+            "show_axes": false,
+            "show_legend": true,
+            "show_point_labels": true,
+            "connect_points": true
+          }
+        }
+      }
+    },
+    {
+      "id": "straight_inclined_motion_friction_05",
+      "year": 2016,
+      "exercise": "مقتبس ومبسّط من بكالوريا",
+      "number": "5",
+      "title": "استخراج قوة الاحتكاك من التسارع",
+      "text": "جسم كتلته \\(0.5kg\\) ينزلق إلى أسفل مستوى مائل \\(45^\\circ\\) بتسارع \\(3m/s^2\\). نأخذ \\(g=9.8m/s^2\\). احسب قوة الاحتكاك.",
+      "standalone_text": "جسم 0.5kg على مستوى 45° بتسارع 3m/s². احسب الاحتكاك.",
+      "skill": "استخراج الاحتكاك من قياس التسارع",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "solution": {
+        "title": "الحل المفصل: الاحتكاك من التسارع",
+        "main_idea": "نرتب معادلة نيوتن لاستخراج f.",
+        "detailed_explanation": "الجسم ينزل، لذلك الاحتكاك إلى أعلى.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "المعادلة",
+            "explanation": "\\[mg\\sin\\alpha-f=ma\\]",
+            "rule_used": "الإسقاط على المستوى.",
+            "why": "الأسفل موجب.",
+            "result": "البداية."
+          },
+          {
+            "order": 2,
+            "title": "استخراج f",
+            "explanation": "\\[f=m(g\\sin\\alpha-a)\\]",
+            "rule_used": "ترتيب جبري.",
+            "why": "f مجهولة.",
+            "result": "الصيغة."
+          },
+          {
+            "order": 3,
+            "title": "الحساب",
+            "explanation": "\\[f=0.5(9.8\\sin45-3)\\approx1.96N\\]",
+            "rule_used": "تعويض.",
+            "why": "النتيجة موجبة.",
+            "result": "f≈1.96N."
+          }
+        ],
+        "final_answer": "\\(f\\approx1.96N\\).",
+        "verification": "لو انعدم الاحتكاك لكان التسارع أكبر.",
+        "hints": [
+          {
+            "level": 1,
+            "hint": "الاحتكاك عكس النزول."
+          }
+        ],
+        "bac_writing": [
+          "نحدد الجهة الموجبة قبل كتابة الإشارات.",
+          "نستعمل معادلات الحركة فقط عندما يكون التسارع ثابتًا.",
+          "نكتب الوحدة مع كل نتيجة عددية."
+        ],
+        "understanding_check": [],
+        "presentation": {
+          "show_one_step_at_a_time": true
+        }
+      }
+    },
+    {
+      "id": "straight_inclined_motion_friction_06",
+      "year": null,
+      "exercise": "تمرين مستقل",
+      "number": "6",
+      "title": "المعادلات الزمنية من السكون",
+      "text": "يتحرك جسم على خط مستقيم بتسارع ثابت \\(a=2m/s^2\\) من السكون عند الأصل. اكتب \\(v(t)\\) و\\(x(t)\\)، ثم احسبهما عند \\(t=4s\\).",
+      "standalone_text": "حركة بتسارع 2m/s² من السكون عند الأصل. اكتب v(t) وx(t) واحسبهما عند 4s.",
+      "skill": "المعادلات الزمنية للحركة المتغيرة بانتظام",
+      "difficulty": "easy",
+      "is_standalone": true,
+      "solution": {
+        "title": "الحل المفصل: المعادلات الزمنية",
+        "main_idea": "عند تسارع ثابت تكون v خطية وx تربيعية.",
+        "detailed_explanation": "نستعمل معادلات الحركة المتغيرة بانتظام.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "السرعة",
+            "explanation": "\\[v=2t\\]",
+            "rule_used": "v=v0+at.",
+            "why": "v0=0.",
+            "result": "v=2t."
+          },
+          {
+            "order": 2,
+            "title": "الموضع",
+            "explanation": "\\[x=t^2\\]",
+            "rule_used": "x=x0+v0t+1/2 at².",
+            "why": "x0=v0=0.",
+            "result": "x=t²."
+          },
+          {
+            "order": 3,
+            "title": "عند 4s",
+            "explanation": "\\[v=8m/s,\\ x=16m\\]",
+            "rule_used": "تعويض.",
+            "why": "t=4.",
+            "result": "النتيجة."
+          }
+        ],
+        "final_answer": "v=2t، x=t²، وعند 4s: v=8m/s وx=16m.",
+        "verification": "v²=2ax يعطي أيضًا 64=64.",
+        "hints": [
+          {
+            "level": 1,
+            "hint": "ضع v0=0 وx0=0."
+          }
+        ],
+        "bac_writing": [
+          "نحدد الجهة الموجبة قبل كتابة الإشارات.",
+          "نستعمل معادلات الحركة فقط عندما يكون التسارع ثابتًا.",
+          "نكتب الوحدة مع كل نتيجة عددية."
+        ],
+        "understanding_check": [],
+        "presentation": {
+          "show_one_step_at_a_time": true
+        },
+        "graph_data": {
+          "id": "graphs_uniform",
+          "title": "v(t) وx(t)",
+          "coordinate_system": {
+            "x_min": 0,
+            "x_max": 5,
+            "y_min": 0,
+            "y_max": 26,
+            "x_step": 1,
+            "y_step": 5,
+            "x_label": "t",
+            "y_label": "القيمة",
+            "show_grid": true
+          },
+          "series": [
+            {
+              "id": "v",
+              "label": "v=2t",
+              "type": "line",
+              "data": [
+                {
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "x": 1,
+                  "y": 2
+                },
+                {
+                  "x": 2,
+                  "y": 4
+                },
+                {
+                  "x": 3,
+                  "y": 6
+                },
+                {
+                  "x": 4,
+                  "y": 8
+                },
+                {
+                  "x": 5,
+                  "y": 10
+                }
+              ]
+            },
+            {
+              "id": "x",
+              "label": "x=t²",
+              "type": "line",
+              "data": [
+                {
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "x": 1,
+                  "y": 1
+                },
+                {
+                  "x": 2,
+                  "y": 4
+                },
+                {
+                  "x": 3,
+                  "y": 9
+                },
+                {
+                  "x": 4,
+                  "y": 16
+                },
+                {
+                  "x": 5,
+                  "y": 25
+                }
+              ]
+            }
+          ],
+          "settings": {
+            "show_grid": true,
+            "show_axes": true,
+            "show_legend": true,
+            "show_point_labels": false,
+            "connect_points": true
+          }
+        }
+      }
+    },
+    {
+      "id": "straight_inclined_motion_friction_07",
+      "year": null,
+      "exercise": "تمرين مستقل",
+      "number": "7",
+      "title": "حركة متباطئة بمعادلات الزمن",
+      "text": "سيارة سرعتها الابتدائية \\(20m/s\\) تبدأ الكبح بتسارع ثابت \\(-4m/s^2\\). احسب زمن التوقف ومسافة الكبح.",
+      "standalone_text": "سيارة سرعتها 20m/s وتباطؤها -4m/s². احسب زمن التوقف ومسافة الكبح.",
+      "skill": "الحركة المتباطئة ومعادلات الزمن",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "solution": {
+        "title": "الحل المفصل: الكبح",
+        "main_idea": "عند التوقف v=0.",
+        "detailed_explanation": "نستعمل v=v0+at ثم x=x0+v0t+1/2at².",
+        "steps": [
+          {
+            "order": 1,
+            "title": "السرعة",
+            "explanation": "\\[v=20-4t\\]",
+            "rule_used": "معادلة السرعة.",
+            "why": "a=-4.",
+            "result": "المعادلة."
+          },
+          {
+            "order": 2,
+            "title": "التوقف",
+            "explanation": "\\[0=20-4t\\Rightarrow t=5s\\]",
+            "rule_used": "شرط التوقف.",
+            "why": "v=0.",
+            "result": "t=5s."
+          },
+          {
+            "order": 3,
+            "title": "الموضع",
+            "explanation": "\\[x=20t-2t^2\\]",
+            "rule_used": "معادلة الموضع.",
+            "why": "x0=0.",
+            "result": "المعادلة."
+          },
+          {
+            "order": 4,
+            "title": "المسافة",
+            "explanation": "\\[x(5)=50m\\]",
+            "rule_used": "تعويض.",
+            "why": "موضع التوقف.",
+            "result": "df=50m."
+          }
+        ],
+        "final_answer": "زمن التوقف 5s ومسافة الكبح 50m.",
+        "verification": "العلاقة المستقلة عن الزمن تعطي النتيجة نفسها.",
+        "hints": [
+          {
+            "level": 1,
+            "hint": "عند التوقف v=0."
+          }
+        ],
+        "bac_writing": [
+          "نحدد الجهة الموجبة قبل كتابة الإشارات.",
+          "نستعمل معادلات الحركة فقط عندما يكون التسارع ثابتًا.",
+          "نكتب الوحدة مع كل نتيجة عددية."
+        ],
+        "understanding_check": [],
+        "presentation": {
+          "show_one_step_at_a_time": true
+        }
+      }
+    },
+    {
+      "id": "straight_inclined_motion_friction_08",
+      "year": 2014,
+      "exercise": "مقتبس ومبسّط من بكالوريا",
+      "number": "8",
+      "title": "العلاقة المستقلة عن الزمن",
+      "text": "جسم يبدأ من السكون بتسارع ثابت \\(3m/s^2\\) ويقطع \\(12m\\). احسب سرعته النهائية دون حساب الزمن.",
+      "standalone_text": "جسم من السكون بتسارع 3m/s² يقطع 12m. احسب السرعة دون الزمن.",
+      "skill": "استعمال العلاقة المستقلة عن الزمن",
+      "difficulty": "easy",
+      "is_standalone": true,
+      "solution": {
+        "title": "الحل المفصل: دون الزمن",
+        "main_idea": "نستعمل vB²-vA²=2aAB.",
+        "detailed_explanation": "المسافة معلومة والزمن غير مطلوب.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "التطبيق",
+            "explanation": "\\[v_B^2=2\\times3\\times12=72\\]",
+            "rule_used": "العلاقة المستقلة عن الزمن.",
+            "why": "vA=0.",
+            "result": "v²=72."
+          },
+          {
+            "order": 2,
+            "title": "السرعة",
+            "explanation": "\\[v_B=\\sqrt{72}\\approx8.49m/s\\]",
+            "rule_used": "نأخذ القيمة الموجبة.",
+            "why": "السرعة طويلة شعاع.",
+            "result": "v≈8.49."
+          }
+        ],
+        "final_answer": "\\(v_B\\approx8.49m/s\\).",
+        "verification": "الوحدة صحيحة.",
+        "hints": [
+          {
+            "level": 1,
+            "hint": "لا تحتاج إلى t."
+          }
+        ],
+        "bac_writing": [
+          "نحدد الجهة الموجبة قبل كتابة الإشارات.",
+          "نستعمل معادلات الحركة فقط عندما يكون التسارع ثابتًا.",
+          "نكتب الوحدة مع كل نتيجة عددية."
+        ],
+        "understanding_check": [],
+        "presentation": {
+          "show_one_step_at_a_time": true
+        }
+      }
+    },
+    {
+      "id": "straight_inclined_motion_friction_09",
+      "year": null,
+      "exercise": "تمرين مستقل",
+      "number": "9",
+      "title": "مسافة الاستجابة والكبح والتوقف",
+      "text": "سيارة تسير بسرعة \\(72km/h\\)، زمن استجابة السائق \\(1.2s\\)، وتسارع الكبح ثابت \\(-5m/s^2\\). احسب مسافة الاستجابة والكبح والتوقف.",
+      "standalone_text": "سيارة 72km/h، زمن استجابة 1.2s، تباطؤ -5m/s². احسب مسافة التوقف.",
+      "skill": "مسافة الاستجابة والكبح والتوقف",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "solution": {
+        "title": "الحل المفصل: مسافة التوقف",
+        "main_idea": "التوقف = استجابة + كبح.",
+        "detailed_explanation": "نحوّل السرعة أولًا إلى m/s.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "التحويل",
+            "explanation": "\\[72km/h=20m/s\\]",
+            "rule_used": "القسمة على 3.6.",
+            "why": "نحتاج SI.",
+            "result": "20m/s."
+          },
+          {
+            "order": 2,
+            "title": "الاستجابة",
+            "explanation": "\\[d_r=20\\times1.2=24m\\]",
+            "rule_used": "dr=vτ.",
+            "why": "v ثابتة تقريبًا.",
+            "result": "24m."
+          },
+          {
+            "order": 3,
+            "title": "الكبح",
+            "explanation": "\\[0-20^2=2(-5)d_f\\Rightarrow d_f=40m\\]",
+            "rule_used": "العلاقة المستقلة عن الزمن.",
+            "why": "vf=0.",
+            "result": "40m."
+          },
+          {
+            "order": 4,
+            "title": "التوقف",
+            "explanation": "\\[D=24+40=64m\\]",
+            "rule_used": "D=dr+df.",
+            "why": "نجمع المرحلتين.",
+            "result": "64m."
+          }
+        ],
+        "final_answer": "dr=24m، df=40m، D=64m.",
+        "verification": "مسافة الاستجابة ليست جزءًا من مسافة الكبح.",
+        "hints": [
+          {
+            "level": 1,
+            "hint": "حوّل km/h إلى m/s."
+          },
+          {
+            "level": 2,
+            "hint": "D=dr+df."
+          }
+        ],
+        "bac_writing": [
+          "نحدد الجهة الموجبة قبل كتابة الإشارات.",
+          "نستعمل معادلات الحركة فقط عندما يكون التسارع ثابتًا.",
+          "نكتب الوحدة مع كل نتيجة عددية."
+        ],
+        "understanding_check": [],
+        "presentation": {
+          "show_one_step_at_a_time": true
+        },
+        "graph_data": {
+          "id": "stop_graph",
+          "title": "مرحلتَا التوقف",
+          "coordinate_system": {
+            "x_min": 0,
+            "x_max": 6,
+            "y_min": 0,
+            "y_max": 22,
+            "x_step": 1,
+            "y_step": 5,
+            "x_label": "t",
+            "y_label": "v",
+            "show_grid": true
+          },
+          "series": [
+            {
+              "id": "reaction",
+              "label": "الاستجابة",
+              "type": "line",
+              "data": [
+                {
+                  "x": 0,
+                  "y": 20,
+                  "label": "رؤية الخطر"
+                },
+                {
+                  "x": 1.2,
+                  "y": 20,
+                  "label": "بداية الكبح"
+                }
+              ]
+            },
+            {
+              "id": "braking",
+              "label": "الكبح",
+              "type": "line",
+              "data": [
+                {
+                  "x": 1.2,
+                  "y": 20
+                },
+                {
+                  "x": 5.2,
+                  "y": 0,
+                  "label": "التوقف"
+                }
+              ]
+            }
+          ],
+          "settings": {
+            "show_grid": true,
+            "show_axes": true,
+            "show_legend": true,
+            "show_point_labels": true,
+            "connect_points": true
+          }
+        }
+      }
+    },
+    {
+      "id": "straight_inclined_motion_friction_10",
+      "year": 2012,
+      "exercise": "مقتبس ومبسّط من بكالوريا",
+      "number": "10",
+      "title": "استخراج التسارع من بيان السرعة",
+      "text": "بيان سرعة جسم خط مستقيم يمر بالنقطتين \\((0,12)\\) و\\((3,3)\\). احسب التسارع، حدد طبيعة الحركة، واحسب لحظة التوقف.",
+      "standalone_text": "بيان v(t) خطي من (0,12) إلى (3,3). احسب a ووقت التوقف.",
+      "skill": "استغلال منحنى السرعة",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "graph_data": {
+        "id": "q10_vt",
+        "title": "v(t)",
+        "coordinate_system": {
+          "x_min": 0,
+          "x_max": 4.5,
+          "y_min": 0,
+          "y_max": 13,
+          "x_step": 0.5,
+          "y_step": 2,
+          "x_label": "t (s)",
+          "y_label": "v (m/s)",
+          "show_grid": true
+        },
+        "series": [
+          {
+            "id": "v",
+            "label": "v(t)",
+            "type": "line",
+            "data": [
+              {
+                "x": 0,
+                "y": 12
+              },
+              {
+                "x": 3,
+                "y": 3
+              },
+              {
+                "x": 4,
+                "y": 0
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "show_grid": true,
+          "show_axes": true,
+          "show_legend": true,
+          "show_point_labels": true,
+          "connect_points": true
+        }
+      },
+      "solution": {
+        "title": "الحل المفصل: ميل بيان السرعة",
+        "main_idea": "ميل v(t) هو التسارع.",
+        "detailed_explanation": "البيان مستقيم، إذن a ثابت.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "التسارع",
+            "explanation": "\\[a=(3-12)/3=-3m/s^2\\]",
+            "rule_used": "ميل المستقيم.",
+            "why": "v(t) خطي.",
+            "result": "a=-3."
+          },
+          {
+            "order": 2,
+            "title": "الطبيعة",
+            "explanation": "v موجبة وa سالبة.",
+            "rule_used": "الإشارتان متعاكستان.",
+            "why": "السرعة تنقص.",
+            "result": "متباطئة بانتظام."
+          },
+          {
+            "order": 3,
+            "title": "التوقف",
+            "explanation": "\\[0=12-3t\\Rightarrow t=4s\\]",
+            "rule_used": "v=v0+at.",
+            "why": "vf=0.",
+            "result": "t=4s."
+          }
+        ],
+        "final_answer": "a=-3m/s² والحركة متباطئة بانتظام وتتوقف عند 4s.",
+        "verification": "البيان يقطع محور الزمن عند 4s.",
+        "hints": [
+          {
+            "level": 1,
+            "hint": "احسب ميل المستقيم."
+          }
+        ],
+        "bac_writing": [
+          "نحدد الجهة الموجبة قبل كتابة الإشارات.",
+          "نستعمل معادلات الحركة فقط عندما يكون التسارع ثابتًا.",
+          "نكتب الوحدة مع كل نتيجة عددية."
+        ],
+        "understanding_check": [],
+        "presentation": {
+          "show_one_step_at_a_time": true
+        }
+      }
+    },
+    {
+      "id": "straight_inclined_motion_friction_11",
+      "year": 2017,
+      "exercise": "مقتبس ومبسّط من بكالوريا",
+      "number": "11",
+      "title": "قذف جسم إلى أعلى مستوى مائل أملس",
+      "text": "يقذف جسم بسرعة \\(10m/s\\) إلى أعلى مستوى مائل أملس زاويته \\(30^\\circ\\). نأخذ g=10m/s² والأعلى موجبًا. احسب التسارع، زمن التوقف، مسافة الصعود، ثم صف الحركة بعد ذلك.",
+      "standalone_text": "جسم بسرعة 10m/s إلى أعلى مستوى أملس 30°. احسب زمن التوقف ومسافة الصعود.",
+      "skill": "الصعود والنزول على مستوى مائل",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "solution": {
+        "title": "الحل المفصل: الصعود على مستوى مائل",
+        "main_idea": "أثناء الصعود يكون a نحو أسفل المستوى.",
+        "detailed_explanation": "الأعلى موجب، لذلك a=-g sinα.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "التسارع",
+            "explanation": "\\[a=-5m/s^2\\]",
+            "rule_used": "a=-g sin30.",
+            "why": "الثقل لأسفل.",
+            "result": "a=-5."
+          },
+          {
+            "order": 2,
+            "title": "زمن التوقف",
+            "explanation": "\\[0=10-5t\\Rightarrow t=2s\\]",
+            "rule_used": "v=v0+at.",
+            "why": "عند أعلى نقطة v=0.",
+            "result": "2s."
+          },
+          {
+            "order": 3,
+            "title": "المسافة",
+            "explanation": "\\[0-100=2(-5)d\\Rightarrow d=10m\\]",
+            "rule_used": "العلاقة المستقلة.",
+            "why": "الزمن غير مطلوب.",
+            "result": "10m."
+          },
+          {
+            "order": 4,
+            "title": "بعدها",
+            "explanation": "يبدأ الجسم النزول ويتسارع نحو أسفل المستوى.",
+            "rule_used": "الثقل لا يتغير.",
+            "why": "تتغير جهة السرعة.",
+            "result": "نزول متسارع."
+          }
+        ],
+        "final_answer": "a=-5m/s²، زمن الصعود 2s، والمسافة 10m، ثم يعود الجسم للنزول.",
+        "verification": "x=v0t+1/2at² يعطي 10m.",
+        "hints": [
+          {
+            "level": 1,
+            "hint": "الأعلى موجب، لذلك a سالبة."
+          }
+        ],
+        "bac_writing": [
+          "نحدد الجهة الموجبة قبل كتابة الإشارات.",
+          "نستعمل معادلات الحركة فقط عندما يكون التسارع ثابتًا.",
+          "نكتب الوحدة مع كل نتيجة عددية."
+        ],
+        "understanding_check": [],
+        "presentation": {
+          "show_one_step_at_a_time": true
+        },
+        "graph_data": {
+          "id": "incline_up",
+          "title": "تفكيك الثقل على مستوى مائل",
+          "coordinate_system": {
+            "x_min": 0,
+            "x_max": 10,
+            "y_min": 0,
+            "y_max": 7,
+            "x_step": 1,
+            "y_step": 1,
+            "x_label": "",
+            "y_label": "",
+            "show_grid": false
+          },
+          "series": [
+            {
+              "id": "incline",
+              "label": "المستوى",
+              "type": "line",
+              "data": [
+                {
+                  "x": 1,
+                  "y": 1
+                },
+                {
+                  "x": 9,
+                  "y": 5.6
+                }
+              ]
+            },
+            {
+              "id": "P",
+              "label": "P",
+              "type": "line",
+              "data": [
+                {
+                  "x": 5,
+                  "y": 3.3,
+                  "label": "G"
+                },
+                {
+                  "x": 5,
+                  "y": 0.4,
+                  "label": "P"
+                }
+              ]
+            },
+            {
+              "id": "R",
+              "label": "R",
+              "type": "line",
+              "data": [
+                {
+                  "x": 5,
+                  "y": 3.3
+                },
+                {
+                  "x": 3.5,
+                  "y": 5.9,
+                  "label": "R"
+                }
+              ]
+            },
+            {
+              "id": "Ppar",
+              "label": "mg sin α",
+              "type": "line",
+              "dashed": true,
+              "data": [
+                {
+                  "x": 5,
+                  "y": 3.3
+                },
+                {
+                  "x": 2.4,
+                  "y": 1.8,
+                  "label": "mg sin α"
+                }
+              ]
+            },
+            {
+              "id": "Pperp",
+              "label": "mg cos α",
+              "type": "line",
+              "dashed": true,
+              "data": [
+                {
+                  "x": 5,
+                  "y": 3.3
+                },
+                {
+                  "x": 6.5,
+                  "y": 0.7,
+                  "label": "mg cos α"
+                }
+              ]
+            },
+            {
+              "id": "v",
+              "label": "v",
+              "type": "line",
+              "data": [
+                {
+                  "x": 5,
+                  "y": 3.3
+                },
+                {
+                  "x": 7.5,
+                  "y": 4.7,
+                  "label": "v"
+                }
+              ]
+            }
+          ],
+          "annotations": [
+            {
+              "x": 2.3,
+              "y": 1.8,
+              "text": "α=30°"
+            }
+          ],
+          "settings": {
+            "show_grid": false,
+            "show_axes": false,
+            "show_legend": true,
+            "show_point_labels": true,
+            "connect_points": true
+          }
+        }
+      }
+    },
+    {
+      "id": "straight_inclined_motion_friction_12",
+      "year": null,
+      "exercise": "تمرين مستقل",
+      "number": "12",
+      "title": "فهم مرحلة الاستجابة قبل الكبح",
+      "text": "سيارة سرعتها \\(25m/s\\) وزمن استجابة السائق \\(0.8s\\). هل يبدأ التباطؤ فور رؤية الخطر؟ احسب مسافة الاستجابة وفسر الفرق بينها وبين مسافة الكبح.",
+      "standalone_text": "سيارة 25m/s، زمن استجابة 0.8s. احسب مسافة الاستجابة.",
+      "skill": "فهم مسافة الاستجابة",
+      "difficulty": "easy",
+      "is_standalone": true,
+      "solution": {
+        "title": "الحل المفصل: الاستجابة",
+        "main_idea": "خلال زمن الاستجابة لم يبدأ الكبح بعد.",
+        "detailed_explanation": "نعتبر v ثابتة تقريبًا.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "المرحلة",
+            "explanation": "لا يبدأ الكبح فورًا.",
+            "rule_used": "النموذج يقسم التوقف إلى مرحلتين.",
+            "why": "السائق يحتاج زمن استجابة.",
+            "result": "v ثابتة تقريبًا."
+          },
+          {
+            "order": 2,
+            "title": "المسافة",
+            "explanation": "\\[d_r=25\\times0.8=20m\\]",
+            "rule_used": "dr=vτ.",
+            "why": "v ثابتة.",
+            "result": "20m."
+          },
+          {
+            "order": 3,
+            "title": "الفرق",
+            "explanation": "مسافة الكبح تبدأ عند الضغط على المكابح.",
+            "rule_used": "تعريف المرحلتين.",
+            "why": "كل مرحلة لها نموذج مختلف.",
+            "result": "dr ليست df."
+          }
+        ],
+        "final_answer": "مسافة الاستجابة 20m وتسبق الكبح.",
+        "verification": "D=dr+df لاحقًا.",
+        "hints": [
+          {
+            "level": 1,
+            "hint": "قبل الفرملة نعتبر v ثابتة."
+          }
+        ],
+        "bac_writing": [
+          "نحدد الجهة الموجبة قبل كتابة الإشارات.",
+          "نستعمل معادلات الحركة فقط عندما يكون التسارع ثابتًا.",
+          "نكتب الوحدة مع كل نتيجة عددية."
+        ],
+        "understanding_check": [],
+        "presentation": {
+          "show_one_step_at_a_time": true
+        }
+      }
+    },
+    {
+      "id": "straight_inclined_motion_friction_13",
+      "year": 2016,
+      "exercise": "مقتبس ومبسّط من بكالوريا",
+      "number": "13",
+      "title": "استخراج زاوية المستوى من التسارع",
+      "text": "جسم ينزلق على مستوى مائل أملس بتسارع \\(4.9m/s^2\\). نأخذ \\(g=9.8m/s^2\\). احسب زاوية الميل.",
+      "standalone_text": "جسم على مستوى أملس بتسارع 4.9m/s². احسب الزاوية.",
+      "skill": "استخراج زاوية المستوى من التسارع",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "solution": {
+        "title": "الحل المفصل: زاوية المستوى",
+        "main_idea": "على السطح الأملس a=g sinα.",
+        "detailed_explanation": "نستخرج sinα ثم α.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "العلاقة",
+            "explanation": "\\[a=g\\sin\\alpha\\]",
+            "rule_used": "المستوى أملس.",
+            "why": "لا احتكاك.",
+            "result": "العلاقة."
+          },
+          {
+            "order": 2,
+            "title": "الحساب",
+            "explanation": "\\[\\sin\\alpha=4.9/9.8=0.5\\Rightarrow\\alpha=30^\\circ\\]",
+            "rule_used": "عكس دالة الجيب.",
+            "why": "النسبة 0.5.",
+            "result": "30°."
+          }
+        ],
+        "final_answer": "\\(\\alpha=30^\\circ\\).",
+        "verification": "9.8 sin30=4.9.",
+        "hints": [
+          {
+            "level": 1,
+            "hint": "استعمل a=g sinα."
+          }
+        ],
+        "bac_writing": [
+          "نحدد الجهة الموجبة قبل كتابة الإشارات.",
+          "نستعمل معادلات الحركة فقط عندما يكون التسارع ثابتًا.",
+          "نكتب الوحدة مع كل نتيجة عددية."
+        ],
+        "understanding_check": [],
+        "presentation": {
+          "show_one_step_at_a_time": true
+        }
+      }
+    },
+    {
+      "id": "straight_inclined_motion_friction_14",
+      "year": null,
+      "exercise": "تمرين مستقل",
+      "number": "14",
+      "title": "هل تؤثر الكتلة في التسارع على مستوى أملس؟",
+      "text": "يترك جسمان كتلتهما 1kg و4kg من السكون على نفس المستوى المائل الأملس بزاوية 35°. هل لهما نفس التسارع؟ وهل يصلان معًا إذا انطلقا من الموضع نفسه واللحظة نفسها؟",
+      "standalone_text": "جسمان بكتلتين مختلفتين على نفس المستوى الأملس. قارن تسارعهما.",
+      "skill": "استقلال التسارع عن الكتلة",
+      "difficulty": "easy",
+      "is_standalone": true,
+      "solution": {
+        "title": "الحل المفصل: تأثير الكتلة",
+        "main_idea": "الكتلة تختزل من المعادلة.",
+        "detailed_explanation": "من mg sinα=ma نحصل على a=g sinα.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "الجسم الأول",
+            "explanation": "\\[a_1=g\\sin35^\\circ\\]",
+            "rule_used": "المستوى أملس.",
+            "why": "m تختزل.",
+            "result": "a1."
+          },
+          {
+            "order": 2,
+            "title": "الجسم الثاني",
+            "explanation": "\\[a_2=g\\sin35^\\circ\\]",
+            "rule_used": "المعادلة نفسها.",
+            "why": "الزاوية نفسها.",
+            "result": "a2=a1."
+          },
+          {
+            "order": 3,
+            "title": "الوصول",
+            "explanation": "لهما نفس x0 وv0 وa، إذن يصلان معًا.",
+            "rule_used": "المعادلات الزمنية متطابقة.",
+            "why": "الشروط نفسها.",
+            "result": "نفس الزمن."
+          }
+        ],
+        "final_answer": "لهما نفس التسارع ويصلان معًا ضمن هذا النموذج.",
+        "verification": "النتيجة تفترض إهمال مقاومة الهواء والاحتكاك.",
+        "hints": [
+          {
+            "level": 1,
+            "hint": "هل تبقى m بعد الاختزال؟"
+          }
+        ],
+        "bac_writing": [
+          "نحدد الجهة الموجبة قبل كتابة الإشارات.",
+          "نستعمل معادلات الحركة فقط عندما يكون التسارع ثابتًا.",
+          "نكتب الوحدة مع كل نتيجة عددية."
+        ],
+        "understanding_check": [],
+        "presentation": {
+          "show_one_step_at_a_time": true
+        }
+      }
+    },
+    {
+      "id": "straight_inclined_motion_friction_15",
+      "year": null,
+      "exercise": "تمرين شامل مستقل",
+      "number": "15",
+      "title": "تمرين شامل: من القوى إلى المعادلات الحركية",
+      "text": "جسم كتلته \\(1kg\\) يترك من السكون لينزلق على مستوى مائل \\(30^\\circ\\) مع احتكاك ثابت \\(2N\\). نأخذ \\(g=10m/s^2\\). مثل القوى، احسب التسارع، اكتب v(t) وx(t)، احسبهما بعد 3s، ثم احسب السرعة بعد قطع 24m دون الزمن.",
+      "standalone_text": "جسم 1kg من السكون على مستوى 30° مع احتكاك 2N. احسب a ثم v(t), x(t), وبعد 3s، ثم السرعة بعد 24m.",
+      "skill": "تركيب القوى والحركة المستقيمة والمعادلات الزمنية",
+      "difficulty": "hard",
+      "is_standalone": true,
+      "solution": {
+        "title": "الحل المفصل: تمرين شامل",
+        "main_idea": "قوى ← تسارع ← طبيعة الحركة ← معادلات الحركة.",
+        "detailed_explanation": "بما أن القوى ثابتة يكون التسارع ثابتًا.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "القوى",
+            "explanation": "P وR وf.",
+            "rule_used": "جرد القوى.",
+            "why": "سطح خشن.",
+            "result": "ثلاث قوى."
+          },
+          {
+            "order": 2,
+            "title": "التسارع",
+            "explanation": "\\[5-2=a\\Rightarrow a=3m/s^2\\]",
+            "rule_used": "قانون نيوتن.",
+            "why": "الأسفل موجب.",
+            "result": "a=3."
+          },
+          {
+            "order": 3,
+            "title": "الطبيعة",
+            "explanation": "a ثابت وفي جهة السرعة.",
+            "rule_used": "a مع v.",
+            "why": "الجسم يبدأ النزول.",
+            "result": "متسارعة بانتظام."
+          },
+          {
+            "order": 4,
+            "title": "السرعة",
+            "explanation": "\\[v=3t\\]",
+            "rule_used": "v=v0+at.",
+            "why": "v0=0.",
+            "result": "v=3t."
+          },
+          {
+            "order": 5,
+            "title": "الموضع",
+            "explanation": "\\[x=1.5t^2\\]",
+            "rule_used": "x=x0+v0t+1/2at².",
+            "why": "x0=v0=0.",
+            "result": "x=1.5t²."
+          },
+          {
+            "order": 6,
+            "title": "بعد 3s",
+            "explanation": "\\[v=9m/s,\\ x=13.5m\\]",
+            "rule_used": "تعويض.",
+            "why": "t=3.",
+            "result": "النتيجة."
+          },
+          {
+            "order": 7,
+            "title": "بعد 24m",
+            "explanation": "\\[v^2=2\\times3\\times24=144\\Rightarrow v=12m/s\\]",
+            "rule_used": "العلاقة المستقلة عن الزمن.",
+            "why": "لا نحتاج t.",
+            "result": "v=12."
+          }
+        ],
+        "final_answer": "a=3m/s²، v=3t، x=1.5t²، وبعد 3s: v=9m/s وx=13.5m، وبعد 24m: v=12m/s.",
+        "verification": "لو حسبنا t عند x=24 نحصل على 4s ثم v=12m/s.",
+        "hints": [
+          {
+            "level": 1,
+            "hint": "ابدأ بالقوى."
+          },
+          {
+            "level": 2,
+            "hint": "بعد إيجاد a استخدم المعادلات الزمنية."
+          },
+          {
+            "level": 3,
+            "hint": "للسؤال الأخير استخدم v²-v0²=2aΔx."
+          }
+        ],
+        "bac_writing": [
+          "نحدد الجهة الموجبة قبل كتابة الإشارات.",
+          "نستعمل معادلات الحركة فقط عندما يكون التسارع ثابتًا.",
+          "نكتب الوحدة مع كل نتيجة عددية."
+        ],
+        "understanding_check": [],
+        "presentation": {
+          "show_one_step_at_a_time": true
+        },
+        "graph_data": {
+          "id": "incline_rough",
+          "title": "قوى جسم على مستوى مائل خشن",
+          "coordinate_system": {
+            "x_min": 0,
+            "x_max": 10,
+            "y_min": 0,
+            "y_max": 7,
+            "x_step": 1,
+            "y_step": 1,
+            "x_label": "",
+            "y_label": "",
+            "show_grid": false
+          },
+          "series": [
+            {
+              "id": "incline",
+              "label": "المستوى",
+              "type": "line",
+              "data": [
+                {
+                  "x": 1,
+                  "y": 1
+                },
+                {
+                  "x": 9,
+                  "y": 5.6
+                }
+              ]
+            },
+            {
+              "id": "P",
+              "label": "P",
+              "type": "line",
+              "data": [
+                {
+                  "x": 5,
+                  "y": 3.3,
+                  "label": "G"
+                },
+                {
+                  "x": 5,
+                  "y": 0.4,
+                  "label": "P"
+                }
+              ]
+            },
+            {
+              "id": "R",
+              "label": "R",
+              "type": "line",
+              "data": [
+                {
+                  "x": 5,
+                  "y": 3.3
+                },
+                {
+                  "x": 3.5,
+                  "y": 5.9,
+                  "label": "R"
+                }
+              ]
+            },
+            {
+              "id": "Ppar",
+              "label": "mg sin α",
+              "type": "line",
+              "dashed": true,
+              "data": [
+                {
+                  "x": 5,
+                  "y": 3.3
+                },
+                {
+                  "x": 2.4,
+                  "y": 1.8,
+                  "label": "mg sin α"
+                }
+              ]
+            },
+            {
+              "id": "Pperp",
+              "label": "mg cos α",
+              "type": "line",
+              "dashed": true,
+              "data": [
+                {
+                  "x": 5,
+                  "y": 3.3
+                },
+                {
+                  "x": 6.5,
+                  "y": 0.7,
+                  "label": "mg cos α"
+                }
+              ]
+            },
+            {
+              "id": "f",
+              "label": "f",
+              "type": "line",
+              "data": [
+                {
+                  "x": 5,
+                  "y": 3.3
+                },
+                {
+                  "x": 7.2,
+                  "y": 4.6,
+                  "label": "f"
+                }
+              ]
+            }
+          ],
+          "annotations": [
+            {
+              "x": 2.3,
+              "y": 1.8,
+              "text": "α=30°"
+            }
+          ],
+          "settings": {
+            "show_grid": false,
+            "show_axes": false,
+            "show_legend": true,
+            "show_point_labels": true,
+            "connect_points": true
+          }
+        }
+      }
+    }
+  ]
+}

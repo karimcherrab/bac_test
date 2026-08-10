@@ -117,6 +117,7 @@ class ExerciseAIGenerator:
         self,
         *,
         prompt: str,
+        subject_kind: str = "math",
         max_output_tokens: int | None = None,
     ) -> GeneratedSingleExerciseResult:
         output_limit = int(
@@ -139,7 +140,7 @@ class ExerciseAIGenerator:
             output_limit,
         )
 
-        system_prompt = self._system_prompt()
+        system_prompt = self._system_prompt(subject_kind)
 
         try:
             return self._request(
@@ -269,9 +270,10 @@ class ExerciseAIGenerator:
         )
 
     @staticmethod
-    def _system_prompt() -> str:
-        return """
-أنت أستاذ رياضيات جزائري متخصص في البكالوريا.
+    def _system_prompt(subject_kind: str = "math") -> str:
+        role = "أستاذ فيزياء جزائري متخصص في البكالوريا" if subject_kind == "physics" else "أستاذ رياضيات جزائري متخصص في البكالوريا"
+        return f"""
+أنت {role}.
 
 أنشئ تمرينًا واحدًا فقط من المحور الذي يحدده المستخدم.
 
@@ -282,7 +284,9 @@ class ExerciseAIGenerator:
 - حل جميع المطالب.
 - اشرح كل انتقال مهم.
 - لا تكرر نفس الشرح.
-- استعمل $...$ للرياضيات.
+- استعمل $...$ لكل الصيغ الرياضية والفيزيائية.
+- إذا كانت المادة فيزياء واحتاج السؤال جدولًا أو دارة أو مخططًا، أعده كبنية JSON في visuals كما يطلب user prompt.
+- لا ترسل SVG أو HTML أو صورًا؛ أرسل بيانات الرسم فقط.
 - لا تستعمل Markdown.
 - أعد JSON صالحًا فقط.
 - أغلق جميع النصوص والأقواس والقوائم.
@@ -312,7 +316,9 @@ class ExerciseAIGenerator:
 - قلل طول الجمل.
 - لا تستعمل \\[ أو \\].
 - لا تستعمل \\( أو \\).
-- استعمل $...$ للرياضيات.
+- استعمل $...$ لكل الصيغ الرياضية والفيزيائية.
+- إذا كانت المادة فيزياء واحتاج السؤال جدولًا أو دارة أو مخططًا، أعده كبنية JSON في visuals كما يطلب user prompt.
+- لا ترسل SVG أو HTML أو صورًا؛ أرسل بيانات الرسم فقط.
 - لا تكرر الشرطة المائلة.
 - اجعل كل calculation قصيرًا.
 - أغلق كل علامات الاقتباس.

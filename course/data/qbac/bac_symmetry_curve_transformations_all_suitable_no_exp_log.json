@@ -1,0 +1,1977 @@
+{
+  "version": 3,
+  "language": "ar",
+  "direction": "rtl",
+  "subject_code": "math",
+  "chapter_code": "derivatives",
+  "tag": "derivative_symmetry_curve_transformations",
+  "axis_tag": "derivative_symmetry_curve_transformations",
+  "title": "تمارين بكالوريا مستقلة في التناظر وتحويلات المنحنيات",
+  "question_count": 15,
+  "max_questions": 15,
+  "selection_summary": {
+    "rule": "اختيار كامل التمارين المناسبة مباشرة لمحور التناظر وتحويلات المنحنيات: الزوجية والفردية، محور ومركز التناظر، الانسحابات الأفقية والعمودية، الانعكاس حول المحورين، التناظر المركزي وتحويلات القيمة المطلقة، مع استبعاد جميع الدوال الأسية واللوغاريتمية.",
+    "full_exercise_text": true,
+    "detailed_solution": true,
+    "react_graph_data": true,
+    "supports_images": true,
+    "supports_tables": true,
+    "supports_variation_tables": true,
+    "supports_sign_tables": true,
+    "supports_graphs": true,
+    "final_graph_rule": "إذا كان الرسم معطى في نص التمرين يوضع داخل question.graph_data، وإذا تم إنشاؤه في الحل يوضع داخل solution.graph_data.",
+    "final_image_rule": "إذا كانت الصورة جزءًا من نص التمرين توضع داخل question.images، وإذا كانت خاصة بالحل توضع داخل solution.images."
+  },
+  "questions": [
+    {
+      "id": "symmetry_transform_01",
+      "year": null,
+      "source_file": "ilovepdf_merged (4)(18).pdf",
+      "source_page": null,
+      "exercise": "سؤال مستقل من تمرين بكالوريا",
+      "number": "",
+      "title": "إثبات زوجية دالة واستنتاج محور التناظر",
+      "text": "لتكن \\(f(x)=x^4-3x^2+2\\) معرفة على \\(\\mathbb{R}\\). أثبت أن \\(f\\) زوجية، ثم استنتج عنصر التناظر لمنحناها.",
+      "standalone_text": "لتكن \\(f(x)=x^4-3x^2+2\\) معرفة على \\(\\mathbb{R}\\). أثبت أن \\(f\\) زوجية، ثم استنتج عنصر التناظر لمنحناها.",
+      "context": "الدالة زوجية إذا تحقق \\(f(-x)=f(x)\\).",
+      "tag": "derivative_symmetry_curve_transformations",
+      "axis": "التناظر وتحويلات المنحنيات",
+      "secondary_tags": [],
+      "skill": "إثبات الزوجية وتفسيرها بيانيًا",
+      "difficulty": "easy",
+      "question_type": "bac_axis_extraction",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "tables": [],
+      "variation_tables": [],
+      "sign_tables": [],
+      "graph_data": null,
+      "solution": {
+        "title": "الحل المفصل: إثبات زوجية دالة واستنتاج محور التناظر",
+        "main_idea": "تحويل العلاقة الجبرية بين الدوال إلى وصف هندسي دقيق للمنحنيات.",
+        "strategy": "نحدد نوع العلاقة: زوجية، فردية، محور أو مركز تناظر، انسحاب، انعكاس أو قيمة مطلقة، ثم نطبق القاعدة المناسبة على النقاط المميزة.",
+        "detailed_explanation": "الحل يوضح كيف ننتقل من عبارة الدالة إلى التحويل الهندسي دون إعادة دراسة الدالة كاملة.",
+        "uses_graph": false,
+        "uses_images": false,
+        "uses_tables": false,
+        "uses_variation_table": false,
+        "uses_sign_table": false,
+        "steps": [
+          {
+            "number": "1",
+            "order": 1,
+            "title": "حساب f(-x)",
+            "explanation": "نعوض x بـ -x.",
+            "construction": [],
+            "calculation": "\\(f(-x)=(-x)^4-3(-x)^2+2=x^4-3x^2+2\\)",
+            "result": "\\(f(-x)=f(x)\\)",
+            "conclusion": "الدالة زوجية.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null
+          },
+          {
+            "number": "2",
+            "order": 2,
+            "title": "التفسير الهندسي",
+            "explanation": "منحنى الدالة الزوجية متناظر بالنسبة لمحور التراتيب.",
+            "construction": [],
+            "calculation": "",
+            "result": "المستقيم \\(x=0\\) محور تناظر",
+            "conclusion": "لا نحتاج إلى إعادة رسم الجهة اليسرى.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null
+          }
+        ],
+        "final_answer": "الدالة \\(f\\) زوجية، ومحور التراتيب \\(x=0\\) محور تناظر لمنحناها.",
+        "verification": "كل نقطة \\((x,f(x))\\) يقابلها \\((-x,f(x))\\).",
+        "common_mistakes": [
+          {
+            "mistake": "الخلط بين \\(f(x-a)\\) و\\(f(x+a)\\) في اتجاه الانسحاب الأفقي.",
+            "correction": "داخل القوس تكون الحركة بعكس الإشارة: \\(f(x-a)\\) إلى اليمين و\\(f(x+a)\\) إلى اليسار."
+          },
+          {
+            "mistake": "الخلط بين \\(-f(x)\\) و\\(f(-x)\\).",
+            "correction": "\\(-f(x)\\) انعكاس حول محور الفواصل، أما \\(f(-x)\\) فهو انعكاس حول محور التراتيب."
+          }
+        ],
+        "hints": [
+          {
+            "level": 1,
+            "hint": "حدد أولًا التغيير الذي طرأ داخل الدالة أو خارجها."
+          },
+          {
+            "level": 2,
+            "hint": "التغيير خارج الدالة عمودي، والتغيير داخلها أفقي."
+          },
+          {
+            "level": 3,
+            "hint": "استعمل نقطة مميزة \\((x,f(x))\\) وحدد صورتها بعد التحويل."
+          }
+        ],
+        "alternative_method": "",
+        "images": [],
+        "tables": [],
+        "variation_tables": [],
+        "sign_tables": [],
+        "graph_data": null,
+        "presentation": {
+          "show_graph_first": false,
+          "show_one_step_at_a_time": true,
+          "react_component": "UniversalMathExerciseRenderer",
+          "graph_mode": "cartesian",
+          "use_field": "graph_data.react_data",
+          "rtl": true,
+          "show_graph_in_question": false,
+          "show_graph_in_solution": false,
+          "show_images_in_question": false,
+          "show_images_in_solution": false,
+          "show_tables_in_question": false,
+          "show_tables_in_solution": false,
+          "show_variation_tables": false,
+          "show_sign_tables": false,
+          "graph_in_question": false,
+          "question_graph_field": null,
+          "question_react_data_field": null,
+          "solution_graph_field": null,
+          "solution_react_data_field": null,
+          "graph_location": "none"
+        },
+        "is_complete": true
+      }
+    },
+    {
+      "id": "symmetry_transform_02",
+      "year": null,
+      "source_file": "ilovepdf_merged (4)(18).pdf",
+      "source_page": null,
+      "exercise": "سؤال مستقل من تمرين بكالوريا",
+      "number": "",
+      "title": "إثبات فردية دالة واستنتاج مركز التناظر",
+      "text": "لتكن \\(f(x)=x^3-2x\\) معرفة على \\(\\mathbb{R}\\). أثبت أن \\(f\\) فردية، ثم أعط التفسير الهندسي.",
+      "standalone_text": "لتكن \\(f(x)=x^3-2x\\) معرفة على \\(\\mathbb{R}\\). أثبت أن \\(f\\) فردية، ثم أعط التفسير الهندسي.",
+      "context": "الدالة فردية إذا تحقق \\(f(-x)=-f(x)\\).",
+      "tag": "derivative_symmetry_curve_transformations",
+      "axis": "التناظر وتحويلات المنحنيات",
+      "secondary_tags": [],
+      "skill": "إثبات الفردية وتحديد مركز التناظر",
+      "difficulty": "easy",
+      "question_type": "bac_axis_extraction",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "tables": [],
+      "variation_tables": [],
+      "sign_tables": [],
+      "graph_data": null,
+      "solution": {
+        "title": "الحل المفصل: إثبات فردية دالة واستنتاج مركز التناظر",
+        "main_idea": "تحويل العلاقة الجبرية بين الدوال إلى وصف هندسي دقيق للمنحنيات.",
+        "strategy": "نحدد نوع العلاقة: زوجية، فردية، محور أو مركز تناظر، انسحاب، انعكاس أو قيمة مطلقة، ثم نطبق القاعدة المناسبة على النقاط المميزة.",
+        "detailed_explanation": "الحل يوضح كيف ننتقل من عبارة الدالة إلى التحويل الهندسي دون إعادة دراسة الدالة كاملة.",
+        "uses_graph": false,
+        "uses_images": false,
+        "uses_tables": false,
+        "uses_variation_table": false,
+        "uses_sign_table": false,
+        "steps": [
+          {
+            "number": "1",
+            "order": 1,
+            "title": "حساب f(-x)",
+            "explanation": "نعوض x بـ -x.",
+            "construction": [],
+            "calculation": "\\(f(-x)=(-x)^3-2(-x)=-x^3+2x\\)",
+            "result": "\\(f(-x)=-f(x)\\)",
+            "conclusion": "الدالة فردية.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null
+          },
+          {
+            "number": "2",
+            "order": 2,
+            "title": "التفسير",
+            "explanation": "منحنى الدالة الفردية له تناظر مركزي.",
+            "construction": [],
+            "calculation": "",
+            "result": "المبدأ \\(O(0,0)\\) مركز تناظر",
+            "conclusion": "يمكن استنتاج نصف المنحنى من النصف الآخر.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null
+          }
+        ],
+        "final_answer": "الدالة فردية، والمبدأ \\(O(0,0)\\) مركز تناظر لمنحناها.",
+        "verification": "النقطة \\((x,f(x))\\) تقابلها \\((-x,-f(x))\\).",
+        "common_mistakes": [
+          {
+            "mistake": "الخلط بين \\(f(x-a)\\) و\\(f(x+a)\\) في اتجاه الانسحاب الأفقي.",
+            "correction": "داخل القوس تكون الحركة بعكس الإشارة: \\(f(x-a)\\) إلى اليمين و\\(f(x+a)\\) إلى اليسار."
+          },
+          {
+            "mistake": "الخلط بين \\(-f(x)\\) و\\(f(-x)\\).",
+            "correction": "\\(-f(x)\\) انعكاس حول محور الفواصل، أما \\(f(-x)\\) فهو انعكاس حول محور التراتيب."
+          }
+        ],
+        "hints": [
+          {
+            "level": 1,
+            "hint": "حدد أولًا التغيير الذي طرأ داخل الدالة أو خارجها."
+          },
+          {
+            "level": 2,
+            "hint": "التغيير خارج الدالة عمودي، والتغيير داخلها أفقي."
+          },
+          {
+            "level": 3,
+            "hint": "استعمل نقطة مميزة \\((x,f(x))\\) وحدد صورتها بعد التحويل."
+          }
+        ],
+        "alternative_method": "",
+        "images": [],
+        "tables": [],
+        "variation_tables": [],
+        "sign_tables": [],
+        "graph_data": null,
+        "presentation": {
+          "show_graph_first": false,
+          "show_one_step_at_a_time": true,
+          "react_component": "UniversalMathExerciseRenderer",
+          "graph_mode": "cartesian",
+          "use_field": "graph_data.react_data",
+          "rtl": true,
+          "show_graph_in_question": false,
+          "show_graph_in_solution": false,
+          "show_images_in_question": false,
+          "show_images_in_solution": false,
+          "show_tables_in_question": false,
+          "show_tables_in_solution": false,
+          "show_variation_tables": false,
+          "show_sign_tables": false,
+          "graph_in_question": false,
+          "question_graph_field": null,
+          "question_react_data_field": null,
+          "solution_graph_field": null,
+          "solution_react_data_field": null,
+          "graph_location": "none"
+        },
+        "is_complete": true
+      }
+    },
+    {
+      "id": "symmetry_transform_03",
+      "year": null,
+      "source_file": "ilovepdf_merged (4)(18).pdf",
+      "source_page": null,
+      "exercise": "سؤال مستقل من تمرين بكالوريا",
+      "number": "",
+      "title": "محور تناظر غير منطبق على محور التراتيب",
+      "text": "لتكن \\(f(x)=(x-2)^2+1\\). أثبت أن المستقيم \\(x=2\\) محور تناظر لمنحنى \\(f\\).",
+      "standalone_text": "لتكن \\(f(x)=(x-2)^2+1\\). أثبت أن المستقيم \\(x=2\\) محور تناظر لمنحنى \\(f\\).",
+      "context": "لإثبات أن \\(x=a\\) محور تناظر نتحقق من \\(f(2a-x)=f(x)\\).",
+      "tag": "derivative_symmetry_curve_transformations",
+      "axis": "التناظر وتحويلات المنحنيات",
+      "secondary_tags": [],
+      "skill": "إثبات محور تناظر عام",
+      "difficulty": "easy",
+      "question_type": "bac_axis_extraction",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "tables": [],
+      "variation_tables": [],
+      "sign_tables": [],
+      "graph_data": null,
+      "solution": {
+        "title": "الحل المفصل: محور تناظر غير منطبق على محور التراتيب",
+        "main_idea": "تحويل العلاقة الجبرية بين الدوال إلى وصف هندسي دقيق للمنحنيات.",
+        "strategy": "نحدد نوع العلاقة: زوجية، فردية، محور أو مركز تناظر، انسحاب، انعكاس أو قيمة مطلقة، ثم نطبق القاعدة المناسبة على النقاط المميزة.",
+        "detailed_explanation": "الحل يوضح كيف ننتقل من عبارة الدالة إلى التحويل الهندسي دون إعادة دراسة الدالة كاملة.",
+        "uses_graph": false,
+        "uses_images": false,
+        "uses_tables": false,
+        "uses_variation_table": false,
+        "uses_sign_table": false,
+        "steps": [
+          {
+            "number": "1",
+            "order": 1,
+            "title": "حساب f(4-x)",
+            "explanation": "لدينا a=2، ولذلك نحسب f(4-x).",
+            "construction": [],
+            "calculation": "\\(f(4-x)=((4-x)-2)^2+1=(2-x)^2+1\\)",
+            "result": "\\((2-x)^2=(x-2)^2\\)",
+            "conclusion": "نقارن مع f(x).",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null
+          },
+          {
+            "number": "2",
+            "order": 2,
+            "title": "الاستنتاج",
+            "explanation": "وجدنا أن القيمتين متساويتان.",
+            "construction": [],
+            "calculation": "\\(f(4-x)=f(x)\\)",
+            "result": "\\(x=2\\) محور تناظر",
+            "conclusion": "رأس القطع المكافئ يقع على المحور.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null
+          }
+        ],
+        "final_answer": "المستقيم \\(x=2\\) محور تناظر لمنحنى الدالة.",
+        "verification": "لأي h لدينا \\(f(2+h)=f(2-h)=h^2+1\\).",
+        "common_mistakes": [
+          {
+            "mistake": "الخلط بين \\(f(x-a)\\) و\\(f(x+a)\\) في اتجاه الانسحاب الأفقي.",
+            "correction": "داخل القوس تكون الحركة بعكس الإشارة: \\(f(x-a)\\) إلى اليمين و\\(f(x+a)\\) إلى اليسار."
+          },
+          {
+            "mistake": "الخلط بين \\(-f(x)\\) و\\(f(-x)\\).",
+            "correction": "\\(-f(x)\\) انعكاس حول محور الفواصل، أما \\(f(-x)\\) فهو انعكاس حول محور التراتيب."
+          }
+        ],
+        "hints": [
+          {
+            "level": 1,
+            "hint": "حدد أولًا التغيير الذي طرأ داخل الدالة أو خارجها."
+          },
+          {
+            "level": 2,
+            "hint": "التغيير خارج الدالة عمودي، والتغيير داخلها أفقي."
+          },
+          {
+            "level": 3,
+            "hint": "استعمل نقطة مميزة \\((x,f(x))\\) وحدد صورتها بعد التحويل."
+          }
+        ],
+        "alternative_method": "",
+        "images": [],
+        "tables": [],
+        "variation_tables": [],
+        "sign_tables": [],
+        "graph_data": null,
+        "presentation": {
+          "show_graph_first": false,
+          "show_one_step_at_a_time": true,
+          "react_component": "UniversalMathExerciseRenderer",
+          "graph_mode": "cartesian",
+          "use_field": "graph_data.react_data",
+          "rtl": true,
+          "show_graph_in_question": false,
+          "show_graph_in_solution": false,
+          "show_images_in_question": false,
+          "show_images_in_solution": false,
+          "show_tables_in_question": false,
+          "show_tables_in_solution": false,
+          "show_variation_tables": false,
+          "show_sign_tables": false,
+          "graph_in_question": false,
+          "question_graph_field": null,
+          "question_react_data_field": null,
+          "solution_graph_field": null,
+          "solution_react_data_field": null,
+          "graph_location": "none"
+        },
+        "is_complete": true
+      }
+    },
+    {
+      "id": "symmetry_transform_04",
+      "year": null,
+      "source_file": "ilovepdf_merged (4)(18).pdf",
+      "source_page": null,
+      "exercise": "سؤال مستقل من تمرين بكالوريا",
+      "number": "",
+      "title": "مركز تناظر غير منطبق على المبدأ",
+      "text": "لتكن \\(g(x)=(x-1)^3+2\\). أثبت أن النقطة \\(\\Omega(1,2)\\) مركز تناظر لمنحنى \\(g\\).",
+      "standalone_text": "لتكن \\(g(x)=(x-1)^3+2\\). أثبت أن النقطة \\(\\Omega(1,2)\\) مركز تناظر لمنحنى \\(g\\).",
+      "context": "نستعمل العلاقة \\(g(2a-x)+g(x)=2b\\).",
+      "tag": "derivative_symmetry_curve_transformations",
+      "axis": "التناظر وتحويلات المنحنيات",
+      "secondary_tags": [],
+      "skill": "إثبات مركز تناظر عام",
+      "difficulty": "medium",
+      "question_type": "bac_axis_extraction",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "tables": [],
+      "variation_tables": [],
+      "sign_tables": [],
+      "graph_data": null,
+      "solution": {
+        "title": "الحل المفصل: مركز تناظر غير منطبق على المبدأ",
+        "main_idea": "تحويل العلاقة الجبرية بين الدوال إلى وصف هندسي دقيق للمنحنيات.",
+        "strategy": "نحدد نوع العلاقة: زوجية، فردية، محور أو مركز تناظر، انسحاب، انعكاس أو قيمة مطلقة، ثم نطبق القاعدة المناسبة على النقاط المميزة.",
+        "detailed_explanation": "الحل يوضح كيف ننتقل من عبارة الدالة إلى التحويل الهندسي دون إعادة دراسة الدالة كاملة.",
+        "uses_graph": false,
+        "uses_images": false,
+        "uses_tables": false,
+        "uses_variation_table": false,
+        "uses_sign_table": false,
+        "steps": [
+          {
+            "number": "1",
+            "order": 1,
+            "title": "حساب g(2-x)",
+            "explanation": "لدينا a=1 وb=2.",
+            "construction": [],
+            "calculation": "\\(g(2-x)=(1-x)^3+2=-(x-1)^3+2\\)",
+            "result": "تم تبسيط العبارة",
+            "conclusion": "نجمعها مع g(x).",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null
+          },
+          {
+            "number": "2",
+            "order": 2,
+            "title": "التحقق من العلاقة",
+            "explanation": "نجمع العبارتين.",
+            "construction": [],
+            "calculation": "\\(g(2-x)+g(x)=4\\)",
+            "result": "\\(4=2\\times2\\)",
+            "conclusion": "شرط مركز التناظر محقق.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null
+          }
+        ],
+        "final_answer": "النقطة \\(\\Omega(1,2)\\) مركز تناظر لمنحنى \\(g\\).",
+        "verification": "متوسط فاصلتي النقطتين المتناظرتين يساوي 1، ومتوسط ترتيبتيهما يساوي 2.",
+        "common_mistakes": [
+          {
+            "mistake": "الخلط بين \\(f(x-a)\\) و\\(f(x+a)\\) في اتجاه الانسحاب الأفقي.",
+            "correction": "داخل القوس تكون الحركة بعكس الإشارة: \\(f(x-a)\\) إلى اليمين و\\(f(x+a)\\) إلى اليسار."
+          },
+          {
+            "mistake": "الخلط بين \\(-f(x)\\) و\\(f(-x)\\).",
+            "correction": "\\(-f(x)\\) انعكاس حول محور الفواصل، أما \\(f(-x)\\) فهو انعكاس حول محور التراتيب."
+          }
+        ],
+        "hints": [
+          {
+            "level": 1,
+            "hint": "حدد أولًا التغيير الذي طرأ داخل الدالة أو خارجها."
+          },
+          {
+            "level": 2,
+            "hint": "التغيير خارج الدالة عمودي، والتغيير داخلها أفقي."
+          },
+          {
+            "level": 3,
+            "hint": "استعمل نقطة مميزة \\((x,f(x))\\) وحدد صورتها بعد التحويل."
+          }
+        ],
+        "alternative_method": "",
+        "images": [],
+        "tables": [],
+        "variation_tables": [],
+        "sign_tables": [],
+        "graph_data": null,
+        "presentation": {
+          "show_graph_first": false,
+          "show_one_step_at_a_time": true,
+          "react_component": "UniversalMathExerciseRenderer",
+          "graph_mode": "cartesian",
+          "use_field": "graph_data.react_data",
+          "rtl": true,
+          "show_graph_in_question": false,
+          "show_graph_in_solution": false,
+          "show_images_in_question": false,
+          "show_images_in_solution": false,
+          "show_tables_in_question": false,
+          "show_tables_in_solution": false,
+          "show_variation_tables": false,
+          "show_sign_tables": false,
+          "graph_in_question": false,
+          "question_graph_field": null,
+          "question_react_data_field": null,
+          "solution_graph_field": null,
+          "solution_react_data_field": null,
+          "graph_location": "none"
+        },
+        "is_complete": true
+      }
+    },
+    {
+      "id": "symmetry_transform_05",
+      "year": null,
+      "source_file": "ilovepdf_merged (4)(18).pdf",
+      "source_page": null,
+      "exercise": "سؤال مستقل من تمرين بكالوريا",
+      "number": "",
+      "title": "انسحاب عمودي لمنحنى معلوم",
+      "text": "ليكن \\((C_f)\\) منحنى الدالة \\(f(x)=x^2\\). لتكن \\(g(x)=f(x)+3\\). صف التحويل الذي يسمح بإنشاء \\((C_g)\\) من \\((C_f)\\)، ثم عين صور النقاط \\(A(0,0)\\)، \\(B(1,1)\\)، \\(C(-2,4)\\).",
+      "standalone_text": "ليكن \\((C_f)\\) منحنى الدالة \\(f(x)=x^2\\). لتكن \\(g(x)=f(x)+3\\). صف التحويل الذي يسمح بإنشاء \\((C_g)\\) من \\((C_f)\\)، ثم عين صور النقاط \\(A(0,0)\\)، \\(B(1,1)\\)، \\(C(-2,4)\\).",
+      "context": "إضافة ثابت خارج الدالة تعني انسحابًا عموديًا.",
+      "tag": "derivative_symmetry_curve_transformations",
+      "axis": "التناظر وتحويلات المنحنيات",
+      "secondary_tags": [],
+      "skill": "استنتاج منحنى f(x)+k",
+      "difficulty": "easy",
+      "question_type": "bac_axis_extraction",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "tables": [],
+      "variation_tables": [],
+      "sign_tables": [],
+      "graph_data": null,
+      "solution": {
+        "title": "الحل المفصل: انسحاب عمودي لمنحنى معلوم",
+        "main_idea": "تحويل العلاقة الجبرية بين الدوال إلى وصف هندسي دقيق للمنحنيات.",
+        "strategy": "نحدد نوع العلاقة: زوجية، فردية، محور أو مركز تناظر، انسحاب، انعكاس أو قيمة مطلقة، ثم نطبق القاعدة المناسبة على النقاط المميزة.",
+        "detailed_explanation": "الحل يوضح كيف ننتقل من عبارة الدالة إلى التحويل الهندسي دون إعادة دراسة الدالة كاملة.",
+        "uses_graph": false,
+        "uses_images": false,
+        "uses_tables": false,
+        "uses_variation_table": false,
+        "uses_sign_table": false,
+        "steps": [
+          {
+            "number": "1",
+            "order": 1,
+            "title": "تحديد التحويل",
+            "explanation": "العدد 3 مضاف خارج الدالة.",
+            "construction": [],
+            "calculation": "",
+            "result": "انسحاب شعاعه \\((0,3)\\)",
+            "conclusion": "كل ترتيب يزيد 3.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null
+          },
+          {
+            "number": "2",
+            "order": 2,
+            "title": "تحويل النقاط",
+            "explanation": "نحافظ على الفواصل ونضيف 3 إلى الترتيبات.",
+            "construction": [],
+            "calculation": "\\(A'(0,3),\\ B'(1,4),\\ C'(-2,7)\\)",
+            "result": "تم تحديد الصور",
+            "conclusion": "يمكن رسم المنحنى من النقاط المنقولة.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null
+          }
+        ],
+        "final_answer": "\\((C_g)\\) صورة \\((C_f)\\) بانسحاب شعاعه \\((0,3)\\)، وصور النقاط هي \\(A'(0,3)\\)، \\(B'(1,4)\\)، \\(C'(-2,7)\\).",
+        "verification": "لدينا دائمًا \\(g(x)-f(x)=3\\).",
+        "common_mistakes": [
+          {
+            "mistake": "الخلط بين \\(f(x-a)\\) و\\(f(x+a)\\) في اتجاه الانسحاب الأفقي.",
+            "correction": "داخل القوس تكون الحركة بعكس الإشارة: \\(f(x-a)\\) إلى اليمين و\\(f(x+a)\\) إلى اليسار."
+          },
+          {
+            "mistake": "الخلط بين \\(-f(x)\\) و\\(f(-x)\\).",
+            "correction": "\\(-f(x)\\) انعكاس حول محور الفواصل، أما \\(f(-x)\\) فهو انعكاس حول محور التراتيب."
+          }
+        ],
+        "hints": [
+          {
+            "level": 1,
+            "hint": "حدد أولًا التغيير الذي طرأ داخل الدالة أو خارجها."
+          },
+          {
+            "level": 2,
+            "hint": "التغيير خارج الدالة عمودي، والتغيير داخلها أفقي."
+          },
+          {
+            "level": 3,
+            "hint": "استعمل نقطة مميزة \\((x,f(x))\\) وحدد صورتها بعد التحويل."
+          }
+        ],
+        "alternative_method": "",
+        "images": [],
+        "tables": [],
+        "variation_tables": [],
+        "sign_tables": [],
+        "graph_data": null,
+        "presentation": {
+          "show_graph_first": false,
+          "show_one_step_at_a_time": true,
+          "react_component": "UniversalMathExerciseRenderer",
+          "graph_mode": "cartesian",
+          "use_field": "graph_data.react_data",
+          "rtl": true,
+          "show_graph_in_question": false,
+          "show_graph_in_solution": false,
+          "show_images_in_question": false,
+          "show_images_in_solution": false,
+          "show_tables_in_question": false,
+          "show_tables_in_solution": false,
+          "show_variation_tables": false,
+          "show_sign_tables": false,
+          "graph_in_question": false,
+          "question_graph_field": null,
+          "question_react_data_field": null,
+          "solution_graph_field": null,
+          "solution_react_data_field": null,
+          "graph_location": "none"
+        },
+        "is_complete": true
+      }
+    },
+    {
+      "id": "symmetry_transform_06",
+      "year": null,
+      "source_file": "ilovepdf_merged (4)(18).pdf",
+      "source_page": null,
+      "exercise": "سؤال مستقل من تمرين بكالوريا",
+      "number": "",
+      "title": "انسحاب أفقي إلى اليمين",
+      "text": "ليكن \\((C_f)\\) منحنى الدالة \\(f(x)=x^2\\)، ولتكن \\(g(x)=f(x-2)=(x-2)^2\\). صف كيفية إنشاء \\((C_g)\\) من \\((C_f)\\)، وحدد صورة الرأس \\(O(0,0)\\).",
+      "standalone_text": "ليكن \\((C_f)\\) منحنى الدالة \\(f(x)=x^2\\)، ولتكن \\(g(x)=f(x-2)=(x-2)^2\\). صف كيفية إنشاء \\((C_g)\\) من \\((C_f)\\)، وحدد صورة الرأس \\(O(0,0)\\).",
+      "context": "التعبير \\(f(x-a)\\) ينقل المنحنى إلى اليمين بمقدار a.",
+      "tag": "derivative_symmetry_curve_transformations",
+      "axis": "التناظر وتحويلات المنحنيات",
+      "secondary_tags": [],
+      "skill": "استنتاج منحنى f(x-a)",
+      "difficulty": "easy",
+      "question_type": "bac_axis_extraction",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "tables": [],
+      "variation_tables": [],
+      "sign_tables": [],
+      "graph_data": null,
+      "solution": {
+        "title": "الحل المفصل: انسحاب أفقي إلى اليمين",
+        "main_idea": "تحويل العلاقة الجبرية بين الدوال إلى وصف هندسي دقيق للمنحنيات.",
+        "strategy": "نحدد نوع العلاقة: زوجية، فردية، محور أو مركز تناظر، انسحاب، انعكاس أو قيمة مطلقة، ثم نطبق القاعدة المناسبة على النقاط المميزة.",
+        "detailed_explanation": "الحل يوضح كيف ننتقل من عبارة الدالة إلى التحويل الهندسي دون إعادة دراسة الدالة كاملة.",
+        "uses_graph": false,
+        "uses_images": false,
+        "uses_tables": false,
+        "uses_variation_table": false,
+        "uses_sign_table": false,
+        "steps": [
+          {
+            "number": "1",
+            "order": 1,
+            "title": "قراءة التحويل",
+            "explanation": "داخل الدالة لدينا x-2.",
+            "construction": [],
+            "calculation": "",
+            "result": "انسحاب أفقي نحو اليمين بوحدتين",
+            "conclusion": "شعاع الانسحاب \\((2,0)\\).",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null
+          },
+          {
+            "number": "2",
+            "order": 2,
+            "title": "تحويل الرأس",
+            "explanation": "نضيف 2 إلى الفاصلة ونحافظ على الترتيب.",
+            "construction": [],
+            "calculation": "\\(O(0,0)\\mapsto S(2,0)\\)",
+            "result": "الرأس الجديد S(2,0)",
+            "conclusion": "محور التناظر يصبح x=2.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null
+          }
+        ],
+        "final_answer": "المنحنى \\((C_g)\\) صورة \\((C_f)\\) بانسحاب شعاعه \\((2,0)\\)، ورأسه \\(S(2,0)\\).",
+        "verification": "أصغر قيمة لـ\\((x-2)^2\\) تتحقق عند x=2.",
+        "common_mistakes": [
+          {
+            "mistake": "الخلط بين \\(f(x-a)\\) و\\(f(x+a)\\) في اتجاه الانسحاب الأفقي.",
+            "correction": "داخل القوس تكون الحركة بعكس الإشارة: \\(f(x-a)\\) إلى اليمين و\\(f(x+a)\\) إلى اليسار."
+          },
+          {
+            "mistake": "الخلط بين \\(-f(x)\\) و\\(f(-x)\\).",
+            "correction": "\\(-f(x)\\) انعكاس حول محور الفواصل، أما \\(f(-x)\\) فهو انعكاس حول محور التراتيب."
+          }
+        ],
+        "hints": [
+          {
+            "level": 1,
+            "hint": "حدد أولًا التغيير الذي طرأ داخل الدالة أو خارجها."
+          },
+          {
+            "level": 2,
+            "hint": "التغيير خارج الدالة عمودي، والتغيير داخلها أفقي."
+          },
+          {
+            "level": 3,
+            "hint": "استعمل نقطة مميزة \\((x,f(x))\\) وحدد صورتها بعد التحويل."
+          }
+        ],
+        "alternative_method": "",
+        "images": [],
+        "tables": [],
+        "variation_tables": [],
+        "sign_tables": [],
+        "graph_data": null,
+        "presentation": {
+          "show_graph_first": false,
+          "show_one_step_at_a_time": true,
+          "react_component": "UniversalMathExerciseRenderer",
+          "graph_mode": "cartesian",
+          "use_field": "graph_data.react_data",
+          "rtl": true,
+          "show_graph_in_question": false,
+          "show_graph_in_solution": false,
+          "show_images_in_question": false,
+          "show_images_in_solution": false,
+          "show_tables_in_question": false,
+          "show_tables_in_solution": false,
+          "show_variation_tables": false,
+          "show_sign_tables": false,
+          "graph_in_question": false,
+          "question_graph_field": null,
+          "question_react_data_field": null,
+          "solution_graph_field": null,
+          "solution_react_data_field": null,
+          "graph_location": "none"
+        },
+        "is_complete": true
+      }
+    },
+    {
+      "id": "symmetry_transform_07",
+      "year": null,
+      "source_file": "ilovepdf_merged (4)(18).pdf",
+      "source_page": null,
+      "exercise": "سؤال مستقل من تمرين بكالوريا",
+      "number": "",
+      "title": "انسحاب أفقي إلى اليسار",
+      "text": "لتكن \\(g(x)=f(x+4)\\)، حيث منحنى \\(f\\) معلوم. حدد التحويل الهندسي الذي يسمح بإنشاء منحنى \\(g\\)، ثم عين صورة النقطة \\(M(3,-2)\\) من منحنى \\(f\\).",
+      "standalone_text": "لتكن \\(g(x)=f(x+4)\\)، حيث منحنى \\(f\\) معلوم. حدد التحويل الهندسي الذي يسمح بإنشاء منحنى \\(g\\)، ثم عين صورة النقطة \\(M(3,-2)\\) من منحنى \\(f\\).",
+      "context": "داخل القوس تكون الحركة بعكس الإشارة.",
+      "tag": "derivative_symmetry_curve_transformations",
+      "axis": "التناظر وتحويلات المنحنيات",
+      "secondary_tags": [],
+      "skill": "استنتاج منحنى f(x+a)",
+      "difficulty": "easy",
+      "question_type": "bac_axis_extraction",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "tables": [],
+      "variation_tables": [],
+      "sign_tables": [],
+      "graph_data": null,
+      "solution": {
+        "title": "الحل المفصل: انسحاب أفقي إلى اليسار",
+        "main_idea": "تحويل العلاقة الجبرية بين الدوال إلى وصف هندسي دقيق للمنحنيات.",
+        "strategy": "نحدد نوع العلاقة: زوجية، فردية، محور أو مركز تناظر، انسحاب، انعكاس أو قيمة مطلقة، ثم نطبق القاعدة المناسبة على النقاط المميزة.",
+        "detailed_explanation": "الحل يوضح كيف ننتقل من عبارة الدالة إلى التحويل الهندسي دون إعادة دراسة الدالة كاملة.",
+        "uses_graph": false,
+        "uses_images": false,
+        "uses_tables": false,
+        "uses_variation_table": false,
+        "uses_sign_table": false,
+        "steps": [
+          {
+            "number": "1",
+            "order": 1,
+            "title": "تحديد الاتجاه",
+            "explanation": "لدينا x+4.",
+            "construction": [],
+            "calculation": "",
+            "result": "انسحاب إلى اليسار بأربع وحدات",
+            "conclusion": "شعاعه \\((-4,0)\\).",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null
+          },
+          {
+            "number": "2",
+            "order": 2,
+            "title": "تحويل النقطة",
+            "explanation": "نطرح 4 من الفاصلة ونحافظ على الترتيب.",
+            "construction": [],
+            "calculation": "\\(M(3,-2)\\mapsto M'(-1,-2)\\)",
+            "result": "الصورة \\(M'(-1,-2)\\)",
+            "conclusion": "تم تطبيق الانسحاب.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null
+          }
+        ],
+        "final_answer": "منحنى \\(g\\) صورة منحنى \\(f\\) بانسحاب شعاعه \\((-4,0)\\)، وصورة \\(M\\) هي \\(M'(-1,-2)\\).",
+        "verification": "إذا كانت \\(f(3)=-2\\)، فإن \\(g(-1)=f(3)=-2\\).",
+        "common_mistakes": [
+          {
+            "mistake": "الخلط بين \\(f(x-a)\\) و\\(f(x+a)\\) في اتجاه الانسحاب الأفقي.",
+            "correction": "داخل القوس تكون الحركة بعكس الإشارة: \\(f(x-a)\\) إلى اليمين و\\(f(x+a)\\) إلى اليسار."
+          },
+          {
+            "mistake": "الخلط بين \\(-f(x)\\) و\\(f(-x)\\).",
+            "correction": "\\(-f(x)\\) انعكاس حول محور الفواصل، أما \\(f(-x)\\) فهو انعكاس حول محور التراتيب."
+          }
+        ],
+        "hints": [
+          {
+            "level": 1,
+            "hint": "حدد أولًا التغيير الذي طرأ داخل الدالة أو خارجها."
+          },
+          {
+            "level": 2,
+            "hint": "التغيير خارج الدالة عمودي، والتغيير داخلها أفقي."
+          },
+          {
+            "level": 3,
+            "hint": "استعمل نقطة مميزة \\((x,f(x))\\) وحدد صورتها بعد التحويل."
+          }
+        ],
+        "alternative_method": "",
+        "images": [],
+        "tables": [],
+        "variation_tables": [],
+        "sign_tables": [],
+        "graph_data": null,
+        "presentation": {
+          "show_graph_first": false,
+          "show_one_step_at_a_time": true,
+          "react_component": "UniversalMathExerciseRenderer",
+          "graph_mode": "cartesian",
+          "use_field": "graph_data.react_data",
+          "rtl": true,
+          "show_graph_in_question": false,
+          "show_graph_in_solution": false,
+          "show_images_in_question": false,
+          "show_images_in_solution": false,
+          "show_tables_in_question": false,
+          "show_tables_in_solution": false,
+          "show_variation_tables": false,
+          "show_sign_tables": false,
+          "graph_in_question": false,
+          "question_graph_field": null,
+          "question_react_data_field": null,
+          "solution_graph_field": null,
+          "solution_react_data_field": null,
+          "graph_location": "none"
+        },
+        "is_complete": true
+      }
+    },
+    {
+      "id": "symmetry_transform_08",
+      "year": null,
+      "source_file": "ilovepdf_merged (4)(18).pdf",
+      "source_page": null,
+      "exercise": "سؤال مستقل من تمرين بكالوريا",
+      "number": "",
+      "title": "انسحاب مركب أفقي وعمودي",
+      "text": "لتكن \\(f(x)=x^2\\)، ولتكن \\(g(x)=f(x-2)+1=(x-2)^2+1\\). صف التحويل الهندسي وحدد الرأس ومحور التناظر.",
+      "standalone_text": "لتكن \\(f(x)=x^2\\)، ولتكن \\(g(x)=f(x-2)+1=(x-2)^2+1\\). صف التحويل الهندسي وحدد الرأس ومحور التناظر.",
+      "context": "نجمع انسحابًا أفقيًا إلى اليمين وانسحابًا عموديًا إلى الأعلى.",
+      "tag": "derivative_symmetry_curve_transformations",
+      "axis": "التناظر وتحويلات المنحنيات",
+      "secondary_tags": [],
+      "skill": "استنتاج منحنى f(x-a)+b",
+      "difficulty": "medium",
+      "question_type": "bac_axis_extraction",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "tables": [],
+      "variation_tables": [],
+      "sign_tables": [],
+      "graph_data": null,
+      "solution": {
+        "title": "الحل المفصل: انسحاب مركب أفقي وعمودي",
+        "main_idea": "تحويل العلاقة الجبرية بين الدوال إلى وصف هندسي دقيق للمنحنيات.",
+        "strategy": "نحدد نوع العلاقة: زوجية، فردية، محور أو مركز تناظر، انسحاب، انعكاس أو قيمة مطلقة، ثم نطبق القاعدة المناسبة على النقاط المميزة.",
+        "detailed_explanation": "الحل يوضح كيف ننتقل من عبارة الدالة إلى التحويل الهندسي دون إعادة دراسة الدالة كاملة.",
+        "uses_graph": false,
+        "uses_images": false,
+        "uses_tables": false,
+        "uses_variation_table": false,
+        "uses_sign_table": false,
+        "steps": [
+          {
+            "number": "1",
+            "order": 1,
+            "title": "التحويل الأفقي",
+            "explanation": "x-2 يعني حركة إلى اليمين.",
+            "construction": [],
+            "calculation": "",
+            "result": "انسحاب أفقي شعاعه \\((2,0)\\)",
+            "conclusion": "نضيف التحويل العمودي.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null
+          },
+          {
+            "number": "2",
+            "order": 2,
+            "title": "التحويل العمودي",
+            "explanation": "+1 خارج الدالة يعني حركة إلى الأعلى.",
+            "construction": [],
+            "calculation": "",
+            "result": "الانسحاب الكلي شعاعه \\((2,1)\\)",
+            "conclusion": "نحدد الرأس.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null
+          },
+          {
+            "number": "3",
+            "order": 3,
+            "title": "العناصر المميزة",
+            "explanation": "رأس x² هو الأصل.",
+            "construction": [],
+            "calculation": "\\(O(0,0)\\mapsto S(2,1)\\)",
+            "result": "الرأس S(2,1)، ومحور التناظر x=2",
+            "conclusion": "تم وصف المنحنى.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null
+          }
+        ],
+        "final_answer": "منحنى \\(g\\) صورة منحنى \\(f\\) بانسحاب شعاعه \\((2,1)\\). رأسه \\(S(2,1)\\) ومحور تناظره \\(x=2\\).",
+        "verification": "العبارة المعيارية نفسها تظهر الرأس مباشرة.",
+        "common_mistakes": [
+          {
+            "mistake": "الخلط بين \\(f(x-a)\\) و\\(f(x+a)\\) في اتجاه الانسحاب الأفقي.",
+            "correction": "داخل القوس تكون الحركة بعكس الإشارة: \\(f(x-a)\\) إلى اليمين و\\(f(x+a)\\) إلى اليسار."
+          },
+          {
+            "mistake": "الخلط بين \\(-f(x)\\) و\\(f(-x)\\).",
+            "correction": "\\(-f(x)\\) انعكاس حول محور الفواصل، أما \\(f(-x)\\) فهو انعكاس حول محور التراتيب."
+          }
+        ],
+        "hints": [
+          {
+            "level": 1,
+            "hint": "حدد أولًا التغيير الذي طرأ داخل الدالة أو خارجها."
+          },
+          {
+            "level": 2,
+            "hint": "التغيير خارج الدالة عمودي، والتغيير داخلها أفقي."
+          },
+          {
+            "level": 3,
+            "hint": "استعمل نقطة مميزة \\((x,f(x))\\) وحدد صورتها بعد التحويل."
+          }
+        ],
+        "alternative_method": "",
+        "images": [],
+        "tables": [],
+        "variation_tables": [],
+        "sign_tables": [],
+        "graph_data": null,
+        "presentation": {
+          "show_graph_first": false,
+          "show_one_step_at_a_time": true,
+          "react_component": "UniversalMathExerciseRenderer",
+          "graph_mode": "cartesian",
+          "use_field": "graph_data.react_data",
+          "rtl": true,
+          "show_graph_in_question": false,
+          "show_graph_in_solution": false,
+          "show_images_in_question": false,
+          "show_images_in_solution": false,
+          "show_tables_in_question": false,
+          "show_tables_in_solution": false,
+          "show_variation_tables": false,
+          "show_sign_tables": false,
+          "graph_in_question": false,
+          "question_graph_field": null,
+          "question_react_data_field": null,
+          "solution_graph_field": null,
+          "solution_react_data_field": null,
+          "graph_location": "none"
+        },
+        "is_complete": true
+      }
+    },
+    {
+      "id": "symmetry_transform_09",
+      "year": null,
+      "source_file": "ilovepdf_merged (4)(18).pdf",
+      "source_page": null,
+      "exercise": "سؤال مستقل من تمرين بكالوريا",
+      "number": "",
+      "title": "انعكاس حول محور الفواصل",
+      "text": "ليكن \\((C_f)\\) منحنى دالة \\(f\\)، ولتكن \\(g(x)=-f(x)\\). صف كيفية إنشاء \\((C_g)\\)، ثم عين صور النقاط \\(A(-2,3)\\) و\\(B(1,-4)\\).",
+      "standalone_text": "ليكن \\((C_f)\\) منحنى دالة \\(f\\)، ولتكن \\(g(x)=-f(x)\\). صف كيفية إنشاء \\((C_g)\\)، ثم عين صور النقاط \\(A(-2,3)\\) و\\(B(1,-4)\\).",
+      "context": "تغيير إشارة قيم الدالة يعكس الترتيبات.",
+      "tag": "derivative_symmetry_curve_transformations",
+      "axis": "التناظر وتحويلات المنحنيات",
+      "secondary_tags": [],
+      "skill": "استنتاج منحنى -f(x)",
+      "difficulty": "easy",
+      "question_type": "bac_axis_extraction",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "tables": [],
+      "variation_tables": [],
+      "sign_tables": [],
+      "graph_data": null,
+      "solution": {
+        "title": "الحل المفصل: انعكاس حول محور الفواصل",
+        "main_idea": "تحويل العلاقة الجبرية بين الدوال إلى وصف هندسي دقيق للمنحنيات.",
+        "strategy": "نحدد نوع العلاقة: زوجية، فردية، محور أو مركز تناظر، انسحاب، انعكاس أو قيمة مطلقة، ثم نطبق القاعدة المناسبة على النقاط المميزة.",
+        "detailed_explanation": "الحل يوضح كيف ننتقل من عبارة الدالة إلى التحويل الهندسي دون إعادة دراسة الدالة كاملة.",
+        "uses_graph": false,
+        "uses_images": false,
+        "uses_tables": false,
+        "uses_variation_table": false,
+        "uses_sign_table": false,
+        "steps": [
+          {
+            "number": "1",
+            "order": 1,
+            "title": "تحديد التحويل",
+            "explanation": "كل ترتيب y يصبح -y.",
+            "construction": [],
+            "calculation": "",
+            "result": "تناظر محوري بالنسبة إلى محور الفواصل",
+            "conclusion": "الفواصل لا تتغير.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null
+          },
+          {
+            "number": "2",
+            "order": 2,
+            "title": "تحويل النقاط",
+            "explanation": "نعكس إشارات الترتيبات.",
+            "construction": [],
+            "calculation": "\\(A'(-2,-3),\\ B'(1,4)\\)",
+            "result": "تم تحديد الصور",
+            "conclusion": "كل نقطة وصورتها لهما الفاصلة نفسها.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null
+          }
+        ],
+        "final_answer": "منحنى \\(g\\) هو صورة منحنى \\(f\\) بتناظر محوري بالنسبة إلى محور الفواصل. الصور: \\(A'(-2,-3)\\)، \\(B'(1,4)\\).",
+        "verification": "لدينا \\(g(x)=-f(x)\\) لكل x.",
+        "common_mistakes": [
+          {
+            "mistake": "الخلط بين \\(f(x-a)\\) و\\(f(x+a)\\) في اتجاه الانسحاب الأفقي.",
+            "correction": "داخل القوس تكون الحركة بعكس الإشارة: \\(f(x-a)\\) إلى اليمين و\\(f(x+a)\\) إلى اليسار."
+          },
+          {
+            "mistake": "الخلط بين \\(-f(x)\\) و\\(f(-x)\\).",
+            "correction": "\\(-f(x)\\) انعكاس حول محور الفواصل، أما \\(f(-x)\\) فهو انعكاس حول محور التراتيب."
+          }
+        ],
+        "hints": [
+          {
+            "level": 1,
+            "hint": "حدد أولًا التغيير الذي طرأ داخل الدالة أو خارجها."
+          },
+          {
+            "level": 2,
+            "hint": "التغيير خارج الدالة عمودي، والتغيير داخلها أفقي."
+          },
+          {
+            "level": 3,
+            "hint": "استعمل نقطة مميزة \\((x,f(x))\\) وحدد صورتها بعد التحويل."
+          }
+        ],
+        "alternative_method": "",
+        "images": [],
+        "tables": [],
+        "variation_tables": [],
+        "sign_tables": [],
+        "graph_data": null,
+        "presentation": {
+          "show_graph_first": false,
+          "show_one_step_at_a_time": true,
+          "react_component": "UniversalMathExerciseRenderer",
+          "graph_mode": "cartesian",
+          "use_field": "graph_data.react_data",
+          "rtl": true,
+          "show_graph_in_question": false,
+          "show_graph_in_solution": false,
+          "show_images_in_question": false,
+          "show_images_in_solution": false,
+          "show_tables_in_question": false,
+          "show_tables_in_solution": false,
+          "show_variation_tables": false,
+          "show_sign_tables": false,
+          "graph_in_question": false,
+          "question_graph_field": null,
+          "question_react_data_field": null,
+          "solution_graph_field": null,
+          "solution_react_data_field": null,
+          "graph_location": "none"
+        },
+        "is_complete": true
+      }
+    },
+    {
+      "id": "symmetry_transform_10",
+      "year": null,
+      "source_file": "ilovepdf_merged (4)(18).pdf",
+      "source_page": null,
+      "exercise": "سؤال مستقل من تمرين بكالوريا",
+      "number": "",
+      "title": "انعكاس حول محور التراتيب",
+      "text": "ليكن \\((C_f)\\) منحنى دالة \\(f\\)، ولتكن \\(g(x)=f(-x)\\). صف التحويل، ثم عين صورة النقطة \\(M(3,5)\\).",
+      "standalone_text": "ليكن \\((C_f)\\) منحنى دالة \\(f\\)، ولتكن \\(g(x)=f(-x)\\). صف التحويل، ثم عين صورة النقطة \\(M(3,5)\\).",
+      "context": "تعويض x بـ -x يعكس الفواصل.",
+      "tag": "derivative_symmetry_curve_transformations",
+      "axis": "التناظر وتحويلات المنحنيات",
+      "secondary_tags": [],
+      "skill": "استنتاج منحنى f(-x)",
+      "difficulty": "easy",
+      "question_type": "bac_axis_extraction",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "tables": [],
+      "variation_tables": [],
+      "sign_tables": [],
+      "graph_data": null,
+      "solution": {
+        "title": "الحل المفصل: انعكاس حول محور التراتيب",
+        "main_idea": "تحويل العلاقة الجبرية بين الدوال إلى وصف هندسي دقيق للمنحنيات.",
+        "strategy": "نحدد نوع العلاقة: زوجية، فردية، محور أو مركز تناظر، انسحاب، انعكاس أو قيمة مطلقة، ثم نطبق القاعدة المناسبة على النقاط المميزة.",
+        "detailed_explanation": "الحل يوضح كيف ننتقل من عبارة الدالة إلى التحويل الهندسي دون إعادة دراسة الدالة كاملة.",
+        "uses_graph": false,
+        "uses_images": false,
+        "uses_tables": false,
+        "uses_variation_table": false,
+        "uses_sign_table": false,
+        "steps": [
+          {
+            "number": "1",
+            "order": 1,
+            "title": "التفسير",
+            "explanation": "نفس القيمة تظهر عند الفاصلة المعاكسة.",
+            "construction": [],
+            "calculation": "",
+            "result": "تناظر محوري بالنسبة إلى محور التراتيب",
+            "conclusion": "الترتيب لا يتغير.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null
+          },
+          {
+            "number": "2",
+            "order": 2,
+            "title": "تحويل النقطة",
+            "explanation": "نعكس إشارة الفاصلة.",
+            "construction": [],
+            "calculation": "\\(M(3,5)\\mapsto M'(-3,5)\\)",
+            "result": "الصورة M'(-3,5)",
+            "conclusion": "تم التحويل.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null
+          }
+        ],
+        "final_answer": "منحنى \\(g\\) صورة منحنى \\(f\\) بتناظر محوري بالنسبة إلى محور التراتيب، وصورة \\(M\\) هي \\(M'(-3,5)\\).",
+        "verification": "إذا كانت \\(f(3)=5\\)، فإن \\(g(-3)=f(3)=5\\).",
+        "common_mistakes": [
+          {
+            "mistake": "الخلط بين \\(f(x-a)\\) و\\(f(x+a)\\) في اتجاه الانسحاب الأفقي.",
+            "correction": "داخل القوس تكون الحركة بعكس الإشارة: \\(f(x-a)\\) إلى اليمين و\\(f(x+a)\\) إلى اليسار."
+          },
+          {
+            "mistake": "الخلط بين \\(-f(x)\\) و\\(f(-x)\\).",
+            "correction": "\\(-f(x)\\) انعكاس حول محور الفواصل، أما \\(f(-x)\\) فهو انعكاس حول محور التراتيب."
+          }
+        ],
+        "hints": [
+          {
+            "level": 1,
+            "hint": "حدد أولًا التغيير الذي طرأ داخل الدالة أو خارجها."
+          },
+          {
+            "level": 2,
+            "hint": "التغيير خارج الدالة عمودي، والتغيير داخلها أفقي."
+          },
+          {
+            "level": 3,
+            "hint": "استعمل نقطة مميزة \\((x,f(x))\\) وحدد صورتها بعد التحويل."
+          }
+        ],
+        "alternative_method": "",
+        "images": [],
+        "tables": [],
+        "variation_tables": [],
+        "sign_tables": [],
+        "graph_data": null,
+        "presentation": {
+          "show_graph_first": false,
+          "show_one_step_at_a_time": true,
+          "react_component": "UniversalMathExerciseRenderer",
+          "graph_mode": "cartesian",
+          "use_field": "graph_data.react_data",
+          "rtl": true,
+          "show_graph_in_question": false,
+          "show_graph_in_solution": false,
+          "show_images_in_question": false,
+          "show_images_in_solution": false,
+          "show_tables_in_question": false,
+          "show_tables_in_solution": false,
+          "show_variation_tables": false,
+          "show_sign_tables": false,
+          "graph_in_question": false,
+          "question_graph_field": null,
+          "question_react_data_field": null,
+          "solution_graph_field": null,
+          "solution_react_data_field": null,
+          "graph_location": "none"
+        },
+        "is_complete": true
+      }
+    },
+    {
+      "id": "symmetry_transform_11",
+      "year": null,
+      "source_file": "ilovepdf_merged (4)(18).pdf",
+      "source_page": null,
+      "exercise": "سؤال مستقل من تمرين بكالوريا",
+      "number": "",
+      "title": "تناظر مركزي باستعمال -f(-x)",
+      "text": "لتكن \\(g(x)=-f(-x)\\). صف التحويل الذي يسمح بالانتقال من منحنى \\(f\\) إلى منحنى \\(g\\).",
+      "standalone_text": "لتكن \\(g(x)=-f(-x)\\). صف التحويل الذي يسمح بالانتقال من منحنى \\(f\\) إلى منحنى \\(g\\).",
+      "context": "نجمع انعكاسًا حول محور التراتيب ثم انعكاسًا حول محور الفواصل.",
+      "tag": "derivative_symmetry_curve_transformations",
+      "axis": "التناظر وتحويلات المنحنيات",
+      "secondary_tags": [],
+      "skill": "استنتاج منحنى -f(-x)",
+      "difficulty": "medium",
+      "question_type": "bac_axis_extraction",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "tables": [],
+      "variation_tables": [],
+      "sign_tables": [],
+      "graph_data": null,
+      "solution": {
+        "title": "الحل المفصل: تناظر مركزي باستعمال -f(-x)",
+        "main_idea": "تحويل العلاقة الجبرية بين الدوال إلى وصف هندسي دقيق للمنحنيات.",
+        "strategy": "نحدد نوع العلاقة: زوجية، فردية، محور أو مركز تناظر، انسحاب، انعكاس أو قيمة مطلقة، ثم نطبق القاعدة المناسبة على النقاط المميزة.",
+        "detailed_explanation": "الحل يوضح كيف ننتقل من عبارة الدالة إلى التحويل الهندسي دون إعادة دراسة الدالة كاملة.",
+        "uses_graph": false,
+        "uses_images": false,
+        "uses_tables": false,
+        "uses_variation_table": false,
+        "uses_sign_table": false,
+        "steps": [
+          {
+            "number": "1",
+            "order": 1,
+            "title": "التحويل الأول",
+            "explanation": "f(-x) انعكاس حول محور التراتيب.",
+            "construction": [],
+            "calculation": "",
+            "result": "نعكس الفواصل",
+            "conclusion": "ننتقل إلى الإشارة الخارجية.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null
+          },
+          {
+            "number": "2",
+            "order": 2,
+            "title": "التحويل الثاني",
+            "explanation": "السالب الخارجي يعكس الترتيبات.",
+            "construction": [],
+            "calculation": "",
+            "result": "نعكس الترتيبات أيضًا",
+            "conclusion": "التحويل الكلي نصف دورة.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null
+          },
+          {
+            "number": "3",
+            "order": 3,
+            "title": "الاستنتاج",
+            "explanation": "تغيير الإشارتين معًا يمثل تناظرًا مركزيًا.",
+            "construction": [],
+            "calculation": "",
+            "result": "المبدأ O مركز التحويل",
+            "conclusion": "النقطة (x,y) تصبح (-x,-y).",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null
+          }
+        ],
+        "final_answer": "منحنى \\(g\\) هو صورة منحنى \\(f\\) بتناظر مركزي مركزه مبدأ المعلم \\(O(0,0)\\).",
+        "verification": "كل نقطة \\((x,y)\\) تتحول إلى \\((-x,-y)\\).",
+        "common_mistakes": [
+          {
+            "mistake": "الخلط بين \\(f(x-a)\\) و\\(f(x+a)\\) في اتجاه الانسحاب الأفقي.",
+            "correction": "داخل القوس تكون الحركة بعكس الإشارة: \\(f(x-a)\\) إلى اليمين و\\(f(x+a)\\) إلى اليسار."
+          },
+          {
+            "mistake": "الخلط بين \\(-f(x)\\) و\\(f(-x)\\).",
+            "correction": "\\(-f(x)\\) انعكاس حول محور الفواصل، أما \\(f(-x)\\) فهو انعكاس حول محور التراتيب."
+          }
+        ],
+        "hints": [
+          {
+            "level": 1,
+            "hint": "حدد أولًا التغيير الذي طرأ داخل الدالة أو خارجها."
+          },
+          {
+            "level": 2,
+            "hint": "التغيير خارج الدالة عمودي، والتغيير داخلها أفقي."
+          },
+          {
+            "level": 3,
+            "hint": "استعمل نقطة مميزة \\((x,f(x))\\) وحدد صورتها بعد التحويل."
+          }
+        ],
+        "alternative_method": "",
+        "images": [],
+        "tables": [],
+        "variation_tables": [],
+        "sign_tables": [],
+        "graph_data": null,
+        "presentation": {
+          "show_graph_first": false,
+          "show_one_step_at_a_time": true,
+          "react_component": "UniversalMathExerciseRenderer",
+          "graph_mode": "cartesian",
+          "use_field": "graph_data.react_data",
+          "rtl": true,
+          "show_graph_in_question": false,
+          "show_graph_in_solution": false,
+          "show_images_in_question": false,
+          "show_images_in_solution": false,
+          "show_tables_in_question": false,
+          "show_tables_in_solution": false,
+          "show_variation_tables": false,
+          "show_sign_tables": false,
+          "graph_in_question": false,
+          "question_graph_field": null,
+          "question_react_data_field": null,
+          "solution_graph_field": null,
+          "solution_react_data_field": null,
+          "graph_location": "none"
+        },
+        "is_complete": true
+      }
+    },
+    {
+      "id": "symmetry_transform_12",
+      "year": null,
+      "source_file": "ilovepdf_merged (4)(18).pdf",
+      "source_page": null,
+      "exercise": "سؤال مستقل من تمرين بكالوريا",
+      "number": "",
+      "title": "بناء منحنى f(|x|)",
+      "text": "لتكن الدالة \\(f\\) معلومة على \\([0,+\\infty[\\)، ولتكن \\(g(x)=f(|x|)\\) على \\(\\mathbb{R}\\). اشرح كيفية إنشاء منحنى \\(g\\) انطلاقًا من الجزء المعلوم من منحنى \\(f\\).",
+      "standalone_text": "لتكن الدالة \\(f\\) معلومة على \\([0,+\\infty[\\)، ولتكن \\(g(x)=f(|x|)\\) على \\(\\mathbb{R}\\). اشرح كيفية إنشاء منحنى \\(g\\) انطلاقًا من الجزء المعلوم من منحنى \\(f\\).",
+      "context": "لدينا \\(|x|=x\\) إذا x≥0 و\\(|x|=-x\\) إذا x<0.",
+      "tag": "derivative_symmetry_curve_transformations",
+      "axis": "التناظر وتحويلات المنحنيات",
+      "secondary_tags": [],
+      "skill": "استنتاج منحنى f(|x|)",
+      "difficulty": "medium",
+      "question_type": "bac_axis_extraction",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "tables": [],
+      "variation_tables": [],
+      "sign_tables": [],
+      "graph_data": null,
+      "solution": {
+        "title": "الحل المفصل: بناء منحنى f(|x|)",
+        "main_idea": "تحويل العلاقة الجبرية بين الدوال إلى وصف هندسي دقيق للمنحنيات.",
+        "strategy": "نحدد نوع العلاقة: زوجية، فردية، محور أو مركز تناظر، انسحاب، انعكاس أو قيمة مطلقة، ثم نطبق القاعدة المناسبة على النقاط المميزة.",
+        "detailed_explanation": "الحل يوضح كيف ننتقل من عبارة الدالة إلى التحويل الهندسي دون إعادة دراسة الدالة كاملة.",
+        "uses_graph": false,
+        "uses_images": false,
+        "uses_tables": false,
+        "uses_variation_table": false,
+        "uses_sign_table": false,
+        "steps": [
+          {
+            "number": "1",
+            "order": 1,
+            "title": "الجهة اليمنى",
+            "explanation": "عندما x≥0 نجد g(x)=f(x).",
+            "construction": [],
+            "calculation": "",
+            "result": "نحتفظ بالجزء الأيمن كما هو",
+            "conclusion": "يشكل نصف المنحنى.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null
+          },
+          {
+            "number": "2",
+            "order": 2,
+            "title": "الجهة اليسرى",
+            "explanation": "عندما x<0 نجد g(x)=f(-x).",
+            "construction": [],
+            "calculation": "",
+            "result": "ننسخ الجزء الأيمن بتناظر حول محور التراتيب",
+            "conclusion": "ينتج منحنى زوجي.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null
+          },
+          {
+            "number": "3",
+            "order": 3,
+            "title": "الاستنتاج",
+            "explanation": "المنحنى النهائي متناظر.",
+            "construction": [],
+            "calculation": "",
+            "result": "محور التراتيب محور تناظر",
+            "conclusion": "لا نحتاج إلى قيم f عند x<0.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null
+          }
+        ],
+        "final_answer": "نحتفظ بالجزء من منحنى \\(f\\) الواقع في \\(x\\ge0\\)، ثم نرسم صورته بتناظر محوري بالنسبة إلى محور التراتيب. الدالة \\(g\\) زوجية.",
+        "verification": "نجد \\(g(-x)=f(|-x|)=f(|x|)=g(x)\\).",
+        "common_mistakes": [
+          {
+            "mistake": "الخلط بين \\(f(x-a)\\) و\\(f(x+a)\\) في اتجاه الانسحاب الأفقي.",
+            "correction": "داخل القوس تكون الحركة بعكس الإشارة: \\(f(x-a)\\) إلى اليمين و\\(f(x+a)\\) إلى اليسار."
+          },
+          {
+            "mistake": "الخلط بين \\(-f(x)\\) و\\(f(-x)\\).",
+            "correction": "\\(-f(x)\\) انعكاس حول محور الفواصل، أما \\(f(-x)\\) فهو انعكاس حول محور التراتيب."
+          }
+        ],
+        "hints": [
+          {
+            "level": 1,
+            "hint": "حدد أولًا التغيير الذي طرأ داخل الدالة أو خارجها."
+          },
+          {
+            "level": 2,
+            "hint": "التغيير خارج الدالة عمودي، والتغيير داخلها أفقي."
+          },
+          {
+            "level": 3,
+            "hint": "استعمل نقطة مميزة \\((x,f(x))\\) وحدد صورتها بعد التحويل."
+          }
+        ],
+        "alternative_method": "",
+        "images": [],
+        "tables": [],
+        "variation_tables": [],
+        "sign_tables": [],
+        "graph_data": null,
+        "presentation": {
+          "show_graph_first": false,
+          "show_one_step_at_a_time": true,
+          "react_component": "UniversalMathExerciseRenderer",
+          "graph_mode": "cartesian",
+          "use_field": "graph_data.react_data",
+          "rtl": true,
+          "show_graph_in_question": false,
+          "show_graph_in_solution": false,
+          "show_images_in_question": false,
+          "show_images_in_solution": false,
+          "show_tables_in_question": false,
+          "show_tables_in_solution": false,
+          "show_variation_tables": false,
+          "show_sign_tables": false,
+          "graph_in_question": false,
+          "question_graph_field": null,
+          "question_react_data_field": null,
+          "solution_graph_field": null,
+          "solution_react_data_field": null,
+          "graph_location": "none"
+        },
+        "is_complete": true
+      }
+    },
+    {
+      "id": "symmetry_transform_13",
+      "year": null,
+      "source_file": "ilovepdf_merged (4)(18).pdf",
+      "source_page": null,
+      "exercise": "سؤال مستقل من تمرين بكالوريا",
+      "number": "",
+      "title": "بناء منحنى |f(x)|",
+      "text": "ليكن منحنى \\(f\\) معلومًا، ولتكن \\(g(x)=|f(x)|\\). اشرح كيفية إنشاء منحنى \\(g\\) مع بيان ما يحدث للأجزاء الواقعة تحت محور الفواصل.",
+      "standalone_text": "ليكن منحنى \\(f\\) معلومًا، ولتكن \\(g(x)=|f(x)|\\). اشرح كيفية إنشاء منحنى \\(g\\) مع بيان ما يحدث للأجزاء الواقعة تحت محور الفواصل.",
+      "context": "القيمة المطلقة تحفظ القيم الموجبة وتغير إشارة القيم السالبة.",
+      "tag": "derivative_symmetry_curve_transformations",
+      "axis": "التناظر وتحويلات المنحنيات",
+      "secondary_tags": [],
+      "skill": "استنتاج منحنى |f(x)|",
+      "difficulty": "medium",
+      "question_type": "bac_axis_extraction",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "tables": [],
+      "variation_tables": [],
+      "sign_tables": [],
+      "graph_data": null,
+      "solution": {
+        "title": "الحل المفصل: بناء منحنى |f(x)|",
+        "main_idea": "تحويل العلاقة الجبرية بين الدوال إلى وصف هندسي دقيق للمنحنيات.",
+        "strategy": "نحدد نوع العلاقة: زوجية، فردية، محور أو مركز تناظر، انسحاب، انعكاس أو قيمة مطلقة، ثم نطبق القاعدة المناسبة على النقاط المميزة.",
+        "detailed_explanation": "الحل يوضح كيف ننتقل من عبارة الدالة إلى التحويل الهندسي دون إعادة دراسة الدالة كاملة.",
+        "uses_graph": false,
+        "uses_images": false,
+        "uses_tables": false,
+        "uses_variation_table": false,
+        "uses_sign_table": false,
+        "steps": [
+          {
+            "number": "1",
+            "order": 1,
+            "title": "الأجزاء الموجبة",
+            "explanation": "إذا f(x)≥0 فإن |f(x)|=f(x).",
+            "construction": [],
+            "calculation": "",
+            "result": "نحتفظ بالأجزاء فوق المحور كما هي",
+            "conclusion": "لا يحدث تغيير.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null
+          },
+          {
+            "number": "2",
+            "order": 2,
+            "title": "الأجزاء السالبة",
+            "explanation": "إذا f(x)<0 فإن |f(x)|=-f(x).",
+            "construction": [],
+            "calculation": "",
+            "result": "نعكس الأجزاء الواقعة تحت المحور إلى الأعلى",
+            "conclusion": "الانعكاس حول محور الفواصل.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null
+          },
+          {
+            "number": "3",
+            "order": 3,
+            "title": "النتيجة",
+            "explanation": "كل ترتيبات منحنى g غير سالبة.",
+            "construction": [],
+            "calculation": "",
+            "result": "منحنى g يقع فوق محور الفواصل أو عليه",
+            "conclusion": "جذور الدالتين متطابقة.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null
+          }
+        ],
+        "final_answer": "نترك الأجزاء الواقعة فوق محور الفواصل كما هي، ونعكس الأجزاء الواقعة تحته بتناظر محوري بالنسبة إلى محور الفواصل.",
+        "verification": "لدينا \\(|f(x)|\\ge0\\)، وتنعدم g في نفس جذور f.",
+        "common_mistakes": [
+          {
+            "mistake": "الخلط بين \\(f(x-a)\\) و\\(f(x+a)\\) في اتجاه الانسحاب الأفقي.",
+            "correction": "داخل القوس تكون الحركة بعكس الإشارة: \\(f(x-a)\\) إلى اليمين و\\(f(x+a)\\) إلى اليسار."
+          },
+          {
+            "mistake": "الخلط بين \\(-f(x)\\) و\\(f(-x)\\).",
+            "correction": "\\(-f(x)\\) انعكاس حول محور الفواصل، أما \\(f(-x)\\) فهو انعكاس حول محور التراتيب."
+          }
+        ],
+        "hints": [
+          {
+            "level": 1,
+            "hint": "حدد أولًا التغيير الذي طرأ داخل الدالة أو خارجها."
+          },
+          {
+            "level": 2,
+            "hint": "التغيير خارج الدالة عمودي، والتغيير داخلها أفقي."
+          },
+          {
+            "level": 3,
+            "hint": "استعمل نقطة مميزة \\((x,f(x))\\) وحدد صورتها بعد التحويل."
+          }
+        ],
+        "alternative_method": "",
+        "images": [],
+        "tables": [],
+        "variation_tables": [],
+        "sign_tables": [],
+        "graph_data": null,
+        "presentation": {
+          "show_graph_first": false,
+          "show_one_step_at_a_time": true,
+          "react_component": "UniversalMathExerciseRenderer",
+          "graph_mode": "cartesian",
+          "use_field": "graph_data.react_data",
+          "rtl": true,
+          "show_graph_in_question": false,
+          "show_graph_in_solution": false,
+          "show_images_in_question": false,
+          "show_images_in_solution": false,
+          "show_tables_in_question": false,
+          "show_tables_in_solution": false,
+          "show_variation_tables": false,
+          "show_sign_tables": false,
+          "graph_in_question": false,
+          "question_graph_field": null,
+          "question_react_data_field": null,
+          "solution_graph_field": null,
+          "solution_react_data_field": null,
+          "graph_location": "none"
+        },
+        "is_complete": true
+      }
+    },
+    {
+      "id": "symmetry_transform_14",
+      "year": 2019,
+      "source_file": "ilovepdf_merged (4)(18).pdf",
+      "source_page": null,
+      "exercise": "التمرين الرابع",
+      "number": "سؤال مستقل حول الزوجية وإنشاء المنحنى",
+      "title": "تمرين بكالوريا في دالة زوجية وإنشاء منحنى",
+      "text": "لتكن \\(f\\) دالة معرفة على \\([-2,0]\\)، وليكن منحناها \\((C_f)\\) معلومًا. نعرف الدالة \\(h\\) على \\([-2,2]\\) بحيث \\(h(x)=f(-|x|)\\). أثبت أن \\(h\\) زوجية، ثم اشرح كيفية إنشاء منحنى \\((C_h)\\) انطلاقًا من \\((C_f)\\).",
+      "standalone_text": "لتكن \\(f\\) دالة معرفة على \\([-2,0]\\)، وليكن منحناها \\((C_f)\\) معلومًا. نعرف الدالة \\(h\\) على \\([-2,2]\\) بحيث \\(h(x)=f(-|x|)\\). أثبت أن \\(h\\) زوجية، ثم اشرح كيفية إنشاء منحنى \\((C_h)\\) انطلاقًا من \\((C_f)\\).",
+      "context": "القيمة \\(-|x|\\) تنتمي دائمًا إلى \\([-2,0]\\) عندما \\(x\\in[-2,2]\\).",
+      "tag": "derivative_symmetry_curve_transformations",
+      "axis": "التناظر وتحويلات المنحنيات",
+      "secondary_tags": [],
+      "skill": "إثبات الزوجية وإنشاء منحنى من نصف معلوم",
+      "difficulty": "hard",
+      "question_type": "bac_axis_extraction",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "tables": [],
+      "variation_tables": [],
+      "sign_tables": [],
+      "graph_data": null,
+      "solution": {
+        "title": "الحل المفصل: تمرين بكالوريا في دالة زوجية وإنشاء منحنى",
+        "main_idea": "تحويل العلاقة الجبرية بين الدوال إلى وصف هندسي دقيق للمنحنيات.",
+        "strategy": "نحدد نوع العلاقة: زوجية، فردية، محور أو مركز تناظر، انسحاب، انعكاس أو قيمة مطلقة، ثم نطبق القاعدة المناسبة على النقاط المميزة.",
+        "detailed_explanation": "الحل يوضح كيف ننتقل من عبارة الدالة إلى التحويل الهندسي دون إعادة دراسة الدالة كاملة.",
+        "uses_graph": false,
+        "uses_images": false,
+        "uses_tables": false,
+        "uses_variation_table": false,
+        "uses_sign_table": false,
+        "steps": [
+          {
+            "number": "1",
+            "order": 1,
+            "title": "إثبات الزوجية",
+            "explanation": "نحسب h(-x).",
+            "construction": [],
+            "calculation": "\\(h(-x)=f(-|-x|)=f(-|x|)=h(x)\\)",
+            "result": "الدالة h زوجية",
+            "conclusion": "محور التراتيب محور تناظر.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null
+          },
+          {
+            "number": "2",
+            "order": 2,
+            "title": "على الجهة السالبة",
+            "explanation": "إذا x≤0 فإن |x|=-x ومنه -|x|=x.",
+            "construction": [],
+            "calculation": "\\(h(x)=f(x)\\) على \\([-2,0]\\)",
+            "result": "نحتفظ بالمنحنى المعطى",
+            "conclusion": "هو الجزء الأيسر من Ch.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null
+          },
+          {
+            "number": "3",
+            "order": 3,
+            "title": "على الجهة الموجبة",
+            "explanation": "بسبب الزوجية نرسم صورة الجزء الأيسر حول محور التراتيب.",
+            "construction": [],
+            "calculation": "",
+            "result": "نحصل على الجزء الأيمن",
+            "conclusion": "اكتمل المنحنى.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null
+          }
+        ],
+        "final_answer": "الدالة \\(h\\) زوجية. على \\([-2,0]\\) يطابق منحناها \\((C_f)\\)، وعلى \\([0,2]\\) نرسم صورة هذا الجزء بتناظر حول محور التراتيب.",
+        "verification": "العلاقة \\(h(-x)=h(x)\\) تؤكد التناظر.",
+        "common_mistakes": [
+          {
+            "mistake": "الخلط بين \\(f(x-a)\\) و\\(f(x+a)\\) في اتجاه الانسحاب الأفقي.",
+            "correction": "داخل القوس تكون الحركة بعكس الإشارة: \\(f(x-a)\\) إلى اليمين و\\(f(x+a)\\) إلى اليسار."
+          },
+          {
+            "mistake": "الخلط بين \\(-f(x)\\) و\\(f(-x)\\).",
+            "correction": "\\(-f(x)\\) انعكاس حول محور الفواصل، أما \\(f(-x)\\) فهو انعكاس حول محور التراتيب."
+          }
+        ],
+        "hints": [
+          {
+            "level": 1,
+            "hint": "حدد أولًا التغيير الذي طرأ داخل الدالة أو خارجها."
+          },
+          {
+            "level": 2,
+            "hint": "التغيير خارج الدالة عمودي، والتغيير داخلها أفقي."
+          },
+          {
+            "level": 3,
+            "hint": "استعمل نقطة مميزة \\((x,f(x))\\) وحدد صورتها بعد التحويل."
+          }
+        ],
+        "alternative_method": "",
+        "images": [],
+        "tables": [],
+        "variation_tables": [],
+        "sign_tables": [],
+        "graph_data": null,
+        "presentation": {
+          "show_graph_first": false,
+          "show_one_step_at_a_time": true,
+          "react_component": "UniversalMathExerciseRenderer",
+          "graph_mode": "cartesian",
+          "use_field": "graph_data.react_data",
+          "rtl": true,
+          "show_graph_in_question": false,
+          "show_graph_in_solution": false,
+          "show_images_in_question": false,
+          "show_images_in_solution": false,
+          "show_tables_in_question": false,
+          "show_tables_in_solution": false,
+          "show_variation_tables": false,
+          "show_sign_tables": false,
+          "graph_in_question": false,
+          "question_graph_field": null,
+          "question_react_data_field": null,
+          "solution_graph_field": null,
+          "solution_react_data_field": null,
+          "graph_location": "none"
+        },
+        "is_complete": true
+      }
+    },
+    {
+      "id": "symmetry_transform_15",
+      "year": null,
+      "source_file": "ilovepdf_merged (4)(18).pdf",
+      "source_page": null,
+      "exercise": "سؤال مستقل من تمرين بكالوريا",
+      "number": "",
+      "title": "تمرين شامل في التحويلات المتتالية",
+      "text": "ليكن \\((C_f)\\) منحنى الدالة \\(f(x)=x^2\\)، ولتكن \\(g(x)=-f(x-2)+3=-(x-2)^2+3\\). 1) صف التحويلات المتتالية للانتقال من \\((C_f)\\) إلى \\((C_g)\\). 2) عين رأس المنحنى ومحور تناظره. 3) عين صور النقاط \\((0,0)\\)، \\((1,1)\\)، \\((-1,1)\\).",
+      "standalone_text": "ليكن \\((C_f)\\) منحنى الدالة \\(f(x)=x^2\\)، ولتكن \\(g(x)=-f(x-2)+3=-(x-2)^2+3\\). 1) صف التحويلات المتتالية للانتقال من \\((C_f)\\) إلى \\((C_g)\\). 2) عين رأس المنحنى ومحور تناظره. 3) عين صور النقاط \\((0,0)\\)، \\((1,1)\\)، \\((-1,1)\\).",
+      "context": "نقرأ التحويلات من الداخل إلى الخارج: انسحاب أفقي، انعكاس، ثم انسحاب عمودي.",
+      "tag": "derivative_symmetry_curve_transformations",
+      "axis": "التناظر وتحويلات المنحنيات",
+      "secondary_tags": [],
+      "skill": "تركيب الانسحاب والانعكاس",
+      "difficulty": "hard",
+      "question_type": "bac_axis_extraction",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "tables": [],
+      "variation_tables": [],
+      "sign_tables": [],
+      "graph_data": null,
+      "solution": {
+        "title": "الحل المفصل: تمرين شامل في التحويلات المتتالية",
+        "main_idea": "تحويل العلاقة الجبرية بين الدوال إلى وصف هندسي دقيق للمنحنيات.",
+        "strategy": "نحدد نوع العلاقة: زوجية، فردية، محور أو مركز تناظر، انسحاب، انعكاس أو قيمة مطلقة، ثم نطبق القاعدة المناسبة على النقاط المميزة.",
+        "detailed_explanation": "الحل يوضح كيف ننتقل من عبارة الدالة إلى التحويل الهندسي دون إعادة دراسة الدالة كاملة.",
+        "uses_graph": false,
+        "uses_images": false,
+        "uses_tables": false,
+        "uses_variation_table": false,
+        "uses_sign_table": false,
+        "steps": [
+          {
+            "number": "1",
+            "order": 1,
+            "title": "الانسحاب الأفقي",
+            "explanation": "x-2 ينقل المنحنى يمينًا بوحدتين.",
+            "construction": [],
+            "calculation": "",
+            "result": "شعاعه \\((2,0)\\)",
+            "conclusion": "الرأس ينتقل إلى (2,0).",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null
+          },
+          {
+            "number": "2",
+            "order": 2,
+            "title": "الانعكاس",
+            "explanation": "السالب خارج الدالة يعكس المنحنى حول محور الفواصل.",
+            "construction": [],
+            "calculation": "",
+            "result": "القطع المكافئ يصبح مفتوحًا إلى الأسفل",
+            "conclusion": "الرأس يبقى (2,0).",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null
+          },
+          {
+            "number": "3",
+            "order": 3,
+            "title": "الانسحاب العمودي",
+            "explanation": "+3 ينقل المنحنى إلى الأعلى.",
+            "construction": [],
+            "calculation": "",
+            "result": "الرأس يصبح S(2,3)",
+            "conclusion": "محور التناظر x=2.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null
+          },
+          {
+            "number": "4",
+            "order": 4,
+            "title": "تحويل النقاط",
+            "explanation": "نطبق التحويل المركب \\((x,y)\\mapsto(x+2,-y+3)\\).",
+            "construction": [],
+            "calculation": "\\((0,0)\\mapsto(2,3),\\ (1,1)\\mapsto(3,2),\\ (-1,1)\\mapsto(1,2)\\)",
+            "result": "تم تحديد الصور",
+            "conclusion": "النقطتان الأخيرتان متناظرتان حول x=2.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null
+          }
+        ],
+        "final_answer": "نطبق انسحابًا إلى اليمين بوحدتين، ثم انعكاسًا حول محور الفواصل، ثم انسحابًا إلى الأعلى بثلاث وحدات. الرأس \\(S(2,3)\\) ومحور التناظر \\(x=2\\).",
+        "verification": "العبارة \\(-(x-2)^2+3\\) تعطي مباشرة الرأس واتجاه الفتحة.",
+        "common_mistakes": [
+          {
+            "mistake": "الخلط بين \\(f(x-a)\\) و\\(f(x+a)\\) في اتجاه الانسحاب الأفقي.",
+            "correction": "داخل القوس تكون الحركة بعكس الإشارة: \\(f(x-a)\\) إلى اليمين و\\(f(x+a)\\) إلى اليسار."
+          },
+          {
+            "mistake": "الخلط بين \\(-f(x)\\) و\\(f(-x)\\).",
+            "correction": "\\(-f(x)\\) انعكاس حول محور الفواصل، أما \\(f(-x)\\) فهو انعكاس حول محور التراتيب."
+          }
+        ],
+        "hints": [
+          {
+            "level": 1,
+            "hint": "حدد أولًا التغيير الذي طرأ داخل الدالة أو خارجها."
+          },
+          {
+            "level": 2,
+            "hint": "التغيير خارج الدالة عمودي، والتغيير داخلها أفقي."
+          },
+          {
+            "level": 3,
+            "hint": "استعمل نقطة مميزة \\((x,f(x))\\) وحدد صورتها بعد التحويل."
+          }
+        ],
+        "alternative_method": "",
+        "images": [],
+        "tables": [],
+        "variation_tables": [],
+        "sign_tables": [],
+        "graph_data": null,
+        "presentation": {
+          "show_graph_first": false,
+          "show_one_step_at_a_time": true,
+          "react_component": "UniversalMathExerciseRenderer",
+          "graph_mode": "cartesian",
+          "use_field": "graph_data.react_data",
+          "rtl": true,
+          "show_graph_in_question": false,
+          "show_graph_in_solution": false,
+          "show_images_in_question": false,
+          "show_images_in_solution": false,
+          "show_tables_in_question": false,
+          "show_tables_in_solution": false,
+          "show_variation_tables": false,
+          "show_sign_tables": false,
+          "graph_in_question": false,
+          "question_graph_field": null,
+          "question_react_data_field": null,
+          "solution_graph_field": null,
+          "solution_react_data_field": null,
+          "graph_location": "none"
+        },
+        "is_complete": true
+      }
+    }
+  ]
+}
