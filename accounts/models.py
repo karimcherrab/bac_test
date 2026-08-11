@@ -44,7 +44,7 @@ class Student(models.Model):
     )
 
     is_active = models.BooleanField(
-        default=False,
+        default=True,
         db_index=True,
     )
 
