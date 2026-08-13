@@ -1,0 +1,938 @@
+{
+  "schema_version": "4.5-bac-source",
+  "version": "4.2-2015-derivatives-ex04",
+  "language": "ar",
+  "direction": "rtl",
+  "year": 2015,
+  "session": "ordinary",
+  "chapter_code": "exponential_logarithmic_functions",
+  "chapter_title": "exp_definition_properties",
+  "exercise_number": 4,
+  "source_pages": [
+    4
+  ],
+  "solution_source_pages": [
+    8
+  ],
+  "branches": [
+    {
+      "code": "science",
+      "name": "شعبة العلوم التجريبية"
+    }
+  ],
+  "title": "التمرين الرابع — بكالوريا الجزائر 2015 — دراسة دالة أسية ومقارب ودالة أصلية",
+  "axis_tags": [
+    "function_variations",
+    "unique_root",
+    "sign_study",
+    "derivative_relation",
+    "limits",
+    "oblique_asymptote",
+    "relative_position",
+    "curve_construction",
+    "antiderivative"
+  ],
+  "statement": "التمرين الرابع: (06 نقاط)\n\nI) \\(g\\) الدالة العددية المعرفة على \\(\\mathbb{R}\\) بـ:\n\\[g(x)=1-2x-e^{2x-2}\\]\n1) ادرس اتجاه تغير الدالة \\(g\\) على \\(\\mathbb{R}\\).\n2) بين أن المعادلة \\(g(x)=0\\) تقبل حلا وحيدا \\(\\alpha\\) في \\(\\mathbb{R}\\)، ثم تحقق أن: \\(0,36<\\alpha<0,37\\).\n3) استنتج إشارة \\(g(x)\\) على \\(\\mathbb{R}\\).\n\nII) \\(f\\) الدالة العددية المعرفة على \\(\\mathbb{R}\\) بـ:\n\\[f(x)=xe^{2x+2}-x+1\\]\nو \\((C_f)\\) تمثيلها البياني في المستوى المنسوب إلى المعلم المتعامد والمتجانس \\((O;\\vec{i};\\vec{j})\\).\n1) أ- بين أنه من أجل كل \\(x\\in\\mathbb{R}\\):\n\\[f'(x)=e^{2x+2}g(-x)\\]\nب- استنتج أن الدالة \\(f\\) متناقصة تماما على \\(]-\\infty,-\\alpha]\\) ومتزايدة تماما على \\([-\\alpha,+\\infty[\\).\n2) احسب نهاية \\(f\\) عند \\(+\\infty\\) وعند \\(-\\infty\\)، ثم شكل جدول تغيرات الدالة \\(f\\).\n3) احسب:\n\\[\\lim_{x\\to-\\infty}[f(x)+x-1]\\]\nثم فسر النتيجة هندسيا.\n4) ادرس وضعية \\((C_f)\\) بالنسبة إلى المستقيم \\((\\Delta)\\) الذي معادلته \\(y=-x+1\\).\n5) أنشئ \\((\\Delta)\\) و \\((C_f)\\) على المجال \\(]-\\infty;\\frac12]\\)، نأخذ \\(f(-\\alpha)\\approx0,1\\).\n6) أ- تحقق أنه من أجل كل \\(x\\in\\mathbb{R}\\):\n\\[2f(x)+f'(x)-f''(x)=1-2x-3e^{2x+2}\\]\nب- استنتج دالة أصلية للدالة \\(f\\) على \\(\\mathbb{R}\\).",
+  "figures": [],
+  "questions": [
+    {
+      "text": "I-1) ادرس اتجاه تغير الدالة \\(g\\) على \\(\\mathbb{R}\\).",
+      "solution": {
+        "strategy": "نحسب مشتقة g ثم ندرس إشارتها.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب المشتقة",
+            "explanation": "\\[g'(x)=-2-2e^{2x-2}=-2(1+e^{2x-2})\\].",
+            "result": "\\(g'(x)=-2(1+e^{2x-2})\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "دراسة الإشارة",
+            "explanation": "لدينا \\(e^{2x-2}>0\\) لكل x، إذن \\(1+e^{2x-2}>0\\)، وبالتالي \\(g'(x)<0\\) على R.",
+            "result": "g متناقصة تماما على R."
+          }
+        ],
+        "final_answer": "\\(\\boxed{g\\text{ متناقصة تماما على }\\mathbb{R}}\\).",
+        "verification": "تمت مراجعة النتيجة مع التصحيح الرسمي لبكالوريا 2015.",
+        "common_mistakes": [],
+        "hints": [],
+        "introduction": "نحسب مشتقة g ثم ندرس إشارتها.",
+        "summary": "\\(\\boxed{g\\text{ متناقصة تماما على }\\mathbb{R}}\\).",
+        "answer_style": "explain_then_calculate_then_conclude"
+      },
+      "id": "2015_der_ex04_q1",
+      "display_order": 1,
+      "content_type": "question"
+    },
+    {
+      "text": "I-2) بين أن \\(g(x)=0\\) تقبل حلا وحيدا \\(\\alpha\\)، ثم تحقق أن \\(0,36<\\alpha<0,37\\).",
+      "solution": {
+        "strategy": "نستعمل الاستمرارية والرتابة، ثم نحسب g عند 0.36 و0.37.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الوجود والوحدانية",
+            "explanation": "الدالة g مستمرة ومتناقصة تماما على R. كما أن \\(g(x)\\to+\\infty\\) عند \\(-\\infty\\) و \\(g(x)\\to-\\infty\\) عند \\(+\\infty\\). إذن يوجد جذر وحيد α.",
+            "result": "حل وحيد α."
+          },
+          {
+            "step_number": 2,
+            "title": "الحصر",
+            "explanation": "\\(g(0.36)\\approx 0.0020>0\\) و \\(g(0.37)\\approx -0.0237<0\\).",
+            "result": "\\(0.36<\\alpha<0.37\\)."
+          }
+        ],
+        "final_answer": "\\(\\boxed{0.36<\\alpha<0.37}\\)، وتقريبا \\(\\alpha\\approx 0.36076773\\).",
+        "verification": "تمت مراجعة النتيجة مع التصحيح الرسمي لبكالوريا 2015.",
+        "common_mistakes": [],
+        "hints": [],
+        "introduction": "نستعمل الاستمرارية والرتابة، ثم نحسب g عند 0.36 و0.37.",
+        "summary": "\\(\\boxed{0.36<\\alpha<0.37}\\)، وتقريبا \\(\\alpha\\approx 0.36076773\\).",
+        "answer_style": "explain_then_calculate_then_conclude"
+      },
+      "id": "2015_der_ex04_q2",
+      "display_order": 2,
+      "content_type": "question"
+    },
+    {
+      "text": "I-3) استنتج إشارة \\(g(x)\\) على \\(\\mathbb{R}\\).",
+      "solution": {
+        "strategy": "بما أن g متناقصة ولها جذر وحيد α، فإشارتها تتحدد مباشرة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الإشارة",
+            "explanation": "إذا \\(x<\\alpha\\) فإن \\(g(x)>0\\)، وعند \\(x=\\alpha\\) نحصل على 0، وإذا \\(x>\\alpha\\) فإن \\(g(x)<0\\).",
+            "result": "الإشارة محددة."
+          }
+        ],
+        "final_answer": "\\(g(x)>0\\) على \\(]-\\infty,\\alpha[\\)، و\\(g(\\alpha)=0\\)، و\\(g(x)<0\\) على \\(]\\alpha,+\\infty[\\).",
+        "verification": "تمت مراجعة النتيجة مع التصحيح الرسمي لبكالوريا 2015.",
+        "common_mistakes": [],
+        "hints": [],
+        "introduction": "بما أن g متناقصة ولها جذر وحيد α، فإشارتها تتحدد مباشرة.",
+        "summary": "\\(g(x)>0\\) على \\(]-\\infty,\\alpha[\\)، و\\(g(\\alpha)=0\\)، و\\(g(x)<0\\) على \\(]\\alpha,+\\infty[\\).",
+        "answer_style": "explain_then_calculate_then_conclude"
+      },
+      "id": "2015_der_ex04_q3",
+      "display_order": 3,
+      "content_type": "question"
+    },
+    {
+      "text": "II-1-أ) بين أن \\(f'(x)=e^{2x+2}g(-x)\\).",
+      "solution": {
+        "strategy": "نشتق f ثم نعيد ترتيب النتيجة لتظهر g(-x).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "اشتقاق f",
+            "explanation": "\\[(xe^{2x+2})'=e^{2x+2}+2xe^{2x+2}=(1+2x)e^{2x+2}\\] ومنه \\[f'(x)=(1+2x)e^{2x+2}-1\\].",
+            "result": "\\(f'(x)=(1+2x)e^{2x+2}-1\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "حساب g(-x)",
+            "explanation": "\\[g(-x)=1+2x-e^{-2x-2}\\]. إذن \\[e^{2x+2}g(-x)=(1+2x)e^{2x+2}-1=f'(x)\\].",
+            "result": "العلاقة صحيحة."
+          }
+        ],
+        "final_answer": "\\(\\boxed{f'(x)=e^{2x+2}g(-x)}\\).",
+        "verification": "تمت مراجعة النتيجة مع التصحيح الرسمي لبكالوريا 2015.",
+        "common_mistakes": [],
+        "hints": [],
+        "introduction": "نشتق f ثم نعيد ترتيب النتيجة لتظهر g(-x).",
+        "summary": "\\(\\boxed{f'(x)=e^{2x+2}g(-x)}\\).",
+        "answer_style": "explain_then_calculate_then_conclude"
+      },
+      "id": "2015_der_ex04_q4",
+      "display_order": 4,
+      "content_type": "question"
+    },
+    {
+      "text": "II-1-ب) استنتج أن \\(f\\) متناقصة تماما على \\(]-\\infty,-\\alpha]\\) ومتزايدة تماما على \\([-\\alpha,+\\infty[\\).",
+      "solution": {
+        "strategy": "إشارة f' هي إشارة g(-x) لأن e^{2x+2} موجب.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "إشارة g(-x)",
+            "explanation": "من إشارة g: \\(g(-x)<0\\) عندما \\(-x>\\alpha\\)، أي \\(x<-\\alpha\\). و\\(g(-x)>0\\) عندما \\(x>-\\alpha\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "استنتاج التغيرات",
+            "explanation": "بما أن \\(e^{2x+2}>0\\)، فإن f' سالبة قبل \\(-\\alpha\\)، منعدمة عندها، وموجبة بعدها.",
+            "result": "تناقص ثم تزايد."
+          }
+        ],
+        "final_answer": "f متناقصة على \\(]-\\infty,-\\alpha]\\) ومتزايدة على \\([-\\alpha,+\\infty[\\).",
+        "verification": "تمت مراجعة النتيجة مع التصحيح الرسمي لبكالوريا 2015.",
+        "common_mistakes": [],
+        "hints": [],
+        "introduction": "إشارة f' هي إشارة g(-x) لأن e^{2x+2} موجب.",
+        "summary": "f متناقصة على \\(]-\\infty,-\\alpha]\\) ومتزايدة على \\([-\\alpha,+\\infty[\\).",
+        "answer_style": "explain_then_calculate_then_conclude"
+      },
+      "id": "2015_der_ex04_q5",
+      "display_order": 5,
+      "content_type": "question"
+    },
+    {
+      "text": "II-2) احسب نهايتي \\(f\\) عند \\(+\\infty\\) و\\(-\\infty\\)، ثم شكل جدول تغيراتها.",
+      "solution": {
+        "strategy": "نحسب النهاية عند الطرفين ثم نربطها بتغيرات f.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "عند +∞",
+            "explanation": "الحد \\(xe^{2x+2}\\) يهيمن على \\(-x+1\\)، لذلك \\(f(x)\\to+\\infty\\).",
+            "result": "\\(\\lim_{x\\to+\\infty}f(x)=+\\infty\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "عند -∞",
+            "explanation": "\\(xe^{2x+2}\\to0\\) بينما \\(-x+1\\to+\\infty\\)، لذلك \\(f(x)\\to+\\infty\\).",
+            "result": "\\(\\lim_{x\\to-\\infty}f(x)=+\\infty\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "القيمة الدنيا",
+            "explanation": "القيمة الصغرى تتحقق عند \\(x=-\\alpha\\)، وتقريبا \\(f(-\\alpha)\\approx 0.0652\\) (وفي الرسم نأخذ 0.1 كما في نص التمرين).",
+            "result": "قيمة صغرى عند -α."
+          }
+        ],
+        "final_answer": "النهايتان تساويان +∞، وf تتناقص ثم تتزايد.",
+        "verification": "تمت مراجعة النتيجة مع التصحيح الرسمي لبكالوريا 2015.",
+        "common_mistakes": [],
+        "hints": [],
+        "introduction": "نحسب النهاية عند الطرفين ثم نربطها بتغيرات f.",
+        "summary": "النهايتان تساويان +∞، وf تتناقص ثم تتزايد.",
+        "answer_style": "explain_then_calculate_then_conclude",
+        "variation_table": {
+          "type": "variation_table",
+          "title": "جدول تغيرات الدالة f",
+          "function_name": "f",
+          "derivative_name": "f'(x)",
+          "domain": "R",
+          "x_values": [
+            "-\\infty",
+            "-\\alpha",
+            "+\\infty"
+          ],
+          "derivative_signs": [
+            "-",
+            "+"
+          ],
+          "function_values": [
+            "+\\infty",
+            "f(-\\alpha)",
+            "+\\infty"
+          ],
+          "directions": [
+            "down",
+            "up"
+          ]
+        }
+      },
+      "id": "2015_der_ex04_q6",
+      "display_order": 6,
+      "content_type": "question"
+    },
+    {
+      "text": "II-3) احسب \\(\\lim_{x\\to-\\infty}[f(x)+x-1]\\) ثم فسر النتيجة هندسيا.",
+      "solution": {
+        "strategy": "نبسط الفرق بين f والمستقيم y=-x+1.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التبسيط",
+            "explanation": "\\[f(x)+x-1=xe^{2x+2}\\].",
+            "result": "الفرق هو \\(xe^{2x+2}\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "النهاية",
+            "explanation": "عندما \\(x\\to-\\infty\\)، فإن \\(xe^{2x+2}\\to0\\).",
+            "result": "النهاية تساوي 0."
+          },
+          {
+            "step_number": 3,
+            "title": "التفسير الهندسي",
+            "explanation": "إذن المستقيم \\(\\Delta:y=-x+1\\) مقارب مائل للمنحنى \\((C_f)\\) عند \\(-\\infty\\).",
+            "result": "مقارب مائل."
+          }
+        ],
+        "final_answer": "\\(\\boxed{\\lim_{x\\to-\\infty}[f(x)+x-1]=0}\\)، ومنه \\(\\boxed{\\Delta:y=-x+1}\\) مقارب مائل.",
+        "verification": "تمت مراجعة النتيجة مع التصحيح الرسمي لبكالوريا 2015.",
+        "common_mistakes": [],
+        "hints": [],
+        "introduction": "نبسط الفرق بين f والمستقيم y=-x+1.",
+        "summary": "\\(\\boxed{\\lim_{x\\to-\\infty}[f(x)+x-1]=0}\\)، ومنه \\(\\boxed{\\Delta:y=-x+1}\\) مقارب مائل.",
+        "answer_style": "explain_then_calculate_then_conclude"
+      },
+      "id": "2015_der_ex04_q7",
+      "display_order": 7,
+      "content_type": "question"
+    },
+    {
+      "text": "II-4) ادرس وضعية \\((C_f)\\) بالنسبة إلى المستقيم \\((\\Delta):y=-x+1\\).",
+      "solution": {
+        "strategy": "ندرس إشارة الفرق بين f ومعادلة المستقيم.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الفرق",
+            "explanation": "\\[f(x)-(-x+1)=xe^{2x+2}\\]."
+          },
+          {
+            "step_number": 2,
+            "title": "الإشارة",
+            "explanation": "بما أن \\(e^{2x+2}>0\\)، فإن إشارة الفرق هي إشارة x.",
+            "result": "سالبة إذا x<0 وموجبة إذا x>0."
+          },
+          {
+            "step_number": 3,
+            "title": "الوضع النسبي",
+            "explanation": "إذن \\((C_f)\\) تحت \\((\\Delta)\\) على \\(]-\\infty,0[\\)، يقطعه عند \\(x=0\\)، وفوقه على \\(]0,+\\infty[\\).",
+            "result": "الوضع النسبي محدد."
+          }
+        ],
+        "final_answer": "\\((C_f)\\) تحت \\((\\Delta)\\) قبل 0 وفوقه بعد 0.",
+        "verification": "تمت مراجعة النتيجة مع التصحيح الرسمي لبكالوريا 2015.",
+        "common_mistakes": [],
+        "hints": [],
+        "introduction": "ندرس إشارة الفرق بين f ومعادلة المستقيم.",
+        "summary": "\\((C_f)\\) تحت \\((\\Delta)\\) قبل 0 وفوقه بعد 0.",
+        "answer_style": "explain_then_calculate_then_conclude"
+      },
+      "id": "2015_der_ex04_q8",
+      "display_order": 8,
+      "content_type": "question"
+    },
+    {
+      "text": "II-5) أنشئ \\((\\Delta)\\) و \\((C_f)\\) على المجال \\(]-\\infty;\\frac12]\\)، مع أخذ \\(f(-\\alpha)\\approx0,1\\).",
+      "solution": {
+        "strategy": "نستعمل المقارب، جدول التغيرات، الوضع النسبي، والقيمة الصغرى.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "رسم Δ",
+            "explanation": "نرسم المستقيم \\(y=-x+1\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "رسم Cf",
+            "explanation": "Cf يقترب من Δ عند -∞، يقع تحته قبل 0، له قيمة صغرى عند \\((-\\alpha,f(-\\alpha))\\)، ثم يصعد ويقطع Δ عند x=0.",
+            "result": "الرسم جاهز في graph_data."
+          }
+        ],
+        "final_answer": "الرسم موجود في graph_data.",
+        "verification": "تمت مراجعة النتيجة مع التصحيح الرسمي لبكالوريا 2015.",
+        "common_mistakes": [],
+        "hints": [],
+        "introduction": "نستعمل المقارب، جدول التغيرات، الوضع النسبي، والقيمة الصغرى.",
+        "summary": "الرسم موجود في graph_data.",
+        "answer_style": "explain_then_calculate_then_conclude",
+        "graph_data": {
+          "id": "cf_graph_2015_ex04",
+          "usage": "solution",
+          "type": "coordinate_graph",
+          "title": "التمثيل البياني للدالة f والمستقيم Δ",
+          "x_label": "x",
+          "y_label": "y",
+          "x_domain": [
+            -5,
+            0.5
+          ],
+          "y_domain": [
+            -1,
+            8
+          ],
+          "show_grid": true,
+          "series": [
+            {
+              "id": "Cf",
+              "label": "(C_f)",
+              "type": "curve",
+              "data": [
+                {
+                  "x": -5,
+                  "y": 5.998323
+                },
+                {
+                  "x": -4.95,
+                  "y": 5.948165
+                },
+                {
+                  "x": -4.9,
+                  "y": 5.897992
+                },
+                {
+                  "x": -4.85,
+                  "y": 5.847804
+                },
+                {
+                  "x": -4.8,
+                  "y": 5.797598
+                },
+                {
+                  "x": -4.75,
+                  "y": 5.747373
+                },
+                {
+                  "x": -4.7,
+                  "y": 5.697127
+                },
+                {
+                  "x": -4.65,
+                  "y": 5.646859
+                },
+                {
+                  "x": -4.6,
+                  "y": 5.596566
+                },
+                {
+                  "x": -4.55,
+                  "y": 5.546246
+                },
+                {
+                  "x": -4.5,
+                  "y": 5.495897
+                },
+                {
+                  "x": -4.45,
+                  "y": 5.445515
+                },
+                {
+                  "x": -4.4,
+                  "y": 5.395099
+                },
+                {
+                  "x": -4.35,
+                  "y": 5.344646
+                },
+                {
+                  "x": -4.3,
+                  "y": 5.29415
+                },
+                {
+                  "x": -4.25,
+                  "y": 5.24361
+                },
+                {
+                  "x": -4.2,
+                  "y": 5.193021
+                },
+                {
+                  "x": -4.15,
+                  "y": 5.142379
+                },
+                {
+                  "x": -4.1,
+                  "y": 5.091679
+                },
+                {
+                  "x": -4.05,
+                  "y": 5.040916
+                },
+                {
+                  "x": -4.0,
+                  "y": 4.990085
+                },
+                {
+                  "x": -3.95,
+                  "y": 4.939179
+                },
+                {
+                  "x": -3.9,
+                  "y": 4.888193
+                },
+                {
+                  "x": -3.85,
+                  "y": 4.837118
+                },
+                {
+                  "x": -3.8,
+                  "y": 4.785948
+                },
+                {
+                  "x": -3.75,
+                  "y": 4.734675
+                },
+                {
+                  "x": -3.7,
+                  "y": 4.683289
+                },
+                {
+                  "x": -3.65,
+                  "y": 4.631781
+                },
+                {
+                  "x": -3.6,
+                  "y": 4.58014
+                },
+                {
+                  "x": -3.55,
+                  "y": 4.528357
+                },
+                {
+                  "x": -3.5,
+                  "y": 4.476417
+                },
+                {
+                  "x": -3.45,
+                  "y": 4.424309
+                },
+                {
+                  "x": -3.4,
+                  "y": 4.372019
+                },
+                {
+                  "x": -3.35,
+                  "y": 4.319531
+                },
+                {
+                  "x": -3.3,
+                  "y": 4.266829
+                },
+                {
+                  "x": -3.25,
+                  "y": 4.213896
+                },
+                {
+                  "x": -3.2,
+                  "y": 4.160713
+                },
+                {
+                  "x": -3.15,
+                  "y": 4.107259
+                },
+                {
+                  "x": -3.1,
+                  "y": 4.053514
+                },
+                {
+                  "x": -3.05,
+                  "y": 3.999453
+                },
+                {
+                  "x": -3.0,
+                  "y": 3.945053
+                },
+                {
+                  "x": -2.95,
+                  "y": 3.890286
+                },
+                {
+                  "x": -2.9,
+                  "y": 3.835125
+                },
+                {
+                  "x": -2.85,
+                  "y": 3.779538
+                },
+                {
+                  "x": -2.8,
+                  "y": 3.723494
+                },
+                {
+                  "x": -2.75,
+                  "y": 3.666957
+                },
+                {
+                  "x": -2.7,
+                  "y": 3.609892
+                },
+                {
+                  "x": -2.65,
+                  "y": 3.55226
+                },
+                {
+                  "x": -2.6,
+                  "y": 3.494018
+                },
+                {
+                  "x": -2.55,
+                  "y": 3.435125
+                },
+                {
+                  "x": -2.5,
+                  "y": 3.375532
+                },
+                {
+                  "x": -2.45,
+                  "y": 3.315193
+                },
+                {
+                  "x": -2.4,
+                  "y": 3.254056
+                },
+                {
+                  "x": -2.35,
+                  "y": 3.192067
+                },
+                {
+                  "x": -2.3,
+                  "y": 3.129171
+                },
+                {
+                  "x": -2.25,
+                  "y": 3.065309
+                },
+                {
+                  "x": -2.2,
+                  "y": 3.000421
+                },
+                {
+                  "x": -2.15,
+                  "y": 2.934443
+                },
+                {
+                  "x": -2.1,
+                  "y": 2.867313
+                },
+                {
+                  "x": -2.05,
+                  "y": 2.798964
+                },
+                {
+                  "x": -2.0,
+                  "y": 2.729329
+                },
+                {
+                  "x": -1.95,
+                  "y": 2.658341
+                },
+                {
+                  "x": -1.9,
+                  "y": 2.585932
+                },
+                {
+                  "x": -1.85,
+                  "y": 2.512035
+                },
+                {
+                  "x": -1.8,
+                  "y": 2.436586
+                },
+                {
+                  "x": -1.75,
+                  "y": 2.359522
+                },
+                {
+                  "x": -1.7,
+                  "y": 2.280785
+                },
+                {
+                  "x": -1.65,
+                  "y": 2.200323
+                },
+                {
+                  "x": -1.6,
+                  "y": 2.118089
+                },
+                {
+                  "x": -1.55,
+                  "y": 2.03405
+                },
+                {
+                  "x": -1.5,
+                  "y": 1.948181
+                },
+                {
+                  "x": -1.45,
+                  "y": 1.860474
+                },
+                {
+                  "x": -1.4,
+                  "y": 1.770939
+                },
+                {
+                  "x": -1.35,
+                  "y": 1.67961
+                },
+                {
+                  "x": -1.3,
+                  "y": 1.586545
+                },
+                {
+                  "x": -1.25,
+                  "y": 1.491837
+                },
+                {
+                  "x": -1.2,
+                  "y": 1.395616
+                },
+                {
+                  "x": -1.15,
+                  "y": 1.298059
+                },
+                {
+                  "x": -1.1,
+                  "y": 1.199396
+                },
+                {
+                  "x": -1.05,
+                  "y": 1.099921
+                },
+                {
+                  "x": -1.0,
+                  "y": 1.0
+                },
+                {
+                  "x": -0.95,
+                  "y": 0.900088
+                },
+                {
+                  "x": -0.9,
+                  "y": 0.800738
+                },
+                {
+                  "x": -0.85,
+                  "y": 0.70262
+                },
+                {
+                  "x": -0.8,
+                  "y": 0.60654
+                },
+                {
+                  "x": -0.75,
+                  "y": 0.513459
+                },
+                {
+                  "x": -0.7,
+                  "y": 0.424517
+                },
+                {
+                  "x": -0.65,
+                  "y": 0.341061
+                },
+                {
+                  "x": -0.6,
+                  "y": 0.264675
+                },
+                {
+                  "x": -0.55,
+                  "y": 0.197218
+                },
+                {
+                  "x": -0.5,
+                  "y": 0.140859
+                },
+                {
+                  "x": -0.45,
+                  "y": 0.098125
+                },
+                {
+                  "x": -0.4,
+                  "y": 0.071953
+                },
+                {
+                  "x": -0.35,
+                  "y": 0.065746
+                },
+                {
+                  "x": -0.3,
+                  "y": 0.08344
+                },
+                {
+                  "x": -0.25,
+                  "y": 0.129578
+                },
+                {
+                  "x": -0.2,
+                  "y": 0.209394
+                },
+                {
+                  "x": -0.15,
+                  "y": 0.328908
+                },
+                {
+                  "x": -0.1,
+                  "y": 0.495035
+                },
+                {
+                  "x": -0.05,
+                  "y": 0.715705
+                },
+                {
+                  "x": -0.0,
+                  "y": 1.0
+                },
+                {
+                  "x": 0.05,
+                  "y": 1.358308
+                },
+                {
+                  "x": 0.1,
+                  "y": 1.802501
+                },
+                {
+                  "x": 0.15,
+                  "y": 2.346127
+                },
+                {
+                  "x": 0.2,
+                  "y": 3.004635
+                },
+                {
+                  "x": 0.25,
+                  "y": 3.795623
+                },
+                {
+                  "x": 0.3,
+                  "y": 4.739121
+                },
+                {
+                  "x": 0.35,
+                  "y": 5.857906
+                },
+                {
+                  "x": 0.4,
+                  "y": 7.177859
+                },
+                {
+                  "x": 0.45,
+                  "y": 8.728365
+                },
+                {
+                  "x": 0.5,
+                  "y": 10.542768
+                }
+              ]
+            },
+            {
+              "id": "Delta",
+              "label": "Δ: y=-x+1",
+              "type": "dashed",
+              "dashed": true,
+              "data": [
+                {
+                  "x": -5,
+                  "y": 6
+                },
+                {
+                  "x": 0.5,
+                  "y": 0.5
+                }
+              ]
+            }
+          ],
+          "annotations": [
+            {
+              "type": "point",
+              "x": -0.36076773,
+              "y": 0.065207,
+              "label": "(-α,f(-α))"
+            },
+            {
+              "type": "point",
+              "x": 0,
+              "y": 1,
+              "label": "تقاطع مع Δ"
+            }
+          ]
+        }
+      },
+      "id": "2015_der_ex04_q9",
+      "display_order": 9,
+      "content_type": "question"
+    },
+    {
+      "text": "II-6-أ) تحقق أنه لكل \\(x\\in\\mathbb{R}\\): \\(2f(x)+f'(x)-f''(x)=1-2x-3e^{2x+2}\\).",
+      "solution": {
+        "strategy": "نحسب f' وf'' ثم نعوض ونبسط.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "المشتقة الأولى",
+            "explanation": "\\[f'(x)=(1+2x)e^{2x+2}-1\\]."
+          },
+          {
+            "step_number": 2,
+            "title": "المشتقة الثانية",
+            "explanation": "\\[f''(x)=4(x+1)e^{2x+2}\\]."
+          },
+          {
+            "step_number": 3,
+            "title": "التعويض",
+            "explanation": "\\[2f+f'-f''=2(xe^{2x+2}-x+1)+((1+2x)e^{2x+2}-1)-4(x+1)e^{2x+2}\\]\\[=1-2x-3e^{2x+2}\\].",
+            "result": "العلاقة صحيحة."
+          }
+        ],
+        "final_answer": "\\(\\boxed{2f(x)+f'(x)-f''(x)=1-2x-3e^{2x+2}}\\).",
+        "verification": "تمت مراجعة النتيجة مع التصحيح الرسمي لبكالوريا 2015.",
+        "common_mistakes": [],
+        "hints": [],
+        "introduction": "نحسب f' وf'' ثم نعوض ونبسط.",
+        "summary": "\\(\\boxed{2f(x)+f'(x)-f''(x)=1-2x-3e^{2x+2}}\\).",
+        "answer_style": "explain_then_calculate_then_conclude"
+      },
+      "id": "2015_der_ex04_q10",
+      "display_order": 10,
+      "content_type": "question"
+    },
+    {
+      "text": "II-6-ب) استنتج دالة أصلية للدالة \\(f\\) على \\(\\mathbb{R}\\).",
+      "solution": {
+        "strategy": "نستعمل العلاقة السابقة لصناعة مشتقته يساوي f.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "إعادة ترتيب العلاقة",
+            "explanation": "من \\(2f+f'-f''=1-2x-3e^{2x+2}\\) نحصل على \\[f=\\frac12\\left[-f'+f''+1-2x-3e^{2x+2}\\right]\\]."
+          },
+          {
+            "step_number": 2,
+            "title": "اقتراح أصلية",
+            "explanation": "إذن يمكن أخذ \\[F(x)=\\frac12\\left[-f(x)+f'(x)+x-x^2-\\frac32e^{2x+2}\\right]\\]. وبالتعويض عن f وf' تتبسط إلى: \\[F(x)=\\frac12\\left(x-\\frac12\\right)e^{2x+2}-\\frac12x^2+x-1\\].",
+            "result": "أصلية صحيحة على R."
+          }
+        ],
+        "final_answer": "\\(\\boxed{F(x)=\\frac12\\left(x-\\frac12\\right)e^{2x+2}-\\frac12x^2+x-1}\\).",
+        "verification": "تمت مراجعة النتيجة مع التصحيح الرسمي لبكالوريا 2015.",
+        "common_mistakes": [],
+        "hints": [],
+        "introduction": "نستعمل العلاقة السابقة لصناعة مشتقته يساوي f.",
+        "summary": "\\(\\boxed{F(x)=\\frac12\\left(x-\\frac12\\right)e^{2x+2}-\\frac12x^2+x-1}\\).",
+        "answer_style": "explain_then_calculate_then_conclude"
+      },
+      "id": "2015_der_ex04_q11",
+      "display_order": 11,
+      "content_type": "question"
+    }
+  ],
+  "source_reference": {
+    "file": "2015(3).pdf",
+    "statement_pages": [
+      4
+    ],
+    "solution_pages": [
+      8
+    ],
+    "source_faithful_statement": true,
+    "solution_reviewed_against_source": true
+  },
+  "display": {
+    "layout": "question_by_question",
+    "show_statement_first": true,
+    "show_statement_figures": true,
+    "show_solution_after_click": true,
+    "show_solution_figures": true
+  },
+  "review_status": {
+    "statement_compared_with_original_pdf": true,
+    "questions_compared_with_original_pdf": true,
+    "source_figures_checked": true,
+    "solution_checked_against_correction": true,
+    "latex_normalized_only": true,
+    "react_ready": true
+  },
+  "given_data": {
+    "g": "1-2x-e^(2x-2)",
+    "f": "x e^(2x+2)-x+1",
+    "alpha_interval": "0.36<α<0.37",
+    "asymptote": "y=-x+1"
+  }
+}

@@ -69,7 +69,7 @@ class Command(BaseCommand):
         parser.add_argument(
             "--subject-code",
             type=str,
-            default="math",
+            default="science",
             help=(
                 "Code de la matière. "
                 "Valeur par défaut : math."

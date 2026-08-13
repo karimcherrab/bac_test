@@ -1,0 +1,953 @@
+{
+  "schema_version": "4.5-bac-source",
+  "version": "4.2-2011-derivatives-ex04",
+  "language": "ar",
+  "direction": "rtl",
+  "year": 2011,
+  "session": "ordinary",
+  "chapter_code": "exponential_logarithmic_functions",
+  "chapter_title": "exp_definition_properties",
+  "exercise_number": 4,
+  "source_pages": [
+    4
+  ],
+  "solution_source_pages": [
+    8
+  ],
+  "branches": [
+    {
+      "code": "science",
+      "name": "شعبة العلوم التجريبية"
+    }
+  ],
+  "title": "التمرين الرابع — بكالوريا الجزائر 2011 — دراسة دالة أسية والمساحة",
+  "axis_tags": [
+    "limits",
+    "derivative_sign",
+    "function_variations",
+    "oblique_asymptote",
+    "tangent_equation",
+    "equation_root",
+    "curve_construction",
+    "area_between_curves"
+  ],
+  "statement": "التمرين الرابع: (07 نقاط)\n\nنعتبر الدالة العددية \\(f\\) المعرفة على \\(\\mathbb{R}\\) بـ:\n\\[f(x)=e^x-ex-1\\]\nو \\((C_f)\\) تمثيلها البياني في المستوى المنسوب إلى المعلم المتعامد والمتجانس \\((O;\\vec{i},\\vec{j})\\).\n\n1. أ- احسب \\(\\lim_{x\\to-\\infty} f(x)\\) و \\(\\lim_{x\\to+\\infty} f(x)\\).\nب- احسب \\(f'(x)\\) ثم ادرس إشارتها.\nج- شكل جدول تغيرات الدالة \\(f\\).\n\n2. أ- بين أن المستقيم \\((\\Delta)\\) ذو المعادلة \\(y=-ex-1\\) مقارب مائل للمنحنى \\((C_f)\\) بجوار \\((-\\infty)\\).\nب- اكتب معادلة المستقيم \\((T)\\) مماس المنحنى \\((C_f)\\) في النقطة ذات الفاصلة \\(0\\).\nج- بين أن المعادلة \\(f(x)=0\\) تقبل في المجال \\(]1,75;1,76[\\) حلا وحيدا \\(\\alpha\\).\nد- ارسم المستقيمين \\((\\Delta)\\) و \\((T)\\) ثم المنحنى \\((C_f)\\) على المجال \\(]-\\infty;2]\\).\n\n3. أ- احسب بدلالة \\(\\alpha\\)، المساحة \\(A(\\alpha)\\) للحيز المستوي المحدد بالمنحنى \\((C_f)\\) وحامل محور الفواصل والمستقيمين اللذين معادلتهما: \\(x=0\\) و \\(x=\\alpha\\).\nب- أثبت أن:\n\\[A(\\alpha)=\\left(\\frac{1}{2}e\\alpha^2-e\\alpha+\\alpha\\right)\\,ua\\]\nحيث \\(ua\\) هي وحدة المساحات.",
+  "figures": [],
+  "questions": [
+    {
+      "id": "2011_der_ex04_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1-أ) احسب \\(\\lim_{x\\to-\\infty} f(x)\\) و \\(\\lim_{x\\to+\\infty} f(x)\\).",
+      "solution": {
+        "strategy": "ندرس سلوك الجزء الأسي والجزء الخطي عند طرفي المجال.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "النهاية عند -∞",
+            "explanation": "عندما \\(x\\to-\\infty\\)، فإن \\(e^x\\to0\\) و \\(-ex\\to+\\infty\\)، لذلك \\(f(x)=e^x-ex-1\\to+\\infty\\).",
+            "result": "\\(\\lim_{x\\to-\\infty}f(x)=+\\infty\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "النهاية عند +∞",
+            "explanation": "عندما \\(x\\to+\\infty\\)، فإن \\(e^x\\) ينمو أسرع من \\(ex\\)، لذلك \\(e^x-ex-1\\to+\\infty\\).",
+            "result": "\\(\\lim_{x\\to+\\infty}f(x)=+\\infty\\)."
+          }
+        ],
+        "final_answer": "\\(\\boxed{\\lim_{x\\to-\\infty}f(x)=+\\infty}\\) و \\(\\boxed{\\lim_{x\\to+\\infty}f(x)=+\\infty}\\).",
+        "verification": "تمت مراجعة النتيجة مع التصحيح الرسمي لبكالوريا 2011.",
+        "common_mistakes": [],
+        "hints": [],
+        "introduction": "ندرس سلوك الجزء الأسي والجزء الخطي عند طرفي المجال.",
+        "summary": "\\(\\boxed{\\lim_{x\\to-\\infty}f(x)=+\\infty}\\) و \\(\\boxed{\\lim_{x\\to+\\infty}f(x)=+\\infty}\\).",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2011_der_ex04_q2",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "1-ب) احسب \\(f'(x)\\) ثم ادرس إشارتها.",
+      "solution": {
+        "strategy": "نشتق ثم نقارن \\(e^x\\) بالعدد \\(e\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب المشتقة",
+            "explanation": "\\[f'(x)=e^x-e\\]",
+            "result": "\\(f'(x)=e^x-e\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "حل f'(x)=0",
+            "explanation": "\\[e^x-e=0\\iff e^x=e\\iff x=1\\]",
+            "result": "\\(x=1\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "دراسة الإشارة",
+            "explanation": "إذا \\(x<1\\) فإن \\(e^x<e\\) ومنه \\(f'(x)<0\\). وإذا \\(x>1\\) فإن \\(f'(x)>0\\).",
+            "result": "سالبة قبل 1 وموجبة بعد 1."
+          }
+        ],
+        "final_answer": "\\(\\boxed{f'(x)=e^x-e}\\)، وإشارتها سالبة على \\(]-\\infty,1[\\)، منعدمة عند 1، موجبة على \\(]1,+\\infty[\\).",
+        "verification": "تمت مراجعة النتيجة مع التصحيح الرسمي لبكالوريا 2011.",
+        "common_mistakes": [],
+        "hints": [],
+        "introduction": "نشتق ثم نقارن \\(e^x\\) بالعدد \\(e\\).",
+        "summary": "\\(\\boxed{f'(x)=e^x-e}\\)، وإشارتها سالبة على \\(]-\\infty,1[\\)، منعدمة عند 1، موجبة على \\(]1,+\\infty[\\).",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2011_der_ex04_q3",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "1-ج) شكل جدول تغيرات الدالة \\(f\\).",
+      "solution": {
+        "strategy": "نستعمل إشارة المشتقة مع \\(f(1)=-1\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب القيمة الحرجة",
+            "explanation": "\\[f(1)=e-e-1=-1\\]",
+            "result": "\\(f(1)=-1\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "استنتاج التغيرات",
+            "explanation": "بما أن \\(f'<0\\) قبل 1 و \\(f'>0\\) بعد 1، فإن \\(f\\) متناقصة ثم متزايدة.",
+            "result": "القيمة الصغرى هي -1 عند x=1."
+          }
+        ],
+        "final_answer": "f متناقصة على \\(]-\\infty,1]\\) ثم متزايدة على \\([1,+\\infty[\\)، وقيمتها الصغرى \\(-1\\).",
+        "verification": "تمت مراجعة النتيجة مع التصحيح الرسمي لبكالوريا 2011.",
+        "common_mistakes": [],
+        "hints": [],
+        "introduction": "نستعمل إشارة المشتقة مع \\(f(1)=-1\\).",
+        "summary": "f متناقصة على \\(]-\\infty,1]\\) ثم متزايدة على \\([1,+\\infty[\\)، وقيمتها الصغرى \\(-1\\).",
+        "answer_style": "explain_then_calculate_then_conclude",
+        "variation_table": {
+          "type": "variation_table",
+          "title": "جدول تغيرات الدالة f",
+          "function_name": "f",
+          "derivative_name": "f'(x)",
+          "domain": "R",
+          "x_values": [
+            "-\\infty",
+            "1",
+            "+\\infty"
+          ],
+          "derivative_signs": [
+            "-",
+            "+"
+          ],
+          "function_values": [
+            "+\\infty",
+            "-1",
+            "+\\infty"
+          ],
+          "directions": [
+            "down",
+            "up"
+          ]
+        }
+      }
+    },
+    {
+      "id": "2011_der_ex04_q4",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "2-أ) بين أن المستقيم \\((\\Delta)\\) ذو المعادلة \\(y=-ex-1\\) مقارب مائل للمنحنى \\((C_f)\\) بجوار \\((-\\infty)\\).",
+      "solution": {
+        "strategy": "نحسب الفرق بين f ومعادلة المستقيم.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب الفرق",
+            "explanation": "\\[f(x)-(-ex-1)=e^x\\]",
+            "result": "\\(f(x)-(-ex-1)=e^x\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "حساب النهاية",
+            "explanation": "\\[\\lim_{x\\to-\\infty}e^x=0\\] وبالتالي \\[\\lim_{x\\to-\\infty}[f(x)-(-ex-1)]=0\\].",
+            "result": "النهاية تساوي 0."
+          },
+          {
+            "step_number": 3,
+            "title": "الاستنتاج",
+            "explanation": "إذن \\(\\Delta:y=-ex-1\\) مقارب مائل للمنحنى عند \\(-\\infty\\).",
+            "result": "\\(\\Delta:y=-ex-1\\)."
+          }
+        ],
+        "final_answer": "\\(\\boxed{\\Delta:y=-ex-1}\\) مقارب مائل عند \\(-\\infty\\).",
+        "verification": "تمت مراجعة النتيجة مع التصحيح الرسمي لبكالوريا 2011.",
+        "common_mistakes": [],
+        "hints": [],
+        "introduction": "نحسب الفرق بين f ومعادلة المستقيم.",
+        "summary": "\\(\\boxed{\\Delta:y=-ex-1}\\) مقارب مائل عند \\(-\\infty\\).",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2011_der_ex04_q5",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "2-ب) اكتب معادلة المستقيم \\((T)\\) مماس المنحنى \\((C_f)\\) في النقطة ذات الفاصلة \\(0\\).",
+      "solution": {
+        "strategy": "نحسب f(0) وf'(0) ثم نطبق صيغة المماس.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب f(0)",
+            "explanation": "\\[f(0)=1-0-1=0\\]",
+            "result": "النقطة هي O(0,0)."
+          },
+          {
+            "step_number": 2,
+            "title": "حساب الميل",
+            "explanation": "\\[f'(0)=1-e\\]",
+            "result": "\\(f'(0)=1-e\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "معادلة المماس",
+            "explanation": "\\[y=f'(0)(x-0)+f(0)=(1-e)x\\]",
+            "result": "\\(T:y=(1-e)x\\)."
+          }
+        ],
+        "final_answer": "\\(\\boxed{T:y=(1-e)x}\\).",
+        "verification": "تمت مراجعة النتيجة مع التصحيح الرسمي لبكالوريا 2011.",
+        "common_mistakes": [],
+        "hints": [],
+        "introduction": "نحسب f(0) وf'(0) ثم نطبق صيغة المماس.",
+        "summary": "\\(\\boxed{T:y=(1-e)x}\\).",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2011_der_ex04_q6",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "2-ج) بين أن المعادلة \\(f(x)=0\\) تقبل في المجال \\(]1,75;1,76[\\) حلا وحيدا \\(\\alpha\\).",
+      "solution": {
+        "strategy": "نستعمل الاستمرارية وتغير الإشارة والرتابة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الاستمرارية والرتابة",
+            "explanation": "الدالة f مستمرة على \\(\\mathbb{R}\\)، وهي متزايدة تماما على \\([1,+\\infty[\\).",
+            "result": "إذن متزايدة على [1.75,1.76]."
+          },
+          {
+            "step_number": 2,
+            "title": "القيم الطرفية",
+            "explanation": "\\[f(1.75)\\approx-0.0024\\], \\[f(1.76)\\approx0.028\\].",
+            "result": "\\(f(1.75)<0<f(1.76)\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "الوجود والوحدانية",
+            "explanation": "بتطبيق مبرهنة القيم المتوسطة يوجد \\(\\alpha\\in]1.75,1.76[\\)، وبما أن f متزايدة تماما فالحل وحيد.",
+            "result": "\\(\\alpha\\) وحيد."
+          }
+        ],
+        "final_answer": "\\(\\boxed{\\alpha\\in]1.75,1.76[}\\)، وتقريبيا \\(\\alpha\\approx 1.750787\\).",
+        "verification": "تمت مراجعة النتيجة مع التصحيح الرسمي لبكالوريا 2011.",
+        "common_mistakes": [],
+        "hints": [],
+        "introduction": "نستعمل الاستمرارية وتغير الإشارة والرتابة.",
+        "summary": "\\(\\boxed{\\alpha\\in]1.75,1.76[}\\)، وتقريبيا \\(\\alpha\\approx 1.750787\\).",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2011_der_ex04_q7",
+      "display_order": 7,
+      "content_type": "question",
+      "text": "2-د) ارسم المستقيمين \\((\\Delta)\\) و \\((T)\\) ثم المنحنى \\((C_f)\\) على المجال \\(]-\\infty;2]\\).",
+      "solution": {
+        "strategy": "نبني الرسم من النتائج السابقة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "العناصر الأساسية",
+            "explanation": "\\(\\Delta:y=-ex-1\\)، و \\(T:y=(1-e)x\\)، والمنحنى يمر بـ O(0,0) وله قيمة صغرى عند (1,-1).",
+            "result": "العناصر مثبتة."
+          },
+          {
+            "step_number": 2,
+            "title": "بناء المنحنى",
+            "explanation": "عند -∞ يقترب Cf من Δ من الأعلى، ثم يتناقص حتى (1,-1)، ثم يتزايد ويقطع محور الفواصل مرة ثانية عند x=α.",
+            "result": "يُرسم وفق هذه المعطيات."
+          }
+        ],
+        "final_answer": "الرسم موجود في graph_data داخل حل السؤال.",
+        "verification": "تمت مراجعة النتيجة مع التصحيح الرسمي لبكالوريا 2011.",
+        "common_mistakes": [],
+        "hints": [],
+        "introduction": "نبني الرسم من النتائج السابقة.",
+        "summary": "الرسم موجود في graph_data داخل حل السؤال.",
+        "answer_style": "explain_then_calculate_then_conclude",
+        "graph_data": {
+          "id": "cf_graph_2011_ex04",
+          "usage": "solution",
+          "type": "coordinate_graph",
+          "title": "التمثيل البياني للدالة f",
+          "x_label": "x",
+          "y_label": "y",
+          "x_domain": [
+            -4,
+            2
+          ],
+          "y_domain": [
+            -2,
+            11
+          ],
+          "show_grid": true,
+          "series": [
+            {
+              "id": "Cf",
+              "label": "(C_f)",
+              "type": "curve",
+              "data": [
+                {
+                  "x": -4,
+                  "y": 9.891443
+                },
+                {
+                  "x": -3.95,
+                  "y": 9.756468
+                },
+                {
+                  "x": -3.9,
+                  "y": 9.621541
+                },
+                {
+                  "x": -3.85,
+                  "y": 9.486665
+                },
+                {
+                  "x": -3.8,
+                  "y": 9.351842
+                },
+                {
+                  "x": -3.75,
+                  "y": 9.217075
+                },
+                {
+                  "x": -3.7,
+                  "y": 9.082366
+                },
+                {
+                  "x": -3.65,
+                  "y": 8.94772
+                },
+                {
+                  "x": -3.6,
+                  "y": 8.813138
+                },
+                {
+                  "x": -3.55,
+                  "y": 8.678625
+                },
+                {
+                  "x": -3.5,
+                  "y": 8.544184
+                },
+                {
+                  "x": -3.45,
+                  "y": 8.409818
+                },
+                {
+                  "x": -3.4,
+                  "y": 8.275531
+                },
+                {
+                  "x": -3.35,
+                  "y": 8.141328
+                },
+                {
+                  "x": -3.3,
+                  "y": 8.007213
+                },
+                {
+                  "x": -3.25,
+                  "y": 7.87319
+                },
+                {
+                  "x": -3.2,
+                  "y": 7.739264
+                },
+                {
+                  "x": -3.15,
+                  "y": 7.60544
+                },
+                {
+                  "x": -3.1,
+                  "y": 7.471723
+                },
+                {
+                  "x": -3.05,
+                  "y": 7.338119
+                },
+                {
+                  "x": -3.0,
+                  "y": 7.204633
+                },
+                {
+                  "x": -2.95,
+                  "y": 7.071271
+                },
+                {
+                  "x": -2.9,
+                  "y": 6.938041
+                },
+                {
+                  "x": -2.85,
+                  "y": 6.804948
+                },
+                {
+                  "x": -2.8,
+                  "y": 6.671999
+                },
+                {
+                  "x": -2.75,
+                  "y": 6.539203
+                },
+                {
+                  "x": -2.7,
+                  "y": 6.406566
+                },
+                {
+                  "x": -2.65,
+                  "y": 6.274098
+                },
+                {
+                  "x": -2.6,
+                  "y": 6.141806
+                },
+                {
+                  "x": -2.55,
+                  "y": 6.0097
+                },
+                {
+                  "x": -2.5,
+                  "y": 5.87779
+                },
+                {
+                  "x": -2.45,
+                  "y": 5.746084
+                },
+                {
+                  "x": -2.4,
+                  "y": 5.614594
+                },
+                {
+                  "x": -2.35,
+                  "y": 5.483331
+                },
+                {
+                  "x": -2.3,
+                  "y": 5.352307
+                },
+                {
+                  "x": -2.25,
+                  "y": 5.221533
+                },
+                {
+                  "x": -2.2,
+                  "y": 5.091023
+                },
+                {
+                  "x": -2.15,
+                  "y": 4.96079
+                },
+                {
+                  "x": -2.1,
+                  "y": 4.830848
+                },
+                {
+                  "x": -2.05,
+                  "y": 4.701213
+                },
+                {
+                  "x": -2.0,
+                  "y": 4.571899
+                },
+                {
+                  "x": -1.95,
+                  "y": 4.442924
+                },
+                {
+                  "x": -1.9,
+                  "y": 4.314304
+                },
+                {
+                  "x": -1.85,
+                  "y": 4.186059
+                },
+                {
+                  "x": -1.8,
+                  "y": 4.058206
+                },
+                {
+                  "x": -1.75,
+                  "y": 3.930767
+                },
+                {
+                  "x": -1.7,
+                  "y": 3.803763
+                },
+                {
+                  "x": -1.65,
+                  "y": 3.677215
+                },
+                {
+                  "x": -1.6,
+                  "y": 3.551147
+                },
+                {
+                  "x": -1.55,
+                  "y": 3.425585
+                },
+                {
+                  "x": -1.5,
+                  "y": 3.300553
+                },
+                {
+                  "x": -1.45,
+                  "y": 3.176079
+                },
+                {
+                  "x": -1.4,
+                  "y": 3.052192
+                },
+                {
+                  "x": -1.35,
+                  "y": 2.928921
+                },
+                {
+                  "x": -1.3,
+                  "y": 2.806298
+                },
+                {
+                  "x": -1.25,
+                  "y": 2.684357
+                },
+                {
+                  "x": -1.2,
+                  "y": 2.563132
+                },
+                {
+                  "x": -1.15,
+                  "y": 2.442661
+                },
+                {
+                  "x": -1.1,
+                  "y": 2.322981
+                },
+                {
+                  "x": -1.05,
+                  "y": 2.204134
+                },
+                {
+                  "x": -1.0,
+                  "y": 2.086161
+                },
+                {
+                  "x": -0.95,
+                  "y": 1.969109
+                },
+                {
+                  "x": -0.9,
+                  "y": 1.853023
+                },
+                {
+                  "x": -0.85,
+                  "y": 1.737954
+                },
+                {
+                  "x": -0.8,
+                  "y": 1.623954
+                },
+                {
+                  "x": -0.75,
+                  "y": 1.511078
+                },
+                {
+                  "x": -0.7,
+                  "y": 1.399383
+                },
+                {
+                  "x": -0.65,
+                  "y": 1.288929
+                },
+                {
+                  "x": -0.6,
+                  "y": 1.179781
+                },
+                {
+                  "x": -0.55,
+                  "y": 1.072005
+                },
+                {
+                  "x": -0.5,
+                  "y": 0.965672
+                },
+                {
+                  "x": -0.45,
+                  "y": 0.860855
+                },
+                {
+                  "x": -0.4,
+                  "y": 0.757633
+                },
+                {
+                  "x": -0.35,
+                  "y": 0.656087
+                },
+                {
+                  "x": -0.3,
+                  "y": 0.556303
+                },
+                {
+                  "x": -0.25,
+                  "y": 0.458371
+                },
+                {
+                  "x": -0.2,
+                  "y": 0.362387
+                },
+                {
+                  "x": -0.15,
+                  "y": 0.26845
+                },
+                {
+                  "x": -0.1,
+                  "y": 0.176666
+                },
+                {
+                  "x": -0.05,
+                  "y": 0.087144
+                },
+                {
+                  "x": -0.0,
+                  "y": 0.0
+                },
+                {
+                  "x": 0.05,
+                  "y": -0.084643
+                },
+                {
+                  "x": 0.1,
+                  "y": -0.166657
+                },
+                {
+                  "x": 0.15,
+                  "y": -0.245908
+                },
+                {
+                  "x": 0.2,
+                  "y": -0.322254
+                },
+                {
+                  "x": 0.25,
+                  "y": -0.395545
+                },
+                {
+                  "x": 0.3,
+                  "y": -0.465626
+                },
+                {
+                  "x": 0.35,
+                  "y": -0.532331
+                },
+                {
+                  "x": 0.4,
+                  "y": -0.595488
+                },
+                {
+                  "x": 0.45,
+                  "y": -0.654915
+                },
+                {
+                  "x": 0.5,
+                  "y": -0.71042
+                },
+                {
+                  "x": 0.55,
+                  "y": -0.761802
+                },
+                {
+                  "x": 0.6,
+                  "y": -0.80885
+                },
+                {
+                  "x": 0.65,
+                  "y": -0.851342
+                },
+                {
+                  "x": 0.7,
+                  "y": -0.889045
+                },
+                {
+                  "x": 0.75,
+                  "y": -0.921711
+                },
+                {
+                  "x": 0.8,
+                  "y": -0.949085
+                },
+                {
+                  "x": 0.85,
+                  "y": -0.970893
+                },
+                {
+                  "x": 0.9,
+                  "y": -0.986851
+                },
+                {
+                  "x": 0.95,
+                  "y": -0.996658
+                },
+                {
+                  "x": 1.0,
+                  "y": -1.0
+                },
+                {
+                  "x": 1.05,
+                  "y": -0.996545
+                },
+                {
+                  "x": 1.1,
+                  "y": -0.985944
+                },
+                {
+                  "x": 1.15,
+                  "y": -0.967831
+                },
+                {
+                  "x": 1.2,
+                  "y": -0.941821
+                },
+                {
+                  "x": 1.25,
+                  "y": -0.907509
+                },
+                {
+                  "x": 1.3,
+                  "y": -0.86447
+                },
+                {
+                  "x": 1.35,
+                  "y": -0.812255
+                },
+                {
+                  "x": 1.4,
+                  "y": -0.750395
+                },
+                {
+                  "x": 1.45,
+                  "y": -0.678394
+                },
+                {
+                  "x": 1.5,
+                  "y": -0.595734
+                },
+                {
+                  "x": 1.55,
+                  "y": -0.501867
+                },
+                {
+                  "x": 1.6,
+                  "y": -0.396219
+                },
+                {
+                  "x": 1.65,
+                  "y": -0.278185
+                },
+                {
+                  "x": 1.7,
+                  "y": -0.147132
+                },
+                {
+                  "x": 1.75,
+                  "y": -0.002391
+                },
+                {
+                  "x": 1.8,
+                  "y": 0.15674
+                },
+                {
+                  "x": 1.85,
+                  "y": 0.330998
+                },
+                {
+                  "x": 1.9,
+                  "y": 0.521159
+                },
+                {
+                  "x": 1.95,
+                  "y": 0.728038
+                },
+                {
+                  "x": 2.0,
+                  "y": 0.952492
+                }
+              ]
+            },
+            {
+              "id": "Delta",
+              "label": "Δ: y=-ex-1",
+              "type": "dashed",
+              "dashed": true,
+              "data": [
+                {
+                  "x": -4,
+                  "y": 9.873127
+                },
+                {
+                  "x": 2,
+                  "y": -6.436564
+                }
+              ]
+            },
+            {
+              "id": "T",
+              "label": "T: y=(1-e)x",
+              "type": "line",
+              "data": [
+                {
+                  "x": -4,
+                  "y": 6.873127
+                },
+                {
+                  "x": 2,
+                  "y": -3.436564
+                }
+              ]
+            }
+          ],
+          "annotations": [
+            {
+              "type": "point",
+              "x": 0,
+              "y": 0,
+              "label": "O(0,0)"
+            },
+            {
+              "type": "point",
+              "x": 1,
+              "y": -1,
+              "label": "M(1,-1)"
+            },
+            {
+              "type": "point",
+              "x": 1.750787,
+              "y": 0,
+              "label": "α"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "2011_der_ex04_q8",
+      "display_order": 8,
+      "content_type": "question",
+      "text": "3-أ) احسب بدلالة \\(\\alpha\\)، المساحة \\(A(\\alpha)\\) للحيز المستوي المحدد بالمنحنى \\((C_f)\\) وحامل محور الفواصل والمستقيمين \\(x=0\\) و \\(x=\\alpha\\).",
+      "solution": {
+        "strategy": "بما أن f سالبة على [0,α] فإن المساحة هي -∫f.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تحديد الإشارة",
+            "explanation": "بين 0 وα يكون المنحنى أسفل محور الفواصل، إذن \\(f(x)\\le0\\).",
+            "result": "نستعمل القيمة المطلقة."
+          },
+          {
+            "step_number": 2,
+            "title": "كتابة التكامل",
+            "explanation": "\\[A(\\alpha)=-\\int_0^\\alpha f(x)\\,dx\\]",
+            "result": "الصيغة الصحيحة للمساحة."
+          },
+          {
+            "step_number": 3,
+            "title": "حساب التكامل",
+            "explanation": "\\[A(\\alpha)=\\int_0^\\alpha(-e^x+ex+1)dx\\]\\[=\\left[-e^x+\\frac e2x^2+x\\right]_0^\\alpha\\]\\[=-e^\\alpha+\\frac e2\\alpha^2+\\alpha+1\\]",
+            "result": "\\(A(\\alpha)=-e^\\alpha+\\frac e2\\alpha^2+\\alpha+1\\)."
+          }
+        ],
+        "final_answer": "\\(\\boxed{A(\\alpha)=\\left(-e^\\alpha+\\frac e2\\alpha^2+\\alpha+1\\right)ua}\\).",
+        "verification": "تمت مراجعة النتيجة مع التصحيح الرسمي لبكالوريا 2011.",
+        "common_mistakes": [],
+        "hints": [],
+        "introduction": "بما أن f سالبة على [0,α] فإن المساحة هي -∫f.",
+        "summary": "\\(\\boxed{A(\\alpha)=\\left(-e^\\alpha+\\frac e2\\alpha^2+\\alpha+1\\right)ua}\\).",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2011_der_ex04_q9",
+      "display_order": 9,
+      "content_type": "question",
+      "text": "3-ب) أثبت أن \\(A(\\alpha)=\\left(\\frac{1}{2}e\\alpha^2-e\\alpha+\\alpha\\right)ua\\).",
+      "solution": {
+        "strategy": "نستعمل أن α جذر للدالة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "استعمال f(α)=0",
+            "explanation": "\\[e^\\alpha-e\\alpha-1=0\\Rightarrow e^\\alpha=e\\alpha+1\\]",
+            "result": "\\(e^\\alpha=e\\alpha+1\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "التعويض",
+            "explanation": "\\[A(\\alpha)=-(e\\alpha+1)+\\frac e2\\alpha^2+\\alpha+1\\]",
+            "result": "نعوض علاقة الجذر."
+          },
+          {
+            "step_number": 3,
+            "title": "التبسيط",
+            "explanation": "\\[A(\\alpha)=\\frac e2\\alpha^2-e\\alpha+\\alpha\\]",
+            "result": "الصيغة المطلوبة."
+          }
+        ],
+        "final_answer": "\\(\\boxed{A(\\alpha)=\\left(\\frac12e\\alpha^2-e\\alpha+\\alpha\\right)ua}\\).",
+        "verification": "تمت مراجعة النتيجة مع التصحيح الرسمي لبكالوريا 2011.",
+        "common_mistakes": [],
+        "hints": [],
+        "introduction": "نستعمل أن α جذر للدالة.",
+        "summary": "\\(\\boxed{A(\\alpha)=\\left(\\frac12e\\alpha^2-e\\alpha+\\alpha\\right)ua}\\).",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    }
+  ],
+  "source_reference": {
+    "file": "2011(3).pdf",
+    "statement_pages": [
+      4
+    ],
+    "solution_pages": [
+      8
+    ],
+    "source_faithful_statement": true,
+    "solution_reviewed_against_source": true
+  },
+  "display": {
+    "layout": "question_by_question",
+    "show_statement_first": true,
+    "show_statement_figures": true,
+    "show_solution_after_click": true,
+    "show_solution_figures": true
+  },
+  "review_status": {
+    "statement_compared_with_original_pdf": true,
+    "solution_checked_against_correction": true,
+    "react_ready": true
+  }
+}

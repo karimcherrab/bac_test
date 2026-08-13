@@ -1,0 +1,1137 @@
+{
+  "schema_version": "4.5-bac-source",
+  "version": "4.2-2023-derivatives-ex04-pedagogical-detailed",
+  "language": "ar",
+  "direction": "rtl",
+  "year": 2023,
+  "session": "ordinary",
+  "subject_variant": "second_subject",
+  "chapter_code": "derivatives",
+  "chapter_title": "الاشتقاقية ودراسة الدوال",
+  "exercise_number": 4,
+  "points": 7,
+  "source_pages": [
+    4
+  ],
+  "solution_source_pages": [
+    9,
+    10
+  ],
+  "branches": [
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "title": "التمرين الرابع — بكالوريا الجزائر 2023 — دراسة دالة أسية ومناقشة بيانية",
+  "axis_tags": [
+    "variation_table_reading",
+    "equation_unique_root",
+    "function_sign",
+    "limits",
+    "oblique_asymptote",
+    "relative_position",
+    "derivative_variations",
+    "parallel_tangent",
+    "curve_construction",
+    "graphical_parameter_discussion"
+  ],
+  "statement": "التمرين الرابع: (07 نقاط)\nI) الجدول المقابل يمثل تغيرات الدالة \\(g\\) المعرفة على \\(\\mathbb{R}\\) بـ:\n\\[g(x)=-1+(2x-1)e^x\\]\nII) الدالة العددية \\(f\\) المعرفة على \\(\\mathbb{R}\\) بـ:\n\\[f(x)=-x+4+(2x-3)e^x\\]\nو\\((C_f)\\) تمثيلها البياني في المستوى المنسوب إلى المعلم المتعامد والمتجانس \\((O;\\vec{i},\\vec{j})\\).",
+  "figures": [
+    {
+      "id": "2023_der_ex04_statement_variation_g",
+      "usage": "statement",
+      "type": "variation_table",
+      "title": "جدول تغيرات الدالة \\(g\\) كما في نص التمرين",
+      "function_name": "g(x)",
+      "domain": "\\mathbb{R}",
+      "x_values": [
+        "-\\infty",
+        "-\\frac12",
+        "+\\infty"
+      ],
+      "function": {
+        "branches": [
+          {
+            "id": "g_left",
+            "start_x": "-\\infty",
+            "end_x": "-\\frac12",
+            "start_value": "-1",
+            "end_value": "g(-\\frac12)",
+            "direction": "down"
+          },
+          {
+            "id": "g_right",
+            "start_x": "-\\frac12",
+            "end_x": "+\\infty",
+            "start_value": "g(-\\frac12)",
+            "end_value": "+\\infty",
+            "direction": "up"
+          }
+        ]
+      },
+      "caption": "الدالة g تتناقص على ]-∞,-1/2] ثم تتزايد على [-1/2,+∞[."
+    }
+  ],
+  "questions": [
+    {
+      "id": "2023_der_ex04_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "I-1) أثبت أن المعادلة \\(g(x)=0\\) تقبل حلا وحيدا \\(\\alpha\\) حيث \\[0,7<\\alpha<0,8\\]",
+      "solution": {
+        "strategy": "نستعمل جدول تغيرات g ثم نتحقق من تغير الإشارة بين 0.7 و0.8.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الوحدانية",
+            "explanation": "من جدول التغيرات، تكون \\(g\\) متزايدة تماما على \\([-\\frac12,+\\infty[\\). وبما أن الجذر المطلوب موجب، فلا يمكن أن يكون هناك أكثر من حل واحد."
+          },
+          {
+            "step_number": 2,
+            "title": "نحسب \\(g(0.7)\\)",
+            "explanation": "\\[g(0.7)\\approx -0.1945<0\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "نحسب \\(g(0.8)\\)",
+            "explanation": "\\[g(0.8)\\approx 0.3353>0\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "الوجود والحصر",
+            "explanation": "الدالة \\(g\\) مستمرة، وتغيرت إشارتها بين 0.7 و0.8، إذن بمبرهنة القيم المتوسطة يوجد حل بينهما. وبفضل التزايد فهو وحيد.",
+            "result": "\\[0.7<\\alpha<0.8\\]"
+          }
+        ],
+        "final_answer": "للمعادلة \\(g(x)=0\\) حل وحيد \\(\\alpha\\)، حيث \\(0.7<\\alpha<0.8\\)، وتقريبا \\(\\alpha\\approx 0.738835\\).",
+        "verification": "الحصر وطريقة الإثبات مطابقان للتصحيح النموذجي.",
+        "common_mistakes": [
+          "إثبات تغير الإشارة دون ذكر سبب وحدانية الجذر."
+        ],
+        "hints": [
+          "استعمل الجزء المتزايد من جدول g."
+        ],
+        "introduction": "نثبت أولا أن الجذر لا يمكن أن يتكرر، ثم نحصره.",
+        "summary": "يوجد جذر وحيد بين 0.7 و0.8.",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2023_der_ex04_q2",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "I-2) استنتج حسب قيم \\(x\\) إشارة \\(g(x)\\) على \\(\\mathbb{R}\\).",
+      "solution": {
+        "strategy": "نستعمل الجذر الوحيد alpha وجدول تغيرات g.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "قبل \\(\\alpha\\)",
+            "explanation": "من جدول التغيرات والجذر الوحيد، تبقى قيم \\(g\\) سالبة قبل \\(\\alpha\\).",
+            "result": "\\[g(x)<0\\quad\\text{إذا }x<\\alpha\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "عند \\(\\alpha\\)",
+            "explanation": "\\[g(\\alpha)=0\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "بعد \\(\\alpha\\)",
+            "explanation": "بعد الجذر الوحيد تكون \\(g\\) موجبة.",
+            "result": "\\[g(x)>0\\quad\\text{إذا }x>\\alpha\\]"
+          }
+        ],
+        "sign_table": {
+          "type": "sign_table",
+          "title": "إشارة \\(g(x)\\)",
+          "x_values": [
+            "-\\infty",
+            "\\alpha",
+            "+\\infty"
+          ],
+          "signs": [
+            "-",
+            "0",
+            "+"
+          ]
+        },
+        "final_answer": "\\(g<0\\) على \\(]-\\infty,\\alpha[\\)، و\\(g(\\alpha)=0\\)، و\\(g>0\\) على \\(]\\alpha,+\\infty[\\).",
+        "verification": "مطابق للتصحيح الرسمي.",
+        "common_mistakes": [
+          "الخلط بين نقطة القيمة الدنيا \\(-1/2\\) والجذر \\(\\alpha\\)."
+        ],
+        "hints": [
+          "الصفر يغير الإشارة عند alpha وليس عند -1/2."
+        ],
+        "introduction": "بعد تحديد الجذر الوحيد يصبح جدول الإشارة مباشرا.",
+        "summary": "سالب قبل alpha وموجب بعده.",
+        "answer_style": "explain_then_conclude"
+      }
+    },
+    {
+      "id": "2023_der_ex04_q3a",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "II-1) أ) احسب \\(\\displaystyle\\lim_{x\\to-\\infty}f(x)\\) ثم بين أن \\(\\displaystyle\\lim_{x\\to+\\infty}f(x)=+\\infty\\).",
+      "solution": {
+        "strategy": "ندرس سلوك الحد الأسي عند طرفي اللانهاية.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "عند \\(-\\infty\\)",
+            "explanation": "عندما \\(x\\to-\\infty\\)، فإن \\(e^x\\to0\\) و\\((2x-3)e^x\\to0\\). إذن:",
+            "result": "\\[\\lim_{x\\to-\\infty}f(x)=+\\infty\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "عند \\(+\\infty\\)",
+            "explanation": "الحد \\((2x-3)e^x\\) يتجه إلى \\(+\\infty\\) وينمو أسرع من الحد الخطي \\(-x+4\\).",
+            "result": "\\[\\lim_{x\\to+\\infty}f(x)=+\\infty\\]"
+          }
+        ],
+        "final_answer": "\\[\\lim_{x\\to-\\infty}f(x)=+\\infty,\\qquad \\lim_{x\\to+\\infty}f(x)=+\\infty\\]",
+        "verification": "مطابق للتصحيح النموذجي.",
+        "common_mistakes": [
+          "نسيان أن \\(-x\\to+\\infty\\) عندما \\(x\\to-\\infty\\)."
+        ],
+        "hints": [
+          "عند -∞ يختفي الحد الأسي، وعند +∞ يهيمن."
+        ],
+        "introduction": "نحسب النهاية في كل جهة على حدة.",
+        "summary": "النهايتان تساويان +∞.",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2023_der_ex04_q3b",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "II-1) ب) بين أن المستقيم \\((\\Delta)\\) ذا المعادلة \\(y=-x+4\\) مستقيم مقارب مائل لـ\\((C_f)\\) عند \\(-\\infty\\).",
+      "solution": {
+        "strategy": "نحسب الفرق بين f والمستقيم.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الفرق",
+            "explanation": "\\[f(x)-(-x+4)=(2x-3)e^x\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "النهاية",
+            "explanation": "عندما \\(x\\to-\\infty\\)، فإن \\((2x-3)e^x\\to0\\).",
+            "result": "\\[\\lim_{x\\to-\\infty}[f(x)-(-x+4)]=0\\]"
+          }
+        ],
+        "final_answer": "\\[\\boxed{\\Delta:y=-x+4}\\] مقارب مائل لـ\\((C_f)\\) عند \\(-\\infty\\).",
+        "verification": "مطابق للتصحيح الرسمي.",
+        "common_mistakes": [
+          "إثبات نهاية f فقط بدل نهاية الفرق."
+        ],
+        "hints": [
+          "المقارب المائل يثبت بنهاية الفرق."
+        ],
+        "introduction": "نقارن f مباشرة بمعادلة المستقيم المعطى.",
+        "summary": "الفرق يؤول إلى صفر.",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2023_der_ex04_q3c",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "II-1) ج) ادرس وضعية \\((C_f)\\) بالنسبة إلى \\((\\Delta)\\).",
+      "solution": {
+        "strategy": "ندرس إشارة \\((2x-3)e^x\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "إشارة الفرق",
+            "explanation": "\\[f(x)-(-x+4)=(2x-3)e^x\\] وبما أن \\(e^x>0\\)، فإشارة الفرق هي إشارة \\(2x-3\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "قبل \\(3/2\\)",
+            "explanation": "إذا \\(x<\\frac32\\)، فالفرق سالب.",
+            "result": "\\((C_f)\\) أسفل \\((\\Delta)\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "بعد \\(3/2\\)",
+            "explanation": "إذا \\(x>\\frac32\\)، فالفرق موجب.",
+            "result": "\\((C_f)\\) أعلى \\((\\Delta)\\)."
+          },
+          {
+            "step_number": 4,
+            "title": "نقطة التقاطع",
+            "explanation": "\\[x=\\frac32,\\qquad y=-\\frac32+4=\\frac52\\]",
+            "result": "\\[A\\left(\\frac32,\\frac52\\right)\\]"
+          }
+        ],
+        "final_answer": "\\((C_f)\\) أسفل \\(\\Delta\\) على \\(]-\\infty,\\frac32[\\)، وأعلاه على \\(]\\frac32,+\\infty[\\)، ويتقاطعان عند \\(A(\\frac32,\\frac52)\\).",
+        "verification": "مطابق للتصحيح النموذجي.",
+        "common_mistakes": [
+          "عكس الوضعية رغم أن e^x موجب."
+        ],
+        "hints": [
+          "ادرس فقط إشارة 2x-3."
+        ],
+        "introduction": "الوضعية النسبية تُستنتج من إشارة الفرق.",
+        "summary": "أسفل قبل 3/2 وأعلى بعده.",
+        "answer_style": "explain_then_conclude"
+      }
+    },
+    {
+      "id": "2023_der_ex04_q4a",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "II-2) أ) بين أنه من أجل كل عدد حقيقي \\(x\\): \\[f'(x)=g(x)\\].",
+      "solution": {
+        "strategy": "نشتق f ثم نبسط.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الاشتقاق",
+            "explanation": "\\[f'(x)=-1+2e^x+(2x-3)e^x\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "التبسيط",
+            "explanation": "\\[f'(x)=-1+(2x-1)e^x\\]",
+            "result": "\\[f'(x)=g(x)\\]"
+          }
+        ],
+        "final_answer": "\\[\\boxed{f'(x)=g(x)}\\]",
+        "verification": "مطابق للتصحيح الرسمي.",
+        "common_mistakes": [
+          "نسيان مشتقة حاصل الضرب (2x-3)e^x."
+        ],
+        "hints": [
+          "مشتقة (2x-3)e^x هي 2e^x+(2x-3)e^x."
+        ],
+        "introduction": "الدالة g هي بالضبط مشتقة f.",
+        "summary": "بعد التبسيط نجد f'=g.",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2023_der_ex04_q4b",
+      "display_order": 7,
+      "content_type": "question",
+      "text": "II-2) ب) استنتج أن \\(f\\) متناقصة تماما على \\(]-\\infty;\\alpha]\\) ومتزايدة تماما على \\([\\alpha;+\\infty[\\)، ثم شكل جدول تغيراتها.",
+      "solution": {
+        "strategy": "بما أن f'=g نستعمل جدول إشارة g مباشرة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "قبل alpha",
+            "explanation": "\\(g<0\\)، إذن \\(f'<0\\) ومنه f متناقصة."
+          },
+          {
+            "step_number": 2,
+            "title": "عند alpha",
+            "explanation": "\\[f'(\\alpha)=0\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "بعد alpha",
+            "explanation": "\\(g>0\\)، إذن \\(f'>0\\) ومنه f متزايدة."
+          }
+        ],
+        "variation_table": {
+          "type": "variation_table",
+          "title": "جدول تغيرات الدالة \\(f\\)",
+          "function_name": "f(x)",
+          "derivative_name": "f'(x)",
+          "domain": "\\mathbb R",
+          "x_values": [
+            "-\\infty",
+            "\\alpha",
+            "+\\infty"
+          ],
+          "derivative_signs": [
+            "-",
+            "0",
+            "+"
+          ],
+          "function": {
+            "branches": [
+              {
+                "id": "f_left",
+                "start_x": "-\\infty",
+                "end_x": "\\alpha",
+                "start_value": "+\\infty",
+                "end_value": "0.0742",
+                "direction": "down"
+              },
+              {
+                "id": "f_right",
+                "start_x": "\\alpha",
+                "end_x": "+\\infty",
+                "start_value": "0.0742",
+                "end_value": "+\\infty",
+                "direction": "up"
+              }
+            ]
+          }
+        },
+        "final_answer": "\\(f\\) متناقصة تماما على \\(]-\\infty,\\alpha]\\)، ثم متزايدة تماما على \\([\\alpha,+\\infty[\\)، وقيمتها الدنيا \\(f(\\alpha)\\approx 0.0742\\).",
+        "verification": "مطابق لجدول التغيرات في التصحيح.",
+        "common_mistakes": [
+          "عدم استعمال نتيجة الجزء I رغم أن f'=g."
+        ],
+        "hints": [
+          "انسخ إشارة g إلى إشارة f'."
+        ],
+        "introduction": "دراسة f تصبح مباشرة بعد إثبات f'=g.",
+        "summary": "تنقص حتى alpha ثم تزيد.",
+        "answer_style": "explain_then_construct_then_conclude"
+      }
+    },
+    {
+      "id": "2023_der_ex04_q5a",
+      "display_order": 8,
+      "content_type": "question",
+      "text": "II-3) أ) أثبت أن \\((C_f)\\) يقبل مماسا \\((T)\\) يوازي \\((\\Delta)\\) يطلب تعيين معادلته.",
+      "solution": {
+        "strategy": "ميل Delta هو -1، لذا نحل f'(x)=-1.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "شرط التوازي",
+            "explanation": "\\[f'(x)=-1\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "نستعمل f'=g",
+            "explanation": "\\[-1+(2x-1)e^x=-1\\iff(2x-1)e^x=0\\]",
+            "result": "\\[x=\\frac12\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "نحسب قيمة الدالة",
+            "explanation": "\\[f\\left(\\frac12\\right)=\\frac72-2\\sqrt e\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "معادلة المماس",
+            "explanation": "\\[y-f\\left(\\frac12\\right)=-1\\left(x-\\frac12\\right)\\]",
+            "result": "\\[T:y=-x+4-2\\sqrt e\\]"
+          }
+        ],
+        "final_answer": "\\[\\boxed{T:y=-x+4-2\\sqrt e}\\]",
+        "verification": "مطابق للتصحيح النموذجي.",
+        "common_mistakes": [
+          "حل f(x)=-1 بدل f'(x)=-1."
+        ],
+        "hints": [
+          "المستقيمان المتوازيان لهما نفس الميل."
+        ],
+        "introduction": "نساوي المشتقة بمعامل توجيه Delta.",
+        "summary": "موضع التماس x=1/2، والمماس y=-x+4-2√e.",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2023_der_ex04_q5b",
+      "display_order": 9,
+      "content_type": "question",
+      "text": "II-3) ب) ارسم \\((\\Delta)\\)، \\((T)\\) و\\((C_f)\\) (نأخذ: \\(f(2)\\simeq9,4\\) و \\(f(\\alpha)\\simeq0,1\\)).",
+      "solution": {
+        "strategy": "نستعمل المقارب، المماس، نقطة التقاطع والقيمة الدنيا.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "المقارب",
+            "explanation": "\\[\\Delta:y=-x+4\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "المماس",
+            "explanation": "\\[T:y=-x+4-2\\sqrt e\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "النقاط المهمة",
+            "explanation": "القيمة الدنيا \\((\\alpha,f(\\alpha))\\approx(0.739,0.07)\\)، \\(A(\\frac32,\\frac52)\\)، ونأخذ \\(f(2)\\approx 9.4\\)."
+          },
+          {
+            "step_number": 4,
+            "title": "الرسم",
+            "explanation": "يتناقص \\(C_f\\) حتى \\(\\alpha\\) ثم يتزايد، ويقترب من \\(\\Delta\\) عند \\(-\\infty\\)، ويكون أسفل \\(\\Delta\\) قبل \\(3/2\\) وأعلاه بعدها.",
+            "result": "الرسم ممثل داخل `graph_data`."
+          }
+        ],
+        "graph_data": {
+          "id": "2023_der_ex04_solution_graph",
+          "usage": "solution",
+          "type": "coordinate_graph",
+          "title": "تمثيل \\((C_f)\\)، \\((\\Delta)\\) و\\((T)\\)",
+          "x_domain": [
+            -5,
+            2.2
+          ],
+          "y_domain": [
+            -1,
+            8
+          ],
+          "series": [
+            {
+              "id": "cf",
+              "label": "\\((C_f)\\)",
+              "type": "curve",
+              "data": [
+                {
+                  "x": -4.15,
+                  "y": 7.971862
+                },
+                {
+                  "x": -4.1,
+                  "y": 7.914386
+                },
+                {
+                  "x": -4.05,
+                  "y": 7.856612
+                },
+                {
+                  "x": -4.0,
+                  "y": 7.798528
+                },
+                {
+                  "x": -3.95,
+                  "y": 7.740124
+                },
+                {
+                  "x": -3.9,
+                  "y": 7.681387
+                },
+                {
+                  "x": -3.85,
+                  "y": 7.622307
+                },
+                {
+                  "x": -3.8,
+                  "y": 7.56287
+                },
+                {
+                  "x": -3.75,
+                  "y": 7.503064
+                },
+                {
+                  "x": -3.7,
+                  "y": 7.442875
+                },
+                {
+                  "x": -3.65,
+                  "y": 7.382291
+                },
+                {
+                  "x": -3.6,
+                  "y": 7.321298
+                },
+                {
+                  "x": -3.55,
+                  "y": 7.259881
+                },
+                {
+                  "x": -3.5,
+                  "y": 7.198026
+                },
+                {
+                  "x": -3.45,
+                  "y": 7.135718
+                },
+                {
+                  "x": -3.4,
+                  "y": 7.072942
+                },
+                {
+                  "x": -3.35,
+                  "y": 7.009682
+                },
+                {
+                  "x": -3.3,
+                  "y": 6.945922
+                },
+                {
+                  "x": -3.25,
+                  "y": 6.881645
+                },
+                {
+                  "x": -3.2,
+                  "y": 6.816835
+                },
+                {
+                  "x": -3.15,
+                  "y": 6.751475
+                },
+                {
+                  "x": -3.1,
+                  "y": 6.685547
+                },
+                {
+                  "x": -3.05,
+                  "y": 6.619034
+                },
+                {
+                  "x": -3.0,
+                  "y": 6.551916
+                },
+                {
+                  "x": -2.95,
+                  "y": 6.484177
+                },
+                {
+                  "x": -2.9,
+                  "y": 6.415796
+                },
+                {
+                  "x": -2.85,
+                  "y": 6.346754
+                },
+                {
+                  "x": -2.8,
+                  "y": 6.277033
+                },
+                {
+                  "x": -2.75,
+                  "y": 6.206613
+                },
+                {
+                  "x": -2.7,
+                  "y": 6.135474
+                },
+                {
+                  "x": -2.65,
+                  "y": 6.063595
+                },
+                {
+                  "x": -2.6,
+                  "y": 5.990957
+                },
+                {
+                  "x": -2.55,
+                  "y": 5.917539
+                },
+                {
+                  "x": -2.5,
+                  "y": 5.84332
+                },
+                {
+                  "x": -2.45,
+                  "y": 5.768281
+                },
+                {
+                  "x": -2.4,
+                  "y": 5.6924
+                },
+                {
+                  "x": -2.35,
+                  "y": 5.615657
+                },
+                {
+                  "x": -2.3,
+                  "y": 5.538033
+                },
+                {
+                  "x": -2.25,
+                  "y": 5.459506
+                },
+                {
+                  "x": -2.2,
+                  "y": 5.380057
+                },
+                {
+                  "x": -2.15,
+                  "y": 5.299666
+                },
+                {
+                  "x": -2.1,
+                  "y": 5.218314
+                },
+                {
+                  "x": -2.05,
+                  "y": 5.135982
+                },
+                {
+                  "x": -2.0,
+                  "y": 5.052653
+                },
+                {
+                  "x": -1.95,
+                  "y": 4.968309
+                },
+                {
+                  "x": -1.9,
+                  "y": 4.882933
+                },
+                {
+                  "x": -1.85,
+                  "y": 4.796511
+                },
+                {
+                  "x": -1.8,
+                  "y": 4.709027
+                },
+                {
+                  "x": -1.75,
+                  "y": 4.620469
+                },
+                {
+                  "x": -1.7,
+                  "y": 4.530825
+                },
+                {
+                  "x": -1.65,
+                  "y": 4.440086
+                },
+                {
+                  "x": -1.6,
+                  "y": 4.348242
+                },
+                {
+                  "x": -1.55,
+                  "y": 4.255287
+                },
+                {
+                  "x": -1.5,
+                  "y": 4.161219
+                },
+                {
+                  "x": -1.45,
+                  "y": 4.066035
+                },
+                {
+                  "x": -1.4,
+                  "y": 3.969738
+                },
+                {
+                  "x": -1.35,
+                  "y": 3.872331
+                },
+                {
+                  "x": -1.3,
+                  "y": 3.773822
+                },
+                {
+                  "x": -1.25,
+                  "y": 3.674224
+                },
+                {
+                  "x": -1.2,
+                  "y": 3.573551
+                },
+                {
+                  "x": -1.15,
+                  "y": 3.471825
+                },
+                {
+                  "x": -1.1,
+                  "y": 3.36907
+                },
+                {
+                  "x": -1.05,
+                  "y": 3.265317
+                },
+                {
+                  "x": -1.0,
+                  "y": 3.160603
+                },
+                {
+                  "x": -0.95,
+                  "y": 3.054969
+                },
+                {
+                  "x": -0.9,
+                  "y": 2.948466
+                },
+                {
+                  "x": -0.85,
+                  "y": 2.84115
+                },
+                {
+                  "x": -0.8,
+                  "y": 2.733087
+                },
+                {
+                  "x": -0.75,
+                  "y": 2.624351
+                },
+                {
+                  "x": -0.7,
+                  "y": 2.515025
+                },
+                {
+                  "x": -0.65,
+                  "y": 2.405203
+                },
+                {
+                  "x": -0.6,
+                  "y": 2.294991
+                },
+                {
+                  "x": -0.55,
+                  "y": 2.184506
+                },
+                {
+                  "x": -0.5,
+                  "y": 2.073877
+                },
+                {
+                  "x": -0.45,
+                  "y": 1.96325
+                },
+                {
+                  "x": -0.4,
+                  "y": 1.852784
+                },
+                {
+                  "x": -0.35,
+                  "y": 1.742654
+                },
+                {
+                  "x": -0.3,
+                  "y": 1.633054
+                },
+                {
+                  "x": -0.25,
+                  "y": 1.524197
+                },
+                {
+                  "x": -0.2,
+                  "y": 1.416315
+                },
+                {
+                  "x": -0.15,
+                  "y": 1.309664
+                },
+                {
+                  "x": -0.1,
+                  "y": 1.20452
+                },
+                {
+                  "x": -0.05,
+                  "y": 1.101189
+                },
+                {
+                  "x": 0.0,
+                  "y": 1.0
+                },
+                {
+                  "x": 0.05,
+                  "y": 0.901314
+                },
+                {
+                  "x": 0.1,
+                  "y": 0.805521
+                },
+                {
+                  "x": 0.15,
+                  "y": 0.713048
+                },
+                {
+                  "x": 0.2,
+                  "y": 0.624353
+                },
+                {
+                  "x": 0.25,
+                  "y": 0.539936
+                },
+                {
+                  "x": 0.3,
+                  "y": 0.460339
+                },
+                {
+                  "x": 0.35,
+                  "y": 0.386145
+                },
+                {
+                  "x": 0.4,
+                  "y": 0.317986
+                },
+                {
+                  "x": 0.45,
+                  "y": 0.256544
+                },
+                {
+                  "x": 0.5,
+                  "y": 0.202557
+                },
+                {
+                  "x": 0.55,
+                  "y": 0.156819
+                },
+                {
+                  "x": 0.6,
+                  "y": 0.120186
+                },
+                {
+                  "x": 0.65,
+                  "y": 0.093581
+                },
+                {
+                  "x": 0.7,
+                  "y": 0.077996
+                },
+                {
+                  "x": 0.75,
+                  "y": 0.0745
+                },
+                {
+                  "x": 0.8,
+                  "y": 0.084243
+                },
+                {
+                  "x": 0.85,
+                  "y": 0.108459
+                },
+                {
+                  "x": 0.9,
+                  "y": 0.148476
+                },
+                {
+                  "x": 0.95,
+                  "y": 0.205719
+                },
+                {
+                  "x": 1.0,
+                  "y": 0.281718
+                },
+                {
+                  "x": 1.05,
+                  "y": 0.378114
+                },
+                {
+                  "x": 1.1,
+                  "y": 0.496667
+                },
+                {
+                  "x": 1.15,
+                  "y": 0.639265
+                },
+                {
+                  "x": 1.2,
+                  "y": 0.80793
+                },
+                {
+                  "x": 1.25,
+                  "y": 1.004829
+                },
+                {
+                  "x": 1.3,
+                  "y": 1.232281
+                },
+                {
+                  "x": 1.35,
+                  "y": 1.492772
+                },
+                {
+                  "x": 1.4,
+                  "y": 1.78896
+                },
+                {
+                  "x": 1.45,
+                  "y": 2.123689
+                },
+                {
+                  "x": 1.5,
+                  "y": 2.5
+                },
+                {
+                  "x": 1.55,
+                  "y": 2.921147
+                },
+                {
+                  "x": 1.6,
+                  "y": 3.390606
+                },
+                {
+                  "x": 1.65,
+                  "y": 3.912094
+                },
+                {
+                  "x": 1.7,
+                  "y": 4.489579
+                },
+                {
+                  "x": 1.75,
+                  "y": 5.127301
+                },
+                {
+                  "x": 1.8,
+                  "y": 5.829788
+                },
+                {
+                  "x": 1.85,
+                  "y": 6.601874
+                },
+                {
+                  "x": 1.9,
+                  "y": 7.448716
+                }
+              ]
+            },
+            {
+              "id": "delta",
+              "label": "\\((\\Delta):y=-x+4\\)",
+              "type": "line",
+              "data": [
+                {
+                  "x": -5,
+                  "y": 9
+                },
+                {
+                  "x": 2.2,
+                  "y": 1.8
+                }
+              ]
+            },
+            {
+              "id": "tangent",
+              "label": "\\((T):y=-x+4-2\\sqrt e\\)",
+              "type": "line",
+              "data": [
+                {
+                  "x": -5,
+                  "y": 5.702557
+                },
+                {
+                  "x": 2.2,
+                  "y": -1.497443
+                }
+              ]
+            }
+          ],
+          "annotations": [
+            {
+              "type": "point",
+              "x": 0.7388350311316079,
+              "y": 0.0741744957289665,
+              "label": "\\((\\alpha,f(\\alpha))\\)"
+            },
+            {
+              "type": "point",
+              "x": 1.5,
+              "y": 2.5,
+              "label": "\\(A(\\frac32,\\frac52)\\)"
+            },
+            {
+              "type": "point",
+              "x": 0.5,
+              "y": 0.2025574585997436,
+              "label": "نقطة تماس \\(T\\)"
+            }
+          ],
+          "caption": "المنحنى له قيمة دنيا قرب 0.1، ومقارب مائل y=-x+4، ومماس مواز له."
+        },
+        "final_answer": "تم إنشاء الرسم داخل `graph_data` ليكون جاهزا للعرض في React.",
+        "verification": "الرسم يوافق التصحيح النموذجي والقيم التقريبية المعطاة.",
+        "common_mistakes": [
+          "نسيان نقطة تقاطع Cf مع Delta عند x=3/2."
+        ],
+        "hints": [
+          "ابدأ بالمستقيمين ثم ضع القيمة الدنيا ونقطة التقاطع."
+        ],
+        "introduction": "الرسم النهائي يجمع جميع النتائج السابقة.",
+        "summary": "Cf مع Delta وT ممثلة داخل graph_data.",
+        "answer_style": "explain_then_construct_then_conclude"
+      }
+    },
+    {
+      "id": "2023_der_ex04_q5c",
+      "display_order": 10,
+      "content_type": "question",
+      "text": "II-3) ج) عين بيانيا قيم الوسيط الحقيقي \\(m\\) التي من أجلها تقبل المعادلة \\[f(x)=-x+m\\] حلين بالضبط.",
+      "solution": {
+        "strategy": "نحوّل المعادلة إلى H(x)=m حيث H(x)=f(x)+x.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "نعرّف الدالة المساعدة",
+            "explanation": "\\[H(x)=f(x)+x=4+(2x-3)e^x\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "القيمة الدنيا لـ H",
+            "explanation": "\\[H'(x)=(2x-1)e^x\\] وتنعدم عند \\(x=\\frac12\\). إذن القيمة الدنيا:\\[H\\left(\\frac12\\right)=4-2\\sqrt e\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "النهاية عند -∞",
+            "explanation": "\\[\\lim_{x\\to-\\infty}H(x)=4\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "شرط وجود حلين",
+            "explanation": "حتى يقطع المستقيم الأفقي \\(y=m\\) منحنى \\(H\\) في نقطتين مختلفتين، يجب أن يكون مستوى m بين القيمة الدنيا 4-2√e والنهاية 4.",
+            "result": "\\[4-2\\sqrt e<m<4\\]"
+          }
+        ],
+        "final_answer": "\\[\\boxed{4-2\\sqrt e<m<4}\\]",
+        "verification": "مطابق للتصحيح النموذجي في الصفحة الأخيرة.",
+        "common_mistakes": [
+          "إدخال الطرفين، حيث لا نحصل على حلين مختلفين."
+        ],
+        "hints": [
+          "حوّل f(x)=-x+m إلى f(x)+x=m."
+        ],
+        "introduction": "هذه مناقشة بيانية لمستقيمات موازية لـ Delta.",
+        "summary": "حلان بالضبط عندما 4-2√e < m < 4.",
+        "answer_style": "explain_then_discuss_then_conclude"
+      }
+    }
+  ],
+  "source_reference": {
+    "file": "2023(3).pdf",
+    "statement_pages": [
+      4
+    ],
+    "solution_pages": [
+      9,
+      10
+    ],
+    "source_faithful_statement": true,
+    "statement_transcription": "تم نقل نص التمرين الظاهر في الصورة والصفحة الأصلية مع تحويل الصيغ الرياضية فقط إلى LaTeX.",
+    "solution_reviewed_against_source": true
+  },
+  "display": {
+    "layout": "question_by_question",
+    "show_statement_first": true,
+    "show_statement_figures": true,
+    "show_solution_after_click": true,
+    "show_solution_figures": true
+  },
+  "review_status": {
+    "statement_compared_with_original_pdf": true,
+    "questions_compared_with_original_pdf": true,
+    "source_figures_checked": true,
+    "solution_checked_against_correction": true,
+    "latex_normalized_only": true,
+    "react_ready": true
+  },
+  "given_data": {
+    "g": "-1+(2x-1)e^x",
+    "f": "-x+4+(2x-3)e^x",
+    "alpha_interval": "0.7<alpha<0.8",
+    "alpha_approx": 0.73883503,
+    "f_alpha_approx": 0.074174,
+    "asymptote": "y=-x+4",
+    "intersection_with_asymptote": "(3/2,5/2)",
+    "parallel_tangent": "y=-x+4-2sqrt(e)",
+    "parallel_tangent_x": "1/2",
+    "parameter_two_roots": "4-2sqrt(e)<m<4"
+  },
+  "solution_pedagogy": {
+    "style": "guided_step_by_step",
+    "audience": "3AS_bac_student",
+    "principles": [
+      "الحل مقسم إلى خطوات قصيرة وبسيطة.",
+      "تم تحويل جدول تغيرات g الموجود في نص التمرين إلى variation_table داخل figures.",
+      "تم إنشاء جدول إشارة g وجدول تغيرات f.",
+      "تم إنشاء الرسم النهائي Cf وDelta وT داخل graph_data.",
+      "المناقشة البيانية حسب m مفصلة بطريقة بسيطة.",
+      "تمت مراجعة الحل مع التصحيح النموذجي في الصفحتين 9 و10."
+    ]
+  }
+}

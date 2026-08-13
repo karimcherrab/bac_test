@@ -101,7 +101,7 @@ class StudentSerializer(
         )
 
         student = Student(
-            is_active=False,
+            is_active=True,
             **validated_data,
         )
 
@@ -184,15 +184,15 @@ class LoginStudentSerializer(
                 }
             )
 
-        if not student.is_active:
-            raise serializers.ValidationError(
-                {
-                    "email": (
-                        "Votre adresse email n'est pas encore vérifiée."
-                    ),
-                    "code": "email_not_verified",
-                }
-            )
+        # if not student.is_active:
+        #     raise serializers.ValidationError(
+        #         {
+        #             "email": (
+        #                 "Votre adresse email n'est pas encore vérifiée."
+        #             ),
+        #             "code": "email_not_verified",
+        #         }
+        #     )
 
         attrs["student"] = student
 

@@ -1,0 +1,324 @@
+{
+  "version": 6,
+  "language": "ar",
+  "direction": "rtl",
+  "subject_code": "math",
+  "chapter_code": "exponential_logarithmic_functions",
+  "tag": "exp_definition_properties",
+  "title": "تمارين محور تعريف الدالة الأسية وخصائصها الجبرية",
+  "question_count": 12,
+  "questions": [
+    {
+      "id": "exp_definition_properties_01",
+      "number": 1,
+      "title": "التعرف على الكتابة الأسية",
+      "text": "من بين العبارات الآتية حدد التي تمثل كتابة أسية، ثم احسب القيم الثابتة منها: \\(e^x\\)، \\(e^0\\)، \\(e^2\\)، \\(ex\\)، \\(e^{-3}\\).",
+      "skill": "فهم معنى الكتابة الأسية والتمييز بينها وبين الضرب.",
+      "difficulty": "easy",
+      "solution": {
+        "steps": [
+          {
+            "order": 1,
+            "title": "تمييز الكتابة",
+            "explanation": "في الكتابة الأسية يكون المتغير أو العدد موجودًا في الأس.",
+            "result": "\\(e^x\\)، \\(e^0\\)، \\(e^2\\)، \\(e^{-3}\\) كتابات أسية، أما \\(ex\\) فهو جداء."
+          },
+          {
+            "order": 2,
+            "title": "حساب القيم المعروفة",
+            "calculation": "\\(e^0=1\\)",
+            "result": "\\(e^2\\) و\\(e^{-3}\\) نتركهما على الشكل الأسي ما لم يطلب تقريب عددي."
+          }
+        ],
+        "final_answer": "الكتابات الأسية هي \\(e^x,e^0,e^2,e^{-3}\\)، و\\(e^0=1\\)."
+      }
+    },
+    {
+      "id": "exp_definition_properties_02",
+      "number": 2,
+      "title": "مجال تعريف دوال أسية",
+      "text": "عين مجموعة تعريف كل دالة: \\(f(x)=e^{x-1}\\)، \\(g(x)=e^{1/x}\\)، \\(h(x)=e^{\\sqrt{x}}\\)، \\(k(x)=\\dfrac{1}{xe^x}\\).",
+      "skill": "تحديد مجال تعريف دالة تحتوي على أسية.",
+      "difficulty": "easy",
+      "solution": {
+        "steps": [
+          {
+            "order": 1,
+            "title": "\\(f\\)",
+            "explanation": "الأس \\(x-1\\) معرف لكل عدد حقيقي.",
+            "result": "\\(D_f=\\mathbb{R}\\)."
+          },
+          {
+            "order": 2,
+            "title": "\\(g\\)",
+            "explanation": "يجب أن يكون \\(x\\neq0\\).",
+            "result": "\\(D_g=\\mathbb{R}\\setminus\\{0\\}\\)."
+          },
+          {
+            "order": 3,
+            "title": "\\(h\\)",
+            "explanation": "وجود \\(\\sqrt{x}\\) يفرض \\(x\\ge0\\).",
+            "result": "\\(D_h=[0,+\\infty[\\)."
+          },
+          {
+            "order": 4,
+            "title": "\\(k\\)",
+            "explanation": "لدينا \\(e^x>0\\)، لذلك المقام ينعدم فقط عند \\(x=0\\).",
+            "result": "\\(D_k=\\mathbb{R}\\setminus\\{0\\}\\)."
+          }
+        ],
+        "final_answer": "\\(D_f=\\mathbb{R}\\)، \\(D_g=\\mathbb{R}\\setminus\\{0\\}\\)، \\(D_h=[0,+\\infty[\\)، \\(D_k=\\mathbb{R}\\setminus\\{0\\}\\)."
+      }
+    },
+    {
+      "id": "exp_definition_properties_03",
+      "number": 3,
+      "title": "إشارة تعابير أسية",
+      "text": "حدد إشارة كل تعبير دون حساب قيمة تقريبية: \\(e^{2x-5}\\)، \\(-e^{x+1}\\)، \\(3e^{-x}\\)، \\(e^x+2\\).",
+      "skill": "استعمال الخاصية \\(e^u>0\\).",
+      "difficulty": "easy",
+      "solution": {
+        "steps": [
+          {
+            "order": 1,
+            "explanation": "كل تعبير من الشكل \\(e^u\\) موجب مهما كانت قيمة \\(u\\).",
+            "result": "\\(e^{2x-5}>0\\) و\\(3e^{-x}>0\\)."
+          },
+          {
+            "order": 2,
+            "explanation": "ضرب كمية موجبة في \\(-1\\) يجعلها سالبة.",
+            "result": "\\(-e^{x+1}<0\\)."
+          },
+          {
+            "order": 3,
+            "explanation": "مجموع عدد موجب و2 موجب.",
+            "result": "\\(e^x+2>0\\)."
+          }
+        ],
+        "final_answer": "الأول موجب، الثاني سالب، الثالث موجب، والرابع موجب لكل \\(x\\in\\mathbb{R}\\)."
+      }
+    },
+    {
+      "id": "exp_definition_properties_04",
+      "number": 4,
+      "title": "الأس السالب",
+      "text": "اكتب دون أس سالب: \\(e^{-x}\\)، \\(e^{-3x}\\)، \\(2e^{-x+1}\\).",
+      "skill": "تحويل الأس السالب إلى مقلوب.",
+      "difficulty": "easy",
+      "solution": {
+        "steps": [
+          {
+            "order": 1,
+            "calculation": "\\(e^{-x}=\\dfrac{1}{e^x}\\)"
+          },
+          {
+            "order": 2,
+            "calculation": "\\(e^{-3x}=\\dfrac{1}{e^{3x}}\\)"
+          },
+          {
+            "order": 3,
+            "calculation": "\\(2e^{-x+1}=2e^{1-x}=\\dfrac{2e}{e^x}\\)"
+          }
+        ],
+        "final_answer": "\\(\\dfrac1{e^x}\\)، \\(\\dfrac1{e^{3x}}\\)، \\(\\dfrac{2e}{e^x}\\)."
+      }
+    },
+    {
+      "id": "exp_definition_properties_05",
+      "number": 5,
+      "title": "الجمع والطرح داخل الأس",
+      "text": "حوّل إلى جداء أو خارج: \\(e^{x+4}\\)، \\(e^{2x-3}\\)، \\(e^{a+b}\\)، \\(e^{a-b}\\).",
+      "skill": "استعمال خاصيتي مجموع وفرق الأسس.",
+      "difficulty": "easy",
+      "solution": {
+        "steps": [
+          {
+            "order": 1,
+            "explanation": "الجمع داخل الأس يتحول إلى ضرب.",
+            "calculation": "\\(e^{x+4}=e^xe^4\\), \\quad e^{a+b}=e^ae^b"
+          },
+          {
+            "order": 2,
+            "explanation": "الطرح داخل الأس يتحول إلى قسمة.",
+            "calculation": "\\(e^{2x-3}=\\dfrac{e^{2x}}{e^3}\\), \\quad e^{a-b}=\\dfrac{e^a}{e^b}"
+          }
+        ],
+        "final_answer": "\\(e^xe^4\\)، \\(\\dfrac{e^{2x}}{e^3}\\)، \\(e^ae^b\\)، \\(\\dfrac{e^a}{e^b}\\)."
+      }
+    },
+    {
+      "id": "exp_definition_properties_06",
+      "number": 6,
+      "title": "الأس المضاعف",
+      "text": "حوّل إلى قوة لـ \\(e^x\\): \\(e^{2x}\\)، \\(e^{3x}\\)، \\(e^{-2x}\\)، \\(e^{5x}\\).",
+      "skill": "استعمال الخاصية \\(e^{nx}=(e^x)^n\\).",
+      "difficulty": "easy",
+      "solution": {
+        "steps": [
+          {
+            "order": 1,
+            "calculation": "\\(e^{2x}=(e^x)^2\\), \\quad e^{3x}=(e^x)^3"
+          },
+          {
+            "order": 2,
+            "calculation": "\\(e^{-2x}=\\dfrac{1}{(e^x)^2}\\), \\quad e^{5x}=(e^x)^5"
+          }
+        ],
+        "final_answer": "\\((e^x)^2\\)، \\((e^x)^3\\)، \\(\\dfrac1{(e^x)^2}\\)، \\((e^x)^5\\)."
+      }
+    },
+    {
+      "id": "exp_definition_properties_07",
+      "number": 7,
+      "title": "تبسيط جداء أسّي",
+      "text": "بسّط: \\(A=e^{2x}e^{3x}\\)، \\(B=e^{x-1}e^{2-x}\\)، \\(C=(e^x)^3e^{-5x}\\).",
+      "skill": "جمع الأسس عند ضرب تعابير أسية.",
+      "difficulty": "easy",
+      "solution": {
+        "steps": [
+          {
+            "order": 1,
+            "calculation": "\\(A=e^{2x+3x}=e^{5x}\\)"
+          },
+          {
+            "order": 2,
+            "calculation": "\\(B=e^{x-1+2-x}=e\\)"
+          },
+          {
+            "order": 3,
+            "calculation": "\\(C=e^{3x}e^{-5x}=e^{-2x}\\)"
+          }
+        ],
+        "final_answer": "\\(A=e^{5x}\\)، \\(B=e\\)، \\(C=e^{-2x}\\)."
+      }
+    },
+    {
+      "id": "exp_definition_properties_08",
+      "number": 8,
+      "title": "تبسيط خارج أسّي",
+      "text": "بسّط: \\(A=\\dfrac{e^{5x}}{e^{2x}}\\)، \\(B=\\dfrac{e^{2x+3}}{e^{-x}}\\)، \\(C=\\dfrac{e^{x-2}}{e^{x+1}}\\).",
+      "skill": "طرح الأسس عند قسمة تعابير أسية.",
+      "difficulty": "easy",
+      "solution": {
+        "steps": [
+          {
+            "order": 1,
+            "calculation": "\\(A=e^{5x-2x}=e^{3x}\\)"
+          },
+          {
+            "order": 2,
+            "calculation": "\\(B=e^{2x+3-(-x)}=e^{3x+3}\\)"
+          },
+          {
+            "order": 3,
+            "calculation": "\\(C=e^{x-2-(x+1)}=e^{-3}=\\dfrac1{e^3}\\)"
+          }
+        ],
+        "final_answer": "\\(A=e^{3x}\\)، \\(B=e^{3x+3}\\)، \\(C=e^{-3}=\\dfrac1{e^3}\\)."
+      }
+    },
+    {
+      "id": "exp_definition_properties_09",
+      "number": 9,
+      "title": "تبسيط تعبيرات مختلطة",
+      "text": "بسّط قدر الإمكان: \\(A=\\dfrac{e^{2x}e^{-x}}{e^3}\\)، \\(B=\\dfrac{(e^x)^2}{e^{x-1}}\\)، \\(C=e^{-x}e^{x+2}\\).",
+      "skill": "اختيار أكثر من خاصية أسية في التعبير نفسه.",
+      "difficulty": "medium",
+      "solution": {
+        "steps": [
+          {
+            "order": 1,
+            "calculation": "\\(A=e^{2x-x-3}=e^{x-3}\\)"
+          },
+          {
+            "order": 2,
+            "calculation": "\\(B=e^{2x-(x-1)}=e^{x+1}\\)"
+          },
+          {
+            "order": 3,
+            "calculation": "\\(C=e^{-x+x+2}=e^2\\)"
+          }
+        ],
+        "final_answer": "\\(A=e^{x-3}\\)، \\(B=e^{x+1}\\)، \\(C=e^2\\)."
+      }
+    },
+    {
+      "id": "exp_definition_properties_10",
+      "number": 10,
+      "title": "إثبات متطابقات أسية",
+      "text": "أثبت من أجل كل \\(x\\in\\mathbb{R}\\): \\(\\dfrac{1-e^{-2x}}{1+e^{-2x}}=\\dfrac{e^{2x}-1}{e^{2x}+1}\\).",
+      "skill": "إزالة الأسس السالبة وإثبات متطابقة.",
+      "difficulty": "medium",
+      "solution": {
+        "steps": [
+          {
+            "order": 1,
+            "explanation": "نضرب البسط والمقام في \\(e^{2x}\\)، وهو موجب وغير منعدم.",
+            "calculation": "\\(\\dfrac{(1-e^{-2x})e^{2x}}{(1+e^{-2x})e^{2x}}\\)"
+          },
+          {
+            "order": 2,
+            "calculation": "\\(\\dfrac{e^{2x}-1}{e^{2x}+1}\\)"
+          }
+        ],
+        "final_answer": "إذن المتطابقة صحيحة لكل \\(x\\in\\mathbb{R}\\)."
+      }
+    },
+    {
+      "id": "exp_definition_properties_11",
+      "number": 11,
+      "title": "استخراج عامل أسي",
+      "text": "حلّل إلى جداء: \\(A=e^{2x}+e^x\\)، \\(B=e^{3x}-e^{2x}\\)، \\(C=e^{x+2}+e^{x-1}\\).",
+      "skill": "استخراج عامل مشترك أسي.",
+      "difficulty": "medium",
+      "solution": {
+        "steps": [
+          {
+            "order": 1,
+            "calculation": "\\(A=e^x(e^x+1)\\)"
+          },
+          {
+            "order": 2,
+            "calculation": "\\(B=e^{2x}(e^x-1)\\)"
+          },
+          {
+            "order": 3,
+            "calculation": "\\(C=e^{x-1}(e^3+1)\\)"
+          }
+        ],
+        "final_answer": "\\(A=e^x(e^x+1)\\)، \\(B=e^{2x}(e^x-1)\\)، \\(C=e^{x-1}(e^3+1)\\)."
+      }
+    },
+    {
+      "id": "exp_definition_properties_12",
+      "number": 12,
+      "title": "تمرين شامل في خواص الأسية",
+      "text": "لتكن \\(A(x)=\\dfrac{e^{2x+1}e^{-x}}{e^{x-2}}\\). 1) بسط \\(A(x)\\). 2) استنتج إشارتها. 3) هل تعتمد النتيجة النهائية على \\(x\\)؟",
+      "skill": "تجميع خواص الضرب والقسمة والإشارة في تمرين واحد.",
+      "difficulty": "medium",
+      "solution": {
+        "steps": [
+          {
+            "order": 1,
+            "title": "التبسيط",
+            "calculation": "\\(A(x)=e^{2x+1-x-(x-2)}=e^3\\)",
+            "result": "\\(A(x)=e^3\\)."
+          },
+          {
+            "order": 2,
+            "title": "الإشارة",
+            "explanation": "كل قيمة أسية موجبة.",
+            "result": "\\(A(x)>0\\)."
+          },
+          {
+            "order": 3,
+            "title": "الاستنتاج",
+            "explanation": "اختفى المتغير \\(x\\) بعد التبسيط.",
+            "result": "التعبير ثابت ولا يعتمد على \\(x\\)."
+          }
+        ],
+        "final_answer": "\\(\\boxed{A(x)=e^3>0}\\) لكل \\(x\\in\\mathbb{R}\\)، والتعبير ثابت."
+      }
+    }
+  ]
+}

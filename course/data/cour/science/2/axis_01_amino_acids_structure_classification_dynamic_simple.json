@@ -1,0 +1,398 @@
+{
+  "tag": "amino_acids_structure_and_classification",
+  "title": "الأحماض الأمينية: البنية والتصنيف",
+  "order": 1,
+  "is_active": true,
+  "branches": [
+    "science",
+    "math"
+  ],
+  "content": {
+    "language": "ar",
+    "direction": "rtl",
+    "chapter_code": "protein_structure_function",
+    "chapter_title": "العلاقة بين بنية البروتين ووظيفته",
+    "axis_tag": "amino_acids_structure_and_classification",
+    "estimated_minutes": 12,
+    "difficulty": "easy",
+    "lesson_goal": "أن يرى التلميذ الحمض الأميني أمامه كتركيب بسيط: جزء ثابت + جذر R متغير، ثم يستعمل R وحده لتصنيف الحمض الأميني.",
+    "prerequisites": [
+      "معرفة أن البروتينات جزيئات حيوية مهمة في الخلية.",
+      "معرفة أن البروتين يتكون من وحدات بنائية تسمى الأحماض الأمينية."
+    ],
+    "learning_outcomes": [
+      "يتعرف بصريا على البنية العامة للحمض الأميني.",
+      "يميز مباشرة بين الجزء الثابت والجذر R المتغير.",
+      "يفهم لماذا تختلف الأحماض الأمينية رغم تشابه بنيتها العامة.",
+      "يصنف حمضا أمينيا إلى حمضي أو قاعدي أو متعادل بالنظر إلى R.",
+      "يطبق القاعدة على سؤال قصير من نمط البكالوريا."
+    ],
+    "learning_path": [
+      {
+        "id": "step_1",
+        "type": "problem",
+        "component": "DiscoveryQuestion",
+        "title": "كل البروتينات مبنية من نفس الوحدات... فكيف تختلف؟",
+        "content": {
+          "question": "الأحماض الأمينية تشبه بعضها في الشكل العام، لكننا نملك أنواعا مختلفة منها. أين يوجد الاختلاف؟",
+          "teacher": "بدل أن نحفظ الأسماء، سنبني حمضا أمينيا أمامك قطعةً قطعة، ثم ستكتشف بنفسك الجزء الذي يتغير.",
+          "action": {
+            "label": "ابنِ الحمض الأميني",
+            "next_step": "step_2"
+          }
+        }
+      },
+      {
+        "id": "step_2",
+        "type": "scientific_animation",
+        "component": "ScientificAnimation",
+        "title": "ابنِ الحمض الأميني خطوة بخطوة",
+        "content": {
+          "scene": "amino_acid",
+          "title": "من أربع قطع فقط",
+          "instruction": "اضغط تشغيل وشاهد المجموعات تظهر واحدة بعد الأخرى حول الكربون المركزي.",
+          "frames": [
+            {
+              "title": "1. نبدأ بالكربون المركزي",
+              "description": "في الوسط توجد ذرة كربون α. سنربط بها أربع مجموعات.",
+              "highlight": [
+                "central"
+              ]
+            },
+            {
+              "title": "2. نضيف المجموعة الأمينية",
+              "description": "NH₂ جزء ثابت يوجد في البنية العامة للحمض الأميني.",
+              "highlight": [
+                "central",
+                "amino"
+              ]
+            },
+            {
+              "title": "3. نضيف المجموعة الكربوكسيلية",
+              "description": "COOH جزء ثابت أيضا.",
+              "highlight": [
+                "central",
+                "amino",
+                "carboxyl"
+              ]
+            },
+            {
+              "title": "4. نضيف ذرة H",
+              "description": "ترتبط ذرة هيدروجين بالكربون المركزي.",
+              "highlight": [
+                "central",
+                "amino",
+                "carboxyl",
+                "hydrogen"
+              ]
+            },
+            {
+              "title": "5. تبقى القطعة المهمة: R",
+              "description": "R هي الجذر الجانبي. هذه هي القطعة التي تتغير من حمض أميني إلى آخر.",
+              "highlight": [
+                "central",
+                "amino",
+                "carboxyl",
+                "hydrogen",
+                "root"
+              ],
+              "root_value": "R"
+            }
+          ],
+          "takeaway": "احفظ الفكرة فقط: NH₂ وCOOH وH حول الكربون المركزي ثابتة، أما R فهي المتغيرة."
+        }
+      },
+      {
+        "id": "step_3",
+        "type": "interactive_diagram",
+        "component": "InteractiveDiagram",
+        "title": "اضغط على أجزاء الحمض الأميني",
+        "content": {
+          "scene": "amino_acid",
+          "title": "ما الثابت؟ وما المتغير؟",
+          "instruction": "اضغط على كل جزء لترى وظيفته. لا تحفظ الرسم دفعة واحدة.",
+          "diagram": {
+            "hotspots": [
+              {
+                "id": "amino",
+                "label": "NH₂",
+                "description": "المجموعة الأمينية: جزء ثابت في البنية العامة، ولها طبيعة قاعدية."
+              },
+              {
+                "id": "central",
+                "label": "الكربون α",
+                "description": "الكربون المركزي الذي ترتبط به المجموعات الأربع."
+              },
+              {
+                "id": "carboxyl",
+                "label": "COOH",
+                "description": "المجموعة الكربوكسيلية: جزء ثابت في البنية العامة، ولها طبيعة حمضية."
+              },
+              {
+                "id": "hydrogen",
+                "label": "H",
+                "description": "ذرة هيدروجين مرتبطة بالكربون المركزي."
+              },
+              {
+                "id": "root",
+                "label": "R",
+                "description": "الجذر الجانبي المتغير. اختلاف R هو المفتاح لاختلاف الأحماض الأمينية وتصنيفها."
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "step_4",
+        "type": "scientific_animation",
+        "component": "ScientificAnimation",
+        "title": "غيّر R وشاهد نوع الحمض الأميني يتغير",
+        "content": {
+          "scene": "amino_acid",
+          "title": "نفس الهيكل... R مختلفة",
+          "instruction": "لاحظ أن NH₂ وCOOH لا تتغيران. سنبدّل R فقط.",
+          "frames": [
+            {
+              "title": "Alanine",
+              "description": "R = CH₃. لا توجد في R مجموعة حمضية أو قاعدية إضافية → متعادل.",
+              "highlight": [
+                "root"
+              ],
+              "root_value": "CH₃",
+              "root_kind": "neutral",
+              "badge": "متعادل"
+            },
+            {
+              "title": "Asp",
+              "description": "R = CH₂–COOH. توجد COOH إضافية داخل R → حمضي.",
+              "highlight": [
+                "root"
+              ],
+              "root_value": "CH₂–COOH",
+              "root_kind": "acidic",
+              "badge": "حمضي"
+            },
+            {
+              "title": "Lys",
+              "description": "R = (CH₂)₄–NH₂. توجد مجموعة قاعدية إضافية داخل R → قاعدي.",
+              "highlight": [
+                "root"
+              ],
+              "root_value": "(CH₂)₄–NH₂",
+              "root_kind": "basic",
+              "badge": "قاعدي"
+            }
+          ],
+          "takeaway": "نفس البنية العامة، لكن تغيير R يغير نوع الحمض الأميني. إذن التصنيف يبدأ دائما من R."
+        }
+      },
+      {
+        "id": "step_5",
+        "type": "comparison",
+        "component": "VisualComparison",
+        "title": "قاعدة التصنيف في 10 ثوانٍ",
+        "content": {
+          "columns": [
+            {
+              "title": "حمضي",
+              "items": [
+                "في R توجد وظيفة حمضية إضافية مثل COOH.",
+                "مثالان مهمان: Asp وGlu."
+              ]
+            },
+            {
+              "title": "قاعدي",
+              "items": [
+                "في R توجد وظيفة قاعدية إضافية.",
+                "أمثلة: Lys وArg وHis."
+              ]
+            },
+            {
+              "title": "متعادل",
+              "items": [
+                "في R لا توجد وظيفة حمضية أو قاعدية إضافية.",
+                "مثال بسيط: Alanine حيث R = CH₃."
+              ]
+            }
+          ],
+          "final_question": "لا تنظر إلى COOH وNH₂ الموجودتين في الهيكل العام؛ ابحث فقط عما أضيف داخل R."
+        }
+      },
+      {
+        "id": "step_6",
+        "type": "quick_check",
+        "component": "QuickCheck",
+        "title": "هل فهمت R؟",
+        "content": {
+          "questions": [
+            {
+              "id": "qc1",
+              "question": "أي جزء يتغير من حمض أميني إلى آخر؟",
+              "choices": [
+                "R",
+                "NH₂",
+                "COOH"
+              ],
+              "correct_answer": "R",
+              "explanation": "R هي الجذر المتغير، بينما NH₂ وCOOH من البنية العامة."
+            },
+            {
+              "id": "qc2",
+              "question": "إذا كان R = CH₂–COOH، فما التصنيف؟",
+              "choices": [
+                "حمضي",
+                "قاعدي",
+                "متعادل"
+              ],
+              "correct_answer": "حمضي",
+              "explanation": "داخل R توجد مجموعة COOH إضافية، لذلك هو حمضي."
+            },
+            {
+              "id": "qc3",
+              "question": "إذا كان R = (CH₂)₄–NH₂، فما التصنيف؟",
+              "choices": [
+                "قاعدي",
+                "حمضي",
+                "متعادل"
+              ],
+              "correct_answer": "قاعدي",
+              "explanation": "داخل R توجد مجموعة أمينية إضافية ذات طبيعة قاعدية."
+            }
+          ]
+        }
+      },
+      {
+        "id": "step_7",
+        "type": "bac_method",
+        "component": "BacMethodCard",
+        "title": "طريقة البكالوريا: لا تحلل الصيغة كلها",
+        "content": {
+          "skill": "تصنيف حمض أميني انطلاقا من الصيغة",
+          "method": [
+            {
+              "label": "1. ضع دائرة على R",
+              "text": "افصل الجذر عن NH₂ وCOOH الموجودتين في الهيكل العام."
+            },
+            {
+              "label": "2. افحص R فقط",
+              "text": "COOH إضافية → حمضي. وظيفة قاعدية إضافية → قاعدي."
+            },
+            {
+              "label": "3. لا توجد أي منهما؟",
+              "text": "صنّفه متعادلا."
+            }
+          ],
+          "bac_sentence": "يصنف الحمض الأميني حسب طبيعة الجذر R؛ فإذا حمل R وظيفة حمضية إضافية كان حمضيا، وإذا حمل وظيفة قاعدية إضافية كان قاعديا، وإلا كان متعادلا.",
+          "common_mistake": "وجود COOH في الصيغة العامة لا يعني أن كل حمض أميني حمضي، ووجود NH₂ لا يعني أن كل حمض أميني قاعدي. ابحث عن المجموعة الإضافية داخل R."
+        }
+      },
+      {
+        "id": "step_8",
+        "type": "bac_application",
+        "component": "BacApplication",
+        "title": "تطبيق سريع من نمط البكالوريا",
+        "content": {
+          "document": {
+            "statement": "لدينا: A: R = CH₃ ، B: R = CH₂–COOH ، C: R = (CH₂)₄–NH₂."
+          },
+          "questions": [
+            {
+              "id": "b1",
+              "question": "صنف B مع التعليل.",
+              "expected_answer": "B حمضي لأن الجذر R يحتوي على COOH إضافية."
+            },
+            {
+              "id": "b2",
+              "question": "صنف C مع التعليل.",
+              "expected_answer": "C قاعدي لأن الجذر R يحتوي على مجموعة أمينية إضافية."
+            },
+            {
+              "id": "b3",
+              "question": "صنف A مع التعليل.",
+              "expected_answer": "A متعادل لأن R = CH₃ لا يحتوي وظيفة حمضية أو قاعدية إضافية."
+            }
+          ]
+        }
+      },
+      {
+        "id": "step_9",
+        "type": "final_visual_map",
+        "component": "InteractiveSummaryMap",
+        "title": "الخلاصة التي يجب أن تبقى في رأسك",
+        "content": {
+          "map": [
+            {
+              "node": "حمض أميني",
+              "relation": "بنيته العامة",
+              "target": "NH₂–Cα(H)(R)–COOH"
+            },
+            {
+              "node": "NH₂ وCOOH",
+              "relation": "هما",
+              "target": "جزء ثابت"
+            },
+            {
+              "node": "R",
+              "relation": "هي",
+              "target": "الجزء المتغير"
+            },
+            {
+              "node": "طبيعة R",
+              "relation": "تحدد",
+              "target": "حمضي / قاعدي / متعادل"
+            }
+          ],
+          "memory_tip": "سؤال واحد يكفي: ماذا يوجد داخل R؟",
+          "next_axis_bridge": {
+            "question": "عرفنا نوع الحمض الأميني من R. فكيف تتغير شحنته عندما يتغير pH الوسط؟",
+            "next_concept": "الخاصية الأمفوتيرية و pHi"
+          }
+        }
+      },
+      {
+        "id": "step_10",
+        "type": "quiz",
+        "component": "FinalQuiz",
+        "title": "اختبار صغير قبل الانتقال",
+        "content": {
+          "questions": [
+            {
+              "id": "q1",
+              "question": "ما الجزء المتغير في الحمض الأميني؟",
+              "choices": [
+                "R",
+                "NH₂",
+                "COOH"
+              ],
+              "correct_answer": "R",
+              "explanation": "R هي السلسلة الجانبية التي تختلف من حمض أميني لآخر."
+            },
+            {
+              "id": "q2",
+              "question": "Asp وGlu ينتميان إلى أي صنف؟",
+              "choices": [
+                "حمضي",
+                "قاعدي",
+                "متعادل"
+              ],
+              "correct_answer": "حمضي",
+              "explanation": "يحمل جذرهما وظيفة كربوكسيلية حمضية إضافية."
+            },
+            {
+              "id": "q3",
+              "question": "Lys وArg وHis ينتمون إلى أي صنف؟",
+              "choices": [
+                "قاعدي",
+                "حمضي",
+                "متعادل"
+              ],
+              "correct_answer": "قاعدي",
+              "explanation": "جذورهم تحمل وظائف ذات طبيعة قاعدية."
+            }
+          ],
+          "mastery_threshold": 3
+        }
+      }
+    ]
+  }
+}

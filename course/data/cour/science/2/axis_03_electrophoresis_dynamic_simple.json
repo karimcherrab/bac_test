@@ -1,0 +1,379 @@
+{
+  "tag": "amino_acids_electrophoresis",
+  "title": "الهجرة الكهربائية للأحماض الأمينية والبروتينات",
+  "order": 3,
+  "is_active": true,
+  "branches": [
+    "science",
+    "math"
+  ],
+  "content": {
+    "language": "ar",
+    "direction": "rtl",
+    "chapter_code": "protein_structure_function",
+    "chapter_title": "العلاقة بين بنية البروتين ووظيفته",
+    "axis_tag": "amino_acids_electrophoresis",
+    "estimated_minutes": 15,
+    "difficulty": "easy",
+    "lesson_goal": "أن يشاهد التلميذ كيف تتحرك الأحماض الأمينية داخل مجال كهربائي، ثم يربط الاتجاه مباشرة بالشحنة وبالعلاقة بين pH وpHi.",
+    "prerequisites": [
+      "معرفة قاعدة pH وpHi.",
+      "معرفة أن الشحنات المختلفة تتجاذب."
+    ],
+    "learning_outcomes": [
+      "يفهم فكرة الهجرة الكهربائية بصريا.",
+      "يربط الشحنة الموجبة بالقطب السالب والشحنة السالبة بالقطب الموجب.",
+      "يفهم لماذا تبقى الجزيئات المتعادلة قرب نقطة الانطلاق.",
+      "يحدد اتجاه الهجرة انطلاقا من pH وpHi.",
+      "يفسر موضع البقع في تمارين البكالوريا."
+    ],
+    "learning_path": [
+      {
+        "id": "step_1",
+        "type": "problem",
+        "component": "DiscoveryQuestion",
+        "title": "ثلاثة أحماض أمينية في نفس المكان... كيف نفصلها؟",
+        "content": {
+          "question": "لدينا ثلاثة أحماض أمينية مختلطة. أحدها موجب، والثاني سالب، والثالث متعادل. كيف يمكن أن نجعل كل واحد منها يذهب إلى جهة مختلفة؟",
+          "teacher": "سنضعها بين قطبين كهربائيين ونشاهد ماذا يحدث بدل أن نحفظ اتجاهات الحركة.",
+          "action": {
+            "label": "شغّل المجال الكهربائي",
+            "next_step": "step_2"
+          }
+        }
+      },
+      {
+        "id": "step_2",
+        "type": "scientific_animation",
+        "component": "ScientificAnimation",
+        "title": "شاهد الهجرة أمامك",
+        "content": {
+          "scene": "electrophoresis",
+          "title": "الموجب والسالب لا يتحركان في نفس الاتجاه",
+          "instruction": "شغّل المشهد. تابع البقعة الزرقاء والمحمّرة والخضراء من نقطة الانطلاق.",
+          "frames": [
+            {
+              "title": "البداية",
+              "description": "الأحماض الأمينية الثلاثة تبدأ من نفس الموضع قبل تطبيق المجال الكهربائي.",
+              "positive_x": 50,
+              "neutral_x": 50,
+              "negative_x": 50,
+              "show_field": false,
+              "badge": "قبل تشغيل المجال"
+            },
+            {
+              "title": "تشغيل المجال",
+              "description": "القطب الموجب (+) في اليسار، والقطب السالب (−) في اليمين. تبدأ الشحنات بالانجذاب نحو القطب المعاكس.",
+              "positive_x": 58,
+              "neutral_x": 50,
+              "negative_x": 42,
+              "show_field": true,
+              "badge": "بدأت الهجرة"
+            },
+            {
+              "title": "بعد مدة",
+              "description": "الموجب اتجه نحو القطب السالب، والسالب نحو القطب الموجب، أما المتعادل فبقي قرب موضع الانطلاق.",
+              "positive_x": 78,
+              "neutral_x": 50,
+              "negative_x": 22,
+              "show_field": true,
+              "badge": "تم الفصل"
+            }
+          ],
+          "takeaway": "حدد الشحنة أولا، ثم اختر القطب المعاكس."
+        }
+      },
+      {
+        "id": "step_3",
+        "type": "key_rule",
+        "component": "KeyRuleCard",
+        "title": "القاعدة في سطر واحد",
+        "content": {
+          "rule": "موجب → نحو القطب السالب (−)، سالب → نحو القطب الموجب (+)، محصلة الشحنة = 0 → لا هجرة واضحة.",
+          "do_not_confuse": [
+            "الحمض الأميني لا يذهب إلى قطب يحمل نفس شحنته.",
+            "عدم الحركة لا يعني أن الحمض الأميني غير موجود."
+          ]
+        }
+      },
+      {
+        "id": "step_4",
+        "type": "scientific_animation",
+        "component": "ScientificAnimation",
+        "title": "اربط pH بالهجرة",
+        "content": {
+          "scene": "electrophoresis_single",
+          "title": "نفس الحمض الأميني، ثلاثة أوساط",
+          "instruction": "لنغيّر pH فقط. راقب كيف يتغير اتجاه نفس الحمض الأميني.",
+          "frames": [
+            {
+              "title": "pH < pHi",
+              "description": "الحمض الأميني موجب الشحنة، لذلك ينجذب نحو القطب السالب.",
+              "ph_relation": "pH < pHi",
+              "charge": "+",
+              "x": 78,
+              "badge": "نحو (−)"
+            },
+            {
+              "title": "pH = pHi",
+              "description": "محصلة الشحنة تساوي صفرا، لذلك يبقى الحمض الأميني قرب موضع الانطلاق.",
+              "ph_relation": "pH = pHi",
+              "charge": "0",
+              "x": 50,
+              "badge": "لا هجرة"
+            },
+            {
+              "title": "pH > pHi",
+              "description": "الحمض الأميني سالب الشحنة، لذلك ينجذب نحو القطب الموجب.",
+              "ph_relation": "pH > pHi",
+              "charge": "−",
+              "x": 22,
+              "badge": "نحو (+)"
+            }
+          ],
+          "takeaway": "pH < pHi → موجب → (−) ؛ pH = pHi → لا هجرة ؛ pH > pHi → سالب → (+)."
+        }
+      },
+      {
+        "id": "step_5",
+        "type": "comparison",
+        "component": "VisualComparison",
+        "title": "حل السؤال في ثلاث حالات",
+        "content": {
+          "columns": [
+            {
+              "title": "pH < pHi",
+              "items": [
+                "الشحنة موجبة (+).",
+                "الهجرة نحو القطب السالب (−)."
+              ]
+            },
+            {
+              "title": "pH = pHi",
+              "items": [
+                "المحصلة = 0.",
+                "يبقى قرب نقطة الانطلاق."
+              ]
+            },
+            {
+              "title": "pH > pHi",
+              "items": [
+                "الشحنة سالبة (−).",
+                "الهجرة نحو القطب الموجب (+)."
+              ]
+            }
+          ],
+          "final_question": "في أي سؤال هجرة: لا تبحث عن القطب أولا، بل حدّد الشحنة أولا."
+        }
+      },
+      {
+        "id": "step_6",
+        "type": "quick_check",
+        "component": "QuickCheck",
+        "title": "حدّد الاتجاه بسرعة",
+        "content": {
+          "questions": [
+            {
+              "id": "qc1",
+              "question": "pHi = 9 و pH = 5. إلى أي قطب يهاجر الحمض الأميني؟",
+              "choices": [
+                "نحو القطب السالب",
+                "نحو القطب الموجب",
+                "لا يهاجر"
+              ],
+              "correct_answer": "نحو القطب السالب",
+              "explanation": "5 < 9، إذن الشحنة موجبة، والموجب يتجه نحو القطب السالب."
+            },
+            {
+              "id": "qc2",
+              "question": "pHi = 3 و pH = 7. إلى أي قطب يهاجر؟",
+              "choices": [
+                "نحو القطب السالب",
+                "نحو القطب الموجب",
+                "لا يهاجر"
+              ],
+              "correct_answer": "نحو القطب الموجب",
+              "explanation": "7 > 3، إذن الشحنة سالبة، والسالب يتجه نحو القطب الموجب."
+            },
+            {
+              "id": "qc3",
+              "question": "ماذا يحدث عند pH = pHi؟",
+              "choices": [
+                "يبقى قرب نقطة الانطلاق",
+                "يتجه نحو (+)",
+                "يتجه نحو (−)"
+              ],
+              "correct_answer": "يبقى قرب نقطة الانطلاق",
+              "explanation": "عند pHi تكون محصلة الشحنة صفرا تقريبا."
+            }
+          ]
+        }
+      },
+      {
+        "id": "step_7",
+        "type": "bac_method",
+        "component": "BacMethodCard",
+        "title": "طريقة البكالوريا",
+        "content": {
+          "skill": "تحديد أو تفسير اتجاه هجرة حمض أميني",
+          "method": [
+            {
+              "label": "1. أقارن pH وpHi",
+              "text": "أحدد شحنة الحمض الأميني: موجبة أو سالبة أو محصلتها صفر."
+            },
+            {
+              "label": "2. أختار القطب المعاكس",
+              "text": "موجب → (−)، سالب → (+)، صفر → قرب البداية."
+            },
+            {
+              "label": "3. أكتب التفسير",
+              "text": "أربط بين المقارنة والشحنة ثم اتجاه الهجرة."
+            }
+          ],
+          "bac_sentence": "بما أن pH الوسط أكبر من pHi، فإن الحمض الأميني سالب الشحنة، لذلك يهاجر نحو القطب الموجب.",
+          "common_mistake": "لا تقل: يذهب إلى القطب الموجب لأنه موجب. الشحنات المتعاكسة هي التي تتجاذب."
+        }
+      },
+      {
+        "id": "step_8",
+        "type": "scientific_animation",
+        "component": "ScientificAnimation",
+        "title": "تجربة فصل مثل البكالوريا",
+        "content": {
+          "scene": "electrophoresis_three",
+          "title": "Asp وAla وLys عند pH = 6",
+          "instruction": "شاهد النتيجة ثم حاول التعرف على موضع كل حمض أميني.",
+          "frames": [
+            {
+              "title": "قبل الفصل",
+              "description": "Asp وAla وLys وضعت معا عند نقطة الانطلاق.",
+              "asp_x": 50,
+              "ala_x": 50,
+              "lys_x": 50,
+              "badge": "البداية"
+            },
+            {
+              "title": "تحديد الشحنات",
+              "description": "عند pH = 6: Asp سالب، Ala قريب من التعادل، Lys موجب.",
+              "asp_x": 40,
+              "ala_x": 50,
+              "lys_x": 60,
+              "badge": "بدأت الحركة"
+            },
+            {
+              "title": "النتيجة",
+              "description": "Asp يتجه نحو (+)، Ala يبقى قرب البداية، وLys يتجه نحو (−).",
+              "asp_x": 20,
+              "ala_x": 50,
+              "lys_x": 80,
+              "badge": "تم الفصل"
+            }
+          ],
+          "takeaway": "من موضع البقعة تستطيع العودة إلى الشحنة، ومن الشحنة تستطيع تفسير العلاقة بين pH وpHi."
+        }
+      },
+      {
+        "id": "step_9",
+        "type": "bac_application",
+        "component": "BacApplication",
+        "title": "طبّق مثل البكالوريا",
+        "content": {
+          "document": {
+            "statement": "وضعت ثلاثة أحماض أمينية في وسط pH = 6: Asp له pHi = 2.98، Ala له pHi ≈ 6، وLys له pHi = 9.74."
+          },
+          "questions": [
+            {
+              "id": "bac_q1",
+              "question": "حدد شحنة Asp واتجاه هجرته.",
+              "expected_answer": "6 > 2.98، إذن Asp سالب الشحنة، لذلك يهاجر نحو القطب الموجب."
+            },
+            {
+              "id": "bac_q2",
+              "question": "أين نجد Ala؟",
+              "expected_answer": "بما أن pH ≈ pHi، تبقى محصلة شحنته قريبة من الصفر، لذلك يبقى قرب موضع الانطلاق."
+            },
+            {
+              "id": "bac_q3",
+              "question": "حدد شحنة Lys واتجاه هجرته.",
+              "expected_answer": "6 < 9.74، إذن Lys موجب الشحنة، لذلك يهاجر نحو القطب السالب."
+            }
+          ]
+        }
+      },
+      {
+        "id": "step_10",
+        "type": "final_visual_map",
+        "component": "InteractiveSummaryMap",
+        "title": "المسار الوحيد الذي تحتاجه",
+        "content": {
+          "map": [
+            {
+              "node": "pH < pHi",
+              "relation": "→",
+              "target": "موجب → نحو (−)"
+            },
+            {
+              "node": "pH = pHi",
+              "relation": "→",
+              "target": "المحصلة 0 → لا هجرة"
+            },
+            {
+              "node": "pH > pHi",
+              "relation": "→",
+              "target": "سالب → نحو (+)"
+            }
+          ],
+          "memory_tip": "الشحنة أولا، القطب المعاكس ثانيا.",
+          "next_axis_bridge": {
+            "question": "بعد أن فهمنا سلوك الأحماض الأمينية، كيف ترتبط هذه الوحدات مع بعضها لتكوين سلسلة ببتيدية؟",
+            "next_concept": "الرابطة الببتيدية وتشكّل الببتيدات"
+          }
+        }
+      },
+      {
+        "id": "step_11",
+        "type": "quiz",
+        "component": "FinalQuiz",
+        "title": "اختبار نهاية المحور",
+        "content": {
+          "questions": [
+            {
+              "id": "q1",
+              "question": "حمض أميني موجب الشحنة يهاجر نحو:",
+              "choices": [
+                "القطب السالب",
+                "القطب الموجب",
+                "لا يتحرك"
+              ],
+              "correct_answer": "القطب السالب",
+              "explanation": "الشحنات المتعاكسة تتجاذب."
+            },
+            {
+              "id": "q2",
+              "question": "إذا كان pH > pHi، فما اتجاه الهجرة؟",
+              "choices": [
+                "نحو القطب الموجب",
+                "نحو القطب السالب",
+                "لا هجرة"
+              ],
+              "correct_answer": "نحو القطب الموجب",
+              "explanation": "عند pH > pHi تكون الشحنة سالبة."
+            },
+            {
+              "id": "q3",
+              "question": "بقعة بقيت قرب نقطة الانطلاق. ما التفسير الأقرب؟",
+              "choices": [
+                "pH قريب من pHi",
+                "الجزيء موجب جدا",
+                "الجزيء سالب جدا"
+              ],
+              "correct_answer": "pH قريب من pHi",
+              "explanation": "عندما تكون محصلة الشحنة قريبة من الصفر لا تحدث هجرة واضحة."
+            }
+          ],
+          "mastery_threshold": 3
+        }
+      }
+    ]
+  }
+}

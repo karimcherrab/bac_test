@@ -119,6 +119,7 @@ INSTALLED_APPS = [
     'exercise_bac',
     'axis_revision',
     'generated_bac',
+    'tutor',
     'accounts.apps.AccountsConfig'
 ]
 

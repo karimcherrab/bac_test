@@ -1,0 +1,610 @@
+{
+  "schema_version": "4.5-bac-source",
+  "version": "4.2-2013-derivatives-ex04-visible-image",
+  "language": "ar",
+  "direction": "rtl",
+  "year": 2013,
+  "session": "ordinary",
+  "chapter_code": "derivatives",
+  "chapter_title": "الاشتقاقية ودراسة الدوال",
+  "exercise_number": 4,
+  "points": 7.5,
+  "source_pages": [
+    4
+  ],
+  "solution_source_pages": [
+    9,
+    10
+  ],
+  "branches": [
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "title": "التمرين الرابع — بكالوريا الجزائر 2013 — دراسة دوال أسية ولوغاريتمية",
+  "axis_tags": [
+    "auxiliary_function",
+    "continuity_at_zero",
+    "derivative_variations",
+    "function_family",
+    "relative_position",
+    "common_point",
+    "equation_root",
+    "sequence_of_roots"
+  ],
+  "statement": "التمرين الرابع: (07.5 نقطة)\nI- الدالة \\(g\\) معرفة على \\(\\mathbb{R}\\) كما يلي:\n\\[g(x)=(x-1)e^x\\]\nII- الدالة \\(f\\) معرفة على \\([0,+\\infty[\\) كما يلي:\n\\[f(x)=\\frac{e^x-1}{x}\\quad ;\\ x>0\\]\n\\[f(0)=1\\]\nIII- \\(n\\) عدد طبيعي حيث \\(n\\ge1\\)، و\\(f_n\\) الدالة المعرفة على \\(]0,+\\infty[\\) بـ:\n\\[f_n(x)=\\frac{e^x-1}{x}+n\\ln x\\]",
+  "figures": [],
+  "questions": [
+    {
+      "id": "2013_der_ex04_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "I-1- ادرس تغيرات \\(g\\).",
+      "solution": {
+        "strategy": "نحسب مشتقة \\(g\\) ثم ندرس إشارتها.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "نحسب المشتقة",
+            "explanation": "\\[g'(x)=e^x+(x-1)e^x=xe^x\\]",
+            "result": "\\[g'(x)=xe^x\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "إشارة المشتقة",
+            "explanation": "بما أن \\(e^x>0\\) لكل \\(x\\)، فإن إشارة \\(g'(x)\\) هي إشارة \\(x\\). إذن \\(g'(x)<0\\) إذا \\(x<0\\)، و\\(g'(0)=0\\)، و\\(g'(x)>0\\) إذا \\(x>0\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "القيمة الدنيا والنهايات",
+            "explanation": "\\[g(0)=-1\\] كما أن \\(\\lim_{x\\to-\\infty}g(x)=0\\) و\\(\\lim_{x\\to+\\infty}g(x)=+\\infty\\).",
+            "result": "تتناقص \\(g\\) على \\(]-\\infty,0]\\) ثم تتزايد على \\([0,+\\infty[\\)."
+          }
+        ],
+        "variation_table": {
+          "type": "variation_table",
+          "title": "جدول تغيرات الدالة \\(g\\)",
+          "function_name": "g(x)",
+          "derivative_name": "g'(x)",
+          "domain": "\\mathbb{R}",
+          "x_values": [
+            "-\\infty",
+            "0",
+            "+\\infty"
+          ],
+          "derivative_signs": [
+            "-",
+            "0",
+            "+"
+          ],
+          "function": {
+            "branches": [
+              {
+                "id": "g_left",
+                "start_x": "-\\infty",
+                "end_x": "0",
+                "start_value": "0",
+                "end_value": "-1",
+                "direction": "down"
+              },
+              {
+                "id": "g_right",
+                "start_x": "0",
+                "end_x": "+\\infty",
+                "start_value": "-1",
+                "end_value": "+\\infty",
+                "direction": "up"
+              }
+            ]
+          }
+        },
+        "final_answer": "الدالة \\(g\\) متناقصة على \\(]-\\infty,0]\\) ثم متزايدة على \\([0,+\\infty[\\)، وقيمتها الدنيا \\(g(0)=-1\\).",
+        "verification": "مطابق لجدول التغيرات في التصحيح النموذجي.",
+        "common_mistakes": [
+          "نسيان أن \\(e^x\\) موجب دائمًا."
+        ],
+        "hints": [
+          "بعد الاشتقاق، إشارة \\(g'\\) هي إشارة \\(x\\)."
+        ],
+        "introduction": "دراسة تغيرات \\(g\\) تمر مباشرة عبر مشتقتها.",
+        "summary": "\\(g\\) تنقص حتى الصفر ثم تزيد.",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2013_der_ex04_q2",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "I-2- بين أنه، من أجل كل عدد حقيقي \\(x\\): \\[1+(x-1)e^x\\ge0\\]",
+      "solution": {
+        "strategy": "نستعمل القيمة الدنيا للدالة \\(g\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "نستعمل تغيرات \\(g\\)",
+            "explanation": "من السؤال السابق، القيمة الدنيا لـ\\(g\\) هي \\(g(0)=-1\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "نكتب المتراجحة",
+            "explanation": "إذن لكل \\(x\\in\\mathbb{R}\\):\\[g(x)\\ge-1\\] أي:\\[(x-1)e^x\\ge-1\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "النتيجة",
+            "explanation": "\\[1+(x-1)e^x\\ge0\\]",
+            "result": "\\[1+(x-1)e^x\\ge0\\]"
+          }
+        ],
+        "final_answer": "\\[1+(x-1)e^x\\ge0\\quad\\forall x\\in\\mathbb R\\]",
+        "verification": "مطابق للتصحيح الرسمي: \\(g(x)\\ge-1\\).",
+        "common_mistakes": [
+          "محاولة حل المتراجحة من جديد بدل استعمال نتيجة السؤال السابق."
+        ],
+        "hints": [
+          "تذكر أن \\(g(x)=(x-1)e^x\\)."
+        ],
+        "introduction": "النتيجة مباشرة من القيمة الدنيا لـ\\(g\\).",
+        "summary": "بما أن \\(g\\ge-1\\)، فإن \\(1+g\\ge0\\).",
+        "answer_style": "explain_then_conclude"
+      }
+    },
+    {
+      "id": "2013_der_ex04_q3",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "II-1- أ) بين أن \\(f\\) مستمرة على \\([0,+\\infty[\\).",
+      "solution": {
+        "strategy": "الاستمرارية واضحة على \\(]0,+\\infty[\\)، ونفحصها فقط عند الصفر.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "على \\(]0,+\\infty[\\)",
+            "explanation": "الدالة \\(x\\mapsto\\frac{e^x-1}{x}\\) خارج قسمة دالتين مستمرتين ومقامها غير منعدم."
+          },
+          {
+            "step_number": 2,
+            "title": "عند الصفر",
+            "explanation": "نستعمل النهاية المعروفة:\\[\\lim_{x\\to0^+}\\frac{e^x-1}{x}=1\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "نقارن مع قيمة الدالة",
+            "explanation": "\\[\\lim_{x\\to0^+}f(x)=1=f(0)\\]",
+            "result": "\\(f\\) مستمرة عند \\(0\\)، وبالتالي على \\([0,+\\infty[\\)."
+          }
+        ],
+        "final_answer": "\\(f\\) مستمرة على \\([0,+\\infty[\\).",
+        "verification": "مطابق للتصحيح النموذجي.",
+        "common_mistakes": [
+          "نسيان التحقق من الاستمرارية عند \\(x=0\\)."
+        ],
+        "hints": [
+          "استعمل \\(\\lim_{x\\to0}(e^x-1)/x=1\\)."
+        ],
+        "introduction": "النقطة الوحيدة التي تحتاج فحصًا هي الصفر.",
+        "summary": "النهاية عند الصفر تساوي القيمة \\(f(0)\\).",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2013_der_ex04_q4",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "II-1- ب) احسب \\(\\displaystyle\\lim_{x\\to+\\infty}f(x)\\).",
+      "solution": {
+        "strategy": "نقارن نمو الدالة الأسية بنمو \\(x\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "نكتب الدالة",
+            "explanation": "\\[f(x)=\\frac{e^x-1}{x}\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "نستعمل سرعة نمو الأسية",
+            "explanation": "عندما \\(x\\to+\\infty\\)، فإن \\(e^x/x\\to+\\infty\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "النتيجة",
+            "explanation": "\\[\\lim_{x\\to+\\infty}f(x)=+\\infty\\]",
+            "result": "\\[+\\infty\\]"
+          }
+        ],
+        "final_answer": "\\[\\lim_{x\\to+\\infty}f(x)=+\\infty\\]",
+        "verification": "مطابق للتصحيح الرسمي.",
+        "common_mistakes": [
+          "اعتبار النهاية من الشكل غير المحدد دون استغلال نمو الأسية."
+        ],
+        "hints": [
+          "\\(e^x\\) أسرع نموًا من \\(x\\)."
+        ],
+        "introduction": "الأسية تهيمن على الدالة الخطية عند \\(+\\infty\\).",
+        "summary": "النهاية هي \\(+\\infty\\).",
+        "answer_style": "explain_then_conclude"
+      }
+    },
+    {
+      "id": "2013_der_ex04_q5",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "II-2- أ) تحقق أنه، من أجل كل عدد حقيقي \\(x\\) من \\(]0,+\\infty[\\): \\[f'(x)=\\frac{1+(x-1)e^x}{x^2}\\]",
+      "solution": {
+        "strategy": "نشتق خارج القسمة ثم نبسط البسط.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "قاعدة القسمة",
+            "explanation": "\\[f'(x)=\\frac{xe^x-(e^x-1)}{x^2}\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "نبسط البسط",
+            "explanation": "\\[xe^x-e^x+1=1+(x-1)e^x\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "النتيجة",
+            "explanation": "\\[f'(x)=\\frac{1+(x-1)e^x}{x^2}\\]",
+            "result": "\\[f'(x)=\\frac{1+(x-1)e^x}{x^2}\\]"
+          }
+        ],
+        "final_answer": "\\[f'(x)=\\frac{1+(x-1)e^x}{x^2}\\]",
+        "verification": "مطابق للتصحيح الرسمي.",
+        "common_mistakes": [
+          "نسيان مربع المقام في قاعدة القسمة."
+        ],
+        "hints": [
+          "بسط \\(xe^x-(e^x-1)\\)."
+        ],
+        "introduction": "نطبق قاعدة مشتقة خارج قسمة.",
+        "summary": "بسط المشتقة هو بالضبط \\(1+(x-1)e^x\\).",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2013_der_ex04_q6",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "II-2- ب) استنتج اتجاه تغير الدالة \\(f\\)، ثم شكل جدول تغيراتها.",
+      "solution": {
+        "strategy": "نستعمل السؤال I-2 لإشارة البسط.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "إشارة المشتقة",
+            "explanation": "من I-2 لدينا \\(1+(x-1)e^x\\ge0\\)، كما أن \\(x^2>0\\) على \\(]0,+\\infty[\\). إذن \\(f'(x)\\ge0\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "التغير",
+            "explanation": "إذن \\(f\\) متزايدة تمامًا على \\([0,+\\infty[\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "القيم الحدية",
+            "explanation": "\\[f(0)=1,\\qquad \\lim_{x\\to+\\infty}f(x)=+\\infty\\]"
+          }
+        ],
+        "variation_table": {
+          "type": "variation_table",
+          "title": "جدول تغيرات الدالة \\(f\\)",
+          "function_name": "f(x)",
+          "derivative_name": "f'(x)",
+          "domain": "[0,+\\infty[",
+          "x_values": [
+            "0",
+            "+\\infty"
+          ],
+          "derivative_signs": [
+            "+"
+          ],
+          "function": {
+            "branches": [
+              {
+                "id": "f_branch",
+                "start_x": "0",
+                "end_x": "+\\infty",
+                "start_value": "1",
+                "end_value": "+\\infty",
+                "direction": "up"
+              }
+            ]
+          }
+        },
+        "final_answer": "\\(f\\) متزايدة تمامًا على \\([0,+\\infty[\\)، من \\(1\\) إلى \\(+\\infty\\).",
+        "verification": "مطابق للتصحيح النموذجي.",
+        "common_mistakes": [
+          "إهمال نتيجة السؤال I-2 وإعادة دراسة البسط من البداية."
+        ],
+        "hints": [
+          "إشارة \\(f'\\) هي إشارة البسط لأن \\(x^2>0\\)."
+        ],
+        "introduction": "نتيجة الجزء I صممت تحديدًا لتسهيل دراسة \\(f\\).",
+        "summary": "\\(f\\) متزايدة تمامًا.",
+        "answer_style": "explain_then_conclude"
+      }
+    },
+    {
+      "id": "2013_der_ex04_q7",
+      "display_order": 7,
+      "content_type": "question",
+      "text": "III-1- ادرس اتجاه تغير الدالة \\(f_n\\) على \\(]0,+\\infty[\\).",
+      "solution": {
+        "strategy": "نشتق \\(f_n=f+n\\ln x\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "المشتقة",
+            "explanation": "\\[f_n'(x)=f'(x)+\\frac{n}{x}\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "إشارة المشتقة",
+            "explanation": "على \\(]0,+\\infty[\\): لدينا \\(f'(x)\\ge0\\) و\\(n/x>0\\)، وبالتالي:\\[f_n'(x)>0\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "النتيجة",
+            "explanation": "إذن \\(f_n\\) متزايدة تمامًا على \\(]0,+\\infty[\\).",
+            "result": "\\(f_n\\) متزايدة تمامًا."
+          }
+        ],
+        "final_answer": "\\(f_n\\) متزايدة تمامًا على \\(]0,+\\infty[\\).",
+        "verification": "مطابق للتصحيح الرسمي.",
+        "common_mistakes": [
+          "نسيان مشتقة \\(n\\ln x\\) وهي \\(n/x\\)."
+        ],
+        "hints": [
+          "اكتب \\(f_n'=f'+n/x\\)."
+        ],
+        "introduction": "نستفيد مباشرة من دراسة \\(f\\).",
+        "summary": "مشتقة \\(f_n\\) موجبة دائمًا.",
+        "answer_style": "explain_then_conclude"
+      }
+    },
+    {
+      "id": "2013_der_ex04_q8",
+      "display_order": 8,
+      "content_type": "question",
+      "text": "III-2- احسب \\(\\displaystyle\\lim_{x\\to0^+}f_n(x)\\) و \\(\\displaystyle\\lim_{x\\to+\\infty}f_n(x)\\).",
+      "solution": {
+        "strategy": "نفصل بين حد \\(f(x)\\) وحد \\(n\\ln x\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "عند الصفر",
+            "explanation": "عندما \\(x\\to0^+\\): \\(f(x)\\to1\\)، بينما \\(n\\ln x\\to-\\infty\\). إذن:\\[\\lim_{x\\to0^+}f_n(x)=-\\infty\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "عند \\(+\\infty\\)",
+            "explanation": "عندما \\(x\\to+\\infty\\): \\(f(x)\\to+\\infty\\) و\\(n\\ln x\\to+\\infty\\). إذن:\\[\\lim_{x\\to+\\infty}f_n(x)=+\\infty\\]"
+          }
+        ],
+        "final_answer": "\\[\\lim_{x\\to0^+}f_n(x)=-\\infty,\\qquad \\lim_{x\\to+\\infty}f_n(x)=+\\infty\\]",
+        "verification": "مطابق للتصحيح الرسمي.",
+        "common_mistakes": [
+          "نسيان أن \\(\\ln x\\to-\\infty\\) عند \\(0^+\\)."
+        ],
+        "hints": [
+          "افصل حدّي \\(f_n\\)."
+        ],
+        "introduction": "نستعمل نهايات \\(f\\) واللوغاريتم.",
+        "summary": "من \\(-\\infty\\) إلى \\(+\\infty\\).",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2013_der_ex04_q9",
+      "display_order": 9,
+      "content_type": "question",
+      "text": "III-3- ادرس الوضع النسبي للمنحنيين \\((C_n)\\) و \\((C_{n+1})\\).",
+      "solution": {
+        "strategy": "نحسب الفرق بين الدالتين.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الفرق",
+            "explanation": "\\[f_{n+1}(x)-f_n(x)=\\ln x\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "إذا \\(0<x<1\\)",
+            "explanation": "\\(\\ln x<0\\)، إذن \\(f_{n+1}(x)<f_n(x)\\).",
+            "result": "\\((C_{n+1})\\) تحت \\((C_n)\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "إذا \\(x>1\\)",
+            "explanation": "\\(\\ln x>0\\)، إذن \\(f_{n+1}(x)>f_n(x)\\).",
+            "result": "\\((C_{n+1})\\) فوق \\((C_n)\\)."
+          },
+          {
+            "step_number": 4,
+            "title": "عند \\(x=1\\)",
+            "explanation": "\\(\\ln1=0\\)، لذلك يلتقي المنحنيان عند نفس النقطة."
+          }
+        ],
+        "final_answer": "على \\(]0,1[\\): \\((C_{n+1})\\) تحت \\((C_n)\\). وعلى \\(]1,+\\infty[\\): \\((C_{n+1})\\) فوق \\((C_n)\\). ويلتقيان عند \\(x=1\\).",
+        "verification": "مطابق للتصحيح الرسمي.",
+        "common_mistakes": [
+          "عكس إشارة \\(\\ln x\\) على \\(]0,1[\\)."
+        ],
+        "hints": [
+          "احسب \\(f_{n+1}-f_n\\)."
+        ],
+        "introduction": "الوضع النسبي يحسمه فرق الدالتين.",
+        "summary": "الفرق هو \\(\\ln x\\).",
+        "answer_style": "explain_then_conclude"
+      }
+    },
+    {
+      "id": "2013_der_ex04_q10",
+      "display_order": 10,
+      "content_type": "question",
+      "text": "III-4- بين أن جميع المنحنيات تمر من نقطة ثابتة \\(B\\) يطلب تعيين إحداثيتيها.",
+      "solution": {
+        "strategy": "نبحث عن قيمة \\(x\\) التي تجعل الحد المحتوي على \\(n\\) يختفي.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "نختار \\(x=1\\)",
+            "explanation": "\\[\\ln1=0\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "نحسب \\(f_n(1)\\)",
+            "explanation": "\\[f_n(1)=\\frac{e-1}{1}+n\\ln1=e-1\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "النقطة الثابتة",
+            "explanation": "القيمة لا تعتمد على \\(n\\)، لذلك جميع المنحنيات تمر من:",
+            "result": "\\[B(1,e-1)\\]"
+          }
+        ],
+        "final_answer": "\\[B(1,e-1)\\]",
+        "verification": "مطابق للتصحيح الرسمي.",
+        "common_mistakes": [
+          "نسيان أن \\(\\ln1=0\\)."
+        ],
+        "hints": [
+          "اختر قيمة تجعل \\(n\\ln x=0\\)."
+        ],
+        "introduction": "نبحث عن نقطة لا تعتمد إحداثيتها الثانية على \\(n\\).",
+        "summary": "النقطة المشتركة هي \\(B(1,e-1)\\).",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2013_der_ex04_q11",
+      "display_order": 11,
+      "content_type": "question",
+      "text": "III-5- أ) بين أنه يوجد عدد حقيقي وحيد \\(\\alpha_1\\) من \\(]0,3;0,4[\\) بحيث \\(f_1(\\alpha_1)=0\\).",
+      "solution": {
+        "strategy": "نستعمل استمرارية وتزايد \\(f_1\\) ثم تغير الإشارة بين 0.3 و0.4.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الاستمرارية والتزايد",
+            "explanation": "\\(f_1\\) مستمرة ومتزايدة تمامًا على \\(]0,+\\infty[\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "نحسب عند الطرفين",
+            "explanation": "\\[f_1(0.3)<0,\\qquad f_1(0.4)>0\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الوجود والوحدانية",
+            "explanation": "بمبرهنة القيم المتوسطة يوجد جذر في \\(]0.3,0.4[\\)، وبسبب التزايد التام فهو وحيد.",
+            "result": "\\[\\alpha_1\\in]0.3,0.4[\\]"
+          }
+        ],
+        "final_answer": "يوجد حل وحيد \\(\\alpha_1\\in]0.3,0.4[\\)، وتقريبًا \\(\\alpha_1\\approx 0.309699\\).",
+        "verification": "الحصر مطابق للتصحيح الرسمي.",
+        "common_mistakes": [
+          "إثبات الوجود دون الوحدانية."
+        ],
+        "hints": [
+          "استعمل تغير الإشارة وتزايد \\(f_1\\)."
+        ],
+        "introduction": "نستعمل مبرهنة القيم المتوسطة مع التزايد التام.",
+        "summary": "جذر وحيد بين 0.3 و0.4.",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2013_der_ex04_q12",
+      "display_order": 12,
+      "content_type": "question",
+      "text": "III-5- ب) بين أنه، من أجل كل عدد طبيعي \\(n\\) حيث \\(n\\ge1\\)، فإن \\(f_n(\\alpha_1)<0\\)، ثم برهن أنه يوجد عدد حقيقي وحيد \\(\\alpha_n\\) من \\(]\\alpha_1;1[\\) بحيث \\(f_n(\\alpha_n)=0\\).",
+      "solution": {
+        "strategy": "نستعمل ترتيب المنحنيات على \\(]0,1[\\)، ثم التزايد التام لـ\\(f_n\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "مقارنة \\(f_n\\) بـ\\(f_1\\)",
+            "explanation": "لـ\\(0<x<1\\)، لدينا \\(\\ln x<0\\). لذلك إذا \\(n>1\\):\\[f_n(x)=f_1(x)+(n-1)\\ln x<f_1(x)\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "عند \\(x=\\alpha_1\\)",
+            "explanation": "بما أن \\(f_1(\\alpha_1)=0\\)، فإن:\\[f_n(\\alpha_1)<0\\] لكل \\(n>1\\). أما عند \\(n=1\\) فلدينا \\(f_1(\\alpha_1)=0\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "نحسب عند \\(x=1\\)",
+            "explanation": "\\[f_n(1)=e-1>0\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "وجود ووحدانية \\(\\alpha_n\\)",
+            "explanation": "بما أن \\(f_n\\) مستمرة ومتزايدة تمامًا، وتغير إشارتها بين \\(\\alpha_1\\) و\\(1\\)، فإن لها حلاً وحيدًا \\(\\alpha_n\\in]\\alpha_1,1[\\).",
+            "result": "\\[f_n(\\alpha_n)=0\\]"
+          }
+        ],
+        "final_answer": "لـ\\(n>1\\): \\(f_n(\\alpha_1)<0\\)، ومنه يوجد حل وحيد \\(\\alpha_n\\in]\\alpha_1,1[\\) بحيث \\(f_n(\\alpha_n)=0\\).",
+        "verification": "مطابق لفكرة التصحيح الرسمي في الصفحة 10.",
+        "common_mistakes": [
+          "القول إن \\(f_n(\\alpha_1)<0\\) أيضًا عند \\(n=1\\)؛ عندها تساوي صفرًا."
+        ],
+        "hints": [
+          "على \\(]0,1[\\)، كل زيادة في \\(n\\) تخفض قيمة \\(f_n\\)."
+        ],
+        "introduction": "نستعمل الوضع النسبي للمنحنيات وتزايد كل دالة.",
+        "summary": "المنحنيات الأعلى رتبة تقع أسفل \\(C_1\\) قبل 1، لذا جذرها ينتقل نحو اليمين.",
+        "answer_style": "explain_then_conclude"
+      }
+    }
+  ],
+  "source_reference": {
+    "file": "2013(4).pdf",
+    "statement_pages": [
+      4
+    ],
+    "solution_pages": [
+      9,
+      10
+    ],
+    "source_faithful_statement": true,
+    "statement_transcription": "نسخ مطابق للجزء الظاهر في الصورة المرسلة، مع تحويل الرموز الرياضية فقط إلى LaTeX.",
+    "solution_reviewed_against_source": true
+  },
+  "display": {
+    "layout": "question_by_question",
+    "show_statement_first": true,
+    "show_statement_figures": true,
+    "show_solution_after_click": true,
+    "show_solution_figures": true
+  },
+  "review_status": {
+    "statement_compared_with_original_pdf": true,
+    "questions_compared_with_original_pdf": true,
+    "source_figures_checked": true,
+    "solution_checked_against_correction": true,
+    "latex_normalized_only": true,
+    "react_ready": true
+  },
+  "given_data": {
+    "g": "(x-1)e^x",
+    "f": "(e^x-1)/x for x>0, f(0)=1",
+    "fn": "(e^x-1)/x + n ln(x)",
+    "alpha1_interval": "0.3<alpha1<0.4",
+    "common_point_B": "(1,e-1)"
+  },
+  "solution_pedagogy": {
+    "style": "guided_step_by_step",
+    "audience": "3AS_bac_student",
+    "principles": [
+      "الحل مقسم إلى خطوات قصيرة وواضحة.",
+      "كل سؤال يستعمل نتائج الأسئلة السابقة لتقليل التكرار.",
+      "جداول التغيرات ممثلة بصيغة منظمة لعرضها في React.",
+      "تمت مراجعة الحل مع التصحيح النموذجي في الصفحتين 9 و10.",
+      "تم الالتزام بالجزء الظاهر في الصورة المرسلة وعدم إضافة السؤال 6 غير الظاهر فيها."
+    ]
+  }
+}

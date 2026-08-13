@@ -1,0 +1,347 @@
+{
+  "tag": "amino_acids_amphoteric_property_ph_phi",
+  "title": "الخاصية الأمفوتيرية وتأثير pH و pHi",
+  "order": 2,
+  "is_active": true,
+  "branches": [
+    "science",
+    "math"
+  ],
+  "content": {
+    "language": "ar",
+    "direction": "rtl",
+    "chapter_code": "protein_structure_function",
+    "chapter_title": "العلاقة بين بنية البروتين ووظيفته",
+    "axis_tag": "amino_acids_amphoteric_property_ph_phi",
+    "estimated_minutes": 16,
+    "difficulty": "easy",
+    "lesson_goal": "أن يرى التلميذ بنفسه كيف تتغير شحنة الحمض الأميني مع pH، ثم يفهم pHi ويحدد الشحنة بمجرد مقارنة pH مع pHi.",
+    "prerequisites": [
+      "معرفة البنية العامة للحمض الأميني.",
+      "معرفة أن الحمض الأميني يحتوي مجموعة أمينية ومجموعة كربوكسيلية."
+    ],
+    "learning_outcomes": [
+      "يفهم أن تغير pH يغير حالة تأين الحمض الأميني.",
+      "يفهم معنى الخاصية الأمفوتيرية دون حفظ تعريف جاف.",
+      "يعرف أن pHi هي قيمة pH التي تكون عندها محصلة الشحنة صفرا.",
+      "يحدد الشحنة باستعمال العلاقة بين pH وpHi.",
+      "يستعمل القاعدة مباشرة في سؤال بكالوريا."
+    ],
+    "learning_path": [
+      {
+        "id": "step_1",
+        "type": "problem",
+        "component": "DiscoveryQuestion",
+        "title": "نفس الحمض الأميني... هل تبقى شحنته نفسها؟",
+        "content": {
+          "question": "لدينا نفس الحمض الأميني. وضعناه مرة في وسط حمضي، ومرة في وسط متعادل، ومرة في وسط قاعدي. هل سيحمل الشحنة نفسها في الحالات الثلاث؟",
+          "teacher": "بدل أن نحفظ القاعدة، سنغيّر pH أمامك ونشاهد ما يحدث للشحنة.",
+          "action": {
+            "label": "غيّر pH وشاهد",
+            "next_step": "step_2"
+          }
+        }
+      },
+      {
+        "id": "step_2",
+        "type": "scientific_animation",
+        "component": "ScientificAnimation",
+        "title": "شاهد تأثير pH على نفس الحمض الأميني",
+        "content": {
+          "scene": "amino_acid_ph",
+          "title": "من موجب إلى متعادل ثم سالب",
+          "instruction": "شغّل المشهد. نفس الجزيء يتغير فقط في عدد البروتونات H⁺ المرتبطة به.",
+          "frames": [
+            {
+              "title": "وسط حمضي",
+              "description": "الوسط غني بـ H⁺، فيكتسب الحمض الأميني بروتونا. تظهر NH₃⁺ وتبقى COOH، لذلك المحصلة موجبة.",
+              "ph_label": "pH منخفض",
+              "amino_label": "NH₃⁺",
+              "carboxyl_label": "COOH",
+              "net_charge": "+",
+              "proton_mode": "gain",
+              "badge": "شحنة موجبة"
+            },
+            {
+              "title": "عند نقطة التعادل الكهربائي",
+              "description": "يوجد داخل الجزيء NH₃⁺ و COO⁻ في الوقت نفسه، لكن الشحنتين تتعادلان. المحصلة = 0.",
+              "ph_label": "pH = pHi",
+              "amino_label": "NH₃⁺",
+              "carboxyl_label": "COO⁻",
+              "net_charge": "0",
+              "proton_mode": "balanced",
+              "badge": "محصلة معدومة"
+            },
+            {
+              "title": "وسط قاعدي",
+              "description": "يفقد الحمض الأميني بروتونا أكثر. تصبح المجموعة الأمينية NH₂ وتبقى COO⁻، لذلك المحصلة سالبة.",
+              "ph_label": "pH مرتفع",
+              "amino_label": "NH₂",
+              "carboxyl_label": "COO⁻",
+              "net_charge": "−",
+              "proton_mode": "loss",
+              "badge": "شحنة سالبة"
+            }
+          ],
+          "takeaway": "حمضي → يكتسب H⁺ → يصبح أكثر إيجابية. قاعدي → يفقد H⁺ → يصبح أكثر سلبية."
+        }
+      },
+      {
+        "id": "step_3",
+        "type": "key_rule",
+        "component": "KeyRuleCard",
+        "title": "إذن ما معنى «أمفوتيري»؟",
+        "content": {
+          "rule": "الحمض الأميني أمفوتيري لأنه يستطيع اكتساب H⁺ في وسط حمضي، ويستطيع فقد H⁺ في وسط قاعدي.",
+          "do_not_confuse": [
+            "أمفوتيري لا يعني أن شحنته دائما صفر.",
+            "الذي يتغير حسب الوسط هو حالة التأين، وبالتالي الشحنة."
+          ]
+        }
+      },
+      {
+        "id": "step_4",
+        "type": "scientific_animation",
+        "component": "ScientificAnimation",
+        "title": "أين توجد pHi وسط كل هذا؟",
+        "content": {
+          "scene": "ph_scale",
+          "title": "حرّك pH حول pHi",
+          "instruction": "راقب مكان pH بالنسبة إلى pHi، ثم لاحظ الشحنة الناتجة.",
+          "frames": [
+            {
+              "title": "pH أصغر من pHi",
+              "description": "نحن على الجهة الحمضية من pHi، لذلك يغلب الشكل الموجب.",
+              "ph": 3,
+              "phi": 6,
+              "net_charge": "+",
+              "badge": "موجب"
+            },
+            {
+              "title": "pH يساوي pHi",
+              "description": "هنا نقطة التعادل الكهربائي: مجموع الشحنات داخل الحمض الأميني يساوي صفرا.",
+              "ph": 6,
+              "phi": 6,
+              "net_charge": "0",
+              "badge": "متعادل كهربائيا"
+            },
+            {
+              "title": "pH أكبر من pHi",
+              "description": "نحن على الجهة القاعدية من pHi، لذلك يغلب الشكل السالب.",
+              "ph": 10,
+              "phi": 6,
+              "net_charge": "−",
+              "badge": "سالب"
+            }
+          ],
+          "takeaway": "pHi ليست شحنة؛ هي قيمة pH مرجعية نقارن بها pH الوسط."
+        }
+      },
+      {
+        "id": "step_5",
+        "type": "comparison",
+        "component": "VisualComparison",
+        "title": "القاعدة التي تحل أغلب الأسئلة",
+        "content": {
+          "columns": [
+            {
+              "title": "pH < pHi",
+              "items": [
+                "الوسط أكثر حمضية.",
+                "اكتساب H⁺ أكبر.",
+                "الشحنة الإجمالية موجبة (+)."
+              ]
+            },
+            {
+              "title": "pH = pHi",
+              "items": [
+                "نقطة التعادل الكهربائي.",
+                "موجب + سالب داخل الجزيء.",
+                "المحصلة تساوي 0."
+              ]
+            },
+            {
+              "title": "pH > pHi",
+              "items": [
+                "الوسط أكثر قاعدية.",
+                "فقد H⁺ أكبر.",
+                "الشحنة الإجمالية سالبة (−)."
+              ]
+            }
+          ],
+          "final_question": "لا تحفظ ثلاث جمل منفصلة: فقط ضع pH على يسار pHi أو فوقها أو على يمينها."
+        }
+      },
+      {
+        "id": "step_6",
+        "type": "quick_check",
+        "component": "QuickCheck",
+        "title": "ثلاث ثوانٍ لكل سؤال",
+        "content": {
+          "questions": [
+            {
+              "id": "qc1",
+              "question": "حمض أميني pHi = 6 ووُضع في وسط pH = 2. ما شحنته؟",
+              "choices": [
+                "موجبة",
+                "معدومة",
+                "سالبة"
+              ],
+              "correct_answer": "موجبة",
+              "explanation": "2 < 6، إذن pH < pHi → الشحنة موجبة."
+            },
+            {
+              "id": "qc2",
+              "question": "حمض أميني pHi = 6 ووُضع في وسط pH = 6. ما المحصلة؟",
+              "choices": [
+                "موجبة",
+                "معدومة",
+                "سالبة"
+              ],
+              "correct_answer": "معدومة",
+              "explanation": "pH = pHi → محصلة الشحنة = 0."
+            },
+            {
+              "id": "qc3",
+              "question": "حمض أميني pHi = 6 ووُضع في وسط pH = 10. ما شحنته؟",
+              "choices": [
+                "موجبة",
+                "معدومة",
+                "سالبة"
+              ],
+              "correct_answer": "سالبة",
+              "explanation": "10 > 6، إذن pH > pHi → الشحنة سالبة."
+            }
+          ]
+        }
+      },
+      {
+        "id": "step_7",
+        "type": "bac_method",
+        "component": "BacMethodCard",
+        "title": "طريقة الإجابة في البكالوريا",
+        "content": {
+          "skill": "تحديد شحنة حمض أميني باستعمال pH وpHi",
+          "method": [
+            {
+              "label": "1. أستخرج القيمتين",
+              "text": "أكتب pH الوسط وpHi للحمض الأميني."
+            },
+            {
+              "label": "2. أقارن فقط",
+              "text": "هل pH أصغر من pHi، يساويه، أم أكبر منه؟"
+            },
+            {
+              "label": "3. أستنتج",
+              "text": "أصغر → موجب، مساوي → صفر، أكبر → سالب."
+            }
+          ],
+          "bac_sentence": "بما أن pH الوسط أصغر من pHi للحمض الأميني، فإن الحمض الأميني يكون موجب الشحنة.",
+          "common_mistake": "لا تستنتج الشحنة من قيمة pH وحدها؛ يجب دائما مقارنتها بـ pHi."
+        }
+      },
+      {
+        "id": "step_8",
+        "type": "bac_application",
+        "component": "BacApplication",
+        "title": "طبّق مثل البكالوريا",
+        "content": {
+          "document": {
+            "statement": "لدينا: Asp له pHi = 2.98، وAla له pHi ≈ 6، وLys له pHi = 9.74. وضعت الأحماض الأمينية الثلاثة في وسط pH = 6."
+          },
+          "questions": [
+            {
+              "id": "bac_q1",
+              "question": "حدد شحنة Asp.",
+              "expected_answer": "6 > 2.98، إذن pH > pHi، لذلك Asp سالب الشحنة."
+            },
+            {
+              "id": "bac_q2",
+              "question": "حدد محصلة شحنة Ala.",
+              "expected_answer": "pH ≈ pHi، لذلك محصلة شحنة Ala قريبة من الصفر."
+            },
+            {
+              "id": "bac_q3",
+              "question": "حدد شحنة Lys.",
+              "expected_answer": "6 < 9.74، إذن pH < pHi، لذلك Lys موجب الشحنة."
+            }
+          ]
+        }
+      },
+      {
+        "id": "step_9",
+        "type": "final_visual_map",
+        "component": "InteractiveSummaryMap",
+        "title": "إذا تذكرت هذا فقد فهمت المحور",
+        "content": {
+          "map": [
+            {
+              "node": "pH < pHi",
+              "relation": "يعني",
+              "target": "شحنة موجبة (+)"
+            },
+            {
+              "node": "pH = pHi",
+              "relation": "يعني",
+              "target": "محصلة = 0"
+            },
+            {
+              "node": "pH > pHi",
+              "relation": "يعني",
+              "target": "شحنة سالبة (−)"
+            }
+          ],
+          "memory_tip": "يسار pHi موجب، عند pHi صفر، يمين pHi سالب.",
+          "next_axis_bridge": {
+            "question": "إذا أصبح الحمض الأميني موجبا أو سالبا، فإلى أي قطب سيتجه في مجال كهربائي؟",
+            "next_concept": "الهجرة الكهربائية للأحماض الأمينية والبروتينات"
+          }
+        }
+      },
+      {
+        "id": "step_10",
+        "type": "quiz",
+        "component": "FinalQuiz",
+        "title": "اختبار نهاية المحور",
+        "content": {
+          "questions": [
+            {
+              "id": "q1",
+              "question": "ما معنى pHi؟",
+              "choices": [
+                "قيمة pH التي تكون عندها محصلة الشحنة صفرا",
+                "شحنة الحمض الأميني",
+                "أكبر قيمة pH"
+              ],
+              "correct_answer": "قيمة pH التي تكون عندها محصلة الشحنة صفرا",
+              "explanation": "pHi هي نقطة التعادل الكهربائي."
+            },
+            {
+              "id": "q2",
+              "question": "إذا كان pH = 4 وpHi = 9 فما الشحنة؟",
+              "choices": [
+                "موجبة",
+                "معدومة",
+                "سالبة"
+              ],
+              "correct_answer": "موجبة",
+              "explanation": "4 < 9، إذن pH < pHi."
+            },
+            {
+              "id": "q3",
+              "question": "إذا كان pH = 10 وpHi = 5 فما الشحنة؟",
+              "choices": [
+                "موجبة",
+                "معدومة",
+                "سالبة"
+              ],
+              "correct_answer": "سالبة",
+              "explanation": "10 > 5، إذن pH > pHi."
+            }
+          ],
+          "mastery_threshold": 3
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,367 @@
+{
+  "version": 1,
+  "language": "ar",
+  "direction": "rtl",
+  "subject_code": "math",
+  "chapter_code": "exponential_logarithmic_functions",
+  "tag": "exp_composite_derivative",
+  "title": "تمارين محور اشتقاق الدالة المركبة e^{u(x)}",
+  "question_count": 12,
+  "questions": [
+    {
+      "id": "exp_composite_derivative_01",
+      "number": 1,
+      "title": "تحديد الدالة الداخلية",
+      "text": "حدد الدالة الداخلية \\(u(x)\\) في كل حالة: \\(e^{3x-2}\\)، \\(e^{x^2+1}\\)، \\(e^{1/x}\\).",
+      "skill": "تحديد ما داخل الأس في الدالة المركبة.",
+      "difficulty": "easy",
+      "solution": {
+        "steps": [
+          {
+            "order": 1,
+            "result": "في \\(e^{3x-2}\\): \\(u(x)=3x-2\\)."
+          },
+          {
+            "order": 2,
+            "result": "في \\(e^{x^2+1}\\): \\(u(x)=x^2+1\\)."
+          },
+          {
+            "order": 3,
+            "result": "في \\(e^{1/x}\\): \\(u(x)=1/x\\)."
+          }
+        ],
+        "final_answer": "الدالة الداخلية هي كامل التعبير الموجود داخل الأس."
+      }
+    },
+    {
+      "id": "exp_composite_derivative_02",
+      "number": 2,
+      "title": "أس خطي",
+      "text": "احسب مشتقة الدالة \\(f(x)=e^{5x-3}\\).",
+      "skill": "تطبيق قاعدة \\((e^{u})'=u'e^u\\) على أس خطي.",
+      "difficulty": "easy",
+      "solution": {
+        "steps": [
+          {
+            "order": 1,
+            "calculation": "\\(u(x)=5x-3\\Rightarrow u'(x)=5\\)."
+          },
+          {
+            "order": 2,
+            "calculation": "\\(f'(x)=u'(x)e^{u(x)}=5e^{5x-3}\\)."
+          }
+        ],
+        "final_answer": "\\(f'(x)=5e^{5x-3}\\)."
+      }
+    },
+    {
+      "id": "exp_composite_derivative_03",
+      "number": 3,
+      "title": "أس تربيعي",
+      "text": "احسب مشتقة الدالة \\(f(x)=e^{x^2+2x-1}\\).",
+      "skill": "اشتقاق دالة أسية ذات أس كثير حدود.",
+      "difficulty": "easy",
+      "solution": {
+        "steps": [
+          {
+            "order": 1,
+            "calculation": "\\(u(x)=x^2+2x-1\\Rightarrow u'(x)=2x+2\\)."
+          },
+          {
+            "order": 2,
+            "calculation": "\\(f'(x)=(2x+2)e^{x^2+2x-1}\\)."
+          }
+        ],
+        "final_answer": "\\(f'(x)=2(x+1)e^{x^2+2x-1}\\)."
+      }
+    },
+    {
+      "id": "exp_composite_derivative_04",
+      "number": 4,
+      "title": "الأس السالب",
+      "text": "احسب مشتقة الدالة \\(f(x)=e^{-x^2}\\).",
+      "skill": "عدم نسيان مشتقة الأس.",
+      "difficulty": "easy",
+      "solution": {
+        "steps": [
+          {
+            "order": 1,
+            "calculation": "\\(u(x)=-x^2\\Rightarrow u'(x)=-2x\\)."
+          },
+          {
+            "order": 2,
+            "calculation": "\\(f'(x)=-2xe^{-x^2}\\)."
+          }
+        ],
+        "final_answer": "\\(f'(x)=-2xe^{-x^2}\\)."
+      }
+    },
+    {
+      "id": "exp_composite_derivative_05",
+      "number": 5,
+      "title": "مجال التعريف ثم الاشتقاق",
+      "text": "لتكن \\(g(x)=e^{1/x}\\). حدد مجال تعريف \\(g\\)، ثم احسب \\(g'(x)\\).",
+      "skill": "تحديد المجال واشتقاق أس يحتوي على كسر.",
+      "difficulty": "medium",
+      "solution": {
+        "steps": [
+          {
+            "order": 1,
+            "explanation": "يجب أن يكون \\(x\\neq0\\).",
+            "result": "\\(D_g=\\mathbb{R}^*\\)."
+          },
+          {
+            "order": 2,
+            "calculation": "\\(u(x)=1/x\\Rightarrow u'(x)=-1/x^2\\)."
+          },
+          {
+            "order": 3,
+            "calculation": "\\(g'(x)=-\\dfrac{1}{x^2}e^{1/x}\\)."
+          }
+        ],
+        "final_answer": "\\(D_g=\\mathbb{R}^*\\) و\\(g'(x)=-\\dfrac{e^{1/x}}{x^2}\\)."
+      }
+    },
+    {
+      "id": "exp_composite_derivative_06",
+      "number": 6,
+      "title": "دراسة إشارة المشتقة",
+      "text": "لتكن \\(f(x)=e^{x^2-6x+2}\\). احسب \\(f'(x)\\) ثم ادرس إشارتها.",
+      "skill": "استعمال إيجابية العامل الأسي لدراسة إشارة المشتقة.",
+      "difficulty": "medium",
+      "solution": {
+        "steps": [
+          {
+            "order": 1,
+            "calculation": "\\(u'(x)=2x-6=2(x-3)\\)."
+          },
+          {
+            "order": 2,
+            "calculation": "\\(f'(x)=2(x-3)e^{x^2-6x+2}\\)."
+          },
+          {
+            "order": 3,
+            "explanation": "بما أن \\(e^{x^2-6x+2}>0\\)، فإشارة \\(f'(x)\\) هي إشارة \\(x-3\\)."
+          }
+        ],
+        "sign_table": {
+          "columns": [
+            "x",
+            "-\\infty",
+            "3",
+            "+\\infty"
+          ],
+          "row": [
+            "f'(x)",
+            "-",
+            "0",
+            "+"
+          ]
+        },
+        "final_answer": "\\(f'(x)<0\\) إذا \\(x<3\\)، وتنعدم عند 3، و\\(f'(x)>0\\) إذا \\(x>3\\)."
+      }
+    },
+    {
+      "id": "exp_composite_derivative_07",
+      "number": 7,
+      "title": "دراسة التغير",
+      "text": "ادرس اتجاه تغير الدالة \\(f(x)=e^{x^2-4x+1}\\)، وحدد قيمتها الصغرى.",
+      "skill": "الانتقال من مشتقة الأس إلى تغير الدالة.",
+      "difficulty": "medium",
+      "solution": {
+        "steps": [
+          {
+            "order": 1,
+            "calculation": "\\(f'(x)=2(x-2)e^{x^2-4x+1}\\)."
+          },
+          {
+            "order": 2,
+            "explanation": "العامل الأسي موجب، لذلك إشارة المشتقة هي إشارة \\(x-2\\)."
+          },
+          {
+            "order": 3,
+            "result": "الدالة متناقصة على \\(]-\\infty,2]\\) ومتزايدة على \\([2,+\\infty[\\)."
+          },
+          {
+            "order": 4,
+            "calculation": "\\(f(2)=e^{4-8+1}=e^{-3}\\)."
+          }
+        ],
+        "variation_table": {
+          "columns": [
+            "x",
+            "-\\infty",
+            "2",
+            "+\\infty"
+          ],
+          "derivative_row": [
+            "f'(x)",
+            "-",
+            "0",
+            "+"
+          ],
+          "function_row": [
+            "f(x)",
+            "تناقص",
+            "\\(e^{-3}\\)",
+            "تزايد"
+          ]
+        },
+        "final_answer": "للدالة قيمة صغرى \\(e^{-3}\\) عند \\(x=2\\)."
+      }
+    },
+    {
+      "id": "exp_composite_derivative_08",
+      "number": 8,
+      "title": "دالة متناقصة على مجالها",
+      "text": "ادرس اتجاه تغير الدالة \\(g(x)=e^{1/x}\\) على كل مجال من مجالي تعريفها.",
+      "skill": "دراسة تغير دالة مركبة مع احترام مجال التعريف.",
+      "difficulty": "medium",
+      "solution": {
+        "steps": [
+          {
+            "order": 1,
+            "result": "\\(D_g=]-\\infty,0[\\cup]0,+\\infty[\\)."
+          },
+          {
+            "order": 2,
+            "calculation": "\\(g'(x)=-\\dfrac{e^{1/x}}{x^2}\\)."
+          },
+          {
+            "order": 3,
+            "explanation": "\\(e^{1/x}>0\\) و\\(x^2>0\\)، لذلك \\(g'(x)<0\\) لكل \\(x\\neq0\\)."
+          }
+        ],
+        "final_answer": "\\(g\\) متناقصة تمامًا على \\(]-\\infty,0[\\) وعلى \\(]0,+\\infty[\\)."
+      }
+    },
+    {
+      "id": "exp_composite_derivative_09",
+      "number": 9,
+      "title": "مشتقة أس كثير حدود من الدرجة الثالثة",
+      "text": "احسب مشتقة \\(f(x)=e^{x^3-3x}\\)، ثم اكتبها في شكل يسمح بدراسة الإشارة.",
+      "skill": "اشتقاق وتحليل مشتقة الأس.",
+      "difficulty": "medium",
+      "solution": {
+        "steps": [
+          {
+            "order": 1,
+            "calculation": "\\(u'(x)=3x^2-3=3(x^2-1)\\)."
+          },
+          {
+            "order": 2,
+            "calculation": "\\(u'(x)=3(x-1)(x+1)\\)."
+          },
+          {
+            "order": 3,
+            "calculation": "\\(f'(x)=3(x-1)(x+1)e^{x^3-3x}\\)."
+          }
+        ],
+        "final_answer": "\\(f'(x)=3(x-1)(x+1)e^{x^3-3x}\\)."
+      }
+    },
+    {
+      "id": "exp_composite_derivative_10",
+      "number": 10,
+      "title": "من المشتقة إلى التغير",
+      "text": "لتكن \\(f(x)=e^{x^3-3x}\\). ادرس إشارة \\(f'(x)\\) واستنتج اتجاه تغير \\(f\\).",
+      "skill": "دراسة تغير دالة مركبة عندما تكون مشتقة الأس قابلة للتحليل.",
+      "difficulty": "medium",
+      "solution": {
+        "steps": [
+          {
+            "order": 1,
+            "calculation": "\\(f'(x)=3(x-1)(x+1)e^{x^3-3x}\\)."
+          },
+          {
+            "order": 2,
+            "explanation": "العاملان \\(3\\) و\\(e^{x^3-3x}\\) موجبان، لذلك ندرس إشارة \\((x-1)(x+1)\\)."
+          },
+          {
+            "order": 3,
+            "result": "\\(f'(x)>0\\) على \\(]-\\infty,-1[\\cup]1,+\\infty[\\)، و\\(f'(x)<0\\) على \\(]-1,1[\\)."
+          }
+        ],
+        "final_answer": "\\(f\\) متزايدة على \\(]-\\infty,-1]\\) و\\([1,+\\infty[\\)، ومتناقصة على \\([-1,1]\\)."
+      }
+    },
+    {
+      "id": "exp_composite_derivative_11",
+      "number": 11,
+      "title": "تصحيح خطأ شائع",
+      "text": "كتب تلميذ: \\((e^{x^2+1})'=e^{2x}\\). بين الخطأ واكتب المشتقة الصحيحة.",
+      "skill": "تمييز القاعدة الصحيحة عن الخطأ الشائع.",
+      "difficulty": "easy",
+      "solution": {
+        "steps": [
+          {
+            "order": 1,
+            "explanation": "الأس الأصلي لا يُستبدل بمشتقته؛ بل تبقى الأسية نفسها ونضربها في مشتقة الأس."
+          },
+          {
+            "order": 2,
+            "calculation": "\\(u(x)=x^2+1\\Rightarrow u'(x)=2x\\)."
+          },
+          {
+            "order": 3,
+            "calculation": "\\((e^{x^2+1})'=2xe^{x^2+1}\\)."
+          }
+        ],
+        "final_answer": "الصحيح هو \\(2xe^{x^2+1}\\)، وليس \\(e^{2x}\\)."
+      }
+    },
+    {
+      "id": "exp_composite_derivative_12",
+      "number": 12,
+      "title": "تمرين شامل",
+      "text": "لتكن \\(f(x)=e^{x^2-2x-3}\\). 1) حدد \\(u(x)\\) و\\(u'(x)\\). 2) احسب \\(f'(x)\\). 3) ادرس إشارة \\(f'(x)\\). 4) استنتج اتجاه تغير \\(f\\) وحدد قيمتها الصغرى.",
+      "skill": "تطبيق الخطة الكاملة للمحور.",
+      "difficulty": "medium",
+      "solution": {
+        "steps": [
+          {
+            "order": 1,
+            "calculation": "\\(u(x)=x^2-2x-3\\)، \\(u'(x)=2x-2=2(x-1)\\)."
+          },
+          {
+            "order": 2,
+            "calculation": "\\(f'(x)=2(x-1)e^{x^2-2x-3}\\)."
+          },
+          {
+            "order": 3,
+            "explanation": "بما أن العامل الأسي موجب، فإشارة المشتقة هي إشارة \\(x-1\\)."
+          },
+          {
+            "order": 4,
+            "result": "\\(f\\) متناقصة حتى \\(x=1\\)، ثم متزايدة بعده."
+          },
+          {
+            "order": 5,
+            "calculation": "\\(f(1)=e^{1-2-3}=e^{-4}\\)."
+          }
+        ],
+        "variation_table": {
+          "columns": [
+            "x",
+            "-\\infty",
+            "1",
+            "+\\infty"
+          ],
+          "derivative_row": [
+            "f'(x)",
+            "-",
+            "0",
+            "+"
+          ],
+          "function_row": [
+            "f(x)",
+            "تناقص",
+            "\\(e^{-4}\\)",
+            "تزايد"
+          ]
+        },
+        "final_answer": "للدالة قيمة صغرى \\(e^{-4}\\) عند \\(x=1\\)."
+      }
+    }
+  ]
+}
