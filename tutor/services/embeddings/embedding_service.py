@@ -1,4 +1,3 @@
-from sentence_transformers import SentenceTransformer
 
 
 class EmbeddingService:
@@ -13,8 +12,11 @@ class EmbeddingService:
     @classmethod
     def get_model(cls):
         if cls._model is None:
+            from sentence_transformers import SentenceTransformer
+
             cls._model = SentenceTransformer(
-                cls.MODEL_NAME
+                cls.MODEL_NAME,
+                device="cpu",
             )
 
         return cls._model
@@ -29,6 +31,7 @@ class EmbeddingService:
         embedding = model.encode(
             text.strip(),
             normalize_embeddings=True,
+            show_progress_bar=False,
         )
 
         return embedding.tolist()
