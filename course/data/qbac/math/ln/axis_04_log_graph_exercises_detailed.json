@@ -1,0 +1,5585 @@
+{
+  "version": 7,
+  "language": "ar",
+  "direction": "rtl",
+  "subject_code": "math",
+  "chapter_code": "exponential_logarithmic_functions",
+  "tag": "log_graph",
+  "axis_tag": "log_graph",
+  "title": "سلسلة تدريبية شاملة: التمثيل البياني واتجاه تغير الدالة ln",
+  "question_count": 13,
+  "max_questions": 13,
+  "selection_summary": {
+    "rule": "تمارين تغطي جميع أفكار المحور: تناظر exp وln، المجال، النقاط المرجعية، النهايات، المقارب، جدول التغير، بناء الرسم، قراءة الصور والسوابق، الإشارة والمقارنة.",
+    "source_axis": "التمثيل البياني واتجاه التغير",
+    "full_exercise_text": true,
+    "detailed_solution": true,
+    "pedagogical_progression": true,
+    "solution_access": "direct",
+    "attempt_before_solution": false,
+    "one_step_at_a_time": true,
+    "animate_solution_steps": true,
+    "bac_writing": true,
+    "understanding_check": true,
+    "supports_graphs": true,
+    "supports_variation_tables": true,
+    "supports_sign_tables": true,
+    "react_component": "UniversalMathExerciseRenderer"
+  },
+  "questions": [
+    {
+      "id": "log_graph_practice_01",
+      "year": null,
+      "source_file": null,
+      "source_page": null,
+      "exercise": "تمرين تدريبي 1",
+      "number": "1",
+      "title": "من exp إلى ln",
+      "text": "نعلم أن النقاط \\((0,1)\\)، \\((1,e)\\)، \\((2,e^2)\\)، \\((-1,1/e)\\) تنتمي إلى منحنى \\(y=e^x\\). أوجد النقاط المناظرة لها على منحنى \\(y=\\ln x\\).",
+      "standalone_text": "نعلم أن النقاط \\((0,1)\\)، \\((1,e)\\)، \\((2,e^2)\\)، \\((-1,1/e)\\) تنتمي إلى منحنى \\(y=e^x\\). أوجد النقاط المناظرة لها على منحنى \\(y=\\ln x\\).",
+      "context": "تمرين تدريبي مبني مباشرة على محور التمثيل البياني واتجاه تغير ln.",
+      "tag": "log_graph",
+      "axis": "التمثيل البياني واتجاه التغير",
+      "secondary_tags": [],
+      "skill": "استعمال التناظر بين exp وln حول y=x.",
+      "difficulty": "easy",
+      "question_type": "axis_practice",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "tables": [],
+      "variation_tables": [],
+      "sign_tables": [],
+      "graph_data": {
+        "react_data": {
+          "coordinate_system": {
+            "x_min": -3,
+            "x_max": 7,
+            "y_min": -3,
+            "y_max": 7,
+            "x_step": 1,
+            "y_step": 1
+          },
+          "series": [
+            {
+              "id": "exp",
+              "label": "y=e^x",
+              "type": "line",
+              "equation": "y=e^x",
+              "data": [
+                {
+                  "x": -3,
+                  "y": 0.049787
+                },
+                {
+                  "x": -2,
+                  "y": 0.135335
+                },
+                {
+                  "x": -1,
+                  "y": 0.367879
+                },
+                {
+                  "x": 0,
+                  "y": 1.0
+                },
+                {
+                  "x": 0.5,
+                  "y": 1.648721
+                },
+                {
+                  "x": 1,
+                  "y": 2.718282
+                },
+                {
+                  "x": 1.5,
+                  "y": 4.481689
+                }
+              ]
+            },
+            {
+              "id": "ln",
+              "label": "y=ln(x)",
+              "type": "line",
+              "equation": "y=ln(x)",
+              "data": [
+                {
+                  "x": 0.05,
+                  "y": -2.995732
+                },
+                {
+                  "x": 0.1,
+                  "y": -2.302585
+                },
+                {
+                  "x": 0.2,
+                  "y": -1.609438
+                },
+                {
+                  "x": 0.367879,
+                  "y": -1.0
+                },
+                {
+                  "x": 0.5,
+                  "y": -0.693147
+                },
+                {
+                  "x": 1,
+                  "y": 0.0
+                },
+                {
+                  "x": 1.5,
+                  "y": 0.405465
+                },
+                {
+                  "x": 2,
+                  "y": 0.693147
+                },
+                {
+                  "x": 2.718282,
+                  "y": 1.0
+                },
+                {
+                  "x": 4,
+                  "y": 1.386294
+                },
+                {
+                  "x": 5,
+                  "y": 1.609438
+                }
+              ]
+            },
+            {
+              "id": "identity",
+              "label": "y=x",
+              "type": "line",
+              "equation": "y=x",
+              "data": [
+                {
+                  "x": -3,
+                  "y": -3
+                },
+                {
+                  "x": 7,
+                  "y": 7
+                }
+              ]
+            }
+          ],
+          "special_points": [
+            {
+              "id": "p1",
+              "x": 0,
+              "y": 1,
+              "label": "(0,1) exp"
+            },
+            {
+              "id": "p2",
+              "x": 1,
+              "y": 0,
+              "label": "(1,0) ln"
+            },
+            {
+              "id": "p3",
+              "x": 1,
+              "y": 2.718282,
+              "label": "(1,e) exp"
+            },
+            {
+              "id": "p4",
+              "x": 2.718282,
+              "y": 1,
+              "label": "(e,1) ln"
+            }
+          ],
+          "title": "تناظر exp وln حول y=x"
+        }
+      },
+      "solution": {
+        "title": "الحل المفصل: من exp إلى ln",
+        "main_idea": "استعمال التناظر بين exp وln حول y=x.",
+        "strategy": "المجال ← المقارب/النقاط ← التزايد والنهايات ← القراءة أو الاستنتاج البياني.",
+        "detailed_explanation": "حل تدريجي يدرّب التلميذ على بناء منحنى ln وقراءة المعلومات منه.",
+        "uses_graph": true,
+        "uses_images": false,
+        "uses_tables": false,
+        "uses_variation_table": false,
+        "uses_sign_table": false,
+        "steps": [
+          {
+            "number": "1",
+            "order": 1,
+            "title": "قاعدة التناظر",
+            "explanation": "في الدالتين المتعاكستين نتبادل الإحداثيين.",
+            "construction": [],
+            "calculation": "\\((a,b)\\to(b,a)\\)",
+            "result": "نبدل x وy فقط.",
+            "conclusion": "نبدل x وy فقط.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "في الدالتين المتعاكستين نتبادل الإحداثيين.",
+            "rule_used": "تناظر الدالة العكسية",
+            "why": "في الدالتين المتعاكستين نتبادل الإحداثيين.",
+            "calculation_breakdown": [],
+            "student_action": "حاول تنفيذ هذه الخطوة بنفسك ثم قارنها بالحل."
+          },
+          {
+            "number": "2",
+            "order": 2,
+            "title": "التطبيق",
+            "explanation": "نطبق على النقاط الأربع.",
+            "construction": [],
+            "calculation": "\\((0,1)\\to(1,0),\\ (1,e)\\to(e,1),\\ (2,e^2)\\to(e^2,2),\\ (-1,1/e)\\to(1/e,-1)\\)",
+            "result": "حصلنا على النقاط المرجعية لـln.",
+            "conclusion": "حصلنا على النقاط المرجعية لـln.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "نطبق على النقاط الأربع.",
+            "rule_used": "تناظر حول y=x",
+            "why": "نطبق على النقاط الأربع.",
+            "calculation_breakdown": [],
+            "student_action": "حاول تنفيذ هذه الخطوة بنفسك ثم قارنها بالحل."
+          }
+        ],
+        "final_answer": "\\(\\boxed{(1,0),(e,1),(e^2,2),(1/e,-1)}\\).",
+        "verification": "النتيجة منسجمة مع مجال ln ونقاطها المرجعية وتزايدها ومقاربها العمودي.",
+        "common_mistakes": [
+          {
+            "mistake": "رسم ln يسار محور التراتيب.",
+            "correction": "مجال ln هو x>0 فقط."
+          },
+          {
+            "mistake": "وضع (0,1) على منحنى ln.",
+            "correction": "(0,1) تخص exp، أما ln فتمر بـ(1,0)."
+          }
+        ],
+        "hints": [
+          {
+            "level": 1,
+            "hint": "بدّل الفاصلة والترتيب."
+          }
+        ],
+        "alternative_method": "",
+        "images": [],
+        "tables": [],
+        "variation_tables": [],
+        "sign_tables": [],
+        "graph_data": {
+          "react_data": {
+            "coordinate_system": {
+              "x_min": -3,
+              "x_max": 7,
+              "y_min": -3,
+              "y_max": 7,
+              "x_step": 1,
+              "y_step": 1
+            },
+            "series": [
+              {
+                "id": "exp",
+                "label": "y=e^x",
+                "type": "line",
+                "equation": "y=e^x",
+                "data": [
+                  {
+                    "x": -3,
+                    "y": 0.049787
+                  },
+                  {
+                    "x": -2,
+                    "y": 0.135335
+                  },
+                  {
+                    "x": -1,
+                    "y": 0.367879
+                  },
+                  {
+                    "x": 0,
+                    "y": 1.0
+                  },
+                  {
+                    "x": 0.5,
+                    "y": 1.648721
+                  },
+                  {
+                    "x": 1,
+                    "y": 2.718282
+                  },
+                  {
+                    "x": 1.5,
+                    "y": 4.481689
+                  }
+                ]
+              },
+              {
+                "id": "ln",
+                "label": "y=ln(x)",
+                "type": "line",
+                "equation": "y=ln(x)",
+                "data": [
+                  {
+                    "x": 0.05,
+                    "y": -2.995732
+                  },
+                  {
+                    "x": 0.1,
+                    "y": -2.302585
+                  },
+                  {
+                    "x": 0.2,
+                    "y": -1.609438
+                  },
+                  {
+                    "x": 0.367879,
+                    "y": -1.0
+                  },
+                  {
+                    "x": 0.5,
+                    "y": -0.693147
+                  },
+                  {
+                    "x": 1,
+                    "y": 0.0
+                  },
+                  {
+                    "x": 1.5,
+                    "y": 0.405465
+                  },
+                  {
+                    "x": 2,
+                    "y": 0.693147
+                  },
+                  {
+                    "x": 2.718282,
+                    "y": 1.0
+                  },
+                  {
+                    "x": 4,
+                    "y": 1.386294
+                  },
+                  {
+                    "x": 5,
+                    "y": 1.609438
+                  }
+                ]
+              },
+              {
+                "id": "identity",
+                "label": "y=x",
+                "type": "line",
+                "equation": "y=x",
+                "data": [
+                  {
+                    "x": -3,
+                    "y": -3
+                  },
+                  {
+                    "x": 7,
+                    "y": 7
+                  }
+                ]
+              }
+            ],
+            "special_points": [
+              {
+                "id": "p1",
+                "x": 0,
+                "y": 1,
+                "label": "(0,1) exp"
+              },
+              {
+                "id": "p2",
+                "x": 1,
+                "y": 0,
+                "label": "(1,0) ln"
+              },
+              {
+                "id": "p3",
+                "x": 1,
+                "y": 2.718282,
+                "label": "(1,e) exp"
+              },
+              {
+                "id": "p4",
+                "x": 2.718282,
+                "y": 1,
+                "label": "(e,1) ln"
+              }
+            ],
+            "title": "تناظر exp وln حول y=x"
+          }
+        },
+        "presentation": {
+          "show_graph_first": true,
+          "show_one_step_at_a_time": true,
+          "react_component": "UniversalMathExerciseRenderer",
+          "graph_mode": "cartesian",
+          "use_field": "graph_data.react_data",
+          "rtl": true,
+          "show_graph_in_question": true,
+          "show_graph_in_solution": true,
+          "show_images_in_question": false,
+          "show_images_in_solution": false,
+          "show_tables_in_question": false,
+          "show_tables_in_solution": false,
+          "show_variation_tables": false,
+          "show_sign_tables": false,
+          "animate_steps": true,
+          "solution_open_mode": "on_button_click",
+          "solution_access": "direct",
+          "attempt_required": false,
+          "show_final_answer_after_last_step": true,
+          "show_verification_after_final_answer": true,
+          "show_bac_writing": true,
+          "show_understanding_check": true,
+          "math_direction": "ltr"
+        },
+        "is_complete": true,
+        "solution_access": "direct",
+        "attempt_required": false,
+        "bac_writing": [
+          "أحدد مجال ln.",
+          "أستعمل النقاط والمقارب والتزايد.",
+          "أقرأ المطلوب من الرسم بدقة."
+        ],
+        "understanding_check": {
+          "question": "ما العناصر الأربعة الأساسية لرسم ln؟",
+          "answer": "المجال x>0، المقارب x=0، النقطة (1,0)، والتزايد."
+        },
+        "takeaway": "استعمال التناظر بين exp وln حول y=x."
+      },
+      "display_order": 1,
+      "learning_stage": "axis_practice",
+      "learning_stage_label": "تمرين تطبيقي",
+      "pedagogical_objective": "استعمال التناظر بين exp وln حول y=x.",
+      "solution_access": "direct",
+      "attempt_required": false
+    },
+    {
+      "id": "log_graph_practice_02",
+      "year": null,
+      "source_file": null,
+      "source_page": null,
+      "exercise": "تمرين تدريبي 2",
+      "number": "2",
+      "title": "المجال والمقارب",
+      "text": "بالاعتماد على خصائص \\(\\ln x\\): 1) حدد مجال الرسم. 2) احسب سلوك الدالة عندما \\(x\\to0^+\\). 3) استنتج المقارب العمودي.",
+      "standalone_text": "بالاعتماد على خصائص \\(\\ln x\\): 1) حدد مجال الرسم. 2) احسب سلوك الدالة عندما \\(x\\to0^+\\). 3) استنتج المقارب العمودي.",
+      "context": "تمرين تدريبي مبني مباشرة على محور التمثيل البياني واتجاه تغير ln.",
+      "tag": "log_graph",
+      "axis": "التمثيل البياني واتجاه التغير",
+      "secondary_tags": [],
+      "skill": "ربط المجال والنهاية بالمقارب العمودي.",
+      "difficulty": "easy",
+      "question_type": "axis_practice",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "tables": [],
+      "variation_tables": [],
+      "sign_tables": [],
+      "graph_data": {
+        "react_data": {
+          "coordinate_system": {
+            "x_min": 0,
+            "x_max": 10,
+            "y_min": -4,
+            "y_max": 3,
+            "x_step": 1,
+            "y_step": 1
+          },
+          "series": [
+            {
+              "id": "ln_curve",
+              "label": "y=ln(x)",
+              "type": "line",
+              "equation": "y=ln(x)",
+              "data": [
+                {
+                  "x": 0.05,
+                  "y": -2.995732
+                },
+                {
+                  "x": 0.1,
+                  "y": -2.302585
+                },
+                {
+                  "x": 0.2,
+                  "y": -1.609438
+                },
+                {
+                  "x": 0.367879,
+                  "y": -1.0
+                },
+                {
+                  "x": 0.5,
+                  "y": -0.693147
+                },
+                {
+                  "x": 1,
+                  "y": 0.0
+                },
+                {
+                  "x": 1.5,
+                  "y": 0.405465
+                },
+                {
+                  "x": 2,
+                  "y": 0.693147
+                },
+                {
+                  "x": 2.718282,
+                  "y": 1.0
+                },
+                {
+                  "x": 4,
+                  "y": 1.386294
+                },
+                {
+                  "x": 5,
+                  "y": 1.609438
+                },
+                {
+                  "x": 7.389056,
+                  "y": 2.0
+                },
+                {
+                  "x": 10,
+                  "y": 2.302585
+                }
+              ]
+            }
+          ],
+          "special_points": [
+            {
+              "id": "a",
+              "x": 0.367879,
+              "y": -1,
+              "label": "A(1/e,-1)"
+            },
+            {
+              "id": "b",
+              "x": 1,
+              "y": 0,
+              "label": "B(1,0)"
+            },
+            {
+              "id": "c",
+              "x": 2.718282,
+              "y": 1,
+              "label": "C(e,1)"
+            },
+            {
+              "id": "d",
+              "x": 7.389056,
+              "y": 2,
+              "label": "D(e²,2)"
+            }
+          ],
+          "asymptotes": [
+            {
+              "id": "v",
+              "type": "vertical",
+              "x": 0,
+              "label": "x=0"
+            }
+          ],
+          "title": "منحنى الدالة y=ln(x)",
+          "description": "منحنى متزايد على ]0,+∞[ وله المقارب العمودي x=0."
+        }
+      },
+      "solution": {
+        "title": "الحل المفصل: المجال والمقارب",
+        "main_idea": "ربط المجال والنهاية بالمقارب العمودي.",
+        "strategy": "المجال ← المقارب/النقاط ← التزايد والنهايات ← القراءة أو الاستنتاج البياني.",
+        "detailed_explanation": "حل تدريجي يدرّب التلميذ على بناء منحنى ln وقراءة المعلومات منه.",
+        "uses_graph": true,
+        "uses_images": false,
+        "uses_tables": false,
+        "uses_variation_table": false,
+        "uses_sign_table": false,
+        "steps": [
+          {
+            "number": "1",
+            "order": 1,
+            "title": "المجال",
+            "explanation": "ln لا تقبل إلا الأعداد الموجبة.",
+            "construction": [],
+            "calculation": "\\(D=]0,+\\infty[\\)",
+            "result": "الرسم يقع يمين محور y.",
+            "conclusion": "الرسم يقع يمين محور y.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "ln لا تقبل إلا الأعداد الموجبة.",
+            "rule_used": "مجال ln",
+            "why": "ln لا تقبل إلا الأعداد الموجبة.",
+            "calculation_breakdown": [],
+            "student_action": "حاول تنفيذ هذه الخطوة بنفسك ثم قارنها بالحل."
+          },
+          {
+            "number": "2",
+            "order": 2,
+            "title": "قرب الصفر",
+            "explanation": "عند الاقتراب من الصفر من اليمين تنزل ln دون حد.",
+            "construction": [],
+            "calculation": "\\(\\lim_{x\\to0^+}\\ln x=-\\infty\\)",
+            "result": "النهاية لانهائية سالبة.",
+            "conclusion": "النهاية لانهائية سالبة.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "عند الاقتراب من الصفر من اليمين تنزل ln دون حد.",
+            "rule_used": "نهاية ln",
+            "why": "عند الاقتراب من الصفر من اليمين تنزل ln دون حد.",
+            "calculation_breakdown": [],
+            "student_action": "حاول تنفيذ هذه الخطوة بنفسك ثم قارنها بالحل."
+          },
+          {
+            "number": "3",
+            "order": 3,
+            "title": "المقارب",
+            "explanation": "النهاية اللانهائية عند x=0 تعطي مقاربًا عموديًا.",
+            "construction": [],
+            "calculation": "\\(x=0\\)",
+            "result": "محور التراتيب مقارب عمودي.",
+            "conclusion": "محور التراتيب مقارب عمودي.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "النهاية اللانهائية عند x=0 تعطي مقاربًا عموديًا.",
+            "rule_used": "تعريف المقارب",
+            "why": "النهاية اللانهائية عند x=0 تعطي مقاربًا عموديًا.",
+            "calculation_breakdown": [],
+            "student_action": "حاول تنفيذ هذه الخطوة بنفسك ثم قارنها بالحل."
+          }
+        ],
+        "final_answer": "\\(\\boxed{D=]0,+\\infty[,\\ \\lim_{x\\to0^+}\\ln x=-\\infty,\\ x=0\\text{ مقارب عمودي}}\\).",
+        "verification": "النتيجة منسجمة مع مجال ln ونقاطها المرجعية وتزايدها ومقاربها العمودي.",
+        "common_mistakes": [
+          {
+            "mistake": "رسم ln يسار محور التراتيب.",
+            "correction": "مجال ln هو x>0 فقط."
+          },
+          {
+            "mistake": "وضع (0,1) على منحنى ln.",
+            "correction": "(0,1) تخص exp، أما ln فتمر بـ(1,0)."
+          }
+        ],
+        "hints": [
+          {
+            "level": 1,
+            "hint": "الصفر ليس من المجال."
+          },
+          {
+            "level": 2,
+            "hint": "نهاية لانهائية عند عدد تعطي مقاربًا عموديًا."
+          }
+        ],
+        "alternative_method": "",
+        "images": [],
+        "tables": [],
+        "variation_tables": [],
+        "sign_tables": [],
+        "graph_data": {
+          "react_data": {
+            "coordinate_system": {
+              "x_min": 0,
+              "x_max": 10,
+              "y_min": -4,
+              "y_max": 3,
+              "x_step": 1,
+              "y_step": 1
+            },
+            "series": [
+              {
+                "id": "ln_curve",
+                "label": "y=ln(x)",
+                "type": "line",
+                "equation": "y=ln(x)",
+                "data": [
+                  {
+                    "x": 0.05,
+                    "y": -2.995732
+                  },
+                  {
+                    "x": 0.1,
+                    "y": -2.302585
+                  },
+                  {
+                    "x": 0.2,
+                    "y": -1.609438
+                  },
+                  {
+                    "x": 0.367879,
+                    "y": -1.0
+                  },
+                  {
+                    "x": 0.5,
+                    "y": -0.693147
+                  },
+                  {
+                    "x": 1,
+                    "y": 0.0
+                  },
+                  {
+                    "x": 1.5,
+                    "y": 0.405465
+                  },
+                  {
+                    "x": 2,
+                    "y": 0.693147
+                  },
+                  {
+                    "x": 2.718282,
+                    "y": 1.0
+                  },
+                  {
+                    "x": 4,
+                    "y": 1.386294
+                  },
+                  {
+                    "x": 5,
+                    "y": 1.609438
+                  },
+                  {
+                    "x": 7.389056,
+                    "y": 2.0
+                  },
+                  {
+                    "x": 10,
+                    "y": 2.302585
+                  }
+                ]
+              }
+            ],
+            "special_points": [
+              {
+                "id": "a",
+                "x": 0.367879,
+                "y": -1,
+                "label": "A(1/e,-1)"
+              },
+              {
+                "id": "b",
+                "x": 1,
+                "y": 0,
+                "label": "B(1,0)"
+              },
+              {
+                "id": "c",
+                "x": 2.718282,
+                "y": 1,
+                "label": "C(e,1)"
+              },
+              {
+                "id": "d",
+                "x": 7.389056,
+                "y": 2,
+                "label": "D(e²,2)"
+              }
+            ],
+            "asymptotes": [
+              {
+                "id": "v",
+                "type": "vertical",
+                "x": 0,
+                "label": "x=0"
+              }
+            ],
+            "title": "منحنى الدالة y=ln(x)",
+            "description": "منحنى متزايد على ]0,+∞[ وله المقارب العمودي x=0."
+          }
+        },
+        "presentation": {
+          "show_graph_first": true,
+          "show_one_step_at_a_time": true,
+          "react_component": "UniversalMathExerciseRenderer",
+          "graph_mode": "cartesian",
+          "use_field": "graph_data.react_data",
+          "rtl": true,
+          "show_graph_in_question": true,
+          "show_graph_in_solution": true,
+          "show_images_in_question": false,
+          "show_images_in_solution": false,
+          "show_tables_in_question": false,
+          "show_tables_in_solution": false,
+          "show_variation_tables": false,
+          "show_sign_tables": false,
+          "animate_steps": true,
+          "solution_open_mode": "on_button_click",
+          "solution_access": "direct",
+          "attempt_required": false,
+          "show_final_answer_after_last_step": true,
+          "show_verification_after_final_answer": true,
+          "show_bac_writing": true,
+          "show_understanding_check": true,
+          "math_direction": "ltr"
+        },
+        "is_complete": true,
+        "solution_access": "direct",
+        "attempt_required": false,
+        "bac_writing": [
+          "أحدد مجال ln.",
+          "أستعمل النقاط والمقارب والتزايد.",
+          "أقرأ المطلوب من الرسم بدقة."
+        ],
+        "understanding_check": {
+          "question": "ما العناصر الأربعة الأساسية لرسم ln؟",
+          "answer": "المجال x>0، المقارب x=0، النقطة (1,0)، والتزايد."
+        },
+        "takeaway": "ربط المجال والنهاية بالمقارب العمودي."
+      },
+      "display_order": 2,
+      "learning_stage": "axis_practice",
+      "learning_stage_label": "تمرين تطبيقي",
+      "pedagogical_objective": "ربط المجال والنهاية بالمقارب العمودي.",
+      "solution_access": "direct",
+      "attempt_required": false
+    },
+    {
+      "id": "log_graph_practice_03",
+      "year": null,
+      "source_file": null,
+      "source_page": null,
+      "exercise": "تمرين تدريبي 3",
+      "number": "3",
+      "title": "النقاط المرجعية",
+      "text": "أكمل القيم ثم ضع النقاط على منحنى ln: \\(x=1/e,1,e,e^2\\).",
+      "standalone_text": "أكمل القيم ثم ضع النقاط على منحنى ln: \\(x=1/e,1,e,e^2\\).",
+      "context": "تمرين تدريبي مبني مباشرة على محور التمثيل البياني واتجاه تغير ln.",
+      "tag": "log_graph",
+      "axis": "التمثيل البياني واتجاه التغير",
+      "secondary_tags": [],
+      "skill": "تثبيت النقاط الأساسية لمنحنى ln.",
+      "difficulty": "easy",
+      "question_type": "axis_practice",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "tables": [],
+      "variation_tables": [],
+      "sign_tables": [],
+      "graph_data": {
+        "react_data": {
+          "coordinate_system": {
+            "x_min": 0,
+            "x_max": 10,
+            "y_min": -4,
+            "y_max": 3,
+            "x_step": 1,
+            "y_step": 1
+          },
+          "series": [
+            {
+              "id": "ln_curve",
+              "label": "y=ln(x)",
+              "type": "line",
+              "equation": "y=ln(x)",
+              "data": [
+                {
+                  "x": 0.05,
+                  "y": -2.995732
+                },
+                {
+                  "x": 0.1,
+                  "y": -2.302585
+                },
+                {
+                  "x": 0.2,
+                  "y": -1.609438
+                },
+                {
+                  "x": 0.367879,
+                  "y": -1.0
+                },
+                {
+                  "x": 0.5,
+                  "y": -0.693147
+                },
+                {
+                  "x": 1,
+                  "y": 0.0
+                },
+                {
+                  "x": 1.5,
+                  "y": 0.405465
+                },
+                {
+                  "x": 2,
+                  "y": 0.693147
+                },
+                {
+                  "x": 2.718282,
+                  "y": 1.0
+                },
+                {
+                  "x": 4,
+                  "y": 1.386294
+                },
+                {
+                  "x": 5,
+                  "y": 1.609438
+                },
+                {
+                  "x": 7.389056,
+                  "y": 2.0
+                },
+                {
+                  "x": 10,
+                  "y": 2.302585
+                }
+              ]
+            }
+          ],
+          "special_points": [
+            {
+              "id": "a",
+              "x": 0.367879,
+              "y": -1,
+              "label": "A(1/e,-1)"
+            },
+            {
+              "id": "b",
+              "x": 1,
+              "y": 0,
+              "label": "B(1,0)"
+            },
+            {
+              "id": "c",
+              "x": 2.718282,
+              "y": 1,
+              "label": "C(e,1)"
+            },
+            {
+              "id": "d",
+              "x": 7.389056,
+              "y": 2,
+              "label": "D(e²,2)"
+            }
+          ],
+          "asymptotes": [
+            {
+              "id": "v",
+              "type": "vertical",
+              "x": 0,
+              "label": "x=0"
+            }
+          ],
+          "title": "منحنى الدالة y=ln(x)",
+          "description": "منحنى متزايد على ]0,+∞[ وله المقارب العمودي x=0."
+        }
+      },
+      "solution": {
+        "title": "الحل المفصل: النقاط المرجعية",
+        "main_idea": "تثبيت النقاط الأساسية لمنحنى ln.",
+        "strategy": "المجال ← المقارب/النقاط ← التزايد والنهايات ← القراءة أو الاستنتاج البياني.",
+        "detailed_explanation": "حل تدريجي يدرّب التلميذ على بناء منحنى ln وقراءة المعلومات منه.",
+        "uses_graph": true,
+        "uses_images": false,
+        "uses_tables": false,
+        "uses_variation_table": false,
+        "uses_sign_table": false,
+        "steps": [
+          {
+            "number": "1",
+            "order": 1,
+            "title": "القاعدة",
+            "explanation": "نستعمل \\(\\ln(e^a)=a\\).",
+            "construction": [],
+            "calculation": "\\(1/e=e^{-1},\\ 1=e^0\\)",
+            "result": "نحوّل القيم إلى قوى لـe.",
+            "conclusion": "نحوّل القيم إلى قوى لـe.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "نستعمل \\(\\ln(e^a)=a\\).",
+            "rule_used": "قيم ln",
+            "why": "نستعمل \\(\\ln(e^a)=a\\).",
+            "calculation_breakdown": [],
+            "student_action": "حاول تنفيذ هذه الخطوة بنفسك ثم قارنها بالحل."
+          },
+          {
+            "number": "2",
+            "order": 2,
+            "title": "القيم",
+            "explanation": "نقرأ الأس مباشرة.",
+            "construction": [],
+            "calculation": "\\(\\ln(1/e)=-1,\\ \\ln1=0,\\ \\ln e=1,\\ \\ln(e^2)=2\\)",
+            "result": "القيم: -1،0،1،2.",
+            "conclusion": "القيم: -1،0،1،2.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "نقرأ الأس مباشرة.",
+            "rule_used": "ln(e^a)=a",
+            "why": "نقرأ الأس مباشرة.",
+            "calculation_breakdown": [],
+            "student_action": "حاول تنفيذ هذه الخطوة بنفسك ثم قارنها بالحل."
+          },
+          {
+            "number": "3",
+            "order": 3,
+            "title": "النقاط",
+            "explanation": "الفاصلة هي x والترتيب هو ln(x).",
+            "construction": [],
+            "calculation": "\\((1/e,-1),(1,0),(e,1),(e^2,2)\\)",
+            "result": "هذه نقاط الرسم الأساسية.",
+            "conclusion": "هذه نقاط الرسم الأساسية.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "الفاصلة هي x والترتيب هو ln(x).",
+            "rule_used": "إحداثيات المنحنى",
+            "why": "الفاصلة هي x والترتيب هو ln(x).",
+            "calculation_breakdown": [],
+            "student_action": "حاول تنفيذ هذه الخطوة بنفسك ثم قارنها بالحل."
+          }
+        ],
+        "final_answer": "\\(\\boxed{(1/e,-1),(1,0),(e,1),(e^2,2)}\\).",
+        "verification": "النتيجة منسجمة مع مجال ln ونقاطها المرجعية وتزايدها ومقاربها العمودي.",
+        "common_mistakes": [
+          {
+            "mistake": "رسم ln يسار محور التراتيب.",
+            "correction": "مجال ln هو x>0 فقط."
+          },
+          {
+            "mistake": "وضع (0,1) على منحنى ln.",
+            "correction": "(0,1) تخص exp، أما ln فتمر بـ(1,0)."
+          }
+        ],
+        "hints": [
+          {
+            "level": 1,
+            "hint": "الأس يصبح ترتيب النقطة."
+          }
+        ],
+        "alternative_method": "",
+        "images": [],
+        "tables": [],
+        "variation_tables": [],
+        "sign_tables": [],
+        "graph_data": {
+          "react_data": {
+            "coordinate_system": {
+              "x_min": 0,
+              "x_max": 10,
+              "y_min": -4,
+              "y_max": 3,
+              "x_step": 1,
+              "y_step": 1
+            },
+            "series": [
+              {
+                "id": "ln_curve",
+                "label": "y=ln(x)",
+                "type": "line",
+                "equation": "y=ln(x)",
+                "data": [
+                  {
+                    "x": 0.05,
+                    "y": -2.995732
+                  },
+                  {
+                    "x": 0.1,
+                    "y": -2.302585
+                  },
+                  {
+                    "x": 0.2,
+                    "y": -1.609438
+                  },
+                  {
+                    "x": 0.367879,
+                    "y": -1.0
+                  },
+                  {
+                    "x": 0.5,
+                    "y": -0.693147
+                  },
+                  {
+                    "x": 1,
+                    "y": 0.0
+                  },
+                  {
+                    "x": 1.5,
+                    "y": 0.405465
+                  },
+                  {
+                    "x": 2,
+                    "y": 0.693147
+                  },
+                  {
+                    "x": 2.718282,
+                    "y": 1.0
+                  },
+                  {
+                    "x": 4,
+                    "y": 1.386294
+                  },
+                  {
+                    "x": 5,
+                    "y": 1.609438
+                  },
+                  {
+                    "x": 7.389056,
+                    "y": 2.0
+                  },
+                  {
+                    "x": 10,
+                    "y": 2.302585
+                  }
+                ]
+              }
+            ],
+            "special_points": [
+              {
+                "id": "a",
+                "x": 0.367879,
+                "y": -1,
+                "label": "A(1/e,-1)"
+              },
+              {
+                "id": "b",
+                "x": 1,
+                "y": 0,
+                "label": "B(1,0)"
+              },
+              {
+                "id": "c",
+                "x": 2.718282,
+                "y": 1,
+                "label": "C(e,1)"
+              },
+              {
+                "id": "d",
+                "x": 7.389056,
+                "y": 2,
+                "label": "D(e²,2)"
+              }
+            ],
+            "asymptotes": [
+              {
+                "id": "v",
+                "type": "vertical",
+                "x": 0,
+                "label": "x=0"
+              }
+            ],
+            "title": "منحنى الدالة y=ln(x)",
+            "description": "منحنى متزايد على ]0,+∞[ وله المقارب العمودي x=0."
+          }
+        },
+        "presentation": {
+          "show_graph_first": true,
+          "show_one_step_at_a_time": true,
+          "react_component": "UniversalMathExerciseRenderer",
+          "graph_mode": "cartesian",
+          "use_field": "graph_data.react_data",
+          "rtl": true,
+          "show_graph_in_question": true,
+          "show_graph_in_solution": true,
+          "show_images_in_question": false,
+          "show_images_in_solution": false,
+          "show_tables_in_question": false,
+          "show_tables_in_solution": false,
+          "show_variation_tables": false,
+          "show_sign_tables": false,
+          "animate_steps": true,
+          "solution_open_mode": "on_button_click",
+          "solution_access": "direct",
+          "attempt_required": false,
+          "show_final_answer_after_last_step": true,
+          "show_verification_after_final_answer": true,
+          "show_bac_writing": true,
+          "show_understanding_check": true,
+          "math_direction": "ltr"
+        },
+        "is_complete": true,
+        "solution_access": "direct",
+        "attempt_required": false,
+        "bac_writing": [
+          "أحدد مجال ln.",
+          "أستعمل النقاط والمقارب والتزايد.",
+          "أقرأ المطلوب من الرسم بدقة."
+        ],
+        "understanding_check": {
+          "question": "ما العناصر الأربعة الأساسية لرسم ln؟",
+          "answer": "المجال x>0، المقارب x=0، النقطة (1,0)، والتزايد."
+        },
+        "takeaway": "تثبيت النقاط الأساسية لمنحنى ln."
+      },
+      "display_order": 3,
+      "learning_stage": "axis_practice",
+      "learning_stage_label": "تمرين تطبيقي",
+      "pedagogical_objective": "تثبيت النقاط الأساسية لمنحنى ln.",
+      "solution_access": "direct",
+      "attempt_required": false
+    },
+    {
+      "id": "log_graph_practice_04",
+      "year": null,
+      "source_file": null,
+      "source_page": null,
+      "exercise": "تمرين تدريبي 4",
+      "number": "4",
+      "title": "جدول التغير والرسم",
+      "text": "أنشئ جدول تغير \\(f(x)=\\ln x\\)، ثم صف شكل المنحنى من \\(0^+\\) إلى \\(+\\infty\\).",
+      "standalone_text": "أنشئ جدول تغير \\(f(x)=\\ln x\\)، ثم صف شكل المنحنى من \\(0^+\\) إلى \\(+\\infty\\).",
+      "context": "تمرين تدريبي مبني مباشرة على محور التمثيل البياني واتجاه تغير ln.",
+      "tag": "log_graph",
+      "axis": "التمثيل البياني واتجاه التغير",
+      "secondary_tags": [],
+      "skill": "ربط المشتقة والنهايات بجدول التغير والرسم.",
+      "difficulty": "medium",
+      "question_type": "axis_practice",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "tables": [],
+      "variation_tables": [
+        {
+          "domain": "]0,+∞[",
+          "rows": [
+            {
+              "label": "x",
+              "cells": [
+                "0⁺",
+                "",
+                "+∞"
+              ]
+            },
+            {
+              "label": "ln'(x)",
+              "cells": [
+                "",
+                "+",
+                ""
+              ]
+            },
+            {
+              "label": "ln(x)",
+              "cells": [
+                "−∞",
+                "↗",
+                "+∞"
+              ]
+            }
+          ]
+        }
+      ],
+      "sign_tables": [],
+      "graph_data": {
+        "react_data": {
+          "coordinate_system": {
+            "x_min": 0,
+            "x_max": 10,
+            "y_min": -4,
+            "y_max": 3,
+            "x_step": 1,
+            "y_step": 1
+          },
+          "series": [
+            {
+              "id": "ln_curve",
+              "label": "y=ln(x)",
+              "type": "line",
+              "equation": "y=ln(x)",
+              "data": [
+                {
+                  "x": 0.05,
+                  "y": -2.995732
+                },
+                {
+                  "x": 0.1,
+                  "y": -2.302585
+                },
+                {
+                  "x": 0.2,
+                  "y": -1.609438
+                },
+                {
+                  "x": 0.367879,
+                  "y": -1.0
+                },
+                {
+                  "x": 0.5,
+                  "y": -0.693147
+                },
+                {
+                  "x": 1,
+                  "y": 0.0
+                },
+                {
+                  "x": 1.5,
+                  "y": 0.405465
+                },
+                {
+                  "x": 2,
+                  "y": 0.693147
+                },
+                {
+                  "x": 2.718282,
+                  "y": 1.0
+                },
+                {
+                  "x": 4,
+                  "y": 1.386294
+                },
+                {
+                  "x": 5,
+                  "y": 1.609438
+                },
+                {
+                  "x": 7.389056,
+                  "y": 2.0
+                },
+                {
+                  "x": 10,
+                  "y": 2.302585
+                }
+              ]
+            }
+          ],
+          "special_points": [
+            {
+              "id": "a",
+              "x": 0.367879,
+              "y": -1,
+              "label": "A(1/e,-1)"
+            },
+            {
+              "id": "b",
+              "x": 1,
+              "y": 0,
+              "label": "B(1,0)"
+            },
+            {
+              "id": "c",
+              "x": 2.718282,
+              "y": 1,
+              "label": "C(e,1)"
+            },
+            {
+              "id": "d",
+              "x": 7.389056,
+              "y": 2,
+              "label": "D(e²,2)"
+            }
+          ],
+          "asymptotes": [
+            {
+              "id": "v",
+              "type": "vertical",
+              "x": 0,
+              "label": "x=0"
+            }
+          ],
+          "title": "منحنى الدالة y=ln(x)",
+          "description": "منحنى متزايد على ]0,+∞[ وله المقارب العمودي x=0."
+        }
+      },
+      "solution": {
+        "title": "الحل المفصل: جدول التغير والرسم",
+        "main_idea": "ربط المشتقة والنهايات بجدول التغير والرسم.",
+        "strategy": "المجال ← المقارب/النقاط ← التزايد والنهايات ← القراءة أو الاستنتاج البياني.",
+        "detailed_explanation": "حل تدريجي يدرّب التلميذ على بناء منحنى ln وقراءة المعلومات منه.",
+        "uses_graph": true,
+        "uses_images": false,
+        "uses_tables": false,
+        "uses_variation_table": true,
+        "uses_sign_table": false,
+        "steps": [
+          {
+            "number": "1",
+            "order": 1,
+            "title": "المشتقة",
+            "explanation": "على المجال x>0.",
+            "construction": [],
+            "calculation": "\\(f'(x)=1/x>0\\)",
+            "result": "المشتقة موجبة.",
+            "conclusion": "المشتقة موجبة.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "على المجال x>0.",
+            "rule_used": "مشتقة ln",
+            "why": "على المجال x>0.",
+            "calculation_breakdown": [],
+            "student_action": "حاول تنفيذ هذه الخطوة بنفسك ثم قارنها بالحل."
+          },
+          {
+            "number": "2",
+            "order": 2,
+            "title": "التغير",
+            "explanation": "مشتقة موجبة تعني تزايدًا تامًا.",
+            "construction": [],
+            "calculation": "\\(f\\nearrow\\text{ على }]0,+\\infty[\\)",
+            "result": "الدالة متزايدة.",
+            "conclusion": "الدالة متزايدة.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "مشتقة موجبة تعني تزايدًا تامًا.",
+            "rule_used": "قاعدة التغير",
+            "why": "مشتقة موجبة تعني تزايدًا تامًا.",
+            "calculation_breakdown": [],
+            "student_action": "حاول تنفيذ هذه الخطوة بنفسك ثم قارنها بالحل."
+          },
+          {
+            "number": "3",
+            "order": 3,
+            "title": "طرفا الجدول",
+            "explanation": "نضيف النهايتين.",
+            "construction": [],
+            "calculation": "\\(\\ln x\\to-\\infty\\ عند\\ 0^+,\\quad \\ln x\\to+\\infty\\ عند\\ +\\infty\\)",
+            "result": "السهم يصعد من -∞ إلى +∞.",
+            "conclusion": "السهم يصعد من -∞ إلى +∞.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "نضيف النهايتين.",
+            "rule_used": "نهايات ln",
+            "why": "نضيف النهايتين.",
+            "calculation_breakdown": [],
+            "student_action": "حاول تنفيذ هذه الخطوة بنفسك ثم قارنها بالحل."
+          }
+        ],
+        "final_answer": "\\(\\boxed{\\ln\\text{ متزايدة تمامًا من }-\\infty\\text{ إلى }+\\infty}\\).",
+        "verification": "النتيجة منسجمة مع مجال ln ونقاطها المرجعية وتزايدها ومقاربها العمودي.",
+        "common_mistakes": [
+          {
+            "mistake": "رسم ln يسار محور التراتيب.",
+            "correction": "مجال ln هو x>0 فقط."
+          },
+          {
+            "mistake": "وضع (0,1) على منحنى ln.",
+            "correction": "(0,1) تخص exp، أما ln فتمر بـ(1,0)."
+          }
+        ],
+        "hints": [
+          {
+            "level": 1,
+            "hint": "احسب 1/x."
+          },
+          {
+            "level": 2,
+            "hint": "أضف النهايتين إلى جدول التغير."
+          }
+        ],
+        "alternative_method": "",
+        "images": [],
+        "tables": [],
+        "variation_tables": [
+          {
+            "domain": "]0,+∞[",
+            "rows": [
+              {
+                "label": "x",
+                "cells": [
+                  "0⁺",
+                  "",
+                  "+∞"
+                ]
+              },
+              {
+                "label": "ln'(x)",
+                "cells": [
+                  "",
+                  "+",
+                  ""
+                ]
+              },
+              {
+                "label": "ln(x)",
+                "cells": [
+                  "−∞",
+                  "↗",
+                  "+∞"
+                ]
+              }
+            ]
+          }
+        ],
+        "sign_tables": [],
+        "graph_data": {
+          "react_data": {
+            "coordinate_system": {
+              "x_min": 0,
+              "x_max": 10,
+              "y_min": -4,
+              "y_max": 3,
+              "x_step": 1,
+              "y_step": 1
+            },
+            "series": [
+              {
+                "id": "ln_curve",
+                "label": "y=ln(x)",
+                "type": "line",
+                "equation": "y=ln(x)",
+                "data": [
+                  {
+                    "x": 0.05,
+                    "y": -2.995732
+                  },
+                  {
+                    "x": 0.1,
+                    "y": -2.302585
+                  },
+                  {
+                    "x": 0.2,
+                    "y": -1.609438
+                  },
+                  {
+                    "x": 0.367879,
+                    "y": -1.0
+                  },
+                  {
+                    "x": 0.5,
+                    "y": -0.693147
+                  },
+                  {
+                    "x": 1,
+                    "y": 0.0
+                  },
+                  {
+                    "x": 1.5,
+                    "y": 0.405465
+                  },
+                  {
+                    "x": 2,
+                    "y": 0.693147
+                  },
+                  {
+                    "x": 2.718282,
+                    "y": 1.0
+                  },
+                  {
+                    "x": 4,
+                    "y": 1.386294
+                  },
+                  {
+                    "x": 5,
+                    "y": 1.609438
+                  },
+                  {
+                    "x": 7.389056,
+                    "y": 2.0
+                  },
+                  {
+                    "x": 10,
+                    "y": 2.302585
+                  }
+                ]
+              }
+            ],
+            "special_points": [
+              {
+                "id": "a",
+                "x": 0.367879,
+                "y": -1,
+                "label": "A(1/e,-1)"
+              },
+              {
+                "id": "b",
+                "x": 1,
+                "y": 0,
+                "label": "B(1,0)"
+              },
+              {
+                "id": "c",
+                "x": 2.718282,
+                "y": 1,
+                "label": "C(e,1)"
+              },
+              {
+                "id": "d",
+                "x": 7.389056,
+                "y": 2,
+                "label": "D(e²,2)"
+              }
+            ],
+            "asymptotes": [
+              {
+                "id": "v",
+                "type": "vertical",
+                "x": 0,
+                "label": "x=0"
+              }
+            ],
+            "title": "منحنى الدالة y=ln(x)",
+            "description": "منحنى متزايد على ]0,+∞[ وله المقارب العمودي x=0."
+          }
+        },
+        "presentation": {
+          "show_graph_first": true,
+          "show_one_step_at_a_time": true,
+          "react_component": "UniversalMathExerciseRenderer",
+          "graph_mode": "cartesian",
+          "use_field": "graph_data.react_data",
+          "rtl": true,
+          "show_graph_in_question": true,
+          "show_graph_in_solution": true,
+          "show_images_in_question": false,
+          "show_images_in_solution": false,
+          "show_tables_in_question": false,
+          "show_tables_in_solution": false,
+          "show_variation_tables": true,
+          "show_sign_tables": false,
+          "animate_steps": true,
+          "solution_open_mode": "on_button_click",
+          "solution_access": "direct",
+          "attempt_required": false,
+          "show_final_answer_after_last_step": true,
+          "show_verification_after_final_answer": true,
+          "show_bac_writing": true,
+          "show_understanding_check": true,
+          "math_direction": "ltr"
+        },
+        "is_complete": true,
+        "solution_access": "direct",
+        "attempt_required": false,
+        "bac_writing": [
+          "أحدد مجال ln.",
+          "أستعمل النقاط والمقارب والتزايد.",
+          "أقرأ المطلوب من الرسم بدقة."
+        ],
+        "understanding_check": {
+          "question": "ما العناصر الأربعة الأساسية لرسم ln؟",
+          "answer": "المجال x>0، المقارب x=0، النقطة (1,0)، والتزايد."
+        },
+        "takeaway": "ربط المشتقة والنهايات بجدول التغير والرسم."
+      },
+      "display_order": 4,
+      "learning_stage": "axis_practice",
+      "learning_stage_label": "تمرين تطبيقي",
+      "pedagogical_objective": "ربط المشتقة والنهايات بجدول التغير والرسم.",
+      "solution_access": "direct",
+      "attempt_required": false
+    },
+    {
+      "id": "log_graph_practice_05",
+      "year": null,
+      "source_file": null,
+      "source_page": null,
+      "exercise": "تمرين تدريبي 5",
+      "number": "5",
+      "title": "قراءة الصور من الرسم",
+      "text": "باستعمال المنحنى المرفق، اقرأ صور الأعداد \\(1/e\\)، \\(1\\)، \\(e\\)، \\(e^2\\). ثم اشرح طريقة قراءة صورة عدد من أي منحنى.",
+      "standalone_text": "باستعمال المنحنى المرفق، اقرأ صور الأعداد \\(1/e\\)، \\(1\\)، \\(e\\)، \\(e^2\\). ثم اشرح طريقة قراءة صورة عدد من أي منحنى.",
+      "context": "تمرين تدريبي مبني مباشرة على محور التمثيل البياني واتجاه تغير ln.",
+      "tag": "log_graph",
+      "axis": "التمثيل البياني واتجاه التغير",
+      "secondary_tags": [],
+      "skill": "قراءة صورة عدد بيانيًا.",
+      "difficulty": "easy",
+      "question_type": "axis_practice",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "tables": [],
+      "variation_tables": [],
+      "sign_tables": [],
+      "graph_data": {
+        "react_data": {
+          "coordinate_system": {
+            "x_min": 0,
+            "x_max": 10,
+            "y_min": -4,
+            "y_max": 3,
+            "x_step": 1,
+            "y_step": 1
+          },
+          "series": [
+            {
+              "id": "ln_curve",
+              "label": "y=ln(x)",
+              "type": "line",
+              "equation": "y=ln(x)",
+              "data": [
+                {
+                  "x": 0.05,
+                  "y": -2.995732
+                },
+                {
+                  "x": 0.1,
+                  "y": -2.302585
+                },
+                {
+                  "x": 0.2,
+                  "y": -1.609438
+                },
+                {
+                  "x": 0.367879,
+                  "y": -1.0
+                },
+                {
+                  "x": 0.5,
+                  "y": -0.693147
+                },
+                {
+                  "x": 1,
+                  "y": 0.0
+                },
+                {
+                  "x": 1.5,
+                  "y": 0.405465
+                },
+                {
+                  "x": 2,
+                  "y": 0.693147
+                },
+                {
+                  "x": 2.718282,
+                  "y": 1.0
+                },
+                {
+                  "x": 4,
+                  "y": 1.386294
+                },
+                {
+                  "x": 5,
+                  "y": 1.609438
+                },
+                {
+                  "x": 7.389056,
+                  "y": 2.0
+                },
+                {
+                  "x": 10,
+                  "y": 2.302585
+                }
+              ]
+            }
+          ],
+          "special_points": [
+            {
+              "id": "a",
+              "x": 0.367879,
+              "y": -1,
+              "label": "A(1/e,-1)"
+            },
+            {
+              "id": "b",
+              "x": 1,
+              "y": 0,
+              "label": "B(1,0)"
+            },
+            {
+              "id": "c",
+              "x": 2.718282,
+              "y": 1,
+              "label": "C(e,1)"
+            },
+            {
+              "id": "d",
+              "x": 7.389056,
+              "y": 2,
+              "label": "D(e²,2)"
+            }
+          ],
+          "asymptotes": [
+            {
+              "id": "v",
+              "type": "vertical",
+              "x": 0,
+              "label": "x=0"
+            }
+          ],
+          "title": "منحنى الدالة y=ln(x)",
+          "description": "منحنى متزايد على ]0,+∞[ وله المقارب العمودي x=0."
+        }
+      },
+      "solution": {
+        "title": "الحل المفصل: قراءة الصور من الرسم",
+        "main_idea": "قراءة صورة عدد بيانيًا.",
+        "strategy": "المجال ← المقارب/النقاط ← التزايد والنهايات ← القراءة أو الاستنتاج البياني.",
+        "detailed_explanation": "حل تدريجي يدرّب التلميذ على بناء منحنى ln وقراءة المعلومات منه.",
+        "uses_graph": true,
+        "uses_images": false,
+        "uses_tables": false,
+        "uses_variation_table": false,
+        "uses_sign_table": false,
+        "steps": [
+          {
+            "number": "1",
+            "order": 1,
+            "title": "طريقة القراءة",
+            "explanation": "نبدأ من x على محور الفواصل ثم نصعد إلى المنحنى ونقرأ y.",
+            "construction": [],
+            "calculation": "\\(x\\to C_{ln}\\to y\\)",
+            "result": "هذا اتجاه قراءة الصورة.",
+            "conclusion": "هذا اتجاه قراءة الصورة.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "نبدأ من x على محور الفواصل ثم نصعد إلى المنحنى ونقرأ y.",
+            "rule_used": "قراءة بيانية",
+            "why": "نبدأ من x على محور الفواصل ثم نصعد إلى المنحنى ونقرأ y.",
+            "calculation_breakdown": [],
+            "student_action": "حاول تنفيذ هذه الخطوة بنفسك ثم قارنها بالحل."
+          },
+          {
+            "number": "2",
+            "order": 2,
+            "title": "الصور",
+            "explanation": "نقرأ ترتيبات النقاط المرجعية.",
+            "construction": [],
+            "calculation": "\\(\\ln(1/e)=-1,\\ \\ln1=0,\\ \\ln e=1,\\ \\ln(e^2)=2\\)",
+            "result": "الصور هي -1،0،1،2.",
+            "conclusion": "الصور هي -1،0،1،2.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "نقرأ ترتيبات النقاط المرجعية.",
+            "rule_used": "قراءة المنحنى",
+            "why": "نقرأ ترتيبات النقاط المرجعية.",
+            "calculation_breakdown": [],
+            "student_action": "حاول تنفيذ هذه الخطوة بنفسك ثم قارنها بالحل."
+          }
+        ],
+        "final_answer": "\\(\\boxed{-1,0,1,2}\\) على الترتيب.",
+        "verification": "النتيجة منسجمة مع مجال ln ونقاطها المرجعية وتزايدها ومقاربها العمودي.",
+        "common_mistakes": [
+          {
+            "mistake": "رسم ln يسار محور التراتيب.",
+            "correction": "مجال ln هو x>0 فقط."
+          },
+          {
+            "mistake": "وضع (0,1) على منحنى ln.",
+            "correction": "(0,1) تخص exp، أما ln فتمر بـ(1,0)."
+          }
+        ],
+        "hints": [
+          {
+            "level": 1,
+            "hint": "الصورة: ابدأ من محور x."
+          }
+        ],
+        "alternative_method": "",
+        "images": [],
+        "tables": [],
+        "variation_tables": [],
+        "sign_tables": [],
+        "graph_data": {
+          "react_data": {
+            "coordinate_system": {
+              "x_min": 0,
+              "x_max": 10,
+              "y_min": -4,
+              "y_max": 3,
+              "x_step": 1,
+              "y_step": 1
+            },
+            "series": [
+              {
+                "id": "ln_curve",
+                "label": "y=ln(x)",
+                "type": "line",
+                "equation": "y=ln(x)",
+                "data": [
+                  {
+                    "x": 0.05,
+                    "y": -2.995732
+                  },
+                  {
+                    "x": 0.1,
+                    "y": -2.302585
+                  },
+                  {
+                    "x": 0.2,
+                    "y": -1.609438
+                  },
+                  {
+                    "x": 0.367879,
+                    "y": -1.0
+                  },
+                  {
+                    "x": 0.5,
+                    "y": -0.693147
+                  },
+                  {
+                    "x": 1,
+                    "y": 0.0
+                  },
+                  {
+                    "x": 1.5,
+                    "y": 0.405465
+                  },
+                  {
+                    "x": 2,
+                    "y": 0.693147
+                  },
+                  {
+                    "x": 2.718282,
+                    "y": 1.0
+                  },
+                  {
+                    "x": 4,
+                    "y": 1.386294
+                  },
+                  {
+                    "x": 5,
+                    "y": 1.609438
+                  },
+                  {
+                    "x": 7.389056,
+                    "y": 2.0
+                  },
+                  {
+                    "x": 10,
+                    "y": 2.302585
+                  }
+                ]
+              }
+            ],
+            "special_points": [
+              {
+                "id": "a",
+                "x": 0.367879,
+                "y": -1,
+                "label": "A(1/e,-1)"
+              },
+              {
+                "id": "b",
+                "x": 1,
+                "y": 0,
+                "label": "B(1,0)"
+              },
+              {
+                "id": "c",
+                "x": 2.718282,
+                "y": 1,
+                "label": "C(e,1)"
+              },
+              {
+                "id": "d",
+                "x": 7.389056,
+                "y": 2,
+                "label": "D(e²,2)"
+              }
+            ],
+            "asymptotes": [
+              {
+                "id": "v",
+                "type": "vertical",
+                "x": 0,
+                "label": "x=0"
+              }
+            ],
+            "title": "منحنى الدالة y=ln(x)",
+            "description": "منحنى متزايد على ]0,+∞[ وله المقارب العمودي x=0."
+          }
+        },
+        "presentation": {
+          "show_graph_first": true,
+          "show_one_step_at_a_time": true,
+          "react_component": "UniversalMathExerciseRenderer",
+          "graph_mode": "cartesian",
+          "use_field": "graph_data.react_data",
+          "rtl": true,
+          "show_graph_in_question": true,
+          "show_graph_in_solution": true,
+          "show_images_in_question": false,
+          "show_images_in_solution": false,
+          "show_tables_in_question": false,
+          "show_tables_in_solution": false,
+          "show_variation_tables": false,
+          "show_sign_tables": false,
+          "animate_steps": true,
+          "solution_open_mode": "on_button_click",
+          "solution_access": "direct",
+          "attempt_required": false,
+          "show_final_answer_after_last_step": true,
+          "show_verification_after_final_answer": true,
+          "show_bac_writing": true,
+          "show_understanding_check": true,
+          "math_direction": "ltr"
+        },
+        "is_complete": true,
+        "solution_access": "direct",
+        "attempt_required": false,
+        "bac_writing": [
+          "أحدد مجال ln.",
+          "أستعمل النقاط والمقارب والتزايد.",
+          "أقرأ المطلوب من الرسم بدقة."
+        ],
+        "understanding_check": {
+          "question": "ما العناصر الأربعة الأساسية لرسم ln؟",
+          "answer": "المجال x>0، المقارب x=0، النقطة (1,0)، والتزايد."
+        },
+        "takeaway": "قراءة صورة عدد بيانيًا."
+      },
+      "display_order": 5,
+      "learning_stage": "axis_practice",
+      "learning_stage_label": "تمرين تطبيقي",
+      "pedagogical_objective": "قراءة صورة عدد بيانيًا.",
+      "solution_access": "direct",
+      "attempt_required": false
+    },
+    {
+      "id": "log_graph_practice_06",
+      "year": null,
+      "source_file": null,
+      "source_page": null,
+      "exercise": "تمرين تدريبي 6",
+      "number": "6",
+      "title": "قراءة السوابق من الرسم",
+      "text": "باستعمال المنحنى، أوجد سوابق القيم \\(-1\\)، \\(0\\)، \\(1\\)، \\(2\\) بالدالة ln.",
+      "standalone_text": "باستعمال المنحنى، أوجد سوابق القيم \\(-1\\)، \\(0\\)، \\(1\\)، \\(2\\) بالدالة ln.",
+      "context": "تمرين تدريبي مبني مباشرة على محور التمثيل البياني واتجاه تغير ln.",
+      "tag": "log_graph",
+      "axis": "التمثيل البياني واتجاه التغير",
+      "secondary_tags": [],
+      "skill": "قراءة السابق بيانيًا.",
+      "difficulty": "easy",
+      "question_type": "axis_practice",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "tables": [],
+      "variation_tables": [],
+      "sign_tables": [],
+      "graph_data": {
+        "react_data": {
+          "coordinate_system": {
+            "x_min": 0,
+            "x_max": 10,
+            "y_min": -4,
+            "y_max": 3,
+            "x_step": 1,
+            "y_step": 1
+          },
+          "series": [
+            {
+              "id": "ln_curve",
+              "label": "y=ln(x)",
+              "type": "line",
+              "equation": "y=ln(x)",
+              "data": [
+                {
+                  "x": 0.05,
+                  "y": -2.995732
+                },
+                {
+                  "x": 0.1,
+                  "y": -2.302585
+                },
+                {
+                  "x": 0.2,
+                  "y": -1.609438
+                },
+                {
+                  "x": 0.367879,
+                  "y": -1.0
+                },
+                {
+                  "x": 0.5,
+                  "y": -0.693147
+                },
+                {
+                  "x": 1,
+                  "y": 0.0
+                },
+                {
+                  "x": 1.5,
+                  "y": 0.405465
+                },
+                {
+                  "x": 2,
+                  "y": 0.693147
+                },
+                {
+                  "x": 2.718282,
+                  "y": 1.0
+                },
+                {
+                  "x": 4,
+                  "y": 1.386294
+                },
+                {
+                  "x": 5,
+                  "y": 1.609438
+                },
+                {
+                  "x": 7.389056,
+                  "y": 2.0
+                },
+                {
+                  "x": 10,
+                  "y": 2.302585
+                }
+              ]
+            }
+          ],
+          "special_points": [
+            {
+              "id": "a",
+              "x": 0.367879,
+              "y": -1,
+              "label": "A(1/e,-1)"
+            },
+            {
+              "id": "b",
+              "x": 1,
+              "y": 0,
+              "label": "B(1,0)"
+            },
+            {
+              "id": "c",
+              "x": 2.718282,
+              "y": 1,
+              "label": "C(e,1)"
+            },
+            {
+              "id": "d",
+              "x": 7.389056,
+              "y": 2,
+              "label": "D(e²,2)"
+            }
+          ],
+          "asymptotes": [
+            {
+              "id": "v",
+              "type": "vertical",
+              "x": 0,
+              "label": "x=0"
+            }
+          ],
+          "title": "منحنى الدالة y=ln(x)",
+          "description": "منحنى متزايد على ]0,+∞[ وله المقارب العمودي x=0."
+        }
+      },
+      "solution": {
+        "title": "الحل المفصل: قراءة السوابق من الرسم",
+        "main_idea": "قراءة السابق بيانيًا.",
+        "strategy": "المجال ← المقارب/النقاط ← التزايد والنهايات ← القراءة أو الاستنتاج البياني.",
+        "detailed_explanation": "حل تدريجي يدرّب التلميذ على بناء منحنى ln وقراءة المعلومات منه.",
+        "uses_graph": true,
+        "uses_images": false,
+        "uses_tables": false,
+        "uses_variation_table": false,
+        "uses_sign_table": false,
+        "steps": [
+          {
+            "number": "1",
+            "order": 1,
+            "title": "طريقة السابق",
+            "explanation": "نبدأ من القيمة y ثم نتحرك أفقيًا إلى المنحنى ثم ننزل إلى x.",
+            "construction": [],
+            "calculation": "\\(y\\to C_{ln}\\to x\\)",
+            "result": "هذا عكس قراءة الصورة.",
+            "conclusion": "هذا عكس قراءة الصورة.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "نبدأ من القيمة y ثم نتحرك أفقيًا إلى المنحنى ثم ننزل إلى x.",
+            "rule_used": "قراءة بيانية",
+            "why": "نبدأ من القيمة y ثم نتحرك أفقيًا إلى المنحنى ثم ننزل إلى x.",
+            "calculation_breakdown": [],
+            "student_action": "حاول تنفيذ هذه الخطوة بنفسك ثم قارنها بالحل."
+          },
+          {
+            "number": "2",
+            "order": 2,
+            "title": "النتائج",
+            "explanation": "نقرأ الفواصل الموافقة.",
+            "construction": [],
+            "calculation": "\\(-1\\to1/e,\\ 0\\to1,\\ 1\\to e,\\ 2\\to e^2\\)",
+            "result": "هذه السوابق.",
+            "conclusion": "هذه السوابق.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "نقرأ الفواصل الموافقة.",
+            "rule_used": "قراءة المنحنى",
+            "why": "نقرأ الفواصل الموافقة.",
+            "calculation_breakdown": [],
+            "student_action": "حاول تنفيذ هذه الخطوة بنفسك ثم قارنها بالحل."
+          }
+        ],
+        "final_answer": "\\(\\boxed{1/e,1,e,e^2}\\) على الترتيب.",
+        "verification": "النتيجة منسجمة مع مجال ln ونقاطها المرجعية وتزايدها ومقاربها العمودي.",
+        "common_mistakes": [
+          {
+            "mistake": "رسم ln يسار محور التراتيب.",
+            "correction": "مجال ln هو x>0 فقط."
+          },
+          {
+            "mistake": "وضع (0,1) على منحنى ln.",
+            "correction": "(0,1) تخص exp، أما ln فتمر بـ(1,0)."
+          }
+        ],
+        "hints": [
+          {
+            "level": 1,
+            "hint": "السابق: ابدأ من محور y."
+          }
+        ],
+        "alternative_method": "",
+        "images": [],
+        "tables": [],
+        "variation_tables": [],
+        "sign_tables": [],
+        "graph_data": {
+          "react_data": {
+            "coordinate_system": {
+              "x_min": 0,
+              "x_max": 10,
+              "y_min": -4,
+              "y_max": 3,
+              "x_step": 1,
+              "y_step": 1
+            },
+            "series": [
+              {
+                "id": "ln_curve",
+                "label": "y=ln(x)",
+                "type": "line",
+                "equation": "y=ln(x)",
+                "data": [
+                  {
+                    "x": 0.05,
+                    "y": -2.995732
+                  },
+                  {
+                    "x": 0.1,
+                    "y": -2.302585
+                  },
+                  {
+                    "x": 0.2,
+                    "y": -1.609438
+                  },
+                  {
+                    "x": 0.367879,
+                    "y": -1.0
+                  },
+                  {
+                    "x": 0.5,
+                    "y": -0.693147
+                  },
+                  {
+                    "x": 1,
+                    "y": 0.0
+                  },
+                  {
+                    "x": 1.5,
+                    "y": 0.405465
+                  },
+                  {
+                    "x": 2,
+                    "y": 0.693147
+                  },
+                  {
+                    "x": 2.718282,
+                    "y": 1.0
+                  },
+                  {
+                    "x": 4,
+                    "y": 1.386294
+                  },
+                  {
+                    "x": 5,
+                    "y": 1.609438
+                  },
+                  {
+                    "x": 7.389056,
+                    "y": 2.0
+                  },
+                  {
+                    "x": 10,
+                    "y": 2.302585
+                  }
+                ]
+              }
+            ],
+            "special_points": [
+              {
+                "id": "a",
+                "x": 0.367879,
+                "y": -1,
+                "label": "A(1/e,-1)"
+              },
+              {
+                "id": "b",
+                "x": 1,
+                "y": 0,
+                "label": "B(1,0)"
+              },
+              {
+                "id": "c",
+                "x": 2.718282,
+                "y": 1,
+                "label": "C(e,1)"
+              },
+              {
+                "id": "d",
+                "x": 7.389056,
+                "y": 2,
+                "label": "D(e²,2)"
+              }
+            ],
+            "asymptotes": [
+              {
+                "id": "v",
+                "type": "vertical",
+                "x": 0,
+                "label": "x=0"
+              }
+            ],
+            "title": "منحنى الدالة y=ln(x)",
+            "description": "منحنى متزايد على ]0,+∞[ وله المقارب العمودي x=0."
+          }
+        },
+        "presentation": {
+          "show_graph_first": true,
+          "show_one_step_at_a_time": true,
+          "react_component": "UniversalMathExerciseRenderer",
+          "graph_mode": "cartesian",
+          "use_field": "graph_data.react_data",
+          "rtl": true,
+          "show_graph_in_question": true,
+          "show_graph_in_solution": true,
+          "show_images_in_question": false,
+          "show_images_in_solution": false,
+          "show_tables_in_question": false,
+          "show_tables_in_solution": false,
+          "show_variation_tables": false,
+          "show_sign_tables": false,
+          "animate_steps": true,
+          "solution_open_mode": "on_button_click",
+          "solution_access": "direct",
+          "attempt_required": false,
+          "show_final_answer_after_last_step": true,
+          "show_verification_after_final_answer": true,
+          "show_bac_writing": true,
+          "show_understanding_check": true,
+          "math_direction": "ltr"
+        },
+        "is_complete": true,
+        "solution_access": "direct",
+        "attempt_required": false,
+        "bac_writing": [
+          "أحدد مجال ln.",
+          "أستعمل النقاط والمقارب والتزايد.",
+          "أقرأ المطلوب من الرسم بدقة."
+        ],
+        "understanding_check": {
+          "question": "ما العناصر الأربعة الأساسية لرسم ln؟",
+          "answer": "المجال x>0، المقارب x=0، النقطة (1,0)، والتزايد."
+        },
+        "takeaway": "قراءة السابق بيانيًا."
+      },
+      "display_order": 6,
+      "learning_stage": "axis_practice",
+      "learning_stage_label": "تمرين تطبيقي",
+      "pedagogical_objective": "قراءة السابق بيانيًا.",
+      "solution_access": "direct",
+      "attempt_required": false
+    },
+    {
+      "id": "log_graph_practice_07",
+      "year": null,
+      "source_file": null,
+      "source_page": null,
+      "exercise": "تمرين تدريبي 7",
+      "number": "7",
+      "title": "قراءة الإشارة من المنحنى",
+      "text": "اعتمادًا على موضع منحنى \\(y=\\ln x\\) بالنسبة إلى محور الفواصل، حدد أين تكون ln سالبة، منعدمة وموجبة.",
+      "standalone_text": "اعتمادًا على موضع منحنى \\(y=\\ln x\\) بالنسبة إلى محور الفواصل، حدد أين تكون ln سالبة، منعدمة وموجبة.",
+      "context": "تمرين تدريبي مبني مباشرة على محور التمثيل البياني واتجاه تغير ln.",
+      "tag": "log_graph",
+      "axis": "التمثيل البياني واتجاه التغير",
+      "secondary_tags": [],
+      "skill": "استخراج إشارة ln من الرسم.",
+      "difficulty": "medium",
+      "question_type": "axis_practice",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "tables": [],
+      "variation_tables": [],
+      "sign_tables": [
+        {
+          "variable": "x",
+          "domain": "]0,+∞[",
+          "rows": [
+            {
+              "label": "x",
+              "cells": [
+                "0",
+                "]0,1[",
+                "1",
+                "]1,+∞["
+              ]
+            },
+            {
+              "label": "ln(x)",
+              "cells": [
+                "غير معرف",
+                "−",
+                "0",
+                "+"
+              ]
+            }
+          ]
+        }
+      ],
+      "graph_data": {
+        "react_data": {
+          "coordinate_system": {
+            "x_min": 0,
+            "x_max": 10,
+            "y_min": -4,
+            "y_max": 3,
+            "x_step": 1,
+            "y_step": 1
+          },
+          "series": [
+            {
+              "id": "ln_curve",
+              "label": "y=ln(x)",
+              "type": "line",
+              "equation": "y=ln(x)",
+              "data": [
+                {
+                  "x": 0.05,
+                  "y": -2.995732
+                },
+                {
+                  "x": 0.1,
+                  "y": -2.302585
+                },
+                {
+                  "x": 0.2,
+                  "y": -1.609438
+                },
+                {
+                  "x": 0.367879,
+                  "y": -1.0
+                },
+                {
+                  "x": 0.5,
+                  "y": -0.693147
+                },
+                {
+                  "x": 1,
+                  "y": 0.0
+                },
+                {
+                  "x": 1.5,
+                  "y": 0.405465
+                },
+                {
+                  "x": 2,
+                  "y": 0.693147
+                },
+                {
+                  "x": 2.718282,
+                  "y": 1.0
+                },
+                {
+                  "x": 4,
+                  "y": 1.386294
+                },
+                {
+                  "x": 5,
+                  "y": 1.609438
+                },
+                {
+                  "x": 7.389056,
+                  "y": 2.0
+                },
+                {
+                  "x": 10,
+                  "y": 2.302585
+                }
+              ]
+            }
+          ],
+          "special_points": [
+            {
+              "id": "a",
+              "x": 0.367879,
+              "y": -1,
+              "label": "A(1/e,-1)"
+            },
+            {
+              "id": "b",
+              "x": 1,
+              "y": 0,
+              "label": "B(1,0)"
+            },
+            {
+              "id": "c",
+              "x": 2.718282,
+              "y": 1,
+              "label": "C(e,1)"
+            },
+            {
+              "id": "d",
+              "x": 7.389056,
+              "y": 2,
+              "label": "D(e²,2)"
+            }
+          ],
+          "asymptotes": [
+            {
+              "id": "v",
+              "type": "vertical",
+              "x": 0,
+              "label": "x=0"
+            }
+          ],
+          "title": "منحنى الدالة y=ln(x)",
+          "description": "منحنى متزايد على ]0,+∞[ وله المقارب العمودي x=0."
+        }
+      },
+      "solution": {
+        "title": "الحل المفصل: قراءة الإشارة من المنحنى",
+        "main_idea": "استخراج إشارة ln من الرسم.",
+        "strategy": "المجال ← المقارب/النقاط ← التزايد والنهايات ← القراءة أو الاستنتاج البياني.",
+        "detailed_explanation": "حل تدريجي يدرّب التلميذ على بناء منحنى ln وقراءة المعلومات منه.",
+        "uses_graph": true,
+        "uses_images": false,
+        "uses_tables": false,
+        "uses_variation_table": false,
+        "uses_sign_table": true,
+        "steps": [
+          {
+            "number": "1",
+            "order": 1,
+            "title": "تحت المحور",
+            "explanation": "بين 0 و1 يقع المنحنى تحت y=0.",
+            "construction": [],
+            "calculation": "\\(0<x<1\\Rightarrow\\ln x<0\\)",
+            "result": "ln سالبة.",
+            "conclusion": "ln سالبة.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "بين 0 و1 يقع المنحنى تحت y=0.",
+            "rule_used": "موضع المنحنى",
+            "why": "بين 0 و1 يقع المنحنى تحت y=0.",
+            "calculation_breakdown": [],
+            "student_action": "حاول تنفيذ هذه الخطوة بنفسك ثم قارنها بالحل."
+          },
+          {
+            "number": "2",
+            "order": 2,
+            "title": "على المحور",
+            "explanation": "المنحنى يقطع محور الفواصل عند (1,0).",
+            "construction": [],
+            "calculation": "\\(\\ln1=0\\)",
+            "result": "الجذر هو 1.",
+            "conclusion": "الجذر هو 1.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "المنحنى يقطع محور الفواصل عند (1,0).",
+            "rule_used": "تقاطع مع محور x",
+            "why": "المنحنى يقطع محور الفواصل عند (1,0).",
+            "calculation_breakdown": [],
+            "student_action": "حاول تنفيذ هذه الخطوة بنفسك ثم قارنها بالحل."
+          },
+          {
+            "number": "3",
+            "order": 3,
+            "title": "فوق المحور",
+            "explanation": "بعد 1 يقع المنحنى فوق y=0.",
+            "construction": [],
+            "calculation": "\\(x>1\\Rightarrow\\ln x>0\\)",
+            "result": "ln موجبة.",
+            "conclusion": "ln موجبة.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "بعد 1 يقع المنحنى فوق y=0.",
+            "rule_used": "موضع المنحنى",
+            "why": "بعد 1 يقع المنحنى فوق y=0.",
+            "calculation_breakdown": [],
+            "student_action": "حاول تنفيذ هذه الخطوة بنفسك ثم قارنها بالحل."
+          }
+        ],
+        "final_answer": "\\(\\boxed{\\ln x<0\\iff0<x<1;\\ \\ln x=0\\iff x=1;\\ \\ln x>0\\iff x>1}\\).",
+        "verification": "النتيجة منسجمة مع مجال ln ونقاطها المرجعية وتزايدها ومقاربها العمودي.",
+        "common_mistakes": [
+          {
+            "mistake": "رسم ln يسار محور التراتيب.",
+            "correction": "مجال ln هو x>0 فقط."
+          },
+          {
+            "mistake": "وضع (0,1) على منحنى ln.",
+            "correction": "(0,1) تخص exp، أما ln فتمر بـ(1,0)."
+          }
+        ],
+        "hints": [
+          {
+            "level": 1,
+            "hint": "تحت محور x = سالب، فوقه = موجب."
+          }
+        ],
+        "alternative_method": "",
+        "images": [],
+        "tables": [],
+        "variation_tables": [],
+        "sign_tables": [
+          {
+            "variable": "x",
+            "domain": "]0,+∞[",
+            "rows": [
+              {
+                "label": "x",
+                "cells": [
+                  "0",
+                  "]0,1[",
+                  "1",
+                  "]1,+∞["
+                ]
+              },
+              {
+                "label": "ln(x)",
+                "cells": [
+                  "غير معرف",
+                  "−",
+                  "0",
+                  "+"
+                ]
+              }
+            ]
+          }
+        ],
+        "graph_data": {
+          "react_data": {
+            "coordinate_system": {
+              "x_min": 0,
+              "x_max": 10,
+              "y_min": -4,
+              "y_max": 3,
+              "x_step": 1,
+              "y_step": 1
+            },
+            "series": [
+              {
+                "id": "ln_curve",
+                "label": "y=ln(x)",
+                "type": "line",
+                "equation": "y=ln(x)",
+                "data": [
+                  {
+                    "x": 0.05,
+                    "y": -2.995732
+                  },
+                  {
+                    "x": 0.1,
+                    "y": -2.302585
+                  },
+                  {
+                    "x": 0.2,
+                    "y": -1.609438
+                  },
+                  {
+                    "x": 0.367879,
+                    "y": -1.0
+                  },
+                  {
+                    "x": 0.5,
+                    "y": -0.693147
+                  },
+                  {
+                    "x": 1,
+                    "y": 0.0
+                  },
+                  {
+                    "x": 1.5,
+                    "y": 0.405465
+                  },
+                  {
+                    "x": 2,
+                    "y": 0.693147
+                  },
+                  {
+                    "x": 2.718282,
+                    "y": 1.0
+                  },
+                  {
+                    "x": 4,
+                    "y": 1.386294
+                  },
+                  {
+                    "x": 5,
+                    "y": 1.609438
+                  },
+                  {
+                    "x": 7.389056,
+                    "y": 2.0
+                  },
+                  {
+                    "x": 10,
+                    "y": 2.302585
+                  }
+                ]
+              }
+            ],
+            "special_points": [
+              {
+                "id": "a",
+                "x": 0.367879,
+                "y": -1,
+                "label": "A(1/e,-1)"
+              },
+              {
+                "id": "b",
+                "x": 1,
+                "y": 0,
+                "label": "B(1,0)"
+              },
+              {
+                "id": "c",
+                "x": 2.718282,
+                "y": 1,
+                "label": "C(e,1)"
+              },
+              {
+                "id": "d",
+                "x": 7.389056,
+                "y": 2,
+                "label": "D(e²,2)"
+              }
+            ],
+            "asymptotes": [
+              {
+                "id": "v",
+                "type": "vertical",
+                "x": 0,
+                "label": "x=0"
+              }
+            ],
+            "title": "منحنى الدالة y=ln(x)",
+            "description": "منحنى متزايد على ]0,+∞[ وله المقارب العمودي x=0."
+          }
+        },
+        "presentation": {
+          "show_graph_first": true,
+          "show_one_step_at_a_time": true,
+          "react_component": "UniversalMathExerciseRenderer",
+          "graph_mode": "cartesian",
+          "use_field": "graph_data.react_data",
+          "rtl": true,
+          "show_graph_in_question": true,
+          "show_graph_in_solution": true,
+          "show_images_in_question": false,
+          "show_images_in_solution": false,
+          "show_tables_in_question": false,
+          "show_tables_in_solution": false,
+          "show_variation_tables": false,
+          "show_sign_tables": true,
+          "animate_steps": true,
+          "solution_open_mode": "on_button_click",
+          "solution_access": "direct",
+          "attempt_required": false,
+          "show_final_answer_after_last_step": true,
+          "show_verification_after_final_answer": true,
+          "show_bac_writing": true,
+          "show_understanding_check": true,
+          "math_direction": "ltr"
+        },
+        "is_complete": true,
+        "solution_access": "direct",
+        "attempt_required": false,
+        "bac_writing": [
+          "أحدد مجال ln.",
+          "أستعمل النقاط والمقارب والتزايد.",
+          "أقرأ المطلوب من الرسم بدقة."
+        ],
+        "understanding_check": {
+          "question": "ما العناصر الأربعة الأساسية لرسم ln؟",
+          "answer": "المجال x>0، المقارب x=0، النقطة (1,0)، والتزايد."
+        },
+        "takeaway": "استخراج إشارة ln من الرسم."
+      },
+      "display_order": 7,
+      "learning_stage": "axis_practice",
+      "learning_stage_label": "تمرين تطبيقي",
+      "pedagogical_objective": "استخراج إشارة ln من الرسم.",
+      "solution_access": "direct",
+      "attempt_required": false
+    },
+    {
+      "id": "log_graph_practice_08",
+      "year": null,
+      "source_file": null,
+      "source_page": null,
+      "exercise": "تمرين تدريبي 8",
+      "number": "8",
+      "title": "المقارنة من التزايد",
+      "text": "قارن دون آلة حاسبة: \\(\\ln2\\) و\\(\\ln7\\)، \\(\\ln(1/e)\\) و\\(\\ln(1/2)\\)، ثم \\(\\ln(e^2)\\) و\\(\\ln(e^3)\\).",
+      "standalone_text": "قارن دون آلة حاسبة: \\(\\ln2\\) و\\(\\ln7\\)، \\(\\ln(1/e)\\) و\\(\\ln(1/2)\\)، ثم \\(\\ln(e^2)\\) و\\(\\ln(e^3)\\).",
+      "context": "تمرين تدريبي مبني مباشرة على محور التمثيل البياني واتجاه تغير ln.",
+      "tag": "log_graph",
+      "axis": "التمثيل البياني واتجاه التغير",
+      "secondary_tags": [],
+      "skill": "استعمال تزايد ln للمقارنة.",
+      "difficulty": "medium",
+      "question_type": "axis_practice",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "tables": [],
+      "variation_tables": [],
+      "sign_tables": [],
+      "graph_data": {
+        "react_data": {
+          "coordinate_system": {
+            "x_min": 0,
+            "x_max": 10,
+            "y_min": -4,
+            "y_max": 3,
+            "x_step": 1,
+            "y_step": 1
+          },
+          "series": [
+            {
+              "id": "ln_curve",
+              "label": "y=ln(x)",
+              "type": "line",
+              "equation": "y=ln(x)",
+              "data": [
+                {
+                  "x": 0.05,
+                  "y": -2.995732
+                },
+                {
+                  "x": 0.1,
+                  "y": -2.302585
+                },
+                {
+                  "x": 0.2,
+                  "y": -1.609438
+                },
+                {
+                  "x": 0.367879,
+                  "y": -1.0
+                },
+                {
+                  "x": 0.5,
+                  "y": -0.693147
+                },
+                {
+                  "x": 1,
+                  "y": 0.0
+                },
+                {
+                  "x": 1.5,
+                  "y": 0.405465
+                },
+                {
+                  "x": 2,
+                  "y": 0.693147
+                },
+                {
+                  "x": 2.718282,
+                  "y": 1.0
+                },
+                {
+                  "x": 4,
+                  "y": 1.386294
+                },
+                {
+                  "x": 5,
+                  "y": 1.609438
+                },
+                {
+                  "x": 7.389056,
+                  "y": 2.0
+                },
+                {
+                  "x": 10,
+                  "y": 2.302585
+                }
+              ]
+            }
+          ],
+          "special_points": [
+            {
+              "id": "a",
+              "x": 0.367879,
+              "y": -1,
+              "label": "A(1/e,-1)"
+            },
+            {
+              "id": "b",
+              "x": 1,
+              "y": 0,
+              "label": "B(1,0)"
+            },
+            {
+              "id": "c",
+              "x": 2.718282,
+              "y": 1,
+              "label": "C(e,1)"
+            },
+            {
+              "id": "d",
+              "x": 7.389056,
+              "y": 2,
+              "label": "D(e²,2)"
+            }
+          ],
+          "asymptotes": [
+            {
+              "id": "v",
+              "type": "vertical",
+              "x": 0,
+              "label": "x=0"
+            }
+          ],
+          "title": "منحنى الدالة y=ln(x)",
+          "description": "منحنى متزايد على ]0,+∞[ وله المقارب العمودي x=0."
+        }
+      },
+      "solution": {
+        "title": "الحل المفصل: المقارنة من التزايد",
+        "main_idea": "استعمال تزايد ln للمقارنة.",
+        "strategy": "المجال ← المقارب/النقاط ← التزايد والنهايات ← القراءة أو الاستنتاج البياني.",
+        "detailed_explanation": "حل تدريجي يدرّب التلميذ على بناء منحنى ln وقراءة المعلومات منه.",
+        "uses_graph": true,
+        "uses_images": false,
+        "uses_tables": false,
+        "uses_variation_table": false,
+        "uses_sign_table": false,
+        "steps": [
+          {
+            "number": "1",
+            "order": 1,
+            "title": "القاعدة",
+            "explanation": "ln متزايدة تمامًا وتحفظ ترتيب المدخلات الموجبة.",
+            "construction": [],
+            "calculation": "\\(a<b\\Rightarrow\\ln a<\\ln b\\)",
+            "result": "نقارن الداخل فقط.",
+            "conclusion": "نقارن الداخل فقط.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "ln متزايدة تمامًا وتحفظ ترتيب المدخلات الموجبة.",
+            "rule_used": "رتابة ln",
+            "why": "ln متزايدة تمامًا وتحفظ ترتيب المدخلات الموجبة.",
+            "calculation_breakdown": [],
+            "student_action": "حاول تنفيذ هذه الخطوة بنفسك ثم قارنها بالحل."
+          },
+          {
+            "number": "2",
+            "order": 2,
+            "title": "الأولى",
+            "explanation": "2<7.",
+            "construction": [],
+            "calculation": "\\(\\ln2<\\ln7\\)",
+            "result": "الترتيب محفوظ.",
+            "conclusion": "الترتيب محفوظ.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "2<7.",
+            "rule_used": "رتابة ln",
+            "why": "2<7.",
+            "calculation_breakdown": [],
+            "student_action": "حاول تنفيذ هذه الخطوة بنفسك ثم قارنها بالحل."
+          },
+          {
+            "number": "3",
+            "order": 3,
+            "title": "الثانية",
+            "explanation": "لأن e>2 فإن 1/e<1/2.",
+            "construction": [],
+            "calculation": "\\(\\ln(1/e)<\\ln(1/2)\\)",
+            "result": "الترتيب محفوظ.",
+            "conclusion": "الترتيب محفوظ.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "لأن e>2 فإن 1/e<1/2.",
+            "rule_used": "رتابة ln",
+            "why": "لأن e>2 فإن 1/e<1/2.",
+            "calculation_breakdown": [],
+            "student_action": "حاول تنفيذ هذه الخطوة بنفسك ثم قارنها بالحل."
+          },
+          {
+            "number": "4",
+            "order": 4,
+            "title": "الثالثة",
+            "explanation": "e²<e³.",
+            "construction": [],
+            "calculation": "\\(\\ln(e^2)<\\ln(e^3)\\)",
+            "result": "أي 2<3.",
+            "conclusion": "أي 2<3.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "e²<e³.",
+            "rule_used": "رتابة ln",
+            "why": "e²<e³.",
+            "calculation_breakdown": [],
+            "student_action": "حاول تنفيذ هذه الخطوة بنفسك ثم قارنها بالحل."
+          }
+        ],
+        "final_answer": "\\(\\boxed{\\ln2<\\ln7,\\ \\ln(1/e)<\\ln(1/2),\\ \\ln(e^2)<\\ln(e^3)}\\).",
+        "verification": "النتيجة منسجمة مع مجال ln ونقاطها المرجعية وتزايدها ومقاربها العمودي.",
+        "common_mistakes": [
+          {
+            "mistake": "رسم ln يسار محور التراتيب.",
+            "correction": "مجال ln هو x>0 فقط."
+          },
+          {
+            "mistake": "وضع (0,1) على منحنى ln.",
+            "correction": "(0,1) تخص exp، أما ln فتمر بـ(1,0)."
+          }
+        ],
+        "hints": [
+          {
+            "level": 1,
+            "hint": "ln تحفظ الترتيب."
+          }
+        ],
+        "alternative_method": "",
+        "images": [],
+        "tables": [],
+        "variation_tables": [],
+        "sign_tables": [],
+        "graph_data": {
+          "react_data": {
+            "coordinate_system": {
+              "x_min": 0,
+              "x_max": 10,
+              "y_min": -4,
+              "y_max": 3,
+              "x_step": 1,
+              "y_step": 1
+            },
+            "series": [
+              {
+                "id": "ln_curve",
+                "label": "y=ln(x)",
+                "type": "line",
+                "equation": "y=ln(x)",
+                "data": [
+                  {
+                    "x": 0.05,
+                    "y": -2.995732
+                  },
+                  {
+                    "x": 0.1,
+                    "y": -2.302585
+                  },
+                  {
+                    "x": 0.2,
+                    "y": -1.609438
+                  },
+                  {
+                    "x": 0.367879,
+                    "y": -1.0
+                  },
+                  {
+                    "x": 0.5,
+                    "y": -0.693147
+                  },
+                  {
+                    "x": 1,
+                    "y": 0.0
+                  },
+                  {
+                    "x": 1.5,
+                    "y": 0.405465
+                  },
+                  {
+                    "x": 2,
+                    "y": 0.693147
+                  },
+                  {
+                    "x": 2.718282,
+                    "y": 1.0
+                  },
+                  {
+                    "x": 4,
+                    "y": 1.386294
+                  },
+                  {
+                    "x": 5,
+                    "y": 1.609438
+                  },
+                  {
+                    "x": 7.389056,
+                    "y": 2.0
+                  },
+                  {
+                    "x": 10,
+                    "y": 2.302585
+                  }
+                ]
+              }
+            ],
+            "special_points": [
+              {
+                "id": "a",
+                "x": 0.367879,
+                "y": -1,
+                "label": "A(1/e,-1)"
+              },
+              {
+                "id": "b",
+                "x": 1,
+                "y": 0,
+                "label": "B(1,0)"
+              },
+              {
+                "id": "c",
+                "x": 2.718282,
+                "y": 1,
+                "label": "C(e,1)"
+              },
+              {
+                "id": "d",
+                "x": 7.389056,
+                "y": 2,
+                "label": "D(e²,2)"
+              }
+            ],
+            "asymptotes": [
+              {
+                "id": "v",
+                "type": "vertical",
+                "x": 0,
+                "label": "x=0"
+              }
+            ],
+            "title": "منحنى الدالة y=ln(x)",
+            "description": "منحنى متزايد على ]0,+∞[ وله المقارب العمودي x=0."
+          }
+        },
+        "presentation": {
+          "show_graph_first": true,
+          "show_one_step_at_a_time": true,
+          "react_component": "UniversalMathExerciseRenderer",
+          "graph_mode": "cartesian",
+          "use_field": "graph_data.react_data",
+          "rtl": true,
+          "show_graph_in_question": true,
+          "show_graph_in_solution": true,
+          "show_images_in_question": false,
+          "show_images_in_solution": false,
+          "show_tables_in_question": false,
+          "show_tables_in_solution": false,
+          "show_variation_tables": false,
+          "show_sign_tables": false,
+          "animate_steps": true,
+          "solution_open_mode": "on_button_click",
+          "solution_access": "direct",
+          "attempt_required": false,
+          "show_final_answer_after_last_step": true,
+          "show_verification_after_final_answer": true,
+          "show_bac_writing": true,
+          "show_understanding_check": true,
+          "math_direction": "ltr"
+        },
+        "is_complete": true,
+        "solution_access": "direct",
+        "attempt_required": false,
+        "bac_writing": [
+          "أحدد مجال ln.",
+          "أستعمل النقاط والمقارب والتزايد.",
+          "أقرأ المطلوب من الرسم بدقة."
+        ],
+        "understanding_check": {
+          "question": "ما العناصر الأربعة الأساسية لرسم ln؟",
+          "answer": "المجال x>0، المقارب x=0، النقطة (1,0)، والتزايد."
+        },
+        "takeaway": "استعمال تزايد ln للمقارنة."
+      },
+      "display_order": 8,
+      "learning_stage": "axis_practice",
+      "learning_stage_label": "تمرين تطبيقي",
+      "pedagogical_objective": "استعمال تزايد ln للمقارنة.",
+      "solution_access": "direct",
+      "attempt_required": false
+    },
+    {
+      "id": "log_graph_practice_09",
+      "year": null,
+      "source_file": null,
+      "source_page": null,
+      "exercise": "تمرين تدريبي 9",
+      "number": "9",
+      "title": "اكتشاف الأخطاء في رسم ln",
+      "text": "تلميذ رسم منحنى ln بهذه الصفات: يمر بـ\\((0,1)\\)، له جزء عندما \\(x<0\\)، يقطع المستقيم \\(x=0\\)، وهو متناقص. حدد كل الأخطاء وصححها.",
+      "standalone_text": "تلميذ رسم منحنى ln بهذه الصفات: يمر بـ\\((0,1)\\)، له جزء عندما \\(x<0\\)، يقطع المستقيم \\(x=0\\)، وهو متناقص. حدد كل الأخطاء وصححها.",
+      "context": "تمرين تدريبي مبني مباشرة على محور التمثيل البياني واتجاه تغير ln.",
+      "tag": "log_graph",
+      "axis": "التمثيل البياني واتجاه التغير",
+      "secondary_tags": [],
+      "skill": "تمييز الرسم الصحيح للدالة ln.",
+      "difficulty": "medium",
+      "question_type": "axis_practice",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "tables": [],
+      "variation_tables": [],
+      "sign_tables": [],
+      "graph_data": {
+        "react_data": {
+          "coordinate_system": {
+            "x_min": 0,
+            "x_max": 10,
+            "y_min": -4,
+            "y_max": 3,
+            "x_step": 1,
+            "y_step": 1
+          },
+          "series": [
+            {
+              "id": "ln_curve",
+              "label": "y=ln(x)",
+              "type": "line",
+              "equation": "y=ln(x)",
+              "data": [
+                {
+                  "x": 0.05,
+                  "y": -2.995732
+                },
+                {
+                  "x": 0.1,
+                  "y": -2.302585
+                },
+                {
+                  "x": 0.2,
+                  "y": -1.609438
+                },
+                {
+                  "x": 0.367879,
+                  "y": -1.0
+                },
+                {
+                  "x": 0.5,
+                  "y": -0.693147
+                },
+                {
+                  "x": 1,
+                  "y": 0.0
+                },
+                {
+                  "x": 1.5,
+                  "y": 0.405465
+                },
+                {
+                  "x": 2,
+                  "y": 0.693147
+                },
+                {
+                  "x": 2.718282,
+                  "y": 1.0
+                },
+                {
+                  "x": 4,
+                  "y": 1.386294
+                },
+                {
+                  "x": 5,
+                  "y": 1.609438
+                },
+                {
+                  "x": 7.389056,
+                  "y": 2.0
+                },
+                {
+                  "x": 10,
+                  "y": 2.302585
+                }
+              ]
+            }
+          ],
+          "special_points": [
+            {
+              "id": "a",
+              "x": 0.367879,
+              "y": -1,
+              "label": "A(1/e,-1)"
+            },
+            {
+              "id": "b",
+              "x": 1,
+              "y": 0,
+              "label": "B(1,0)"
+            },
+            {
+              "id": "c",
+              "x": 2.718282,
+              "y": 1,
+              "label": "C(e,1)"
+            },
+            {
+              "id": "d",
+              "x": 7.389056,
+              "y": 2,
+              "label": "D(e²,2)"
+            }
+          ],
+          "asymptotes": [
+            {
+              "id": "v",
+              "type": "vertical",
+              "x": 0,
+              "label": "x=0"
+            }
+          ],
+          "title": "منحنى الدالة y=ln(x)",
+          "description": "منحنى متزايد على ]0,+∞[ وله المقارب العمودي x=0."
+        }
+      },
+      "solution": {
+        "title": "الحل المفصل: اكتشاف الأخطاء في رسم ln",
+        "main_idea": "تمييز الرسم الصحيح للدالة ln.",
+        "strategy": "المجال ← المقارب/النقاط ← التزايد والنهايات ← القراءة أو الاستنتاج البياني.",
+        "detailed_explanation": "حل تدريجي يدرّب التلميذ على بناء منحنى ln وقراءة المعلومات منه.",
+        "uses_graph": true,
+        "uses_images": false,
+        "uses_tables": false,
+        "uses_variation_table": false,
+        "uses_sign_table": false,
+        "steps": [
+          {
+            "number": "1",
+            "order": 1,
+            "title": "النقطة",
+            "explanation": "(0,1) تخص exp.",
+            "construction": [],
+            "calculation": "\\(\\ln1=0\\Rightarrow(1,0)\\in C_{ln}\\)",
+            "result": "النقطة الصحيحة (1,0).",
+            "conclusion": "النقطة الصحيحة (1,0).",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "(0,1) تخص exp.",
+            "rule_used": "نقطة مرجعية",
+            "why": "(0,1) تخص exp.",
+            "calculation_breakdown": [],
+            "student_action": "حاول تنفيذ هذه الخطوة بنفسك ثم قارنها بالحل."
+          },
+          {
+            "number": "2",
+            "order": 2,
+            "title": "المجال",
+            "explanation": "ln غير معرفة عندما x≤0.",
+            "construction": [],
+            "calculation": "\\(D=]0,+\\infty[\\)",
+            "result": "لا رسم يسار محور y.",
+            "conclusion": "لا رسم يسار محور y.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "ln غير معرفة عندما x≤0.",
+            "rule_used": "مجال ln",
+            "why": "ln غير معرفة عندما x≤0.",
+            "calculation_breakdown": [],
+            "student_action": "حاول تنفيذ هذه الخطوة بنفسك ثم قارنها بالحل."
+          },
+          {
+            "number": "3",
+            "order": 3,
+            "title": "المقارب",
+            "explanation": "x=0 ليس جزءًا من المنحنى.",
+            "construction": [],
+            "calculation": "\\(x=0\\text{ مقارب عمودي}\\)",
+            "result": "لا يقطعه المنحنى.",
+            "conclusion": "لا يقطعه المنحنى.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "x=0 ليس جزءًا من المنحنى.",
+            "rule_used": "مقارب",
+            "why": "x=0 ليس جزءًا من المنحنى.",
+            "calculation_breakdown": [],
+            "student_action": "حاول تنفيذ هذه الخطوة بنفسك ثم قارنها بالحل."
+          },
+          {
+            "number": "4",
+            "order": 4,
+            "title": "الاتجاه",
+            "explanation": "المشتقة 1/x موجبة.",
+            "construction": [],
+            "calculation": "\\(\\ln\\text{ متزايدة}\\)",
+            "result": "الرسم يجب أن يكون صاعدًا.",
+            "conclusion": "الرسم يجب أن يكون صاعدًا.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "المشتقة 1/x موجبة.",
+            "rule_used": "اتجاه التغير",
+            "why": "المشتقة 1/x موجبة.",
+            "calculation_breakdown": [],
+            "student_action": "حاول تنفيذ هذه الخطوة بنفسك ثم قارنها بالحل."
+          }
+        ],
+        "final_answer": "\\(\\boxed{يمين\\ محور\\ y\\ فقط،\\ يمر\\ بـ(1,0)،\\ لا\\ يقطع\\ x=0،\\ ومتزايد}\\).",
+        "verification": "النتيجة منسجمة مع مجال ln ونقاطها المرجعية وتزايدها ومقاربها العمودي.",
+        "common_mistakes": [
+          {
+            "mistake": "رسم ln يسار محور التراتيب.",
+            "correction": "مجال ln هو x>0 فقط."
+          },
+          {
+            "mistake": "وضع (0,1) على منحنى ln.",
+            "correction": "(0,1) تخص exp، أما ln فتمر بـ(1,0)."
+          }
+        ],
+        "hints": [
+          {
+            "level": 1,
+            "hint": "تذكر: يمين فقط، (1,0)، x=0 مقارب، صاعد."
+          }
+        ],
+        "alternative_method": "",
+        "images": [],
+        "tables": [],
+        "variation_tables": [],
+        "sign_tables": [],
+        "graph_data": {
+          "react_data": {
+            "coordinate_system": {
+              "x_min": 0,
+              "x_max": 10,
+              "y_min": -4,
+              "y_max": 3,
+              "x_step": 1,
+              "y_step": 1
+            },
+            "series": [
+              {
+                "id": "ln_curve",
+                "label": "y=ln(x)",
+                "type": "line",
+                "equation": "y=ln(x)",
+                "data": [
+                  {
+                    "x": 0.05,
+                    "y": -2.995732
+                  },
+                  {
+                    "x": 0.1,
+                    "y": -2.302585
+                  },
+                  {
+                    "x": 0.2,
+                    "y": -1.609438
+                  },
+                  {
+                    "x": 0.367879,
+                    "y": -1.0
+                  },
+                  {
+                    "x": 0.5,
+                    "y": -0.693147
+                  },
+                  {
+                    "x": 1,
+                    "y": 0.0
+                  },
+                  {
+                    "x": 1.5,
+                    "y": 0.405465
+                  },
+                  {
+                    "x": 2,
+                    "y": 0.693147
+                  },
+                  {
+                    "x": 2.718282,
+                    "y": 1.0
+                  },
+                  {
+                    "x": 4,
+                    "y": 1.386294
+                  },
+                  {
+                    "x": 5,
+                    "y": 1.609438
+                  },
+                  {
+                    "x": 7.389056,
+                    "y": 2.0
+                  },
+                  {
+                    "x": 10,
+                    "y": 2.302585
+                  }
+                ]
+              }
+            ],
+            "special_points": [
+              {
+                "id": "a",
+                "x": 0.367879,
+                "y": -1,
+                "label": "A(1/e,-1)"
+              },
+              {
+                "id": "b",
+                "x": 1,
+                "y": 0,
+                "label": "B(1,0)"
+              },
+              {
+                "id": "c",
+                "x": 2.718282,
+                "y": 1,
+                "label": "C(e,1)"
+              },
+              {
+                "id": "d",
+                "x": 7.389056,
+                "y": 2,
+                "label": "D(e²,2)"
+              }
+            ],
+            "asymptotes": [
+              {
+                "id": "v",
+                "type": "vertical",
+                "x": 0,
+                "label": "x=0"
+              }
+            ],
+            "title": "منحنى الدالة y=ln(x)",
+            "description": "منحنى متزايد على ]0,+∞[ وله المقارب العمودي x=0."
+          }
+        },
+        "presentation": {
+          "show_graph_first": true,
+          "show_one_step_at_a_time": true,
+          "react_component": "UniversalMathExerciseRenderer",
+          "graph_mode": "cartesian",
+          "use_field": "graph_data.react_data",
+          "rtl": true,
+          "show_graph_in_question": true,
+          "show_graph_in_solution": true,
+          "show_images_in_question": false,
+          "show_images_in_solution": false,
+          "show_tables_in_question": false,
+          "show_tables_in_solution": false,
+          "show_variation_tables": false,
+          "show_sign_tables": false,
+          "animate_steps": true,
+          "solution_open_mode": "on_button_click",
+          "solution_access": "direct",
+          "attempt_required": false,
+          "show_final_answer_after_last_step": true,
+          "show_verification_after_final_answer": true,
+          "show_bac_writing": true,
+          "show_understanding_check": true,
+          "math_direction": "ltr"
+        },
+        "is_complete": true,
+        "solution_access": "direct",
+        "attempt_required": false,
+        "bac_writing": [
+          "أحدد مجال ln.",
+          "أستعمل النقاط والمقارب والتزايد.",
+          "أقرأ المطلوب من الرسم بدقة."
+        ],
+        "understanding_check": {
+          "question": "ما العناصر الأربعة الأساسية لرسم ln؟",
+          "answer": "المجال x>0، المقارب x=0، النقطة (1,0)، والتزايد."
+        },
+        "takeaway": "تمييز الرسم الصحيح للدالة ln."
+      },
+      "display_order": 9,
+      "learning_stage": "axis_practice",
+      "learning_stage_label": "تمرين تطبيقي",
+      "pedagogical_objective": "تمييز الرسم الصحيح للدالة ln.",
+      "solution_access": "direct",
+      "attempt_required": false
+    },
+    {
+      "id": "log_graph_practice_10",
+      "year": null,
+      "source_file": null,
+      "source_page": null,
+      "exercise": "تمرين تدريبي 10",
+      "number": "10",
+      "title": "بناء منحنى ln من الصفر",
+      "text": "أنشئ رسمًا منظمًا لـ\\(y=\\ln x\\) باستعمال: المجال، المقارب، النهايات، النقاط المرجعية، واتجاه التغير. اذكر ترتيب خطوات البناء.",
+      "standalone_text": "أنشئ رسمًا منظمًا لـ\\(y=\\ln x\\) باستعمال: المجال، المقارب، النهايات، النقاط المرجعية، واتجاه التغير. اذكر ترتيب خطوات البناء.",
+      "context": "تمرين تدريبي مبني مباشرة على محور التمثيل البياني واتجاه تغير ln.",
+      "tag": "log_graph",
+      "axis": "التمثيل البياني واتجاه التغير",
+      "secondary_tags": [],
+      "skill": "بناء منحنى ln كاملًا بطريقة منهجية.",
+      "difficulty": "hard",
+      "question_type": "axis_practice",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "tables": [],
+      "variation_tables": [],
+      "sign_tables": [],
+      "graph_data": {
+        "react_data": {
+          "coordinate_system": {
+            "x_min": 0,
+            "x_max": 10,
+            "y_min": -4,
+            "y_max": 3,
+            "x_step": 1,
+            "y_step": 1
+          },
+          "series": [
+            {
+              "id": "ln_curve",
+              "label": "y=ln(x)",
+              "type": "line",
+              "equation": "y=ln(x)",
+              "data": [
+                {
+                  "x": 0.05,
+                  "y": -2.995732
+                },
+                {
+                  "x": 0.1,
+                  "y": -2.302585
+                },
+                {
+                  "x": 0.2,
+                  "y": -1.609438
+                },
+                {
+                  "x": 0.367879,
+                  "y": -1.0
+                },
+                {
+                  "x": 0.5,
+                  "y": -0.693147
+                },
+                {
+                  "x": 1,
+                  "y": 0.0
+                },
+                {
+                  "x": 1.5,
+                  "y": 0.405465
+                },
+                {
+                  "x": 2,
+                  "y": 0.693147
+                },
+                {
+                  "x": 2.718282,
+                  "y": 1.0
+                },
+                {
+                  "x": 4,
+                  "y": 1.386294
+                },
+                {
+                  "x": 5,
+                  "y": 1.609438
+                },
+                {
+                  "x": 7.389056,
+                  "y": 2.0
+                },
+                {
+                  "x": 10,
+                  "y": 2.302585
+                }
+              ]
+            }
+          ],
+          "special_points": [
+            {
+              "id": "a",
+              "x": 0.367879,
+              "y": -1,
+              "label": "A(1/e,-1)"
+            },
+            {
+              "id": "b",
+              "x": 1,
+              "y": 0,
+              "label": "B(1,0)"
+            },
+            {
+              "id": "c",
+              "x": 2.718282,
+              "y": 1,
+              "label": "C(e,1)"
+            },
+            {
+              "id": "d",
+              "x": 7.389056,
+              "y": 2,
+              "label": "D(e²,2)"
+            }
+          ],
+          "asymptotes": [
+            {
+              "id": "v",
+              "type": "vertical",
+              "x": 0,
+              "label": "x=0"
+            }
+          ],
+          "title": "منحنى الدالة y=ln(x)",
+          "description": "منحنى متزايد على ]0,+∞[ وله المقارب العمودي x=0."
+        }
+      },
+      "solution": {
+        "title": "الحل المفصل: بناء منحنى ln من الصفر",
+        "main_idea": "بناء منحنى ln كاملًا بطريقة منهجية.",
+        "strategy": "المجال ← المقارب/النقاط ← التزايد والنهايات ← القراءة أو الاستنتاج البياني.",
+        "detailed_explanation": "حل تدريجي يدرّب التلميذ على بناء منحنى ln وقراءة المعلومات منه.",
+        "uses_graph": true,
+        "uses_images": false,
+        "uses_tables": false,
+        "uses_variation_table": false,
+        "uses_sign_table": false,
+        "steps": [
+          {
+            "number": "1",
+            "order": 1,
+            "title": "المجال والمقارب",
+            "explanation": "نرسم فقط x>0 ونضع x=0 كمقارب.",
+            "construction": [],
+            "calculation": "\\(D=]0,+\\infty[,\\quad x=0\\text{ مقارب}\\)",
+            "result": "حددنا مكان الرسم.",
+            "conclusion": "حددنا مكان الرسم.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "نرسم فقط x>0 ونضع x=0 كمقارب.",
+            "rule_used": "المجال والمقارب",
+            "why": "نرسم فقط x>0 ونضع x=0 كمقارب.",
+            "calculation_breakdown": [],
+            "student_action": "حاول تنفيذ هذه الخطوة بنفسك ثم قارنها بالحل."
+          },
+          {
+            "number": "2",
+            "order": 2,
+            "title": "النقاط",
+            "explanation": "نضع أربع نقاط مرجعية.",
+            "construction": [],
+            "calculation": "\\((1/e,-1),(1,0),(e,1),(e^2,2)\\)",
+            "result": "ثبّتنا مواضع دقيقة.",
+            "conclusion": "ثبّتنا مواضع دقيقة.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "نضع أربع نقاط مرجعية.",
+            "rule_used": "قيم ln",
+            "why": "نضع أربع نقاط مرجعية.",
+            "calculation_breakdown": [],
+            "student_action": "حاول تنفيذ هذه الخطوة بنفسك ثم قارنها بالحل."
+          },
+          {
+            "number": "3",
+            "order": 3,
+            "title": "النهايات",
+            "explanation": "قرب 0 ينزل إلى -∞، ويمينًا يصعد إلى +∞.",
+            "construction": [],
+            "calculation": "\\(\\lim_{0^+}\\ln x=-\\infty,\\quad\\lim_{+\\infty}\\ln x=+\\infty\\)",
+            "result": "حددنا الطرفين.",
+            "conclusion": "حددنا الطرفين.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "قرب 0 ينزل إلى -∞، ويمينًا يصعد إلى +∞.",
+            "rule_used": "النهايات",
+            "why": "قرب 0 ينزل إلى -∞، ويمينًا يصعد إلى +∞.",
+            "calculation_breakdown": [],
+            "student_action": "حاول تنفيذ هذه الخطوة بنفسك ثم قارنها بالحل."
+          },
+          {
+            "number": "4",
+            "order": 4,
+            "title": "التوصيل",
+            "explanation": "بما أن ln متزايدة، نصل النقاط بمنحنى صاعد ناعم.",
+            "construction": [],
+            "calculation": "\\((\\ln x)'=1/x>0\\)",
+            "result": "اكتمل الرسم.",
+            "conclusion": "اكتمل الرسم.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "بما أن ln متزايدة، نصل النقاط بمنحنى صاعد ناعم.",
+            "rule_used": "التزايد",
+            "why": "بما أن ln متزايدة، نصل النقاط بمنحنى صاعد ناعم.",
+            "calculation_breakdown": [],
+            "student_action": "حاول تنفيذ هذه الخطوة بنفسك ثم قارنها بالحل."
+          }
+        ],
+        "final_answer": "\\(\\boxed{مقارب+x>0+نقاط+نهايات+تزايد\\Rightarrow الرسم\\ الكامل}\\).",
+        "verification": "النتيجة منسجمة مع مجال ln ونقاطها المرجعية وتزايدها ومقاربها العمودي.",
+        "common_mistakes": [
+          {
+            "mistake": "رسم ln يسار محور التراتيب.",
+            "correction": "مجال ln هو x>0 فقط."
+          },
+          {
+            "mistake": "وضع (0,1) على منحنى ln.",
+            "correction": "(0,1) تخص exp، أما ln فتمر بـ(1,0)."
+          }
+        ],
+        "hints": [
+          {
+            "level": 1,
+            "hint": "لا تبدأ بالرسم عشوائيًا."
+          },
+          {
+            "level": 2,
+            "hint": "ضع المقارب والنقاط أولًا."
+          }
+        ],
+        "alternative_method": "",
+        "images": [],
+        "tables": [],
+        "variation_tables": [],
+        "sign_tables": [],
+        "graph_data": {
+          "react_data": {
+            "coordinate_system": {
+              "x_min": 0,
+              "x_max": 10,
+              "y_min": -4,
+              "y_max": 3,
+              "x_step": 1,
+              "y_step": 1
+            },
+            "series": [
+              {
+                "id": "ln_curve",
+                "label": "y=ln(x)",
+                "type": "line",
+                "equation": "y=ln(x)",
+                "data": [
+                  {
+                    "x": 0.05,
+                    "y": -2.995732
+                  },
+                  {
+                    "x": 0.1,
+                    "y": -2.302585
+                  },
+                  {
+                    "x": 0.2,
+                    "y": -1.609438
+                  },
+                  {
+                    "x": 0.367879,
+                    "y": -1.0
+                  },
+                  {
+                    "x": 0.5,
+                    "y": -0.693147
+                  },
+                  {
+                    "x": 1,
+                    "y": 0.0
+                  },
+                  {
+                    "x": 1.5,
+                    "y": 0.405465
+                  },
+                  {
+                    "x": 2,
+                    "y": 0.693147
+                  },
+                  {
+                    "x": 2.718282,
+                    "y": 1.0
+                  },
+                  {
+                    "x": 4,
+                    "y": 1.386294
+                  },
+                  {
+                    "x": 5,
+                    "y": 1.609438
+                  },
+                  {
+                    "x": 7.389056,
+                    "y": 2.0
+                  },
+                  {
+                    "x": 10,
+                    "y": 2.302585
+                  }
+                ]
+              }
+            ],
+            "special_points": [
+              {
+                "id": "a",
+                "x": 0.367879,
+                "y": -1,
+                "label": "A(1/e,-1)"
+              },
+              {
+                "id": "b",
+                "x": 1,
+                "y": 0,
+                "label": "B(1,0)"
+              },
+              {
+                "id": "c",
+                "x": 2.718282,
+                "y": 1,
+                "label": "C(e,1)"
+              },
+              {
+                "id": "d",
+                "x": 7.389056,
+                "y": 2,
+                "label": "D(e²,2)"
+              }
+            ],
+            "asymptotes": [
+              {
+                "id": "v",
+                "type": "vertical",
+                "x": 0,
+                "label": "x=0"
+              }
+            ],
+            "title": "منحنى الدالة y=ln(x)",
+            "description": "منحنى متزايد على ]0,+∞[ وله المقارب العمودي x=0."
+          }
+        },
+        "presentation": {
+          "show_graph_first": true,
+          "show_one_step_at_a_time": true,
+          "react_component": "UniversalMathExerciseRenderer",
+          "graph_mode": "cartesian",
+          "use_field": "graph_data.react_data",
+          "rtl": true,
+          "show_graph_in_question": true,
+          "show_graph_in_solution": true,
+          "show_images_in_question": false,
+          "show_images_in_solution": false,
+          "show_tables_in_question": false,
+          "show_tables_in_solution": false,
+          "show_variation_tables": false,
+          "show_sign_tables": false,
+          "animate_steps": true,
+          "solution_open_mode": "on_button_click",
+          "solution_access": "direct",
+          "attempt_required": false,
+          "show_final_answer_after_last_step": true,
+          "show_verification_after_final_answer": true,
+          "show_bac_writing": true,
+          "show_understanding_check": true,
+          "math_direction": "ltr"
+        },
+        "is_complete": true,
+        "solution_access": "direct",
+        "attempt_required": false,
+        "bac_writing": [
+          "أحدد مجال ln.",
+          "أستعمل النقاط والمقارب والتزايد.",
+          "أقرأ المطلوب من الرسم بدقة."
+        ],
+        "understanding_check": {
+          "question": "ما العناصر الأربعة الأساسية لرسم ln؟",
+          "answer": "المجال x>0، المقارب x=0، النقطة (1,0)، والتزايد."
+        },
+        "takeaway": "بناء منحنى ln كاملًا بطريقة منهجية."
+      },
+      "display_order": 10,
+      "learning_stage": "axis_practice",
+      "learning_stage_label": "تمرين تطبيقي",
+      "pedagogical_objective": "بناء منحنى ln كاملًا بطريقة منهجية.",
+      "solution_access": "direct",
+      "attempt_required": false
+    },
+    {
+      "id": "log_graph_practice_11",
+      "year": null,
+      "source_file": null,
+      "source_page": null,
+      "exercise": "تمرين تدريبي 11",
+      "number": "11",
+      "title": "التناظر بين المقاربين",
+      "text": "منحنى \\(y=e^x\\) له المقارب الأفقي \\(y=0\\) عندما \\(x\\to-\\infty\\). باستعمال التناظر حول \\(y=x\\)، استنتج المقارب الموافق لمنحنى ln.",
+      "standalone_text": "منحنى \\(y=e^x\\) له المقارب الأفقي \\(y=0\\) عندما \\(x\\to-\\infty\\). باستعمال التناظر حول \\(y=x\\)، استنتج المقارب الموافق لمنحنى ln.",
+      "context": "تمرين تدريبي مبني مباشرة على محور التمثيل البياني واتجاه تغير ln.",
+      "tag": "log_graph",
+      "axis": "التمثيل البياني واتجاه التغير",
+      "secondary_tags": [],
+      "skill": "فهم أثر التناظر على المقارب.",
+      "difficulty": "medium",
+      "question_type": "axis_practice",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "tables": [],
+      "variation_tables": [],
+      "sign_tables": [],
+      "graph_data": {
+        "react_data": {
+          "coordinate_system": {
+            "x_min": -3,
+            "x_max": 7,
+            "y_min": -3,
+            "y_max": 7,
+            "x_step": 1,
+            "y_step": 1
+          },
+          "series": [
+            {
+              "id": "exp",
+              "label": "y=e^x",
+              "type": "line",
+              "equation": "y=e^x",
+              "data": [
+                {
+                  "x": -3,
+                  "y": 0.049787
+                },
+                {
+                  "x": -2,
+                  "y": 0.135335
+                },
+                {
+                  "x": -1,
+                  "y": 0.367879
+                },
+                {
+                  "x": 0,
+                  "y": 1.0
+                },
+                {
+                  "x": 0.5,
+                  "y": 1.648721
+                },
+                {
+                  "x": 1,
+                  "y": 2.718282
+                },
+                {
+                  "x": 1.5,
+                  "y": 4.481689
+                }
+              ]
+            },
+            {
+              "id": "ln",
+              "label": "y=ln(x)",
+              "type": "line",
+              "equation": "y=ln(x)",
+              "data": [
+                {
+                  "x": 0.05,
+                  "y": -2.995732
+                },
+                {
+                  "x": 0.1,
+                  "y": -2.302585
+                },
+                {
+                  "x": 0.2,
+                  "y": -1.609438
+                },
+                {
+                  "x": 0.367879,
+                  "y": -1.0
+                },
+                {
+                  "x": 0.5,
+                  "y": -0.693147
+                },
+                {
+                  "x": 1,
+                  "y": 0.0
+                },
+                {
+                  "x": 1.5,
+                  "y": 0.405465
+                },
+                {
+                  "x": 2,
+                  "y": 0.693147
+                },
+                {
+                  "x": 2.718282,
+                  "y": 1.0
+                },
+                {
+                  "x": 4,
+                  "y": 1.386294
+                },
+                {
+                  "x": 5,
+                  "y": 1.609438
+                }
+              ]
+            },
+            {
+              "id": "identity",
+              "label": "y=x",
+              "type": "line",
+              "equation": "y=x",
+              "data": [
+                {
+                  "x": -3,
+                  "y": -3
+                },
+                {
+                  "x": 7,
+                  "y": 7
+                }
+              ]
+            }
+          ],
+          "special_points": [
+            {
+              "id": "p1",
+              "x": 0,
+              "y": 1,
+              "label": "(0,1) exp"
+            },
+            {
+              "id": "p2",
+              "x": 1,
+              "y": 0,
+              "label": "(1,0) ln"
+            },
+            {
+              "id": "p3",
+              "x": 1,
+              "y": 2.718282,
+              "label": "(1,e) exp"
+            },
+            {
+              "id": "p4",
+              "x": 2.718282,
+              "y": 1,
+              "label": "(e,1) ln"
+            }
+          ],
+          "title": "تناظر exp وln حول y=x"
+        }
+      },
+      "solution": {
+        "title": "الحل المفصل: التناظر بين المقاربين",
+        "main_idea": "فهم أثر التناظر على المقارب.",
+        "strategy": "المجال ← المقارب/النقاط ← التزايد والنهايات ← القراءة أو الاستنتاج البياني.",
+        "detailed_explanation": "حل تدريجي يدرّب التلميذ على بناء منحنى ln وقراءة المعلومات منه.",
+        "uses_graph": true,
+        "uses_images": false,
+        "uses_tables": false,
+        "uses_variation_table": false,
+        "uses_sign_table": false,
+        "steps": [
+          {
+            "number": "1",
+            "order": 1,
+            "title": "فكرة التناظر",
+            "explanation": "التناظر حول y=x يبدل x وy.",
+            "construction": [],
+            "calculation": "\\(x\\leftrightarrow y\\)",
+            "result": "الأفقي يتحول إلى عمودي.",
+            "conclusion": "الأفقي يتحول إلى عمودي.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "التناظر حول y=x يبدل x وy.",
+            "rule_used": "تناظر",
+            "why": "التناظر حول y=x يبدل x وy.",
+            "calculation_breakdown": [],
+            "student_action": "حاول تنفيذ هذه الخطوة بنفسك ثم قارنها بالحل."
+          },
+          {
+            "number": "2",
+            "order": 2,
+            "title": "تحويل المستقيم",
+            "explanation": "المستقيم y=0 بعد تبادل x وy يصبح x=0.",
+            "construction": [],
+            "calculation": "\\(y=0\\to x=0\\)",
+            "result": "هذا مقارب ln.",
+            "conclusion": "هذا مقارب ln.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "المستقيم y=0 بعد تبادل x وy يصبح x=0.",
+            "rule_used": "تناظر الدالتين العكسيتين",
+            "why": "المستقيم y=0 بعد تبادل x وy يصبح x=0.",
+            "calculation_breakdown": [],
+            "student_action": "حاول تنفيذ هذه الخطوة بنفسك ثم قارنها بالحل."
+          },
+          {
+            "number": "3",
+            "order": 3,
+            "title": "التحقق",
+            "explanation": "وهو يوافق نهاية ln قرب 0+.",
+            "construction": [],
+            "calculation": "\\(\\lim_{x\\to0^+}\\ln x=-\\infty\\)",
+            "result": "الاستنتاج صحيح.",
+            "conclusion": "الاستنتاج صحيح.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "وهو يوافق نهاية ln قرب 0+.",
+            "rule_used": "نهاية ln",
+            "why": "وهو يوافق نهاية ln قرب 0+.",
+            "calculation_breakdown": [],
+            "student_action": "حاول تنفيذ هذه الخطوة بنفسك ثم قارنها بالحل."
+          }
+        ],
+        "final_answer": "\\(\\boxed{x=0\\text{ هو المقارب العمودي لـ }C_{ln}}\\).",
+        "verification": "النتيجة منسجمة مع مجال ln ونقاطها المرجعية وتزايدها ومقاربها العمودي.",
+        "common_mistakes": [
+          {
+            "mistake": "رسم ln يسار محور التراتيب.",
+            "correction": "مجال ln هو x>0 فقط."
+          },
+          {
+            "mistake": "وضع (0,1) على منحنى ln.",
+            "correction": "(0,1) تخص exp، أما ln فتمر بـ(1,0)."
+          }
+        ],
+        "hints": [
+          {
+            "level": 1,
+            "hint": "بدّل x وy في معادلة المقارب."
+          }
+        ],
+        "alternative_method": "",
+        "images": [],
+        "tables": [],
+        "variation_tables": [],
+        "sign_tables": [],
+        "graph_data": {
+          "react_data": {
+            "coordinate_system": {
+              "x_min": -3,
+              "x_max": 7,
+              "y_min": -3,
+              "y_max": 7,
+              "x_step": 1,
+              "y_step": 1
+            },
+            "series": [
+              {
+                "id": "exp",
+                "label": "y=e^x",
+                "type": "line",
+                "equation": "y=e^x",
+                "data": [
+                  {
+                    "x": -3,
+                    "y": 0.049787
+                  },
+                  {
+                    "x": -2,
+                    "y": 0.135335
+                  },
+                  {
+                    "x": -1,
+                    "y": 0.367879
+                  },
+                  {
+                    "x": 0,
+                    "y": 1.0
+                  },
+                  {
+                    "x": 0.5,
+                    "y": 1.648721
+                  },
+                  {
+                    "x": 1,
+                    "y": 2.718282
+                  },
+                  {
+                    "x": 1.5,
+                    "y": 4.481689
+                  }
+                ]
+              },
+              {
+                "id": "ln",
+                "label": "y=ln(x)",
+                "type": "line",
+                "equation": "y=ln(x)",
+                "data": [
+                  {
+                    "x": 0.05,
+                    "y": -2.995732
+                  },
+                  {
+                    "x": 0.1,
+                    "y": -2.302585
+                  },
+                  {
+                    "x": 0.2,
+                    "y": -1.609438
+                  },
+                  {
+                    "x": 0.367879,
+                    "y": -1.0
+                  },
+                  {
+                    "x": 0.5,
+                    "y": -0.693147
+                  },
+                  {
+                    "x": 1,
+                    "y": 0.0
+                  },
+                  {
+                    "x": 1.5,
+                    "y": 0.405465
+                  },
+                  {
+                    "x": 2,
+                    "y": 0.693147
+                  },
+                  {
+                    "x": 2.718282,
+                    "y": 1.0
+                  },
+                  {
+                    "x": 4,
+                    "y": 1.386294
+                  },
+                  {
+                    "x": 5,
+                    "y": 1.609438
+                  }
+                ]
+              },
+              {
+                "id": "identity",
+                "label": "y=x",
+                "type": "line",
+                "equation": "y=x",
+                "data": [
+                  {
+                    "x": -3,
+                    "y": -3
+                  },
+                  {
+                    "x": 7,
+                    "y": 7
+                  }
+                ]
+              }
+            ],
+            "special_points": [
+              {
+                "id": "p1",
+                "x": 0,
+                "y": 1,
+                "label": "(0,1) exp"
+              },
+              {
+                "id": "p2",
+                "x": 1,
+                "y": 0,
+                "label": "(1,0) ln"
+              },
+              {
+                "id": "p3",
+                "x": 1,
+                "y": 2.718282,
+                "label": "(1,e) exp"
+              },
+              {
+                "id": "p4",
+                "x": 2.718282,
+                "y": 1,
+                "label": "(e,1) ln"
+              }
+            ],
+            "title": "تناظر exp وln حول y=x"
+          }
+        },
+        "presentation": {
+          "show_graph_first": true,
+          "show_one_step_at_a_time": true,
+          "react_component": "UniversalMathExerciseRenderer",
+          "graph_mode": "cartesian",
+          "use_field": "graph_data.react_data",
+          "rtl": true,
+          "show_graph_in_question": true,
+          "show_graph_in_solution": true,
+          "show_images_in_question": false,
+          "show_images_in_solution": false,
+          "show_tables_in_question": false,
+          "show_tables_in_solution": false,
+          "show_variation_tables": false,
+          "show_sign_tables": false,
+          "animate_steps": true,
+          "solution_open_mode": "on_button_click",
+          "solution_access": "direct",
+          "attempt_required": false,
+          "show_final_answer_after_last_step": true,
+          "show_verification_after_final_answer": true,
+          "show_bac_writing": true,
+          "show_understanding_check": true,
+          "math_direction": "ltr"
+        },
+        "is_complete": true,
+        "solution_access": "direct",
+        "attempt_required": false,
+        "bac_writing": [
+          "أحدد مجال ln.",
+          "أستعمل النقاط والمقارب والتزايد.",
+          "أقرأ المطلوب من الرسم بدقة."
+        ],
+        "understanding_check": {
+          "question": "ما العناصر الأربعة الأساسية لرسم ln؟",
+          "answer": "المجال x>0، المقارب x=0، النقطة (1,0)، والتزايد."
+        },
+        "takeaway": "فهم أثر التناظر على المقارب."
+      },
+      "display_order": 11,
+      "learning_stage": "axis_practice",
+      "learning_stage_label": "تمرين تطبيقي",
+      "pedagogical_objective": "فهم أثر التناظر على المقارب.",
+      "solution_access": "direct",
+      "attempt_required": false
+    },
+    {
+      "id": "log_graph_practice_12",
+      "year": null,
+      "source_file": null,
+      "source_page": null,
+      "exercise": "تمرين تدريبي 12",
+      "number": "12",
+      "title": "ln وexp: مقارنة بيانية",
+      "text": "قارن بين منحنيي \\(y=e^x\\) و\\(y=\\ln x\\) من حيث: المجال، النقطة الأساسية، المقارب، اتجاه التغير، وعلاقة التناظر.",
+      "standalone_text": "قارن بين منحنيي \\(y=e^x\\) و\\(y=\\ln x\\) من حيث: المجال، النقطة الأساسية، المقارب، اتجاه التغير، وعلاقة التناظر.",
+      "context": "تمرين تدريبي مبني مباشرة على محور التمثيل البياني واتجاه تغير ln.",
+      "tag": "log_graph",
+      "axis": "التمثيل البياني واتجاه التغير",
+      "secondary_tags": [],
+      "skill": "تمييز الخصائص البيانية لـln وexp.",
+      "difficulty": "hard",
+      "question_type": "axis_practice",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "tables": [],
+      "variation_tables": [],
+      "sign_tables": [],
+      "graph_data": {
+        "react_data": {
+          "coordinate_system": {
+            "x_min": -3,
+            "x_max": 7,
+            "y_min": -3,
+            "y_max": 7,
+            "x_step": 1,
+            "y_step": 1
+          },
+          "series": [
+            {
+              "id": "exp",
+              "label": "y=e^x",
+              "type": "line",
+              "equation": "y=e^x",
+              "data": [
+                {
+                  "x": -3,
+                  "y": 0.049787
+                },
+                {
+                  "x": -2,
+                  "y": 0.135335
+                },
+                {
+                  "x": -1,
+                  "y": 0.367879
+                },
+                {
+                  "x": 0,
+                  "y": 1.0
+                },
+                {
+                  "x": 0.5,
+                  "y": 1.648721
+                },
+                {
+                  "x": 1,
+                  "y": 2.718282
+                },
+                {
+                  "x": 1.5,
+                  "y": 4.481689
+                }
+              ]
+            },
+            {
+              "id": "ln",
+              "label": "y=ln(x)",
+              "type": "line",
+              "equation": "y=ln(x)",
+              "data": [
+                {
+                  "x": 0.05,
+                  "y": -2.995732
+                },
+                {
+                  "x": 0.1,
+                  "y": -2.302585
+                },
+                {
+                  "x": 0.2,
+                  "y": -1.609438
+                },
+                {
+                  "x": 0.367879,
+                  "y": -1.0
+                },
+                {
+                  "x": 0.5,
+                  "y": -0.693147
+                },
+                {
+                  "x": 1,
+                  "y": 0.0
+                },
+                {
+                  "x": 1.5,
+                  "y": 0.405465
+                },
+                {
+                  "x": 2,
+                  "y": 0.693147
+                },
+                {
+                  "x": 2.718282,
+                  "y": 1.0
+                },
+                {
+                  "x": 4,
+                  "y": 1.386294
+                },
+                {
+                  "x": 5,
+                  "y": 1.609438
+                }
+              ]
+            },
+            {
+              "id": "identity",
+              "label": "y=x",
+              "type": "line",
+              "equation": "y=x",
+              "data": [
+                {
+                  "x": -3,
+                  "y": -3
+                },
+                {
+                  "x": 7,
+                  "y": 7
+                }
+              ]
+            }
+          ],
+          "special_points": [
+            {
+              "id": "p1",
+              "x": 0,
+              "y": 1,
+              "label": "(0,1) exp"
+            },
+            {
+              "id": "p2",
+              "x": 1,
+              "y": 0,
+              "label": "(1,0) ln"
+            },
+            {
+              "id": "p3",
+              "x": 1,
+              "y": 2.718282,
+              "label": "(1,e) exp"
+            },
+            {
+              "id": "p4",
+              "x": 2.718282,
+              "y": 1,
+              "label": "(e,1) ln"
+            }
+          ],
+          "title": "تناظر exp وln حول y=x"
+        }
+      },
+      "solution": {
+        "title": "الحل المفصل: ln وexp: مقارنة بيانية",
+        "main_idea": "تمييز الخصائص البيانية لـln وexp.",
+        "strategy": "المجال ← المقارب/النقاط ← التزايد والنهايات ← القراءة أو الاستنتاج البياني.",
+        "detailed_explanation": "حل تدريجي يدرّب التلميذ على بناء منحنى ln وقراءة المعلومات منه.",
+        "uses_graph": true,
+        "uses_images": false,
+        "uses_tables": false,
+        "uses_variation_table": false,
+        "uses_sign_table": false,
+        "steps": [
+          {
+            "number": "1",
+            "order": 1,
+            "title": "المجال",
+            "explanation": "exp معرفة على R، وln على الأعداد الموجبة.",
+            "construction": [],
+            "calculation": "\\(D_{exp}=\\mathbb R,\\quad D_{ln}=]0,+\\infty[\\)",
+            "result": "المجالان مختلفان.",
+            "conclusion": "المجالان مختلفان.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "exp معرفة على R، وln على الأعداد الموجبة.",
+            "rule_used": "المجال",
+            "why": "exp معرفة على R، وln على الأعداد الموجبة.",
+            "calculation_breakdown": [],
+            "student_action": "حاول تنفيذ هذه الخطوة بنفسك ثم قارنها بالحل."
+          },
+          {
+            "number": "2",
+            "order": 2,
+            "title": "النقاط",
+            "explanation": "exp تمر بـ(0,1)، وln تمر بـ(1,0).",
+            "construction": [],
+            "calculation": "\\((0,1)\\leftrightarrow(1,0)\\)",
+            "result": "النقطتان متناظرتان.",
+            "conclusion": "النقطتان متناظرتان.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "exp تمر بـ(0,1)، وln تمر بـ(1,0).",
+            "rule_used": "الدالة العكسية",
+            "why": "exp تمر بـ(0,1)، وln تمر بـ(1,0).",
+            "calculation_breakdown": [],
+            "student_action": "حاول تنفيذ هذه الخطوة بنفسك ثم قارنها بالحل."
+          },
+          {
+            "number": "3",
+            "order": 3,
+            "title": "المقاربان",
+            "explanation": "exp لها y=0 وln لها x=0.",
+            "construction": [],
+            "calculation": "\\(y=0\\leftrightarrow x=0\\)",
+            "result": "المقاربان متناظران.",
+            "conclusion": "المقاربان متناظران.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "exp لها y=0 وln لها x=0.",
+            "rule_used": "التناظر",
+            "why": "exp لها y=0 وln لها x=0.",
+            "calculation_breakdown": [],
+            "student_action": "حاول تنفيذ هذه الخطوة بنفسك ثم قارنها بالحل."
+          },
+          {
+            "number": "4",
+            "order": 4,
+            "title": "التغير",
+            "explanation": "كلتاهما متزايدة.",
+            "construction": [],
+            "calculation": "\\(exp\\nearrow,\\quad ln\\nearrow\\)",
+            "result": "الاتجاه نفسه.",
+            "conclusion": "الاتجاه نفسه.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "كلتاهما متزايدة.",
+            "rule_used": "التزايد",
+            "why": "كلتاهما متزايدة.",
+            "calculation_breakdown": [],
+            "student_action": "حاول تنفيذ هذه الخطوة بنفسك ثم قارنها بالحل."
+          },
+          {
+            "number": "5",
+            "order": 5,
+            "title": "العلاقة",
+            "explanation": "المنحنيان متناظران حول y=x.",
+            "construction": [],
+            "calculation": "\\(C_{exp}\\leftrightarrow C_{ln}\\text{ حول }y=x\\)",
+            "result": "هذه الفكرة الجامعة.",
+            "conclusion": "هذه الفكرة الجامعة.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "المنحنيان متناظران حول y=x.",
+            "rule_used": "الدالتان المتعاكستان",
+            "why": "المنحنيان متناظران حول y=x.",
+            "calculation_breakdown": [],
+            "student_action": "حاول تنفيذ هذه الخطوة بنفسك ثم قارنها بالحل."
+          }
+        ],
+        "final_answer": "\\(\\boxed{C_{ln}\\text{ هو صورة }C_{exp}\\text{ بالتناظر حول }y=x}\\) مع تبادل المجال والمدى والمقاربين.",
+        "verification": "النتيجة منسجمة مع مجال ln ونقاطها المرجعية وتزايدها ومقاربها العمودي.",
+        "common_mistakes": [
+          {
+            "mistake": "رسم ln يسار محور التراتيب.",
+            "correction": "مجال ln هو x>0 فقط."
+          },
+          {
+            "mistake": "وضع (0,1) على منحنى ln.",
+            "correction": "(0,1) تخص exp، أما ln فتمر بـ(1,0)."
+          }
+        ],
+        "hints": [
+          {
+            "level": 1,
+            "hint": "الدالة العكسية تبدل المدخل والنتيجة."
+          }
+        ],
+        "alternative_method": "",
+        "images": [],
+        "tables": [],
+        "variation_tables": [],
+        "sign_tables": [],
+        "graph_data": {
+          "react_data": {
+            "coordinate_system": {
+              "x_min": -3,
+              "x_max": 7,
+              "y_min": -3,
+              "y_max": 7,
+              "x_step": 1,
+              "y_step": 1
+            },
+            "series": [
+              {
+                "id": "exp",
+                "label": "y=e^x",
+                "type": "line",
+                "equation": "y=e^x",
+                "data": [
+                  {
+                    "x": -3,
+                    "y": 0.049787
+                  },
+                  {
+                    "x": -2,
+                    "y": 0.135335
+                  },
+                  {
+                    "x": -1,
+                    "y": 0.367879
+                  },
+                  {
+                    "x": 0,
+                    "y": 1.0
+                  },
+                  {
+                    "x": 0.5,
+                    "y": 1.648721
+                  },
+                  {
+                    "x": 1,
+                    "y": 2.718282
+                  },
+                  {
+                    "x": 1.5,
+                    "y": 4.481689
+                  }
+                ]
+              },
+              {
+                "id": "ln",
+                "label": "y=ln(x)",
+                "type": "line",
+                "equation": "y=ln(x)",
+                "data": [
+                  {
+                    "x": 0.05,
+                    "y": -2.995732
+                  },
+                  {
+                    "x": 0.1,
+                    "y": -2.302585
+                  },
+                  {
+                    "x": 0.2,
+                    "y": -1.609438
+                  },
+                  {
+                    "x": 0.367879,
+                    "y": -1.0
+                  },
+                  {
+                    "x": 0.5,
+                    "y": -0.693147
+                  },
+                  {
+                    "x": 1,
+                    "y": 0.0
+                  },
+                  {
+                    "x": 1.5,
+                    "y": 0.405465
+                  },
+                  {
+                    "x": 2,
+                    "y": 0.693147
+                  },
+                  {
+                    "x": 2.718282,
+                    "y": 1.0
+                  },
+                  {
+                    "x": 4,
+                    "y": 1.386294
+                  },
+                  {
+                    "x": 5,
+                    "y": 1.609438
+                  }
+                ]
+              },
+              {
+                "id": "identity",
+                "label": "y=x",
+                "type": "line",
+                "equation": "y=x",
+                "data": [
+                  {
+                    "x": -3,
+                    "y": -3
+                  },
+                  {
+                    "x": 7,
+                    "y": 7
+                  }
+                ]
+              }
+            ],
+            "special_points": [
+              {
+                "id": "p1",
+                "x": 0,
+                "y": 1,
+                "label": "(0,1) exp"
+              },
+              {
+                "id": "p2",
+                "x": 1,
+                "y": 0,
+                "label": "(1,0) ln"
+              },
+              {
+                "id": "p3",
+                "x": 1,
+                "y": 2.718282,
+                "label": "(1,e) exp"
+              },
+              {
+                "id": "p4",
+                "x": 2.718282,
+                "y": 1,
+                "label": "(e,1) ln"
+              }
+            ],
+            "title": "تناظر exp وln حول y=x"
+          }
+        },
+        "presentation": {
+          "show_graph_first": true,
+          "show_one_step_at_a_time": true,
+          "react_component": "UniversalMathExerciseRenderer",
+          "graph_mode": "cartesian",
+          "use_field": "graph_data.react_data",
+          "rtl": true,
+          "show_graph_in_question": true,
+          "show_graph_in_solution": true,
+          "show_images_in_question": false,
+          "show_images_in_solution": false,
+          "show_tables_in_question": false,
+          "show_tables_in_solution": false,
+          "show_variation_tables": false,
+          "show_sign_tables": false,
+          "animate_steps": true,
+          "solution_open_mode": "on_button_click",
+          "solution_access": "direct",
+          "attempt_required": false,
+          "show_final_answer_after_last_step": true,
+          "show_verification_after_final_answer": true,
+          "show_bac_writing": true,
+          "show_understanding_check": true,
+          "math_direction": "ltr"
+        },
+        "is_complete": true,
+        "solution_access": "direct",
+        "attempt_required": false,
+        "bac_writing": [
+          "أحدد مجال ln.",
+          "أستعمل النقاط والمقارب والتزايد.",
+          "أقرأ المطلوب من الرسم بدقة."
+        ],
+        "understanding_check": {
+          "question": "ما العناصر الأربعة الأساسية لرسم ln؟",
+          "answer": "المجال x>0، المقارب x=0، النقطة (1,0)، والتزايد."
+        },
+        "takeaway": "تمييز الخصائص البيانية لـln وexp."
+      },
+      "display_order": 12,
+      "learning_stage": "axis_practice",
+      "learning_stage_label": "تمرين تطبيقي",
+      "pedagogical_objective": "تمييز الخصائص البيانية لـln وexp.",
+      "solution_access": "direct",
+      "attempt_required": false
+    },
+    {
+      "id": "log_graph_practice_13",
+      "year": null,
+      "source_file": null,
+      "source_page": null,
+      "exercise": "تمرين تدريبي 13",
+      "number": "13",
+      "title": "تمرين شامل للمحور",
+      "text": "لدينا منحنى \\(C\\) للدالة \\(f(x)=\\ln x\\). 1) حدد مجال f. 2) أعط المقارب العمودي. 3) أعط أربع نقاط مرجعية. 4) أنشئ جدول التغير. 5) اقرأ صورة e وسابق -1. 6) حل بيانيًا \\(\\ln x\\ge0\\). 7) قارن \\(\\ln3\\) و\\(\\ln5\\). 8) اشرح علاقته بمنحنى exp.",
+      "standalone_text": "لدينا منحنى \\(C\\) للدالة \\(f(x)=\\ln x\\). 1) حدد مجال f. 2) أعط المقارب العمودي. 3) أعط أربع نقاط مرجعية. 4) أنشئ جدول التغير. 5) اقرأ صورة e وسابق -1. 6) حل بيانيًا \\(\\ln x\\ge0\\). 7) قارن \\(\\ln3\\) و\\(\\ln5\\). 8) اشرح علاقته بمنحنى exp.",
+      "context": "تمرين تدريبي مبني مباشرة على محور التمثيل البياني واتجاه تغير ln.",
+      "tag": "log_graph",
+      "axis": "التمثيل البياني واتجاه التغير",
+      "secondary_tags": [],
+      "skill": "تجميع جميع مهارات التمثيل البياني واتجاه التغير.",
+      "difficulty": "hard",
+      "question_type": "axis_practice",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "tables": [],
+      "variation_tables": [
+        {
+          "domain": "]0,+∞[",
+          "rows": [
+            {
+              "label": "x",
+              "cells": [
+                "0⁺",
+                "",
+                "+∞"
+              ]
+            },
+            {
+              "label": "ln'(x)",
+              "cells": [
+                "",
+                "+",
+                ""
+              ]
+            },
+            {
+              "label": "ln(x)",
+              "cells": [
+                "−∞",
+                "↗",
+                "+∞"
+              ]
+            }
+          ]
+        }
+      ],
+      "sign_tables": [
+        {
+          "variable": "x",
+          "domain": "]0,+∞[",
+          "rows": [
+            {
+              "label": "x",
+              "cells": [
+                "0",
+                "]0,1[",
+                "1",
+                "]1,+∞["
+              ]
+            },
+            {
+              "label": "ln(x)",
+              "cells": [
+                "غير معرف",
+                "−",
+                "0",
+                "+"
+              ]
+            }
+          ]
+        }
+      ],
+      "graph_data": {
+        "react_data": {
+          "coordinate_system": {
+            "x_min": 0,
+            "x_max": 10,
+            "y_min": -4,
+            "y_max": 3,
+            "x_step": 1,
+            "y_step": 1
+          },
+          "series": [
+            {
+              "id": "ln_curve",
+              "label": "y=ln(x)",
+              "type": "line",
+              "equation": "y=ln(x)",
+              "data": [
+                {
+                  "x": 0.05,
+                  "y": -2.995732
+                },
+                {
+                  "x": 0.1,
+                  "y": -2.302585
+                },
+                {
+                  "x": 0.2,
+                  "y": -1.609438
+                },
+                {
+                  "x": 0.367879,
+                  "y": -1.0
+                },
+                {
+                  "x": 0.5,
+                  "y": -0.693147
+                },
+                {
+                  "x": 1,
+                  "y": 0.0
+                },
+                {
+                  "x": 1.5,
+                  "y": 0.405465
+                },
+                {
+                  "x": 2,
+                  "y": 0.693147
+                },
+                {
+                  "x": 2.718282,
+                  "y": 1.0
+                },
+                {
+                  "x": 4,
+                  "y": 1.386294
+                },
+                {
+                  "x": 5,
+                  "y": 1.609438
+                },
+                {
+                  "x": 7.389056,
+                  "y": 2.0
+                },
+                {
+                  "x": 10,
+                  "y": 2.302585
+                }
+              ]
+            }
+          ],
+          "special_points": [
+            {
+              "id": "a",
+              "x": 0.367879,
+              "y": -1,
+              "label": "A(1/e,-1)"
+            },
+            {
+              "id": "b",
+              "x": 1,
+              "y": 0,
+              "label": "B(1,0)"
+            },
+            {
+              "id": "c",
+              "x": 2.718282,
+              "y": 1,
+              "label": "C(e,1)"
+            },
+            {
+              "id": "d",
+              "x": 7.389056,
+              "y": 2,
+              "label": "D(e²,2)"
+            }
+          ],
+          "asymptotes": [
+            {
+              "id": "v",
+              "type": "vertical",
+              "x": 0,
+              "label": "x=0"
+            }
+          ],
+          "title": "منحنى الدالة y=ln(x)",
+          "description": "منحنى متزايد على ]0,+∞[ وله المقارب العمودي x=0."
+        }
+      },
+      "solution": {
+        "title": "الحل المفصل: تمرين شامل للمحور",
+        "main_idea": "تجميع جميع مهارات التمثيل البياني واتجاه التغير.",
+        "strategy": "المجال ← المقارب/النقاط ← التزايد والنهايات ← القراءة أو الاستنتاج البياني.",
+        "detailed_explanation": "حل تدريجي يدرّب التلميذ على بناء منحنى ln وقراءة المعلومات منه.",
+        "uses_graph": true,
+        "uses_images": false,
+        "uses_tables": false,
+        "uses_variation_table": true,
+        "uses_sign_table": true,
+        "steps": [
+          {
+            "number": "1",
+            "order": 1,
+            "title": "المجال والمقارب",
+            "explanation": "ln موجودة فقط يمين محور y.",
+            "construction": [],
+            "calculation": "\\(D=]0,+\\infty[,\\quad x=0\\text{ مقارب}\\)",
+            "result": "الأساس البياني.",
+            "conclusion": "الأساس البياني.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "ln موجودة فقط يمين محور y.",
+            "rule_used": "المجال والمقارب",
+            "why": "ln موجودة فقط يمين محور y.",
+            "calculation_breakdown": [],
+            "student_action": "حاول تنفيذ هذه الخطوة بنفسك ثم قارنها بالحل."
+          },
+          {
+            "number": "2",
+            "order": 2,
+            "title": "النقاط",
+            "explanation": "نستعمل القوى المعروفة لـe.",
+            "construction": [],
+            "calculation": "\\((1/e,-1),(1,0),(e,1),(e^2,2)\\)",
+            "result": "النقاط المرجعية.",
+            "conclusion": "النقاط المرجعية.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "نستعمل القوى المعروفة لـe.",
+            "rule_used": "قيم ln",
+            "why": "نستعمل القوى المعروفة لـe.",
+            "calculation_breakdown": [],
+            "student_action": "حاول تنفيذ هذه الخطوة بنفسك ثم قارنها بالحل."
+          },
+          {
+            "number": "3",
+            "order": 3,
+            "title": "التغير",
+            "explanation": "المشتقة موجبة والنهايتان -∞ و+∞.",
+            "construction": [],
+            "calculation": "\\(1/x>0\\Rightarrow ln\\nearrow\\text{ من }-\\infty\\text{ إلى }+\\infty\\)",
+            "result": "جدول صاعد.",
+            "conclusion": "جدول صاعد.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "المشتقة موجبة والنهايتان -∞ و+∞.",
+            "rule_used": "التغير",
+            "why": "المشتقة موجبة والنهايتان -∞ و+∞.",
+            "calculation_breakdown": [],
+            "student_action": "حاول تنفيذ هذه الخطوة بنفسك ثم قارنها بالحل."
+          },
+          {
+            "number": "4",
+            "order": 4,
+            "title": "الصورة والسابق",
+            "explanation": "من النقاط المرجعية.",
+            "construction": [],
+            "calculation": "\\(\\ln e=1,\\quad \\ln x=-1\\Rightarrow x=1/e\\)",
+            "result": "الصورة 1 والسابق 1/e.",
+            "conclusion": "الصورة 1 والسابق 1/e.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "من النقاط المرجعية.",
+            "rule_used": "قراءة بيانية",
+            "why": "من النقاط المرجعية.",
+            "calculation_breakdown": [],
+            "student_action": "حاول تنفيذ هذه الخطوة بنفسك ثم قارنها بالحل."
+          },
+          {
+            "number": "5",
+            "order": 5,
+            "title": "المتراجحة",
+            "explanation": "المنحنى على أو فوق محور x ابتداء من 1.",
+            "construction": [],
+            "calculation": "\\(\\ln x\\ge0\\iff x\\ge1\\)",
+            "result": "الحل [1,+∞[.",
+            "conclusion": "الحل [1,+∞[.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "المنحنى على أو فوق محور x ابتداء من 1.",
+            "rule_used": "إشارة من الرسم",
+            "why": "المنحنى على أو فوق محور x ابتداء من 1.",
+            "calculation_breakdown": [],
+            "student_action": "حاول تنفيذ هذه الخطوة بنفسك ثم قارنها بالحل."
+          },
+          {
+            "number": "6",
+            "order": 6,
+            "title": "المقارنة",
+            "explanation": "3<5 وln متزايدة.",
+            "construction": [],
+            "calculation": "\\(\\ln3<\\ln5\\)",
+            "result": "المقارنة مباشرة.",
+            "conclusion": "المقارنة مباشرة.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "3<5 وln متزايدة.",
+            "rule_used": "التزايد",
+            "why": "3<5 وln متزايدة.",
+            "calculation_breakdown": [],
+            "student_action": "حاول تنفيذ هذه الخطوة بنفسك ثم قارنها بالحل."
+          },
+          {
+            "number": "7",
+            "order": 7,
+            "title": "التناظر",
+            "explanation": "ln وexp دالتان متعاكستان.",
+            "construction": [],
+            "calculation": "\\(C_{ln}\\text{ و }C_{exp}\\text{ متناظران حول }y=x\\)",
+            "result": "اكتملت أفكار المحور.",
+            "conclusion": "اكتملت أفكار المحور.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "ln وexp دالتان متعاكستان.",
+            "rule_used": "التناظر",
+            "why": "ln وexp دالتان متعاكستان.",
+            "calculation_breakdown": [],
+            "student_action": "حاول تنفيذ هذه الخطوة بنفسك ثم قارنها بالحل."
+          }
+        ],
+        "final_answer": "\\(\\boxed{D=]0,+\\infty[,\\ x=0\\text{ مقارب},\\ ln\\nearrow,\\ \\ln e=1,\\ السابق(-1)=1/e,\\ x\\ge1,\\ \\ln3<\\ln5}\\).",
+        "verification": "النتيجة منسجمة مع مجال ln ونقاطها المرجعية وتزايدها ومقاربها العمودي.",
+        "common_mistakes": [
+          {
+            "mistake": "رسم ln يسار محور التراتيب.",
+            "correction": "مجال ln هو x>0 فقط."
+          },
+          {
+            "mistake": "وضع (0,1) على منحنى ln.",
+            "correction": "(0,1) تخص exp، أما ln فتمر بـ(1,0)."
+          }
+        ],
+        "hints": [
+          {
+            "level": 1,
+            "hint": "حل بالترتيب: مجال، مقارب، نقاط، تغير، قراءة، إشارة، مقارنة، تناظر."
+          }
+        ],
+        "alternative_method": "",
+        "images": [],
+        "tables": [],
+        "variation_tables": [
+          {
+            "domain": "]0,+∞[",
+            "rows": [
+              {
+                "label": "x",
+                "cells": [
+                  "0⁺",
+                  "",
+                  "+∞"
+                ]
+              },
+              {
+                "label": "ln'(x)",
+                "cells": [
+                  "",
+                  "+",
+                  ""
+                ]
+              },
+              {
+                "label": "ln(x)",
+                "cells": [
+                  "−∞",
+                  "↗",
+                  "+∞"
+                ]
+              }
+            ]
+          }
+        ],
+        "sign_tables": [
+          {
+            "variable": "x",
+            "domain": "]0,+∞[",
+            "rows": [
+              {
+                "label": "x",
+                "cells": [
+                  "0",
+                  "]0,1[",
+                  "1",
+                  "]1,+∞["
+                ]
+              },
+              {
+                "label": "ln(x)",
+                "cells": [
+                  "غير معرف",
+                  "−",
+                  "0",
+                  "+"
+                ]
+              }
+            ]
+          }
+        ],
+        "graph_data": {
+          "react_data": {
+            "coordinate_system": {
+              "x_min": 0,
+              "x_max": 10,
+              "y_min": -4,
+              "y_max": 3,
+              "x_step": 1,
+              "y_step": 1
+            },
+            "series": [
+              {
+                "id": "ln_curve",
+                "label": "y=ln(x)",
+                "type": "line",
+                "equation": "y=ln(x)",
+                "data": [
+                  {
+                    "x": 0.05,
+                    "y": -2.995732
+                  },
+                  {
+                    "x": 0.1,
+                    "y": -2.302585
+                  },
+                  {
+                    "x": 0.2,
+                    "y": -1.609438
+                  },
+                  {
+                    "x": 0.367879,
+                    "y": -1.0
+                  },
+                  {
+                    "x": 0.5,
+                    "y": -0.693147
+                  },
+                  {
+                    "x": 1,
+                    "y": 0.0
+                  },
+                  {
+                    "x": 1.5,
+                    "y": 0.405465
+                  },
+                  {
+                    "x": 2,
+                    "y": 0.693147
+                  },
+                  {
+                    "x": 2.718282,
+                    "y": 1.0
+                  },
+                  {
+                    "x": 4,
+                    "y": 1.386294
+                  },
+                  {
+                    "x": 5,
+                    "y": 1.609438
+                  },
+                  {
+                    "x": 7.389056,
+                    "y": 2.0
+                  },
+                  {
+                    "x": 10,
+                    "y": 2.302585
+                  }
+                ]
+              }
+            ],
+            "special_points": [
+              {
+                "id": "a",
+                "x": 0.367879,
+                "y": -1,
+                "label": "A(1/e,-1)"
+              },
+              {
+                "id": "b",
+                "x": 1,
+                "y": 0,
+                "label": "B(1,0)"
+              },
+              {
+                "id": "c",
+                "x": 2.718282,
+                "y": 1,
+                "label": "C(e,1)"
+              },
+              {
+                "id": "d",
+                "x": 7.389056,
+                "y": 2,
+                "label": "D(e²,2)"
+              }
+            ],
+            "asymptotes": [
+              {
+                "id": "v",
+                "type": "vertical",
+                "x": 0,
+                "label": "x=0"
+              }
+            ],
+            "title": "منحنى الدالة y=ln(x)",
+            "description": "منحنى متزايد على ]0,+∞[ وله المقارب العمودي x=0."
+          }
+        },
+        "presentation": {
+          "show_graph_first": true,
+          "show_one_step_at_a_time": true,
+          "react_component": "UniversalMathExerciseRenderer",
+          "graph_mode": "cartesian",
+          "use_field": "graph_data.react_data",
+          "rtl": true,
+          "show_graph_in_question": true,
+          "show_graph_in_solution": true,
+          "show_images_in_question": false,
+          "show_images_in_solution": false,
+          "show_tables_in_question": false,
+          "show_tables_in_solution": false,
+          "show_variation_tables": true,
+          "show_sign_tables": true,
+          "animate_steps": true,
+          "solution_open_mode": "on_button_click",
+          "solution_access": "direct",
+          "attempt_required": false,
+          "show_final_answer_after_last_step": true,
+          "show_verification_after_final_answer": true,
+          "show_bac_writing": true,
+          "show_understanding_check": true,
+          "math_direction": "ltr"
+        },
+        "is_complete": true,
+        "solution_access": "direct",
+        "attempt_required": false,
+        "bac_writing": [
+          "أحدد مجال ln.",
+          "أستعمل النقاط والمقارب والتزايد.",
+          "أقرأ المطلوب من الرسم بدقة."
+        ],
+        "understanding_check": {
+          "question": "ما العناصر الأربعة الأساسية لرسم ln؟",
+          "answer": "المجال x>0، المقارب x=0، النقطة (1,0)، والتزايد."
+        },
+        "takeaway": "تجميع جميع مهارات التمثيل البياني واتجاه التغير."
+      },
+      "display_order": 13,
+      "learning_stage": "axis_practice",
+      "learning_stage_label": "تمرين تطبيقي",
+      "pedagogical_objective": "تجميع جميع مهارات التمثيل البياني واتجاه التغير.",
+      "solution_access": "direct",
+      "attempt_required": false
+    }
+  ]
+}

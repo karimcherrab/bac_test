@@ -1,0 +1,454 @@
+{
+  "version": 6,
+  "language": "ar",
+  "direction": "rtl",
+  "subject_code": "math",
+  "chapter_code": "exponential_logarithmic_functions",
+  "tag": "exp_limits",
+  "title": "تمارين المحور الخامس: نهايات الدالة الأسية والدوال المركبة",
+  "question_count": 13,
+  "questions": [
+    {
+      "id": "exp_limits_practice_01",
+      "number": 1,
+      "title": "النهايتان الأساسيتان للدالة الأسية",
+      "text": "احسب النهايات الآتية: \\(\\displaystyle\\lim_{x\\to+\\infty}e^x\\)، \\(\\displaystyle\\lim_{x\\to-\\infty}e^x\\)، \\(\\displaystyle\\lim_{x\\to+\\infty}e^{-x}\\)، \\(\\displaystyle\\lim_{x\\to-\\infty}e^{-x}\\).",
+      "skill": "تثبيت النهايتين المرجعيتين وفهم أثر إشارة الأس.",
+      "difficulty": "easy",
+      "solution": {
+        "steps": [
+          {
+            "order": 1,
+            "title": "تذكر النهايتين المرجعيتين",
+            "explanation": "الدالة الأسية تكبر دون حد عندما يتجه أسها إلى \\(+\\infty\\)، وتقترب من الصفر عندما يتجه أسها إلى \\(-\\infty\\).",
+            "calculation": "\\(\\lim_{x\\to+\\infty}e^x=+\\infty\\), \\quad \\(\\lim_{x\\to-\\infty}e^x=0\\).",
+            "result": "حصلنا على النهايتين الأساسيتين."
+          },
+          {
+            "order": 2,
+            "title": "دراسة \\(e^{-x}\\) عند \\(+\\infty\\)",
+            "explanation": "نحسب نهاية الأس أولًا.",
+            "calculation": "\\(x\\to+\\infty\\Rightarrow -x\\to-\\infty\\Rightarrow e^{-x}\\to0\\).",
+            "result": "\\(\\displaystyle\\lim_{x\\to+\\infty}e^{-x}=0\\)."
+          },
+          {
+            "order": 3,
+            "title": "دراسة \\(e^{-x}\\) عند \\(-\\infty\\)",
+            "explanation": "تغير الإشارة يجعل الأس يتجه إلى \\(+\\infty\\).",
+            "calculation": "\\(x\\to-\\infty\\Rightarrow -x\\to+\\infty\\Rightarrow e^{-x}\\to+\\infty\\).",
+            "result": "\\(\\displaystyle\\lim_{x\\to-\\infty}e^{-x}=+\\infty\\)."
+          }
+        ],
+        "final_answer": "\\(\\boxed{+\\infty,\\ 0,\\ 0,\\ +\\infty}\\) بالترتيب."
+      }
+    },
+    {
+      "id": "exp_limits_practice_02",
+      "number": 2,
+      "title": "الأس يتجه إلى عدد حقيقي",
+      "text": "احسب: \\(A=\\displaystyle\\lim_{x\\to2}e^{x^2-3x}\\)، \\(B=\\displaystyle\\lim_{x\\to-1}e^{2x+5}\\)، \\(C=\\displaystyle\\lim_{x\\to3}e^{\\frac{x-1}{x+1}}\\).",
+      "skill": "استعمال استمرارية الدالة الأسية عندما تكون نهاية الأس عددًا حقيقيًا.",
+      "difficulty": "easy",
+      "solution": {
+        "steps": [
+          {
+            "order": 1,
+            "title": "حساب \\(A\\)",
+            "explanation": "نحسب نهاية الأس بالتعويض لأن كثير الحدود مستمر.",
+            "calculation": "\\(x^2-3x\\to 2^2-3\\times2=-2\\Rightarrow A=e^{-2}\\).",
+            "result": "\\(A=e^{-2}\\)."
+          },
+          {
+            "order": 2,
+            "title": "حساب \\(B\\)",
+            "explanation": "نهاية الأس عدد حقيقي.",
+            "calculation": "\\(2x+5\\to2(-1)+5=3\\Rightarrow B=e^3\\).",
+            "result": "\\(B=e^3\\)."
+          },
+          {
+            "order": 3,
+            "title": "حساب \\(C\\)",
+            "explanation": "المقام لا ينعدم عند \\(x=3\\)، لذلك نعوض مباشرة في الأس.",
+            "calculation": "\\(\\frac{x-1}{x+1}\\to\\frac{3-1}{3+1}=\\frac12\\Rightarrow C=e^{1/2}\\).",
+            "result": "\\(C=\\sqrt e\\)."
+          }
+        ],
+        "final_answer": "\\(\\boxed{A=e^{-2},\\quad B=e^3,\\quad C=e^{1/2}}\\)."
+      }
+    },
+    {
+      "id": "exp_limits_practice_03",
+      "number": 3,
+      "title": "نهايات \\(e^{ax+b}\\)",
+      "text": "احسب عند \\(-\\infty\\) و\\(+\\infty\\) نهايات الدالتين \\(f(x)=e^{3x-2}\\) و\\(g(x)=e^{-2x+5}\\).",
+      "skill": "تحديد سلوك دالة من الشكل \\(e^{ax+b}\\) انطلاقًا من نهاية الأس.",
+      "difficulty": "easy",
+      "solution": {
+        "steps": [
+          {
+            "order": 1,
+            "title": "الدالة \\(f\\) عند \\(+\\infty\\)",
+            "explanation": "نبدأ بالأس \\(3x-2\\).",
+            "calculation": "\\(3x-2\\to+\\infty\\Rightarrow e^{3x-2}\\to+\\infty\\).",
+            "result": "\\(\\lim_{x\\to+\\infty}f(x)=+\\infty\\)."
+          },
+          {
+            "order": 2,
+            "title": "الدالة \\(f\\) عند \\(-\\infty\\)",
+            "calculation": "\\(3x-2\\to-\\infty\\Rightarrow e^{3x-2}\\to0\\).",
+            "result": "\\(\\lim_{x\\to-\\infty}f(x)=0\\)."
+          },
+          {
+            "order": 3,
+            "title": "الدالة \\(g\\) عند \\(+\\infty\\)",
+            "calculation": "\\(-2x+5\\to-\\infty\\Rightarrow e^{-2x+5}\\to0\\).",
+            "result": "\\(\\lim_{x\\to+\\infty}g(x)=0\\)."
+          },
+          {
+            "order": 4,
+            "title": "الدالة \\(g\\) عند \\(-\\infty\\)",
+            "calculation": "\\(-2x+5\\to+\\infty\\Rightarrow e^{-2x+5}\\to+\\infty\\).",
+            "result": "\\(\\lim_{x\\to-\\infty}g(x)=+\\infty\\)."
+          }
+        ],
+        "final_answer": "\\(f: 0\\) عند \\(-\\infty\\) و\\(+\\infty\\) عند \\(+\\infty\\). \\(g: +\\infty\\) عند \\(-\\infty\\) و\\(0\\) عند \\(+\\infty\\)."
+      }
+    },
+    {
+      "id": "exp_limits_practice_04",
+      "number": 4,
+      "title": "دالة أسية ذات أس كثير حدود",
+      "text": "لتكن \\(f(x)=e^{x^2-4x}\\). احسب \\(\\displaystyle\\lim_{x\\to+\\infty}f(x)\\) و\\(\\displaystyle\\lim_{x\\to-\\infty}f(x)\\).",
+      "skill": "دراسة نهاية الأس كثير الحدود قبل تطبيق الدالة الأسية.",
+      "difficulty": "medium",
+      "solution": {
+        "steps": [
+          {
+            "order": 1,
+            "title": "تحليل الأس",
+            "explanation": "في \\(x^2-4x\\)، الحد \\(x^2\\) هو المسيطر عند المالانهاية.",
+            "calculation": "\\(x^2-4x=x^2\\left(1-\\frac4x\\right)\\).",
+            "result": "العامل \\(1-\\frac4x\\to1\\) و\\(x^2\\to+\\infty\\)."
+          },
+          {
+            "order": 2,
+            "title": "عند \\(+\\infty\\)",
+            "calculation": "\\(x^2-4x\\to+\\infty\\Rightarrow e^{x^2-4x}\\to+\\infty\\).",
+            "result": "\\(\\lim_{x\\to+\\infty}f(x)=+\\infty\\)."
+          },
+          {
+            "order": 3,
+            "title": "عند \\(-\\infty\\)",
+            "calculation": "\\(x^2-4x\\to+\\infty\\Rightarrow e^{x^2-4x}\\to+\\infty\\).",
+            "result": "\\(\\lim_{x\\to-\\infty}f(x)=+\\infty\\)."
+          }
+        ],
+        "final_answer": "\\(\\boxed{\\lim_{x\\to-\\infty}f(x)=\\lim_{x\\to+\\infty}f(x)=+\\infty}\\)."
+      }
+    },
+    {
+      "id": "exp_limits_practice_05",
+      "number": 5,
+      "title": "تحويل مجموع حدود أسية",
+      "text": "احسب نهايتي \\(f(x)=e^{2x}+3e^x\\) عند \\(-\\infty\\) و\\(+\\infty\\)، بعد تحليل العبارة إلى جداء مناسب.",
+      "skill": "استعمال الخصائص الجبرية للأسية واستخراج عامل أسي.",
+      "difficulty": "medium",
+      "solution": {
+        "steps": [
+          {
+            "order": 1,
+            "title": "التحليل",
+            "explanation": "نستخرج \\(e^x\\) عاملًا مشتركًا.",
+            "calculation": "\\(e^{2x}+3e^x=e^x(e^x+3)\\).",
+            "result": "أصبحت النهاية جداء عاملين بسيطين."
+          },
+          {
+            "order": 2,
+            "title": "عند \\(+\\infty\\)",
+            "calculation": "\\(e^x\\to+\\infty\\), \\quad \\(e^x+3\\to+\\infty\\).",
+            "result": "\\(\\lim_{x\\to+\\infty}f(x)=+\\infty\\)."
+          },
+          {
+            "order": 3,
+            "title": "عند \\(-\\infty\\)",
+            "explanation": "هنا لا يوجد شكل غير معين: كلا الحدين الأصليين يتجه إلى الصفر.",
+            "calculation": "\\(e^{2x}\\to0\\), \\quad \\(3e^x\\to0\\).",
+            "result": "\\(\\lim_{x\\to-\\infty}f(x)=0\\)."
+          }
+        ],
+        "final_answer": "\\(\\boxed{\\lim_{x\\to-\\infty}f(x)=0,\\quad \\lim_{x\\to+\\infty}f(x)=+\\infty}\\)."
+      }
+    },
+    {
+      "id": "exp_limits_practice_06",
+      "number": 6,
+      "title": "خارج أسي وشكل \\(\\infty/\\infty\\)",
+      "text": "احسب \\(\\displaystyle\\lim_{x\\to+\\infty}\\frac{e^{2x}+1}{e^x}\\) مع توضيح لماذا لا يجوز التوقف عند الشكل \\(\\infty/\\infty\\).",
+      "skill": "التعرف على شكل غير معين ثم تبسيط خارج أسي.",
+      "difficulty": "medium",
+      "solution": {
+        "steps": [
+          {
+            "order": 1,
+            "title": "التعرف على الشكل",
+            "explanation": "البسط والمقام يتجهان إلى \\(+\\infty\\)، لذلك يظهر الشكل \\(\\infty/\\infty\\)، وهو ليس جوابًا.",
+            "result": "يجب تبسيط العبارة."
+          },
+          {
+            "order": 2,
+            "title": "التبسيط",
+            "calculation": "\\(\\frac{e^{2x}+1}{e^x}=\\frac{e^{2x}}{e^x}+\\frac1{e^x}=e^x+e^{-x}\\).",
+            "result": "تحول الخارج إلى مجموع نهايتين معروفتين."
+          },
+          {
+            "order": 3,
+            "title": "حساب النهاية",
+            "calculation": "\\(e^x\\to+\\infty\\), \\quad \\(e^{-x}\\to0\\).",
+            "result": "\\(\\displaystyle\\lim_{x\\to+\\infty}\\frac{e^{2x}+1}{e^x}=+\\infty\\)."
+          }
+        ],
+        "final_answer": "\\(\\boxed{+\\infty}\\). الشكل \\(\\infty/\\infty\\) شكل غير معين وليس قيمة النهاية."
+      }
+    },
+    {
+      "id": "exp_limits_practice_07",
+      "number": 7,
+      "title": "فرق أسي يحتاج إلى تحليل",
+      "text": "لتكن \\(f(x)=e^{2x}-e^x\\). احسب نهايتيها عند \\(-\\infty\\) و\\(+\\infty\\)، واستعمل تحليلًا مناسبًا عند \\(+\\infty\\).",
+      "skill": "اختيار التحليل المناسب لحساب نهاية فرق أسي.",
+      "difficulty": "medium",
+      "solution": {
+        "steps": [
+          {
+            "order": 1,
+            "title": "عند \\(-\\infty\\)",
+            "calculation": "\\(e^{2x}\\to0\\), \\quad \\(e^x\\to0\\).",
+            "explanation": "رغم أن الشكل الظاهري هو \\(0-0\\)، يمكن الحساب مباشرة لأن فرق حدين لهما نهايتان منتهيتان.",
+            "result": "\\(\\lim_{x\\to-\\infty}f(x)=0\\)."
+          },
+          {
+            "order": 2,
+            "title": "التحليل عند \\(+\\infty\\)",
+            "explanation": "الكتابة المباشرة تعطي \\(+\\infty-+\\infty\\)، وهو شكل غير معين، لذلك نحلل.",
+            "calculation": "\\(e^{2x}-e^x=e^{2x}(1-e^{-x})\\).",
+            "result": "ظهر جداء مناسب."
+          },
+          {
+            "order": 3,
+            "title": "النهاية عند \\(+\\infty\\)",
+            "calculation": "\\(e^{2x}\\to+\\infty\\), \\quad \\(e^{-x}\\to0\\Rightarrow1-e^{-x}\\to1\\).",
+            "result": "\\(\\lim_{x\\to+\\infty}f(x)=+\\infty\\)."
+          }
+        ],
+        "final_answer": "\\(\\boxed{\\lim_{x\\to-\\infty}f(x)=0,\\quad \\lim_{x\\to+\\infty}f(x)=+\\infty}\\)."
+      }
+    },
+    {
+      "id": "exp_limits_practice_08",
+      "number": 8,
+      "title": "نهاية أسية ذات أس ناطق",
+      "text": "لتكن \\(f(x)=e^{\\frac{2x-1}{x+2}}\\) معرفة على \\(\\mathbb R\\setminus\\{-2\\}\\). احسب نهايتيها عند \\(-\\infty\\) و\\(+\\infty\\).",
+      "skill": "حساب نهاية أس ناطق ثم استعمال استمرارية الدالة الأسية.",
+      "difficulty": "medium",
+      "solution": {
+        "steps": [
+          {
+            "order": 1,
+            "title": "حساب نهاية الأس عند المالانهاية",
+            "explanation": "البسط والمقام من الدرجة الأولى، فتساوي النهاية نسبة معاملي \\(x\\).",
+            "calculation": "\\(\\frac{2x-1}{x+2}=\\frac{2-1/x}{1+2/x}\\to2\\).",
+            "result": "نهاية الأس تساوي \\(2\\) في الجهتين."
+          },
+          {
+            "order": 2,
+            "title": "تطبيق الدالة الأسية",
+            "explanation": "بما أن نهاية الأس عدد حقيقي، نستعمل استمرارية الأسية.",
+            "calculation": "\\(e^{\\frac{2x-1}{x+2}}\\to e^2\\).",
+            "result": "النهاية هي \\(e^2\\) عند \\(-\\infty\\) وعند \\(+\\infty\\)."
+          }
+        ],
+        "final_answer": "\\(\\boxed{\\lim_{x\\to-\\infty}f(x)=\\lim_{x\\to+\\infty}f(x)=e^2}\\)."
+      }
+    },
+    {
+      "id": "exp_limits_practice_09",
+      "number": 9,
+      "title": "النهايات الجانبية لـ \\(e^{1/x}\\)",
+      "text": "لتكن \\(f(x)=e^{1/x}\\) معرفة على \\(\\mathbb R^*\\). احسب \\(\\displaystyle\\lim_{x\\to0^-}f(x)\\)، \\(\\displaystyle\\lim_{x\\to0^+}f(x)\\)، \\(\\displaystyle\\lim_{x\\to-\\infty}f(x)\\)، \\(\\displaystyle\\lim_{x\\to+\\infty}f(x)\\).",
+      "skill": "التمييز بين النهايتين الجانبيتين عند قيمة ممنوعة.",
+      "difficulty": "medium",
+      "solution": {
+        "steps": [
+          {
+            "order": 1,
+            "title": "عند \\(0^-\\)",
+            "calculation": "\\(x\\to0^-\\Rightarrow\\frac1x\\to-\\infty\\Rightarrow e^{1/x}\\to0\\).",
+            "result": "\\(\\lim_{x\\to0^-}f(x)=0\\)."
+          },
+          {
+            "order": 2,
+            "title": "عند \\(0^+\\)",
+            "calculation": "\\(x\\to0^+\\Rightarrow\\frac1x\\to+\\infty\\Rightarrow e^{1/x}\\to+\\infty\\).",
+            "result": "\\(\\lim_{x\\to0^+}f(x)=+\\infty\\)."
+          },
+          {
+            "order": 3,
+            "title": "عند \\(-\\infty\\)",
+            "calculation": "\\(\\frac1x\\to0\\Rightarrow e^{1/x}\\to e^0=1\\).",
+            "result": "\\(\\lim_{x\\to-\\infty}f(x)=1\\)."
+          },
+          {
+            "order": 4,
+            "title": "عند \\(+\\infty\\)",
+            "calculation": "\\(\\frac1x\\to0\\Rightarrow e^{1/x}\\to1\\).",
+            "result": "\\(\\lim_{x\\to+\\infty}f(x)=1\\)."
+          }
+        ],
+        "final_answer": "\\(\\boxed{0,\\ +\\infty,\\ 1,\\ 1}\\) بالترتيب المطلوب."
+      }
+    },
+    {
+      "id": "exp_limits_practice_10",
+      "number": 10,
+      "title": "شكل غير معين داخل الأس",
+      "text": "احسب \\(\\displaystyle\\lim_{x\\to+\\infty}e^{x^2-3x}\\) مع توضيح لماذا لا يجوز التعامل مع \\(+\\infty-\\infty\\) داخل الأس كأنه عدد.",
+      "skill": "معالجة الشكل غير المعين داخل الأس قبل تطبيق الدالة الأسية.",
+      "difficulty": "medium",
+      "solution": {
+        "steps": [
+          {
+            "order": 1,
+            "title": "ملاحظة الشكل غير المعين",
+            "explanation": "إذا عوضنا شكليًا في \\(x^2-3x\\) نحصل على \\(+\\infty-\\infty\\)، وهو شكل غير معين.",
+            "result": "يجب تبسيط الأس أولًا."
+          },
+          {
+            "order": 2,
+            "title": "تحليل الأس",
+            "calculation": "\\(x^2-3x=x^2\\left(1-\\frac3x\\right)\\).",
+            "explanation": "عند \\(+\\infty\\)، لدينا \\(x^2\\to+\\infty\\) و\\(1-3/x\\to1>0\\).",
+            "result": "\\(x^2-3x\\to+\\infty\\)."
+          },
+          {
+            "order": 3,
+            "title": "تطبيق الأسية",
+            "calculation": "\\(x^2-3x\\to+\\infty\\Rightarrow e^{x^2-3x}\\to+\\infty\\).",
+            "result": "النهاية تساوي \\(+\\infty\\)."
+          }
+        ],
+        "final_answer": "\\(\\boxed{+\\infty}\\). يجب حسم نهاية الأس قبل الانتقال إلى الأسية."
+      }
+    },
+    {
+      "id": "exp_limits_practice_11",
+      "number": 11,
+      "title": "استخراج المقارب من النهايات",
+      "text": "لدالة \\(f(x)=e^{1/x}\\) على \\(\\mathbb R^*\\): استنتج من النهايات السابقة المقارب الأفقي عند المالانهاية، وحدد هل يوجد مقارب عمودي عند \\(x=0\\).",
+      "skill": "الانتقال من حساب النهاية إلى التفسير الهندسي الصحيح.",
+      "difficulty": "medium",
+      "solution": {
+        "steps": [
+          {
+            "order": 1,
+            "title": "المقارب الأفقي",
+            "explanation": "عند \\(x\\to\\pm\\infty\\)، وجدنا أن \\(f(x)\\to1\\).",
+            "calculation": "\\(\\lim_{x\\to\\pm\\infty}e^{1/x}=1\\).",
+            "result": "المستقيم \\(y=1\\) مقارب أفقي في الجهتين."
+          },
+          {
+            "order": 2,
+            "title": "عند \\(0^+\\)",
+            "calculation": "\\(\\lim_{x\\to0^+}e^{1/x}=+\\infty\\).",
+            "explanation": "وجود نهاية لا نهائية من جهة واحدة يكفي لاعتبار \\(x=0\\) مقاربًا عموديًا.",
+            "result": "\\(x=0\\) مقارب عمودي من الجهة اليمنى."
+          },
+          {
+            "order": 3,
+            "title": "تنبيه عند \\(0^-\\)",
+            "calculation": "\\(\\lim_{x\\to0^-}e^{1/x}=0\\).",
+            "explanation": "هذه النهاية لا تعطي مقاربًا أفقيًا لأن \\(x\\) لا يتجه إلى المالانهاية.",
+            "result": "لا نستنتج أي مقارب أفقي من النهاية عند \\(0^-\\)."
+          }
+        ],
+        "final_answer": "\\(\\boxed{y=1}\\) مقارب أفقي عند \\(\\pm\\infty\\)، و\\(\\boxed{x=0}\\) مقارب عمودي من الجهة اليمنى."
+      }
+    },
+    {
+      "id": "exp_limits_practice_12",
+      "number": 12,
+      "title": "مقارب مائل ووضعية نسبية",
+      "text": "لتكن \\(f(x)=2x+1-e^{-x}\\). بيّن أن المستقيم \\(\\Delta: y=2x+1\\) مقارب للمنحنى عند \\(+\\infty\\)، ثم ادرس وضعية منحنى \\(f\\) بالنسبة إلى \\(\\Delta\\).",
+      "skill": "إثبات مقارب مائل بدراسة الفرق واستعمال إشارته.",
+      "difficulty": "hard",
+      "solution": {
+        "steps": [
+          {
+            "order": 1,
+            "title": "حساب الفرق",
+            "calculation": "\\(f(x)-(2x+1)=-e^{-x}\\).",
+            "result": "يكفي دراسة نهاية وإشارة \\(-e^{-x}\\)."
+          },
+          {
+            "order": 2,
+            "title": "إثبات المقارب",
+            "calculation": "\\(x\\to+\\infty\\Rightarrow e^{-x}\\to0\\Rightarrow f(x)-(2x+1)\\to0\\).",
+            "result": "\\(\\Delta:y=2x+1\\) مقارب مائل عند \\(+\\infty\\)."
+          },
+          {
+            "order": 3,
+            "title": "الوضعية النسبية",
+            "explanation": "لدينا \\(e^{-x}>0\\) لكل \\(x\\)، ومنه \\(-e^{-x}<0\\).",
+            "calculation": "\\(f(x)-(2x+1)<0\\).",
+            "result": "منحنى \\(f\\) يقع أسفل المستقيم \\(\\Delta\\) لكل \\(x\\)."
+          }
+        ],
+        "final_answer": "\\(\\boxed{\\Delta:y=2x+1}\\) مقارب عند \\(+\\infty\\)، والمنحنى يقع أسفله."
+      }
+    },
+    {
+      "id": "exp_limits_practice_13",
+      "number": 13,
+      "title": "تمرين شامل للمحور",
+      "text": "لتكن \\(f(x)=\\dfrac{e^{2x}+3e^x}{e^x+1}\\). 1) احسب نهايتي \\(f\\) عند \\(-\\infty\\) و\\(+\\infty\\). 2) بسّط التعبير بالقسمة على \\(e^x\\) عند الحاجة. 3) استنتج إن كان للمنحنى مقارب أفقي عند \\(-\\infty\\).",
+      "skill": "دمج التحويل الجبري، الشكل غير المعين، النهايات الأسية والمقارب الأفقي.",
+      "difficulty": "hard",
+      "solution": {
+        "steps": [
+          {
+            "order": 1,
+            "title": "النهاية عند \\(-\\infty\\)",
+            "explanation": "عند \\(-\\infty\\)، كل من \\(e^x\\) و\\(e^{2x}\\) يتجه إلى الصفر.",
+            "calculation": "\\(e^{2x}+3e^x\\to0,\\quad e^x+1\\to1\\).",
+            "result": "\\(\\lim_{x\\to-\\infty}f(x)=0\\)."
+          },
+          {
+            "order": 2,
+            "title": "اكتشاف الشكل عند \\(+\\infty\\)",
+            "explanation": "البسط والمقام يتجهان إلى \\(+\\infty\\)، فالشكل \\(\\infty/\\infty\\) غير معين.",
+            "result": "نقوم بالتبسيط قبل الحكم."
+          },
+          {
+            "order": 3,
+            "title": "التبسيط",
+            "calculation": "\\(f(x)=\\frac{e^x+3}{1+e^{-x}}\\).",
+            "explanation": "قسمنا البسط والمقام على \\(e^x>0\\).",
+            "result": "أصبحت النهاية واضحة."
+          },
+          {
+            "order": 4,
+            "title": "النهاية عند \\(+\\infty\\)",
+            "calculation": "\\(e^x+3\\to+\\infty,\\quad 1+e^{-x}\\to1\\).",
+            "result": "\\(\\lim_{x\\to+\\infty}f(x)=+\\infty\\)."
+          },
+          {
+            "order": 5,
+            "title": "المقارب عند \\(-\\infty\\)",
+            "explanation": "بما أن \\(f(x)\\to0\\) عندما \\(x\\to-\\infty\\)، فإن محور الفواصل مقارب أفقي.",
+            "result": "\\(y=0\\) مقارب أفقي عند \\(-\\infty\\)."
+          }
+        ],
+        "final_answer": "\\(\\boxed{\\lim_{x\\to-\\infty}f(x)=0,\\quad \\lim_{x\\to+\\infty}f(x)=+\\infty}\\)، و\\(\\boxed{y=0}\\) مقارب أفقي عند \\(-\\infty\\)."
+      }
+    }
+  ]
+}
