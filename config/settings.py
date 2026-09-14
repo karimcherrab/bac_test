@@ -321,18 +321,18 @@ REST_FRAMEWORK = {
     'PAGE_SIZE': 100
 }
 # CORS_ALLOW_ALL_ORIGINS = True
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5173",
-    "http://localhost:5174",
-]
 # CORS_ALLOWED_ORIGINS = [
-#     origin.strip()
-#     for origin in os.getenv(
-#         "CORS_ALLOWED_ORIGINS",
-#         "http://localhost:5173",
-#     ).split(",")
-#     if origin.strip()
+#     "http://localhost:5173",
+#     "http://localhost:5174",
 # ]
+CORS_ALLOWED_ORIGINS = [
+    origin.strip()
+    for origin in os.getenv(
+        "CORS_ALLOWED_ORIGINS",
+        "http://localhost:5173",
+    ).split(",")
+    if origin.strip()
+]
 
 CSRF_TRUSTED_ORIGINS = [
     origin.strip()
@@ -347,6 +347,7 @@ ALLOWED_HOSTS = [
     "127.0.0.1",
     "localhost",
     "54fc-185-5-129-25.ngrok-free.app",
+    "https://front-bac-57vp.vercel.app",
 
 ]
 
