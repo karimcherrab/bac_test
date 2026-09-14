@@ -52,23 +52,23 @@ class StudentView(GenericAPIView):
 
         student = serializer.save()
 
-        try:
-            send_student_verification_email(
-                student
-            )
-
-        except Exception:
-            logger.exception(
-                (
-                    "Impossible d'envoyer l'email "
-                    "de vérification à %s"
-                ),
-                student.email,
-            )
-
-            # بما أننا داخل transaction.atomic،
-            # سيُلغي إنشاء الحساب بالكامل.
-            raise
+        # try:
+        #     send_student_verification_email(
+        #         student
+        #     )
+        #
+        # except Exception:
+        #     logger.exception(
+        #         (
+        #             "Impossible d'envoyer l'email "
+        #             "de vérification à %s"
+        #         ),
+        #         student.email,
+        #     )
+        #
+        #     # بما أننا داخل transaction.atomic،
+        #     # سيُلغي إنشاء الحساب بالكامل.
+        #     raise
 
         return Response(
             {
