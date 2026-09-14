@@ -303,6 +303,38 @@ class Command(BaseCommand):
             chapter_code=selected_chapter_code,
         )
 
+        # Deux anciens JSON peuvent ne pas contenir subject_number tout en
+        # représentant réellement deux exercices différents. Dans ce cas,
+        # on réutilise le code d'un contenu identique, ou on attribue le
+        # premier numéro de sujet libre au contenu différent.
+        if not update_existing:
+            resolved_code, resolved_subject_number = (
+                self.resolve_exercise_identity(
+                    normalized_data=normalized_data,
+                    chapter=chapter,
+                )
+            )
+
+            if resolved_code != normalized_data["code"]:
+                old_code = normalized_data["code"]
+                normalized_data["code"] = resolved_code
+                normalized_data["subject_number"] = (
+                    resolved_subject_number
+                )
+                normalized_data["content"]["code"] = resolved_code
+                normalized_data["content"]["subject_number"] = (
+                    resolved_subject_number
+                )
+
+                self.stdout.write(
+                    self.style.WARNING(
+                        f"[SUJET AUTO] {json_file.name}: "
+                        f"{old_code} -> {resolved_code}"
+                    )
+                )
+
+        code = normalized_data["code"]
+
         if (
             chapter_code_override
             and chapter_code_override != json_chapter_code
@@ -447,6 +479,117 @@ class Command(BaseCommand):
             "branches_created": branches_created,
         }
 
+    def resolve_exercise_identity(
+        self,
+        normalized_data: dict[str, Any],
+        chapter: Chapter,
+    ) -> tuple[str, int]:
+        """
+        Rend l'identité rétrocompatible avec les anciens fichiers.
+
+        - contenu déjà importé : réutilise exactement son code ;
+        - code libre : conserve le numéro détecté ;
+        - même code mais contenu différent : choisit le premier sujet libre.
+
+        Cette résolution est stable : relancer le même dossier ne crée pas
+        une nouvelle copie, car le contenu déjà présent est reconnu d'abord.
+        """
+        branch_codes = [
+            item["code"]
+            for item in normalized_data["branches"]
+        ]
+        branch_part = "_".join(sorted(branch_codes))
+        prefix = (
+            f"bac_{branch_part}_"
+            f"{normalized_data['chapter_code']}_"
+            f"{normalized_data['year']}_"
+            f"{normalized_data['session']}_subject_"
+        )
+
+        candidates = list(
+            ExerciseBac.objects.filter(
+                chapter=chapter,
+                year=normalized_data["year"],
+                exercise_number=normalized_data["exercise_number"],
+                code__startswith=prefix,
+            ).only("code", "content")
+        )
+
+        incoming_signature = self.exercise_content_signature(
+            normalized_data["content"]
+        )
+
+        # Cherche d'abord le même exercice, quel que soit le numéro que
+        # l'ancien fichier permettait de déduire.
+        for candidate in candidates:
+            if self.exercise_content_signature(
+                candidate.content
+            ) == incoming_signature:
+                subject_number = self.subject_number_from_code(
+                    candidate.code
+                )
+                if subject_number is not None:
+                    return candidate.code, subject_number
+
+        desired_code = normalized_data["code"]
+        used_codes = {
+            candidate.code
+            for candidate in candidates
+        }
+        if desired_code not in used_codes:
+            return desired_code, normalized_data["subject_number"]
+
+        used_subject_numbers = {
+            number
+            for number in (
+                self.subject_number_from_code(candidate.code)
+                for candidate in candidates
+            )
+            if number is not None
+        }
+
+        subject_number = 1
+        while subject_number in used_subject_numbers:
+            subject_number += 1
+
+        code = self.normalize_code(
+            value=None,
+            chapter_code=normalized_data["chapter_code"],
+            year=normalized_data["year"],
+            session=normalized_data["session"],
+            subject_number=subject_number,
+            exercise_number=normalized_data["exercise_number"],
+            branch_codes=branch_codes,
+        )
+        return code, subject_number
+
+    def exercise_content_signature(self, content: Any) -> str:
+        """Signature stable fondée sur l'énoncé et les questions."""
+        if not isinstance(content, dict):
+            return ""
+
+        payload = {
+            "statement": content.get("statement"),
+            "questions": content.get("questions"),
+        }
+        return json.dumps(
+            payload,
+            ensure_ascii=False,
+            sort_keys=True,
+            separators=(",", ":"),
+            default=str,
+        )
+
+    def subject_number_from_code(self, code: Any) -> int | None:
+        if not isinstance(code, str):
+            return None
+        match = re.search(
+            r"_subject_(\d+)_exercise_\d+$",
+            code,
+            flags=re.IGNORECASE,
+        )
+        return int(match.group(1)) if match else None
+
     def resolve_branches(
         self,
         branch_specs: list[dict[str, str]],
@@ -576,6 +719,13 @@ class Command(BaseCommand):
         exercise_number = data.get(
             "exercise_number"
         )
+        subject_number = self.extract_subject_number(
+            data=data,
+            filename=filename,
+        )
+        session = self.normalize_session(
+            data.get("session", "ordinary")
+        )
         title = data.get("title")
         statement = data.get("statement")
         questions = data.get("questions")
@@ -630,6 +780,24 @@ class Command(BaseCommand):
                 "ou égal à 1."
             )
 
+        if not isinstance(subject_number, int):
+            errors.append(
+                "subject_number doit être un nombre entier. "
+                "Ajoutez-le au JSON ou utilisez un nom de fichier "
+                "contenant subject_01 / subject_02."
+            )
+        elif subject_number < 1:
+            errors.append(
+                "subject_number doit être supérieur ou égal à 1."
+            )
+
+        if session is None:
+            errors.append(
+                "session invalide. Valeurs acceptées : ordinary, "
+                "exceptional, regular, special, ordinaire, "
+                "exceptionnelle."
+            )
+
         if not isinstance(
             title,
             str,
@@ -646,10 +814,9 @@ class Command(BaseCommand):
                 "statement doit être une chaîne "
                 "de caractères."
             )
-        elif not statement.strip():
-            errors.append(
-                "statement ne peut pas être vide."
-            )
+        # Une chaîne vide est valide pour les anciens exercices dont tout
+        # l'énoncé est déjà réparti dans questions[].text. On la conserve
+        # telle quelle afin de ne rien inventer et de ne dupliquer aucun texte.
 
         if (
             source_page is not None
@@ -762,6 +929,8 @@ class Command(BaseCommand):
             value=data.get("code"),
             chapter_code=normalized_chapter_code,
             year=year,
+            session=session,
+            subject_number=subject_number,
             exercise_number=exercise_number,
             branch_codes=[
                 item["code"]
@@ -792,6 +961,8 @@ class Command(BaseCommand):
         ]
         normalized_content["branches"] = canonical_branches
         normalized_content["year"] = year
+        normalized_content["session"] = session
+        normalized_content["subject_number"] = subject_number
         normalized_content[
             "exercise_number"
         ] = exercise_number
@@ -814,6 +985,8 @@ class Command(BaseCommand):
             "chapter_code": normalized_chapter_code,
             "branches": canonical_branches,
             "year": year,
+            "session": session,
+            "subject_number": subject_number,
             "exercise_number": exercise_number,
             "title": title.strip(),
             "source_page": source_page,
@@ -946,21 +1119,159 @@ class Command(BaseCommand):
             code,
         )
 
+    def extract_subject_number(
+        self,
+        data: dict[str, Any],
+        filename: str,
+    ) -> int | None:
+        """
+        Retourne le numéro du sujet.
+
+        Priorité :
+        1. subject_number dans le JSON ;
+        2. subject.number ou subject_number dans un objet source ;
+        3. nom du fichier : subject_01, subject-02, sujet_1 ;
+        4. variante alphabétique : variant_a / variant_b ;
+        5. ancien champ code ou autres métadonnées textuelles ;
+        6. titre arabe : الموضوع الأول / الموضوع الثاني ;
+        7. valeur 1 par défaut pour les anciens fichiers.
+
+        Le numéro du sujet fait partie de l'identité d'un exercice.
+        Sans lui, deux exercices de la même année et portant le même
+        exercise_number peuvent entrer en collision.
+        """
+        def positive_integer(value: Any) -> int | None:
+            """Accepte 1, 2 ainsi que les anciennes formes "1", "02"."""
+            if isinstance(value, bool):
+                return None
+            if isinstance(value, int) and value >= 1:
+                return value
+            if isinstance(value, str) and re.fullmatch(
+                r"\s*\d+\s*",
+                value,
+            ):
+                number = int(value.strip())
+                return number if number >= 1 else None
+            return None
+
+        direct_value = positive_integer(
+            data.get("subject_number")
+        )
+        if direct_value is not None:
+            return direct_value
+
+        source = data.get("source")
+        if isinstance(source, dict):
+            for key in ("subject_number", "number"):
+                value = positive_integer(source.get(key))
+                if value is not None:
+                    return value
+
+        # Cherche aussi dans l'ancien code et dans les métadonnées de source.
+        textual_candidates = [
+            filename,
+            data.get("code"),
+            data.get("source_file"),
+            data.get("source_filename"),
+        ]
+        if isinstance(source, dict):
+            textual_candidates.extend(
+                [
+                    source.get("file"),
+                    source.get("filename"),
+                    source.get("name"),
+                ]
+            )
+
+        for candidate in textual_candidates:
+            if not isinstance(candidate, str):
+                continue
+
+            # Ancien format très utilisé : variant_a et variant_b.
+            # a devient le sujet 1, b le sujet 2, etc.
+            variant_match = re.search(
+                r"(?:variant|variante|version|topic|sujet|subject)"
+                r"[\s_-]*([a-z])(?:[\s_.-]|$)",
+                candidate,
+                flags=re.IGNORECASE,
+            )
+            if variant_match:
+                return (
+                    ord(variant_match.group(1).lower())
+                    - ord("a")
+                    + 1
+                )
+
+            filename_match = re.search(
+                r"(?:subject|sujet|topic|موضوع)"
+                r"[\s_-]*(\d+)",
+                candidate,
+                flags=re.IGNORECASE,
+            )
+            if filename_match:
+                number = int(filename_match.group(1))
+                if number >= 1:
+                    return number
+
+        title = data.get("title")
+        if isinstance(title, str):
+            arabic_numbers = {
+                "الأول": 1,
+                "الاول": 1,
+                "الثاني": 2,
+                "الثالث": 3,
+            }
+            for word, number in arabic_numbers.items():
+                if re.search(
+                    rf"الموضوع\s+{word}",
+                    title,
+                ):
+                    return number
+
+        # Compatibilité avec les anciens JSON qui ne distinguaient pas les
+        # deux sujets. Ils sont importés comme sujet 1 au lieu d'être rejetés.
+        # Si un dossier contient réellement deux sujets de la même année,
+        # ajoutez subject_number (1 ou 2) afin de conserver deux codes uniques.
+        return 1
+
+    def normalize_session(
+        self,
+        value: Any,
+    ) -> str | None:
+        """Normalise la session afin qu'elle participe au code unique."""
+        if not isinstance(value, str):
+            return None
+
+        normalized = value.strip().lower()
+        aliases = {
+            "ordinary": "ordinary",
+            "regular": "ordinary",
+            "ordinaire": "ordinary",
+            "عادية": "ordinary",
+            "exceptional": "exceptional",
+            "special": "exceptional",
+            "exceptionnelle": "exceptional",
+            "استثنائية": "exceptional",
+        }
+        return aliases.get(normalized)
+
     def normalize_code(
         self,
         value: Any,
         chapter_code: str,
         year: int,
+        session: str,
+        subject_number: int,
         exercise_number: int,
         branch_codes: list[str],
     ) -> str:
         """
         Génère toujours un code canonique unique qui contient
-        la/les filière(s), le chapitre, l'année et le numéro
-        de l'exercice.
+        la/les filière(s), le chapitre, l'année, la session,
+        le numéro du sujet et le numéro de l'exercice.
 
         Exemple :
-        bac_science_electrical_phenomena_evolution_2008_exercise_03
+        bac_math_protein_synthesis_2023_ordinary_subject_02_exercise_02
 
         Le champ ``code`` éventuellement présent dans le JSON
         n'est volontairement pas réutilisé afin d'éviter de
@@ -977,7 +1288,8 @@ class Command(BaseCommand):
         code = (
             f"bac_{branch_part}_"
             f"{normalized_chapter_code}_"
-            f"{year}_"
+            f"{year}_{session}_"
+            f"subject_{subject_number:02d}_"
             f"exercise_{exercise_number:02d}"
         )
 
@@ -1052,6 +1364,27 @@ class Command(BaseCommand):
                 solution["final_answer"] = (
                     solution["final_answer"].strip()
                 )
+
+            # Certains anciens fichiers utilisent null (ou plus rarement
+            # une valeur structurée) pour explanation. Le front attend une
+            # chaîne : on normalise sans supprimer la clé ni les étapes.
+            steps = solution.get("steps")
+            if isinstance(steps, list):
+                normalized_steps = []
+                for step in steps:
+                    if not isinstance(step, dict):
+                        normalized_steps.append(step)
+                        continue
+
+                    normalized_step = dict(step)
+                    normalized_step["explanation"] = (
+                        self.normalize_explanation(
+                            step.get("explanation")
+                        )
+                    )
+                    normalized_steps.append(normalized_step)
+
+                solution["steps"] = normalized_steps
 
             normalized_question["solution"] = solution
 
@@ -1285,10 +1618,13 @@ class Command(BaseCommand):
             if not isinstance(
                 explanation,
                 str,
+            ) and explanation is not None and not isinstance(
+                explanation,
+                (dict, list, int, float, bool),
             ):
                 errors.append(
                     f"{location}.explanation "
-                    "doit être une chaîne."
+                    "doit être une chaîne, null ou une valeur JSON."
                 )
 
             if (
@@ -1301,6 +1637,27 @@ class Command(BaseCommand):
                 )
 
         return errors
+
+    def normalize_explanation(self, value: Any) -> str:
+        """
+        Convertit explanation en chaîne sans perdre une valeur existante.
+
+        null devient une chaîne vide ; les objets et listes sont conservés
+        sous forme JSON lisible ; les nombres et booléens deviennent du texte.
+        """
+        if value is None:
+            return ""
+        if isinstance(value, str):
+            return value.strip()
+        if isinstance(value, (dict, list)):
+            return json.dumps(
+                value,
+                ensure_ascii=False,
+                sort_keys=True,
+                separators=(",", ":"),
+                default=str,
+            )
+        return str(value)
 
     def display_summary(
         self,
@@ -1361,4 +1718,3 @@ class Command(BaseCommand):
                     "Aucune erreur détectée."
                 )
             )
-

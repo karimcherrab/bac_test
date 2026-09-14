@@ -1,0 +1,233 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2013-tech-math-space-subject1-ex01-detailed",
+  "session": "ordinary",
+  "year": 2013,
+  "chapter_code": "space_geometry",
+  "chapter_title": "الهندسة في الفضاء",
+  "axis_tags": [
+    "space_cartesian_plane_normal_vector",
+    "space_parametric_line_plane",
+    "space_projections_distances",
+    "space_dot_product_orthogonality"
+  ],
+  "branches": [
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "exercise_number": 1,
+  "subject_number": 1,
+  "source_page": 1,
+  "source_pages": [
+    1
+  ],
+  "solution_source_pages": [
+    5
+  ],
+  "title": "التمرين الأول — بكالوريا الجزائر 2013 — الموضوع الأول — شعبة تقني رياضي",
+  "statement": "الفضاء منسوب إلى المعلم المتعامد المتجانس \\((O;\\vec{i},\\vec{j},\\vec{k})\\). نعتبر النقط \\(A(3;-2;-1)\\)، \\(B(5;-3;2)\\)، \\(C(2;3;2)\\) و \\(D(1;-5;-2)\\).",
+  "questions": [
+    {
+      "id": "2013_s1_space_ex01_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) بين أن النقط \\(A\\) و\\(B\\) و\\(C\\) تعين مستويا، نرمز له بالرمز \\((P)\\).",
+      "axis_tags": [
+        "space_dot_product_orthogonality"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب شعاعين منطلقهما A، ثم نتحقق أنهما غير مرتبطين خطيا. عندها تكون النقط A وB وC غير مستقيمية وتعين مستويا.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب الشعاعين AB و AC",
+            "explanation": "\\[\\overrightarrow{AB}=B-A=(5-3,-3-(-2),2-(-1))=(2,-1,3).\\]\n\\[\\overrightarrow{AC}=C-A=(2-3,3-(-2),2-(-1))=(-1,5,3).\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "اختبار الارتباط الخطي",
+            "explanation": "الشعاعان \\((2,-1,3)\\) و\\((-1,5,3)\\) ليس أحدهما مضاعفا للآخر، لأن نسب الإحداثيات ليست متساوية."
+          },
+          {
+            "step_number": 3,
+            "title": "الاستنتاج",
+            "explanation": "إذن النقط \\(A,B,C\\) غير مستقيمية، ولذلك تعين مستويا واحدا."
+          }
+        ],
+        "final_answer": "النقط \\(A\\)، \\(B\\)، \\(C\\) تعين المستوي \\((P)\\)."
+      }
+    },
+    {
+      "id": "2013_s1_space_ex01_q2",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2) بين أن الشعاع \\(\\vec n(2;1;-1)\\) ناظمي للمستوي \\((P)\\)، ثم جد معادلة ديكارتية للمستوي \\((P)\\).",
+      "axis_tags": [
+        "space_cartesian_plane_normal_vector",
+        "space_dot_product_orthogonality"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نثبت أن n عمودي على شعاعين غير متوازيين من المستوي P، ثم نستعمل النقطة A لكتابة المعادلة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التعامد مع AB",
+            "explanation": "\\[\\vec n\\cdot\\overrightarrow{AB}=2\\times2+1\\times(-1)+(-1)\\times3=4-1-3=0.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "التعامد مع AC",
+            "explanation": "\\[\\vec n\\cdot\\overrightarrow{AC}=2\\times(-1)+1\\times5+(-1)\\times3=-2+5-3=0.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "استنتاج أن n ناظمي",
+            "explanation": "بما أن \\(\\overrightarrow{AB}\\) و\\(\\overrightarrow{AC}\\) شعاعان غير متوازيين من \\((P)\\)، و\\(\\vec n\\) عمودي عليهما، فإن \\(\\vec n\\) شعاع ناظمي للمستوي \\((P)\\)."
+          },
+          {
+            "step_number": 4,
+            "title": "كتابة المعادلة",
+            "explanation": "بما أن \\(\\vec n=(2,1,-1)\\)، فمعادلة \\((P)\\) من الشكل:\n\\[2x+y-z+d=0.\\]\nنعوض \\(A(3,-2,-1)\\):\n\\[2\\times3-2-(-1)+d=0\\Rightarrow 5+d=0\\Rightarrow d=-5.\\]"
+          }
+        ],
+        "final_answer": "\\[P:2x+y-z-5=0.\\]"
+      }
+    },
+    {
+      "id": "2013_s1_space_ex01_q3a",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "3) أ) اكتب تمثيلا وسيطيا للمستقيم \\((\\Delta)\\) الذي يشمل النقطة \\(D\\) ويعامد \\((P)\\).",
+      "axis_tags": [
+        "space_parametric_line_plane",
+        "space_cartesian_plane_normal_vector"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "المستقيم العمودي على المستوي يكون شعاع توجيهه موازيا لشعاع ناظم المستوي.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "اختيار شعاع التوجيه",
+            "explanation": "بما أن \\((\\Delta)\\perp(P)\\)، نأخذ \\(\\vec n=(2,1,-1)\\) شعاع توجيه للمستقيم."
+          },
+          {
+            "step_number": 2,
+            "title": "كتابة التمثيل الوسيطي",
+            "explanation": "يمر \\((\\Delta)\\) بالنقطة \\(D(1,-5,-2)\\)، لذلك:\n\\[\\Delta:\\begin{cases}x=1+2t\\\\y=-5+t\\\\z=-2-t\\end{cases}\\qquad t\\in\\mathbb R.\\]"
+          }
+        ],
+        "final_answer": "\\[\\Delta:\\begin{cases}x=1+2t\\\\y=-5+t\\\\z=-2-t\\end{cases},\\quad t\\in\\mathbb R.\\]"
+      }
+    },
+    {
+      "id": "2013_s1_space_ex01_q3b",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "ب) عين إحداثيات النقطة \\(E\\) المسقط العمودي للنقطة \\(D\\) على المستوي \\((P)\\).",
+      "axis_tags": [
+        "space_projections_distances",
+        "space_relative_positions_intersections"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "بما أن E هي المسقط العمودي لـD على P، فهي نقطة تقاطع المستقيم Δ مع المستوي P.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التعويض في معادلة P",
+            "explanation": "نعوض \\(x=1+2t\\)، \\(y=-5+t\\)، \\(z=-2-t\\) في:\n\\[2x+y-z-5=0.\\]\nفنحصل على:\n\\[2(1+2t)+(-5+t)-(-2-t)-5=0.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "إيجاد الوسيط",
+            "explanation": "\\[-6+6t=0\\Rightarrow t=1.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب إحداثيات E",
+            "explanation": "\\[x_E=1+2=3,\\qquad y_E=-5+1=-4,\\qquad z_E=-2-1=-3.\\]"
+          }
+        ],
+        "final_answer": "\\[E(3;-4;-3).\\]"
+      }
+    },
+    {
+      "id": "2013_s1_space_ex01_q4a",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "4) \\(H\\) المسقط العمودي للنقطة \\(D\\) على المستقيم \\((AB)\\)، و\\(\\lambda\\) العدد الحقيقي حيث: \\(\\overrightarrow{AH}=\\lambda\\overrightarrow{AB}\\). أ) بين أن: \\(\\lambda=\\dfrac{\\overrightarrow{AD}\\cdot\\overrightarrow{AB}}{\\|\\overrightarrow{AB}\\|^2}\\).",
+      "axis_tags": [
+        "space_projections_distances",
+        "space_dot_product_orthogonality"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل أن H إسقاط عمودي، أي DH عمودي على AB، ثم نعبر عن DH بدلالة AD وAH.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "استعمال التعامد",
+            "explanation": "بما أن \\(H\\) مسقط \\(D\\) على \\((AB)\\)، فإن:\n\\[\\overrightarrow{DH}\\cdot\\overrightarrow{AB}=0.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "كتابة DH",
+            "explanation": "\\[\\overrightarrow{DH}=\\overrightarrow{DA}+\\overrightarrow{AH}=-\\overrightarrow{AD}+\\lambda\\overrightarrow{AB}.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "استخراج λ",
+            "explanation": "\\[(-\\overrightarrow{AD}+\\lambda\\overrightarrow{AB})\\cdot\\overrightarrow{AB}=0.\\]\n\\[-\\overrightarrow{AD}\\cdot\\overrightarrow{AB}+\\lambda\\|\\overrightarrow{AB}\\|^2=0.\\]\nإذن:\n\\[\\lambda=\\frac{\\overrightarrow{AD}\\cdot\\overrightarrow{AB}}{\\|\\overrightarrow{AB}\\|^2}.\\]"
+          }
+        ],
+        "final_answer": "\\[\\lambda=\\dfrac{\\overrightarrow{AD}\\cdot\\overrightarrow{AB}}{\\|\\overrightarrow{AB}\\|^2}.\\]"
+      }
+    },
+    {
+      "id": "2013_s1_space_ex01_q4b",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "ب) استنتج العدد الحقيقي \\(\\lambda\\) وإحداثيات النقطة \\(H\\)، ثم المسافة بين النقطة \\(D\\) والمستقيم \\((AB)\\).",
+      "axis_tags": [
+        "space_projections_distances"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب λ من العلاقة السابقة، ثم نستعمل H=A+λAB، وأخيرا نحسب DH.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب λ",
+            "explanation": "\\[\\overrightarrow{AD}=D-A=(-2,-3,-1),\\qquad \\overrightarrow{AB}=(2,-1,3).\\]\n\\[\\overrightarrow{AD}\\cdot\\overrightarrow{AB}=-4+3-3=-4.\\]\n\\[\\|\\overrightarrow{AB}\\|^2=2^2+(-1)^2+3^2=14.\\]\nإذن:\n\\[\\lambda=-\\frac4{14}=-\\frac27.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب H",
+            "explanation": "\\[H=A+\\lambda\\overrightarrow{AB}.\\]\n\\[H=(3,-2,-1)-\\frac27(2,-1,3).\\]\nإذن:\n\\[H\\left(\\frac{17}{7},-\\frac{12}{7},-\\frac{13}{7}\\right).\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب المسافة",
+            "explanation": "بما أن \\(H\\) مسقط عمودي، فإن:\n\\[d(D,(AB))=DH.\\]\nنحسب:\n\\[\\overrightarrow{DH}=H-D=\\left(\\frac{10}{7},\\frac{23}{7},\\frac{1}{7}\\right).\\]\n\\[DH=\\frac1{7}\\sqrt{100+529+1}=\\frac{\\sqrt{630}}7=\\frac{3\\sqrt{70}}7.\\]"
+          }
+        ],
+        "final_answer": "\\[\\lambda=-\\frac27,\\qquad H\\left(\\frac{17}{7},-\\frac{12}{7},-\\frac{13}{7}\\right),\\qquad d(D,(AB))=\\frac{3\\sqrt{70}}7.\\]"
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2013(2).pdf",
+    "statement_figure_policy": "لا يوجد شكل هندسي إلزامي في نص التمرين.",
+    "solution_figure_policy": "الحل مستقل عن أي رسم.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  }
+}

@@ -62,6 +62,8 @@ class GeneratedBacExercise(models.Model):
         help_text="يُنشأ فقط عندما يطلبه الطالب.",
     )
 
+    generation_metadata = models.JSONField(default=dict, blank=True)
+
     reference_exercise_ids = models.JSONField(
         default=list,
         blank=True,

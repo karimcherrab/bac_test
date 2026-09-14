@@ -1,0 +1,492 @@
+{
+  "tag": "chemical_synaptic_transmission",
+  "title": "انتقال الرسالة العصبية في المشبك الكيميائي",
+  "order": 3,
+  "is_active": true,
+  "branches": ["science"],
+  "content": {
+    "language": "ar",
+    "direction": "rtl",
+    "chapter_code": "neural_communication",
+    "chapter_title": "الاتصال العصبي",
+    "axis_tag": "chemical_synaptic_transmission",
+    "estimated_minutes": 55,
+    "difficulty": "medium",
+    "lesson_goal": "أن يشرح التلميذ مراحل انتقال الرسالة العصبية عبر المشبك الكيميائي ويبرز دور البروتينات في استقبال المبلغ العصبي وإحداث الاستجابة بعد المشبكية.",
+    "prerequisites": [
+      "معرفة كمون الراحة وكمون العمل وانتقاله على طول الليف العصبي.",
+      "معرفة دور القنوات المرتبطة بالفولطية في حركة الشوارد.",
+      "معرفة مفهوم البروتين الغشائي والتكامل البنيوي."
+    ],
+    "learning_outcomes": [
+      "يتعرف على العنصر قبل المشبكي والشق المشبكي والعنصر بعد المشبكي.",
+      "يستنتج اتجاه انتقال الرسالة من توزيع الحويصلات والمستقبلات.",
+      "يرتب المراحل التسع للنقل المشبكي ترتيبا صحيحا.",
+      "يربط وصول كمون العمل بفتح قنوات Ca²⁺ الفولطية.",
+      "يفسر دور Ca²⁺ في اندماج الحويصلات والإطراح الخلوي.",
+      "يحدد الغشاء بعد المشبكي مقرا لتأثير الأستيل كولين.",
+      "يشرح أن مستقبل الأستيل كولين بروتين قنوي يفتح بتثبت المبلغ.",
+      "يربط دخول Na⁺ بظهور كمون بعد مشبكي تنبيهي PPSE.",
+      "يفسر توقف التأثير بتفكيك الأستيل كولين أو إزالته.",
+      "يميز بين انتقال كهربائي داخل العصبون وانتقال كيميائي في الشق المشبكي."
+    ],
+    "learning_path": [
+      {
+        "id": "step_1",
+        "type": "problem",
+        "component": "DiscoveryQuestion",
+        "title": "كيف تعبر الرسالة فراغا بين خليتين؟",
+        "content": {
+          "question": "يصل كمون العمل إلى نهاية العصبون، لكن الغشاء قبل المشبكي لا يلامس الغشاء بعد المشبكي. كيف تنتقل المعلومة عبر الشق المشبكي؟",
+          "teacher": "سنبحث عن حلقة التحويل: رسالة كهربائية قبل المشبك، وسيط كيميائي داخل الشق، ثم استجابة كهربائية بعد المشبك.",
+          "action": {"label": "تعرف على المشبك", "next_step": "step_2"}
+        },
+        "display_order": 1
+      },
+      {
+        "id": "step_2",
+        "type": "real_evidence",
+        "component": "RealEvidenceGallery",
+        "title": "الدليل 1: خريطة المشبك واتجاه الرسالة",
+        "content": {
+          "intro": "لاحظ توزيع الحويصلات في النهاية العصبية وموقع المستقبلات في الغشاء المقابل.",
+          "figures": [{
+            "src": "/science/neural-communication/axis-03/synapse_overview.png",
+            "alt": "رسم تخطيطي لمشبك كيميائي يبين العنصر قبل المشبكي والشق والعنصر بعد المشبكي",
+            "caption": "توجد الحويصلات في العنصر قبل المشبكي، بينما توجد المستقبلات في الغشاء بعد المشبكي.",
+            "source_label": "الوثيقة 1 - الصفحة 1 من ملف آليات النقل المشبكي"
+          }],
+          "guided_reading": [
+            {"label": "العنصر قبل المشبكي", "text": "نهاية عصبية تحتوي حويصلات مشبكية مملوءة بالمبلغ العصبي."},
+            {"label": "الشق المشبكي", "text": "فراغ ضيق يفصل الغشائين وينتشر عبره المبلغ العصبي."},
+            {"label": "العنصر بعد المشبكي", "text": "خلية عصبية أو عضلية يحمل غشاؤها مستقبلات نوعية للمبلغ."},
+            {"label": "الاتجاه", "text": "من النهاية التي تحرر المبلغ نحو الغشاء الذي يحمل المستقبلات؛ لذلك يكون النقل الكيميائي أحادي الاتجاه."
+            }
+          ],
+          "takeaway": "عدم التناظر البنيوي للمشبك يحدد اتجاهه: حويصلات قبلية → شق → مستقبلات بعدية."
+        },
+        "display_order": 2
+      },
+      {
+        "id": "step_3",
+        "type": "short_explanation",
+        "component": "ShortExplanation",
+        "title": "لغة المشبك في أربع كلمات",
+        "content": {
+          "blocks": [
+            {"title": "المبلغ العصبي", "text": "جزيء كيميائي تحرره النهاية قبل المشبكية؛ مثال الدرس: الأستيل كولين."},
+            {"title": "الإطراح الخلوي", "text": "اندماج غشاء الحويصلة بالغشاء قبل المشبكي وتحرير محتواها في الشق."},
+            {"title": "المستقبل القنوي", "text": "بروتين يجمع موقع تثبيت نوعيا وقناة أيونية تفتح عند ارتباط المبلغ."},
+            {"title": "الكمون بعد المشبكي", "text": "تغير محلي ومتدرج في كمون الغشاء بعد المشبكي ناتج عن فتح القنوات الكيميائية."}
+          ],
+          "memory_tip": "كهربائي قبل المشبك → كيميائي في الشق → كهربائي بعد المشبك.",
+          "attention": "المبلغ العصبي لا يتحول إلى كمون؛ بل يفتح مستقبلات قنوية فتتحرك الشوارد وينشأ تغير كهربائي."
+        },
+        "display_order": 3
+      },
+      {
+        "id": "step_4",
+        "type": "real_evidence",
+        "component": "RealEvidenceGallery",
+        "title": "الدليل 2: أين يؤثر الأستيل كولين؟",
+        "content": {
+          "intro": "استعملت مادة مشعة تشبه الأستيل كولين جزئيا وترتبط بمستقبلاته، ثم حدد موضع الإشعاع بالتصوير الإشعاعي الذاتي.",
+          "figures": [{
+            "src": "/science/neural-communication/axis-03/receptor_location_em.png",
+            "alt": "صورة مجهر إلكتروني لمشبك عصبي عضلي تظهر الإشعاع على الغشاء بعد المشبكي",
+            "caption": "تتمركز العلامات المشعة على الغشاء بعد المشبكي، ما يكشف موضع المستقبلات.",
+            "source_label": "الوثيقة 2 - الصفحة 2"
+          }],
+          "guided_reading": [
+            {"label": "الملاحظة", "text": "يتركز الإشعاع على مستوى الغشاء بعد المشبكي، خاصة في طياته، ولا يتوزع بالتساوي على جانبي الشق."},
+            {"label": "الدلالة", "text": "لأن المادة المشعة تثبت على مستقبلات الأستيل كولين، فإن موضع الإشعاع يحدد موضع هذه المستقبلات."},
+            {"label": "الاستنتاج", "text": "مقر تأثير الأستيل كولين هو مستقبلاته الموجودة في الغشاء بعد المشبكي."
+            }
+          ],
+          "takeaway": "الأستيل كولين لا يؤثر عشوائيا في كل الأغشية؛ تأثيره يبدأ من مستقبلات نوعية بعد مشبكية."
+        },
+        "display_order": 4
+      },
+      {
+        "id": "step_5",
+        "type": "real_evidence",
+        "component": "RealEvidenceGallery",
+        "title": "الدليل 3: المستقبل بروتين وقناة في الوقت نفسه",
+        "content": {
+          "intro": "توضح الوثيقة تنظيم مستقبل الأستيل كولين داخل الغشاء وحالته في غياب المبلغ ووجوده.",
+          "figures": [{
+            "src": "/science/neural-communication/axis-03/acetylcholine_receptor_structure.png",
+            "alt": "بنية مستقبل الأستيل كولين وحالته المغلقة والمفتوحة",
+            "caption": "المستقبل بروتين متعدد تحت الوحدات، يحمل موقعي تثبيت ويكوّن قناة مركزية.",
+            "source_label": "الوثيقة 3 - الصفحة 2"
+          }],
+          "guided_reading": [
+            {"label": "الطبيعة", "text": "المستقبل بروتين غشائي ذو بنية رابعية مكونة في الوثيقة من خمس تحت وحدات."},
+            {"label": "البنية الوظيفية", "text": "تنتظم تحت الوحدات حول قناة مركزية، ويضم المستقبل موقعين لتثبيت الأستيل كولين."},
+            {"label": "في غياب المبلغ", "text": "تبقى القناة مغلقة ولا تعبر الشوارد."},
+            {"label": "عند التثبيت", "text": "يؤدي ارتباط الأستيل كولين إلى تغير بنيوي يفتح القناة؛ لذلك يسمى مستقبلا قنويا أو قناة مرتبطة بالكيمياء."}
+          ],
+          "takeaway": "التكامل البنيوي بين الأستيل كولين وموقعه النوعي هو الذي يحول الارتباط الكيميائي إلى فتح قناة."
+        },
+        "display_order": 5
+      },
+      {
+        "id": "step_6",
+        "type": "key_rule",
+        "component": "KeyRuleCard",
+        "title": "النوعية والتكامل البنيوي",
+        "content": {
+          "rule": "لا يفتح المستقبل القنوي إلا مبلغ يملك بنية فراغية ملائمة لموقع التثبيت؛ يؤدي الارتباط النوعي إلى تغير شكل المستقبل وفتح قناته.",
+          "simple_flow": "تكامل بنيوي → تثبت الأستيل كولين → تغير بنية المستقبل → فتح القناة → تدفق شوارد",
+          "do_not_confuse": [
+            "المستقبل القنوي ليس قناة مفتوحة دائما.",
+            "المستقبل بعد المشبكي مرتبط بالكيمياء، بينما قناة Ca²⁺ قبل المشبكية مرتبطة بالفولطية.",
+            "وجود الأستيل كولين في الشق وحده لا يكفي إذا غابت المستقبلات الموافقة."
+          ],
+          "memory_tip": "المبلغ هو المفتاح، وموقع التثبيت هو القفل، والقناة هي الباب الذي يفتح."
+        },
+        "display_order": 6
+      },
+      {
+        "id": "step_7",
+        "type": "real_evidence",
+        "component": "RealEvidenceGallery",
+        "title": "الدليل 4: من كمية الأستيل كولين إلى PPSE",
+        "content": {
+          "intro": "تحقن كميات متزايدة من الأستيل كولين وتقاس استجابة الغشاء بعد المشبكي، مع تمثيل القنوات المفتوحة.",
+          "figures": [{
+            "src": "/science/neural-communication/axis-03/ach_ppse_dose_response.png",
+            "alt": "تأثير كميات متزايدة من الأستيل كولين في الكمون بعد المشبكي وفتح قنوات الصوديوم",
+            "caption": "زيادة كمية الأستيل كولين تفتح مستقبلات أكثر فتكبر سعة PPSE، وقد تبلغ عتبة كمون العمل.",
+            "source_label": "الوثيقة 6 - الصفحة 4"
+          }],
+          "guided_reading": [
+            {"label": "الكمية A", "text": "تفتح قنوات قليلة ويظهر PPSE صغير لا يبلغ العتبة."},
+            {"label": "الكمية B", "text": "تفتح قنوات أكثر ويزداد PPSE، لكنه يبقى دون العتبة في الوثيقة."},
+            {"label": "الكمية C", "text": "تفتح قنوات كافية، فيبلغ زوال الاستقطاب العتبة ويتولد كمون عمل بعد مشبكي."},
+            {"label": "السبب الأيوني", "text": "فتح المستقبلات القنوية يسمح بتدفق Na⁺ نحو الداخل وفق تدرجه، فيزول استقطاب الغشاء بعد المشبكي."
+            }
+          ],
+          "takeaway": "PPSE كمون متدرج: تتعلق سعته بكمية المبلغ وعدد المستقبلات القنوية المفتوحة، بخلاف كمون العمل الخاضع للكل أو لا شيء."
+        },
+        "display_order": 7
+      },
+      {
+        "id": "step_8",
+        "type": "comparison",
+        "component": "VisualComparison",
+        "title": "قناتان مختلفتان في مشبك واحد",
+        "content": {
+          "columns": [
+            {"title": "قناة Ca²⁺ قبل المشبكية", "items": ["مرتبطة بالفولطية", "تفتح بوصول كمون العمل", "تسمح بدخول Ca²⁺", "تطلق اندماج الحويصلات", "توجد في الغشاء قبل المشبكي"]},
+            {"title": "مستقبل الأستيل كولين بعد المشبكي", "items": ["مرتبط بالكيمياء", "يفتح بتثبت الأستيل كولين", "يسمح أساسا بدخول Na⁺ في نموذج الدرس", "يولد PPSE", "يوجد في الغشاء بعد المشبكي"]}
+          ],
+          "attention": "سبب فتح القناة الأولى تغير الفولطية، وسبب فتح الثانية ارتباط جزيء كيميائي.",
+          "memory_tip": "قبل المشبك: فولطية وCa²⁺؛ بعد المشبك: كيمياء وNa⁺."
+        },
+        "display_order": 8
+      },
+      {
+        "id": "step_9",
+        "type": "real_evidence",
+        "component": "RealEvidenceGallery",
+        "title": "الدليل 5: Ca²⁺ هو إشارة التحرير",
+        "content": {
+          "intro": "تقارن الوثيقة تواتر كمونات العمل بتركيز Ca²⁺ في النهاية قبل المشبكية وبعدد الحويصلات التي تطرح محتواها.",
+          "figures": [{
+            "src": "/science/neural-communication/axis-03/calcium_exocytosis_evidence.png",
+            "alt": "منحنيات الكالسيوم وصور الحويصلات بدلالة تواتر كمونات العمل قبل المشبكية",
+            "caption": "زيادة تواتر كمونات العمل ترفع دخول Ca²⁺ وتزيد الإطراح الخلوي، وحقن Ca²⁺ مباشرة يحرر المبلغ.",
+            "source_label": "الوثيقة 8 - الصفحة 6"
+          }],
+          "guided_reading": [
+            {"label": "دون كمون عمل", "text": "يبقى Ca²⁺ منخفضا ولا يظهر تحرير معتبر للمبلغ."},
+            {"label": "مع زيادة التواتر", "text": "يزداد تركيز Ca²⁺ في الهيولى قبل المشبكية وتزداد الحويصلات في حالة إطراح خلوي."},
+            {"label": "حقن Ca²⁺", "text": "يؤدي إدخال Ca²⁺ مباشرة إلى تحرير الأستيل كولين حتى دون الاعتماد على وصول كمون عمل في الشرط التجريبي."},
+            {"label": "الاستنتاج", "text": "وصول كمون العمل يفتح قنوات Ca²⁺ الفولطية، ودخوله هو الإشارة المباشرة لاندماج الحويصلات وتحرير المبلغ."
+            }
+          ],
+          "takeaway": "تواتر كهربائي أكبر قبل المشبك → Ca²⁺ أكثر → حويصلات مندمجة أكثر → مبلغ عصبي أكثر في الشق."
+        },
+        "display_order": 9
+      },
+      {
+        "id": "step_10",
+        "type": "real_evidence",
+        "component": "RealEvidenceGallery",
+        "title": "الدليل 6: لماذا يجب إزالة الأستيل كولين؟",
+        "content": {
+          "intro": "تقارن التجربة الاستجابة الطبيعية باستجابة مسجلة عند تثبيط الإنزيم المحطم للأستيل كولين.",
+          "figures": [{
+            "src": "/science/neural-communication/axis-03/acetylcholinesterase_termination.png",
+            "alt": "مقارنة الاستجابة الطبيعية والاستجابة عند تثبيط إنزيم أستيل كولين إستيراز",
+            "caption": "في الحالة الطبيعية تظهر استجابة محدودة، وعند تعطيل الإنزيم يستمر تأثير المبلغ فتظهر استجابات متكررة.",
+            "source_label": "الوثيقة 7 - الصفحة 4"
+          }],
+          "guided_reading": [
+            {"label": "الحالة الطبيعية", "text": "بعد تنبيه واحد تكون الاستجابة محدودة لأن الأستيل كولين يزال بسرعة من الشق."},
+            {"label": "عند تثبيط الإنزيم", "text": "يبقى الأستيل كولين مدة أطول قرب مستقبلاته، فتستمر القنوات في التنشيط وتظهر استجابات متكررة في الوثيقة."},
+            {"label": "الاستنتاج", "text": "إنزيم أستيل كولين إستيراز يوقف تأثير المبلغ بتفكيكه، فتغلق المستقبلات القنوية وتنتهي الرسالة."
+            }
+          ],
+          "takeaway": "إزالة المبلغ ليست خطوة ثانوية؛ هي شرط لإنهاء الاستجابة ومنع التنبيه المستمر."
+        },
+        "display_order": 10
+      },
+      {
+        "id": "step_11",
+        "type": "key_rule",
+        "component": "KeyRuleCard",
+        "title": "المراحل التسع التي يجب إتقانها",
+        "content": {
+          "rule": "انتقال الرسالة المشبكية سلسلة سببية؛ لا تحفظ الخطوات منفصلة، بل اربط نهاية كل خطوة ببداية التي تليها.",
+          "simple_flow": "1 وصول كمون العمل → 2 دخول Ca²⁺ → 3 اندماج الحويصلات → 4 تحرير المبلغ → 5 انتشاره → 6 تثبته على المستقبل → 7 فتح القنوات → 8 كمون بعد مشبكي → 9 تفكيك المبلغ أو إزالته",
+          "do_not_confuse": [
+            "دخول Ca²⁺ يحدث قبل مشبكيا قبل الإطراح الخلوي.",
+            "انتشار المبلغ في الشق يسبق تثبته على المستقبل.",
+            "فتح القناة بعد المشبكية يسبق ظهور PPSE.",
+            "تفكيك المبلغ ينهي التأثير ولا يبدأ النقل."
+          ],
+          "memory_tip": "وصول، كالسيوم، اندماج، تحرير، انتشار، تثبت، فتح، كمون، إزالة."
+        },
+        "display_order": 11
+      },
+      {
+        "id": "step_12",
+        "type": "real_evidence",
+        "component": "RealEvidenceGallery",
+        "title": "المشهد الكامل في وثيقة واحدة",
+        "content": {
+          "intro": "استعمل الرسم لتتبع مسار الرسالة من كمون العمل إلى الكمون بعد المشبكي، ثم أضف خطوة إزالة المبلغ لإكمال الدورة.",
+          "figures": [{
+            "src": "/science/neural-communication/axis-03/synaptic_transmission_complete.png",
+            "alt": "رسم تحصيلي كامل لانتقال الرسالة عبر المشبك الكيميائي",
+            "caption": "يجمع الرسم قناة Ca²⁺ والحويصلات والأستيل كولين والمستقبلات القنوية ودخول Na⁺ وPPSE.",
+            "source_label": "الرسم التحصيلي - الصفحة 8"
+          }],
+          "guided_reading": [
+            {"label": "التحويل الأول", "text": "وصول كمون العمل الكهربائي يفتح قناة Ca²⁺ الفولطية ويبدأ التحرير الكيميائي."},
+            {"label": "داخل الشق", "text": "تحمل جزيئات الأستيل كولين المعلومة كيميائيا من الغشاء القبلي إلى المستقبلات البعدية."},
+            {"label": "التحويل الثاني", "text": "فتح المستقبلات القنوية وحركة Na⁺ يعيدان المعلومة إلى شكل كهربائي هو PPSE، وقد يتولد بعده كمون عمل إذا بلغت العتبة."
+            }
+          ],
+          "takeaway": "المشبك محول مزدوج: كهربائي → كيميائي → كهربائي."
+        },
+        "display_order": 12
+      },
+      {
+        "id": "step_13",
+        "type": "quick_check",
+        "component": "QuickCheck",
+        "title": "رتب وافهم قبل الاختبار",
+        "content": {
+          "questions": [
+            {"id": "qc1", "question": "ما الحدث المباشر الذي يلي وصول كمون العمل إلى النهاية قبل المشبكية؟", "choices": ["فتح قنوات Ca²⁺ الفولطية", "فتح مستقبلات الأستيل كولين", "تفكيك الأستيل كولين"], "correct_answer": "فتح قنوات Ca²⁺ الفولطية", "explanation": "زوال الاستقطاب يفتح القنوات الحساسة للفولطية."},
+            {"id": "qc2", "question": "لماذا يكون انتقال الرسالة الكيميائية أحادي الاتجاه؟", "choices": ["الحويصلات قبلية والمستقبلات بعدية", "الشق يمنع عودة الجزيئات", "Na⁺ يوجد في جهة واحدة فقط"], "correct_answer": "الحويصلات قبلية والمستقبلات بعدية", "explanation": "التوزع غير المتماثل للعناصر يفرض الاتجاه."},
+            {"id": "qc3", "question": "ما السبب المباشر لظهور PPSE في النموذج المدروس؟", "choices": ["دخول Na⁺ بعد فتح المستقبلات القنوية", "دخول Ca²⁺ إلى العنصر البعدي", "خروج الأستيل كولين من المستقبل"], "correct_answer": "دخول Na⁺ بعد فتح المستقبلات القنوية", "explanation": "دخول الشحنات الموجبة يزيل استقطاب الغشاء بعد المشبكي."
+            }
+          ]
+        },
+        "display_order": 13
+      },
+      {
+        "id": "step_14",
+        "type": "bac_method",
+        "component": "BacMethodCard",
+        "title": "كيف تشرح النقل المشبكي في البكالوريا؟",
+        "content": {
+          "skill": "بناء تفسير سببي كامل للنقل عبر مشبك كيميائي",
+          "method": [
+            {"label": "1. ابدأ بالعنصر القبلي", "text": "وصول كمون العمل يفتح قنوات Ca²⁺ المرتبطة بالفولطية فيدخل Ca²⁺."},
+            {"label": "2. اربط Ca²⁺ بالحويصلات", "text": "يحفز Ca²⁺ اندماج الحويصلات بالغشاء وتحرير المبلغ بالإطراح الخلوي."},
+            {"label": "3. عبر الشق", "text": "ينتشر الأستيل كولين نحو الغشاء بعد المشبكي ويتثبت نوعيا على مستقبلاته القنوية."},
+            {"label": "4. فسر الاستجابة", "text": "يفتح التثبت القنوات الكيميائية فيدخل Na⁺ ويظهر PPSE قد يبلغ عتبة كمون العمل."},
+            {"label": "5. اختم بالإزالة", "text": "يفكك أستيل كولين إستيراز المبلغ فتغلق القنوات ويتوقف التأثير."
+            }
+          ],
+          "bac_sentence": "عند وصول كمون العمل إلى النهاية قبل المشبكية تفتح قنوات Ca²⁺ الفولطية فيدخل Ca²⁺، فيحفز اندماج الحويصلات بالغشاء وتحرير الأستيل كولين بالإطراح الخلوي. ينتشر المبلغ في الشق ويتثبت نوعيا على مستقبلاته القنوية بعد المشبكية، فتفتح القنوات الكيميائية ويدخل Na⁺ مولدا PPSE. وينتهي التأثير بتفكيك الأستيل كولين بوساطة إنزيم أستيل كولين إستيراز أو بإزالته من الشق.",
+          "common_mistakes": [
+            "القول إن كمون العمل يعبر الشق المشبكي مباشرة.",
+            "وضع مستقبلات الأستيل كولين في الغشاء قبل المشبكي.",
+            "عكس ترتيب دخول Ca²⁺ واندماج الحويصلات.",
+            "الخلط بين قناة Ca²⁺ الفولطية والمستقبل القنوي المرتبط بالكيمياء.",
+            "اعتبار PPSE كمون عمل دائما؛ قد يبقى دون العتبة.",
+            "نسيان خطوة تفكيك المبلغ وإنهاء تأثيره."
+          ]
+        },
+        "display_order": 14
+      },
+      {
+        "id": "step_15",
+        "type": "final_visual_map",
+        "component": "InteractiveSummaryMap",
+        "title": "خريطة التحويلات في المشبك",
+        "content": {
+          "map": [
+            {"node": "كمون عمل قبلي", "relation": "يفتح", "target": "قنوات Ca²⁺ الفولطية"},
+            {"node": "دخول Ca²⁺", "relation": "يحفز", "target": "اندماج الحويصلات والإطراح"},
+            {"node": "الأستيل كولين", "relation": "ينتشر ويتثبت على", "target": "مستقبل قنوي بعد مشبكي"},
+            {"node": "فتح القناة", "relation": "يسمح بدخول Na⁺", "target": "PPSE"},
+            {"node": "PPSE كاف", "relation": "يبلغ العتبة", "target": "كمون عمل بعد مشبكي"},
+            {"node": "أستيل كولين إستيراز", "relation": "يفكك المبلغ", "target": "توقف الاستجابة"}
+          ],
+          "memory_tip": "قبل المشبك كهرباء، في الشق كيمياء، بعد المشبك كهرباء من جديد.",
+          "next_axis_bridge": {"question": "ماذا يحدث عندما تصل إلى عصبون واحد رسائل تنبيهية وتثبيطية متعددة في الوقت نفسه؟", "next_concept": "آلية الإدماج العصبي"}
+        },
+        "display_order": 15
+      },
+      {
+        "id": "step_16",
+        "type": "quiz",
+        "component": "FinalQuiz",
+        "title": "اختبار نهاية المحور",
+        "content": {
+          "questions": [
+            {"id": "q1", "question": "أي ترتيب صحيح لبداية النقل المشبكي؟", "choices": ["كمون عمل → دخول Ca²⁺ → اندماج الحويصلات", "دخول Na⁺ → كمون عمل → دخول Ca²⁺", "تحطيم المبلغ → اندماج الحويصلات"], "correct_answer": "كمون عمل → دخول Ca²⁺ → اندماج الحويصلات", "explanation": "Ca²⁺ يربط وصول الإشارة الكهربائية بالإطراح الخلوي."},
+            {"id": "q2", "question": "أين توجد مستقبلات الأستيل كولين في المشبك المدروس؟", "choices": ["في الغشاء بعد المشبكي", "داخل الحويصلات", "في الشق دون ارتباط بالغشاء"], "correct_answer": "في الغشاء بعد المشبكي", "explanation": "تثبت ذلك وثيقة التموضع الإشعاعي."},
+            {"id": "q3", "question": "لماذا يسمى مستقبل الأستيل كولين مستقبلا قنويا؟", "choices": ["لأنه يجمع موقع تثبيت وقناة أيونية", "لأنه يضخ المبلغ باستعمال ATP", "لأنه موجود داخل الحويصلة"], "correct_answer": "لأنه يجمع موقع تثبيت وقناة أيونية", "explanation": "ارتباط المبلغ يفتح القناة المركزية."},
+            {"id": "q4", "question": "ما العلاقة بين كمية الأستيل كولين وسعة PPSE؟", "choices": ["تزداد السعة بفتح مستقبلات أكثر", "تبقى السعة ثابتة دائما", "تنعدم السعة عند زيادة المبلغ"], "correct_answer": "تزداد السعة بفتح مستقبلات أكثر", "explanation": "PPSE كمون متدرج يعتمد على عدد القنوات المفتوحة."},
+            {"id": "q5", "question": "ما وظيفة أستيل كولين إستيراز؟", "choices": ["تفكيك الأستيل كولين وإنهاء تأثيره", "فتح قناة Ca²⁺", "تكوين الحويصلات مباشرة"], "correct_answer": "تفكيك الأستيل كولين وإنهاء تأثيره", "explanation": "إزالة المبلغ تسمح بغلق القنوات وتوقف الاستجابة."},
+            {"id": "q6", "question": "ما التحويل الصحيح على مستوى المشبك؟", "choices": ["كهربائي → كيميائي → كهربائي", "كيميائي → كهربائي → كيميائي فقط", "كهربائي فقط دون وسيط"], "correct_answer": "كهربائي → كيميائي → كهربائي", "explanation": "كمون العمل يحرر المبلغ، والمبلغ يولد كمونا بعد مشبكي."
+            }
+          ],
+          "mastery_threshold": 5
+        },
+        "display_order": 16
+      }
+    ],
+    "document_bank": [
+      {
+        "document_id": "nc_axis03_doc01_overview",
+        "file_name": "synapse_overview.png",
+        "src": "/science/neural-communication/axis-03/synapse_overview.png",
+        "document_type": "synapse_structure_diagram",
+        "source": {"kind": "lesson_pdf", "page": 1, "figure": "الوثيقة (1)"},
+        "skills": ["identify_synapse_parts", "infer_direction", "order_basic_events"],
+        "scientific_entities": ["عنصر قبل مشبكي", "شق مشبكي", "عنصر بعد مشبكي", "حويصلات", "مستقبلات"],
+        "pedagogical_roles": ["lesson_evidence", "axis_exercise", "ai_axis_exercise"],
+        "difficulty": 1,
+        "interpretation_scope": "تحدد مكونات المشبك واتجاه النقل من الحويصلات نحو المستقبلات.",
+        "safe_claims": ["الحويصلات قبل مشبكية.", "المستقبلات بعد مشبكية.", "النقل الكيميائي أحادي الاتجاه في النموذج."],
+        "forbidden_inferences": ["القول إن الحويصلات موجودة في الشق.", "القول إن كمون العمل يعبر الشق مباشرة."],
+        "ai_generation": {"allowed": true, "allowed_question_types": ["label", "identify", "infer_direction", "order"], "max_documents_with": 2}
+      },
+      {
+        "document_id": "nc_axis03_doc02_receptor_location",
+        "file_name": "receptor_location_em.png",
+        "src": "/science/neural-communication/axis-03/receptor_location_em.png",
+        "document_type": "electron_micrograph_autoradiography",
+        "source": {"kind": "lesson_pdf", "page": 2, "figure": "الوثيقة (2)"},
+        "skills": ["interpret_autoradiography", "locate_receptors", "infer_site_of_action"],
+        "scientific_entities": ["غشاء بعد مشبكي", "مستقبل أستيل كولين", "وسم إشعاعي"],
+        "pedagogical_roles": ["lesson_evidence", "axis_exercise", "ai_axis_exercise", "bac_similar"],
+        "difficulty": 3,
+        "interpretation_scope": "تحدد الغشاء بعد المشبكي مقرا لمستقبلات الأستيل كولين.",
+        "safe_claims": ["يتركز الوسم على الغشاء بعد المشبكي.", "مقر تأثير الأستيل كولين بعد مشبكي."],
+        "forbidden_inferences": ["اعتبار الحبيبات المشعة جزيئات أستيل كولين مرئية مباشرة.", "استنتاج آلية فتح القناة من الوثيقة وحدها."],
+        "ai_generation": {"allowed": true, "allowed_question_types": ["observe", "locate", "infer"], "max_documents_with": 2}
+      },
+      {
+        "document_id": "nc_axis03_doc03_receptor_structure",
+        "file_name": "acetylcholine_receptor_structure.png",
+        "src": "/science/neural-communication/axis-03/acetylcholine_receptor_structure.png",
+        "document_type": "protein_receptor_structure_model",
+        "source": {"kind": "lesson_pdf", "page": 2, "figure": "الوثيقة (3)"},
+        "skills": ["describe_quaternary_structure", "identify_binding_sites", "link_binding_to_opening"],
+        "scientific_entities": ["مستقبل قنوي", "تحت وحدات", "موقع تثبيت", "أستيل كولين"],
+        "pedagogical_roles": ["lesson_evidence", "axis_exercise", "ai_axis_exercise", "bac_similar"],
+        "difficulty": 3,
+        "interpretation_scope": "تثبت الطبيعة البروتينية للمستقبل ووجود موقعي تثبيت وقناة تفتح بوجود المبلغ.",
+        "safe_claims": ["المستقبل بروتين متعدد تحت الوحدات.", "يضم قناة مركزية.", "يثبت الأستيل كولين على موقعين في نموذج الوثيقة."],
+        "forbidden_inferences": ["القول إن الأستيل كولين يعبر القناة نفسها.", "اعتبار كل المستقبلات الكيميائية مطابقة بنيويا لهذا النموذج."],
+        "ai_generation": {"allowed": true, "allowed_question_types": ["identify", "compare_states", "explain_complementarity"], "max_documents_with": 2}
+      },
+      {
+        "document_id": "nc_axis03_doc04_ach_ppse",
+        "file_name": "ach_ppse_dose_response.png",
+        "src": "/science/neural-communication/axis-03/ach_ppse_dose_response.png",
+        "document_type": "dose_response_and_channel_model",
+        "source": {"kind": "lesson_pdf", "page": 4, "figure": "الوثيقة (6)"},
+        "skills": ["interpret_dose_response", "link_open_channels_to_ppse", "distinguish_ppse_action_potential"],
+        "scientific_entities": ["كمية الأستيل كولين", "PPSE", "عتبة", "قناة Na⁺ مرتبطة بالكيمياء"],
+        "pedagogical_roles": ["lesson_evidence", "axis_exercise", "ai_axis_exercise", "bac_similar"],
+        "difficulty": 4,
+        "interpretation_scope": "تربط كمية الأستيل كولين بعدد القنوات المفتوحة وسعة PPSE واحتمال بلوغ العتبة.",
+        "safe_claims": ["زيادة المبلغ تزيد سعة PPSE في الوثيقة.", "فتح القنوات يسمح بدخول Na⁺.", "PPSE قد يبقى دون العتبة."],
+        "forbidden_inferences": ["القول إن كل PPSE يولد كمون عمل.", "تطبيق قانون الكل أو لا شيء على PPSE."],
+        "ai_generation": {"allowed": true, "allowed_question_types": ["compare", "interpret_curve", "explain", "predict"], "max_documents_with": 3}
+      },
+      {
+        "document_id": "nc_axis03_doc05_termination",
+        "file_name": "acetylcholinesterase_termination.png",
+        "src": "/science/neural-communication/axis-03/acetylcholinesterase_termination.png",
+        "document_type": "enzyme_inhibition_experiment",
+        "source": {"kind": "lesson_pdf", "page": 4, "figure": "الوثيقة (7)"},
+        "skills": ["compare_control_inhibition", "infer_enzyme_role", "explain_signal_termination"],
+        "scientific_entities": ["أستيل كولين إستيراز", "تثبيط إنزيمي", "استمرار الاستجابة"],
+        "pedagogical_roles": ["lesson_evidence", "axis_exercise", "ai_axis_exercise", "bac_similar"],
+        "difficulty": 4,
+        "interpretation_scope": "تثبت أن تفكيك الأستيل كولين ضروري لإنهاء تأثيره.",
+        "safe_claims": ["تثبيط الإنزيم يطيل تأثير الأستيل كولين في الوثيقة.", "الإنزيم ينهي الرسالة بتفكيك المبلغ."],
+        "forbidden_inferences": ["القول إن الإنزيم يمنع تحرير الأستيل كولين من الحويصلات.", "اعتبار المثبط مبلغاً عصبياً."],
+        "ai_generation": {"allowed": true, "allowed_question_types": ["compare_conditions", "infer", "justify"], "max_documents_with": 2}
+      },
+      {
+        "document_id": "nc_axis03_doc06_calcium_release",
+        "file_name": "calcium_exocytosis_evidence.png",
+        "src": "/science/neural-communication/axis-03/calcium_exocytosis_evidence.png",
+        "document_type": "calcium_fluorescence_and_em_release",
+        "source": {"kind": "lesson_pdf", "page": 6, "figure": "الوثيقة (8)"},
+        "skills": ["correlate_frequency_calcium", "interpret_em_states", "infer_calcium_role"],
+        "scientific_entities": ["Ca²⁺", "تواتر كمونات العمل", "حويصلات", "إطراح خلوي", "أستيل كولين"],
+        "pedagogical_roles": ["lesson_evidence", "axis_exercise", "ai_axis_exercise", "bac_similar"],
+        "difficulty": 4,
+        "interpretation_scope": "تربط تواتر كمونات العمل بدخول Ca²⁺ وكمية المبلغ المحررة.",
+        "safe_claims": ["زيادة التواتر ترفع Ca²⁺ قبل مشبكيا.", "زيادة Ca²⁺ تزيد الإطراح الخلوي.", "حقن Ca²⁺ يحرر المبلغ في التجربة."],
+        "forbidden_inferences": ["القول إن Ca²⁺ هو المبلغ العصبي.", "القول إن Ca²⁺ يفتح مستقبل الأستيل كولين بعد المشبكي."],
+        "ai_generation": {"allowed": true, "allowed_question_types": ["compare", "correlate", "infer_causality", "cross_document_reasoning"], "preferred_pair": "nc_axis03_doc01_overview"}
+      },
+      {
+        "document_id": "nc_axis03_doc07_complete",
+        "file_name": "synaptic_transmission_complete.png",
+        "src": "/science/neural-communication/axis-03/synaptic_transmission_complete.png",
+        "document_type": "complete_functional_diagram",
+        "source": {"kind": "lesson_pdf", "page": 8, "role": "رسم تحصيلي"},
+        "skills": ["order_nine_steps", "construct_explanation", "identify_signal_conversion"],
+        "scientific_entities": ["كمون عمل", "Ca²⁺", "حويصلات", "أستيل كولين", "Na⁺", "PPSE"],
+        "pedagogical_roles": ["lesson_summary", "lesson_evaluation", "axis_exercise", "ai_axis_exercise"],
+        "difficulty": 3,
+        "interpretation_scope": "يجمع المراحل الرئيسة من وصول كمون العمل إلى ظهور PPSE، ويستكمل بإزالة المبلغ.",
+        "safe_claims": ["Ca²⁺ يدخل قبل مشبكيا.", "الأستيل كولين يحرر بالإطراح.", "فتح القنوات البعدية يولد PPSE."],
+        "forbidden_inferences": ["اعتبار الأرقام في الرسم بديلا عن التفسير السببي.", "نسيان إزالة المبلغ لأنها غير بارزة في الرسم."],
+        "ai_generation": {"allowed": true, "allowed_question_types": ["order", "label", "complete_flow", "explain_conversion"], "max_documents_with": 2}
+      }
+    ],
+    "presentation": {
+      "hook": "كيف تعبر الرسالة العصبية شقا لا تتلامس فيه الخليتان؟",
+      "promise": "ستتبع الرحلة من كمون العمل وCa²⁺ إلى تحرير الأستيل كولين ثم فتح المستقبلات وظهور PPSE.",
+      "rhythm": ["تعرف", "حدد الاتجاه", "اكتشف المستقبل", "اربط البنية", "حلل Ca²⁺", "رتب المراحل", "لخص"],
+      "mode": "evidence_story_learning",
+      "student_first": true,
+      "reveal_teacher_after_think": true,
+      "max_text_lines_per_card": 6,
+      "avoid_repetition": true,
+      "show_progress_as_journey": true
+    },
+    "scientific_quality_control": {
+      "version": "1.0",
+      "rules": [
+        "حدد اتجاه النقل من الحويصلات قبل المشبكية نحو المستقبلات بعد المشبكية.",
+        "قناة Ca²⁺ قبل المشبكية مرتبطة بالفولطية، والمستقبل البعدي مرتبط بالكيمياء.",
+        "دخول Ca²⁺ يسبق اندماج الحويصلات وهو الإشارة المباشرة للإطراح الخلوي.",
+        "الأستيل كولين ينتشر في الشق ويتثبت على مستقبل نوعي؛ لا يعبر القناة بصفته شاردة.",
+        "في نموذج الدرس يؤدي فتح المستقبل القنوي إلى تدفق Na⁺ للداخل وظهور PPSE.",
+        "PPSE متدرج وتعتمد سعته على عدد القنوات المفتوحة، ولا يخضع مباشرة للكل أو لا شيء.",
+        "يتولد كمون عمل بعد مشبكي فقط إذا بلغ زوال الاستقطاب العتبة.",
+        "عودة الغشاء إلى الراحة تتطلب إزالة المبلغ، ومنها تفكيكه بأستيل كولين إستيراز.",
+        "افصل بين الانتقال الكهربائي على الغشاء والانتقال الكيميائي داخل الشق."
+      ]
+    },
+    "curriculum_goal": "تحديد مراحل النقل عبر المشبك الكيميائي وإبراز دور Ca²⁺ والحويصلات والمبلغ العصبي والمستقبلات البروتينية في تحويل الرسالة."
+  }
+}

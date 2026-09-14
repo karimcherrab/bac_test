@@ -1,0 +1,249 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2013-math-space-subject2-ex03-detailed",
+  "session": "ordinary",
+  "year": 2013,
+  "chapter_code": "space_geometry",
+  "chapter_title": "الهندسة في الفضاء",
+  "axis_tags": [
+    "space_parametric_line_plane",
+    "space_relative_positions_intersections",
+    "space_cartesian_plane_normal_vector",
+    "space_distances_projections",
+    "space_areas_volumes"
+  ],
+  "branches": [
+    {
+      "code": "math",
+      "name": "شعبة رياضيات"
+    }
+  ],
+  "exercise_number": 3,
+  "subject_number": 2,
+  "source_page": 5,
+  "source_pages": [
+    5
+  ],
+  "solution_source_pages": [
+    9,
+    10
+  ],
+  "title": "التمرين الثالث — بكالوريا الجزائر 2013 — الموضوع الثاني — شعبة رياضيات",
+  "statement": "نعتبر في الفضاء المنسوب إلى المعلم المتعامد المتجانس \\((O;\\vec{i},\\vec{j},\\vec{k})\\)، النقطتين \\(A(-1;0;2)\\) و \\(B(1;1;1)\\)\nوالمستقيم \\((\\Delta)\\) المعرف بالتمثيل الوسيطي التالي:\n\\[\n\\begin{cases}\nx=2+\\alpha\\\\\ny=-2\\\\\nz=-1-\\alpha\n\\end{cases}\n\\quad \\text{حيث } (\\alpha\\in\\mathbb{R}).\n\\]",
+  "questions": [
+    {
+      "id": "2013_s2_space_ex03_q1a",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1. أ- اكتب تمثيلا وسيطيا للمستقيم \\((AB)\\).",
+      "axis_tags": [
+        "space_parametric_line_plane"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل النقطة \\(A\\) وشعاع التوجيه \\(\\overrightarrow{AB}\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب شعاع AB",
+            "explanation": "\\[\\overrightarrow{AB}=B-A=(2,1,-1).\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "كتابة التمثيل الوسيطي",
+            "explanation": "\\[\n(AB):\\begin{cases}\nx=-1+2t\\\\\ny=t\\\\\nz=2-t\n\\end{cases}\n\\quad ;\\ t\\in\\mathbb{R}.\n\\]"
+          }
+        ],
+        "final_answer": "\\[\n(AB):\\begin{cases}\nx=-1+2t\\\\\ny=t\\\\\nz=2-t\n\\end{cases}\n\\quad ;\\ t\\in\\mathbb{R}.\n\\]"
+      }
+    },
+    {
+      "id": "2013_s2_space_ex03_q1b",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "ب- بين أن المستقيمين \\((AB)\\) و \\((\\Delta)\\) ليسا من نفس المستوي.",
+      "axis_tags": [
+        "space_relative_positions_intersections"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نبين أن المستقيمين غير متوازيين ولا يتقاطعان، فنستنتج أنهما متخالفان.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التحقق من عدم التوازي",
+            "explanation": "شعاع توجيه \\((AB)\\) هو \\((2,1,-1)\\)، وشعاع توجيه \\((\\Delta)\\) هو \\((1,0,-1)\\). وهما غير متناسبين، إذن المستقيمان غير متوازيين."
+          },
+          {
+            "step_number": 2,
+            "title": "التحقق من عدم التقاطع",
+            "explanation": "إذا تقاطع المستقيمان، فإن من الإحداثي \\(y\\) نحصل على \\(t=-2\\). وعندها من الإحداثي \\(x\\):\n\\[\n-1+2(-2)=2+\\alpha\\Rightarrow \\alpha=-7.\n\\]\nلكن الإحداثي \\(z\\) يعطي:\n\\[\n2-(-2)=4\\neq -1-(-7)=6.\n\\]\nإذن لا توجد نقطة تقاطع."
+          },
+          {
+            "step_number": 3,
+            "title": "الاستنتاج",
+            "explanation": "المستقيمان غير متوازيين وغير متقاطعين، إذن هما متخالفان ولا ينتميان إلى نفس المستوي."
+          }
+        ],
+        "final_answer": "المستقيمان \\((AB)\\) و\\((\\Delta)\\) ليسا من نفس المستوي."
+      }
+    },
+    {
+      "id": "2013_s2_space_ex03_q2a",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "2. \\((\\mathcal{P})\\) المستوي الذي يشمل \\((AB)\\) ويوازي \\((\\Delta)\\).\nأ- اكتب تمثيلا وسيطيا للمستوي \\((\\mathcal{P})\\).",
+      "axis_tags": [
+        "space_parametric_line_plane"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "المستوى يحتوي شعاع توجيه \\((AB)\\)، كما يحتوي شعاعا موازيا لاتجاه \\((\\Delta)\\)، ونستعمل النقطة \\(A\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "شعاعا توجيه المستوى",
+            "explanation": "\\[\n\\vec u=(2,1,-1),\\qquad \\vec v=(1,0,-1).\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "التمثيل الوسيطي",
+            "explanation": "\\[\n(\\mathcal P):\\begin{cases}\nx=-1+2\\lambda+\\gamma\\\\\ny=\\lambda\\\\\nz=2-\\lambda-\\gamma\n\\end{cases}\n\\quad ;\\ (\\lambda,\\gamma)\\in\\mathbb{R}^2.\n\\]"
+          }
+        ],
+        "final_answer": "\\[\n(\\mathcal P):\\begin{cases}\nx=-1+2\\lambda+\\gamma\\\\\ny=\\lambda\\\\\nz=2-\\lambda-\\gamma\n\\end{cases}\n\\quad ;\\ (\\lambda,\\gamma)\\in\\mathbb{R}^2.\n\\]"
+      }
+    },
+    {
+      "id": "2013_s2_space_ex03_q2b",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "ب- أثبت أن \\(x-y+z-1=0\\)، هي معادلة ديكارتية للمستوي \\((\\mathcal{P})\\).",
+      "axis_tags": [
+        "space_cartesian_plane_normal_vector"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نعوض التمثيل الوسيطي في الطرف الأيسر للمعادلة المقترحة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التعويض",
+            "explanation": "\\[\nx-y+z-1=(-1+2\\lambda+\\gamma)-\\lambda+(2-\\lambda-\\gamma)-1=0.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "الاستنتاج",
+            "explanation": "كل نقطة من التمثيل الوسيطي تحقق المعادلة، وهي معادلة مستوى لأن شعاعها الناظم \\((1,-1,1)\\) غير منعدم."
+          }
+        ],
+        "final_answer": "\\[(\\mathcal P):x-y+z-1=0.\\]"
+      }
+    },
+    {
+      "id": "2013_s2_space_ex03_q3a",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "3. لتكن \\(N\\) نقطة من المستقيم \\((\\Delta)\\) و \\(M\\) نقطة من الفضاء إحداثياتها \\((1+2\\beta;1+\\beta;1-\\beta)\\) مع \\((\\beta\\in\\mathbb{R})\\).\nأ- بين أن النقطة \\(M\\) تنتمي إلى المستقيم \\((AB)\\).",
+      "axis_tags": [
+        "space_parametric_line_plane"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نقارن إحداثيات \\(M\\) بالتمثيل الوسيطي للمستقيم \\((AB)\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "اختيار الوسيط",
+            "explanation": "نضع \\(t=1+\\beta\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "التحقق",
+            "explanation": "عند \\(t=1+\\beta\\):\n\\[\nx=-1+2t=1+2\\beta,\n\\quad y=t=1+\\beta,\n\\quad z=2-t=1-\\beta.\n\\]\nوهي إحداثيات \\(M\\)."
+          }
+        ],
+        "final_answer": "\\[M\\in(AB).\\]"
+      }
+    },
+    {
+      "id": "2013_s2_space_ex03_q3b",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "ب- جد إحداثيات النقطتين \\(M\\) و \\(N\\) حتى تكون \\(M\\) المسقط العمودي للنقطة \\(N\\) على المستوي \\((\\mathcal{P})\\).",
+      "axis_tags": [
+        "space_distances_projections",
+        "space_parametric_line_plane"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "لدينا \\(M\\in(AB)\\subset(\\mathcal P)\\). لكي تكون \\(M\\) مسقط \\(N\\) على المستوى، يجب أن يكون \\(\\overrightarrow{MN}\\) موازيا للشعاع الناظم \\((1,-1,1)\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "كتابة إحداثيات M وN",
+            "explanation": "\\[\nM=(1+2\\beta,1+\\beta,1-\\beta),\n\\qquad\nN=(2+\\alpha,-2,-1-\\alpha).\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "كتابة شعاع MN",
+            "explanation": "\\[\n\\overrightarrow{MN}=(1+\\alpha-2\\beta,-3-\\beta,-2-\\alpha+\\beta).\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "فرض التعامد على المستوى",
+            "explanation": "بما أن شعاعا ناظما للمستوى هو \\((1,-1,1)\\)، نفرض أن مركبات \\(\\overrightarrow{MN}\\) متناسبة معه. فنحصل على النظام الذي يعطي:\n\\[\n\\beta=-\\frac73,\\qquad \\alpha=-5.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "إحداثيات M وN",
+            "explanation": "بالتعويض:\n\\[\nM\\left(-\\frac{11}{3},-\\frac43,\\frac{10}{3}\\right),\n\\qquad\nN(-3,-2,4).\n\\]"
+          }
+        ],
+        "final_answer": "\\[M\\left(-\\frac{11}{3};-\\frac43;\\frac{10}{3}\\right),\\qquad N(-3;-2;4).\\]"
+      }
+    },
+    {
+      "id": "2013_s2_space_ex03_q3c",
+      "display_order": 7,
+      "content_type": "question",
+      "text": "ج- تحقق أن المسافة بين \\(N\\) و \\((\\mathcal{P})\\) هي \\(\\frac{2}{\\sqrt3}\\)، ثم احسب مساحة المثلث \\(ABN\\).",
+      "axis_tags": [
+        "space_distances_projections",
+        "space_areas_volumes"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب المسافة من \\(N\\) إلى المستوى بمعادلته الديكارتية. وبما أن \\(M\\) هو المسقط العمودي لـ\\(N\\) على المستوى و\\(M\\in(AB)\\)، فإن \\(NM\\) هو أيضا ارتفاع المثلث \\(ABN\\) الموافق للقاعدة \\(AB\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب المسافة",
+            "explanation": "\\[\nd(N,(\\mathcal P))=\\frac{|-3-(-2)+4-1|}{\\sqrt{1^2+(-1)^2+1^2}}\n=\\frac{2}{\\sqrt3}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب طول AB",
+            "explanation": "\\[\nAB=\\sqrt{2^2+1^2+(-1)^2}=\\sqrt6.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب المساحة",
+            "explanation": "بما أن \\(NM\\perp(\\mathcal P)\\) و\\((AB)\\subset(\\mathcal P)\\)، فإن \\(NM\\perp AB\\). ومن ثم:\n\\[\nS_{ABN}=\\frac12\\,AB\\times NM\n=\\frac12\\times\\sqrt6\\times\\frac{2}{\\sqrt3}\n=\\sqrt2.\n\\]"
+          }
+        ],
+        "final_answer": "\\[d(N,(\\mathcal P))=\\frac{2}{\\sqrt3},\\qquad S(ABN)=\\sqrt2\\ \\text{وحدة مساحة}.\\]"
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2013(10).pdf",
+    "statement_figure_policy": "لا يوجد شكل هندسي إلزامي في نص التمرين.",
+    "solution_figure_policy": "الحل مستقل عن أي رسم.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  }
+}

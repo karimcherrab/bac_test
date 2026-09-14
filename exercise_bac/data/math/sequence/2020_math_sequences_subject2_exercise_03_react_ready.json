@@ -1,0 +1,255 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "graph_schema_version": "1.0-react-json",
+  "version": "4.2-2020-math-sequences-subject2-ex03-react-ready",
+  "session": "ordinary",
+  "year": 2020,
+  "chapter_code": "sequences",
+  "chapter_title": "المتتاليات العددية",
+  "axis_tags": [
+    "sequence_definition_notation_methods",
+    "geometric_sequences",
+    "sequence_monotonicity",
+    "adjacent_sequences",
+    "limits_convergence_divergence",
+    "sequence_sums"
+  ],
+  "branches": [
+    {
+      "code": "math",
+      "name": "شعبة رياضيات"
+    }
+  ],
+  "exercise_number": 3,
+  "subject_number": 2,
+  "source_page": 3,
+  "source_pages": [
+    3,
+    4
+  ],
+  "solution_source_pages": [
+    9
+  ],
+  "title": "التمرين الثالث — بكالوريا الجزائر 2020 — الموضوع الثاني — شعبة رياضيات — المتتاليات",
+  "statement": "المتتاليتان العدديتان \\((u_n)\\) و \\((v_n)\\) معرفتان على \\(\\mathbb N\\) بـ:\n\\[\n\\begin{cases}\nu_0=-1\\\\\nu_{n+1}=3\\alpha u_n+(1-3\\alpha)v_n\n\\end{cases}\n\\qquad\\text{و}\\qquad\n\\begin{cases}\nv_0=3\\\\\nv_{n+1}=3\\alpha v_n+(1-3\\alpha)u_n\n\\end{cases}\n\\]\n\\((\\alpha\\) عدد حقيقي\\().\\)\nالمتتالية العددية \\((w_n)\\) معرفة على \\(\\mathbb N\\) بـ:\n\\[\nw_n=v_n-u_n.\n\\]",
+  "questions": [
+    {
+      "id": "2020_s2_sequences_ex03_q1a",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) أ. احسب \\(w_0\\) ثم احسب \\(w_1\\) بدلالة \\(\\alpha\\).",
+      "axis_tags": [
+        "sequence_definition_notation_methods"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل تعريف wₙ ثم نحسب u₁ وv₁.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب w₀",
+            "explanation": "\\[\nw_0=v_0-u_0=3-(-1)=4.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب u₁ وv₁",
+            "explanation": "\\[\nu_1=3\\alpha(-1)+(1-3\\alpha)3=3-12\\alpha,\n\\]\n\\[\nv_1=3\\alpha(3)+(1-3\\alpha)(-1)=12\\alpha-1.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب w₁",
+            "explanation": "\\[\nw_1=v_1-u_1=(12\\alpha-1)-(3-12\\alpha)=24\\alpha-4\n=4(6\\alpha-1).\n\\]"
+          }
+        ],
+        "final_answer": "\\[w_0=4,\\qquad w_1=4(6\\alpha-1).\\]"
+      }
+    },
+    {
+      "id": "2020_s2_sequences_ex03_q1b",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "ب. بين أن \\((w_n)\\) متتالية هندسية أساسها \\((6\\alpha-1)\\).",
+      "axis_tags": [
+        "geometric_sequences"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب wₙ₊₁=vₙ₊₁−uₙ₊₁.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الحساب",
+            "explanation": "\\[\nw_{n+1}=v_{n+1}-u_{n+1}\n\\]\n\\[\n=\\left[3\\alpha v_n+(1-3\\alpha)u_n\\right]-\\left[3\\alpha u_n+(1-3\\alpha)v_n\\right]\n\\]\n\\[\n=(6\\alpha-1)(v_n-u_n)=(6\\alpha-1)w_n.\n\\]"
+          }
+        ],
+        "final_answer": "\\[w_{n+1}=(6\\alpha-1)w_n.\\]"
+      }
+    },
+    {
+      "id": "2020_s2_sequences_ex03_q1c",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "جـ. اكتب عبارة \\(w_n\\) بدلالة \\(n\\) و \\(\\alpha\\)، ثم عين قيم \\(\\alpha\\) حتى تكون:\n\\[\n\\lim_{n\\to+\\infty}w_n=0.\n\\]",
+      "axis_tags": [
+        "geometric_sequences",
+        "limits_convergence_divergence"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نكتب الحد العام للمتتالية الهندسية ثم نطبق شرط نهاية qⁿ.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "عبارة wₙ",
+            "explanation": "\\[\nw_n=w_0(6\\alpha-1)^n=4(6\\alpha-1)^n.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "شرط النهاية",
+            "explanation": "\\[\n\\lim_{n\\to+\\infty}w_n=0\n\\Longleftrightarrow|6\\alpha-1|<1.\n\\]\nأي:\n\\[\n-1<6\\alpha-1<1\\Longleftrightarrow0<\\alpha<\\frac13.\n\\]"
+          }
+        ],
+        "final_answer": "\\[w_n=4(6\\alpha-1)^n,\\qquad 0<\\alpha<\\frac13.\\]"
+      }
+    },
+    {
+      "id": "2020_s2_sequences_ex03_q2a",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "نفرض في كل ما يلي:\n\\[\n\\frac16<\\alpha<\\frac13.\n\\]\n2) أ. أثبت أن المتتالية \\((u_n)\\) متزايدة تماما و أن \\((v_n)\\) متناقصة تماما.",
+      "axis_tags": [
+        "sequence_monotonicity"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نكتب الفرقين uₙ₊₁−uₙ وvₙ₊₁−vₙ بدلالة wₙ.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "إشارة wₙ",
+            "explanation": "بما أن:\n\\[\n\\frac16<\\alpha<\\frac13,\n\\]\nفإن:\n\\[\n0<6\\alpha-1<1.\n\\]\nومن ثم:\n\\[\nw_n=4(6\\alpha-1)^n>0.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "تغير uₙ",
+            "explanation": "\\[\nu_{n+1}-u_n=(1-3\\alpha)(v_n-u_n)=(1-3\\alpha)w_n.\n\\]\nوبما أن \\(1-3\\alpha>0\\) و\\(w_n>0\\)، فإن:\n\\[\nu_{n+1}-u_n>0.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "تغير vₙ",
+            "explanation": "\\[\nv_{n+1}-v_n=(3\\alpha-1)(v_n-u_n)=(3\\alpha-1)w_n.\n\\]\nوبما أن \\(3\\alpha-1<0\\)، فإن:\n\\[\nv_{n+1}-v_n<0.\n\\]"
+          }
+        ],
+        "final_answer": "\\((u_n)\\) متزايدة تماما و\\((v_n)\\) متناقصة تماما."
+      }
+    },
+    {
+      "id": "2020_s2_sequences_ex03_q2b",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "ب. استنتج أن \\((u_n)\\) و \\((v_n)\\) متقاربتان نحو نفس النهاية \\(\\ell\\).",
+      "axis_tags": [
+        "adjacent_sequences",
+        "limits_convergence_divergence"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل أن u متزايدة وv متناقصة وأن الفرق vₙ−uₙ يقترب من الصفر.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الفرق بين المتتاليتين",
+            "explanation": "\\[\nv_n-u_n=w_n=4(6\\alpha-1)^n\\longrightarrow0.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "الاستنتاج",
+            "explanation": "بما أن \\((u_n)\\) متزايدة تماما و\\((v_n)\\) متناقصة تماما و\\(v_n-u_n\\to0\\)، فإنهما متجاورتان، وبالتالي متقاربتان نحو نفس النهاية \\(\\ell\\)."
+          }
+        ],
+        "final_answer": "\\[(u_n)\\text{ و }(v_n)\\text{ متقاربتان نحو نفس النهاية }\\ell.\\]"
+      }
+    },
+    {
+      "id": "2020_s2_sequences_ex03_q3",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "3) بين أنه من أجل كل عدد طبيعي \\(n\\):\n\\[\nu_n+v_n=2,\n\\]\nواستنتج قيمة \\(\\ell\\).",
+      "axis_tags": [
+        "limits_convergence_divergence"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نجمع علاقتي الرجوع ثم نمر إلى النهاية.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "ثبات المجموع",
+            "explanation": "\\[\nu_{n+1}+v_{n+1}\n=3\\alpha(u_n+v_n)+(1-3\\alpha)(u_n+v_n)\n=u_n+v_n.\n\\]\nإذن المتتالية \\((u_n+v_n)\\) ثابتة."
+          },
+          {
+            "step_number": 2,
+            "title": "القيمة الثابتة",
+            "explanation": "\\[\nu_0+v_0=-1+3=2.\n\\]\nإذن:\n\\[\nu_n+v_n=2.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب ℓ",
+            "explanation": "بما أن:\n\\[\nu_n\\to\\ell,\n\\qquad\nv_n\\to\\ell,\n\\]\nفإن:\n\\[\n2\\ell=2.\n\\]\nومن ثم:\n\\[\n\\ell=1.\n\\]"
+          }
+        ],
+        "final_answer": "\\[u_n+v_n=2,\\qquad \\boxed{\\ell=1}.\\]"
+      }
+    },
+    {
+      "id": "2020_s2_sequences_ex03_q4",
+      "display_order": 7,
+      "content_type": "question",
+      "text": "4) احسب بدلالة \\(\\alpha\\) المجموع \\(S\\) حيث:\n\\[\nS=u_0+u_1+\\cdots+u_{2020}.\n\\]",
+      "axis_tags": [
+        "sequence_sums",
+        "geometric_sequences"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستخرج uₙ من مجموع uₙ+vₙ والفرق vₙ−uₙ، ثم نجمع.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "عبارة uₙ",
+            "explanation": "لدينا:\n\\[\nu_n+v_n=2,\n\\qquad\nv_n-u_n=4(6\\alpha-1)^n.\n\\]\nبطرح العلاقتين نحصل على:\n\\[\n2u_n=2-4(6\\alpha-1)^n,\n\\]\nومن ثم:\n\\[\nu_n=1-2(6\\alpha-1)^n.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب S",
+            "explanation": "\\[\nS=\\sum_{k=0}^{2020}\\left[1-2(6\\alpha-1)^k\\right]\n=2021-2\\sum_{k=0}^{2020}(6\\alpha-1)^k.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "المجموع الهندسي",
+            "explanation": "\\[\n\\sum_{k=0}^{2020}(6\\alpha-1)^k=\\frac{(6\\alpha-1)^{2021}-1}{(6\\alpha-1)-1}=\\frac{(6\\alpha-1)^{2021}-1}{6\\alpha-2}.\n\\]\nإذن:\n\\[\nS=2021-\\frac{(6\\alpha-1)^{2021}-1}{3\\alpha-1}.\n\\]"
+          }
+        ],
+        "final_answer": "\\[\\boxed{S=2021-\\frac{(6\\alpha-1)^{2021}-1}{3\\alpha-1}}.\\]"
+      }
+    }
+  ],
+  "rendering_contract": {
+    "no_capture": true,
+    "external_image_required": false,
+    "external_svg_required": false,
+    "graph_source": "inline_json",
+    "supported_graph_types": [],
+    "react_note": "هذا التمرين لا يحتاج رسما. جميع الصيغ تعرض مباشرة بـ MathJax أو KaTeX."
+  },
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2020(8).pdf",
+    "statement_figure_policy": "لا يوجد رسم في هذا التمرين.",
+    "solution_figure_policy": "لا Capture ولا صورة خارجية.",
+    "renderer": "MathJax/KaTeX + standard content renderer"
+  }
+}

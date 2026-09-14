@@ -1,0 +1,273 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2025-subject-02-exercise-02-lamp-rc-rl-react-compatible",
+  "session": "ordinary",
+  "year": 2025,
+  "chapter_code": "electrical_phenomena_evolution",
+  "chapter_title": "تطور دراسة ظواهر كهربائية",
+  "axis_tags": [
+    "electric_circuits_fundamentals",
+    "capacitor_fundamental_relations",
+    "rc_differential_equation_solution",
+    "rc_time_constant_graphical_analysis",
+    "inductor_fundamental_relations",
+    "rl_current_establishment_differential_equation",
+    "rl_time_constant_graphical_analysis"
+  ],
+  "branches": [
+    {
+      "code": "science",
+      "name": "شعبة علوم تجريبية"
+    }
+  ],
+  "exercise_number": 2,
+  "source_page": 6,
+  "source_pages": [
+    6
+  ],
+  "solution_source_pages": [
+    16,
+    17
+  ],
+  "title": "التمرين الثاني — بكالوريا الجزائر 2025 — الموضوع الثاني — شعبة علوم تجريبية",
+  "statement": "التمرين الثاني: (07 نقاط)\nلدراسة تأثير كل من المكثفة والوشيعة في مصباح، نحقق دارتين كهربائيتين 1 و2 (الشكل 1). المولدان مثاليان لهما نفس القوة المحركة الكهربائية \\(E=6\\,V\\)، المصباحان متماثلان ويمكن اعتبارهما ناقلين أوميين لهما نفس المقاومة \\(R=12\\,\\Omega\\).\nيهدف هذا التمرين إلى دراسة تأثير كل من المكثفة والوشيعة على توهج المصباح.",
+  "figures": [
+    {
+      "id": "2025_s2_e2_f1",
+      "type": "svg",
+      "usage": "statement",
+      "placement": "statement",
+      "title": "الشكل 1. الدارتان 1 و2",
+      "description": "الدارة 1 تضم المكثفة C والمصباح، والدارة 2 تضم الوشيعة L والمصباح.",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 900 520\" role=\"img\" aria-label=\"الشكل 1: الدارة 1 بالمكثفة والدارة 2 بالوشيعة\">\n  <rect width=\"100%\" height=\"100%\" fill=\"white\"/>\n  \n<defs>\n  <marker id=\"arrB\" markerWidth=\"10\" markerHeight=\"10\" refX=\"8\" refY=\"5\" orient=\"auto\"><path d=\"M0,0 L10,5 L0,10 z\" fill=\"#111827\"/></marker>\n</defs>\n<!-- Divider -->\n<line x1=\"450\" y1=\"45\" x2=\"450\" y2=\"455\" stroke=\"#6b7280\" stroke-width=\"2\"/>\n<!-- Circuit 2 (left): source, switch, lamp, L -->\n<circle cx=\"150\" cy=\"245\" r=\"48\" fill=\"white\" stroke=\"#111827\" stroke-width=\"4\"/>\n<path d=\"M150 197 V110 H275\" stroke=\"#111827\" stroke-width=\"4\" fill=\"none\"/>\n<path d=\"M150 293 V385 H365\" stroke=\"#111827\" stroke-width=\"4\" fill=\"none\"/>\n<circle cx=\"275\" cy=\"110\" r=\"6\" fill=\"#111827\"/><circle cx=\"315\" cy=\"110\" r=\"6\" fill=\"#111827\"/>\n<line x1=\"275\" y1=\"110\" x2=\"309\" y2=\"83\" stroke=\"#111827\" stroke-width=\"4\"/>\n<text x=\"285\" y=\"67\" font-size=\"24\" font-family=\"DejaVu Sans,Arial,sans-serif\">K</text>\n<path d=\"M315 110 H335\" stroke=\"#111827\" stroke-width=\"4\"/>\n<circle cx=\"375\" cy=\"110\" r=\"38\" fill=\"white\" stroke=\"#111827\" stroke-width=\"4\"/>\n<path d=\"M351 86 L399 134 M399 86 L351 134\" stroke=\"#111827\" stroke-width=\"3\"/>\n<text x=\"375\" y=\"62\" text-anchor=\"middle\" font-size=\"22\" font-family=\"DejaVu Sans,Arial,sans-serif\" direction=\"rtl\">مصباح</text>\n<path d=\"M413 110 H420 V205\" stroke=\"#111827\" stroke-width=\"4\" fill=\"none\"/>\n<path d=\"M420 205\n c-18 -36 -35 -36 -52 0 c-18 36 -35 36 -52 0 c-18 -36 -35 -36 -52 0\n c-18 36 -35 36 -52 0\" transform=\"rotate(90 420 205)\" stroke=\"#111827\" stroke-width=\"4\" fill=\"none\"/>\n<!-- easier direct vertical inductor -->\n<path d=\"M420 190\n c-35 18 -35 35 0 52 c35 18 35 35 0 52 c-35 18 -35 35 0 52\" stroke=\"#111827\" stroke-width=\"4\" fill=\"none\"/>\n<line x1=\"420\" y1=\"346\" x2=\"420\" y2=\"385\" stroke=\"#111827\" stroke-width=\"4\"/>\n<text x=\"390\" y=\"285\" font-size=\"26\" font-family=\"DejaVu Sans,Arial,sans-serif\">L</text>\n<text x=\"92\" y=\"253\" font-size=\"28\" font-family=\"DejaVu Sans,Arial,sans-serif\">E</text>\n<text x=\"285\" y=\"430\" text-anchor=\"middle\" font-size=\"24\" font-family=\"DejaVu Sans,Arial,sans-serif\" direction=\"rtl\">الدارة 2</text>\n\n<!-- Circuit 1 (right): source, switch, lamp, C -->\n<circle cx=\"550\" cy=\"245\" r=\"48\" fill=\"white\" stroke=\"#111827\" stroke-width=\"4\"/>\n<path d=\"M550 197 V110 H675\" stroke=\"#111827\" stroke-width=\"4\" fill=\"none\"/>\n<path d=\"M550 293 V385 H820\" stroke=\"#111827\" stroke-width=\"4\" fill=\"none\"/>\n<circle cx=\"675\" cy=\"110\" r=\"6\" fill=\"#111827\"/><circle cx=\"715\" cy=\"110\" r=\"6\" fill=\"#111827\"/>\n<line x1=\"675\" y1=\"110\" x2=\"709\" y2=\"83\" stroke=\"#111827\" stroke-width=\"4\"/>\n<text x=\"685\" y=\"67\" font-size=\"24\" font-family=\"DejaVu Sans,Arial,sans-serif\">K</text>\n<path d=\"M715 110 H735\" stroke=\"#111827\" stroke-width=\"4\"/>\n<circle cx=\"775\" cy=\"110\" r=\"38\" fill=\"white\" stroke=\"#111827\" stroke-width=\"4\"/>\n<path d=\"M751 86 L799 134 M799 86 L751 134\" stroke=\"#111827\" stroke-width=\"3\"/>\n<text x=\"775\" y=\"62\" text-anchor=\"middle\" font-size=\"22\" font-family=\"DejaVu Sans,Arial,sans-serif\" direction=\"rtl\">مصباح</text>\n<path d=\"M813 110 H820 V240\" stroke=\"#111827\" stroke-width=\"4\"/>\n<line x1=\"780\" y1=\"240\" x2=\"860\" y2=\"240\" stroke=\"#111827\" stroke-width=\"5\"/>\n<line x1=\"780\" y1=\"267\" x2=\"860\" y2=\"267\" stroke=\"#111827\" stroke-width=\"5\"/>\n<line x1=\"820\" y1=\"267\" x2=\"820\" y2=\"385\" stroke=\"#111827\" stroke-width=\"4\"/>\n<text x=\"865\" y=\"263\" font-size=\"26\" font-family=\"DejaVu Sans,Arial,sans-serif\">C</text>\n<text x=\"492\" y=\"253\" font-size=\"28\" font-family=\"DejaVu Sans,Arial,sans-serif\">E</text>\n<text x=\"685\" y=\"430\" text-anchor=\"middle\" font-size=\"24\" font-family=\"DejaVu Sans,Arial,sans-serif\" direction=\"rtl\">الدارة 1</text>\n<text x=\"450\" y=\"500\" text-anchor=\"middle\" font-size=\"24\" font-family=\"DejaVu Sans,Arial,sans-serif\" direction=\"rtl\">الشكل 1</text>\n\n</svg>",
+      "render_mode": "inline",
+      "responsive": true,
+      "file_path": "public/phy/bac/2025/subject_02/exercise_02/figure_01_two_circuits.svg"
+    }
+  ],
+  "statement_graphs": [
+    {
+      "id": "2025_s2_e2_f1",
+      "type": "svg",
+      "usage": "statement",
+      "placement": "statement",
+      "title": "الشكل 1. الدارتان 1 و2",
+      "description": "الدارة 1 تضم المكثفة C والمصباح، والدارة 2 تضم الوشيعة L والمصباح.",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 900 520\" role=\"img\" aria-label=\"الشكل 1: الدارة 1 بالمكثفة والدارة 2 بالوشيعة\">\n  <rect width=\"100%\" height=\"100%\" fill=\"white\"/>\n  \n<defs>\n  <marker id=\"arrB\" markerWidth=\"10\" markerHeight=\"10\" refX=\"8\" refY=\"5\" orient=\"auto\"><path d=\"M0,0 L10,5 L0,10 z\" fill=\"#111827\"/></marker>\n</defs>\n<!-- Divider -->\n<line x1=\"450\" y1=\"45\" x2=\"450\" y2=\"455\" stroke=\"#6b7280\" stroke-width=\"2\"/>\n<!-- Circuit 2 (left): source, switch, lamp, L -->\n<circle cx=\"150\" cy=\"245\" r=\"48\" fill=\"white\" stroke=\"#111827\" stroke-width=\"4\"/>\n<path d=\"M150 197 V110 H275\" stroke=\"#111827\" stroke-width=\"4\" fill=\"none\"/>\n<path d=\"M150 293 V385 H365\" stroke=\"#111827\" stroke-width=\"4\" fill=\"none\"/>\n<circle cx=\"275\" cy=\"110\" r=\"6\" fill=\"#111827\"/><circle cx=\"315\" cy=\"110\" r=\"6\" fill=\"#111827\"/>\n<line x1=\"275\" y1=\"110\" x2=\"309\" y2=\"83\" stroke=\"#111827\" stroke-width=\"4\"/>\n<text x=\"285\" y=\"67\" font-size=\"24\" font-family=\"DejaVu Sans,Arial,sans-serif\">K</text>\n<path d=\"M315 110 H335\" stroke=\"#111827\" stroke-width=\"4\"/>\n<circle cx=\"375\" cy=\"110\" r=\"38\" fill=\"white\" stroke=\"#111827\" stroke-width=\"4\"/>\n<path d=\"M351 86 L399 134 M399 86 L351 134\" stroke=\"#111827\" stroke-width=\"3\"/>\n<text x=\"375\" y=\"62\" text-anchor=\"middle\" font-size=\"22\" font-family=\"DejaVu Sans,Arial,sans-serif\" direction=\"rtl\">مصباح</text>\n<path d=\"M413 110 H420 V205\" stroke=\"#111827\" stroke-width=\"4\" fill=\"none\"/>\n<path d=\"M420 205\n c-18 -36 -35 -36 -52 0 c-18 36 -35 36 -52 0 c-18 -36 -35 -36 -52 0\n c-18 36 -35 36 -52 0\" transform=\"rotate(90 420 205)\" stroke=\"#111827\" stroke-width=\"4\" fill=\"none\"/>\n<!-- easier direct vertical inductor -->\n<path d=\"M420 190\n c-35 18 -35 35 0 52 c35 18 35 35 0 52 c-35 18 -35 35 0 52\" stroke=\"#111827\" stroke-width=\"4\" fill=\"none\"/>\n<line x1=\"420\" y1=\"346\" x2=\"420\" y2=\"385\" stroke=\"#111827\" stroke-width=\"4\"/>\n<text x=\"390\" y=\"285\" font-size=\"26\" font-family=\"DejaVu Sans,Arial,sans-serif\">L</text>\n<text x=\"92\" y=\"253\" font-size=\"28\" font-family=\"DejaVu Sans,Arial,sans-serif\">E</text>\n<text x=\"285\" y=\"430\" text-anchor=\"middle\" font-size=\"24\" font-family=\"DejaVu Sans,Arial,sans-serif\" direction=\"rtl\">الدارة 2</text>\n\n<!-- Circuit 1 (right): source, switch, lamp, C -->\n<circle cx=\"550\" cy=\"245\" r=\"48\" fill=\"white\" stroke=\"#111827\" stroke-width=\"4\"/>\n<path d=\"M550 197 V110 H675\" stroke=\"#111827\" stroke-width=\"4\" fill=\"none\"/>\n<path d=\"M550 293 V385 H820\" stroke=\"#111827\" stroke-width=\"4\" fill=\"none\"/>\n<circle cx=\"675\" cy=\"110\" r=\"6\" fill=\"#111827\"/><circle cx=\"715\" cy=\"110\" r=\"6\" fill=\"#111827\"/>\n<line x1=\"675\" y1=\"110\" x2=\"709\" y2=\"83\" stroke=\"#111827\" stroke-width=\"4\"/>\n<text x=\"685\" y=\"67\" font-size=\"24\" font-family=\"DejaVu Sans,Arial,sans-serif\">K</text>\n<path d=\"M715 110 H735\" stroke=\"#111827\" stroke-width=\"4\"/>\n<circle cx=\"775\" cy=\"110\" r=\"38\" fill=\"white\" stroke=\"#111827\" stroke-width=\"4\"/>\n<path d=\"M751 86 L799 134 M799 86 L751 134\" stroke=\"#111827\" stroke-width=\"3\"/>\n<text x=\"775\" y=\"62\" text-anchor=\"middle\" font-size=\"22\" font-family=\"DejaVu Sans,Arial,sans-serif\" direction=\"rtl\">مصباح</text>\n<path d=\"M813 110 H820 V240\" stroke=\"#111827\" stroke-width=\"4\"/>\n<line x1=\"780\" y1=\"240\" x2=\"860\" y2=\"240\" stroke=\"#111827\" stroke-width=\"5\"/>\n<line x1=\"780\" y1=\"267\" x2=\"860\" y2=\"267\" stroke=\"#111827\" stroke-width=\"5\"/>\n<line x1=\"820\" y1=\"267\" x2=\"820\" y2=\"385\" stroke=\"#111827\" stroke-width=\"4\"/>\n<text x=\"865\" y=\"263\" font-size=\"26\" font-family=\"DejaVu Sans,Arial,sans-serif\">C</text>\n<text x=\"492\" y=\"253\" font-size=\"28\" font-family=\"DejaVu Sans,Arial,sans-serif\">E</text>\n<text x=\"685\" y=\"430\" text-anchor=\"middle\" font-size=\"24\" font-family=\"DejaVu Sans,Arial,sans-serif\" direction=\"rtl\">الدارة 1</text>\n<text x=\"450\" y=\"500\" text-anchor=\"middle\" font-size=\"24\" font-family=\"DejaVu Sans,Arial,sans-serif\" direction=\"rtl\">الشكل 1</text>\n\n</svg>",
+      "render_mode": "inline",
+      "responsive": true,
+      "file_path": "public/phy/bac/2025/subject_02/exercise_02/figure_01_two_circuits.svg"
+    }
+  ],
+  "questions": [
+    {
+      "id": "2025_s02_e02_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "أولا: الدارة 1\nالمكثفة غير مشحونة، سعتها \\(C=47\\times10^3\\,\\mu F\\). نغلق القاطعة \\(K\\) في اللحظة \\(t=0\\) نعتبرها كمبدأ للأزمنة.\n1. اكتب المعادلة التفاضلية لتطور \\(i(t)\\) شدة التيار المار في الدارة على الشكل:\n\\[RC\\frac{di(t)}{dt}+i(t)=0.\\]\n2. تحقق أن العلاقة: \\[i(t)=\\frac{E}{R}e^{-t/\\tau}\\] هي حل للمعادلة التفاضلية السابقة.\n3. أكمل الجدول 1 باستغلال العلاقة السابقة (السؤال 2).\n4. كم تكون قيمة التوتر الكهربائي بين طرفي المكثفة بعد فتح القاطعة \\(K\\) في اللحظة \\(10\\tau\\)؟\n5. لماذا ننصح بعدم لمس قطبي المكثفة بالأصابع؟",
+      "axis_tags": [
+        "capacitor_fundamental_relations",
+        "rc_differential_equation_solution",
+        "rc_time_constant_graphical_analysis"
+      ],
+      "solution": {
+        "strategy": "نكتب قانون جمع التوترات في دارة RC ثم نشتق، نتحقق من الحل الأسي ونستعمله عند 0 وτ و10τ لربط شدة التيار بإضاءة المصباح.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "1 — المعادلة التفاضلية",
+            "explanation": "من قانون جمع التوترات: \\[u_C+u_R=E.\\] أي \\[\\frac{q}{C}+Ri=E.\\] باشتقاق الطرفين: \\[\\frac1C\\frac{dq}{dt}+R\\frac{di}{dt}=0.\\] ومع \\(dq/dt=i\\): \\[\\boxed{RC\\frac{di}{dt}+i=0}.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "2 — التحقق من الحل",
+            "explanation": "لدينا \\(\\tau=RC\\) و\\[i(t)=\\frac ER e^{-t/\\tau}.\\] مشتقته \\[\\frac{di}{dt}=-\\frac{E}{R\\tau}e^{-t/\\tau}.\\] بالتعويض في \\(RC\\,di/dt+i\\) ومع \\(RC=\\tau\\) نحصل على صفر، إذن الحل صحيح."
+          },
+          {
+            "step_number": 3,
+            "title": "3 — إكمال الجدول 1",
+            "explanation": "\\[i(0)=\\frac ER=\\frac6{12}=0.50\\,A.\\] وعند \\(t=\\tau\\): \\[i(\\tau)=0.50e^{-1}\\approx0.18\\,A.\\] وعند \\(10\\tau\\): \\(i\\approx0\\). لذلك يكون المصباح متوهجا في البداية، توهجه أقل عند \\(\\tau\\)، ثم منطفئا عمليا عند \\(10\\tau\\).",
+            "graph_data": {
+              "id": "2025_s2_e2_sol_t1",
+              "diagram_type": "2025_s2_e2_sol_t1",
+              "usage": "solution",
+              "title": "حل الجدول 1",
+              "description": "قيم شدة التيار وحالة إضاءة المصباح في دارة RC.",
+              "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 900 510\" role=\"img\" aria-label=\"حل الجدول 1\">\n  <rect width=\"100%\" height=\"100%\" fill=\"white\"/>\n  \n<rect x=\"95\" y=\"70\" width=\"710\" height=\"345\" fill=\"white\" stroke=\"#111827\" stroke-width=\"3\"/>\n<line x1=\"295\" y1=\"70\" x2=\"295\" y2=\"415\" stroke=\"#111827\" stroke-width=\"2\"/>\n<line x1=\"465\" y1=\"70\" x2=\"465\" y2=\"415\" stroke=\"#111827\" stroke-width=\"2\"/>\n<line x1=\"635\" y1=\"70\" x2=\"635\" y2=\"415\" stroke=\"#111827\" stroke-width=\"2\"/>\n<line x1=\"95\" y1=\"155\" x2=\"805\" y2=\"155\" stroke=\"#111827\" stroke-width=\"2\"/>\n<line x1=\"95\" y1=\"255\" x2=\"805\" y2=\"255\" stroke=\"#111827\" stroke-width=\"2\"/>\n<text x=\"195\" y=\"122\" text-anchor=\"middle\" font-size=\"26\" font-family=\"DejaVu Sans,Arial,sans-serif\" font-style=\"italic\">t(s)</text>\n<text x=\"380\" y=\"122\" text-anchor=\"middle\" font-size=\"26\" font-family=\"DejaVu Sans,Arial,sans-serif\">0</text>\n<text x=\"550\" y=\"122\" text-anchor=\"middle\" font-size=\"26\" font-family=\"DejaVu Sans,Arial,sans-serif\">τ</text>\n<text x=\"720\" y=\"122\" text-anchor=\"middle\" font-size=\"26\" font-family=\"DejaVu Sans,Arial,sans-serif\">10τ</text>\n<text x=\"195\" y=\"216\" text-anchor=\"middle\" font-size=\"26\" font-family=\"DejaVu Sans,Arial,sans-serif\" font-style=\"italic\">i(A)</text>\n<text x=\"380\" y=\"216\" text-anchor=\"middle\" font-size=\"24\" font-family=\"DejaVu Sans,Arial,sans-serif\">0,50</text>\n<text x=\"550\" y=\"216\" text-anchor=\"middle\" font-size=\"24\" font-family=\"DejaVu Sans,Arial,sans-serif\">0,18</text>\n<text x=\"720\" y=\"216\" text-anchor=\"middle\" font-size=\"24\" font-family=\"DejaVu Sans,Arial,sans-serif\">≈ 0</text>\n<text x=\"195\" y=\"325\" text-anchor=\"middle\" font-size=\"24\" font-family=\"DejaVu Sans,Arial,sans-serif\" direction=\"rtl\">إضاءة المصباح</text>\n<text x=\"380\" y=\"325\" text-anchor=\"middle\" font-size=\"22\" font-family=\"DejaVu Sans,Arial,sans-serif\" direction=\"rtl\">توهج</text>\n<text x=\"550\" y=\"325\" text-anchor=\"middle\" font-size=\"22\" font-family=\"DejaVu Sans,Arial,sans-serif\" direction=\"rtl\">توهج أقل</text>\n<text x=\"720\" y=\"325\" text-anchor=\"middle\" font-size=\"22\" font-family=\"DejaVu Sans,Arial,sans-serif\" direction=\"rtl\">منطفئ</text>\n<text x=\"450\" y=\"478\" text-anchor=\"middle\" font-size=\"24\" font-family=\"DejaVu Sans,Arial,sans-serif\" direction=\"rtl\">حل الجدول 1</text>\n\n</svg>",
+              "render_mode": "inline",
+              "responsive": true,
+              "file_path": "public/phy/bac/2025/subject_02/exercise_02/solution_table_01_rc.svg"
+            }
+          },
+          {
+            "step_number": 4,
+            "title": "4 — توتر المكثفة بعد فتح القاطعة عند 10τ",
+            "explanation": "عند \\(10\\tau\\) تكون المكثفة مشحونة كليا تقريبا، أي \\(u_C\\approx E\\). وبعد فتح القاطعة تحتفظ بشحنتها، ومنه: \\[\\boxed{u_C=E=6\\,V}.\\]"
+          },
+          {
+            "step_number": 5,
+            "title": "5 — سبب عدم لمس قطبي المكثفة",
+            "explanation": "لأن المكثفة قد تبقى مشحونة حتى بعد فتح الدارة، ولمس قطبيها قد يؤدي إلى تفريغ شحنتها عبر الجسم."
+          }
+        ],
+        "final_answer": "في الدارة 1: \\(i(0)=0.50\\,A\\)، \\(i(\\tau)\\approx0.18\\,A\\)، \\(i(10\\tau)\\approx0\\)، وبعد فتح القاطعة عند \\(10\\tau\\): \\(u_C=6\\,V\\)."
+      },
+      "figures": [
+        {
+          "id": "2025_s2_e2_t1",
+          "type": "svg",
+          "usage": "statement",
+          "placement": "question",
+          "title": "الجدول 1",
+          "description": "جدول مطلوب إكماله للدارة 1 عند 0 وτ و10τ.",
+          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 900 510\" role=\"img\" aria-label=\"الجدول 1\">\n  <rect width=\"100%\" height=\"100%\" fill=\"white\"/>\n  \n<rect x=\"95\" y=\"80\" width=\"710\" height=\"330\" fill=\"white\" stroke=\"#111827\" stroke-width=\"3\"/>\n<line x1=\"295\" y1=\"80\" x2=\"295\" y2=\"410\" stroke=\"#111827\" stroke-width=\"2\"/>\n<line x1=\"465\" y1=\"80\" x2=\"465\" y2=\"410\" stroke=\"#111827\" stroke-width=\"2\"/>\n<line x1=\"635\" y1=\"80\" x2=\"635\" y2=\"410\" stroke=\"#111827\" stroke-width=\"2\"/>\n<line x1=\"95\" y1=\"165\" x2=\"805\" y2=\"165\" stroke=\"#111827\" stroke-width=\"2\"/>\n<line x1=\"95\" y1=\"260\" x2=\"805\" y2=\"260\" stroke=\"#111827\" stroke-width=\"2\"/>\n<text x=\"195\" y=\"132\" text-anchor=\"middle\" font-size=\"26\" font-family=\"DejaVu Sans,Arial,sans-serif\" font-style=\"italic\">t(s)</text>\n<text x=\"380\" y=\"132\" text-anchor=\"middle\" font-size=\"26\" font-family=\"DejaVu Sans,Arial,sans-serif\">0</text>\n<text x=\"550\" y=\"132\" text-anchor=\"middle\" font-size=\"26\" font-family=\"DejaVu Sans,Arial,sans-serif\">τ</text>\n<text x=\"720\" y=\"132\" text-anchor=\"middle\" font-size=\"26\" font-family=\"DejaVu Sans,Arial,sans-serif\">10τ</text>\n<text x=\"195\" y=\"220\" text-anchor=\"middle\" font-size=\"26\" font-family=\"DejaVu Sans,Arial,sans-serif\" font-style=\"italic\">i(A)</text>\n<text x=\"195\" y=\"325\" text-anchor=\"middle\" font-size=\"24\" font-family=\"DejaVu Sans,Arial,sans-serif\" direction=\"rtl\">إضاءة المصباح</text>\n<text x=\"450\" y=\"475\" text-anchor=\"middle\" font-size=\"24\" font-family=\"DejaVu Sans,Arial,sans-serif\" direction=\"rtl\">الجدول 1</text>\n\n</svg>",
+          "render_mode": "inline",
+          "responsive": true,
+          "file_path": "public/phy/bac/2025/subject_02/exercise_02/table_01_rc_blank.svg"
+        }
+      ]
+    },
+    {
+      "id": "2025_s02_e02_q2",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "ثانيا: الدارة 2\nالوشيعة مثالية ذاتيتها \\(L=1.2\\,mH\\). نغلق القاطعة \\(K\\) في اللحظة \\(t=0\\) نعتبرها كمبدأ للأزمنة.\n1. يعطى حل المعادلة التفاضلية لتطور شدة التيار \\(i(t)\\) المار في الدارة 2:\n\\[i(t)=\\frac{E}{R}\\left(1-e^{-t/\\tau}\\right).\\]\nأكمل الجدول 2.\n2. جد قيمة التوتر بين طرفي الوشيعة في اللحظة \\(10\\tau\\).",
+      "axis_tags": [
+        "inductor_fundamental_relations",
+        "rl_current_establishment_differential_equation",
+        "rl_time_constant_graphical_analysis"
+      ],
+      "solution": {
+        "strategy": "نحسب شدة التيار عند 0 وτ و10τ من حل دارة RL، ثم نستعمل uL=L di/dt في النظام الدائم.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "1 — إكمال الجدول 2",
+            "explanation": "\\[i(0)=0.\\] عند \\(t=\\tau\\): \\[i(\\tau)=\\frac6{12}(1-e^{-1})\\approx0.32\\,A.\\] وعند \\(10\\tau\\): \\[i(10\\tau)\\approx\\frac ER=0.50\\,A.\\] لذلك يكون المصباح منطفئا لحظة الغلق، ثم يتوهج عند \\(\\tau\\)، ويبلغ توهجا أكبر في النظام الدائم.",
+            "graph_data": {
+              "id": "2025_s2_e2_sol_t2",
+              "diagram_type": "2025_s2_e2_sol_t2",
+              "usage": "solution",
+              "title": "حل الجدول 2",
+              "description": "قيم شدة التيار وحالة إضاءة المصباح في دارة RL.",
+              "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 900 510\" role=\"img\" aria-label=\"حل الجدول 2\">\n  <rect width=\"100%\" height=\"100%\" fill=\"white\"/>\n  \n<rect x=\"95\" y=\"70\" width=\"710\" height=\"345\" fill=\"white\" stroke=\"#111827\" stroke-width=\"3\"/>\n<line x1=\"295\" y1=\"70\" x2=\"295\" y2=\"415\" stroke=\"#111827\" stroke-width=\"2\"/>\n<line x1=\"465\" y1=\"70\" x2=\"465\" y2=\"415\" stroke=\"#111827\" stroke-width=\"2\"/>\n<line x1=\"635\" y1=\"70\" x2=\"635\" y2=\"415\" stroke=\"#111827\" stroke-width=\"2\"/>\n<line x1=\"95\" y1=\"155\" x2=\"805\" y2=\"155\" stroke=\"#111827\" stroke-width=\"2\"/>\n<line x1=\"95\" y1=\"255\" x2=\"805\" y2=\"255\" stroke=\"#111827\" stroke-width=\"2\"/>\n<text x=\"195\" y=\"122\" text-anchor=\"middle\" font-size=\"26\" font-family=\"DejaVu Sans,Arial,sans-serif\" font-style=\"italic\">t(s)</text>\n<text x=\"380\" y=\"122\" text-anchor=\"middle\" font-size=\"26\" font-family=\"DejaVu Sans,Arial,sans-serif\">0</text>\n<text x=\"550\" y=\"122\" text-anchor=\"middle\" font-size=\"26\" font-family=\"DejaVu Sans,Arial,sans-serif\">τ</text>\n<text x=\"720\" y=\"122\" text-anchor=\"middle\" font-size=\"26\" font-family=\"DejaVu Sans,Arial,sans-serif\">10τ</text>\n<text x=\"195\" y=\"216\" text-anchor=\"middle\" font-size=\"26\" font-family=\"DejaVu Sans,Arial,sans-serif\" font-style=\"italic\">i(A)</text>\n<text x=\"380\" y=\"216\" text-anchor=\"middle\" font-size=\"24\" font-family=\"DejaVu Sans,Arial,sans-serif\">0</text>\n<text x=\"550\" y=\"216\" text-anchor=\"middle\" font-size=\"24\" font-family=\"DejaVu Sans,Arial,sans-serif\">0,32</text>\n<text x=\"720\" y=\"216\" text-anchor=\"middle\" font-size=\"24\" font-family=\"DejaVu Sans,Arial,sans-serif\">0,50</text>\n<text x=\"195\" y=\"325\" text-anchor=\"middle\" font-size=\"24\" font-family=\"DejaVu Sans,Arial,sans-serif\" direction=\"rtl\">إضاءة المصباح</text>\n<text x=\"380\" y=\"325\" text-anchor=\"middle\" font-size=\"22\" font-family=\"DejaVu Sans,Arial,sans-serif\" direction=\"rtl\">منطفئ</text>\n<text x=\"550\" y=\"325\" text-anchor=\"middle\" font-size=\"22\" font-family=\"DejaVu Sans,Arial,sans-serif\" direction=\"rtl\">توهج</text>\n<text x=\"720\" y=\"325\" text-anchor=\"middle\" font-size=\"22\" font-family=\"DejaVu Sans,Arial,sans-serif\" direction=\"rtl\">توهج أكبر</text>\n<text x=\"450\" y=\"478\" text-anchor=\"middle\" font-size=\"24\" font-family=\"DejaVu Sans,Arial,sans-serif\" direction=\"rtl\">حل الجدول 2</text>\n\n</svg>",
+              "render_mode": "inline",
+              "responsive": true,
+              "file_path": "public/phy/bac/2025/subject_02/exercise_02/solution_table_02_rl.svg"
+            }
+          },
+          {
+            "step_number": 2,
+            "title": "2 — توتر الوشيعة عند 10τ",
+            "explanation": "للوشيعة المثالية: \\[u_L=L\\frac{di}{dt}.\\] عند \\(10\\tau\\) تكون الدارة عمليا في النظام الدائم، فتكون شدة التيار ثابتة ومنه \\(di/dt=0\\). إذن: \\[\\boxed{u_L=0\\,V}.\\]"
+          }
+        ],
+        "final_answer": "في الدارة 2: \\(i(0)=0\\)، \\(i(\\tau)\\approx0.32\\,A\\)، \\(i(10\\tau)\\approx0.50\\,A\\)، وعند \\(10\\tau\\): \\(u_L=0\\,V\\)."
+      },
+      "figures": [
+        {
+          "id": "2025_s2_e2_t2",
+          "type": "svg",
+          "usage": "statement",
+          "placement": "question",
+          "title": "الجدول 2",
+          "description": "جدول مطلوب إكماله للدارة 2 عند 0 وτ و10τ.",
+          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 900 510\" role=\"img\" aria-label=\"الجدول 2\">\n  <rect width=\"100%\" height=\"100%\" fill=\"white\"/>\n  \n<rect x=\"95\" y=\"80\" width=\"710\" height=\"330\" fill=\"white\" stroke=\"#111827\" stroke-width=\"3\"/>\n<line x1=\"295\" y1=\"80\" x2=\"295\" y2=\"410\" stroke=\"#111827\" stroke-width=\"2\"/>\n<line x1=\"465\" y1=\"80\" x2=\"465\" y2=\"410\" stroke=\"#111827\" stroke-width=\"2\"/>\n<line x1=\"635\" y1=\"80\" x2=\"635\" y2=\"410\" stroke=\"#111827\" stroke-width=\"2\"/>\n<line x1=\"95\" y1=\"165\" x2=\"805\" y2=\"165\" stroke=\"#111827\" stroke-width=\"2\"/>\n<line x1=\"95\" y1=\"260\" x2=\"805\" y2=\"260\" stroke=\"#111827\" stroke-width=\"2\"/>\n<text x=\"195\" y=\"132\" text-anchor=\"middle\" font-size=\"26\" font-family=\"DejaVu Sans,Arial,sans-serif\" font-style=\"italic\">t(s)</text>\n<text x=\"380\" y=\"132\" text-anchor=\"middle\" font-size=\"26\" font-family=\"DejaVu Sans,Arial,sans-serif\">0</text>\n<text x=\"550\" y=\"132\" text-anchor=\"middle\" font-size=\"26\" font-family=\"DejaVu Sans,Arial,sans-serif\">τ</text>\n<text x=\"720\" y=\"132\" text-anchor=\"middle\" font-size=\"26\" font-family=\"DejaVu Sans,Arial,sans-serif\">10τ</text>\n<text x=\"195\" y=\"220\" text-anchor=\"middle\" font-size=\"26\" font-family=\"DejaVu Sans,Arial,sans-serif\" font-style=\"italic\">i(A)</text>\n<text x=\"195\" y=\"325\" text-anchor=\"middle\" font-size=\"24\" font-family=\"DejaVu Sans,Arial,sans-serif\" direction=\"rtl\">إضاءة المصباح</text>\n<text x=\"450\" y=\"475\" text-anchor=\"middle\" font-size=\"24\" font-family=\"DejaVu Sans,Arial,sans-serif\" direction=\"rtl\">الجدول 2</text>\n\n</svg>",
+          "render_mode": "inline",
+          "responsive": true,
+          "file_path": "public/phy/bac/2025/subject_02/exercise_02/table_02_rl_blank.svg"
+        }
+      ]
+    },
+    {
+      "id": "2025_s02_e02_q3",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "ثالثا:\n1. تحصلنا تجريبيا على المنحنى البياني لتطور التوتر بين طرفي عنصر كهربائي من إحدى الدارتين 1 و2 (الشكل 2). حدد الدارة التي ينتمي إليها هذا العنصر الكهربائي. علل.\n2. نستبدل المصباحين التالفين بمصباحين آخرين متماثلين مقاومتهما أكبر من مقاومتي المتلفين.\nكيف تتغير مدة النظام الانتقالي في كل دارة؟ علل.",
+      "axis_tags": [
+        "rc_time_constant_graphical_analysis",
+        "rl_time_constant_graphical_analysis"
+      ],
+      "solution": {
+        "strategy": "نقارن ثابت الزمن المقروء بيانيا مع ثابت زمن دارة RC وثابت زمن دارة RL، ثم ندرس أثر زيادة R على 5RC وعلى 5L/R.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "1 — قراءة ثابت الزمن من الشكل 2",
+            "explanation": "من مماس المنحنى عند الأصل نقرأ تقريبا: \\[\\boxed{\\tau_{بيان}\\approx0.10\\,ms}.\\]",
+            "graph_data": {
+              "id": "2025_s2_e2_sol_g2",
+              "diagram_type": "2025_s2_e2_sol_g2",
+              "usage": "solution",
+              "title": "قراءة ثابت الزمن من الشكل 2",
+              "description": "المماس عند الأصل يعطي τ≈0.10 ms؛ هذه قيمة دارة RL.",
+              "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 900 580\" role=\"img\" aria-label=\"قراءة ثابت الزمن من الشكل 2\">\n  <rect width=\"100%\" height=\"100%\" fill=\"white\"/>\n  <line x1=\"130.0\" y1=\"80\" x2=\"130.0\" y2=\"470\" stroke=\"#9ca3af\" stroke-width=\"1\"/><line x1=\"196.0\" y1=\"80\" x2=\"196.0\" y2=\"470\" stroke=\"#9ca3af\" stroke-width=\"1\"/><line x1=\"262.0\" y1=\"80\" x2=\"262.0\" y2=\"470\" stroke=\"#9ca3af\" stroke-width=\"1\"/><line x1=\"328.0\" y1=\"80\" x2=\"328.0\" y2=\"470\" stroke=\"#9ca3af\" stroke-width=\"1\"/><line x1=\"394.0\" y1=\"80\" x2=\"394.0\" y2=\"470\" stroke=\"#9ca3af\" stroke-width=\"1\"/><line x1=\"460.0\" y1=\"80\" x2=\"460.0\" y2=\"470\" stroke=\"#9ca3af\" stroke-width=\"1\"/><line x1=\"526.0\" y1=\"80\" x2=\"526.0\" y2=\"470\" stroke=\"#9ca3af\" stroke-width=\"1\"/><line x1=\"592.0\" y1=\"80\" x2=\"592.0\" y2=\"470\" stroke=\"#9ca3af\" stroke-width=\"1\"/><line x1=\"658.0\" y1=\"80\" x2=\"658.0\" y2=\"470\" stroke=\"#9ca3af\" stroke-width=\"1\"/><line x1=\"724.0\" y1=\"80\" x2=\"724.0\" y2=\"470\" stroke=\"#9ca3af\" stroke-width=\"1\"/><line x1=\"790.0\" y1=\"80\" x2=\"790.0\" y2=\"470\" stroke=\"#9ca3af\" stroke-width=\"1\"/><line x1=\"130\" y1=\"470.0\" x2=\"790\" y2=\"470.0\" stroke=\"#9ca3af\" stroke-width=\"1\"/><line x1=\"130\" y1=\"440.0\" x2=\"790\" y2=\"440.0\" stroke=\"#9ca3af\" stroke-width=\"1\"/><line x1=\"130\" y1=\"410.0\" x2=\"790\" y2=\"410.0\" stroke=\"#9ca3af\" stroke-width=\"1\"/><line x1=\"130\" y1=\"380.0\" x2=\"790\" y2=\"380.0\" stroke=\"#9ca3af\" stroke-width=\"1\"/><line x1=\"130\" y1=\"350.0\" x2=\"790\" y2=\"350.0\" stroke=\"#9ca3af\" stroke-width=\"1\"/><line x1=\"130\" y1=\"320.0\" x2=\"790\" y2=\"320.0\" stroke=\"#9ca3af\" stroke-width=\"1\"/><line x1=\"130\" y1=\"290.0\" x2=\"790\" y2=\"290.0\" stroke=\"#9ca3af\" stroke-width=\"1\"/><line x1=\"130\" y1=\"260.0\" x2=\"790\" y2=\"260.0\" stroke=\"#9ca3af\" stroke-width=\"1\"/><line x1=\"130\" y1=\"230.0\" x2=\"790\" y2=\"230.0\" stroke=\"#9ca3af\" stroke-width=\"1\"/><line x1=\"130\" y1=\"200.0\" x2=\"790\" y2=\"200.0\" stroke=\"#9ca3af\" stroke-width=\"1\"/><line x1=\"130\" y1=\"170.0\" x2=\"790\" y2=\"170.0\" stroke=\"#9ca3af\" stroke-width=\"1\"/><line x1=\"130\" y1=\"140.0\" x2=\"790\" y2=\"140.0\" stroke=\"#9ca3af\" stroke-width=\"1\"/><line x1=\"130\" y1=\"110.0\" x2=\"790\" y2=\"110.0\" stroke=\"#9ca3af\" stroke-width=\"1\"/><line x1=\"130\" y1=\"80.0\" x2=\"790\" y2=\"80.0\" stroke=\"#9ca3af\" stroke-width=\"1\"/><line x1=\"130\" y1=\"470\" x2=\"820\" y2=\"470\" stroke=\"#111827\" stroke-width=\"3\"/><line x1=\"130\" y1=\"470\" x2=\"130\" y2=\"60\" stroke=\"#111827\" stroke-width=\"3\"/><polyline points=\"130.00,110.00 133.32,118.93 136.63,127.64 139.95,136.14 143.27,144.42 146.58,152.50 149.90,160.38 153.22,168.06 156.53,175.55 159.85,182.86 163.17,189.98 166.48,196.93 169.80,203.71 173.12,210.31 176.43,216.76 179.75,223.04 183.07,229.17 186.38,235.14 189.70,240.97 193.02,246.66 196.33,252.20 199.65,257.60 202.96,262.87 206.28,268.01 209.60,273.02 212.91,277.91 216.23,282.68 219.55,287.32 222.86,291.86 226.18,296.28 229.50,300.59 232.81,304.79 236.13,308.89 239.45,312.89 242.76,316.79 246.08,320.59 249.40,324.30 252.71,327.91 256.03,331.44 259.35,334.87 262.66,338.23 265.98,341.50 269.30,344.69 272.61,347.79 275.93,350.83 279.25,353.78 282.56,356.67 285.88,359.48 289.20,362.22 292.51,364.90 295.83,367.50 299.15,370.05 302.46,372.53 305.78,374.95 309.10,377.30 312.41,379.60 315.73,381.85 319.05,384.03 322.36,386.17 325.68,388.25 328.99,390.28 332.31,392.25 335.63,394.18 338.94,396.06 342.26,397.90 345.58,399.69 348.89,401.43 352.21,403.13 355.53,404.79 358.84,406.41 362.16,407.99 365.48,409.53 368.79,411.03 372.11,412.49 375.43,413.92 378.74,415.31 382.06,416.67 385.38,417.99 388.69,419.28 392.01,420.54 395.33,421.77 398.64,422.96 401.96,424.13 405.28,425.27 408.59,426.38 411.91,427.46 415.23,428.52 418.54,429.55 421.86,430.55 425.18,431.53 428.49,432.48 431.81,433.41 435.13,434.32 438.44,435.21 441.76,436.07 445.08,436.91 448.39,437.73 451.71,438.53 455.03,439.31 458.34,440.08 461.66,440.82 464.97,441.54 468.29,442.25 471.61,442.94 474.92,443.61 478.24,444.26 481.56,444.90 484.87,445.52 488.19,446.13 491.51,446.72 494.82,447.30 498.14,447.87 501.46,448.41 504.77,448.95 508.09,449.47 511.41,449.98 514.72,450.48 518.04,450.96 521.36,451.43 524.67,451.90 527.99,452.34 531.31,452.78 534.62,453.21 537.94,453.63 541.26,454.03 544.57,454.43 547.89,454.82 551.21,455.19 554.52,455.56 557.84,455.92 561.16,456.27 564.47,456.61 567.79,456.94 571.11,457.26 574.42,457.58 577.74,457.89 581.06,458.19 584.37,458.48 587.69,458.77 591.01,459.05 594.32,459.32 597.64,459.58 600.95,459.84 604.27,460.09 607.59,460.34 610.90,460.58 614.22,460.81 617.54,461.04 620.85,461.26 624.17,461.48 627.49,461.69 630.80,461.90 634.12,462.10 637.44,462.29 640.75,462.49 644.07,462.67 647.39,462.85 650.70,463.03 654.02,463.20 657.34,463.37 660.65,463.54 663.97,463.70 667.29,463.85 670.60,464.01 673.92,464.16 677.24,464.30 680.55,464.44 683.87,464.58 687.19,464.71 690.50,464.85 693.82,464.97 697.14,465.10 700.45,465.22 703.77,465.34 707.09,465.45 710.40,465.57 713.72,465.68 717.04,465.78 720.35,465.89 723.67,465.99 726.98,466.09 730.30,466.19 733.62,466.28 736.93,466.37 740.25,466.46 743.57,466.55 746.88,466.64 750.20,466.72 753.52,466.80 756.83,466.88 760.15,466.96 763.47,467.03 766.78,467.11 770.10,467.18 773.42,467.25 776.73,467.32 780.05,467.38 783.37,467.45 786.68,467.51 790.00,467.57\" fill=\"none\" stroke=\"#111827\" stroke-width=\"5\"/><line x1=\"130\" y1=\"110.0\" x2=\"262.0\" y2=\"470\" stroke=\"#111827\" stroke-width=\"3\"/><text x=\"45\" y=\"66\" font-size=\"27\" font-family=\"DejaVu Sans,Arial,sans-serif\" font-style=\"italic\">u(V)</text><text x=\"830\" y=\"478\" font-size=\"24\" font-family=\"DejaVu Sans,Arial,sans-serif\" font-style=\"italic\">t(ms)</text><text x=\"105\" y=\"498\" font-size=\"19\" font-family=\"DejaVu Sans,Arial,sans-serif\">0</text><text x=\"175.0\" y=\"500\" font-size=\"19\" font-family=\"DejaVu Sans,Arial,sans-serif\">0,05</text><text x=\"87\" y=\"357.0\" font-size=\"19\" font-family=\"DejaVu Sans,Arial,sans-serif\">2</text><text x=\"460.0\" y=\"530\" text-anchor=\"middle\" font-size=\"23\" font-family=\"DejaVu Sans,Arial,sans-serif\" direction=\"rtl\">الشكل 2</text>\n<line x1=\"262.0\" y1=\"470\" x2=\"262.0\" y2=\"80\" stroke=\"#2563eb\" stroke-width=\"2.5\" stroke-dasharray=\"8 6\"/>\n<text x=\"262.0\" y=\"525\" text-anchor=\"middle\" font-size=\"21\" font-family=\"DejaVu Sans,Arial,sans-serif\" fill=\"#2563eb\">τ ≈ 0,10 ms</text>\n<text x=\"495\" y=\"145\" font-size=\"20\" font-family=\"DejaVu Sans,Arial,sans-serif\" fill=\"#2563eb\">uL(t)=E e⁻ᵗ/τ</text>\n\n</svg>",
+              "render_mode": "inline",
+              "responsive": true,
+              "file_path": "public/phy/bac/2025/subject_02/exercise_02/solution_figure_02_tau.svg"
+            }
+          },
+          {
+            "step_number": 2,
+            "title": "1 — ثابت زمن الدارة 1",
+            "explanation": "لدارة \\(RC\\): \\[\\tau_1=RC.\\] وبما أن \\(C=47\\times10^3\\,\\mu F=47\\times10^{-3}\\,F\\): \\[\\tau_1=12\\times47\\times10^{-3}=0.564\\,s=564\\,ms.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "1 — ثابت زمن الدارة 2",
+            "explanation": "لدارة \\(RL\\): \\[\\tau_2=\\frac LR=\\frac{1.2\\times10^{-3}}{12}=1.0\\times10^{-4}\\,s=\\boxed{0.10\\,ms}.\\] وهذه تساوي القيمة المقروءة من البيان، إذن العنصر ينتمي إلى \\(\\boxed{الدارة\\ 2}\\)، وهو الوشيعة، والتوتر الممثل هو توترها المتناقص."
+          },
+          {
+            "step_number": 4,
+            "title": "2 — أثر زيادة مقاومة المصباح في الدارة 1",
+            "explanation": "مدة النظام الانتقالي تقريبا: \\[\\Delta t_1=5\\tau_1=5RC.\\] إذا زادت \\(R\\) فإن \\(\\Delta t_1\\) \\(\\boxed{تزداد}\\)."
+          },
+          {
+            "step_number": 5,
+            "title": "2 — أثر زيادة مقاومة المصباح في الدارة 2",
+            "explanation": "مدة النظام الانتقالي تقريبا: \\[\\Delta t_2=5\\tau_2=5\\frac LR.\\] إذا زادت \\(R\\) فإن \\(\\Delta t_2\\) \\(\\boxed{تتناقص}\\)."
+          }
+        ],
+        "final_answer": "الشكل 2 يعود إلى الدارة 2 لأن \\(\\tau\\approx0.10\\,ms=L/R\\). عند زيادة مقاومة المصباح تزداد مدة الانتقال في دارة RC وتتناقص في دارة RL."
+      },
+      "figures": [
+        {
+          "id": "2025_s2_e2_f2",
+          "type": "svg",
+          "usage": "statement",
+          "placement": "question",
+          "title": "الشكل 2. تطور التوتر u(t)",
+          "description": "منحنى تناقص أسي للتوتر مع مماس عند الأصل.",
+          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 900 550\" role=\"img\" aria-label=\"الشكل 2: تناقص توتر كهربائي بدلالة الزمن\">\n  <rect width=\"100%\" height=\"100%\" fill=\"white\"/>\n  <line x1=\"130.0\" y1=\"80\" x2=\"130.0\" y2=\"470\" stroke=\"#9ca3af\" stroke-width=\"1\"/><line x1=\"196.0\" y1=\"80\" x2=\"196.0\" y2=\"470\" stroke=\"#9ca3af\" stroke-width=\"1\"/><line x1=\"262.0\" y1=\"80\" x2=\"262.0\" y2=\"470\" stroke=\"#9ca3af\" stroke-width=\"1\"/><line x1=\"328.0\" y1=\"80\" x2=\"328.0\" y2=\"470\" stroke=\"#9ca3af\" stroke-width=\"1\"/><line x1=\"394.0\" y1=\"80\" x2=\"394.0\" y2=\"470\" stroke=\"#9ca3af\" stroke-width=\"1\"/><line x1=\"460.0\" y1=\"80\" x2=\"460.0\" y2=\"470\" stroke=\"#9ca3af\" stroke-width=\"1\"/><line x1=\"526.0\" y1=\"80\" x2=\"526.0\" y2=\"470\" stroke=\"#9ca3af\" stroke-width=\"1\"/><line x1=\"592.0\" y1=\"80\" x2=\"592.0\" y2=\"470\" stroke=\"#9ca3af\" stroke-width=\"1\"/><line x1=\"658.0\" y1=\"80\" x2=\"658.0\" y2=\"470\" stroke=\"#9ca3af\" stroke-width=\"1\"/><line x1=\"724.0\" y1=\"80\" x2=\"724.0\" y2=\"470\" stroke=\"#9ca3af\" stroke-width=\"1\"/><line x1=\"790.0\" y1=\"80\" x2=\"790.0\" y2=\"470\" stroke=\"#9ca3af\" stroke-width=\"1\"/><line x1=\"130\" y1=\"470.0\" x2=\"790\" y2=\"470.0\" stroke=\"#9ca3af\" stroke-width=\"1\"/><line x1=\"130\" y1=\"440.0\" x2=\"790\" y2=\"440.0\" stroke=\"#9ca3af\" stroke-width=\"1\"/><line x1=\"130\" y1=\"410.0\" x2=\"790\" y2=\"410.0\" stroke=\"#9ca3af\" stroke-width=\"1\"/><line x1=\"130\" y1=\"380.0\" x2=\"790\" y2=\"380.0\" stroke=\"#9ca3af\" stroke-width=\"1\"/><line x1=\"130\" y1=\"350.0\" x2=\"790\" y2=\"350.0\" stroke=\"#9ca3af\" stroke-width=\"1\"/><line x1=\"130\" y1=\"320.0\" x2=\"790\" y2=\"320.0\" stroke=\"#9ca3af\" stroke-width=\"1\"/><line x1=\"130\" y1=\"290.0\" x2=\"790\" y2=\"290.0\" stroke=\"#9ca3af\" stroke-width=\"1\"/><line x1=\"130\" y1=\"260.0\" x2=\"790\" y2=\"260.0\" stroke=\"#9ca3af\" stroke-width=\"1\"/><line x1=\"130\" y1=\"230.0\" x2=\"790\" y2=\"230.0\" stroke=\"#9ca3af\" stroke-width=\"1\"/><line x1=\"130\" y1=\"200.0\" x2=\"790\" y2=\"200.0\" stroke=\"#9ca3af\" stroke-width=\"1\"/><line x1=\"130\" y1=\"170.0\" x2=\"790\" y2=\"170.0\" stroke=\"#9ca3af\" stroke-width=\"1\"/><line x1=\"130\" y1=\"140.0\" x2=\"790\" y2=\"140.0\" stroke=\"#9ca3af\" stroke-width=\"1\"/><line x1=\"130\" y1=\"110.0\" x2=\"790\" y2=\"110.0\" stroke=\"#9ca3af\" stroke-width=\"1\"/><line x1=\"130\" y1=\"80.0\" x2=\"790\" y2=\"80.0\" stroke=\"#9ca3af\" stroke-width=\"1\"/><line x1=\"130\" y1=\"470\" x2=\"820\" y2=\"470\" stroke=\"#111827\" stroke-width=\"3\"/><line x1=\"130\" y1=\"470\" x2=\"130\" y2=\"60\" stroke=\"#111827\" stroke-width=\"3\"/><polyline points=\"130.00,110.00 133.32,118.93 136.63,127.64 139.95,136.14 143.27,144.42 146.58,152.50 149.90,160.38 153.22,168.06 156.53,175.55 159.85,182.86 163.17,189.98 166.48,196.93 169.80,203.71 173.12,210.31 176.43,216.76 179.75,223.04 183.07,229.17 186.38,235.14 189.70,240.97 193.02,246.66 196.33,252.20 199.65,257.60 202.96,262.87 206.28,268.01 209.60,273.02 212.91,277.91 216.23,282.68 219.55,287.32 222.86,291.86 226.18,296.28 229.50,300.59 232.81,304.79 236.13,308.89 239.45,312.89 242.76,316.79 246.08,320.59 249.40,324.30 252.71,327.91 256.03,331.44 259.35,334.87 262.66,338.23 265.98,341.50 269.30,344.69 272.61,347.79 275.93,350.83 279.25,353.78 282.56,356.67 285.88,359.48 289.20,362.22 292.51,364.90 295.83,367.50 299.15,370.05 302.46,372.53 305.78,374.95 309.10,377.30 312.41,379.60 315.73,381.85 319.05,384.03 322.36,386.17 325.68,388.25 328.99,390.28 332.31,392.25 335.63,394.18 338.94,396.06 342.26,397.90 345.58,399.69 348.89,401.43 352.21,403.13 355.53,404.79 358.84,406.41 362.16,407.99 365.48,409.53 368.79,411.03 372.11,412.49 375.43,413.92 378.74,415.31 382.06,416.67 385.38,417.99 388.69,419.28 392.01,420.54 395.33,421.77 398.64,422.96 401.96,424.13 405.28,425.27 408.59,426.38 411.91,427.46 415.23,428.52 418.54,429.55 421.86,430.55 425.18,431.53 428.49,432.48 431.81,433.41 435.13,434.32 438.44,435.21 441.76,436.07 445.08,436.91 448.39,437.73 451.71,438.53 455.03,439.31 458.34,440.08 461.66,440.82 464.97,441.54 468.29,442.25 471.61,442.94 474.92,443.61 478.24,444.26 481.56,444.90 484.87,445.52 488.19,446.13 491.51,446.72 494.82,447.30 498.14,447.87 501.46,448.41 504.77,448.95 508.09,449.47 511.41,449.98 514.72,450.48 518.04,450.96 521.36,451.43 524.67,451.90 527.99,452.34 531.31,452.78 534.62,453.21 537.94,453.63 541.26,454.03 544.57,454.43 547.89,454.82 551.21,455.19 554.52,455.56 557.84,455.92 561.16,456.27 564.47,456.61 567.79,456.94 571.11,457.26 574.42,457.58 577.74,457.89 581.06,458.19 584.37,458.48 587.69,458.77 591.01,459.05 594.32,459.32 597.64,459.58 600.95,459.84 604.27,460.09 607.59,460.34 610.90,460.58 614.22,460.81 617.54,461.04 620.85,461.26 624.17,461.48 627.49,461.69 630.80,461.90 634.12,462.10 637.44,462.29 640.75,462.49 644.07,462.67 647.39,462.85 650.70,463.03 654.02,463.20 657.34,463.37 660.65,463.54 663.97,463.70 667.29,463.85 670.60,464.01 673.92,464.16 677.24,464.30 680.55,464.44 683.87,464.58 687.19,464.71 690.50,464.85 693.82,464.97 697.14,465.10 700.45,465.22 703.77,465.34 707.09,465.45 710.40,465.57 713.72,465.68 717.04,465.78 720.35,465.89 723.67,465.99 726.98,466.09 730.30,466.19 733.62,466.28 736.93,466.37 740.25,466.46 743.57,466.55 746.88,466.64 750.20,466.72 753.52,466.80 756.83,466.88 760.15,466.96 763.47,467.03 766.78,467.11 770.10,467.18 773.42,467.25 776.73,467.32 780.05,467.38 783.37,467.45 786.68,467.51 790.00,467.57\" fill=\"none\" stroke=\"#111827\" stroke-width=\"5\"/><line x1=\"130\" y1=\"110.0\" x2=\"262.0\" y2=\"470\" stroke=\"#111827\" stroke-width=\"3\"/><text x=\"45\" y=\"66\" font-size=\"27\" font-family=\"DejaVu Sans,Arial,sans-serif\" font-style=\"italic\">u(V)</text><text x=\"830\" y=\"478\" font-size=\"24\" font-family=\"DejaVu Sans,Arial,sans-serif\" font-style=\"italic\">t(ms)</text><text x=\"105\" y=\"498\" font-size=\"19\" font-family=\"DejaVu Sans,Arial,sans-serif\">0</text><text x=\"175.0\" y=\"500\" font-size=\"19\" font-family=\"DejaVu Sans,Arial,sans-serif\">0,05</text><text x=\"87\" y=\"357.0\" font-size=\"19\" font-family=\"DejaVu Sans,Arial,sans-serif\">2</text><text x=\"460.0\" y=\"530\" text-anchor=\"middle\" font-size=\"23\" font-family=\"DejaVu Sans,Arial,sans-serif\" direction=\"rtl\">الشكل 2</text>\n</svg>",
+          "render_mode": "inline",
+          "responsive": true,
+          "file_path": "public/phy/bac/2025/subject_02/exercise_02/figure_02_decay_voltage.svg"
+        }
+      ]
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2025(8).pdf",
+    "statement_figure_policy": "الشكل 1 والجدولان والشكل 2 أعيدت كـSVG؛ لا توجد صورة حقيقية ضرورية في هذا التمرين.",
+    "solution_figure_policy": "أضيف SVG للجدولين بعد ملئهما وSVG مشروح لقراءة ثابت الزمن من الشكل 2.",
+    "renderer": "InlineSvgGraph for inline svg without path/src/url.",
+    "source_page_numbering": "نص التمرين في صفحة PDF 6، والتصحيح في صفحتي PDF 16 و17.",
+    "react_compatibility": "الحفاظ على questions[].solution.steps[].graph_data وfinal_answer النصي، مع SVG مضمّن وfile_path.",
+    "transcription_policy": "نقل نص التمرين والأسئلة دون إضافة أسئلة جديدة وتحويل المعادلات إلى LaTeX.",
+    "correction_notes": [
+      "الدارة 1: i(0)=0.50 A، i(τ)=0.18 A، i(10τ)≈0، uC(10τ)=6 V.",
+      "الدارة 2: i(0)=0، i(τ)=0.32 A، i(10τ)=0.50 A، uL(10τ)=0 V.",
+      "τ_RC=0.564 s وτ_RL=0.10 ms، لذا الشكل 2 يعود إلى الدارة 2.",
+      "زيادة R تزيد 5RC وتقلل 5L/R."
+    ],
+    "safety_reference": {
+      "title": "غير مطبق",
+      "url": ""
+    }
+  },
+  "subject_number": 2
+}

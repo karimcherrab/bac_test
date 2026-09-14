@@ -1,0 +1,326 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "session": "ordinary",
+  "year": 2012,
+  "chapter_code": "complex_numbers",
+  "chapter_title": "الأعداد المركبة",
+  "branches": [
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "version": "4.2-2012-technical-math-complex-subject1-ex02",
+  "subject_number": 1,
+  "exercise_number": 2,
+  "source_page": 1,
+  "source_pages": [
+    1
+  ],
+  "solution_source_pages": [
+    5
+  ],
+  "title": "التمرين الثاني — بكالوريا الجزائر 2012 — الموضوع الأول — شعبة تقني رياضي",
+  "axis_tags": [
+    "complex_linear_system",
+    "complex_geometry",
+    "complex_homothety",
+    "complex_barycenter",
+    "complex_geometric_locus"
+  ],
+  "statement": "",
+  "questions": [
+    {
+      "id": "2012_tm_s1_complex_ex02_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1- عين العددين المركبين \\(z_1\\) و \\(z_2\\) حيث:\n\\[\n\\begin{cases}\n2z_1+3z_2=9-2i\\\\\n3z_1-z_2=8+8i\n\\end{cases}\n\\]",
+      "axis_tags": [
+        "complex_linear_system"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحل الجملة بالحذف. نعبر أولًا عن أحد المجهولين أو نضرب إحدى المعادلتين حتى نحذف أحدهما، ثم نعوض لإيجاد الآخر.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "كتابة الجملة",
+            "explanation": "لدينا:\n\\[\n\\begin{cases}\n2z_1+3z_2=9-2i\\\\\n3z_1-z_2=8+8i\n\\end{cases}\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حذف z2",
+            "explanation": "نضرب المعادلة الثانية في \\(3\\):\n\\[\n9z_1-3z_2=24+24i.\n\\]\nثم نجمعها مع المعادلة الأولى:\n\\[\n(2z_1+3z_2)+(9z_1-3z_2)=(9-2i)+(24+24i).\n\\]\nإذن:\n\\[\n11z_1=33+22i.\n\\]\nومنها:\n\\[\nz_1=3+2i.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب z2",
+            "explanation": "نعوض في المعادلة الثانية:\n\\[\n3(3+2i)-z_2=8+8i.\n\\]\nأي:\n\\[\n9+6i-z_2=8+8i.\n\\]\nومنها:\n\\[\n-z_2=-1+2i,\n\\]\nإذن:\n\\[\nz_2=1-2i.\n\\]"
+          }
+        ],
+        "final_answer": "\\(z_1=3+2i\\)، و\\(z_2=1-2i\\)."
+      }
+    },
+    {
+      "id": "2012_tm_s1_complex_ex02_q2a",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2- نعتبر في المستوى المركب المنسوب إلى المعلم المتعامد والمتجانس \\((O;\\vec u,\\vec v)\\)، النقط \\(A\\) و \\(B\\) و \\(\\Omega\\) التي لواحقها على الترتيب \\(z_A\\)، \\(z_B\\) و \\(z_\\Omega\\) حيث: \\(z_A=3+2i\\)، \\(z_B=-3\\) و \\(z_\\Omega=1-2i\\).\nأ) أثبت أن: \\(z_B-z_\\Omega=i(z_A-z_\\Omega)\\).",
+      "axis_tags": [
+        "complex_geometry"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب طرفي العلاقة مباشرة انطلاقًا من اللواحق المعطاة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب الطرف الأيسر",
+            "explanation": "\\[\nz_B-z_\\Omega=-3-(1-2i)=-4+2i.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب الطرف الأيمن",
+            "explanation": "\\[\nz_A-z_\\Omega=(3+2i)-(1-2i)=2+4i.\n\\]\nإذن:\n\\[\ni(z_A-z_\\Omega)=i(2+4i)=2i+4i^2=-4+2i.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "المقارنة",
+            "explanation": "وجدنا أن الطرفين متساويان:\n\\[\nz_B-z_\\Omega=i(z_A-z_\\Omega).\n\\]"
+          }
+        ],
+        "final_answer": "\\(z_B-z_\\Omega=i(z_A-z_\\Omega)\\)."
+      }
+    },
+    {
+      "id": "2012_tm_s1_complex_ex02_q2b",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "ب) عين طبيعة المثلث \\(\\Omega AB\\).",
+      "axis_tags": [
+        "complex_geometry"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل العلاقة السابقة: الضرب في \\(i\\) يحافظ على الطويلة ويدير الشعاع بزاوية \\(\\pi/2\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تساوي الطولين",
+            "explanation": "من:\n\\[\nz_B-z_\\Omega=i(z_A-z_\\Omega)\n\\]\nنأخذ الطويلة:\n\\[\n|z_B-z_\\Omega|=|i|\\,|z_A-z_\\Omega|.\n\\]\nوبما أن \\(|i|=1\\)، فإن:\n\\[\n\\Omega B=\\Omega A.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "التعامد",
+            "explanation": "الضرب في \\(i\\) يضيف زاوية \\(\\frac{\\pi}{2}\\)، لذلك:\n\\[\n\\overrightarrow{\\Omega A}\\perp\\overrightarrow{\\Omega B}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الاستنتاج",
+            "explanation": "إذن للمثلث ضلعان متساويان ومتعامدان عند \\(\\Omega\\)، وبالتالي هو مثلث قائم ومتساوي الساقين في \\(\\Omega\\)."
+          }
+        ],
+        "final_answer": "المثلث \\(\\Omega AB\\) قائم ومتساوي الساقين في \\(\\Omega\\)."
+      }
+    },
+    {
+      "id": "2012_tm_s1_complex_ex02_q3a",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "3- \\(h\\) هو التحاكي الذي مركزه النقطة \\(A\\) ونسبته \\(2\\).\nأ) عين الكتابة المركبة للتحاكي \\(h\\).",
+      "axis_tags": [
+        "complex_homothety"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل الصيغة العامة للتحاكي: \\(z'-z_A=k(z-z_A)\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "كتابة الصيغة العامة",
+            "explanation": "بما أن مركز التحاكي هو \\(A\\) ونسبته \\(2\\)، فإن:\n\\[\nz'-z_A=2(z-z_A).\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "التعويض بـ zA",
+            "explanation": "نعوض \\(z_A=3+2i\\):\n\\[\nz'-(3+2i)=2\\bigl(z-(3+2i)\\bigr).\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "التبسيط",
+            "explanation": "بعد النشر:\n\\[\nz'=2z-3-2i.\n\\]"
+          }
+        ],
+        "final_answer": "\\(z'=2z-3-2i\\)."
+      }
+    },
+    {
+      "id": "2012_tm_s1_complex_ex02_q3b",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "ب) عين \\(z_C\\) لاحقة النقطة \\(C\\) صورة النقطة \\(\\Omega\\) بالتحاكي \\(h\\).",
+      "axis_tags": [
+        "complex_homothety"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نعوض لاحقة \\(\\Omega\\) في الكتابة المركبة للتحاكي.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التعويض",
+            "explanation": "لدينا:\n\\[\nz_C=2z_\\Omega-3-2i.\n\\]\nوبما أن:\n\\[\nz_\\Omega=1-2i,\n\\]\nفإن:\n\\[\nz_C=2(1-2i)-3-2i.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "التبسيط",
+            "explanation": "\\[\nz_C=2-4i-3-2i=-1-6i.\n\\]"
+          }
+        ],
+        "final_answer": "\\(z_C=-1-6i\\)."
+      }
+    },
+    {
+      "id": "2012_tm_s1_complex_ex02_q3c",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "ج) عين \\(z_D\\) لاحقة النقطة \\(D\\) مرجح الجملة \\(\\{(A,1),(B,-1),(C,1)\\}\\).",
+      "axis_tags": [
+        "complex_barycenter"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل صيغة لاحقة المرجح مع الانتباه إلى أن مجموع المعاملات يساوي \\(1\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "مجموع المعاملات",
+            "explanation": "\\[\n1-1+1=1\\neq0.\n\\]\nإذن المرجح موجود."
+          },
+          {
+            "step_number": 2,
+            "title": "حساب لاحقة D",
+            "explanation": "\\[\nz_D=\\frac{z_A-z_B+z_C}{1}=z_A-z_B+z_C.\n\\]\nنعوض:\n\\[\nz_D=(3+2i)-(-3)+(-1-6i).\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "التبسيط",
+            "explanation": "\\[\nz_D=3+2i+3-1-6i=5-4i.\n\\]"
+          }
+        ],
+        "final_answer": "\\(z_D=5-4i\\)."
+      }
+    },
+    {
+      "id": "2012_tm_s1_complex_ex02_q3d",
+      "display_order": 7,
+      "content_type": "question",
+      "text": "د) بين أن \\(ABCD\\) مربع.",
+      "axis_tags": [
+        "complex_geometry"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب متجهتين متتاليتين من أضلاع الرباعي، ثم نثبت تساوي طولهما وتعامدهما.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب AB",
+            "explanation": "\\[\nz_{\\overrightarrow{AB}}=z_B-z_A=-3-(3+2i)=-6-2i.\n\\]\nإذن:\n\\[\nAB=|-6-2i|=\\sqrt{36+4}=2\\sqrt{10}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب BC",
+            "explanation": "\\[\nz_{\\overrightarrow{BC}}=z_C-z_B=(-1-6i)-(-3)=2-6i.\n\\]\nومن ثم:\n\\[\nBC=|2-6i|=\\sqrt{4+36}=2\\sqrt{10}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "إثبات التعامد",
+            "explanation": "نلاحظ أن:\n\\[\n\\frac{z_{\\overrightarrow{BC}}}{z_{\\overrightarrow{AB}}}\n=\\frac{2-6i}{-6-2i}=i.\n\\]\nإذن الانتقال من \\(\\overrightarrow{AB}\\) إلى \\(\\overrightarrow{BC}\\) هو دوران بزاوية \\(\\frac{\\pi}{2}\\)، وبالتالي:\n\\[\nAB\\perp BC.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "الاستنتاج",
+            "explanation": "لدينا ضلعان متتاليان متساويان ومتعامدان، كما أن الإحداثيات المحسوبة تحقق أن الرباعي متوازي أضلاع. لذلك \\(ABCD\\) مربع."
+          }
+        ],
+        "final_answer": "\\(ABCD\\) مربع."
+      }
+    },
+    {
+      "id": "2012_tm_s1_complex_ex02_q4a",
+      "display_order": 8,
+      "content_type": "question",
+      "text": "4- مجموعة النقط \\(M\\) من المستوى التي تحقق:\n\\[\n\\left\\|\\overrightarrow{MA}-\\overrightarrow{MB}+\\overrightarrow{MC}\\right\\|=4\\sqrt5.\n\\]\nأ) تحقق أن النقطة \\(B\\) تنتمي إلى المجموعة \\((E)\\)، ثم عين طبيعة \\((E)\\) وعناصرها المميزة.",
+      "axis_tags": [
+        "complex_barycenter",
+        "complex_geometric_locus"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "بما أن \\(D\\) مرجح الجملة \\((A,1),(B,-1),(C,1)\\)، فإن مجموع المتجهات المعطى يساوي \\(\\overrightarrow{MD}\\). تتحول العلاقة إذن إلى معادلة دائرة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "استعمال خاصية المرجح",
+            "explanation": "بما أن \\(D\\) مرجح الجملة \\(\\{(A,1),(B,-1),(C,1)\\}\\) ومجموع المعاملات يساوي \\(1\\)، فإن:\n\\[\n\\overrightarrow{MA}-\\overrightarrow{MB}+\\overrightarrow{MC}=\\overrightarrow{MD}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "تبسيط شرط المجموعة",
+            "explanation": "إذن الشرط يصبح:\n\\[\n\\|\\overrightarrow{MD}\\|=4\\sqrt5,\n\\]\nأي:\n\\[\nMD=4\\sqrt5.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "التحقق من انتماء B",
+            "explanation": "لدينا \\(z_D=5-4i\\) و\\(z_B=-3\\). إذن:\n\\[\nBD=|z_D-z_B|=|8-4i|=\\sqrt{64+16}=\\sqrt{80}=4\\sqrt5.\n\\]\nإذن:\n\\[\nB\\in(E).\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "تحديد المجموعة",
+            "explanation": "المعادلة:\n\\[\nMD=4\\sqrt5\n\\]\nتمثل دائرة مركزها \\(D\\) ونصف قطرها \\(4\\sqrt5\\)."
+          }
+        ],
+        "final_answer": "\\((E)\\) دائرة مركزها \\(D(5,-4)\\) ونصف قطرها \\(4\\sqrt5\\)، و\\(B\\in(E)\\)."
+      }
+    },
+    {
+      "id": "2012_tm_s1_complex_ex02_q4b",
+      "display_order": 9,
+      "content_type": "question",
+      "text": "ب) أنشئ المجموعة \\((E)\\).",
+      "axis_tags": [
+        "complex_geometric_locus"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "بما أن \\((E)\\) دائرة معلومة المركز ونقطة منها، يكفي تحديد \\(D\\) ثم رسم الدائرة المارة بـ\\(B\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تحديد المركز",
+            "explanation": "نضع النقطة:\n\\[\nD(5,-4).\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "استعمال النقطة B",
+            "explanation": "بما أن \\(B\\in(E)\\)، فإن نصف القطر هو:\n\\[\nDB=4\\sqrt5.\n\\]\nنرسم الدائرة مركزها \\(D\\) والمارة بالنقطة \\(B\\)."
+          }
+        ],
+        "final_answer": "إنشاء \\((E)\\): دائرة مركزها \\(D\\) والمارة بالنقطة \\(B\\)."
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2012(1).pdf",
+    "statement_page": 1,
+    "correction_page": 5,
+    "statement_figure_policy": "لا يوجد شكل أصلي ضروري في نص التمرين.",
+    "solution_figure_policy": "الإنشاء الهندسي موضح نصيًا داخل الحل دون إضافة معطيات غير موجودة.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  }
+}

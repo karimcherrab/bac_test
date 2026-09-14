@@ -1,0 +1,349 @@
+{
+  "schema_version": "4.5-bac-source",
+  "version": "4.2-2018-tech-math-sequences-ex01",
+  "language": "ar",
+  "direction": "rtl",
+  "year": 2018,
+  "session": "ordinary",
+  "chapter_code": "sequences",
+  "chapter_title": "sequences",
+  "exercise_number": 1,
+  "points": 4,
+  "source_pages": [
+    1
+  ],
+  "solution_source_pages": [
+    6
+  ],
+  "branches": [
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "title": "التمرين الأول — بكالوريا الجزائر 2018 — متتالية معرفة بالتراجع ومتتالية هندسية والقسمة الإقليدية",
+  "axis_tags": [
+    "recursive_sequence",
+    "mathematical_induction",
+    "sequence_monotonicity",
+    "bounded_sequence",
+    "sequence_convergence",
+    "geometric_sequence",
+    "explicit_formula",
+    "sequence_limit",
+    "geometric_sum",
+    "modular_arithmetic"
+  ],
+  "statement": "التمرين الأول: (04 نقاط)\n\n\\(f\\) الدالة العددية المعرفة والمتزايدة تماما على المجال \\([0;+\\infty[\\) بـ:\n\\[\nf(x)=\\frac{2x}{e x+1}\n\\]\nحيث \\(e\\) أساس اللوغاريتم النيبيري.\n\nو\\((u_n)\\) المتتالية العددية المعرفة بحدها الأول:\n\\[\nu_0=\\frac{5}{4e}\n\\]\nومن أجل كل عدد طبيعي \\(n\\):\n\\[\nu_{n+1}=f(u_n).\n\\]\n\n1) أ) برهن بالتراجع أنه من أجل كل عدد طبيعي \\(n\\):\n\\[\nu_n>\\frac1e.\n\\]\n\nب) بين أنه من أجل كل عدد طبيعي \\(n\\):\n\\[\nu_{n+1}-u_n=\n\\frac{e u_n\\left(\\frac1e-u_n\\right)}\n{e u_n+1}.\n\\]\nثم استنتج اتجاه تغير المتتالية \\((u_n)\\) وبرر أنها متقاربة.\n\n2) لتكن المتتالية \\((v_n)\\) المعرفة من أجل كل عدد طبيعي \\(n\\) كما يلي:\n\\[\nv_n=\\frac{e u_n}{e u_n-1}.\n\\]\n\nأثبت أن \\((v_n)\\) متتالية هندسية أساسها \\(2\\)، يطلب تعيين حدها الأول \\(v_0\\) وعبارة \\(v_n\\) بدلالة \\(n\\).\n\n3) أ) تحقق أنه من أجل كل \\(n\\) من \\(\\mathbb N\\):\n\\[\nv_n=1+\\frac1{e u_n-1}.\n\\]\nواستنتج عبارة \\(u_n\\) بدلالة \\(n\\) ثم احسب:\n\\[\n\\lim_{n\\to+\\infty}u_n.\n\\]\n\nب) احسب بدلالة \\(n\\) المجموع \\(S_n\\) حيث:\n\\[\nS_n=v_0+v_1+\\cdots+v_n.\n\\]\n\n4) أ) ادرس حسب قيم العدد الطبيعي \\(n\\) بواقي القسمة الإقليدية للعدد:\n\\[\n2^n\n\\]\nعلى \\(7\\).\n\nب) عين قيم العدد الطبيعي \\(n\\) التي من أجلها \\(S_n\\) يقبل القسمة على \\(7\\).",
+  "figures": [],
+  "questions": [
+    {
+      "id": "2018_tech_math_ex01_q1a",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1-أ) برهن بالتراجع أنه من أجل كل عدد طبيعي \\(n\\): \\(u_n>\\frac1e\\).",
+      "solution": {
+        "introduction": "نثبت الخاصية باستعمال البرهان بالتراجع، مع الاستفادة من أن الدالة \\(f\\) متزايدة تماما.",
+        "strategy": "نتحقق عند \\(n=0\\)، ثم نفترض \\(u_n>1/e\\) ونطبق تزايد \\(f\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التحقق عند n=0",
+            "explanation": "لدينا:\n\\[u_0=\\frac{5}{4e}.\\]\nوبما أن \\(\\frac54>1\\)، فإن:\n\\[\\frac{5}{4e}>\\frac1e.\\]",
+            "result": "\\(u_0>\\frac1e\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "فرضية التراجع",
+            "explanation": "نفترض أنه من أجل عدد طبيعي \\(n\\):\n\\[u_n>\\frac1e.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الانتقال إلى n+1",
+            "explanation": "بما أن \\(f\\) متزايدة تماما على \\([0,+\\infty[\\)، فإن:\n\\[f(u_n)>f\\left(\\frac1e\\right).\\]\nنحسب:\n\\[f\\left(\\frac1e\\right)=\\frac{2/e}{1+1}=\\frac1e.\\]\nإذن:\n\\[u_{n+1}=f(u_n)>\\frac1e.\\]",
+            "result": "الخاصية تنتقل من n إلى n+1."
+          },
+          {
+            "step_number": 4,
+            "title": "الخلاصة",
+            "explanation": "حسب مبدأ التراجع:\n\\[u_n>\\frac1e\\]\nلكل \\(n\\in\\mathbb N\\)."
+          }
+        ],
+        "final_answer": "\\(\\boxed{u_n>\\frac1e\\text{ لكل }n\\in\\mathbb N}\\).",
+        "verification": "تمت مراجعة الحل مع الإجابة النموذجية الرسمية لبكالوريا 2018، الموضوع الأول، التمرين الأول.",
+        "common_mistakes": [
+          "نسيان حساب \\(f(1/e)\\)."
+        ],
+        "hints": [
+          "استعمل أن f متزايدة تماما."
+        ],
+        "summary": "بما أن \\(u_0>1/e\\) و\\(f(1/e)=1/e\\)، تبقى كل الحدود أكبر من \\(1/e\\).",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2018_tech_math_ex01_q1b",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "1-ب) بين أنه من أجل كل عدد طبيعي \\(n\\): \\(u_{n+1}-u_n=\\frac{e u_n(\\frac1e-u_n)}{e u_n+1}\\)، ثم استنتج اتجاه تغير المتتالية \\((u_n)\\) وبرر أنها متقاربة.",
+      "solution": {
+        "introduction": "نحسب فرق حدين متتاليين ثم نحدد إشارته باستعمال النتيجة السابقة.",
+        "strategy": "نعوض عبارة \\(u_{n+1}\\) ثم نوحد المقام.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب الفرق",
+            "explanation": "\\[u_{n+1}-u_n=\\frac{2u_n}{e u_n+1}-u_n.\\]\nنوحد المقام:\n\\[u_{n+1}-u_n=\\frac{2u_n-u_n(eu_n+1)}{eu_n+1}.\\]\nإذن:\n\\[u_{n+1}-u_n=\\frac{u_n-eu_n^2}{eu_n+1}.\\]\nنستخرج \\(eu_n\\) عاملا مشتركا:\n\\[u_{n+1}-u_n=\\frac{eu_n\\left(\\frac1e-u_n\\right)}{eu_n+1}.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "إشارة الفرق",
+            "explanation": "من السؤال السابق:\n\\[u_n>\\frac1e>0.\\]\nإذن:\n\\[eu_n>0,\\qquad \\frac1e-u_n<0,\\qquad eu_n+1>0.\\]\nومن ثم:\n\\[u_{n+1}-u_n<0.\\]",
+            "result": "\\((u_n)\\) متناقصة تماما."
+          },
+          {
+            "step_number": 3,
+            "title": "التقارب",
+            "explanation": "المتتالية متناقصة تماما، ومن السؤال السابق هي محدودة من الأسفل بالعدد \\(\\frac1e\\). وكل متتالية متناقصة ومحدودة من الأسفل متقاربة.",
+            "result": "\\((u_n)\\) متقاربة."
+          }
+        ],
+        "final_answer": "\\(\\boxed{(u_n)\\text{ متناقصة تماما ومحدودة من الأسفل بـ }1/e\\Rightarrow\\text{ متقاربة}}\\).",
+        "verification": "تمت مراجعة الحل مع الإجابة النموذجية الرسمية لبكالوريا 2018، الموضوع الأول، التمرين الأول.",
+        "common_mistakes": [
+          "نسيان أن \\(1/e-u_n<0\\)."
+        ],
+        "hints": [
+          "بعد حساب الفرق استعمل \\(u_n>1/e\\)."
+        ],
+        "summary": "الفرق سالب، والمتتالية محدودة من الأسفل، إذن هي متقاربة.",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2018_tech_math_ex01_q2",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "2) أثبت أن \\((v_n)\\) متتالية هندسية أساسها \\(2\\)، يطلب تعيين حدها الأول \\(v_0\\) وعبارة \\(v_n\\) بدلالة \\(n\\).",
+      "solution": {
+        "introduction": "نحسب \\(v_{n+1}\\) بدلالة \\(v_n\\) باستعمال العلاقة التراجعية لـ\\(u_n\\).",
+        "strategy": "نعوض \\(u_{n+1}=\\frac{2u_n}{eu_n+1}\\) داخل تعريف \\(v_{n+1}\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب v_{n+1}",
+            "explanation": "\\[v_{n+1}=\\frac{e u_{n+1}}{e u_{n+1}-1}.\\]\nوبما أن:\n\\[u_{n+1}=\\frac{2u_n}{eu_n+1},\\]\nفإن:\n\\[v_{n+1}=\\frac{\\frac{2eu_n}{eu_n+1}}{\\frac{2eu_n}{eu_n+1}-1}.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "التبسيط",
+            "explanation": "نبسط المقام:\n\\[\\frac{2eu_n}{eu_n+1}-1=\\frac{eu_n-1}{eu_n+1}.\\]\nإذن:\n\\[v_{n+1}=\\frac{2eu_n}{eu_n-1}=2v_n.\\]",
+            "result": "\\((v_n)\\) هندسية أساسها \\(2\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "حساب v₀",
+            "explanation": "لدينا:\n\\[eu_0=e\\cdot\\frac{5}{4e}=\\frac54.\\]\nإذن:\n\\[v_0=\\frac{5/4}{5/4-1}=\\frac{5/4}{1/4}=5.\\]",
+            "result": "\\(v_0=5\\)."
+          },
+          {
+            "step_number": 4,
+            "title": "الحد العام",
+            "explanation": "بما أن \\((v_n)\\) هندسية أساسها \\(2\\) وحدها الأول \\(v_0=5\\):\n\\[v_n=v_0\\,2^n.\\]",
+            "result": "\\(v_n=5\\times2^n\\)."
+          }
+        ],
+        "final_answer": "\\(\\boxed{v_{n+1}=2v_n}\\)، \\(\\boxed{v_0=5}\\)، و\\(\\boxed{v_n=5\\cdot2^n}\\).",
+        "verification": "تمت مراجعة الحل مع الإجابة النموذجية الرسمية لبكالوريا 2018، الموضوع الأول، التمرين الأول.",
+        "common_mistakes": [
+          "الخطأ في تبسيط \\(e u_{n+1}-1\\)."
+        ],
+        "hints": [
+          "عوّض u_{n+1} داخل v_{n+1} مباشرة."
+        ],
+        "summary": "وجدنا أن النسبة ثابتة وتساوي 2، والحد الأول 5.",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2018_tech_math_ex01_q3a",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "3-أ) تحقق أنه من أجل كل \\(n\\in\\mathbb N\\): \\(v_n=1+\\frac1{eu_n-1}\\)، واستنتج عبارة \\(u_n\\) بدلالة \\(n\\) ثم احسب \\(\\lim_{n\\to+\\infty}u_n\\).",
+      "solution": {
+        "introduction": "نحوّل تعريف \\(v_n\\) إلى صيغة تسمح بعزل \\(u_n\\).",
+        "strategy": "نفكك البسط \\(eu_n=(eu_n-1)+1\\)، ثم نعوض \\(v_n=5\\cdot2^n\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التحقق من العلاقة",
+            "explanation": "\\[v_n=\\frac{eu_n}{eu_n-1}=\\frac{(eu_n-1)+1}{eu_n-1}=1+\\frac1{eu_n-1}.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "عزل u_n",
+            "explanation": "بما أن:\n\\[v_n=5\\cdot2^n,\\]\nفإن:\n\\[5\\cdot2^n=1+\\frac1{eu_n-1}.\\]\nإذن:\n\\[\\frac1{eu_n-1}=5\\cdot2^n-1.\\]\nومنها:\n\\[eu_n-1=\\frac1{5\\cdot2^n-1}.\\]\nإذن:\n\\[eu_n=1+\\frac1{5\\cdot2^n-1}=\\frac{5\\cdot2^n}{5\\cdot2^n-1}.\\]\nوعليه:",
+            "result": "\\[u_n=\\frac{5\\cdot2^n}{e(5\\cdot2^n-1)}.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب النهاية",
+            "explanation": "نقسم البسط والمقام على \\(5\\cdot2^n\\):\n\\[u_n=\\frac1{e\\left(1-\\frac1{5\\cdot2^n}\\right)}.\\]\nوعندما \\(n\\to+\\infty\\):\n\\[\\frac1{5\\cdot2^n}\\to0.\\]\nإذن:",
+            "result": "\\[\\lim_{n\\to+\\infty}u_n=\\frac1e.\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{u_n=\\frac{5\\cdot2^n}{e(5\\cdot2^n-1)}}\\) و\\(\\boxed{\\lim u_n=\\frac1e}\\).",
+        "verification": "تمت مراجعة الحل مع الإجابة النموذجية الرسمية لبكالوريا 2018، الموضوع الأول، التمرين الأول.",
+        "common_mistakes": [
+          "نسيان العامل e عند عزل u_n."
+        ],
+        "hints": [
+          "اكتب eu_n=(eu_n-1)+1."
+        ],
+        "summary": "الصيغة الصريحة تؤكد أن النهاية هي \\(1/e\\).",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2018_tech_math_ex01_q3b",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "3-ب) احسب بدلالة \\(n\\) المجموع \\(S_n=v_0+v_1+\\cdots+v_n\\).",
+      "solution": {
+        "introduction": "المجموع هو مجموع حدود متتالية هندسية أساسها 2.",
+        "strategy": "نطبق قانون مجموع أول \\(n+1\\) حد من متتالية هندسية.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "كتابة المجموع",
+            "explanation": "لدينا:\n\\[v_k=5\\cdot2^k.\\]\nإذن:\n\\[S_n=5+5\\cdot2+5\\cdot2^2+\\cdots+5\\cdot2^n.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "قانون المجموع",
+            "explanation": "\\[S_n=5\\frac{2^{n+1}-1}{2-1}.\\]\nإذن:",
+            "result": "\\[S_n=5(2^{n+1}-1).\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{S_n=5(2^{n+1}-1)}\\).",
+        "verification": "تمت مراجعة الحل مع الإجابة النموذجية الرسمية لبكالوريا 2018، الموضوع الأول، التمرين الأول.",
+        "common_mistakes": [
+          "نسيان أن عدد الحدود من v₀ إلى v_n هو n+1."
+        ],
+        "hints": [
+          "استعمل مجموع 1+2+...+2^n."
+        ],
+        "summary": "S_n هو مجموع هندسي بسيط.",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2018_tech_math_ex01_q4a",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "4-أ) ادرس حسب قيم العدد الطبيعي \\(n\\) بواقي القسمة الإقليدية للعدد \\(2^n\\) على \\(7\\).",
+      "solution": {
+        "introduction": "نحسب القوى الأولى للعدد 2 بترديد 7 ونلاحظ الدورة.",
+        "strategy": "نستعمل أن \\(2^3=8\\equiv1\\pmod7\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "القوى الأولى",
+            "explanation": "\\[2^0\\equiv1\\pmod7,\\qquad2^1\\equiv2\\pmod7,\\qquad2^2\\equiv4\\pmod7.\\]\nكما أن:\n\\[2^3=8\\equiv1\\pmod7.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "الدورية",
+            "explanation": "إذن البواقي تتكرر كل 3 رتب:\n- إذا \\(n=3k\\) فإن \\(2^n\\equiv1\\pmod7\\).\n- إذا \\(n=3k+1\\) فإن \\(2^n\\equiv2\\pmod7\\).\n- إذا \\(n=3k+2\\) فإن \\(2^n\\equiv4\\pmod7\\).",
+            "result": "البواقي هي 1، 2، 4 حسب باقي قسمة n على 3."
+          }
+        ],
+        "final_answer": "\\(\\boxed{2^{3k}\\equiv1,\\;2^{3k+1}\\equiv2,\\;2^{3k+2}\\equiv4\\pmod7}\\).",
+        "verification": "تمت مراجعة الحل مع الإجابة النموذجية الرسمية لبكالوريا 2018، الموضوع الأول، التمرين الأول.",
+        "common_mistakes": [
+          "القول إن الدورة طولها 7 بدل 3."
+        ],
+        "hints": [
+          "احسب 2^0 و2^1 و2^2 و2^3 modulo 7."
+        ],
+        "summary": "قوى 2 بترديد 7 تتكرر وفق الدورة 1،2،4.",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2018_tech_math_ex01_q4b",
+      "display_order": 7,
+      "content_type": "question",
+      "text": "4-ب) عين قيم العدد الطبيعي \\(n\\) التي من أجلها \\(S_n\\) يقبل القسمة على \\(7\\).",
+      "solution": {
+        "introduction": "نستعمل عبارة \\(S_n\\) ونتائج السؤال السابق حول بواقي قوى 2.",
+        "strategy": "نحوّل شرط القسمة على 7 إلى شرط على \\(2^{n+1}\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "شرط القسمة",
+            "explanation": "لدينا:\n\\[S_n=5(2^{n+1}-1).\\]\nولأن 5 غير قابل للقسمة على 7، فإن:\n\\[7\\mid S_n\\iff2^{n+1}-1\\equiv0\\pmod7.\\]\nأي:\n\\[2^{n+1}\\equiv1\\pmod7.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "استعمال الدورية",
+            "explanation": "من السؤال السابق يتحقق:\n\\[2^m\\equiv1\\pmod7\\]\nبالضبط عندما \\(m\\) مضاعف للعدد 3. لذلك:\n\\[n+1=3k.\\]\nإذن:",
+            "result": "\\[n=3k+2.\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{n=3k+2\\text{ حيث }k\\in\\mathbb N}\\).",
+        "verification": "تمت مراجعة الحل مع الإجابة النموذجية الرسمية لبكالوريا 2018، الموضوع الأول، التمرين الأول.",
+        "common_mistakes": [
+          "نسيان أن الأس في S_n هو n+1."
+        ],
+        "hints": [
+          "نحتاج أن يكون 2^{n+1}≡1 modulo 7."
+        ],
+        "summary": "S_n يقبل القسمة على 7 عندما n≡2 mod 3.",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    }
+  ],
+  "source_reference": {
+    "file": "2018(7).pdf",
+    "statement_pages": [
+      1
+    ],
+    "solution_pages": [
+      6
+    ],
+    "source_faithful_statement": true,
+    "solution_reviewed_against_source": true
+  },
+  "display": {
+    "layout": "question_by_question",
+    "show_statement_first": true,
+    "show_statement_figures": true,
+    "show_solution_after_click": true,
+    "show_solution_figures": true
+  },
+  "review_status": {
+    "statement_compared_with_original_pdf": true,
+    "questions_compared_with_original_pdf": true,
+    "source_figures_checked": true,
+    "solution_checked_against_correction": true,
+    "latex_normalized_only": true,
+    "react_ready": true
+  },
+  "given_data": {
+    "f": "2x/(e*x+1)",
+    "domain_f": "[0,+∞[",
+    "u0": "5/(4e)",
+    "recurrence": "u_{n+1}=f(u_n)",
+    "lower_bound": "1/e",
+    "monotonicity": "strictly_decreasing",
+    "v_n": "e*u_n/(e*u_n-1)",
+    "v0": "5",
+    "ratio_v": "2",
+    "explicit_v": "5*2^n",
+    "explicit_u": "5*2^n/[e*(5*2^n-1)]",
+    "limit_u": "1/e",
+    "S_n": "5*(2^(n+1)-1)",
+    "divisibility_condition": "n=3k+2"
+  }
+}

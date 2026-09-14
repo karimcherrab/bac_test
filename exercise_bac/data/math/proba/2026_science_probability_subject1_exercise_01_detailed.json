@@ -1,0 +1,199 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "session": "ordinary",
+  "year": 2026,
+  "chapter_code": "probability",
+  "chapter_title": "الاحتمالات",
+  "branches": [
+    {
+      "code": "science",
+      "name": "شعبة علوم تجريبية"
+    }
+  ],
+  "version": "4.2-2026-science-probability-subject1-ex01",
+  "axis_tags": [
+    "probability_events_law",
+    "probability_counting",
+    "probability_conditional",
+    "random_variable_probability_law_expectation",
+    "probability_draw_modeling"
+  ],
+  "exercise_number": 1,
+  "subject_number": 1,
+  "source_page": 1,
+  "source_pages": [
+    1
+  ],
+  "title": "التمرين الأول — بكالوريا الجزائر 2026 — الموضوع الأول — شعبة علوم تجريبية",
+  "statement": "I) يحتوي كيس على 9 كريات متماثلة ولا نفرق بينها باللمس منها: كريتان تحملان الرقم 1 وأربع كريات تحمل الرقم 2 وثلاث كريات تحمل الرقم 3. نسحب عشوائيا من الكيس ثلاث كريات في آن واحد ونعتبر الحوادث:\nA : « سحب ثلاث كريات تحمل نفس الرقم »\nB : « سحب ثلاث كريات أرقامها مختلفة مثنى مثنى »\nC : « سحب ثلاث كريات مجموع أرقامها عدد زوجي »\n1) أ) احسب P(A) ، P(B) و P(C) احتمالات الحوادث A ، B و C على الترتيب.\nب) بين أن: P(A∩C)=1/21 ثم استنتج P_A(C)\n2) X المتغير العشوائي الذي يرفق بكل عملية سحب لثلاث كريات، عدد الكريات التي تحمل الرقم 2.\n- عين قانون احتمال المتغير العشوائي X ثم احسب أمله الرياضياتي E(X)\nII) نضيف إلى محتوى الكيس السابق n كرية تحمل الرقم 1 ثم نسحب منه كريتين على التوالي دون إرجاع.\n- عين قيمة n حتى يكون احتمال الحصول على كريتين لا تحمل أي منهما الرقم 1 يساوي 1/5.",
+  "questions": [
+    {
+      "id": "2026_s1_probability_ex01_q1a",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "I) 1) أ) احسب \\(P(A)\\)، \\(P(B)\\) و \\(P(C)\\) احتمالات الحوادث \\(A\\)، \\(B\\) و \\(C\\) على الترتيب.",
+      "axis_tags": [
+        "probability_events_law",
+        "probability_counting"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "السحب يتم في آن واحد، لذلك نستعمل التوفيقات. عدد السحبات الممكنة هو اختيار 3 كريات من أصل 9.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب عدد الحالات الممكنة",
+            "explanation": "\\[|\\Omega|=\\binom93=84\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب P(A)",
+            "explanation": "الحادثة \\(A\\): الكريات الثلاث تحمل نفس الرقم.\n\nالرقم \\(1\\) موجود على كريتين فقط، لذلك لا يمكن سحب ثلاث كريات تحمل الرقم \\(1\\).\n\nللرقم \\(2\\):\n\\[\\binom43=4\\]\nوللرقم \\(3\\):\n\\[\\binom33=1\\]\nإذن:\n\\[P(A)=\\frac{4+1}{84}=\\frac5{84}\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب P(B)",
+            "explanation": "الحادثة \\(B\\): أرقام الكريات الثلاث مختلفة مثنى مثنى، أي نختار كرية رقمها \\(1\\) وكرية رقمها \\(2\\) وكرية رقمها \\(3\\).\n\nعدد الحالات الملائمة:\n\\[2\\times4\\times3=24\\]\nإذن:\n\\[P(B)=\\frac{24}{84}=\\frac27\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "حساب P(C)",
+            "explanation": "الأعداد الفردية هي \\(1\\) و\\(3\\)، وعدد الكريات ذات الرقم الفردي هو:\n\\[2+3=5\\]\nأما الكريات ذات الرقم الزوجي فهي الكريات الأربع التي تحمل الرقم \\(2\\).\n\nمجموع ثلاثة أعداد يكون زوجيا إذا كان عدد الأعداد الفردية بينها زوجيا، أي إما \\(0\\) أو \\(2\\).\n\nالحالة الأولى: ثلاث كريات زوجية:\n\\[\\binom43=4\\]\nالحالة الثانية: كريتان فرديتان وكرية زوجية:\n\\[\\binom52\\binom41=10\\times4=40\\]\nإذن:\n\\[P(C)=\\frac{4+40}{84}=\\frac{44}{84}=\\frac{11}{21}\\]"
+          },
+          {
+            "step_number": 5,
+            "title": "النتيجة النهائية",
+            "explanation": "\\[\\boxed{P(A)=\\frac5{84}},\\qquad \\boxed{P(B)=\\frac27},\\qquad \\boxed{P(C)=\\frac{11}{21}}\\]"
+          }
+        ],
+        "final_answer": "\\(P(A)=\\frac5{84}\\)، \\(P(B)=\\frac27\\)، \\(P(C)=\\frac{11}{21}\\)."
+      }
+    },
+    {
+      "id": "2026_s1_probability_ex01_q1b",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "ب) بين أن: \\(P(A\\cap C)=\\frac1{21}\\) ثم استنتج \\(P_A(C)\\).",
+      "axis_tags": [
+        "probability_conditional",
+        "probability_counting"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحدد أولا الحالات التي تحقق في الوقت نفسه أن الكريات الثلاث تحمل نفس الرقم وأن مجموع أرقامها زوجي، ثم نستعمل تعريف الاحتمال الشرطي.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تحديد A تقاطع C",
+            "explanation": "إذا كانت الكريات الثلاث تحمل الرقم \\(3\\)، فإن مجموع الأرقام هو:\n\\[3+3+3=9\\]\nوهو فردي، لذلك هذه الحالة لا تحقق \\(C\\).\n\nأما إذا كانت الكريات الثلاث تحمل الرقم \\(2\\)، فإن مجموعها:\n\\[2+2+2=6\\]\nوهو زوجي.\n\nإذن الحالات الموافقة لـ \\(A\\cap C\\) هي فقط اختيار 3 كريات من الكريات الأربع التي تحمل الرقم \\(2\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "حساب P(A تقاطع C)",
+            "explanation": "\\[P(A\\cap C)=\\frac{\\binom43}{\\binom93}=\\frac4{84}=\\frac1{21}\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب الاحتمال الشرطي",
+            "explanation": "حسب التعريف:\n\\[P_A(C)=\\frac{P(A\\cap C)}{P(A)}\\]\nوبالتعويض:\n\\[P_A(C)=\\frac{\\frac1{21}}{\\frac5{84}}=\\frac1{21}\\times\\frac{84}{5}=\\frac45\\]"
+          }
+        ],
+        "final_answer": "\\(P(A\\cap C)=\\frac1{21}\\) و \\(P_A(C)=\\frac45\\)."
+      }
+    },
+    {
+      "id": "2026_s1_probability_ex01_q2",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "2) \\(X\\) المتغير العشوائي الذي يرفق بكل عملية سحب لثلاث كريات، عدد الكريات التي تحمل الرقم 2. - عين قانون احتمال المتغير العشوائي \\(X\\) ثم احسب أمله الرياضياتي \\(E(X)\\).",
+      "axis_tags": [
+        "random_variable_probability_law_expectation",
+        "probability_counting"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "لدينا 4 كريات تحمل الرقم 2 و5 كريات لا تحمل الرقم 2. عند سحب 3 كريات يمكن أن يكون عدد الكريات التي تحمل الرقم 2 مساويا لـ0 أو1 أو2 أو3.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "قيم المتغير X",
+            "explanation": "\\[X(\\Omega)=\\{0,1,2,3\\}\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب P(X=0)",
+            "explanation": "نختار الكريات الثلاث من الكريات الخمس التي لا تحمل الرقم \\(2\\):\n\\[P(X=0)=\\frac{\\binom53}{\\binom93}=\\frac{10}{84}=\\frac5{42}\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب P(X=1)",
+            "explanation": "نختار كرية واحدة تحمل الرقم \\(2\\) من بين 4 وكريتين من الخمس الأخرى:\n\\[P(X=1)=\\frac{\\binom41\\binom52}{84}=\\frac{4\\times10}{84}=\\frac{10}{21}\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "حساب P(X=2)",
+            "explanation": "نختار كريتين تحملان الرقم \\(2\\) وكرية واحدة من الخمس الأخرى:\n\\[P(X=2)=\\frac{\\binom42\\binom51}{84}=\\frac{6\\times5}{84}=\\frac5{14}\\]"
+          },
+          {
+            "step_number": 5,
+            "title": "حساب P(X=3)",
+            "explanation": "نختار ثلاث كريات من الكريات الأربع التي تحمل الرقم \\(2\\):\n\\[P(X=3)=\\frac{\\binom43}{84}=\\frac4{84}=\\frac1{21}\\]"
+          },
+          {
+            "step_number": 6,
+            "title": "قانون احتمال X",
+            "explanation": "\\[\\begin{array}{c|cccc}x_i&0&1&2&3\\\\\\hline P(X=x_i)&\\frac5{42}&\\frac{10}{21}&\\frac5{14}&\\frac1{21}\\end{array}\\]"
+          },
+          {
+            "step_number": 7,
+            "title": "حساب الأمل الرياضياتي",
+            "explanation": "\\[E(X)=0\\times\\frac5{42}+1\\times\\frac{10}{21}+2\\times\\frac5{14}+3\\times\\frac1{21}\\]\n\\[E(X)=\\frac{10}{21}+\\frac{10}{14}+\\frac3{21}=\\frac43\\]"
+          }
+        ],
+        "final_answer": "قانون \\(X\\): \\(\\frac5{42},\\frac{10}{21},\\frac5{14},\\frac1{21}\\) للقيم \\(0,1,2,3\\) على الترتيب، و \\(E(X)=\\frac43\\)."
+      }
+    },
+    {
+      "id": "2026_s1_probability_ex01_qII",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "II) نضيف إلى محتوى الكيس السابق \\(n\\) كرية تحمل الرقم 1 ثم نسحب منه كريتين على التوالي دون إرجاع. - عين قيمة \\(n\\) حتى يكون احتمال الحصول على كريتين لا تحمل أي منهما الرقم 1 يساوي \\(\\frac15\\).",
+      "axis_tags": [
+        "probability_draw_modeling",
+        "probability_counting"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "بعد إضافة n كريات تحمل الرقم 1، يصبح العدد الكلي \\(9+n\\)، بينما يبقى عدد الكريات التي لا تحمل الرقم 1 مساويا لـ7. نحسب احتمال سحب كريتين من هذه السبع دون إرجاع ونساويه بـ\\(\\frac15\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تحديد الأعداد الجديدة",
+            "explanation": "عدد الكريات الكلي بعد الإضافة:\n\\[9+n\\]\nعدد الكريات التي تحمل الرقم \\(1\\):\n\\[2+n\\]\nوعدد الكريات التي لا تحمل الرقم \\(1\\) يبقى:\n\\[4+3=7\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "كتابة الاحتمال",
+            "explanation": "نسحب كريتين على التوالي دون إرجاع، إذن:\n\\[P=\\frac7{n+9}\\times\\frac6{n+8}\\]\nوحسب المطلوب:\n\\[\\frac7{n+9}\\times\\frac6{n+8}=\\frac15\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حل المعادلة",
+            "explanation": "\\[\\frac{42}{(n+9)(n+8)}=\\frac15\\]\nإذن:\n\\[(n+9)(n+8)=210\\]\nنلاحظ أن:\n\\[210=14\\times15\\]\nومن ثم:\n\\[n+8=14\\quad\\text{و}\\quad n+9=15\\]\nإذن:\n\\[n=6\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{n=6}\\)."
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_by_direct_calculation": true,
+    "source_pdf": "2026(1).pdf",
+    "statement_figure_policy": "لا يوجد شكل في نص تمرين الاحتمالات.",
+    "solution_figure_policy": "لا يحتاج الحل إلى رسم.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  }
+}

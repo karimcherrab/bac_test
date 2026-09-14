@@ -83,7 +83,6 @@ class Chapter(models.Model):
             )
         ]
 
-
 class Axis(models.Model):
     chapter = models.ForeignKey(
         Chapter,
@@ -132,13 +131,6 @@ class Axis(models.Model):
                 name="unique_axis_tag_per_chapter",
             )
         ]
-
-
-
-
-from django.core.exceptions import ValidationError
-from django.db import models
-
 
 class Question(models.Model):
 
@@ -323,9 +315,6 @@ class Question(models.Model):
             f"{self.code} - "
             f"{self.title or self.text[:50]}"
         )
-from django.conf import settings
-from django.db import models
-
 
 class ReExplainStepHistory(models.Model):
     student = models.ForeignKey(
@@ -404,201 +393,7 @@ class ReExplainStepHistory(models.Model):
             f"{self.step_title}"
         )
 
-
-
-
-from django.db import models
-
-
-# class BacExercise(models.Model):
-#     class Difficulty(models.TextChoices):
-#         EASY = "easy", "سهل"
-#         MEDIUM = "medium", "متوسط"
-#         HARD = "hard", "صعب"
-#         MEDIUM_HARD = "medium_hard", "متوسط إلى صعب"
-#
-#     exercise_id = models.CharField(
-#         max_length=150,
-#         unique=True,
-#         db_index=True,
-#         verbose_name="المعرف الخارجي",
-#     )
-#
-#     chapter = models.ForeignKey(
-#         Chapter,
-#         on_delete=models.CASCADE,
-#         related_name="bac_exercises",
-#         verbose_name="الفصل",
-#     )
-#
-#     axes = models.ManyToManyField(
-#         Axis,
-#         related_name="bac_exercises",
-#         blank=True,
-#         verbose_name="المحاور المرتبطة",
-#     )
-#
-#     year = models.PositiveIntegerField(
-#         db_index=True,
-#         verbose_name="السنة",
-#     )
-#
-#     branch = models.CharField(
-#         max_length=150,
-#         default="علوم تجريبية",
-#         verbose_name="الشعبة",
-#     )
-#
-#     session = models.CharField(
-#         max_length=150,
-#         blank=True,
-#         default="",
-#         verbose_name="الدورة",
-#     )
-#
-#     exercise_number = models.CharField(
-#         max_length=150,
-#         blank=True,
-#         default="",
-#         verbose_name="رقم التمرين",
-#     )
-#
-#     points = models.DecimalField(
-#         max_digits=5,
-#         decimal_places=2,
-#         null=True,
-#         blank=True,
-#         verbose_name="النقاط",
-#     )
-#
-#     pdf_page = models.PositiveIntegerField(
-#         null=True,
-#         blank=True,
-#         verbose_name="صفحة المصدر",
-#     )
-#
-#     title = models.CharField(
-#         max_length=255,
-#         verbose_name="عنوان التمرين",
-#     )
-#
-#     difficulty = models.CharField(
-#         max_length=30,
-#         choices=Difficulty.choices,
-#         default=Difficulty.MEDIUM,
-#         db_index=True,
-#         verbose_name="الصعوبة",
-#     )
-#
-#     statement = models.JSONField(
-#         default=dict,
-#         verbose_name="نص التمرين",
-#     )
-#
-#     solution = models.JSONField(
-#         default=dict,
-#         verbose_name="الحل",
-#     )
-#
-#     graph = models.JSONField(
-#         null=True,
-#         blank=True,
-#         verbose_name="بيانات الرسم",
-#     )
-#
-#     images = models.JSONField(
-#         default=list,
-#         blank=True,
-#         verbose_name="الصور",
-#     )
-#
-#     source = models.JSONField(
-#         default=dict,
-#         blank=True,
-#         verbose_name="بيانات المصدر",
-#     )
-#
-#     raw_data = models.JSONField(
-#         default=dict,
-#         blank=True,
-#         verbose_name="JSON الأصلي",
-#     )
-#
-#     schema_version = models.CharField(
-#         max_length=30,
-#         default="1.0",
-#     )
-#
-#     language = models.CharField(
-#         max_length=10,
-#         default="ar",
-#     )
-#
-#     direction = models.CharField(
-#         max_length=10,
-#         default="rtl",
-#     )
-#
-#     math_format = models.CharField(
-#         max_length=30,
-#         default="LaTeX",
-#     )
-#
-#     is_active = models.BooleanField(
-#         default=True,
-#         db_index=True,
-#     )
-#
-#     order = models.PositiveIntegerField(
-#         default=0,
-#     )
-#
-#     created_at = models.DateTimeField(
-#         auto_now_add=True,
-#     )
-#
-#     updated_at = models.DateTimeField(
-#         auto_now=True,
-#     )
-#
-#     class Meta:
-#         ordering = [
-#             "-year",
-#             "order",
-#             "id",
-#         ]
-#
-#         indexes = [
-#             models.Index(
-#                 fields=["year", "branch"],
-#             ),
-#             models.Index(
-#                 fields=["is_active", "year"],
-#             ),
-#         ]
-#
-#         verbose_name = "تمرين بكالوريا"
-#         verbose_name_plural = "تمارين البكالوريا"
-#
-#     def __str__(self):
-#         return (
-#             f"{self.year} - "
-#             f"{self.exercise_number} - "
-#             f"{self.title}"
-#         )
-
-
-# ============================================================
-# AI - حل مبسط محفوظ لكل طالب ولكل سؤال
-# ============================================================
-
 class StudentQuestionSimpleSolution(models.Model):
-    """
-    يحتفظ بآخر حل مبسط أنشأه الذكاء الاصطناعي لطالب محدد ولسؤال محدد.
-
-    لكل زوج (student, question) يوجد سجل واحد فقط.
-    عند إعادة التوليد يتم تحديث نفس السجل بدل إنشاء سجل جديد.
-    """
 
     student = models.ForeignKey(
         Student,

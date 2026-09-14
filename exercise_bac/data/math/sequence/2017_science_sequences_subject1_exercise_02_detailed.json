@@ -1,0 +1,221 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "session": "ordinary",
+  "year": 2017,
+  "chapter_code": "sequences",
+  "chapter_title": "المتتاليات العددية",
+  "branches": [
+    {
+      "code": "science",
+      "name": "شعبة علوم تجريبية"
+    }
+  ],
+  "source_pdf": "2017(4).pdf",
+  "comparison_source": "bac_sequence_scientifique(20260823-103712).pdf",
+  "source_verification": {
+    "statement_checked_against_original_bac": true,
+    "solution_checked_against_official_correction": true,
+    "solution_style": "حل مفصل ومبسط بخطوات صغيرة مع الحفاظ على نتائج التصحيح الرسمي.",
+    "statement_policy": "نص الأسئلة منقول من موضوع البكالوريا دون إضافة معطيات جديدة.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  },
+  "version": "4.2-2017-science-sequences-subject1-ex02",
+  "exercise_number": 2,
+  "subject_number": 1,
+  "points": 4,
+  "source_page": 1,
+  "source_pages": [
+    1
+  ],
+  "solution_source_pages": [
+    5
+  ],
+  "title": "التمرين الثاني — بكالوريا الجزائر 2017 — الموضوع الأول — شعبة علوم تجريبية",
+  "statement": "متتاليتان \\((u_n)\\) و \\((v_n)\\) معرفتان على مجموعة الأعداد الطبيعية \\(\\mathbb N\\) كما يلي: \\(u_0=\\frac14\\)، ومن أجل كل عدد طبيعي \\(n\\): \\(u_{n+1}=3-\\frac{10}{u_n+4}\\)، و \\(v_n=\\frac{u_n+2}{1-u_n}\\).",
+  "statement_graphs": [],
+  "axis_tags": [
+    "recursive_sequence",
+    "induction_bounds",
+    "sequence_monotonicity",
+    "sequence_convergence",
+    "auxiliary_geometric_sequence",
+    "explicit_sequence_formula",
+    "sequence_limit"
+  ],
+  "questions": [
+    {
+      "id": "2017_s1_ex02_q1a",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) أ) برهن بالتراجع أنه من أجل كل عدد طبيعي \\(n\\): \\(0<u_n<1\\).",
+      "axis_tags": [
+        "induction_bounds"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نبرهن الخاصية بالتراجع.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التحقق عند n=0",
+            "explanation": "لدينا:\n\\[\nu_0=\\frac14.\n\\]\nإذن:\n\\[\n0<\\frac14<1.\n\\]\nفالخاصية صحيحة عند \\(n=0\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "فرضية التراجع",
+            "explanation": "نفترض أنه من أجل رتبة طبيعية \\(n\\):\n\\[\n0<u_n<1.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "إعادة كتابة u_{n+1}",
+            "explanation": "لدينا:\n\\[\nu_{n+1}=3-\\frac{10}{u_n+4}\n=\\frac{3(u_n+4)-10}{u_n+4}\n=\\frac{3u_n+2}{u_n+4}.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "إثبات أن u_{n+1}>0",
+            "explanation": "بما أن \\(u_n>0\\)، فإن:\n\\[\n3u_n+2>0,\n\\]\nوكذلك:\n\\[\nu_n+4>0.\n\\]\nإذن:\n\\[\nu_{n+1}>0.\n\\]"
+          },
+          {
+            "step_number": 5,
+            "title": "إثبات أن u_{n+1}<1",
+            "explanation": "بما أن المقام موجب:\n\\[\nu_{n+1}<1\n\\iff \\frac{3u_n+2}{u_n+4}<1\n\\iff 3u_n+2<u_n+4\n\\iff 2u_n<2\n\\iff u_n<1.\n\\]\nوهذا صحيح بفرضية التراجع."
+          },
+          {
+            "step_number": 6,
+            "title": "الخلاصة",
+            "explanation": "إذن:\n\\[\n0<u_{n+1}<1.\n\\]\nوبالتراجع:\n\\[\n\\boxed{0<u_n<1\\quad\\forall n\\in\\mathbb N}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{0<u_n<1\\text{ لكل }n\\in\\mathbb N}\\)."
+      }
+    },
+    {
+      "id": "2017_s1_ex02_q1b",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "ب) بين أن المتتالية \\((u_n)\\) متزايدة تماما ثم استنتج أنها متقاربة.",
+      "axis_tags": [
+        "sequence_monotonicity",
+        "sequence_convergence"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب الفرق \\(u_{n+1}-u_n\\)، ثم نستعمل الحصر السابق.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب الفرق",
+            "explanation": "لدينا:\n\\[\nu_{n+1}-u_n\n=\\frac{3u_n+2}{u_n+4}-u_n.\n\\]\nنوحد المقام:\n\\[\nu_{n+1}-u_n\n=\\frac{3u_n+2-u_n(u_n+4)}{u_n+4}.\n\\]\nإذن:\n\\[\nu_{n+1}-u_n\n=\\frac{-u_n^2-u_n+2}{u_n+4}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "تحليل البسط",
+            "explanation": "نحلل:\n\\[\n-u_n^2-u_n+2=(1-u_n)(u_n+2).\n\\]\nومن ثم:\n\\[\n\\boxed{u_{n+1}-u_n=\\frac{(1-u_n)(u_n+2)}{u_n+4}}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "دراسة الإشارة",
+            "explanation": "من السؤال السابق:\n\\[\n0<u_n<1.\n\\]\nإذن:\n\\[\n1-u_n>0,\\qquad u_n+2>0,\\qquad u_n+4>0.\n\\]\nوبالتالي:\n\\[\nu_{n+1}-u_n>0.\n\\]\nإذن \\((u_n)\\) متزايدة تماما."
+          },
+          {
+            "step_number": 4,
+            "title": "التقارب",
+            "explanation": "كما أن:\n\\[\nu_n<1\n\\]\nلكل \\(n\\)، أي أن المتتالية محدودة من الأعلى. وكل متتالية متزايدة ومحدودة من الأعلى متقاربة."
+          }
+        ],
+        "final_answer": "\\(\\boxed{(u_n)\\text{ متزايدة تماما ومتقاربة}}\\)."
+      }
+    },
+    {
+      "id": "2017_s1_ex02_q2a",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "2) أ) بين أن المتتالية \\((v_n)\\) هندسية أساسها \\(\\frac52\\) ثم عبر عن حدها العام \\(v_n\\) بدلالة \\(n\\).",
+      "axis_tags": [
+        "auxiliary_geometric_sequence",
+        "geometric_sequence_general_term"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب \\(v_{n+1}\\) بدلالة \\(v_n\\)، ثم نحسب \\(v_0\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "كتابة v_{n+1}",
+            "explanation": "حسب التعريف:\n\\[\nv_{n+1}=\\frac{u_{n+1}+2}{1-u_{n+1}}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب u_{n+1}+2",
+            "explanation": "باستعمال:\n\\[\nu_{n+1}=\\frac{3u_n+2}{u_n+4},\n\\]\nنحصل على:\n\\[\nu_{n+1}+2\n=\\frac{3u_n+2+2(u_n+4)}{u_n+4}\n=\\frac{5u_n+10}{u_n+4}\n=\\frac{5(u_n+2)}{u_n+4}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب 1-u_{n+1}",
+            "explanation": "\\[\n1-u_{n+1}\n=1-\\frac{3u_n+2}{u_n+4}\n=\\frac{u_n+4-3u_n-2}{u_n+4}\n=\\frac{2(1-u_n)}{u_n+4}.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "إظهار العلاقة الهندسية",
+            "explanation": "إذن:\n\\[\nv_{n+1}\n=\\frac{\\frac{5(u_n+2)}{u_n+4}}{\\frac{2(1-u_n)}{u_n+4}}\n=\\frac52\\frac{u_n+2}{1-u_n}\n=\\frac52v_n.\n\\]\nإذن \\((v_n)\\) هندسية أساسها:\n\\[\nq=\\frac52.\n\\]"
+          },
+          {
+            "step_number": 5,
+            "title": "حساب v_0",
+            "explanation": "\\[\nv_0=\\frac{u_0+2}{1-u_0}\n=\\frac{\\frac14+2}{1-\\frac14}\n=\\frac{\\frac94}{\\frac34}=3.\n\\]"
+          },
+          {
+            "step_number": 6,
+            "title": "الحد العام",
+            "explanation": "بما أن \\((v_n)\\) هندسية وحدها الأول \\(v_0=3\\) وأساسها \\(\\frac52\\)، فإن:\n\\[\n\\boxed{v_n=3\\left(\\frac52\\right)^n}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{v_n=3(\\frac52)^n}\\)."
+      }
+    },
+    {
+      "id": "2017_s1_ex02_q2b",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "ب) أثبت أنه من أجل كل عدد طبيعي \\(n\\): \\(u_n=1-\\frac3{v_n+1}\\)، ثم استنتج النهاية \\(\\lim_{n\\to+\\infty}u_n\\).",
+      "axis_tags": [
+        "explicit_sequence_formula",
+        "sequence_limit"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحل تعريف \\(v_n\\) بالنسبة إلى \\(u_n\\)، ثم نستعمل نهاية \\(v_n\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الانطلاق من تعريف v_n",
+            "explanation": "\\[\nv_n=\\frac{u_n+2}{1-u_n}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "إزالة المقام",
+            "explanation": "\\[\nv_n(1-u_n)=u_n+2.\n\\]\nإذن:\n\\[\nv_n-v_nu_n=u_n+2.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "تجميع حدود u_n",
+            "explanation": "\\[\nv_n-2=u_n(v_n+1).\n\\]\nومن ثم:\n\\[\nu_n=\\frac{v_n-2}{v_n+1}.\n\\]\nنكتب البسط:\n\\[\nv_n-2=(v_n+1)-3.\n\\]\nإذن:\n\\[\n\\boxed{u_n=1-\\frac3{v_n+1}}.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "نهاية v_n",
+            "explanation": "لدينا:\n\\[\nv_n=3\\left(\\frac52\\right)^n.\n\\]\nوبما أن \\(\\frac52>1\\):\n\\[\nv_n\\to+\\infty.\n\\]"
+          },
+          {
+            "step_number": 5,
+            "title": "استنتاج نهاية u_n",
+            "explanation": "إذن:\n\\[\n\\frac3{v_n+1}\\to0.\n\\]\nومن ثم:\n\\[\n\\boxed{u_n\\to1}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{u_n=1-\\frac3{v_n+1}}\\)، و \\(\\boxed{\\lim_{n\\to+\\infty}u_n=1}\\)."
+      }
+    }
+  ]
+}

@@ -9,6 +9,7 @@ from .models import (
 
 
 class GenerateBacExerciseRequestSerializer(serializers.Serializer):
+    subject_code = serializers.CharField(default="auto", required=False, allow_blank=True, allow_null=True)
     chapter_id = serializers.IntegerField(min_value=1)
     branch_code = serializers.CharField(max_length=100)
     references_count = serializers.IntegerField(
@@ -26,6 +27,18 @@ class GenerateBacExerciseRequestSerializer(serializers.Serializer):
         default="diverse_random",
         required=False,
     )
+
+    def validate_subject_code(self, value):
+        value=(value or "auto").strip().lower()
+        if value in ("", "auto", "undefined", "null"):
+            return "auto"
+        if value in ("natural_sciences", "science", "sciences", "svt", "biology", "علوم", "العلوم"):
+            return "natural_sciences"
+        if value in ("physics", "phy", "physique", "الفيزياء", "فيزياء"):
+            return "physics"
+        if value in ("math", "maths", "mathematics", "mathematiques", "الرياضيات", "رياضيات"):
+            return "math"
+        raise serializers.ValidationError("المواد المدعومة: الرياضيات والفيزياء وعلوم الطبيعة والحياة.")
 
     def validate_chapter_id(self, value):
         if not Chapter.objects.filter(
@@ -77,6 +90,8 @@ class GeneratedBacQuestionReExplanationSerializer(
 class GeneratedBacExerciseSerializer(
     serializers.ModelSerializer
 ):
+    solution_progress = serializers.SerializerMethodField()
+    subject_code = serializers.SerializerMethodField()
     chapter = serializers.SerializerMethodField()
     branch = serializers.SerializerMethodField()
     has_solution = serializers.BooleanField(
@@ -92,6 +107,8 @@ class GeneratedBacExerciseSerializer(
             "exercise",
             "solution",
             "has_solution",
+            "solution_progress",
+            "subject_code",
             "status",
             "selection_strategy",
             "chapter",
@@ -100,6 +117,13 @@ class GeneratedBacExerciseSerializer(
             "created_at",
             "updated_at",
         ]
+
+    def get_solution_progress(self,obj):
+        from .services.solution_chunks import progress
+        return progress(obj)
+
+    def get_subject_code(self,obj):
+        return (obj.generation_metadata or {}).get("subject_code", "auto")
 
     def get_chapter(self, obj):
         return {

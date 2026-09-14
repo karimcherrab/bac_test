@@ -1,0 +1,282 @@
+{
+  "schema_version": "4.5-bac-source",
+  "version": "4.2-2020-tech-math-subject2-sequences-ex03",
+  "language": "ar",
+  "direction": "rtl",
+  "year": 2020,
+  "session": "ordinary",
+  "chapter_code": "sequences",
+  "chapter_title": "sequences",
+  "exercise_number": 3,
+  "points": 5,
+  "source_pages": [
+    4
+  ],
+  "solution_source_pages": [
+    8,
+    9
+  ],
+  "branches": [
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "title": "التمرين الثالث — بكالوريا الجزائر 2020 — متتالية معرفة بالتراجع ومتتالية هندسية",
+  "axis_tags": [
+    "recursive_sequence",
+    "mathematical_induction",
+    "bounded_sequence",
+    "sequence_monotonicity",
+    "sequence_convergence",
+    "geometric_sequence",
+    "explicit_formula",
+    "sequence_limit"
+  ],
+  "statement": "التمرين الثالث: (05 نقاط)\n\nالمتتالية العددية \\((u_n)\\) معرفة بحدها الأول \\(u_0\\) حيث \\(u_0=\\frac12\\)، ومن أجل كل عدد طبيعي \\(n\\):\n\\[u_{n+1}=3-\\frac4{u_n+2}.\\]\n\n1) برهن بالتراجع أنه من أجل كل عدد طبيعي \\(n\\): \\[-1<u_n<2.\\]\n\n2) أ. بين أنه من أجل كل عدد طبيعي \\(n\\):\n\\[u_{n+1}-u_n=\\frac{(2-u_n)(1+u_n)}{u_n+2}.\\]\nب. حدد اتجاه تغير المتتالية \\((u_n)\\) ثم استنتج أنها متقاربة.\n\n3) المتتالية العددية \\((v_n)\\) معرفة على \\(\\mathbb N\\) بـ:\n\\[v_n=\\frac{u_n+\\alpha}{u_n+1},\\]\nحيث \\(\\alpha\\) عدد حقيقي.\nأ. اوجد \\(\\alpha\\) حتى تكون المتتالية \\((v_n)\\) هندسية أساسها \\(\\frac14\\)، ثم احسب حدها الأول \\(v_0\\).\nب. بين عندئذ أنه من أجل كل عدد طبيعي \\(n\\):\n\\[u_n=\\frac{2\\times4^n-1}{4^n+1},\\]\nثم احسب \\(\\lim_{n\\to+\\infty}u_n\\).",
+  "figures": [],
+  "questions": [
+    {
+      "id": "2020_tech_math_s2_ex03_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) برهن بالتراجع أنه من أجل كل عدد طبيعي \\(n\\): \\(-1<u_n<2\\).",
+      "solution": {
+        "introduction": "نثبت الحصر بالتراجع.",
+        "strategy": "نتحقق عند n=0، ثم نستعمل العلاقة التراجعية للانتقال من n إلى n+1.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التحقق عند n=0",
+            "explanation": "\\[u_0=\\frac12\\Rightarrow -1<u_0<2.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "فرضية التراجع",
+            "explanation": "نفترض: \\[-1<u_n<2.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الحد الأدنى",
+            "explanation": "من \\(u_n>-1\\) نحصل على \\(u_n+2>1\\)، ومنه \\(4/(u_n+2)<4\\)، وبالتالي \\(u_{n+1}>-1\\)."
+          },
+          {
+            "step_number": 4,
+            "title": "الحد الأعلى",
+            "explanation": "من \\(u_n<2\\) نحصل على \\(u_n+2<4\\)، وبالتالي \\(4/(u_n+2)>1\\)، ومنه \\(u_{n+1}<2\\).",
+            "result": "\\(-1<u_{n+1}<2\\)."
+          },
+          {
+            "step_number": 5,
+            "title": "الخلاصة",
+            "explanation": "الخاصية صحيحة لكل n حسب مبدأ التراجع."
+          }
+        ],
+        "final_answer": "\\(\\boxed{-1<u_n<2}\\) لكل \\(n\\).",
+        "verification": "تمت مراجعة الحل مع الإجابة النموذجية الرسمية لبكالوريا 2020، الموضوع الثاني، التمرين الثالث.",
+        "common_mistakes": [
+          "قلب اتجاه المتراجحة خطأ عند أخذ المقلوب."
+        ],
+        "hints": [
+          "استعمل u_n+2>0 قبل أخذ المقلوب."
+        ],
+        "summary": "كل الحدود تبقى داخل ]-1,2[.",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2020_tech_math_s2_ex03_q2a",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2-أ) بين أنه من أجل كل عدد طبيعي \\(n\\): \\(u_{n+1}-u_n=\\frac{(2-u_n)(1+u_n)}{u_n+2}\\).",
+      "solution": {
+        "introduction": "نحسب الفرق ونبسطه.",
+        "strategy": "نوحد المقام ثم نفكك البسط.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب الفرق",
+            "explanation": "\\[u_{n+1}-u_n=3-\\frac4{u_n+2}-u_n.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "توحيد المقام",
+            "explanation": "\\[u_{n+1}-u_n=\\frac{(3-u_n)(u_n+2)-4}{u_n+2}.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "تفكيك البسط",
+            "explanation": "\\[(3-u_n)(u_n+2)-4=-u_n^2+u_n+2=(2-u_n)(1+u_n).\\]",
+            "result": "\\[u_{n+1}-u_n=\\frac{(2-u_n)(1+u_n)}{u_n+2}.\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{u_{n+1}-u_n=\\frac{(2-u_n)(1+u_n)}{u_n+2}}\\).",
+        "verification": "تمت مراجعة الحل مع الإجابة النموذجية الرسمية لبكالوريا 2020، الموضوع الثاني، التمرين الثالث.",
+        "common_mistakes": [
+          "الخطأ في نشر (3-u_n)(u_n+2)."
+        ],
+        "hints": [
+          "وحد المقام ثم فكك -u_n²+u_n+2."
+        ],
+        "summary": "بعد التوحيد يظهر البسط على شكل جداء مناسب لدراسة الإشارة.",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2020_tech_math_s2_ex03_q2b",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "2-ب) حدد اتجاه تغير المتتالية \\((u_n)\\) ثم استنتج أنها متقاربة.",
+      "solution": {
+        "introduction": "نستعمل الحصر السابق وعبارة الفرق.",
+        "strategy": "ندرس إشارة العوامل الثلاثة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "إشارة العوامل",
+            "explanation": "من \\(-1<u_n<2\\): \\(2-u_n>0\\)، \\(1+u_n>0\\)، و\\(u_n+2>0\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "التزايد",
+            "explanation": "إذن \\(u_{n+1}-u_n>0\\).",
+            "result": "\\((u_n)\\) متزايدة تماما."
+          },
+          {
+            "step_number": 3,
+            "title": "التقارب",
+            "explanation": "المتتالية متزايدة تماما ومحدودة من الأعلى بالعدد 2، لذلك فهي متقاربة."
+          }
+        ],
+        "final_answer": "\\(\\boxed{(u_n)\\text{ متزايدة تماما ومتقاربة}}\\).",
+        "verification": "تمت مراجعة الحل مع الإجابة النموذجية الرسمية لبكالوريا 2020، الموضوع الثاني، التمرين الثالث.",
+        "common_mistakes": [
+          "إثبات التزايد دون ذكر الحد الأعلى 2."
+        ],
+        "hints": [
+          "استعمل -1<u_n<2."
+        ],
+        "summary": "الفرق موجب والمتتالية محدودة من الأعلى.",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2020_tech_math_s2_ex03_q3a",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "3-أ) اوجد \\(\\alpha\\) حتى تكون المتتالية \\((v_n)\\) هندسية أساسها \\(\\frac14\\)، ثم احسب حدها الأول \\(v_0\\).",
+      "solution": {
+        "introduction": "نبحث عن قيمة \\(\\alpha\\) التي تجعل \\(v_{n+1}=\\frac14v_n\\).",
+        "strategy": "نبسط u_{n+1} أولا، ثم نختار α بحيث تتحول النسبة إلى ثابت.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "كتابة u_{n+1} على شكل كسر",
+            "explanation": "\\[u_{n+1}=\\frac{3u_n+2}{u_n+2}.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "اختيار α",
+            "explanation": "نحسب \\(u_{n+1}-2=\\frac{u_n-2}{u_n+2}\\) و\\(u_{n+1}+1=\\frac{4(u_n+1)}{u_n+2}\\). باختيار \\(\\alpha=-2\\): \\[v_{n+1}=\\frac14v_n.\\]",
+            "result": "\\(\\alpha=-2\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "حساب v₀",
+            "explanation": "\\[v_0=\\frac{1/2-2}{1/2+1}=-1.\\]",
+            "result": "\\(v_0=-1\\)."
+          }
+        ],
+        "final_answer": "\\(\\boxed{\\alpha=-2}\\) و\\(\\boxed{v_0=-1}\\).",
+        "verification": "تمت مراجعة الحل مع الإجابة النموذجية الرسمية لبكالوريا 2020، الموضوع الثاني، التمرين الثالث.",
+        "common_mistakes": [
+          "اختيار α=2 بدل -2."
+        ],
+        "hints": [
+          "قارن u_{n+1}-2 مع u_n-2."
+        ],
+        "summary": "القيمة α=-2 تجعل النسبة ثابتة وتساوي 1/4.",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2020_tech_math_s2_ex03_q3b",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "3-ب) بين عندئذ أنه من أجل كل عدد طبيعي \\(n\\): \\(u_n=\\frac{2\\times4^n-1}{4^n+1}\\)، ثم احسب \\(\\lim_{n\\to+\\infty}u_n\\).",
+      "solution": {
+        "introduction": "نستعمل الحد العام للمتتالية الهندسية \\((v_n)\\)، ثم نعزل \\(u_n\\).",
+        "strategy": "بما أن v₀=-1 والأساس 1/4، فإن v_n=-(1/4)^n.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "عبارة v_n",
+            "explanation": "\\[v_n=-\\left(\\frac14\\right)^n.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "عزل u_n",
+            "explanation": "من \\(v_n=\\frac{u_n-2}{u_n+1}\\) نجد \\(u_n=\\frac{v_n+2}{1-v_n}\\). بالتعويض ثم الضرب في \\(4^n\\): \\[u_n=\\frac{2\\cdot4^n-1}{4^n+1}.\\]",
+            "result": "العبارة المطلوبة."
+          },
+          {
+            "step_number": 3,
+            "title": "حساب النهاية",
+            "explanation": "\\[u_n=\\frac{2-4^{-n}}{1+4^{-n}}\\to2.\\]",
+            "result": "\\(\\lim u_n=2\\)."
+          }
+        ],
+        "final_answer": "\\(\\boxed{u_n=\\frac{2\\times4^n-1}{4^n+1}}\\) و\\(\\boxed{\\lim_{n\\to+\\infty}u_n=2}\\).",
+        "verification": "تمت مراجعة الحل مع الإجابة النموذجية الرسمية لبكالوريا 2020، الموضوع الثاني، التمرين الثالث.",
+        "common_mistakes": [
+          "نسيان الإشارة السالبة في v_n=-(1/4)^n."
+        ],
+        "hints": [
+          "استخرج u_n من v_n=(u_n-2)/(u_n+1)."
+        ],
+        "summary": "الصيغة الصريحة تعطي مباشرة النهاية 2.",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    }
+  ],
+  "source_reference": {
+    "file": "2020(4).pdf",
+    "statement_pages": [
+      4
+    ],
+    "solution_pages": [
+      8,
+      9
+    ],
+    "source_faithful_statement": true,
+    "solution_reviewed_against_source": true
+  },
+  "display": {
+    "layout": "question_by_question",
+    "show_statement_first": true,
+    "show_statement_figures": true,
+    "show_solution_after_click": true,
+    "show_solution_figures": true
+  },
+  "review_status": {
+    "statement_compared_with_original_pdf": true,
+    "questions_compared_with_original_pdf": true,
+    "source_figures_checked": true,
+    "solution_checked_against_correction": true,
+    "latex_normalized_only": true,
+    "react_ready": true
+  },
+  "given_data": {
+    "u0": "1/2",
+    "recurrence": "u_{n+1}=3-4/(u_n+2)",
+    "bound": "-1<u_n<2",
+    "monotonicity": "strictly_increasing",
+    "alpha": "-2",
+    "v_n": "(u_n-2)/(u_n+1)",
+    "v0": "-1",
+    "ratio_v": "1/4",
+    "explicit_v": "-(1/4)^n",
+    "explicit_u": "(2*4^n-1)/(4^n+1)",
+    "limit_u": "2"
+  }
+}

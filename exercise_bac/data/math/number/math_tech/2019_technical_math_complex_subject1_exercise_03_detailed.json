@@ -1,0 +1,226 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "session": "ordinary",
+  "year": 2019,
+  "chapter_code": "complex_numbers",
+  "chapter_title": "الأعداد المركبة",
+  "branches": [
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "version": "4.2-2019-technical-math-complex-subject1-ex03",
+  "subject_number": 1,
+  "exercise_number": 3,
+  "source_page": 2,
+  "source_pages": [
+    2
+  ],
+  "solution_source_pages": [
+    7
+  ],
+  "title": "التمرين الثالث — بكالوريا الجزائر 2019 — الموضوع الأول — شعبة تقني رياضي",
+  "axis_tags": [
+    "complex_geometry",
+    "complex_rotation",
+    "complex_direct_similarity",
+    "complex_homothety",
+    "complex_geometric_locus"
+  ],
+  "statement": "المستوي المركب منسوب إلى المعلم المتعامد والمتجانس \\((O;\\vec u,\\vec v)\\). \\(A\\)، \\(B\\) و \\(C\\) النقط التي لواحقها على الترتيب: \\(z_A=1+i\\)، \\(z_B=2+i\\) و \\(z_C=\\frac32+i\\left(1+\\frac{\\sqrt3}{2}\\right)\\). \\((\\Gamma)\\) الدائرة التي مركزها \\(A\\) وطول نصف قطرها \\(1\\).",
+  "questions": [
+    {
+      "id": "2019_tm_s1_complex_ex03_q1a",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) أ) تحقق أن النقطة \\(C\\) من الدائرة \\((\\Gamma)\\).",
+      "axis_tags": [
+        "complex_geometry"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "حتى تكون C من الدائرة مركزها A ونصف قطرها 1، يكفي التحقق أن \\(AC=1\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب zC-zA",
+            "explanation": "لدينا:\n\\[\nz_C-z_A=\\left(\\frac32+i\\left(1+\\frac{\\sqrt3}{2}\\right)\\right)-(1+i)\n=\\frac12+i\\frac{\\sqrt3}{2}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب AC",
+            "explanation": "\\[\nAC=|z_C-z_A|\n=\\sqrt{\\left(\\frac12\\right)^2+\\left(\\frac{\\sqrt3}{2}\\right)^2}\n=\\sqrt{\\frac14+\\frac34}=1.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الاستنتاج",
+            "explanation": "بما أن \\(AC=1\\)، وهو نصف قطر الدائرة \\((\\Gamma)\\)، فإن:\n\\[\nC\\in(\\Gamma).\n\\]"
+          }
+        ],
+        "final_answer": "\\(C\\in(\\Gamma)\\)."
+      }
+    },
+    {
+      "id": "2019_tm_s1_complex_ex03_q1b",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "ب) عين قيسا بالراديان للزاوية \\((\\overrightarrow{AB};\\overrightarrow{AC})\\) ثم استنتج أن \\(C\\) صورة \\(B\\) بالدوران \\(r\\) الذي مركزه \\(A\\) يطلب تعيين زاويته.",
+      "axis_tags": [
+        "complex_rotation",
+        "complex_geometry"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب نسبة لاحقتي الشعاعين \\(AB\\) و\\(AC\\)، ثم نستخرج عمدتها.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب لاحقة AB",
+            "explanation": "\\[\nz_B-z_A=(2+i)-(1+i)=1.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب لاحقة AC",
+            "explanation": "\\[\nz_C-z_A=\\frac12+i\\frac{\\sqrt3}{2}\n=\\cos\\frac{\\pi}{3}+i\\sin\\frac{\\pi}{3}\n=e^{i\\pi/3}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب الزاوية",
+            "explanation": "\\[\n(\\overrightarrow{AB};\\overrightarrow{AC})\n=\\arg\\left(\\frac{z_C-z_A}{z_B-z_A}\\right)\n=\\arg(e^{i\\pi/3})\n=\\frac{\\pi}{3}\\ [2\\pi].\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "استنتاج الدوران",
+            "explanation": "لدينا أيضًا:\n\\[\nAB=|z_B-z_A|=1,\n\\qquad\nAC=1.\n\\]\nإذن الدوران مركزه \\(A\\) وزاويته \\(\\frac{\\pi}{3}\\) يحول \\(B\\) إلى \\(C\\)."
+          }
+        ],
+        "final_answer": "\\((\\overrightarrow{AB};\\overrightarrow{AC})=\\frac{\\pi}{3}\\ [2\\pi]\\)، و\\(C=r(B)\\) حيث مركز \\(r\\) هو \\(A\\) وزاويته \\(\\frac{\\pi}{3}\\)."
+      }
+    },
+    {
+      "id": "2019_tm_s1_complex_ex03_q2a",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "2) \\(S\\) التشابه المباشر الذي يحول النقطة \\(M\\) ذات اللاحقة \\(z\\) إلى النقطة \\(M'\\) ذات اللاحقة \\(z'\\) حيث:\n\\[\nz'=(1+i\\sqrt3)z+\\sqrt3-i\\sqrt3.\n\\]\nأ) حدد العناصر المميزة للتشابه \\(S\\).",
+      "axis_tags": [
+        "complex_direct_similarity"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نكتب معامل z على الشكل الأسي لاستخراج النسبة والزاوية، ثم نحل معادلة النقطة الثابتة لإيجاد المركز.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "كتابة معامل التشابه أسيًا",
+            "explanation": "لدينا:\n\\[\n1+i\\sqrt3=2\\left(\\frac12+i\\frac{\\sqrt3}{2}\\right)=2e^{i\\pi/3}.\n\\]\nإذن نسبة التشابه:\n\\[\nk=2,\n\\]\nوزاويته:\n\\[\n\\theta=\\frac{\\pi}{3}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "تعيين المركز",
+            "explanation": "إذا كانت \\(\\Omega\\) مركز التشابه فإنها نقطة ثابتة، أي:\n\\[\nz_\\Omega=(1+i\\sqrt3)z_\\Omega+\\sqrt3-i\\sqrt3.\n\\]\nومنها:\n\\[\n-i\\sqrt3\\,z_\\Omega=\\sqrt3-i\\sqrt3.\n\\]\nإذن:\n\\[\nz_\\Omega=1+i=z_A.\n\\]"
+          }
+        ],
+        "final_answer": "التشابه \\(S\\) مركزه \\(A\\)، نسبته \\(2\\)، وزاويته \\(\\frac{\\pi}{3}\\)."
+      }
+    },
+    {
+      "id": "2019_tm_s1_complex_ex03_q2b",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "ب) عين \\(z_D\\) لاحقة \\(D\\) صورة \\(B\\) بالتشابه \\(S\\).",
+      "axis_tags": [
+        "complex_direct_similarity"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نعوض \\(z=z_B\\) في العبارة المركبة للتشابه.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التعويض",
+            "explanation": "\\[\nz_D=(1+i\\sqrt3)(2+i)+\\sqrt3-i\\sqrt3.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "التطوير",
+            "explanation": "\\[\n(1+i\\sqrt3)(2+i)=2+i+2i\\sqrt3-\\sqrt3.\n\\]\nإذن:\n\\[\nz_D=2+i+2i\\sqrt3-\\sqrt3+\\sqrt3-i\\sqrt3.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "التبسيط",
+            "explanation": "\\[\nz_D=2+i(1+\\sqrt3).\n\\]"
+          }
+        ],
+        "final_answer": "\\(z_D=2+i(1+\\sqrt3)\\)."
+      }
+    },
+    {
+      "id": "2019_tm_s1_complex_ex03_q3",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "3) ماهي نسبة التحاكي \\(h\\) الذي مركزه \\(A\\) حيث \\(S=h\\circ r\\)؟ استنتج أن النقط \\(A\\)، \\(C\\) و \\(D\\) في استقامية.",
+      "axis_tags": [
+        "complex_homothety",
+        "complex_geometry"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "الدوران r والتشابه S لهما نفس المركز ونفس الزاوية، لذلك الجزء المتبقي هو تحاكي نسبته تساوي نسبة S.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "مقارنة التحويلين",
+            "explanation": "الدوران \\(r\\) مركزه \\(A\\) وزاويته \\(\\frac{\\pi}{3}\\)، بينما التشابه \\(S\\) مركزه \\(A\\)، نسبته \\(2\\) وزاويته \\(\\frac{\\pi}{3}\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "نسبة التحاكي",
+            "explanation": "حتى يكون:\n\\[\nS=h\\circ r,\n\\]\nفإن التحاكي \\(h\\) مركزه \\(A\\) ونسبته:\n\\[\n2.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "استنتاج الاستقامية",
+            "explanation": "نعلم أن:\n\\[\nr(B)=C.\n\\]\nومن جهة أخرى:\n\\[\nS(B)=D=(h\\circ r)(B)=h(C).\n\\]\nإذن \\(D\\) صورة \\(C\\) بتحاكي مركزه \\(A\\)، وبالتالي النقط \\(A,C,D\\) على استقامة واحدة."
+          }
+        ],
+        "final_answer": "نسبة التحاكي \\(h\\) هي \\(2\\)، والنقط \\(A\\)، \\(C\\)، \\(D\\) في استقامية."
+      }
+    },
+    {
+      "id": "2019_tm_s1_complex_ex03_q4",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "4) \\((E)\\) مجموعة النقط \\(M\\) من المستوي التي لاحقتها \\(z\\) حيث:\n\\[\nz=z_A+ke^{i\\frac{\\pi}{3}},\\qquad k\\in\\mathbb{R}_+^*.\n\\]\n- تحقق أن النقطة \\(C\\) من المجموعة \\((E)\\)، ثم حدد طبيعة \\((E)\\).",
+      "axis_tags": [
+        "complex_geometric_locus"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "العلاقة تحدد جميع النقاط التي تنطلق من A في اتجاه ثابت زاويته π/3 وبمعامل موجب.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التحقق من انتماء C",
+            "explanation": "وجدنا سابقًا:\n\\[\nz_C-z_A=\\frac12+i\\frac{\\sqrt3}{2}=e^{i\\pi/3}.\n\\]\nإذن:\n\\[\nz_C=z_A+1\\cdot e^{i\\pi/3}.\n\\]\nوبما أن \\(1\\in\\mathbb R_+^*\\)، فإن:\n\\[\nC\\in(E).\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "تحديد طبيعة المجموعة",
+            "explanation": "لكل \\(M\\in(E)\\):\n\\[\nz-z_A=ke^{i\\pi/3},\\qquad k>0.\n\\]\nأي أن \\(\\overrightarrow{AM}\\) له اتجاه ثابت هو اتجاه \\(\\overrightarrow{AC}\\)، وطوله موجب.\nإذن \\((E)\\) هو نصف المستقيم الذي مبدؤه \\(A\\) والمار بـ\\(C\\)، مع استثناء \\(A\\) لأن \\(k>0\\)."
+          }
+        ],
+        "final_answer": "\\(C\\in(E)\\)، و\\((E)=[AC)\\setminus\\{A\\}\\)."
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_official_correction": true,
+    "source_pdf": "2019(1).pdf",
+    "statement_page": 2,
+    "correction_page": 7
+  }
+}

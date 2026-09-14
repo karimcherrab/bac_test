@@ -1,0 +1,243 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "session": "ordinary",
+  "year": 2020,
+  "chapter_code": "probability",
+  "chapter_title": "الاحتمالات",
+  "branches": [
+    {
+      "code": "science",
+      "name": "شعبة علوم تجريبية"
+    }
+  ],
+  "version": "4.2-2020-science-probability-subject1-ex02",
+  "axis_tags": [
+    "probability_events_law",
+    "probability_counting",
+    "probability_conditional",
+    "probability_tree_total_probability",
+    "probability_draw_modeling"
+  ],
+  "exercise_number": 2,
+  "subject_number": 1,
+  "source_page": 1,
+  "source_pages": [
+    1
+  ],
+  "solution_source_pages": [
+    5
+  ],
+  "title": "التمرين الثاني — بكالوريا الجزائر 2020 — الموضوع الأول — شعبة علوم تجريبية",
+  "statement": "يحتوي وعاء U على 4 كريات حمراء و 6 سوداء، ويحتوي وعاء V على 5 كريات حمراء و 3 سوداء و كل الكريات متماثلة ولا نفرق بينها عند اللمس. نسحب عشوائيا كريتين في آن واحد من أحد الوعاءين بالكيفية التالية:\nنقوم بسحب بطاقة واحدة عشوائيا من كيس يحتوي على 6 بطاقات متماثلة ومرقمة من 1 إلى 6 ، إذا تحصلنا على أحد الرقمين 3 أو 5 نسحب الكريتين من U و في باقي الحالات نسحب الكريتين من V .\nنسمي A الحدث: \" الحصول على أحد الرقمين 3 أو 5 \".\nنسمي M الحدث: \" الحصول على كريتين من نفس اللون\".",
+  "statement_graph_data": {
+    "type": "probability_tree",
+    "title": "شجرة الاحتمالات المعطاة في نص التمرين",
+    "nodes": [
+      {
+        "id": "root",
+        "label": ""
+      },
+      {
+        "id": "A",
+        "label": "A",
+        "parent": "root"
+      },
+      {
+        "id": "notA",
+        "label": "\\overline{A}",
+        "parent": "root"
+      },
+      {
+        "id": "AM",
+        "label": "M",
+        "parent": "A"
+      },
+      {
+        "id": "AnotM",
+        "label": "\\overline{M}",
+        "parent": "A"
+      },
+      {
+        "id": "notAM",
+        "label": "M",
+        "parent": "notA",
+        "edge_label": "\\frac{13}{28}"
+      },
+      {
+        "id": "notAnotM",
+        "label": "\\overline{M}",
+        "parent": "notA"
+      }
+    ]
+  },
+  "questions": [
+    {
+      "id": "2020_s1_probability_ex02_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) تحقق أن \\(P(\\overline{A})\\) احتمال السحب من الوعاء \\(V\\) هو \\(\\frac{2}{3}\\).",
+      "axis_tags": [
+        "probability_events_law",
+        "probability_draw_modeling"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "الحادثة \\(A\\) تعني الحصول على البطاقة رقم 3 أو 5، أي حالتين من أصل 6 حالات متساوية الاحتمال. أما \\(\\overline{A}\\) فتعني الحصول على أحد الأرقام الأخرى، وبالتالي السحب من الوعاء \\(V\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب احتمال الحادثة A",
+            "explanation": "الكيس يحتوي على \\(6\\) بطاقات مرقمة من \\(1\\) إلى \\(6\\).\n\nالحادثة \\(A\\) تتحقق إذا حصلنا على الرقم \\(3\\) أو الرقم \\(5\\)، أي حالتان ملائمتان من أصل \\(6\\):\n\\[P(A)=\\frac{2}{6}=\\frac13\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب احتمال الحادثة المضادة",
+            "explanation": "لدينا:\n\\[P(\\overline A)=1-P(A)\\]\nإذن:\n\\[P(\\overline A)=1-\\frac13=\\frac23\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "النتيجة النهائية",
+            "explanation": "بما أن \\(\\overline A\\) تعني أننا لم نحصل على \\(3\\) أو \\(5\\)، ففي هذه الحالة نسحب من الوعاء \\(V\\).\n\nإذن:\n\\[\\boxed{P(\\overline A)=\\frac23}\\]"
+          }
+        ],
+        "final_answer": "\\(\\displaystyle P(\\overline A)=\\frac23\\)."
+      }
+    },
+    {
+      "id": "2020_s1_probability_ex02_q2",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2) علما أن الكريتين المسحوبتين من \\(U\\)، بين أن احتمال أن تكونا من نفس اللون هو \\(\\frac{7}{15}\\).",
+      "axis_tags": [
+        "probability_conditional",
+        "probability_counting"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "بما أننا نعلم أن السحب تم من الوعاء \\(U\\)، فإننا نعمل داخل هذا الوعاء فقط. يحتوي \\(U\\) على 4 كريات حمراء و6 سوداء، ونحسب احتمال سحب كرتين حمراوين أو كرتين سوداويين.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "عدد السحبات الممكنة من U",
+            "explanation": "الوعاء \\(U\\) يحتوي على \\(10\\) كريات، ونسحب كرتين في آن واحد، لذلك عدد الحالات الممكنة هو:\n\\[\\binom{10}{2}=45\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "سحب كرتين حمراوين",
+            "explanation": "عدد الكريات الحمراء هو \\(4\\)، لذلك عدد طرق سحب كرتين حمراوين هو:\n\\[\\binom42=6\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "سحب كرتين سوداويين",
+            "explanation": "عدد الكريات السوداء هو \\(6\\)، لذلك عدد طرق سحب كرتين سوداويين هو:\n\\[\\binom62=15\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "حساب الاحتمال",
+            "explanation": "الحصول على كرتين من نفس اللون يعني: إما حمراوان أو سوداوان.\n\nإذن:\n\\[P_A(M)=\\frac{\\binom42+\\binom62}{\\binom{10}{2}}\\]\n\\[P_A(M)=\\frac{6+15}{45}=\\frac{21}{45}=\\frac7{15}\\]"
+          },
+          {
+            "step_number": 5,
+            "title": "النتيجة النهائية",
+            "explanation": "\\[\\boxed{P_A(M)=\\frac7{15}}\\]"
+          }
+        ],
+        "final_answer": "\\(\\displaystyle P_A(M)=\\frac7{15}\\)."
+      }
+    },
+    {
+      "id": "2020_s1_probability_ex02_q3",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "3) انقل شجرة الاحتمالات المقابلة ثم أكملها واستنتج \\(P(M)\\).",
+      "axis_tags": [
+        "probability_tree_total_probability",
+        "probability_conditional"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نكمل كل فرع باستعمال أن مجموع احتمالي الفرعين الخارجين من العقدة يساوي 1، ثم نطبق قانون الاحتمالات الكلية على الحادثة \\(M\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "احتمالا الفرعين الأولين",
+            "explanation": "من السؤال الأول:\n\\[P(A)=\\frac13,\\qquad P(\\overline A)=\\frac23\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "فرعا الحادثة A",
+            "explanation": "من السؤال الثاني:\n\\[P_A(M)=\\frac7{15}\\]\nإذن الاحتمال المكمل هو:\n\\[P_A(\\overline M)=1-\\frac7{15}=\\frac8{15}\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "فرعا الحادثة A المضادة",
+            "explanation": "حسب الشجرة المعطاة:\n\\[P_{\\overline A}(M)=\\frac{13}{28}\\]\nإذن:\n\\[P_{\\overline A}(\\overline M)=1-\\frac{13}{28}=\\frac{15}{28}\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "حساب P(M) بقانون الاحتمالات الكلية",
+            "explanation": "الحادثة \\(M\\) تتحقق عبر مسارين:\n\n- السحب من \\(U\\) ثم الحصول على نفس اللون.\n- السحب من \\(V\\) ثم الحصول على نفس اللون.\n\nإذن:\n\\[P(M)=P(A)P_A(M)+P(\\overline A)P_{\\overline A}(M)\\]\n\nبالتعويض:\n\\[P(M)=\\frac13\\times\\frac7{15}+\\frac23\\times\\frac{13}{28}\\]\n\\[P(M)=\\frac7{45}+\\frac{13}{42}\\]\n\nنوحد المقام إلى \\(630\\):\n\\[P(M)=\\frac{98}{630}+\\frac{195}{630}=\\frac{293}{630}\\]"
+          },
+          {
+            "step_number": 5,
+            "title": "الشجرة المكتملة",
+            "explanation": "الاحتمالات على الشجرة هي:\n\\[P(A)=\\frac13,\\quad P(\\overline A)=\\frac23\\]\n\\[P_A(M)=\\frac7{15},\\quad P_A(\\overline M)=\\frac8{15}\\]\n\\[P_{\\overline A}(M)=\\frac{13}{28},\\quad P_{\\overline A}(\\overline M)=\\frac{15}{28}\\]"
+          },
+          {
+            "step_number": 6,
+            "title": "النتيجة النهائية",
+            "explanation": "\\[\\boxed{P(M)=\\frac{293}{630}}\\]"
+          }
+        ],
+        "final_answer": "\\(\\displaystyle P(M)=\\frac{293}{630}\\)."
+      }
+    },
+    {
+      "id": "2020_s1_probability_ex02_q4",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "4) احسب \\(P_{\\overline{M}}(A)\\) احتمال السحب من الوعاء \\(U\\) علما أن الكريتين المسحوبتين مختلفتا اللون؟",
+      "axis_tags": [
+        "probability_conditional",
+        "probability_tree_total_probability"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "المطلوب احتمال الحادثة \\(A\\) بشرط تحقق \\(\\overline M\\). نستعمل تعريف الاحتمال الشرطي، لذلك نحتاج إلى \\(P(A\\cap\\overline M)\\) و\\(P(\\overline M)\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب P(A تقاطع M المضادة)",
+            "explanation": "لدينا:\n\\[P(A\\cap\\overline M)=P(A)\\times P_A(\\overline M)\\]\nوبما أن:\n\\[P(A)=\\frac13,\\qquad P_A(\\overline M)=\\frac8{15}\\]\nفإن:\n\\[P(A\\cap\\overline M)=\\frac13\\times\\frac8{15}=\\frac8{45}\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب P(M المضادة)",
+            "explanation": "من السؤال السابق:\n\\[P(M)=\\frac{293}{630}\\]\nإذن:\n\\[P(\\overline M)=1-\\frac{293}{630}=\\frac{337}{630}\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "تطبيق تعريف الاحتمال الشرطي",
+            "explanation": "حسب التعريف:\n\\[P_{\\overline M}(A)=\\frac{P(A\\cap\\overline M)}{P(\\overline M)}\\]\nبالتعويض:\n\\[P_{\\overline M}(A)=\\frac{\\frac8{45}}{\\frac{337}{630}}\\]\n\\[P_{\\overline M}(A)=\\frac8{45}\\times\\frac{630}{337}\\]\nوبما أن:\n\\[\\frac{630}{45}=14\\]\nفنحصل على:\n\\[P_{\\overline M}(A)=\\frac{8\\times14}{337}=\\frac{112}{337}\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "النتيجة النهائية",
+            "explanation": "\\[\\boxed{P_{\\overline M}(A)=\\frac{112}{337}}\\]"
+          }
+        ],
+        "final_answer": "\\(\\displaystyle P_{\\overline M}(A)=\\frac{112}{337}\\)."
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2020.pdf",
+    "statement_figure_policy": "تم تمثيل شجرة الاحتمالات الواردة في نص التمرين ضمن statement_graph_data.",
+    "solution_figure_policy": "يستعمل الحل نفس شجرة الاحتمالات مع إكمال القيم.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  }
+}

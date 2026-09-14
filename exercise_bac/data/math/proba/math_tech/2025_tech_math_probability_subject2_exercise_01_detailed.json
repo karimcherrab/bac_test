@@ -1,0 +1,225 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2025-tech-math-probability-subject2-ex01-detailed",
+  "session": "ordinary",
+  "year": 2025,
+  "chapter_code": "probability",
+  "chapter_title": "الاحتمالات",
+  "axis_tags": [
+    "probability_language_law",
+    "probability_counting_modeling",
+    "random_variable_probability_law",
+    "random_variable_expected_value",
+    "successive_draw_without_replacement"
+  ],
+  "branches": [
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "exercise_number": 1,
+  "subject_number": 2,
+  "source_page": 3,
+  "source_pages": [
+    3
+  ],
+  "solution_source_pages": [
+    8
+  ],
+  "title": "التمرين الأول — بكالوريا الجزائر 2025 — الموضوع الثاني — شعبة تقني رياضي",
+  "statement": "يحتوي صندوق على 12 كرية منها: 3 كريات خضراء و 4 كريات بيضاء و 5 كريات حمراء.\nكل الكريات متماثلة ولا نفرق بينها باللمس.",
+  "questions": [
+    {
+      "id": "2025_s2_probability_ex01_qI1a",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "I) نسحب عشوائيا من الصندوق 4 كريات في آن واحد، ونعتبر الحوادث الآتية:\nA : « الحصول على 3 كريات بالضبط من نفس اللون » ، B : « لا نحصل على أية كرية بيضاء »\nC : « الحصول على كرية واحدة بيضاء على الأقل »\n1) أ) احسب \\(P(A)\\) ، \\(P(B)\\) ، \\(P(C)\\) احتمالات الحوادث A ، B و C على الترتيب.",
+      "axis_tags": [
+        "probability_language_law",
+        "probability_counting_modeling"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "السحب يتم في آن واحد، لذلك نستعمل التوفيقات. عدد الحالات الممكنة هو اختيار 4 كريات من أصل 12.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "عدد الحالات الممكنة",
+            "explanation": "\\[|\\Omega|=\\binom{12}{4}=495.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب P(A)",
+            "explanation": "الحادثة \\(A\\) تعني الحصول على 3 كريات بالضبط من نفس اللون، أي ثلاث كريات من لون واحد والكرية الرابعة من لون آخر.\nإذا كانت الثلاث خضراء:\n\\[\\binom33\\binom91=9.\\]\nإذا كانت الثلاث بيضاء:\n\\[\\binom43\\binom81=4\\times8=32.\\]\nإذا كانت الثلاث حمراء:\n\\[\\binom53\\binom71=10\\times7=70.\\]\nإذن عدد الحالات الملائمة:\n\\[9+32+70=111.\\]\nومن ثم:\n\\[P(A)=\\frac{111}{495}=\\frac{37}{165}.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب P(B)",
+            "explanation": "الحادثة \\(B\\) تعني عدم الحصول على أي كرية بيضاء.\nعدد الكريات غير البيضاء هو:\n\\[3+5=8.\\]\nإذن:\n\\[P(B)=\\frac{\\binom84}{\\binom{12}{4}}=\\frac{70}{495}=\\frac{14}{99}.\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "حساب P(C)",
+            "explanation": "الحادثة \\(C\\) تعني الحصول على كرية بيضاء واحدة على الأقل، وهي الحادثة العكسية لـ \\(B\\).\nإذن:\n\\[P(C)=1-P(B)=1-\\frac{14}{99}=\\frac{85}{99}.\\]"
+          }
+        ],
+        "final_answer": "\\[P(A)=\\frac{37}{165},\\qquad P(B)=\\frac{14}{99},\\qquad P(C)=\\frac{85}{99}.\\]"
+      }
+    },
+    {
+      "id": "2025_s2_probability_ex01_qI1b",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "ب) احسب \\(P(A\\cap B)\\) ثم استنتج حساب \\(P(A\\cup B)\\).",
+      "axis_tags": [
+        "probability_language_law",
+        "probability_counting_modeling"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "الحادثة \\(A\\cap B\\) تعني الحصول على 3 كريات بالضبط من نفس اللون مع عدم سحب أي كرية بيضاء. إذن نتعامل فقط مع اللونين الأخضر والأحمر.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الحالات التي فيها 3 خضراء",
+            "explanation": "نسحب الكريات الخضراء الثلاث كلها ثم كرية حمراء واحدة:\n\\[\\binom33\\binom51=5.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "الحالات التي فيها 3 حمراء",
+            "explanation": "نسحب 3 كريات حمراء من بين 5 ثم كرية خضراء واحدة من بين 3:\n\\[\\binom53\\binom31=10\\times3=30.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب P(A∩B)",
+            "explanation": "إجمالي الحالات الملائمة:\n\\[5+30=35.\\]\nإذن:\n\\[P(A\\cap B)=\\frac{35}{495}=\\frac7{99}.\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "حساب P(A∪B)",
+            "explanation": "نستعمل:\n\\[P(A\\cup B)=P(A)+P(B)-P(A\\cap B).\\]\nإذن:\n\\[P(A\\cup B)=\\frac{37}{165}+\\frac{14}{99}-\\frac7{99}.\\]\nنوحد المقامات إلى 495:\n\\[P(A\\cup B)=\\frac{111+70-35}{495}=\\frac{146}{495}.\\]"
+          }
+        ],
+        "final_answer": "\\[P(A\\cap B)=\\frac7{99},\\qquad P(A\\cup B)=\\frac{146}{495}.\\]"
+      }
+    },
+    {
+      "id": "2025_s2_probability_ex01_qI2",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "2) X المتغير العشوائي الذي يرفق بكل عملية سحب لـ 4 كريات بالكيفية السابقة عدد الكريات الخضراء المسحوبة.\n- عين قانون احتمال المتغير العشوائي X ثم احسب أمله الرياضياتي.",
+      "axis_tags": [
+        "random_variable_probability_law",
+        "random_variable_expected_value"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "يوجد 3 كريات خضراء و9 كريات غير خضراء. عند سحب 4 كريات يمكن أن يكون عدد الكريات الخضراء 0 أو1 أو2 أو3.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تحديد قيم X",
+            "explanation": "\\[X(\\Omega)=\\{0,1,2,3\\}.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب P(X=0)",
+            "explanation": "نسحب الكريات الأربع كلها من بين 9 كريات غير خضراء:\n\\[P(X=0)=\\frac{\\binom90\\binom94}{\\binom{12}{4}}=\\frac{126}{495}=\\frac{14}{55}.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب P(X=1)",
+            "explanation": "نختار كرية خضراء واحدة من 3 وثلاث كريات غير خضراء من 9:\n\\[P(X=1)=\\frac{\\binom31\\binom93}{495}=\\frac{3\\times84}{495}=\\frac{28}{55}.\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "حساب P(X=2)",
+            "explanation": "نختار كريتين خضراوين من 3 وكريتين غير خضراوين من 9:\n\\[P(X=2)=\\frac{\\binom32\\binom92}{495}=\\frac{3\\times36}{495}=\\frac{12}{55}.\\]"
+          },
+          {
+            "step_number": 5,
+            "title": "حساب P(X=3)",
+            "explanation": "نختار الكريات الخضراء الثلاث وكرية واحدة غير خضراء من 9:\n\\[P(X=3)=\\frac{\\binom33\\binom91}{495}=\\frac9{495}=\\frac1{55}.\\]"
+          },
+          {
+            "step_number": 6,
+            "title": "التحقق",
+            "explanation": "\\[\\frac{14+28+12+1}{55}=1.\\]"
+          },
+          {
+            "step_number": 7,
+            "title": "حساب الأمل الرياضياتي",
+            "explanation": "\\[E(X)=0\\times\\frac{14}{55}+1\\times\\frac{28}{55}+2\\times\\frac{12}{55}+3\\times\\frac1{55}.\\]\nإذن:\n\\[E(X)=\\frac{28+24+3}{55}=1.\\]"
+          }
+        ],
+        "tables": [
+          {
+            "title": "قانون احتمال المتغير العشوائي X",
+            "headers": [
+              "\\(x_i\\)",
+              "0",
+              "1",
+              "2",
+              "3"
+            ],
+            "rows": [
+              [
+                "\\(P(X=x_i)\\)",
+                "\\(\\frac{14}{55}\\)",
+                "\\(\\frac{28}{55}\\)",
+                "\\(\\frac{12}{55}\\)",
+                "\\(\\frac1{55}\\)"
+              ]
+            ]
+          }
+        ],
+        "final_answer": "\\[P(X=0)=\\frac{14}{55},\\quad P(X=1)=\\frac{28}{55},\\quad P(X=2)=\\frac{12}{55},\\quad P(X=3)=\\frac1{55}.\\]\n\\[E(X)=1.\\]"
+      }
+    },
+    {
+      "id": "2025_s2_probability_ex01_qII",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "II) نسحب عشوائيا من الصندوق 4 كريات على التوالي دون إرجاع.\n- ما احتمال ألا يبقى في الصندوق أية كرية خضراء؟",
+      "axis_tags": [
+        "successive_draw_without_replacement",
+        "probability_counting_modeling"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "حتى لا تبقى أي كرية خضراء في الصندوق، يجب سحب الكريات الخضراء الثلاث كلها ضمن السحبات الأربع، وتكون الكرية الرابعة من بين 9 كريات غير خضراء.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "عدد السحبات المرتبة الممكنة",
+            "explanation": "السحب متتال ودون إرجاع، لذلك عدد السحبات المرتبة هو:\n\\[A_{12}^{4}=12\\times11\\times10\\times9.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "عدد السحبات الملائمة",
+            "explanation": "يجب سحب الكريات الخضراء الثلاث وكرية واحدة من بين 9 كريات غير خضراء.\nبعد اختيار الكريات الأربع، يمكن ترتيب ظهورها في:\n\\[4!\\]\nطرق.\nإذن عدد السحبات الملائمة:\n\\[4!\\times9.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب الاحتمال",
+            "explanation": "\\[P=\\frac{4!\\times9}{12\\times11\\times10\\times9}=\\frac{216}{11880}=\\frac1{55}.\\]"
+          }
+        ],
+        "final_answer": "\\[P=\\frac1{55}.\\]"
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "statement_checked_against_image": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2025(2).pdf",
+    "statement_image": "2025_exo02(2).jpg",
+    "statement_figure_policy": "لا يوجد شكل لازم في نص التمرين.",
+    "solution_figure_policy": "لا يحتاج الحل إلى رسم.",
+    "renderer": "MathJax + structured tables"
+  }
+}

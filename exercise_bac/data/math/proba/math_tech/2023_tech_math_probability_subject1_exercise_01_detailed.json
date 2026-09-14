@@ -1,0 +1,228 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2023-tech-math-probability-subject1-ex01-detailed",
+  "session": "ordinary",
+  "year": 2023,
+  "chapter_code": "probability",
+  "chapter_title": "الاحتمالات",
+  "axis_tags": [
+    "probability_language_law",
+    "probability_counting_modeling",
+    "random_variable_probability_law",
+    "random_variable_expected_value"
+  ],
+  "branches": [
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "exercise_number": 1,
+  "subject_number": 1,
+  "source_page": 1,
+  "source_pages": [
+    1
+  ],
+  "solution_source_pages": [
+    5
+  ],
+  "title": "التمرين الأول — بكالوريا الجزائر 2023 — الموضوع الأول — شعبة تقني رياضي",
+  "statement": "يحتوي كيس على 8 كريات متماثلة ولا نفرق بينها باللمس، موزعة كما يلي:\n3 كريات بيضاء مرقمة بـ: 0 ، 1 ، 1 و 3 كريات حمراء مرقمة بـ: 1 ، 1 ، 2\nو كريتين خضراوين مرقمتين بـ: 1 ، 2\nنسحب عشوائيا وفي آن واحد كريتين من الكيس ونعتبر الحوادث A ، B ، C الآتية:\nA \"الحصول على كريتين من نفس اللون\"\nB \"الحصول على كرية حمراء على الأقل\"\nC \"الحصول على كريتين تحملان رقمين مجموعهما يساوي 3\"",
+  "questions": [
+    {
+      "id": "2023_s1_probability_ex01_q1a",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) أ) بين أن احتمال الحدث A يساوي \\(\\frac{1}{4}\\) وأن احتمال الحدث B يساوي \\(\\frac{9}{14}\\).",
+      "axis_tags": [
+        "probability_language_law",
+        "probability_counting_modeling"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "السحب يتم في آن واحد لكريتين من أصل 8، لذلك نستعمل التوفيقات. بالنسبة إلى A نعد حالات السحب من نفس اللون، وبالنسبة إلى B نستعمل الحادثة العكسية.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب عدد الحالات الممكنة",
+            "explanation": "عدد طرق سحب كريتين من أصل 8 هو:\n\\[\\binom{8}{2}=28.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب احتمال A",
+            "explanation": "الحادثة A تعني الحصول على كريتين من نفس اللون.\nيمكن أن تكونا بيضاوين أو حمراوين أو خضراوين.\nإذن عدد الحالات الملائمة هو:\n\\[\\binom{3}{2}+\\binom{3}{2}+\\binom{2}{2}=3+3+1=7.\\]\nومن ثم:\n\\[P(A)=\\frac{7}{28}=\\frac14.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "تحديد الحادثة العكسية لـ B",
+            "explanation": "الحادثة B هي «الحصول على كرية حمراء على الأقل».\nالحادثة العكسية \\(\\overline B\\) هي «عدم الحصول على أي كرية حمراء».\nعدد الكريات غير الحمراء هو:\n\\[3+2=5.\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "حساب احتمال B",
+            "explanation": "\\[P(\\overline B)=\\frac{\\binom{5}{2}}{\\binom{8}{2}}=\\frac{10}{28}=\\frac{5}{14}.\\]\nإذن:\n\\[P(B)=1-P(\\overline B)=1-\\frac{5}{14}=\\frac{9}{14}.\\]"
+          }
+        ],
+        "final_answer": "\\[P(A)=\\frac14,\\qquad P(B)=\\frac{9}{14}.\\]"
+      }
+    },
+    {
+      "id": "2023_s1_probability_ex01_q1b",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "ب) احسب الاحتمال \\(P(C)\\).",
+      "axis_tags": [
+        "probability_language_law",
+        "probability_counting_modeling"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "حتى يكون مجموع الرقمين مساويا 3، يجب أن نحصل على الرقمين 1 و2.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "عد الكريات التي تحمل الرقم 1",
+            "explanation": "الكريات التي تحمل الرقم 1 عددها 5:\nكريتان بيضاوان، كريتان حمراوان، وكرية خضراء واحدة."
+          },
+          {
+            "step_number": 2,
+            "title": "عد الكريات التي تحمل الرقم 2",
+            "explanation": "الكريات التي تحمل الرقم 2 عددها 2:\nكرية حمراء وكرية خضراء."
+          },
+          {
+            "step_number": 3,
+            "title": "حساب الحالات الملائمة",
+            "explanation": "لتحقيق الحدث C نختار كرية تحمل 1 وكرية تحمل 2:\n\\[\\binom51\\binom21=5\\times2=10.\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "حساب الاحتمال",
+            "explanation": "\\[P(C)=\\frac{10}{28}=\\frac{5}{14}.\\]"
+          }
+        ],
+        "final_answer": "\\[P(C)=\\frac{5}{14}.\\]"
+      }
+    },
+    {
+      "id": "2023_s1_probability_ex01_q2a",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "2) نعتبر المتغير العشوائي X الذي يرفق بكل عملية سحب لكريتين مجموع الرقمين المسجلين عليهما.\nأ) برر أن مجموعة قيم المتغير العشوائي X هي \\(\\{1;2;3;4\\}\\).",
+      "axis_tags": [
+        "random_variable_probability_law"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "الأرقام الموجودة على الكريات هي 0 و1 و2. نبحث عن المجاميع الممكنة عند اختيار كريتين مختلفتين.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الحصول على القيمة 1",
+            "explanation": "يمكن الحصول على:\n\\[0+1=1.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "الحصول على القيمة 2",
+            "explanation": "يمكن الحصول على:\n\\[0+2=2\\]\nأو:\n\\[1+1=2.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الحصول على القيمة 3",
+            "explanation": "يمكن الحصول على:\n\\[1+2=3.\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "الحصول على القيمة 4",
+            "explanation": "توجد كريتان تحملان الرقم 2، لذلك يمكن الحصول على:\n\\[2+2=4.\\]"
+          },
+          {
+            "step_number": 5,
+            "title": "الاستنتاج",
+            "explanation": "إذن مجموعة القيم الممكنة هي:\n\\[X(\\Omega)=\\{1,2,3,4\\}.\\]"
+          }
+        ],
+        "final_answer": "\\[X(\\Omega)=\\{1;2;3;4\\}.\\]"
+      }
+    },
+    {
+      "id": "2023_s1_probability_ex01_q2b",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "ب) عين قانون احتمال المتغير العشوائي X ثم احسب أمله الرياضياتي \\(E(X)\\).",
+      "axis_tags": [
+        "random_variable_probability_law",
+        "random_variable_expected_value"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نعد الكريات حسب الرقم: توجد كرية واحدة تحمل 0، وخمس كريات تحمل 1، وكريتان تحملان 2. ثم نحسب عدد الأزواج الموافقة لكل قيمة من قيم X.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب P(X=1)",
+            "explanation": "حتى يكون المجموع 1، يجب سحب 0 و1:\n\\[P(X=1)=\\frac{1\\times5}{28}=\\frac{5}{28}.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب P(X=2)",
+            "explanation": "يمكن الحصول على 2 بطريقتين:\n\\[0+2\\quad\\text{أو}\\quad1+1.\\]\nإذن عدد الحالات الملائمة:\n\\[1\\times2+\\binom52=2+10=12.\\]\nومن ثم:\n\\[P(X=2)=\\frac{12}{28}.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب P(X=3)",
+            "explanation": "حتى يكون المجموع 3، يجب سحب 1 و2:\n\\[P(X=3)=\\frac{5\\times2}{28}=\\frac{10}{28}.\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "حساب P(X=4)",
+            "explanation": "حتى يكون المجموع 4، يجب سحب الكريتين اللتين تحملان الرقم 2:\n\\[P(X=4)=\\frac{\\binom22}{28}=\\frac1{28}.\\]"
+          },
+          {
+            "step_number": 5,
+            "title": "التحقق من قانون الاحتمال",
+            "explanation": "\\[\\frac5{28}+\\frac{12}{28}+\\frac{10}{28}+\\frac1{28}=1.\\]"
+          },
+          {
+            "step_number": 6,
+            "title": "حساب الأمل الرياضياتي",
+            "explanation": "\\[E(X)=1\\times\\frac5{28}+2\\times\\frac{12}{28}+3\\times\\frac{10}{28}+4\\times\\frac1{28}.\\]\nإذن:\n\\[E(X)=\\frac{5+24+30+4}{28}=\\frac{63}{28}=\\frac94.\\]"
+          }
+        ],
+        "tables": [
+          {
+            "title": "قانون احتمال المتغير العشوائي X",
+            "headers": [
+              "\\(x_i\\)",
+              "1",
+              "2",
+              "3",
+              "4"
+            ],
+            "rows": [
+              [
+                "\\(P(X=x_i)\\)",
+                "\\(\\frac5{28}\\)",
+                "\\(\\frac{12}{28}\\)",
+                "\\(\\frac{10}{28}\\)",
+                "\\(\\frac1{28}\\)"
+              ]
+            ]
+          }
+        ],
+        "final_answer": "\\[P(X=1)=\\frac5{28},\\quad P(X=2)=\\frac{12}{28},\\quad P(X=3)=\\frac{10}{28},\\quad P(X=4)=\\frac1{28}.\\]\n\\[E(X)=\\frac94.\\]"
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "statement_checked_against_image": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2023(1).pdf",
+    "statement_image": "2023_exo01(2).jpg",
+    "statement_figure_policy": "لا يوجد شكل لازم في نص التمرين.",
+    "solution_figure_policy": "لا يحتاج الحل إلى رسم.",
+    "renderer": "MathJax + structured tables"
+  }
+}

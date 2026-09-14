@@ -1,0 +1,297 @@
+{
+  "schema_version": "4.5-bac-source",
+  "version": "4.2-2017-exceptional-tech-math-sequences-ex02",
+  "language": "ar",
+  "direction": "rtl",
+  "year": 2017,
+  "session": "exceptional",
+  "chapter_code": "sequences",
+  "chapter_title": "sequences",
+  "exercise_number": 2,
+  "points": 4,
+  "source_pages": [
+    3
+  ],
+  "solution_source_pages": [
+    8,
+    9
+  ],
+  "branches": [
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "title": "التمرين الثاني — بكالوريا الجزائر 2017 الاستثنائية — متتالية معرفة بالتراجع ومتتالية هندسية ومجموع",
+  "axis_tags": [
+    "recursive_sequence",
+    "mathematical_induction",
+    "positive_sequence",
+    "sequence_monotonicity",
+    "bounded_sequence",
+    "sequence_convergence",
+    "geometric_sequence",
+    "explicit_formula",
+    "sequence_limit",
+    "geometric_sum",
+    "parameter_determination"
+  ],
+  "statement": "التمرين الثاني: (04 نقاط)\n\nنعتبر المتتالية \\((u_n)\\) المعرفة بـ:\n\\[\nu_1=\\frac{1}{a}\n\\]\nومن أجل كل عدد طبيعي \\(n\\) غير معدوم:\n\\[\nu_{n+1}=\\frac{n+1}{an}u_n,\n\\]\nحيث \\(a\\) عدد حقيقي أكبر من أو يساوي \\(2\\).\n\n1) أ) بين أن: من أجل كل عدد طبيعي \\(n\\) غير معدوم:\n\\[\nu_n>0.\n\\]\n\nب) بين أن المتتالية \\((u_n)\\) متناقصة تماما ثم استنتج أنها متقاربة.\n\n2) نعتبر المتتالية \\((v_n)\\) المعرفة كما يلي: من أجل كل عدد طبيعي \\(n\\) غير معدوم:\n\\[\nv_n=\\frac{1}{an}u_n.\n\\]\n\nأ) بين أن المتتالية \\((v_n)\\) هندسية أساسها:\n\\[\n\\frac1a\n\\]\nوعين حدها الأول \\(v_1\\) بدلالة \\(a\\).\n\nب) جد بدلالة \\(n\\) و \\(a\\) عبارة الحد العام \\(v_n\\) ثم استنتج عبارة \\(u_n\\) واحسب:\n\\[\n\\lim_{n\\to+\\infty}u_n.\n\\]\n\n3) احسب بدلالة \\(n\\) و \\(a\\) المجموع \\(S_n\\) حيث:\n\\[\nS_n=u_1+\\frac12u_2+\\frac13u_3+\\cdots+\\frac1n u_n.\n\\]\n\nثم عين قيمة \\(a\\) حيث:\n\\[\n\\lim_{n\\to+\\infty}S_n=\\frac1{2016}.\n\\]",
+  "figures": [],
+  "questions": [
+    {
+      "id": "2017_exceptional_tech_math_ex02_q1a",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1-أ) بين أن: من أجل كل عدد طبيعي \\(n\\) غير معدوم: \\(u_n>0\\).",
+      "solution": {
+        "introduction": "نثبت إيجابية جميع حدود المتتالية باستعمال البرهان بالتراجع.",
+        "strategy": "نبدأ من \\(u_1\\)، ثم نستعمل العلاقة التراجعية لإثبات انتقال الإيجابية من \\(u_n\\) إلى \\(u_{n+1}\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التحقق من الحد الأول",
+            "explanation": "لدينا:\n\\[u_1=\\frac1a.\\]\nوبما أن \\(a\\ge2\\)، فإن \\(a>0\\)، وبالتالي:\n\\[u_1>0.\\]",
+            "result": "الخاصية صحيحة عند \\(n=1\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "فرضية التراجع",
+            "explanation": "نفترض أنه من أجل عدد طبيعي غير معدوم \\(n\\):\n\\[u_n>0.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الانتقال من n إلى n+1",
+            "explanation": "حسب العلاقة التراجعية:\n\\[u_{n+1}=\\frac{n+1}{an}u_n.\\]\nلدينا \\(n+1>0\\)، و\\(a>0\\)، و\\(n>0\\)، إذن:\n\\[\\frac{n+1}{an}>0.\\]\nومع فرضية التراجع \\(u_n>0\\)، نحصل على:",
+            "result": "\\[u_{n+1}>0.\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "الخلاصة",
+            "explanation": "حسب مبدأ التراجع، لكل \\(n\\in\\mathbb N^*\\):\n\\[u_n>0.\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{u_n>0\\text{ لكل }n\\in\\mathbb N^*}\\).",
+        "verification": "تمت مراجعة الحل مع الإجابة النموذجية الرسمية لبكالوريا 2017 الاستثنائية، الموضوع الثاني، التمرين الثاني.",
+        "common_mistakes": [
+          "نسيان استعمال الشرط \\(a\\ge2\\) لإثبات أن معامل الانتقال موجب."
+        ],
+        "hints": [
+          "المعامل \\((n+1)/(an)\\) موجب."
+        ],
+        "summary": "الحد الأول موجب ومعامل الانتقال موجب، إذن كل حدود المتتالية موجبة.",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2017_exceptional_tech_math_ex02_q1b",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "1-ب) بين أن المتتالية \\((u_n)\\) متناقصة تماما ثم استنتج أنها متقاربة.",
+      "solution": {
+        "introduction": "ندرس الفرق بين حدين متتاليين، ثم نستعمل الإيجابية لإثبات التقارب.",
+        "strategy": "نحسب \\(u_{n+1}-u_n\\) ونحدد إشارته باستعمال \\(a\\ge2\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب الفرق",
+            "explanation": "لدينا:\n\\[u_{n+1}-u_n=\\left(\\frac{n+1}{an}-1\\right)u_n.\\]\nنوحد الكسر:\n\\[u_{n+1}-u_n=\\frac{n+1-an}{an}u_n.\\]\nأي:\n\\[u_{n+1}-u_n=\\frac{(1-a)n+1}{an}u_n.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "إشارة البسط",
+            "explanation": "بما أن \\(a\\ge2\\)، فإن \\(1-a\\le-1\\). ولأن \\(n\\ge1\\):\n\\[(1-a)n+1\\le -n+1\\le0.\\]\nبل عندما \\(a\\ge2\\) و\\(n\\ge1\\)، يكون معامل الانتقال \\(\\frac{n+1}{an}<1\\)، ومنه الفرق سالب تماما."
+          },
+          {
+            "step_number": 3,
+            "title": "اتجاه التغير",
+            "explanation": "من السؤال السابق \\(u_n>0\\)، كما أن \\(an>0\\). إذن:\n\\[u_{n+1}-u_n<0.\\]",
+            "result": "\\((u_n)\\) متناقصة تماما."
+          },
+          {
+            "step_number": 4,
+            "title": "التقارب",
+            "explanation": "المتتالية \\((u_n)\\) متناقصة تماما، ومن السؤال 1-أ لدينا:\n\\[u_n>0.\\]\nإذن هي محدودة من الأسفل بالعدد \\(0\\). وكل متتالية متناقصة ومحدودة من الأسفل متقاربة.",
+            "result": "\\((u_n)\\) متقاربة."
+          }
+        ],
+        "final_answer": "\\(\\boxed{(u_n)\\text{ متناقصة تماما ومحدودة من الأسفل بـ }0\\Rightarrow\\text{ متقاربة}}\\).",
+        "verification": "تمت مراجعة الحل مع الإجابة النموذجية الرسمية لبكالوريا 2017 الاستثنائية، الموضوع الثاني، التمرين الثاني.",
+        "common_mistakes": [
+          "إثبات التناقص دون ذكر أن المتتالية محدودة من الأسفل.",
+          "نسيان أن n يبدأ من 1."
+        ],
+        "hints": [
+          "ادرس \\(u_{n+1}-u_n\\)."
+        ],
+        "summary": "الفرق سالب، والمتتالية موجبة؛ إذن هي متناقصة ومتقاربة.",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2017_exceptional_tech_math_ex02_q2a",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "2-أ) بين أن المتتالية \\((v_n)\\) هندسية أساسها \\(\\frac1a\\) وعين حدها الأول \\(v_1\\) بدلالة \\(a\\).",
+      "solution": {
+        "introduction": "نستعمل تعريف \\(v_n\\) والعلاقة التراجعية لـ\\(u_n\\).",
+        "strategy": "نحسب \\(v_{n+1}\\) ونقارنه بـ\\(v_n\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب v_{n+1}",
+            "explanation": "حسب التعريف:\n\\[v_{n+1}=\\frac{1}{a(n+1)}u_{n+1}.\\]\nوباستعمال:\n\\[u_{n+1}=\\frac{n+1}{an}u_n,\\]\nنجد:\n\\[v_{n+1}=\\frac{1}{a(n+1)}\\times\\frac{n+1}{an}u_n.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "التبسيط",
+            "explanation": "نبسط \\(n+1\\):\n\\[v_{n+1}=\\frac{u_n}{a^2n}.\\]\nلكن:\n\\[v_n=\\frac{u_n}{an}.\\]\nإذن:\n\\[v_{n+1}=\\frac1a v_n.\\]",
+            "result": "\\((v_n)\\) هندسية أساسها \\(\\frac1a\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "حساب الحد الأول",
+            "explanation": "لدينا:\n\\[v_1=\\frac{1}{a\\cdot1}u_1=\\frac1a\\times\\frac1a=\\frac1{a^2}.\\]",
+            "result": "\\(v_1=\\frac1{a^2}\\)."
+          }
+        ],
+        "final_answer": "\\(\\boxed{v_{n+1}=\\frac1a v_n}\\) و\\(\\boxed{v_1=\\frac1{a^2}}\\).",
+        "verification": "تمت مراجعة الحل مع الإجابة النموذجية الرسمية لبكالوريا 2017 الاستثنائية، الموضوع الثاني، التمرين الثاني.",
+        "common_mistakes": [
+          "نسيان العامل n في تعريف v_n."
+        ],
+        "hints": [
+          "اكتب v_{n+1}=u_{n+1}/[a(n+1)]."
+        ],
+        "summary": "النسبة \\(v_{n+1}/v_n\\) ثابتة وتساوي \\(1/a\\).",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2017_exceptional_tech_math_ex02_q2b",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "2-ب) جد بدلالة \\(n\\) و \\(a\\) عبارة الحد العام \\(v_n\\) ثم استنتج عبارة \\(u_n\\) واحسب \\(\\lim_{n\\to+\\infty}u_n\\).",
+      "solution": {
+        "introduction": "بما أن \\((v_n)\\) هندسية، نكتب حدها العام ثم نرجع إلى \\(u_n\\).",
+        "strategy": "نستعمل صيغة المتتالية الهندسية ابتداء من \\(v_1\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "عبارة v_n",
+            "explanation": "بما أن حدها الأول \\(v_1=\\frac1{a^2}\\) وأساسها \\(\\frac1a\\)، فإن:\n\\[v_n=v_1\\left(\\frac1a\\right)^{n-1}.\\]\nإذن:\n\\[v_n=\\frac1{a^2}\\left(\\frac1a\\right)^{n-1}=\\frac1{a^{n+1}}.\\]",
+            "result": "\\(v_n=\\frac1{a^{n+1}}\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "استخراج u_n",
+            "explanation": "من تعريف \\(v_n\\):\n\\[v_n=\\frac{u_n}{an}.\\]\nإذن:\n\\[u_n=anv_n.\\]\nوبالتعويض:\n\\[u_n=an\\times\\frac1{a^{n+1}}=\\frac{n}{a^n}.\\]",
+            "result": "\\(u_n=\\frac{n}{a^n}\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "حساب النهاية",
+            "explanation": "بما أن \\(a\\ge2>1\\)، فإن المتتالية الأسية \\(a^n\\) تنمو أسرع من \\(n\\)، ومن النتيجة المعروفة:\n\\[\\frac{n}{a^n}\\to0.\\]\nإذن:",
+            "result": "\\(\\lim_{n\\to+\\infty}u_n=0\\)."
+          }
+        ],
+        "final_answer": "\\(\\boxed{v_n=\\frac1{a^{n+1}}}\\)، \\(\\boxed{u_n=\\frac{n}{a^n}}\\)، و\\(\\boxed{\\lim u_n=0}\\).",
+        "verification": "تمت مراجعة الحل مع الإجابة النموذجية الرسمية لبكالوريا 2017 الاستثنائية، الموضوع الثاني، التمرين الثاني.",
+        "common_mistakes": [
+          "كتابة \\(v_n=1/a^n\\) ونسيان أن البداية من \\(v_1=1/a^2\\)."
+        ],
+        "hints": [
+          "استعمل \\(v_n=v_1q^{n-1}\\)."
+        ],
+        "summary": "نحصل على \\(v_n=1/a^{n+1}\\)، ومنها \\(u_n=n/a^n\\) والنهاية صفر.",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2017_exceptional_tech_math_ex02_q3",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "3) احسب بدلالة \\(n\\) و \\(a\\) المجموع \\(S_n=u_1+\\frac12u_2+\\frac13u_3+\\cdots+\\frac1n u_n\\)، ثم عين قيمة \\(a\\) حيث \\(\\lim_{n\\to+\\infty}S_n=\\frac1{2016}\\).",
+      "solution": {
+        "introduction": "نستعمل العبارة الصريحة \\(u_k=\\frac{k}{a^k}\\)، فيختفي العامل \\(k\\) الموجود في المقام.",
+        "strategy": "نحول \\(S_n\\) إلى مجموع هندسي ثم نحسب نهايته.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تعويض u_k",
+            "explanation": "لدينا:\n\\[u_k=\\frac{k}{a^k}.\\]\nإذن:\n\\[\\frac1k u_k=\\frac1{a^k}.\\]\nوبالتالي:\n\\[S_n=\\frac1a+\\frac1{a^2}+\\cdots+\\frac1{a^n}.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب المجموع الهندسي",
+            "explanation": "هذا مجموع هندسي حدّه الأول \\(\\frac1a\\) وأساسه \\(\\frac1a\\). لذلك:\n\\[S_n=\\frac1a\\,\\frac{1-(1/a)^n}{1-1/a}.\\]\nنبسط:\n\\[S_n=\\frac{1-(1/a)^n}{a-1}.\\]",
+            "result": "\\(S_n=\\frac{1-(1/a)^n}{a-1}\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "حساب نهاية S_n",
+            "explanation": "بما أن \\(a\\ge2\\)، فإن:\n\\[0<\\frac1a\\le\\frac12<1.\\]\nإذن:\n\\[\\left(\\frac1a\\right)^n\\to0.\\]\nومن ثم:\n\\[\\lim_{n\\to+\\infty}S_n=\\frac1{a-1}.\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "تعيين a",
+            "explanation": "حسب المعطى:\n\\[\\frac1{a-1}=\\frac1{2016}.\\]\nبما أن المقامين موجبان، فإن:\n\\[a-1=2016.\\]\nإذن:",
+            "result": "\\(a=2017\\)."
+          }
+        ],
+        "final_answer": "\\(\\boxed{S_n=\\frac{1-(1/a)^n}{a-1}}\\) و\\(\\boxed{a=2017}\\).",
+        "verification": "تمت مراجعة الحل مع الإجابة النموذجية الرسمية لبكالوريا 2017 الاستثنائية، الموضوع الثاني، التمرين الثاني.",
+        "common_mistakes": [
+          "نسيان أن \\(u_k/k=1/a^k\\).",
+          "استعمال قانون مجموع هندسي يبدأ من k=0 بدل k=1 دون تعديل."
+        ],
+        "hints": [
+          "بعد التعويض بـu_k، ستحصل على مجموع 1/a^k."
+        ],
+        "summary": "S_n مجموع هندسي ونهايته \\(1/(a-1)\\)، ومن الشرط نحصل على a=2017.",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    }
+  ],
+  "source_reference": {
+    "file": "2017_2(5).pdf",
+    "statement_pages": [
+      3
+    ],
+    "solution_pages": [
+      8,
+      9
+    ],
+    "source_faithful_statement": true,
+    "solution_reviewed_against_source": true
+  },
+  "display": {
+    "layout": "question_by_question",
+    "show_statement_first": true,
+    "show_statement_figures": true,
+    "show_solution_after_click": true,
+    "show_solution_figures": true
+  },
+  "review_status": {
+    "statement_compared_with_original_pdf": true,
+    "questions_compared_with_original_pdf": true,
+    "source_figures_checked": true,
+    "solution_checked_against_correction": true,
+    "latex_normalized_only": true,
+    "react_ready": true
+  },
+  "given_data": {
+    "u1": "1/a",
+    "recurrence": "u_{n+1}=((n+1)/(an))*u_n",
+    "parameter_condition": "a>=2",
+    "v_n": "u_n/(an)",
+    "ratio_v": "1/a",
+    "v1": "1/a^2",
+    "explicit_v": "1/a^(n+1)",
+    "explicit_u": "n/a^n",
+    "limit_u": "0",
+    "S_n": "[1-(1/a)^n]/(a-1)",
+    "limit_S_n": "1/(a-1)",
+    "parameter_solution": "a=2017"
+  }
+}

@@ -1,0 +1,233 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "session": "ordinary",
+  "year": 2018,
+  "chapter_code": "sequences",
+  "chapter_title": "المتتاليات العددية",
+  "branches": [
+    {
+      "code": "science",
+      "name": "شعبة علوم تجريبية"
+    }
+  ],
+  "source_pdf": "2018(6).pdf",
+  "comparison_source": "bac_sequence_scientifique(20260823-104203).pdf",
+  "source_verification": {
+    "statement_checked_against_original_bac": true,
+    "solution_checked_against_official_correction": true,
+    "solution_style": "حل مفصل ومبسط بخطوات صغيرة، مع إظهار الحسابات الوسيطة التي اختصرها التصحيح الرسمي.",
+    "statement_policy": "نص الأسئلة منقول من موضوع البكالوريا دون إضافة معطيات جديدة.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  },
+  "version": "4.2-2018-science-sequences-subject1-ex01",
+  "exercise_number": 1,
+  "subject_number": 1,
+  "points": 4,
+  "source_page": 1,
+  "source_pages": [
+    1
+  ],
+  "solution_source_pages": [
+    5
+  ],
+  "title": "التمرين الأول — بكالوريا الجزائر 2018 — الموضوع الأول — شعبة علوم تجريبية",
+  "statement": "متتالية عددية \\((u_n)\\) معرفة بحدها الأول \\(u_0=1\\)، ومن أجل كل عدد طبيعي \\(n\\): \\(u_{n+1}=1-\\frac{9}{u_n+5}\\).",
+  "statement_graphs": [],
+  "axis_tags": [
+    "recursive_sequence",
+    "induction_bounds",
+    "sequence_monotonicity",
+    "sequence_convergence",
+    "auxiliary_arithmetic_sequence",
+    "explicit_sequence_formula",
+    "sequence_limit",
+    "sequence_sum"
+  ],
+  "questions": [
+    {
+      "id": "2018_s1_ex01_q1a",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) أ) برهن بالتراجع أنه من أجل كل عدد طبيعي \\(n\\): \\(u_n>-2\\).",
+      "axis_tags": [
+        "induction_bounds"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نبرهن الخاصية \\(u_n>-2\\) بالتراجع.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التحقق عند n=0",
+            "explanation": "لدينا:\n\\[\nu_0=1>-2.\n\\]\nإذن الخاصية صحيحة عند الرتبة \\(0\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "فرضية التراجع",
+            "explanation": "نفترض أنه عند رتبة طبيعية \\(n\\):\n\\[\nu_n>-2.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "دراسة الحد التالي",
+            "explanation": "من \\(u_n>-2\\) نحصل على:\n\\[\nu_n+5>3>0.\n\\]\nكما أن:\n\\[\nu_{n+1}+2=3-\\frac{9}{u_n+5}.\n\\]\nنوحد الكتابة:\n\\[\nu_{n+1}+2\n=\\frac{3(u_n+5)-9}{u_n+5}\n=\\frac{3u_n+6}{u_n+5}\n=\\frac{3(u_n+2)}{u_n+5}.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "إشارة u_{n+1}+2",
+            "explanation": "بفرضية التراجع \\(u_n+2>0\\)، كما أن \\(u_n+5>0\\)، إذن:\n\\[\nu_{n+1}+2>0.\n\\]\nومن ثم:\n\\[\nu_{n+1}>-2.\n\\]"
+          },
+          {
+            "step_number": 5,
+            "title": "الخلاصة",
+            "explanation": "بالتراجع:\n\\[\n\\boxed{u_n>-2\\quad\\forall n\\in\\mathbb N}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{u_n>-2\\text{ لكل }n\\in\\mathbb N}\\)."
+      }
+    },
+    {
+      "id": "2018_s1_ex01_q1b",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "ب) بين أن \\((u_n)\\) متتالية متناقصة تماما على \\(\\mathbb N\\) واستنتج أنها متقاربة.",
+      "axis_tags": [
+        "sequence_monotonicity",
+        "sequence_convergence"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب الفرق \\(u_{n+1}-u_n\\)، ثم نستعمل النتيجة السابقة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب الفرق",
+            "explanation": "لدينا:\n\\[\nu_{n+1}-u_n\n=1-\\frac9{u_n+5}-u_n.\n\\]\nنوحد المقام:\n\\[\nu_{n+1}-u_n\n=\\frac{(1-u_n)(u_n+5)-9}{u_n+5}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "تبسيط البسط",
+            "explanation": "نوسع:\n\\[\n(1-u_n)(u_n+5)-9\n=u_n+5-u_n^2-5u_n-9\n=-u_n^2-4u_n-4.\n\\]\nأي:\n\\[\n-u_n^2-4u_n-4=-(u_n+2)^2.\n\\]\nإذن:\n\\[\n\\boxed{u_{n+1}-u_n=-\\frac{(u_n+2)^2}{u_n+5}}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "دراسة الإشارة",
+            "explanation": "بما أن \\(u_n>-2\\)، فإن:\n\\[\nu_n+5>0.\n\\]\nكما أن \\((u_n+2)^2>0\\) لأن \\(u_n\\ne-2\\). لذلك:\n\\[\nu_{n+1}-u_n<0.\n\\]\nإذن \\((u_n)\\) متناقصة تماما."
+          },
+          {
+            "step_number": 4,
+            "title": "التقارب",
+            "explanation": "ومن السؤال السابق:\n\\[\nu_n>-2.\n\\]\nأي أن المتتالية محدودة من الأسفل بالعدد \\(-2\\). وكل متتالية متناقصة ومحدودة من الأسفل متقاربة."
+          }
+        ],
+        "final_answer": "\\(\\boxed{(u_n)\\text{ متناقصة تماما ومتقاربة}}\\)."
+      }
+    },
+    {
+      "id": "2018_s1_ex01_q2",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "2) نضع من أجل كل عدد طبيعي \\(n\\): \\(v_n=\\frac{1}{u_n+2}\\). أثبت أن المتتالية \\((v_n)\\) حسابية أساسها \\(\\frac13\\) يطلب تعيين حدها الأول.",
+      "axis_tags": [
+        "auxiliary_arithmetic_sequence"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب \\(v_{n+1}\\) بدلالة \\(v_n\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب u_{n+1}+2",
+            "explanation": "من العلاقة السابقة وجدنا:\n\\[\nu_{n+1}+2=\\frac{3(u_n+2)}{u_n+5}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب v_{n+1}",
+            "explanation": "إذن:\n\\[\nv_{n+1}=\\frac1{u_{n+1}+2}\n=\\frac{u_n+5}{3(u_n+2)}.\n\\]\nنكتب:\n\\[\nu_n+5=(u_n+2)+3.\n\\]\nومن ثم:\n\\[\nv_{n+1}=\\frac{u_n+2}{3(u_n+2)}+\\frac3{3(u_n+2)}\n=\\frac13+\\frac1{u_n+2}.\n\\]\nأي:\n\\[\n\\boxed{v_{n+1}=v_n+\\frac13}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "تحديد الأساس",
+            "explanation": "إذن \\((v_n)\\) متتالية حسابية أساسها:\n\\[\nr=\\frac13.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "حساب الحد الأول",
+            "explanation": "لدينا:\n\\[\nv_0=\\frac1{u_0+2}=\\frac1{1+2}=\\frac13.\n\\]"
+          }
+        ],
+        "final_answer": "\\((v_n)\\) حسابية أساسها \\(\\boxed{\\frac13}\\)، وحدها الأول \\(\\boxed{v_0=\\frac13}\\)."
+      }
+    },
+    {
+      "id": "2018_s1_ex01_q3",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "3) عبر بدلالة \\(n\\) عن \\(v_n\\) و \\(u_n\\)، واحسب \\(\\lim_{n\\to+\\infty}u_n\\).",
+      "axis_tags": [
+        "arithmetic_sequence_general_term",
+        "explicit_sequence_formula",
+        "sequence_limit"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نكتب الحد العام للمتتالية الحسابية \\((v_n)\\)، ثم نستعمل تعريف \\(v_n\\) لاستخراج \\(u_n\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "كتابة v_n",
+            "explanation": "بما أن \\((v_n)\\) حسابية، حدها الأول \\(v_0=\\frac13\\) وأساسها \\(\\frac13\\):\n\\[\nv_n=v_0+n\\times\\frac13\n=\\frac13+\\frac n3\n=\\frac{n+1}{3}.\n\\]\nإذن:\n\\[\n\\boxed{v_n=\\frac{n+1}{3}}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "استخراج u_n",
+            "explanation": "من:\n\\[\nv_n=\\frac1{u_n+2}\n\\]\nنحصل على:\n\\[\nu_n+2=\\frac1{v_n}.\n\\]\nإذن:\n\\[\nu_n=\\frac1{v_n}-2.\n\\]\nوبالتعويض:\n\\[\nu_n=\\frac{3}{n+1}-2\n=\\frac{3-2n-2}{n+1}\n=\\frac{1-2n}{n+1}.\n\\]\nأي:\n\\[\n\\boxed{u_n=\\frac{-2n+1}{n+1}}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب النهاية",
+            "explanation": "لدينا:\n\\[\nu_n=\\frac{-2n+1}{n+1}.\n\\]\nبقسمة البسط والمقام على \\(n\\):\n\\[\nu_n=\\frac{-2+\\frac1n}{1+\\frac1n}.\n\\]\nوعندما \\(n\\to+\\infty\\):\n\\[\nu_n\\to-2.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{v_n=\\frac{n+1}{3}}\\)، \\(\\boxed{u_n=\\frac{-2n+1}{n+1}}\\)، و \\(\\boxed{\\lim u_n=-2}\\)."
+      }
+    },
+    {
+      "id": "2018_s1_ex01_q4",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "4) بين أنه من أجل كل عدد طبيعي \\(n\\): \\(u_0v_0+u_1v_1+\\cdots+u_nv_n=\\frac13(1-n^2)\\).",
+      "axis_tags": [
+        "sequence_sum"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحول حاصل الضرب \\(u_kv_k\\) إلى عبارة بسيطة بدلالة \\(v_k\\)، ثم نجمع.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "ربط u_k وv_k",
+            "explanation": "من:\n\\[\nv_k=\\frac1{u_k+2}\n\\]\nنحصل على:\n\\[\nu_k=\\frac1{v_k}-2.\n\\]\nبضرب الطرفين في \\(v_k\\):\n\\[\n\\boxed{u_kv_k=1-2v_k}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "تحويل المجموع",
+            "explanation": "إذن:\n\\[\nS_n=u_0v_0+u_1v_1+\\cdots+u_nv_n\n=\\sum_{k=0}^{n}(1-2v_k).\n\\]\nومن ثم:\n\\[\nS_n=(n+1)-2\\sum_{k=0}^{n}v_k.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "مجموع المتتالية الحسابية v_k",
+            "explanation": "لدينا:\n\\[\nv_k=\\frac{k+1}{3}.\n\\]\nإذن:\n\\[\n\\sum_{k=0}^{n}v_k\n=\\frac13\\sum_{k=0}^{n}(k+1)\n=\\frac13(1+2+\\cdots+(n+1)).\n\\]\nومعلوم أن:\n\\[\n1+2+\\cdots+(n+1)=\\frac{(n+1)(n+2)}2.\n\\]\nإذن:\n\\[\n\\sum_{k=0}^{n}v_k=\\frac{(n+1)(n+2)}6.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "التبسيط النهائي",
+            "explanation": "نعوض:\n\\[\nS_n=(n+1)-2\\times\\frac{(n+1)(n+2)}6.\n\\]\nأي:\n\\[\nS_n=(n+1)-\\frac{(n+1)(n+2)}3.\n\\]\nنأخذ \\(n+1\\) عاملا مشتركا:\n\\[\nS_n=(n+1)\\left(1-\\frac{n+2}{3}\\right)\n=\\frac{(n+1)(1-n)}3.\n\\]\nومن ثم:\n\\[\n\\boxed{S_n=\\frac{1-n^2}{3}}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{u_0v_0+u_1v_1+\\cdots+u_nv_n=\\frac13(1-n^2)}\\)."
+      }
+    }
+  ]
+}

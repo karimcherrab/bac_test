@@ -1,0 +1,268 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "session": "ordinary",
+  "year": 2026,
+  "chapter_code": "sequences",
+  "chapter_title": "المتتاليات العددية",
+  "branches": [
+    {
+      "code": "science",
+      "name": "شعبة علوم تجريبية"
+    }
+  ],
+  "source_pdf": "2026(3).pdf",
+  "comparison_source": "bac_sequence_scientifique(20260823-110547).pdf",
+  "source_verification": {
+    "statement_checked_against_original_bac": true,
+    "statement_checked_against_sequence_compilation": true,
+    "official_correction_available_in_supplied_files": false,
+    "solution_checked_algebraically": true,
+    "solution_style": "حل مفصل ومبسط بخطوات صغيرة، مع إظهار جميع الحسابات الوسيطة.",
+    "statement_policy": "نص التمرين والأسئلة منقول من موضوع البكالوريا دون إضافة أسئلة أو معطيات جديدة.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  },
+  "version": "4.2-2026-science-sequences-subject1-ex03",
+  "exercise_number": 3,
+  "subject_number": 1,
+  "points": 5,
+  "source_pages": [
+    2
+  ],
+  "title": "التمرين الثالث — بكالوريا الجزائر 2026 — الموضوع الأول — شعبة علوم تجريبية",
+  "statement": "1) ادرس اتجاه تغير الدالة \\(f\\) المعرفة على المجال \\(]-2;+\\infty[\\) بـ: \\(f(x)=\\frac{4x}{x+2}\\). 2) \\((u_n)\\) المتتالية العددية المعرفة بـ: \\(u_0=4\\)، ومن أجل كل عدد طبيعي \\(n\\): \\(u_{n+1}=f(u_n)\\). 3) \\((v_n)\\) المتتالية العددية المعرفة على \\(\\mathbb N\\) بـ: \\(v_n=\\frac{u_n-2}{u_n}\\).",
+  "statement_graphs": [],
+  "questions": [
+    {
+      "id": "2026_s1_ex03_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) ادرس اتجاه تغير الدالة \\(f\\) المعرفة على المجال \\(]-2;+\\infty[\\) بـ: \\(f(x)=\\frac{4x}{x+2}\\).",
+      "axis_tags": [
+        "function_monotonicity"
+      ],
+      "solution": {
+        "strategy": "نحسب مشتقة الدالة ثم ندرس إشارتها على المجال.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب المشتقة",
+            "explanation": "لدينا:\n\\[\nf(x)=\\frac{4x}{x+2}.\n\\]\nإذن حسب قاعدة مشتقة خارج قسمة:\n\\[\nf'(x)=\\frac{4(x+2)-4x}{(x+2)^2}\n=\\frac{8}{(x+2)^2}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "دراسة الإشارة",
+            "explanation": "على المجال \\(]-2,+\\infty[\\) لدينا:\n\\[\n(x+2)^2>0.\n\\]\nوبالتالي:\n\\[\nf'(x)>0.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الاستنتاج",
+            "explanation": "إذن الدالة \\(f\\) متزايدة تماما على المجال \\(]-2,+\\infty[\\)."
+          }
+        ],
+        "final_answer": "\\(\\boxed{f\\text{ متزايدة تماما على }]-2,+\\infty[}\\)."
+      }
+    },
+    {
+      "id": "2026_s1_ex03_q2a",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2) أ) احسب \\(u_1\\) و \\(u_2\\) ثم خمن اتجاه تغير المتتالية \\((u_n)\\).",
+      "axis_tags": [
+        "sequence_terms",
+        "sequence_conjecture"
+      ],
+      "solution": {
+        "strategy": "نحسب الحدين مباشرة من علاقة الرجوع ثم نقارن الحدود الأولى.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب u_1",
+            "explanation": "لدينا:\n\\[\nu_1=f(u_0)=f(4)=\\frac{4\\times4}{4+2}\n=\\frac{16}{6}=\\frac83.\n\\]\nإذن:\n\\[\n\\boxed{u_1=\\frac83}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب u_2",
+            "explanation": "\\[\nu_2=f\\left(\\frac83\\right)\n=\\frac{4\\times\\frac83}{\\frac83+2}.\n\\]\nنحسب المقام:\n\\[\n\\frac83+2=\\frac{14}{3}.\n\\]\nإذن:\n\\[\nu_2=\\frac{32/3}{14/3}=\\frac{32}{14}=\\frac{16}{7}.\n\\]\nومن ثم:\n\\[\n\\boxed{u_2=\\frac{16}{7}}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "التخمين",
+            "explanation": "نلاحظ:\n\\[\n4>\\frac83>\\frac{16}{7}.\n\\]\nإذن نتخمن أن المتتالية \\((u_n)\\) متناقصة تماما."
+          }
+        ],
+        "final_answer": "\\(\\boxed{u_1=\\frac83,\\quad u_2=\\frac{16}{7}}\\)، والتخمين: \\(\\boxed{(u_n)\\text{ متناقصة تماما}}\\)."
+      }
+    },
+    {
+      "id": "2026_s1_ex03_q2b",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "ب) برهن بالتراجع أنه: من أجل كل عدد طبيعي \\(n\\)، \\(u_n>2\\).",
+      "axis_tags": [
+        "induction",
+        "sequence_bounds"
+      ],
+      "solution": {
+        "strategy": "نبرهن الخاصية بالتراجع، مستعملين تزايد الدالة \\(f\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التحقق عند n=0",
+            "explanation": "لدينا:\n\\[\nu_0=4>2.\n\\]\nإذن الخاصية صحيحة عند الرتبة \\(0\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "فرضية التراجع",
+            "explanation": "نفترض أنه عند رتبة طبيعية \\(n\\):\n\\[\nu_n>2.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الانتقال إلى n+1",
+            "explanation": "بما أن \\(f\\) متزايدة تماما و\\(u_n>2\\)، فإن:\n\\[\nf(u_n)>f(2).\n\\]\nنحسب:\n\\[\nf(2)=\\frac{4\\times2}{2+2}=2.\n\\]\nوبما أن \\(u_{n+1}=f(u_n)\\)، نحصل على:\n\\[\nu_{n+1}>2.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "الخلاصة",
+            "explanation": "بالتراجع:\n\\[\n\\boxed{u_n>2\\quad\\forall n\\in\\mathbb N}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{u_n>2\\text{ لكل }n\\in\\mathbb N}\\)."
+      }
+    },
+    {
+      "id": "2026_s1_ex03_q2c",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "جـ) ادرس اتجاه تغير المتتالية \\((u_n)\\).",
+      "axis_tags": [
+        "sequence_monotonicity"
+      ],
+      "solution": {
+        "strategy": "نحسب الفرق \\(u_{n+1}-u_n\\)، ثم نستعمل الحصر \\(u_n>2\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب الفرق",
+            "explanation": "\\[\nu_{n+1}-u_n=\\frac{4u_n}{u_n+2}-u_n.\n\\]\nنوحد المقام:\n\\[\nu_{n+1}-u_n\n=\\frac{4u_n-u_n(u_n+2)}{u_n+2}\n=\\frac{2u_n-u_n^2}{u_n+2}.\n\\]\nإذن:\n\\[\n\\boxed{u_{n+1}-u_n=\\frac{u_n(2-u_n)}{u_n+2}}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "دراسة الإشارة",
+            "explanation": "لدينا \\(u_n>2\\)، ومنه:\n\\[\nu_n>0,\\qquad 2-u_n<0,\\qquad u_n+2>0.\n\\]\nإذن:\n\\[\nu_{n+1}-u_n<0.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الاستنتاج",
+            "explanation": "إذن:\n\\[\n\\boxed{(u_n)\\text{ متناقصة تماما}}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{(u_n)\\text{ متناقصة تماما}}\\)."
+      }
+    },
+    {
+      "id": "2026_s1_ex03_q3a",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "3) أ) أثبت أن المتتالية \\((v_n)\\) هندسية أساسها \\(\\frac12\\)، يطلب كتابة \\(v_n\\) بدلالة \\(n\\).",
+      "axis_tags": [
+        "auxiliary_sequence",
+        "geometric_sequence"
+      ],
+      "solution": {
+        "strategy": "نحسب \\(v_{n+1}\\) باستعمال علاقة الرجوع، ثم نحسب الحد الأول.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "إعادة كتابة v_n",
+            "explanation": "لدينا:\n\\[\nv_n=\\frac{u_n-2}{u_n}=1-\\frac2{u_n}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب v_{n+1}",
+            "explanation": "\\[\nv_{n+1}=1-\\frac2{u_{n+1}}.\n\\]\nوبما أن:\n\\[\nu_{n+1}=\\frac{4u_n}{u_n+2},\n\\]\nفإن:\n\\[\n\\frac2{u_{n+1}}\n=\\frac{2(u_n+2)}{4u_n}\n=\\frac{u_n+2}{2u_n}\n=\\frac12+\\frac1{u_n}.\n\\]\nإذن:\n\\[\nv_{n+1}=1-\\frac12-\\frac1{u_n}\n=\\frac12\\left(1-\\frac2{u_n}\\right)\n=\\frac12v_n.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب v_0",
+            "explanation": "\\[\nv_0=\\frac{4-2}{4}=\\frac12.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "كتابة الحد العام",
+            "explanation": "إذن \\((v_n)\\) هندسية حدها الأول \\(v_0=\\frac12\\) وأساسها \\(q=\\frac12\\)، ومنه:\n\\[\nv_n=v_0q^n\n=\\frac12\\left(\\frac12\\right)^n\n=\\left(\\frac12\\right)^{n+1}.\n\\]\nأي:\n\\[\n\\boxed{v_n=\\left(\\frac12\\right)^{n+1}}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{v_n=(\\frac12)^{n+1}}\\)."
+      }
+    },
+    {
+      "id": "2026_s1_ex03_q3b",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "ب) عبر عن \\(u_n\\) بدلالة \\(n\\) ثم احسب نهاية المتتالية \\((u_n)\\).",
+      "axis_tags": [
+        "explicit_sequence_formula",
+        "sequence_limit"
+      ],
+      "solution": {
+        "strategy": "نستخرج \\(u_n\\) من تعريف \\(v_n\\)، ثم نعوض العبارة الصريحة لـ\\(v_n\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الانطلاق من تعريف v_n",
+            "explanation": "\\[\nv_n=1-\\frac2{u_n}.\n\\]\nإذن:\n\\[\n\\frac2{u_n}=1-v_n.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "استخراج u_n",
+            "explanation": "\\[\nu_n=\\frac2{1-v_n}.\n\\]\nوبالتعويض عن:\n\\[\nv_n=\\left(\\frac12\\right)^{n+1},\n\\]\nنحصل على:\n\\[\n\\boxed{u_n=\\frac{2}{1-(\\frac12)^{n+1}}}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب النهاية",
+            "explanation": "بما أن:\n\\[\n\\left(\\frac12\\right)^{n+1}\\to0,\n\\]\nفإن:\n\\[\n\\lim_{n\\to+\\infty}u_n=\\frac2{1-0}=2.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{u_n=\\frac2{1-(\\frac12)^{n+1}}}\\)، و \\(\\boxed{\\lim u_n=2}\\)."
+      }
+    },
+    {
+      "id": "2026_s1_ex03_q4",
+      "display_order": 7,
+      "content_type": "question",
+      "text": "4) نضع: من أجل كل \\(n\\) من \\(\\mathbb N\\)، \\(S_n=v_0+v_1+\\cdots+v_n\\) و \\(T_n=\\frac1{u_0}+\\frac1{u_1}+\\cdots+\\frac1{u_n}\\). احسب \\(S_n\\) بدلالة \\(n\\) ثم استنتج أن: \\(T_n=\\frac12n+\\left(\\frac12\\right)^{n+2}\\).",
+      "axis_tags": [
+        "geometric_sum",
+        "transformed_sum"
+      ],
+      "solution": {
+        "strategy": "نحسب أولا مجموع المتتالية الهندسية \\((v_n)\\)، ثم نربط \\(1/u_k\\) بـ\\(v_k\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب S_n",
+            "explanation": "لدينا:\n\\[\nv_0=\\frac12,\\qquad q=\\frac12.\n\\]\nإذن:\n\\[\nS_n=\\frac12\\frac{1-(\\frac12)^{n+1}}{1-\\frac12}\n=1-\\left(\\frac12\\right)^{n+1}.\n\\]\nأي:\n\\[\n\\boxed{S_n=1-(\\frac12)^{n+1}}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "ربط 1/u_k بـ v_k",
+            "explanation": "من:\n\\[\nv_k=1-\\frac2{u_k},\n\\]\nنجد:\n\\[\n\\frac1{u_k}=\\frac{1-v_k}{2}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب T_n",
+            "explanation": "إذن:\n\\[\nT_n=\\frac12\\sum_{k=0}^{n}(1-v_k)\n=\\frac12[(n+1)-S_n].\n\\]\nبالتعويض:\n\\[\nT_n=\\frac12\\left[n+1-1+\\left(\\frac12\\right)^{n+1}\\right].\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "التبسيط النهائي",
+            "explanation": "\\[\n\\boxed{T_n=\\frac n2+\\left(\\frac12\\right)^{n+2}}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{S_n=1-(\\frac12)^{n+1}}\\)، و \\(\\boxed{T_n=\\frac n2+(\\frac12)^{n+2}}\\)."
+      }
+    }
+  ]
+}

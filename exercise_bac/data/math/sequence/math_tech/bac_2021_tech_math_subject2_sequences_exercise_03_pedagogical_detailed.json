@@ -1,0 +1,379 @@
+{
+  "schema_version": "4.5-bac-source",
+  "version": "4.2-2021-tech-math-subject2-sequences-ex03",
+  "language": "ar",
+  "direction": "rtl",
+  "year": 2021,
+  "session": "ordinary",
+  "chapter_code": "sequences",
+  "chapter_title": "sequences",
+  "exercise_number": 3,
+  "points": 5,
+  "source_pages": [
+    3,
+    4
+  ],
+  "solution_source_pages": [
+    8,
+    9
+  ],
+  "branches": [
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "title": "التمرين الثالث — بكالوريا الجزائر 2021 — متتالية غير خطية ومتتالية هندسية لوغاريتمية",
+  "axis_tags": [
+    "recursive_sequence",
+    "mathematical_induction",
+    "bounded_sequence",
+    "sequence_monotonicity",
+    "sequence_convergence",
+    "logarithmic_sequence",
+    "geometric_sequence",
+    "explicit_formula",
+    "sequence_limit",
+    "sequence_product"
+  ],
+  "statement": "التمرين الثالث: (05 نقاط)\n\nالمتتالية العددية \\((u_n)\\) معرفة بـ:\n\\[\nu_0=3+e^{-2}\n\\]\nومن أجل كل عدد طبيعي \\(n\\):\n\\[\nu_{n+1}=u_n^2-6u_n+12.\n\\]\n\n1) أ. تحقق أنه من أجل كل عدد طبيعي \\(n\\):\n\\[\nu_{n+1}=(u_n-3)^2+3.\n\\]\n\nب. برهن بالتراجع أنه من أجل كل عدد طبيعي \\(n\\):\n\\[\n3<u_n<4.\n\\]\n\n2) أ. ادرس اتجاه تغير المتتالية \\((u_n)\\).\n\nب. استنتج أن \\((u_n)\\) متقاربة.\n\n3) المتتالية العددية \\((v_n)\\) معرفة على \\(\\mathbb N\\) بـ:\n\\[\nv_n=\\ln(u_n-3).\n\\]\n\nأ. بين أن المتتالية \\((v_n)\\) هندسية أساسها \\(2\\)، يطلب حساب حدها الأول.\n\nب. اكتب \\(v_n\\) بدلالة \\(n\\) ثم استنتج أنه من أجل كل عدد طبيعي \\(n\\):\n\\[\nu_n=3+e^{-2^{n+1}}.\n\\]\n\nج. احسب:\n\\[\n\\lim_{n\\to+\\infty}u_n.\n\\]\n\n4) نضع من أجل كل عدد طبيعي \\(n\\):\n\\[\nP_n=(u_0-3)(u_1-3)\\times\\cdots\\times(u_n-3).\n\\]\nاحسب \\(P_n\\) بدلالة \\(n\\).",
+  "figures": [],
+  "questions": [
+    {
+      "id": "2021_tech_math_s2_ex03_q1a",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1-أ) تحقق أنه من أجل كل عدد طبيعي \\(n\\): \\(u_{n+1}=(u_n-3)^2+3\\).",
+      "solution": {
+        "introduction": "نحول العبارة الأصلية بإكمال المربع.",
+        "strategy": "نوسع \\((u_n-3)^2+3\\) ونقارن.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "توسيع العبارة",
+            "explanation": "\\[(u_n-3)^2+3=u_n^2-6u_n+9+3.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "التبسيط",
+            "explanation": "\\[(u_n-3)^2+3=u_n^2-6u_n+12.\\]\nلكن حسب تعريف المتتالية:\n\\[u_{n+1}=u_n^2-6u_n+12.\\]",
+            "result": "\\[u_{n+1}=(u_n-3)^2+3.\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{u_{n+1}=(u_n-3)^2+3}\\).",
+        "verification": "تمت مراجعة الحل مع الإجابة النموذجية الرسمية لبكالوريا 2021، الموضوع الثاني، التمرين الثالث.",
+        "common_mistakes": [
+          "نسيان الحد +9 عند نشر المربع."
+        ],
+        "hints": [
+          "وسع (u_n-3)^2."
+        ],
+        "summary": "إكمال المربع يعطينا صيغة أبسط للعلاقة التراجعية.",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2021_tech_math_s2_ex03_q1b",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "1-ب) برهن بالتراجع أنه من أجل كل عدد طبيعي \\(n\\): \\(3<u_n<4\\).",
+      "solution": {
+        "introduction": "نثبت الحصر بالتراجع باستعمال الصيغة \\(u_{n+1}=(u_n-3)^2+3\\).",
+        "strategy": "نتحقق عند n=0، ثم نستخدم 0<u_n-3<1.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التحقق عند n=0",
+            "explanation": "لدينا:\n\\[u_0=3+e^{-2}.\\]\nوبما أن:\n\\[0<e^{-2}<1,\\]\nفإن:\n\\[3<u_0<4.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "فرضية التراجع",
+            "explanation": "نفترض:\n\\[3<u_n<4.\\]\nإذن:\n\\[0<u_n-3<1.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "التربيع",
+            "explanation": "بما أن الطرفين موجبان:\n\\[0<(u_n-3)^2<1.\\]\nبإضافة 3:\n\\[3<(u_n-3)^2+3<4.\\]\nلكن:\n\\[u_{n+1}=(u_n-3)^2+3.\\]",
+            "result": "\\[3<u_{n+1}<4.\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "الخلاصة",
+            "explanation": "حسب مبدأ التراجع:\n\\[3<u_n<4\\]\nلكل \\(n\\in\\mathbb N\\)."
+          }
+        ],
+        "final_answer": "\\(\\boxed{3<u_n<4}\\) لكل \\(n\\in\\mathbb N\\).",
+        "verification": "تمت مراجعة الحل مع الإجابة النموذجية الرسمية لبكالوريا 2021، الموضوع الثاني، التمرين الثالث.",
+        "common_mistakes": [
+          "تربيع متراجحة تحتوي أعدادا سالبة دون التحقق من الإشارة؛ هنا u_n-3 موجب."
+        ],
+        "hints": [
+          "حول الحصر إلى 0<u_n-3<1."
+        ],
+        "summary": "الفارق u_n-3 يبقى دائما بين 0 و1.",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2021_tech_math_s2_ex03_q2a",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "2-أ) ادرس اتجاه تغير المتتالية \\((u_n)\\).",
+      "solution": {
+        "introduction": "ندرس الفرق بين حدين متتاليين.",
+        "strategy": "نستعمل الصيغة المفككة الموجودة في التصحيح الرسمي.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب الفرق",
+            "explanation": "\\[u_{n+1}-u_n=u_n^2-7u_n+12.\\]\nنفكك:\n\\[u_n^2-7u_n+12=(u_n-3)(u_n-4).\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "إشارة الفرق",
+            "explanation": "من السؤال السابق:\n\\[3<u_n<4.\\]\nإذن:\n\\[u_n-3>0\\quad\\text{و}\\quad u_n-4<0.\\]\nومن ثم:\n\\[u_{n+1}-u_n<0.\\]",
+            "result": "\\((u_n)\\) متناقصة تماما."
+          }
+        ],
+        "final_answer": "\\(\\boxed{(u_n)\\text{ متناقصة تماما}}\\).",
+        "verification": "تمت مراجعة الحل مع الإجابة النموذجية الرسمية لبكالوريا 2021، الموضوع الثاني، التمرين الثالث.",
+        "common_mistakes": [
+          "الخطأ في تفكيك u_n²-7u_n+12."
+        ],
+        "hints": [
+          "فكك الفرق إلى (u_n-3)(u_n-4)."
+        ],
+        "summary": "أحد العاملين موجب والآخر سالب، لذلك الفرق سالب.",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2021_tech_math_s2_ex03_q2b",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "2-ب) استنتج أن \\((u_n)\\) متقاربة.",
+      "solution": {
+        "introduction": "نستعمل مبرهنة تقارب المتتاليات الرتيبة.",
+        "strategy": "نجمع بين التناقص والحصر السفلي.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الرتابة",
+            "explanation": "من السؤال السابق، \\((u_n)\\) متناقصة تماما."
+          },
+          {
+            "step_number": 2,
+            "title": "الحد السفلي",
+            "explanation": "ومن الحصر:\n\\[u_n>3.\\]\nإذن المتتالية محدودة من الأسفل بالعدد 3."
+          },
+          {
+            "step_number": 3,
+            "title": "الخلاصة",
+            "explanation": "كل متتالية متناقصة ومحدودة من الأسفل متقاربة.",
+            "result": "\\((u_n)\\) متقاربة."
+          }
+        ],
+        "final_answer": "\\(\\boxed{(u_n)\\text{ متقاربة}}\\).",
+        "verification": "تمت مراجعة الحل مع الإجابة النموذجية الرسمية لبكالوريا 2021، الموضوع الثاني، التمرين الثالث.",
+        "common_mistakes": [
+          "نسيان ذكر أنها محدودة من الأسفل."
+        ],
+        "hints": [
+          "استعمل 3<u_n."
+        ],
+        "summary": "التناقص مع الحصر السفلي يضمن التقارب.",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2021_tech_math_s2_ex03_q3a",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "3-أ) بين أن المتتالية \\((v_n)\\) هندسية أساسها \\(2\\)، يطلب حساب حدها الأول.",
+      "solution": {
+        "introduction": "نستعمل العلاقة \\(u_{n+1}-3=(u_n-3)^2\\) ثم نطبق اللوغاريتم.",
+        "strategy": "نحسب v_{n+1}.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "العلاقة على u_n-3",
+            "explanation": "لدينا:\n\\[u_{n+1}-3=(u_n-3)^2.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب v_{n+1}",
+            "explanation": "بما أن \\(u_n-3>0\\):\n\\[v_{n+1}=\\ln(u_{n+1}-3)=\\ln((u_n-3)^2)=2\\ln(u_n-3)=2v_n.\\]",
+            "result": "\\((v_n)\\) هندسية أساسها 2."
+          },
+          {
+            "step_number": 3,
+            "title": "حساب v₀",
+            "explanation": "\\[v_0=\\ln(u_0-3)=\\ln(e^{-2})=-2.\\]",
+            "result": "\\(v_0=-2\\)."
+          }
+        ],
+        "final_answer": "\\(\\boxed{v_{n+1}=2v_n}\\) و\\(\\boxed{v_0=-2}\\).",
+        "verification": "تمت مراجعة الحل مع الإجابة النموذجية الرسمية لبكالوريا 2021، الموضوع الثاني، التمرين الثالث.",
+        "common_mistakes": [
+          "نسيان أن ln(a²)=2ln(a) لأن a=u_n-3>0."
+        ],
+        "hints": [
+          "ابدأ من u_{n+1}-3=(u_n-3)^2."
+        ],
+        "summary": "العلاقة التربيعية تتحول إلى علاقة هندسية بعد أخذ اللوغاريتم.",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2021_tech_math_s2_ex03_q3b",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "3-ب) اكتب \\(v_n\\) بدلالة \\(n\\) ثم استنتج أنه من أجل كل عدد طبيعي \\(n\\): \\(u_n=3+e^{-2^{n+1}}\\).",
+      "solution": {
+        "introduction": "نكتب الحد العام للمتتالية الهندسية ثم نرجع إلى u_n.",
+        "strategy": "نستعمل v_n=v₀·2^n، ثم v_n=ln(u_n-3).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "عبارة v_n",
+            "explanation": "\\[v_n=v_0\\,2^n=-2\\cdot2^n=-2^{n+1}.\\]",
+            "result": "\\(v_n=-2^{n+1}\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "الرجوع إلى u_n",
+            "explanation": "من:\n\\[v_n=\\ln(u_n-3),\\]\nنحصل على:\n\\[u_n-3=e^{v_n}=e^{-2^{n+1}}.\\]\nإذن:",
+            "result": "\\[u_n=3+e^{-2^{n+1}}.\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{v_n=-2^{n+1}}\\) و\\(\\boxed{u_n=3+e^{-2^{n+1}}}\\).",
+        "verification": "تمت مراجعة الحل مع الإجابة النموذجية الرسمية لبكالوريا 2021، الموضوع الثاني، التمرين الثالث.",
+        "common_mistakes": [
+          "الخلط بين -2^{n+1} و(-2)^{n+1}."
+        ],
+        "hints": [
+          "v₀=-2 والأساس 2."
+        ],
+        "summary": "بعد إيجاد v_n نطبق الدالة الأسية فنحصل على u_n.",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2021_tech_math_s2_ex03_q3c",
+      "display_order": 7,
+      "content_type": "question",
+      "text": "3-ج) احسب \\(\\lim_{n\\to+\\infty}u_n\\).",
+      "solution": {
+        "introduction": "نستعمل العبارة الصريحة للحد العام.",
+        "strategy": "ندرس نهاية الأس \\(-2^{n+1}\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "نهاية الأس",
+            "explanation": "عندما \\(n\\to+\\infty\\):\n\\[2^{n+1}\\to+\\infty\\Rightarrow -2^{n+1}\\to-\\infty.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "نهاية الحد الأسي",
+            "explanation": "\\[e^{-2^{n+1}}\\to0.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "النتيجة",
+            "explanation": "\\[u_n=3+e^{-2^{n+1}}\\to3.\\]",
+            "result": "\\(\\lim u_n=3\\)."
+          }
+        ],
+        "final_answer": "\\(\\boxed{\\lim_{n\\to+\\infty}u_n=3}\\).",
+        "verification": "تمت مراجعة الحل مع الإجابة النموذجية الرسمية لبكالوريا 2021، الموضوع الثاني، التمرين الثالث.",
+        "common_mistakes": [],
+        "hints": [
+          "e^x→0 عندما x→-∞."
+        ],
+        "summary": "الحد الأسي يختفي في النهاية، فتبقى القيمة 3.",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2021_tech_math_s2_ex03_q4",
+      "display_order": 8,
+      "content_type": "question",
+      "text": "4) نضع من أجل كل عدد طبيعي \\(n\\): \\(P_n=(u_0-3)(u_1-3)\\times\\cdots\\times(u_n-3)\\). احسب \\(P_n\\) بدلالة \\(n\\).",
+      "solution": {
+        "introduction": "نحوّل الجداء إلى أس باستعمال العلاقة \\(u_k-3=e^{v_k}\\).",
+        "strategy": "نكتب P_n=e^{v_0+...+v_n} ثم نحسب مجموعا هندسيا.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تحويل كل عامل",
+            "explanation": "بما أن:\n\\[v_k=\\ln(u_k-3),\\]\nفإن:\n\\[u_k-3=e^{v_k}.\\]\nإذن:\n\\[P_n=e^{v_0}e^{v_1}\\cdots e^{v_n}=e^{v_0+v_1+\\cdots+v_n}.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب مجموع v_k",
+            "explanation": "لدينا:\n\\[v_k=-2^{k+1}=-2\\cdot2^k.\\]\nإذن:\n\\[\\sum_{k=0}^{n}v_k=-2\\sum_{k=0}^{n}2^k.\\]\nومجموع المتتالية الهندسية:\n\\[\\sum_{k=0}^{n}2^k=2^{n+1}-1.\\]\nإذن:\n\\[\\sum_{k=0}^{n}v_k=-2(2^{n+1}-1).\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "النتيجة",
+            "explanation": "\\[P_n=e^{-2(2^{n+1}-1)}.\\]",
+            "result": "هذه هي عبارة P_n بدلالة n."
+          }
+        ],
+        "final_answer": "\\(\\boxed{P_n=e^{-2(2^{n+1}-1)}}\\).",
+        "verification": "تمت مراجعة الحل مع الإجابة النموذجية الرسمية لبكالوريا 2021، الموضوع الثاني، التمرين الثالث.",
+        "common_mistakes": [
+          "ضرب الأسس بدل جمعها عند ضرب قوى العدد e."
+        ],
+        "hints": [
+          "استعمل u_k-3=e^{v_k}."
+        ],
+        "summary": "الجداء يتحول إلى أس مجموع حدود هندسية.",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    }
+  ],
+  "source_reference": {
+    "file": "2021(2).pdf",
+    "statement_pages": [
+      3,
+      4
+    ],
+    "solution_pages": [
+      8,
+      9
+    ],
+    "source_faithful_statement": true,
+    "solution_reviewed_against_source": true
+  },
+  "display": {
+    "layout": "question_by_question",
+    "show_statement_first": true,
+    "show_statement_figures": true,
+    "show_solution_after_click": true,
+    "show_solution_figures": true
+  },
+  "review_status": {
+    "statement_compared_with_original_pdf": true,
+    "questions_compared_with_original_pdf": true,
+    "source_figures_checked": true,
+    "solution_checked_against_correction": true,
+    "latex_normalized_only": true,
+    "react_ready": true
+  },
+  "given_data": {
+    "u0": "3+e^-2",
+    "recurrence": "u_{n+1}=u_n^2-6u_n+12",
+    "equivalent_recurrence": "u_{n+1}=(u_n-3)^2+3",
+    "bound": "3<u_n<4",
+    "monotonicity": "strictly_decreasing",
+    "v_n": "ln(u_n-3)",
+    "v0": "-2",
+    "ratio_v": "2",
+    "explicit_v": "-2^(n+1)",
+    "explicit_u": "3+e^(-2^(n+1))",
+    "limit_u": "3",
+    "P_n": "e^(-2*(2^(n+1)-1))"
+  }
+}

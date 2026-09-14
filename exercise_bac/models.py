@@ -207,9 +207,43 @@ class ExerciseBac(models.Model):
         )
 
     @property
+    def statement_figures(self):
+        """رسومات/منحنيات نص التمرين في schema V5."""
+        if not isinstance(self.content, dict):
+            return []
+
+        value = self.content.get(
+            "statement_figures",
+            [],
+        )
+
+        return value if isinstance(value, list) else []
+
+    @property
+    def statement_graphs(self):
+        """
+        توافق مع الملفات القديمة التي كانت تستعمل statement_graphs.
+        إذا لم يوجد الحقل القديم نعيد statement_figures.
+        """
+        if not isinstance(self.content, dict):
+            return []
+
+        value = self.content.get(
+            "statement_graphs",
+            [],
+        )
+
+        if isinstance(value, list) and value:
+            return value
+
+        return self.statement_figures
+
+    @property
     def has_statement_graph(self):
         return bool(
             self.statement_graph_data
+            or self.statement_figures
+            or self.statement_graphs
         )
 
     @property

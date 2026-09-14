@@ -1,0 +1,213 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2020-tech-math-probability-subject2-ex01-detailed",
+  "session": "ordinary",
+  "year": 2020,
+  "chapter_code": "probability",
+  "chapter_title": "الاحتمالات",
+  "axis_tags": [
+    "probability_language_law",
+    "probability_counting_modeling",
+    "random_variable_probability_law",
+    "random_variable_expected_value",
+    "successive_draw_without_replacement"
+  ],
+  "branches": [
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "exercise_number": 1,
+  "subject_number": 2,
+  "source_page": 3,
+  "source_pages": [
+    3
+  ],
+  "solution_source_pages": [
+    8
+  ],
+  "title": "التمرين الأول — بكالوريا الجزائر 2020 — الموضوع الثاني — شعبة تقني رياضي",
+  "statement": "يحتوي كيس على كريتين خضراوين تحملان الرقمين 1 ، 2 وثلاث كريات حمراء تحمل الأرقام 1 ، 2 ، 2 و أربع كريات بيضاء تحمل الأرقام 2 ، 3 ، 3 ، 4. ( الكريات متماثلة لا نفرق بينها باللمس )",
+  "questions": [
+    {
+      "id": "2020_s2_probability_ex01_qI1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "I) نسحب من هذا الكيس 3 كريات في آن واحد.\n1) احسب احتمال كل من الحدثين A و B التاليين:\nA : \"الحصول على 3 كريات من نفس اللون.\"\nB : \"الحصول على كرية بيضاء على الأقل.\"",
+      "axis_tags": [
+        "probability_language_law",
+        "probability_counting_modeling"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "عدد الكريات 9، والسحب في آن واحد، لذلك عدد الحالات الممكنة هو C(9,3). للحادثة B نستعمل الحادثة العكسية.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "عدد الحالات الممكنة",
+            "explanation": "\\[|\\Omega|=\\binom93=84.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب P(A)",
+            "explanation": "لا يمكن أخذ 3 خضر لأن عددها 2 فقط. يمكن أخذ 3 حمر من 3، أو 3 بيض من 4:\n\\[P(A)=\\frac{\\binom33+\\binom43}{84}=\\frac{1+4}{84}=\\frac5{84}.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "تحديد الحادثة العكسية لـ B",
+            "explanation": "الحادثة \\(\\overline B\\) هي: عدم الحصول على أي كرية بيضاء. يوجد 5 كريات غير بيضاء."
+          },
+          {
+            "step_number": 4,
+            "title": "حساب P(B)",
+            "explanation": "\\[P(B)=1-P(\\overline B)=1-\\frac{\\binom53}{\\binom93}=1-\\frac{10}{84}=\\frac{74}{84}=\\frac{37}{42}.\\]"
+          }
+        ],
+        "final_answer": "\\[P(A)=\\frac5{84},\\qquad P(B)=\\frac{37}{42}.\\]"
+      }
+    },
+    {
+      "id": "2020_s2_probability_ex01_qI2a",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2) ليكن X المتغير العشوائي الذي يرفق بكل سحب أكبر الأرقام المحصل عليها.\nأ. بين أن: \\(P(X=3)=\\frac{3}{7}\\) ثم عرف قانون الاحتمال للمتغير العشوائي X.",
+      "axis_tags": [
+        "random_variable_probability_law",
+        "probability_counting_modeling"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "قيم X هي أكبر رقم بين ثلاث كريات. الأرقام الموجودة 1 و2 و3 و4، لكن لا يمكن أن يكون الأكبر 1 لأن لدينا كريتين فقط تحملان الرقم 1.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تحديد قيم X",
+            "explanation": "لدينا كريتان فقط تحملان الرقم 1، لذلك عند سحب 3 كريات لا يمكن أن يكون أكبر رقم هو 1.\nإذن:\n\\[X\\in\\{2,3,4\\}.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب P(X=2)",
+            "explanation": "حتى يكون أكبر رقم هو 2، يجب أن تكون الكريات الثلاث مختارة من الكريات التي أرقامها 1 أو2. عدد هذه الكريات 6.\nإذن:\n\\[P(X=2)=\\frac{\\binom63}{84}=\\frac{20}{84}=\\frac5{21}.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب P(X=3)",
+            "explanation": "حتى يكون أكبر رقم هو 3، نختار 3 كريات من بين الكريات الثماني التي أرقامها لا تتجاوز 3، مع استبعاد السحبات التي لا تحتوي أي 3:\n\\[P(X=3)=\\frac{\\binom83-\\binom63}{84}=\\frac{56-20}{84}=\\frac{36}{84}=\\frac37.\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "حساب P(X=4)",
+            "explanation": "توجد كرية واحدة تحمل الرقم 4. لكي يكون أكبر رقم هو 4 يجب أن تكون ضمن السحب، ثم نختار كريتين من الكريات الثماني الباقية:\n\\[P(X=4)=\\frac{\\binom82}{84}=\\frac{28}{84}=\\frac13=\\frac7{21}.\\]"
+          },
+          {
+            "step_number": 5,
+            "title": "التحقق",
+            "explanation": "\\[\\frac5{21}+\\frac9{21}+\\frac7{21}=1.\\]"
+          }
+        ],
+        "tables": [
+          {
+            "title": "قانون احتمال X",
+            "headers": [
+              "\\(x_i\\)",
+              "2",
+              "3",
+              "4"
+            ],
+            "rows": [
+              [
+                "\\(P(X=x_i)\\)",
+                "\\(\\frac5{21}\\)",
+                "\\(\\frac9{21}\\)",
+                "\\(\\frac7{21}\\)"
+              ]
+            ]
+          }
+        ],
+        "final_answer": "\\[P(X=3)=\\frac37.\\]\nوقانون الاحتمال:\n\\[P(X=2)=\\frac5{21},\\quad P(X=3)=\\frac9{21},\\quad P(X=4)=\\frac7{21}.\\]"
+      }
+    },
+    {
+      "id": "2020_s2_probability_ex01_qI2b",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "ب. احسب الأمل الرياضياتي للمتغير العشوائي X.",
+      "axis_tags": [
+        "random_variable_expected_value",
+        "random_variable_probability_law"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل قانون الاحتمال المحسوب في السؤال السابق ونطبق تعريف الأمل الرياضياتي.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "كتابة صيغة الأمل",
+            "explanation": "\\[E(X)=\\sum x_iP(X=x_i).\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "التعويض",
+            "explanation": "\\[E(X)=2\\times\\frac5{21}+3\\times\\frac9{21}+4\\times\\frac7{21}.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الحساب",
+            "explanation": "\\[E(X)=\\frac{10+27+28}{21}=\\frac{65}{21}.\\]"
+          }
+        ],
+        "final_answer": "\\[E(X)=\\frac{65}{21}.\\]"
+      }
+    },
+    {
+      "id": "2020_s2_probability_ex01_qII",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "II) نسحب الآن 3 كريات على التوالي دون إرجاع.\nليكن C الحدث: \"الحصول على 3 أرقام جداؤها عدد زوجي\".\nاحسب احتمال C.",
+      "axis_tags": [
+        "successive_draw_without_replacement",
+        "probability_counting_modeling"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "الجداء يكون زوجيا إذا ظهر عدد زوجي واحد على الأقل. الأسهل حساب الحادثة العكسية: أن تكون الأرقام الثلاثة كلها فردية.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "عد الكريات ذات الأرقام الفردية",
+            "explanation": "الكريات ذات الأرقام الفردية هي: خضراء 1، حمراء 1، بيضاء 3، بيضاء 3. إذن عددها 4."
+          },
+          {
+            "step_number": 2,
+            "title": "عدد السحبات المرتبة الممكنة",
+            "explanation": "السحب متتال دون إرجاع، لذلك:\n\\[A_9^3=9\\times8\\times7=504.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الحادثة العكسية",
+            "explanation": "الحادثة \\(\\overline C\\) تعني الحصول على ثلاثة أرقام فردية. عدد السحبات المرتبة الموافقة:\n\\[A_4^3=4\\times3\\times2=24.\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "حساب الاحتمال",
+            "explanation": "\\[P(C)=1-P(\\overline C)=1-\\frac{24}{504}=1-\\frac1{21}=\\frac{20}{21}.\\]"
+          }
+        ],
+        "final_answer": "\\[P(C)=\\frac{20}{21}.\\]"
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "statement_checked_against_image": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2020(1).pdf",
+    "statement_image": "2020_exo02(2).jpg",
+    "statement_figure_policy": "لا يوجد شكل لازم في نص التمرين.",
+    "solution_figure_policy": "لا يحتاج الحل إلى رسم.",
+    "renderer": "MathJax + structured tables"
+  }
+}

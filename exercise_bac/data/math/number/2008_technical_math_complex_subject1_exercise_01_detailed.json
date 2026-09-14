@@ -1,0 +1,253 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2008-technical-math-complex-subject1-ex01",
+  "session": "ordinary",
+  "year": 2008,
+  "chapter_code": "complex_numbers",
+  "chapter_title": "الأعداد المركبة",
+  "axis_tags": [
+    "complex_polynomial_equation",
+    "complex_exponential_form",
+    "complex_barycenter",
+    "complex_geometric_locus",
+    "complex_homothety"
+  ],
+  "branches": [
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "exercise_number": 1,
+  "subject_number": 1,
+  "source_page": 1,
+  "source_pages": [
+    1
+  ],
+  "solution_source_pages": [
+    5
+  ],
+  "title": "التمرين الأول — بكالوريا الجزائر 2008 — الموضوع الأول — شعبة تقني رياضي",
+  "statement": "لتكن في مجموعة الأعداد المركبة \\(\\mathbb{C}\\) المعادلة \\((*)\\) المعرفة كما يلي:\n\\[\nZ^3+(2-4i)Z^2-(6+9i)Z+9(-1+i)=0 \\quad ... \\quad (*)\n\\]",
+  "questions": [
+    {
+      "id": "2008_tm_s1_complex_ex01_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1/ بين أن \\(Z_0=3i\\) هو حل للمعادلة \\((*)\\).",
+      "axis_tags": [
+        "complex_polynomial_equation"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نعوض مباشرة \\(Z=3i\\) في الطرف الأيسر للمعادلة، ثم نبسط باستعمال \\(i^2=-1\\) و\\(i^3=-i\\). إذا حصلنا على الصفر فإن \\(3i\\) حل.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "نعوض Z=3i",
+            "explanation": "نحسب الطرف الأيسر:\n\\[\n(3i)^3+(2-4i)(3i)^2-(6+9i)(3i)+9(-1+i).\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "نحسب القوى",
+            "explanation": "لدينا:\n\\[\n(3i)^2=9i^2=-9,\n\\]\nو\n\\[\n(3i)^3=(3i)(-9)=-27i.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "نبسط الحدود",
+            "explanation": "إذن:\n\\[\n-27i+(2-4i)(-9)-(6+9i)(3i)+9(-1+i).\n\\]\nنحسب كل حد:\n\\[\n(2-4i)(-9)=-18+36i,\n\\]\nو\n\\[\n-(6+9i)(3i)=-(18i+27i^2)=27-18i,\n\\]\nو\n\\[\n9(-1+i)=-9+9i.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "نجمع",
+            "explanation": "نجمع الأجزاء الحقيقية والتخيلية:\n\\[\n(-18+27-9)+(-27+36-18+9)i=0+0i=0.\n\\]\nإذن التعويض أعطى صفرًا."
+          }
+        ],
+        "final_answer": "\\(Z_0=3i\\) حل للمعادلة \\((*)\\)."
+      }
+    },
+    {
+      "id": "2008_tm_s1_complex_ex01_q2",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2/ حل، في \\(\\mathbb{C}\\)، المعادلة \\((*)\\) ثم اكتب حلولها \\(Z_0\\)، \\(Z_1\\)، \\(Z_2\\) على الشكل الأسي حيث \\(|Z_1|<|Z_2|\\).",
+      "axis_tags": [
+        "complex_polynomial_equation",
+        "complex_exponential_form"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "بما أن \\(Z_0=3i\\) حل، فإن \\(Z-3i\\) عامل في كثير الحدود. نفكك كثير الحدود، ثم نحل المعادلة من الدرجة الثانية المتبقية، وبعدها نرتب الحلين حسب الطويلة ونكتب الحلول على الشكل الأسي.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "نفكك باستعمال الحل المعروف",
+            "explanation": "بما أن \\(3i\\) جذر، نكتب:\n\\[\nZ^3+(2-4i)Z^2-(6+9i)Z+9(-1+i)\n=(Z-3i)\\bigl[Z^2+(2-i)Z-3-3i\\bigr].\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "نحل المعادلة من الدرجة الثانية",
+            "explanation": "نحل:\n\\[\nZ^2+(2-i)Z-3-3i=0.\n\\]\nمميزها:\n\\[\n\\Delta=(2-i)^2-4(-3-3i).\n\\]\nنحسب:\n\\[\n(2-i)^2=3-4i,\n\\]\nومن ثم:\n\\[\n\\Delta=3-4i+12+12i=15+8i=(4+i)^2.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "نستخرج الجذرين",
+            "explanation": "إذن:\n\\[\nZ=\\frac{-(2-i)\\pm(4+i)}{2}.\n\\]\nفنحصل على:\n\\[\nZ=1+i\n\\]\nأو\n\\[\nZ=-3.\n\\]\nومع الجذر الأول المعروف تصبح حلول المعادلة:\n\\[\n3i,\\quad 1+i,\\quad -3.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "نرتب حسب الطويلة",
+            "explanation": "لدينا:\n\\[\n|1+i|=\\sqrt{1^2+1^2}=\\sqrt2,\n\\]\nو\n\\[\n|-3|=3.\n\\]\nوبما أن \\(\\sqrt2<3\\)، فإن:\n\\[\nZ_1=1+i,\\qquad Z_2=-3.\n\\]\nكما أن \\(Z_0=3i\\)."
+          },
+          {
+            "step_number": 5,
+            "title": "نكتب الشكل الأسي",
+            "explanation": "بالنسبة إلى \\(Z_0=3i\\): طويلته \\(3\\) وحجته \\(\\frac{\\pi}{2}\\)، إذن\n\\[\nZ_0=3e^{i\\pi/2}.\n\\]\nبالنسبة إلى \\(Z_1=1+i\\): طويلته \\(\\sqrt2\\) وحجته \\(\\frac{\\pi}{4}\\)، إذن\n\\[\nZ_1=\\sqrt2e^{i\\pi/4}.\n\\]\nأما \\(Z_2=-3\\): طويلته \\(3\\) وحجة له \\(\\pi\\)، إذن\n\\[\nZ_2=3e^{i\\pi}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(Z_0=3i=3e^{i\\pi/2}\\)، \\(Z_1=1+i=\\sqrt2e^{i\\pi/4}\\)، \\(Z_2=-3=3e^{i\\pi}\\)."
+      }
+    },
+    {
+      "id": "2008_tm_s1_complex_ex01_q3",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "3/ لتكن \\(A\\)، \\(B\\)، \\(C\\) صور الحلول \\(Z_0\\)، \\(Z_1\\)، \\(Z_2\\) على الترتيب في مستو منسوب إلى معلم متعامد ومتجانس \\((O;\\vec{u},\\vec{v})\\). عين النقطة \\(G\\) مرجح الجملة \\(\\{(A,1);(B,1);(C,-1)\\}\\).",
+      "axis_tags": [
+        "complex_barycenter"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل صيغة لاحقة المرجح: إذا كان مجموع المعاملات غير منعدم فإن لاحقة المرجح تساوي مجموع اللواحق الموزونة مقسومًا على مجموع المعاملات.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "نكتب لواحق النقط",
+            "explanation": "حسب السؤال السابق:\n\\[\nz_A=3i,\\qquad z_B=1+i,\\qquad z_C=-3.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "نحسب مجموع المعاملات",
+            "explanation": "معاملات الجملة هي \\(1,1,-1\\)، وبالتالي:\n\\[\n1+1-1=1\\neq0.\n\\]\nإذن المرجح \\(G\\) موجود."
+          },
+          {
+            "step_number": 3,
+            "title": "نحسب لاحقة G",
+            "explanation": "لدينا:\n\\[\nz_G=\\frac{1z_A+1z_B-1z_C}{1+1-1}.\n\\]\nإذن:\n\\[\nz_G=3i+(1+i)-(-3)=4+4i.\n\\]"
+          }
+        ],
+        "final_answer": "\\(z_G=4+4i\\)، أي \\(G(4,4)\\)."
+      }
+    },
+    {
+      "id": "2008_tm_s1_complex_ex01_q4",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "4/ عين المجموعة \\((E)\\) للنقط \\(M\\) حيث: \\(AM^2+BM^2-CM^2=-13\\). بين أن النقطة \\(A\\) تنتمي إلى المجموعة \\((E)\\) ثم أنشئ \\((E)\\).",
+      "axis_tags": [
+        "complex_barycenter",
+        "complex_geometric_locus"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل خاصية المرجح لتحويل العبارة \\(AM^2+BM^2-CM^2\\) إلى عبارة بدلالة \\(GM^2\\). بعد ذلك نحصل على معادلة دائرة، ثم نتحقق من انتماء \\(A\\) بحساب \\(GA\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "نستعمل علاقة المرجح",
+            "explanation": "بما أن \\(G\\) مرجح الجملة \\(\\{(A,1),(B,1),(C,-1)\\}\\) ومجموع المعاملات يساوي \\(1\\)، فإن:\n\\[\nAM^2+BM^2-CM^2\n=GM^2+GA^2+GB^2-GC^2.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "نحسب الثابت",
+            "explanation": "لدينا \\(G(4,4)\\)، \\(A(0,3)\\)، \\(B(1,1)\\)، \\(C(-3,0)\\).\nإذن:\n\\[\nGA^2=(4-0)^2+(4-3)^2=16+1=17,\n\\]\n\\[\nGB^2=(4-1)^2+(4-1)^2=9+9=18,\n\\]\n\\[\nGC^2=(4+3)^2+(4-0)^2=49+16=65.\n\\]\nوبالتالي:\n\\[\nGA^2+GB^2-GC^2=17+18-65=-30.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "نحدد المجموعة E",
+            "explanation": "شرط المجموعة هو:\n\\[\nAM^2+BM^2-CM^2=-13.\n\\]\nإذن باستعمال النتيجة السابقة:\n\\[\nGM^2-30=-13,\n\\]\nومنها:\n\\[\nGM^2=17.\n\\]\nأي:\n\\[\nGM=\\sqrt{17}.\n\\]\nإذن \\((E)\\) دائرة مركزها \\(G\\) ونصف قطرها \\(\\sqrt{17}\\)."
+          },
+          {
+            "step_number": 4,
+            "title": "نتحقق أن A تنتمي إلى E",
+            "explanation": "حسب الحساب السابق:\n\\[\nGA^2=17 \\quad\\Longrightarrow\\quad GA=\\sqrt{17}.\n\\]\nوهذا يساوي نصف قطر الدائرة، إذن:\n\\[\nA\\in(E).\n\\]"
+          },
+          {
+            "step_number": 5,
+            "title": "إنشاء المجموعة",
+            "explanation": "نحدد النقطة \\(G(4,4)\\)، ثم نرسم الدائرة مركزها \\(G\\) والمارة بالنقطة \\(A\\). بما أن \\(GA=\\sqrt{17}\\)، فهي بالضبط الدائرة \\((E)\\).",
+            "graph_data": {
+              "diagram_type": "coordinate_circle",
+              "title": "إنشاء المجموعة (E)",
+              "description": "الدائرة (E) مركزها G(4,4) ونصف قطرها √17، وهي تمر بالنقطة A.",
+              "svg": "<svg viewBox=\"0 0 700 420\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"40\" y1=\"250\" x2=\"660\" y2=\"250\" stroke=\"currentColor\" stroke-width=\"1.5\"/><line x1=\"310\" y1=\"390\" x2=\"310\" y2=\"30\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"645\" y=\"238\" font-size=\"18\">x</text><text x=\"322\" y=\"45\" font-size=\"18\">y</text><circle cx=\"470\" cy=\"90\" r=\"164.9\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"310\" cy=\"130\" r=\"4\" fill=\"currentColor\"/><text x=\"320\" y=\"125\" font-size=\"18\">A(0,3)</text><circle cx=\"350\" cy=\"210\" r=\"4\" fill=\"currentColor\"/><text x=\"360\" y=\"205\" font-size=\"18\">B(1,1)</text><circle cx=\"190\" cy=\"250\" r=\"4\" fill=\"currentColor\"/><text x=\"125\" y=\"275\" font-size=\"18\">C(-3,0)</text><circle cx=\"470\" cy=\"90\" r=\"5\" fill=\"currentColor\"/><text x=\"480\" y=\"82\" font-size=\"18\">G(4,4)</text></svg>",
+              "render_mode": "inline",
+              "responsive": true
+            }
+          }
+        ],
+        "final_answer": "\\((E)\\) هي الدائرة ذات المركز \\(G(4,4)\\) ونصف القطر \\(\\sqrt{17}\\)، و\\(A\\in(E)\\)."
+      }
+    },
+    {
+      "id": "2008_tm_s1_complex_ex01_q5",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "5/ تحقق أن النقط \\(O\\)، \\(B\\) و \\(G\\) في استقامية ثم عين صورة المجموعة \\((E)\\) بالتحاكي الذي مركزه النقطة \\(O\\) ويحول \\(B\\) إلى \\(G\\) محددا عناصره المميزة.",
+      "axis_tags": [
+        "complex_homothety",
+        "complex_geometric_locus"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نقارن لاحقتي \\(B\\) و\\(G\\). إذا كانت \\(z_G=kz_B\\) بعدد حقيقي \\(k\\)، فإن \\(O,B,G\\) مستقيمية. هذا العدد هو نسبة التحاكي ذي المركز \\(O\\). صورة دائرة بتحاكي هي دائرة مركزها صورة المركز ونصف قطرها مضروب في القيمة المطلقة للنسبة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "نثبت الاستقامية",
+            "explanation": "لدينا:\n\\[\nz_B=1+i,\n\\]\nو\n\\[\nz_G=4+4i=4(1+i)=4z_B.\n\\]\nإذن:\n\\[\n\\overrightarrow{OG}=4\\overrightarrow{OB}.\n\\]\nوعليه فالنقط \\(O,B,G\\) في استقامية."
+          },
+          {
+            "step_number": 2,
+            "title": "نحدد التحاكي",
+            "explanation": "التحاكي مركزه \\(O\\) ويحول \\(B\\) إلى \\(G\\). وبما أن:\n\\[\n\\overrightarrow{OG}=4\\overrightarrow{OB},\n\\]\nفنسبته هي:\n\\[\nk=4.\n\\]\nوعبارته المركبة:\n\\[\nz'=4z.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "نحدد صورة مركز الدائرة",
+            "explanation": "الدائرة \\((E)\\) مركزها \\(G\\). صورة \\(G\\) بالتحاكي هي نقطة \\(G'\\) لاحقتها:\n\\[\nz_{G'}=4z_G=4(4+4i)=16+16i.\n\\]\nإذن:\n\\[\nG'(16,16).\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "نحدد نصف قطر الصورة",
+            "explanation": "نصف قطر \\((E)\\) هو \\(\\sqrt{17}\\). تحت تحاكي نسبته \\(4\\)، تتضاعف الأطوال بـ \\(|4|=4\\). إذن نصف قطر صورة \\((E)\\) هو:\n\\[\n4\\sqrt{17}.\n\\]"
+          },
+          {
+            "step_number": 5,
+            "title": "نكتب النتيجة",
+            "explanation": "صورة \\((E)\\) هي دائرة مركزها \\(G'(16,16)\\) ونصف قطرها \\(4\\sqrt{17}\\). عناصر التحاكي المميزة هي: المركز \\(O\\) والنسبة \\(4\\).",
+            "graph_data": {
+              "diagram_type": "homothety_circle",
+              "title": "صورة (E) بالتحاكي",
+              "description": "التحاكي مركزه O ونسبته 4؛ مركز الدائرة ينتقل من G إلى G′ ونصف القطر يتضاعف أربع مرات.",
+              "svg": "<svg viewBox=\"0 0 900 460\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"50\" y1=\"300\" x2=\"850\" y2=\"300\" stroke=\"currentColor\" stroke-width=\"1.5\"/><line x1=\"220\" y1=\"420\" x2=\"220\" y2=\"30\" stroke=\"currentColor\" stroke-width=\"1.5\"/><circle cx=\"220\" cy=\"300\" r=\"5\" fill=\"currentColor\"/><text x=\"195\" y=\"325\" font-size=\"18\">O</text><circle cx=\"260\" cy=\"260\" r=\"5\" fill=\"currentColor\"/><text x=\"268\" y=\"257\" font-size=\"18\">B(1,1)</text><circle cx=\"380\" cy=\"140\" r=\"5\" fill=\"currentColor\"/><text x=\"390\" y=\"134\" font-size=\"18\">G(4,4)</text><line x1=\"220\" y1=\"300\" x2=\"430\" y2=\"90\" stroke=\"currentColor\" stroke-width=\"1.2\" stroke-dasharray=\"6 5\"/><circle cx=\"380\" cy=\"140\" r=\"164.9\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"860\" cy=\"-340\" r=\"659.7\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"610\" y=\"70\" font-size=\"18\">مركز الصورة G′(16,16)، نصف القطر 4√17</text></svg>",
+              "render_mode": "inline",
+              "responsive": true
+            }
+          }
+        ],
+        "final_answer": "التحاكي مركزه \\(O\\) ونسبته \\(4\\) وعبارته \\(z'=4z\\). صورة \\((E)\\) دائرة مركزها \\(G'(16,16)\\) ونصف قطرها \\(4\\sqrt{17}\\)."
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2008(2).pdf",
+    "statement_figure_policy": "لا يوجد شكل مطلوب في نص هذا التمرين.",
+    "solution_figure_policy": "أضيف رسم توضيحي فقط في خطوات الحل التي تتطلب إنشاء الدائرة أو صورة الدائرة.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  }
+}

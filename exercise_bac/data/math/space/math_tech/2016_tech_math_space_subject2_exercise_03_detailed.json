@@ -1,0 +1,266 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2016-tech-math-space-subject2-ex03-detailed",
+  "session": "ordinary",
+  "year": 2016,
+  "chapter_code": "space_geometry",
+  "chapter_title": "الهندسة في الفضاء",
+  "axis_tags": [
+    "space_dot_product_orthogonality",
+    "space_cartesian_plane_normal_vector",
+    "space_parametric_line_plane",
+    "space_relative_positions_intersections",
+    "space_projections_distances",
+    "space_areas_volumes"
+  ],
+  "branches": [
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "exercise_number": 3,
+  "subject_number": 2,
+  "source_page": 5,
+  "source_pages": [
+    5
+  ],
+  "solution_source_pages": [
+    10
+  ],
+  "title": "التمرين الثالث — بكالوريا الجزائر 2016 — الموضوع الثاني — شعبة تقني رياضي",
+  "statement": "في الفضاء المزود بالمعلم المتعامد والمتجانس \\((O;\\vec{i},\\vec{j},\\vec{k})\\)، نعتبر النقط \\(A\\)، \\(B\\)، \\(C\\) و\\(D\\) حيث:\n\\[A(3;-2;2),\\quad B(6;1;5),\\quad C(6;-2;-1),\\quad D(0;1;1).\\]",
+  "questions": [
+    {
+      "id": "2016_s2_space_ex03_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) بين أن \\(ABC\\) مثلث قائم في \\(A\\).",
+      "axis_tags": [
+        "space_dot_product_orthogonality"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب الشعاعين AB وAC ثم جداءهما السلمي.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب AB وAC",
+            "explanation": "\\[\\overrightarrow{AB}=B-A=(3,3,3),\\]\n\\[\\overrightarrow{AC}=C-A=(3,0,-3).\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "الجداء السلمي",
+            "explanation": "\\[\\overrightarrow{AB}\\cdot\\overrightarrow{AC}=3\\times3+3\\times0+3\\times(-3)=9-9=0.\\]"
+          }
+        ],
+        "final_answer": "إذن \\(AB\\perp AC\\)، ومنه المثلث \\(ABC\\) قائم في \\(A\\)."
+      }
+    },
+    {
+      "id": "2016_s2_space_ex03_q2",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2) اكتب معادلة للمستوي \\((P)\\) الذي يشمل \\(A\\) والعمودي على \\((AB)\\).",
+      "axis_tags": [
+        "space_cartesian_plane_normal_vector"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "بما أن P عمودي على المستقيم AB، فإن شعاع توجيه AB يكون شعاعا ناظميا للمستوي P.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "اختيار شعاع ناظم",
+            "explanation": "\\[\\overrightarrow{AB}=(3,3,3)=3(1,1,1).\\]\nإذن يمكن أخذ \\(\\vec n_P=(1,1,1)\\) شعاعا ناظميا."
+          },
+          {
+            "step_number": 2,
+            "title": "كتابة المعادلة",
+            "explanation": "معادلة \\(P\\) من الشكل:\n\\[x+y+z+d=0.\\]\nوبما أن \\(A(3,-2,2)\\in P\\):\n\\[3-2+2+d=0\\Rightarrow d=-3.\\]"
+          }
+        ],
+        "final_answer": "\\[P:x+y+z-3=0.\\]"
+      }
+    },
+    {
+      "id": "2016_s2_space_ex03_q3a",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "3) ليكن المستوي \\((P')\\) حيث: \\(x-z-1=0\\)، معادلة له. أ- هل المستويان \\((P)\\) و\\((P')\\) متعامدان؟ برر إجابتك.",
+      "axis_tags": [
+        "space_cartesian_plane_normal_vector",
+        "space_dot_product_orthogonality"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب الجداء السلمي للشعاعين الناظمين للمستويين.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تعيين الشعاعين الناظمين",
+            "explanation": "\\[\\vec n_P=(1,1,1),\\qquad \\vec n_{P'}=(1,0,-1).\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب الجداء السلمي",
+            "explanation": "\\[\\vec n_P\\cdot\\vec n_{P'}=1+0-1=0.\\]\nإذن الشعاعان الناظمان متعامدان."
+          }
+        ],
+        "final_answer": "نعم، \\((P)\\perp(P')\\)."
+      }
+    },
+    {
+      "id": "2016_s2_space_ex03_q3b",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "ب- بين أن المستقيم \\((\\Delta)\\) الذي يشمل النقطة \\(A\\) و\\(\\vec u(1;-2;1)\\) شعاع توجيه له هو تقاطع المستويين \\((P)\\) و\\((P')\\).",
+      "axis_tags": [
+        "space_relative_positions_intersections",
+        "space_parametric_line_plane"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نثبت أن A تنتمي إلى المستويين وأن u مواز لاتجاه تقاطعهما، أي عمودي على الشعاعين الناظمين.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التحقق من انتماء A إلى P وP'",
+            "explanation": "في \\(P\\):\n\\[3-2+2-3=0.\\]\nوفي \\(P'\\):\n\\[3-2-1=0.\\]\nإذن \\(A\\in P\\cap P'\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "التحقق من اتجاه u",
+            "explanation": "\\[\\vec u\\cdot\\vec n_P=(1,-2,1)\\cdot(1,1,1)=1-2+1=0,\\]\n\\[\\vec u\\cdot\\vec n_{P'}=(1,-2,1)\\cdot(1,0,-1)=1-1=0.\\]\nإذن \\(\\vec u\\) موازي للمستويين، وبالتالي هو اتجاه مستقيم تقاطعهما."
+          },
+          {
+            "step_number": 3,
+            "title": "تمثيل Δ",
+            "explanation": "\\[\\Delta:\\begin{cases}x=3+t\\\\y=-2-2t\\\\z=2+t\\end{cases}\\qquad t\\in\\mathbb R.\\]"
+          }
+        ],
+        "final_answer": "\\[(P)\\cap(P')=\\Delta.\\]"
+      }
+    },
+    {
+      "id": "2016_s2_space_ex03_q4a",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "4) لتكن النقطة \\(H\\left(\\frac43;\\frac43;\\frac13\\right)\\) من الفضاء. أ- بين أن \\(H\\) هي المسقط العمودي لـ\\(D\\) على \\((\\Delta)\\).",
+      "axis_tags": [
+        "space_projections_distances"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نثبت أولا أن H تنتمي إلى Δ، ثم أن DH عمودي على شعاع توجيه Δ.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "إثبات أن H تنتمي إلى Δ",
+            "explanation": "من \\(x=3+t=\\frac43\\) نجد:\n\\[t=-\\frac53.\\]\nوعندها:\n\\[y=-2-2\\left(-\\frac53\\right)=\\frac43,\\qquad z=2-\\frac53=\\frac13.\\]\nإذن \\(H\\in\\Delta\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "إثبات التعامد",
+            "explanation": "\\[\\overrightarrow{DH}=H-D=\\left(\\frac43,\\frac13,-\\frac23\\right).\\]\nومع \\(\\vec u=(1,-2,1)\\):\n\\[\\overrightarrow{DH}\\cdot\\vec u=\\frac43-\\frac23-\\frac23=0.\\]"
+          }
+        ],
+        "final_answer": "إذن \\(H\\) هي المسقط العمودي للنقطة \\(D\\) على المستقيم \\((\\Delta)\\)."
+      }
+    },
+    {
+      "id": "2016_s2_space_ex03_q4b",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "ب- احسب المسافة بين \\(D\\) و\\((\\Delta)\\).",
+      "axis_tags": [
+        "space_projections_distances"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "بما أن H هو المسقط العمودي، فالمسافة المطلوبة هي DH.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب DH",
+            "explanation": "\\[DH=\\sqrt{\\left(\\frac43\\right)^2+\\left(\\frac13\\right)^2+\\left(-\\frac23\\right)^2}.\\]\n\\[DH=\\sqrt{\\frac{16+1+4}{9}}=\\frac{\\sqrt{21}}{3}.\\]"
+          }
+        ],
+        "final_answer": "\\[d(D,\\Delta)=\\frac{\\sqrt{21}}3.\\]"
+      }
+    },
+    {
+      "id": "2016_s2_space_ex03_q5a",
+      "display_order": 7,
+      "content_type": "question",
+      "text": "5) أ- بين أن النقطة \\(E(0;4;-1)\\) تنتمي إلى المستقيم \\((\\Delta)\\).",
+      "axis_tags": [
+        "space_parametric_line_plane"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نعوض قيمة مناسبة للوسيط في التمثيل الوسيطي للمستقيم Δ.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تحديد قيمة t",
+            "explanation": "من \\(x=3+t=0\\) نحصل على:\n\\[t=-3.\\]\nوعندها:\n\\[y=-2-2(-3)=4,\\qquad z=2-3=-1.\\]"
+          }
+        ],
+        "final_answer": "\\[E(0;4;-1)\\in\\Delta.\\]"
+      }
+    },
+    {
+      "id": "2016_s2_space_ex03_q5b",
+      "display_order": 8,
+      "content_type": "question",
+      "text": "ب- احسب حجم رباعي الوجوه \\(ABCE\\).",
+      "axis_tags": [
+        "space_areas_volumes",
+        "space_dot_product_orthogonality"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نأخذ المثلث ACE قاعدة. بما أن AB عمودي على المستوي P الذي يحتوي A وC وE، فإن AB هو الارتفاع الموافق لهذه القاعدة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "إثبات أن A وC وE في المستوي P",
+            "explanation": "لدينا \\(A\\in P\\) من تعريفه، و\\(C\\in P\\) لأن:\n\\[6-2-1-3=0.\\]\nكما أن \\(E\\in\\Delta\\subset P\\). إذن المثلث \\(ACE\\) قاعدة مناسبة."
+          },
+          {
+            "step_number": 2,
+            "title": "حساب AC وAE",
+            "explanation": "\\[\\overrightarrow{AC}=(3,0,-3),\\qquad \\overrightarrow{AE}=(-3,6,-3).\\]\nونحسب:\n\\[\\overrightarrow{AC}\\cdot\\overrightarrow{AE}=-9+0+9=0.\\]\nإذن المثلث \\(ACE\\) قائم في \\(A\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "مساحة القاعدة ACE",
+            "explanation": "\\[AC=3\\sqrt2,\\qquad AE=3\\sqrt6.\\]\nإذن:\n\\[S_{ACE}=\\frac12\\times3\\sqrt2\\times3\\sqrt6=9\\sqrt3.\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "حساب الارتفاع AB",
+            "explanation": "بما أن \\((P)\\perp(AB)\\)، فإن \\(AB\\) هو الارتفاع من B على القاعدة \\((ACE)\\).\n\\[AB=\\sqrt{3^2+3^2+3^2}=3\\sqrt3.\\]"
+          },
+          {
+            "step_number": 5,
+            "title": "حساب الحجم",
+            "explanation": "\\[V_{ABCE}=\\frac13S_{ACE}\\times AB.\\]\n\\[V_{ABCE}=\\frac13\\times9\\sqrt3\\times3\\sqrt3=27.\\]"
+          }
+        ],
+        "final_answer": "\\[V_{ABCE}=27\\] وحدة حجم."
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2016(2).pdf",
+    "statement_figure_policy": "لا يوجد شكل هندسي إلزامي في نص التمرين.",
+    "solution_figure_policy": "الحل مستقل عن أي رسم.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  }
+}

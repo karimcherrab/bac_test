@@ -1,0 +1,210 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2014-tech-math-space-subject2-ex02-detailed",
+  "session": "ordinary",
+  "year": 2014,
+  "chapter_code": "space_geometry",
+  "chapter_title": "الهندسة في الفضاء",
+  "axis_tags": [
+    "space_dot_product_orthogonality",
+    "space_cartesian_plane_normal_vector",
+    "space_sphere_tangent_plane"
+  ],
+  "branches": [
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "exercise_number": 2,
+  "subject_number": 2,
+  "source_page": 3,
+  "source_pages": [
+    3
+  ],
+  "solution_source_pages": [
+    8
+  ],
+  "title": "التمرين الثاني — بكالوريا الجزائر 2014 — الموضوع الثاني — شعبة تقني رياضي",
+  "statement": "الفضاء منسوب إلى المعلم المتعامد المتجانس \\((O;\\vec{i},\\vec{j},\\vec{k})\\).\nA و B و C ثلاث نقط من الفضاء حيث \\(A(0;-1;1)\\) و\\(B(1;3;2)\\) و\\(C(-1;3;4)\\).",
+  "questions": [
+    {
+      "id": "2014_s2_space_ex02_q1a",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) أ) احسب الجداء السلمي \\(\\overrightarrow{AB}\\cdot\\overrightarrow{AC}\\)، ثم استنتج القيمة المدورة إلى الوحدة، بالدرجات، للزاوية \\(\\widehat{BAC}\\).",
+      "axis_tags": [
+        "space_dot_product_orthogonality"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب الشعاعين ثم الجداء السلمي وطولي الشعاعين، وبعدها نستعمل علاقة جيب تمام الزاوية.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب AB و AC",
+            "explanation": "\\[\\overrightarrow{AB}=(1,4,1),\\qquad \\overrightarrow{AC}=(-1,4,3).\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "الجداء السلمي",
+            "explanation": "\\[\\overrightarrow{AB}\\cdot\\overrightarrow{AC}=1(-1)+4(4)+1(3)=-1+16+3=18.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب الزاوية",
+            "explanation": "\\[AB=\\sqrt{1+16+1}=3\\sqrt2,\\qquad AC=\\sqrt{1+16+9}=\\sqrt{26}.\\]\n\\[\\cos\\widehat{BAC}=\\frac{18}{3\\sqrt2\\sqrt{26}}=\\frac{3}{\\sqrt{13}}.\\]\nومنها:\n\\[\\widehat{BAC}\\approx33.69^\\circ.\\]"
+          }
+        ],
+        "final_answer": "\\[\\overrightarrow{AB}\\cdot\\overrightarrow{AC}=18,\\qquad \\widehat{BAC}\\approx34^\\circ.\\]"
+      }
+    },
+    {
+      "id": "2014_s2_space_ex02_q1b",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "ب) بين أن النقط \\(A\\)، \\(B\\)، \\(C\\) تعين مستويا.",
+      "axis_tags": [
+        "space_dot_product_orthogonality"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "بما أن الزاوية بين AB وAC ليست 0° ولا 180°، فالشعاعان غير متوازيين، وبالتالي النقط غير مستقيمية.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الاعتماد على النتيجة السابقة",
+            "explanation": "وجدنا أن:\n\\[\\widehat{BAC}\\approx34^\\circ.\\]\nإذن الزاوية ليست \\(0^\\circ\\) وليست \\(180^\\circ\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "الاستنتاج",
+            "explanation": "إذن \\(\\overrightarrow{AB}\\) و\\(\\overrightarrow{AC}\\) غير متوازيين، ومنه النقط \\(A,B,C\\) تعين مستويا."
+          }
+        ],
+        "final_answer": "النقط \\(A\\)، \\(B\\)، \\(C\\) تعين المستوي \\((ABC)\\)."
+      }
+    },
+    {
+      "id": "2014_s2_space_ex02_q2a",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "2) أ) بين أن الشعاع \\(\\vec n(2;-1;2)\\) ناظمي للمستوي \\((ABC)\\).",
+      "axis_tags": [
+        "space_cartesian_plane_normal_vector",
+        "space_dot_product_orthogonality"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نثبت أن n عمودي على شعاعين غير متوازيين من المستوي.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التعامد مع AB",
+            "explanation": "\\[\\vec n\\cdot\\overrightarrow{AB}=2\\times1+(-1)\\times4+2\\times1=2-4+2=0.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "التعامد مع AC",
+            "explanation": "\\[\\vec n\\cdot\\overrightarrow{AC}=2(-1)+(-1)(4)+2(3)=-2-4+6=0.\\]"
+          }
+        ],
+        "final_answer": "\\[\\vec n=(2,-1,2)\\] شعاع ناظمي للمستوي \\((ABC)\\)."
+      }
+    },
+    {
+      "id": "2014_s2_space_ex02_q2b",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "ب) اكتب معادلة ديكارتية للمستوي \\((ABC)\\).",
+      "axis_tags": [
+        "space_cartesian_plane_normal_vector"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل الشعاع الناظم n والنقطة A.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الشكل العام",
+            "explanation": "\\[2x-y+2z+d=0.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "تحديد d",
+            "explanation": "نعوض \\(A(0,-1,1)\\):\n\\[0-(-1)+2+d=0\\Rightarrow3+d=0\\Rightarrow d=-3.\\]"
+          }
+        ],
+        "final_answer": "\\[(ABC):2x-y+2z-3=0.\\]"
+      }
+    },
+    {
+      "id": "2014_s2_space_ex02_q3",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "3) ليكن \\((S)\\) سطح الكرة الذي معادلته: \\(x^2+y^2+z^2-4x+6y-2z+5=0\\). نسمي \\(\\Omega\\) مركز و\\(R\\) نصف قطر \\((S)\\)، احسب \\(R\\) وعين إحداثيات \\(\\Omega\\).",
+      "axis_tags": [
+        "space_sphere_tangent_plane"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحوّل معادلة الكرة إلى الشكل المركزي بإكمال المربعات.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "إكمال المربعات",
+            "explanation": "\\[x^2-4x=(x-2)^2-4,\\]\n\\[y^2+6y=(y+3)^2-9,\\]\n\\[z^2-2z=(z-1)^2-1.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "الشكل المركزي",
+            "explanation": "بالتعويض:\n\\[(x-2)^2+(y+3)^2+(z-1)^2=9.\\]"
+          }
+        ],
+        "final_answer": "\\[\\Omega(2;-3;1),\\qquad R=3.\\]"
+      }
+    },
+    {
+      "id": "2014_s2_space_ex02_q4",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "4) اكتب معادلة ديكارتية لكل من المستويين \\((P_1)\\) و\\((P_2)\\) مماسي سطح الكرة \\((S)\\) والموازيين للمستوي \\((ABC)\\).",
+      "axis_tags": [
+        "space_sphere_tangent_plane",
+        "space_cartesian_plane_normal_vector"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "كل مستو مواز لـ(ABC) له نفس الشعاع الناظم، ثم نفرض أن بعد مركز الكرة عنه يساوي نصف القطر.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "شكل المستوي الموازي",
+            "explanation": "بما أن المستويين موازيان لـ\\((ABC)\\)، فمعادلتهما من الشكل:\n\\[2x-y+2z+d=0.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "شرط التماس",
+            "explanation": "المستوي مماس للكرة إذا كانت المسافة بين مركزها \\(\\Omega(2,-3,1)\\) والمستوي تساوي \\(R=3\\):\n\\[\\frac{|2\\times2-(-3)+2\\times1+d|}{\\sqrt{4+1+4}}=3.\\]\n\\[\\frac{|9+d|}{3}=3.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "تحديد d",
+            "explanation": "\\[|9+d|=9.\\]\nإذن:\n\\[9+d=9\\Rightarrow d=0,\\]\nأو:\n\\[9+d=-9\\Rightarrow d=-18.\\]"
+          }
+        ],
+        "final_answer": "\\[(P_1):2x-y+2z=0,\\qquad (P_2):2x-y+2z-18=0.\\]"
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2014(2).pdf",
+    "statement_figure_policy": "لا يوجد شكل هندسي إلزامي في نص التمرين.",
+    "solution_figure_policy": "الحل مستقل عن أي رسم.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  }
+}

@@ -1,0 +1,1949 @@
+{
+  "version": 1,
+  "language": "ar",
+  "direction": "rtl",
+  "subject_code": "math",
+  "chapter_code": "sequences",
+  "tag": "seq_monotonicity",
+  "axis": "اتجاه تغير المتتالية ودراسة اتجاه التغير",
+  "title": "سلسلة تدريبية شاملة: اتجاه تغير المتتالية",
+  "description": "13 تمرينًا تدريبيًا متدرجًا من السهل إلى الصعب، مرتبطة فقط بمحور اتجاه تغير المتتالية، مع حلول مفصلة ومبسطة.",
+  "question_count": 13,
+  "training_path": {
+    "total_exercises": 13,
+    "progression": "من السهل إلى الصعب",
+    "covered_methods": [
+      "طريقة الفرق",
+      "دراسة إشارة الفرق",
+      "تحديد رتبة بداية الرتابة",
+      "استعمال دالة مرتبطة بالمتتالية",
+      "خارج حدين متتاليين بعد إثبات الإيجابية",
+      "إثبات حصر مساعد قبل دراسة الاتجاه",
+      "استعمال المرافق",
+      "دراسة إشارة كسر",
+      "إثبات عدم الرتابة على كامل المجال",
+      "التمييز بين الرتابة والرتابة التامة",
+      "كتابة خاتمة البكالوريا"
+    ],
+    "axis_only": true
+  },
+  "questions": [
+    {
+      "id": "axis04_monotonicity_practice_01",
+      "year": null,
+      "source_file": null,
+      "source_page": null,
+      "exercise": "axis04_practice_01",
+      "number": "1",
+      "text": "لتكن المتتالية \\((u_n)\\) معرفة على \\(\\mathbb N\\) بـ \\(u_n=3n+2\\). ادرس اتجاه تغيرها.",
+      "context": "\\(u_n=3n+2\\).",
+      "tag": "seq_monotonicity",
+      "axis": "اتجاه تغير المتتالية ودراسة اتجاه التغير",
+      "secondary_tags": [],
+      "skill": "دراسة اتجاه تغير المتتالية",
+      "difficulty": "easy",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "pedagogical_relevance": "تمرين تدريبي مرتبط مباشرة بمحور اتجاه تغير المتتالية، ويركز على مقارنة حدين متتاليين واختيار الطريقة المناسبة.",
+      "solution": {
+        "strategy": "طريقة الفرق",
+        "student_friendly_intro": "نحدد أولًا الطريقة الأنسب للمقارنة بين حدين متتاليين، ثم نجري الحساب خطوة بخطوة، وندرس الإشارة بدقة، وأخيرًا نكتب اتجاه التغير مع المجال.",
+        "what_we_know": [
+          "\\(u_n=3n+2\\)."
+        ],
+        "what_we_need_to_show": "تحديد اتجاه تغير المتتالية وكتابة استنتاج مبرر.",
+        "method_name": "طريقة الفرق",
+        "why_this_method": "تعلم أبسط تطبيق مباشر لطريقة الفرق.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "حساب الحد الموالي",
+            "goal": "إيجاد u_{n+1}.",
+            "explanation": "نعوض n بـ n+1.",
+            "rule_used": "تعويض مباشر",
+            "calculation_lines": [
+              "\\(u_{n+1}=3(n+1)+2=3n+5\\)."
+            ],
+            "result": "حصلنا على الحد الموالي."
+          },
+          {
+            "order": 2,
+            "title": "حساب الفرق",
+            "goal": "مقارنة الحدين.",
+            "explanation": "نطرح u_n من u_{n+1}.",
+            "rule_used": "طريقة الفرق",
+            "calculation_lines": [
+              "\\(u_{n+1}-u_n=(3n+5)-(3n+2)=3\\)."
+            ],
+            "result": "الفرق يساوي 3."
+          },
+          {
+            "order": 3,
+            "title": "الإشارة والاستنتاج",
+            "goal": "تحديد الاتجاه.",
+            "explanation": "بما أن 3>0 فالحد الموالي أكبر دائمًا.",
+            "rule_used": "فرق موجب تمامًا",
+            "calculation_lines": [
+              "\\(u_{n+1}-u_n=3>0\\).",
+              "\\(u_{n+1}>u_n\\)."
+            ],
+            "result": "المتتالية متزايدة تمامًا على \\(\\mathbb N\\)."
+          }
+        ],
+        "final_answer": "المتتالية \\((u_n)\\) متزايدة تمامًا على \\(\\mathbb N\\).",
+        "verification": "تم التحقق من الحساب، وإشارة الفرق أو الخارج، ومن المجال الذي يصح عليه الاستنتاج.",
+        "common_mistakes": [
+          {
+            "mistake": "الاكتفاء بحساب بعض الحدود والحكم على الاتجاه.",
+            "correction": "حساب حدود قليلة يعطي تخمينًا فقط؛ يجب تقديم مقارنة عامة بين u_{n+1} وu_n."
+          },
+          {
+            "mistake": "نسيان دراسة إشارة العبارة المحسوبة.",
+            "correction": "بعد حساب الفرق أو الخارج يجب تحديد إشارته ثم ربطها باتجاه التغير."
+          },
+          {
+            "mistake": "نسيان المجال أو رتبة البداية.",
+            "correction": "قد يتغير الاتجاه حسب n، لذلك يجب ذكر المجال بدقة."
+          }
+        ],
+        "hints": [
+          "احسب u_{n+1}.",
+          "اطرح u_n.",
+          "قارن الفرق بالصفر."
+        ],
+        "understanding_check": [
+          "ما الطريقة المستعملة في هذا التمرين؟",
+          "ما العبارة التي حددنا إشارتها؟",
+          "كيف انتقلنا من الإشارة إلى اتجاه تغير المتتالية؟"
+        ],
+        "bac_writing": [
+          "نحسب العبارة المناسبة للمقارنة بين حدين متتاليين.",
+          "ندرس إشارتها على المجال المطلوب.",
+          "نحوّل الإشارة إلى مقارنة بين u_{n+1} وu_n.",
+          "نكتب الاستنتاج النهائي مع ذكر المجال."
+        ],
+        "is_complete": true,
+        "audience": "تلميذ السنة الثالثة ثانوي - بكالوريا الجزائر",
+        "solution_presentation": {
+          "style": "simple_detailed_axis_04_only",
+          "show_one_step_at_a_time": true,
+          "show_explanation_before_calculation": true,
+          "show_conclusion_after_each_step": true,
+          "avoid_unproved_previous_results": true
+        },
+        "academy_presentation": {
+          "show_problem_data_first": true,
+          "show_method_choice": true,
+          "show_reason_before_calculation": true,
+          "show_calculation_line_by_line": true,
+          "show_sign_analysis": true,
+          "show_final_conclusion": true,
+          "show_common_mistakes": true,
+          "show_progressive_hints": true
+        },
+        "academy_understanding_check": [
+          "لماذا اخترنا هذه الطريقة؟",
+          "ما إشارة الفرق أو الخارج؟ ولماذا؟",
+          "هل الاتجاه تام أم غير تام؟",
+          "ما المجال الذي تصح عليه النتيجة؟"
+        ],
+        "academy_success_criteria": [
+          "اختيار الأداة المناسبة.",
+          "حساب صحيح دون قفزات.",
+          "تحديد الإشارة مع التبرير.",
+          "التمييز بين الرتابة والرتابة التامة.",
+          "ذكر المجال في الخاتمة."
+        ]
+      },
+      "original_text": "لتكن المتتالية \\((u_n)\\) معرفة على \\(\\mathbb N\\) بـ \\(u_n=3n+2\\). ادرس اتجاه تغيرها.",
+      "standalone_text": "لتكن المتتالية \\((u_n)\\) معرفة على \\(\\mathbb N\\) بـ \\(u_n=3n+2\\). ادرس اتجاه تغيرها.",
+      "review_status": "axis04_practice_mathematically_reviewed",
+      "training_order": 1,
+      "academy_level": "تمهيدي",
+      "method_focus": "طريقة الفرق",
+      "pedagogical_goal": "تعلم أبسط تطبيق مباشر لطريقة الفرق.",
+      "selection_reason": "مختار لتحقيق تدرج منهجي داخل المحور دون الخروج إلى موضوع النهايات.",
+      "axis_scope": "اتجاه تغير المتتالية فقط"
+    },
+    {
+      "id": "axis04_monotonicity_practice_02",
+      "year": null,
+      "source_file": null,
+      "source_page": null,
+      "exercise": "axis04_practice_02",
+      "number": "2",
+      "text": "لتكن \\((u_n)\\) معرفة بـ \\(u_n=5-2n\\). ادرس اتجاه تغيرها.",
+      "context": "\\(u_n=5-2n\\).",
+      "tag": "seq_monotonicity",
+      "axis": "اتجاه تغير المتتالية ودراسة اتجاه التغير",
+      "secondary_tags": [],
+      "skill": "دراسة اتجاه تغير المتتالية",
+      "difficulty": "easy",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "pedagogical_relevance": "تمرين تدريبي مرتبط مباشرة بمحور اتجاه تغير المتتالية، ويركز على مقارنة حدين متتاليين واختيار الطريقة المناسبة.",
+      "solution": {
+        "strategy": "طريقة الفرق",
+        "student_friendly_intro": "نحدد أولًا الطريقة الأنسب للمقارنة بين حدين متتاليين، ثم نجري الحساب خطوة بخطوة، وندرس الإشارة بدقة، وأخيرًا نكتب اتجاه التغير مع المجال.",
+        "what_we_know": [
+          "\\(u_n=5-2n\\)."
+        ],
+        "what_we_need_to_show": "تحديد اتجاه تغير المتتالية وكتابة استنتاج مبرر.",
+        "method_name": "طريقة الفرق",
+        "why_this_method": "تثبيت العلاقة بين الفرق السالب والتناقص التام.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "الحد الموالي",
+            "goal": "إيجاد u_{n+1}.",
+            "explanation": "نعوض n بـ n+1.",
+            "rule_used": "تعويض مباشر",
+            "calculation_lines": [
+              "\\(u_{n+1}=5-2(n+1)=3-2n\\)."
+            ],
+            "result": "تم حساب u_{n+1}."
+          },
+          {
+            "order": 2,
+            "title": "الفرق",
+            "goal": "تبسيط المقارنة.",
+            "explanation": "نحسب u_{n+1}-u_n.",
+            "rule_used": "طريقة الفرق",
+            "calculation_lines": [
+              "\\(u_{n+1}-u_n=(3-2n)-(5-2n)=-2\\)."
+            ],
+            "result": "الفرق سالب."
+          },
+          {
+            "order": 3,
+            "title": "النتيجة",
+            "goal": "تحديد الاتجاه.",
+            "explanation": "لأن -2<0 لكل n.",
+            "rule_used": "فرق سالب تمامًا",
+            "calculation_lines": [
+              "\\(-2<0\\Rightarrow u_{n+1}<u_n\\)."
+            ],
+            "result": "المتتالية متناقصة تمامًا على \\(\\mathbb N\\)."
+          }
+        ],
+        "final_answer": "المتتالية \\((u_n)\\) متناقصة تمامًا على \\(\\mathbb N\\).",
+        "verification": "تم التحقق من الحساب، وإشارة الفرق أو الخارج، ومن المجال الذي يصح عليه الاستنتاج.",
+        "common_mistakes": [
+          {
+            "mistake": "الاكتفاء بحساب بعض الحدود والحكم على الاتجاه.",
+            "correction": "حساب حدود قليلة يعطي تخمينًا فقط؛ يجب تقديم مقارنة عامة بين u_{n+1} وu_n."
+          },
+          {
+            "mistake": "نسيان دراسة إشارة العبارة المحسوبة.",
+            "correction": "بعد حساب الفرق أو الخارج يجب تحديد إشارته ثم ربطها باتجاه التغير."
+          },
+          {
+            "mistake": "نسيان المجال أو رتبة البداية.",
+            "correction": "قد يتغير الاتجاه حسب n، لذلك يجب ذكر المجال بدقة."
+          }
+        ],
+        "hints": [
+          "استعمل الفرق.",
+          "إشارة -2 سالبة تمامًا."
+        ],
+        "understanding_check": [
+          "ما الطريقة المستعملة في هذا التمرين؟",
+          "ما العبارة التي حددنا إشارتها؟",
+          "كيف انتقلنا من الإشارة إلى اتجاه تغير المتتالية؟"
+        ],
+        "bac_writing": [
+          "نحسب العبارة المناسبة للمقارنة بين حدين متتاليين.",
+          "ندرس إشارتها على المجال المطلوب.",
+          "نحوّل الإشارة إلى مقارنة بين u_{n+1} وu_n.",
+          "نكتب الاستنتاج النهائي مع ذكر المجال."
+        ],
+        "is_complete": true,
+        "audience": "تلميذ السنة الثالثة ثانوي - بكالوريا الجزائر",
+        "solution_presentation": {
+          "style": "simple_detailed_axis_04_only",
+          "show_one_step_at_a_time": true,
+          "show_explanation_before_calculation": true,
+          "show_conclusion_after_each_step": true,
+          "avoid_unproved_previous_results": true
+        },
+        "academy_presentation": {
+          "show_problem_data_first": true,
+          "show_method_choice": true,
+          "show_reason_before_calculation": true,
+          "show_calculation_line_by_line": true,
+          "show_sign_analysis": true,
+          "show_final_conclusion": true,
+          "show_common_mistakes": true,
+          "show_progressive_hints": true
+        },
+        "academy_understanding_check": [
+          "لماذا اخترنا هذه الطريقة؟",
+          "ما إشارة الفرق أو الخارج؟ ولماذا؟",
+          "هل الاتجاه تام أم غير تام؟",
+          "ما المجال الذي تصح عليه النتيجة؟"
+        ],
+        "academy_success_criteria": [
+          "اختيار الأداة المناسبة.",
+          "حساب صحيح دون قفزات.",
+          "تحديد الإشارة مع التبرير.",
+          "التمييز بين الرتابة والرتابة التامة.",
+          "ذكر المجال في الخاتمة."
+        ]
+      },
+      "original_text": "لتكن \\((u_n)\\) معرفة بـ \\(u_n=5-2n\\). ادرس اتجاه تغيرها.",
+      "standalone_text": "لتكن \\((u_n)\\) معرفة بـ \\(u_n=5-2n\\). ادرس اتجاه تغيرها.",
+      "review_status": "axis04_practice_mathematically_reviewed",
+      "training_order": 2,
+      "academy_level": "سهل",
+      "method_focus": "طريقة الفرق",
+      "pedagogical_goal": "تثبيت العلاقة بين الفرق السالب والتناقص التام.",
+      "selection_reason": "مختار لتحقيق تدرج منهجي داخل المحور دون الخروج إلى موضوع النهايات.",
+      "axis_scope": "اتجاه تغير المتتالية فقط"
+    },
+    {
+      "id": "axis04_monotonicity_practice_03",
+      "year": null,
+      "source_file": null,
+      "source_page": null,
+      "exercise": "axis04_practice_03",
+      "number": "3",
+      "text": "لتكن \\((u_n)\\) معرفة بـ \\(u_n=n^2+2n\\). ادرس اتجاه تغيرها على \\(\\mathbb N\\).",
+      "context": "\\(u_n=n^2+2n\\).",
+      "tag": "seq_monotonicity",
+      "axis": "اتجاه تغير المتتالية ودراسة اتجاه التغير",
+      "secondary_tags": [],
+      "skill": "دراسة اتجاه تغير المتتالية",
+      "difficulty": "easy",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "pedagogical_relevance": "تمرين تدريبي مرتبط مباشرة بمحور اتجاه تغير المتتالية، ويركز على مقارنة حدين متتاليين واختيار الطريقة المناسبة.",
+      "solution": {
+        "strategy": "طريقة الفرق مع تحليل الإشارة",
+        "student_friendly_intro": "نحدد أولًا الطريقة الأنسب للمقارنة بين حدين متتاليين، ثم نجري الحساب خطوة بخطوة، وندرس الإشارة بدقة، وأخيرًا نكتب اتجاه التغير مع المجال.",
+        "what_we_know": [
+          "\\(u_n=n^2+2n\\)."
+        ],
+        "what_we_need_to_show": "تحديد اتجاه تغير المتتالية وكتابة استنتاج مبرر.",
+        "method_name": "طريقة الفرق مع تحليل الإشارة",
+        "why_this_method": "التدرب على تبسيط فرق غير ثابت ثم دراسة إشارته.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "الحد الموالي",
+            "goal": "حساب u_{n+1}.",
+            "explanation": "نوسع العبارة بعناية.",
+            "rule_used": "تعويض وتطوير",
+            "calculation_lines": [
+              "\\(u_{n+1}=(n+1)^2+2(n+1)=n^2+4n+3\\)."
+            ],
+            "result": "تم حساب الحد الموالي."
+          },
+          {
+            "order": 2,
+            "title": "الفرق",
+            "goal": "استخراج عبارة بسيطة.",
+            "explanation": "نطرح u_n.",
+            "rule_used": "طريقة الفرق",
+            "calculation_lines": [
+              "\\(u_{n+1}-u_n=2n+3\\)."
+            ],
+            "result": "الفرق هو 2n+3."
+          },
+          {
+            "order": 3,
+            "title": "الإشارة",
+            "goal": "استعمال n≥0.",
+            "explanation": "بما أن n∈N فإن 2n+3≥3>0.",
+            "rule_used": "دراسة الإشارة",
+            "calculation_lines": [
+              "\\(2n+3>0\\)."
+            ],
+            "result": "الفرق موجب تمامًا."
+          },
+          {
+            "order": 4,
+            "title": "الخاتمة",
+            "goal": "تحديد الاتجاه.",
+            "explanation": "فرق موجب تمامًا على كامل المجال.",
+            "rule_used": "قاعدة الرتابة",
+            "calculation_lines": [
+              "\\(u_{n+1}>u_n\\)."
+            ],
+            "result": "المتتالية متزايدة تمامًا على \\(\\mathbb N\\)."
+          }
+        ],
+        "final_answer": "المتتالية متزايدة تمامًا على \\(\\mathbb N\\).",
+        "verification": "تم التحقق من الحساب، وإشارة الفرق أو الخارج، ومن المجال الذي يصح عليه الاستنتاج.",
+        "common_mistakes": [
+          {
+            "mistake": "الاكتفاء بحساب بعض الحدود والحكم على الاتجاه.",
+            "correction": "حساب حدود قليلة يعطي تخمينًا فقط؛ يجب تقديم مقارنة عامة بين u_{n+1} وu_n."
+          },
+          {
+            "mistake": "نسيان دراسة إشارة العبارة المحسوبة.",
+            "correction": "بعد حساب الفرق أو الخارج يجب تحديد إشارته ثم ربطها باتجاه التغير."
+          },
+          {
+            "mistake": "نسيان المجال أو رتبة البداية.",
+            "correction": "قد يتغير الاتجاه حسب n، لذلك يجب ذكر المجال بدقة."
+          }
+        ],
+        "hints": [
+          "وسع (n+1)^2 جيدًا.",
+          "استعمل أن n≥0."
+        ],
+        "understanding_check": [
+          "ما الطريقة المستعملة في هذا التمرين؟",
+          "ما العبارة التي حددنا إشارتها؟",
+          "كيف انتقلنا من الإشارة إلى اتجاه تغير المتتالية؟"
+        ],
+        "bac_writing": [
+          "نحسب العبارة المناسبة للمقارنة بين حدين متتاليين.",
+          "ندرس إشارتها على المجال المطلوب.",
+          "نحوّل الإشارة إلى مقارنة بين u_{n+1} وu_n.",
+          "نكتب الاستنتاج النهائي مع ذكر المجال."
+        ],
+        "is_complete": true,
+        "audience": "تلميذ السنة الثالثة ثانوي - بكالوريا الجزائر",
+        "solution_presentation": {
+          "style": "simple_detailed_axis_04_only",
+          "show_one_step_at_a_time": true,
+          "show_explanation_before_calculation": true,
+          "show_conclusion_after_each_step": true,
+          "avoid_unproved_previous_results": true
+        },
+        "academy_presentation": {
+          "show_problem_data_first": true,
+          "show_method_choice": true,
+          "show_reason_before_calculation": true,
+          "show_calculation_line_by_line": true,
+          "show_sign_analysis": true,
+          "show_final_conclusion": true,
+          "show_common_mistakes": true,
+          "show_progressive_hints": true
+        },
+        "academy_understanding_check": [
+          "لماذا اخترنا هذه الطريقة؟",
+          "ما إشارة الفرق أو الخارج؟ ولماذا؟",
+          "هل الاتجاه تام أم غير تام؟",
+          "ما المجال الذي تصح عليه النتيجة؟"
+        ],
+        "academy_success_criteria": [
+          "اختيار الأداة المناسبة.",
+          "حساب صحيح دون قفزات.",
+          "تحديد الإشارة مع التبرير.",
+          "التمييز بين الرتابة والرتابة التامة.",
+          "ذكر المجال في الخاتمة."
+        ]
+      },
+      "original_text": "لتكن \\((u_n)\\) معرفة بـ \\(u_n=n^2+2n\\). ادرس اتجاه تغيرها على \\(\\mathbb N\\).",
+      "standalone_text": "لتكن \\((u_n)\\) معرفة بـ \\(u_n=n^2+2n\\). ادرس اتجاه تغيرها على \\(\\mathbb N\\).",
+      "review_status": "axis04_practice_mathematically_reviewed",
+      "training_order": 3,
+      "academy_level": "سهل",
+      "method_focus": "طريقة الفرق مع تحليل الإشارة",
+      "pedagogical_goal": "التدرب على تبسيط فرق غير ثابت ثم دراسة إشارته.",
+      "selection_reason": "مختار لتحقيق تدرج منهجي داخل المحور دون الخروج إلى موضوع النهايات.",
+      "axis_scope": "اتجاه تغير المتتالية فقط"
+    },
+    {
+      "id": "axis04_monotonicity_practice_04",
+      "year": null,
+      "source_file": null,
+      "source_page": null,
+      "exercise": "axis04_practice_04",
+      "number": "4",
+      "text": "لتكن \\((u_n)\\) معرفة بـ \\(u_n=n^2-5n+4\\). ادرس اتجاه تغيرها وحدد بدقة الرتبة التي يبدأ منها التزايد.",
+      "context": "\\(u_n=n^2-5n+4\\).",
+      "tag": "seq_monotonicity",
+      "axis": "اتجاه تغير المتتالية ودراسة اتجاه التغير",
+      "secondary_tags": [],
+      "skill": "دراسة اتجاه تغير المتتالية",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "pedagogical_relevance": "تمرين تدريبي مرتبط مباشرة بمحور اتجاه تغير المتتالية، ويركز على مقارنة حدين متتاليين واختيار الطريقة المناسبة.",
+      "solution": {
+        "strategy": "طريقة الفرق وتغير الإشارة",
+        "student_friendly_intro": "نحدد أولًا الطريقة الأنسب للمقارنة بين حدين متتاليين، ثم نجري الحساب خطوة بخطوة، وندرس الإشارة بدقة، وأخيرًا نكتب اتجاه التغير مع المجال.",
+        "what_we_know": [
+          "\\(u_n=n^2-5n+4\\)."
+        ],
+        "what_we_need_to_show": "تحديد اتجاه تغير المتتالية وكتابة استنتاج مبرر.",
+        "method_name": "طريقة الفرق وتغير الإشارة",
+        "why_this_method": "تعلم أن المتتالية قد لا تكون رتيبة على كامل المجال.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "حساب الفرق",
+            "goal": "الحصول على معيار الاتجاه.",
+            "explanation": "نحسب مباشرة الفرق بعد تعويض n+1.",
+            "rule_used": "طريقة الفرق",
+            "calculation_lines": [
+              "\\(u_{n+1}-u_n=2n-4=2(n-2)\\)."
+            ],
+            "result": "الإشارة تتوقف على n."
+          },
+          {
+            "order": 2,
+            "title": "دراسة الإشارة",
+            "goal": "تحديد المجالات.",
+            "explanation": "نقارن n بالعدد 2.",
+            "rule_used": "إشارة حاصل ضرب",
+            "calculation_lines": [
+              "عند \\(n=0,1\\): \\(2(n-2)<0\\).",
+              "عند \\(n=2\\): الفرق يساوي صفرًا.",
+              "عند \\(n\\ge3\\): \\(2(n-2)>0\\)."
+            ],
+            "result": "يتغير اتجاه المقارنة."
+          },
+          {
+            "order": 3,
+            "title": "الاستنتاج",
+            "goal": "وصف الاتجاه بدقة.",
+            "explanation": "نحوّل كل إشارة إلى مقارنة بين حدين.",
+            "rule_used": "قاعدة الرتابة",
+            "calculation_lines": [
+              "\\(u_1<u_0\\), \\(u_2<u_1\\), \\(u_3=u_2\\).",
+              "ومن أجل \\(n\\ge3\\): \\(u_{n+1}>u_n\\)."
+            ],
+            "result": "ليست رتيبة على كامل N، وهي متزايدة ابتداءً من الرتبة 2، ومتزايدة تمامًا ابتداءً من الرتبة 3."
+          }
+        ],
+        "final_answer": "المتتالية ليست رتيبة على كامل \\(\\mathbb N\\). وهي متزايدة ابتداءً من الرتبة \\(2\\)، ومتزايدة تمامًا ابتداءً من الرتبة \\(3\\).",
+        "verification": "تم التحقق من الحساب، وإشارة الفرق أو الخارج، ومن المجال الذي يصح عليه الاستنتاج.",
+        "common_mistakes": [
+          {
+            "mistake": "الاكتفاء بحساب بعض الحدود والحكم على الاتجاه.",
+            "correction": "حساب حدود قليلة يعطي تخمينًا فقط؛ يجب تقديم مقارنة عامة بين u_{n+1} وu_n."
+          },
+          {
+            "mistake": "نسيان دراسة إشارة العبارة المحسوبة.",
+            "correction": "بعد حساب الفرق أو الخارج يجب تحديد إشارته ثم ربطها باتجاه التغير."
+          },
+          {
+            "mistake": "نسيان المجال أو رتبة البداية.",
+            "correction": "قد يتغير الاتجاه حسب n، لذلك يجب ذكر المجال بدقة."
+          }
+        ],
+        "hints": [
+          "احسب 2(n-2).",
+          "انتبه لحالة الفرق=0.",
+          "ميز بين متزايدة ومتزايدة تمامًا."
+        ],
+        "understanding_check": [
+          "ما الطريقة المستعملة في هذا التمرين؟",
+          "ما العبارة التي حددنا إشارتها؟",
+          "كيف انتقلنا من الإشارة إلى اتجاه تغير المتتالية؟"
+        ],
+        "bac_writing": [
+          "نحسب العبارة المناسبة للمقارنة بين حدين متتاليين.",
+          "ندرس إشارتها على المجال المطلوب.",
+          "نحوّل الإشارة إلى مقارنة بين u_{n+1} وu_n.",
+          "نكتب الاستنتاج النهائي مع ذكر المجال."
+        ],
+        "is_complete": true,
+        "audience": "تلميذ السنة الثالثة ثانوي - بكالوريا الجزائر",
+        "solution_presentation": {
+          "style": "simple_detailed_axis_04_only",
+          "show_one_step_at_a_time": true,
+          "show_explanation_before_calculation": true,
+          "show_conclusion_after_each_step": true,
+          "avoid_unproved_previous_results": true
+        },
+        "academy_presentation": {
+          "show_problem_data_first": true,
+          "show_method_choice": true,
+          "show_reason_before_calculation": true,
+          "show_calculation_line_by_line": true,
+          "show_sign_analysis": true,
+          "show_final_conclusion": true,
+          "show_common_mistakes": true,
+          "show_progressive_hints": true
+        },
+        "academy_understanding_check": [
+          "لماذا اخترنا هذه الطريقة؟",
+          "ما إشارة الفرق أو الخارج؟ ولماذا؟",
+          "هل الاتجاه تام أم غير تام؟",
+          "ما المجال الذي تصح عليه النتيجة؟"
+        ],
+        "academy_success_criteria": [
+          "اختيار الأداة المناسبة.",
+          "حساب صحيح دون قفزات.",
+          "تحديد الإشارة مع التبرير.",
+          "التمييز بين الرتابة والرتابة التامة.",
+          "ذكر المجال في الخاتمة."
+        ]
+      },
+      "original_text": "لتكن \\((u_n)\\) معرفة بـ \\(u_n=n^2-5n+4\\). ادرس اتجاه تغيرها وحدد بدقة الرتبة التي يبدأ منها التزايد.",
+      "standalone_text": "لتكن \\((u_n)\\) معرفة بـ \\(u_n=n^2-5n+4\\). ادرس اتجاه تغيرها وحدد بدقة الرتبة التي يبدأ منها التزايد.",
+      "review_status": "axis04_practice_mathematically_reviewed",
+      "training_order": 4,
+      "academy_level": "متوسط",
+      "method_focus": "طريقة الفرق وتغير الإشارة",
+      "pedagogical_goal": "تعلم أن المتتالية قد لا تكون رتيبة على كامل المجال.",
+      "selection_reason": "مختار لتحقيق تدرج منهجي داخل المحور دون الخروج إلى موضوع النهايات.",
+      "axis_scope": "اتجاه تغير المتتالية فقط"
+    },
+    {
+      "id": "axis04_monotonicity_practice_05",
+      "year": null,
+      "source_file": null,
+      "source_page": null,
+      "exercise": "axis04_practice_05",
+      "number": "5",
+      "text": "لتكن \\((u_n)\\) معرفة على \\(\\mathbb N\\) بـ \\(u_n=\\frac{n+3}{n+1}\\). ادرس اتجاه تغيرها.",
+      "context": "\\(u_n=\\frac{n+3}{n+1}\\).",
+      "tag": "seq_monotonicity",
+      "axis": "اتجاه تغير المتتالية ودراسة اتجاه التغير",
+      "secondary_tags": [],
+      "skill": "دراسة اتجاه تغير المتتالية",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "pedagogical_relevance": "تمرين تدريبي مرتبط مباشرة بمحور اتجاه تغير المتتالية، ويركز على مقارنة حدين متتاليين واختيار الطريقة المناسبة.",
+      "solution": {
+        "strategy": "طريقة الفرق مع كسر",
+        "student_friendly_intro": "نحدد أولًا الطريقة الأنسب للمقارنة بين حدين متتاليين، ثم نجري الحساب خطوة بخطوة، وندرس الإشارة بدقة، وأخيرًا نكتب اتجاه التغير مع المجال.",
+        "what_we_know": [
+          "\\(u_n=\\frac{n+3}{n+1}\\)."
+        ],
+        "what_we_need_to_show": "تحديد اتجاه تغير المتتالية وكتابة استنتاج مبرر.",
+        "method_name": "طريقة الفرق مع كسر",
+        "why_this_method": "التدرب على توحيد المقامات وتحديد إشارة المقام.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "الحد الموالي",
+            "goal": "كتابة u_{n+1}.",
+            "explanation": "نعوض n بـ n+1.",
+            "rule_used": "تعويض",
+            "calculation_lines": [
+              "\\(u_{n+1}=\\frac{n+4}{n+2}\\)."
+            ],
+            "result": "تم الحساب."
+          },
+          {
+            "order": 2,
+            "title": "الفرق",
+            "goal": "توحيد المقامين.",
+            "explanation": "نكتب الفرق على مقام مشترك.",
+            "rule_used": "حساب كسور",
+            "calculation_lines": [
+              "\\(u_{n+1}-u_n=\\frac{n+4}{n+2}-\\frac{n+3}{n+1}\\).",
+              "\\(=\\frac{(n+4)(n+1)-(n+3)(n+2)}{(n+1)(n+2)}\\).",
+              "\\(=\\frac{-2}{(n+1)(n+2)}\\)."
+            ],
+            "result": "حصلنا على كسر بسيط."
+          },
+          {
+            "order": 3,
+            "title": "الإشارة",
+            "goal": "تحديد إشارة البسط والمقام.",
+            "explanation": "لـ n∈N المقام موجب والبسط سالب.",
+            "rule_used": "إشارة كسر",
+            "calculation_lines": [
+              "\\((n+1)(n+2)>0\\), \\(-2<0\\).",
+              "\\(u_{n+1}-u_n<0\\)."
+            ],
+            "result": "الفرق سالب تمامًا."
+          },
+          {
+            "order": 4,
+            "title": "الاستنتاج",
+            "goal": "كتابة الخاتمة.",
+            "explanation": "الحد الموالي أصغر دائمًا.",
+            "rule_used": "قاعدة الرتابة",
+            "calculation_lines": [
+              "\\(u_{n+1}<u_n\\)."
+            ],
+            "result": "المتتالية متناقصة تمامًا على \\(\\mathbb N\\)."
+          }
+        ],
+        "final_answer": "المتتالية متناقصة تمامًا على \\(\\mathbb N\\).",
+        "verification": "تم التحقق من الحساب، وإشارة الفرق أو الخارج، ومن المجال الذي يصح عليه الاستنتاج.",
+        "common_mistakes": [
+          {
+            "mistake": "الاكتفاء بحساب بعض الحدود والحكم على الاتجاه.",
+            "correction": "حساب حدود قليلة يعطي تخمينًا فقط؛ يجب تقديم مقارنة عامة بين u_{n+1} وu_n."
+          },
+          {
+            "mistake": "نسيان دراسة إشارة العبارة المحسوبة.",
+            "correction": "بعد حساب الفرق أو الخارج يجب تحديد إشارته ثم ربطها باتجاه التغير."
+          },
+          {
+            "mistake": "نسيان المجال أو رتبة البداية.",
+            "correction": "قد يتغير الاتجاه حسب n، لذلك يجب ذكر المجال بدقة."
+          }
+        ],
+        "hints": [
+          "وحد المقامين.",
+          "لا تحكم على الكسر قبل تحديد إشارة المقام."
+        ],
+        "understanding_check": [
+          "ما الطريقة المستعملة في هذا التمرين؟",
+          "ما العبارة التي حددنا إشارتها؟",
+          "كيف انتقلنا من الإشارة إلى اتجاه تغير المتتالية؟"
+        ],
+        "bac_writing": [
+          "نحسب العبارة المناسبة للمقارنة بين حدين متتاليين.",
+          "ندرس إشارتها على المجال المطلوب.",
+          "نحوّل الإشارة إلى مقارنة بين u_{n+1} وu_n.",
+          "نكتب الاستنتاج النهائي مع ذكر المجال."
+        ],
+        "is_complete": true,
+        "audience": "تلميذ السنة الثالثة ثانوي - بكالوريا الجزائر",
+        "solution_presentation": {
+          "style": "simple_detailed_axis_04_only",
+          "show_one_step_at_a_time": true,
+          "show_explanation_before_calculation": true,
+          "show_conclusion_after_each_step": true,
+          "avoid_unproved_previous_results": true
+        },
+        "academy_presentation": {
+          "show_problem_data_first": true,
+          "show_method_choice": true,
+          "show_reason_before_calculation": true,
+          "show_calculation_line_by_line": true,
+          "show_sign_analysis": true,
+          "show_final_conclusion": true,
+          "show_common_mistakes": true,
+          "show_progressive_hints": true
+        },
+        "academy_understanding_check": [
+          "لماذا اخترنا هذه الطريقة؟",
+          "ما إشارة الفرق أو الخارج؟ ولماذا؟",
+          "هل الاتجاه تام أم غير تام؟",
+          "ما المجال الذي تصح عليه النتيجة؟"
+        ],
+        "academy_success_criteria": [
+          "اختيار الأداة المناسبة.",
+          "حساب صحيح دون قفزات.",
+          "تحديد الإشارة مع التبرير.",
+          "التمييز بين الرتابة والرتابة التامة.",
+          "ذكر المجال في الخاتمة."
+        ]
+      },
+      "original_text": "لتكن \\((u_n)\\) معرفة على \\(\\mathbb N\\) بـ \\(u_n=\\frac{n+3}{n+1}\\). ادرس اتجاه تغيرها.",
+      "standalone_text": "لتكن \\((u_n)\\) معرفة على \\(\\mathbb N\\) بـ \\(u_n=\\frac{n+3}{n+1}\\). ادرس اتجاه تغيرها.",
+      "review_status": "axis04_practice_mathematically_reviewed",
+      "training_order": 5,
+      "academy_level": "متوسط",
+      "method_focus": "طريقة الفرق مع كسر",
+      "pedagogical_goal": "التدرب على توحيد المقامات وتحديد إشارة المقام.",
+      "selection_reason": "مختار لتحقيق تدرج منهجي داخل المحور دون الخروج إلى موضوع النهايات.",
+      "axis_scope": "اتجاه تغير المتتالية فقط"
+    },
+    {
+      "id": "axis04_monotonicity_practice_06",
+      "year": null,
+      "source_file": null,
+      "source_page": null,
+      "exercise": "axis04_practice_06",
+      "number": "6",
+      "text": "لتكن \\((u_n)\\) معرفة بـ \\(u_n=\\frac1{n+2}\\). ادرس اتجاه تغيرها باستعمال دالة مرتبطة بها.",
+      "context": "\\(u_n=\\frac1{n+2}=f(n)\\).",
+      "tag": "seq_monotonicity",
+      "axis": "اتجاه تغير المتتالية ودراسة اتجاه التغير",
+      "secondary_tags": [],
+      "skill": "دراسة اتجاه تغير المتتالية",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "pedagogical_relevance": "تمرين تدريبي مرتبط مباشرة بمحور اتجاه تغير المتتالية، ويركز على مقارنة حدين متتاليين واختيار الطريقة المناسبة.",
+      "solution": {
+        "strategy": "استعمال دالة مرتبطة بالمتتالية",
+        "student_friendly_intro": "نحدد أولًا الطريقة الأنسب للمقارنة بين حدين متتاليين، ثم نجري الحساب خطوة بخطوة، وندرس الإشارة بدقة، وأخيرًا نكتب اتجاه التغير مع المجال.",
+        "what_we_know": [
+          "\\(u_n=\\frac1{n+2}=f(n)\\)."
+        ],
+        "what_we_need_to_show": "تحديد اتجاه تغير المتتالية وكتابة استنتاج مبرر.",
+        "method_name": "استعمال دالة مرتبطة بالمتتالية",
+        "why_this_method": "التدرب على الطريقة الثانية المذكورة في المحور.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "تعريف الدالة",
+            "goal": "ربط المتتالية بدالة.",
+            "explanation": "نختار f بحيث u_n=f(n).",
+            "rule_used": "ربط متتالية بدالة",
+            "calculation_lines": [
+              "\\(f(x)=\\frac1{x+2}\\) على \\([0,+\\infty[\\).",
+              "\\(u_n=f(n)\\)."
+            ],
+            "result": "تم الربط."
+          },
+          {
+            "order": 2,
+            "title": "اشتقاق الدالة",
+            "goal": "تحديد اتجاه f.",
+            "explanation": "نحسب المشتقة.",
+            "rule_used": "المشتقة",
+            "calculation_lines": [
+              "\\(f'(x)=-\\frac1{(x+2)^2}<0\\) لكل \\(x\\ge0\\)."
+            ],
+            "result": "الدالة متناقصة تمامًا."
+          },
+          {
+            "order": 3,
+            "title": "النقل إلى المتتالية",
+            "goal": "استنتاج اتجاه u_n.",
+            "explanation": "رتب المتتالية أعداد صحيحة داخل مجال تناقص f.",
+            "rule_used": "اتجاه دالة مرتبطة",
+            "calculation_lines": [
+              "\\(f(n+1)<f(n)\\Rightarrow u_{n+1}<u_n\\)."
+            ],
+            "result": "المتتالية متناقصة تمامًا على \\(\\mathbb N\\)."
+          }
+        ],
+        "final_answer": "المتتالية متناقصة تمامًا على \\(\\mathbb N\\).",
+        "verification": "تم التحقق من الحساب، وإشارة الفرق أو الخارج، ومن المجال الذي يصح عليه الاستنتاج.",
+        "common_mistakes": [
+          {
+            "mistake": "الاكتفاء بحساب بعض الحدود والحكم على الاتجاه.",
+            "correction": "حساب حدود قليلة يعطي تخمينًا فقط؛ يجب تقديم مقارنة عامة بين u_{n+1} وu_n."
+          },
+          {
+            "mistake": "نسيان دراسة إشارة العبارة المحسوبة.",
+            "correction": "بعد حساب الفرق أو الخارج يجب تحديد إشارته ثم ربطها باتجاه التغير."
+          },
+          {
+            "mistake": "نسيان المجال أو رتبة البداية.",
+            "correction": "قد يتغير الاتجاه حسب n، لذلك يجب ذكر المجال بدقة."
+          }
+        ],
+        "hints": [
+          "عرّف f(x)=1/(x+2).",
+          "ادرس إشارة f'."
+        ],
+        "understanding_check": [
+          "ما الطريقة المستعملة في هذا التمرين؟",
+          "ما العبارة التي حددنا إشارتها؟",
+          "كيف انتقلنا من الإشارة إلى اتجاه تغير المتتالية؟"
+        ],
+        "bac_writing": [
+          "نحسب العبارة المناسبة للمقارنة بين حدين متتاليين.",
+          "ندرس إشارتها على المجال المطلوب.",
+          "نحوّل الإشارة إلى مقارنة بين u_{n+1} وu_n.",
+          "نكتب الاستنتاج النهائي مع ذكر المجال."
+        ],
+        "is_complete": true,
+        "audience": "تلميذ السنة الثالثة ثانوي - بكالوريا الجزائر",
+        "solution_presentation": {
+          "style": "simple_detailed_axis_04_only",
+          "show_one_step_at_a_time": true,
+          "show_explanation_before_calculation": true,
+          "show_conclusion_after_each_step": true,
+          "avoid_unproved_previous_results": true
+        },
+        "academy_presentation": {
+          "show_problem_data_first": true,
+          "show_method_choice": true,
+          "show_reason_before_calculation": true,
+          "show_calculation_line_by_line": true,
+          "show_sign_analysis": true,
+          "show_final_conclusion": true,
+          "show_common_mistakes": true,
+          "show_progressive_hints": true
+        },
+        "academy_understanding_check": [
+          "لماذا اخترنا هذه الطريقة؟",
+          "ما إشارة الفرق أو الخارج؟ ولماذا؟",
+          "هل الاتجاه تام أم غير تام؟",
+          "ما المجال الذي تصح عليه النتيجة؟"
+        ],
+        "academy_success_criteria": [
+          "اختيار الأداة المناسبة.",
+          "حساب صحيح دون قفزات.",
+          "تحديد الإشارة مع التبرير.",
+          "التمييز بين الرتابة والرتابة التامة.",
+          "ذكر المجال في الخاتمة."
+        ]
+      },
+      "original_text": "لتكن \\((u_n)\\) معرفة بـ \\(u_n=\\frac1{n+2}\\). ادرس اتجاه تغيرها باستعمال دالة مرتبطة بها.",
+      "standalone_text": "لتكن \\((u_n)\\) معرفة بـ \\(u_n=\\frac1{n+2}\\). ادرس اتجاه تغيرها باستعمال دالة مرتبطة بها.",
+      "review_status": "axis04_practice_mathematically_reviewed",
+      "training_order": 6,
+      "academy_level": "متوسط",
+      "method_focus": "استعمال دالة مرتبطة بالمتتالية",
+      "pedagogical_goal": "التدرب على الطريقة الثانية المذكورة في المحور.",
+      "selection_reason": "مختار لتحقيق تدرج منهجي داخل المحور دون الخروج إلى موضوع النهايات.",
+      "axis_scope": "اتجاه تغير المتتالية فقط"
+    },
+    {
+      "id": "axis04_monotonicity_practice_07",
+      "year": null,
+      "source_file": null,
+      "source_page": null,
+      "exercise": "axis04_practice_07",
+      "number": "7",
+      "text": "لتكن \\((u_n)\\) معرفة بـ \\(u_n=\\frac{2^n}{n!}\\) لكل \\(n\\in\\mathbb N\\). ادرس اتجاه تغيرها.",
+      "context": "\\(u_n=\\frac{2^n}{n!}>0\\).",
+      "tag": "seq_monotonicity",
+      "axis": "اتجاه تغير المتتالية ودراسة اتجاه التغير",
+      "secondary_tags": [],
+      "skill": "دراسة اتجاه تغير المتتالية",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "pedagogical_relevance": "تمرين تدريبي مرتبط مباشرة بمحور اتجاه تغير المتتالية، ويركز على مقارنة حدين متتاليين واختيار الطريقة المناسبة.",
+      "solution": {
+        "strategy": "خارج حدين متتاليين",
+        "student_friendly_intro": "نحدد أولًا الطريقة الأنسب للمقارنة بين حدين متتاليين، ثم نجري الحساب خطوة بخطوة، وندرس الإشارة بدقة، وأخيرًا نكتب اتجاه التغير مع المجال.",
+        "what_we_know": [
+          "\\(u_n=\\frac{2^n}{n!}>0\\)."
+        ],
+        "what_we_need_to_show": "تحديد اتجاه تغير المتتالية وكتابة استنتاج مبرر.",
+        "method_name": "خارج حدين متتاليين",
+        "why_this_method": "تعلم استعمال الخارج بعد التحقق من إيجابية الحدود.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "الإيجابية",
+            "goal": "التحقق من شرط استعمال الخارج.",
+            "explanation": "البسط والمقام موجبان.",
+            "rule_used": "شرط طريقة الخارج",
+            "calculation_lines": [
+              "\\(2^n>0\\) و\\(n!>0\\Rightarrow u_n>0\\)."
+            ],
+            "result": "يمكن استعمال الخارج."
+          },
+          {
+            "order": 2,
+            "title": "حساب الخارج",
+            "goal": "تبسيط المقارنة.",
+            "explanation": "نحسب u_{n+1}/u_n.",
+            "rule_used": "خارج حدين",
+            "calculation_lines": [
+              "\\(\\frac{u_{n+1}}{u_n}=\\frac{2}{n+1}\\)."
+            ],
+            "result": "نقارن الآن بالعدد 1."
+          },
+          {
+            "order": 3,
+            "title": "المقارنة بـ1",
+            "goal": "تحديد الاتجاه حسب n.",
+            "explanation": "نحل مقارنة 2/(n+1) مع 1.",
+            "rule_used": "دراسة إشارة",
+            "calculation_lines": [
+              "عند \\(n=0\\): \\(\\frac2{n+1}=2>1\\).",
+              "عند \\(n=1\\): الخارج يساوي 1.",
+              "عند \\(n\\ge2\\): \\(0<\\frac2{n+1}<1\\)."
+            ],
+            "result": "الاتجاه يتغير."
+          },
+          {
+            "order": 4,
+            "title": "الخاتمة",
+            "goal": "وصف السلوك.",
+            "explanation": "نترجم نتائج الخارج.",
+            "rule_used": "قاعدة الخارج",
+            "calculation_lines": [
+              "\\(u_1>u_0\\), \\(u_2=u_1\\), ثم \\(u_{n+1}<u_n\\) لكل \\(n\\ge2\\)."
+            ],
+            "result": "ليست رتيبة على كامل المجال، وتتناقص ابتداءً من الرتبة 1، وتتناقص تمامًا ابتداءً من الرتبة 2."
+          }
+        ],
+        "final_answer": "ليست رتيبة على كامل \\(\\mathbb N\\). وهي متناقصة ابتداءً من الرتبة \\(1\\)، ومت ناقصة تمامًا ابتداءً من الرتبة \\(2\\).",
+        "verification": "تم التحقق من الحساب، وإشارة الفرق أو الخارج، ومن المجال الذي يصح عليه الاستنتاج.",
+        "common_mistakes": [
+          {
+            "mistake": "الاكتفاء بحساب بعض الحدود والحكم على الاتجاه.",
+            "correction": "حساب حدود قليلة يعطي تخمينًا فقط؛ يجب تقديم مقارنة عامة بين u_{n+1} وu_n."
+          },
+          {
+            "mistake": "نسيان دراسة إشارة العبارة المحسوبة.",
+            "correction": "بعد حساب الفرق أو الخارج يجب تحديد إشارته ثم ربطها باتجاه التغير."
+          },
+          {
+            "mistake": "نسيان المجال أو رتبة البداية.",
+            "correction": "قد يتغير الاتجاه حسب n، لذلك يجب ذكر المجال بدقة."
+          }
+        ],
+        "hints": [
+          "أثبت u_n>0 أولًا.",
+          "بسط u_{n+1}/u_n.",
+          "قارن 2/(n+1) بـ1."
+        ],
+        "understanding_check": [
+          "ما الطريقة المستعملة في هذا التمرين؟",
+          "ما العبارة التي حددنا إشارتها؟",
+          "كيف انتقلنا من الإشارة إلى اتجاه تغير المتتالية؟"
+        ],
+        "bac_writing": [
+          "نحسب العبارة المناسبة للمقارنة بين حدين متتاليين.",
+          "ندرس إشارتها على المجال المطلوب.",
+          "نحوّل الإشارة إلى مقارنة بين u_{n+1} وu_n.",
+          "نكتب الاستنتاج النهائي مع ذكر المجال."
+        ],
+        "is_complete": true,
+        "audience": "تلميذ السنة الثالثة ثانوي - بكالوريا الجزائر",
+        "solution_presentation": {
+          "style": "simple_detailed_axis_04_only",
+          "show_one_step_at_a_time": true,
+          "show_explanation_before_calculation": true,
+          "show_conclusion_after_each_step": true,
+          "avoid_unproved_previous_results": true
+        },
+        "academy_presentation": {
+          "show_problem_data_first": true,
+          "show_method_choice": true,
+          "show_reason_before_calculation": true,
+          "show_calculation_line_by_line": true,
+          "show_sign_analysis": true,
+          "show_final_conclusion": true,
+          "show_common_mistakes": true,
+          "show_progressive_hints": true
+        },
+        "academy_understanding_check": [
+          "لماذا اخترنا هذه الطريقة؟",
+          "ما إشارة الفرق أو الخارج؟ ولماذا؟",
+          "هل الاتجاه تام أم غير تام؟",
+          "ما المجال الذي تصح عليه النتيجة؟"
+        ],
+        "academy_success_criteria": [
+          "اختيار الأداة المناسبة.",
+          "حساب صحيح دون قفزات.",
+          "تحديد الإشارة مع التبرير.",
+          "التمييز بين الرتابة والرتابة التامة.",
+          "ذكر المجال في الخاتمة."
+        ]
+      },
+      "original_text": "لتكن \\((u_n)\\) معرفة بـ \\(u_n=\\frac{2^n}{n!}\\) لكل \\(n\\in\\mathbb N\\). ادرس اتجاه تغيرها.",
+      "standalone_text": "لتكن \\((u_n)\\) معرفة بـ \\(u_n=\\frac{2^n}{n!}\\) لكل \\(n\\in\\mathbb N\\). ادرس اتجاه تغيرها.",
+      "review_status": "axis04_practice_mathematically_reviewed",
+      "training_order": 7,
+      "academy_level": "متوسط",
+      "method_focus": "خارج حدين متتاليين",
+      "pedagogical_goal": "تعلم استعمال الخارج بعد التحقق من إيجابية الحدود.",
+      "selection_reason": "مختار لتحقيق تدرج منهجي داخل المحور دون الخروج إلى موضوع النهايات.",
+      "axis_scope": "اتجاه تغير المتتالية فقط"
+    },
+    {
+      "id": "axis04_monotonicity_practice_08",
+      "year": null,
+      "source_file": null,
+      "source_page": null,
+      "exercise": "axis04_practice_08",
+      "number": "8",
+      "text": "لتكن \\((u_n)\\) معرفة بـ \\(u_0=1\\) و\\(u_{n+1}=\\frac12u_n+2\\). أثبت أولًا أن \\(u_n<4\\) لكل \\(n\\)، ثم ادرس اتجاه تغيرها.",
+      "context": "\\(u_0=1\\), \\(u_{n+1}=\\frac12u_n+2\\).",
+      "tag": "seq_monotonicity",
+      "axis": "اتجاه تغير المتتالية ودراسة اتجاه التغير",
+      "secondary_tags": [],
+      "skill": "دراسة اتجاه تغير المتتالية",
+      "difficulty": "hard",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "pedagogical_relevance": "تمرين تدريبي مرتبط مباشرة بمحور اتجاه تغير المتتالية، ويركز على مقارنة حدين متتاليين واختيار الطريقة المناسبة.",
+      "solution": {
+        "strategy": "حصر مساعد ثم طريقة الفرق",
+        "student_friendly_intro": "نحدد أولًا الطريقة الأنسب للمقارنة بين حدين متتاليين، ثم نجري الحساب خطوة بخطوة، وندرس الإشارة بدقة، وأخيرًا نكتب اتجاه التغير مع المجال.",
+        "what_we_know": [
+          "\\(u_0=1\\), \\(u_{n+1}=\\frac12u_n+2\\)."
+        ],
+        "what_we_need_to_show": "تحديد اتجاه تغير المتتالية وكتابة استنتاج مبرر.",
+        "method_name": "حصر مساعد ثم طريقة الفرق",
+        "why_this_method": "التدرب على نمط بكالوريا شائع: إثبات حصر ثم استعماله في إشارة الفرق.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "إثبات الحصر: البداية",
+            "goal": "التحقق من u_0<4.",
+            "explanation": "الحد الأول يحقق الحصر.",
+            "rule_used": "تحقق مباشر",
+            "calculation_lines": [
+              "\\(u_0=1<4\\)."
+            ],
+            "result": "الحصر صحيح عند البداية."
+          },
+          {
+            "order": 2,
+            "title": "إثبات الحصر: الانتقال",
+            "goal": "إثبات بقاء الحد التالي تحت 4.",
+            "explanation": "نفترض u_n<4 ثم نستعمل العلاقة.",
+            "rule_used": "تراجع",
+            "calculation_lines": [
+              "\\(u_n<4\\Rightarrow \\frac12u_n<2\\).",
+              "\\(u_{n+1}=\\frac12u_n+2<4\\)."
+            ],
+            "result": "إذن u_n<4 لكل n."
+          },
+          {
+            "order": 3,
+            "title": "حساب الفرق",
+            "goal": "ربط الاتجاه بالحصر.",
+            "explanation": "نطرح u_n.",
+            "rule_used": "طريقة الفرق",
+            "calculation_lines": [
+              "\\(u_{n+1}-u_n=2-\\frac12u_n=\\frac{4-u_n}{2}\\)."
+            ],
+            "result": "الإشارة مرتبطة بـ4-u_n."
+          },
+          {
+            "order": 4,
+            "title": "الإشارة والاستنتاج",
+            "goal": "استعمال الحصر المثبت.",
+            "explanation": "بما أن u_n<4 فإن 4-u_n>0.",
+            "rule_used": "نتيجة مساعدة ثم فرق",
+            "calculation_lines": [
+              "\\(\\frac{4-u_n}{2}>0\\Rightarrow u_{n+1}>u_n\\)."
+            ],
+            "result": "المتتالية متزايدة تمامًا على \\(\\mathbb N\\)."
+          }
+        ],
+        "final_answer": "لدينا \\(u_n<4\\) لكل \\(n\\)، ومنه المتتالية \\((u_n)\\) متزايدة تمامًا على \\(\\mathbb N\\).",
+        "verification": "تم التحقق من الحساب، وإشارة الفرق أو الخارج، ومن المجال الذي يصح عليه الاستنتاج.",
+        "common_mistakes": [
+          {
+            "mistake": "الاكتفاء بحساب بعض الحدود والحكم على الاتجاه.",
+            "correction": "حساب حدود قليلة يعطي تخمينًا فقط؛ يجب تقديم مقارنة عامة بين u_{n+1} وu_n."
+          },
+          {
+            "mistake": "نسيان دراسة إشارة العبارة المحسوبة.",
+            "correction": "بعد حساب الفرق أو الخارج يجب تحديد إشارته ثم ربطها باتجاه التغير."
+          },
+          {
+            "mistake": "نسيان المجال أو رتبة البداية.",
+            "correction": "قد يتغير الاتجاه حسب n، لذلك يجب ذكر المجال بدقة."
+          }
+        ],
+        "hints": [
+          "أثبت الحصر قبل استعماله.",
+          "حاول كتابة الفرق بدلالة 4-u_n."
+        ],
+        "understanding_check": [
+          "ما الطريقة المستعملة في هذا التمرين؟",
+          "ما العبارة التي حددنا إشارتها؟",
+          "كيف انتقلنا من الإشارة إلى اتجاه تغير المتتالية؟"
+        ],
+        "bac_writing": [
+          "نحسب العبارة المناسبة للمقارنة بين حدين متتاليين.",
+          "ندرس إشارتها على المجال المطلوب.",
+          "نحوّل الإشارة إلى مقارنة بين u_{n+1} وu_n.",
+          "نكتب الاستنتاج النهائي مع ذكر المجال."
+        ],
+        "is_complete": true,
+        "audience": "تلميذ السنة الثالثة ثانوي - بكالوريا الجزائر",
+        "solution_presentation": {
+          "style": "simple_detailed_axis_04_only",
+          "show_one_step_at_a_time": true,
+          "show_explanation_before_calculation": true,
+          "show_conclusion_after_each_step": true,
+          "avoid_unproved_previous_results": true
+        },
+        "academy_presentation": {
+          "show_problem_data_first": true,
+          "show_method_choice": true,
+          "show_reason_before_calculation": true,
+          "show_calculation_line_by_line": true,
+          "show_sign_analysis": true,
+          "show_final_conclusion": true,
+          "show_common_mistakes": true,
+          "show_progressive_hints": true
+        },
+        "academy_understanding_check": [
+          "لماذا اخترنا هذه الطريقة؟",
+          "ما إشارة الفرق أو الخارج؟ ولماذا؟",
+          "هل الاتجاه تام أم غير تام؟",
+          "ما المجال الذي تصح عليه النتيجة؟"
+        ],
+        "academy_success_criteria": [
+          "اختيار الأداة المناسبة.",
+          "حساب صحيح دون قفزات.",
+          "تحديد الإشارة مع التبرير.",
+          "التمييز بين الرتابة والرتابة التامة.",
+          "ذكر المجال في الخاتمة."
+        ]
+      },
+      "original_text": "لتكن \\((u_n)\\) معرفة بـ \\(u_0=1\\) و\\(u_{n+1}=\\frac12u_n+2\\). أثبت أولًا أن \\(u_n<4\\) لكل \\(n\\)، ثم ادرس اتجاه تغيرها.",
+      "standalone_text": "لتكن \\((u_n)\\) معرفة بـ \\(u_0=1\\) و\\(u_{n+1}=\\frac12u_n+2\\). أثبت أولًا أن \\(u_n<4\\) لكل \\(n\\)، ثم ادرس اتجاه تغيرها.",
+      "review_status": "axis04_practice_mathematically_reviewed",
+      "training_order": 8,
+      "academy_level": "متقدم",
+      "method_focus": "حصر مساعد ثم طريقة الفرق",
+      "pedagogical_goal": "التدرب على نمط بكالوريا شائع: إثبات حصر ثم استعماله في إشارة الفرق.",
+      "selection_reason": "مختار لتحقيق تدرج منهجي داخل المحور دون الخروج إلى موضوع النهايات.",
+      "axis_scope": "اتجاه تغير المتتالية فقط"
+    },
+    {
+      "id": "axis04_monotonicity_practice_09",
+      "year": null,
+      "source_file": null,
+      "source_page": null,
+      "exercise": "axis04_practice_09",
+      "number": "9",
+      "text": "لتكن \\((u_n)\\) معرفة بـ \\(u_0=5\\) و\\(u_{n+1}=\\frac34u_n+1\\). أثبت أن \\(u_n>4\\) لكل \\(n\\)، ثم ادرس اتجاه تغيرها.",
+      "context": "\\(u_0=5\\), \\(u_{n+1}=\\frac34u_n+1\\).",
+      "tag": "seq_monotonicity",
+      "axis": "اتجاه تغير المتتالية ودراسة اتجاه التغير",
+      "secondary_tags": [],
+      "skill": "دراسة اتجاه تغير المتتالية",
+      "difficulty": "hard",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "pedagogical_relevance": "تمرين تدريبي مرتبط مباشرة بمحور اتجاه تغير المتتالية، ويركز على مقارنة حدين متتاليين واختيار الطريقة المناسبة.",
+      "solution": {
+        "strategy": "حصر سفلي ثم طريقة الفرق",
+        "student_friendly_intro": "نحدد أولًا الطريقة الأنسب للمقارنة بين حدين متتاليين، ثم نجري الحساب خطوة بخطوة، وندرس الإشارة بدقة، وأخيرًا نكتب اتجاه التغير مع المجال.",
+        "what_we_know": [
+          "\\(u_0=5\\), \\(u_{n+1}=\\frac34u_n+1\\)."
+        ],
+        "what_we_need_to_show": "تحديد اتجاه تغير المتتالية وكتابة استنتاج مبرر.",
+        "method_name": "حصر سفلي ثم طريقة الفرق",
+        "why_this_method": "تعميق نمط الحصر المساعد مع تناقص المتتالية.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "إثبات u_n>4",
+            "goal": "إيجاد النتيجة المساعدة.",
+            "explanation": "نلاحظ أن 4 نقطة تثبيت للعلاقة.",
+            "rule_used": "تراجع",
+            "calculation_lines": [
+              "\\(u_0=5>4\\).",
+              "إذا \\(u_n>4\\) فإن \\(u_{n+1}=\\frac34u_n+1>3+1=4\\)."
+            ],
+            "result": "إذن u_n>4 لكل n."
+          },
+          {
+            "order": 2,
+            "title": "حساب الفرق",
+            "goal": "إظهار العامل المرتبط بالحصر.",
+            "explanation": "نعوض العلاقة ثم نطرح u_n.",
+            "rule_used": "طريقة الفرق",
+            "calculation_lines": [
+              "\\(u_{n+1}-u_n=1-\\frac14u_n=\\frac{4-u_n}{4}\\)."
+            ],
+            "result": "الفرق مرتبط بـ4-u_n."
+          },
+          {
+            "order": 3,
+            "title": "الإشارة",
+            "goal": "استعمال u_n>4.",
+            "explanation": "إذا u_n>4 فإن 4-u_n<0.",
+            "rule_used": "دراسة الإشارة",
+            "calculation_lines": [
+              "\\(u_{n+1}-u_n<0\\)."
+            ],
+            "result": "الفرق سالب تمامًا."
+          },
+          {
+            "order": 4,
+            "title": "الخاتمة",
+            "goal": "تحديد الاتجاه.",
+            "explanation": "الحد الموالي أصغر دائمًا.",
+            "rule_used": "قاعدة الرتابة",
+            "calculation_lines": [
+              "\\(u_{n+1}<u_n\\)."
+            ],
+            "result": "المتتالية متناقصة تمامًا على \\(\\mathbb N\\)."
+          }
+        ],
+        "final_answer": "المتتالية \\((u_n)\\) متناقصة تمامًا على \\(\\mathbb N\\).",
+        "verification": "تم التحقق من الحساب، وإشارة الفرق أو الخارج، ومن المجال الذي يصح عليه الاستنتاج.",
+        "common_mistakes": [
+          {
+            "mistake": "الاكتفاء بحساب بعض الحدود والحكم على الاتجاه.",
+            "correction": "حساب حدود قليلة يعطي تخمينًا فقط؛ يجب تقديم مقارنة عامة بين u_{n+1} وu_n."
+          },
+          {
+            "mistake": "نسيان دراسة إشارة العبارة المحسوبة.",
+            "correction": "بعد حساب الفرق أو الخارج يجب تحديد إشارته ثم ربطها باتجاه التغير."
+          },
+          {
+            "mistake": "نسيان المجال أو رتبة البداية.",
+            "correction": "قد يتغير الاتجاه حسب n، لذلك يجب ذكر المجال بدقة."
+          }
+        ],
+        "hints": [
+          "ابحث عن العدد الثابت 4.",
+          "اكتب الفرق على صورة (4-u_n)/4."
+        ],
+        "understanding_check": [
+          "ما الطريقة المستعملة في هذا التمرين؟",
+          "ما العبارة التي حددنا إشارتها؟",
+          "كيف انتقلنا من الإشارة إلى اتجاه تغير المتتالية؟"
+        ],
+        "bac_writing": [
+          "نحسب العبارة المناسبة للمقارنة بين حدين متتاليين.",
+          "ندرس إشارتها على المجال المطلوب.",
+          "نحوّل الإشارة إلى مقارنة بين u_{n+1} وu_n.",
+          "نكتب الاستنتاج النهائي مع ذكر المجال."
+        ],
+        "is_complete": true,
+        "audience": "تلميذ السنة الثالثة ثانوي - بكالوريا الجزائر",
+        "solution_presentation": {
+          "style": "simple_detailed_axis_04_only",
+          "show_one_step_at_a_time": true,
+          "show_explanation_before_calculation": true,
+          "show_conclusion_after_each_step": true,
+          "avoid_unproved_previous_results": true
+        },
+        "academy_presentation": {
+          "show_problem_data_first": true,
+          "show_method_choice": true,
+          "show_reason_before_calculation": true,
+          "show_calculation_line_by_line": true,
+          "show_sign_analysis": true,
+          "show_final_conclusion": true,
+          "show_common_mistakes": true,
+          "show_progressive_hints": true
+        },
+        "academy_understanding_check": [
+          "لماذا اخترنا هذه الطريقة؟",
+          "ما إشارة الفرق أو الخارج؟ ولماذا؟",
+          "هل الاتجاه تام أم غير تام؟",
+          "ما المجال الذي تصح عليه النتيجة؟"
+        ],
+        "academy_success_criteria": [
+          "اختيار الأداة المناسبة.",
+          "حساب صحيح دون قفزات.",
+          "تحديد الإشارة مع التبرير.",
+          "التمييز بين الرتابة والرتابة التامة.",
+          "ذكر المجال في الخاتمة."
+        ]
+      },
+      "original_text": "لتكن \\((u_n)\\) معرفة بـ \\(u_0=5\\) و\\(u_{n+1}=\\frac34u_n+1\\). أثبت أن \\(u_n>4\\) لكل \\(n\\)، ثم ادرس اتجاه تغيرها.",
+      "standalone_text": "لتكن \\((u_n)\\) معرفة بـ \\(u_0=5\\) و\\(u_{n+1}=\\frac34u_n+1\\). أثبت أن \\(u_n>4\\) لكل \\(n\\)، ثم ادرس اتجاه تغيرها.",
+      "review_status": "axis04_practice_mathematically_reviewed",
+      "training_order": 9,
+      "academy_level": "متقدم",
+      "method_focus": "حصر سفلي ثم طريقة الفرق",
+      "pedagogical_goal": "تعميق نمط الحصر المساعد مع تناقص المتتالية.",
+      "selection_reason": "مختار لتحقيق تدرج منهجي داخل المحور دون الخروج إلى موضوع النهايات.",
+      "axis_scope": "اتجاه تغير المتتالية فقط"
+    },
+    {
+      "id": "axis04_monotonicity_practice_10",
+      "year": null,
+      "source_file": null,
+      "source_page": null,
+      "exercise": "axis04_practice_10",
+      "number": "10",
+      "text": "لتكن \\((u_n)\\) معرفة على \\(\\mathbb N^*\\) بـ \\(u_n=\\frac{n^2+1}{n}\\). ادرس اتجاه تغيرها وحدد الرتبة التي تصبح ابتداءً منها متزايدة تمامًا.",
+      "context": "\\(u_n=n+\\frac1n\\), \\(n\\ge1\\).",
+      "tag": "seq_monotonicity",
+      "axis": "اتجاه تغير المتتالية ودراسة اتجاه التغير",
+      "secondary_tags": [],
+      "skill": "دراسة اتجاه تغير المتتالية",
+      "difficulty": "hard",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "pedagogical_relevance": "تمرين تدريبي مرتبط مباشرة بمحور اتجاه تغير المتتالية، ويركز على مقارنة حدين متتاليين واختيار الطريقة المناسبة.",
+      "solution": {
+        "strategy": "طريقة الفرق وتحديد رتبة بداية الرتابة",
+        "student_friendly_intro": "نحدد أولًا الطريقة الأنسب للمقارنة بين حدين متتاليين، ثم نجري الحساب خطوة بخطوة، وندرس الإشارة بدقة، وأخيرًا نكتب اتجاه التغير مع المجال.",
+        "what_we_know": [
+          "\\(u_n=n+\\frac1n\\), \\(n\\ge1\\)."
+        ],
+        "what_we_need_to_show": "تحديد اتجاه تغير المتتالية وكتابة استنتاج مبرر.",
+        "method_name": "طريقة الفرق وتحديد رتبة بداية الرتابة",
+        "why_this_method": "التدرب على استخراج رتبة بداية الاتجاه من إشارة كسر.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "إعادة الكتابة",
+            "goal": "تبسيط الحد العام.",
+            "explanation": "نفصل الكسر.",
+            "rule_used": "تبسيط جبري",
+            "calculation_lines": [
+              "\\(u_n=n+\\frac1n\\)."
+            ],
+            "result": "أصبحت المقارنة أسهل."
+          },
+          {
+            "order": 2,
+            "title": "حساب الفرق",
+            "goal": "استخراج عبارة قابلة لدراسة الإشارة.",
+            "explanation": "نحسب الفرق.",
+            "rule_used": "طريقة الفرق",
+            "calculation_lines": [
+              "\\(u_{n+1}-u_n=1+\\frac1{n+1}-\\frac1n\\).",
+              "\\(=1-\\frac1{n(n+1)}\\).",
+              "\\(=\\frac{n(n+1)-1}{n(n+1)}\\)."
+            ],
+            "result": "نحدد الإشارة."
+          },
+          {
+            "order": 3,
+            "title": "الإشارة",
+            "goal": "استعمال n≥1.",
+            "explanation": "المقام موجب، والبسط عند n=1 يساوي1 ثم يبقى موجبًا.",
+            "rule_used": "إشارة كسر",
+            "calculation_lines": [
+              "\\(n(n+1)>0\\).",
+              "\\(n(n+1)-1\\ge1>0\\)."
+            ],
+            "result": "الفرق موجب تمامًا لكل n≥1."
+          },
+          {
+            "order": 4,
+            "title": "النتيجة",
+            "goal": "ذكر المجال.",
+            "explanation": "الحد الموالي أكبر من الحالي.",
+            "rule_used": "قاعدة الرتابة",
+            "calculation_lines": [
+              "\\(u_{n+1}>u_n\\) لكل \\(n\\ge1\\)."
+            ],
+            "result": "المتتالية متزايدة تمامًا على \\(\\mathbb N^*\\)."
+          }
+        ],
+        "final_answer": "المتتالية متزايدة تمامًا ابتداءً من الرتبة \\(1\\).",
+        "verification": "تم التحقق من الحساب، وإشارة الفرق أو الخارج، ومن المجال الذي يصح عليه الاستنتاج.",
+        "common_mistakes": [
+          {
+            "mistake": "الاكتفاء بحساب بعض الحدود والحكم على الاتجاه.",
+            "correction": "حساب حدود قليلة يعطي تخمينًا فقط؛ يجب تقديم مقارنة عامة بين u_{n+1} وu_n."
+          },
+          {
+            "mistake": "نسيان دراسة إشارة العبارة المحسوبة.",
+            "correction": "بعد حساب الفرق أو الخارج يجب تحديد إشارته ثم ربطها باتجاه التغير."
+          },
+          {
+            "mistake": "نسيان المجال أو رتبة البداية.",
+            "correction": "قد يتغير الاتجاه حسب n، لذلك يجب ذكر المجال بدقة."
+          }
+        ],
+        "hints": [
+          "اكتب u_n=n+1/n.",
+          "حدد إشارة المقام والبسط كلًا على حدة."
+        ],
+        "understanding_check": [
+          "ما الطريقة المستعملة في هذا التمرين؟",
+          "ما العبارة التي حددنا إشارتها؟",
+          "كيف انتقلنا من الإشارة إلى اتجاه تغير المتتالية؟"
+        ],
+        "bac_writing": [
+          "نحسب العبارة المناسبة للمقارنة بين حدين متتاليين.",
+          "ندرس إشارتها على المجال المطلوب.",
+          "نحوّل الإشارة إلى مقارنة بين u_{n+1} وu_n.",
+          "نكتب الاستنتاج النهائي مع ذكر المجال."
+        ],
+        "is_complete": true,
+        "audience": "تلميذ السنة الثالثة ثانوي - بكالوريا الجزائر",
+        "solution_presentation": {
+          "style": "simple_detailed_axis_04_only",
+          "show_one_step_at_a_time": true,
+          "show_explanation_before_calculation": true,
+          "show_conclusion_after_each_step": true,
+          "avoid_unproved_previous_results": true
+        },
+        "academy_presentation": {
+          "show_problem_data_first": true,
+          "show_method_choice": true,
+          "show_reason_before_calculation": true,
+          "show_calculation_line_by_line": true,
+          "show_sign_analysis": true,
+          "show_final_conclusion": true,
+          "show_common_mistakes": true,
+          "show_progressive_hints": true
+        },
+        "academy_understanding_check": [
+          "لماذا اخترنا هذه الطريقة؟",
+          "ما إشارة الفرق أو الخارج؟ ولماذا؟",
+          "هل الاتجاه تام أم غير تام؟",
+          "ما المجال الذي تصح عليه النتيجة؟"
+        ],
+        "academy_success_criteria": [
+          "اختيار الأداة المناسبة.",
+          "حساب صحيح دون قفزات.",
+          "تحديد الإشارة مع التبرير.",
+          "التمييز بين الرتابة والرتابة التامة.",
+          "ذكر المجال في الخاتمة."
+        ]
+      },
+      "original_text": "لتكن \\((u_n)\\) معرفة على \\(\\mathbb N^*\\) بـ \\(u_n=\\frac{n^2+1}{n}\\). ادرس اتجاه تغيرها وحدد الرتبة التي تصبح ابتداءً منها متزايدة تمامًا.",
+      "standalone_text": "لتكن \\((u_n)\\) معرفة على \\(\\mathbb N^*\\) بـ \\(u_n=\\frac{n^2+1}{n}\\). ادرس اتجاه تغيرها وحدد الرتبة التي تصبح ابتداءً منها متزايدة تمامًا.",
+      "review_status": "axis04_practice_mathematically_reviewed",
+      "training_order": 10,
+      "academy_level": "متقدم",
+      "method_focus": "طريقة الفرق وتحديد رتبة بداية الرتابة",
+      "pedagogical_goal": "التدرب على استخراج رتبة بداية الاتجاه من إشارة كسر.",
+      "selection_reason": "مختار لتحقيق تدرج منهجي داخل المحور دون الخروج إلى موضوع النهايات.",
+      "axis_scope": "اتجاه تغير المتتالية فقط"
+    },
+    {
+      "id": "axis04_monotonicity_practice_11",
+      "year": null,
+      "source_file": null,
+      "source_page": null,
+      "exercise": "axis04_practice_11",
+      "number": "11",
+      "text": "لتكن \\((u_n)\\) معرفة بـ \\(u_n=\\sqrt{n+2}-\\sqrt{n+1}\\). ادرس اتجاه تغيرها على \\(\\mathbb N\\).",
+      "context": "\\(u_n=\\sqrt{n+2}-\\sqrt{n+1}\\).",
+      "tag": "seq_monotonicity",
+      "axis": "اتجاه تغير المتتالية ودراسة اتجاه التغير",
+      "secondary_tags": [],
+      "skill": "دراسة اتجاه تغير المتتالية",
+      "difficulty": "hard",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "pedagogical_relevance": "تمرين تدريبي مرتبط مباشرة بمحور اتجاه تغير المتتالية، ويركز على مقارنة حدين متتاليين واختيار الطريقة المناسبة.",
+      "solution": {
+        "strategy": "استعمال المرافق ثم المقارنة",
+        "student_friendly_intro": "نحدد أولًا الطريقة الأنسب للمقارنة بين حدين متتاليين، ثم نجري الحساب خطوة بخطوة، وندرس الإشارة بدقة، وأخيرًا نكتب اتجاه التغير مع المجال.",
+        "what_we_know": [
+          "\\(u_n=\\sqrt{n+2}-\\sqrt{n+1}\\)."
+        ],
+        "what_we_need_to_show": "تحديد اتجاه تغير المتتالية وكتابة استنتاج مبرر.",
+        "method_name": "استعمال المرافق ثم المقارنة",
+        "why_this_method": "التدرب على تحويل فرق جذور إلى عبارة موجبة أسهل للمقارنة.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "استعمال المرافق",
+            "goal": "إعادة كتابة u_n.",
+            "explanation": "نضرب في المرافق.",
+            "rule_used": "المرافق",
+            "calculation_lines": [
+              "\\(u_n=\\frac{1}{\\sqrt{n+2}+\\sqrt{n+1}}\\)."
+            ],
+            "result": "حصلنا على كسر موجب."
+          },
+          {
+            "order": 2,
+            "title": "الحد الموالي",
+            "goal": "كتابة u_{n+1} بالشكل نفسه.",
+            "explanation": "نعوض n بـn+1.",
+            "rule_used": "تعويض",
+            "calculation_lines": [
+              "\\(u_{n+1}=\\frac1{\\sqrt{n+3}+\\sqrt{n+2}}\\)."
+            ],
+            "result": "يمكن المقارنة بين المقامين."
+          },
+          {
+            "order": 3,
+            "title": "المقارنة",
+            "goal": "تحديد أي الحدين أكبر.",
+            "explanation": "المقام الثاني أكبر تمامًا، والعددان موجبان.",
+            "rule_used": "مقارنة مقلوبين موجبين",
+            "calculation_lines": [
+              "\\(\\sqrt{n+3}+\\sqrt{n+2}>\\sqrt{n+2}+\\sqrt{n+1}>0\\).",
+              "\\(u_{n+1}<u_n\\)."
+            ],
+            "result": "الحدود تنخفض."
+          },
+          {
+            "order": 4,
+            "title": "الخاتمة",
+            "goal": "تحديد الاتجاه.",
+            "explanation": "المقارنة صحيحة لكل n∈N.",
+            "rule_used": "قاعدة الرتابة",
+            "calculation_lines": [
+              "\\(u_{n+1}<u_n\\)."
+            ],
+            "result": "المتتالية متناقصة تمامًا على \\(\\mathbb N\\)."
+          }
+        ],
+        "final_answer": "المتتالية \\((u_n)\\) متناقصة تمامًا على \\(\\mathbb N\\).",
+        "verification": "تم التحقق من الحساب، وإشارة الفرق أو الخارج، ومن المجال الذي يصح عليه الاستنتاج.",
+        "common_mistakes": [
+          {
+            "mistake": "الاكتفاء بحساب بعض الحدود والحكم على الاتجاه.",
+            "correction": "حساب حدود قليلة يعطي تخمينًا فقط؛ يجب تقديم مقارنة عامة بين u_{n+1} وu_n."
+          },
+          {
+            "mistake": "نسيان دراسة إشارة العبارة المحسوبة.",
+            "correction": "بعد حساب الفرق أو الخارج يجب تحديد إشارته ثم ربطها باتجاه التغير."
+          },
+          {
+            "mistake": "نسيان المجال أو رتبة البداية.",
+            "correction": "قد يتغير الاتجاه حسب n، لذلك يجب ذكر المجال بدقة."
+          }
+        ],
+        "hints": [
+          "استعمل المرافق أولًا.",
+          "قارن المقامين الموجبين."
+        ],
+        "understanding_check": [
+          "ما الطريقة المستعملة في هذا التمرين؟",
+          "ما العبارة التي حددنا إشارتها؟",
+          "كيف انتقلنا من الإشارة إلى اتجاه تغير المتتالية؟"
+        ],
+        "bac_writing": [
+          "نحسب العبارة المناسبة للمقارنة بين حدين متتاليين.",
+          "ندرس إشارتها على المجال المطلوب.",
+          "نحوّل الإشارة إلى مقارنة بين u_{n+1} وu_n.",
+          "نكتب الاستنتاج النهائي مع ذكر المجال."
+        ],
+        "is_complete": true,
+        "audience": "تلميذ السنة الثالثة ثانوي - بكالوريا الجزائر",
+        "solution_presentation": {
+          "style": "simple_detailed_axis_04_only",
+          "show_one_step_at_a_time": true,
+          "show_explanation_before_calculation": true,
+          "show_conclusion_after_each_step": true,
+          "avoid_unproved_previous_results": true
+        },
+        "academy_presentation": {
+          "show_problem_data_first": true,
+          "show_method_choice": true,
+          "show_reason_before_calculation": true,
+          "show_calculation_line_by_line": true,
+          "show_sign_analysis": true,
+          "show_final_conclusion": true,
+          "show_common_mistakes": true,
+          "show_progressive_hints": true
+        },
+        "academy_understanding_check": [
+          "لماذا اخترنا هذه الطريقة؟",
+          "ما إشارة الفرق أو الخارج؟ ولماذا؟",
+          "هل الاتجاه تام أم غير تام؟",
+          "ما المجال الذي تصح عليه النتيجة؟"
+        ],
+        "academy_success_criteria": [
+          "اختيار الأداة المناسبة.",
+          "حساب صحيح دون قفزات.",
+          "تحديد الإشارة مع التبرير.",
+          "التمييز بين الرتابة والرتابة التامة.",
+          "ذكر المجال في الخاتمة."
+        ]
+      },
+      "original_text": "لتكن \\((u_n)\\) معرفة بـ \\(u_n=\\sqrt{n+2}-\\sqrt{n+1}\\). ادرس اتجاه تغيرها على \\(\\mathbb N\\).",
+      "standalone_text": "لتكن \\((u_n)\\) معرفة بـ \\(u_n=\\sqrt{n+2}-\\sqrt{n+1}\\). ادرس اتجاه تغيرها على \\(\\mathbb N\\).",
+      "review_status": "axis04_practice_mathematically_reviewed",
+      "training_order": 11,
+      "academy_level": "متقدم",
+      "method_focus": "استعمال المرافق ثم المقارنة",
+      "pedagogical_goal": "التدرب على تحويل فرق جذور إلى عبارة موجبة أسهل للمقارنة.",
+      "selection_reason": "مختار لتحقيق تدرج منهجي داخل المحور دون الخروج إلى موضوع النهايات.",
+      "axis_scope": "اتجاه تغير المتتالية فقط"
+    },
+    {
+      "id": "axis04_monotonicity_practice_12",
+      "year": null,
+      "source_file": null,
+      "source_page": null,
+      "exercise": "axis04_practice_12",
+      "number": "12",
+      "text": "لتكن \\((u_n)\\) معرفة بـ \\(u_n=\\frac{3^n}{n!}\\). ادرس اتجاه تغيرها على \\(\\mathbb N\\)، وحدد متى تتزايد ومتى تتناقص.",
+      "context": "\\(u_n=\\frac{3^n}{n!}>0\\).",
+      "tag": "seq_monotonicity",
+      "axis": "اتجاه تغير المتتالية ودراسة اتجاه التغير",
+      "secondary_tags": [],
+      "skill": "دراسة اتجاه تغير المتتالية",
+      "difficulty": "hard",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "pedagogical_relevance": "تمرين تدريبي مرتبط مباشرة بمحور اتجاه تغير المتتالية، ويركز على مقارنة حدين متتاليين واختيار الطريقة المناسبة.",
+      "solution": {
+        "strategy": "خارج حدين وتغير الاتجاه",
+        "student_friendly_intro": "نحدد أولًا الطريقة الأنسب للمقارنة بين حدين متتاليين، ثم نجري الحساب خطوة بخطوة، وندرس الإشارة بدقة، وأخيرًا نكتب اتجاه التغير مع المجال.",
+        "what_we_know": [
+          "\\(u_n=\\frac{3^n}{n!}>0\\)."
+        ],
+        "what_we_need_to_show": "تحديد اتجاه تغير المتتالية وكتابة استنتاج مبرر.",
+        "method_name": "خارج حدين وتغير الاتجاه",
+        "why_this_method": "دراسة مثال مركب تتغير فيه الرتابة حسب الرتبة.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "الإيجابية",
+            "goal": "تأمين استعمال الخارج.",
+            "explanation": "كل الحدود موجبة.",
+            "rule_used": "شرط الخارج",
+            "calculation_lines": [
+              "\\(u_n>0\\) لكل \\(n\\)."
+            ],
+            "result": "يمكن استعمال u_{n+1}/u_n."
+          },
+          {
+            "order": 2,
+            "title": "الخارج",
+            "goal": "تبسيط المقارنة.",
+            "explanation": "نختزل القوى والعاملي.",
+            "rule_used": "خارج حدين",
+            "calculation_lines": [
+              "\\(\\frac{u_{n+1}}{u_n}=\\frac3{n+1}\\)."
+            ],
+            "result": "نقارن بـ1."
+          },
+          {
+            "order": 3,
+            "title": "دراسة الحالات",
+            "goal": "تحديد الرتب.",
+            "explanation": "نحل المقارنة مع 1.",
+            "rule_used": "مقارنة",
+            "calculation_lines": [
+              "إذا \\(n=0,1\\): \\(\\frac3{n+1}>1\\).",
+              "إذا \\(n=2\\): \\(\\frac3{n+1}=1\\).",
+              "إذا \\(n\\ge3\\): \\(0<\\frac3{n+1}<1\\)."
+            ],
+            "result": "الاتجاه يتغير."
+          },
+          {
+            "order": 4,
+            "title": "الخاتمة الدقيقة",
+            "goal": "تمييز الرتابة والتامة.",
+            "explanation": "نترجم الخارج إلى مقارنات.",
+            "rule_used": "قاعدة الخارج",
+            "calculation_lines": [
+              "\\(u_0<u_1<u_2=u_3\\).",
+              "ثم \\(u_{n+1}<u_n\\) لكل \\(n\\ge3\\)."
+            ],
+            "result": "ليست رتيبة على كامل N؛ تتزايد حتى u_2، ويتساوى u_2 وu_3، ثم تتناقص تمامًا ابتداءً من الرتبة 3."
+          }
+        ],
+        "final_answer": "ليست رتيبة على كامل \\(\\mathbb N\\): \\(u_0<u_1<u_2=u_3\\)، ثم تتناقص تمامًا ابتداءً من الرتبة \\(3\\).",
+        "verification": "تم التحقق من الحساب، وإشارة الفرق أو الخارج، ومن المجال الذي يصح عليه الاستنتاج.",
+        "common_mistakes": [
+          {
+            "mistake": "الاكتفاء بحساب بعض الحدود والحكم على الاتجاه.",
+            "correction": "حساب حدود قليلة يعطي تخمينًا فقط؛ يجب تقديم مقارنة عامة بين u_{n+1} وu_n."
+          },
+          {
+            "mistake": "نسيان دراسة إشارة العبارة المحسوبة.",
+            "correction": "بعد حساب الفرق أو الخارج يجب تحديد إشارته ثم ربطها باتجاه التغير."
+          },
+          {
+            "mistake": "نسيان المجال أو رتبة البداية.",
+            "correction": "قد يتغير الاتجاه حسب n، لذلك يجب ذكر المجال بدقة."
+          }
+        ],
+        "hints": [
+          "استعمل الخارج لأن الحدود موجبة.",
+          "حل 3/(n+1)>1 و=1 و<1."
+        ],
+        "understanding_check": [
+          "ما الطريقة المستعملة في هذا التمرين؟",
+          "ما العبارة التي حددنا إشارتها؟",
+          "كيف انتقلنا من الإشارة إلى اتجاه تغير المتتالية؟"
+        ],
+        "bac_writing": [
+          "نحسب العبارة المناسبة للمقارنة بين حدين متتاليين.",
+          "ندرس إشارتها على المجال المطلوب.",
+          "نحوّل الإشارة إلى مقارنة بين u_{n+1} وu_n.",
+          "نكتب الاستنتاج النهائي مع ذكر المجال."
+        ],
+        "is_complete": true,
+        "audience": "تلميذ السنة الثالثة ثانوي - بكالوريا الجزائر",
+        "solution_presentation": {
+          "style": "simple_detailed_axis_04_only",
+          "show_one_step_at_a_time": true,
+          "show_explanation_before_calculation": true,
+          "show_conclusion_after_each_step": true,
+          "avoid_unproved_previous_results": true
+        },
+        "academy_presentation": {
+          "show_problem_data_first": true,
+          "show_method_choice": true,
+          "show_reason_before_calculation": true,
+          "show_calculation_line_by_line": true,
+          "show_sign_analysis": true,
+          "show_final_conclusion": true,
+          "show_common_mistakes": true,
+          "show_progressive_hints": true
+        },
+        "academy_understanding_check": [
+          "لماذا اخترنا هذه الطريقة؟",
+          "ما إشارة الفرق أو الخارج؟ ولماذا؟",
+          "هل الاتجاه تام أم غير تام؟",
+          "ما المجال الذي تصح عليه النتيجة؟"
+        ],
+        "academy_success_criteria": [
+          "اختيار الأداة المناسبة.",
+          "حساب صحيح دون قفزات.",
+          "تحديد الإشارة مع التبرير.",
+          "التمييز بين الرتابة والرتابة التامة.",
+          "ذكر المجال في الخاتمة."
+        ]
+      },
+      "original_text": "لتكن \\((u_n)\\) معرفة بـ \\(u_n=\\frac{3^n}{n!}\\). ادرس اتجاه تغيرها على \\(\\mathbb N\\)، وحدد متى تتزايد ومتى تتناقص.",
+      "standalone_text": "لتكن \\((u_n)\\) معرفة بـ \\(u_n=\\frac{3^n}{n!}\\). ادرس اتجاه تغيرها على \\(\\mathbb N\\)، وحدد متى تتزايد ومتى تتناقص.",
+      "review_status": "axis04_practice_mathematically_reviewed",
+      "training_order": 12,
+      "academy_level": "متقدم",
+      "method_focus": "خارج حدين وتغير الاتجاه",
+      "pedagogical_goal": "دراسة مثال مركب تتغير فيه الرتابة حسب الرتبة.",
+      "selection_reason": "مختار لتحقيق تدرج منهجي داخل المحور دون الخروج إلى موضوع النهايات.",
+      "axis_scope": "اتجاه تغير المتتالية فقط"
+    },
+    {
+      "id": "axis04_monotonicity_practice_13",
+      "year": null,
+      "source_file": null,
+      "source_page": null,
+      "exercise": "axis04_practice_13",
+      "number": "13",
+      "text": "لتكن \\((u_n)\\) معرفة بـ \\(u_0=2\\) و\\(u_{n+1}=\\frac{2u_n+3}{u_n+2}\\). أثبت أن \\(1<u_n\\le2\\) لكل \\(n\\)، ثم ادرس اتجاه تغيرها.",
+      "context": "\\(u_0=2\\), \\(u_{n+1}=\\frac{2u_n+3}{u_n+2}\\).",
+      "tag": "seq_monotonicity",
+      "axis": "اتجاه تغير المتتالية ودراسة اتجاه التغير",
+      "secondary_tags": [],
+      "skill": "دراسة اتجاه تغير المتتالية",
+      "difficulty": "hard",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "pedagogical_relevance": "تمرين تدريبي مرتبط مباشرة بمحور اتجاه تغير المتتالية، ويركز على مقارنة حدين متتاليين واختيار الطريقة المناسبة.",
+      "solution": {
+        "strategy": "حصر مساعد ثم إشارة كسر",
+        "student_friendly_intro": "نحدد أولًا الطريقة الأنسب للمقارنة بين حدين متتاليين، ثم نجري الحساب خطوة بخطوة، وندرس الإشارة بدقة، وأخيرًا نكتب اتجاه التغير مع المجال.",
+        "what_we_know": [
+          "\\(u_0=2\\), \\(u_{n+1}=\\frac{2u_n+3}{u_n+2}\\)."
+        ],
+        "what_we_need_to_show": "تحديد اتجاه تغير المتتالية وكتابة استنتاج مبرر.",
+        "method_name": "حصر مساعد ثم إشارة كسر",
+        "why_this_method": "تجميع مهارات المحور في تمرين واحد: حصر، إشارة مقام، فرق، وخاتمة دقيقة.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "التحقق من الحصر",
+            "goal": "فحص الحد الأول.",
+            "explanation": "نعوض u0.",
+            "rule_used": "تحقق مباشر",
+            "calculation_lines": [
+              "\\(1<u_0=2\\le2\\)."
+            ],
+            "result": "الحصر صحيح عند البداية."
+          },
+          {
+            "order": 2,
+            "title": "انتقال الحصر",
+            "goal": "إثبات 1<u_{n+1}≤2.",
+            "explanation": "نفترض 1<u_n≤2 ونستعمل فروقًا مع الحدين 1 و2.",
+            "rule_used": "تراجع",
+            "calculation_lines": [
+              "\\(u_{n+1}-1=\\frac{u_n+1}{u_n+2}>0\\).",
+              "\\(2-u_{n+1}=\\frac{1}{u_n+2}>0\\)."
+            ],
+            "result": "إذن 1<u_{n+1}<2، ومنه الحصر وراثي."
+          },
+          {
+            "order": 3,
+            "title": "حساب الفرق",
+            "goal": "تحديد اتجاه التغير.",
+            "explanation": "نطرح u_n ونحلل البسط.",
+            "rule_used": "طريقة الفرق",
+            "calculation_lines": [
+              "\\(u_{n+1}-u_n=\\frac{2u_n+3-u_n(u_n+2)}{u_n+2}\\).",
+              "\\(=\\frac{3-u_n^2}{u_n+2}\\)."
+            ],
+            "result": "إشارة الفرق تتوقف على مقارنة u_n بـ√3."
+          },
+          {
+            "order": 4,
+            "title": "ملاحظة الحدود الأولى",
+            "goal": "تحديد هل الحصر كافٍ.",
+            "explanation": "الحصر 1<u_n≤2 لا يحدد وحده إشارة 3-u_n²؛ نحسب أول انتقال لفهم الوضع.",
+            "rule_used": "حساب مباشر",
+            "calculation_lines": [
+              "\\(u_1=\\frac{7}{4}=1.75>\\sqrt3\\)."
+            ],
+            "result": "نحتاج نتيجة أدق لضمان الإشارة."
+          },
+          {
+            "order": 5,
+            "title": "النتيجة المساعدة الأدق",
+            "goal": "إثبات u_n>√3.",
+            "explanation": "نلاحظ أن الدالة g(x)=(2x+3)/(x+2) تحقق g(x)-√3=((2-√3)x+3-2√3)/(x+2)، وهي موجبة إذا x>√3.",
+            "rule_used": "حصر مساعد",
+            "calculation_lines": [
+              "\\(u_0=2>\\sqrt3\\).",
+              "إذا \\(u_n>\\sqrt3\\)، فإن \\((2-\\sqrt3)u_n+3-2\\sqrt3>(2-\\sqrt3)\\sqrt3+3-2\\sqrt3=0\\).",
+              "إذن \\(u_{n+1}>\\sqrt3\\)."
+            ],
+            "result": "إذن u_n>√3 لكل n."
+          },
+          {
+            "order": 6,
+            "title": "الإشارة والخاتمة",
+            "goal": "إنهاء دراسة الاتجاه.",
+            "explanation": "بما أن u_n>√3 فـ3-u_n²<0، والمقام موجب.",
+            "rule_used": "إشارة كسر",
+            "calculation_lines": [
+              "\\(3-u_n^2<0\\), \\(u_n+2>0\\).",
+              "\\(u_{n+1}-u_n<0\\)."
+            ],
+            "result": "المتتالية متناقصة تمامًا على \\(\\mathbb N\\)."
+          }
+        ],
+        "final_answer": "لدينا \\(1<u_n\\le2\\) لكل \\(n\\)، وفي الحقيقة \\(u_n>\\sqrt3\\)، ومنه \\((u_n)\\) متناقصة تمامًا على \\(\\mathbb N\\).",
+        "verification": "تم التحقق من الحساب، وإشارة الفرق أو الخارج، ومن المجال الذي يصح عليه الاستنتاج.",
+        "common_mistakes": [
+          {
+            "mistake": "الاكتفاء بحساب بعض الحدود والحكم على الاتجاه.",
+            "correction": "حساب حدود قليلة يعطي تخمينًا فقط؛ يجب تقديم مقارنة عامة بين u_{n+1} وu_n."
+          },
+          {
+            "mistake": "نسيان دراسة إشارة العبارة المحسوبة.",
+            "correction": "بعد حساب الفرق أو الخارج يجب تحديد إشارته ثم ربطها باتجاه التغير."
+          },
+          {
+            "mistake": "نسيان المجال أو رتبة البداية.",
+            "correction": "قد يتغير الاتجاه حسب n، لذلك يجب ذكر المجال بدقة."
+          }
+        ],
+        "hints": [
+          "ابدأ بالحصر المطلوب.",
+          "عند دراسة الفرق ستظهر √3.",
+          "أثبت u_n>√3 قبل الحكم على إشارة الفرق."
+        ],
+        "understanding_check": [
+          "ما الطريقة المستعملة في هذا التمرين؟",
+          "ما العبارة التي حددنا إشارتها؟",
+          "كيف انتقلنا من الإشارة إلى اتجاه تغير المتتالية؟"
+        ],
+        "bac_writing": [
+          "نحسب العبارة المناسبة للمقارنة بين حدين متتاليين.",
+          "ندرس إشارتها على المجال المطلوب.",
+          "نحوّل الإشارة إلى مقارنة بين u_{n+1} وu_n.",
+          "نكتب الاستنتاج النهائي مع ذكر المجال."
+        ],
+        "is_complete": true,
+        "audience": "تلميذ السنة الثالثة ثانوي - بكالوريا الجزائر",
+        "solution_presentation": {
+          "style": "simple_detailed_axis_04_only",
+          "show_one_step_at_a_time": true,
+          "show_explanation_before_calculation": true,
+          "show_conclusion_after_each_step": true,
+          "avoid_unproved_previous_results": true
+        },
+        "academy_presentation": {
+          "show_problem_data_first": true,
+          "show_method_choice": true,
+          "show_reason_before_calculation": true,
+          "show_calculation_line_by_line": true,
+          "show_sign_analysis": true,
+          "show_final_conclusion": true,
+          "show_common_mistakes": true,
+          "show_progressive_hints": true
+        },
+        "academy_understanding_check": [
+          "لماذا اخترنا هذه الطريقة؟",
+          "ما إشارة الفرق أو الخارج؟ ولماذا؟",
+          "هل الاتجاه تام أم غير تام؟",
+          "ما المجال الذي تصح عليه النتيجة؟"
+        ],
+        "academy_success_criteria": [
+          "اختيار الأداة المناسبة.",
+          "حساب صحيح دون قفزات.",
+          "تحديد الإشارة مع التبرير.",
+          "التمييز بين الرتابة والرتابة التامة.",
+          "ذكر المجال في الخاتمة."
+        ]
+      },
+      "original_text": "لتكن \\((u_n)\\) معرفة بـ \\(u_0=2\\) و\\(u_{n+1}=\\frac{2u_n+3}{u_n+2}\\). أثبت أن \\(1<u_n\\le2\\) لكل \\(n\\)، ثم ادرس اتجاه تغيرها.",
+      "standalone_text": "لتكن \\((u_n)\\) معرفة بـ \\(u_0=2\\) و\\(u_{n+1}=\\frac{2u_n+3}{u_n+2}\\). أثبت أن \\(1<u_n\\le2\\) لكل \\(n\\)، ثم ادرس اتجاه تغيرها.",
+      "review_status": "axis04_practice_mathematically_reviewed",
+      "training_order": 13,
+      "academy_level": "متقدم جدًا",
+      "method_focus": "حصر مساعد ثم إشارة كسر",
+      "pedagogical_goal": "تجميع مهارات المحور في تمرين واحد: حصر، إشارة مقام، فرق، وخاتمة دقيقة.",
+      "selection_reason": "مختار لتحقيق تدرج منهجي داخل المحور دون الخروج إلى موضوع النهايات.",
+      "axis_scope": "اتجاه تغير المتتالية فقط"
+    }
+  ]
+}

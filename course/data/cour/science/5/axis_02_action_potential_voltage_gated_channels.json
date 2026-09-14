@@ -1,0 +1,411 @@
+{
+  "tag": "action_potential_voltage_gated_channels",
+  "title": "كمون العمل ودور القنوات الفولطية",
+  "order": 2,
+  "is_active": true,
+  "branches": ["science"],
+  "content": {
+    "language": "ar",
+    "direction": "rtl",
+    "chapter_code": "neural_communication",
+    "chapter_title": "الاتصال العصبي",
+    "axis_tag": "action_potential_voltage_gated_channels",
+    "estimated_minutes": 50,
+    "difficulty": "medium",
+    "lesson_goal": "أن يفسر التلميذ مراحل كمون العمل بفتح وغلق القنوات البروتينية المرتبطة بالفولطية وحركة شوارد Na⁺ وK⁺.",
+    "prerequisites": [
+      "معرفة كمون الراحة واستقطاب الغشاء وقيمته التقريبية -70 mV.",
+      "معرفة أن Na⁺ أعلى تركيزا خارج الليف وK⁺ أعلى تركيزا داخله.",
+      "التمييز بين قنوات التسرب ومضخة Na⁺/K⁺."
+    ],
+    "learning_outcomes": [
+      "يتعرف على منحنى كمون العمل ويسمي مراحله بالترتيب.",
+      "يحسب سعة كمون العمل ومدته من سلم الوثيقة.",
+      "يميز بين التنبيه دون العتبة والتنبيه الفعال ويطبق قانون الكل أو لا شيء.",
+      "يربط زوال الاستقطاب وانقلابه بتدفق Na⁺ نحو الداخل.",
+      "يربط عودة الاستقطاب وفرطه بتدفق K⁺ نحو الخارج.",
+      "يحلل تسجيلات Patch-Clamp ويميز التيار الداخل من التيار الخارج.",
+      "يستغل TTX لتحديد تيار Na⁺ ويستغل TEA لتحديد تيار K⁺.",
+      "يميز الدور السريع للقنوات الفولطية من دور المضخة في استرجاع التوزع الشاردي.",
+      "يفسر الطبيعة الكهربائية للرسالة العصبية على طول الليف."
+    ],
+    "learning_path": [
+      {
+        "id": "step_1",
+        "type": "problem",
+        "component": "DiscoveryQuestion",
+        "title": "كيف يتحول الغشاء من -70 إلى +30 mV؟",
+        "content": {
+          "question": "بعد تنبيه فعال يرتفع الكمون الغشائي بسرعة من نحو -70 mV إلى +30 mV ثم يعود إلى الراحة خلال بضعة ميلي ثوان. ما الذي تحرك عبر الغشاء؟ وما البروتينات التي سمحت بذلك؟",
+          "teacher": "سنقرأ المنحنى أولا، ثم نستعمل Patch-Clamp والمثبطات لتعيين الشاردة المسؤولة عن كل مرحلة.",
+          "action": {"label": "اقرأ منحنى كمون العمل", "next_step": "step_2"}
+        },
+        "display_order": 1
+      },
+      {
+        "id": "step_2",
+        "type": "real_evidence",
+        "component": "RealEvidenceGallery",
+        "title": "الدليل 1: بطاقة هوية كمون العمل",
+        "content": {
+          "intro": "يسجل الشكل (أ) تغير الكمون الغشائي بعد تنبيه فعال، ويبين الشكل (ب) انتقال موجة التغير على طول الليف.",
+          "figures": [{
+            "src": "/science/neural-communication/axis-02/action_potential_and_propagation.png",
+            "alt": "منحنى كمون العمل وانتقال موجة زوال الاستقطاب على طول ليف عصبي",
+            "caption": "يرتفع الكمون من -70 إلى +30 mV ثم يعود ويمر بفرط استقطاب قبل استعادة كمون الراحة.",
+            "source_label": "الوثيقة 1 - الصفحة 1 من ملف كمون العمل"
+          }],
+          "guided_reading": [
+            {"label": "من 1 إلى 2", "text": "زوال استقطاب سريع، يعبر الكمون قيمة 0 mV ويصل إلى نحو +30 mV؛ والجزء الموجب يسمى انقلاب الاستقطاب."},
+            {"label": "من 2 إلى 3", "text": "عودة الاستقطاب: ينخفض الكمون من القمة نحو قيمة الراحة."},
+            {"label": "من 3 إلى 4", "text": "فرط الاستقطاب: يصبح الكمون أكثر سلبية من قيمة الراحة مدة قصيرة."},
+            {"label": "من 4 إلى 5", "text": "العودة التدريجية إلى كمون الراحة."},
+            {"label": "المدة والسعة", "text": "حسب الوثيقة تدوم الظاهرة نحو 3 ms، وسعتها = القيمة القصوى - قيمة الراحة = +30 - (-70) = 100 mV."}
+          ],
+          "takeaway": "كمون العمل تغير سريع ومؤقت للكمون الغشائي ينتج عن تنبيه فعال، وليس بقاء الغشاء عند قيمة موجبة."
+        },
+        "display_order": 2
+      },
+      {
+        "id": "step_3",
+        "type": "short_explanation",
+        "component": "ShortExplanation",
+        "title": "العتبة وقانون الكل أو لا شيء",
+        "content": {
+          "blocks": [
+            {"title": "تنبيه دون العتبة", "text": "يحدث تغيرا محليا صغيرا لا يبلغ عتبة زوال الاستقطاب، فلا يتولد كمون عمل."},
+            {"title": "تنبيه فعال", "text": "يرفع الكمون إلى العتبة، فتفتح أعداد كافية من قنوات Na⁺ الفولطية وينطلق كمون عمل كامل."},
+            {"title": "الكل أو لا شيء", "text": "إما ألا يتولد كمون عمل إذا لم تبلغ العتبة، وإما أن يتولد بسعته النمطية بعد بلوغها؛ رفع شدة التنبيه فوق العتبة لا يرفع سعة كل كمون عمل."}
+          ],
+          "memory_tip": "دون العتبة: لا كمون عمل. عند العتبة أو فوقها: كمون عمل كامل.",
+          "attention": "تزداد شدة الرسالة عادة بزيادة تواتر كمونات العمل، لا بزيادة سعة كمون العمل الواحد."
+        },
+        "display_order": 3
+      },
+      {
+        "id": "step_4",
+        "type": "real_evidence",
+        "component": "RealEvidenceGallery",
+        "title": "الدليل 2: Patch-Clamp يفصل التيارين",
+        "content": {
+          "intro": "يفرض كمون يزيل استقطاب قطعة غشائية، ثم تسجل التيارات العابرة في الظروف العادية وبوجود مثبط نوعي لكل قناة.",
+          "figures": [{
+            "src": "/science/neural-communication/axis-02/patch_clamp_ttx_tea.png",
+            "alt": "تسجيلات Patch-Clamp في الظروف العادية وبوجود TTX أو TEA",
+            "caption": "في الظروف العادية يظهر تيار داخل سريع يليه تيار خارج أبطأ؛ TTX يلغي الداخل وTEA يلغي الخارج.",
+            "source_label": "الوثيقة 2 - الصفحة 2"
+          }],
+          "guided_reading": [
+            {"label": "الظروف العادية", "text": "يظهر أولا تيار أيوني داخل سريع وقصير، ثم تيار أيوني خارج أبطأ وأطول."},
+            {"label": "مع TTX", "text": "يختفي التيار الداخل ويبقى التيار الخارج. بما أن TTX يثبط قنوات Na⁺، فالتيار الداخل هو دخول Na⁺."},
+            {"label": "مع TEA", "text": "يختفي التيار الخارج ويبقى التيار الداخل. بما أن TEA يثبط قنوات K⁺، فالتيار الخارج هو خروج K⁺."},
+            {"label": "الترتيب الزمني", "text": "قنوات Na⁺ تستجيب بسرعة، بينما تتأخر قنوات K⁺ وتبقى مفتوحة مدة أطول."}
+          ],
+          "takeaway": "تثبت المقارنة التجريبية أن التيار الداخل السريع محمول على Na⁺ وأن التيار الخارج المتأخر محمول على K⁺."
+        },
+        "display_order": 4
+      },
+      {
+        "id": "step_5",
+        "type": "key_rule",
+        "component": "KeyRuleCard",
+        "title": "طريقة تحليل المثبطات دون حفظ أعمى",
+        "content": {
+          "rule": "إذا أدى مثبط نوعي إلى اختفاء جزء من التسجيل، فإن الجزء المختفي يكشف التيار والقناة اللذين ثبطهما.",
+          "simple_flow": "TTX يثبط قناة Na⁺ → اختفاء التيار الداخل → Na⁺ مسؤول عن الداخل؛ TEA يثبط قناة K⁺ → اختفاء التيار الخارج → K⁺ مسؤول عن الخارج",
+          "do_not_confuse": [
+            "TTX لا يثبت وحده اتجاه K⁺؛ إنه يعزل أثر Na⁺ بالمقارنة.",
+            "TEA لا يحول تيار K⁺ إلى تيار Na⁺؛ بل يمنع مكون K⁺ فيبقى المكون الآخر ظاهرا.",
+            "الإشارة السالبة للتيار في الوثيقة اصطلاح تسجيل لتيار داخل، وليست كمونا غشائيا سالبا."
+          ],
+          "memory_tip": "اعرف ما ثُبط، ثم انسب إليه الجزء الذي اختفى."
+        },
+        "display_order": 5
+      },
+      {
+        "id": "step_6",
+        "type": "real_evidence",
+        "component": "RealEvidenceGallery",
+        "title": "الدليل 3: اربط التيارات بمراحل المنحنى",
+        "content": {
+          "intro": "تجمع الوثيقة في محور زمني واحد كمون الغشاء وتدفق Na⁺ وK⁺ وحالة القنوات الفولطية.",
+          "figures": [{
+            "src": "/science/neural-communication/axis-02/ionic_currents_channel_states.png",
+            "alt": "العلاقة بين منحنى كمون العمل وتدفق الصوديوم والبوتاسيوم وحالات القنوات الفولطية",
+            "caption": "يفتح Na⁺ بسرعة ثم يصبح غير نشط، بينما يفتح K⁺ بتأخر ويستمر خروجه خلال عودة وفرط الاستقطاب.",
+            "source_label": "الوثيقة 3 - الصفحة 2"
+          }],
+          "guided_reading": [
+            {"label": "بداية زوال الاستقطاب", "text": "بلوغ العتبة يفتح قنوات Na⁺ الفولطية بسرعة، فيدخل Na⁺ وفق تدرجه ويرتفع الكمون."},
+            {"label": "انقلاب الاستقطاب", "text": "يستمر دخول Na⁺ زمنا قصيرا حتى يصبح داخل الغشاء موجبا بالنسبة إلى الخارج."},
+            {"label": "عند القمة", "text": "تدخل قنوات Na⁺ حالة عدم النشاط، وفي الوقت نفسه تكون قنوات K⁺ المتأخرة قد فتحت."},
+            {"label": "عودة الاستقطاب", "text": "يتوقف معظم دخول Na⁺ ويزداد خروج K⁺، فينخفض الكمون نحو قيمة الراحة."},
+            {"label": "فرط الاستقطاب", "text": "يتواصل خروج K⁺ لأن قنواته تغلق ببطء، فينخفض الكمون مؤقتا تحت قيمة الراحة."},
+            {"label": "استعادة الراحة", "text": "تغلق قنوات K⁺ الفولطية، وتعود القنوات إلى حالة الاستعداد، وتحافظ المضخة مع قنوات التسرب على التوزع الشاردي الأصلي."
+            }
+          ],
+          "takeaway": "تعاقب فتح وعدم تنشيط قنوات Na⁺ ثم فتح وغلق قنوات K⁺ هو الذي يصنع الشكل الزمني لكمون العمل."
+        },
+        "display_order": 6
+      },
+      {
+        "id": "step_7",
+        "type": "comparison",
+        "component": "VisualComparison",
+        "title": "قناتا Na⁺ وK⁺ الفولطيتان",
+        "content": {
+          "columns": [
+            {"title": "قناة Na⁺ الفولطية", "items": ["تفتح بسرعة عند بلوغ العتبة", "تسمح بتدفق Na⁺ نحو الداخل", "تصنع زوال وانقلاب الاستقطاب", "تصبح غير نشطة بسرعة", "لها حالات: مغلقة، مفتوحة، غير نشطة"]},
+            {"title": "قناة K⁺ الفولطية", "items": ["تفتح بتأخر", "تسمح بتدفق K⁺ نحو الخارج", "تصنع عودة الاستقطاب", "تغلق ببطء فتسبب فرط الاستقطاب", "تمثل في الدرس بحالتين: مغلقة ومفتوحة"]}
+          ],
+          "attention": "كلا التدفقين سلبي وفق التدرج الكهروكيميائي؛ القناة تستجيب للفولطية لكنها لا تضخ الشاردة باستعمال ATP.",
+          "memory_tip": "Na⁺ سريع إلى الداخل؛ K⁺ متأخر إلى الخارج."
+        },
+        "display_order": 7
+      },
+      {
+        "id": "step_8",
+        "type": "real_evidence",
+        "component": "RealEvidenceGallery",
+        "title": "صورة وظيفية للغشاء أثناء المرحلتين",
+        "content": {
+          "intro": "يلخص المخطط حالة القنوات ومسار الشوارد في زوال الاستقطاب ثم عودة وفرط الاستقطاب.",
+          "figures": [{
+            "src": "/science/neural-communication/axis-02/functional_membrane_phases.png",
+            "alt": "مخطط غشائي يقارن زوال الاستقطاب بعودة وفرط الاستقطاب",
+            "caption": "في زوال الاستقطاب تفتح قنوات Na⁺، وفي عودة وفرط الاستقطاب تغلق أو تتعطل قنوات Na⁺ وتفتح قنوات K⁺.",
+            "source_label": "رسم التقويم - الصفحة 4"
+          }],
+          "guided_reading": [
+            {"label": "زوال الاستقطاب", "text": "القناة الفولطية لـNa⁺ مفتوحة فيدخل Na⁺، بينما تكون قناة K⁺ الفولطية في بداية الاستجابة مغلقة."},
+            {"label": "عودة وفرط الاستقطاب", "text": "قناة Na⁺ ليست في حالة مرور، وتكون قناة K⁺ مفتوحة فيخرج K⁺."},
+            {"label": "المضخة", "text": "تعمل في الخلفية لاسترجاع وحفظ التدرجات، لكنها ليست سبب الهبوط السريع في عودة الاستقطاب."
+            }
+          ],
+          "takeaway": "سبب المراحل السريعة هو تغير حالة القنوات الفولطية؛ المضخة تعيد التوازن الشاردي على المدى الأطول."
+        },
+        "display_order": 8
+      },
+      {
+        "id": "step_9",
+        "type": "real_evidence",
+        "component": "RealEvidenceGallery",
+        "title": "كيف تعمل تقنية فرض الكمون؟",
+        "content": {
+          "intro": "تفرض التقنية قيمة محددة للكمون الغشائي ثم تقيس التيار اللازم للمحافظة عليها؛ وبذلك يمكن عزل أثر تغير الفولطية على القنوات.",
+          "figures": [{
+            "src": "/science/neural-communication/axis-02/voltage_clamp_setup.png",
+            "alt": "تركيب تجريبي لقياس وفرض كمون على غشاء ليف عصبي",
+            "caption": "يقارن الجهاز الكمون المقاس بالقيمة المفروضة ويرسل تيارا مصححا، ثم يسجل التيار العابر للغشاء.",
+            "source_label": "وثيقة المصطلحات العلمية - الصفحة 4"
+          }],
+          "guided_reading": [
+            {"label": "الفرض", "text": "يغير الجهاز الكمون من قيمة الراحة إلى قيمة تجريبية محددة مدة معلومة."},
+            {"label": "القياس", "text": "يسجل التيار الذي يظهر نتيجة فتح القنوات الحساسة للفولطية."},
+            {"label": "في Patch-Clamp", "text": "يطبق المبدأ نفسه على رقعة غشائية صغيرة، ما يسمح بدراسة القنوات الموجودة فيها بدقة."}
+          ],
+          "takeaway": "التقنية لا تسجل كمون عمل عاديا فقط؛ إنها تتحكم في الفولطية لتكشف التيارات الأيونية الناتجة عن القنوات."
+        },
+        "display_order": 9
+      },
+      {
+        "id": "step_10",
+        "type": "key_rule",
+        "component": "KeyRuleCard",
+        "title": "دور مضخة Na⁺/K⁺ دون مبالغة",
+        "content": {
+          "rule": "القنوات الفولطية تصنع التغير السريع في كمون العمل، أما مضخة Na⁺/K⁺ المستهلكة لـATP فتحافظ على تدرجات Na⁺ وK⁺ وتعيد التوزع الشاردي بعد النشاط المتكرر.",
+          "simple_flow": "قنوات Na⁺ وK⁺ → مراحل كمون العمل خلال ms؛ مضخة Na⁺/K⁺ + ATP → حفظ واسترجاع التدرجات",
+          "do_not_confuse": [
+            "عودة الاستقطاب السريعة سببها خروج K⁺ عبر القنوات الفولطية، لا عمل المضخة وحدها.",
+            "المضخة تخرج 3 Na⁺ وتدخل 2 K⁺ عكس تدرجهما.",
+            "فتح القنوات الفولطية لا يستهلك ATP مباشرة."
+          ],
+          "memory_tip": "القناة تصنع الموجة؛ المضخة تحفظ البطارية الشاردية."
+        },
+        "display_order": 10
+      },
+      {
+        "id": "step_11",
+        "type": "quick_check",
+        "component": "QuickCheck",
+        "title": "اختبر الربط بين المنحنى والقنوات",
+        "content": {
+          "questions": [
+            {"id": "qc1", "question": "من -70 إلى +30 mV، ما الحدث الغالب؟", "choices": ["دخول Na⁺ عبر قنواته الفولطية", "خروج Na⁺ بالمضخة", "دخول K⁺ عبر قنواته"], "correct_answer": "دخول Na⁺ عبر قنواته الفولطية", "explanation": "دخول الشحنات الموجبة يزيل الاستقطاب ويقلبه."},
+            {"id": "qc2", "question": "لماذا يحدث فرط الاستقطاب؟", "choices": ["تأخر غلق قنوات K⁺ واستمرار خروجه", "استمرار فتح قنوات Na⁺", "توقف كل حركة شاردية"], "correct_answer": "تأخر غلق قنوات K⁺ واستمرار خروجه", "explanation": "خروج K⁺ الإضافي يجعل الداخل أكثر سلبية مؤقتا."},
+            {"id": "qc3", "question": "في وجود TTX اختفى التيار الداخل. ما الاستنتاج؟", "choices": ["التيار الداخل محمول على Na⁺", "التيار الداخل محمول على K⁺", "المضخة هي التيار الداخل"], "correct_answer": "التيار الداخل محمول على Na⁺", "explanation": "TTX مثبط نوعي لقنوات Na⁺ في الوثيقة."}
+          ]
+        },
+        "display_order": 11
+      },
+      {
+        "id": "step_12",
+        "type": "bac_method",
+        "component": "BacMethodCard",
+        "title": "منهجية إجابة البكالوريا",
+        "content": {
+          "skill": "تفسير كمون العمل باستغلال منحنى الكمون وتسجيلات التيارات والمثبطات",
+          "method": [
+            {"label": "1. عرّف التسجيل", "text": "اذكر أنه كمون عمل ناتج عن تنبيه فعال، ثم سم المراحل واحسب المدة والسعة من السلمين."},
+            {"label": "2. حلل الشاهد", "text": "في الظروف العادية: تيار داخل سريع ثم تيار خارج متأخر."},
+            {"label": "3. استعمل TTX", "text": "اختفاء الداخل عند تثبيط قنوات Na⁺ يثبت أن هذا التيار ناتج عن دخول Na⁺."},
+            {"label": "4. استعمل TEA", "text": "اختفاء الخارج عند تثبيط قنوات K⁺ يثبت أن هذا التيار ناتج عن خروج K⁺."},
+            {"label": "5. ادمج", "text": "دخول Na⁺ يصنع زوال وانقلاب الاستقطاب، وخروج K⁺ يصنع عودة وفرط الاستقطاب، ثم تحفظ المضخة التدرجات."
+            }
+          ],
+          "bac_sentence": "يؤدي التنبيه الفعال وبلوغ العتبة إلى فتح سريع لقنوات Na⁺ الفولطية، فيتدفق Na⁺ نحو الداخل وينشأ زوال ثم انقلاب الاستقطاب. بعد ذلك تصبح قنوات Na⁺ غير نشطة وتفتح قنوات K⁺ بتأخر، فيخرج K⁺ فتحدث عودة الاستقطاب، ويؤدي تأخر غلق قنواته إلى فرط الاستقطاب. وتحافظ مضخة Na⁺/K⁺ المستهلكة لـATP على التدرجات الشاردية اللازمة لتكرار الظاهرة.",
+          "common_mistakes": [
+            "حساب السعة +30 - 70 بدل +30 - (-70).",
+            "اعتبار انقلاب الاستقطاب مرحلة منفصلة تماما عن زوال الاستقطاب؛ هو الجزء الذي تصبح فيه القيمة موجبة.",
+            "نسب عودة الاستقطاب السريعة إلى المضخة بدل خروج K⁺ عبر القنوات الفولطية.",
+            "عكس تأثير TTX وTEA.",
+            "القول إن شدة التنبيه فوق العتبة تزيد سعة كمون العمل الواحد."
+          ]
+        },
+        "display_order": 12
+      },
+      {
+        "id": "step_13",
+        "type": "final_visual_map",
+        "component": "InteractiveSummaryMap",
+        "title": "قصة كمون العمل في خريطة واحدة",
+        "content": {
+          "map": [
+            {"node": "تنبيه فعال", "relation": "يبلغ", "target": "عتبة زوال الاستقطاب"},
+            {"node": "قنوات Na⁺", "relation": "تفتح بسرعة ويدخل Na⁺", "target": "زوال وانقلاب الاستقطاب"},
+            {"node": "قنوات Na⁺", "relation": "تصبح غير نشطة", "target": "توقف التيار الداخل"},
+            {"node": "قنوات K⁺", "relation": "تفتح بتأخر ويخرج K⁺", "target": "عودة الاستقطاب"},
+            {"node": "قنوات K⁺", "relation": "تغلق ببطء", "target": "فرط الاستقطاب"},
+            {"node": "مضخة Na⁺/K⁺", "relation": "تحفظ التدرجات باستعمال ATP", "target": "جاهزية الليف لنشاط جديد"}
+          ],
+          "memory_tip": "Na⁺ يدخل أولا فيصعد المنحنى؛ K⁺ يخرج لاحقا فيهبط المنحنى.",
+          "next_axis_bridge": {"question": "كيف ينتقل كمون العمل على طول الليف ثم يحول إلى رسالة كيميائية عند المشبك؟", "next_concept": "آليات النقل المشبكي"}
+        },
+        "display_order": 13
+      },
+      {
+        "id": "step_14",
+        "type": "quiz",
+        "component": "FinalQuiz",
+        "title": "اختبار نهاية المحور",
+        "content": {
+          "questions": [
+            {"id": "q1", "question": "ارتفع الكمون من -70 إلى +30 mV. ما سعة كمون العمل؟", "choices": ["100 mV", "40 mV", "70 mV"], "correct_answer": "100 mV", "explanation": "+30 - (-70) = 100 mV."},
+            {"id": "q2", "question": "أي تسلسل صحيح؟", "choices": ["فتح Na⁺ ثم عدم تنشيطه وفتح K⁺", "فتح K⁺ ثم فتح Na⁺", "عمل المضخة ثم غلق جميع القنوات"], "correct_answer": "فتح Na⁺ ثم عدم تنشيطه وفتح K⁺", "explanation": "هذا التعاقب يفسر الصعود ثم الهبوط."},
+            {"id": "q3", "question": "ماذا يحدث مع تنبيه دون العتبة؟", "choices": ["لا يتولد كمون عمل", "يتولد كمون عمل نصف سعته", "تزداد سعة كمون العمل"], "correct_answer": "لا يتولد كمون عمل", "explanation": "هذا تطبيق لقانون الكل أو لا شيء."},
+            {"id": "q4", "question": "أي مثبط يسمح بعزل التيار الخارج لـK⁺ بإلغاء تيار Na⁺ الداخل؟", "choices": ["TTX", "TEA", "ATP"], "correct_answer": "TTX", "explanation": "TTX يثبط قنوات Na⁺ فيبقى مكون K⁺ الخارج."},
+            {"id": "q5", "question": "ما التفسير الأدق لعودة الاستقطاب؟", "choices": ["خروج K⁺ بعد فتح قنواته الفولطية", "دخول Na⁺ المستمر", "دخول K⁺ بواسطة التسرب"], "correct_answer": "خروج K⁺ بعد فتح قنواته الفولطية", "explanation": "خروج الشحنات الموجبة يعيد الداخل إلى السلبية."},
+            {"id": "q6", "question": "كيف ترمز شدة الرسالة العصبية على الليف غالبا؟", "choices": ["بتواتر كمونات العمل", "بسعة متغيرة لكل كمون عمل", "بقيمة كمون الراحة"], "correct_answer": "بتواتر كمونات العمل", "explanation": "سعة كمون العمل الواحد ثابتة تقريبا بعد بلوغ العتبة."
+            }
+          ],
+          "mastery_threshold": 5
+        },
+        "display_order": 14
+      }
+    ],
+    "document_bank": [
+      {
+        "document_id": "nc_axis02_doc01_action_curve",
+        "file_name": "action_potential_and_propagation.png",
+        "src": "/science/neural-communication/axis-02/action_potential_and_propagation.png",
+        "document_type": "electrophysiological_curve_and_propagation_model",
+        "source": {"kind": "lesson_pdf", "page": 1, "figure": "الوثيقة (1)"},
+        "skills": ["identify_action_potential", "label_phases", "calculate_amplitude_duration", "infer_message_nature"],
+        "scientific_entities": ["كمون العمل", "-70 mV", "+30 mV", "زوال الاستقطاب", "عودة الاستقطاب", "فرط الاستقطاب"],
+        "pedagogical_roles": ["lesson_evidence", "axis_exercise", "ai_axis_exercise", "bac_similar"],
+        "difficulty": 2,
+        "interpretation_scope": "تحدد شكل كمون العمل ومراحله وسعته ومدته، وتبين انتقال موجة كهربائية على طول الليف.",
+        "safe_claims": ["السعة في الوثيقة 100 mV.", "المدة نحو 3 ms.", "تنتقل الرسالة على شكل موجة زوال استقطاب."],
+        "forbidden_inferences": ["القول إن كل كمونات العمل في كل الألياف مدتها الدقيقة 3 ms.", "اعتبار السعة +30 mV فقط."],
+        "ai_generation": {"allowed": true, "allowed_question_types": ["label", "calculate", "define", "infer"], "max_documents_with": 2}
+      },
+      {
+        "document_id": "nc_axis02_doc02_patch_clamp",
+        "file_name": "patch_clamp_ttx_tea.png",
+        "src": "/science/neural-communication/axis-02/patch_clamp_ttx_tea.png",
+        "document_type": "voltage_clamp_inhibitor_curves",
+        "source": {"kind": "lesson_pdf", "page": 2, "figure": "الوثيقة (2)"},
+        "skills": ["compare_curves", "interpret_inhibitor", "identify_ionic_current"],
+        "scientific_entities": ["Patch-Clamp", "TTX", "TEA", "تيار داخل", "تيار خارج", "Na⁺", "K⁺"],
+        "pedagogical_roles": ["lesson_evidence", "axis_exercise", "ai_axis_exercise", "bac_similar"],
+        "difficulty": 4,
+        "interpretation_scope": "تعين التيار الداخل السريع كتيار Na⁺ والتيار الخارج المتأخر كتيار K⁺ بالمقارنة مع المثبطات.",
+        "safe_claims": ["TTX يلغي التيار الداخل في الوثيقة.", "TEA يلغي التيار الخارج في الوثيقة.", "التيار الداخل يسبق الخارج."],
+        "forbidden_inferences": ["اعتبار إشارة التيار كمونا غشائيا.", "عكس نوعية TTX وTEA."],
+        "ai_generation": {"allowed": true, "allowed_question_types": ["compare_conditions", "interpret_inhibitor", "infer", "justify"], "max_documents_with": 3}
+      },
+      {
+        "document_id": "nc_axis02_doc03_currents_states",
+        "file_name": "ionic_currents_channel_states.png",
+        "src": "/science/neural-communication/axis-02/ionic_currents_channel_states.png",
+        "document_type": "integrated_curve_and_channel_states",
+        "source": {"kind": "lesson_pdf", "page": 2, "figure": "الوثيقة (3)"},
+        "skills": ["synchronize_curves", "map_current_to_phase", "explain_channel_states"],
+        "scientific_entities": ["قناة Na⁺ الفولطية", "قناة K⁺ الفولطية", "عدم التنشيط", "تدفق Na⁺", "تدفق K⁺"],
+        "pedagogical_roles": ["lesson_evidence", "axis_exercise", "ai_axis_exercise", "bac_similar"],
+        "difficulty": 4,
+        "interpretation_scope": "تربط زمن تدفق الشوارد وحالات القنوات بمراحل كمون العمل.",
+        "safe_claims": ["Na⁺ يدخل خلال زوال الاستقطاب.", "K⁺ يخرج خلال عودة وفرط الاستقطاب.", "قناة Na⁺ تصبح غير نشطة قرب القمة."],
+        "forbidden_inferences": ["القول إن قناة Na⁺ تبقى مفتوحة طوال عودة الاستقطاب.", "نسب فرط الاستقطاب إلى دخول Na⁺."],
+        "ai_generation": {"allowed": true, "allowed_question_types": ["match_phase", "order_events", "explain", "cross_document_reasoning"], "preferred_pair": "nc_axis02_doc02_patch_clamp"}
+      },
+      {
+        "document_id": "nc_axis02_doc04_functional_phases",
+        "file_name": "functional_membrane_phases.png",
+        "src": "/science/neural-communication/axis-02/functional_membrane_phases.png",
+        "document_type": "functional_membrane_diagram",
+        "source": {"kind": "lesson_pdf", "page": 4, "role": "تقويم"},
+        "skills": ["read_membrane_diagram", "compare_phases", "construct_functional_model"],
+        "scientific_entities": ["قنوات التسرب", "قنوات فولطية", "مضخة Na⁺/K⁺", "زوال الاستقطاب", "عودة الاستقطاب"],
+        "pedagogical_roles": ["lesson_evaluation", "axis_exercise", "ai_axis_exercise"],
+        "difficulty": 3,
+        "interpretation_scope": "يلخص حالة القنوات واتجاه الشوارد خلال المرحلتين الرئيسيتين.",
+        "safe_claims": ["قناة Na⁺ الفولطية مفتوحة في زوال الاستقطاب.", "قناة K⁺ الفولطية مفتوحة في عودة الاستقطاب."],
+        "forbidden_inferences": ["اعتبار المضخة مسؤولة وحدها عن عودة الاستقطاب السريعة."],
+        "ai_generation": {"allowed": true, "allowed_question_types": ["label", "compare", "complete_diagram", "explain"], "max_documents_with": 2}
+      },
+      {
+        "document_id": "nc_axis02_doc05_voltage_clamp",
+        "file_name": "voltage_clamp_setup.png",
+        "src": "/science/neural-communication/axis-02/voltage_clamp_setup.png",
+        "document_type": "experimental_setup",
+        "source": {"kind": "lesson_pdf", "page": 4, "figure": "تقنية تطبيق كمون مفروض"},
+        "skills": ["identify_setup_components", "explain_voltage_clamp", "link_stimulus_to_current"],
+        "scientific_entities": ["كمون مفروض", "قطب قياس", "قطب تيار", "فولتمتر", "أمبيرمتر"],
+        "pedagogical_roles": ["lesson_evidence", "axis_exercise", "ai_axis_exercise"],
+        "difficulty": 3,
+        "interpretation_scope": "توضح مبدأ تثبيت الكمون وقياس التيار الناتج لدراسة القنوات الفولطية.",
+        "safe_claims": ["تفرض التقنية قيمة كمون محددة.", "يسجل الجهاز التيار اللازم للحفاظ على القيمة المفروضة."],
+        "forbidden_inferences": ["القول إن التقنية تضيف شوارد مباشرة إلى داخل القناة.", "اعتبار Patch-Clamp اسما لمثبط كيميائي."],
+        "ai_generation": {"allowed": true, "allowed_question_types": ["identify", "explain_setup", "interpret_result"], "max_documents_with": 2}
+      }
+    ],
+    "presentation": {
+      "hook": "كيف يقفز الكمون من -70 إلى +30 mV ثم يعود خلال ثلاث ميلي ثوان؟",
+      "promise": "ستقرأ المنحنى، ثم تكشف بتجارب Patch-Clamp وTTX وTEA أي شاردة تصنع كل مرحلة.",
+      "rhythm": ["لاحظ", "احسب", "افهم العتبة", "حلل التجربة", "عين التيار", "اربط القنوات", "لخص"],
+      "mode": "evidence_story_learning",
+      "student_first": true,
+      "reveal_teacher_after_think": true,
+      "max_text_lines_per_card": 6,
+      "avoid_repetition": true,
+      "show_progress_as_journey": true
+    },
+    "scientific_quality_control": {
+      "version": "1.0",
+      "rules": [
+        "تحسب سعة كمون العمل بطرح قيمة الراحة من القيمة القصوى مع احترام الإشارة.",
+        "انقلاب الاستقطاب هو الجزء الموجب من زوال الاستقطاب وليس حدثا أيونيا مستقلا.",
+        "قنوات Na⁺ الفولطية تفتح بسرعة ثم تصبح غير نشطة، وقنوات K⁺ تفتح بتأخر وتغلق ببطء.",
+        "التيار الداخل السريع في الوثيقة هو Na⁺ والتيار الخارج المتأخر هو K⁺.",
+        "TTX وTEA يستعملان كأداتين تجريبيتين لتعيين مكونات التيار ولا تعكس نوعيتهما.",
+        "عودة الاستقطاب السريعة سببها خروج K⁺ عبر قنواته الفولطية، لا المضخة وحدها.",
+        "المضخة تحافظ على التدرجات وتسترجع التوزع الشاردي بعد النشاط المتكرر.",
+        "قانون الكل أو لا شيء يخص تولد كمون العمل وسعته بعد العتبة؛ شدة الرسالة ترمز بالتواتر.",
+        "لا تخلط بين منحنى الكمون الغشائي ومنحنى التيار الأيوني في Patch-Clamp."
+      ]
+    },
+    "curriculum_goal": "تحديد المصدر الأيوني لكمون العمل وإبراز دور القنوات البروتينية المرتبطة بالفولطية في توليده."
+  }
+}

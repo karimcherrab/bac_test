@@ -1,0 +1,463 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "graph_schema_version": "1.0-react-json",
+  "version": "4.2-2022-math-sequences-subject1-ex03-react-graphs",
+  "session": "ordinary",
+  "year": 2022,
+  "chapter_code": "sequences",
+  "chapter_title": "المتتاليات العددية",
+  "axis_tags": [
+    "sequence_graphical_representation",
+    "sequence_monotonicity",
+    "mathematical_induction",
+    "bounded_sequence",
+    "limits_convergence_divergence"
+  ],
+  "branches": [
+    {
+      "code": "math",
+      "name": "شعبة رياضيات"
+    }
+  ],
+  "exercise_number": 3,
+  "subject_number": 1,
+  "source_page": 1,
+  "source_pages": [
+    1,
+    2
+  ],
+  "solution_source_pages": [
+    6
+  ],
+  "title": "التمرين الثالث — بكالوريا الجزائر 2022 — الموضوع الأول — شعبة رياضيات — المتتاليات",
+  "statement": "الدالة العددية \\(f\\) المعرفة على \\([0;+\\infty[\\) كما يلي:\n\\[\nf(x)=\\frac{2x^2+5}{2x+1}\n\\]\nو \\((C)\\) تمثيلها البياني في المستوي المنسوب إلى المعلم المتعامد المتجانس \\((O;\\vec{i},\\vec{j})\\) كما هو مبين في الشكل المرفق.\nالمتتالية العددية \\((u_n)\\) المعرفة على \\(\\mathbb{N}\\) كما يلي: \\(u_0=2\\) و \\(u_{n+1}=f(u_n)\\).",
+  "statement_graphs": [
+    {
+      "id": "2022_s1_sequences_ex03_function_plot",
+      "type": "function_plot",
+      "render_mode": "json",
+      "capture": false,
+      "direction": "ltr",
+      "canvas": {
+        "width": 900,
+        "height": 650,
+        "padding": 28
+      },
+      "viewport": {
+        "x_min": -0.25,
+        "x_max": 7.0,
+        "y_min": -0.25,
+        "y_max": 6.7,
+        "x_tick": 1,
+        "y_tick": 1,
+        "equal_scale": true
+      },
+      "axes": {
+        "show": true,
+        "x_label": "x",
+        "y_label": "y",
+        "grid": true
+      },
+      "curves": [
+        {
+          "id": "curve_c",
+          "kind": "function",
+          "label": "(C)",
+          "formula": "(2*x*x + 5)/(2*x + 1)",
+          "latex_formula": "f(x)=\\frac{2x^2+5}{2x+1}",
+          "domain": [
+            0,
+            7
+          ]
+        },
+        {
+          "id": "line_delta",
+          "kind": "line",
+          "label": "(Δ)",
+          "formula": "x",
+          "latex_formula": "y=x",
+          "domain": [
+            0,
+            7
+          ]
+        }
+      ],
+      "special_points": [
+        {
+          "id": "intersection",
+          "x": 5,
+          "y": 5,
+          "label": "(5,5)",
+          "note": "نقطة تقاطع (C) و(Δ)"
+        },
+        {
+          "id": "y_intercept",
+          "x": 0,
+          "y": 5,
+          "label": "(0,5)"
+        }
+      ],
+      "react_renderer": {
+        "component": "FunctionPlotRenderer",
+        "source": "curves_special_points"
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "2022_s1_sequences_ex03_q1a",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) أ- أدرس وضعية \\((C)\\) بالنسبة إلى المستقيم \\((\\Delta)\\) ذي المعادلة \\(y=x\\).",
+      "axis_tags": [
+        "sequence_graphical_representation"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "ندرس إشارة الفرق \\(f(x)-x\\) على \\([0,+\\infty[\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب الفرق",
+            "explanation": "\\[\nf(x)-x=\\frac{2x^2+5}{2x+1}-x\n=\\frac{5-x}{2x+1}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "الإشارة",
+            "explanation": "على \\([0,+\\infty[\\) لدينا \\(2x+1>0\\)، لذلك إشارة \\(f(x)-x\\) هي إشارة \\(5-x\\).\nإذن \\((C)\\) فوق \\((\\Delta)\\) عندما \\(0\\le x<5\\)، ويتقاطعان عند \\(x=5\\)، و\\((C)\\) تحت \\((\\Delta)\\) عندما \\(x>5\\)."
+          }
+        ],
+        "final_answer": "\\((C)\\) فوق \\((\\Delta)\\) على \\([0,5[\\)، ويتقاطعان عند \\((5,5)\\)، و\\((C)\\) تحت \\((\\Delta)\\) على \\(]5,+\\infty[\\)."
+      }
+    },
+    {
+      "id": "2022_s1_sequences_ex03_q1b",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "ب- انقل الشكل ومثل على حامل محور الفواصل الحدود \\(u_0\\)، \\(u_1\\)، \\(u_2\\) وضع تخمينا حول اتجاه تغير \\((u_n)\\).",
+      "axis_tags": [
+        "sequence_graphical_representation",
+        "sequence_monotonicity"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل طريقة السلم بين المنحنى \\((C)\\) والمستقيم \\((\\Delta)\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التمثيل",
+            "explanation": "نبدأ من \\(u_0=2\\) على محور الفواصل، نصعد إلى المنحنى \\((C)\\)، ثم أفقيا إلى المستقيم \\((\\Delta)\\)، ونكرر العملية للحصول على \\(u_1\\) ثم \\(u_2\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "التخمين",
+            "explanation": "من الرسم نلاحظ أن الحدود تتزايد وتتجه نحو العدد \\(5\\)."
+          }
+        ],
+        "solution_graphs": [
+          {
+            "id": "2022_s1_sequences_ex03_cobweb",
+            "type": "sequence_cobweb",
+            "render_mode": "json",
+            "capture": false,
+            "direction": "ltr",
+            "canvas": {
+              "width": 900,
+              "height": 650,
+              "padding": 28
+            },
+            "viewport": {
+              "x_min": 0,
+              "x_max": 5.5,
+              "y_min": 0,
+              "y_max": 5.5,
+              "x_tick": 0.5,
+              "y_tick": 0.5,
+              "equal_scale": true
+            },
+            "axes": {
+              "show": true,
+              "x_label": "x",
+              "y_label": "y",
+              "grid": true
+            },
+            "curves": [
+              {
+                "id": "curve_c",
+                "kind": "function",
+                "label": "(C)",
+                "formula": "(2*x*x + 5)/(2*x + 1)",
+                "latex_formula": "f(x)=\\frac{2x^2+5}{2x+1}",
+                "domain": [
+                  0,
+                  5.5
+                ]
+              },
+              {
+                "id": "line_delta",
+                "kind": "line",
+                "label": "(Δ)",
+                "formula": "x",
+                "latex_formula": "y=x",
+                "domain": [
+                  0,
+                  5.5
+                ]
+              }
+            ],
+            "sequence": {
+              "recurrence": "u_(n+1)=(2*u_n^2+5)/(2*u_n+1)",
+              "latex_recurrence": "u_{n+1}=\\frac{2u_n^2+5}{2u_n+1}",
+              "values": [
+                {
+                  "n": 0,
+                  "value": 2.0,
+                  "latex": "u_0=2"
+                },
+                {
+                  "n": 1,
+                  "value": 2.6,
+                  "latex": "u_1=\\frac{13}{5}"
+                },
+                {
+                  "n": 2,
+                  "value": 2.9870967741935486,
+                  "latex": "u_2=\\frac{463}{155}"
+                }
+              ]
+            },
+            "segments": [
+              {
+                "from": [
+                  2.0,
+                  0
+                ],
+                "to": [
+                  2.0,
+                  2.6
+                ],
+                "role": "vertical_to_curve"
+              },
+              {
+                "from": [
+                  2.0,
+                  2.6
+                ],
+                "to": [
+                  2.6,
+                  2.6
+                ],
+                "role": "horizontal_to_y_equals_x"
+              },
+              {
+                "from": [
+                  2.6,
+                  2.6
+                ],
+                "to": [
+                  2.6,
+                  2.9870967741935486
+                ],
+                "role": "vertical_to_curve"
+              },
+              {
+                "from": [
+                  2.6,
+                  2.9870967741935486
+                ],
+                "to": [
+                  2.9870967741935486,
+                  2.9870967741935486
+                ],
+                "role": "horizontal_to_y_equals_x"
+              }
+            ],
+            "x_axis_markers": [
+              {
+                "x": 2.0,
+                "label": "u₀"
+              },
+              {
+                "x": 2.6,
+                "label": "u₁"
+              },
+              {
+                "x": 2.9870967741935486,
+                "label": "u₂"
+              },
+              {
+                "x": 5,
+                "label": "5"
+              }
+            ],
+            "react_renderer": {
+              "component": "SequenceCobwebRenderer",
+              "source": "curves_sequence_segments"
+            }
+          }
+        ],
+        "final_answer": "التخمين: المتتالية \\((u_n)\\) متزايدة تماما ومتقاربة نحو \\(5\\)."
+      }
+    },
+    {
+      "id": "2022_s1_sequences_ex03_q2a",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "2) أ- برهن بالتراجع أنه من أجل كل عدد طبيعي \\(n\\)، \\(2\\le u_n<5\\).",
+      "axis_tags": [
+        "mathematical_induction",
+        "bounded_sequence"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل التراجع، مع تزايد الدالة \\(f\\) على \\([2,5]\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التحقق عند n=0",
+            "explanation": "\\[u_0=2\\Rightarrow 2\\le u_0<5.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "تزايد f على [2,5]",
+            "explanation": "\\[\nf'(x)=\\frac{4x^2+4x-10}{(2x+1)^2}.\n\\]\nومن أجل \\(x\\in[2,5]\\) يكون البسط موجبا، إذن \\(f\\) متزايدة على هذا المجال."
+          },
+          {
+            "step_number": 3,
+            "title": "خطوة التراجع",
+            "explanation": "نفترض \\(2\\le u_n<5\\). بما أن \\(f\\) متزايدة:\n\\[\nf(2)\\le f(u_n)<f(5).\n\\]\nأي:\n\\[\n\\frac{13}{5}\\le u_{n+1}<5.\n\\]\nومن ثم:\n\\[\n2\\le u_{n+1}<5.\n\\]"
+          }
+        ],
+        "final_answer": "\\[2\\le u_n<5\\quad\\forall n\\in\\mathbb N.\\]"
+      }
+    },
+    {
+      "id": "2022_s1_sequences_ex03_q2b",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "ب- ادرس اتجاه تغير المتتالية \\((u_n)\\) ثم استنتج أنها متقاربة.",
+      "axis_tags": [
+        "sequence_monotonicity",
+        "bounded_sequence",
+        "limits_convergence_divergence"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب الفرق \\(u_{n+1}-u_n\\) ثم نستعمل الحصر السابق.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب الفرق",
+            "explanation": "\\[\nu_{n+1}-u_n\n=\\frac{2u_n^2+5}{2u_n+1}-u_n\n=\\frac{5-u_n}{2u_n+1}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "الإشارة",
+            "explanation": "بما أن \\(2\\le u_n<5\\)، فإن \\(5-u_n>0\\) و\\(2u_n+1>0\\)، إذن \\(u_{n+1}-u_n>0\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "التقارب",
+            "explanation": "إذن \\((u_n)\\) متزايدة تماما، وهي محدودة من الأعلى بالعدد \\(5\\)، ومن ثم فهي متقاربة."
+          }
+        ],
+        "final_answer": "المتتالية \\((u_n)\\) متزايدة تماما ومحدودة من الأعلى، إذن هي متقاربة."
+      }
+    },
+    {
+      "id": "2022_s1_sequences_ex03_q3",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "3) أثبت أنه من أجل كل عدد طبيعي \\(n\\)،\n\\[\n5-u_{n+1}=\\frac{2u_n}{2u_n+1}(5-u_n).\n\\]",
+      "axis_tags": [
+        "sequence_definition_notation_methods"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نعوض عبارة \\(u_{n+1}\\) ثم نبسط.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الحساب",
+            "explanation": "\\[\n5-u_{n+1}\n=5-\\frac{2u_n^2+5}{2u_n+1}\n=\\frac{10u_n+5-2u_n^2-5}{2u_n+1}\n=\\frac{2u_n(5-u_n)}{2u_n+1}.\n\\]"
+          }
+        ],
+        "final_answer": "\\[5-u_{n+1}=\\frac{2u_n}{2u_n+1}(5-u_n).\\]"
+      }
+    },
+    {
+      "id": "2022_s1_sequences_ex03_q4a",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "4) أ- بين أنه من أجل كل عدد طبيعي \\(n\\)،\n\\[\n\\frac{2u_n}{2u_n+1}\\le\\frac{10}{11}.\n\\]",
+      "axis_tags": [
+        "limits_convergence_divergence"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل الحصر \\(u_n<5\\) ونقارن مباشرة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "المقارنة",
+            "explanation": "\\[\n\\frac{2u_n}{2u_n+1}-\\frac{10}{11}\n=\\frac{2(u_n-5)}{11(2u_n+1)}.\n\\]\nوبما أن \\(u_n<5\\) و\\(2u_n+1>0\\)، فإن هذا الفرق سالب أو معدوم."
+          }
+        ],
+        "final_answer": "\\[\\frac{2u_n}{2u_n+1}\\le\\frac{10}{11}.\\]"
+      }
+    },
+    {
+      "id": "2022_s1_sequences_ex03_q4b",
+      "display_order": 7,
+      "content_type": "question",
+      "text": "ب- استنتج أن:\n\\[\n0<5-u_n\\le3\\left(\\frac{10}{11}\\right)^n\n\\]\nثم احسب \\(\\displaystyle\\lim_{n\\to+\\infty}u_n\\).",
+      "axis_tags": [
+        "mathematical_induction",
+        "limits_convergence_divergence"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل السؤالين 3 و4-أ ثم نكرر المتراجحة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "متراجحة الانتقال",
+            "explanation": "من السؤال 3 و4-أ:\n\\[\n0<5-u_{n+1}\\le\\frac{10}{11}(5-u_n).\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "التكرار",
+            "explanation": "وبالتكرار:\n\\[\n0<5-u_n\\le\\left(\\frac{10}{11}\\right)^n(5-u_0).\n\\]\nولأن \\(u_0=2\\)، فإن \\(5-u_0=3\\)، ومنه:\n\\[\n0<5-u_n\\le3\\left(\\frac{10}{11}\\right)^n.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "النهاية",
+            "explanation": "بما أن \\(0<\\frac{10}{11}<1\\)، فإن\n\\[\n\\left(\\frac{10}{11}\\right)^n\\to0.\n\\]\nإذن حسب مبرهنة الحصر:\n\\[\n5-u_n\\to0,\n\\]\nومن ثم:\n\\[\nu_n\\to5.\n\\]"
+          }
+        ],
+        "final_answer": "\\[0<5-u_n\\le3\\left(\\frac{10}{11}\\right)^n,\\qquad \\boxed{\\lim_{n\\to+\\infty}u_n=5}.\\]"
+      }
+    }
+  ],
+  "rendering_contract": {
+    "no_capture": true,
+    "external_image_required": false,
+    "external_svg_required": false,
+    "graph_source": "inline_json",
+    "supported_graph_types": [
+      "function_plot",
+      "sequence_cobweb"
+    ],
+    "react_note": "لا يوجد Capture ولا SVG خارجي. الشكل الأصلي أعيد بناؤه كـ function_plot داخل JSON، وتمثيل u0 وu1 وu2 موجود داخل solution_graphs كـ sequence_cobweb."
+  },
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2022(4).pdf",
+    "statement_figure_policy": "لا Capture. الشكل معاد بناؤه داخل JSON.",
+    "solution_figure_policy": "تمثيل حدود المتتالية معاد بناؤه داخل JSON.",
+    "renderer": "FunctionPlotRenderer + SequenceCobwebRenderer"
+  }
+}

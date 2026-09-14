@@ -1,0 +1,297 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2014-tech-math-space-subject1-ex02-detailed",
+  "session": "ordinary",
+  "year": 2014,
+  "chapter_code": "space_geometry",
+  "chapter_title": "الهندسة في الفضاء",
+  "axis_tags": [
+    "space_parametric_line_plane",
+    "space_relative_positions_intersections",
+    "space_cartesian_plane_normal_vector",
+    "space_dot_product_orthogonality",
+    "space_areas_volumes"
+  ],
+  "branches": [
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "exercise_number": 2,
+  "subject_number": 1,
+  "source_page": 1,
+  "source_pages": [
+    1,
+    2
+  ],
+  "solution_source_pages": [
+    5,
+    6
+  ],
+  "title": "التمرين الثاني — بكالوريا الجزائر 2014 — الموضوع الأول — شعبة تقني رياضي",
+  "statement": "الفضاء منسوب إلى المعلم المتعامد المتجانس \\((O;\\vec{i},\\vec{j},\\vec{k})\\).\nالمستقيمان \\((\\Delta_1)\\) و\\((\\Delta_2)\\) مستقيمان من الفضاء معرفان بتمثيلهما الوسيطيين التاليين:\n\\[(\\Delta_1):\\begin{cases}x=3+2t\\\\y=-2-2t\\\\z=1-t\\end{cases}\\quad(t\\in\\mathbb R)\\]\nو\n\\[(\\Delta_2):\\begin{cases}x=1\\\\y=-1-t'\\\\z=4+2t'\\end{cases}\\quad(t'\\in\\mathbb R).\\]",
+  "questions": [
+    {
+      "id": "2014_s1_space_ex02_q1a",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) أ) عين إحداثيات النقطة \\(B\\) تقاطع المستقيمين \\((\\Delta_1)\\) و\\((\\Delta_2)\\).",
+      "axis_tags": [
+        "space_relative_positions_intersections"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نبحث عن قيمتي الوسيطين اللتين تعطيان النقطة نفسها على المستقيمين.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "مساواة الإحداثي x",
+            "explanation": "على \\((\\Delta_2)\\) لدينا دائما \\(x=1\\). إذن على \\((\\Delta_1)\\):\n\\[3+2t=1\\Rightarrow t=-1.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "إحداثيات النقطة على Δ1",
+            "explanation": "عند \\(t=-1\\):\n\\[x=1,\\qquad y=-2-2(-1)=0,\\qquad z=1-(-1)=2.\\]\nإذن النقطة هي \\((1,0,2)\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "التحقق على Δ2",
+            "explanation": "لكي يكون \\(y=0\\):\n\\[-1-t'=0\\Rightarrow t'=-1.\\]\nوعندها:\n\\[z=4+2(-1)=2.\\]\nإذن النقطة نفسها تنتمي إلى \\((\\Delta_2)\\)."
+          }
+        ],
+        "final_answer": "\\[B(1;0;2).\\]"
+      }
+    },
+    {
+      "id": "2014_s1_space_ex02_q1b",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "ب) عين تمثيلا وسيطيا للمستوي \\((P)\\) المعين بالمستقيمين \\((\\Delta_1)\\) و\\((\\Delta_2)\\).",
+      "axis_tags": [
+        "space_parametric_line_plane"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "بما أن المستقيمين يتقاطعان في B، نأخذ B نقطة أصل للمستوي وشعاعي توجيه المستقيمين شعاعين مولدين له.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "شعاعا التوجيه",
+            "explanation": "من التمثيل الوسيطي:\n\\[\\vec u_1=(2,-2,-1),\\qquad \\vec u_2=(0,-1,2).\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "كتابة نقطة عامة من P",
+            "explanation": "كل نقطة \\(M\\) من \\((P)\\) تحقق:\n\\[\\overrightarrow{BM}=s\\vec u_1+r\\vec u_2.\\]\nوبما أن \\(B(1,0,2)\\)، نحصل على:"
+          },
+          {
+            "step_number": 3,
+            "title": "التمثيل الوسيطي",
+            "explanation": "\\[(P):\\begin{cases}x=1+2s\\\\y=-2s-r\\\\z=2-s+2r\\end{cases}\\qquad (s,r)\\in\\mathbb R^2.\\]"
+          }
+        ],
+        "final_answer": "\\[(P):\\begin{cases}x=1+2s\\\\y=-2s-r\\\\z=2-s+2r\\end{cases},\\quad(s,r)\\in\\mathbb R^2.\\]"
+      }
+    },
+    {
+      "id": "2014_s1_space_ex02_q2a",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "2) أ) أثبت أن النقطة \\(A(6;4;4)\\) لا تنتمي إلى المستوي \\((P)\\).",
+      "axis_tags": [
+        "space_parametric_line_plane"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نفترض أن A تنتمي إلى P، ثم نحاول إيجاد وسيطين يحققان الإحداثيات الثلاثة. إذا ظهرت استحالة فإن A لا تنتمي إلى P.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "استعمال الإحداثي x",
+            "explanation": "\\[6=1+2s\\Rightarrow s=\\frac52.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "استعمال الإحداثي y",
+            "explanation": "\\[4=-2\\left(\\frac52\\right)-r=-5-r\\Rightarrow r=-9.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "فحص الإحداثي z",
+            "explanation": "لو كانت \\(A\\in P\\)، لوجب أن يكون:\n\\[4=2-\\frac52+2(-9).\\]\nلكن الطرف الأيمن يساوي \\(-\\frac{37}{2}\\)، وليس \\(4\\)."
+          }
+        ],
+        "final_answer": "\\[A\\notin(P).\\]"
+      }
+    },
+    {
+      "id": "2014_s1_space_ex02_q2b",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "ب) بين أن النقطة \\(B\\) هي المسقط العمودي للنقطة \\(A\\) على المستوي \\((P)\\).",
+      "axis_tags": [
+        "space_dot_product_orthogonality",
+        "space_projections_distances"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نعلم أن B تنتمي إلى P. يبقى إثبات أن AB عمودي على المستوي، وذلك بإثبات تعامده مع شعاعي توجيه للمستوي.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب AB",
+            "explanation": "\\[\\overrightarrow{AB}=B-A=(1-6,0-4,2-4)=(-5,-4,-2).\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "التعامد مع u1",
+            "explanation": "\\[\\overrightarrow{AB}\\cdot\\vec u_1=(-5)(2)+(-4)(-2)+(-2)(-1)=-10+8+2=0.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "التعامد مع u2",
+            "explanation": "\\[\\overrightarrow{AB}\\cdot\\vec u_2=(-5)(0)+(-4)(-1)+(-2)(2)=4-4=0.\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "الاستنتاج",
+            "explanation": "الشعاعان \\(\\vec u_1\\) و\\(\\vec u_2\\) غير متوازيين وينتميان إلى المستوي \\((P)\\)، إذن \\((AB)\\perp(P)\\). وبما أن \\(B\\in(P)\\)، فإن B هي المسقط العمودي لـA على P."
+          }
+        ],
+        "final_answer": "النقطة \\(B(1;0;2)\\) هي المسقط العمودي للنقطة \\(A\\) على المستوي \\((P)\\)."
+      }
+    },
+    {
+      "id": "2014_s1_space_ex02_q3a",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "3) أ) عين معادلة ديكارتية للمستوي \\((Q)\\) الذي يشمل النقطة \\(A\\) و\\(\\vec n(5;1;-7)\\) شعاع ناظمي له.",
+      "axis_tags": [
+        "space_cartesian_plane_normal_vector"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نكتب معادلة مستو له الشعاع الناظم المعطى، ثم نستعمل مرور المستوي بالنقطة A.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الشكل العام",
+            "explanation": "\\[5x+y-7z+d=0.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "تحديد d",
+            "explanation": "بما أن \\(A(6,4,4)\\in Q\\):\n\\[5\\times6+4-7\\times4+d=0\\]\n\\[30+4-28+d=0\\Rightarrow d=-6.\\]"
+          }
+        ],
+        "final_answer": "\\[Q:5x+y-7z-6=0.\\]"
+      }
+    },
+    {
+      "id": "2014_s1_space_ex02_q3b",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "ب) عين إحداثيات \\(C\\) و\\(D\\) نقطتي تقاطع \\((Q)\\) مع كل من \\((\\Delta_1)\\) و\\((\\Delta_2)\\) على الترتيب.",
+      "axis_tags": [
+        "space_relative_positions_intersections"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نعوض التمثيل الوسيطي لكل مستقيم في معادلة Q.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "إيجاد C = Q ∩ Δ1",
+            "explanation": "نعوض إحداثيات \\((\\Delta_1)\\):\n\\[5(3+2t)+(-2-2t)-7(1-t)-6=0.\\]\nبالتبسيط:\n\\[15t=0\\Rightarrow t=0.\\]\nإذن:\n\\[C(3,-2,1).\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "إيجاد D = Q ∩ Δ2",
+            "explanation": "نعوض:\n\\[5+(-1-t')-7(4+2t')-6=0.\\]\n\\[-30-15t'=0\\Rightarrow t'=-2.\\]\nإذن:\n\\[D(1,1,0).\\]"
+          }
+        ],
+        "final_answer": "\\[C(3;-2;1),\\qquad D(1;1;0).\\]"
+      }
+    },
+    {
+      "id": "2014_s1_space_ex02_q4a",
+      "display_order": 7,
+      "content_type": "question",
+      "text": "4) أ) عين طبيعة المثلث \\(BCD\\)، ثم احسب حجم رباعي الوجوه \\(ABCD\\).",
+      "axis_tags": [
+        "space_dot_product_orthogonality",
+        "space_areas_volumes"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب شعاعي BC وBD لتحديد طبيعة المثلث، ثم نستعمل BCD قاعدة وAB ارتفاعا لأن B هو مسقط A على P.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب BC و BD",
+            "explanation": "\\[\\overrightarrow{BC}=C-B=(2,-2,-1),\\]\n\\[\\overrightarrow{BD}=D-B=(0,1,-2).\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "إثبات أن المثلث قائم",
+            "explanation": "\\[\\overrightarrow{BC}\\cdot\\overrightarrow{BD}=2\\times0+(-2)\\times1+(-1)\\times(-2)=0.\\]\nإذن المثلث \\(BCD\\) قائم في \\(B\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "مساحة القاعدة BCD",
+            "explanation": "\\[BC=\\sqrt{4+4+1}=3,\\qquad BD=\\sqrt{1+4}=\\sqrt5.\\]\nإذن:\n\\[S_{BCD}=\\frac12\\times3\\times\\sqrt5=\\frac{3\\sqrt5}{2}.\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "حساب الارتفاع AB",
+            "explanation": "\\[AB=\\sqrt{(-5)^2+(-4)^2+(-2)^2}=\\sqrt{45}=3\\sqrt5.\\]\nوبما أن \\(B\\) المسقط العمودي لـA على \\((P)\\)، فإن \\(AB\\) هو ارتفاع رباعي الوجوه فوق القاعدة \\(BCD\\)."
+          },
+          {
+            "step_number": 5,
+            "title": "حساب الحجم",
+            "explanation": "\\[V=\\frac13S_{BCD}\\times AB=\\frac13\\times\\frac{3\\sqrt5}{2}\\times3\\sqrt5=\\frac{15}{2}.\\]"
+          }
+        ],
+        "final_answer": "المثلث \\(BCD\\) قائم في \\(B\\)، و\\[V(ABCD)=\\frac{15}{2}.\\]"
+      }
+    },
+    {
+      "id": "2014_s1_space_ex02_q4b",
+      "display_order": 8,
+      "content_type": "question",
+      "text": "ب) استنتج مساحة المثلث \\(ACD\\).",
+      "axis_tags": [
+        "space_areas_volumes",
+        "space_projections_distances"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نأخذ ACD قاعدة لرباعي الوجوه، فيكون ارتفاعه المسافة من B إلى المستوي Q لأن A,C,D تنتمي إلى Q.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب المسافة من B إلى Q",
+            "explanation": "\\[d(B,Q)=\\frac{|5\\times1+0-7\\times2-6|}{\\sqrt{25+1+49}}=\\frac{15}{\\sqrt{75}}=\\sqrt3.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "استعمال صيغة الحجم",
+            "explanation": "\\[V=\\frac13S_{ACD}\\times d(B,Q).\\]\nإذن:\n\\[S_{ACD}=\\frac{3V}{d(B,Q)}=\\frac{3\\times\\frac{15}{2}}{\\sqrt3}=\\frac{15\\sqrt3}{2}.\\]"
+          }
+        ],
+        "final_answer": "\\[S_{ACD}=\\frac{15\\sqrt3}{2}.\\]"
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2014(2).pdf",
+    "statement_figure_policy": "لا يوجد شكل هندسي إلزامي في نص التمرين.",
+    "solution_figure_policy": "الحل مستقل عن أي رسم.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  }
+}

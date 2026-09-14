@@ -1,0 +1,80 @@
+from django.urls import path
+
+from .views import (
+    AdaptiveAnswerImageView,
+    AdaptiveTestDetailView,
+    AdaptiveTestResultView,
+    AxisIdeaExplorerView,
+    AxisProgressView,
+    AxisTestHistoryView,
+    BlueprintPreviewView,
+    GenerateAxisTestView,
+    GenerateCurrentQuestionView,
+    StartIdeaPracticeView,
+    SubmitImageSolutionView,
+    SubmitTestQuestionView,
+)
+
+
+urlpatterns = [
+    path(
+        "axes/<int:axis_id>/blueprint/",
+        BlueprintPreviewView.as_view(),
+        name="adaptive-blueprint-preview",
+    ),
+    path(
+        "axes/<int:axis_id>/ideas/",
+        AxisIdeaExplorerView.as_view(),
+        name="adaptive-axis-idea-explorer",
+    ),
+    path(
+        "axes/<int:axis_id>/ideas/<int:idea_id>/practice/",
+        StartIdeaPracticeView.as_view(),
+        name="adaptive-start-idea-practice",
+    ),
+    path(
+        "axes/<int:axis_id>/tests/generate/",
+        GenerateAxisTestView.as_view(),
+        name="adaptive-generate-axis-test",
+    ),
+    path(
+        "axes/<int:axis_id>/tests/history/",
+        AxisTestHistoryView.as_view(),
+        name="adaptive-axis-test-history",
+    ),
+    path(
+        "axes/<int:axis_id>/progress/",
+        AxisProgressView.as_view(),
+        name="adaptive-axis-progress",
+    ),
+    path(
+        "tests/<int:test_id>/next/",
+        GenerateCurrentQuestionView.as_view(),
+        name="adaptive-next-question",
+    ),
+    path(
+        "tests/<int:test_id>/result/",
+        AdaptiveTestResultView.as_view(),
+        name="adaptive-test-result",
+    ),
+    path(
+        "tests/<int:test_id>/",
+        AdaptiveTestDetailView.as_view(),
+        name="adaptive-test-detail",
+    ),
+    path(
+        "test-questions/<int:test_question_id>/submit/",
+        SubmitTestQuestionView.as_view(),
+        name="adaptive-submit-question",
+    ),
+    path(
+        "test-questions/<int:test_question_id>/submit-image/",
+        SubmitImageSolutionView.as_view(),
+        name="adaptive-submit-image",
+    ),
+    path(
+        "answers/<int:answer_id>/images/<int:page>/",
+        AdaptiveAnswerImageView.as_view(),
+        name="adaptive-answer-image",
+    ),
+]

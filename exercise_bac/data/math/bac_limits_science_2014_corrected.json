@@ -1,0 +1,331 @@
+{
+  "schema_version": "3.0-bac-pedagogical-verified",
+  "language": "ar",
+  "direction": "rtl",
+  "branch": {
+    "code": "science",
+    "name": "شعبة علوم تجريبية"
+  },
+  "branch_code": "science",
+  "branches": [
+    {
+      "code": "science",
+      "name": "شعبة علوم تجريبية"
+    }
+  ],
+  "chapter_code": "limits_continuity",
+  "year": 2014,
+  "exercise_number": 4,
+  "source_page": 5,
+  "source_reference": "بكالوريا 2014 — التمرين الرابع، من ملف الدوال المرفق.",
+  "title": "تمارين النهايات — بكالوريا 2014",
+  "axis_tags": [
+    "limits_continuity"
+  ],
+  "statement": "لتكن الدالة العددية \\(g\\) المعرفة على \\(\\mathbb{R}\\) كما يلي:\n\\[\ng(x)=2x^3-4x^2+7x-4.\n\\]\n\nولتكن الدالة العددية \\(f\\) المعرفة على \\(\\mathbb{R}\\) كما يلي:\n\\[\nf(x)=\\frac{x^3-2x+1}{2x^2-2x+1}.\n\\]",
+  "statement_graph_data": null,
+  "questions": [
+    {
+      "id": "2014_limits_g",
+      "text": "احسب:\n\\[\n\\lim_{x\\to-\\infty}g(x)\n\\qquad\\text{و}\\qquad\n\\lim_{x\\to+\\infty}g(x).\n\\]",
+      "axis_tags": [
+        "limits_continuity"
+      ],
+      "solution": {
+        "strategy": "بما أن \\(g\\) كثيرة حدود، نحدد سلوكها عند اللانهاية انطلاقًا من الحد ذي أعلى درجة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "النهاية عند -∞",
+            "explanation": "الحد ذو أعلى درجة هو \\(2x^3\\). وعندما \\(x\\to-\\infty\\)، فإن \\(2x^3\\to-\\infty\\).",
+            "latex": "\\lim_{x\\to-\\infty}g(x)=-\\infty",
+            "why": "الحد من أعلى درجة هو الذي يحدد سلوك كثيرة الحدود عند اللانهاية.",
+            "student_tip": "في كثيرة الحدود، ركز أولًا على الحد ذي أكبر أس."
+          },
+          {
+            "step_number": 2,
+            "title": "النهاية عند +∞",
+            "explanation": "عندما \\(x\\to+\\infty\\)، فإن \\(2x^3\\to+\\infty\\).",
+            "latex": "\\lim_{x\\to+\\infty}g(x)=+\\infty",
+            "why": "الحد \\(2x^3\\) هو المسيطر.",
+            "student_tip": "إشارة معامل \\(x^3\\) موجبة، لذلك النهاية عند \\(+\\infty\\) موجبة."
+          }
+        ],
+        "final_answer": "\\[\n\\boxed{\\lim_{x\\to-\\infty}g(x)=-\\infty}\n\\qquad\\text{و}\\qquad\n\\boxed{\\lim_{x\\to+\\infty}g(x)=+\\infty}.\n\\]",
+        "verification": "النتيجتان مطابقتان للتصحيح المرفق لبكالوريا 2014.",
+        "common_mistakes": [
+          "الخطأ في إشارة النهاية عند \\(-\\infty\\).",
+          "الانشغال بكل حدود كثيرة الحدود بدل الحد ذي أعلى درجة."
+        ],
+        "hints": [
+          "راقب فقط الحد \\(2x^3\\) عند اللانهاية."
+        ],
+        "graph_data": null,
+        "table_data": null,
+        "solution_style": "حل مفصل ومبسط: فكرة واضحة، ثم خطوات قصيرة، ثم نتيجة نهائية قابلة للكتابة في ورقة البكالوريا.",
+        "methodology": {
+          "goal": "حساب نهايتي الدالة g عند ±∞.",
+          "method": "استعمال الحد ذي أعلى درجة.",
+          "why_this_method": "لأن g كثيرة حدود.",
+          "used_theorem": "نهاية كثيرة حدود عند اللانهاية.",
+          "bac_template": [],
+          "formal_writing": [
+            "نحدد الحد ذي أعلى درجة.",
+            "نحسب سلوكه عند اللانهاية.",
+            "نستنتج نهاية كثيرة الحدود."
+          ]
+        },
+        "formal_writing": [
+          "نكتب النهاية.",
+          "نحدد الحد المسيطر.",
+          "نكتب النتيجة."
+        ],
+        "react_display": {
+          "show_strategy": true,
+          "show_steps": true,
+          "show_final_answer": true,
+          "show_graph": false,
+          "show_table": false,
+          "graph_key": "graph_data",
+          "table_key": "table_data",
+          "math_renderer": "better-react-mathjax"
+        },
+        "official_answer_check": {
+          "checked": true,
+          "reference": "التصحيح المرفق لبكالوريا 2014.",
+          "final_result_matches_reference": true,
+          "note": "تمت مطابقة النتيجتين مع الحل الرسمي."
+        },
+        "pedagogical_detail": {
+          "level": "مبسط جدًا",
+          "show_intermediate_calculations": true,
+          "explain_rule_before_use": true,
+          "state_final_conclusion": true
+        },
+        "display_order": [
+          "strategy",
+          "steps",
+          "final_answer",
+          "verification"
+        ],
+        "validation": {
+          "checked_against_official_solution": true,
+          "final_answer_checked": true,
+          "mathematical_consistency_checked": true
+        },
+        "main_idea": "الحد ذي أعلى درجة يحدد نهاية كثيرة الحدود عند اللانهاية.",
+        "detailed_explanation": "تم الاحتفاظ بعبارة g كما وردت في موضوع 2014، واستخراج النهايتين المطلوبتين فقط.",
+        "answer_style": "idea_then_steps_then_conclusion"
+      },
+      "display_order": 1,
+      "content_type": "question"
+    },
+    {
+      "id": "2014_limits_f",
+      "text": "لتكن الدالة العددية \\(f\\) المعرفة على \\(\\mathbb{R}\\) كما يلي:\n\\[\nf(x)=\\frac{x^3-2x+1}{2x^2-2x+1}.\n\\]\nاحسب:\n\\[\n\\lim_{x\\to-\\infty}f(x)\n\\qquad\\text{و}\\qquad\n\\lim_{x\\to+\\infty}f(x).\n\\]",
+      "axis_tags": [
+        "limits_continuity"
+      ],
+      "solution": {
+        "strategy": "نقارن أعلى درجة في البسط مع أعلى درجة في المقام.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "نحدد الحدود الغالبة",
+            "explanation": "في البسط الحد الغالب هو \\(x^3\\)، وفي المقام الحد الغالب هو \\(2x^2\\).",
+            "latex": "f(x)\\sim\\frac{x^3}{2x^2}=\\frac{x}{2}",
+            "why": "عند اللانهاية تتحكم الحدود ذات أعلى درجة في السلوك.",
+            "student_tip": "درجة البسط أكبر من درجة المقام بواحد."
+          },
+          {
+            "step_number": 2,
+            "title": "النهاية عند -∞",
+            "explanation": "بما أن \\(\\frac{x}{2}\\to-\\infty\\) عندما \\(x\\to-\\infty\\)، فإن \\(f(x)\\to-\\infty\\).",
+            "latex": "\\lim_{x\\to-\\infty}f(x)=-\\infty",
+            "why": "للدالة نفس السلوك النهائي لـ \\(x/2\\).",
+            "student_tip": "احتفظ بإشارة x عند \\(-\\infty\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "النهاية عند +∞",
+            "explanation": "بما أن \\(\\frac{x}{2}\\to+\\infty\\) عندما \\(x\\to+\\infty\\)، فإن \\(f(x)\\to+\\infty\\).",
+            "latex": "\\lim_{x\\to+\\infty}f(x)=+\\infty",
+            "why": "للدالة نفس السلوك النهائي لـ \\(x/2\\).",
+            "student_tip": "نفس الطريقة، مع تغيير جهة اللانهاية."
+          }
+        ],
+        "final_answer": "\\[\n\\boxed{\\lim_{x\\to-\\infty}f(x)=-\\infty}\n\\qquad\\text{و}\\qquad\n\\boxed{\\lim_{x\\to+\\infty}f(x)=+\\infty}.\n\\]",
+        "verification": "النتيجتان مطابقتان للتصحيح المرفق لبكالوريا 2014.",
+        "common_mistakes": [
+          "القول إن النهاية نسبة معاملي أعلى درجتين فقط رغم اختلاف الدرجتين.",
+          "نسيان أن درجة البسط أكبر من درجة المقام."
+        ],
+        "hints": [
+          "قارن \\(x^3\\) مع \\(2x^2\\)."
+        ],
+        "graph_data": null,
+        "table_data": null,
+        "solution_style": "حل مفصل ومبسط: فكرة واضحة، ثم خطوات قصيرة، ثم نتيجة نهائية قابلة للكتابة في ورقة البكالوريا.",
+        "methodology": {
+          "goal": "حساب نهايتي الدالة f عند ±∞.",
+          "method": "مقارنة الحدود ذات أعلى درجة في البسط والمقام.",
+          "why_this_method": "لأن f دالة ناطقة.",
+          "used_theorem": "قواعد نهايات الدوال الناطقة.",
+          "bac_template": [],
+          "formal_writing": [
+            "نحدد الحدود ذات أعلى درجة.",
+            "نبسط السلوك عند اللانهاية.",
+            "نستنتج النهايتين."
+          ]
+        },
+        "formal_writing": [
+          "نكتب النهاية.",
+          "نقارن أعلى الدرجات.",
+          "نكتب النتيجة."
+        ],
+        "react_display": {
+          "show_strategy": true,
+          "show_steps": true,
+          "show_final_answer": true,
+          "show_graph": false,
+          "show_table": false,
+          "graph_key": "graph_data",
+          "table_key": "table_data",
+          "math_renderer": "better-react-mathjax"
+        },
+        "official_answer_check": {
+          "checked": true,
+          "reference": "التصحيح المرفق لبكالوريا 2014.",
+          "final_result_matches_reference": true,
+          "note": "تمت مطابقة النتيجتين مع الحل الرسمي."
+        },
+        "pedagogical_detail": {
+          "level": "مبسط جدًا",
+          "show_intermediate_calculations": true,
+          "explain_rule_before_use": true,
+          "state_final_conclusion": true
+        },
+        "display_order": [
+          "strategy",
+          "steps",
+          "final_answer",
+          "verification"
+        ],
+        "validation": {
+          "checked_against_official_solution": true,
+          "final_answer_checked": true,
+          "mathematical_consistency_checked": true
+        },
+        "main_idea": "مقارنة أعلى درجة في البسط وأعلى درجة في المقام.",
+        "detailed_explanation": "تم الاحتفاظ بعبارة f كما وردت في الموضوع، واستخراج النهايتين المطلوبتين.",
+        "answer_style": "idea_then_steps_then_conclusion"
+      },
+      "display_order": 2,
+      "content_type": "question"
+    },
+    {
+      "id": "2014_limits_asymptote",
+      "text": "بعد إثبات أنه من أجل كل \\(x\\in\\mathbb{R}\\):\n\\[\nf(x)=\\frac12(x+1)+\\frac{1-3x}{2(2x^2-2x+1)},\n\\]\nاحسب النهايتين اللازمتين لاستنتاج وجود المستقيم المقارب المائل:\n\\[\n\\lim_{x\\to-\\infty}\\left[f(x)-\\frac12(x+1)\\right]\n\\qquad\\text{و}\\qquad\n\\lim_{x\\to+\\infty}\\left[f(x)-\\frac12(x+1)\\right].\n\\]",
+      "axis_tags": [
+        "limits_continuity"
+      ],
+      "solution": {
+        "strategy": "نستعمل الكتابة التي طلب الموضوع إثباتها، ثم نحسب نهاية الحد المتبقي عند ±∞.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "نكتب الفرق",
+            "explanation": "من العلاقة المعطاة مباشرة نحصل على الفرق بين f والعبارة الخطية.",
+            "latex": "f(x)-\\frac12(x+1)=\\frac{1-3x}{2(2x^2-2x+1)}",
+            "why": "هذا هو التعبير الذي يجب دراسة نهايته لإثبات المقارب المائل.",
+            "student_tip": "لا تعيد القسمة إذا كانت هذه الكتابة قد أثبتت في السؤال السابق."
+          },
+          {
+            "step_number": 2,
+            "title": "النهاية عند -∞",
+            "explanation": "درجة البسط 1 ودرجة المقام 2، لذلك الكسر يتجه إلى الصفر.",
+            "latex": "\\lim_{x\\to-\\infty}\\left[f(x)-\\frac12(x+1)\\right]=0",
+            "why": "المقام ينمو أسرع من البسط.",
+            "student_tip": "إذا كانت درجة المقام أكبر من درجة البسط، فالنهاية تساوي 0."
+          },
+          {
+            "step_number": 3,
+            "title": "النهاية عند +∞",
+            "explanation": "لنفس السبب، الكسر يتجه إلى الصفر عند \\(+\\infty\\).",
+            "latex": "\\lim_{x\\to+\\infty}\\left[f(x)-\\frac12(x+1)\\right]=0",
+            "why": "درجة المقام أكبر من درجة البسط.",
+            "student_tip": "النتيجة نفسها على الجهتين."
+          }
+        ],
+        "final_answer": "\\[\n\\boxed{\\lim_{x\\to-\\infty}\\left[f(x)-\\frac12(x+1)\\right]=0}\n\\qquad\\text{و}\\qquad\n\\boxed{\\lim_{x\\to+\\infty}\\left[f(x)-\\frac12(x+1)\\right]=0}.\n\\]",
+        "verification": "النتيجتان ظاهرتان في التصحيح الرسمي لبكالوريا 2014 عند استنتاج المقارب المائل.",
+        "common_mistakes": [
+          "حساب نهاية f نفسها بدل نهاية الفرق.",
+          "نسيان العامل \\(1/2\\) في العبارة الخطية."
+        ],
+        "hints": [
+          "استعمل مباشرة الكتابة المثبتة في السؤال السابق.",
+          "قارن درجتي البسط والمقام في الكسر المتبقي."
+        ],
+        "graph_data": null,
+        "table_data": null,
+        "solution_style": "حل مفصل ومبسط: فكرة واضحة، ثم خطوات قصيرة، ثم نتيجة نهائية قابلة للكتابة في ورقة البكالوريا.",
+        "methodology": {
+          "goal": "حساب النهايتين اللازمتين لإثبات وجود المقارب المائل.",
+          "method": "طرح العبارة الخطية واستعمال نهاية دالة ناطقة درجتها في المقام أكبر.",
+          "why_this_method": "لأن معيار المقارب المائل يعتمد على نهاية الفرق.",
+          "used_theorem": "معيار المستقيم المقارب المائل.",
+          "bac_template": [],
+          "formal_writing": [
+            "نكتب الفرق.",
+            "نحسب نهايته عند -∞ و+∞.",
+            "نستنتج أن الفرق يتجه إلى الصفر."
+          ]
+        },
+        "formal_writing": [
+          "نكتب العلاقة المثبتة.",
+          "نحسب النهاية.",
+          "نكتب النتيجة."
+        ],
+        "react_display": {
+          "show_strategy": true,
+          "show_steps": true,
+          "show_final_answer": true,
+          "show_graph": false,
+          "show_table": false,
+          "graph_key": "graph_data",
+          "table_key": "table_data",
+          "math_renderer": "better-react-mathjax"
+        },
+        "official_answer_check": {
+          "checked": true,
+          "reference": "التصحيح المرفق لبكالوريا 2014.",
+          "final_result_matches_reference": true,
+          "note": "تمت مطابقة النهايتين مع الحل الرسمي."
+        },
+        "pedagogical_detail": {
+          "level": "مبسط جدًا",
+          "show_intermediate_calculations": true,
+          "explain_rule_before_use": true,
+          "state_final_conclusion": true
+        },
+        "display_order": [
+          "strategy",
+          "steps",
+          "final_answer",
+          "verification"
+        ],
+        "validation": {
+          "checked_against_official_solution": true,
+          "final_answer_checked": true,
+          "mathematical_consistency_checked": true
+        },
+        "main_idea": "نهاية الفرق بين f والعبارة الخطية تساوي 0 عند ±∞.",
+        "detailed_explanation": "أُدرجت هاتان النهايتان لأنهما لازمتان مباشرة لسؤال استنتاج المستقيم المقارب المائل في الموضوع.",
+        "answer_style": "idea_then_steps_then_conclusion"
+      },
+      "display_order": 3,
+      "content_type": "question"
+    }
+  ]
+}

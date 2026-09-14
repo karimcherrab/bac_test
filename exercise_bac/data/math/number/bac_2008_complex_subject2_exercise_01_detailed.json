@@ -1,0 +1,299 @@
+{
+  "schema_version": "4.5-bac-source",
+  "version": "4.2-2008-complex-subject2-ex01",
+  "language": "ar",
+  "direction": "rtl",
+  "year": 2008,
+  "session": "ordinary",
+  "chapter_code": "complex_numbers",
+  "chapter_title": "complex_numbers",
+  "exercise_number": 1,
+  "source_pages": [
+    3
+  ],
+  "solution_source_pages": [
+    8
+  ],
+  "branches": [
+    {
+      "code": "math",
+      "name": "شعبة الرياضيات"
+    }
+  ],
+  "title": "التمرين الأول — بكالوريا الجزائر 2008 — الموضوع الثاني — الأعداد المركبة",
+  "axis_tags": [
+    "complex_polynomial",
+    "complex_roots",
+    "reciprocal_roots",
+    "exponential_form",
+    "complex_plane_geometry",
+    "square"
+  ],
+  "statement": "تمرين 1: (5 نقاط)\n\nنعتبر في مجموعة الأعداد المركبة \\(\\mathbb{C}\\) كثير الحدود \\(P(z)\\) المعرف كما يلي :\n\\[P(z)=2z^4-2iz^3-z^2-2iz+2\\]\n1) بين أنه إذا كان \\(a\\) جذرا لكثير الحدود \\(P(z)\\) فإن \\(\\frac{1}{a}\\) جذر له أيضا.\n2) تحقق أن \\(1+i\\) جذر لكثير الحدود \\(P(z)\\).\n3) حل في \\(\\mathbb{C}\\) المعادلة \\(P(z)=0\\).\n4) اكتب الحلول على الشكل الأسي.\n5) لتكن \\(A\\) و \\(B\\) و \\(C\\) و \\(D\\) النقط من المستوى المركب المنسوب إلى معلم متعامد متجانس \\((O;\\vec{u},\\vec{v})\\) والتي لاحقاتها على الترتيب: \\(1+i\\) و \\(-1+i\\) و \\(-\\frac{m}{2}-\\frac{m}{2}i\\) و \\(\\frac{m}{2}-\\frac{m}{2}i\\)، حيث \\(m\\) عدد حقيقي. عين \\(m\\) حتى يكون الرباعي \\(ABCD\\) مربعا.",
+  "figures": [],
+  "questions": [
+    {
+      "text": "1) بين أنه إذا كان \\(a\\) جذرا لكثير الحدود \\(P(z)\\) فإن \\(\\frac{1}{a}\\) جذر له أيضا.",
+      "solution": {
+        "strategy": "نستعمل تماثل معاملات كثير الحدود ونربط بين \\(P(z)\\) و \\(P(1/z)\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "نتأكد أن الجذر لا يمكن أن يكون صفرا",
+            "explanation": "لدينا \\[P(0)=2\\neq0.\\] إذن إذا كان \\(a\\) جذرا لـ \\(P\\)، فإن \\(a\\neq0\\)، وبالتالي العدد \\(\\frac1a\\) معرف.",
+            "result": "\\(a\\neq0\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "نحسب P(1/z)",
+            "explanation": "من أجل \\(z\\neq0\\):\n\\[P\\!\\left(\\frac1z\\right)=\\frac{2}{z^4}-\\frac{2i}{z^3}-\\frac1{z^2}-\\frac{2i}{z}+2.\\]\nوبتوحيد المقام نحصل على:\n\\[P\\!\\left(\\frac1z\\right)=\\frac{2z^4-2iz^3-z^2-2iz+2}{z^4}=\\frac{P(z)}{z^4}.\\]",
+            "result": "\\(P(1/z)=P(z)/z^4\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "نطبق العلاقة على الجذر a",
+            "explanation": "بما أن \\(a\\) جذر، فإن \\(P(a)=0\\). ومن العلاقة السابقة:\n\\[P\\!\\left(\\frac1a\\right)=\\frac{P(a)}{a^4}=\\frac0{a^4}=0.\\]",
+            "result": "\\(\\frac1a\\) جذر أيضا لـ \\(P\\)."
+          }
+        ],
+        "final_answer": "\\[\\boxed{P(a)=0\\Longrightarrow P\\!\\left(\\frac1a\\right)=0}\\] وبالتالي إذا كان \\(a\\) جذرا لـ \\(P\\) فإن \\(\\frac1a\\) جذر له أيضا.",
+        "verification": "النتيجة مطابقة لفكرة التصحيح النموذجي لبكالوريا 2008، الموضوع الثاني.",
+        "common_mistakes": [
+          "نسيان التحقق من أن \\(a\\neq0\\).",
+          "كتابة العلاقة بين \\(P(z)\\) و \\(P(1/z)\\) دون توحيد المقام."
+        ],
+        "hints": [
+          "احسب \\(P(0)\\) أولا.",
+          "حاول كتابة \\(P(1/z)\\) على مقام \\(z^4\\)."
+        ],
+        "introduction": "الفكرة هي أن كثير الحدود له معاملات متناظرة، لذلك يظهر نفس كثير الحدود عند تعويض \\(z\\) بـ \\(1/z\\) بعد الضرب في \\(z^4\\).",
+        "summary": "لأن \\(P(1/z)=P(z)/z^4\\)، فإن كل جذر غير معدوم يعطي مقلوبه جذرا أيضا.",
+        "answer_style": "explain_then_calculate_then_conclude"
+      },
+      "id": "2008_complex_s2_ex01_q1",
+      "display_order": 1,
+      "content_type": "question"
+    },
+    {
+      "text": "2) تحقق أن \\(1+i\\) جذر لكثير الحدود \\(P(z)\\).",
+      "solution": {
+        "strategy": "نحسب القوى اللازمة للعدد \\(1+i\\)، ثم نعوض مباشرة في \\(P\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب القوى",
+            "explanation": "لدينا:\n\\[(1+i)^2=1+2i+i^2=2i,\\]\n\\[(1+i)^3=(1+i)\\cdot2i=-2+2i,\\]\n\\[(1+i)^4=(2i)^2=-4.\\]",
+            "result": "\\((1+i)^2=2i\\)، \\((1+i)^3=-2+2i\\)، \\((1+i)^4=-4\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "التعويض في P",
+            "explanation": "نعوض \\(z=1+i\\):\n\\[P(1+i)=2(-4)-2i(-2+2i)-2i-2i(1+i)+2.\\]\nوبالتبسيط:\n\\[P(1+i)=-8+(4+4i)-2i+(2-2i)+2=0.\\]",
+            "result": "\\(P(1+i)=0\\)."
+          }
+        ],
+        "final_answer": "\\[\\boxed{P(1+i)=0}\\] إذن \\(\\boxed{1+i}\\) جذر لكثير الحدود \\(P\\).",
+        "verification": "مطابق للتصحيح النموذجي الذي يعطي \\(P(1+i)=0\\).",
+        "common_mistakes": [
+          "الخطأ في حساب \\((1+i)^2\\).",
+          "نسيان أن \\(i^2=-1\\)."
+        ],
+        "hints": [
+          "ابدأ بحساب \\((1+i)^2\\)، ثم استنتج القوتين الثالثة والرابعة."
+        ],
+        "introduction": "للتحقق من أن عدد ما جذر، يكفي تعويضه في كثير الحدود وإثبات أن النتيجة تساوي صفرا.",
+        "summary": "بالتعويض المباشر نجد \\(P(1+i)=0\\).",
+        "answer_style": "explain_then_calculate_then_conclude"
+      },
+      "id": "2008_complex_s2_ex01_q2",
+      "display_order": 2,
+      "content_type": "question"
+    },
+    {
+      "text": "3) حل في \\(\\mathbb{C}\\) المعادلة \\(P(z)=0\\).",
+      "solution": {
+        "strategy": "نستعمل الجذر \\(1+i\\) ونتيجة السؤال الأول للحصول على جذر ثان، ثم نفكك كثير الحدود ونحل المعادلة التربيعية المتبقية.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الجذر الثاني باستعمال السؤال الأول",
+            "explanation": "بما أن \\(1+i\\) جذر، فإن مقلوبه جذر أيضا:\n\\[\\frac1{1+i}=\\frac{1-i}{(1+i)(1-i)}=\\frac{1-i}{2}.\\]",
+            "result": "\\(\\frac{1-i}{2}\\) جذر لـ \\(P\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "استخراج الجذرين المعروفين",
+            "explanation": "بما أن \\(1+i\\) و \\(\\frac{1-i}{2}\\) جذران، فإننا نستخرج العاملين الموافقين لهما. بعد القسمة نحصل على المعادلة التربيعية المتبقية:\n\\[2z^2+(3-i)z+2=0.\\]",
+            "result": "يبقى حل \\(2z^2+(3-i)z+2=0\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "حساب المميز",
+            "explanation": "لدينا:\n\\[\\Delta=(3-i)^2-4\\cdot2\\cdot2=-8-6i.\\]\nونلاحظ أن:\n\\[(1-3i)^2=-8-6i.\\]\nإذن:\n\\[\\Delta=(1-3i)^2.\\]",
+            "result": "\\(\\sqrt{\\Delta}=\\pm(1-3i)\\)."
+          },
+          {
+            "step_number": 4,
+            "title": "حل المعادلة التربيعية",
+            "explanation": "الحلان هما:\n\\[z=\\frac{-(3-i)\\pm(1-3i)}{4}.\\]\nفنجد:\n\\[z=-1+i\\]\nأو\n\\[z=\\frac{-1-i}{2}.\\]",
+            "result": "الجذران الآخران هما \\(-1+i\\) و \\(\\frac{-1-i}{2}\\)."
+          },
+          {
+            "step_number": 5,
+            "title": "مجموعة الحلول",
+            "explanation": "نجمع الجذور الأربعة.",
+            "result": "\\(1+i\\)، \\(\\frac{1-i}{2}\\)، \\(-1+i\\)، \\(\\frac{-1-i}{2}\\)."
+          }
+        ],
+        "final_answer": "\\[\\boxed{S=\\left\\{1+i,\\ \\frac{1-i}{2},\\ -1+i,\\ \\frac{-1-i}{2}\\right\\}}\\]",
+        "verification": "مطابق للتصحيح النموذجي: الجذران الإضافيان هما \\(-1+i\\) و \\(\\frac{-1-i}{2}\\).",
+        "common_mistakes": [
+          "نسيان استعمال مقلوب \\(1+i\\) كجذر.",
+          "الخطأ في حساب \\(\\Delta\\).",
+          "نسيان أحد الحلول الأربعة."
+        ],
+        "hints": [
+          "استعمل نتيجة السؤال الأول.",
+          "بعد استخراج الجذرين المعروفين يبقى كثير حدود من الدرجة الثانية."
+        ],
+        "introduction": "بدل حل معادلة من الدرجة الرابعة مباشرة، نستفيد من السؤالين السابقين.",
+        "summary": "الحلول الأربعة هي \\(1+i\\)، \\((1-i)/2\\)، \\(-1+i\\)، \\((-1-i)/2\\).",
+        "answer_style": "explain_then_calculate_then_conclude"
+      },
+      "id": "2008_complex_s2_ex01_q3",
+      "display_order": 3,
+      "content_type": "question"
+    },
+    {
+      "text": "4) اكتب الحلول على الشكل الأسي.",
+      "solution": {
+        "strategy": "نحسب معيار وعمدة كل حل ثم نستعمل \\(z=re^{i\\theta}\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الحل 1+i",
+            "explanation": "\\(|1+i|=\\sqrt2\\) وعمدة مناسبة هي \\(\\frac{\\pi}{4}\\).",
+            "result": "\\(1+i=\\sqrt2\\,e^{i\\pi/4}\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "الحل (1-i)/2",
+            "explanation": "\\(\\left|\\frac{1-i}{2}\\right|=\\frac1{\\sqrt2}\\) وعمدة مناسبة هي \\(-\\frac{\\pi}{4}\\).",
+            "result": "\\(\\frac{1-i}{2}=\\frac1{\\sqrt2}e^{-i\\pi/4}\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "الحل -1+i",
+            "explanation": "\\(|-1+i|=\\sqrt2\\) وعمدة مناسبة هي \\(\\frac{3\\pi}{4}\\).",
+            "result": "\\(-1+i=\\sqrt2\\,e^{i3\\pi/4}\\)."
+          },
+          {
+            "step_number": 4,
+            "title": "الحل (-1-i)/2",
+            "explanation": "\\(\\left|\\frac{-1-i}{2}\\right|=\\frac1{\\sqrt2}\\) وعمدة مناسبة هي \\(-\\frac{3\\pi}{4}\\).",
+            "result": "\\(\\frac{-1-i}{2}=\\frac1{\\sqrt2}e^{-i3\\pi/4}\\)."
+          }
+        ],
+        "final_answer": "\\[\\boxed{1+i=\\sqrt2\\,e^{i\\pi/4}}\\]\n\\[\\boxed{\\frac{1-i}{2}=\\frac1{\\sqrt2}e^{-i\\pi/4}}\\]\n\\[\\boxed{-1+i=\\sqrt2\\,e^{i3\\pi/4}}\\]\n\\[\\boxed{\\frac{-1-i}{2}=\\frac1{\\sqrt2}e^{-i3\\pi/4}}\\]",
+        "verification": "تم التحقق من المعايير والعمد لكل حل.",
+        "common_mistakes": [
+          "الخطأ في معيار الحلين اللذين يحتويان على مقام 2.",
+          "اختيار عمدة في ربع غير مناسب."
+        ],
+        "hints": [
+          "استعمل \\(z=re^{i\\theta}\\)."
+        ],
+        "introduction": "نحوّل كل حل من الشكل الجبري إلى الشكل الأسي.",
+        "summary": "المعياران هما \\(\\sqrt2\\) و \\(1/\\sqrt2\\)، والعمد المناسبة هي \\(\\pm\\pi/4\\) و \\(\\pm3\\pi/4\\).",
+        "answer_style": "explain_then_calculate_then_conclude"
+      },
+      "id": "2008_complex_s2_ex01_q4",
+      "display_order": 4,
+      "content_type": "question"
+    },
+    {
+      "text": "5) لتكن \\(A\\) و \\(B\\) و \\(C\\) و \\(D\\) النقط من المستوى المركب المنسوب إلى معلم متعامد متجانس \\((O;\\vec{u},\\vec{v})\\) والتي لاحقاتها على الترتيب: \\(1+i\\) و \\(-1+i\\) و \\(-\\frac{m}{2}-\\frac{m}{2}i\\) و \\(\\frac{m}{2}-\\frac{m}{2}i\\)، حيث \\(m\\) عدد حقيقي. عين \\(m\\) حتى يكون الرباعي \\(ABCD\\) مربعا.",
+      "solution": {
+        "strategy": "نحوّل اللواحق إلى إحداثيات، ثم نستعمل شرط التعامد وتساوي الأضلاع.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "إحداثيات النقط",
+            "explanation": "\\[A(1,1),\\qquad B(-1,1),\\]\n\\[C\\left(-\\frac m2,-\\frac m2\\right),\\qquad D\\left(\\frac m2,-\\frac m2\\right).\\]",
+            "result": "تم تحديد إحداثيات النقط."
+          },
+          {
+            "step_number": 2,
+            "title": "دراسة الضلع AB",
+            "explanation": "\\[\\overrightarrow{AB}=(-2,0).\\]\nإذن \\(AB\\) أفقي و:\n\\[AB=2.\\]",
+            "result": "\\(AB=2\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "شرط التعامد",
+            "explanation": "لدينا:\n\\[\\overrightarrow{BC}=\\left(1-\\frac m2,\\,-1-\\frac m2\\right).\\]\nلكي يكون \\(ABCD\\) مربعا يجب أن يكون \\(AB\\perp BC\\). وبما أن \\(AB\\) أفقي، يجب أن تكون المركبة الأفقية لـ \\(BC\\) معدومة:\n\\[1-\\frac m2=0.\\]\nإذن:\n\\[m=2.\\]",
+            "result": "\\(m=2\\)."
+          },
+          {
+            "step_number": 4,
+            "title": "التحقق",
+            "explanation": "عند \\(m=2\\):\n\\[A(1,1),\\ B(-1,1),\\ C(-1,-1),\\ D(1,-1).\\]\nفتكون الأضلاع الأربعة طولها \\(2\\) والأضلاع المتتالية متعامدة، وبالتالي الرباعي مربع.",
+            "result": "القيمة تحقق شروط المربع."
+          }
+        ],
+        "final_answer": "\\[\\boxed{m=2}\\]",
+        "verification": "مطابق للتصحيح النموذجي الذي يعطي \\(m=2\\).",
+        "common_mistakes": [
+          "الاكتفاء بتساوي بعض الأطوال دون التحقق من التعامد.",
+          "الخطأ في إشارات إحداثيات \\(C\\) و \\(D\\)."
+        ],
+        "hints": [
+          "حوّل كل لاحقة إلى إحداثيين.",
+          "لاحظ أن \\(AB\\) أفقي."
+        ],
+        "introduction": "شرط المربع هنا يصبح بسيطا عند استعمال الإحداثيات.",
+        "summary": "من شرط \\(AB\\perp BC\\) نحصل على \\(m=2\\)، ثم نتحقق من تساوي الأضلاع.",
+        "answer_style": "explain_then_calculate_then_conclude"
+      },
+      "id": "2008_complex_s2_ex01_q5",
+      "display_order": 5,
+      "content_type": "question"
+    }
+  ],
+  "source_reference": {
+    "file": "2008(8).pdf",
+    "statement_pages": [
+      3
+    ],
+    "solution_pages": [
+      8
+    ],
+    "source_faithful_statement": true,
+    "solution_reviewed_against_source": true
+  },
+  "display": {
+    "layout": "question_by_question",
+    "show_statement_first": true,
+    "show_statement_figures": true,
+    "show_solution_after_click": true,
+    "show_solution_figures": true
+  },
+  "review_status": {
+    "statement_compared_with_original_pdf": true,
+    "questions_compared_with_original_pdf": true,
+    "source_figures_checked": true,
+    "solution_checked_against_correction": true,
+    "latex_normalized_only": true,
+    "react_ready": true
+  },
+  "given_data": {
+    "P": "2z^4-2iz^3-z^2-2iz+2",
+    "known_root": "1+i",
+    "points_affixes": {
+      "A": "1+i",
+      "B": "-1+i",
+      "C": "-m/2-(m/2)i",
+      "D": "m/2-(m/2)i"
+    }
+  }
+}

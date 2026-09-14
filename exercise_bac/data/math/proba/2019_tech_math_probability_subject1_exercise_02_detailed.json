@@ -1,0 +1,224 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2019-tech-math-probability-subject1-ex02-detailed",
+  "session": "ordinary",
+  "year": 2019,
+  "chapter_code": "probability",
+  "chapter_title": "الاحتمالات",
+  "axis_tags": [
+    "random_variable_probability_law",
+    "random_variable_expected_value",
+    "probability_counting_modeling"
+  ],
+  "branches": [
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "exercise_number": 2,
+  "subject_number": 1,
+  "source_page": 1,
+  "source_pages": [
+    1,
+    2
+  ],
+  "solution_source_pages": [
+    7
+  ],
+  "title": "التمرين الثاني — بكالوريا الجزائر 2019 — الموضوع الأول — شعبة تقني رياضي",
+  "statement": "توجد إجابة صحيحة واحدة من بين الأجوبة المقترحة في كل حالة من الحالات التالية. اختر الإجابة الصحيحة مبررا اختيارك.\nيحتوي كيس على ثلاث كريات بيضاء تحمل الأرقام 1 ، 2 ، 3 و كريتين سوداويين تحملان الرقمين 1 ، 2 .\n(الكريات لا نفرق بينها عند اللمس) نسحب من الكيس 3 كريات عشوائيا و في آن واحد.\nX المتغير العشوائي الذي يرفق بكل سحب عدد الكريات السوداء المسحوبة.",
+  "questions": [
+    {
+      "id": "2019_s1_probability_ex02_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) قيم المتغير العشوائي X هي: أ) \\(\\{1;2;3\\}\\) ، ب) \\(\\{0;2;3\\}\\) ، جـ) \\(\\{0;1;2\\}\\).",
+      "axis_tags": [
+        "random_variable_probability_law"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نبحث عن أصغر وأكبر عدد ممكن من الكريات السوداء عند سحب 3 كريات، مع ملاحظة أن الكيس يحتوي على كريتين سوداويين فقط.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "أصغر قيمة ممكنة",
+            "explanation": "يمكن سحب الكريات البيضاء الثلاث كلها، وفي هذه الحالة لا نسحب أي كرية سوداء، وبالتالي:\n\\[X=0.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "القيمة 1",
+            "explanation": "يمكن سحب كرية سوداء واحدة مع كريتين بيضاوين، وبالتالي:\n\\[X=1.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "أكبر قيمة ممكنة",
+            "explanation": "لا يوجد في الكيس إلا كريتان سوداوان، لذلك أكبر عدد من الكريات السوداء الممكن سحبه هو:\n\\[X=2.\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "الاختيار الصحيح",
+            "explanation": "إذن قيم المتغير العشوائي هي:\n\\[X\\in\\{0,1,2\\}.\\]\nوعليه فالاختيار الصحيح هو جـ."
+          }
+        ],
+        "final_answer": "الإجابة الصحيحة: جـ) \\(\\{0;1;2\\}\\)."
+      }
+    },
+    {
+      "id": "2019_s1_probability_ex02_q2",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2) الأمل الرياضياتي \\(E(X)\\) لـ \\(X\\) هو: أ) \\(E(X)=\\frac{4}{5}\\) ، ب) \\(E(X)=\\frac{6}{5}\\) ، جـ) \\(E(X)=\\frac{11}{10}\\).",
+      "axis_tags": [
+        "random_variable_probability_law",
+        "random_variable_expected_value"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب أولا قانون احتمال X باستعمال التوفيقات، ثم نحسب الأمل الرياضياتي.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "عدد السحبات الممكنة",
+            "explanation": "نسحب 3 كريات من أصل 5 في آن واحد، لذلك عدد الحالات الممكنة هو:\n\\[\\binom{5}{3}=10.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب P(X=0)",
+            "explanation": "حتى يكون \\(X=0\\) يجب سحب الكريات البيضاء الثلاث:\n\\[P(X=0)=\\frac{\\binom{3}{3}\\binom{2}{0}}{\\binom{5}{3}}=\\frac{1}{10}.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب P(X=1)",
+            "explanation": "نسحب كرية سوداء واحدة من بين 2 وكريتين بيضاوين من بين 3:\n\\[P(X=1)=\\frac{\\binom{2}{1}\\binom{3}{2}}{\\binom{5}{3}}=\\frac{6}{10}=\\frac{3}{5}.\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "حساب P(X=2)",
+            "explanation": "نسحب الكريتين السوداوين وكرية بيضاء واحدة:\n\\[P(X=2)=\\frac{\\binom{2}{2}\\binom{3}{1}}{\\binom{5}{3}}=\\frac{3}{10}.\\]"
+          },
+          {
+            "step_number": 5,
+            "title": "حساب الأمل الرياضياتي",
+            "explanation": "نطبق:\n\\[E(X)=\\sum x_iP(X=x_i).\\]\nإذن:\n\\[E(X)=0\\times\\frac{1}{10}+1\\times\\frac{6}{10}+2\\times\\frac{3}{10}.\\]\nومن ثم:\n\\[E(X)=\\frac{6}{10}+\\frac{6}{10}=\\frac{12}{10}=\\frac{6}{5}.\\]"
+          },
+          {
+            "step_number": 6,
+            "title": "الاختيار الصحيح",
+            "explanation": "إذن الاختيار الصحيح هو ب."
+          }
+        ],
+        "tables": [
+          {
+            "title": "قانون احتمال X",
+            "headers": [
+              "\\(x_i\\)",
+              "0",
+              "1",
+              "2"
+            ],
+            "rows": [
+              [
+                "\\(P(X=x_i)\\)",
+                "\\(\\frac{1}{10}\\)",
+                "\\(\\frac{6}{10}\\)",
+                "\\(\\frac{3}{10}\\)"
+              ]
+            ]
+          }
+        ],
+        "final_answer": "الإجابة الصحيحة: ب) \\[E(X)=\\frac{6}{5}.\\]"
+      }
+    },
+    {
+      "id": "2019_s1_probability_ex02_q3",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "3) احتمال \"الحصول على كرية واحدة سوداء تحمل الرقم 1 من الكريات المسحوبة\" يساوي: أ) \\(\\frac{7}{10}\\) ، ب) \\(\\frac{9}{10}\\) ، جـ) \\(\\frac{3}{5}\\).",
+      "axis_tags": [
+        "probability_counting_modeling"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "الكرية السوداء الحاملة للرقم 1 كرية محددة. لكي تكون ضمن السحب نثبتها ثم نختار الكريتين الباقيتين من الكريات الأربع الأخرى.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "عدد الحالات الممكنة",
+            "explanation": "عدد طرق سحب 3 كريات من أصل 5 هو:\n\\[\\binom{5}{3}=10.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "عدد الحالات الملائمة",
+            "explanation": "نفرض أن الكرية السوداء التي تحمل الرقم 1 موجودة في السحب. يتبقى اختيار كريتين من بين الكريات الأربع الأخرى:\n\\[\\binom{4}{2}=6.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب الاحتمال",
+            "explanation": "إذن:\n\\[P=\\frac{6}{10}=\\frac{3}{5}.\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "الاختيار الصحيح",
+            "explanation": "الاختيار الصحيح هو جـ."
+          }
+        ],
+        "final_answer": "الإجابة الصحيحة: جـ) \\[\\frac{3}{5}.\\]"
+      }
+    },
+    {
+      "id": "2019_s1_probability_ex02_q4",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "4) احتمال \"باقي قسمة مجموع مربعات الأرقام التي تحملها الكريات المسحوبة على 13 هو 1\" يساوي: أ) \\(\\frac{2}{5}\\) ، ب) \\(\\frac{3}{10}\\) ، جـ) \\(\\frac{1}{5}\\).",
+      "axis_tags": [
+        "probability_counting_modeling"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نسمي الكريات حسب اللون والرقم، ثم نفحص السحبات الثلاثية التي يكون فيها مجموع مربعات الأرقام موافقا لـ 1 بترديد 13.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "عدد الحالات الممكنة",
+            "explanation": "عدد السحبات الممكنة هو:\n\\[\\binom{5}{3}=10.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "تحديد الشرط العددي",
+            "explanation": "نريد أن يكون:\n\\[a^2+b^2+c^2\\equiv1\\pmod{13}.\\]\nوبما أن الأرقام الموجودة هي 1 و2 و3، فإن المجموع الملائم هنا هو:\n\\[1^2+2^2+3^2=1+4+9=14\\equiv1\\pmod{13}.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "عد الحالات الملائمة",
+            "explanation": "يلزم إذن أن تحمل الكريات الثلاث الأرقام 1 و2 و3. توجد كرية واحدة تحمل الرقم 3، وكريتان تحملان الرقم 1، وكريتان تحملان الرقم 2.\nعدد الاختيارات هو:\n\\[1\\times2\\times2=4.\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "حساب الاحتمال",
+            "explanation": "إذن:\n\\[P=\\frac{4}{10}=\\frac{2}{5}.\\]"
+          },
+          {
+            "step_number": 5,
+            "title": "الاختيار الصحيح",
+            "explanation": "الاختيار الصحيح هو أ."
+          }
+        ],
+        "final_answer": "الإجابة الصحيحة: أ) \\[\\frac{2}{5}.\\]"
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "statement_checked_against_image": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2019(3).pdf",
+    "statement_image": "2019_exo01(4).jpg",
+    "statement_figure_policy": "لا يوجد شكل لازم في نص التمرين.",
+    "solution_figure_policy": "لا يحتاج الحل إلى رسم.",
+    "renderer": "MathJax + structured tables"
+  }
+}

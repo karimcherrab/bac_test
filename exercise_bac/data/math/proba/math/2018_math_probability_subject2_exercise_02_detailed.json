@@ -1,0 +1,227 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2018-math-probability-subject2-ex02-detailed",
+  "session": "ordinary",
+  "year": 2018,
+  "chapter_code": "probability",
+  "chapter_title": "الاحتمالات",
+  "axis_tags": [
+    "probability_language_probability_law",
+    "counting_combinations",
+    "random_variable_probability_distribution_expectation"
+  ],
+  "branches": [
+    {
+      "code": "math",
+      "name": "شعبة رياضيات"
+    }
+  ],
+  "exercise_number": 2,
+  "subject_number": 2,
+  "source_page": 4,
+  "source_pages": [
+    4
+  ],
+  "solution_source_pages": [
+    10
+  ],
+  "title": "التمرين الثاني — بكالوريا الجزائر 2018 — الموضوع الثاني — شعبة رياضيات — الاحتمالات",
+  "statement": "كيس يحوي 9 كريات لا نفرق بينها باللمس موزعة كما يلي:\nخمس كريات حمراء مرقمة بـ: 1، 1، 2، 2، 2 وثلاث كريات خضراء مرقمة بـ: -3، 2، 3 وكرية بيضاء مرقمة بـ: -1.\nنسحب عشوائيا 4 كريات في آن واحد.",
+  "questions": [
+    {
+      "id": "2018_s2_probability_ex02_q1a",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) احسب احتمال الحوادث التالية:\nA : \"الحصول على أربع كريات من نفس اللون\".",
+      "axis_tags": [
+        "probability_language_probability_law",
+        "counting_combinations"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "السحب في آن واحد، لذا نستعمل التوفيقات. لا يمكن الحصول على أربع خضراء أو أربع بيضاء، فالحالة الممكنة الوحيدة هي أربع كريات حمراء.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "عدد الحالات الممكنة",
+            "explanation": "\\[|\\Omega|=\\binom{9}{4}=126.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "عدد الحالات الملائمة",
+            "explanation": "\\[|A|=\\binom{5}{4}=5.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الاحتمال",
+            "explanation": "\\[P(A)=\\frac{5}{126}.\\]"
+          }
+        ],
+        "final_answer": "\\[P(A)=\\frac{5}{126}.\\]"
+      }
+    },
+    {
+      "id": "2018_s2_probability_ex02_q1b",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "B : \"الحصول على كرية بيضاء على الأكثر\".",
+      "axis_tags": [
+        "probability_language_probability_law"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "في الكيس كرية بيضاء واحدة فقط، لذلك كل سحب لأربع كريات يحتوي على صفر أو كرية بيضاء واحدة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "فهم الحادثة",
+            "explanation": "«على الأكثر كرية بيضاء» يعني الحصول على 0 أو 1 كرية بيضاء."
+          },
+          {
+            "step_number": 2,
+            "title": "النتيجة",
+            "explanation": "هذه الحادثة محققة دائما لأن الكيس لا يحتوي إلا على كرية بيضاء واحدة."
+          }
+        ],
+        "final_answer": "\\[P(B)=1.\\]"
+      }
+    },
+    {
+      "id": "2018_s2_probability_ex02_q1c",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "C : \"الحصول على أربع كريات مجموع أرقامها معدوم\".",
+      "axis_tags": [
+        "probability_language_probability_law",
+        "counting_combinations"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نعد الاختيارات المكونة من أربع كريات التي يكون مجموع أرقامها صفرا مع مراعاة تكرار الكريات ذات الرقم نفسه.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "عدد الحالات الممكنة",
+            "explanation": "\\[|\\Omega|=\\binom94=126.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "عد الحالات ذات المجموع صفر",
+            "explanation": "الحالات الممكنة هي:\n• \\(1,-3,3,-1\\): لدينا كريتان حمراوان رقمهما 1، إذن حالتان.\n• \\(2,2,-3,-1\\): نختار كريتين من بين ثلاث حمراء مرقمة بـ2، إذن \\(\\binom32=3\\) حالات.\n• \\(2,-3,2,-1\\): نختار كرية حمراء واحدة رقمها 2 من بين 3، إذن 3 حالات.\nإذن العدد الكلي:\n\\[2+3+3=8.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الاحتمال",
+            "explanation": "\\[P(C)=\\frac{8}{126}=\\frac{4}{63}.\\]"
+          }
+        ],
+        "final_answer": "\\[P(C)=\\frac{8}{126}=\\frac{4}{63}.\\]"
+      }
+    },
+    {
+      "id": "2018_s2_probability_ex02_q2a",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "2) ليكن \\(X\\) المتغير العشوائي الذي يرفق بكل نتيجة سحب عدد الكريات الخضراء المتبقية في الكيس.\nأ) عين قيم المتغير العشوائي \\(X\\) ثم عرف قانون احتماله.",
+      "axis_tags": [
+        "random_variable_probability_distribution_expectation",
+        "counting_combinations"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "في البداية توجد 3 كريات خضراء. إذا سحبنا k كريات خضراء فإن عدد الخضراء المتبقية هو \\(X=3-k\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "قيم X",
+            "explanation": "\\[X\\in\\{0,1,2,3\\}.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "P(X=0)",
+            "explanation": "\\[P(X=0)=\\frac{\\binom33\\binom61}{\\binom94}=\\frac{6}{126}.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "P(X=1)",
+            "explanation": "\\[P(X=1)=\\frac{\\binom32\\binom62}{\\binom94}=\\frac{45}{126}.\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "P(X=2)",
+            "explanation": "\\[P(X=2)=\\frac{\\binom31\\binom63}{\\binom94}=\\frac{60}{126}.\\]"
+          },
+          {
+            "step_number": 5,
+            "title": "P(X=3)",
+            "explanation": "\\[P(X=3)=\\frac{\\binom30\\binom64}{\\binom94}=\\frac{15}{126}.\\]"
+          },
+          {
+            "step_number": 6,
+            "title": "قانون الاحتمال",
+            "explanation": "\\[\n\\begin{array}{c|cccc}\nx_i & 0 & 1 & 2 & 3\\\\ \\hline\nP(X=x_i) & \\frac{6}{126} & \\frac{45}{126} & \\frac{60}{126} & \\frac{15}{126}\n\\end{array}\n\\]"
+          }
+        ],
+        "final_answer": "\\[X\\in\\{0,1,2,3\\}.\\]\n\\[\n\\begin{array}{c|cccc}\nx_i & 0 & 1 & 2 & 3\\\\ \\hline\nP(X=x_i) & \\frac{6}{126} & \\frac{45}{126} & \\frac{60}{126} & \\frac{15}{126}\n\\end{array}\n\\]"
+      }
+    },
+    {
+      "id": "2018_s2_probability_ex02_q2b",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "ب) احسب الأمل الرياضياتي \\(E(X)\\) للمتغير العشوائي \\(X\\).",
+      "axis_tags": [
+        "random_variable_probability_distribution_expectation"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل تعريف الأمل الرياضي.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الحساب",
+            "explanation": "\\[\nE(X)=0\\times\\frac6{126}+1\\times\\frac{45}{126}+2\\times\\frac{60}{126}+3\\times\\frac{15}{126}=\\frac{210}{126}=\\frac53.\n\\]"
+          }
+        ],
+        "final_answer": "\\[E(X)=\\frac53.\\]"
+      }
+    },
+    {
+      "id": "2018_s2_probability_ex02_q2c",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "ج) احسب احتمال الحادثة: \"\\(X^2-X>0\\)\".",
+      "axis_tags": [
+        "probability_language_probability_law",
+        "random_variable_probability_distribution_expectation"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحل المتراجحة على القيم الممكنة للمتغير العشوائي فقط.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حل الشرط",
+            "explanation": "\\[X^2-X>0\\Longleftrightarrow X(X-1)>0.\\]\nوبما أن \\(X\\in\\{0,1,2,3\\}\\)، فالشرط يتحقق عند \\(X=2\\) أو \\(X=3\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "حساب الاحتمال",
+            "explanation": "\\[\nP(X^2-X>0)=P(X=2)+P(X=3)=\\frac{60}{126}+\\frac{15}{126}=\\frac{75}{126}=\\frac{25}{42}.\n\\]"
+          }
+        ],
+        "final_answer": "\\[P(X^2-X>0)=\\frac{25}{42}.\\]"
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2018(20260826-125649).pdf",
+    "statement_figure_policy": "لا يوجد رسم مطلوب في نص التمرين.",
+    "solution_figure_policy": "قانون احتمال المتغير العشوائي ممثل بجدول رياضي داخل الحل.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  }
+}

@@ -1,0 +1,238 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2020-tech-math-probability-subject1-ex03-detailed",
+  "session": "ordinary",
+  "year": 2020,
+  "chapter_code": "probability",
+  "chapter_title": "الاحتمالات",
+  "axis_tags": [
+    "probability_language_law",
+    "probability_counting_modeling",
+    "random_variable_probability_law",
+    "fair_game_expected_gain"
+  ],
+  "branches": [
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "exercise_number": 3,
+  "subject_number": 1,
+  "source_page": 2,
+  "source_pages": [
+    2
+  ],
+  "solution_source_pages": [
+    6
+  ],
+  "title": "التمرين الثالث — بكالوريا الجزائر 2020 — الموضوع الأول — شعبة تقني رياضي",
+  "statement": "يحتوي كيس على أربع كريات حمراء مرقمة بـ: 2 ، 2 ، 2 ، 2 و ثلاث كريات خضراء مرقمة بـ: 3 ، 3 ، 2.\nالكريات لا نفرق بينها باللمس، نسحب عشوائيا في آن واحد كريتين من هذا الكيس.",
+  "questions": [
+    {
+      "id": "2020_s1_probability_ex03_q1a",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) نعتبر الحدثين: A \"الحصول على كريتين تحملان نفس الرقم\" و B \"الحصول على كريتين مختلفتين في اللون\".\nأ. احسب احتمال كل من الحدثين A و B.",
+      "axis_tags": [
+        "probability_language_law",
+        "probability_counting_modeling"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "عدد الكريات 7 ونسحب كريتين في آن واحد، لذلك نستعمل التوفيقات. توجد 5 كريات تحمل الرقم 2 وكريتان تحملان الرقم 3.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "عدد الحالات الممكنة",
+            "explanation": "لدينا:\n\\[|\\Omega|=\\binom{7}{2}=21.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب P(A)",
+            "explanation": "للحصول على نفس الرقم توجد حالتان: كريتان تحملان الرقم 2، أو الكريتان اللتان تحملان الرقم 3.\nإذن:\n\\[P(A)=\\frac{\\binom{5}{2}+\\binom{2}{2}}{21}=\\frac{10+1}{21}=\\frac{11}{21}.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب P(B)",
+            "explanation": "للحصول على لونين مختلفين نختار كرية حمراء من 4 وكرية خضراء من 3:\n\\[P(B)=\\frac{\\binom41\\binom31}{21}=\\frac{12}{21}=\\frac47.\\]"
+          }
+        ],
+        "final_answer": "\\[P(A)=\\frac{11}{21},\\qquad P(B)=\\frac{12}{21}=\\frac47.\\]"
+      }
+    },
+    {
+      "id": "2020_s1_probability_ex03_q1b",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "ب. بين أن احتمال الحصول على كريتين تحملان نفس الرقم ومختلفتين في اللون يساوي \\(\\frac{4}{21}\\).",
+      "axis_tags": [
+        "probability_language_law",
+        "probability_counting_modeling"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "المطلوب هو الحدث A∩B. لكي تحمل الكريتان نفس الرقم وتختلفا في اللون لا بد أن يكون رقمهما 2.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تحديد الحالات الملائمة",
+            "explanation": "الكريات الحمراء الأربع كلها تحمل الرقم 2، ومن الكريات الخضراء توجد كرية واحدة فقط تحمل الرقم 2."
+          },
+          {
+            "step_number": 2,
+            "title": "عد الحالات الملائمة",
+            "explanation": "نختار كرية حمراء رقم 2 من 4، وكرية خضراء رقم 2 من 1:\n\\[\\binom41\\binom11=4.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب الاحتمال",
+            "explanation": "إذن:\n\\[P(A\\cap B)=\\frac4{21}.\\]"
+          }
+        ],
+        "final_answer": "\\[P(A\\cap B)=\\frac4{21}.\\]"
+      }
+    },
+    {
+      "id": "2020_s1_probability_ex03_q1c",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "جـ. استنتج احتمال الحصول على كريتين تحملان نفس الرقم أو مختلفتين في اللون.",
+      "axis_tags": [
+        "probability_language_law"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "عبارة «نفس الرقم أو مختلفتين في اللون» تمثل الاتحاد A∪B، فنستعمل قانون احتمال اتحاد حادثتين.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "كتابة قانون الاتحاد",
+            "explanation": "\\[P(A\\cup B)=P(A)+P(B)-P(A\\cap B).\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "التعويض",
+            "explanation": "\\[P(A\\cup B)=\\frac{11}{21}+\\frac{12}{21}-\\frac4{21}=\\frac{19}{21}.\\]"
+          }
+        ],
+        "final_answer": "\\[P(A\\cup B)=\\frac{19}{21}.\\]"
+      }
+    },
+    {
+      "id": "2020_s1_probability_ex03_q2",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "2) ليكن X المتغير العشوائي الذي يرفق بكل سحب جداء الرقمين الظاهرين على الكريتين المسحوبتين.\nعرف قانون الاحتمال للمتغير العشوائي X.",
+      "axis_tags": [
+        "random_variable_probability_law",
+        "probability_counting_modeling"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "الأرقام الممكنة على الكريات هي 2 و3، لذلك الجداء الممكن هو 4 أو 6 أو 9. نحسب احتمال كل قيمة بعدد الأزواج الموافقة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تحديد قيم X",
+            "explanation": "\\[2\\times2=4,\\qquad2\\times3=6,\\qquad3\\times3=9.\\]\nإذن:\n\\[X\\in\\{4,6,9\\}.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب P(X=4)",
+            "explanation": "يوجد 5 كريات تحمل الرقم 2، فنختار اثنتين منها:\n\\[P(X=4)=\\frac{\\binom52}{\\binom72}=\\frac{10}{21}.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب P(X=6)",
+            "explanation": "نختار كرية رقم 2 من 5 وكرية رقم 3 من 2:\n\\[P(X=6)=\\frac{5\\times2}{21}=\\frac{10}{21}.\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "حساب P(X=9)",
+            "explanation": "يجب سحب الكريتين اللتين تحملان الرقم 3:\n\\[P(X=9)=\\frac{\\binom22}{21}=\\frac1{21}.\\]"
+          },
+          {
+            "step_number": 5,
+            "title": "التحقق",
+            "explanation": "\\[\\frac{10}{21}+\\frac{10}{21}+\\frac1{21}=1.\\]"
+          }
+        ],
+        "tables": [
+          {
+            "title": "قانون احتمال X",
+            "headers": [
+              "\\(x_i\\)",
+              "4",
+              "6",
+              "9"
+            ],
+            "rows": [
+              [
+                "\\(P(X=x_i)\\)",
+                "\\(\\frac{10}{21}\\)",
+                "\\(\\frac{10}{21}\\)",
+                "\\(\\frac1{21}\\)"
+              ]
+            ]
+          }
+        ],
+        "final_answer": "\\[X\\in\\{4,6,9\\}\\]\\n\\[P(X=4)=\\frac{10}{21},\\quad P(X=6)=\\frac{10}{21},\\quad P(X=9)=\\frac1{21}.\\]"
+      }
+    },
+    {
+      "id": "2020_s1_probability_ex03_q3",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "3) في لعبة، يقوم لاعب بسحب كريتين: إذا كان جداء رقميهما 4 يربح \\(x^2\\) دينار، إذا كان جداء رقميهما 6 يخسر \\(y^2\\) دينار و إذا كان جداء رقميهما 9 يخسر 130 دينار. (x و y عددان طبيعيان غير معدومين)\nعين قيمة كل من x و y حتى تكون هذه اللعبة عادلة.",
+      "axis_tags": [
+        "fair_game_expected_gain",
+        "random_variable_probability_law"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "اللعبة العادلة تعني أن الأمل الرياضي للربح الجبري يساوي صفرا. نستعمل قانون احتمال X المحسوب في السؤال السابق.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "كتابة الأرباح والخسائر",
+            "explanation": "عند \\(X=4\\) الربح هو \\(+x^2\\)، وعند \\(X=6\\) الربح الجبري هو \\(-y^2\\)، وعند \\(X=9\\) هو \\(-130\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "شرط عدالة اللعبة",
+            "explanation": "\\[\\frac{10}{21}x^2-\\frac{10}{21}y^2-\\frac1{21}\\times130=0.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "تبسيط المعادلة",
+            "explanation": "نضرب في 21:\n\\[10x^2-10y^2-130=0.\\]\nومنها:\n\\[x^2-y^2=13.\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "استعمال فرق مربعين",
+            "explanation": "\\[(x-y)(x+y)=13.\\]\nوبما أن \\(x,y\\) عددان طبيعيان غير معدومين و13 عدد أولي، فإن:\n\\[x-y=1,\\qquad x+y=13.\\]"
+          },
+          {
+            "step_number": 5,
+            "title": "إيجاد x و y",
+            "explanation": "بجمع المعادلتين:\n\\[2x=14\\Rightarrow x=7.\\]\nثم:\n\\[y=6.\\]"
+          }
+        ],
+        "final_answer": "\\[x=7,\\qquad y=6.\\]"
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "statement_checked_against_image": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2020(1).pdf",
+    "statement_image": "2020_exo01(2).jpg",
+    "statement_figure_policy": "لا يوجد شكل لازم في نص التمرين.",
+    "solution_figure_policy": "لا يحتاج الحل إلى رسم.",
+    "renderer": "MathJax + structured tables"
+  }
+}

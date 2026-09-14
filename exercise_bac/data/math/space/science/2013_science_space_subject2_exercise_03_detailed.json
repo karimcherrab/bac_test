@@ -1,0 +1,267 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2013-science-space-subject2-ex03-detailed",
+  "session": "ordinary",
+  "year": 2013,
+  "chapter_code": "space_geometry",
+  "chapter_title": "الهندسة في الفضاء",
+  "axis_tags": [
+    "space_midpoint",
+    "space_perpendicular_bisector_plane",
+    "space_parametric_line",
+    "space_relative_positions_intersections",
+    "space_parallel_lines_coplanarity",
+    "space_triangle_geometry",
+    "space_perpendicular_lines",
+    "space_areas_volumes"
+  ],
+  "branches": [
+    {
+      "code": "science",
+      "name": "شعبة علوم تجريبية"
+    }
+  ],
+  "exercise_number": 3,
+  "subject_number": 2,
+  "source_page": 4,
+  "source_pages": [
+    4
+  ],
+  "solution_source_pages": [
+    9
+  ],
+  "title": "التمرين الثالث — بكالوريا الجزائر 2013 — الموضوع الثاني — شعبة علوم تجريبية",
+  "statement": "نعتبر في الفضاء المنسوب إلى المعلم المتعامد المتجانس \\((O;\\vec{i},\\vec{j},\\vec{k})\\) النقط \\(A(2;1;-1)\\)، \\(B(1;-1;3)\\)، \\(C\\left(-\\frac32;-2;1\\right)\\) و \\(D\\left(\\frac72;-3;0\\right)\\). وليكن \\(I\\) منتصف القطعة \\([AB]\\).",
+  "questions": [
+    {
+      "id": "2013_s2_space_ex03_q1a",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) أ) احسب إحداثيات النقطة \\(I\\).",
+      "axis_tags": [
+        "space_midpoint"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نطبق صيغة إحداثيات منتصف قطعة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تطبيق صيغة المنتصف",
+            "explanation": "\\[I\\left(\\frac{2+1}{2},\\frac{1+(-1)}{2},\\frac{-1+3}{2}\\right).\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "التبسيط",
+            "explanation": "\\[I\\left(\\frac32,0,1\\right).\\]"
+          }
+        ],
+        "final_answer": "\\[I\\left(\\frac32;0;1\\right).\\]"
+      }
+    },
+    {
+      "id": "2013_s2_space_ex03_q1b",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "ب) بين أن: \\(2x+4y-8z+5=0\\) معادلة ديكارتية لـ \\((P)\\)، المستوى المحوري لـ \\([AB]\\).",
+      "axis_tags": [
+        "space_perpendicular_bisector_plane",
+        "space_cartesian_plane_normal_vector"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "المستوى المحوري لـ[AB] يمر بمنتصف القطعة ويكون عموديا على المستقيم AB. نتحقق من الشرطين.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التحقق من أن I تنتمي إلى P",
+            "explanation": "نعوض \\(I\\left(\\frac32,0,1\\right)\\):\n\\[2\\times\\frac32+4(0)-8(1)+5=3-8+5=0.\\]\nإذن \\(I\\in(P)\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "مقارنة شعاع الناظم مع AB",
+            "explanation": "شعاع ناظمي للمستوى هو:\n\\[\\vec n=(2,4,-8).\\]\nولدينا:\n\\[\\overrightarrow{AB}=B-A=(-1,-2,4).\\]\nونلاحظ أن:\n\\[\\vec n=-2\\overrightarrow{AB}.\\]\nإذن \\((P)\\perp(AB)\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "الاستنتاج",
+            "explanation": "المستوى \\((P)\\) يمر بمنتصف \\([AB]\\) وهو عمودي على \\((AB)\\)، لذلك هو المستوى المحوري للقطعة \\([AB]\\)."
+          }
+        ],
+        "final_answer": "\\[(P):2x+4y-8z+5=0\\] هو المستوى المحوري للقطعة \\([AB]\\)."
+      }
+    },
+    {
+      "id": "2013_s2_space_ex03_q2",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "2) اكتب تمثيلا وسيطيا للمستقيم \\((\\Delta)\\) الذي يشمل النقطة \\(C\\) و \\(\\vec u(1;2;-4)\\) شعاع توجيه له.",
+      "axis_tags": [
+        "space_parametric_line"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل إحداثيات C وشعاع التوجيه u.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "كتابة التمثيل الوسيطي",
+            "explanation": "\\[(\\Delta):\\begin{cases}x=-\\frac32+t\\\\y=-2+2t\\\\z=1-4t\\end{cases}\\qquad t\\in\\mathbb R.\\]"
+          }
+        ],
+        "final_answer": "\\[(\\Delta):\\begin{cases}x=-\\frac32+t\\\\y=-2+2t\\\\z=1-4t\\end{cases},\\quad t\\in\\mathbb R.\\]"
+      }
+    },
+    {
+      "id": "2013_s2_space_ex03_q3a",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "3) أ) جد إحداثيات \\(E\\) نقطة تقاطع المستوى \\((P)\\) و المستقيم \\((\\Delta)\\).",
+      "axis_tags": [
+        "space_relative_positions_intersections"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نعوض التمثيل الوسيطي للمستقيم Δ في معادلة المستوى P لتحديد قيمة الوسيط.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التعويض في معادلة P",
+            "explanation": "\\[2\\left(-\\frac32+t\\right)+4(-2+2t)-8(1-4t)+5=0.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حل المعادلة",
+            "explanation": "\\[-3+2t-8+8t-8+32t+5=0\\]\n\\[42t-14=0\\Rightarrow t=\\frac13.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب إحداثيات E",
+            "explanation": "عند \\(t=\\frac13\\):\n\\[x=-\\frac32+\\frac13=-\\frac76,\\]\n\\[y=-2+\\frac23=-\\frac43,\\]\n\\[z=1-\\frac43=-\\frac13.\\]"
+          }
+        ],
+        "final_answer": "\\[E\\left(-\\frac76;-\\frac43;-\\frac13\\right).\\]"
+      }
+    },
+    {
+      "id": "2013_s2_space_ex03_q3b",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "ب) بين أن \\((\\Delta)\\) و \\((AB)\\) من نفس المستوى، ثم استنتج أن المثلث \\(IEC\\) قائم.",
+      "axis_tags": [
+        "space_parallel_lines_coplanarity",
+        "space_triangle_geometry"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نقارن شعاع توجيه Δ مع AB، ثم نستعمل كون P عموديا على AB وأن I وE ينتميان إلى P.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "إثبات توازي Δ وAB",
+            "explanation": "لدينا:\n\\[\\overrightarrow{AB}=(-1,-2,4).\\]\nوشعاع توجيه \\((\\Delta)\\):\n\\[\\vec u=(1,2,-4)=-\\overrightarrow{AB}.\\]\nإذن:\n\\[(\\Delta)\\parallel(AB).\\]\nوكل مستقيمين متوازيين يكونان من نفس المستوى."
+          },
+          {
+            "step_number": 2,
+            "title": "تحديد اتجاه EC",
+            "explanation": "النقطتان \\(E,C\\) تنتميان إلى \\((\\Delta)\\)، إذن:\n\\[(EC)\\parallel(AB).\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "استعمال المستوى المحوري P",
+            "explanation": "بما أن \\((P)\\) هو المستوى المحوري لـ\\([AB]\\)، فإن:\n\\[(AB)\\perp(P).\\]\nكما أن \\(I\\in(P)\\) و\\(E\\in(P)\\)، إذن المستقيم \\((IE)\\) محتوى في \\((P)\\).\nولأن \\((EC)\\parallel(AB)\\)، فإن:\n\\[(EC)\\perp(IE).\\]"
+          }
+        ],
+        "final_answer": "المستقيمان \\((\\Delta)\\) و\\((AB)\\) من نفس المستوى، والمثلث \\(IEC\\) قائم في \\(E\\)."
+      }
+    },
+    {
+      "id": "2013_s2_space_ex03_q4a",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "4) أ) بين أن المستقيم \\((ID)\\) عمودي على كل من المستقيم \\((AB)\\) و المستقيم \\((IE)\\).",
+      "axis_tags": [
+        "space_perpendicular_lines"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب شعاع ID ثم جداءه السلمي مع شعاعي AB وIE.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب ID",
+            "explanation": "\\[\\overrightarrow{ID}=D-I=\\left(\\frac72-\\frac32,-3-0,0-1\\right)=(2,-3,-1).\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "إثبات ID عمودي على AB",
+            "explanation": "\\[\\overrightarrow{AB}=(-1,-2,4).\\]\nإذن:\n\\[\\overrightarrow{ID}\\cdot\\overrightarrow{AB}=2(-1)+(-3)(-2)+(-1)(4)=-2+6-4=0.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب IE",
+            "explanation": "\\[\\overrightarrow{IE}=E-I=\\left(-\\frac76-\\frac32,-\\frac43,-\\frac13-1\\right)=\\left(-\\frac83,-\\frac43,-\\frac43\\right).\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "إثبات ID عمودي على IE",
+            "explanation": "\\[\\overrightarrow{ID}\\cdot\\overrightarrow{IE}=2\\left(-\\frac83\\right)+(-3)\\left(-\\frac43\\right)+(-1)\\left(-\\frac43\\right)\\]\n\\[=-\\frac{16}{3}+4+\\frac43=0.\\]"
+          }
+        ],
+        "final_answer": "\\[(ID)\\perp(AB)\\quad\\text{و}\\quad(ID)\\perp(IE).\\]"
+      }
+    },
+    {
+      "id": "2013_s2_space_ex03_q4b",
+      "display_order": 7,
+      "content_type": "question",
+      "text": "ب) احسب حجم رباعي الوجوه \\(DIEC\\).",
+      "axis_tags": [
+        "space_areas_volumes",
+        "space_perpendicular_lines"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نأخذ المثلث IEC قاعدة. بما أنه قائم في E نحسب مساحته بسهولة، ثم نستعمل ID ارتفاعا لأن ID عمودي على IE وعلى EC أيضا لكون EC موازيا لـAB.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب EC",
+            "explanation": "\\[\\overrightarrow{EC}=C-E=\\left(-\\frac32+\\frac76,-2+\\frac43,1+\\frac13\\right)=\\left(-\\frac13,-\\frac23,\\frac43\\right).\\]\nإذن:\n\\[EC=\\frac13\\sqrt{1+4+16}=\\frac{\\sqrt{21}}3.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب IE",
+            "explanation": "\\[IE=\\sqrt{\\left(-\\frac83\\right)^2+\\left(-\\frac43\\right)^2+\\left(-\\frac43\\right)^2}\n=\\frac43\\sqrt6.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "مساحة المثلث IEC",
+            "explanation": "المثلث \\(IEC\\) قائم في \\(E\\)، إذن:\n\\[S_{IEC}=\\frac12\\,IE\\times EC\n=\\frac12\\times\\frac{4\\sqrt6}{3}\\times\\frac{\\sqrt{21}}3\n=\\frac{2\\sqrt{126}}9\n=\\frac{2\\sqrt{14}}3.\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "حساب الارتفاع ID",
+            "explanation": "لدينا:\n\\[ID=\\sqrt{2^2+(-3)^2+(-1)^2}=\\sqrt{14}.\\]\nومن السؤال السابق \\((ID)\\perp(IE)\\)، كما أن \\((EC)\\parallel(AB)\\) و\\((ID)\\perp(AB)\\)، إذن \\((ID)\\perp(EC)\\).\nوعليه \\(ID\\) عمودي على مستوى القاعدة \\((IEC)\\)، فهو ارتفاع رباعي الوجوه."
+          },
+          {
+            "step_number": 5,
+            "title": "حساب الحجم",
+            "explanation": "\\[V=\\frac13S_{IEC}\\times ID\n=\\frac13\\times\\frac{2\\sqrt{14}}3\\times\\sqrt{14}\n=\\frac{28}{9}.\\]"
+          }
+        ],
+        "final_answer": "\\[V_{DIEC}=\\frac{28}{9}\\] وحدة حجم."
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2013.pdf",
+    "statement_figure_policy": "لا يوجد شكل لازم في نص التمرين.",
+    "solution_figure_policy": "لا يحتاج الحل إلى رسم.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  }
+}

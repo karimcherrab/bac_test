@@ -1,0 +1,222 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2018-science-space-subject2-ex02-detailed",
+  "session": "ordinary",
+  "year": 2018,
+  "chapter_code": "space_geometry",
+  "chapter_title": "الهندسة في الفضاء",
+  "axis_tags": [
+    "space_parametric_line",
+    "space_relative_positions_intersections",
+    "space_cartesian_plane_normal_vector",
+    "space_plane_perpendicularity",
+    "space_orthogonal_projection",
+    "space_triangle_geometry",
+    "space_areas_volumes"
+  ],
+  "branches": [
+    {
+      "code": "science",
+      "name": "شعبة علوم تجريبية"
+    }
+  ],
+  "exercise_number": 2,
+  "subject_number": 2,
+  "source_page": 3,
+  "source_pages": [
+    3
+  ],
+  "solution_source_pages": [
+    9,
+    10
+  ],
+  "title": "التمرين الثاني — بكالوريا الجزائر 2018 — الموضوع الثاني — شعبة علوم تجريبية",
+  "statement": "الفضاء منسوب إلى المعلم المتعامد المتجانس \\((O;\\vec{i},\\vec{j},\\vec{k})\\)، نعتبر النقطة \\(A(1;-2;1)\\) والمستويين \\((P_1)\\) و \\((P_2)\\) اللذين معادلتيهما على الترتيب:\n\\[(P_1):-x+y+2z+1=0\\]\nو\n\\[(P_2):-3x+y+z+4=0.\\]",
+  "questions": [
+    {
+      "id": "2018_s2_space_ex02_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) اكتب تمثيلا وسيطيا للمستقيم \\((\\Delta)\\) الذي يشمل النقطة \\(A\\) و \\(\\vec u(1;5;-2)\\) شعاع توجيه له.",
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل مباشرة إحداثيات النقطة A وشعاع التوجيه u.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تحديد نقطة وشعاع توجيه",
+            "explanation": "لدينا:\n\\[A(1,-2,1),\\qquad \\vec u=(1,5,-2).\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "كتابة التمثيل الوسيطي",
+            "explanation": "كل نقطة \\(M(x,y,z)\\) من المستقيم تحقق:\n\\[\\overrightarrow{AM}=t\\vec u.\\]\nإذن:\n\\[\\begin{cases}x=1+t\\\\y=-2+5t\\\\z=1-2t\\end{cases}\\qquad t\\in\\mathbb R.\\]"
+          }
+        ],
+        "final_answer": "\\[(\\Delta):\\begin{cases}x=1+t\\\\y=-2+5t\\\\z=1-2t\\end{cases},\\quad t\\in\\mathbb R.\\]"
+      }
+    },
+    {
+      "id": "2018_s2_space_ex02_q2",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2) بين أن المستويين \\((P_1)\\) و \\((P_2)\\) متقاطعان، ثم تحقق أن تقاطعهما هو المستقيم \\((\\Delta)\\).",
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نثبت أولا أن شعاعي الناظم للمستويين غير مرتبطين خطيا، ثم نتحقق أن كل نقطة من Δ تنتمي إلى المستويين.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "شعاعا الناظم",
+            "explanation": "للمستوى \\((P_1)\\):\n\\[\\vec n_1=(-1,1,2).\\]\nوللمستوى \\((P_2)\\):\n\\[\\vec n_2=(-3,1,1).\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "إثبات أن المستويين متقاطعان",
+            "explanation": "الشعاعان \\((-1,1,2)\\) و\\((-3,1,1)\\) غير مرتبطين خطيا، لأن مركباتهما ليست متناسبة. إذن المستويان غير متوازيين، وبالتالي يتقاطعان وفق مستقيم."
+          },
+          {
+            "step_number": 3,
+            "title": "التحقق أن Δ محتوى في P1",
+            "explanation": "على \\((\\Delta)\\):\n\\[x=1+t,\\quad y=-2+5t,\\quad z=1-2t.\\]\nبالتعويض في \\((P_1)\\):\n\\[-(1+t)+(-2+5t)+2(1-2t)+1=0.\\]\nإذن:\n\\[(\\Delta)\\subset(P_1).\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "التحقق أن Δ محتوى في P2",
+            "explanation": "بالتعويض في \\((P_2)\\):\n\\[-3(1+t)+(-2+5t)+(1-2t)+4=0.\\]\nإذن:\n\\[(\\Delta)\\subset(P_2).\\]"
+          }
+        ],
+        "final_answer": "\\[(P_1)\\cap(P_2)=(\\Delta).\\]"
+      }
+    },
+    {
+      "id": "2018_s2_space_ex02_q3",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "3) اكتب معادلة ديكارتية للمستوى \\((Q)\\) الذي يشمل \\(B(-1;4;0)\\) ويعامد كلا من \\((P_1)\\) و \\((P_2)\\)، ثم استنتج تقاطع المستويات الثلاثة \\((P_1)\\)، \\((P_2)\\) و \\((Q)\\).",
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "بما أن Q عمودي على P1 وP2، فإن شعاع توجيه مستقيم تقاطعهما Δ يصلح شعاعا ناظميا لـQ. ثم نبحث عن تقاطع Q مع Δ.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "اختيار شعاع ناظمي لـ Q",
+            "explanation": "شعاع توجيه \\((\\Delta)\\) هو:\n\\[\\vec u=(1,5,-2).\\]\nوبما أن \\((\\Delta)\\) هو تقاطع \\((P_1)\\) و\\((P_2)\\)، فإن \\(\\vec u\\) عمودي على شعاعي ناظم المستويين. لذلك يمكن أخذ:\n\\[\\vec n_Q=(1,5,-2).\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "كتابة معادلة Q",
+            "explanation": "يمر \\((Q)\\) بالنقطة \\(B(-1,4,0)\\)، إذن:\n\\[(x+1)+5(y-4)-2z=0.\\]\nبالتبسيط:\n\\[x+5y-2z-19=0.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "البحث عن نقطة التقاطع المشتركة",
+            "explanation": "بما أن:\n\\[(P_1)\\cap(P_2)=\\Delta,\\]\nفإن تقاطع المستويات الثلاثة هو تقاطع \\(\\Delta\\) مع \\(Q\\). نعوض تمثيل \\(\\Delta\\) في معادلة \\(Q\\):\n\\[(1+t)+5(-2+5t)-2(1-2t)-19=0.\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "حساب الوسيط",
+            "explanation": "بالتبسيط:\n\\[1+t-10+25t-2+4t-19=0\\]\n\\[30t-30=0\\Rightarrow t=1.\\]"
+          },
+          {
+            "step_number": 5,
+            "title": "حساب نقطة التقاطع",
+            "explanation": "عند \\(t=1\\):\n\\[x=2,\\qquad y=3,\\qquad z=-1.\\]\nإذن:\n\\[E(2,3,-1).\\]"
+          }
+        ],
+        "final_answer": "\\[(Q):x+5y-2z-19=0,\\]\nو\n\\[(P_1)\\cap(P_2)\\cap(Q)=\\{E(2;3;-1)\\}.\\]"
+      }
+    },
+    {
+      "id": "2018_s2_space_ex02_q4a",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "4) لتكن: \\(E(2;3;-1)\\) و \\(H(0;3;-2)\\) نقطتان من الفضاء. أ) تحقق أن \\(H\\) هي المسقط العمودي للنقطة \\(B\\) على المستوى \\((P_1)\\).",
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "حتى تكون H مسقطا عموديا لـB على P1، نثبت أن H تنتمي إلى P1 وأن BH مواز لشعاع ناظم لـP1.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التحقق من انتماء H إلى P1",
+            "explanation": "نعوض \\(H(0,3,-2)\\) في:\n\\[(P_1):-x+y+2z+1=0.\\]\nفنحصل على:\n\\[0+3-4+1=0.\\]\nإذن:\n\\[H\\in(P_1).\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب BH",
+            "explanation": "\\[\\overrightarrow{BH}=H-B=(0-(-1),3-4,-2-0)=(1,-1,-2).\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "إثبات العمودية",
+            "explanation": "شعاع ناظمي لـ\\((P_1)\\) هو:\n\\[\\vec n_1=(-1,1,2).\\]\nونلاحظ أن:\n\\[\\overrightarrow{BH}=-\\vec n_1.\\]\nإذن:\n\\[(BH)\\perp(P_1).\\]"
+          }
+        ],
+        "final_answer": "بما أن \\(H\\in(P_1)\\) و\\((BH)\\perp(P_1)\\)، فإن \\(H\\) هي المسقط العمودي للنقطة \\(B\\) على \\((P_1)\\)."
+      }
+    },
+    {
+      "id": "2018_s2_space_ex02_q4b",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "ب) حدد طبيعة المثلث \\(EBH\\) ثم احسب \\(V\\) حجم رباعي الوجوه \\(AEBH\\).",
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نثبت أن المثلث EBH قائم في H، ثم نحسب مساحته. بعد ذلك نأخذ المثلث EBH قاعدة، والارتفاع هو المسافة من A إلى المستوى Q الذي يحتوي E وB وH.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب شعاعي HE وHB",
+            "explanation": "\\[\\overrightarrow{HE}=E-H=(2,0,1),\\]\nو\n\\[\\overrightarrow{HB}=B-H=(-1,1,2).\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "إثبات أن المثلث قائم",
+            "explanation": "\\[\\overrightarrow{HE}\\cdot\\overrightarrow{HB}=2(-1)+0(1)+1(2)=0.\\]\nإذن:\n\\[(HE)\\perp(HB).\\]\nومن ثم المثلث \\(EBH\\) قائم في \\(H\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "حساب EH وHB",
+            "explanation": "\\[EH=\\sqrt{2^2+0^2+1^2}=\\sqrt5,\\]\nو\n\\[HB=\\sqrt{(-1)^2+1^2+2^2}=\\sqrt6.\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "حساب مساحة المثلث EBH",
+            "explanation": "بما أن المثلث قائم في \\(H\\):\n\\[S_{EBH}=\\frac12\\times EH\\times HB\n=\\frac12\\sqrt5\\sqrt6\n=\\frac{\\sqrt{30}}2.\\]"
+          },
+          {
+            "step_number": 5,
+            "title": "تحديد ارتفاع رباعي الوجوه",
+            "explanation": "النقطتان \\(E\\) و\\(B\\) تنتميان إلى \\((Q)\\)، كما أن:\n\\[0+5(3)-2(-2)-19=0\\]\nإذن \\(H\\in(Q)\\). وبالتالي مستوى القاعدة \\((EBH)\\) هو \\((Q)\\)."
+          },
+          {
+            "step_number": 6,
+            "title": "حساب المسافة من A إلى Q",
+            "explanation": "معادلة \\((Q)\\):\n\\[x+5y-2z-19=0.\\]\nإذن:\n\\[d(A,(Q))=\\frac{|1+5(-2)-2(1)-19|}{\\sqrt{1^2+5^2+(-2)^2}}\n=\\frac{30}{\\sqrt{30}}=\\sqrt{30}.\\]"
+          },
+          {
+            "step_number": 7,
+            "title": "حساب الحجم",
+            "explanation": "\\[V=\\frac13S_{EBH}\\times d(A,(Q))\n=\\frac13\\times\\frac{\\sqrt{30}}2\\times\\sqrt{30}\n=5.\\]"
+          }
+        ],
+        "final_answer": "المثلث \\(EBH\\) قائم في \\(H\\)، و\n\\[S_{EBH}=\\frac{\\sqrt{30}}2,\\qquad V_{AEBH}=5\\] وحدة حجم."
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2018(3).pdf",
+    "statement_page": 3,
+    "correction_pages": [
+      9,
+      10
+    ],
+    "statement_figure_policy": "لا يوجد شكل لازم في نص التمرين.",
+    "solution_figure_policy": "لا يحتاج الحل إلى رسم.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  }
+}

@@ -1,0 +1,394 @@
+{
+  "version": 1,
+  "language": "ar",
+  "direction": "rtl",
+  "subject_code": "math",
+  "chapter_code": "space_geometry",
+  "tag": "barycenter_in_space",
+  "title": "تمارين المحور السابع: المرجح في الفضاء",
+  "question_count": 13,
+  "questions": [
+    {
+      "id": "space_barycenter_axis07_01",
+      "number": 1,
+      "title": "شرط وجود المرجح",
+      "text": "هل للجملة المثقلة \\(\\{(A;2),(B;-1),(C;3)\\}\\) مرجح؟ علل.",
+      "skill": "التحقق من شرط وجود المرجح.",
+      "difficulty": "easy",
+      "solution": {
+        "steps": [
+          {
+            "order": 1,
+            "explanation": "نحسب مجموع المعاملات."
+          },
+          {
+            "order": 2,
+            "calculation": "\\[2+(-1)+3=4.\\]"
+          },
+          {
+            "order": 3,
+            "explanation": "بما أن المجموع غير منعدم، فإن المرجح موجود ووحيد."
+          }
+        ],
+        "final_answer": "نعم، للجملة مرجح لأن \\(2-1+3=4\\neq0\\)."
+      }
+    },
+    {
+      "id": "space_barycenter_axis07_02",
+      "number": 2,
+      "title": "حالة عدم وجود مرجح",
+      "text": "نعتبر الجملة المثقلة \\(\\{(A;1),(B;-2),(C;1)\\}\\). هل لها مرجح؟",
+      "skill": "تمييز حالة انعدام مجموع المعاملات.",
+      "difficulty": "easy",
+      "solution": {
+        "steps": [
+          {
+            "order": 1,
+            "calculation": "\\[1-2+1=0.\\]"
+          },
+          {
+            "order": 2,
+            "explanation": "شرط وجود المرجح هو أن يكون مجموع المعاملات غير منعدم."
+          }
+        ],
+        "final_answer": "لا، لأن مجموع المعاملات يساوي صفرًا."
+      }
+    },
+    {
+      "id": "space_barycenter_axis07_03",
+      "number": 3,
+      "title": "التعرف على المرجح من علاقة شعاعية",
+      "text": "لدينا:\n\\[2\\overrightarrow{GA}-\\overrightarrow{GB}+3\\overrightarrow{GC}=\\vec0.\\]\nماذا تمثل النقطة \\(G\\)؟",
+      "skill": "التعرف على المرجح من علاقة تعريفه.",
+      "difficulty": "easy",
+      "solution": {
+        "steps": [
+          {
+            "order": 1,
+            "explanation": "نقرأ المعاملات مباشرة من العلاقة: \\(2,-1,3\\)."
+          },
+          {
+            "order": 2,
+            "calculation": "\\[2-1+3=4\\neq0.\\]"
+          },
+          {
+            "order": 3,
+            "explanation": "إذن العلاقة هي علاقة تعريف مرجح."
+          }
+        ],
+        "final_answer": "\\(G\\) هي مرجح الجملة \\(\\{(A;2),(B;-1),(C;3)\\}\\)."
+      }
+    },
+    {
+      "id": "space_barycenter_axis07_04",
+      "number": 4,
+      "title": "حساب إحداثيات مرجح نقطتين",
+      "text": "نعتبر النقطتين \\(A(1;2;0)\\) و\\(B(5;0;4)\\). عين إحداثيات مرجح الجملة \\(\\{(A;1),(B;1)\\}\\).",
+      "skill": "حساب إحداثيات مرجح نقطتين بمعاملين متساويين.",
+      "difficulty": "easy",
+      "solution": {
+        "steps": [
+          {
+            "order": 1,
+            "explanation": "مجموع المعاملات هو \\(2\\)."
+          },
+          {
+            "order": 2,
+            "calculation": "\\[x_G=\\frac{1+5}{2}=3.\\]"
+          },
+          {
+            "order": 3,
+            "calculation": "\\[y_G=\\frac{2+0}{2}=1.\\]"
+          },
+          {
+            "order": 4,
+            "calculation": "\\[z_G=\\frac{0+4}{2}=2.\\]"
+          },
+          {
+            "order": 5,
+            "explanation": "وهذا يوافق أن مرجح نقطتين بمعاملين متساويين هو منتصف القطعة."
+          }
+        ],
+        "final_answer": "\\(G(3;1;2)\\)."
+      }
+    },
+    {
+      "id": "space_barycenter_axis07_05",
+      "number": 5,
+      "title": "حساب مرجح ثلاث نقاط",
+      "text": "نعتبر \\(A(1;0;2)\\)، \\(B(3;2;0)\\) و\\(C(-1;1;1)\\). احسب مرجح الجملة \\(\\{(A;1),(B;-1),(C;1)\\}\\).",
+      "skill": "حساب إحداثيات مرجح ثلاث نقاط مع معامل سالب.",
+      "difficulty": "medium",
+      "solution": {
+        "steps": [
+          {
+            "order": 1,
+            "calculation": "\\[1-1+1=1.\\]"
+          },
+          {
+            "order": 2,
+            "calculation": "\\[x_G=1(1)-1(3)+1(-1)=-3.\\]"
+          },
+          {
+            "order": 3,
+            "calculation": "\\[y_G=1(0)-1(2)+1(1)=-1.\\]"
+          },
+          {
+            "order": 4,
+            "calculation": "\\[z_G=1(2)-1(0)+1(1)=3.\\]"
+          }
+        ],
+        "final_answer": "\\(G(-3;-1;3)\\)."
+      }
+    },
+    {
+      "id": "space_barycenter_axis07_06",
+      "number": 6,
+      "title": "التحقق أن نقطة معلومة هي المرجح",
+      "text": "نعتبر النقط \\(A(0;0;0)\\)، \\(B(4;0;0)\\)، \\(C(0;2;0)\\) والنقطة \\(G(2;1;0)\\). بين أن \\(G\\) هي مرجح الجملة \\(\\{(A;1),(B;1),(C;2)\\}\\).",
+      "skill": "التحقق من أن نقطة معلومة هي مرجح جملة نقط مثقلة.",
+      "difficulty": "medium",
+      "solution": {
+        "steps": [
+          {
+            "order": 1,
+            "explanation": "نحسب مجموع المعاملات.",
+            "calculation": "\\[1+1+2=4\\neq0.\\]"
+          },
+          {
+            "order": 2,
+            "explanation": "نحسب إحداثيات المرجح بالقانون.",
+            "calculation": "\\[x_G=\\frac{0+4+2(0)}4=1.\\]"
+          },
+          {
+            "order": 3,
+            "calculation": "\\[y_G=\\frac{0+0+2(2)}4=1.\\]"
+          },
+          {
+            "order": 4,
+            "calculation": "\\[z_G=0.\\]"
+          },
+          {
+            "order": 5,
+            "explanation": "الإحداثيات الناتجة هي \\((1;1;0)\\)، وليست \\((2;1;0)\\). إذن النقطة المعطاة ليست المرجح."
+          }
+        ],
+        "final_answer": "\\(G(2;1;0)\\) ليست مرجح الجملة. المرجح الصحيح هو \\((1;1;0)\\)."
+      }
+    },
+    {
+      "id": "space_barycenter_axis07_07",
+      "number": 7,
+      "title": "إثبات علاقة مرجحية",
+      "text": "لتكن \\(G\\) مرجح الجملة \\(\\{(A;2),(B;1)\\}\\). أثبت أنه لأي نقطة \\(M\\) من الفضاء:\n\\[2\\overrightarrow{MA}+\\overrightarrow{MB}=3\\overrightarrow{MG}.\\]",
+      "skill": "استعمال الخاصية الأساسية للمرجح.",
+      "difficulty": "medium",
+      "solution": {
+        "steps": [
+          {
+            "order": 1,
+            "explanation": "مجموع المعاملات هو \\(2+1=3\\)."
+          },
+          {
+            "order": 2,
+            "explanation": "بتطبيق خاصية المرجح بالنسبة إلى نقطة كيفية \\(M\\):",
+            "calculation": "\\[2\\overrightarrow{MA}+\\overrightarrow{MB}=(2+1)\\overrightarrow{MG}.\\]"
+          },
+          {
+            "order": 3,
+            "calculation": "\\[2\\overrightarrow{MA}+\\overrightarrow{MB}=3\\overrightarrow{MG}.\\]"
+          }
+        ],
+        "final_answer": "\\[2\\overrightarrow{MA}+\\overrightarrow{MB}=3\\overrightarrow{MG}.\\]"
+      }
+    },
+    {
+      "id": "space_barycenter_axis07_08",
+      "number": 8,
+      "title": "تبسيط مجموع أشعة",
+      "text": "لتكن \\(G\\) مرجح الجملة \\(\\{(A;3),(B;1)\\}\\). بسّط التعبير:\n\\[3\\overrightarrow{MA}+\\overrightarrow{MB}.\\]",
+      "skill": "تحويل مجموع أشعة موزونة إلى شعاع واحد نحو المرجح.",
+      "difficulty": "medium",
+      "solution": {
+        "steps": [
+          {
+            "order": 1,
+            "explanation": "المعاملات في التعبير هي نفسها معاملات المرجح."
+          },
+          {
+            "order": 2,
+            "calculation": "\\[3\\overrightarrow{MA}+\\overrightarrow{MB}=4\\overrightarrow{MG}.\\]"
+          }
+        ],
+        "final_answer": "\\[3\\overrightarrow{MA}+\\overrightarrow{MB}=4\\overrightarrow{MG}.\\]"
+      }
+    },
+    {
+      "id": "space_barycenter_axis07_09",
+      "number": 9,
+      "title": "معاملات موجبة وسالبة",
+      "text": "لتكن \\(G\\) مرجح الجملة \\(\\{(A;1),(B;-1),(C;1)\\}\\). بسّط:\n\\[\\overrightarrow{MA}-\\overrightarrow{MB}+\\overrightarrow{MC}.\\]",
+      "skill": "استعمال خاصية المرجح مع معاملات سالبة.",
+      "difficulty": "medium",
+      "solution": {
+        "steps": [
+          {
+            "order": 1,
+            "calculation": "\\[1-1+1=1.\\]"
+          },
+          {
+            "order": 2,
+            "explanation": "بتطبيق خاصية المرجح:",
+            "calculation": "\\[\\overrightarrow{MA}-\\overrightarrow{MB}+\\overrightarrow{MC}=\\overrightarrow{MG}.\\]"
+          }
+        ],
+        "final_answer": "\\[\\overrightarrow{MA}-\\overrightarrow{MB}+\\overrightarrow{MC}=\\overrightarrow{MG}.\\]"
+      }
+    },
+    {
+      "id": "space_barycenter_axis07_10",
+      "number": 10,
+      "title": "شرط شعاعي يتحول إلى مسافة",
+      "text": "لتكن \\(G\\) مرجح الجملة \\(\\{(A;3),(B;1)\\}\\). حدد مجموعة النقط \\(M\\) التي تحقق:\n\\[\\left\\|3\\overrightarrow{MA}+\\overrightarrow{MB}\\right\\|=12.\\]",
+      "skill": "تحويل معيار مجموع أشعة إلى شرط مسافة باستعمال المرجح.",
+      "difficulty": "hard",
+      "solution": {
+        "steps": [
+          {
+            "order": 1,
+            "calculation": "\\[3\\overrightarrow{MA}+\\overrightarrow{MB}=4\\overrightarrow{MG}.\\]"
+          },
+          {
+            "order": 2,
+            "calculation": "\\[\\|4\\overrightarrow{MG}\\|=12.\\]"
+          },
+          {
+            "order": 3,
+            "calculation": "\\[4MG=12\\Rightarrow MG=3.\\]"
+          },
+          {
+            "order": 4,
+            "explanation": "مجموعة النقط التي تبعد مسافة ثابتة \\(3\\) عن نقطة ثابتة \\(G\\) هي كرة."
+          }
+        ],
+        "final_answer": "مجموعة النقط هي الكرة مركزها \\(G\\) ونصف قطرها \\(3\\)."
+      }
+    },
+    {
+      "id": "space_barycenter_axis07_11",
+      "number": 11,
+      "title": "مرجح نقطتين وموقعه الهندسي",
+      "text": "لتكن \\(G\\) مرجح الجملة \\(\\{(A;2),(B;3)\\}\\).\n1) أثبت أن \\(G\\in(AB)\\).\n2) عبر عن \\(\\overrightarrow{AG}\\) بدلالة \\(\\overrightarrow{AB}\\).",
+      "skill": "استغلال علاقة مرجح نقطتين لإثبات الاستقامية وتحديد الموضع.",
+      "difficulty": "hard",
+      "solution": {
+        "steps": [
+          {
+            "order": 1,
+            "explanation": "من تعريف المرجح:",
+            "calculation": "\\[2\\overrightarrow{GA}+3\\overrightarrow{GB}=\\vec0.\\]"
+          },
+          {
+            "order": 2,
+            "explanation": "نكتب \\(\\overrightarrow{GB}=\\overrightarrow{GA}+\\overrightarrow{AB}\\)."
+          },
+          {
+            "order": 3,
+            "calculation": "\\[2\\overrightarrow{GA}+3(\\overrightarrow{GA}+\\overrightarrow{AB})=\\vec0.\\]"
+          },
+          {
+            "order": 4,
+            "calculation": "\\[5\\overrightarrow{GA}+3\\overrightarrow{AB}=\\vec0.\\]"
+          },
+          {
+            "order": 5,
+            "calculation": "\\[\\overrightarrow{GA}=-\\frac35\\overrightarrow{AB}.\\]"
+          },
+          {
+            "order": 6,
+            "explanation": "وبالتالي \\(\\overrightarrow{AG}=\\frac35\\overrightarrow{AB}\\)، ومنه \\(A,G,B\\) مستقيمية."
+          }
+        ],
+        "final_answer": "\\[G\\in(AB),\\qquad \\overrightarrow{AG}=\\frac35\\overrightarrow{AB}.\\]"
+      }
+    },
+    {
+      "id": "space_barycenter_axis07_12",
+      "number": 12,
+      "title": "إيجاد نقطة مجهولة من علاقة مرجحية",
+      "text": "نعتبر النقط \\(A(1;0;2)\\)، \\(B(3;2;0)\\)، والنقطة \\(G(2;1;1)\\). إذا كانت \\(G\\) مرجح الجملة \\(\\{(A;1),(B;1),(C;2)\\}\\)، عين إحداثيات النقطة \\(C\\).",
+      "skill": "استعمال صيغة إحداثيات المرجح لإيجاد نقطة مجهولة.",
+      "difficulty": "hard",
+      "solution": {
+        "steps": [
+          {
+            "order": 1,
+            "explanation": "مجموع المعاملات هو \\(4\\)."
+          },
+          {
+            "order": 2,
+            "explanation": "بالنسبة إلى الإحداثي \\(x\\):",
+            "calculation": "\\[2=\\frac{1+3+2x_C}{4}.\\]"
+          },
+          {
+            "order": 3,
+            "calculation": "\\[8=4+2x_C\\Rightarrow x_C=2.\\]"
+          },
+          {
+            "order": 4,
+            "explanation": "بالنسبة إلى \\(y\\):",
+            "calculation": "\\[1=\\frac{0+2+2y_C}{4}\\Rightarrow4=2+2y_C\\Rightarrow y_C=1.\\]"
+          },
+          {
+            "order": 5,
+            "explanation": "بالنسبة إلى \\(z\\):",
+            "calculation": "\\[1=\\frac{2+0+2z_C}{4}\\Rightarrow4=2+2z_C\\Rightarrow z_C=1.\\]"
+          }
+        ],
+        "final_answer": "\\(C(2;1;1)\\)."
+      }
+    },
+    {
+      "id": "space_barycenter_axis07_13",
+      "number": 13,
+      "title": "تمرين شامل للمحور",
+      "text": "في الفضاء المنسوب إلى معلم متعامد ومتجانس، نعتبر النقط \\(A(1;0;2)\\)، \\(B(3;2;0)\\)، \\(C(-1;1;1)\\)، ولتكن \\(G\\) مرجح الجملة \\(\\{(A;1),(B;-1),(C;1)\\}\\).\n1) تحقق أن المرجح موجود.\n2) احسب إحداثيات \\(G\\).\n3) بين أنه لأي نقطة \\(M\\):\n\\[\\overrightarrow{MA}-\\overrightarrow{MB}+\\overrightarrow{MC}=\\overrightarrow{MG}.\\]\n4) حدد مجموعة النقط \\(M\\) التي تحقق:\n\\[\\left\\|\\overrightarrow{MA}-\\overrightarrow{MB}+\\overrightarrow{MC}\\right\\|=4.\\]",
+      "skill": "دمج شرط الوجود وحساب الإحداثيات وخاصية المرجح والمجموعة النقطية.",
+      "difficulty": "hard",
+      "solution": {
+        "steps": [
+          {
+            "order": 1,
+            "title": "وجود المرجح",
+            "calculation": "\\[1-1+1=1\\neq0.\\]"
+          },
+          {
+            "order": 2,
+            "title": "إحداثيات G",
+            "calculation": "\\[x_G=1-3-1=-3,\\qquad y_G=0-2+1=-1,\\qquad z_G=2-0+1=3.\\]"
+          },
+          {
+            "order": 3,
+            "result": "\\[G(-3;-1;3).\\]"
+          },
+          {
+            "order": 4,
+            "title": "خاصية المرجح",
+            "explanation": "بما أن مجموع المعاملات يساوي \\(1\\)، فإن:",
+            "calculation": "\\[\\overrightarrow{MA}-\\overrightarrow{MB}+\\overrightarrow{MC}=\\overrightarrow{MG}.\\]"
+          },
+          {
+            "order": 5,
+            "title": "المجموعة النقطية",
+            "calculation": "\\[\\left\\|\\overrightarrow{MG}\\right\\|=4\\Rightarrow MG=4.\\]"
+          },
+          {
+            "order": 6,
+            "explanation": "إذن مجموعة النقط هي كرة مركزها \\(G\\) ونصف قطرها \\(4\\)."
+          }
+        ],
+        "final_answer": "\\[G(-3;-1;3)\\] ومجموعة النقط المطلوبة هي الكرة مركزها \\(G\\) ونصف قطرها \\(4\\)."
+      }
+    }
+  ]
+}

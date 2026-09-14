@@ -190,7 +190,54 @@ def _normalize_visuals(value: Any) -> list[dict[str, Any]]:
     return result
 
 
-def validate_bac_like_exercise(exercise: dict[str, Any]) -> dict[str, Any]:
+def _normalize_document_references(
+    value: Any,
+    *,
+    allowed_documents: list[dict[str, Any]],
+    required: bool,
+) -> list[dict[str, str]]:
+    """Refuse tout chemin inventé et toute image absente de la whitelist serveur."""
+    allowed_by_path = {
+        _text(item.get("path")): item
+        for item in allowed_documents
+        if isinstance(item, dict) and _text(item.get("path"))
+    }
+    if not isinstance(value, list):
+        value = []
+    result, used_paths = [], set()
+    for item in value[:4]:
+        if not isinstance(item, dict):
+            continue
+        path = _text(item.get("path"))
+        if not path:
+            continue
+        if path not in allowed_by_path:
+            raise ExerciseValidationError(
+                f"مسار الوثيقة غير مسموح أو مخترع: {path}"
+            )
+        if path in used_paths:
+            continue
+        source = allowed_by_path[path]
+        used_paths.add(path)
+        result.append({
+            "id": _text(source.get("id")) or _text(item.get("id")),
+            "path": path,
+            "title": _text(source.get("title")) or _text(item.get("title")),
+            "placement": "statement",
+        })
+    if required and not result:
+        raise ExerciseValidationError(
+            "تمرين العلوم يجب أن يستعمل وثيقة أصلية واحدة على الأقل من القائمة المسموحة."
+        )
+    return result
+
+
+def validate_bac_like_exercise(
+    exercise: dict[str, Any],
+    *,
+    subject_kind: str = "math",
+    allowed_documents: list[dict[str, Any]] | None = None,
+) -> dict[str, Any]:
     if not isinstance(exercise, dict):
         raise ExerciseValidationError("exercise يجب أن يكون JSON object.")
     title = _text(exercise.get("title"))
@@ -210,12 +257,30 @@ def validate_bac_like_exercise(exercise: dict[str, Any]) -> dict[str, Any]:
     graph_data = exercise.get("graph_data", {})
     if requires_graph and not isinstance(graph_data, dict):
         raise ExerciseValidationError("graph_data يجب أن تكون JSON object.")
+    allowed_documents = allowed_documents if isinstance(allowed_documents, list) else []
+    document_references = _normalize_document_references(
+        exercise.get("document_references"),
+        allowed_documents=allowed_documents,
+        required=(subject_kind == "natural_sciences" and bool(allowed_documents)),
+    )
+    if subject_kind == "natural_sciences":
+        if requires_graph:
+            raise ExerciseValidationError(
+                "وثائق العلوم الجاهزة تستعمل document_references ولا تستعمل graph_spec."
+            )
+        if document_references and not any(
+            word in question for word in ("الوثيقة", "الشكل", "الجدول", "المنحنى")
+        ):
+            raise ExerciseValidationError(
+                "نص تمرين العلوم لا يحيل بوضوح إلى الوثيقة المستعملة."
+            )
     return {
         "title": title,
         "question": question,
         "skill": skill,
         "hints": _normalize_hints(exercise.get("hints")),
         "visuals": _normalize_visuals(exercise.get("visuals")),
+        "document_references": document_references,
         "solution_strategy": _text(solution.get("strategy")),
         "solution_explanation": _text(solution.get("detailed_explanation")),
         "solution_steps": _normalize_steps(solution.get("steps")),

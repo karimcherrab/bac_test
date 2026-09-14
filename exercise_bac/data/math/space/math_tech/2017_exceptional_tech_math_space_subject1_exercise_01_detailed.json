@@ -1,0 +1,221 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2017-exceptional-tech-math-space-subject1-ex01-detailed",
+  "session": "exceptional",
+  "year": 2017,
+  "chapter_code": "space_geometry",
+  "chapter_title": "الهندسة في الفضاء",
+  "axis_tags": [
+    "space_dot_product_orthogonality",
+    "space_cartesian_plane_normal_vector",
+    "space_relative_positions_intersections",
+    "space_parametric_line_plane",
+    "space_projections_distances",
+    "space_areas_volumes"
+  ],
+  "branches": [
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "exercise_number": 1,
+  "subject_number": 1,
+  "source_page": 1,
+  "source_pages": [
+    1
+  ],
+  "solution_source_pages": [
+    5
+  ],
+  "title": "التمرين الأول — بكالوريا الجزائر 2017 الاستثنائية — الموضوع الأول — شعبة تقني رياضي",
+  "statement": "الفضاء منسوب إلى المعلم المتعامد المتجانس \\((O;\\vec{i},\\vec{j},\\vec{k})\\).\nنعتبر النقط \\(A(0;-1;2)\\)، \\(B(3;2;5)\\)، \\(C(3;-1;-1)\\) و \\(D(-3;5;-1)\\).\nليكن \\((P)\\) و\\((Q)\\) المستويين اللذان معادلتاهما على الترتيب:\n\\[x+y+z-1=0\\quad\\text{و}\\quad x-z+2=0.\\]",
+  "questions": [
+    {
+      "id": "2017_exc_s1_space_ex01_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) بين أن المثلث \\(ABC\\) قائم، ثم عين معادلة ديكارتية للمستوي \\((ABC)\\).",
+      "axis_tags": [
+        "space_dot_product_orthogonality",
+        "space_cartesian_plane_normal_vector"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب الشعاعين AB وAC ونستعمل الجداء السلمي لإثبات التعامد، ثم نأخذ شعاعا ناظما للمستوي ونستعمل نقطة منه.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب AB وAC",
+            "explanation": "\\[\\overrightarrow{AB}=B-A=(3,3,3),\\]\n\\[\\overrightarrow{AC}=C-A=(3,0,-3).\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "إثبات أن المثلث قائم",
+            "explanation": "\\[\\overrightarrow{AB}\\cdot\\overrightarrow{AC}=3\\times3+3\\times0+3\\times(-3)=0.\\]\nإذن \\(AB\\perp AC\\)، وبالتالي المثلث \\(ABC\\) قائم في \\(A\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "تعيين شعاع ناظم للمستوي ABC",
+            "explanation": "يمكن أخذ:\n\\[\\vec n=(1,-2,1)\\]\nلأن:\n\\[\\vec n\\cdot\\overrightarrow{AB}=3-6+3=0,\\]\n\\[\\vec n\\cdot\\overrightarrow{AC}=3+0-3=0.\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "كتابة معادلة المستوي",
+            "explanation": "معادلة \\((ABC)\\) من الشكل:\n\\[x-2y+z+d=0.\\]\nنعوض النقطة \\(A(0,-1,2)\\):\n\\[0-2(-1)+2+d=0\\Rightarrow d=-4.\\]"
+          }
+        ],
+        "final_answer": "المثلث \\(ABC\\) قائم في \\(A\\)، و\\[(ABC):x-2y+z-4=0.\\]"
+      }
+    },
+    {
+      "id": "2017_exc_s1_space_ex01_q2a",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2) أ) بين أن المستويين \\((P)\\) و\\((Q)\\) متعامدان ثم جد تمثيلا وسيطيا للمستقيم \\((\\Delta)\\)، تقاطع المستويين \\((P)\\) و\\((Q)\\).",
+      "axis_tags": [
+        "space_cartesian_plane_normal_vector",
+        "space_relative_positions_intersections",
+        "space_parametric_line_plane"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نقارن شعاعي الناظم للمستويين، ثم نحل جملة معادلتيهما باختيار متغير وسيطا حرا.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "إثبات التعامد",
+            "explanation": "شعاع ناظم لـ\\((P)\\):\n\\[\\vec n_P=(1,1,1),\\]\nوشعاع ناظم لـ\\((Q)\\):\n\\[\\vec n_Q=(1,0,-1).\\]\nإذن:\n\\[\\vec n_P\\cdot\\vec n_Q=1+0-1=0.\\]\nوعليه \\((P)\\perp(Q)\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "حل جملة المستويين",
+            "explanation": "\\[\\begin{cases}x+y+z-1=0\\\\x-z+2=0\\end{cases}\\]\nمن المعادلة الثانية:\n\\[x=z-2.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "اختيار وسيط",
+            "explanation": "نضع \\(z=t\\). عندئذ:\n\\[x=t-2.\\]\nوبالتعويض في \\(P\\):\n\\[(t-2)+y+t-1=0\\Rightarrow y=3-2t.\\]"
+          }
+        ],
+        "final_answer": "\\[(P)\\perp(Q),\\qquad \\Delta:\\begin{cases}x=t-2\\\\y=3-2t\\\\z=t\\end{cases},\\quad t\\in\\mathbb R.\\]"
+      }
+    },
+    {
+      "id": "2017_exc_s1_space_ex01_q2b",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "ب) عين تقاطع المستويات \\((P)\\)، \\((Q)\\) و\\((ABC)\\).",
+      "axis_tags": [
+        "space_relative_positions_intersections"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "بما أن تقاطع P وQ هو Δ، نبحث عن نقطة تقاطع Δ مع المستوي ABC.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التعويض في معادلة ABC",
+            "explanation": "على \\(\\Delta\\):\n\\[x=t-2,\\quad y=3-2t,\\quad z=t.\\]\nنعوض في:\n\\[x-2y+z-4=0.\\]\nفنحصل على:\n\\[(t-2)-2(3-2t)+t-4=0.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "إيجاد t",
+            "explanation": "\\[6t-12=0\\Rightarrow t=2.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "إحداثيات نقطة التقاطع",
+            "explanation": "عند \\(t=2\\):\n\\[x=0,\\qquad y=-1,\\qquad z=2.\\]\nوهذه هي النقطة \\(A\\)."
+          }
+        ],
+        "final_answer": "\\[(P)\\cap(Q)\\cap(ABC)=\\{A(0;-1;2)\\}.\\]"
+      }
+    },
+    {
+      "id": "2017_exc_s1_space_ex01_q3",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "3) تحقق أن \\(A\\) هي المسقط العمودي للنقطة \\(D\\) على المستوي \\((ABC)\\) ثم احسب حجم رباعي الوجوه \\(DABC\\).",
+      "axis_tags": [
+        "space_projections_distances",
+        "space_areas_volumes"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نثبت أن A تنتمي إلى ABC وأن DA مواز لشعاع ناظم للمستوي. بعد ذلك نحسب مساحة القاعدة ABC والارتفاع DA.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب DA",
+            "explanation": "\\[\\overrightarrow{DA}=A-D=(3,-6,3)=3(1,-2,1).\\]\nوالشعاع \\((1,-2,1)\\) ناظم للمستوي \\((ABC)\\)، إذن \\((DA)\\perp(ABC)\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "الاستنتاج حول الإسقاط",
+            "explanation": "بما أن \\(A\\in(ABC)\\) و\\((DA)\\perp(ABC)\\)، فإن \\(A\\) هي المسقط العمودي لـ\\(D\\) على \\((ABC)\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "مساحة القاعدة ABC",
+            "explanation": "المثلث \\(ABC\\) قائم في \\(A\\)، لذلك:\n\\[AB=\\sqrt{3^2+3^2+3^2}=3\\sqrt3,\\]\n\\[AC=\\sqrt{3^2+0^2+(-3)^2}=3\\sqrt2.\\]\nإذن:\n\\[S_{ABC}=\\frac12 AB\\times AC=\\frac{9\\sqrt6}{2}.\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "حساب الارتفاع والحجم",
+            "explanation": "\\[DA=\\sqrt{3^2+(-6)^2+3^2}=3\\sqrt6.\\]\nإذن:\n\\[V_{DABC}=\\frac13S_{ABC}\\times DA=\\frac13\\times\\frac{9\\sqrt6}{2}\\times3\\sqrt6=27.\\]"
+          }
+        ],
+        "final_answer": "\\[V_{DABC}=27\\] وحدة حجم."
+      }
+    },
+    {
+      "id": "2017_exc_s1_space_ex01_q4",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "4) بين أن \\(\\frac{\\pi}{4}\\) قيس بالراديان للزاوية \\(\\widehat{BDC}\\)، ثم استنتج المسافة بين النقطة \\(A\\) والمستوي \\((BDC)\\).",
+      "axis_tags": [
+        "space_dot_product_orthogonality",
+        "space_projections_distances",
+        "space_areas_volumes"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب جيب تمام الزاوية بين DB وDC، ثم نستعمل حجم رباعي الوجوه نفسه لكن بقاعدة BDC لاستخراج الارتفاع من A.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب DB وDC",
+            "explanation": "\\[\\overrightarrow{DB}=B-D=(6,-3,6),\\]\n\\[\\overrightarrow{DC}=C-D=(6,-6,0).\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب جيب تمام الزاوية",
+            "explanation": "\\[\\overrightarrow{DB}\\cdot\\overrightarrow{DC}=6\\times6+(-3)(-6)+6\\times0=54.\\]\n\\[DB=9,\\qquad DC=6\\sqrt2.\\]\nإذن:\n\\[\\cos\\widehat{BDC}=\\frac{54}{9\\times6\\sqrt2}=\\frac{\\sqrt2}{2}.\\]\nومن ثم:\n\\[\\widehat{BDC}=\\frac{\\pi}{4}.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "مساحة المثلث BDC",
+            "explanation": "\\[S_{BDC}=\\frac12 DB\\times DC\\times\\sin\\frac\\pi4.\\]\n\\[S_{BDC}=\\frac12\\times9\\times6\\sqrt2\\times\\frac{\\sqrt2}{2}=27.\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "استخراج المسافة",
+            "explanation": "إذا رمزنا بـ\\(h=d(A,(BDC))\\)، فإن:\n\\[V_{DABC}=\\frac13S_{BDC}\\times h.\\]\nوبما أن \\(V_{DABC}=27\\):\n\\[27=\\frac13\\times27\\times h\\Rightarrow h=3.\\]"
+          }
+        ],
+        "final_answer": "\\[\\widehat{BDC}=\\frac\\pi4,\\qquad d(A,(BDC))=3.\\]"
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2017_2(2).pdf",
+    "statement_figure_policy": "لا يوجد شكل هندسي إلزامي في نص التمرين.",
+    "solution_figure_policy": "الحل مستقل عن أي رسم.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  }
+}

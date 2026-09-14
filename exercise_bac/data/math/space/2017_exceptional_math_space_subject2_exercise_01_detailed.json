@@ -1,0 +1,179 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2017-exceptional-math-space-subject2-ex01-detailed",
+  "session": "exceptional",
+  "year": 2017,
+  "chapter_code": "space_geometry",
+  "chapter_title": "الهندسة في الفضاء",
+  "axis_tags": [
+    "space_dot_product_orthogonality",
+    "space_cartesian_plane_normal_vector",
+    "space_parametric_line_plane",
+    "space_relative_positions_intersections",
+    "space_distances_projections",
+    "space_areas_volumes"
+  ],
+  "branches": [
+    {
+      "code": "math",
+      "name": "شعبة رياضيات"
+    }
+  ],
+  "exercise_number": 1,
+  "subject_number": 2,
+  "source_page": 4,
+  "source_pages": [
+    4
+  ],
+  "solution_source_pages": [
+    11
+  ],
+  "title": "التمرين الأول — بكالوريا الجزائر 2017 استثنائية — الموضوع الثاني — شعبة رياضيات",
+  "statement": "الفضاء منسوب إلى المعلم المتعامد المتجانس \\((O;\\vec{i},\\vec{j},\\vec{k})\\) حيث \\(\\|\\vec{i}\\|=1cm\\)، نعتبر النقط: \\(A(2;6;4)\\)، \\(B(3;6;2)\\) و \\(C(0;3;3)\\) والمستوي \\((P)\\) المعرف بالتمثيل الوسيطي:\n\\[\n\\begin{cases}\nx=1+2\\alpha-12\\beta\\\\\ny=3+3\\alpha+10\\beta\\\\\nz=1+\\alpha-6\\beta\n\\end{cases}\n\\quad ;\\ (\\alpha\\in\\mathbb R;\\ \\beta\\in\\mathbb R).\n\\]",
+  "questions": [
+    {
+      "id": "2017_exceptional_s2_space_ex01_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) احسب الجداء السلمي \\(\\overrightarrow{AB}\\cdot\\overrightarrow{AC}\\) ثم استنتج طبيعة المثلث \\(ABC\\) واحسب مساحته.",
+      "axis_tags": [
+        "space_dot_product_orthogonality",
+        "space_areas_volumes"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب الشعاعين AB وAC ثم الجداء السلمي، وبعد تحديد أن المثلث قائم نستعمل نصفي حاصل ضرب ضلعي القائمة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب الشعاعين",
+            "explanation": "\\[\n\\overrightarrow{AB}=(1,0,-2),\n\\qquad\n\\overrightarrow{AC}=(-2,-3,-1).\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب الجداء السلمي",
+            "explanation": "\\[\n\\overrightarrow{AB}\\cdot\\overrightarrow{AC}=1(-2)+0(-3)+(-2)(-1)=0.\n\\]\nإذن \\(AB\\perp AC\\)، وبالتالي المثلث \\(ABC\\) قائم في \\(A\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "حساب المساحة",
+            "explanation": "\\[\nAB=\\sqrt5,\n\\qquad\nAC=\\sqrt{14}.\n\\]\nإذن:\n\\[\nS_{ABC}=\\frac12 AB\\times AC=\\frac{\\sqrt{70}}2\\ cm^2.\n\\]"
+          }
+        ],
+        "final_answer": "\\[\\overrightarrow{AB}\\cdot\\overrightarrow{AC}=0,\\]\nالمثلث \\(ABC\\) قائم في \\(A\\)، و\\[S_{ABC}=\\frac{\\sqrt{70}}2\\ cm^2.\\]"
+      }
+    },
+    {
+      "id": "2017_exceptional_s2_space_ex01_q2",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2) تحقق أن \\(6x-5y+3z+6=0\\) معادلة للمستوي \\((ABC)\\) واكتب معادلة ديكارتية للمستوي \\((P)\\).",
+      "axis_tags": [
+        "space_cartesian_plane_normal_vector"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نتحقق من انتماء A وB وC إلى المعادلة الأولى، ثم نستخرج شعاعين موجّهين لـP من تمثيله الوسيطي ونحدد شعاعا ناظما.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التحقق من معادلة ABC",
+            "explanation": "نعوض إحداثيات النقط الثلاث:\n\\[\n6(2)-5(6)+3(4)+6=0,\n\\]\n\\[\n6(3)-5(6)+3(2)+6=0,\n\\]\n\\[\n6(0)-5(3)+3(3)+6=0.\n\\]\nإذن المعادلة المعطاة هي معادلة \\((ABC)\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "استخراج شعاعي توجيه P",
+            "explanation": "من التمثيل الوسيطي:\n\\[\n\\vec u=(2,3,1),\n\\qquad\n\\vec v=(-12,10,-6).\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "إيجاد شعاع ناظم للمستوى P",
+            "explanation": "يمكن أخذ:\n\\[\n\\vec n_P=(1,0,-2).\n\\]\nإذ:\n\\[\n\\vec n_P\\cdot\\vec u=2-2=0,\n\\qquad\n\\vec n_P\\cdot\\vec v=-12+12=0.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "كتابة معادلة P",
+            "explanation": "عند \\(\\alpha=\\beta=0\\) نحصل على النقطة \\((1,3,1)\\). إذن المعادلة من الشكل:\n\\[\nx-2z+d=0.\n\\]\nوبالتعويض:\n\\[1-2+d=0\\Rightarrow d=1.\n\\]"
+          }
+        ],
+        "final_answer": "\\[(ABC):6x-5y+3z+6=0,\\]\n\\[(P):x-2z+1=0.\\]"
+      }
+    },
+    {
+      "id": "2017_exceptional_s2_space_ex01_q3",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "3) ليكن \\((Q)\\) المستوي ذو المعادلة: \\(2x+3y+z-12=0\\).\nبين أن المستويين \\((P)\\) و \\((Q)\\) متعامدان، ثم عين تمثيلا وسيطيا لـ\\((\\Delta)\\) مستقيم تقاطعهما.",
+      "axis_tags": [
+        "space_dot_product_orthogonality",
+        "space_relative_positions_intersections",
+        "space_parametric_line_plane"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نقارن شعاعي الناظم للمستويين ثم نستعمل حل نظام المعادلتين للحصول على مستقيم التقاطع.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "إثبات التعامد",
+            "explanation": "شعاع ناظم لـ\\((P)\\):\n\\[\n\\vec n_P=(1,0,-2).\n\\]\nوشعاع ناظم لـ\\((Q)\\):\n\\[\n\\vec n_Q=(2,3,1).\n\\]\nفنجد:\n\\[\n\\vec n_P\\cdot\\vec n_Q=2-2=0.\n\\]\nإذن \\((P)\\perp(Q)\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "تعيين مستقيم التقاطع",
+            "explanation": "نأخذ \\(\\beta\\in\\mathbb R\\) ونكتب:\n\\[\n(\\Delta):\\begin{cases}\nx=1-12\\beta\\\\\ny=3+10\\beta\\\\\nz=1-6\\beta\n\\end{cases}\n\\]\nفنلاحظ أن هذه الإحداثيات تحقق معادلتي \\((P)\\) و\\((Q)\\)، إذن هذا هو مستقيم تقاطعهما."
+          }
+        ],
+        "final_answer": "\\[(P)\\perp(Q),\\]\n\\[(\\Delta):\\begin{cases}x=1-12\\beta\\\\y=3+10\\beta\\\\z=1-6\\beta\\end{cases},\\quad \\beta\\in\\mathbb R.\\]"
+      }
+    },
+    {
+      "id": "2017_exceptional_s2_space_ex01_q4",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "4) لتكن \\(M\\) نقطة من الفضاء إحداثياتها \\(\\left(2t-1;-\\frac53t+\\frac{14}{3};t\\right)\\) حيث \\(t\\) عدد حقيقي يختلف عن \\(1\\).\nعين \\((\\Gamma)\\) مجموعة النقط \\(M\\) حتى يكون حجم رباعي الوجوه \\(MABC\\) أصغر من أو يساوي \\(\\frac{35}{9}cm^3\\).",
+      "axis_tags": [
+        "space_areas_volumes",
+        "space_distances_projections",
+        "space_point_loci"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نعتبر المثلث ABC قاعدة لرباعي الوجوه. نحسب المسافة من M إلى المستوى (ABC)، ثم نطبق صيغة الحجم ونحل المتراجحة بالنسبة إلى t.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "المسافة من M إلى المستوى ABC",
+            "explanation": "معادلة \\((ABC)\\):\n\\[\n6x-5y+3z+6=0.\n\\]\nبالتعويض بإحداثيات \\(M\\):\n\\[\n6(2t-1)-5\\left(-\\frac53t+\\frac{14}{3}\\right)+3t+6=\\frac{70}{3}(t-1).\n\\]\nإذن:\n\\[\nd(M,(ABC))=\\frac{\\left|\\frac{70}{3}(t-1)\\right|}{\\sqrt{6^2+(-5)^2+3^2}}=\\frac{\\sqrt{70}}3|t-1|.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب الحجم",
+            "explanation": "لدينا:\n\\[\nS_{ABC}=\\frac{\\sqrt{70}}2.\n\\]\nإذن:\n\\[\nV=\\frac13S_{ABC}\\,d(M,(ABC))=\\frac13\\times\\frac{\\sqrt{70}}2\\times\\frac{\\sqrt{70}}3|t-1|=\\frac{35}{9}|t-1|.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حل شرط الحجم",
+            "explanation": "\\[\nV\\le\\frac{35}{9}\\Longleftrightarrow |t-1|\\le1\n\\Longleftrightarrow 0\\le t\\le2.\n\\]\nلكن المعطى يفرض \\(t\\neq1\\)."
+          },
+          {
+            "step_number": 4,
+            "title": "تحديد المجموعة Γ",
+            "explanation": "إذن \\((\\Gamma)\\) هي القطعة المستقيمة الممثلة بـ:\n\\[\n\\begin{cases}\nx=2t-1\\\\\ny=-\\frac53t+\\frac{14}{3}\\\\\nz=t\n\\end{cases}\n\\quad ;\\ t\\in[0,2]\\setminus\\{1\\}.\n\\]\nأي القطعة بين النقطتين:\n\\[\nM_0\\left(-1,\\frac{14}{3},0\\right),\n\\qquad\nM_2\\left(3,\\frac43,2\\right)\n\\]\nباستثناء النقطة الموافقة لـ\\(t=1\\):\n\\[\nK(1,3,1).\n\\]"
+          }
+        ],
+        "final_answer": "\\[(\\Gamma):\\begin{cases}x=2t-1\\\\y=-\\frac53t+\\frac{14}{3}\\\\z=t\\end{cases},\\quad t\\in[0,2]\\setminus\\{1\\}.\\]\nوهي القطعة بين \\(\\left(-1;\\frac{14}{3};0\\right)\\) و \\(\\left(3;\\frac43;2\\right)\\) باستثناء \\(K(1;3;1)\\)."
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2017_2(8).pdf",
+    "statement_figure_policy": "لا يوجد شكل هندسي إلزامي في نص التمرين.",
+    "solution_figure_policy": "الحل مستقل عن أي رسم.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  }
+}

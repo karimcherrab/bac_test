@@ -1,0 +1,1077 @@
+{
+  "schema_version": "2.0",
+  "subject": {
+    "code": "math",
+    "title": "الرياضيات"
+  },
+  "branch": {
+    "code": "science",
+    "title": "علوم تجريبية"
+  },
+  "chapter": {
+    "code": "sequences",
+    "title": "المتتاليات العددية"
+  },
+  "axis": {
+    "tag": "arithmetic_sequences",
+    "title": "المتتالية الحسابية"
+  },
+  "source_summary": {
+    "lesson_files_count": 1,
+    "bac_files_count": 1,
+    "years_covered": [
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "notes": [
+      "هذا الملف مخصص لاختبار أفكار البكالوريا فقط في محور المتتالية الحسابية.",
+      "skills موجودة كمصفوفة فارغة لمنع ظهور أفكار شرح المحور في الاختبار.",
+      "bac_ideas محصورة حصريا في SEQ_BAC_23 إلى SEQ_BAC_30.",
+      "التركيز البكالوري في هذا المحور ليس فقط على المتتالية الحسابية المباشرة، بل خصوصا على التحويل إلى متتالية حسابية ثم الرجوع إلى المتتالية الأصلية أو حساب مجموع/جداء."
+    ]
+  },
+  "lesson_scope": {
+    "learning_outcomes": [
+      "إتقان أفكار البكالوريا الثماني المرتبطة بالمتتالية الحسابية والتحويلات التي تقود إليها."
+    ],
+    "concepts": [
+      "الفرق الثابت.",
+      "التحويل بالمقلوب إلى حسابية.",
+      "التحويل باللوغاريتم إلى حسابية.",
+      "الحد العام للحسابية المساعدة.",
+      "الرجوع إلى المتتالية الأصلية.",
+      "مجموع متتالية حسابية.",
+      "حل شرط في n بعد المجموع.",
+      "تحويل الجداء إلى مجموع باللوغاريتم."
+    ],
+    "methods": [
+      "حساب v_{n+1}-v_n.",
+      "استعمال v_n=a+b/u_n.",
+      "استعمال v_n=1/(u_n+a).",
+      "استعمال ln لتحويل الضرب إلى جمع.",
+      "صيغة الحد العام للحسابية.",
+      "صيغة مجموع الحسابية."
+    ],
+    "prerequisites": [],
+    "excluded_topics": [
+      "أفكار شرح المحور العامة التي لم تظهر كبنية BAC.",
+      "المتتالية الهندسية كهدف مستقل.",
+      "النهايات كهدف مستقل.",
+      "أي فكرة خارج SEQ_BAC_23 إلى SEQ_BAC_30."
+    ]
+  },
+  "skills": [],
+  "bac_ideas": [
+    {
+      "idea_code": "SEQ_BAC_23",
+      "title": "إثبات أن متتالية مباشرة حسابية باستعمال الفرق الثابت",
+      "description": "حساب v_{n+1}-v_n أو u_{n+1}-u_n وإثبات أنه ثابت لا يعتمد على n، ثم استنتاج أن المتتالية حسابية وتحديد أساسها.",
+      "bac_priority": "critical",
+      "frequency_level": "medium",
+      "occurrence_count": 2,
+      "years": [
+        2009,
+        2021
+      ],
+      "last_seen_year": 2021,
+      "skill_refs": [],
+      "required_skills": [],
+      "prerequisites": [],
+      "external_prerequisites": [],
+      "difficulty_range": {
+        "min": 1,
+        "max": 2
+      },
+      "variants": [
+        {
+          "variant_code": "SEQ_BAC_23_V01",
+          "title": "التعرف المباشر بالفرق الثابت",
+          "description": "إظهار أن u_{n+1}-u_n=r ثابت ثم تحديد r والحد الأول.",
+          "years": [
+            2009,
+            2021
+          ],
+          "occurrence_count": 2,
+          "difficulty": 1,
+          "skill_idea_codes": [],
+          "required_skills": [],
+          "distinguishing_feature": "المتتالية نفسها حسابية دون الحاجة إلى تحويل مساعد."
+        }
+      ],
+      "common_errors": [
+        {
+          "code": "SEQ_BAC_23_DIFF_NOT_CONSTANT",
+          "description": "حساب الفرق دون التحقق من أنه لا يعتمد على n.",
+          "severity": "high",
+          "related_skill_idea_codes": []
+        },
+        {
+          "code": "SEQ_BAC_23_WRONG_REASON",
+          "description": "اعتبار المتتالية حسابية بعد ملاحظة حدود قليلة فقط دون برهان عام.",
+          "severity": "high",
+          "related_skill_idea_codes": []
+        }
+      ],
+      "bac_occurrences": [
+        {
+          "year": 2009,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "متتالية حسابية مباشرة مع تحديد الأساس والحد الأول واستعمال خصائصها.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2021,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "متتالية معرفة بحد عام خطي واستعمال بنيتها الحسابية في بقية الأسئلة.",
+          "skill_idea_codes": []
+        }
+      ],
+      "mastery_requirements": {
+        "must_cover_variants": [
+          "SEQ_BAC_23_V01"
+        ],
+        "minimum_successful_variants": 1,
+        "requires_bac_style_question": true,
+        "required_skill_idea_codes": [],
+        "notes": "هذه أبسط صورة BAC للمتتالية الحسابية، لكنها أقل شيوعا من المتتاليات الحسابية المساعدة."
+      },
+      "generation_guidance": {
+        "allowed_structures": [
+          "إعطاء u_n أو علاقة بسيطة ثم طلب إثبات أن u_{n+1}-u_n ثابت.",
+          "إعطاء حدود أو شروط تسمح بتحديد أساس متتالية حسابية."
+        ],
+        "must_test": [
+          "حساب الفرق بين حدين متتاليين.",
+          "إثبات ثبات الفرق.",
+          "تحديد الأساس."
+        ],
+        "may_vary": [
+          "الحد الأول",
+          "الأساس",
+          "دليل البداية"
+        ],
+        "must_not_change": [
+          "جوهر الفكرة هو إثبات الحسابية بالفرق الثابت."
+        ],
+        "forbidden_concepts": [
+          "المتتالية الهندسية كهدف رئيسي",
+          "النهايات كهدف رئيسي"
+        ]
+      }
+    },
+    {
+      "idea_code": "SEQ_BAC_24",
+      "title": "تحويل من الشكل v_n=a+b/u_n إلى متتالية حسابية",
+      "description": "تعريف متتالية مساعدة على شكل v_n=a+\\frac{b}{u_n} ثم استعمال علاقة u_n التراجعية لإثبات أن v_{n+1}-v_n ثابت.",
+      "bac_priority": "high",
+      "frequency_level": "rare",
+      "occurrence_count": 1,
+      "years": [
+        2016
+      ],
+      "last_seen_year": 2016,
+      "skill_refs": [],
+      "required_skills": [],
+      "prerequisites": [],
+      "external_prerequisites": [],
+      "difficulty_range": {
+        "min": 2,
+        "max": 3
+      },
+      "variants": [
+        {
+          "variant_code": "SEQ_BAC_24_V01",
+          "title": "تحويل كسري بالمقلوب",
+          "description": "إدخال a+b/u_n حتى تصبح الزيادة بين حدين متتاليين ثابتة.",
+          "years": [
+            2016
+          ],
+          "occurrence_count": 1,
+          "difficulty": 3,
+          "skill_idea_codes": [],
+          "required_skills": [],
+          "distinguishing_feature": "التحويل يحتوي على 1/u_n مع ثابت إضافي."
+        }
+      ],
+      "common_errors": [
+        {
+          "code": "SEQ_BAC_24_RECIPROCAL_ALGEBRA",
+          "description": "خطأ في تحويل 1/u_{n+1} باستعمال العلاقة التراجعية.",
+          "severity": "high",
+          "related_skill_idea_codes": []
+        }
+      ],
+      "bac_occurrences": [
+        {
+          "year": 2016,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "تعريف v_n=2+13/u_n ثم إثبات أنها حسابية واستغلال حدها العام.",
+          "skill_idea_codes": [],
+          "session": "2016_2"
+        }
+      ],
+      "mastery_requirements": {
+        "must_cover_variants": [
+          "SEQ_BAC_24_V01"
+        ],
+        "minimum_successful_variants": 1,
+        "requires_bac_style_question": true,
+        "required_skill_idea_codes": [],
+        "notes": "فكرة تحويل BAC مهمة رغم ندرة ظهورها؛ الاختبار يقيس اكتشاف الحسابية بعد التحويل لا مجرد معرفة القانون."
+      },
+      "generation_guidance": {
+        "allowed_structures": [
+          "متتالية تراجعية u_n وتعريف v_n=a+b/u_n ثم طلب إثبات حسابية v_n."
+        ],
+        "must_test": [
+          "حساب v_{n+1}",
+          "استعمال علاقة u_n",
+          "إثبات v_{n+1}-v_n ثابت"
+        ],
+        "may_vary": [
+          "a",
+          "b",
+          "العلاقة التراجعية"
+        ],
+        "must_not_change": [
+          "يجب أن يصبح الفرق ثابتا بعد تحويل من الشكل a+b/u_n."
+        ],
+        "forbidden_concepts": [
+          "التحويل إلى هندسية"
+        ]
+      }
+    },
+    {
+      "idea_code": "SEQ_BAC_25",
+      "title": "تحويل من الشكل v_n=1/(u_n+a) إلى متتالية حسابية",
+      "description": "تعريف v_n=\\frac{1}{u_n+a} أو صيغة مكافئة بالمقلوب، ثم إثبات أن الفرق v_{n+1}-v_n ثابت.",
+      "bac_priority": "critical",
+      "frequency_level": "low",
+      "occurrence_count": 2,
+      "years": [
+        2017,
+        2018
+      ],
+      "last_seen_year": 2018,
+      "skill_refs": [],
+      "required_skills": [],
+      "prerequisites": [],
+      "external_prerequisites": [],
+      "difficulty_range": {
+        "min": 2,
+        "max": 3
+      },
+      "variants": [
+        {
+          "variant_code": "SEQ_BAC_25_V01",
+          "title": "مقلوب إزاحة u_n",
+          "description": "اختيار v_n=1/(u_n+a) لتحويل العلاقة التراجعية إلى زيادة ثابتة.",
+          "years": [
+            2017,
+            2018
+          ],
+          "occurrence_count": 2,
+          "difficulty": 3,
+          "skill_idea_codes": [],
+          "required_skills": [],
+          "distinguishing_feature": "المتتالية المساعدة هي مقلوب عبارة خطية في u_n."
+        }
+      ],
+      "common_errors": [
+        {
+          "code": "SEQ_BAC_25_DENOMINATOR_SHIFT",
+          "description": "إهمال الإزاحة a أو ارتكاب خطأ في مقام v_{n+1}.",
+          "severity": "high",
+          "related_skill_idea_codes": []
+        }
+      ],
+      "bac_occurrences": [
+        {
+          "year": 2017,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "تعريف متتالية مساعدة بالمقلوب لإظهار بنية حسابية.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2018,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "استعمال v_n=1/(u_n+a) للوصول إلى متتالية حسابية ثم الرجوع إلى u_n.",
+          "skill_idea_codes": []
+        }
+      ],
+      "mastery_requirements": {
+        "must_cover_variants": [
+          "SEQ_BAC_25_V01"
+        ],
+        "minimum_successful_variants": 1,
+        "requires_bac_style_question": true,
+        "required_skill_idea_codes": [],
+        "notes": "هذه من أهم صيغ التحويل إلى متتالية حسابية في التمارين التراجعية."
+      },
+      "generation_guidance": {
+        "allowed_structures": [
+          "تعريف v_n=1/(u_n+a) ثم طلب إثبات أنها حسابية."
+        ],
+        "must_test": [
+          "حساب v_{n+1}",
+          "اختزال الفرق",
+          "استخراج الأساس"
+        ],
+        "may_vary": [
+          "a",
+          "الحد الأول",
+          "العلاقة التراجعية"
+        ],
+        "must_not_change": [
+          "المقلوب هو عنصر التحويل الأساسي."
+        ],
+        "forbidden_concepts": [
+          "تحويل هندسي من الشكل (u_n-a)/(u_n-b)"
+        ]
+      }
+    },
+    {
+      "idea_code": "SEQ_BAC_26",
+      "title": "استعمال اللوغاريتم لتحويل علاقة ضربية إلى متتالية حسابية",
+      "description": "تعريف v_n=\\ln(u_n-a) أو w_n=\\ln(v_n) عندما تكون العلاقة الأصلية ضربية أو هندسية، ثم استغلال \\ln(ab)=\\ln a+\\ln b للحصول على فرق ثابت.",
+      "bac_priority": "critical",
+      "frequency_level": "medium",
+      "occurrence_count": 3,
+      "years": [
+        2014,
+        2019,
+        2026
+      ],
+      "last_seen_year": 2026,
+      "skill_refs": [],
+      "required_skills": [],
+      "prerequisites": [],
+      "external_prerequisites": [],
+      "difficulty_range": {
+        "min": 2,
+        "max": 3
+      },
+      "variants": [
+        {
+          "variant_code": "SEQ_BAC_26_V01",
+          "title": "v_n=ln(u_n-a)",
+          "description": "استعمال لوغاريتم فرق u_n عن ثابت لتحويل العلاقة إلى إضافة ثابتة.",
+          "years": [
+            2019
+          ],
+          "occurrence_count": 1,
+          "difficulty": 3,
+          "skill_idea_codes": [],
+          "required_skills": [],
+          "distinguishing_feature": "اللوغاريتم يطبق مباشرة على u_n-a."
+        },
+        {
+          "variant_code": "SEQ_BAC_26_V02",
+          "title": "لوغاريتم متتالية هندسية مساعدة",
+          "description": "إذا كانت v_n هندسية، فإن w_n=ln(v_n) تصبح حسابية.",
+          "years": [
+            2014,
+            2026
+          ],
+          "occurrence_count": 2,
+          "difficulty": 2,
+          "skill_idea_codes": [],
+          "required_skills": [],
+          "distinguishing_feature": "التحويل الحسابي يأتي بعد بنية ضربية أو هندسية."
+        }
+      ],
+      "common_errors": [
+        {
+          "code": "SEQ_BAC_26_LOG_DOMAIN",
+          "description": "استعمال ln دون التحقق من إيجابية العبارة داخل اللوغاريتم.",
+          "severity": "high",
+          "related_skill_idea_codes": []
+        },
+        {
+          "code": "SEQ_BAC_26_LOG_PRODUCT_RULE",
+          "description": "استعمال خاطئ لخواص اللوغاريتم عند تحويل الجداء إلى جمع.",
+          "severity": "high",
+          "related_skill_idea_codes": []
+        }
+      ],
+      "bac_occurrences": [
+        {
+          "year": 2014,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "تعريف v_n=ln(u_n) أو صيغة مماثلة وتحويل بنية ضربية إلى حسابية.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2019,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "تعريف v_n=ln(u_n-1) وإثبات أن v_n حسابية.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2026,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "تعريف لوغاريتم لمتتالية مساعدة ثم استغلال الحسابية في المجموع.",
+          "skill_idea_codes": []
+        }
+      ],
+      "mastery_requirements": {
+        "must_cover_variants": [
+          "SEQ_BAC_26_V01",
+          "SEQ_BAC_26_V02"
+        ],
+        "minimum_successful_variants": 1,
+        "requires_bac_style_question": true,
+        "required_skill_idea_codes": [],
+        "notes": "الفكرة الأساسية هي أن اللوغاريتم يحول الضرب إلى جمع ثابت، لذلك يجب تدريبها كتحويل BAC مستقل."
+      },
+      "generation_guidance": {
+        "allowed_structures": [
+          "تعريف v_n=ln(u_n-a) ثم طلب إثبات حسابيتها.",
+          "متتالية هندسية موجبة v_n ثم تعريف w_n=ln(v_n)."
+        ],
+        "must_test": [
+          "شرط الإيجابية",
+          "خاصية ln(ab)",
+          "استخراج الفرق الثابت"
+        ],
+        "may_vary": [
+          "a",
+          "الأساس الضربي",
+          "اسم المتتالية المساعدة"
+        ],
+        "must_not_change": [
+          "اللوغاريتم هو أداة التحويل إلى بنية حسابية."
+        ],
+        "forbidden_concepts": [
+          "لوغاريتم دون تحقق من المجال"
+        ]
+      }
+    },
+    {
+      "idea_code": "SEQ_BAC_27",
+      "title": "استنتاج الحد العام للمتتالية الأصلية من الحد العام للحسابية المساعدة",
+      "description": "بعد إثبات أن v_n حسابية، كتابة v_n=v_0+nr أو الصيغة المناسبة، ثم حل علاقة التحويل للرجوع إلى u_n وكتابة حدها العام.",
+      "bac_priority": "critical",
+      "frequency_level": "high",
+      "occurrence_count": 4,
+      "years": [
+        2016,
+        2018,
+        2019,
+        2026
+      ],
+      "last_seen_year": 2026,
+      "skill_refs": [],
+      "required_skills": [],
+      "prerequisites": [],
+      "external_prerequisites": [],
+      "difficulty_range": {
+        "min": 2,
+        "max": 3
+      },
+      "variants": [
+        {
+          "variant_code": "SEQ_BAC_27_V01",
+          "title": "الرجوع من تحويل بالمقلوب إلى u_n",
+          "description": "كتابة v_n ثم حل v_n=a+b/u_n أو v_n=1/(u_n+a) من أجل u_n.",
+          "years": [
+            2016,
+            2018
+          ],
+          "occurrence_count": 2,
+          "difficulty": 3,
+          "skill_idea_codes": [],
+          "required_skills": [],
+          "distinguishing_feature": "الرجوع إلى u_n يحتاج حل علاقة كسرية."
+        },
+        {
+          "variant_code": "SEQ_BAC_27_V02",
+          "title": "الرجوع من تحويل لوغاريتمي",
+          "description": "بعد إيجاد v_n=ln(u_n-a)، استعمال الأسية لاسترجاع u_n.",
+          "years": [
+            2019,
+            2026
+          ],
+          "occurrence_count": 2,
+          "difficulty": 3,
+          "skill_idea_codes": [],
+          "required_skills": [],
+          "distinguishing_feature": "الرجوع إلى u_n يتم باستعمال الدالة الأسية."
+        }
+      ],
+      "common_errors": [
+        {
+          "code": "SEQ_BAC_27_ARITHMETIC_INDEX",
+          "description": "خطأ في صيغة الحد العام للحسابية بسبب نسيان دليل البداية.",
+          "severity": "high",
+          "related_skill_idea_codes": []
+        },
+        {
+          "code": "SEQ_BAC_27_INVERSE_TRANSFORM",
+          "description": "خطأ جبري عند حل علاقة v_n من أجل u_n.",
+          "severity": "high",
+          "related_skill_idea_codes": []
+        }
+      ],
+      "bac_occurrences": [
+        {
+          "year": 2016,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "استنتاج u_n من الحد العام لمتتالية حسابية مساعدة.",
+          "skill_idea_codes": [],
+          "session": "2016_2"
+        },
+        {
+          "year": 2018,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "الرجوع من متتالية بالمقلوب إلى صيغة u_n.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2019,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "إيجاد u_n انطلاقا من v_n=ln(u_n-1).",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2026,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "استغلال حد عام لمتتالية لوغاريتمية حسابية للرجوع إلى المتتالية الأصلية.",
+          "skill_idea_codes": []
+        }
+      ],
+      "mastery_requirements": {
+        "must_cover_variants": [
+          "SEQ_BAC_27_V01",
+          "SEQ_BAC_27_V02"
+        ],
+        "minimum_successful_variants": 1,
+        "requires_bac_style_question": true,
+        "required_skill_idea_codes": [],
+        "notes": "هذه الفكرة تأتي مباشرة بعد إثبات الحسابية المساعدة، وهي حلقة الرجوع إلى u_n."
+      },
+      "generation_guidance": {
+        "allowed_structures": [
+          "إثبات v_n حسابية ثم طلب التعبير عن v_n وبعدها u_n.",
+          "تحويل لوغاريتمي أو بالمقلوب ثم الرجوع إلى المتتالية الأصلية."
+        ],
+        "must_test": [
+          "صيغة الحد العام للحسابية",
+          "احترام دليل البداية",
+          "عكس التحويل"
+        ],
+        "may_vary": [
+          "نوع التحويل",
+          "الأساس",
+          "الحد الأول"
+        ],
+        "must_not_change": [
+          "لا بد أن يأتي u_n من استغلال الحد العام لمتتالية حسابية مساعدة."
+        ],
+        "forbidden_concepts": [
+          "إعطاء u_n مباشرة دون الرجوع من v_n"
+        ]
+      }
+    },
+    {
+      "idea_code": "SEQ_BAC_28",
+      "title": "حساب مجموع حدود متتالية حسابية",
+      "description": "حساب مجموع عدد محدود من حدود متتالية حسابية باستعمال عدد الحدود ومتوسط الحدين الأول والأخير أو الصيغة المكافئة.",
+      "bac_priority": "high",
+      "frequency_level": "medium",
+      "occurrence_count": 4,
+      "years": [
+        2009,
+        2014,
+        2021,
+        2026
+      ],
+      "last_seen_year": 2026,
+      "skill_refs": [],
+      "required_skills": [],
+      "prerequisites": [],
+      "external_prerequisites": [],
+      "difficulty_range": {
+        "min": 1,
+        "max": 2
+      },
+      "variants": [
+        {
+          "variant_code": "SEQ_BAC_28_V01",
+          "title": "مجموع مباشر لمتتالية حسابية",
+          "description": "حساب S_n=u_p+u_{p+1}+...+u_q بعد تحديد عدد الحدود.",
+          "years": [
+            2009,
+            2021
+          ],
+          "occurrence_count": 2,
+          "difficulty": 1,
+          "skill_idea_codes": [],
+          "required_skills": [],
+          "distinguishing_feature": "المجموع يخص المتتالية الحسابية مباشرة."
+        },
+        {
+          "variant_code": "SEQ_BAC_28_V02",
+          "title": "مجموع لمتتالية حسابية مساعدة",
+          "description": "حساب مجموع حدود v_n أو w_n بعد إثبات أنها حسابية بالتحويل.",
+          "years": [
+            2014,
+            2026
+          ],
+          "occurrence_count": 2,
+          "difficulty": 2,
+          "skill_idea_codes": [],
+          "required_skills": [],
+          "distinguishing_feature": "المجموع يأتي بعد تحويل سابق إلى متتالية حسابية."
+        }
+      ],
+      "common_errors": [
+        {
+          "code": "SEQ_BAC_28_TERM_COUNT",
+          "description": "الخطأ في عدد الحدود، خصوصا عندما يبدأ المجموع من رتبة غير صفرية.",
+          "severity": "high",
+          "related_skill_idea_codes": []
+        },
+        {
+          "code": "SEQ_BAC_28_FIRST_LAST",
+          "description": "اختيار الحد الأول أو الأخير الخطأ في صيغة المجموع.",
+          "severity": "high",
+          "related_skill_idea_codes": []
+        }
+      ],
+      "bac_occurrences": [
+        {
+          "year": 2009,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "حساب مجموع متتالية حسابية ثم استعماله في معادلة.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2014,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "حساب مجموع مرتبط بمتتالية لوغاريتمية حسابية.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2021,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "حساب S_n لمتتالية حسابية مباشرة.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2026,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "حساب مجموع حدود متتالية لوغاريتمية حسابية.",
+          "skill_idea_codes": []
+        }
+      ],
+      "mastery_requirements": {
+        "must_cover_variants": [
+          "SEQ_BAC_28_V01"
+        ],
+        "minimum_successful_variants": 1,
+        "requires_bac_style_question": true,
+        "required_skill_idea_codes": [],
+        "notes": "يجب التركيز على عدد الحدود والرتب، فهما مصدر الخطأ الأكثر شيوعا."
+      },
+      "generation_guidance": {
+        "allowed_structures": [
+          "مجموع مباشر S_n لمتتالية حسابية.",
+          "مجموع لمتتالية مساعدة ثبتت حسابيتها."
+        ],
+        "must_test": [
+          "عدد الحدود",
+          "الحد الأول",
+          "الحد الأخير",
+          "صيغة المجموع"
+        ],
+        "may_vary": [
+          "رتبة البداية",
+          "رتبة النهاية",
+          "الأساس"
+        ],
+        "must_not_change": [
+          "المجموع يجب أن يكون مجموع حدود متتالية حسابية."
+        ],
+        "forbidden_concepts": [
+          "مجموع هندسي كهدف"
+        ]
+      }
+    },
+    {
+      "idea_code": "SEQ_BAC_29",
+      "title": "حل معادلة أو متراجحة في n بعد حساب مجموع حسابي",
+      "description": "كتابة S_n بدلالة n ثم حل شرط من الشكل S_n=A أو S_n>A أو S_n≤A لتحديد رتبة أو عدد حدود.",
+      "bac_priority": "high",
+      "frequency_level": "medium",
+      "occurrence_count": 3,
+      "years": [
+        2009,
+        2014,
+        2021
+      ],
+      "last_seen_year": 2021,
+      "skill_refs": [],
+      "required_skills": [],
+      "prerequisites": [],
+      "external_prerequisites": [],
+      "difficulty_range": {
+        "min": 2,
+        "max": 3
+      },
+      "variants": [
+        {
+          "variant_code": "SEQ_BAC_29_V01",
+          "title": "حل معادلة S_n=A",
+          "description": "بعد إيجاد عبارة S_n، حل معادلة عددية في n.",
+          "years": [
+            2009,
+            2021
+          ],
+          "occurrence_count": 2,
+          "difficulty": 2,
+          "skill_idea_codes": [],
+          "required_skills": [],
+          "distinguishing_feature": "القيمة المطلوبة تتحقق عند مساواة المجموع بعدد معلوم."
+        },
+        {
+          "variant_code": "SEQ_BAC_29_V02",
+          "title": "حل متراجحة مرتبطة بالمجموع",
+          "description": "استعمال عبارة مجموع حسابي داخل شرط متراجحة لإيجاد n.",
+          "years": [
+            2014
+          ],
+          "occurrence_count": 1,
+          "difficulty": 3,
+          "skill_idea_codes": [],
+          "required_skills": [],
+          "distinguishing_feature": "الشرط النهائي متراجحة لا مساواة."
+        }
+      ],
+      "common_errors": [
+        {
+          "code": "SEQ_BAC_29_NON_INTEGER_N",
+          "description": "نسيان أن n عدد طبيعي عند اختيار حل المعادلة أو المتراجحة.",
+          "severity": "high",
+          "related_skill_idea_codes": []
+        }
+      ],
+      "bac_occurrences": [
+        {
+          "year": 2009,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "بعد حساب S_n حل الشرط S_n=728 لتعيين n.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2014,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "حل متراجحة في n بعد تحويل جداء إلى مجموع لوغاريتمي حسابي.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2021,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "بعد إيجاد S_n حل S_n=30132.",
+          "skill_idea_codes": []
+        }
+      ],
+      "mastery_requirements": {
+        "must_cover_variants": [
+          "SEQ_BAC_29_V01"
+        ],
+        "minimum_successful_variants": 1,
+        "requires_bac_style_question": true,
+        "required_skill_idea_codes": [],
+        "notes": "الفكرة لا تقيس صيغة المجموع فقط بل توظيفها لحل شرط في n."
+      },
+      "generation_guidance": {
+        "allowed_structures": [
+          "حساب S_n ثم طلب n بحيث S_n=A.",
+          "حساب S_n ثم حل S_n>A أو شرط مشابه."
+        ],
+        "must_test": [
+          "صياغة S_n بدلالة n",
+          "حل المعادلة أو المتراجحة",
+          "فرض n∈N"
+        ],
+        "may_vary": [
+          "A",
+          "رتبة البداية",
+          "نوع الشرط"
+        ],
+        "must_not_change": [
+          "الحل في n يجب أن يأتي بعد استغلال مجموع حسابي."
+        ],
+        "forbidden_concepts": [
+          "حل معادلة في n لا علاقة لها بالمجموع"
+        ]
+      }
+    },
+    {
+      "idea_code": "SEQ_BAC_30",
+      "title": "تحويل جداء إلى مجموع باستعمال ln ثم استغلال متتالية حسابية",
+      "description": "استعمال ln(\\prod a_k)=\\sum ln(a_k) لتحويل جداء حدود إلى مجموع، ثم ملاحظة أن حدود اللوغاريتم تشكل متتالية حسابية واستعمال صيغة مجموعها.",
+      "bac_priority": "critical",
+      "frequency_level": "high",
+      "occurrence_count": 5,
+      "years": [
+        2014,
+        2019,
+        2021,
+        2025,
+        2026
+      ],
+      "last_seen_year": 2026,
+      "skill_refs": [],
+      "required_skills": [],
+      "prerequisites": [],
+      "external_prerequisites": [],
+      "difficulty_range": {
+        "min": 2,
+        "max": 3
+      },
+      "variants": [
+        {
+          "variant_code": "SEQ_BAC_30_V01",
+          "title": "جداء حدود موجبة ثم ln",
+          "description": "أخذ لوغاريتم جداء ثم حساب مجموع لوغاريتمات تشكل متتالية حسابية.",
+          "years": [
+            2014,
+            2019,
+            2021
+          ],
+          "occurrence_count": 3,
+          "difficulty": 3,
+          "skill_idea_codes": [],
+          "required_skills": [],
+          "distinguishing_feature": "يبدأ السؤال بجداء وينتهي بمجموع حسابي."
+        },
+        {
+          "variant_code": "SEQ_BAC_30_V02",
+          "title": "مجموع ln|v_k| بعد متتالية هندسية",
+          "description": "إذا كانت v_n هندسية، تصبح ln|v_n| حسابية ويحسب مجموعها.",
+          "years": [
+            2025,
+            2026
+          ],
+          "occurrence_count": 2,
+          "difficulty": 3,
+          "skill_idea_codes": [],
+          "required_skills": [],
+          "distinguishing_feature": "الحسابية تظهر بعد أخذ لوغاريتم القيمة المطلقة لحدود متتالية ضربية."
+        }
+      ],
+      "common_errors": [
+        {
+          "code": "SEQ_BAC_30_LOG_PRODUCT",
+          "description": "نسيان أن لوغاريتم الجداء يساوي مجموع اللوغاريتمات.",
+          "severity": "high",
+          "related_skill_idea_codes": []
+        },
+        {
+          "code": "SEQ_BAC_30_ABS_OR_POSITIVITY",
+          "description": "إهمال شرط الإيجابية أو القيمة المطلقة عند استعمال ln.",
+          "severity": "high",
+          "related_skill_idea_codes": []
+        },
+        {
+          "code": "SEQ_BAC_30_SUM_COUNT",
+          "description": "الخطأ في عدد حدود مجموع اللوغاريتمات.",
+          "severity": "high",
+          "related_skill_idea_codes": []
+        }
+      ],
+      "bac_occurrences": [
+        {
+          "year": 2014,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "تحويل جداء إلى مجموع باستعمال ln ثم استغلال متتالية حسابية.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2019,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "استعمال v_n=ln(u_n-1) وتحويل جداء إلى مجموع.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2021,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "استغلال مجموع لوغاريتمات مرتبط بمتتالية ذات بنية حسابية.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2025,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "حساب T_n=ln|v_0|+...+ln|v_n| باستعمال حسابية اللوغاريتمات.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2026,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "استغلال w_n=ln(v_n) كمتتالية حسابية في مجموع لوغاريتمي.",
+          "skill_idea_codes": []
+        }
+      ],
+      "mastery_requirements": {
+        "must_cover_variants": [
+          "SEQ_BAC_30_V01",
+          "SEQ_BAC_30_V02"
+        ],
+        "minimum_successful_variants": 1,
+        "requires_bac_style_question": true,
+        "required_skill_idea_codes": [],
+        "notes": "من أهم أفكار BAC المركبة في هذا المحور لأنها تجمع الحسابية واللوغاريتم والجداء."
+      },
+      "generation_guidance": {
+        "allowed_structures": [
+          "جداء P_n ثم أخذ ln(P_n) وتحويله إلى مجموع.",
+          "متتالية هندسية موجبة أو غير منعدمة ثم دراسة ln|v_n| وحساب مجموعها."
+        ],
+        "must_test": [
+          "خاصية لوغاريتم الجداء",
+          "إثبات أو استعمال الحسابية",
+          "حساب مجموع الحسابية"
+        ],
+        "may_vary": [
+          "شكل الجداء",
+          "استعمال القيمة المطلقة",
+          "رتبة البداية"
+        ],
+        "must_not_change": [
+          "الجداء أو مجموع اللوغاريتمات يجب أن يقود إلى استغلال متتالية حسابية."
+        ],
+        "forbidden_concepts": [
+          "استعمال ln كزينة دون دور في التحويل"
+        ]
+      }
+    }
+  ],
+  "coverage_summary": {
+    "total_skills": 0,
+    "total_skill_ideas": 0,
+    "total_bac_ideas": 8,
+    "total_variants": 13,
+    "critical_bac_ideas": [
+      "SEQ_BAC_23",
+      "SEQ_BAC_25",
+      "SEQ_BAC_26",
+      "SEQ_BAC_27",
+      "SEQ_BAC_30"
+    ],
+    "high_priority_bac_ideas": [
+      "SEQ_BAC_24",
+      "SEQ_BAC_28",
+      "SEQ_BAC_29"
+    ],
+    "skills_covered_by_bac": [],
+    "skills_not_seen_in_bac": [],
+    "skill_ideas_not_seen_in_bac": [],
+    "years_covered": [
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "bac_statistics": {
+      "total_bac_ideas": 8,
+      "total_variants": 13,
+      "most_frequent_idea": "SEQ_BAC_30",
+      "latest_bac_year": 2026,
+      "rare_ideas": [
+        "SEQ_BAC_24"
+      ],
+      "idea_occurrence_counts": {
+        "SEQ_BAC_23": 2,
+        "SEQ_BAC_24": 1,
+        "SEQ_BAC_25": 2,
+        "SEQ_BAC_26": 3,
+        "SEQ_BAC_27": 4,
+        "SEQ_BAC_28": 4,
+        "SEQ_BAC_29": 3,
+        "SEQ_BAC_30": 5
+      }
+    }
+  }
+}

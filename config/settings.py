@@ -113,13 +113,19 @@ INSTALLED_APPS = [
     'rest_framework',
     "corsheaders",
     'drf_spectacular',
-    'knowledge',
+    # 'knowledge',
     'course',
     'exercise_generation',
     'exercise_bac',
     'axis_revision',
     'generated_bac',
     'tutor',
+    'memory_practice',
+    'tutor_chat',
+    'admin_panel',
+
+    'payments',
+    'adaptive_assessment',
     'accounts.apps.AccountsConfig'
 ]
 
@@ -164,41 +170,41 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 DATABASE_URL = os.getenv("DATABASE_URL")
 
-if DATABASE_URL:
-    DATABASES = {
-        "default": dj_database_url.parse(
-            DATABASE_URL,
-            conn_max_age=600,
-            conn_health_checks=True,
-            ssl_require=not DEBUG,
-        )
-    }
-else:
-    DATABASES = {
-        "default": {
-            "ENGINE": "django.db.backends.postgresql",
-            "NAME": os.getenv(
-                "DB_NAME",
-                "bac_database",
-            ),
-            "USER": os.getenv(
-                "DB_USER",
-                "postgres",
-            ),
-            "PASSWORD": os.getenv(
-                "DB_PASSWORD",
-                "",
-            ),
-            "HOST": os.getenv(
-                "DB_HOST",
-                "localhost",
-            ),
-            "PORT": os.getenv(
-                "DB_PORT",
-                "5432",
-            ),
+# if DATABASE_URL:
+#     DATABASES = {
+#         "default": dj_database_url.parse(
+#             DATABASE_URL,
+#             conn_max_age=600,
+#             conn_health_checks=True,
+#             ssl_require=not DEBUG,
+#         )
+#     }
+# else:
+DATABASES = {
+            "default": {
+                "ENGINE": "django.db.backends.postgresql",
+                "NAME": os.getenv(
+                    "DB_NAME",
+                    "bac_database",
+                ),
+                "USER": os.getenv(
+                    "DB_USER",
+                    "postgres",
+                ),
+                "PASSWORD": os.getenv(
+                    "DB_PASSWORD",
+                    "",
+                ),
+                "HOST": os.getenv(
+                    "DB_HOST",
+                    "localhost",
+                ),
+                "PORT": os.getenv(
+                    "DB_PORT",
+                    "5432",
+                ),
+            }
         }
-    }
 
 SPECTACULAR_SETTINGS = {
     "TITLE": "API",
@@ -223,6 +229,66 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+
+
+import os
+
+
+CHARGILY_MODE = os.getenv(
+    "CHARGILY_MODE",
+    "test",
+).lower()
+
+
+CHARGILY_SECRET_KEY = os.getenv(
+    "CHARGILY_SECRET_KEY",
+    "",
+)
+
+
+if CHARGILY_MODE == "live":
+
+    CHARGILY_BASE_URL = (
+        "https://pay.chargily.net/api/v2"
+    )
+
+else:
+
+    CHARGILY_BASE_URL = (
+        "https://pay.chargily.net/test/api/v2"
+    )
+
+
+CHARGILY_TIMEOUT = 20
+
+
+# أنصحك أن Backey يتحمل العمولة
+# حتى يرى الطالب مثلاً 500 DA
+# ويدفع 500 DA.
+CHARGILY_FEES_ALLOCATION = os.getenv(
+    "CHARGILY_FEES_ALLOCATION",
+    "merchant",
+)
+
+
+FRONTEND_URL = os.getenv(
+    "FRONTEND_URL",
+    "http://localhost:5173",
+)
+
+
+# في local لا يمكن Chargily
+# الوصول إلى localhost.
+#
+# أثناء الاختبار ضع URL عام.
+BACKEND_PUBLIC_URL = os.getenv(
+    "BACKEND_PUBLIC_URL",
+    "https://api.backey.dz",
+)
+
+
+
 
 
 # Internationalization
@@ -255,18 +321,18 @@ REST_FRAMEWORK = {
     'PAGE_SIZE': 100
 }
 # CORS_ALLOW_ALL_ORIGINS = True
-# CORS_ALLOWED_ORIGINS = [
-#     "http://localhost:3000",
-#     "http://localhost:5173",
-# ]
 CORS_ALLOWED_ORIGINS = [
-    origin.strip()
-    for origin in os.getenv(
-        "CORS_ALLOWED_ORIGINS",
-        "http://localhost:5173",
-    ).split(",")
-    if origin.strip()
+    "http://localhost:5173",
+    "http://localhost:5174",
 ]
+# CORS_ALLOWED_ORIGINS = [
+#     origin.strip()
+#     for origin in os.getenv(
+#         "CORS_ALLOWED_ORIGINS",
+#         "http://localhost:5173",
+#     ).split(",")
+#     if origin.strip()
+# ]
 
 CSRF_TRUSTED_ORIGINS = [
     origin.strip()
@@ -280,6 +346,8 @@ CSRF_TRUSTED_ORIGINS = [
 ALLOWED_HOSTS = [
     "127.0.0.1",
     "localhost",
+    "54fc-185-5-129-25.ngrok-free.app",
+
 ]
 
 render_hostname = os.getenv("RENDER_EXTERNAL_HOSTNAME")

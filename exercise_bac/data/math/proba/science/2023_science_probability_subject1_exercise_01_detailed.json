@@ -1,0 +1,211 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "session": "ordinary",
+  "year": 2023,
+  "chapter_code": "probability",
+  "chapter_title": "الاحتمالات",
+  "branches": [
+    {
+      "code": "science",
+      "name": "شعبة علوم تجريبية"
+    }
+  ],
+  "version": "4.2-2023-science-probability-subject1-ex01",
+  "axis_tags": [
+    "probability_events_law",
+    "probability_counting",
+    "probability_tree_total_probability",
+    "random_variable_probability_law_expectation",
+    "probability_draw_modeling"
+  ],
+  "exercise_number": 1,
+  "subject_number": 1,
+  "source_page": 1,
+  "source_pages": [
+    1
+  ],
+  "solution_source_pages": [
+    5
+  ],
+  "title": "التمرين الأول — بكالوريا الجزائر 2023 — الموضوع الأول — شعبة علوم تجريبية",
+  "statement": "يحتوي صندوق \\(U_1\\) على 5 كريات تحمل الأرقام 1 ، 1 ، 1 ، 2 ، 3 ويحتوي صندوق \\(U_2\\) على 4 كريات تحمل الأرقام 1 ، 1 ، 2 ، 2 (كل الكريات متماثلة ولا نفرق بينها عند اللمس).\nنختار عشوائيا أحد الصندوقين ونسحب منه عشوائيا كريتين في آن واحد.\n1) نعتبر الحوادث: \\(A\\) \"سحب كريتين تحملان رقمين فرديين\" ، \\(B\\) \"سحب كريتين تحملان رقمين زوجيين\" ، \\(C\\) \"سحب كريتين إحداهما تحمل رقما فرديا والأخرى تحمل رقما زوجيا\".\n2) نفرغ محتوى الصندوقين \\(U_1\\) و \\(U_2\\) في صندوق جديد \\(U_3\\) ثم نسحب منه عشوائيا كريتين في آن واحد.\nالمتغير العشوائي \\(X\\) الذي يرفق بكل عملية سحب لكريتين جداء الرقمين المسجلين عليهما.",
+  "questions": [
+    {
+      "id": "2023_s1_probability_ex01_q1a",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) أ) أنجز الشجرة التي تنمذج هذه التجربة.",
+      "axis_tags": [
+        "probability_tree_total_probability",
+        "probability_draw_modeling"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نبدأ باختيار الصندوق: احتمال اختيار كل صندوق يساوي \\(\\frac12\\). ثم نحسب داخل كل صندوق احتمال الحوادث \\(A\\)، \\(B\\) و \\(C\\) باستعمال التوفيقات.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "فرعا اختيار الصندوق",
+            "explanation": "نختار أحد الصندوقين عشوائيا، لذلك:\n\\[P(U_1)=\\frac12,\\qquad P(U_2)=\\frac12\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "احتمالات الحوادث داخل U_1",
+            "explanation": "في \\(U_1\\) توجد 5 كريات: أربع كريات ذات أرقام فردية \\((1,1,1,3)\\) وكرية واحدة ذات رقم زوجي \\((2)\\).\n\nعدد الأزواج الممكنة:\n\\[\\binom52=10\\]\n\nإذن:\n\\[P(A\\mid U_1)=\\frac{\\binom42}{\\binom52}=\\frac6{10}=\\frac35\\]\n\nولا يمكن سحب كريتين زوجيتين لأن هناك كرية زوجية واحدة فقط:\n\\[P(B\\mid U_1)=0\\]\n\nأما احتمال سحب كرية فردية وأخرى زوجية فهو:\n\\[P(C\\mid U_1)=\\frac{4\\times1}{10}=\\frac25\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "احتمالات الحوادث داخل U_2",
+            "explanation": "في \\(U_2\\) توجد كريتان فرديتان \\((1,1)\\) وكريتان زوجيتان \\((2,2)\\).\n\nعدد الأزواج الممكنة:\n\\[\\binom42=6\\]\n\nإذن:\n\\[P(A\\mid U_2)=\\frac{\\binom22}{6}=\\frac16\\]\n\\[P(B\\mid U_2)=\\frac{\\binom22}{6}=\\frac16\\]\n\\[P(C\\mid U_2)=\\frac{2\\times2}{6}=\\frac46=\\frac23\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "الشجرة النهائية",
+            "explanation": "الشجرة تبدأ بفرعين:\n\\[U_1:\\frac12\\qquad U_2:\\frac12\\]\nثم من \\(U_1\\):\n\\[A:\\frac35,\\quad B:0,\\quad C:\\frac25\\]\nومن \\(U_2\\):\n\\[A:\\frac16,\\quad B:\\frac16,\\quad C:\\frac23\\]"
+          }
+        ],
+        "final_answer": "الشجرة: \\(P(U_1)=P(U_2)=\\frac12\\)، ومن \\(U_1\\): \\(\\frac35,0,\\frac25\\)، ومن \\(U_2\\): \\(\\frac16,\\frac16,\\frac23\\) للحوادث \\(A,B,C\\) على الترتيب."
+      }
+    },
+    {
+      "id": "2023_s1_probability_ex01_q1b",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "ب) بين أن \\(P(A)=\\frac{23}{60}\\) و \\(P(B)=\\frac{1}{12}\\) ثم احسب \\(P(C)\\).",
+      "axis_tags": [
+        "probability_tree_total_probability",
+        "probability_events_law"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل قانون الاحتمالات الكلية انطلاقا من الصندوقين \\(U_1\\) و\\(U_2\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب P(A)",
+            "explanation": "لدينا:\n\\[P(A)=P(U_1)P(A\\mid U_1)+P(U_2)P(A\\mid U_2)\\]\nبالتعويض:\n\\[P(A)=\\frac12\\times\\frac35+\\frac12\\times\\frac16\\]\n\\[P(A)=\\frac3{10}+\\frac1{12}=\\frac{18+5}{60}=\\frac{23}{60}\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب P(B)",
+            "explanation": "لدينا:\n\\[P(B)=P(U_1)P(B\\mid U_1)+P(U_2)P(B\\mid U_2)\\]\nإذن:\n\\[P(B)=\\frac12\\times0+\\frac12\\times\\frac16=\\frac1{12}\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب P(C)",
+            "explanation": "الحوادث \\(A\\)، \\(B\\)، \\(C\\) تشكل تجزئة لجميع الحالات الممكنة، لذلك:\n\\[P(C)=1-P(A)-P(B)\\]\n\\[P(C)=1-\\frac{23}{60}-\\frac1{12}\\]\n\\[P(C)=1-\\frac{23}{60}-\\frac5{60}=\\frac{32}{60}=\\frac8{15}\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "النتيجة النهائية",
+            "explanation": "\\[\\boxed{P(A)=\\frac{23}{60}},\\quad\\boxed{P(B)=\\frac1{12}},\\quad\\boxed{P(C)=\\frac8{15}}\\]"
+          }
+        ],
+        "final_answer": "\\(P(A)=\\frac{23}{60}\\)، \\(P(B)=\\frac1{12}\\)، و \\(P(C)=\\frac8{15}\\)."
+      }
+    },
+    {
+      "id": "2023_s1_probability_ex01_q2a",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "2) أ) برر أن مجموعة قيم المتغير العشوائي \\(X\\) هي \\(\\{1;2;3;4;6\\}\\).",
+      "axis_tags": [
+        "random_variable_probability_law_expectation"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "بعد جمع محتوى الصندوقين، الأرقام الموجودة هي فقط \\(1\\)، \\(2\\)، \\(3\\). نحصر جداءات رقمين مختلفين أو متساويين الممكن سحبهما فعلا من الصندوق.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "محتوى الصندوق U_3",
+            "explanation": "بعد جمع الصندوقين نحصل على 9 كريات:\n- خمس كريات تحمل الرقم \\(1\\).\n- ثلاث كريات تحمل الرقم \\(2\\).\n- كرية واحدة تحمل الرقم \\(3\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "الجداءات الممكنة",
+            "explanation": "الجداءات الممكنة هي:\n\\[1\\times1=1\\]\n\\[1\\times2=2\\]\n\\[1\\times3=3\\]\n\\[2\\times2=4\\]\n\\[2\\times3=6\\]\nأما \\(3\\times3=9\\) فغير ممكن لأن هناك كرية واحدة فقط تحمل الرقم \\(3\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "النتيجة",
+            "explanation": "\\[\\boxed{X(\\Omega)=\\{1,2,3,4,6\\}}\\]"
+          }
+        ],
+        "final_answer": "\\(\\displaystyle X(\\Omega)=\\{1,2,3,4,6\\}\\)."
+      }
+    },
+    {
+      "id": "2023_s1_probability_ex01_q2b",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "ب) عين قانون احتمال المتغير العشوائي \\(X\\) ثم احسب أمله الرياضياتي \\(E(X)\\).",
+      "axis_tags": [
+        "random_variable_probability_law_expectation",
+        "probability_counting"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "عدد الأزواج الممكنة هو \\(\\binom92=36\\). لكل قيمة من قيم \\(X\\)، نحسب عدد الأزواج التي تحقق الجداء المطلوب.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "عدد الحالات الممكنة",
+            "explanation": "\\[|\\Omega|=\\binom92=36\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب P(X=1)",
+            "explanation": "الجداء \\(1\\) يتحقق بسحب كريتين تحملان الرقم \\(1\\):\n\\[P(X=1)=\\frac{\\binom52}{36}=\\frac{10}{36}\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب P(X=2)",
+            "explanation": "الجداء \\(2\\) يتحقق بسحب كرية رقمها \\(1\\) وأخرى رقمها \\(2\\):\n\\[P(X=2)=\\frac{5\\times3}{36}=\\frac{15}{36}\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "حساب P(X=3)",
+            "explanation": "الجداء \\(3\\) يتحقق بسحب كرية رقمها \\(1\\) والكرية الوحيدة رقمها \\(3\\):\n\\[P(X=3)=\\frac{5\\times1}{36}=\\frac5{36}\\]"
+          },
+          {
+            "step_number": 5,
+            "title": "حساب P(X=4)",
+            "explanation": "الجداء \\(4\\) يتحقق بسحب كريتين تحملان الرقم \\(2\\):\n\\[P(X=4)=\\frac{\\binom32}{36}=\\frac3{36}\\]"
+          },
+          {
+            "step_number": 6,
+            "title": "حساب P(X=6)",
+            "explanation": "الجداء \\(6\\) يتحقق بسحب كرية رقمها \\(2\\) والكرية رقمها \\(3\\):\n\\[P(X=6)=\\frac{3\\times1}{36}=\\frac3{36}\\]"
+          },
+          {
+            "step_number": 7,
+            "title": "قانون احتمال X",
+            "explanation": "\\[\n\\begin{array}{c|ccccc}\nx_i&1&2&3&4&6\\\\ \\hline\nP(X=x_i)&\\frac{10}{36}&\\frac{15}{36}&\\frac5{36}&\\frac3{36}&\\frac3{36}\n\\end{array}\n\\]"
+          },
+          {
+            "step_number": 8,
+            "title": "حساب الأمل الرياضياتي",
+            "explanation": "\\[E(X)=1\\times\\frac{10}{36}+2\\times\\frac{15}{36}+3\\times\\frac5{36}+4\\times\\frac3{36}+6\\times\\frac3{36}\\]\n\\[E(X)=\\frac{10+30+15+12+18}{36}=\\frac{85}{36}\\]"
+          },
+          {
+            "step_number": 9,
+            "title": "النتيجة النهائية",
+            "explanation": "\\[\\boxed{E(X)=\\frac{85}{36}}\\]"
+          }
+        ],
+        "final_answer": "\\(P(X=1)=\\frac{10}{36}\\)، \\(P(X=2)=\\frac{15}{36}\\)، \\(P(X=3)=\\frac5{36}\\)، \\(P(X=4)=\\frac3{36}\\)، \\(P(X=6)=\\frac3{36}\\)، و \\(E(X)=\\frac{85}{36}\\)."
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2023.pdf",
+    "statement_figure_policy": "لا يوجد شكل معطى في نص التمرين؛ الشجرة مطلوبة من التلميذ.",
+    "solution_figure_policy": "تم شرح جميع فروع شجرة الاحتمالات وقيمها ضمن خطوات الحل.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  }
+}

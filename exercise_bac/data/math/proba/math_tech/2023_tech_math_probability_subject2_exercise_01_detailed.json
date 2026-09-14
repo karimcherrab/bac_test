@@ -1,0 +1,251 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2023-tech-math-probability-subject2-ex01-detailed",
+  "session": "ordinary",
+  "year": 2023,
+  "chapter_code": "probability",
+  "chapter_title": "الاحتمالات",
+  "axis_tags": [
+    "probability_language_law",
+    "probability_counting_modeling",
+    "random_variable_probability_law",
+    "random_variable_expected_value",
+    "random_variable_event"
+  ],
+  "branches": [
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "exercise_number": 1,
+  "subject_number": 2,
+  "source_page": 3,
+  "source_pages": [
+    3
+  ],
+  "solution_source_pages": [
+    8
+  ],
+  "title": "التمرين الأول — بكالوريا الجزائر 2023 — الموضوع الثاني — شعبة تقني رياضي",
+  "statement": "يحتوي كيس على 11 كرية متماثلة ولا نفرق بينها باللمس، موزعة كما يلي:\n3 كريات تحمل الرقم 0 ، 3 كريات تحمل الرقم 1 و 5 كريات تحمل الرقم 2\nنسحب عشوائيا وفي آن واحد كريتين من الكيس ونعتبر الحوادث A ، B ، C الآتية:\nA \"الحصول على كريتين رقم كل منهما عدد أولي\"\nB \"الحصول على كرية واحدة تحمل رقما فرديا\"\nC \"الحصول على كريتين جداء رقميهما معدوم\"",
+  "questions": [
+    {
+      "id": "2023_s2_probability_ex01_q1a",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) أ) بين أن احتمال الحدث A يساوي \\(\\frac{2}{11}\\) وأن احتمال الحدث B يساوي \\(\\frac{24}{55}\\).",
+      "axis_tags": [
+        "probability_language_law",
+        "probability_counting_modeling"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "عدد الحالات الممكنة هو اختيار كريتين من 11. بالنسبة إلى A العدد الأولي الوحيد الموجود هو 2، وبالنسبة إلى B نختار كرية واحدة تحمل الرقم الفردي 1 وكرية ثانية غير فردية.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "عدد الحالات الممكنة",
+            "explanation": "\\[|\\Omega|=\\binom{11}{2}=55.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب احتمال A",
+            "explanation": "من بين الأرقام 0 و1 و2، العدد الأولي الوحيد هو 2.\nيوجد 5 كريات تحمل الرقم 2.\nإذن:\n\\[P(A)=\\frac{\\binom52}{\\binom{11}{2}}=\\frac{10}{55}=\\frac{2}{11}.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب احتمال B",
+            "explanation": "الرقم الفردي الموجود هو 1، وعدد الكريات التي تحمله 3.\nحتى نحصل على كرية واحدة فقط تحمل رقما فرديا، نختار كرية من هذه الثلاث، وكرية ثانية من الكريات الثماني التي تحمل 0 أو2:\n\\[P(B)=\\frac{\\binom31\\binom81}{55}=\\frac{24}{55}.\\]"
+          }
+        ],
+        "final_answer": "\\[P(A)=\\frac{2}{11},\\qquad P(B)=\\frac{24}{55}.\\]"
+      }
+    },
+    {
+      "id": "2023_s2_probability_ex01_q1b",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "ب) احسب الاحتمال \\(P(C)\\).",
+      "axis_tags": [
+        "probability_language_law",
+        "probability_counting_modeling"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "جداء الرقمين يكون معدوما إذا كان أحد الرقمين على الأقل يساوي 0. الأسهل استعمال الحادثة العكسية.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تحديد الحادثة العكسية",
+            "explanation": "الحادثة \\(\\overline C\\) تعني ألا نسحب أي كرية تحمل الرقم 0.\nعدد الكريات التي لا تحمل 0 هو:\n\\[3+5=8.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب احتمال الحادثة العكسية",
+            "explanation": "\\[P(\\overline C)=\\frac{\\binom82}{\\binom{11}{2}}=\\frac{28}{55}.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب P(C)",
+            "explanation": "\\[P(C)=1-\\frac{28}{55}=\\frac{27}{55}.\\]"
+          }
+        ],
+        "final_answer": "\\[P(C)=\\frac{27}{55}.\\]"
+      }
+    },
+    {
+      "id": "2023_s2_probability_ex01_q2a",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "2) نعتبر المتغير العشوائي X الذي يرفق بكل عملية سحب لكريتين جداء الرقمين المسجلين عليهما.\nأ) برر أن مجموعة قيم المتغير العشوائي X هي \\(\\{0;1;2;4\\}\\).",
+      "axis_tags": [
+        "random_variable_probability_law"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "الأرقام الموجودة هي 0 و1 و2، فنكتب جميع الجداءات المختلفة الممكنة بين رقمين مسحوبين.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "القيمة 0",
+            "explanation": "إذا ظهرت كرية تحمل 0 فإن:\n\\[0\\times0=0,\\quad0\\times1=0,\\quad0\\times2=0.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "القيمة 1",
+            "explanation": "\\[1\\times1=1.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "القيمة 2",
+            "explanation": "\\[1\\times2=2.\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "القيمة 4",
+            "explanation": "\\[2\\times2=4.\\]"
+          },
+          {
+            "step_number": 5,
+            "title": "الاستنتاج",
+            "explanation": "\\[X(\\Omega)=\\{0,1,2,4\\}.\\]"
+          }
+        ],
+        "final_answer": "\\[X(\\Omega)=\\{0;1;2;4\\}.\\]"
+      }
+    },
+    {
+      "id": "2023_s2_probability_ex01_q2b",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "ب) عين قانون احتمال المتغير العشوائي X ثم احسب أمله الرياضياتي \\(E(X)\\).",
+      "axis_tags": [
+        "random_variable_probability_law",
+        "random_variable_expected_value"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب احتمال كل قيمة من قيم X حسب نوع الرقمين المسحوبين.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب P(X=0)",
+            "explanation": "هذا هو الحدث C المحسوب سابقا:\n\\[P(X=0)=\\frac{27}{55}.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب P(X=1)",
+            "explanation": "حتى يكون الجداء 1، يجب سحب كريتين تحملان الرقم 1:\n\\[P(X=1)=\\frac{\\binom32}{55}=\\frac3{55}.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب P(X=2)",
+            "explanation": "حتى يكون الجداء 2، نختار كرية تحمل 1 من بين 3 وكرية تحمل 2 من بين 5:\n\\[P(X=2)=\\frac{3\\times5}{55}=\\frac{15}{55}.\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "حساب P(X=4)",
+            "explanation": "حتى يكون الجداء 4، يجب سحب كريتين تحملان الرقم 2:\n\\[P(X=4)=\\frac{\\binom52}{55}=\\frac{10}{55}.\\]"
+          },
+          {
+            "step_number": 5,
+            "title": "التحقق",
+            "explanation": "\\[\\frac{27+3+15+10}{55}=1.\\]"
+          },
+          {
+            "step_number": 6,
+            "title": "حساب الأمل الرياضياتي",
+            "explanation": "\\[E(X)=0\\times\\frac{27}{55}+1\\times\\frac3{55}+2\\times\\frac{15}{55}+4\\times\\frac{10}{55}.\\]\nإذن:\n\\[E(X)=\\frac{3+30+40}{55}=\\frac{73}{55}.\\]"
+          }
+        ],
+        "tables": [
+          {
+            "title": "قانون احتمال المتغير العشوائي X",
+            "headers": [
+              "\\(x_i\\)",
+              "0",
+              "1",
+              "2",
+              "4"
+            ],
+            "rows": [
+              [
+                "\\(P(X=x_i)\\)",
+                "\\(\\frac{27}{55}\\)",
+                "\\(\\frac3{55}\\)",
+                "\\(\\frac{15}{55}\\)",
+                "\\(\\frac{10}{55}\\)"
+              ]
+            ]
+          }
+        ],
+        "final_answer": "\\[P(X=0)=\\frac{27}{55},\\quad P(X=1)=\\frac3{55},\\quad P(X=2)=\\frac{15}{55},\\quad P(X=4)=\\frac{10}{55}.\\]\n\\[E(X)=\\frac{73}{55}.\\]"
+      }
+    },
+    {
+      "id": "2023_s2_probability_ex01_q2c",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "جـ) احسب احتمال الحدث: \" \\(e^{X+6}<2023\\) \".",
+      "axis_tags": [
+        "random_variable_event",
+        "random_variable_probability_law"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نختبر قيم X الممكنة: 0 و1 و2 و4، ونحدد القيم التي تحقق المتراجحة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "مقارنة القوى",
+            "explanation": "لدينا تقريبا:\n\\[e^6\\approx403,\\qquad e^7\\approx1096,\\qquad e^8\\approx2981.\\]\nوبالتالي:\n\\[e^7<2023<e^8.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "تحديد قيم X الملائمة",
+            "explanation": "حتى يكون:\n\\[e^{X+6}<2023,\\]\nيجب أن يكون:\n\\[X+6<8.\\]\nوبالنظر إلى القيم الممكنة \\(0,1,2,4\\)، نجد أن القيم الملائمة هي فقط:\n\\[X=0\\quad\\text{أو}\\quad X=1.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب الاحتمال",
+            "explanation": "\\[P(e^{X+6}<2023)=P(X=0)+P(X=1).\\]\nإذن:\n\\[P(e^{X+6}<2023)=\\frac{27}{55}+\\frac3{55}=\\frac{30}{55}=\\frac6{11}.\\]"
+          }
+        ],
+        "final_answer": "\\[P(e^{X+6}<2023)=\\frac6{11}.\\]"
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "statement_checked_against_image": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2023(1).pdf",
+    "statement_image": "2023_exo02(2).jpg",
+    "statement_figure_policy": "لا يوجد شكل لازم في نص التمرين.",
+    "solution_figure_policy": "لا يحتاج الحل إلى رسم.",
+    "renderer": "MathJax + structured tables"
+  }
+}

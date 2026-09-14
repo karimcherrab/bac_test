@@ -1,0 +1,229 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2018-science-complex-subject1-ex03-detailed",
+  "session": "ordinary",
+  "year": 2018,
+  "chapter_code": "complex_numbers",
+  "chapter_title": "الأعداد المركبة",
+  "axis_tags": [
+    "complex_roots_equations",
+    "complex_argument_trigonometric_form",
+    "complex_exponential_demoivre",
+    "complex_algebra_conjugate",
+    "complex_modulus_geometric_interpretation",
+    "complex_geometric_applications_loci",
+    "complex_point_transformations"
+  ],
+  "branches": [
+    {
+      "code": "science",
+      "name": "شعبة علوم تجريبية"
+    }
+  ],
+  "exercise_number": 3,
+  "subject_number": 1,
+  "source_page": 1,
+  "source_pages": [
+    1,
+    2
+  ],
+  "solution_source_pages": [
+    6
+  ],
+  "title": "التمرين الثالث — بكالوريا الجزائر 2018 — الموضوع الأول — شعبة علوم تجريبية",
+  "statement": "1) حل في مجموعة الأعداد المركبة C المعادلة \\(z^2-\\sqrt3z+1=0\\). 2) في المستوى المركب المنسوب إلى المعلم المتعامد والمتجانس \\((O;\\vec u,\\vec v)\\)، نعتبر النقط A وB وC ذات اللواحق \\(z_A=\\frac12+i\\frac{\\sqrt3}{2}\\)، \\(z_B=\\frac{\\sqrt3}{2}+i\\frac12\\)، \\(z_C=\\overline{z_B}\\). 3) ندرس النسبة \\(\\frac{z_B}{z_C}\\) والدوران الذي يحول C إلى B. 4) نعين مجموعة النقط \\((\\gamma)\\) التي تحقق \\(|z|=\\left|\\overline z-\\frac{\\sqrt3+i}{2}\\right|\\)، ثم صورتها بالدوران.",
+  "questions": [
+    {
+      "id": "2018_s1_complex_ex03_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) حل في مجموعة الأعداد المركبة \\(C\\) المعادلة: \\(z^2-\\sqrt3z+1=0\\).",
+      "axis_tags": [
+        "complex_roots_equations"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب المميز ثم نستخرج الحلين المركبين.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تحديد المعاملات",
+            "explanation": "\\[a=1,\\qquad b=-\\sqrt3,\\qquad c=1.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب المميز",
+            "explanation": "\\[\\Delta=b^2-4ac=3-4=-1=i^2.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "استخراج الحلين",
+            "explanation": "\\[z=\\frac{\\sqrt3\\pm i}{2}.\\]"
+          }
+        ],
+        "final_answer": "\\(z_1=\\frac{\\sqrt3-i}{2}\\)، و\\(z_2=\\frac{\\sqrt3+i}{2}\\)."
+      }
+    },
+    {
+      "id": "2018_s1_complex_ex03_q2",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2) اكتب \\(z_A\\) و\\(z_B\\) على الشكل الأسي، ثم عين قيم العدد الطبيعي \\(n\\) بحيث: \\(\\left(\\frac{z_A}{z_B}\\right)^n=\\frac{1+i\\sqrt3}{2}\\).",
+      "axis_tags": [
+        "complex_argument_trigonometric_form",
+        "complex_exponential_demoivre"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نكتب z_A وz_B على الشكل الأسي، ثم نحول المعادلة إلى تساوي حجج بترديد \\(2\\pi\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الشكل الأسي لـ z_A",
+            "explanation": "\\[z_A=\\frac12+i\\frac{\\sqrt3}{2}.\\]\nطويلته \\(1\\) وحجته \\(\\frac\\pi3\\)، إذن:\n\\[z_A=e^{i\\pi/3}.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "الشكل الأسي لـ z_B",
+            "explanation": "\\[z_B=\\frac{\\sqrt3}{2}+i\\frac12.\\]\nطويلته \\(1\\) وحجته \\(\\frac\\pi6\\)، إذن:\n\\[z_B=e^{i\\pi/6}.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب النسبة",
+            "explanation": "\\[\\frac{z_A}{z_B}=e^{i(\\pi/3-\\pi/6)}=e^{i\\pi/6}.\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "تحويل الطرف الأيمن",
+            "explanation": "\\[\\frac{1+i\\sqrt3}{2}=\\frac12+i\\frac{\\sqrt3}{2}=e^{i\\pi/3}.\\]"
+          },
+          {
+            "step_number": 5,
+            "title": "تحديد n",
+            "explanation": "\\[\\left(\\frac{z_A}{z_B}\\right)^n=e^{in\\pi/6}=e^{i\\pi/3}.\\]\nإذن:\n\\[\\frac{n\\pi}{6}=\\frac\\pi3+2k\\pi.\\]\nومن ثم:\n\\[n=12k+2,\\qquad k\\in\\mathbb N.\\]"
+          }
+        ],
+        "final_answer": "\\(z_A=e^{i\\pi/3}\\)، \\(z_B=e^{i\\pi/6}\\)، و\\(n=12k+2\\)."
+      }
+    },
+    {
+      "id": "2018_s1_complex_ex03_q3a",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "3) أ) تحقق أن \\(\\frac{z_B}{z_C}=e^{i\\pi/3}\\)، ثم حدد طبيعة المثلث \\(OBC\\).",
+      "axis_tags": [
+        "complex_algebra_conjugate",
+        "complex_exponential_demoivre",
+        "complex_modulus_geometric_interpretation"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل أن z_C هو مرافق z_B، ثم نفسر طويلة وحجة النسبة هندسيًا.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "كتابة z_C أسيا",
+            "explanation": "بما أن:\n\\[z_B=e^{i\\pi/6},\\]\nفإن:\n\\[z_C=\\overline{z_B}=e^{-i\\pi/6}.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب النسبة",
+            "explanation": "\\[\\frac{z_B}{z_C}=e^{i\\pi/6-(-i\\pi/6)}=e^{i\\pi/3}.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "تفسير الطويلة",
+            "explanation": "\\[|z_B|=|z_C|=1\\Rightarrow OB=OC.\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "تفسير الحجة",
+            "explanation": "\\[\\arg\\left(\\frac{z_B}{z_C}\\right)=(\\overrightarrow{OC},\\overrightarrow{OB})=\\frac\\pi3.\\]"
+          },
+          {
+            "step_number": 5,
+            "title": "الاستنتاج",
+            "explanation": "لدينا ضلعان متساويان والزاوية المحصورة بينهما \\(60^\\circ\\)، إذن المثلث \\(OBC\\) متساوي الأضلاع."
+          }
+        ],
+        "final_answer": "المثلث \\(OBC\\) متساوي الأضلاع."
+      }
+    },
+    {
+      "id": "2018_s1_complex_ex03_q3b",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "ب) استنتج أن \\(B\\) هي صورة \\(C\\) بدوران \\(r\\) يطلب تعيين عناصره المميزة.",
+      "axis_tags": [
+        "complex_point_transformations",
+        "complex_argument_trigonometric_form"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل العلاقة السابقة التي تربط لاحقتي B وC.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "العلاقة المركبة",
+            "explanation": "\\[\\frac{z_B}{z_C}=e^{i\\pi/3}\\Rightarrow z_B=e^{i\\pi/3}z_C.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "الاستنتاج",
+            "explanation": "هذه هي صيغة دوران مركزه O وزاويته \\(\\frac\\pi3\\)."
+          }
+        ],
+        "final_answer": "\\(r\\) دوران مركزه \\(O\\) وزاويته \\(\\frac\\pi3\\)، ويحقق \\(r(C)=B\\)."
+      }
+    },
+    {
+      "id": "2018_s1_complex_ex03_q4",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "4) نسمي \\((\\gamma)\\) مجموعة النقط \\(M\\) من المستوى ذات اللاحقة \\(z\\) التي تحقق: \\(|z|=\\left|\\overline z-\\frac{\\sqrt3+i}{2}\\right|\\). عين طبيعة المجموعة \\((\\gamma)\\)، ثم عين صورتها بالدوران \\(r\\).",
+      "axis_tags": [
+        "complex_algebra_conjugate",
+        "complex_modulus_geometric_interpretation",
+        "complex_geometric_applications_loci",
+        "complex_point_transformations"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحوّل الطرف الثاني إلى مسافة عادية باستعمال خاصية المرافق، ثم نستعمل أن الدوران يحافظ على المحاور العمودية.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تحويل الطرف الثاني",
+            "explanation": "لدينا:\n\\[\\left|\\overline z-\\frac{\\sqrt3+i}{2}\\right|=\\left|\\overline{z-\\frac{\\sqrt3-i}{2}}\\right|.\\]\nوبما أن طويلة العدد تساوي طويلة مرافقه:\n\\[\\left|\\overline z-\\frac{\\sqrt3+i}{2}\\right|=\\left|z-\\frac{\\sqrt3-i}{2}\\right|.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "التعرف على z_C",
+            "explanation": "\\[z_C=\\frac{\\sqrt3}{2}-i\\frac12=\\frac{\\sqrt3-i}{2}.\\]\nإذن الشرط يصبح:\n\\[|z|=|z-z_C|.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "التفسير الهندسي",
+            "explanation": "\\[OM=CM.\\]\nإذن \\((\\gamma)\\) هي محور القطعة \\([OC]\\)."
+          },
+          {
+            "step_number": 4,
+            "title": "صورة المجموعة بالدوران",
+            "explanation": "بما أن:\n\\[r(O)=O,\\qquad r(C)=B,\\]\nفإن صورة محور \\([OC]\\) بالدوران هي محور القطعة \\([OB]\\)."
+          }
+        ],
+        "final_answer": "\\((\\gamma)\\) هو محور \\([OC]\\)، وصورته بالدوران \\(r\\) هي محور \\([OB]\\)."
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2018.pdf",
+    "statement_figure_policy": "لا يوجد شكل إلزامي في نص تمرين الأعداد المركبة.",
+    "solution_figure_policy": "المحل الهندسي محور قطعة ويمكن تمثيله عند العرض.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  }
+}

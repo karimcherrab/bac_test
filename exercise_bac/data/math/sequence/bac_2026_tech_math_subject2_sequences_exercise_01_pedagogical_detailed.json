@@ -1,0 +1,299 @@
+{
+  "schema_version": "4.5-bac-source",
+  "language": "ar",
+  "direction": "rtl",
+  "year": 2026,
+  "chapter_code": "sequences",
+  "chapter_title": "sequences",
+  "branches": [
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "figures": [],
+  "display": {
+    "layout": "question_by_question",
+    "show_statement_first": true,
+    "show_statement_figures": true,
+    "show_solution_after_click": true,
+    "show_solution_figures": true
+  },
+  "version": "4.2-2026-tech-math-subject2-sequences-ex01",
+  "session": "ordinary",
+  "exercise_number": 1,
+  "points": 4,
+  "source_pages": [
+    3
+  ],
+  "solution_source_pages": [],
+  "title": "التمرين الأول — بكالوريا الجزائر 2026 — متتالية تراجعية ومتتالية هندسية ومجاميع",
+  "axis_tags": [
+    "recursive_sequence",
+    "sequence_monotonicity",
+    "geometric_sequence",
+    "explicit_formula",
+    "geometric_sum",
+    "sequence_sum"
+  ],
+  "statement": "التمرين الأول: (04 نقاط)\n\n1) \\((u_n)\\) المتتالية العددية المعرفة على \\(\\mathbb N\\) بـ:\n\\[\nu_0=1\n\\]\nومن أجل كل عدد طبيعي \\(n\\):\n\\[\nu_{n+1}=u_n-3\\times2^n.\n\\]\n\n- احسب \\(u_1\\) و \\(u_2\\) ثم حدد اتجاه تغير المتتالية \\((u_n)\\).\n\n2) \\((v_n)\\) المتتالية العددية المعرفة على \\(\\mathbb N\\) بـ:\n\\[\nv_n=\\frac{u_n}{2^n}+3.\n\\]\n\nأ) أثبت أن المتتالية \\((v_n)\\) هندسية أساسها:\n\\[\n\\frac12\n\\]\nيطلب تعيين حدها الأول.\n\nب) اكتب \\(v_n\\) بدلالة \\(n\\) ثم بين أن:\n\\[\nu_n=4-3\\times2^n.\n\\]\n\n3) نضع من أجل كل \\(n\\in\\mathbb N\\):\n\\[\nS_n=v_0+v_1+\\cdots+v_n\n\\]\nو:\n\\[\nT_n=u_0+u_1+\\cdots+u_n.\n\\]\n\nأ) احسب \\(S_n\\) بدلالة \\(n\\) ثم استنتج نهاية \\(S_n\\).\n\nب) بين أنه من أجل كل \\(n\\in\\mathbb N\\):\n\\[\nT_n=4n+7-6\\times2^n.\n\\]\n\nج) احسب بدلالة \\(n\\) المجموع \\(L_n\\) حيث:\n\\[\nL_n=T_0+T_1+\\cdots+T_n.\n\\]",
+  "questions": [
+    {
+      "id": "2026_tech_math_s2_ex01_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) احسب \\(u_1\\) و \\(u_2\\) ثم حدد اتجاه تغير المتتالية \\((u_n)\\).",
+      "solution": {
+        "introduction": "نحسب الحدين الأولين ثم ندرس الفرق u_{n+1}-u_n.",
+        "strategy": "نعوض n=0 ثم n=1، وبعدها نلاحظ أن الفرق معلوم مباشرة من العلاقة التراجعية.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب u₁",
+            "explanation": "\\[u_1=u_0-3\\times2^0=1-3=-2.\\]",
+            "result": "\\(u_1=-2\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "حساب u₂",
+            "explanation": "\\[u_2=u_1-3\\times2^1=-2-6=-8.\\]",
+            "result": "\\(u_2=-8\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "اتجاه التغير",
+            "explanation": "من العلاقة التراجعية:\n\\[u_{n+1}-u_n=-3\\times2^n.\\]\nولأن \\(2^n>0\\)، فإن:\n\\[u_{n+1}-u_n<0.\\]",
+            "result": "\\((u_n)\\) متناقصة تماما."
+          }
+        ],
+        "final_answer": "\\(\\boxed{u_1=-2,\\quad u_2=-8}\\) و\\(\\boxed{(u_n)\\text{ متناقصة تماما}}\\).",
+        "verification": "تمت مراجعة الحل حسابيا خطوة بخطوة انطلاقا من نص الموضوع المرفق لسنة 2026. ملف الموضوع المرفق لا يحتوي على تصحيح نموذجي.",
+        "common_mistakes": [
+          "نسيان أن 2^0=1."
+        ],
+        "hints": [
+          "الفرق u_{n+1}-u_n ظاهر مباشرة في العلاقة."
+        ],
+        "summary": "الحدود تنقص لأننا نطرح دائما عددا موجبا.",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2026_tech_math_s2_ex01_q2a",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2-أ) أثبت أن المتتالية \\((v_n)\\) هندسية أساسها \\(\\frac12\\)، يطلب تعيين حدها الأول.",
+      "solution": {
+        "introduction": "نحسب v_{n+1} انطلاقا من تعريف v_n والعلاقة التراجعية.",
+        "strategy": "نقسم u_{n+1} على 2^{n+1} ثم نبسط.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب vₙ₊₁",
+            "explanation": "\\[v_{n+1}=\\frac{u_{n+1}}{2^{n+1}}+3.\\]\nوبما أن:\n\\[u_{n+1}=u_n-3\\times2^n,\\]\nفإن:\n\\[v_{n+1}=\\frac{u_n}{2^{n+1}}-\\frac32+3.\\]\nإذن:\n\\[v_{n+1}=\\frac12\\frac{u_n}{2^n}+\\frac32.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "الربط بـvₙ",
+            "explanation": "\\[v_{n+1}=\\frac12\\left(\\frac{u_n}{2^n}+3\\right)=\\frac12v_n.\\]",
+            "result": "\\((v_n)\\) هندسية أساسها \\(1/2\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "حساب v₀",
+            "explanation": "\\[v_0=\\frac{u_0}{2^0}+3=1+3=4.\\]",
+            "result": "\\(v_0=4\\)."
+          }
+        ],
+        "final_answer": "\\(\\boxed{v_{n+1}=\\frac12v_n}\\) و\\(\\boxed{v_0=4}\\).",
+        "verification": "تمت مراجعة الحل حسابيا خطوة بخطوة انطلاقا من نص الموضوع المرفق لسنة 2026. ملف الموضوع المرفق لا يحتوي على تصحيح نموذجي.",
+        "common_mistakes": [
+          "نسيان أن 2^{n+1}=2×2^n."
+        ],
+        "hints": [
+          "حاول إظهار نصف التعبير u_n/2^n+3."
+        ],
+        "summary": "النسبة بين حدين متتاليين ثابتة وتساوي 1/2.",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2026_tech_math_s2_ex01_q2b",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "2-ب) اكتب \\(v_n\\) بدلالة \\(n\\) ثم بين أن \\(u_n=4-3\\times2^n\\).",
+      "solution": {
+        "introduction": "نكتب الحد العام للمتتالية الهندسية ثم نرجع إلى تعريف v_n.",
+        "strategy": "نستعمل v_n=v_0(1/2)^n.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "عبارة vₙ",
+            "explanation": "\\[v_n=4\\left(\\frac12\\right)^n=\\frac4{2^n}.\\]",
+            "result": "\\(v_n=4/2^n\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "الرجوع إلى uₙ",
+            "explanation": "من:\n\\[v_n=\\frac{u_n}{2^n}+3,\\]\nنحصل على:\n\\[\\frac{u_n}{2^n}=v_n-3=\\frac4{2^n}-3.\\]\nبضرب الطرفين في \\(2^n\\):",
+            "result": "\\[u_n=4-3\\times2^n.\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{v_n=\\frac4{2^n}}\\) و\\(\\boxed{u_n=4-3\\times2^n}\\).",
+        "verification": "تمت مراجعة الحل حسابيا خطوة بخطوة انطلاقا من نص الموضوع المرفق لسنة 2026. ملف الموضوع المرفق لا يحتوي على تصحيح نموذجي.",
+        "common_mistakes": [
+          "الخلط بين 4/2^n و4×2^n."
+        ],
+        "hints": [
+          "اضرب في 2^n في آخر خطوة فقط."
+        ],
+        "summary": "الصيغة الهندسية لـv_n تعطي الصيغة الصريحة لـu_n.",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2026_tech_math_s2_ex01_q3a",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "3-أ) احسب \\(S_n=v_0+\\cdots+v_n\\) بدلالة \\(n\\) ثم استنتج نهاية \\(S_n\\).",
+      "solution": {
+        "introduction": "S_n هو مجموع أول n+1 حد من متتالية هندسية أساسها 1/2.",
+        "strategy": "نطبق قانون المجموع ثم نحسب النهاية.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب Sₙ",
+            "explanation": "\\[S_n=4\\frac{1-(1/2)^{n+1}}{1-1/2}.\\]\nإذن:\n\\[S_n=8\\left(1-\\left(\\frac12\\right)^{n+1}\\right).\\]",
+            "result": "\\(S_n=8(1-(1/2)^{n+1})\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "حساب النهاية",
+            "explanation": "بما أن:\n\\[\\left(\\frac12\\right)^{n+1}\\to0,\\]\nفإن:",
+            "result": "\\[\\lim_{n\\to+\\infty}S_n=8.\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{S_n=8(1-(\\frac12)^{n+1})}\\) و\\(\\boxed{\\lim S_n=8}\\).",
+        "verification": "تمت مراجعة الحل حسابيا خطوة بخطوة انطلاقا من نص الموضوع المرفق لسنة 2026. ملف الموضوع المرفق لا يحتوي على تصحيح نموذجي.",
+        "common_mistakes": [
+          "نسيان أن عدد الحدود من v₀ إلى v_n هو n+1."
+        ],
+        "hints": [
+          "استعمل مجموع متتالية هندسية أساسها 1/2."
+        ],
+        "summary": "المجموع يقترب من 8.",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2026_tech_math_s2_ex01_q3b",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "3-ب) بين أنه من أجل كل \\(n\\in\\mathbb N\\): \\(T_n=4n+7-6\\times2^n\\).",
+      "solution": {
+        "introduction": "نستعمل الصيغة الصريحة u_k=4-3×2^k ثم نحسب المجموع.",
+        "strategy": "نفصل مجموع الثابت 4 عن المجموع الهندسي.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "كتابة Tₙ",
+            "explanation": "\\[T_n=\\sum_{k=0}^{n}(4-3\\times2^k).\\]\nإذن:\n\\[T_n=4(n+1)-3\\sum_{k=0}^{n}2^k.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب المجموع الهندسي",
+            "explanation": "\\[\\sum_{k=0}^{n}2^k=2^{n+1}-1.\\]\nإذن:\n\\[T_n=4(n+1)-3(2^{n+1}-1).\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "التبسيط",
+            "explanation": "\\[T_n=4n+4-3\\times2^{n+1}+3.\\]\nوبما أن \\(3\\times2^{n+1}=6\\times2^n\\)، فإن:",
+            "result": "\\[T_n=4n+7-6\\times2^n.\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{T_n=4n+7-6\\times2^n}\\).",
+        "verification": "تمت مراجعة الحل حسابيا خطوة بخطوة انطلاقا من نص الموضوع المرفق لسنة 2026. ملف الموضوع المرفق لا يحتوي على تصحيح نموذجي.",
+        "common_mistakes": [
+          "الخطأ في مجموع 2^k."
+        ],
+        "hints": [
+          "استعمل Σ2^k=2^{n+1}-1."
+        ],
+        "summary": "بعد جمع الحدود الصريحة نحصل على العبارة المطلوبة.",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2026_tech_math_s2_ex01_q3c",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "3-ج) احسب بدلالة \\(n\\) المجموع \\(L_n=T_0+T_1+\\cdots+T_n\\).",
+      "solution": {
+        "introduction": "نعوض عبارة T_k ثم نحسب ثلاثة مجاميع بسيطة.",
+        "strategy": "نفصل حدود 4k و7 و-6×2^k.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "كتابة Lₙ",
+            "explanation": "\\[L_n=\\sum_{k=0}^{n}(4k+7-6\\times2^k).\\]\nإذن:\n\\[L_n=4\\sum_{k=0}^{n}k+7(n+1)-6\\sum_{k=0}^{n}2^k.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "استعمال قوانين المجاميع",
+            "explanation": "\\[\\sum_{k=0}^{n}k=\\frac{n(n+1)}2\\]\nو:\n\\[\\sum_{k=0}^{n}2^k=2^{n+1}-1.\\]\nإذن:\n\\[L_n=2n(n+1)+7(n+1)-6(2^{n+1}-1).\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "التبسيط",
+            "explanation": "\\[L_n=2n^2+2n+7n+7-6\\times2^{n+1}+6.\\]\nإذن:\n\\[L_n=2n^2+9n+13-12\\times2^n.\\]",
+            "result": "العبارة المطلوبة."
+          }
+        ],
+        "final_answer": "\\(\\boxed{L_n=2n^2+9n+13-12\\times2^n}\\).",
+        "verification": "تمت مراجعة الحل حسابيا خطوة بخطوة انطلاقا من نص الموضوع المرفق لسنة 2026. ملف الموضوع المرفق لا يحتوي على تصحيح نموذجي.",
+        "common_mistakes": [
+          "نسيان إضافة 6 عند نشر -6(2^{n+1}-1)."
+        ],
+        "hints": [
+          "افصل L_n إلى ثلاثة مجاميع."
+        ],
+        "summary": "نجمع T_k باستعمال مجموع الأعداد الطبيعية ومجموع قوى 2.",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    }
+  ],
+  "source_reference": {
+    "file": "2026(4).pdf",
+    "statement_pages": [
+      3
+    ],
+    "solution_pages": [],
+    "source_faithful_statement": true,
+    "solution_reviewed_against_source": false
+  },
+  "review_status": {
+    "statement_compared_with_original_pdf": true,
+    "questions_compared_with_original_pdf": true,
+    "source_figures_checked": true,
+    "solution_checked_against_correction": false,
+    "solution_algebraically_verified": true,
+    "latex_normalized_only": true,
+    "react_ready": true
+  },
+  "given_data": {
+    "u0": "1",
+    "recurrence": "u_{n+1}=u_n-3*2^n",
+    "u1": "-2",
+    "u2": "-8",
+    "monotonicity": "strictly_decreasing",
+    "v_n": "u_n/2^n+3",
+    "v0": "4",
+    "ratio_v": "1/2",
+    "explicit_v": "4/2^n",
+    "explicit_u": "4-3*2^n",
+    "S_n": "8*(1-(1/2)^(n+1))",
+    "limit_S": "8",
+    "T_n": "4n+7-6*2^n",
+    "L_n": "2n^2+9n+13-12*2^n"
+  }
+}

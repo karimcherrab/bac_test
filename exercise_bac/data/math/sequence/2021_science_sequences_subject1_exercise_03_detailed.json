@@ -1,0 +1,229 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "session": "ordinary",
+  "year": 2021,
+  "chapter_code": "sequences",
+  "chapter_title": "المتتاليات العددية",
+  "branches": [
+    {
+      "code": "science",
+      "name": "شعبة علوم تجريبية"
+    }
+  ],
+  "source_pdf": "2021(1).pdf",
+  "comparison_source": "bac_sequence_scientifique(20260823-105022).pdf",
+  "source_verification": {
+    "statement_checked_against_original_bac": true,
+    "solution_checked_against_official_correction": true,
+    "solution_style": "حل مفصل ومبسط بخطوات صغيرة، مع إظهار الحسابات الوسيطة التي اختصرها التصحيح الرسمي.",
+    "statement_policy": "نص التمرين والأسئلة منقول من موضوع البكالوريا دون إضافة معطيات جديدة."
+  },
+  "version": "4.2-2021-science-sequences-subject1-ex03",
+  "exercise_number": 3,
+  "subject_number": 1,
+  "points": 5,
+  "source_page": 2,
+  "source_pages": [
+    2
+  ],
+  "solution_source_pages": [
+    5
+  ],
+  "title": "التمرين الثالث — بكالوريا الجزائر 2021 — الموضوع الأول — شعبة علوم تجريبية",
+  "statement": "المتتالية العددية \\((u_n)\\) معرفة على \\(\\mathbb{N}\\) بـ: \\(u_n=-4n+3\\).",
+  "statement_graphs": [],
+  "questions": [
+    {
+      "id": "2021_s1_ex03_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) بين أن المتتالية \\((u_n)\\) حسابية يطلب تعيين أساسها \\(r\\) وحدها الأول \\(u_0\\).",
+      "axis_tags": [
+        "arithmetic_sequence",
+        "sequence_first_term"
+      ],
+      "solution": {
+        "strategy": "نحسب الفرق بين حدين متتاليين ثم نحسب الحد الأول.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب الحد الأول",
+            "explanation": "لدينا:\n\\[\nu_0=-4\\times0+3=3.\n\\]\nإذن:\n\\[\n\\boxed{u_0=3}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب الفرق",
+            "explanation": "من أجل كل \\(n\\in\\mathbb N\\):\n\\[\nu_{n+1}=-4(n+1)+3=-4n-1.\n\\]\nإذن:\n\\[\nu_{n+1}-u_n=(-4n-1)-(-4n+3)=-4.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الاستنتاج",
+            "explanation": "الفرق \\(u_{n+1}-u_n\\) ثابت ويساوي \\(-4\\)، إذن \\((u_n)\\) متتالية حسابية أساسها:\n\\[\n\\boxed{r=-4}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{u_0=3,\\quad r=-4}\\)."
+      }
+    },
+    {
+      "id": "2021_s1_ex03_q2a",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2) من أجل كل عدد طبيعي \\(n\\) نضع: \\(S_n=u_0+u_1+\\cdots+u_n\\). أ. بين أنه من أجل كل عدد طبيعي \\(n\\): \\(S_n=-2n^2+n+3\\).",
+      "axis_tags": [
+        "arithmetic_sequence_sum",
+        "sequence_sum"
+      ],
+      "solution": {
+        "strategy": "نستعمل صيغة مجموع حدود متتالية حسابية من \\(u_0\\) إلى \\(u_n\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "عدد الحدود",
+            "explanation": "المجموع من \\(u_0\\) إلى \\(u_n\\) يحتوي على \\(n+1\\) حدا."
+          },
+          {
+            "step_number": 2,
+            "title": "استعمال صيغة المجموع",
+            "explanation": "لدينا:\n\\[\nS_n=\\frac{(n+1)(u_0+u_n)}{2}.\n\\]\nوبما أن:\n\\[\nu_0=3,\\qquad u_n=-4n+3,\n\\]\nفإن:\n\\[\nS_n=\\frac{(n+1)(3-4n+3)}2.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "التبسيط",
+            "explanation": "\\[\nS_n=\\frac{(n+1)(6-4n)}2=(n+1)(3-2n).\n\\]\nوبالنشر:\n\\[\nS_n=-2n^2+n+3.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{S_n=-2n^2+n+3}\\)."
+      }
+    },
+    {
+      "id": "2021_s1_ex03_q2b",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "ب. عين قيمة العدد الطبيعي \\(n\\) حيث: \\(S_n=-30132\\).",
+      "axis_tags": [
+        "sequence_sum_equation"
+      ],
+      "solution": {
+        "strategy": "نعوض عبارة \\(S_n\\) ثم نحل المعادلة مع الاحتفاظ بالحل الطبيعي.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تشكيل المعادلة",
+            "explanation": "\\[\n-2n^2+n+3=-30132.\n\\]\nأي:\n\\[\n2n^2-n-30135=0.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب المميز",
+            "explanation": "\\[\n\\Delta=(-1)^2-4\\times2\\times(-30135)=241081=491^2.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حل المعادلة",
+            "explanation": "\\[\nn=\\frac{1\\pm491}{4}.\n\\]\nفنحصل على:\n\\[\nn=123\n\\]\nأو قيمة سالبة غير طبيعية."
+          },
+          {
+            "step_number": 4,
+            "title": "النتيجة",
+            "explanation": "بما أن \\(n\\) عدد طبيعي:\n\\[\n\\boxed{n=123}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{n=123}\\)."
+      }
+    },
+    {
+      "id": "2021_s1_ex03_q3a",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "3) المتتالية العددية \\((v_n)\\) حدودها موجبة تماما ومن أجل كل عدد طبيعي \\(n\\): \\(u_n=\\ln(v_n)\\). أ. اكتب عبارة الحد العام \\(v_n\\) بدلالة \\(n\\).",
+      "axis_tags": [
+        "logarithm_sequence",
+        "explicit_sequence_formula"
+      ],
+      "solution": {
+        "strategy": "نستعمل أن \\(u_n=\\ln(v_n)\\) ثم نطبق الدالة الأسية على الطرفين.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تعويض u_n",
+            "explanation": "لدينا:\n\\[\n\\ln(v_n)=u_n=-4n+3.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "تطبيق الأسية",
+            "explanation": "بما أن \\(v_n>0\\):\n\\[\nv_n=e^{-4n+3}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{v_n=e^{-4n+3}}\\)."
+      }
+    },
+    {
+      "id": "2021_s1_ex03_q3b",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "ب. بين أن المتتالية \\((v_n)\\) هندسية أساسها \\(e^{-4}\\).",
+      "axis_tags": [
+        "geometric_sequence"
+      ],
+      "solution": {
+        "strategy": "نحسب النسبة \\(v_{n+1}/v_n\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "كتابة v_{n+1}",
+            "explanation": "\\[\nv_{n+1}=e^{-4(n+1)+3}=e^{-4n-1}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب النسبة",
+            "explanation": "\\[\n\\frac{v_{n+1}}{v_n}=\\frac{e^{-4n-1}}{e^{-4n+3}}=e^{-4}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الاستنتاج",
+            "explanation": "النسبة ثابتة، إذن \\((v_n)\\) هندسية أساسها:\n\\[\n\\boxed{e^{-4}}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{q=e^{-4}}\\)."
+      }
+    },
+    {
+      "id": "2021_s1_ex03_q4",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "4) من أجل كل عدد طبيعي \\(n\\) نضع: \\(S'_n=\\ln[v_0(1-\\frac12)]+\\ln[v_1(1-\\frac13)]+\\cdots+\\ln[v_n(1-\\frac{1}{n+2})]\\). احسب \\(S'_n\\) بدلالة \\(n\\).",
+      "axis_tags": [
+        "logarithm_sum",
+        "telescoping_product",
+        "sequence_sum"
+      ],
+      "solution": {
+        "strategy": "نفصل كل لوغاريتم إلى مجموع لوغاريتمين، ثم نستعمل مجموع \\(u_k\\) واختزال الجداء.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تفكيك الحدود",
+            "explanation": "بما أن \\(\\ln(v_k)=u_k\\):\n\\[\n\\ln\\left[v_k\\left(1-\\frac1{k+2}\\right)\\right]\n=u_k+\\ln\\left(\\frac{k+1}{k+2}\\right).\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "جمع حدود u_k",
+            "explanation": "إذن الجزء الأول هو:\n\\[\n\\sum_{k=0}^{n}u_k=S_n=-2n^2+n+3.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "جمع اللوغاريتمات",
+            "explanation": "لدينا:\n\\[\n\\sum_{k=0}^{n}\\ln\\left(\\frac{k+1}{k+2}\\right)\n=\\ln\\left(\\frac12\\times\\frac23\\times\\cdots\\times\\frac{n+1}{n+2}\\right).\n\\]\nالجداء يختزل إلى:\n\\[\n\\frac1{n+2}.\n\\]\nإذن:\n\\[\n\\ln\\left(\\frac1{n+2}\\right)=-\\ln(n+2).\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "النتيجة",
+            "explanation": "\\[\n\\boxed{S'_n=-2n^2+n+3-\\ln(n+2)}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{S'_n=-2n^2+n+3-\\ln(n+2)}\\)."
+      }
+    }
+  ]
+}

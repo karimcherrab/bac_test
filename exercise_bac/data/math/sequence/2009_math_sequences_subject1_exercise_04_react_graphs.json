@@ -1,0 +1,497 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "graph_schema_version": "1.0-react-json",
+  "version": "4.2-2009-math-sequences-subject1-ex04-react-graphs",
+  "session": "ordinary",
+  "year": 2009,
+  "chapter_code": "sequences",
+  "chapter_title": "المتتاليات العددية",
+  "axis_tags": [
+    "sequence_graphical_representation",
+    "sequence_monotonicity",
+    "mathematical_induction",
+    "bounded_sequence",
+    "limits_convergence_divergence"
+  ],
+  "branches": [
+    {
+      "code": "math",
+      "name": "شعبة رياضيات"
+    }
+  ],
+  "exercise_number": 4,
+  "subject_number": 1,
+  "source_page": 2,
+  "source_pages": [
+    2
+  ],
+  "solution_source_pages": [
+    6
+  ],
+  "title": "التمرين 4 — بكالوريا الجزائر 2009 — الموضوع الأول — شعبة رياضيات — المتتاليات",
+  "statement": "1) نعرف الدالة العددية \\(f\\) على المجال \\([1,5]\\) بالعبارة:\n\\[\nf(x)=\\frac12\\left(x+\\frac5x\\right).\n\\]\nليكن \\((C)\\) تمثيلها البياني في المستوى المنسوب إلى المعلم المتعامد والمتجانس \\((O;\\vec i,\\vec j)\\).\nالوحدة على المحورين \\(3cm\\).",
+  "questions": [
+    {
+      "id": "2009_s1_sequences_ex04_q1a",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "أ- ادرس تغيرات الدالة \\(f\\).",
+      "axis_tags": [
+        "sequence_graphical_representation"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب مشتقة الدالة ونحدد إشارتها على المجال [1,5].",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب المشتقة",
+            "explanation": "\\[\nf'(x)=\\frac12\\left(1-\\frac5{x^2}\\right)=\\frac{x^2-5}{2x^2}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "إشارة المشتقة",
+            "explanation": "بما أن \\(2x^2>0\\) على \\([1,5]\\)، فإن إشارة \\(f'(x)\\) هي إشارة \\(x^2-5\\):\n\\[\nf'(x)<0\\quad\\text{إذا }1\\le x<\\sqrt5,\n\\]\n\\[\nf'(\\sqrt5)=0,\n\\]\n\\[\nf'(x)>0\\quad\\text{إذا }\\sqrt5<x\\le5.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "قيم مهمة",
+            "explanation": "\\[\nf(1)=3,\\qquad f(\\sqrt5)=\\sqrt5,\\qquad f(5)=3.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "النتيجة",
+            "explanation": "إذن \\(f\\) متناقصة تماما على \\([1,\\sqrt5]\\)، ثم متزايدة تماما على \\([\\sqrt5,5]\\)."
+          }
+        ],
+        "final_answer": "\\(f\\) متناقصة على \\([1,\\sqrt5]\\) ومتزايدة على \\([\\sqrt5,5]\\)، وقيمتها الدنيا هي \\(\\sqrt5\\)."
+      }
+    },
+    {
+      "id": "2009_s1_sequences_ex04_q1b",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "ب- أنشئ المنحنى البياني \\((C)\\) والمستقيم \\((\\Delta)\\) الذي معادلته \\(y=x\\) في نفس المعلم.",
+      "axis_tags": [
+        "sequence_graphical_representation"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نرسم الدالة باستعمال تغيراتها والنقاط المميزة، ثم المستقيم y=x.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "النقاط الأساسية",
+            "explanation": "يمر المنحنى بالنقطتين \\((1,3)\\) و\\((5,3)\\)، ويبلغ قيمته الدنيا عند \\((\\sqrt5,\\sqrt5)\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "المستقيم Δ",
+            "explanation": "\\[(\\Delta):y=x.\\]"
+          }
+        ],
+        "solution_graphs": [
+          {
+            "id": "2009_s1_sequences_ex04_function_plot",
+            "type": "function_plot",
+            "render_mode": "json",
+            "capture": false,
+            "direction": "ltr",
+            "canvas": {
+              "width": 860,
+              "height": 620,
+              "padding": 28
+            },
+            "viewport": {
+              "x_min": 0.8,
+              "x_max": 5.2,
+              "y_min": 2.0,
+              "y_max": 5.2,
+              "x_tick": 0.5,
+              "y_tick": 0.5,
+              "equal_scale": true
+            },
+            "axes": {
+              "show": true,
+              "x_label": "x",
+              "y_label": "y",
+              "grid": true
+            },
+            "curves": [
+              {
+                "id": "curve_c",
+                "kind": "function",
+                "label": "(C)",
+                "formula": "0.5 * (x + 5 / x)",
+                "latex_formula": "f(x)=\\frac12\\left(x+\\frac5x\\right)",
+                "domain": [
+                  1,
+                  5
+                ]
+              },
+              {
+                "id": "line_delta",
+                "kind": "line",
+                "label": "(Δ)",
+                "formula": "x",
+                "latex_formula": "y=x",
+                "domain": [
+                  1,
+                  5
+                ]
+              }
+            ],
+            "special_points": [
+              {
+                "id": "m",
+                "x": 2.23606797749979,
+                "y": 2.23606797749979,
+                "label": "(√5,√5)",
+                "note": "نقطة تقاطع (C) مع (Δ) ونقطة القيمة الدنيا للدالة"
+              },
+              {
+                "id": "p1",
+                "x": 1,
+                "y": 3,
+                "label": "(1,3)"
+              },
+              {
+                "id": "p5",
+                "x": 5,
+                "y": 3,
+                "label": "(5,3)"
+              }
+            ],
+            "react_renderer": {
+              "component": "FunctionPlotRenderer",
+              "source": "curves_special_points"
+            }
+          }
+        ],
+        "final_answer": "الرسم موجود داخل `solution_graphs` كبيانات JSON قابلة للعرض في React."
+      }
+    },
+    {
+      "id": "2009_s1_sequences_ex04_q2a",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "2) نعتبر المتتالية العددية \\((U_n)\\) المعرفة على \\(\\mathbb N\\) بحدها الأول \\(U_0=5\\) وبالعبارة:\n\\[\nU_{n+1}=\\frac12\\left(U_n+\\frac5{U_n}\\right).\n\\]\nأ- احسب \\(U_1\\)، \\(U_2\\).",
+      "axis_tags": [
+        "sequence_definition_notation_methods"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نعوض مباشرة في علاقة الرجوع.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب U₁",
+            "explanation": "\\[\nU_1=\\frac12\\left(5+\\frac55\\right)=\\frac12(6)=3.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب U₂",
+            "explanation": "\\[\nU_2=\\frac12\\left(3+\\frac53\\right)=\\frac12\\cdot\\frac{14}{3}=\\frac73.\n\\]"
+          }
+        ],
+        "final_answer": "\\[U_1=3,\\qquad U_2=\\frac73.\\]"
+      }
+    },
+    {
+      "id": "2009_s1_sequences_ex04_q2b",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "ب- استعمل المنحنى \\((C)\\) والمستقيم \\((\\Delta)\\) لتمثيل الحدود \\(U_0\\)، \\(U_1\\)، \\(U_2\\) على محور الفواصل.",
+      "axis_tags": [
+        "sequence_graphical_representation"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل طريقة السلم بين المنحنى C والمستقيم Δ.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "طريقة التمثيل",
+            "explanation": "نبدأ من \\(U_0=5\\) على محور الفواصل، نصعد عموديا إلى \\((C)\\)، ثم نتحرك أفقيا إلى \\((\\Delta)\\)، ونكرر العملية."
+          }
+        ],
+        "solution_graphs": [
+          {
+            "id": "2009_s1_sequences_ex04_cobweb",
+            "type": "sequence_cobweb",
+            "render_mode": "json",
+            "capture": false,
+            "direction": "ltr",
+            "canvas": {
+              "width": 860,
+              "height": 620,
+              "padding": 28
+            },
+            "viewport": {
+              "x_min": 1.5,
+              "x_max": 5.2,
+              "y_min": 1.5,
+              "y_max": 5.2,
+              "x_tick": 0.5,
+              "y_tick": 0.5,
+              "equal_scale": true
+            },
+            "axes": {
+              "show": true,
+              "x_label": "x",
+              "y_label": "y",
+              "grid": true
+            },
+            "curves": [
+              {
+                "id": "curve_c",
+                "kind": "function",
+                "label": "(C)",
+                "formula": "0.5 * (x + 5 / x)",
+                "latex_formula": "f(x)=\\frac12\\left(x+\\frac5x\\right)",
+                "domain": [
+                  1,
+                  5
+                ]
+              },
+              {
+                "id": "line_delta",
+                "kind": "line",
+                "label": "(Δ)",
+                "formula": "x",
+                "latex_formula": "y=x",
+                "domain": [
+                  1,
+                  5
+                ]
+              }
+            ],
+            "sequence": {
+              "recurrence": "u_(n+1)=0.5*(u_n+5/u_n)",
+              "latex_recurrence": "U_{n+1}=\\frac12\\left(U_n+\\frac5{U_n}\\right)",
+              "values": [
+                {
+                  "n": 0,
+                  "value": 5.0,
+                  "latex": "U_0=5"
+                },
+                {
+                  "n": 1,
+                  "value": 3.0,
+                  "latex": "U_1=3"
+                },
+                {
+                  "n": 2,
+                  "value": 2.3333333333333335,
+                  "latex": "U_2=\\frac73"
+                }
+              ]
+            },
+            "segments": [
+              {
+                "from": [
+                  5.0,
+                  0
+                ],
+                "to": [
+                  5.0,
+                  3.0
+                ],
+                "role": "vertical_to_curve"
+              },
+              {
+                "from": [
+                  5.0,
+                  3.0
+                ],
+                "to": [
+                  3.0,
+                  3.0
+                ],
+                "role": "horizontal_to_y_equals_x"
+              },
+              {
+                "from": [
+                  3.0,
+                  3.0
+                ],
+                "to": [
+                  3.0,
+                  2.3333333333333335
+                ],
+                "role": "vertical_to_curve"
+              },
+              {
+                "from": [
+                  3.0,
+                  2.3333333333333335
+                ],
+                "to": [
+                  2.3333333333333335,
+                  2.3333333333333335
+                ],
+                "role": "horizontal_to_y_equals_x"
+              }
+            ],
+            "x_axis_markers": [
+              {
+                "x": 5.0,
+                "label": "U₀"
+              },
+              {
+                "x": 3.0,
+                "label": "U₁"
+              },
+              {
+                "x": 2.3333333333333335,
+                "label": "U₂"
+              },
+              {
+                "x": 2.23606797749979,
+                "label": "√5"
+              }
+            ],
+            "react_renderer": {
+              "component": "SequenceCobwebRenderer",
+              "source": "curves_sequence_segments"
+            }
+          }
+        ],
+        "final_answer": "\\[U_0=5,\\qquad U_1=3,\\qquad U_2=\\frac73.\\]"
+      }
+    },
+    {
+      "id": "2009_s1_sequences_ex04_q3a",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "3) أ- برهن أنه من أجل كل عدد طبيعي \\(n\\): \\(U_n\\ge\\sqrt5\\).",
+      "axis_tags": [
+        "mathematical_induction",
+        "bounded_sequence"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل علاقة الرجوع ونكتب الفرق Uₙ₊₁−√5 على شكل مربع.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "عند n=0",
+            "explanation": "\\[U_0=5\\ge\\sqrt5.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "خطوة التراجع",
+            "explanation": "إذا كان \\(U_n\\ge\\sqrt5>0\\)، فإن:\n\\[\nU_{n+1}-\\sqrt5=\\frac12\\left(U_n+\\frac5{U_n}-2\\sqrt5\\right)\n=\\frac{(U_n-\\sqrt5)^2}{2U_n}\\ge0.\n\\]\nإذن \\(U_{n+1}\\ge\\sqrt5\\)."
+          }
+        ],
+        "final_answer": "\\[U_n\\ge\\sqrt5\\quad\\forall n\\in\\mathbb N.\\]"
+      }
+    },
+    {
+      "id": "2009_s1_sequences_ex04_q3b",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "ب- بين أن المتتالية \\((U_n)\\) متناقصة تماما. ماذا تستنتج بالنسبة إلى تقارب \\((U_n)\\)؟",
+      "axis_tags": [
+        "sequence_monotonicity",
+        "bounded_sequence",
+        "limits_convergence_divergence"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب الفرق Uₙ₊₁−Uₙ ونستعمل أن Uₙ≥√5.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب الفرق",
+            "explanation": "\\[\nU_{n+1}-U_n=\\frac12\\left(U_n+\\frac5{U_n}\\right)-U_n=\\frac{5-U_n^2}{2U_n}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "الإشارة",
+            "explanation": "بما أن \\(U_n\\ge\\sqrt5\\)، ولدينا فعليا \\(U_n>\\sqrt5\\)، فإن:\n\\[\n5-U_n^2<0.\n\\]\nإذن:\n\\[\nU_{n+1}<U_n.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الاستنتاج",
+            "explanation": "المتتالية \\((U_n)\\) متناقصة تماما ومحدودة من الأسفل بـ\\(\\sqrt5\\)، إذن هي متقاربة."
+          }
+        ],
+        "final_answer": "المتتالية \\((U_n)\\) متناقصة تماما ومحدودة من الأسفل، وبالتالي فهي متقاربة."
+      }
+    },
+    {
+      "id": "2009_s1_sequences_ex04_q4a",
+      "display_order": 7,
+      "content_type": "question",
+      "text": "4) أ- برهن أنه مهما يكن العدد الطبيعي \\(n\\) فإن:\n\\[\nU_{n+1}-\\sqrt5\\le\\frac12\\left(U_n-\\sqrt5\\right).\n\\]",
+      "axis_tags": [
+        "limits_convergence_divergence"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل التعبير السابق للفرق Uₙ₊₁−√5 ثم نقارنه بـ 1/2(Uₙ−√5).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "إعادة كتابة الفرق",
+            "explanation": "\\[\nU_{n+1}-\\sqrt5=\\frac{(U_n-\\sqrt5)^2}{2U_n}\n=\\frac12(U_n-\\sqrt5)\\frac{U_n-\\sqrt5}{U_n}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "المقارنة",
+            "explanation": "بما أن \\(U_n\\ge\\sqrt5>0\\)، فإن:\n\\[\n0\\le\\frac{U_n-\\sqrt5}{U_n}\\le1.\n\\]\nإذن:\n\\[\nU_{n+1}-\\sqrt5\\le\\frac12(U_n-\\sqrt5).\n\\]"
+          }
+        ],
+        "final_answer": "\\[U_{n+1}-\\sqrt5\\le\\frac12(U_n-\\sqrt5).\\]"
+      }
+    },
+    {
+      "id": "2009_s1_sequences_ex04_q4b",
+      "display_order": 8,
+      "content_type": "question",
+      "text": "ب- استنتج أن:\n\\[\nU_n-\\sqrt5\\le\\left(\\frac12\\right)^n(U_0-\\sqrt5).\n\\]\nما هي \\(\\displaystyle\\lim_{n\\to+\\infty}U_n\\)؟",
+      "axis_tags": [
+        "limits_convergence_divergence"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نكرر المتراجحة السابقة ثم نمر إلى النهاية.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "بالتكرار",
+            "explanation": "\\[\n0\\le U_n-\\sqrt5\\le\\left(\\frac12\\right)^n(U_0-\\sqrt5).\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "النهاية",
+            "explanation": "بما أن:\n\\[\n\\left(\\frac12\\right)^n\\to0,\n\\]\nفمن مبرهنة الحصر:\n\\[\nU_n-\\sqrt5\\to0.\n\\]\nإذن:\n\\[\n\\lim_{n\\to+\\infty}U_n=\\sqrt5.\n\\]"
+          }
+        ],
+        "final_answer": "\\[\\boxed{\\lim_{n\\to+\\infty}U_n=\\sqrt5}.\\]"
+      }
+    }
+  ],
+  "rendering_contract": {
+    "no_capture": true,
+    "external_image_required": false,
+    "external_svg_required": false,
+    "graph_source": "inline_json",
+    "supported_graph_types": [
+      "function_plot",
+      "sequence_cobweb"
+    ],
+    "react_note": "لا يوجد Capture. المنحنى (C) والمستقيم (Δ) موجودان كبيانات JSON، وتمثيل U0 وU1 وU2 موجود داخل sequence_cobweb."
+  },
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2009(20260826-151204).pdf",
+    "statement_figure_policy": "لا Capture. الرسوم المطلوبة أعيد بناؤها داخل JSON.",
+    "solution_figure_policy": "المنحنى والمستقيم وتمثيل المتتالية موجودة كبيانات قابلة للعرض في React.",
+    "renderer": "FunctionPlotRenderer + SequenceCobwebRenderer"
+  }
+}

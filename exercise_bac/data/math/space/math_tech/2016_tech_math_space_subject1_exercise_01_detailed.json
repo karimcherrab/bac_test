@@ -1,0 +1,235 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2016-tech-math-space-subject1-ex01-detailed",
+  "session": "ordinary",
+  "year": 2016,
+  "chapter_code": "space_geometry",
+  "chapter_title": "الهندسة في الفضاء",
+  "axis_tags": [
+    "space_cartesian_plane_normal_vector",
+    "space_parametric_line_plane",
+    "space_relative_positions_intersections",
+    "space_projections_distances",
+    "space_loci"
+  ],
+  "branches": [
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "exercise_number": 1,
+  "subject_number": 1,
+  "source_page": 1,
+  "source_pages": [
+    1
+  ],
+  "solution_source_pages": [
+    7
+  ],
+  "title": "التمرين الأول — بكالوريا الجزائر 2016 — الموضوع الأول — شعبة تقني رياضي",
+  "statement": "في الفضاء المنسوب إلى المعلم المتعامد والمتجانس \\((O;\\vec{i},\\vec{j},\\vec{k})\\)، لتكن النقط: \\(A(1;1;4)\\)، \\(B(0;3;1)\\)، \\(C\\left(\\frac43;\\frac53;5\\right)\\)، والمستوي \\((P)\\) الذي \\(x-2y+z-3=0\\) معادلة له، والمستقيم \\((\\Delta)\\) الذي:\n\\[\n\\begin{cases}\nx=1-t\\\\\ny=2+t\\\\\nz=4-3t\n\\end{cases}\n\\qquad t\\in\\mathbb R\n\\]\nتمثيلا وسيطيا له.\nفي كل سؤال توجد إجابة واحدة صحيحة من بين الاقتراحات الثلاثة، حددها مع التعليل.",
+  "statement_tables": [
+    {
+      "title": "الاقتراحات",
+      "headers": [
+        "السؤال",
+        "الإجابة (أ)",
+        "الإجابة (ب)",
+        "الإجابة (ج)"
+      ],
+      "rows": [
+        [
+          "1",
+          "\\((\\Delta)\\)",
+          "\\((AB)\\)",
+          "\\((AC)\\)"
+        ],
+        [
+          "2",
+          "متوازيان تماما",
+          "متقاطعان",
+          "متطابقان"
+        ],
+        [
+          "3",
+          "\\(A\\)",
+          "\\(B\\)",
+          "\\(C\\)"
+        ],
+        [
+          "4",
+          "متقاطعان",
+          "متوازيان",
+          "ليسا من نفس المستوي"
+        ],
+        [
+          "5",
+          "مستو",
+          "سطح كرة",
+          "مجموعة خالية"
+        ]
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "2016_s1_space_ex01_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) المستوي \\((P)\\) يحوي المستقيم: (أ) \\((\\Delta)\\)، (ب) \\((AB)\\)، (ج) \\((AC)\\).",
+      "axis_tags": [
+        "space_relative_positions_intersections"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "لكي يكون مستقيم محدد بنقطتين محتويا في مستو، يكفي التحقق من انتماء النقطتين إلى ذلك المستوي.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التحقق من انتماء A إلى P",
+            "explanation": "نعوض \\(A(1,1,4)\\) في معادلة \\(P\\):\n\\[1-2(1)+4-3=0.\\]\nإذن \\(A\\in(P)\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "التحقق من انتماء C إلى P",
+            "explanation": "نعوض \\(C\\left(\\frac43,\\frac53,5\\right)\\):\n\\[\\frac43-2\\times\\frac53+5-3=\\frac43-\\frac{10}{3}+2=0.\\]\nإذن \\(C\\in(P)\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "الاستنتاج",
+            "explanation": "بما أن النقطتين \\(A\\) و\\(C\\) تنتميان إلى \\((P)\\)، فإن المستقيم \\((AC)\\) محتوى في \\((P)\\)."
+          }
+        ],
+        "final_answer": "الإجابة الصحيحة هي (ج): \\((AC)\\)."
+      }
+    },
+    {
+      "id": "2016_s1_space_ex01_q2",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2) المستويان \\((P)\\) و\\((ABC)\\): (أ) متوازيان تماما، (ب) متقاطعان، (ج) متطابقان.",
+      "axis_tags": [
+        "space_relative_positions_intersections",
+        "space_cartesian_plane_normal_vector"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نعين شعاعا ناظما للمستوي (ABC)، ثم نقارنه بالشعاع الناظم للمستوي P.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب شعاعي AB وAC",
+            "explanation": "\\[\\overrightarrow{AB}=B-A=(-1,2,-3),\\]\n\\[\\overrightarrow{AC}=C-A=\\left(\\frac13,\\frac23,1\\right).\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "شعاع ناظم للمستوي ABC",
+            "explanation": "يمكن أخذ شعاع ناظم للمستوي \\((ABC)\\) مثلا:\n\\[\\vec n_{ABC}=(4,1,-2),\\]\nلأنه عمودي على كل من \\(\\overrightarrow{AB}\\) و\\(\\overrightarrow{AC}\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "مقارنة الشعاعين الناظمين",
+            "explanation": "شعاع ناظم لـ\\((P)\\) هو:\n\\[\\vec n_P=(1,-2,1).\\]\nوالشعاعان \\((4,1,-2)\\) و\\((1,-2,1)\\) غير متوازيين، إذن المستويان غير متوازيين، وبالتالي يتقاطعان وفق مستقيم."
+          }
+        ],
+        "final_answer": "الإجابة الصحيحة هي (ب): المستويان متقاطعان."
+      }
+    },
+    {
+      "id": "2016_s1_space_ex01_q3",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "3) المسقط العمودي للنقطة \\(O\\) على المستقيم \\((\\Delta)\\) هي النقطة: (أ) \\(A\\)، (ب) \\(B\\)، (ج) \\(C\\).",
+      "axis_tags": [
+        "space_projections_distances",
+        "space_parametric_line_plane"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "يجب أن تكون نقطة الإسقاط على المستقيم Δ، وأن يكون الشعاع الواصل بينها وبين O عموديا على شعاع توجيه Δ.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التحقق من انتماء B إلى Δ",
+            "explanation": "عند \\(t=1\\) في تمثيل \\((\\Delta)\\):\n\\[x=0,\\quad y=3,\\quad z=1.\\]\nإذن نحصل على \\(B(0,3,1)\\)، ومنه \\(B\\in\\Delta\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "التحقق من التعامد",
+            "explanation": "شعاع توجيه لـ\\((\\Delta)\\) هو:\n\\[\\vec u=(-1,1,-3).\\]\nولدينا:\n\\[\\overrightarrow{OB}=(0,3,1).\\]\nإذن:\n\\[\\overrightarrow{OB}\\cdot\\vec u=0(-1)+3(1)+1(-3)=0.\\]"
+          }
+        ],
+        "final_answer": "الإجابة الصحيحة هي (ب): النقطة \\(B\\)."
+      }
+    },
+    {
+      "id": "2016_s1_space_ex01_q4",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "4) المستقيمان \\((\\Delta)\\) و\\((AC)\\): (أ) متقاطعان، (ب) متوازيان، (ج) ليسا من نفس المستوي.",
+      "axis_tags": [
+        "space_relative_positions_intersections"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "يكفي إيجاد نقطة مشتركة بين المستقيمين.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "إثبات أن C تنتمي إلى Δ",
+            "explanation": "نبحث عن \\(t\\) بحيث \\(x=\\frac43\\):\n\\[1-t=\\frac43\\Rightarrow t=-\\frac13.\\]\nوعندها:\n\\[y=2-\\frac13=\\frac53,\\qquad z=4+1=5.\\]\nإذن النقطة الناتجة هي \\(C\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "الاستنتاج",
+            "explanation": "النقطة \\(C\\) تنتمي إلى \\((\\Delta)\\)، وبالطبع \\(C\\in(AC)\\)، إذن للمستقيمين نقطة مشتركة."
+          }
+        ],
+        "final_answer": "الإجابة الصحيحة هي (أ): المستقيمان متقاطعان."
+      }
+    },
+    {
+      "id": "2016_s1_space_ex01_q5",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "5) مجموعة النقط \\(M\\) من الفضاء حيث \\(BM^2-9CM^2=0\\) هي: (أ) مستو، (ب) سطح كرة، (ج) مجموعة خالية.",
+      "axis_tags": [
+        "space_loci",
+        "space_barycenter"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحوّل فرق مربعي المسافتين إلى جداء سلمي باستعمال مرجحين مناسبين، فنحصل على شرط تعامد من نوع دائرة/كرة ذات قطر معلوم.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تفكيك العلاقة",
+            "explanation": "\\[BM^2-9CM^2=0\\]\nتكافئ:\n\\[(\\overrightarrow{BM}-3\\overrightarrow{CM})\\cdot(\\overrightarrow{BM}+3\\overrightarrow{CM})=0.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "إدخال المرجحين",
+            "explanation": "لتكن \\(G\\) مرجح الجملة \\(\\{(B;1),(C;-3)\\}\\)، ولتكن \\(H\\) مرجح الجملة \\(\\{(B;1),(C;3)\\}\\). عندئذ تتحول العلاقة إلى شرط من الشكل:\n\\[\\overrightarrow{GM}\\cdot\\overrightarrow{HM}=0.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "التفسير الهندسي",
+            "explanation": "الشرط \\(\\overrightarrow{GM}\\cdot\\overrightarrow{HM}=0\\) يعني أن الزاوية \\(GMH\\) قائمة. إذن مجموعة النقط \\(M\\) هي سطح الكرة التي قطرها \\([GH]\\)."
+          }
+        ],
+        "final_answer": "الإجابة الصحيحة هي (ب): سطح كرة."
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2016(2).pdf",
+    "statement_figure_policy": "لا يوجد شكل هندسي مستقل؛ جدول الاقتراحات ممثل داخل JSON بواسطة statement_tables.",
+    "solution_figure_policy": "الحل مستقل عن أي رسم.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  }
+}

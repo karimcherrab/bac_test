@@ -1,0 +1,239 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2009-math-space-subject2-ex03-detailed",
+  "session": "ordinary",
+  "year": 2009,
+  "chapter_code": "space_geometry",
+  "chapter_title": "الهندسة في الفضاء",
+  "axis_tags": [
+    "space_parametric_line_plane",
+    "space_cartesian_plane_normal_vector",
+    "space_dot_product_orthogonality",
+    "space_distances_projections",
+    "space_relative_positions_intersections"
+  ],
+  "branches": [
+    {
+      "code": "math",
+      "name": "شعبة رياضيات"
+    }
+  ],
+  "exercise_number": 3,
+  "subject_number": 2,
+  "source_page": 3,
+  "source_pages": [
+    3
+  ],
+  "solution_source_pages": [
+    7
+  ],
+  "title": "التمرين الثالث — بكالوريا الجزائر 2009 — الموضوع الثاني — شعبة رياضيات",
+  "statement": "نعتبر في الفضاء المنسوب إلى المعلم المتعامد والمتجانس \\((O;\\vec{i},\\vec{j},\\vec{k})\\)، المستويين \\((P_1)\\) و \\((P_2)\\) حيث\nمعادلة للمستوى \\((P_1)\\) \\(x+2y-z-2=0\\)\nو\n\\[\n\\begin{cases}\nx=1+2\\alpha+\\beta\\\\\ny=1+\\alpha\\\\\nz=5+\\alpha+\\beta\n\\end{cases}\n\\quad ;\\ (\\alpha,\\beta)\\in\\mathbb{R}^2\n\\]\nتمثيل وسيطي للمستوى \\((P_2)\\).",
+  "questions": [
+    {
+      "id": "2009_s2_space_ex03_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) اكتب معادلة للمستوى \\((P_2)\\).",
+      "axis_tags": [
+        "space_cartesian_plane_normal_vector",
+        "space_parametric_line_plane"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستخرج من التمثيل الوسيطي نقطة من المستوى وشعاعين موجّهين له، ثم نبحث عن شعاع ناظم عمودي عليهما.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "استخراج نقطة وشعاعي توجيه",
+            "explanation": "عند \\(\\alpha=\\beta=0\\) نحصل على النقطة:\n\\[\nA_0(1,1,5).\n\\]\nوشعاعا توجيه المستوى هما:\n\\[\n\\vec u=(2,1,1),\\qquad \\vec v=(1,0,1).\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "تحديد شعاع ناظم",
+            "explanation": "نأخذ:\n\\[\n\\vec n_2=(1,-1,-1).\n\\]\nفنجد:\n\\[\n\\vec n_2\\cdot\\vec u=2-1-1=0,\n\\qquad\n\\vec n_2\\cdot\\vec v=1-1=0.\n\\]\nإذن \\(\\vec n_2\\) ناظم للمستوى \\((P_2)\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "كتابة المعادلة",
+            "explanation": "معادلة \\((P_2)\\) من الشكل:\n\\[\nx-y-z+d=0.\n\\]\nوباستعمال النقطة \\((1,1,5)\\):\n\\[\n1-1-5+d=0\\Rightarrow d=5.\n\\]"
+          }
+        ],
+        "final_answer": "\\[(P_2):x-y-z+5=0.\\]"
+      }
+    },
+    {
+      "id": "2009_s2_space_ex03_q2",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2) عين شعاعا ناظما \\(\\vec n_1\\) للمستوى \\((P_1)\\) وشعاعا ناظما \\(\\vec n_2\\) للمستوى \\((P_2)\\).",
+      "axis_tags": [
+        "space_cartesian_plane_normal_vector"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "في معادلة المستوى الديكارتية، معاملات \\(x,y,z\\) تعطي مباشرة إحداثيات شعاع ناظم.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "شعاع ناظم للمستوى P1",
+            "explanation": "من:\n\\[\n(P_1):x+2y-z-2=0\n\\]\nنأخذ:\n\\[\n\\vec n_1=(1,2,-1).\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "شعاع ناظم للمستوى P2",
+            "explanation": "من:\n\\[\n(P_2):x-y-z+5=0\n\\]\nنأخذ:\n\\[\n\\vec n_2=(1,-1,-1).\n\\]"
+          }
+        ],
+        "final_answer": "\\[\\vec n_1=(1,2,-1),\\qquad \\vec n_2=(1,-1,-1).\\]"
+      }
+    },
+    {
+      "id": "2009_s2_space_ex03_q3",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "3) بين أن المستويين \\((P_1)\\) و \\((P_2)\\) متعامدان.",
+      "axis_tags": [
+        "space_dot_product_orthogonality"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "مستويان متعامدان إذا كان شعاعاهما الناظمان متعامدين.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب الجداء السلمي",
+            "explanation": "\\[\n\\vec n_1\\cdot\\vec n_2=(1)(1)+(2)(-1)+(-1)(-1)=1-2+1=0.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "الاستنتاج",
+            "explanation": "إذن \\(\\vec n_1\\perp\\vec n_2\\)، وبالتالي:\n\\[\n(P_1)\\perp(P_2).\n\\]"
+          }
+        ],
+        "final_answer": "\\[(P_1)\\perp(P_2).\\]"
+      }
+    },
+    {
+      "id": "2009_s2_space_ex03_q4a",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "4) أ- \\(A(3,1,1)\\) نقطة من الفضاء، عين المسافة \\(d_1\\) بين النقطة \\(A\\) والمستوى \\((P_1)\\) ثم المسافة \\(d_2\\) بين \\(A\\) و \\((P_2)\\).",
+      "axis_tags": [
+        "space_distances_projections"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نطبق صيغة المسافة من نقطة إلى مستوى على كل من \\((P_1)\\) و\\((P_2)\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب d1",
+            "explanation": "\\[\nd_1=\\frac{|3+2(1)-1-2|}{\\sqrt{1^2+2^2+(-1)^2}}\n=\\frac{2}{\\sqrt6}=\\frac{\\sqrt6}{3}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب d2",
+            "explanation": "\\[\nd_2=\\frac{|3-1-1+5|}{\\sqrt{1^2+(-1)^2+(-1)^2}}\n=\\frac{6}{\\sqrt3}=2\\sqrt3.\n\\]"
+          }
+        ],
+        "final_answer": "\\[d_1=\\frac{\\sqrt6}{3},\\qquad d_2=2\\sqrt3.\\]"
+      }
+    },
+    {
+      "id": "2009_s2_space_ex03_q4b",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "ب- استنتج المسافة \\(d_3\\) بين النقطة \\(A\\) والمستقيم \\((\\Delta)\\) تقاطع المستويين \\((P_1)\\) و \\((P_2)\\).",
+      "axis_tags": [
+        "space_distances_projections",
+        "space_relative_positions_intersections"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "بما أن المستويين متعامدان، فإن المسافة من \\(A\\) إلى مستقيم تقاطعهما تحقق \\(d_3^2=d_1^2+d_2^2\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "استعمال تعامد المستويين",
+            "explanation": "\\[\nd_3=\\sqrt{d_1^2+d_2^2}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "التعويض",
+            "explanation": "\\[\nd_3=\\sqrt{\\left(\\frac{\\sqrt6}{3}\\right)^2+(2\\sqrt3)^2}\n=\\sqrt{\\frac{6}{9}+12}\n=\\sqrt{\\frac{114}{9}}\n=\\frac{\\sqrt{114}}{3}.\n\\]"
+          }
+        ],
+        "final_answer": "\\[d_3=\\frac{\\sqrt{114}}{3}.\\]"
+      }
+    },
+    {
+      "id": "2009_s2_space_ex03_q5a",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "5) أ- عين تمثيلا وسيطيا بدلالة \\(\\lambda\\) للمستقيم \\((\\Delta)\\) حيث \\(\\lambda\\) عدد حقيقي.",
+      "axis_tags": [
+        "space_parametric_line_plane",
+        "space_relative_positions_intersections"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحل معادلتي المستويين معًا ونختار أحد الإحداثيات وسيطًا حرًا.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حل نظام تقاطع المستويين",
+            "explanation": "لدينا:\n\\[\n\\begin{cases}\nx+2y-z-2=0\\\\\nx-y-z+5=0\n\\end{cases}\n\\]\nبطرح المعادلة الثانية من الأولى:\n\\[\n3y-7=0\\Rightarrow y=\\frac73.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "اختيار الوسيط",
+            "explanation": "نضع \\(z=\\lambda\\). من المعادلة الثانية:\n\\[\nx-\\frac73-\\lambda+5=0\n\\Rightarrow x=\\lambda-\\frac83.\n\\]\nإذن:\n\\[\n(\\Delta):\\begin{cases}\nx=\\lambda-\\frac83\\\\\ny=\\frac73\\\\\nz=\\lambda\n\\end{cases}\n\\quad ;\\ \\lambda\\in\\mathbb{R}.\n\\]"
+          }
+        ],
+        "final_answer": "\\[\n(\\Delta):\\begin{cases}\nx=\\lambda-\\frac83\\\\\ny=\\frac73\\\\\nz=\\lambda\n\\end{cases}\n\\quad ;\\ \\lambda\\in\\mathbb{R}.\n\\]"
+      }
+    },
+    {
+      "id": "2009_s2_space_ex03_q5b",
+      "display_order": 7,
+      "content_type": "question",
+      "text": "ب- \\(M\\) نقطة كيفية من \\((\\Delta)\\)، احسب \\(MA^2\\) بدلالة \\(\\lambda\\) مستنتجا ثانية المسافة بين \\(A\\) و \\((\\Delta)\\).",
+      "axis_tags": [
+        "space_distances_projections"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نكتب إحداثيات نقطة كيفية \\(M\\) من \\((\\Delta)\\)، نحسب \\(MA^2\\)، ثم نكتبه على شكل مربع زائد ثابت لتحديد قيمته الدنيا.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "إحداثيات M",
+            "explanation": "\\[\nM\\left(\\lambda-\\frac83,\\frac73,\\lambda\\right).\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب مربع المسافة",
+            "explanation": "بما أن \\(A(3,1,1)\\):\n\\[\nMA^2=\\left(\\lambda-\\frac{17}{3}\\right)^2+\\left(\\frac43\\right)^2+(\\lambda-1)^2.\n\\]\nوبالتبسيط وإكمال المربع:\n\\[\nMA^2=2\\left(\\lambda-\\frac{10}{3}\\right)^2+\\frac{114}{9}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "استخراج المسافة",
+            "explanation": "أصغر قيمة لـ\\(MA^2\\) تتحقق عندما:\n\\[\n\\lambda=\\frac{10}{3}.\n\\]\nوعندها:\n\\[\nMA_{\\min}^2=\\frac{114}{9}.\n\\]\nإذن:\n\\[\nd(A,(\\Delta))=\\frac{\\sqrt{114}}{3}.\n\\]"
+          }
+        ],
+        "final_answer": "\\[MA^2=2\\left(\\lambda-\\frac{10}{3}\\right)^2+\\frac{114}{9},\\qquad d(A,(\\Delta))=\\frac{\\sqrt{114}}{3}=d_3.\\]"
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2009(20260826-114853).pdf",
+    "statement_figure_policy": "لا يوجد شكل هندسي إلزامي في نص التمرين.",
+    "solution_figure_policy": "الحل مستقل عن أي رسم.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  }
+}

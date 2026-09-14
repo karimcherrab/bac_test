@@ -1,0 +1,191 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2011-science-sequences-subject2-ex01",
+  "session": "ordinary",
+  "year": 2011,
+  "chapter_code": "sequences",
+  "chapter_title": "المتتاليات العددية",
+  "axis_tags": [
+    "parameterized_recurrence",
+    "auxiliary_geometric_sequence",
+    "explicit_sequence_formula",
+    "sequence_convergence",
+    "geometric_sum"
+  ],
+  "branches": [
+    {
+      "code": "science",
+      "name": "شعبة علوم تجريبية"
+    }
+  ],
+  "exercise_number": 1,
+  "subject_number": 2,
+  "source_page": 3,
+  "source_pages": [
+    3
+  ],
+  "solution_source_pages": [
+    7
+  ],
+  "title": "التمرين الأول — بكالوريا الجزائر 2011 — الموضوع الثاني — شعبة علوم تجريبية",
+  "statement": "\\(\\alpha\\) عدد حقيقي موجب تماما و يختلف عن \\(1\\). \\((u_n)\\) متتالية عددية معرفة على \\(N\\) بـ: \\(u_0=6\\) و من أجل كل عدد طبيعي \\(n\\): \\(u_{n+1}=\\alpha u_n+1\\). \\((v_n)\\) متتالية عددية معرفة من أجل كل عدد طبيعي \\(n\\) بـ: \\(v_n=u_n+\\frac{1}{\\alpha-1}\\).",
+  "questions": [
+    {
+      "id": "2011_s2_sequences_ex01_q1a",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1. أ- بين أن \\((v_n)\\) متتالية هندسية أساسها \\(\\alpha\\).",
+      "axis_tags": [
+        "auxiliary_geometric_sequence"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب \\(v_{n+1}\\) ونستعمل علاقة الرجوع لـ \\(u_{n+1}\\)، ثم نحاول استخراج \\(v_n\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "كتابة v_{n+1}",
+            "explanation": "من التعريف:\n\\[\nv_{n+1}=u_{n+1}+\\frac{1}{\\alpha-1}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "التعويض بعلاقة u_{n+1}",
+            "explanation": "بما أن:\n\\[\nu_{n+1}=\\alpha u_n+1,\n\\]\nفإن:\n\\[\nv_{n+1}=\\alpha u_n+1+\\frac{1}{\\alpha-1}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "تبسيط الجزء الثابت",
+            "explanation": "نلاحظ أن:\n\\[\n1+\\frac{1}{\\alpha-1}\n=\\frac{\\alpha-1+1}{\\alpha-1}\n=\\frac{\\alpha}{\\alpha-1}.\n\\]\nإذن:\n\\[\nv_{n+1}=\\alpha u_n+\\frac{\\alpha}{\\alpha-1}.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "استخراج v_n",
+            "explanation": "نأخذ \\(\\alpha\\) عاملًا مشتركًا:\n\\[\nv_{n+1}=\\alpha\\left(u_n+\\frac{1}{\\alpha-1}\\right)=\\alpha v_n.\n\\]\nإذن \\((v_n)\\) هندسية أساسها \\(\\alpha\\)."
+          }
+        ],
+        "final_answer": "\\((v_n)\\) متتالية هندسية أساسها \\(\\alpha\\)."
+      }
+    },
+    {
+      "id": "2011_s2_sequences_ex01_q1b",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "ب- اكتب \\(v_n\\) بدلالة \\(n\\) و \\(\\alpha\\)، ثم استنتج بدلالة \\(n\\) و \\(\\alpha\\)، عبارة \\(u_n\\).",
+      "axis_tags": [
+        "geometric_sequence_general_term",
+        "explicit_sequence_formula"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب الحد الأول \\(v_0\\)، ثم نكتب الحد العام للمتتالية الهندسية، وبعدها نرجع إلى تعريف \\(v_n\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب v_0",
+            "explanation": "لدينا:\n\\[\nv_0=u_0+\\frac{1}{\\alpha-1}\n=6+\\frac{1}{\\alpha-1}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "كتابة v_n",
+            "explanation": "بما أن \\((v_n)\\) هندسية أساسها \\(\\alpha\\)، فإن:\n\\[\nv_n=v_0\\alpha^n.\n\\]\nإذن:\n\\[\n\\boxed{v_n=\\left(6+\\frac{1}{\\alpha-1}\\right)\\alpha^n}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "استخراج u_n",
+            "explanation": "من:\n\\[\nv_n=u_n+\\frac{1}{\\alpha-1}\n\\]\nنحصل على:\n\\[\nu_n=v_n-\\frac{1}{\\alpha-1}.\n\\]\nوبالتعويض:\n\\[\n\\boxed{u_n=\\left(6+\\frac{1}{\\alpha-1}\\right)\\alpha^n-\\frac{1}{\\alpha-1}}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(v_n=\\left(6+\\frac{1}{\\alpha-1}\\right)\\alpha^n\\)، و \\(u_n=\\left(6+\\frac{1}{\\alpha-1}\\right)\\alpha^n-\\frac{1}{\\alpha-1}\\)."
+      }
+    },
+    {
+      "id": "2011_s2_sequences_ex01_q1c",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "ج- عين قيم العدد الحقيقي \\(\\alpha\\) التي تكون من أجلها المتتالية \\((u_n)\\) متقاربة.",
+      "axis_tags": [
+        "sequence_convergence",
+        "parameter_study"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل العبارة الصريحة لـ \\(u_n\\). بما أن \\(\\alpha>0\\) و\\(\\alpha\\ne1\\)، فإن تقارب \\(u_n\\) مرتبط بسلوك \\(\\alpha^n\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "العبارة الصريحة",
+            "explanation": "لدينا:\n\\[\nu_n=\\left(6+\\frac{1}{\\alpha-1}\\right)\\alpha^n-\\frac{1}{\\alpha-1}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "الحالة 0<α<1",
+            "explanation": "إذا كان:\n\\[\n0<\\alpha<1,\n\\]\nفإن:\n\\[\n\\alpha^n\\to0.\n\\]\nومن ثم:\n\\[\nu_n\\to-\\frac{1}{\\alpha-1},\n\\]\nوهي نهاية حقيقية، إذن المتتالية متقاربة."
+          },
+          {
+            "step_number": 3,
+            "title": "الحالة α>1",
+            "explanation": "إذا كان \\(\\alpha>1\\)، فإن:\n\\[\n\\alpha^n\\to+\\infty.\n\\]\nكما أن:\n\\[\n6+\\frac{1}{\\alpha-1}>0,\n\\]\nلأن \\(\\alpha-1>0\\). لذلك الحد الأول في عبارة \\(u_n\\) يتجه إلى \\(+\\infty\\)، وبالتالي لا تكون المتتالية متقاربة."
+          },
+          {
+            "step_number": 4,
+            "title": "الاستنتاج",
+            "explanation": "وبما أن \\(\\alpha\\) موجب ويختلف عن \\(1\\)، فإن القيم الوحيدة التي تجعل \\((u_n)\\) متقاربة هي:\n\\[\n0<\\alpha<1.\n\\]"
+          }
+        ],
+        "final_answer": "تكون \\((u_n)\\) متقاربة إذا وفقط إذا \\(0<\\alpha<1\\)."
+      }
+    },
+    {
+      "id": "2011_s2_sequences_ex01_q2",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "2. نضع \\(\\alpha=\\frac32\\). احسب بدلالة \\(n\\)، المجموعين \\(S_n\\) و \\(T_n\\) حيث: \\(S_n=v_0+v_1+\\ldots+v_n\\) و \\(T_n=u_0+u_1+\\ldots+u_n\\).",
+      "axis_tags": [
+        "geometric_sum",
+        "sequence_sum"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نعوض \\(\\alpha=\\frac32\\)، فنحسب أولًا \\(v_0\\) ثم مجموع المتتالية الهندسية \\((v_n)\\). بعد ذلك نستعمل العلاقة بين \\(u_n\\) و\\(v_n\\) لإيجاد \\(T_n\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب v_0 عند α=3/2",
+            "explanation": "لدينا:\n\\[\n\\alpha-1=\\frac32-1=\\frac12.\n\\]\nإذن:\n\\[\n\\frac{1}{\\alpha-1}=2.\n\\]\nومن ثم:\n\\[\nv_0=u_0+2=6+2=8.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "كتابة v_n",
+            "explanation": "بما أن أساس المتتالية هو \\(\\alpha=\\frac32\\)، فإن:\n\\[\nv_n=8\\left(\\frac32\\right)^n.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب S_n",
+            "explanation": "لدينا مجموع هندسي من \\(v_0\\) إلى \\(v_n\\)، أي \\(n+1\\) حدًا:\n\\[\nS_n=v_0\\frac{q^{n+1}-1}{q-1}.\n\\]\nبالتعويض:\n\\[\nS_n=8\\frac{\\left(\\frac32\\right)^{n+1}-1}{\\frac32-1}\n=8\\frac{\\left(\\frac32\\right)^{n+1}-1}{\\frac12}.\n\\]\nإذن:\n\\[\n\\boxed{S_n=16\\left[\\left(\\frac32\\right)^{n+1}-1\\right]}.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "ربط u_n بـ v_n",
+            "explanation": "عند \\(\\alpha=\\frac32\\):\n\\[\nv_n=u_n+2.\n\\]\nإذن:\n\\[\nu_n=v_n-2.\n\\]"
+          },
+          {
+            "step_number": 5,
+            "title": "حساب T_n",
+            "explanation": "نجمع من \\(0\\) إلى \\(n\\):\n\\[\nT_n=\\sum_{k=0}^n u_k\n=\\sum_{k=0}^n(v_k-2)\n=S_n-2(n+1).\n\\]\nإذن:\n\\[\nT_n=16\\left[\\left(\\frac32\\right)^{n+1}-1\\right]-2n-2.\n\\]\nوبالتبسيط:\n\\[\n\\boxed{T_n=16\\left(\\frac32\\right)^{n+1}-2n-18}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(S_n=16\\left[\\left(\\frac32\\right)^{n+1}-1\\right]\\)، و \\(T_n=16\\left(\\frac32\\right)^{n+1}-2n-18\\)."
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2011(4).pdf",
+    "statement_figure_policy": "إذا كان الشكل موجوداً في نص البكالوريا يوضع في statement_graphs. إذا كان السؤال يطلب رسم شكل فلا يظهر الجواب قبل السؤال بل يوضع داخل الحل.",
+    "solution_figure_policy": "تضاف الرسومات اللازمة في خطوات الحل فقط، مع الحفاظ على معنى الشكل الأصلي أو شكل التصحيح.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  }
+}

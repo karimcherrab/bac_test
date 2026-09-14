@@ -1,0 +1,918 @@
+{
+  "tag": "translation_requirements_and_components",
+  "title": "متطلبات الترجمة والعناصر المتدخلة فيها",
+  "order": 5,
+  "is_active": true,
+  "branches": [
+    "math",
+    "science"
+  ],
+  "content": {
+    "language": "ar",
+    "direction": "rtl",
+    "chapter_code": "protein_synthesis",
+    "chapter_title": "آلية تركيب البروتين",
+    "axis_tag": "translation_requirements_and_components",
+    "estimated_minutes": 42,
+    "difficulty": "easy",
+    "lesson_goal": "أن يستخرج التلميذ من الوثائق مقر عملية الترجمة والعناصر الضرورية لها، ويفهم وظيفة ARNm والريبوزوم وARNr وARNt والأحماض الأمينية الحرة، ويتعرف كذلك على ضرورة الإنزيمات النوعية والطاقة قبل استعمال الأحماض الأمينية، من دون الدخول في التفاصيل الكاملة لتنشيط الأحماض الأمينية أو في مراحل الانطلاق والاستطالة والنهاية.",
+    "prerequisites": [
+      "معرفة أن ARNm يحمل نسخة من المعلومة الوراثية إلى الهيولى.",
+      "معرفة أن البروتين يتكون من تتابع أحماض أمينية.",
+      "معرفة أن رامزات ARNm تحدد ترتيب الأحماض الأمينية."
+    ],
+    "learning_outcomes": [
+      "يستدل من الوثيقة 1 على أن تركيب البروتين يتم على مستوى الريبوزومات المرتبطة بـ ARNm.",
+      "يعرف متعدد الريبوزوم (البوليزوم) ويفسر فائدته في تركيب عدة سلاسل ببتيدية في الوقت نفسه.",
+      "يستخرج من الوثيقة 2 الأنواع الثلاثة من ARN المتدخلة أثناء تركيب البروتين: ARNm وARNr وARNt.",
+      "يربط ARNr والبروتينات ببنية الريبوزوم.",
+      "يتعرف على البنية الوظيفية للريبوزوم: تحت وحدة صغرى، تحت وحدة كبرى، موقعا A وP، ونفق خروج السلسلة.",
+      "يفهم أن الريبوزوم هو مقر عملية الترجمة.",
+      "يتعرف على بنية ARNt وموقعيه الوظيفيين: موقع تثبيت الحمض الأميني والرامزة المضادة.",
+      "يربط ARNt بنقل الحمض الأميني والتعرف على رامزة ARNm المكملة.",
+      "يستنتج من الوثيقة 5 أن استعمال الحمض الأميني في الترجمة يتطلب ARNt وإنزيما نوعيا وطاقة في شكل ATP.",
+      "يلخص متطلبات الترجمة في قائمة واضحة دون الخلط بينها وبين مراحل حدوث الترجمة.",
+      "يميز ما ينتمي إلى هذا المحور عما سيُدرس لاحقا في محور تنشيط الأحماض الأمينية ومراحل الترجمة."
+    ],
+    "learning_path": [
+      {
+        "id": "step_1",
+        "type": "problem",
+        "component": "DiscoveryQuestion",
+        "title": "المشكلة: ما الذي تحتاجه الخلية لترجمة ARNm؟",
+        "content": {
+          "question": "وصلت رسالة ARNm إلى الهيولى. هل تكفي الرسالة وحدها لصنع البروتين، أم تحتاج الخلية إلى مقر للترجمة وناقلات وأحماض أمينية وطاقة؟",
+          "teacher": "سنستخرج العناصر واحدا واحدا من خمس وثائق، ثم نجمعها في نهاية المحور داخل «فريق الترجمة».",
+          "action": {
+            "label": "ابدأ بالوثيقة 1",
+            "next_step": "step_2"
+          }
+        },
+        "display_order": 1
+      },
+      {
+        "id": "step_2",
+        "type": "real_evidence",
+        "component": "RealEvidenceGallery",
+        "title": "الوثيقة 1: أين يتم تركيب البروتين؟",
+        "content": {
+          "intro": "تعرض الوثيقة صورا بالمجهر الإلكتروني ورسوما لمتعدد الريبوزوم أثناء تركيب البروتين. ركز على ARNm والريبوزومات والسلاسل الخارجة منها.",
+          "figures": [
+            {
+              "src": "/science/protein-synthesis/axis-05-1/polysome_evidence.png",
+              "alt": "متعدد الريبوزوم أثناء الترجمة",
+              "caption": "الوثيقة 1: عدة ريبوزومات مرتبطة بجزيئة ARNm واحدة، وتخرج من كل ريبوزوم سلسلة ببتيدية.",
+              "source_label": "الوثيقة (1) — الصفحة 2"
+            }
+          ],
+          "guided_reading": [
+            {
+              "question": "ماذا يمثل الخيط الذي ترتبط به الكتل؟",
+              "answer": "يمثل جزيئة ARNm."
+            },
+            {
+              "question": "ماذا تمثل الكتل المرتبطة به؟",
+              "answer": "ريبوزومات."
+            },
+            {
+              "question": "ماذا يخرج من كل ريبوزوم؟",
+              "answer": "سلسلة ببتيدية قيد التشكل."
+            },
+            {
+              "question": "ماذا نستنتج عن مقر تركيب البروتين؟",
+              "answer": "يتم تركيب البروتين على مستوى الريبوزومات المرتبطة بـ ARNm."
+            },
+            {
+              "question": "ما فائدة وجود عدة ريبوزومات على ARNm نفسه؟",
+              "answer": "يسمح بترجمة ARNm نفسه عدة مرات في الوقت نفسه، فتتكون عدة سلاسل ببتيدية في مدة قصيرة."
+            }
+          ],
+          "takeaway": "عدة ريبوزومات على ARNm واحد = متعدد الريبوزوم (البوليزوم)، وهو يسمح بإنتاج عدة سلاسل ببتيدية بصورة متزامنة."
+        },
+        "display_order": 2
+      },
+      {
+        "id": "step_3",
+        "type": "key_rule",
+        "component": "KeyRuleCard",
+        "title": "متعدد الريبوزوم باختصار",
+        "content": {
+          "rule": "متعدد الريبوزوم هو مجموعة من الريبوزومات المستقلة المرتبطة بجزيئة ARNm واحدة وتترجمها في الوقت نفسه.",
+          "simple_flow": "ARNm واحد + عدة ريبوزومات → عدة سلاسل ببتيدية",
+          "do_not_confuse": [
+            "متعدد الريبوزوم ليس ريبوزوما واحدا كبيرا.",
+            "كل ريبوزوم يبني سلسلة ببتيدية خاصة به."
+          ],
+          "memory_tip": "رسالة واحدة، عدة قارئين، إنتاج أسرع."
+        },
+        "display_order": 3
+      },
+      {
+        "id": "step_4",
+        "type": "real_evidence",
+        "component": "RealEvidenceGallery",
+        "title": "الوثيقة 2: ما أنواع ARN المتدخلة؟",
+        "content": {
+          "intro": "تعرض الوثيقة نتائج فصل ARN الهيولي أثناء فترة تركيب البروتين بالطرد المركزي، مع جدول يبين خصائص كل نوع.",
+          "figures": [
+            {
+              "src": "/science/protein-synthesis/axis-05-1/rna_types_centrifugation.png",
+              "alt": "منحنى فصل أنواع ARN وجدول خصائص ARNr وARNt وARNm",
+              "caption": "الوثيقة 2: نتائج الطرد المركزي تبين وجود ARNr وARNt وARNm أثناء تركيب البروتين.",
+              "source_label": "الوثيقة (2) — الصفحة 2"
+            }
+          ],
+          "guided_reading": [
+            {
+              "question": "ماذا تمثل الشوكات 1 و2 و3 حسب معطيات الوثيقة؟",
+              "answer": "تمثل ARNr الريبوزومي."
+            },
+            {
+              "question": "ماذا تمثل الشوكة 4؟",
+              "answer": "تمثل ARNt الناقل."
+            },
+            {
+              "question": "ما خصوصية الشوكة 5؟",
+              "answer": "تظهر أثناء فترة تركيب البروتين وتمثل ARNm الرسول."
+            },
+            {
+              "question": "ما النسب العامة المبينة في الجدول؟",
+              "answer": "ARNr حوالي 80%، ARNt حوالي 15%، وARNm حوالي 5% من مجموع ARN الخلية."
+            },
+            {
+              "question": "ما الاستنتاج؟",
+              "answer": "تتدخل في تركيب البروتين ثلاثة أنواع من ARN: ARNm وARNr وARNt."
+            }
+          ],
+          "takeaway": "ARNm يحمل الرسالة، ARNr يدخل في تركيب الريبوزوم، وARNt ينقل الأحماض الأمينية."
+        },
+        "display_order": 4
+      },
+      {
+        "id": "step_5",
+        "type": "real_evidence",
+        "component": "RealEvidenceGallery",
+        "title": "الوثيقة 3: لماذا الريبوزوم مناسب للترجمة؟",
+        "content": {
+          "intro": "تعرض الوثيقة نماذج جزيئية وتخطيطية للريبوزوم. لا تحفظ الرسم؛ اربط كل جزء بدوره.",
+          "figures": [
+            {
+              "src": "/science/protein-synthesis/axis-05-1/ribosome_structure.png",
+              "alt": "بنية الريبوزوم وموقعي A وP",
+              "caption": "الوثيقة 3: الريبوزوم يتكون من تحت وحدتين ويحتوي مواقع ارتباط ARNm وARNt ونفقا لخروج السلسلة.",
+              "source_label": "الوثيقة (3) — الصفحة 3"
+            }
+          ],
+          "guided_reading": [
+            {
+              "question": "مم يتكون الريبوزوم كيميائيا؟",
+              "answer": "من ARNr وبروتينات."
+            },
+            {
+              "question": "مم يتكون بنيويا؟",
+              "answer": "من تحت وحدة صغرى وتحت وحدة كبرى."
+            },
+            {
+              "question": "ما علاقة تحت الوحدة الصغرى بـ ARNm؟",
+              "answer": "تحمل موقع ارتباط وقراءة ARNm."
+            },
+            {
+              "question": "ماذا نجد في تحت الوحدة الكبرى؟",
+              "answer": "موقعي A وP لارتباط ARNt، ونفق خروج السلسلة الببتيدية."
+            },
+            {
+              "question": "ما الاستنتاج العام؟",
+              "answer": "بنية الريبوزوم مهيأة لجمع ARNm وARNt والمساهمة في بناء السلسلة، لذلك يمثل مقر الترجمة."
+            }
+          ],
+          "takeaway": "ARNr + بروتينات → ريبوزوم؛ والريبوزوم هو مقر الترجمة."
+        },
+        "display_order": 5
+      },
+      {
+        "id": "step_6",
+        "type": "short_explanation",
+        "component": "ShortExplanation",
+        "title": "ماذا تعني A وP في هذا المحور؟",
+        "content": {
+          "blocks": [
+            {
+              "title": "الموقع A",
+              "text": "موقع يستقبل ARNt الحامل للحمض الأميني القادم."
+            },
+            {
+              "title": "الموقع P",
+              "text": "موقع يرتبط فيه ARNt الحامل للسلسلة الببتيدية أثناء الترجمة."
+            },
+            {
+              "title": "النفق",
+              "text": "مسار خروج السلسلة الببتيدية المتشكلة من الريبوزوم."
+            }
+          ],
+          "memory_tip": "A للاستقبال، P للسلسلة الببتيدية.",
+          "attention": "حركة ARNt بين A وP وكيف تتشكل الروابط الببتيدية ستدرس بالتفصيل في محور مراحل الترجمة."
+        },
+        "display_order": 6
+      },
+      {
+        "id": "step_7",
+        "type": "real_evidence",
+        "component": "RealEvidenceGallery",
+        "title": "الوثيقة 4: كيف يؤدي ARNt وظيفته؟",
+        "content": {
+          "intro": "تعرض الوثيقة البنية الثانوية والثلاثية لـ ARNt. ركز فقط على موقع تثبيت الحمض الأميني وموقع الرامزة المضادة.",
+          "figures": [
+            {
+              "src": "/science/protein-synthesis/axis-05-1/trna_structure.png",
+              "alt": "بنية ARNt وموقعي الحمض الأميني والرامزة المضادة",
+              "caption": "الوثيقة 4: يملك ARNt موقعا لتثبيت الحمض الأميني وموقع رامزة مضادة مكملة لرامزة ARNm.",
+              "source_label": "الوثيقة (4) — الصفحة 3"
+            }
+          ],
+          "guided_reading": [
+            {
+              "question": "أين يثبت الحمض الأميني؟",
+              "answer": "في موقع خاص بتثبيت الحمض الأميني على ARNt."
+            },
+            {
+              "question": "ما الرامزة المضادة؟",
+              "answer": "ثلاثية قواعد على ARNt تتكامل مع رامزة ARNm الموافقة."
+            },
+            {
+              "question": "كيف يجمع ARNt بين وظيفتين؟",
+              "answer": "يحمل حمضا أمينيا من جهة ويتعرف على رامزة ARNm المناسبة من جهة أخرى."
+            },
+            {
+              "question": "ما وظيفته العامة؟",
+              "answer": "نقل الحمض الأميني المناسب إلى الريبوزوم والتعرف على الرامزة الموافقة بواسطة الرامزة المضادة."
+            }
+          ],
+          "takeaway": "ARNt ناقل متخصص يربط بين رامزة ARNm والحمض الأميني الموافق."
+        },
+        "display_order": 7
+      },
+      {
+        "id": "step_8",
+        "type": "comparison",
+        "component": "VisualComparison",
+        "title": "لا تخلط بين ARNm وARNr وARNt",
+        "content": {
+          "columns": [
+            {
+              "title": "ARNm — الرسول",
+              "items": [
+                "يحمل الرسالة الوراثية.",
+                "يحمل الرامزات.",
+                "يُقرأ على مستوى الريبوزوم."
+              ]
+            },
+            {
+              "title": "ARNr — الريبوزومي",
+              "items": [
+                "يدخل مع البروتينات في تركيب الريبوزوم.",
+                "يساهم في بنية مقر الترجمة.",
+                "لا ينقل الأحماض الأمينية."
+              ]
+            },
+            {
+              "title": "ARNt — الناقل",
+              "items": [
+                "يحمل حمضا أمينيا.",
+                "يحمل رامزة مضادة.",
+                "يتعرف على رامزة ARNm المكملة."
+              ]
+            }
+          ],
+          "memory_tip": "m = message، r = ribosome، t = transport.",
+          "attention": "هذه وسيلة تذكر فقط؛ في الإجابة العلمية استعمل أسماء العناصر ووظائفها."
+        },
+        "display_order": 8
+      },
+      {
+        "id": "step_9",
+        "type": "real_evidence",
+        "component": "RealEvidenceGallery",
+        "title": "الوثيقة 5: هل يكفي وجود الحمض الأميني وARNt؟",
+        "content": {
+          "intro": "توضح الوثيقة أن الحمض الأميني لا يستعمل مباشرة؛ بل يرتبط بـ ARNt الخاص به بوجود إنزيم نوعي وطاقة. نكتفي هنا باستخراج المتطلبات، أما تفاصيل الآلية فتأتي في المحور التالي.",
+          "figures": [
+            {
+              "src": "/science/protein-synthesis/axis-05-1/aminoacyl_trna_activation.png",
+              "alt": "تنشيط الحمض الأميني وربطه بـ ARNt",
+              "caption": "الوثيقة 5: حمض أميني + ARNt + إنزيم نوعي + ATP تؤدي إلى تشكل حمض أميني مرتبط بـ ARNt.",
+              "source_label": "الوثيقة (5) — الصفحة 3"
+            }
+          ],
+          "guided_reading": [
+            {
+              "question": "ما العناصر الموجودة قبل تشكل المعقد؟",
+              "answer": "حمض أميني، ARNt، إنزيم تنشيط نوعي وATP."
+            },
+            {
+              "question": "ما دور ATP في الوثيقة؟",
+              "answer": "يوفر الطاقة اللازمة للعملية."
+            },
+            {
+              "question": "ما الناتج المهم بالنسبة للترجمة؟",
+              "answer": "حمض أميني مرتبط بـ ARNt الخاص به، جاهز للنقل إلى الريبوزوم."
+            },
+            {
+              "question": "ماذا نضيف إذن إلى قائمة متطلبات الترجمة؟",
+              "answer": "إنزيمات نوعية وطاقة، إضافة إلى ARNt والأحماض الأمينية الحرة."
+            }
+          ],
+          "takeaway": "الترجمة تتطلب أحماضا أمينية وARNt وإنزيمات نوعية وطاقة. تفاصيل تنشيط الحمض الأميني ستُشرح في المحور التالي."
+        },
+        "display_order": 9
+      },
+      {
+        "id": "step_10",
+        "type": "short_explanation",
+        "component": "ShortExplanation",
+        "title": "فريق الترجمة الكامل",
+        "content": {
+          "blocks": [
+            {
+              "title": "ARNm",
+              "text": "يحمل نسخة المعلومة الوراثية والرامزات التي ستقرأ."
+            },
+            {
+              "title": "الريبوزوم",
+              "text": "مقر الترجمة؛ يتكون من ARNr وبروتينات."
+            },
+            {
+              "title": "ARNt",
+              "text": "ينقل الحمض الأميني المناسب ويتعرف على رامزة ARNm بواسطة الرامزة المضادة."
+            },
+            {
+              "title": "الأحماض الأمينية الحرة",
+              "text": "الوحدات البنائية التي ستكوّن السلسلة الببتيدية."
+            },
+            {
+              "title": "إنزيمات نوعية",
+              "text": "ضرورية لتحضير الحمض الأميني وربطه بالـ ARNt الموافق."
+            },
+            {
+              "title": "الطاقة",
+              "text": "تستهلك أثناء تجهيز الأحماض الأمينية وعمليات الترجمة."
+            }
+          ],
+          "memory_tip": "رسالة + مقر + ناقل + مواد بناء + إنزيمات + طاقة."
+        },
+        "display_order": 10
+      },
+      {
+        "id": "step_11",
+        "type": "quick_check",
+        "component": "QuickCheck",
+        "title": "تحقق من فهم متطلبات الترجمة",
+        "content": {
+          "questions": [
+            {
+              "id": "qc1",
+              "question": "ما مقر الترجمة؟",
+              "choices": [
+                "الريبوزوم",
+                "ADN",
+                "الغشاء البلازمي"
+              ],
+              "correct_answer": "الريبوزوم",
+              "explanation": "الوثيقة 1 تربط تركيب السلسلة الببتيدية بالريبوزومات المرتبطة بـ ARNm."
+            },
+            {
+              "id": "qc2",
+              "question": "أي ARN ينقل الحمض الأميني؟",
+              "choices": [
+                "ARNt",
+                "ARNm",
+                "ARNr"
+              ],
+              "correct_answer": "ARNt",
+              "explanation": "ARNt هو ARN الناقل."
+            },
+            {
+              "id": "qc3",
+              "question": "مم يتكون الريبوزوم؟",
+              "choices": [
+                "ARNr وبروتينات",
+                "ARNm فقط",
+                "ARNt فقط"
+              ],
+              "correct_answer": "ARNr وبروتينات",
+              "explanation": "هذا ما تبينه الوثيقة 3."
+            },
+            {
+              "id": "qc4",
+              "question": "أي عبارة تخص الرامزة المضادة؟",
+              "choices": [
+                "توجد على ARNt وتتكامل مع رامزة ARNm",
+                "توجد على البروتين",
+                "هي رامزة توقف على ADN"
+              ],
+              "correct_answer": "توجد على ARNt وتتكامل مع رامزة ARNm",
+              "explanation": "وهذا يسمح للـ ARNt بالتعرف على الرامزة الموافقة."
+            },
+            {
+              "id": "qc5",
+              "question": "ما الذي تضيفه الوثيقة 5 إلى متطلبات الترجمة؟",
+              "choices": [
+                "إنزيمات نوعية وطاقة",
+                "ADN جديد",
+                "غشاء نووي"
+              ],
+              "correct_answer": "إنزيمات نوعية وطاقة",
+              "explanation": "الوثيقة تبين تدخل إنزيم تنشيط وATP."
+            }
+          ]
+        },
+        "display_order": 11
+      },
+      {
+        "id": "step_12",
+        "type": "bac_method",
+        "component": "BacMethodCard",
+        "title": "كيف تستخرج متطلبات الترجمة من مجموعة وثائق؟",
+        "content": {
+          "skill": "استغلال الوثائق للوصول إلى قائمة متطلبات الترجمة",
+          "method": [
+            {
+              "label": "1. الوثيقة 1",
+              "text": "اربط الريبوزومات وARNm بخروج السلاسل الببتيدية، واستنتج مقر الترجمة ومتعدد الريبوزوم."
+            },
+            {
+              "label": "2. الوثيقة 2",
+              "text": "حدد ARNm وARNr وARNt واستنتج تدخل الأنواع الثلاثة من ARN."
+            },
+            {
+              "label": "3. الوثيقة 3",
+              "text": "اربط بنية الريبوزوم بوظيفته ومكوناته ARNr والبروتينات."
+            },
+            {
+              "label": "4. الوثيقة 4",
+              "text": "استخرج موقعي ARNt واربطهما بالنقل والتعرف على الرامزة."
+            },
+            {
+              "label": "5. الوثيقة 5",
+              "text": "استخرج تدخل الأحماض الأمينية والإنزيمات النوعية والطاقة في تجهيز ARNt."
+            },
+            {
+              "label": "6. التركيب",
+              "text": "اجمع العناصر في خلاصة واحدة بدل إعادة وصف الوثائق."
+            }
+          ],
+          "bac_sentence": "تتطلب الترجمة ARNm الحامل للرسالة، وريبوزومات تمثل مقر الترجمة وتتكون من ARNr وبروتينات، وARNt متخصصا في نقل الأحماض الأمينية والتعرف على رامزات ARNm، إضافة إلى الأحماض الأمينية الحرة وإنزيمات نوعية وطاقة.",
+          "common_mistakes": [
+            "نسيان الإنزيمات النوعية والطاقة عند استخلاص المتطلبات من الوثيقة 5.",
+            "الخلط بين ARNm وARNt.",
+            "القول إن ARNr ينقل الأحماض الأمينية.",
+            "اعتبار متعدد الريبوزوم ريبوزوما واحدا.",
+            "شرح آلية تنشيط الأحماض الأمينية بالتفصيل رغم أن السؤال يطلب المتطلبات فقط.",
+            "الدخول في مراحل الانطلاق والاستطالة والنهاية داخل هذا المحور."
+          ]
+        },
+        "display_order": 12
+      },
+      {
+        "id": "step_13",
+        "type": "final_visual_map",
+        "component": "InteractiveSummaryMap",
+        "title": "الخلاصة: متطلبات الترجمة في خريطة واحدة",
+        "content": {
+          "map": [
+            {
+              "node": "ARNm",
+              "relation": "يحمل",
+              "target": "الرسالة والرامزات"
+            },
+            {
+              "node": "الريبوزوم",
+              "relation": "يمثل",
+              "target": "مقر الترجمة"
+            },
+            {
+              "node": "الريبوزوم",
+              "relation": "يتكون من",
+              "target": "ARNr + بروتينات"
+            },
+            {
+              "node": "ARNt",
+              "relation": "ينقل",
+              "target": "حمضا أمينيا"
+            },
+            {
+              "node": "ARNt",
+              "relation": "يتعرف بواسطة",
+              "target": "الرامزة المضادة"
+            },
+            {
+              "node": "الأحماض الأمينية الحرة",
+              "relation": "تمثل",
+              "target": "مواد بناء البروتين"
+            },
+            {
+              "node": "إنزيمات نوعية + ATP",
+              "relation": "تسمح بـ",
+              "target": "تجهيز الحمض الأميني وربطه بـ ARNt"
+            },
+            {
+              "node": "عدة ريبوزومات + ARNm واحد",
+              "relation": "تشكل",
+              "target": "متعدد الريبوزوم"
+            }
+          ],
+          "memory_tip": "ARNm + ريبوزوم + ARNt + أحماض أمينية + إنزيمات + طاقة.",
+          "next_axis_bridge": {
+            "question": "كيف يرتبط كل حمض أميني بالـ ARNt المناسب له قبل وصوله إلى الريبوزوم؟",
+            "next_concept": "المحور التالي: تنشيط الأحماض الأمينية وربطها بـ ARNt."
+          }
+        },
+        "display_order": 13
+      },
+      {
+        "id": "step_14",
+        "type": "quiz",
+        "component": "FinalQuiz",
+        "title": "اختبار نهاية المحور",
+        "content": {
+          "questions": [
+            {
+              "id": "q1",
+              "question": "ما تعريف متعدد الريبوزوم؟",
+              "choices": [
+                "عدة ريبوزومات مرتبطة بـ ARNm واحد وتترجمه في الوقت نفسه",
+                "ريبوزوم واحد كبير",
+                "مجموعة ARNt فقط"
+              ],
+              "correct_answer": "عدة ريبوزومات مرتبطة بـ ARNm واحد وتترجمه في الوقت نفسه",
+              "explanation": "كل ريبوزوم يبني سلسلة ببتيدية مستقلة."
+            },
+            {
+              "id": "q2",
+              "question": "أي نوع ARN يدخل في تركيب الريبوزوم؟",
+              "choices": [
+                "ARNr",
+                "ARNm فقط",
+                "ARNt فقط"
+              ],
+              "correct_answer": "ARNr",
+              "explanation": "الريبوزوم يتكون من ARNr وبروتينات."
+            },
+            {
+              "id": "q3",
+              "question": "ما وظيفة ARNt؟",
+              "choices": [
+                "نقل الحمض الأميني والتعرف على الرامزة الموافقة",
+                "حمل المورثة",
+                "تكوين الريبوزوم وحده"
+              ],
+              "correct_answer": "نقل الحمض الأميني والتعرف على الرامزة الموافقة",
+              "explanation": "يملك موقع تثبيت للحمض الأميني ورامزة مضادة."
+            },
+            {
+              "id": "q4",
+              "question": "ما العناصر التي تبينها الوثيقة 5؟",
+              "choices": [
+                "حمض أميني + ARNt + إنزيم نوعي + ATP",
+                "ADN + ARN بوليميراز",
+                "ريبوزوم فقط"
+              ],
+              "correct_answer": "حمض أميني + ARNt + إنزيم نوعي + ATP",
+              "explanation": "هذه العناصر تسمح بتجهيز ARNt الحامل للحمض الأميني."
+            },
+            {
+              "id": "q5",
+              "question": "أي قائمة تمثل متطلبات الترجمة بصورة أشمل؟",
+              "choices": [
+                "ARNm، ريبوزومات، ARNt، أحماض أمينية، إنزيمات نوعية، طاقة",
+                "ARNm فقط",
+                "ADN وARN بوليميراز فقط"
+              ],
+              "correct_answer": "ARNm، ريبوزومات، ARNt، أحماض أمينية، إنزيمات نوعية، طاقة",
+              "explanation": "هذه خلاصة الوثائق 1 إلى 5."
+            }
+          ],
+          "mastery_threshold": 4
+        },
+        "display_order": 14
+      }
+    ],
+    "presentation": {
+      "hook": "وصلت رسالة ARNm إلى الهيولى؛ من يقرأها، ومن يجلب الأحماض الأمينية، وما الذي يسمح باستعمالها؟",
+      "promise": "ستستخرج فريق الترجمة من خمس وثائق حقيقية دون حفظ فقرة جاهزة.",
+      "rhythm": [
+        "مشكلة",
+        "وثيقة 1",
+        "متعدد الريبوزوم",
+        "وثيقة 2",
+        "وثيقة 3",
+        "وثيقة 4",
+        "مقارنة",
+        "وثيقة 5",
+        "تجميع المتطلبات",
+        "تحقق",
+        "منهجية",
+        "خلاصة"
+      ],
+      "mode": "document_first_learning",
+      "student_first": true,
+      "reveal_teacher_after_think": true,
+      "max_text_lines_per_card": 6,
+      "avoid_repetition": true,
+      "show_progress_as_journey": true
+    },
+    "curriculum_goal": "استخراج متطلبات الترجمة وتحديد مقرها والعناصر الجزيئية المتدخلة فيها: ARNm والريبوزوم وARNr وARNt والأحماض الأمينية الحرة والإنزيمات النوعية والطاقة، مع ربط بنية كل عنصر بوظيفته الأساسية.",
+    "document_bank": [
+      {
+        "document_id": "ps_axis051_doc01_polysome",
+        "file_name": "polysome_evidence.png",
+        "src": "/science/protein-synthesis/axis-05-1/polysome_evidence.png",
+        "document_type": "electron_microscopy_and_scheme",
+        "source": {
+          "kind": "lesson_pdf",
+          "page": 2,
+          "figure": "الوثيقة (1)"
+        },
+        "skills": [
+          "identify_translation_site",
+          "identify_polysome",
+          "link_ribosome_to_protein_synthesis"
+        ],
+        "scientific_entities": [
+          "ARNm",
+          "ريبوزوم",
+          "متعدد الريبوزوم",
+          "سلسلة ببتيدية"
+        ],
+        "pedagogical_roles": [
+          "lesson_evidence",
+          "axis_exercise",
+          "ai_axis_exercise",
+          "bac_similar"
+        ],
+        "difficulty": 2,
+        "interpretation_scope": "تحديد مقر تركيب البروتين وتعريف متعدد الريبوزوم.",
+        "safe_claims": [
+          "ترتبط عدة ريبوزومات بجزيئة ARNm واحدة.",
+          "تخرج من الريبوزومات سلاسل ببتيدية.",
+          "القراءة المتزامنة تسمح بإنتاج عدة سلاسل."
+        ],
+        "forbidden_inferences": [
+          "شرح مراحل الترجمة التفصيلية من هذه الوثيقة وحدها.",
+          "اعتبار البوليزوم ريبوزوما واحدا."
+        ],
+        "ai_generation": {
+          "allowed": true,
+          "allowed_question_types": [
+            "observe",
+            "infer",
+            "explain_polysome",
+            "identify_site"
+          ],
+          "max_documents_with": 2
+        },
+        "lesson_step": "step_2"
+      },
+      {
+        "document_id": "ps_axis051_doc02_rna_types",
+        "file_name": "rna_types_centrifugation.png",
+        "src": "/science/protein-synthesis/axis-05-1/rna_types_centrifugation.png",
+        "document_type": "centrifugation_graph_and_table",
+        "source": {
+          "kind": "lesson_pdf",
+          "page": 2,
+          "figure": "الوثيقة (2)"
+        },
+        "skills": [
+          "read_graph",
+          "read_table",
+          "identify_rna_types",
+          "infer_translation_requirements"
+        ],
+        "scientific_entities": [
+          "ARNm",
+          "ARNr",
+          "ARNt",
+          "معامل الترسيب"
+        ],
+        "pedagogical_roles": [
+          "lesson_evidence",
+          "axis_exercise",
+          "ai_axis_exercise",
+          "bac_similar"
+        ],
+        "difficulty": 3,
+        "interpretation_scope": "استخراج الأنواع الثلاثة من ARN المتدخلة أثناء تركيب البروتين.",
+        "safe_claims": [
+          "الشوكات 1 و2 و3 مرتبطة بـ ARNr.",
+          "الشوكة 4 مرتبطة بـ ARNt.",
+          "الشوكة 5 مرتبطة بـ ARNm.",
+          "النسب العامة في الجدول: 80% ARNr، 15% ARNt، 5% ARNm."
+        ],
+        "forbidden_inferences": [
+          "استخراج وظيفة كل نوع كاملة من المنحنى وحده دون الاستعانة بباقي الوثائق.",
+          "القول إن نسبة ARNm ثابتة في جميع الخلايا والظروف."
+        ],
+        "ai_generation": {
+          "allowed": true,
+          "allowed_question_types": [
+            "read_graph",
+            "compare",
+            "identify_peak",
+            "infer"
+          ],
+          "max_documents_with": 2
+        },
+        "lesson_step": "step_4"
+      },
+      {
+        "document_id": "ps_axis051_doc03_ribosome",
+        "file_name": "ribosome_structure.png",
+        "src": "/science/protein-synthesis/axis-05-1/ribosome_structure.png",
+        "document_type": "molecular_and_functional_ribosome_models",
+        "source": {
+          "kind": "lesson_pdf",
+          "page": 3,
+          "figure": "الوثيقة (3)"
+        },
+        "skills": [
+          "identify_ribosome_subunits",
+          "identify_A_P_sites",
+          "link_structure_function"
+        ],
+        "scientific_entities": [
+          "ARNr",
+          "بروتينات",
+          "تحت وحدة صغرى",
+          "تحت وحدة كبرى",
+          "A",
+          "P",
+          "نفق"
+        ],
+        "pedagogical_roles": [
+          "lesson_evidence",
+          "axis_exercise",
+          "ai_axis_exercise",
+          "bac_similar"
+        ],
+        "difficulty": 3,
+        "interpretation_scope": "ربط البنية الكيميائية والوظيفية للريبوزوم بدوره كمقر للترجمة.",
+        "safe_claims": [
+          "الريبوزوم يتكون من ARNr وبروتينات.",
+          "له تحت وحدتان.",
+          "توجد مواقع ارتباط ARNm وARNt.",
+          "يوجد نفق لخروج السلسلة."
+        ],
+        "forbidden_inferences": [
+          "تفصيل دورة الانتقال بين A وP ضمن هذا المحور.",
+          "اختزال وظيفة الريبوزوم في القراءة فقط."
+        ],
+        "ai_generation": {
+          "allowed": true,
+          "allowed_question_types": [
+            "label",
+            "structure_function",
+            "compare_subunits",
+            "identify_site"
+          ],
+          "max_documents_with": 2
+        },
+        "lesson_step": "step_5"
+      },
+      {
+        "document_id": "ps_axis051_doc04_trna",
+        "file_name": "trna_structure.png",
+        "src": "/science/protein-synthesis/axis-05-1/trna_structure.png",
+        "document_type": "trna_2d_3d_models",
+        "source": {
+          "kind": "lesson_pdf",
+          "page": 3,
+          "figure": "الوثيقة (4)"
+        },
+        "skills": [
+          "identify_amino_acid_site",
+          "identify_anticodon",
+          "link_trna_structure_function"
+        ],
+        "scientific_entities": [
+          "ARNt",
+          "حمض أميني",
+          "رامزة مضادة",
+          "ARNm"
+        ],
+        "pedagogical_roles": [
+          "lesson_evidence",
+          "axis_exercise",
+          "ai_axis_exercise",
+          "bac_similar"
+        ],
+        "difficulty": 2,
+        "interpretation_scope": "تحديد الموقعين الوظيفيين في ARNt وربطهما بالنقل والتعرف.",
+        "safe_claims": [
+          "ARNt يحمل حمضا أمينيا.",
+          "الرامزة المضادة مكملة لرامزة ARNm الموافقة."
+        ],
+        "forbidden_inferences": [
+          "شرح تفاعل إنزيم التنشيط من هذه الوثيقة وحدها.",
+          "القول إن ARNt يحمل رامزة بدل رامزة مضادة."
+        ],
+        "ai_generation": {
+          "allowed": true,
+          "allowed_question_types": [
+            "label",
+            "infer_function",
+            "codon_anticodon_relation"
+          ],
+          "max_documents_with": 2
+        },
+        "lesson_step": "step_7"
+      },
+      {
+        "document_id": "ps_axis051_doc05_activation_requirements",
+        "file_name": "aminoacyl_trna_activation.png",
+        "src": "/science/protein-synthesis/axis-05-1/aminoacyl_trna_activation.png",
+        "document_type": "amino_acid_activation_scheme",
+        "source": {
+          "kind": "lesson_pdf",
+          "page": 3,
+          "figure": "الوثيقة (5)"
+        },
+        "skills": [
+          "identify_activation_requirements",
+          "identify_energy_need",
+          "infer_aminoacyl_trna_product"
+        ],
+        "scientific_entities": [
+          "حمض أميني",
+          "ARNt",
+          "إنزيم نوعي",
+          "ATP",
+          "AMP"
+        ],
+        "pedagogical_roles": [
+          "lesson_evidence",
+          "axis_exercise",
+          "ai_axis_exercise",
+          "bridge_to_next_axis"
+        ],
+        "difficulty": 3,
+        "interpretation_scope": "في هذا المحور تستعمل الوثيقة فقط لإضافة الإنزيمات النوعية والطاقة إلى متطلبات الترجمة؛ التفاصيل الميكانيكية تحفظ للمحور التالي.",
+        "safe_claims": [
+          "تتطلب العملية حمضا أمينيا وARNt وإنزيما نوعيا وATP.",
+          "الناتج هو حمض أميني مرتبط بـ ARNt الخاص به."
+        ],
+        "forbidden_inferences": [
+          "شرح المراحل الجزيئية الدقيقة لتنشيط الحمض الأميني داخل هذا المحور.",
+          "التوسع في aminoacyl-AMP أو تفاصيل التفاعل إذا لم يطلب ذلك."
+        ],
+        "ai_generation": {
+          "allowed": true,
+          "allowed_question_types": [
+            "identify_requirements",
+            "infer_energy_need",
+            "bridge_question"
+          ],
+          "max_documents_with": 2
+        },
+        "lesson_step": "step_9"
+      }
+    ],
+    "scientific_quality_control": {
+      "version": "2.0",
+      "axis_boundary": {
+        "axis_starts_at": "وصول ARNm إلى الهيولى والحاجة إلى عناصر الترجمة",
+        "axis_ends_at": "تحديد متطلبات الترجمة ووظيفة كل عنصر بصورة عامة",
+        "allowed": [
+          "ARNm",
+          "ARNr",
+          "ARNt",
+          "ريبوزوم",
+          "متعدد الريبوزوم",
+          "الأحماض الأمينية الحرة",
+          "إنزيمات نوعية",
+          "ATP",
+          "موقعا A وP",
+          "رامزة مضادة"
+        ],
+        "next_axis_only": [
+          "التفاصيل الكاملة لتنشيط الأحماض الأمينية",
+          "آلية aminoacyl-tRNA synthetase خطوة بخطوة"
+        ],
+        "later_translation_axis": [
+          "الانطلاق",
+          "الاستطالة",
+          "النهاية",
+          "تكوين الرابطة الببتيدية بالتفصيل",
+          "انتقال الريبوزوم رامزة بعد رامزة"
+        ]
+      },
+      "rules": [
+        "متعدد الريبوزوم هو عدة ريبوزومات على ARNm واحد وليس ريبوزوما واحدا.",
+        "الريبوزوم يتكون من ARNr وبروتينات وله تحت وحدتان.",
+        "ARNt يحمل الحمض الأميني ويملك رامزة مضادة مكملة لرامزة ARNm.",
+        "الوثيقة 5 تثبت ضرورة إنزيم نوعي وطاقة على شكل ATP لتجهيز الحمض الأميني وربطه بـ ARNt.",
+        "في هذا المحور لا تشرح آلية تنشيط الأحماض الأمينية بالتفصيل؛ يكفي استخراج متطلباتها ونتيجتها العامة.",
+        "لا تدخل في مراحل الانطلاق والاستطالة والنهاية؛ فهي محور مستقل لاحق."
+      ]
+    }
+  }
+}

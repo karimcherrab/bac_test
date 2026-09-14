@@ -1,0 +1,217 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "session": "ordinary",
+  "year": 2024,
+  "chapter_code": "probability",
+  "chapter_title": "الاحتمالات",
+  "branches": [
+    {
+      "code": "science",
+      "name": "شعبة علوم تجريبية"
+    }
+  ],
+  "version": "4.2-2024-science-probability-subject1-ex01",
+  "axis_tags": [
+    "probability_events_law",
+    "probability_counting",
+    "probability_conditional",
+    "random_variable_probability_law_expectation",
+    "probability_draw_modeling"
+  ],
+  "exercise_number": 1,
+  "subject_number": 1,
+  "source_page": 1,
+  "source_pages": [
+    1
+  ],
+  "solution_source_pages": [
+    5
+  ],
+  "title": "التمرين الأول — بكالوريا الجزائر 2024 — الموضوع الأول — شعبة علوم تجريبية",
+  "statement": "يحتوي كيس على 11 كرية متماثلة لا نفرق بينها باللمس موزعة كما يلي: كريتان بيضاوان مرقمتان بـ: 1 ، 3\nوأربع كريات حمراء مرقمة بـ: 0 ، 1 ، 1 ، 3 وخمس كريات خضراء مرقمة بـ: 0 ، 1 ، 1 ، 3 ، 4\nI) نسحب عشوائيا وفي آن واحد 3 كريات من الكيس ونعتبر الحوادث الآتية:\nA : \"الحصول على 3 كريات من نفس اللون\"\nB : \"الحصول على 3 كريات جداء أرقامها عدد فردي\"\nC : \"الحصول على 3 كريات جداء أرقامها عدد زوجي\"\n1) أ) احسب P(A) احتمال الحادثة A وبين أن: P(B)=56/165 ثم استنتج P(C)\nب) احسب الاحتمال الشرطي P_A(B)\n2) X المتغير العشوائي الذي يرفق بكل عملية سحب لثلاث كريات، عدد الكريات التي تحمل رقما زوجيا.\nأ) عين قانون الاحتمال للمتغير العشوائي X ثم احسب أمله الرياضياتي E(X)\nب) احسب احتمال الحادثة (X>1)\nII) نسحب الآن من الكيس عشوائيا 3 كريات على التوالي وبدون إرجاع.\n- احسب احتمال الحادثة D : \"الحصول على 3 كريات جداء أرقامها معدوم\" ",
+  "questions": [
+    {
+      "id": "2024_s1_probability_ex01_q1a",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "I) 1) أ) احسب \\(P(A)\\) احتمال الحادثة \\(A\\) وبين أن: \\(P(B)=\\frac{56}{165}\\) ثم استنتج \\(P(C)\\).",
+      "axis_tags": [
+        "probability_events_law",
+        "probability_counting"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "السحب يتم في آن واحد، لذلك نستعمل التوفيقات. عدد الحالات الكلي هو اختيار 3 كريات من أصل 11.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "عدد الحالات الممكنة",
+            "explanation": "\\[|\\Omega|=\\binom{11}{3}=165\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب P(A)",
+            "explanation": "حتى نحصل على 3 كريات من نفس اللون، لا يمكن اختيار البيضاء لأن عددها 2 فقط. يمكن اختيار 3 حمراء من 4 أو 3 خضراء من 5:\n\\[P(A)=\\frac{\\binom43+\\binom53}{\\binom{11}3}=\\frac{4+10}{165}=\\frac{14}{165}\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب P(B)",
+            "explanation": "حتى يكون جداء الأرقام فرديا يجب أن تكون الأرقام الثلاثة كلها فردية. في الكيس 8 كريات تحمل أرقاما فردية، لذلك:\n\\[P(B)=\\frac{\\binom83}{\\binom{11}3}=\\frac{56}{165}\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "استنتاج P(C)",
+            "explanation": "الجداء إما فردي أو زوجي، وبالتالي \\(C=\\overline B\\):\n\\[P(C)=1-P(B)=1-\\frac{56}{165}=\\frac{109}{165}\\]"
+          }
+        ],
+        "final_answer": "\\(P(A)=\\frac{14}{165}\\)، \\(P(B)=\\frac{56}{165}\\)، \\(P(C)=\\frac{109}{165}\\)."
+      }
+    },
+    {
+      "id": "2024_s1_probability_ex01_q1b",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "ب) احسب الاحتمال الشرطي \\(P_A(B)\\).",
+      "axis_tags": [
+        "probability_conditional"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل تعريف الاحتمال الشرطي: \\(P_A(B)=\\frac{P(A\\cap B)}{P(A)}\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تحديد A تقاطع B",
+            "explanation": "نريد 3 كريات من نفس اللون وفي الوقت نفسه أرقامها كلها فردية. بين الحمراء توجد 3 كريات فردية، وبين الخضراء توجد 3 كريات فردية. إذن عدد الحالات الملائمة هو:\n\\[\\binom33+\\binom33=2\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب P(A∩B)",
+            "explanation": "\\[P(A\\cap B)=\\frac2{165}\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب الاحتمال الشرطي",
+            "explanation": "\\[P_A(B)=\\frac{P(A\\cap B)}{P(A)}=\\frac{2/165}{14/165}=\\frac{2}{14}=\\frac17\\]"
+          }
+        ],
+        "final_answer": "\\(\\displaystyle P_A(B)=\\frac17\\)."
+      }
+    },
+    {
+      "id": "2024_s1_probability_ex01_q2a",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "2) أ) عين قانون الاحتمال للمتغير العشوائي \\(X\\) ثم احسب أمله الرياضياتي \\(E(X)\\).",
+      "axis_tags": [
+        "random_variable_probability_law_expectation",
+        "probability_counting"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "في الكيس 3 كريات تحمل رقما زوجيا: كريتان تحملان 0 وكرية تحمل 4، و8 كريات تحمل أرقاما فردية. المتغير X يعد عدد الكريات الزوجية ضمن 3 كريات مسحوبة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "قيم X",
+            "explanation": "يمكن أن نسحب 0 أو 1 أو 2 أو 3 كريات ذات رقم زوجي، لذلك:\n\\[X(\\Omega)=\\{0,1,2,3\\}\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب P(X=0)",
+            "explanation": "نختار الكريات الثلاث كلها من 8 كريات فردية:\n\\[P(X=0)=\\frac{\\binom83}{\\binom{11}3}=\\frac{56}{165}\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب P(X=1)",
+            "explanation": "نختار كرية زوجية واحدة من 3 وكريتين فرديتين من 8:\n\\[P(X=1)=\\frac{\\binom31\\binom82}{165}=\\frac{3\\times28}{165}=\\frac{84}{165}\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "حساب P(X=2)",
+            "explanation": "نختار كريتين زوجيتين من 3 وكرية فردية من 8:\n\\[P(X=2)=\\frac{\\binom32\\binom81}{165}=\\frac{3\\times8}{165}=\\frac{24}{165}\\]"
+          },
+          {
+            "step_number": 5,
+            "title": "حساب P(X=3)",
+            "explanation": "نختار الكريات الزوجية الثلاث:\n\\[P(X=3)=\\frac{\\binom33}{165}=\\frac1{165}\\]"
+          },
+          {
+            "step_number": 6,
+            "title": "قانون الاحتمال",
+            "explanation": "\\[\\begin{array}{c|cccc}x_i&0&1&2&3\\\\\\hline P(X=x_i)&\\frac{56}{165}&\\frac{84}{165}&\\frac{24}{165}&\\frac1{165}\\end{array}\\]"
+          },
+          {
+            "step_number": 7,
+            "title": "حساب E(X)",
+            "explanation": "\\[E(X)=0\\times\\frac{56}{165}+1\\times\\frac{84}{165}+2\\times\\frac{24}{165}+3\\times\\frac1{165}\\]\n\\[E(X)=\\frac{84+48+3}{165}=\\frac{135}{165}=\\frac9{11}\\]"
+          }
+        ],
+        "final_answer": "قانون \\(X\\): \\(\\frac{56}{165},\\frac{84}{165},\\frac{24}{165},\\frac1{165}\\) للقيم \\(0,1,2,3\\) على الترتيب، و\\(E(X)=\\frac9{11}\\)."
+      }
+    },
+    {
+      "id": "2024_s1_probability_ex01_q2b",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "ب) احسب احتمال الحادثة \\((X>1)\\).",
+      "axis_tags": [
+        "random_variable_probability_law_expectation"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "الشرط \\(X>1\\) يعني \\(X=2\\) أو \\(X=3\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "جمع الاحتمالين",
+            "explanation": "\\[P(X>1)=P(X=2)+P(X=3)\\]\n\\[P(X>1)=\\frac{24}{165}+\\frac1{165}=\\frac{25}{165}=\\frac5{33}\\]"
+          }
+        ],
+        "final_answer": "\\(\\displaystyle P(X>1)=\\frac5{33}\\)."
+      }
+    },
+    {
+      "id": "2024_s1_probability_ex01_qII",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "II) نسحب الآن من الكيس عشوائيا 3 كريات على التوالي وبدون إرجاع. - احسب احتمال الحادثة \\(D\\): \"الحصول على 3 كريات جداء أرقامها معدوم\".",
+      "axis_tags": [
+        "probability_draw_modeling",
+        "probability_events_law"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "يكون الجداء معدوما إذا احتوت الكريات الثلاث المسحوبة على كرية واحدة على الأقل رقمها 0. نحسب احتمال الحدث المضاد: عدم سحب أي كرية تحمل 0.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "عدد الكريات ذات الرقم 0",
+            "explanation": "في الكيس كريتان تحملان الرقم \\(0\\)، وبالتالي توجد 9 كريات غير معدومة الرقم."
+          },
+          {
+            "step_number": 2,
+            "title": "حساب الحدث المضاد",
+            "explanation": "بدون إرجاع وعلى التوالي:\n\\[P(\\overline D)=\\frac9{11}\\times\\frac8{10}\\times\\frac7{9}=\\frac{28}{55}\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب P(D)",
+            "explanation": "\\[P(D)=1-P(\\overline D)=1-\\frac{28}{55}=\\frac{27}{55}\\]"
+          }
+        ],
+        "final_answer": "\\(\\displaystyle P(D)=\\frac{27}{55}\\)."
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2024(1).pdf",
+    "statement_figure_policy": "لا يوجد شكل معطى في نص التمرين.",
+    "solution_figure_policy": "لا يحتاج الحل إلى رسم.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  }
+}

@@ -1,0 +1,234 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2015-tech-math-space-subject2-ex01-detailed",
+  "session": "ordinary",
+  "year": 2015,
+  "chapter_code": "space_geometry",
+  "chapter_title": "الهندسة في الفضاء",
+  "axis_tags": [
+    "space_parametric_line_plane",
+    "space_relative_positions_intersections",
+    "space_cartesian_plane_normal_vector",
+    "space_projections_distances",
+    "space_areas_volumes"
+  ],
+  "branches": [
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "exercise_number": 1,
+  "subject_number": 2,
+  "source_page": 3,
+  "source_pages": [
+    3
+  ],
+  "solution_source_pages": [
+    7
+  ],
+  "title": "التمرين الأول — بكالوريا الجزائر 2015 — الموضوع الثاني — شعبة تقني رياضي",
+  "statement": "في الفضاء المنسوب إلى المعلم المتعامد والمتجانس \\((O;\\vec{i},\\vec{j},\\vec{k})\\)، نعتبر النقطتين \\(A(2;3;1)\\)، \\(B(1;2;-2)\\) والمستقيم \\((D)\\) الذي تمثيله الوسيطي:\n\\[\n\\begin{cases}\nx=1\\\\\ny=1-t\\\\\nz=3+2t\n\\end{cases}\n\\qquad(t\\in\\mathbb R).\n\\]",
+  "questions": [
+    {
+      "id": "2015_s2_space_ex01_q1a",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) أ) اكتب تمثيلا وسيطيا للمستقيم \\((\\Delta)\\) الذي يشمل النقطة \\(A\\) و\\(\\vec u(1;2;-2)\\) شعاع توجيه له.",
+      "axis_tags": [
+        "space_parametric_line_plane"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نكتب مباشرة تمثيل مستقيم يمر بـA وله شعاع التوجيه u.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التمثيل الوسيطي",
+            "explanation": "\\[\\Delta:\\begin{cases}x=2+\\lambda\\\\y=3+2\\lambda\\\\z=1-2\\lambda\\end{cases}\\qquad\\lambda\\in\\mathbb R.\\]"
+          }
+        ],
+        "final_answer": "\\[\\Delta:\\begin{cases}x=2+\\lambda\\\\y=3+2\\lambda\\\\z=1-2\\lambda\\end{cases},\\quad\\lambda\\in\\mathbb R.\\]"
+      }
+    },
+    {
+      "id": "2015_s2_space_ex01_q1b",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "ب) عين إحداثيات النقطة \\(C\\) نقطة تقاطع المستقيمين \\((D)\\) و\\((\\Delta)\\).",
+      "axis_tags": [
+        "space_relative_positions_intersections"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نساوي إحداثيات نقطة من D بإحداثيات نقطة من Δ ونحل في الوسيطين.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "استعمال الإحداثي x",
+            "explanation": "على \\((D)\\): \\(x=1\\)، وعلى \\((\\Delta)\\): \\(x=2+\\lambda\\). إذن:\n\\[2+\\lambda=1\\Rightarrow\\lambda=-1.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب النقطة على Δ",
+            "explanation": "عند \\(\\lambda=-1\\):\n\\[x=1,\\qquad y=1,\\qquad z=3.\\]\nأي \\(C(1,1,3)\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "التحقق على D",
+            "explanation": "على \\((D)\\)، إذا أخذنا \\(t=0\\) نحصل على:\n\\[(1,1,3).\\]\nإذن النقطة مشتركة فعلا."
+          }
+        ],
+        "final_answer": "\\[C(1;1;3).\\]"
+      }
+    },
+    {
+      "id": "2015_s2_space_ex01_q2",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "2) \\((\\mathcal P)\\) المستوي المعين بالمستقيمين \\((D)\\) و\\((\\Delta)\\). بين أن \\(\\vec n(2;-2;-1)\\) شعاع ناظمي للمستوي \\((\\mathcal P)\\)، ثم استنتج معادلة ديكارتية له.",
+      "axis_tags": [
+        "space_cartesian_plane_normal_vector",
+        "space_dot_product_orthogonality"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نثبت أن n عمودي على شعاعي توجيه المستقيمين، ثم نستعمل نقطة التقاطع C لكتابة معادلة المستوي.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "شعاعا التوجيه",
+            "explanation": "شعاع توجيه \\((D)\\) هو:\n\\[\\vec v_D=(0,-1,2),\\]\nوشعاع توجيه \\((\\Delta)\\) هو:\n\\[\\vec u=(1,2,-2).\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "التحقق من التعامد",
+            "explanation": "\\[\\vec n\\cdot\\vec v_D=2\\times0+(-2)(-1)+(-1)2=0,\\]\n\\[\\vec n\\cdot\\vec u=2(1)+(-2)2+(-1)(-2)=0.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "كتابة المعادلة",
+            "explanation": "بما أن \\(\\vec n=(2,-2,-1)\\)، فالمعادلة من الشكل:\n\\[2x-2y-z+d=0.\\]\nو\\(C(1,1,3)\\in\\mathcal P\\)، لذلك:\n\\[2-2-3+d=0\\Rightarrow d=3.\\]"
+          }
+        ],
+        "final_answer": "\\[(\\mathcal P):2x-2y-z+3=0.\\]"
+      }
+    },
+    {
+      "id": "2015_s2_space_ex01_q3a",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "3) أ) اكتب معادلة ديكارتية للمستوي \\((Q)\\) الذي يشمل النقطة \\(B\\) ويعامد المستقيم \\((\\Delta)\\).",
+      "axis_tags": [
+        "space_cartesian_plane_normal_vector"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "إذا كان المستوي Q عموديا على المستقيم Δ، فإن شعاع توجيه Δ يكون شعاعا ناظميا لـQ.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "اختيار الشعاع الناظم",
+            "explanation": "\\[\\vec u=(1,2,-2)\\] شعاع ناظم للمستوي \\(Q\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "كتابة المعادلة",
+            "explanation": "معادلة \\(Q\\) من الشكل:\n\\[x+2y-2z+d=0.\\]\nنعوض \\(B(1,2,-2)\\):\n\\[1+4+4+d=0\\Rightarrow d=-9.\\]"
+          }
+        ],
+        "final_answer": "\\[Q:x+2y-2z-9=0.\\]"
+      }
+    },
+    {
+      "id": "2015_s2_space_ex01_q3b",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "ب) عين إحداثيات النقطة \\(E\\) المسقط العمودي للنقطة \\(B\\) على المستقيم \\((\\Delta)\\).",
+      "axis_tags": [
+        "space_projections_distances",
+        "space_relative_positions_intersections"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "بما أن Q يمر بـB ويعامد Δ، فإن E هي نقطة تقاطع Q مع Δ.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التعويض",
+            "explanation": "نعوض تمثيل \\(\\Delta\\):\n\\[x=2+\\lambda,\\quad y=3+2\\lambda,\\quad z=1-2\\lambda\\]\nفي:\n\\[x+2y-2z-9=0.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "إيجاد λ",
+            "explanation": "\\[(2+\\lambda)+2(3+2\\lambda)-2(1-2\\lambda)-9=0\\]\n\\[-3+9\\lambda=0\\Rightarrow\\lambda=\\frac13.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "إحداثيات E",
+            "explanation": "\\[x_E=2+\\frac13=\\frac73,\\]\n\\[y_E=3+\\frac23=\\frac{11}{3},\\]\n\\[z_E=1-\\frac23=\\frac13.\\]"
+          }
+        ],
+        "final_answer": "\\[E\\left(\\frac73;\\frac{11}{3};\\frac13\\right).\\]"
+      }
+    },
+    {
+      "id": "2015_s2_space_ex01_q3c",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "ج) احسب المسافة بين النقطة \\(B\\) والمستقيم \\((\\Delta)\\).",
+      "axis_tags": [
+        "space_projections_distances"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "بما أن E هو المسقط العمودي لـB على Δ، فإن المسافة المطلوبة هي BE.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب BE",
+            "explanation": "\\[\\overrightarrow{BE}=E-B=\\left(\\frac43,\\frac53,\\frac73\\right).\\]\n\\[BE=\\sqrt{\\frac{16+25+49}{9}}=\\sqrt{10}.\\]"
+          }
+        ],
+        "final_answer": "\\[d(B,\\Delta)=BE=\\sqrt{10}.\\]"
+      }
+    },
+    {
+      "id": "2015_s2_space_ex01_q3d",
+      "display_order": 7,
+      "content_type": "question",
+      "text": "د) احسب مساحة المثلث \\(BEC\\).",
+      "axis_tags": [
+        "space_areas_volumes",
+        "space_projections_distances"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "النقطتان E وC تنتميان إلى Δ، وBE عمودي على Δ، لذلك المثلث BEC قائم في E.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب CE",
+            "explanation": "\\[\\overrightarrow{CE}=E-C=\\left(\\frac43,\\frac83,-\\frac83\\right).\\]\n\\[CE=\\sqrt{\\frac{16+64+64}{9}}=4.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب المساحة",
+            "explanation": "بما أن المثلث قائم في \\(E\\):\n\\[S_{BEC}=\\frac12\\,BE\\times CE=\\frac12\\times\\sqrt{10}\\times4=2\\sqrt{10}.\\]"
+          }
+        ],
+        "final_answer": "\\[S_{BEC}=2\\sqrt{10}.\\]"
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2015(2).pdf",
+    "statement_figure_policy": "لا يوجد شكل هندسي إلزامي في نص التمرين.",
+    "solution_figure_policy": "الحل مستقل عن أي رسم.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  }
+}

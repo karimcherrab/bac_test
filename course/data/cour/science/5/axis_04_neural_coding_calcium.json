@@ -1,0 +1,406 @@
+{
+  "tag": "neural_coding_calcium",
+  "title": "التشفير العصبي ودور الكالسيوم في تغيير نمط التشفير",
+  "order": 4,
+  "is_active": true,
+  "branches": ["science"],
+  "content": {
+    "language": "ar",
+    "direction": "rtl",
+    "chapter_code": "neural_communication",
+    "chapter_title": "الاتصال العصبي",
+    "axis_tag": "neural_coding_calcium",
+    "estimated_minutes": 45,
+    "difficulty": "medium",
+    "lesson_goal": "أن يستنتج التلميذ كيفية تغير نمط تشفير الرسالة العصبية عند عبورها المشبك ودور شوارد Ca²⁺ في تحرير المبلغ العصبي.",
+    "prerequisites": [
+      "معرفة قانون الكل أو لا شيء وأن شدة الرسالة على الليف تشفر بتواتر كمونات العمل.",
+      "معرفة مراحل النقل المشبكي ودور قنوات Ca²⁺ والحويصلات.",
+      "معرفة أن PPSE كمون محلي متدرج وقد يبلغ عتبة توليد كمون العمل."
+    ],
+    "learning_outcomes": [
+      "يقرأ تواتر كمونات العمل ويميزه عن سعة كمون العمل.",
+      "يربط زيادة التواتر قبل المشبكي بزيادة دخول Ca²⁺.",
+      "يربط كمية Ca²⁺ بعدد الحويصلات المنطرحة وكمية المبلغ المحررة.",
+      "يربط تركيز المبلغ بعدد المستقبلات القنوية المفتوحة وسعة PPSE.",
+      "يحدد شرط بلوغ PPSE عتبة توليد كمون عمل بعد مشبكي.",
+      "يفسر الانتقال بين التشفير الكهربائي والكيميائي والمتدرج ثم الكهربائي الجديد.",
+      "ينظم مستويات التشفير الأربعة في جدول أو مخطط سببي."
+    ],
+    "learning_path": [
+      {
+        "id": "step_1",
+        "type": "problem",
+        "component": "DiscoveryQuestion",
+        "title": "هل تعبر الشدة المشبك بالشكل نفسه؟",
+        "content": {
+          "question": "قبل المشبك تحمل الرسالة على شكل تواتر كمونات عمل، لكن داخل الشق لا توجد كمونات عمل. كيف تحفظ الخلية معلومة الشدة ثم تحولها بعد المشبك إلى رسالة كهربائية جديدة؟",
+          "teacher": "سنبحث عن سلسلة كميات مترابطة: التواتر، Ca²⁺، عدد الحويصلات، تركيز المبلغ، سعة PPSE، ثم التواتر الجديد.",
+          "action": {"label": "تتبع سلسلة التشفير", "next_step": "step_2"}
+        },
+        "display_order": 1
+      },
+      {
+        "id": "step_2",
+        "type": "short_explanation",
+        "component": "ShortExplanation",
+        "title": "ما معنى التشفير العصبي؟",
+        "content": {
+          "blocks": [
+            {"title": "المعلومة", "text": "قد تكون شدة تنبيه أو تغيرا يريد الجهاز العصبي تمثيله ونقله."},
+            {"title": "الشفرة", "text": "الخاصية القابلة للقياس التي تمثل تلك الشدة في كل مستوى من مسار الرسالة."},
+            {"title": "التواتر", "text": "عدد كمونات العمل المسجلة خلال وحدة زمن؛ زيادة الشدة فوق العتبة ترفع التواتر عادة لا سعة كل كمون."}
+          ],
+          "memory_tip": "التشفير لا يعني تغير المعلومة، بل تغير الطريقة الفيزيولوجية التي تمثلها.",
+          "attention": "لا تقل إن كمون العمل القوي سعتُه أكبر؛ سعة كمون العمل الواحد نمطية، بينما يتغير عدد الكمونات في الزمن."
+        },
+        "display_order": 2
+      },
+      {
+        "id": "step_3",
+        "type": "real_evidence",
+        "component": "RealEvidenceGallery",
+        "title": "الدليل 1: التواتر يتحكم في Ca²⁺",
+        "content": {
+          "intro": "تقارن الوثيقة تغير تركيز Ca²⁺ في النهاية قبل المشبكية عند وصول عدد مختلف من كمونات العمل.",
+          "figures": [{
+            "src": "/science/neural-communication/axis-04/action_frequency_calcium.png",
+            "alt": "منحنيات تغير تركيز الكالسيوم بدلالة تواتر كمونات العمل قبل المشبكية",
+            "caption": "عند وصول كمونات عمل أكثر تتكرر فترات فتح القنوات الكلسية ويرتفع Ca²⁺ داخل النهاية.",
+            "source_label": "الشكل (أ) من الوثيقة 8 - الصفحة 6"
+          }],
+          "guided_reading": [
+            {"label": "كمون عمل واحد", "text": "يفتح قنوات Ca²⁺ الفولطية مدة قصيرة، فيدخل مقدار محدود من Ca²⁺."},
+            {"label": "كمونا عمل متقاربان", "text": "تفتح القنوات مرة أخرى قبل زوال الزيادة السابقة كليا، فيصبح تركيز Ca²⁺ الداخلي أكبر في الوثيقة."},
+            {"label": "العلاقة", "text": "كلما ارتفع تواتر كمونات العمل قبل المشبكية ازدادت كمية Ca²⁺ الداخلة والمتراكمة خلال الفترة المدروسة."
+            }
+          ],
+          "takeaway": "Ca²⁺ يحول شفرة التواتر الكهربائي إلى إشارة داخل خلوية كمية داخل النهاية قبل المشبكية."
+        },
+        "display_order": 3
+      },
+      {
+        "id": "step_4",
+        "type": "key_rule",
+        "component": "KeyRuleCard",
+        "title": "الحلقة الأولى من السلسلة",
+        "content": {
+          "rule": "زيادة تواتر كمونات العمل تزيد مرات فتح قنوات Ca²⁺ المرتبطة بالفولطية، فتزيد كمية Ca²⁺ الداخلة إلى النهاية قبل المشبكية.",
+          "simple_flow": "تواتر قبلي أعلى → فتح أكثر/متكرر لقنوات Ca²⁺ → Ca²⁺ داخلي أكثر",
+          "do_not_confuse": [
+            "Ca²⁺ ليس المبلغ العصبي؛ إنه إشارة إطلاق داخل النهاية قبل المشبكية.",
+            "القناة الكلسية تفتح بالفولطية لا بارتباط الأستيل كولين.",
+            "زيادة Ca²⁺ لا تعني أن سعة كمون العمل القبلي زادت."
+          ],
+          "memory_tip": "التواتر يفتح الباب مرات أكثر؛ لذلك يدخل كالسيوم أكثر."
+        },
+        "display_order": 4
+      },
+      {
+        "id": "step_5",
+        "type": "real_evidence",
+        "component": "RealEvidenceGallery",
+        "title": "الدليل 2: Ca²⁺ يحدد عدد الحويصلات المحررة",
+        "content": {
+          "intro": "تقارن الوثيقة حالة الراحة بتواترين مختلفين من كمونات العمل، وتضيف تجربة حقن Ca²⁺ مباشرة.",
+          "figures": [{
+            "src": "/science/neural-communication/axis-04/calcium_vesicle_release.png",
+            "alt": "صور الحويصلات المشبكية عند الراحة وعند تواترين ونتيجة حقن الكالسيوم",
+            "caption": "ارتفاع التواتر يزيد الحويصلات في حالة إطراح، وحقن Ca²⁺ مباشرة يؤدي إلى تحرير المبلغ.",
+            "source_label": "الشكل (ب) من الوثيقة 8 - الصفحة 6"
+          }],
+          "guided_reading": [
+            {"label": "الراحة", "text": "لا يصل كمون عمل، يبقى Ca²⁺ منخفضا وتبقى معظم الحويصلات داخل النهاية."},
+            {"label": "تواتر متوسط", "text": "تدخل كمية من Ca²⁺ فتندمج مجموعة محدودة من الحويصلات وتحرر محتواها."},
+            {"label": "تواتر أعلى", "text": "يزداد Ca²⁺ فتشارك حويصلات أكثر في الإطراح الخلوي، فتزداد كمية المبلغ في الشق."},
+            {"label": "حقن Ca²⁺", "text": "يؤدي حقنه مباشرة إلى تحرير المبلغ، ما يدعم وجود علاقة سببية لا مجرد تزامن."
+            }
+          ],
+          "takeaway": "كمية Ca²⁺ قبل المشبكية تضبط عدد الحويصلات المندمجة، ولذلك تضبط كمية المبلغ المحررة."
+        },
+        "display_order": 5
+      },
+      {
+        "id": "step_6",
+        "type": "real_evidence",
+        "component": "RealEvidenceGallery",
+        "title": "الدليل 3: من شدة التنبيه إلى تيار بعد مشبكي",
+        "content": {
+          "intro": "تسجل تيارات الغشاء بعد المشبكي عند تنبيهات قبل مشبكية متزايدة، وتعطي كميات متزايدة من الأستيل كولين النتيجة نفسها.",
+          "figures": [{
+            "src": "/science/neural-communication/axis-04/stimulation_transmitter_current.png",
+            "alt": "تسجيلات تيارات بعد مشبكية بسعات مختلفة تبعا لشدة التنبيه أو كمية الأستيل كولين",
+            "caption": "كلما زاد التنبيه القبلي أو كمية المبلغ، ازدادت سعة التيار بعد المشبكي المسجل.",
+            "source_label": "الوثيقة 4 - الصفحة 3"
+          }],
+          "guided_reading": [
+            {"label": "التسجيلات", "text": "تزداد سعة التيار بعد المشبكي مع زيادة الشرط المنبه في الوثيقة."},
+            {"label": "المقابلة الكيميائية", "text": "تعطي زيادة كمية الأستيل كولين في الشق تغيرا مماثلا، ما يربط الاستجابة بكمية المبلغ."},
+            {"label": "التفسير", "text": "مبلغ أكثر يثبت على مستقبلات أكثر في اللحظة نفسها، فتفتح قنوات أكثر ويزداد مجموع التيار الأيوني."
+            }
+          ],
+          "takeaway": "في الشق تصبح الشدة ممثلة بكمية أو تركيز المبلغ، وتظهر بعد المشبك في سعة الاستجابة المتدرجة."
+        },
+        "display_order": 6
+      },
+      {
+        "id": "step_7",
+        "type": "real_evidence",
+        "component": "RealEvidenceGallery",
+        "title": "الدليل 4: تركيز المبلغ يحدد سعة PPSE",
+        "content": {
+          "intro": "توضح الوثيقة أثر كميات A وB وC من الأستيل كولين في عدد القنوات المفتوحة والكمون بعد المشبكي.",
+          "figures": [{
+            "src": "/science/neural-communication/axis-04/ach_concentration_ppse.png",
+            "alt": "استجابات PPSE عند كميات متزايدة من الأستيل كولين وتوزع القنوات المفتوحة",
+            "caption": "زيادة المبلغ تفتح قنوات أكثر فتزداد سعة PPSE، وقد تبلغ العتبة فتطلق كمون عمل.",
+            "source_label": "الوثيقة 6 - الصفحة 4"
+          }],
+          "guided_reading": [
+            {"label": "A ثم B", "text": "تزداد سعة PPSE بزيادة كمية الأستيل كولين، لكنها تبقى دون العتبة في الحالتين الممثلتين."},
+            {"label": "C", "text": "يصبح PPSE كبيرا بما يكفي لبلوغ العتبة، فيتولد كمون عمل بعد مشبكي."},
+            {"label": "الخاصية", "text": "PPSE متدرج: سعته متغيرة بحسب عدد القنوات الكيميائية المفتوحة، ولا يطبق عليه قانون الكل أو لا شيء."}
+          ],
+          "takeaway": "تركيز المبلغ هو الشفرة الكيميائية في الشق، وسعة PPSE هي الشفرة المتدرجة على الغشاء بعد المشبكي."
+        },
+        "display_order": 7
+      },
+      {
+        "id": "step_8",
+        "type": "comparison",
+        "component": "VisualComparison",
+        "title": "جدول تغير نمط التشفير",
+        "content": {
+          "columns": [
+            {"title": "المستوى", "items": ["العنصر قبل المشبكي", "الشق المشبكي", "الغشاء بعد المشبكي", "المحور بعد المشبكي"]},
+            {"title": "نمط التشفير", "items": ["تواتر كمونات العمل", "تركيز المبلغ العصبي", "سعة الكمون بعد المشبكي PPSE", "تواتر كمونات العمل الجديدة"]}
+          ],
+          "attention": "لا ينتقل شكل الشفرة نفسه عبر كل المستويات؛ الذي يبقى هو علاقة الشدة بالقيمة الممثلة لها.",
+          "memory_tip": "تواتر → تركيز → سعة → تواتر جديد."
+        },
+        "display_order": 8
+      },
+      {
+        "id": "step_9",
+        "type": "key_rule",
+        "component": "KeyRuleCard",
+        "title": "السلسلة السببية الكاملة",
+        "content": {
+          "rule": "ارتفاع تواتر كمونات العمل قبل المشبكية يزيد Ca²⁺ الداخل، فيزيد عدد الحويصلات المفرغة وتركيز المبلغ، فتفتح مستقبلات أكثر وتكبر سعة PPSE؛ وعند بلوغ العتبة تتولد كمونات عمل بعد مشبكية يعبّر تواترها الجديد عن الرسالة الناتجة.",
+          "simple_flow": "تواتر قبلي ↑ → Ca²⁺ ↑ → حويصلات محررة ↑ → مبلغ ↑ → قنوات بعدية مفتوحة ↑ → PPSE أكبر → بلوغ العتبة → تواتر بعدي جديد",
+          "do_not_confuse": [
+            "لا يتولد تواتر بعد مشبكي جديد إذا بقي PPSE دون العتبة.",
+            "العلاقة بين المراحل اتجاهية سببية، لكنها ليست بالضرورة تناسبا خطيا بسيطا في كل القيم.",
+            "التواتر الجديد لا يساوي آليا التواتر القديم؛ يتأثر بخصائص الخلية وبالرسائل الأخرى الواصلة إليها."
+          ],
+          "memory_tip": "Ca²⁺ هو الجسر الكمي بين تواتر القبلي وكمية المبلغ."
+        },
+        "display_order": 9
+      },
+      {
+        "id": "step_10",
+        "type": "real_evidence",
+        "component": "RealEvidenceGallery",
+        "title": "ضع كل شفرة في مكانها",
+        "content": {
+          "intro": "استعمل الرسم لتحديد موضع كل متغير: التواتر قبليا، Ca²⁺ والحويصلات في النهاية، المبلغ في الشق، PPSE بعديا.",
+          "figures": [{
+            "src": "/science/neural-communication/axis-04/coding_conversion_synapse.png",
+            "alt": "رسم كامل للمشبك يبين الكالسيوم والحويصلات والمبلغ والمستقبلات وPPSE",
+            "caption": "يتيح الرسم توطين حلقات تحويل التشفير داخل المشبك الكيميائي.",
+            "source_label": "الرسم التحصيلي - الصفحة 8"
+          }],
+          "guided_reading": [
+            {"label": "قبل المشبك", "text": "التواتر يصل ككمونات عمل، وتحوّله القنوات إلى كمية Ca²⁺ داخلية."},
+            {"label": "في الشق", "text": "يتحول أثر Ca²⁺ إلى كمية مبلغ محررة، أي شفرة كيميائية."},
+            {"label": "بعد المشبك", "text": "يتحول تركيز المبلغ إلى عدد قنوات مفتوحة ثم إلى سعة PPSE."},
+            {"label": "بعد العتبة", "text": "إذا بلغت السعة العتبة يبدأ المحور بعد المشبكي ترميزا كهربائيا بتواتر جديد."
+            }
+          ],
+          "takeaway": "المشبك ليس مجرد نقطة عبور؛ إنه موقع تحويل نمط التشفير."
+        },
+        "display_order": 10
+      },
+      {
+        "id": "step_11",
+        "type": "quick_check",
+        "component": "QuickCheck",
+        "title": "اختبر العلاقات الكمية",
+        "content": {
+          "questions": [
+            {"id": "qc1", "question": "ما النتيجة المباشرة لزيادة تواتر كمونات العمل قبل المشبكية؟", "choices": ["زيادة دخول Ca²⁺", "زيادة سعة كل كمون عمل", "غلق القنوات الكلسية"], "correct_answer": "زيادة دخول Ca²⁺", "explanation": "تتكرر فترات فتح القنوات المرتبطة بالفولطية."},
+            {"id": "qc2", "question": "أي متغير يمثل شفرة الرسالة داخل الشق؟", "choices": ["تركيز المبلغ العصبي", "سعة كمون العمل القبلي", "عدد قنوات التسرب"], "correct_answer": "تركيز المبلغ العصبي", "explanation": "الشق لا ينقل كمونات عمل؛ تنتشر فيه جزيئات المبلغ."},
+            {"id": "qc3", "question": "إذا بقي PPSE دون العتبة، ماذا يحدث؟", "choices": ["لا يتولد كمون عمل بعد مشبكي", "يتولد نصف كمون عمل", "تزداد سعة كمون الراحة"], "correct_answer": "لا يتولد كمون عمل بعد مشبكي", "explanation": "توليد كمون العمل يتطلب بلوغ العتبة."
+            }
+          ]
+        },
+        "display_order": 11
+      },
+      {
+        "id": "step_12",
+        "type": "bac_method",
+        "component": "BacMethodCard",
+        "title": "منهجية تفسير تغير التشفير",
+        "content": {
+          "skill": "ربط منحنيات التواتر والكالسيوم والتحرير وPPSE في استنتاج واحد",
+          "method": [
+            {"label": "1. حدد المتغير المستقل", "text": "ابدأ بتواتر كمونات العمل قبل المشبكية وقارن الحالات المعروضة."},
+            {"label": "2. استخرج أثره في Ca²⁺", "text": "ارتفاع التواتر يقابله ارتفاع تركيز Ca²⁺ داخل النهاية قبل المشبكية."},
+            {"label": "3. اربط بالتحرير", "text": "Ca²⁺ أكثر يعني اندماج حويصلات أكثر وتحرير مبلغ بكمية أكبر."},
+            {"label": "4. حلل PPSE", "text": "مبلغ أكثر يفتح قنوات أكثر فتزداد سعة PPSE وقد تبلغ العتبة."},
+            {"label": "5. سم أنماط التشفير", "text": "تواتر قبلي → تركيز كيميائي → سعة بعد مشبكية → تواتر بعدي جديد."
+            }
+          ],
+          "bac_sentence": "تؤدي زيادة تواتر كمونات العمل قبل المشبكية إلى زيادة فتح قنوات Ca²⁺ الفولطية ودخول كمية أكبر من Ca²⁺، فيندمج عدد أكبر من الحويصلات ويزداد تركيز المبلغ العصبي في الشق. يتثبت المبلغ على مستقبلات أكثر فتفتح قنوات أكثر وتزداد سعة PPSE؛ فإذا بلغت العتبة تولدت كمونات عمل بعد مشبكية مشفرة بتواتر جديد. لذلك يتغير التشفير من تواتر كهربائي إلى تركيز كيميائي ثم إلى سعة متدرجة وأخيرا إلى تواتر كهربائي جديد.",
+          "common_mistakes": [
+            "القول إن زيادة التواتر ترفع سعة كمون العمل الواحد.",
+            "اعتبار Ca²⁺ مبلغا عصبيا يسبح في الشق.",
+            "القفز من التواتر إلى PPSE دون ذكر الحويصلات وتركيز المبلغ.",
+            "اعتبار PPSE خاضعا للكل أو لا شيء.",
+            "القول إن كل PPSE يولد تواترا بعد مشبكيًا مهما كانت سعته."
+          ]
+        },
+        "display_order": 12
+      },
+      {
+        "id": "step_13",
+        "type": "final_visual_map",
+        "component": "InteractiveSummaryMap",
+        "title": "خريطة أنماط التشفير",
+        "content": {
+          "map": [
+            {"node": "عنصر قبل مشبكي", "relation": "تشفير كهربائي", "target": "تواتر كمونات العمل"},
+            {"node": "التواتر", "relation": "يضبط عبر قنوات Ca²⁺", "target": "كمية Ca²⁺ الداخلة"},
+            {"node": "Ca²⁺", "relation": "يضبط الإطراح", "target": "تركيز المبلغ في الشق"},
+            {"node": "تركيز المبلغ", "relation": "يضبط عدد القنوات المفتوحة", "target": "سعة PPSE"},
+            {"node": "PPSE يبلغ العتبة", "relation": "يولد", "target": "تواتر كمونات عمل بعد مشبكية"}
+          ],
+          "memory_tip": "تواتر → Ca²⁺ → مبلغ → سعة → عتبة → تواتر جديد.",
+          "next_axis_bridge": {"question": "إذا وصلت إلى العصبون عدة PPSE وPPSI، كيف يجمعها ليقرر بلوغ العتبة؟", "next_concept": "آلية الإدماج العصبي"}
+        },
+        "display_order": 13
+      },
+      {
+        "id": "step_14",
+        "type": "quiz",
+        "component": "FinalQuiz",
+        "title": "اختبار نهاية المحور",
+        "content": {
+          "questions": [
+            {"id": "q1", "question": "بماذا تشفر الرسالة على العنصر قبل المشبكي؟", "choices": ["بتواتر كمونات العمل", "بتركيز المبلغ", "بسعة PPSE"], "correct_answer": "بتواتر كمونات العمل", "explanation": "هذه شفرة الرسالة الكهربائية على المحور القبلي."},
+            {"id": "q2", "question": "ما دور Ca²⁺ في تغيير نمط التشفير؟", "choices": ["ربط التواتر بعدد الحويصلات المحررة", "زيادة سعة كمون العمل", "تفكيك المبلغ في الشق"], "correct_answer": "ربط التواتر بعدد الحويصلات المحررة", "explanation": "كمية Ca²⁺ تضبط الإطراح الخلوي."},
+            {"id": "q3", "question": "ما النتيجة المتوقعة لارتفاع Ca²⁺ قبل المشبكي؟", "choices": ["تحرير حويصلات أكثر", "غلق جميع الحويصلات", "انخفاض تركيز المبلغ"], "correct_answer": "تحرير حويصلات أكثر", "explanation": "Ca²⁺ يحفز اندماج الحويصلات."},
+            {"id": "q4", "question": "كيف تشفر الرسالة على الغشاء بعد المشبكي قبل بلوغ العتبة؟", "choices": ["بسعة PPSE", "بتواتر كمونات عمل دائما", "بكمية Ca²⁺ خارج الخلية"], "correct_answer": "بسعة PPSE", "explanation": "PPSE استجابة متدرجة تتعلق بعدد القنوات المفتوحة."},
+            {"id": "q5", "question": "أي سلسلة صحيحة؟", "choices": ["تواتر ↑ → Ca²⁺ ↑ → مبلغ ↑ → PPSE أكبر", "تواتر ↑ → Ca²⁺ ↓ → مبلغ ↑", "مبلغ ↑ → حويصلات أقل → PPSE أصغر"], "correct_answer": "تواتر ↑ → Ca²⁺ ↑ → مبلغ ↑ → PPSE أكبر", "explanation": "هذه السلسلة المركزية للمحور."},
+            {"id": "q6", "question": "متى يبدأ التشفير بتواتر جديد بعد المشبك؟", "choices": ["عندما يبلغ PPSE العتبة", "عند أي PPSE مهما كان صغيرا", "قبل تحرير المبلغ"], "correct_answer": "عندما يبلغ PPSE العتبة", "explanation": "بلوغ العتبة شرط توليد كمونات العمل الجديدة."
+            }
+          ],
+          "mastery_threshold": 5
+        },
+        "display_order": 14
+      }
+    ],
+    "document_bank": [
+      {
+        "document_id": "nc_axis04_doc01_frequency_calcium",
+        "file_name": "action_frequency_calcium.png",
+        "src": "/science/neural-communication/axis-04/action_frequency_calcium.png",
+        "document_type": "calcium_frequency_curves",
+        "source": {"kind": "lesson_pdf", "page": 6, "figure": "الوثيقة (8) الشكل (أ)"},
+        "skills": ["read_frequency", "compare_calcium_curves", "infer_relationship"],
+        "scientific_entities": ["تواتر كمونات العمل", "Ca²⁺", "قنوات كلسية فولطية"],
+        "pedagogical_roles": ["lesson_evidence", "axis_exercise", "ai_axis_exercise", "bac_similar"],
+        "difficulty": 3,
+        "interpretation_scope": "تربط ارتفاع التواتر بزيادة Ca²⁺ قبل المشبكي.",
+        "safe_claims": ["كمونات أكثر تقابل ارتفاعا أكبر لـCa²⁺ في الوثيقة.", "القنوات الكلسية تفتح بوصول كمون العمل."],
+        "forbidden_inferences": ["القول إن Ca²⁺ هو المبلغ العصبي.", "القول إن سعة كمون العمل زادت."],
+        "ai_generation": {"allowed": true, "allowed_question_types": ["observe", "compare", "infer", "predict"], "max_documents_with": 3}
+      },
+      {
+        "document_id": "nc_axis04_doc02_calcium_release",
+        "file_name": "calcium_vesicle_release.png",
+        "src": "/science/neural-communication/axis-04/calcium_vesicle_release.png",
+        "document_type": "em_release_frequency_experiment",
+        "source": {"kind": "lesson_pdf", "page": 6, "figure": "الوثيقة (8) الشكل (ب)"},
+        "skills": ["compare_em_states", "link_calcium_exocytosis", "infer_causality"],
+        "scientific_entities": ["حويصلات", "إطراح خلوي", "Ca²⁺", "مبلغ عصبي"],
+        "pedagogical_roles": ["lesson_evidence", "axis_exercise", "ai_axis_exercise", "bac_similar"],
+        "difficulty": 4,
+        "interpretation_scope": "تربط Ca²⁺ بعدد الحويصلات المحررة وكمية المبلغ.",
+        "safe_claims": ["زيادة التواتر تزيد الحويصلات في حالة إطراح.", "حقن Ca²⁺ يحرر المبلغ في التجربة."],
+        "forbidden_inferences": ["القول إن Ca²⁺ مخزن داخل الحويصلات بوصفه المبلغ.", "اعتبار الصور قياسا مباشرا لتركيز المبلغ دون تفسير."],
+        "ai_generation": {"allowed": true, "allowed_question_types": ["compare", "correlate", "infer_causality"], "preferred_pair": "nc_axis04_doc01_frequency_calcium"}
+      },
+      {
+        "document_id": "nc_axis04_doc03_current_intensity",
+        "file_name": "stimulation_transmitter_current.png",
+        "src": "/science/neural-communication/axis-04/stimulation_transmitter_current.png",
+        "document_type": "postsynaptic_current_intensity_curves",
+        "source": {"kind": "lesson_pdf", "page": 3, "figure": "الوثيقة (4)"},
+        "skills": ["compare_current_amplitudes", "link_stimulus_transmitter", "infer_graded_response"],
+        "scientific_entities": ["شدة التنبيه", "كمية الأستيل كولين", "تيار بعد مشبكي"],
+        "pedagogical_roles": ["lesson_evidence", "axis_exercise", "ai_axis_exercise"],
+        "difficulty": 3,
+        "interpretation_scope": "تربط زيادة الشرط القبلي أو كمية المبلغ بسعة التيار البعدي.",
+        "safe_claims": ["سعة التيار تتدرج مع الشرط التجريبي.", "زيادة الأستيل كولين تعطي أثرا مماثلا لزيادة التنبيه في الوثيقة."],
+        "forbidden_inferences": ["اعتبار منحنى التيار كمون عمل.", "القول إن كل تيار يولد كمون عمل."],
+        "ai_generation": {"allowed": true, "allowed_question_types": ["compare", "interpret", "infer"], "max_documents_with": 2}
+      },
+      {
+        "document_id": "nc_axis04_doc04_ach_ppse",
+        "file_name": "ach_concentration_ppse.png",
+        "src": "/science/neural-communication/axis-04/ach_concentration_ppse.png",
+        "document_type": "dose_response_ppse",
+        "source": {"kind": "lesson_pdf", "page": 4, "figure": "الوثيقة (6)"},
+        "skills": ["read_ppse_amplitude", "identify_threshold", "link_transmitter_channels"],
+        "scientific_entities": ["تركيز المبلغ", "PPSE", "عتبة", "قنوات كيميائية"],
+        "pedagogical_roles": ["lesson_evidence", "axis_exercise", "ai_axis_exercise", "bac_similar"],
+        "difficulty": 4,
+        "interpretation_scope": "تربط كمية المبلغ بسعة PPSE وبلوغ العتبة.",
+        "safe_claims": ["PPSE يزداد مع كمية الأستيل كولين في الوثيقة.", "الكمية C تبلغ العتبة في الرسم."],
+        "forbidden_inferences": ["تطبيق الكل أو لا شيء على PPSE.", "القول إن الكميتين A وB تولدان كمون عمل في الرسم."],
+        "ai_generation": {"allowed": true, "allowed_question_types": ["compare", "read_threshold", "predict", "explain"], "max_documents_with": 3}
+      },
+      {
+        "document_id": "nc_axis04_doc05_conversion_map",
+        "file_name": "coding_conversion_synapse.png",
+        "src": "/science/neural-communication/axis-04/coding_conversion_synapse.png",
+        "document_type": "complete_synapse_coding_map",
+        "source": {"kind": "lesson_pdf", "page": 8, "role": "رسم تحصيلي"},
+        "skills": ["locate_coding_levels", "construct_causal_chain", "explain_conversion"],
+        "scientific_entities": ["كمون عمل", "Ca²⁺", "حويصلات", "مبلغ", "PPSE"],
+        "pedagogical_roles": ["lesson_summary", "lesson_evaluation", "axis_exercise", "ai_axis_exercise"],
+        "difficulty": 3,
+        "interpretation_scope": "توطّن حلقات تحويل التشفير على مكونات المشبك.",
+        "safe_claims": ["Ca²⁺ قبل مشبكي.", "المبلغ في الشق.", "PPSE بعد مشبكي."],
+        "forbidden_inferences": ["القول إن الرسم وحده يثبت التناسب الكمي.", "إهمال شرط العتبة عند الانتقال إلى تواتر جديد."],
+        "ai_generation": {"allowed": true, "allowed_question_types": ["label", "order", "complete_chain", "explain"], "max_documents_with": 2}
+      }
+    ],
+    "presentation": {
+      "hook": "كيف يحافظ المشبك على معلومة الشدة مع أن نمط الرسالة يتغير داخله؟",
+      "promise": "ستبني السلسلة كاملة من التواتر إلى Ca²⁺ ثم المبلغ وPPSE والتواتر الجديد.",
+      "rhythm": ["حدد الشفرة", "اقرأ التواتر", "اربط Ca²⁺", "احسب العلاقة", "تتبع العتبة", "حوّل النمط", "لخص"],
+      "mode": "evidence_story_learning",
+      "student_first": true,
+      "reveal_teacher_after_think": true,
+      "max_text_lines_per_card": 6,
+      "avoid_repetition": true,
+      "show_progress_as_journey": true
+    },
+    "scientific_quality_control": {
+      "version": "1.0",
+      "rules": [
+        "شدة الرسالة الكهربائية تشفر بتواتر كمونات العمل لا بسعة كمون العمل الواحد.",
+        "زيادة التواتر ترفع كمية Ca²⁺ الداخلة عبر القنوات الفولطية في الفترة المدروسة.",
+        "Ca²⁺ إشارة داخل خلوية لتحرير المبلغ وليس مبلغا عصبيا.",
+        "تركيز المبلغ في الشق يتحدد بكمية الحويصلات المحررة وبحجم الوسط والزمن؛ لا تفترض تناسبا خطيا مطلقا.",
+        "سعة PPSE متدرجة وتتعلق بعدد القنوات الكيميائية المفتوحة.",
+        "لا يتولد تواتر بعد مشبكي جديد إلا إذا بلغ زوال الاستقطاب العتبة.",
+        "التواتر البعدي الجديد قد يتأثر بخصائص العصبون وبالإدماج مع رسائل أخرى.",
+        "افصل بين مواضع التشفير: تواتر قبلي، تركيز في الشق، سعة على الغشاء، تواتر بعدي."
+      ]
+    },
+    "curriculum_goal": "استخلاص تغير نمط تشفير الرسالة العصبية عند مستوى المشبك وتحديد دور Ca²⁺ في تحويل التواتر القبلي إلى كمية مبلغ محررة."
+  }
+}

@@ -1,0 +1,465 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "5.0-physics-bac-unified",
+  "version": "4.2-2012-subject01-exercise03-rl-react-compatible-inline-svg-detailed-unified-detailed-kvl",
+  "session": "ordinary",
+  "year": 2012,
+  "subject_number": 1,
+  "part": null,
+  "chapter_code": "electrical_phenomena_evolution",
+  "chapter_title": "تطور دراسة ظواهر كهربائية",
+  "axis_tags": [
+    "inductor_fundamental_relations",
+    "rl_current_establishment_differential_equation",
+    "rl_time_constant_graphical_analysis"
+  ],
+  "branches": [
+    {
+      "code": "math",
+      "name": "شعبة رياضيات"
+    },
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "exercise_number": 3,
+  "source_page": 2,
+  "source_pages": [
+    2,
+    3
+  ],
+  "solution_source_pages": [
+    11,
+    12
+  ],
+  "title": "التمرين الثالث — بكالوريا الجزائر 2012 — الموضوع الأول — شعبة رياضيات وتقني رياضي",
+  "statement": "التمرين الثالث: (03,5 نقطة)\nتتكون دارة كهربائية (الشكل-3) مما يلي:\n- مولد توتر مستمر قوته المحركة الكهربائية E=6,0V.\n- قاطعة K.\n- وشيعة ذاتيتها L ومقاومتها r=10Ω.\n- ناقل أومي مقاومته R=200Ω.\nفي اللحظة t=0s نغلق القاطعة K، فبواسطة الـExAO يمكن معاينة التوتر الكهربائي u_AB و u_BC (الشكل-4) و(الشكل-5).",
+  "statement_figures": [
+    {
+      "id": "2012_s01_ex03_circuit",
+      "type": "svg",
+      "usage": "statement",
+      "placement": "statement",
+      "title": "الشكل-3",
+      "description": "دارة RL تحتوي على مولد E وناقل أومي R ووشيعة حقيقية (L,r).",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 860 360\" role=\"img\" aria-label=\"الشكل-3 دارة RL\">\n<rect width=\"860\" height=\"360\" fill=\"white\"/>\n<defs><marker id=\"arr\" markerWidth=\"10\" markerHeight=\"10\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L0,6 L9,3 z\" fill=\"#111827\"/></marker></defs>\n<g fill=\"none\" stroke=\"#111827\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n <line x1=\"120\" y1=\"80\" x2=\"315\" y2=\"80\"/>\n <line x1=\"350\" y1=\"80\" x2=\"690\" y2=\"80\"/>\n <line x1=\"690\" y1=\"80\" x2=\"690\" y2=\"120\"/>\n <circle cx=\"690\" cy=\"133\" r=\"5\" fill=\"#111827\"/>\n <circle cx=\"690\" cy=\"195\" r=\"5\" fill=\"#111827\"/>\n <line x1=\"690\" y1=\"195\" x2=\"690\" y2=\"285\"/>\n <path d=\"M690 285 c-12 -23 -24 -23 -36 0 c-12 23 -24 23 -36 0 c-12 -23 -24 -23 -36 0 c-12 23 -24 23 -36 0 c-12 -23 -24 -23 -36 0\"/>\n <line x1=\"546\" y1=\"285\" x2=\"465\" y2=\"285\"/>\n <rect x=\"305\" y=\"265\" width=\"160\" height=\"40\"/>\n <line x1=\"305\" y1=\"285\" x2=\"120\" y2=\"285\"/>\n <line x1=\"120\" y1=\"285\" x2=\"120\" y2=\"80\"/>\n <line x1=\"690\" y1=\"133\" x2=\"650\" y2=\"181\"/>\n</g>\n<g stroke=\"#111827\" stroke-width=\"4\">\n <line x1=\"90\" y1=\"170\" x2=\"150\" y2=\"170\"/>\n <line x1=\"100\" y1=\"194\" x2=\"140\" y2=\"194\"/>\n</g>\n<text x=\"160\" y=\"191\" font-family=\"DejaVu Sans,Arial\" font-size=\"27\">E</text>\n<line x1=\"175\" y1=\"52\" x2=\"270\" y2=\"52\" stroke=\"#111827\" stroke-width=\"3\" marker-end=\"url(#arr)\"/>\n<text x=\"220\" y=\"39\" text-anchor=\"middle\" font-family=\"DejaVu Sans,Arial\" font-size=\"23\">i</text>\n<text x=\"327\" y=\"51\" font-family=\"DejaVu Sans,Arial\" font-size=\"25\">K</text>\n<text x=\"716\" y=\"205\" font-family=\"DejaVu Sans,Arial\" font-size=\"25\">A</text>\n<text x=\"717\" y=\"314\" font-family=\"DejaVu Sans,Arial\" font-size=\"25\">B</text>\n<text x=\"100\" y=\"315\" font-family=\"DejaVu Sans,Arial\" font-size=\"25\">C</text>\n<text x=\"385\" y=\"252\" text-anchor=\"middle\" font-family=\"DejaVu Sans,Arial\" font-size=\"27\">R</text>\n<text x=\"615\" y=\"245\" text-anchor=\"middle\" font-family=\"DejaVu Sans,Arial\" font-size=\"25\">(L,r)</text>\n<line x1=\"735\" y1=\"305\" x2=\"735\" y2=\"205\" stroke=\"#111827\" stroke-width=\"3\" marker-end=\"url(#arr)\"/>\n<text x=\"755\" y=\"260\" font-family=\"DejaVu Sans,Arial\" font-size=\"22\">u_AB</text>\n<line x1=\"275\" y1=\"330\" x2=\"460\" y2=\"330\" stroke=\"#111827\" stroke-width=\"3\" marker-end=\"url(#arr)\"/>\n<text x=\"368\" y=\"352\" text-anchor=\"middle\" font-family=\"DejaVu Sans,Arial\" font-size=\"22\">u_BC</text>\n</svg>",
+      "render_mode": "inline",
+      "responsive": true
+    },
+    {
+      "id": "2012_s01_ex03_graph_1",
+      "type": "svg",
+      "usage": "statement",
+      "placement": "statement",
+      "title": "الشكل-4 — البيان 1",
+      "description": "منحنى توتر متزايد من الصفر إلى قيمة نهائية تقارب 5,7V.",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 690 410\" role=\"img\" aria-label=\"الشكل-4 البيان 1\">\n<rect width=\"690\" height=\"410\" fill=\"white\"/>\n<defs><marker id=\"ax\" markerWidth=\"10\" markerHeight=\"10\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L0,6 L9,3 z\" fill=\"#111827\"/></marker></defs>\n<g stroke=\"#d1d5db\" stroke-width=\"1\">\n<line x1=\"85.0\" y1=\"70\" x2=\"85.0\" y2=\"335\" /><line x1=\"137.0\" y1=\"70\" x2=\"137.0\" y2=\"335\" /><line x1=\"189.0\" y1=\"70\" x2=\"189.0\" y2=\"335\" /><line x1=\"241.0\" y1=\"70\" x2=\"241.0\" y2=\"335\" /><line x1=\"293.0\" y1=\"70\" x2=\"293.0\" y2=\"335\" /><line x1=\"345.0\" y1=\"70\" x2=\"345.0\" y2=\"335\" /><line x1=\"397.0\" y1=\"70\" x2=\"397.0\" y2=\"335\" /><line x1=\"449.0\" y1=\"70\" x2=\"449.0\" y2=\"335\" /><line x1=\"501.0\" y1=\"70\" x2=\"501.0\" y2=\"335\" /><line x1=\"553.0\" y1=\"70\" x2=\"553.0\" y2=\"335\" /><line x1=\"605.0\" y1=\"70\" x2=\"605.0\" y2=\"335\" />\n<line x1=\"85\" y1=\"335.0\" x2=\"630\" y2=\"335.0\" /><line x1=\"85\" y1=\"293.0\" x2=\"630\" y2=\"293.0\" /><line x1=\"85\" y1=\"251.0\" x2=\"630\" y2=\"251.0\" /><line x1=\"85\" y1=\"209.0\" x2=\"630\" y2=\"209.0\" /><line x1=\"85\" y1=\"167.0\" x2=\"630\" y2=\"167.0\" /><line x1=\"85\" y1=\"125.0\" x2=\"630\" y2=\"125.0\" /><line x1=\"85\" y1=\"83.0\" x2=\"630\" y2=\"83.0\" />\n</g>\n<line x1=\"85\" y1=\"335\" x2=\"645\" y2=\"335\" stroke=\"#111827\" stroke-width=\"3\" marker-end=\"url(#ax)\"/>\n<line x1=\"85\" y1=\"335\" x2=\"85\" y2=\"50\" stroke=\"#111827\" stroke-width=\"3\" marker-end=\"url(#ax)\"/>\n<polyline points=\"85.0,335.0 88.2,323.3 91.5,312.2 94.8,301.6 98.0,291.5 101.2,281.9 104.5,272.8 107.8,264.1 111.0,255.9 114.2,248.0 117.5,240.6 120.8,233.5 124.0,226.7 127.2,220.3 130.5,214.2 133.8,208.4 137.0,202.8 140.2,197.6 143.5,192.6 146.8,187.8 150.0,183.3 153.2,179.0 156.5,174.9 159.8,171.0 163.0,167.3 166.2,163.8 169.5,160.4 172.8,157.2 176.0,154.2 179.2,151.3 182.5,148.6 185.8,145.9 189.0,143.5 192.2,141.1 195.5,138.8 198.8,136.7 202.0,134.7 205.2,132.7 208.5,130.9 211.8,129.1 215.0,127.5 218.2,125.9 221.5,124.4 224.8,123.0 228.0,121.6 231.2,120.3 234.5,119.1 237.8,117.9 241.0,116.8 244.2,115.7 247.5,114.7 250.8,113.7 254.0,112.8 257.2,112.0 260.5,111.1 263.8,110.3 267.0,109.6 270.2,108.9 273.5,108.2 276.8,107.6 280.0,106.9 283.2,106.4 286.5,105.8 289.8,105.3 293.0,104.8 296.2,104.3 299.5,103.9 302.8,103.4 306.0,103.0 309.2,102.6 312.5,102.2 315.8,101.9 319.0,101.6 322.2,101.2 325.5,100.9 328.8,100.6 332.0,100.4 335.2,100.1 338.5,99.9 341.8,99.6 345.0,99.4 348.2,99.2 351.5,99.0 354.8,98.8 358.0,98.6 361.2,98.4 364.5,98.3 367.8,98.1 371.0,97.9 374.2,97.8 377.5,97.7 380.8,97.5 384.0,97.4 387.2,97.3 390.5,97.2 393.8,97.1 397.0,97.0 400.2,96.9 403.5,96.8 406.8,96.7 410.0,96.6 413.2,96.5 416.5,96.5 419.8,96.4 423.0,96.3 426.2,96.3 429.5,96.2 432.8,96.1 436.0,96.1 439.2,96.0 442.5,96.0 445.8,95.9 449.0,95.9 452.2,95.8 455.5,95.8 458.8,95.8 462.0,95.7 465.2,95.7 468.5,95.7 471.8,95.6 475.0,95.6 478.2,95.6 481.5,95.5 484.8,95.5 488.0,95.5 491.2,95.5 494.5,95.4 497.8,95.4 501.0,95.4 504.2,95.4 507.5,95.4 510.8,95.3 514.0,95.3 517.2,95.3 520.5,95.3 523.8,95.3 527.0,95.3 530.2,95.3 533.5,95.2 536.8,95.2 540.0,95.2 543.2,95.2 546.5,95.2 549.8,95.2 553.0,95.2 556.2,95.2 559.5,95.2 562.8,95.2 566.0,95.1 569.2,95.1 572.5,95.1 575.8,95.1 579.0,95.1 582.2,95.1 585.5,95.1 588.8,95.1 592.0,95.1 595.2,95.1 598.5,95.1 601.8,95.1 605.0,95.1\" fill=\"none\" stroke=\"#111827\" stroke-width=\"4\"/>\n<text x=\"28\" y=\"58\" font-family=\"DejaVu Sans,Arial\" font-size=\"23\">u(V)</text>\n<text x=\"590\" y=\"373\" font-family=\"DejaVu Sans,Arial\" font-size=\"23\">t(ms)</text>\n<text x=\"350\" y=\"150\" font-family=\"DejaVu Sans,Arial\" font-size=\"25\" direction=\"rtl\">البيان 1</text>\n</svg>",
+      "render_mode": "inline",
+      "responsive": true
+    },
+    {
+      "id": "2012_s01_ex03_graph_2",
+      "type": "svg",
+      "usage": "statement",
+      "placement": "statement",
+      "title": "الشكل-5 — البيان 2",
+      "description": "منحنى توتر متناقص من 6V إلى قيمة نهائية صغيرة.",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 690 410\" role=\"img\" aria-label=\"الشكل-5 البيان 2\">\n<rect width=\"690\" height=\"410\" fill=\"white\"/>\n<defs><marker id=\"ax\" markerWidth=\"10\" markerHeight=\"10\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L0,6 L9,3 z\" fill=\"#111827\"/></marker></defs>\n<g stroke=\"#d1d5db\" stroke-width=\"1\">\n<line x1=\"85.0\" y1=\"70\" x2=\"85.0\" y2=\"335\" /><line x1=\"137.0\" y1=\"70\" x2=\"137.0\" y2=\"335\" /><line x1=\"189.0\" y1=\"70\" x2=\"189.0\" y2=\"335\" /><line x1=\"241.0\" y1=\"70\" x2=\"241.0\" y2=\"335\" /><line x1=\"293.0\" y1=\"70\" x2=\"293.0\" y2=\"335\" /><line x1=\"345.0\" y1=\"70\" x2=\"345.0\" y2=\"335\" /><line x1=\"397.0\" y1=\"70\" x2=\"397.0\" y2=\"335\" /><line x1=\"449.0\" y1=\"70\" x2=\"449.0\" y2=\"335\" /><line x1=\"501.0\" y1=\"70\" x2=\"501.0\" y2=\"335\" /><line x1=\"553.0\" y1=\"70\" x2=\"553.0\" y2=\"335\" /><line x1=\"605.0\" y1=\"70\" x2=\"605.0\" y2=\"335\" />\n<line x1=\"85\" y1=\"335.0\" x2=\"630\" y2=\"335.0\" /><line x1=\"85\" y1=\"293.0\" x2=\"630\" y2=\"293.0\" /><line x1=\"85\" y1=\"251.0\" x2=\"630\" y2=\"251.0\" /><line x1=\"85\" y1=\"209.0\" x2=\"630\" y2=\"209.0\" /><line x1=\"85\" y1=\"167.0\" x2=\"630\" y2=\"167.0\" /><line x1=\"85\" y1=\"125.0\" x2=\"630\" y2=\"125.0\" /><line x1=\"85\" y1=\"83.0\" x2=\"630\" y2=\"83.0\" />\n</g>\n<line x1=\"85\" y1=\"335\" x2=\"645\" y2=\"335\" stroke=\"#111827\" stroke-width=\"3\" marker-end=\"url(#ax)\"/>\n<line x1=\"85\" y1=\"335\" x2=\"85\" y2=\"50\" stroke=\"#111827\" stroke-width=\"3\" marker-end=\"url(#ax)\"/>\n<polyline points=\"85.0,83.0 88.2,94.7 91.5,105.8 94.8,116.4 98.0,126.5 101.2,136.1 104.5,145.2 107.8,153.9 111.0,162.1 114.2,170.0 117.5,177.4 120.8,184.5 124.0,191.3 127.2,197.7 130.5,203.8 133.8,209.6 137.0,215.2 140.2,220.4 143.5,225.4 146.8,230.2 150.0,234.7 153.2,239.0 156.5,243.1 159.8,247.0 163.0,250.7 166.2,254.2 169.5,257.6 172.8,260.8 176.0,263.8 179.2,266.7 182.5,269.4 185.8,272.1 189.0,274.5 192.2,276.9 195.5,279.2 198.8,281.3 202.0,283.3 205.2,285.3 208.5,287.1 211.8,288.9 215.0,290.5 218.2,292.1 221.5,293.6 224.8,295.0 228.0,296.4 231.2,297.7 234.5,298.9 237.8,300.1 241.0,301.2 244.2,302.3 247.5,303.3 250.8,304.3 254.0,305.2 257.2,306.0 260.5,306.9 263.8,307.7 267.0,308.4 270.2,309.1 273.5,309.8 276.8,310.4 280.0,311.1 283.2,311.6 286.5,312.2 289.8,312.7 293.0,313.2 296.2,313.7 299.5,314.1 302.8,314.6 306.0,315.0 309.2,315.4 312.5,315.8 315.8,316.1 319.0,316.4 322.2,316.8 325.5,317.1 328.8,317.4 332.0,317.6 335.2,317.9 338.5,318.1 341.8,318.4 345.0,318.6 348.2,318.8 351.5,319.0 354.8,319.2 358.0,319.4 361.2,319.6 364.5,319.7 367.8,319.9 371.0,320.1 374.2,320.2 377.5,320.3 380.8,320.5 384.0,320.6 387.2,320.7 390.5,320.8 393.8,320.9 397.0,321.0 400.2,321.1 403.5,321.2 406.8,321.3 410.0,321.4 413.2,321.5 416.5,321.5 419.8,321.6 423.0,321.7 426.2,321.7 429.5,321.8 432.8,321.9 436.0,321.9 439.2,322.0 442.5,322.0 445.8,322.1 449.0,322.1 452.2,322.2 455.5,322.2 458.8,322.2 462.0,322.3 465.2,322.3 468.5,322.3 471.8,322.4 475.0,322.4 478.2,322.4 481.5,322.5 484.8,322.5 488.0,322.5 491.2,322.5 494.5,322.6 497.8,322.6 501.0,322.6 504.2,322.6 507.5,322.6 510.8,322.7 514.0,322.7 517.2,322.7 520.5,322.7 523.8,322.7 527.0,322.7 530.2,322.7 533.5,322.8 536.8,322.8 540.0,322.8 543.2,322.8 546.5,322.8 549.8,322.8 553.0,322.8 556.2,322.8 559.5,322.8 562.8,322.8 566.0,322.9 569.2,322.9 572.5,322.9 575.8,322.9 579.0,322.9 582.2,322.9 585.5,322.9 588.8,322.9 592.0,322.9 595.2,322.9 598.5,322.9 601.8,322.9 605.0,322.9\" fill=\"none\" stroke=\"#111827\" stroke-width=\"4\"/>\n<text x=\"28\" y=\"58\" font-family=\"DejaVu Sans,Arial\" font-size=\"23\">u(V)</text>\n<text x=\"590\" y=\"373\" font-family=\"DejaVu Sans,Arial\" font-size=\"23\">t(ms)</text>\n<text x=\"350\" y=\"195\" font-family=\"DejaVu Sans,Arial\" font-size=\"25\" direction=\"rtl\">البيان 2</text>\n</svg>",
+      "render_mode": "inline",
+      "responsive": true
+    }
+  ],
+  "statement_tables": [],
+  "question_groups": [],
+  "questions": [
+    {
+      "id": "2012_s01_ex03_q1",
+      "display_order": 1,
+      "label": "1",
+      "group_id": null,
+      "content_type": "question",
+      "text": "1- ما هو الجهاز الذي يمكن وضعه بدلا من ExAO لتسجيل المنحنيات البيانية السابقة؟",
+      "axis_tags": [
+        "electric_circuits_fundamentals"
+      ],
+      "figures": [],
+      "tables": [],
+      "solution": {
+        "strategy": "نحل السؤال بطريقة بسيطة ومفهومة خطوة بخطوة: نحتاج جهازا يستطيع تسجيل تطور التوتر بدلالة الزمن.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الجهاز البديل",
+            "explanation": "يمكن استعمال راسم الاهتزاز المهبطي ذي ذاكرة لتسجيل التطور الزمني للتوتر.",
+            "calculation": "",
+            "result": "",
+            "figures": [],
+            "tables": []
+          }
+        ],
+        "final_answer": "راسم الاهتزاز المهبطي ذو ذاكرة.",
+        "verification": "التحقق: نراجع الوحدات والإشارة ونقارن النتيجة بالسلوك الفيزيائي المتوقع أو بالبيان التجريبي.",
+        "hints": [
+          "استخرج المعطيات من النص أو البيان قبل بدء الحساب.",
+          "اكتب العلاقة الفيزيائية الحرفية قبل التعويض العددي."
+        ],
+        "common_mistakes": [
+          "التعويض العددي قبل كتابة العلاقة الحرفية.",
+          "نسيان تحويل الوحدات أو قراءة قيمة غير صحيحة من البيان."
+        ]
+      }
+    },
+    {
+      "id": "2012_s01_ex03_q2",
+      "display_order": 2,
+      "label": "2",
+      "group_id": null,
+      "content_type": "question",
+      "text": "2- اكتب عبارة u_AB بدلالة i(t) و di/dt.",
+      "axis_tags": [
+        "inductor_fundamental_relations"
+      ],
+      "figures": [],
+      "tables": [],
+      "solution": {
+        "strategy": "نحل السؤال بطريقة بسيطة ومفهومة خطوة بخطوة: الوشيعة حقيقية، لذا توترها يساوي مجموع الجزء الأومي والجزء التحريضي.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "عبارة توتر الوشيعة",
+            "explanation": "\\[\\boxed{u_{AB}(t)=r\\,i(t)+L\\frac{di(t)}{dt}}.\\]",
+            "calculation": "",
+            "result": "",
+            "figures": [],
+            "tables": []
+          }
+        ],
+        "final_answer": "\\(\\boxed{u_{AB}=ri+L\\,di/dt}\\).",
+        "verification": "التحقق: نراجع الوحدات والإشارة ونقارن النتيجة بالسلوك الفيزيائي المتوقع أو بالبيان التجريبي.",
+        "hints": [
+          "استخرج المعطيات من النص أو البيان قبل بدء الحساب.",
+          "اكتب العلاقة الفيزيائية الحرفية قبل التعويض العددي."
+        ],
+        "common_mistakes": [
+          "التعويض العددي قبل كتابة العلاقة الحرفية.",
+          "نسيان تحويل الوحدات أو قراءة قيمة غير صحيحة من البيان."
+        ]
+      }
+    },
+    {
+      "id": "2012_s01_ex03_q3",
+      "display_order": 3,
+      "label": "3",
+      "group_id": null,
+      "content_type": "question",
+      "text": "3- اكتب عبارة u_BC بدلالة i(t).",
+      "axis_tags": [
+        "electric_circuits_fundamentals"
+      ],
+      "figures": [],
+      "tables": [],
+      "solution": {
+        "strategy": "نحل السؤال بطريقة بسيطة ومفهومة خطوة بخطوة: نطبق قانون أوم على الناقل الأومي R.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "قانون أوم",
+            "explanation": "\\[\\boxed{u_{BC}(t)=R\\,i(t)}.\\]",
+            "calculation": "",
+            "result": "",
+            "figures": [],
+            "tables": []
+          }
+        ],
+        "final_answer": "\\(\\boxed{u_{BC}=Ri}\\).",
+        "verification": "التحقق: نراجع الوحدات والإشارة ونقارن النتيجة بالسلوك الفيزيائي المتوقع أو بالبيان التجريبي.",
+        "hints": [
+          "استخرج المعطيات من النص أو البيان قبل بدء الحساب.",
+          "اكتب العلاقة الفيزيائية الحرفية قبل التعويض العددي."
+        ],
+        "common_mistakes": [
+          "التعويض العددي قبل كتابة العلاقة الحرفية.",
+          "نسيان تحويل الوحدات أو قراءة قيمة غير صحيحة من البيان."
+        ]
+      }
+    },
+    {
+      "id": "2012_s01_ex03_q4",
+      "display_order": 4,
+      "label": "4",
+      "group_id": null,
+      "content_type": "question",
+      "text": "4- انسب كل منحنى بياني بالتوتر الكهربائي الموافق له u_AB و u_BC. برر.",
+      "axis_tags": [
+        "inductor_fundamental_relations",
+        "rl_current_establishment_differential_equation"
+      ],
+      "figures": [],
+      "tables": [],
+      "solution": {
+        "strategy": "نحل السؤال بطريقة بسيطة ومفهومة خطوة بخطوة: نقارن القيم الابتدائية عند غلق القاطعة: i(0)=0، وبالتالي u_BC(0)=0، بينما u_AB(0)=E.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "عند t=0",
+            "explanation": "لحظة الغلق \\(i(0)=0\\)، ومنه: \\[u_{BC}(0)=Ri(0)=0.\\]",
+            "calculation": "",
+            "result": "",
+            "figures": [],
+            "tables": []
+          },
+          {
+            "step_number": 2,
+            "title": "توتر الوشيعة في البداية",
+            "explanation": "في اللحظة نفسها يتحمل طرفا الوشيعة تقريبا كل توتر المولد، أي \\(u_{AB}(0)=E=6V\\).",
+            "calculation": "",
+            "result": "",
+            "figures": [],
+            "tables": []
+          },
+          {
+            "step_number": 3,
+            "title": "الاستنتاج",
+            "explanation": "إذن المنحنى المتزايد من الصفر (البيان 1) يمثل \\(u_{BC}\\)، والمنحنى المتناقص من 6V (البيان 2) يمثل \\(u_{AB}\\).",
+            "calculation": "",
+            "result": "",
+            "figures": [],
+            "tables": []
+          }
+        ],
+        "final_answer": "البيان 1 ↔ \\(u_{BC}\\)، والبيان 2 ↔ \\(u_{AB}\\).",
+        "verification": "التحقق: نراجع الوحدات والإشارة ونقارن النتيجة بالسلوك الفيزيائي المتوقع أو بالبيان التجريبي.",
+        "hints": [
+          "استخرج المعطيات من النص أو البيان قبل بدء الحساب.",
+          "اكتب العلاقة الفيزيائية الحرفية قبل التعويض العددي."
+        ],
+        "common_mistakes": [
+          "التعويض العددي قبل كتابة العلاقة الحرفية.",
+          "نسيان تحويل الوحدات أو قراءة قيمة غير صحيحة من البيان."
+        ]
+      }
+    },
+    {
+      "id": "2012_s01_ex03_q5",
+      "display_order": 5,
+      "label": "5",
+      "group_id": null,
+      "content_type": "question",
+      "text": "5- اكتب المعادلة التفاضلية التي تحققها شدة التيار الكهربائي i(t) مع إعطاء حل لها.",
+      "axis_tags": [
+        "rl_current_establishment_differential_equation"
+      ],
+      "figures": [],
+      "tables": [],
+      "solution": {
+        "strategy": "نحل السؤال بطريقة بسيطة ومفهومة خطوة بخطوة: نطبق قانون جمع التوترات على الدارة RL ثم نكتبها على الشكل المعياري ونستعمل الشرط الابتدائي i(0)=0.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "قانون جمع التوترات",
+            "explanation": "قبل كتابة المعادلة نثبت جهة التيار واتجاهات التوترات على الدارة المرسومة. بعد ذلك نطبق قانون جمع التوترات على الحلقة المختارة، ثم نعوض بعلاقات العناصر. \\[u_{BC}+u_{AB}=E.\\]",
+            "calculation": "",
+            "result": "",
+            "figures": [
+              {
+                "id": "2012_s01_ex03_q5_kvl_oriented_circuit",
+                "type": "svg",
+                "usage": "solution",
+                "placement": "solution",
+                "title": "دارة RL مع أسهم التوترات والتيار",
+                "description": "رسم تعليمي مضاف إلى خطوة تطبيق قانون جمع التوترات لتوضيح جهة التيار واتجاهات التوترات المرجعية قبل كتابة المعادلة.",
+                "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 980 450\" role=\"img\" aria-label=\"الدارة مع أسهم التوترات والتيار\">\n<rect width=\"100%\" height=\"100%\" fill=\"white\"/>\n\n<defs>\n  <marker id=\"arr\" markerWidth=\"10\" markerHeight=\"10\" refX=\"8\" refY=\"5\" orient=\"auto\">\n    <path d=\"M0,0 L10,5 L0,10 z\" fill=\"#111827\"/>\n  </marker>\n</defs>\n<text x=\"490\" y=\"34\" text-anchor=\"middle\" font-size=\"25\" font-family=\"DejaVu Sans,Arial,sans-serif\" font-weight=\"700\">الدارة مع أسهم التوترات والتيار</text>\n\n<text x=\"490\" y=\"66\" text-anchor=\"middle\" font-size=\"19\" font-family=\"DejaVu Sans,Arial,sans-serif\">دارة RL — اتجاه التيار والتوترات المرجعية</text>\n<line x1=\"135\" y1=\"120\" x2=\"135\" y2=\"320\" stroke=\"#111827\" stroke-width=\"4\"/>\n<line x1=\"171\" y1=\"140\" x2=\"171\" y2=\"300\" stroke=\"#111827\" stroke-width=\"8\"/>\n<text x=\"102\" y=\"222\" font-size=\"28\" font-family=\"DejaVu Sans,Arial,sans-serif\">E</text>\n<path d=\"M171 140 H300\" stroke=\"#111827\" stroke-width=\"4\"/>\n<rect x=\"300\" y=\"112\" width=\"165\" height=\"56\" fill=\"white\" stroke=\"#111827\" stroke-width=\"4\"/>\n<text x=\"383\" y=\"148\" text-anchor=\"middle\" font-size=\"27\" font-family=\"DejaVu Sans,Arial,sans-serif\">R</text>\n<path d=\"M465 140 H520 c18 -38 36 -38 54 0 c18 38 36 38 54 0 c18 -38 36 -38 54 0\" stroke=\"#111827\" stroke-width=\"4\" fill=\"none\"/>\n<path d=\"M682 140 H765 V320 H135\" stroke=\"#111827\" stroke-width=\"4\" fill=\"none\"/>\n<text x=\"602\" y=\"90\" text-anchor=\"middle\" font-size=\"25\" font-family=\"DejaVu Sans,Arial,sans-serif\">(L,r)</text>\n<line x1=\"215\" y1=\"78\" x2=\"735\" y2=\"78\" stroke=\"#111827\" stroke-width=\"3\" marker-end=\"url(#arr)\"/>\n<text x=\"475\" y=\"61\" text-anchor=\"middle\" font-size=\"24\" font-family=\"DejaVu Sans,Arial,sans-serif\">i</text>\n<line x1=\"310\" y1=\"220\" x2=\"455\" y2=\"220\" stroke=\"#111827\" stroke-width=\"3\" marker-end=\"url(#arr)\"/>\n<text x=\"383\" y=\"207\" text-anchor=\"middle\" font-size=\"23\" font-family=\"DejaVu Sans,Arial,sans-serif\">u_R</text>\n<line x1=\"525\" y1=\"220\" x2=\"675\" y2=\"220\" stroke=\"#111827\" stroke-width=\"3\" marker-end=\"url(#arr)\"/>\n<text x=\"600\" y=\"207\" text-anchor=\"middle\" font-size=\"23\" font-family=\"DejaVu Sans,Arial,sans-serif\">u_b</text>\n<line x1=\"95\" y1=\"310\" x2=\"95\" y2=\"145\" stroke=\"#111827\" stroke-width=\"3\" marker-end=\"url(#arr)\"/>\n<text x=\"70\" y=\"230\" font-size=\"23\" font-family=\"DejaVu Sans,Arial,sans-serif\">E</text>\n<text x=\"490\" y=\"390\" text-anchor=\"middle\" font-size=\"21\" font-family=\"DejaVu Sans,Arial,sans-serif\">قانون جمع التوترات: E = u_R + u_b</text>\n\n</svg>",
+                "render_mode": "inline",
+                "responsive": true
+              }
+            ],
+            "tables": []
+          },
+          {
+            "step_number": 2,
+            "title": "التعويض",
+            "explanation": "\\[Ri+ri+L\\frac{di}{dt}=E.\\] أي: \\[\\boxed{L\\frac{di}{dt}+(R+r)i=E}.\\]",
+            "calculation": "",
+            "result": "",
+            "figures": [],
+            "tables": []
+          },
+          {
+            "step_number": 3,
+            "title": "الحل",
+            "explanation": "بوضع \\(\\tau=\\frac{L}{R+r}\\): \\[\\boxed{i(t)=\\frac{E}{R+r}\\left(1-e^{-t/\\tau}\\right)}.\\]",
+            "calculation": "",
+            "result": "",
+            "figures": [],
+            "tables": []
+          }
+        ],
+        "final_answer": "\\(Ldi/dt+(R+r)i=E\\)، وحلها \\(i=\\frac{E}{R+r}(1-e^{-t/\\tau})\\).",
+        "verification": "التحقق: نراجع الإشارات والوحدات، ونتأكد أن النتيجة منسجمة مع اتجاهات التوترات المرسومة ومع السلوك الفيزيائي للدارة.",
+        "hints": [
+          "ابدأ برسم الدارة وتثبيت جهة التيار واتجاهات التوترات قبل تطبيق قانون جمع التوترات.",
+          "اكتب العلاقة الحرفية أولا، ثم عوض بعلاقات العناصر ورتب المعادلة خطوة بخطوة."
+        ],
+        "common_mistakes": [
+          "الخطأ في إشارة أحد التوترات بسبب عدم تحديد اتجاه السهم المرجعي على الدارة.",
+          "الانتقال مباشرة إلى النتيجة النهائية دون كتابة قانون جمع التوترات ثم علاقات العناصر."
+        ]
+      }
+    },
+    {
+      "id": "2012_s01_ex03_q6",
+      "display_order": 6,
+      "label": "6",
+      "group_id": null,
+      "content_type": "question",
+      "text": "6- جد عبارة شدة التيار الكهربائي الأعظمي I_0 الذي يجتاز الدارة عند الوصول إلى النظام الدائم، ثم احسب قيمته.",
+      "axis_tags": [
+        "rl_current_establishment_differential_equation"
+      ],
+      "figures": [],
+      "tables": [],
+      "solution": {
+        "strategy": "نحل السؤال بطريقة بسيطة ومفهومة خطوة بخطوة: في النظام الدائم ينعدم di/dt.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "العبارة الحرفية",
+            "explanation": "\\[\\boxed{I_0=\\frac{E}{R+r}}.\\]",
+            "calculation": "",
+            "result": "",
+            "figures": [],
+            "tables": []
+          },
+          {
+            "step_number": 2,
+            "title": "الحساب",
+            "explanation": "\\[I_0=\\frac{6,0}{200+10}=2,86\\times10^{-2}A=\\boxed{28,6\\,mA}.\\]",
+            "calculation": "",
+            "result": "",
+            "figures": [],
+            "tables": []
+          }
+        ],
+        "final_answer": "\\(\\boxed{I_0=E/(R+r)=28,6mA}\\).",
+        "verification": "التحقق: نراجع الوحدات والإشارة ونقارن النتيجة بالسلوك الفيزيائي المتوقع أو بالبيان التجريبي.",
+        "hints": [
+          "استخرج المعطيات من النص أو البيان قبل بدء الحساب.",
+          "اكتب العلاقة الفيزيائية الحرفية قبل التعويض العددي."
+        ],
+        "common_mistakes": [
+          "التعويض العددي قبل كتابة العلاقة الحرفية.",
+          "نسيان تحويل الوحدات أو قراءة قيمة غير صحيحة من البيان."
+        ]
+      }
+    },
+    {
+      "id": "2012_s01_ex03_q7",
+      "display_order": 7,
+      "label": "7",
+      "group_id": null,
+      "content_type": "question",
+      "text": "7- جد قيمة ثابت الزمن τ بطريقتين مختلفتين مع الشرح.",
+      "axis_tags": [
+        "rl_time_constant_graphical_analysis"
+      ],
+      "figures": [],
+      "tables": [],
+      "solution": {
+        "strategy": "نحل السؤال بطريقة بسيطة ومفهومة خطوة بخطوة: يمكن استعمال مماس المنحنى عند الأصل أو خاصية 63% على البيان 1.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "طريقة المماس",
+            "explanation": "نرسم المماس للبيان 1 عند \\(t=0\\). فاصلة تقاطعه مع الأفقية الموافقة للقيمة النهائية تعطي \\(\\tau\\).",
+            "calculation": "",
+            "result": "",
+            "figures": [],
+            "tables": []
+          },
+          {
+            "step_number": 2,
+            "title": "طريقة 63%",
+            "explanation": "نحسب \\(0,63\\,u_{BC}(\\infty)\\)، ثم نقرأ الزمن الموافق لهذه القيمة على البيان 1.",
+            "calculation": "",
+            "result": "",
+            "figures": [],
+            "tables": []
+          },
+          {
+            "step_number": 3,
+            "title": "النتيجة",
+            "explanation": "بالطريقتين نحصل على: \\[\\boxed{\\tau\\approx2,5\\,ms}.\\]",
+            "calculation": "",
+            "result": "",
+            "figures": [],
+            "tables": []
+          }
+        ],
+        "final_answer": "\\(\\boxed{\\tau\\approx2,5ms}\\) بالمماس عند الأصل أو بطريقة 63%.",
+        "verification": "التحقق: نراجع الوحدات والإشارة ونقارن النتيجة بالسلوك الفيزيائي المتوقع أو بالبيان التجريبي.",
+        "hints": [
+          "استخرج المعطيات من النص أو البيان قبل بدء الحساب.",
+          "اكتب العلاقة الفيزيائية الحرفية قبل التعويض العددي."
+        ],
+        "common_mistakes": [
+          "التعويض العددي قبل كتابة العلاقة الحرفية.",
+          "نسيان تحويل الوحدات أو قراءة قيمة غير صحيحة من البيان."
+        ]
+      }
+    },
+    {
+      "id": "2012_s01_ex03_q8",
+      "display_order": 8,
+      "label": "8",
+      "group_id": null,
+      "content_type": "question",
+      "text": "8- احسب L ذاتية الوشيعة.",
+      "axis_tags": [
+        "rl_time_constant_graphical_analysis"
+      ],
+      "figures": [],
+      "tables": [],
+      "solution": {
+        "strategy": "نحل السؤال بطريقة بسيطة ومفهومة خطوة بخطوة: نستعمل τ=L/(R+r).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الحساب",
+            "explanation": "\\[L=\\tau(R+r)=2,5\\times10^{-3}\\times210=0,525H\\approx\\boxed{0,53H}.\\]",
+            "calculation": "",
+            "result": "",
+            "figures": [],
+            "tables": []
+          }
+        ],
+        "final_answer": "\\(\\boxed{L\\approx0,53H}\\).",
+        "verification": "التحقق: نراجع الوحدات والإشارة ونقارن النتيجة بالسلوك الفيزيائي المتوقع أو بالبيان التجريبي.",
+        "hints": [
+          "استخرج المعطيات من النص أو البيان قبل بدء الحساب.",
+          "اكتب العلاقة الفيزيائية الحرفية قبل التعويض العددي."
+        ],
+        "common_mistakes": [
+          "التعويض العددي قبل كتابة العلاقة الحرفية.",
+          "نسيان تحويل الوحدات أو قراءة قيمة غير صحيحة من البيان."
+        ]
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2012(20260911-113024).pdf",
+    "source_page_numbering": "نص التمرين في الصفحتين 2 و3 من PDF، والتصحيح النموذجي في الصفحتين 11 و12.",
+    "figure_policy": "الدارة والمنحنيان الكهربائيان أعيد إنشاؤهما كـ SVG داخل JSON.",
+    "transcription_policy": "تم الحفاظ على نص الأسئلة والمعطيات، مع تحويل الرموز الرياضية إلى LaTeX فقط.",
+    "correction_notes": [
+      "تم توحيد الملف إلى schema 5.0، وتحويل graph_data إلى figures، وتبسيط بنية الحل، وإضافة رسم دارة موجه عند تطبيق قانون جمع التوترات."
+    ],
+    "unified_schema": true,
+    "legacy_graph_data_removed": true,
+    "detailed_solution_reviewed": true,
+    "kvl_solution_circuits_added": true
+  }
+}

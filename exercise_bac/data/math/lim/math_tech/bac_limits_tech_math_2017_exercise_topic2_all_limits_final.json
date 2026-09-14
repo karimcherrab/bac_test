@@ -1,0 +1,379 @@
+{
+  "schema_version": "3.0-bac-pedagogical-verified",
+  "language": "ar",
+  "direction": "rtl",
+  "branch": {
+    "code": "math_tech",
+    "name": "شعبة تقني رياضي"
+  },
+  "branch_code": "math_tech",
+  "branches": [
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "chapter_code": "limits_continuity",
+  "year": 2017,
+  "session": "ordinary",
+  "subject": 2,
+  "exercise_number": 4,
+  "source_reference": "بكالوريا 2017 — شعبة تقني رياضي — الدورة العادية — الموضوع الثاني — التمرين الرابع.",
+  "title": "بكالوريا 2017 — تقني رياضي — الموضوع الثاني — التمرين الرابع — النهايات",
+  "axis_tags": [
+    "limits_continuity"
+  ],
+  "statement": "I) لتكن الدالة \\(g\\) المعرفة على \\(\\mathbb{R}\\) كما يلي:\n\\[\ng(x)=x^3+6x+12.\n\\]\n\nII) نعتبر الدالة \\(f\\) المعرفة على \\(\\mathbb{R}\\) كما يلي:\n\\[\nf(x)=\\frac{x^3-6}{x^2+2}.\n\\]\nوليكن \\((C_f)\\) تمثيلها البياني.",
+  "statement_graph_data": null,
+  "questions": [
+    {
+      "id": "2017_tech_topic2_limits_g_infinity",
+      "text": "احسب:\n\\[\n\\lim_{x\\to-\\infty}g(x)\n\\qquad\\text{و}\\qquad\n\\lim_{x\\to+\\infty}g(x).\n\\]",
+      "axis_tags": [
+        "limits_continuity"
+      ],
+      "solution": {
+        "strategy": "الدالة \\(g\\) كثيرة حدود. عند اللانهاية نركز على الحد ذي أعلى درجة، وهو \\(x^3\\)، لأنه هو الذي يحدد سلوك الدالة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "النهاية عند +∞",
+            "explanation": "عندما \\(x\\to+\\infty\\)، فإن \\(x^3\\to+\\infty\\) و\\(6x\\to+\\infty\\). لا توجد حالة عدم تعيين.",
+            "latex": "\\lim_{x\\to+\\infty}g(x)=\\lim_{x\\to+\\infty}(x^3+6x+12)=+\\infty",
+            "why": "الحد الغالب \\(x^3\\) يتجه إلى \\(+\\infty\\).",
+            "student_tip": "في كثيرة الحدود، الحد ذو أكبر أس هو الذي يحدد النهاية عند اللانهاية."
+          },
+          {
+            "step_number": 2,
+            "title": "النهاية عند -∞",
+            "explanation": "عندما \\(x\\to-\\infty\\)، فإن \\(x^3\\to-\\infty\\) و\\(6x\\to-\\infty\\). إذن المجموع يتجه إلى \\(-\\infty\\). لا توجد حالة عدم تعيين.",
+            "latex": "\\lim_{x\\to-\\infty}g(x)=\\lim_{x\\to-\\infty}(x^3+6x+12)=-\\infty",
+            "why": "الحد الغالب \\(x^3\\) يتجه إلى \\(-\\infty\\).",
+            "student_tip": "لأن الأس 3 فردي، فإن \\(x^3\\) يحافظ على إشارة x."
+          }
+        ],
+        "final_answer": "\\[\n\\boxed{\\lim_{x\\to-\\infty}g(x)=-\\infty}\n\\qquad\\text{و}\\qquad\n\\boxed{\\lim_{x\\to+\\infty}g(x)=+\\infty}.\n\\]",
+        "verification": "النتيجتان توافقان سلوك كثيرة الحدود ذات الحد الغالب \\(x^3\\).",
+        "common_mistakes": [
+          "نسيان إشارة \\(x^3\\) عند \\(-\\infty\\).",
+          "البحث عن حالة عدم تعيين رغم عدم وجودها هنا."
+        ],
+        "hints": [
+          "ركز على الحد \\(x^3\\).",
+          "عند +∞: \\(x^3\\to+\\infty\\).",
+          "عند -∞: \\(x^3\\to-\\infty\\)."
+        ],
+        "graph_data": null,
+        "table_data": null,
+        "solution_style": "حل مفصل ومبسط جدًا.",
+        "methodology": {
+          "goal": "حساب نهايتي g عند ±∞.",
+          "method": "استعمال الحد ذي أعلى درجة في كثيرة الحدود.",
+          "why_this_method": "لأن الحد الغالب يحدد سلوك كثيرة الحدود عند اللانهاية.",
+          "used_theorem": "نهايات كثيرات الحدود.",
+          "bac_template": [
+            "نحدد الحد ذي أعلى درجة.",
+            "نحسب نهايته.",
+            "نستنتج نهاية كثيرة الحدود."
+          ],
+          "formal_writing": [
+            "نكتب النهاية.",
+            "نحدد الحد الغالب.",
+            "نستنتج."
+          ]
+        },
+        "formal_writing": [
+          "نحدد الحد الغالب.",
+          "نحسب النهاية عند +∞.",
+          "نحسب النهاية عند -∞.",
+          "نكتب النتيجة."
+        ],
+        "react_display": {
+          "show_strategy": true,
+          "show_steps": true,
+          "show_final_answer": true,
+          "show_graph": false,
+          "show_table": false,
+          "graph_key": "graph_data",
+          "table_key": "table_data",
+          "math_renderer": "better-react-mathjax"
+        },
+        "pedagogical_detail": {
+          "level": "مبسط جدًا",
+          "show_intermediate_calculations": true,
+          "explain_rule_before_use": true,
+          "state_final_conclusion": true
+        },
+        "display_order": [
+          "strategy",
+          "steps",
+          "final_answer",
+          "verification"
+        ],
+        "validation": {
+          "final_answer_checked": true,
+          "mathematical_consistency_checked": true
+        },
+        "main_idea": "الحد الغالب في g هو x³.",
+        "detailed_explanation": "لا توجد حالة عدم تعيين في نهايتي g عند ±∞.",
+        "answer_style": "idea_then_steps_then_conclusion"
+      },
+      "display_order": 1,
+      "content_type": "question"
+    },
+    {
+      "id": "2017_tech_topic2_limits_f_infinity",
+      "text": "احسب:\n\\[\n\\lim_{x\\to-\\infty}f(x)\n\\qquad\\text{و}\\qquad\n\\lim_{x\\to+\\infty}f(x).\n\\]",
+      "axis_tags": [
+        "limits_continuity"
+      ],
+      "solution": {
+        "strategy": "نبدأ بتحديد شكل النهاية. عند \\(\\pm\\infty\\) يتجه البسط والمقام في القيمة المطلقة إلى اللانهاية، فنحصل على حالة عدم تعيين من الشكل \\(\\infty/\\infty\\). نرفعها بقسمة البسط والمقام على \\(x^2\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "نحدد شكل النهاية",
+            "explanation": "لدينا \\(x^3-6\\) في البسط و\\(x^2+2\\) في المقام. عند اللانهاية كلاهما غير محدود في القيمة المطلقة.",
+            "latex": "f(x)=\\frac{x^3-6}{x^2+2}\\quad\\Longrightarrow\\quad\\frac{\\infty}{\\infty}",
+            "why": "هذا شكل غير معين، لذلك لا نعطي النتيجة مباشرة.",
+            "student_tip": "إذا ظهر \\(\\infty/\\infty\\)، اكتب صراحة: حالة عدم تعيين."
+          },
+          {
+            "step_number": 2,
+            "title": "نرفع حالة عدم التعيين",
+            "explanation": "نقسم البسط والمقام على \\(x^2\\).",
+            "latex": "f(x)=\\frac{x-\\frac6{x^2}}{1+\\frac2{x^2}}",
+            "why": "بعد القسمة تصبح الحدود \\(6/x^2\\) و\\(2/x^2\\) متجهة إلى الصفر.",
+            "student_tip": "في هذه الدالة القسمة على أعلى قوة في المقام تجعل الحساب بسيطًا."
+          },
+          {
+            "step_number": 3,
+            "title": "النهاية عند +∞",
+            "explanation": "عندما \\(x\\to+\\infty\\): \\(6/x^2\\to0\\) و\\(2/x^2\\to0\\).",
+            "latex": "\\lim_{x\\to+\\infty}f(x)=\\lim_{x\\to+\\infty}\\frac{x-\\frac6{x^2}}{1+\\frac2{x^2}}=+\\infty",
+            "why": "البسط يتصرف مثل x والمقام يتجه إلى 1.",
+            "student_tip": "بعد رفع حالة عدم التعيين يصبح السلوك مثل \\(x\\)."
+          },
+          {
+            "step_number": 4,
+            "title": "النهاية عند -∞",
+            "explanation": "نستعمل نفس الكتابة. عندما \\(x\\to-\\infty\\)، البسط يتصرف مثل x والمقام يتجه إلى 1.",
+            "latex": "\\lim_{x\\to-\\infty}f(x)=\\lim_{x\\to-\\infty}\\frac{x-\\frac6{x^2}}{1+\\frac2{x^2}}=-\\infty",
+            "why": "لأن \\(x\\to-\\infty\\) بينما المقام يتجه إلى عدد موجب هو 1.",
+            "student_tip": "نفس التبسيط صالح عند +∞ و-∞."
+          }
+        ],
+        "final_answer": "\\[\n\\boxed{\\lim_{x\\to-\\infty}f(x)=-\\infty}\n\\qquad\\text{و}\\qquad\n\\boxed{\\lim_{x\\to+\\infty}f(x)=+\\infty}.\n\\]",
+        "verification": "النتيجتان توافقان سلوك \\(f(x)\\sim x\\) عند \\(\\pm\\infty\\).",
+        "common_mistakes": [
+          "إعطاء نتيجة مباشرة للشكل ∞/∞ دون ذكر أنه حالة عدم تعيين.",
+          "القول إن النهاية تساوي نسبة المعاملات رغم اختلاف درجتي البسط والمقام.",
+          "نسيان إشارة x عند -∞."
+        ],
+        "hints": [
+          "قارن درجتي البسط والمقام.",
+          "اقسم البسط والمقام على x².",
+          "بعد التبسيط راقب الحد x."
+        ],
+        "graph_data": null,
+        "table_data": null,
+        "solution_style": "حل مفصل ومبسط جدًا مع ذكر حالة عدم التعيين ثم رفعها.",
+        "methodology": {
+          "goal": "حساب نهايتي f عند ±∞.",
+          "method": "رفع حالة ∞/∞ بالقسمة على x².",
+          "why_this_method": "لأن f دالة ناطقة والبسط والمقام غير محدودين عند اللانهاية.",
+          "used_theorem": "قواعد نهايات الدوال الناطقة.",
+          "bac_template": [
+            "نحدد الشكل.",
+            "نذكر حالة عدم التعيين.",
+            "نقسم على x².",
+            "نحسب النهاية.",
+            "نكتب الاستنتاج."
+          ],
+          "formal_writing": [
+            "نكتب النهاية.",
+            "نرفع حالة عدم التعيين.",
+            "نستنتج."
+          ]
+        },
+        "formal_writing": [
+          "نحدد الشكل ∞/∞.",
+          "نقسم البسط والمقام على x².",
+          "نحسب النهايتين.",
+          "نكتب النتيجة."
+        ],
+        "react_display": {
+          "show_strategy": true,
+          "show_steps": true,
+          "show_final_answer": true,
+          "show_graph": false,
+          "show_table": false,
+          "graph_key": "graph_data",
+          "table_key": "table_data",
+          "math_renderer": "better-react-mathjax"
+        },
+        "pedagogical_detail": {
+          "level": "مبسط جدًا",
+          "show_intermediate_calculations": true,
+          "explain_rule_before_use": true,
+          "state_final_conclusion": true
+        },
+        "display_order": [
+          "strategy",
+          "steps",
+          "final_answer",
+          "verification"
+        ],
+        "validation": {
+          "final_answer_checked": true,
+          "mathematical_consistency_checked": true
+        },
+        "main_idea": "عند ±∞ تظهر حالة ∞/∞، فنرفعها بالقسمة على x².",
+        "detailed_explanation": "تم الاحتفاظ بعبارة الدالة كما وردت في تمرين 2017، واستخراج نهاياتها عند أطراف R.",
+        "answer_style": "idea_then_steps_then_conclusion"
+      },
+      "display_order": 2,
+      "content_type": "question"
+    },
+    {
+      "id": "2017_tech_topic2_limit_asymptote",
+      "text": "لدراسة المستقيم \\((\\Delta)\\) ذي المعادلة \\(y=x\\) بالنسبة إلى المنحنى \\((C_f)\\)، احسب:\n\\[\n\\lim_{x\\to-\\infty}\\left[f(x)-x\\right]\n\\qquad\\text{و}\\qquad\n\\lim_{x\\to+\\infty}\\left[f(x)-x\\right].\n\\]",
+      "axis_tags": [
+        "limits_continuity"
+      ],
+      "solution": {
+        "strategy": "إذا طرحنا النهايات مباشرة نحصل على \\(\\infty-\\infty\\)، وهي حالة عدم تعيين. لذلك نبسط الفرق \\(f(x)-x\\) جبريًا أولًا.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "نحدد حالة عدم التعيين",
+            "explanation": "عند +∞ مثلًا لدينا \\(f(x)\\to+\\infty\\) و\\(x\\to+\\infty\\).",
+            "latex": "f(x)-x\\longrightarrow+\\infty-\\infty",
+            "why": "الشكل \\(\\infty-\\infty\\) حالة عدم تعيين.",
+            "student_tip": "لا تكتب أبدًا \\(\\infty-\\infty=0\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "نبسط الفرق",
+            "explanation": "نوحد المقام.",
+            "latex": "f(x)-x=\\frac{x^3-6}{x^2+2}-x=\\frac{x^3-6-x(x^2+2)}{x^2+2}",
+            "why": "توحيد المقام يسمح باختزال الحدود التي سببت حالة عدم التعيين.",
+            "student_tip": "عند نهاية فرق دالتين، التبسيط الجبري غالبًا هو أول خطوة."
+          },
+          {
+            "step_number": 3,
+            "title": "نبسط البسط",
+            "explanation": "نحسب \\(x(x^2+2)=x^3+2x\\).",
+            "latex": "x^3-6-(x^3+2x)=-2x-6",
+            "why": "يختفي الحد x³.",
+            "student_tip": "انتبه إلى الإشارة السالبة أمام القوس."
+          },
+          {
+            "step_number": 4,
+            "title": "نحصل على الفرق المبسط",
+            "explanation": "إذن:",
+            "latex": "f(x)-x=\\frac{-2x-6}{x^2+2}",
+            "why": "تم رفع حالة \\(\\infty-\\infty\\).",
+            "student_tip": "الآن درجة المقام أكبر من درجة البسط."
+          },
+          {
+            "step_number": 5,
+            "title": "النهاية عند +∞",
+            "explanation": "نقسم البسط والمقام على x².",
+            "latex": "\\lim_{x\\to+\\infty}\\frac{-2x-6}{x^2+2}=\\lim_{x\\to+\\infty}\\frac{-\\frac2x-\\frac6{x^2}}{1+\\frac2{x^2}}=0",
+            "why": "كل الحدود 1/x و1/x² تتجه إلى الصفر.",
+            "student_tip": "درجة البسط 1 ودرجة المقام 2، لذلك النهاية 0."
+          },
+          {
+            "step_number": 6,
+            "title": "النهاية عند -∞",
+            "explanation": "نفس التبسيط يعطي النتيجة نفسها.",
+            "latex": "\\lim_{x\\to-\\infty}\\left[f(x)-x\\right]=0",
+            "why": "أيضًا 1/x و1/x² يتجهان إلى الصفر عند -∞.",
+            "student_tip": "الفرق يتجه إلى 0 في جهتي اللانهاية."
+          }
+        ],
+        "final_answer": "\\[\n\\boxed{\\lim_{x\\to-\\infty}[f(x)-x]=0}\n\\qquad\\text{و}\\qquad\n\\boxed{\\lim_{x\\to+\\infty}[f(x)-x]=0}.\n\\]",
+        "verification": "بما أن \\(f(x)-x=(-2x-6)/(x^2+2)\\)، فالنهاية تساوي 0 عند ±∞.",
+        "common_mistakes": [
+          "كتابة ∞-∞=0؛ هذا شكل غير معين.",
+          "نسيان ضرب x في كامل المقام x²+2.",
+          "الخطأ في الإشارة عند تبسيط x³-6-(x³+2x)."
+        ],
+        "hints": [
+          "اكتب f(x)-x في كسر واحد.",
+          "اختزل x³.",
+          "قارن درجة -2x-6 بدرجة x²+2."
+        ],
+        "graph_data": null,
+        "table_data": null,
+        "solution_style": "حل مفصل ومبسط جدًا مع التصريح بحالة ∞-∞ ثم رفعها.",
+        "methodology": {
+          "goal": "حساب نهاية الفرق المرتبط بالمستقيم y=x.",
+          "method": "رفع حالة ∞-∞ بتوحيد المقام ثم حساب نهاية الدالة الناطقة الناتجة.",
+          "why_this_method": "لأن طرح النهايات مباشرة يعطي شكلاً غير معين.",
+          "used_theorem": "معيار المقارب المائل وقواعد النهايات.",
+          "bac_template": [
+            "نحدد حالة عدم التعيين.",
+            "نوحد المقام.",
+            "نبسط.",
+            "نحسب النهاية.",
+            "نستنتج."
+          ],
+          "formal_writing": [
+            "نكتب الفرق.",
+            "نبسطه.",
+            "نحسب النهاية عند ±∞."
+          ]
+        },
+        "formal_writing": [
+          "نذكر أن ∞-∞ حالة عدم تعيين.",
+          "نرفعها جبريًا.",
+          "نكتب النتيجة."
+        ],
+        "react_display": {
+          "show_strategy": true,
+          "show_steps": true,
+          "show_final_answer": true,
+          "show_graph": false,
+          "show_table": false,
+          "graph_key": "graph_data",
+          "table_key": "table_data",
+          "math_renderer": "better-react-mathjax"
+        },
+        "pedagogical_detail": {
+          "level": "مبسط جدًا",
+          "show_intermediate_calculations": true,
+          "explain_rule_before_use": true,
+          "state_final_conclusion": true
+        },
+        "display_order": [
+          "strategy",
+          "steps",
+          "final_answer",
+          "verification"
+        ],
+        "validation": {
+          "final_answer_checked": true,
+          "mathematical_consistency_checked": true
+        },
+        "main_idea": "نهاية الفرق تعطي ∞-∞ قبل التبسيط؛ نوحد المقام فنحصل على كسر نهايته 0.",
+        "detailed_explanation": "هذه النهاية مرتبطة بالمستقيم y=x الظاهر في بنية التمرين الأصلي.",
+        "answer_style": "idea_then_steps_then_conclusion"
+      },
+      "display_order": 3,
+      "content_type": "question"
+    }
+  ],
+  "content_separation": {
+    "statement": "تعريف الدالتين g و f يكتب مرة واحدة فقط في نص التمرين.",
+    "questions": "لا يعاد تعريف الدالة داخل السؤال؛ يكتب فقط مطلب حساب النهايات.",
+    "solution": "يمكن استعمال رمز الدالة مباشرة لأن تعريفها ظاهر في statement."
+  },
+  "review_status": {
+    "function_definitions_not_repeated_in_questions": true,
+    "chapter_code_checked": true,
+    "exercise_kept_as_single_file": true,
+    "mathematical_results_rechecked": true
+  }
+}

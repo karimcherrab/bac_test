@@ -1,0 +1,193 @@
+{
+  "tag": "immune-defense-axis-08",
+  "title": "عرض المستضد والتعاون بين الخلايا المناعية",
+  "order": 8,
+  "is_active": true,
+  "branches": ["science"],
+  "content": {
+    "language": "ar",
+    "direction": "rtl",
+    "chapter_code": "immune_defense",
+    "chapter_title": "دور البروتينات في الدفاع عن الذات",
+    "axis_tag": "immune-defense-axis-08",
+    "estimated_minutes": 70,
+    "difficulty": 4,
+    "lesson_goal": "أن يفسر التلميذ كيف تعرض الخلايا العارضة الببتيد المستضدي، وكيف تنسق LT4 والأنترلوكينات الاستجابتين المناعيتين الخلطية والخلوية.",
+    "prerequisites": ["مفهوم المستضد ومحدد المستضد", "CMH I وCMH II", "الخلايا LB وLT4 وLT8", "الانتقاء اللمي والتكاثر والتمايز"],
+    "learning_outcomes": [
+      "يفسر تجربة ماربروك ويستنتج وجود اتصال كيميائي غير مباشر.",
+      "يرتب مراحل اقتناص المستضد وهضمه وعرض ببتيداته.",
+      "يميز بين دور IL1 ودور IL2 ومصدر كل منهما.",
+      "يفسر تحول LT4 المنتقاة إلى LTh.",
+      "يربط IL2 بتحفيز LB وLT8 المنتقاة فقط.",
+      "يبني مخططا شاملا يربط الردين الخلطي والخلوي."
+    ],
+    "learning_path": [
+      {
+        "id": "step_1", "type": "problem", "component": "DiscoveryQuestion", "title": "كيف تتعاون خلايا متباعدة؟",
+        "content": {"question": "إذا كانت LT4 وLB أو LT8 لا تتلامس دائما، فكيف تستطيع LT4 تكثيف الردين الخلطي والخلوي؟", "teacher": "سنبحث عن رسائل كيميائية، ثم نحدد كيف تبدأ السلسلة بعرض المستضد.", "action": {"label": "حلل الأدلة", "next_step": "step_2"}},
+        "display_order": 1
+      },
+      {
+        "id": "step_2", "type": "evidence", "component": "RealEvidence", "title": "تجربة ماربروك",
+        "content": {
+          "document_id": "immune_axis08_doc01_marbrook", "src": "/science/immune-defense/axis-08/marbrook_indirect_cooperation.png",
+          "instruction": "قارن عدد الخلايا البلازمية في التجارب الثلاث، وانتبه إلى خصائص الغشاء الفاصل.",
+          "observations": ["وجود LB وحدها يعطي عددا ضعيفا من الخلايا البلازمية.", "وجود LB وLT4 معا يرفع العدد كثيرا.", "يبقى الارتفاع كبيرا عندما تفصل الخلايا بغشاء ينفذ الجزيئات ولا ينفذ الخلايا."],
+          "conclusion": "تتعاون LT4 وLB باتصال غير مباشر بوساطة جزيئات كيميائية قابلة للانتشار."
+        },
+        "display_order": 2
+      },
+      {
+        "id": "step_3", "type": "rule", "component": "KeyRule", "title": "الاتصال الخلوي الكيميائي",
+        "content": {"definition": "هو نقل معلومة بين الخلايا بواسطة مبلغ كيميائي تفرزه خلية، وينتشر ثم يرتبط بمستقبل غشائي نوعي على خلية مستهدفة.", "conditions": ["إفراز المبلغ الكيميائي", "وصوله إلى الخلية المستهدفة", "وجود مستقبل نوعي موافق", "توليد استجابة داخل الخلية"], "application": "في هذا المحور يمثل IL2 المبلغ الكيميائي، وتمثل LB وLT8 المنشطة خلايا مستهدفة له."},
+        "display_order": 3
+      },
+      {
+        "id": "step_4", "type": "evidence", "component": "RealEvidence", "title": "تأثير IL2 في LB وLT8",
+        "content": {
+          "document_id": "immune_axis08_doc02_il2_graphs", "src": "/science/immune-defense/axis-08/il2_lb_lt8_response_graphs.png",
+          "instruction": "حلل كل منحنى على حدة، ثم استخرج الوظيفة المشتركة لـIL2.",
+          "analysis": ["كلما زاد تركيز IL2 ازداد عدد الخلايا البلازمية الناتجة من LB.", "بعد حقن IL2 يرتفع عدد LT8 ويرافق ذلك تناقص حجم الورم في التجربة.", "الوظيفة المشتركة هي تحفيز اللمفاويات المنتقاة على التكاثر والتمايز."],
+          "conclusion": "يحفز IL2 الخلايا LB المنتقاة لتكوين خلايا بلازمية وذاكرية، ويحفز LT8 المنتقاة لتكوين LTc وذاكرية."
+        },
+        "display_order": 4
+      },
+      {
+        "id": "step_5", "type": "explanation", "component": "ShortExplanation", "title": "لماذا لا يؤثر IL2 في كل اللمفاويات؟",
+        "content": {"paragraphs": ["قبل التعرف النوعي لا تكون الخلايا غير المنشطة جاهزة للاستجابة الفعالة لـIL2.", "بعد الانتقاء والتنشيط تظهر مستقبلات IL2 الغشائية على اللمفاويات الموافقة.", "يتثبت IL2 على مستقبله فيحفز مسارات التكاثر والتمايز."], "common_error": "لا تقل إن IL2 يختار اللمة؛ الانتقاء يسبق تأثير IL2، ثم يعمل IL2 على الخلايا المنتقاة والمنشطة."},
+        "display_order": 5
+      },
+      {
+        "id": "step_6", "type": "evidence", "component": "RealEvidence", "title": "مخطط تحفيز الخلايا اللمفاوية",
+        "content": {"document_id": "immune_axis08_doc03_cooperation", "src": "/science/immune-defense/axis-08/immune_cell_cooperation_map.png", "instruction": "اتبع المسار الأوسط أولا، ثم اربطه بمساري LB وLT8.", "guided_reading": ["تعرض البالعة المعقد CMH II–ببتيد إلى LT4 الموافقة.", "تتكاثر LT4 وتتمايز إلى LTh مفرزة لـIL2.", "ينتشر IL2 نحو LB وLT8 المنتقاة الحاملة لمستقبلاته.", "تتكاثر هذه الخلايا وتتمايز إلى منفذة وذاكرية."]},
+        "display_order": 6
+      },
+      {
+        "id": "step_7", "type": "evidence", "component": "RealEvidence", "title": "دليل تدخل البلعميات في التحسيس",
+        "content": {
+          "document_id": "immune_axis08_doc04_macrophage", "src": "/science/immune-defense/axis-08/macrophage_activation_experiment.png",
+          "instruction": "قارن الأوساط الخمسة، ثم فسر استمرار إنتاج الأجسام المضادة في الوسط الخامس بعد الغسل.",
+          "answer": ["البالعات وحدها لا تنتج أجساما مضادة.", "وجود البالعات وLB يعطي استجابة ضعيفة، ووجود البالعات وLT وحده لا ينتج أجساما مضادة.", "اجتماع البالعات وLT وLB يعطي استجابة قوية.", "استمرار الاستجابة بعد إزالة المستضد الحر يدل على أن البالعات احتفظت بمعلومة مستضدية وعرضتها للخلايا اللمفاوية."],
+          "conclusion": "تقتنص البلعميات المستضد وتعرض ببتيداته، فتساهم في تحسيس وتنشيط الخلايا اللمفاوية."
+        },
+        "display_order": 7
+      },
+      {
+        "id": "step_8", "type": "evidence", "component": "RealEvidence", "title": "كيف تعرض CPA المستضد؟",
+        "content": {
+          "document_id": "immune_axis08_doc05_presentation", "src": "/science/immune-defense/axis-08/cpa_antigen_presentation_il1.png",
+          "instruction": "سم العناصر التي تربط البالعة بـLT4، ثم رتب مراحل العرض.",
+          "sequence": ["اقتناص المستضد", "هضم بروتيناته جزئيا إلى ببتيدات", "ربط ببتيد مستضدي بجزيئة CMH II", "عرض المعقد على الغشاء", "تعرف LT4 بواسطة TCR وبمساهمة CD4", "مساهمة IL1 في تنشيط LT4"],
+          "conclusion": "تسمى البالعة CPA لأنها تعرض الببتيد المستضدي مرتبطا بـCMH II إلى LT4 الموافقة."
+        },
+        "display_order": 8
+      },
+      {
+        "id": "step_9", "type": "comparison", "component": "VisualComparison", "title": "التمييز بين IL1 وIL2",
+        "content": {
+          "columns": ["العنصر", "IL1", "IL2"],
+          "rows": [
+            ["المصدر", "البلعميات الكبيرة/الخلايا العارضة", "الخلايا LTh الناتجة من LT4 المنشطة"],
+            ["الهدف الرئيس في الدرس", "المساهمة في تنشيط LT4", "تحفيز اللمفاويات المنتقاة والمنشطة"],
+            ["الخلايا المستجيبة", "LT4 الموافقة عند عرض المستضد", "LB وLT8 وLT4 الحاملة لمستقبل IL2"],
+            ["النتيجة", "تهيئة وتنشيط LT4", "تكاثر لمي وتمايز إلى منفذة وذاكرية"]
+          ],
+          "note": "الأنترلوكينات لا تمنح النوعية المناعية؛ النوعية يحددها التعرف السابق بواسطة BCR أو TCR."
+        },
+        "display_order": 9
+      },
+      {
+        "id": "step_10", "type": "rule", "component": "KeyRule", "title": "التسلسل الكامل للتعاون المناعي",
+        "content": {
+          "formula": "اقتناص المستضد وهضمه جزئيا ← عرض CMH II–ببتيد ← تعرف LT4 وتنشيطها بمساهمة IL1 ← تكاثر LT4 وتمايزها إلى LTh ← إفراز IL2 ← تحفيز LB وLT8 المنتقاة ← تكاثر وتمايز إلى خلايا منفذة وذاكرية",
+          "branches": {"الرد الخلطي": "LB ← خلايا بلازمية مفرزة للأجسام المضادة + LB ذاكرية", "الرد الخلوي": "LT8 ← LTc منفذة + LT8 ذاكرية"}
+        },
+        "display_order": 10
+      },
+      {
+        "id": "step_11", "type": "method", "component": "BacMethodCard", "title": "منهجية حل تمرين التعاون المناعي",
+        "content": {"steps": ["أحدد المتغير التجريبي والخلايا الموجودة في كل وسط.", "أصف النتيجة رقميا أو نوعيا دون تفسير مبكر.", "أقارن وسط الشاهد بالوسط التجريبي المناسب.", "أستنتج هل الاتصال مباشر أم كيميائي غير مباشر.", "أحدد مصدر كل أنترلوكين وخليته الهدف.", "أربط النتائج بمساري الرد الخلطي والخلوي."], "model_conclusion": "تنسق LT4 الرد المناعي بعد عرض المستضد من CPA؛ فتتمايز إلى LTh مفرزة لـIL2 الذي يحفز LB وLT8 المنتقاة على التكاثر والتمايز."},
+        "display_order": 11
+      },
+      {
+        "id": "step_12", "type": "summary", "component": "InteractiveSummaryMap", "title": "الخريطة الشاملة للتعاون المناعي",
+        "content": {
+          "nodes": [
+            {"id": "ag", "label": "المستضد"}, {"id": "cpa", "label": "CPA: اقتناص وهضم جزئي"}, {"id": "display", "label": "CMH II–ببتيد"},
+            {"id": "lt4", "label": "LT4 + IL1"}, {"id": "lth", "label": "LTh"}, {"id": "il2", "label": "IL2"},
+            {"id": "lb", "label": "LB منتقاة"}, {"id": "lt8", "label": "LT8 منتقاة"}, {"id": "plasma", "label": "بلازمية + ذاكرية"}, {"id": "ltc", "label": "LTc + ذاكرية"}
+          ],
+          "edges": [["ag","cpa"],["cpa","display"],["display","lt4"],["lt4","lth"],["lth","il2"],["il2","lb"],["il2","lt8"],["lb","plasma"],["lt8","ltc"]]
+        },
+        "display_order": 12
+      },
+      {
+        "id": "step_13", "type": "assessment", "component": "FinalQuiz", "title": "اختبر فهمك",
+        "content": {
+          "passing_score": 5,
+          "questions": [
+            {"id": "q1", "type": "mcq", "question": "ماذا تثبت تجربة ماربروك عندما يفصل غشاء نافذ للجزيئات بين LT4 وLB؟", "options": ["الاتصال الكيميائي غير المباشر", "تحول LT4 إلى LB", "مرور الخلايا عبر الغشاء", "إنتاج LB لـIL1"], "answer": 0, "explanation": "استمرار التكثيف رغم منع مرور الخلايا يدل على انتقال جزيئات كيميائية."},
+            {"id": "q2", "type": "ordering", "question": "رتب مراحل عرض المستضد.", "items": ["اقتناص المستضد", "هضمه جزئيا", "ربط الببتيد بـCMH II", "عرض المعقد إلى LT4"], "answer": [0,1,2,3], "explanation": "يجب تجهيز الببتيد داخل CPA قبل عرضه غشائيا."},
+            {"id": "q3", "type": "mcq", "question": "ما مصدر IL1 ودوره في هذا المحور؟", "options": ["CPA ويساهم في تنشيط LT4", "LTh ويحفز LB وLT8", "LB ويشكل الأجسام المضادة", "LTc ويثقب الخلية"], "answer": 0, "explanation": "تفرز الخلية العارضة IL1 ليساهم في تنشيط LT4 الموافقة."},
+            {"id": "q4", "type": "mcq", "question": "ما مصدر IL2؟", "options": ["الخلايا LTh الناتجة من LT4 المنشطة", "الكريات الحمراء", "الخلايا البلازمية", "جميع الخلايا دون تمييز"], "answer": 0, "explanation": "LTh هي المصدر الرئيس لـIL2 في النموذج الدراسي."},
+            {"id": "q5", "type": "true_false", "question": "يختار IL2 اللمة النوعية من بين جميع اللمفاويات قبل تعرفها على المستضد.", "answer": false, "explanation": "يحدث الانتقاء أولا بواسطة التعرف النوعي، ثم يحفز IL2 الخلايا المنتقاة والمنشطة."},
+            {"id": "q6", "type": "mcq", "question": "كيف تنسق LT4 الردين المناعيين؟", "options": ["تتمايز إلى LTh تفرز IL2 المحفز لـLB وLT8", "تفرز أجساما مضادة وبرفورين معا", "تبتلع المستضد مباشرة", "تحول CMH II إلى CMH I"], "answer": 0, "explanation": "تربط LTh بين عرض المستضد وتحفيز النسائل المنفذة للردين."}
+          ]
+        },
+        "display_order": 13
+      }
+    ],
+    "document_bank": [
+      {
+        "document_id": "immune_axis08_doc01_marbrook", "file_name": "marbrook_indirect_cooperation.png", "src": "/science/immune-defense/axis-08/marbrook_indirect_cooperation.png", "document_type": "marbrook_chamber_experiment",
+        "source": {"kind": "lesson_pdf", "file": "تحفيز الخلايا اللمفاوية 2025(1).pdf", "page": 2, "figure": "الوثيقة (1)"},
+        "skills": ["compare_media", "infer_indirect_contact", "analyze_membrane_permeability"], "scientific_entities": ["LB", "LT4", "المستضد Z", "غرفة ماربروك"], "pedagogical_roles": ["lesson_evidence", "axis_exercise", "bac_similar"], "difficulty": 4,
+        "interpretation_scope": "إثبات التعاون غير المباشر بين LT4 وLB.", "safe_claims": ["الغشاء ينفذ الجزيئات ولا ينفذ الخلايا.", "التعاون يتم بمبلغات قابلة للانتشار."], "forbidden_inferences": ["القول إن LT4 مرت عبر الغشاء.", "نسبة الأثر إلى تماس مباشر."],
+        "ai_generation": {"allowed": true, "allowed_question_types": ["compare", "infer", "justify"], "max_documents_with": 2}
+      },
+      {
+        "document_id": "immune_axis08_doc02_il2_graphs", "file_name": "il2_lb_lt8_response_graphs.png", "src": "/science/immune-defense/axis-08/il2_lb_lt8_response_graphs.png", "document_type": "dual_il2_response_graphs",
+        "source": {"kind": "lesson_pdf", "file": "تحفيز الخلايا اللمفاوية 2025(1).pdf", "page": 2, "figure": "الوثيقة (2)"},
+        "skills": ["analyze_graph", "correlate_variables", "infer_il2_role"], "scientific_entities": ["IL2", "LB", "LT8", "الخلايا البلازمية"], "pedagogical_roles": ["lesson_evidence", "axis_exercise", "bac_similar"], "difficulty": 4,
+        "interpretation_scope": "ربط IL2 بتكاثر وتمايز LB وLT8 المنشطة.", "safe_claims": ["زيادة IL2 ترفع عدد الخلايا البلازمية في التجربة.", "حقن IL2 يترافق مع تغير عدد LT8 وتناقص حجم الورم."], "forbidden_inferences": ["اعتبار IL2 ذا نوعية مستضدية.", "التعميم السريري خارج معطيات التجربة."],
+        "ai_generation": {"allowed": true, "allowed_question_types": ["read_graph", "compare", "infer"], "max_documents_with": 2}
+      },
+      {
+        "document_id": "immune_axis08_doc03_cooperation", "file_name": "immune_cell_cooperation_map.png", "src": "/science/immune-defense/axis-08/immune_cell_cooperation_map.png", "document_type": "immune_cooperation_functional_map",
+        "source": {"kind": "lesson_pdf", "file": "تحفيز الخلايا اللمفاوية 2025(1).pdf", "page": 2, "figure": "الوثيقة (3)"},
+        "skills": ["read_functional_map", "link_humoral_cellular", "sequence_activation"], "scientific_entities": ["CPA", "LT4", "LTh", "IL2", "LB", "LT8"], "pedagogical_roles": ["lesson_core_diagram", "axis_exercise", "ai_axis_exercise"], "difficulty": 5,
+        "interpretation_scope": "بناء مخطط شامل للتعاون بين الخلايا المناعية.", "safe_claims": ["LTh تفرز IL2.", "IL2 يحفز النسائل المنشطة الحاملة لمستقبله."], "forbidden_inferences": ["اعتبار IL2 بديلا عن التعرف النوعي.", "القول إن LTh تنتج الأجسام المضادة أو LTc مباشرة."],
+        "ai_generation": {"allowed": true, "allowed_question_types": ["complete_diagram", "sequence", "explain"], "max_documents_with": 2}
+      },
+      {
+        "document_id": "immune_axis08_doc04_macrophage", "file_name": "macrophage_activation_experiment.png", "src": "/science/immune-defense/axis-08/macrophage_activation_experiment.png", "document_type": "five_media_macrophage_experiment",
+        "source": {"kind": "lesson_pdf", "file": "تحفيز الخلايا اللمفاوية 2025(1).pdf", "page": 4, "figure": "الوثيقة (4)"},
+        "skills": ["compare_experimental_media", "infer_cpa_role", "interpret_washing_step"], "scientific_entities": ["بالعة كبيرة", "PN", "LB", "LT", "أجسام مضادة"], "pedagogical_roles": ["lesson_evidence", "axis_exercise", "bac_similar"], "difficulty": 5,
+        "interpretation_scope": "إثبات تدخل البلعميات في تحسيس وتنشيط اللمفاويات.", "safe_claims": ["الاستجابة القوية تتطلب تعاونا خلويا.", "الغسل يزيل المستضد الحر ولا يزيل البالعات العالقة."], "forbidden_inferences": ["اعتبار البالعة منتجة للأجسام المضادة.", "اعتبار الغسل مخربا للببتيد المعروض حتما."],
+        "ai_generation": {"allowed": true, "allowed_question_types": ["compare", "infer", "explain_control"], "max_documents_with": 2}
+      },
+      {
+        "document_id": "immune_axis08_doc05_presentation", "file_name": "cpa_antigen_presentation_il1.png", "src": "/science/immune-defense/axis-08/cpa_antigen_presentation_il1.png", "document_type": "cpa_antigen_presentation_diagram",
+        "source": {"kind": "lesson_pdf", "file": "تحفيز الخلايا اللمفاوية 2025(1).pdf", "page": 4, "figure": "الوثيقة (5)"},
+        "skills": ["sequence_antigen_presentation", "identify_molecular_complex", "distinguish_il1_il2"], "scientific_entities": ["CPA", "CMH II", "ببتيد مستضدي", "TCR", "CD4", "IL1", "LT4"], "pedagogical_roles": ["lesson_core_diagram", "axis_exercise", "bac_similar"], "difficulty": 4,
+        "interpretation_scope": "شرح عرض الببتيد إلى LT4 ومساهمة IL1 في تنشيطها.", "safe_claims": ["CPA تعرض CMH II–ببتيد.", "TCR يتعرف على المعقد وتساهم CD4 وIL1 في التنشيط."], "forbidden_inferences": ["القول إن IL1 يحمل الببتيد.", "الخلط بين CMH II وCMH I في عرض الببتيد إلى LT4."],
+        "ai_generation": {"allowed": true, "allowed_question_types": ["label", "order", "explain"], "max_documents_with": 2}
+      }
+    ],
+    "presentation": {"style": "modern_science_lesson", "rtl": true, "show_progress": true, "image_policy": "scientific_documents_only", "color_semantics": {"cpa": "amber", "lt4": "blue", "il1": "orange", "il2": "violet", "humoral": "green", "cellular": "rose"}},
+    "scientific_quality_control": {
+      "validated": true,
+      "guardrails": [
+        "CPA تقتنص المستضد وتهضمه جزئيا ثم تعرض ببتيده ولا تعرض المستضد كاملا بالضرورة.",
+        "عرض الببتيد إلى LT4 يتم مرتبطا بـCMH II.",
+        "IL1 مصدره البالعات ويساهم في تنشيط LT4، بينما IL2 مصدره LTh ويحفز اللمفاويات المنتقاة.",
+        "الأنترلوكينات لا تحدد النوعية المناعية ولا تعوض BCR أو TCR.",
+        "لا يستجيب لـIL2 إلا اللمفاوي المنشط الحامل لمستقبله في النموذج الدراسي.",
+        "LT4 تنسق وتكثف الردين ولا تتحول إلى خلايا بلازمية أو LTc."
+      ],
+      "scope_limits": ["لا يتوسع المحور في التفاصيل الجزيئية لمسارات الإشارة داخل الخلية.", "لا يعيد شرح آلية الأجسام المضادة أو قتل LTc تفصيليا.", "يعتمد IL1 وIL2 وفق النموذج التربوي المقرر." ]
+    },
+    "curriculum_goal": "فهم أن الاستجابة المناعية النوعية شبكة من التعاون تبدأ بعرض المستضد، وتمر بتنشيط LT4 وتكوين LTh، وتنتهي بتحفيز النسائل المنفذة والذاكرية للردين الخلطي والخلوي."
+  }
+}

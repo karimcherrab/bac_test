@@ -1,0 +1,237 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "session": "ordinary",
+  "year": 2015,
+  "chapter_code": "complex_numbers",
+  "chapter_title": "الأعداد المركبة",
+  "branches": [
+    {
+      "code": "science",
+      "name": "شعبة علوم تجريبية"
+    }
+  ],
+  "version": "4.2-2015-science-complex-subject1-ex02-detailed",
+  "exercise_number": 2,
+  "subject_number": 1,
+  "source_page": 1,
+  "source_pages": [
+    1,
+    2
+  ],
+  "solution_source_pages": [
+    5
+  ],
+  "title": "التمرين الثاني — بكالوريا الجزائر 2015 — الموضوع الأول — شعبة علوم تجريبية",
+  "axis_tags": [
+    "complex_algebra_conjugate",
+    "complex_algebraic_geometric_form",
+    "complex_argument_trigonometric_form",
+    "complex_exponential_demoivre",
+    "complex_modulus_geometric_interpretation",
+    "complex_point_transformations",
+    "complex_geometric_applications_loci"
+  ],
+  "statement": "نعتبر العددين المركبين α و β حيث \\(2\\alpha-\\beta=-3\\) و \\(2\\overline{\\alpha}+\\overline{\\beta}=-3-2i\\sqrt3\\). ثم نعتبر النقط A وB وC حيث \\(z_A=-\\frac32+i\\frac{\\sqrt3}{2}\\)، \\(z_B=\\overline{z_A}\\)، و \\(z_A=z_Ce^{i\\pi/3}\\)، والنقطة D ذات اللاحقة \\(z_D=1+i\\).",
+  "questions": [
+    {
+      "id": "2015_s1_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "I) عين العددين المركبين \\(\\alpha\\) و\\(\\beta\\).",
+      "axis_tags": [
+        "complex_algebra_conjugate"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نأخذ مرافق المعادلة الثانية ثم نحل الجهاز.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "أخذ المرافق",
+            "explanation": "من \\(2\\overline\\alpha+\\overline\\beta=-3-2i\\sqrt3\\) نحصل على \\(2\\alpha+\\beta=-3+2i\\sqrt3\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "جمع المعادلتين",
+            "explanation": "\\(4\\alpha=-6+2i\\sqrt3\\Rightarrow \\alpha=-\\frac32+i\\frac{\\sqrt3}{2}\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "حساب β",
+            "explanation": "بالتعويض في \\(2\\alpha-\\beta=-3\\): \\(\\beta=i\\sqrt3\\)."
+          }
+        ],
+        "final_answer": "\\(\\alpha=-\\frac32+i\\frac{\\sqrt3}{2}\\)، \\(\\beta=i\\sqrt3\\)."
+      }
+    },
+    {
+      "id": "2015_s1_q2",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "II-1) أ) اكتب \\(z_A\\) و\\(z_C\\) على الشكل الأسي ثم عين n حتى يكون \\((z_A/z_C)^n\\) حقيقيًا سالبًا.",
+      "axis_tags": [
+        "complex_argument_trigonometric_form",
+        "complex_exponential_demoivre"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب الطويلة والحجة ثم نستعمل شرط العدد الحقيقي السالب.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "z_A",
+            "explanation": "\\(|z_A|=\\sqrt3\\) وحجته \\(5\\pi/6\\)، إذن \\(z_A=\\sqrt3e^{i5\\pi/6}\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "z_C",
+            "explanation": "من \\(z_A=z_Ce^{i\\pi/3}\\): \\(z_C=\\sqrt3e^{i\\pi/2}\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "النسبة",
+            "explanation": "\\(z_A/z_C=e^{i\\pi/3}\\)، إذن \\((z_A/z_C)^n=e^{in\\pi/3}\\)."
+          },
+          {
+            "step_number": 4,
+            "title": "شرط السالب الحقيقي",
+            "explanation": "يلزم \\(n\\pi/3=(2k+1)\\pi\\)، ومنه \\(n=6k+3\\)، \\(k\\in\\mathbb N\\)."
+          }
+        ],
+        "final_answer": "\\(z_A=\\sqrt3e^{i5\\pi/6}\\)، \\(z_C=\\sqrt3e^{i\\pi/2}\\)، و\\(n=6k+3\\)."
+      }
+    },
+    {
+      "id": "2015_s1_q3",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "ب) تحقق أن \\(2(z_A/\\sqrt3)^{2015}+(z_B/\\sqrt3)^{1962}-(z_C/\\sqrt3)^{1435}\\) حقيقي.",
+      "axis_tags": [
+        "complex_exponential_demoivre"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل الأشكال الأسية ونختزل الزوايا بترديد \\(2\\pi\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الكتابات",
+            "explanation": "\\(z_A/\\sqrt3=e^{i5\\pi/6}\\)، \\(z_B/\\sqrt3=e^{-i5\\pi/6}\\)، \\(z_C/\\sqrt3=e^{i\\pi/2}\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "الاختزال",
+            "explanation": "نرفع كل حد إلى قوته ثم نختزل الحجة بترديد \\(2\\pi\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "النتيجة",
+            "explanation": "بعد التبسيط نحصل على \\(-\\sqrt3-1\\)، وهو عدد حقيقي."
+          }
+        ],
+        "final_answer": "\\(-\\sqrt3-1\\in\\mathbb R\\)."
+      }
+    },
+    {
+      "id": "2015_s1_q4",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "2) أ) حدد نسبة وزاوية التشابه المباشر مركزه O ويحول D إلى A.",
+      "axis_tags": [
+        "complex_point_transformations"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب معامل التشابه \\(z_A/z_D\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "z_D",
+            "explanation": "\\(z_D=1+i=\\sqrt2e^{i\\pi/4}\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "النسبة",
+            "explanation": "\\(z_A/z_D=\\frac{\\sqrt6}{2}e^{i7\\pi/12}\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "العناصر",
+            "explanation": "النسبة \\(\\frac{\\sqrt6}{2}\\) والزاوية \\(\\frac{7\\pi}{12}\\)."
+          }
+        ],
+        "final_answer": "النسبة \\(\\frac{\\sqrt6}{2}\\)، الزاوية \\(\\frac{7\\pi}{12}\\)."
+      }
+    },
+    {
+      "id": "2015_s1_q5",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "ب) اكتب \\(z_A/z_D\\) على الشكل الجبري ثم استنتج \\(\\cos(7\\pi/12)\\) و\\(\\sin(7\\pi/12)\\).",
+      "axis_tags": [
+        "complex_algebraic_geometric_form",
+        "complex_argument_trigonometric_form"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب خارج القسمة بالمرافق ثم نقارن بالشكل المثلثي.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الشكل الجبري",
+            "explanation": "\\(z_A/z_D=\\frac{\\sqrt3-3}{4}+i\\frac{\\sqrt3+3}{4}\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "المقارنة",
+            "explanation": "\\(z_A/z_D=\\frac{\\sqrt6}{2}(\\cos\\frac{7\\pi}{12}+i\\sin\\frac{7\\pi}{12})\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "الجيب وجيب التمام",
+            "explanation": "\\(\\cos\\frac{7\\pi}{12}=\\frac{\\sqrt2-\\sqrt6}{4}\\)، \\(\\sin\\frac{7\\pi}{12}=\\frac{\\sqrt2+\\sqrt6}{4}\\)."
+          }
+        ],
+        "final_answer": "\\(\\cos\\frac{7\\pi}{12}=\\frac{\\sqrt2-\\sqrt6}{4}\\)، \\(\\sin\\frac{7\\pi}{12}=\\frac{\\sqrt2+\\sqrt6}{4}\\)."
+      }
+    },
+    {
+      "id": "2015_s1_q6",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "3) عين مجموعة النقط M التي تحقق \\(z=k(1+i)e^{i7\\pi/12}\\)، حيث \\(k\\in\\mathbb R_+^*\\).",
+      "axis_tags": [
+        "complex_geometric_applications_loci"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نثبت أن الحجة ثابتة والطويلة موجبة متغيرة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تبسيط",
+            "explanation": "\\(1+i=\\sqrt2e^{i\\pi/4}\\)، إذن \\(z=k\\sqrt2e^{i5\\pi/6}\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "التفسير",
+            "explanation": "الحجة ثابتة \\(5\\pi/6\\) و\\(|z|=k\\sqrt2>0\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "المحل",
+            "explanation": "هو نصف المستقيم ذي الأصل O والمار بـ A، دون O."
+          }
+        ],
+        "final_answer": "المجموعة هي نصف المستقيم \\([OA)\\setminus\\{O\\}\\)."
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2015.pdf"
+  }
+}

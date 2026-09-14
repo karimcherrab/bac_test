@@ -1853,3 +1853,20 @@ class QuestionSimpleSolutionAPIView(BaseStudentAPIView):
                 },
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR,
             )
+
+
+
+from rest_framework.generics import RetrieveAPIView
+from rest_framework.permissions import AllowAny
+
+from .models import Chapter
+from .serializers import ChapterSerializer
+
+
+class ChapterByIdView(RetrieveAPIView):
+    serializer_class = ChapterSerializer
+    permission_classes = [AllowAny]
+
+    queryset = Chapter.objects.select_related("subject").all()
+    lookup_field = "id"
+    lookup_url_kwarg = "chapter_id"

@@ -1,0 +1,825 @@
+{
+  "tag": "transcription_and_mechanism",
+  "title": "الاستنساخ وآليته: من ADN إلى ARNm",
+  "order": 3,
+  "is_active": true,
+  "branches": [
+    "math",
+    "science"
+  ],
+  "content": {
+    "language": "ar",
+    "direction": "rtl",
+    "chapter_code": "protein_synthesis",
+    "chapter_title": "آلية تركيب البروتين",
+    "axis_tag": "transcription_and_mechanism",
+    "estimated_minutes": 40,
+    "difficulty": "easy",
+    "lesson_goal": "أن يفهم التلميذ آلية الاستنساخ كاملة داخل النواة عند الخلايا حقيقية النواة، انطلاقا من تحليل الوثائق: مظهر الريشة، متطلبات الاستنساخ، دور ARN بوليميراز، السلسلة المستنسخة، مبدأ التكامل، مراحل الانطلاق والاستطالة والنهاية، واتجاهات 3′ و5′، ثم يتمكن من بناء ARNm وشرح الظاهرة برسم تخطيطي، دون الدخول في الشفرة الوراثية أو الترجمة.",
+    "prerequisites": [
+      "معرفة أن المورثة جزء من ADN يحمل معلومة وراثية محددة.",
+      "معرفة أن ARNm ينقل نسخة من معلومة المورثة نحو الهيولى.",
+      "معرفة أن ADN يوجد داخل النواة عند الخلايا حقيقية النواة."
+    ],
+    "learning_outcomes": [
+      "يعرف الاستنساخ بأنه التصنيع الحيوي لجزيئة ARNm انطلاقا من مورثة على ADN.",
+      "يستدل من مظهر الريشة على تشكل عدة جزيئات ARNm متفاوتة الطول على المورثة نفسها.",
+      "يستنتج اتجاه الاستنساخ من الخيوط القصيرة نحو الخيوط الطويلة.",
+      "يحدد متطلبات الاستنساخ الواردة في الدرس: المورثة، ARN بوليميراز، الريبونوكليوتيدات الحرة والطاقة في شكل ATP.",
+      "يميز السلسلة المستنسخة عن السلسلة غير المستنسخة.",
+      "يفهم دور ARN بوليميراز في الارتباط ببداية المورثة وفتح ADN وتركيب ARNm.",
+      "يرتب مراحل الاستنساخ: الانطلاق، الاستطالة، النهاية.",
+      "يطبق تكامل القواعد بين السلسلة المستنسخة وARNm: A↔U، T↔A، C↔G، G↔C.",
+      "يفهم أن القالب يقرأ في اتجاه 3′→5′ وأن ARNm يركب في اتجاه 5′→3′.",
+      "يبني تسلسل ARNm انطلاقا من سلسلة ADN مستنسخة بسيطة.",
+      "يقرأ رسما تفسيريا لفقاعة الاستنساخ ويحدد عناصره.",
+      "يصوغ نصا علميا بسيطا يلخص آلية الاستنساخ."
+    ],
+    "learning_path": [
+      {
+        "id": "step_1",
+        "type": "problem",
+        "component": "DiscoveryQuestion",
+        "title": "المشكلة: كيف تُنسخ المعلومة الوراثية؟",
+        "content": {
+          "question": "توجد المعلومة الوراثية على ADN داخل النواة، بينما تحتاج الخلية إلى نسخة منها في صورة ARNm. كيف يتم تصنيع هذه النسخة؟",
+          "teacher": "لفهم ذلك سنبدأ بدليل حقيقي على حدوث الاستنساخ، ثم نحدد متطلباته، وبعدها نتتبع مراحله حتى تشكل ARNm.",
+          "action": {
+            "label": "حلل الوثيقة 1",
+            "next_step": "step_2"
+          }
+        },
+        "display_order": 1
+      },
+      {
+        "id": "step_2",
+        "type": "real_evidence",
+        "component": "RealEvidenceGallery",
+        "title": "الوثيقة 1: مظهر الريشة ودليل حدوث الاستنساخ",
+        "content": {
+          "intro": "تمثل الوثيقة (1) صورة بالمجهر الإلكتروني مرفقة برسم تخطيطي تفسيري لظاهرة الاستنساخ في خلية حقيقية النواة.",
+          "figures": [
+            {
+              "src": "/science/protein-synthesis/axis-03/transcription_evidence.png",
+              "alt": "صورة بالمجهر الإلكتروني ومخطط تفسيري لمظهر الريشة أثناء الاستنساخ",
+              "caption": "الوثيقة (1): مورثة على ADN تحمل خيوطا جانبية متفاوتة الطول تمثل ARNm قيد التشكل.",
+              "source_label": "الوثيقة الأصلية — الصفحة 1"
+            }
+          ],
+          "observation": [
+            "نلاحظ محورا يمثل المورثة الموجودة على ADN.",
+            "تنطلق من المورثة خيوط جانبية عديدة متفاوتة الطول تمثل جزيئات ARNm قيد التشكل.",
+            "تكون الخيوط قصيرة قرب بداية المورثة ثم يزداد طولها تدريجيا نحو نهايتها.",
+            "يعطي هذا التنظيم للمورثة أثناء الاستنساخ مظهرا يشبه الريشة."
+          ],
+          "guided_reading": [
+            {
+              "question": "ماذا تمثل الخيوط الجانبية؟",
+              "answer": "جزيئات ARNm قيد التشكل."
+            },
+            {
+              "question": "لماذا تختلف أطوالها؟",
+              "answer": "لأن جزيئة ARNm تستطيل كلما تقدم الاستنساخ على المورثة."
+            },
+            {
+              "question": "كيف نحدد اتجاه الاستنساخ؟",
+              "answer": "من جهة الخيوط القصيرة، أي بداية المورثة، نحو جهة الخيوط الطويلة، أي نهاية المورثة."
+            },
+            {
+              "question": "ماذا يدل وجود عدة خيوط على المورثة نفسها؟",
+              "answer": "يدل على تشكل عدة جزيئات ARNm على المورثة نفسها أثناء الاستنساخ."
+            }
+          ],
+          "takeaway": "الاستنساخ ظاهرة حيوية يتم خلالها التصنيع الحيوي لجزيئات ARNm انطلاقا من المورثة الموجودة على ADN."
+        },
+        "display_order": 2
+      },
+      {
+        "id": "step_3",
+        "type": "short_explanation",
+        "component": "ShortExplanation",
+        "title": "متطلبات عملية الاستنساخ",
+        "content": {
+          "intro": "قبل معرفة المراحل، نحدد العناصر اللازمة كما وردت في الدرس.",
+          "blocks": [
+            {
+              "title": "المورثة (ADN)",
+              "text": "تحمل المعلومة الوراثية المراد استنساخها."
+            },
+            {
+              "title": "إنزيم ARN بوليميراز",
+              "text": "يرتبط ببداية المورثة، يفتح منطقة من ADN ويسمح بتركيب ARNm انطلاقا من السلسلة المستنسخة."
+            },
+            {
+              "title": "نيكليوتيدات ريبية حرة",
+              "text": "A وU وC وG، وهي الوحدات البنائية التي تستعمل في تركيب ARNm."
+            },
+            {
+              "title": "طاقة في شكل ATP",
+              "text": "وردت في الوثيقة التعليمية ضمن متطلبات عملية الاستنساخ وضرورية لعمل الإنزيم أثناء العملية."
+            }
+          ],
+          "memory_tip": "مورثة + ARN بوليميراز + نيكليوتيدات ريبية حرة + طاقة → حدوث الاستنساخ."
+        },
+        "display_order": 3
+      },
+      {
+        "id": "step_4",
+        "type": "real_evidence",
+        "component": "RealEvidenceGallery",
+        "title": "الوثيقة 2: شاهد المراحل الحقيقية للاستنساخ",
+        "content": {
+          "intro": "هذه الوثيقة هي المرجع المرئي الأساسي للمراحل. لذلك ألغينا المشهد السابق الذي كان يعرض خلية ونواة فقط؛ فهو لا يوضح آلية الاستنساخ نفسها.",
+          "figures": [
+            {
+              "src": "/science/protein-synthesis/axis-03/transcription_stages.png",
+              "alt": "رسم تخطيطي لمراحل الاستنساخ وتكبير منطقة حدوثه",
+              "caption": "الوثيقة (2): ارتباط ARN بوليميراز بالمورثة، الاستطالة، ثم تحرر ARNm عند النهاية.",
+              "source_label": "الوثيقة الأصلية — الصفحة 1"
+            }
+          ],
+          "guided_reading": [
+            {
+              "question": "أين يرتبط ARN بوليميراز أولا؟",
+              "answer": "بمنطقة بداية المورثة."
+            },
+            {
+              "question": "ماذا يحدث لـ ADN في منطقة عمل الإنزيم؟",
+              "answer": "تنفتح السلسلتان موضعيا فتظهر منطقة الاستنساخ."
+            },
+            {
+              "question": "ما السلسلة التي تستعمل لبناء ARNm؟",
+              "answer": "إحدى سلسلتي ADN فقط، وتسمى السلسلة المستنسخة أو الناسخة."
+            },
+            {
+              "question": "ماذا يحدث أثناء تقدم الإنزيم؟",
+              "answer": "ترتبط الريبونوكليوتيدات الحرة وفق التكامل مع قواعد السلسلة المستنسخة، فتستطيل جزيئة ARNm."
+            },
+            {
+              "question": "ماذا يحدث عند نهاية المورثة؟",
+              "answer": "تتوقف استطالة ARNm، يتحرر من ADN، ينفصل ARN بوليميراز وتلتحم سلسلتا ADN من جديد."
+            }
+          ],
+          "takeaway": "تمر عملية الاستنساخ بثلاث مراحل مترابطة: الانطلاق → الاستطالة → النهاية."
+        },
+        "display_order": 4
+      },
+      {
+        "id": "step_5",
+        "type": "scientific_storyboard",
+        "component": "ScientificStoryboard",
+        "title": "مشاهدة الظاهرة خطوة بخطوة — تمثيل صحيح",
+        "content": {
+          "instruction": "يعتمد هذا العرض على مستوى المورثة نفسها، وليس على رسم عام للخلية. استخدم السابق/التالي لمتابعة ما يحدث.",
+          "visual_mode": "molecular_transcription_only",
+          "frames": [
+            {
+              "order": 1,
+              "title": "1 — الانطلاق",
+              "description": "يرتبط إنزيم ARN بوليميراز ببداية المورثة، ثم تنفتح سلسلتا ADN موضعيا.",
+              "visual": {
+                "focus": [
+                  "ADN",
+                  "بداية المورثة",
+                  "ARN بوليميراز"
+                ],
+                "state": "polymerase_binding_and_local_opening"
+              }
+            },
+            {
+              "order": 2,
+              "title": "2 — ظهور السلسلة المستنسخة",
+              "description": "بعد الفتح الموضعي تصبح إحدى سلسلتي ADN هي القالب الذي يقرأه ARN بوليميراز؛ تسمى السلسلة المستنسخة.",
+              "visual": {
+                "focus": [
+                  "السلسلة المستنسخة",
+                  "السلسلة غير المستنسخة",
+                  "ARN بوليميراز"
+                ],
+                "state": "template_identification"
+              }
+            },
+            {
+              "order": 3,
+              "title": "3 — بداية بناء ARNm",
+              "description": "ترتبط ريبونوكليوتيدات ARN الحرة بقواعد السلسلة المستنسخة وفق التكامل: A مع U، T مع A، C مع G، G مع C.",
+              "visual": {
+                "focus": [
+                  "ريبونوكليوتيدات حرة",
+                  "السلسلة المستنسخة",
+                  "ARNm"
+                ],
+                "state": "rna_nucleotide_pairing"
+              }
+            },
+            {
+              "order": 4,
+              "title": "4 — الاستطالة",
+              "description": "يتقدم ARN بوليميراز على طول المورثة، فتضاف نيكليوتيدات جديدة ويزداد طول ARNm.",
+              "visual": {
+                "focus": [
+                  "ARN بوليميراز",
+                  "ARNm النامي",
+                  "فقاعة الاستنساخ"
+                ],
+                "state": "elongation"
+              }
+            },
+            {
+              "order": 5,
+              "title": "5 — اتجاه السلاسل",
+              "description": "يقرأ الإنزيم السلسلة المستنسخة في اتجاه 3′→5′، بينما يركب ARNm في الاتجاه المعاكس 5′→3′.",
+              "visual": {
+                "focus": [
+                  "3′→5′",
+                  "5′→3′",
+                  "ARNm"
+                ],
+                "state": "directionality"
+              }
+            },
+            {
+              "order": 6,
+              "title": "6 — النهاية",
+              "description": "عند نهاية المورثة يتوقف الاستنساخ، تتحرر جزيئة ARNm وينفصل ARN بوليميراز، ثم تعود سلسلتا ADN إلى الازدواج.",
+              "visual": {
+                "focus": [
+                  "نهاية المورثة",
+                  "ARNm محرر",
+                  "ADN مزدوج"
+                ],
+                "state": "termination"
+              }
+            }
+          ],
+          "controls": [
+            "previous",
+            "play",
+            "next",
+            "restart"
+          ],
+          "rendering_rules": {
+            "do_not_render": [
+              "خلية كاملة",
+              "نواة كرتونية",
+              "صبغيات ملونة على شكل نجمة",
+              "ريبوزوم",
+              "أحماض أمينية",
+              "بروتين"
+            ],
+            "must_render": [
+              "ADN مزدوج",
+              "ARN بوليميراز",
+              "فقاعة استنساخ",
+              "سلسلة مستنسخة",
+              "ARNm",
+              "ريبونوكليوتيدات حرة"
+            ],
+            "note": "إذا كان مكون ScientificStoryboard لا يدعم هذه العناصر فلا تعرض رسما تخمينيا؛ اعرض الوثيقة 2 مع إبراز الجزء الموافق لكل مرحلة."
+          },
+          "takeaway": "المشاهدة الصحيحة للاستنساخ يجب أن تركز على المورثة وARN بوليميراز وARNm داخل منطقة الاستنساخ."
+        },
+        "display_order": 5
+      },
+      {
+        "id": "step_6",
+        "type": "short_explanation",
+        "component": "ShortExplanation",
+        "title": "المراحل الثلاث بشرح بسيط",
+        "content": {
+          "blocks": [
+            {
+              "title": "1 — مرحلة الانطلاق",
+              "text": "يرتبط ARN بوليميراز ببداية المورثة، ويفتح سلسلتي ADN موضعيا بعد تفكك الروابط بين القواعد المتكاملة. تبدأ قراءة إحدى السلسلتين: السلسلة المستنسخة."
+            },
+            {
+              "title": "2 — مرحلة الاستطالة",
+              "text": "يتقدم ARN بوليميراز على طول السلسلة المستنسخة ويربط نيكليوتيدات ARN المكملة لها. كلما تقدم الإنزيم أضيفت نيكليوتيدات جديدة، فتستطيل جزيئة ARNm."
+            },
+            {
+              "title": "3 — مرحلة النهاية",
+              "text": "عندما يصل ARN بوليميراز إلى نهاية المورثة تتوقف استطالة ARNm، فتتحرر الجزيئة وينفصل الإنزيم، ثم تلتحم سلسلتا ADN من جديد."
+            }
+          ],
+          "memory_tip": "ابدأ → افتح واقرأ القالب → أطل ARNm → حرر ARNm وأغلق ADN."
+        },
+        "display_order": 6
+      },
+      {
+        "id": "step_7",
+        "type": "short_explanation",
+        "component": "ShortExplanation",
+        "title": "كيف تُختار قواعد ARNm؟",
+        "content": {
+          "blocks": [
+            {
+              "title": "قاعدة التكامل",
+              "text": "كل قاعدة على السلسلة المستنسخة تحدد القاعدة التي تقابلها في ARNm."
+            },
+            {
+              "title": "A على ADN",
+              "text": "تقابلها U على ARNm."
+            },
+            {
+              "title": "T على ADN",
+              "text": "تقابلها A على ARNm."
+            },
+            {
+              "title": "C على ADN",
+              "text": "تقابلها G على ARNm."
+            },
+            {
+              "title": "G على ADN",
+              "text": "تقابلها C على ARNm."
+            },
+            {
+              "title": "الاتجاه",
+              "text": "تقرأ السلسلة المستنسخة 3′→5′، بينما يركب ARNm 5′→3′."
+            }
+          ],
+          "memory_tip": "القالب 3′→5′ ⇢ ARNm مكمل 5′→3′."
+        },
+        "display_order": 7
+      },
+      {
+        "id": "step_8",
+        "type": "sequence_exercise",
+        "component": "SequenceExercise",
+        "title": "طبّق: ابنِ ARNm بنفسك",
+        "content": {
+          "instruction": "السلسلة الآتية هي السلسلة المستنسخة من ADN مكتوبة 3′→5′. كوّن ARNm المكمل لها.",
+          "dna_template": [
+            "T",
+            "A",
+            "C",
+            "G",
+            "G",
+            "A"
+          ],
+          "student_slots": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "available_bases": [
+            "A",
+            "U",
+            "C",
+            "G"
+          ],
+          "correct_mrna": [
+            "A",
+            "U",
+            "G",
+            "C",
+            "C",
+            "U"
+          ],
+          "correction_steps": [
+            "T → A",
+            "A → U",
+            "C → G",
+            "G → C",
+            "G → C",
+            "A → U"
+          ],
+          "result": "ARNm: 5′-AUGCCU-3′",
+          "template_direction": "3′→5′",
+          "mrna_direction": "5′→3′",
+          "takeaway": "نكتب قاعدة ARN المكملة لكل قاعدة من القالب مع احترام الاتجاه."
+        },
+        "display_order": 8
+      },
+      {
+        "id": "step_9",
+        "type": "real_evidence",
+        "component": "RealEvidenceGallery",
+        "title": "الوثيقة 3: الرسم التفسيري الكامل لظاهرة الاستنساخ",
+        "content": {
+          "intro": "بعد فهم الآلية، استعمل الرسم التفسيري النهائي لتثبيت أسماء العناصر والاتجاهات والتكامل.",
+          "figures": [
+            {
+              "src": "/science/protein-synthesis/axis-03/transcription_diagram.png",
+              "alt": "رسم تخطيطي تفسيري لفقاعة الاستنساخ",
+              "caption": "الوثيقة (3): ARN بوليميراز، السلسلة المستنسخة وغير المستنسخة، ARNm، الريبونوكليوتيدات الحرة واتجاه الاستنساخ.",
+              "source_label": "حل التقويم — الصفحة 3"
+            }
+          ],
+          "guided_reading": [
+            {
+              "question": "حدد السلسلة المستنسخة.",
+              "answer": "هي السلسلة التي تقابلها قواعد ARNm داخل فقاعة الاستنساخ وتعمل قالبا."
+            },
+            {
+              "question": "ما اتجاه قراءة السلسلة المستنسخة؟",
+              "answer": "3′→5′."
+            },
+            {
+              "question": "ما اتجاه تركيب ARNm؟",
+              "answer": "5′→3′."
+            },
+            {
+              "question": "ما دور الريبونوكليوتيدات الحرة؟",
+              "answer": "تندمج وفق التكامل لتكوين ARNm."
+            },
+            {
+              "question": "ما دور ARN بوليميراز؟",
+              "answer": "يفتح منطقة الاستنساخ ويتقدم على القالب ويحفز تركيب ARNm."
+            }
+          ],
+          "zoom": true,
+          "takeaway": "الرسم يلخص الآلية كلها: قالب ADN + ARN بوليميراز + تكامل + ARNm ينمو 5′→3′."
+        },
+        "display_order": 9
+      },
+      {
+        "id": "step_10",
+        "type": "bac_method",
+        "component": "BacMethodCard",
+        "title": "نص علمي جاهز الفهم لشرح آلية الاستنساخ",
+        "content": {
+          "skill": "تلخيص آلية الاستنساخ",
+          "method": [
+            {
+              "label": "المكان",
+              "text": "تتم عملية الاستنساخ على مستوى النواة عند الخلايا حقيقية النواة."
+            },
+            {
+              "label": "الانطلاق",
+              "text": "يرتبط ARN بوليميراز ببداية المورثة ويفتح سلسلتي ADN موضعيا، ثم يعتمد إحدى السلسلتين قالبا وهي السلسلة المستنسخة."
+            },
+            {
+              "label": "الاستطالة",
+              "text": "يتقدم الإنزيم على السلسلة المستنسخة، وتندمج نيكليوتيدات ARN الحرة وفق التكامل، فتستطيل جزيئة ARNm."
+            },
+            {
+              "label": "النهاية",
+              "text": "عند نهاية المورثة تتوقف الاستطالة، يتحرر ARNm وينفصل الإنزيم وتلتحم سلسلتا ADN من جديد."
+            }
+          ],
+          "scientific_text": "تتم عملية الاستنساخ على مستوى النواة عند الخلايا حقيقية النواة. يرتبط إنزيم ARN بوليميراز ببداية المورثة ويفتح سلسلتي ADN موضعيا، ثم يقرأ إحدى السلسلتين وهي السلسلة المستنسخة. ترتبط النيكليوتيدات الريبية الحرة بقواعد السلسلة المستنسخة وفق مبدأ التكامل، فتستطيل جزيئة ARNm مع تقدم الإنزيم. عند بلوغ نهاية المورثة تتوقف الاستطالة، تتحرر جزيئة ARNm وينفصل ARN بوليميراز، ثم تلتحم سلسلتا ADN من جديد.",
+          "common_mistakes": [
+            "القول إن ADN يتحول إلى ARNm.",
+            "اعتبار سلسلتي ADN معا قالبا للمورثة نفسها.",
+            "استعمال T داخل ARNm بدل U.",
+            "عكس اتجاهي 3′→5′ و5′→3′.",
+            "الانتقال إلى الشفرة الوراثية أو الأحماض الأمينية؛ فهذا ليس موضوع المحور 3."
+          ]
+        },
+        "display_order": 10
+      },
+      {
+        "id": "step_11",
+        "type": "final_visual_map",
+        "component": "InteractiveSummaryMap",
+        "title": "الخلاصة: الاستنساخ في مخطط واحد",
+        "content": {
+          "map": [
+            {
+              "node": "المورثة على ADN",
+              "relation": "يرتبط ببدايتها",
+              "target": "ARN بوليميراز"
+            },
+            {
+              "node": "ARN بوليميراز",
+              "relation": "يفتح موضعيا",
+              "target": "ADN"
+            },
+            {
+              "node": "السلسلة المستنسخة",
+              "relation": "تُقرأ",
+              "target": "3′→5′"
+            },
+            {
+              "node": "الريبونوكليوتيدات الحرة",
+              "relation": "تُدمج وفق",
+              "target": "التكامل"
+            },
+            {
+              "node": "ARNm",
+              "relation": "يُركب",
+              "target": "5′→3′"
+            },
+            {
+              "node": "نهاية المورثة",
+              "relation": "تؤدي إلى",
+              "target": "تحرر ARNm وإعادة التحام ADN"
+            }
+          ],
+          "final_summary": "الاستنساخ هو تصنيع ARNm انطلاقا من إحدى سلسلتي ADN في وجود ARN بوليميراز ونيكليوتيدات ريبية حرة، مع احترام تكامل القواعد. يمر بالانطلاق والاستطالة والنهاية.",
+          "next_axis_bridge": {
+            "question": "بعد أن أصبح ARNm جاهزا، كيف تُقرأ المعلومة التي يحملها؟",
+            "next_concept": "يُدرس ذلك في المحور 4، وليس ضمن هذا المحور."
+          }
+        },
+        "display_order": 11
+      },
+      {
+        "id": "step_12",
+        "type": "quiz",
+        "component": "FinalQuiz",
+        "title": "اختبار نهاية المحور",
+        "content": {
+          "questions": [
+            {
+              "id": "q1",
+              "question": "ما الاستنساخ؟",
+              "choices": [
+                "تصنيع ARNm انطلاقا من مورثة على ADN",
+                "تصنيع بروتين مباشرة",
+                "تحويل ADN كله إلى ARN"
+              ],
+              "correct_answer": "تصنيع ARNm انطلاقا من مورثة على ADN",
+              "explanation": "الاستنساخ يعطي جزيئة ARN جديدة اعتمادا على معلومة المورثة."
+            },
+            {
+              "id": "q2",
+              "question": "ما السلسلة التي تعمل قالبا؟",
+              "choices": [
+                "السلسلة المستنسخة",
+                "السلسلتان معا",
+                "ARNm"
+              ],
+              "correct_answer": "السلسلة المستنسخة",
+              "explanation": "تستعمل إحدى سلسلتي ADN فقط قالبا للمورثة."
+            },
+            {
+              "id": "q3",
+              "question": "إذا كانت قاعدة القالب A، فما القاعدة المقابلة في ARNm؟",
+              "choices": [
+                "U",
+                "T",
+                "C"
+              ],
+              "correct_answer": "U",
+              "explanation": "في ARN تقابل A القالبية قاعدة U."
+            },
+            {
+              "id": "q4",
+              "question": "ما ترتيب مراحل الاستنساخ؟",
+              "choices": [
+                "الانطلاق ثم الاستطالة ثم النهاية",
+                "الاستطالة ثم الانطلاق ثم النهاية",
+                "النهاية ثم الانطلاق ثم الاستطالة"
+              ],
+              "correct_answer": "الانطلاق ثم الاستطالة ثم النهاية",
+              "explanation": "هذا هو التسلسل الزمني للعملية."
+            },
+            {
+              "id": "q5",
+              "question": "ما الاتجاه الصحيح؟",
+              "choices": [
+                "القالب 3′→5′ وARNm 5′→3′",
+                "القالب 5′→3′ وARNm 3′→5′",
+                "كلاهما 5′→3′"
+              ],
+              "correct_answer": "القالب 3′→5′ وARNm 5′→3′",
+              "explanation": "ARNm يركب في الاتجاه المعاكس لاتجاه قراءة القالب."
+            }
+          ],
+          "mastery_threshold": 4
+        },
+        "display_order": 12
+      }
+    ],
+    "presentation": {
+      "hook": "كيف تصنع الخلية نسخة ARNm من المعلومة الموجودة على مورثة ADN؟",
+      "promise": "ستكتشف الظاهرة من الوثائق الأصلية ثم تفهم المراحل وتبني ARNm بنفسك.",
+      "rhythm": [
+        "مشكلة",
+        "وثيقة 1: الدليل",
+        "المتطلبات",
+        "وثيقة 2: المراحل",
+        "مشاهدة جزيئية صحيحة",
+        "التكامل والاتجاهات",
+        "تطبيق",
+        "وثيقة 3: الرسم الكامل",
+        "خلاصة",
+        "اختبار"
+      ],
+      "mode": "document_first_learning",
+      "student_first": true,
+      "reveal_teacher_after_think": true,
+      "max_text_lines_per_card": 6,
+      "avoid_repetition": true,
+      "show_progress_as_journey": true,
+      "disable_generic_cell_animation": true
+    },
+    "curriculum_goal": "أن يفهم التلميذ كيف تصنع الخلية جزيئة ARNm انطلاقا من مورثة على ADN، من بداية العملية إلى نهايتها، دون حفظ فقرة طويلة.",
+    "document_bank": [
+      {
+        "document_id": "ps_axis03_doc01_transcription_feather",
+        "file_name": "transcription_evidence.png",
+        "src": "/science/protein-synthesis/axis-03/transcription_evidence.png",
+        "document_type": "electron_micrograph_with_interpretive_diagram",
+        "source": {
+          "kind": "lesson_pdf",
+          "page": 1,
+          "figure": "الوثيقة (1)"
+        },
+        "axis_tags": [
+          "transcription_and_mechanism"
+        ],
+        "skills": [
+          "read_electron_micrograph",
+          "identify_nascent_rna",
+          "infer_transcription_direction",
+          "infer_multiple_polymerases"
+        ],
+        "scientific_entities": [
+          "ADN",
+          "مورثة",
+          "ARN قيد التشكل",
+          "بداية المورثة",
+          "نهاية المورثة"
+        ],
+        "pedagogical_roles": [
+          "lesson_evidence",
+          "axis_exercise",
+          "ai_axis_exercise",
+          "bac_similar"
+        ],
+        "difficulty": 3,
+        "interpretation_scope": "توضح مظهر الريشة الناتج عن وجود عدة جزيئات ARN متفاوتة الطول قيد التشكل على المورثة، وتسمح باستنتاج اتجاه تقدم الاستنساخ من القصير نحو الطويل.",
+        "safe_claims": [
+          "الخيوط الجانبية تمثل ARN قيد التشكل في الرسم التفسيري.",
+          "ازدياد طول الخيوط يعكس تقدم الاستنساخ.",
+          "يمكن أن تعمل عدة جزيئات ARN بوليميراز على المورثة نفسها في الوقت نفسه."
+        ],
+        "forbidden_inferences": [
+          "اعتبار كل خيط جانبي مورثة مستقلة.",
+          "القول إن ADN يتحول إلى ARN.",
+          "استخراج تسلسل نيكليوتيدي من الصورة المجهرية."
+        ],
+        "ai_generation": {
+          "allowed": true,
+          "allowed_question_types": [
+            "observe",
+            "interpret",
+            "infer_direction",
+            "explain_feather"
+          ],
+          "max_documents_with": 2
+        },
+        "used_in_lesson": true,
+        "lesson_step": "step_2"
+      },
+      {
+        "document_id": "ps_axis03_doc02_transcription_stages",
+        "file_name": "transcription_stages.png",
+        "src": "/science/protein-synthesis/axis-03/transcription_stages.png",
+        "document_type": "mechanism_diagram",
+        "source": {
+          "kind": "lesson_pdf",
+          "page": 1,
+          "figure": "الوثيقة (2)"
+        },
+        "axis_tags": [
+          "transcription_and_mechanism"
+        ],
+        "skills": [
+          "identify_transcription_requirements",
+          "order_transcription_stages",
+          "identify_template_strand",
+          "apply_complementarity"
+        ],
+        "scientific_entities": [
+          "مورثة",
+          "ARN بوليميراز",
+          "ADN",
+          "السلسلة المستنسخة",
+          "ARNm",
+          "ريبونوكليوتيدات حرة",
+          "منطقة البداية",
+          "منطقة النهاية"
+        ],
+        "pedagogical_roles": [
+          "lesson_evidence",
+          "axis_exercise",
+          "ai_axis_exercise",
+          "bac_similar"
+        ],
+        "difficulty": 2,
+        "interpretation_scope": "وثيقة تخطيطية لآلية الاستنساخ من الارتباط ببداية المورثة إلى الاستطالة ثم النهاية، وتوضح التكامل بين القالب وARN.",
+        "safe_claims": [
+          "تعمل سلسلة واحدة من ADN قالبا أثناء استنساخ المورثة.",
+          "ARN بوليميراز يحفز تركيب ARN.",
+          "الريبونوكليوتيدات الحرة هي وحدات بناء ARN.",
+          "تتحرر جزيئة ARN في نهاية العملية."
+        ],
+        "forbidden_inferences": [
+          "اعتبار السلسلتين معا قالبا في الوقت نفسه للمورثة نفسها.",
+          "اعتبار ATP متطلبا مستقلا إذا لم يكن ممثلا مباشرة في الوثيقة.",
+          "القول إن البروتين يتشكل أثناء الاستنساخ."
+        ],
+        "ai_generation": {
+          "allowed": true,
+          "allowed_question_types": [
+            "identify",
+            "order_stages",
+            "explain",
+            "apply_complementarity"
+          ],
+          "max_documents_with": 2
+        },
+        "used_in_lesson": true,
+        "lesson_step": "step_4"
+      },
+      {
+        "document_id": "ps_axis03_doc03_transcription_interpretive_scheme",
+        "file_name": "transcription_diagram.png",
+        "src": "/science/protein-synthesis/axis-03/transcription_diagram.png",
+        "document_type": "evaluation_correction_diagram",
+        "source": {
+          "kind": "lesson_pdf",
+          "page": 3,
+          "role": "حل التقويم"
+        },
+        "axis_tags": [
+          "transcription_and_mechanism"
+        ],
+        "skills": [
+          "identify_template_and_non_template_strands",
+          "read_5_3_directions",
+          "apply_base_pairing",
+          "draw_transcription_scheme"
+        ],
+        "scientific_entities": [
+          "السلسلة المستنسخة",
+          "السلسلة غير المستنسخة",
+          "ARN بوليميراز",
+          "ARNm",
+          "ريبونوكليوتيدات حرة",
+          "5′",
+          "3′"
+        ],
+        "pedagogical_roles": [
+          "lesson_evaluation_solution",
+          "axis_exercise",
+          "ai_axis_exercise"
+        ],
+        "difficulty": 3,
+        "interpretation_scope": "رسم تصحيحي يوضح فقاعة الاستنساخ واتجاهات السلاسل والتكامل بين السلسلة المستنسخة وARNm.",
+        "safe_claims": [
+          "السلسلة المستنسخة هي القالب.",
+          "ARNm مكمل للقالب ومتعاكس معه في الاتجاه.",
+          "وجود U يميز ARN عن ADN في هذا المستوى."
+        ],
+        "forbidden_inferences": [
+          "عرض الرسم كوثيقة اكتشاف قبل أن يحاول التلميذ إنجاز التقويم إذا كان الهدف تقويميا.",
+          "إهمال اتجاهات 5′ و3′ عند بناء تسلسل ARNm."
+        ],
+        "ai_generation": {
+          "allowed": true,
+          "allowed_question_types": [
+            "label",
+            "complete_scheme",
+            "sequence_reasoning",
+            "error_detection"
+          ],
+          "answer_visibility": "hidden_until_reveal"
+        },
+        "used_in_lesson": true,
+        "lesson_step": "step_9"
+      }
+    ],
+    "scientific_quality_control": {
+      "version": "2.0-source-aligned",
+      "rules": [
+        "الاستنساخ يصنع ARNm انطلاقا من مورثة على ADN باستعمال إحدى سلسلتي ADN قالبا.",
+        "السلسلة المستنسخة هي القالب، ولا تستعمل السلسلتان معا كقالب للمورثة نفسها.",
+        "قواعد التكامل في هذا المحور: A في ADN تقابل U في ARN، T تقابل A، C تقابل G، G تقابل C.",
+        "يقرأ القالب في اتجاه 3′→5′ ويركب ARNm في اتجاه 5′→3′.",
+        "تمر العملية بثلاث مراحل: الانطلاق، الاستطالة، النهاية.",
+        "وفق المصدر التعليمي المرفق تذكر الطاقة في شكل ATP ضمن متطلبات الاستنساخ.",
+        "لا يدخل هذا المحور في الشفرة الوراثية أو ترجمة ARNm إلى بروتين.",
+        "المشهد المرئي لا يجوز أن يكتفي برسم خلية ونواة؛ يجب أن يمثل المورثة وARN بوليميراز وARNm وفق المرحلة."
+      ]
+    },
+    "source_alignment": {
+      "primary_source": "آلية الإستنساخ.pdf",
+      "source_scope": "الحصة التعليمية: آلية الاستنساخ",
+      "source_requirements_note": "حافظ هذا الملف على المتطلبات والمراحل والخلاصة الواردة في المذكرة التعليمية، بما فيها الطاقة في شكل ATP كما وردت في المصدر.",
+      "documents_used": [
+        {
+          "document": "الوثيقة (1)",
+          "step": "step_2",
+          "purpose": "تحليل مظهر الريشة واستنتاج حدوث واتجاه الاستنساخ"
+        },
+        {
+          "document": "الوثيقة (2)",
+          "step": "step_4",
+          "purpose": "شرح المراحل ومتطلبات وآلية تشكل ARNm"
+        },
+        {
+          "document": "رسم حل التقويم",
+          "step": "step_9",
+          "purpose": "تثبيت السلسلة المستنسخة والاتجاهات والتكامل"
+        }
+      ]
+    }
+  }
+}

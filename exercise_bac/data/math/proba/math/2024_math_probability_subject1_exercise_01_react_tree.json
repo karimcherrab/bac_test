@@ -1,0 +1,642 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "graph_schema_version": "1.0-react-json",
+  "version": "4.2-2024-math-probability-subject1-ex01-react-tree",
+  "session": "ordinary",
+  "year": 2024,
+  "chapter_code": "probability",
+  "chapter_title": "الاحتمالات",
+  "axis_tags": [
+    "probability_tree_total_probability",
+    "conditional_probability",
+    "probability_language_probability_law",
+    "counting_combinations",
+    "random_variable_probability_distribution_expectation"
+  ],
+  "branches": [
+    {
+      "code": "math",
+      "name": "شعبة رياضيات"
+    }
+  ],
+  "exercise_number": 1,
+  "subject_number": 1,
+  "source_page": 1,
+  "source_pages": [
+    1
+  ],
+  "solution_source_pages": [
+    7
+  ],
+  "title": "التمرين الأول — بكالوريا الجزائر 2024 — الموضوع الأول — شعبة رياضيات — الاحتمالات",
+  "statement": "يحتوي صندوق \\(U_1\\) على 5 بطاقات متماثلة مرقمة بـ: 1 ، 1 ، 2 ، 3 ، 3 ويحتوي صندوق \\(U_2\\) على 6 كريات متماثلة موزعة كما يلي: 4 كريات حمراء و 2 خضراوان (لا نفرق بين البطاقات ولا بين الكريات باللمس).\nنسحب عشوائيا بطاقة واحدة من الصندوق \\(U_1\\):\n– إذا تحصلنا على الرقم 1 نسحب عشوائيا من \\(U_2\\) كرية واحدة.\n– وإذا تحصلنا على الرقم 2 نسحب عشوائيا من \\(U_2\\) كريتين في آن واحد.\n– وإذا تحصلنا على الرقم 3 نسحب عشوائيا من \\(U_2\\) ثلاث كريات في آن واحد.\nنعتبر الحوادث الآتية، \\(C_i\\): « البطاقة المتحصل عليها تحمل الرقم \\(i\\) » حيث \\(i\\in\\{1;2;3\\}\\)\n\\(A\\): « الحصول على كريات حمراء فقط » ، \\(B\\): « الحصول على كريات خضراء فقط »\n\\(D\\): « الحصول على كريات ليست كلها من نفس اللون »",
+  "questions": [
+    {
+      "id": "2024_s1_probability_ex01_q1a",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) أ) بين أن: \\(P_{C_2}(B)=\\frac{1}{15}\\) و \\(P_{C_3}(D)=\\frac{4}{5}\\).",
+      "axis_tags": [
+        "conditional_probability",
+        "counting_combinations"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "بعد معرفة رقم البطاقة نعمل فقط داخل الصندوق U₂ ونستعمل التوفيقات.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب P_C2(B)",
+            "explanation": "عند تحقق \\(C_2\\) نسحب كريتين من بين 6 كريات، منها كريتان خضراوان:\n\\[\nP_{C_2}(B)=\\frac{\\binom22}{\\binom62}=\\frac1{15}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب P_C3(D)",
+            "explanation": "عند تحقق \\(C_3\\) نسحب 3 كريات. لا يمكن سحب 3 خضراء لأن عدد الخضراء هو 2، إذن الحالة الوحيدة التي تكون فيها الكريات كلها من نفس اللون هي 3 حمراء:\n\\[\nP_{C_3}(D)=1-\\frac{\\binom43}{\\binom63}=1-\\frac4{20}=\\frac45.\n\\]"
+          }
+        ],
+        "final_answer": "\\[P_{C_2}(B)=\\frac1{15},\\qquad P_{C_3}(D)=\\frac45.\\]"
+      }
+    },
+    {
+      "id": "2024_s1_probability_ex01_q1b",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "ب) انقل وأملأ شجرة الاحتمالات المقابلة.",
+      "axis_tags": [
+        "probability_tree_total_probability"
+      ],
+      "statement_graphs": [
+        {
+          "id": "2024_s1_probability_ex01_tree_statement",
+          "type": "probability_tree",
+          "render_mode": "json",
+          "capture": false,
+          "title": "شجرة الاحتمالات",
+          "direction": "ltr",
+          "canvas": {
+            "width": 860,
+            "height": 620,
+            "padding": 24
+          },
+          "style": {
+            "node_radius": 5,
+            "edge_width": 2,
+            "label_font_size": 18,
+            "probability_font_size": 17,
+            "show_arrow_heads": false
+          },
+          "nodes": [
+            {
+              "id": "root",
+              "kind": "root",
+              "x": 70,
+              "y": 310,
+              "label": ""
+            },
+            {
+              "id": "c1",
+              "kind": "branch",
+              "x": 300,
+              "y": 115,
+              "label": "C₁"
+            },
+            {
+              "id": "c2",
+              "kind": "branch",
+              "x": 300,
+              "y": 310,
+              "label": "C₂"
+            },
+            {
+              "id": "c3",
+              "kind": "branch",
+              "x": 300,
+              "y": 505,
+              "label": "C₃"
+            },
+            {
+              "id": "c1_a",
+              "kind": "event",
+              "x": 720,
+              "y": 70,
+              "label": "A"
+            },
+            {
+              "id": "c1_b",
+              "kind": "event",
+              "x": 720,
+              "y": 155,
+              "label": "B"
+            },
+            {
+              "id": "c2_a",
+              "kind": "event",
+              "x": 720,
+              "y": 235,
+              "label": "A"
+            },
+            {
+              "id": "c2_b",
+              "kind": "event",
+              "x": 720,
+              "y": 310,
+              "label": "B"
+            },
+            {
+              "id": "c2_d",
+              "kind": "event",
+              "x": 720,
+              "y": 385,
+              "label": "D"
+            },
+            {
+              "id": "c3_a",
+              "kind": "event",
+              "x": 720,
+              "y": 465,
+              "label": "A"
+            },
+            {
+              "id": "c3_d",
+              "kind": "event",
+              "x": 720,
+              "y": 550,
+              "label": "D"
+            }
+          ],
+          "edges": [
+            {
+              "id": "e_root_c1",
+              "from": "root",
+              "to": "c1",
+              "probability": null,
+              "latex_probability": null,
+              "display_if_missing": "",
+              "is_given_in_statement": false
+            },
+            {
+              "id": "e_root_c2",
+              "from": "root",
+              "to": "c2",
+              "probability": null,
+              "latex_probability": null,
+              "display_if_missing": "",
+              "is_given_in_statement": false
+            },
+            {
+              "id": "e_root_c3",
+              "from": "root",
+              "to": "c3",
+              "probability": null,
+              "latex_probability": null,
+              "display_if_missing": "",
+              "is_given_in_statement": false
+            },
+            {
+              "id": "e_c1_a",
+              "from": "c1",
+              "to": "c1_a",
+              "probability": null,
+              "latex_probability": null,
+              "display_if_missing": "",
+              "is_given_in_statement": false
+            },
+            {
+              "id": "e_c1_b",
+              "from": "c1",
+              "to": "c1_b",
+              "probability": null,
+              "latex_probability": null,
+              "display_if_missing": "",
+              "is_given_in_statement": false
+            },
+            {
+              "id": "e_c2_a",
+              "from": "c2",
+              "to": "c2_a",
+              "probability": null,
+              "latex_probability": null,
+              "display_if_missing": "",
+              "is_given_in_statement": false
+            },
+            {
+              "id": "e_c2_b",
+              "from": "c2",
+              "to": "c2_b",
+              "probability": null,
+              "latex_probability": null,
+              "display_if_missing": "",
+              "is_given_in_statement": false
+            },
+            {
+              "id": "e_c2_d",
+              "from": "c2",
+              "to": "c2_d",
+              "probability": null,
+              "latex_probability": null,
+              "display_if_missing": "",
+              "is_given_in_statement": false
+            },
+            {
+              "id": "e_c3_a",
+              "from": "c3",
+              "to": "c3_a",
+              "probability": null,
+              "latex_probability": null,
+              "display_if_missing": "",
+              "is_given_in_statement": false
+            },
+            {
+              "id": "e_c3_d",
+              "from": "c3",
+              "to": "c3_d",
+              "probability": null,
+              "latex_probability": null,
+              "display_if_missing": "",
+              "is_given_in_statement": false
+            }
+          ],
+          "react_renderer": {
+            "component": "ProbabilityTreeRenderer",
+            "source": "nodes_edges",
+            "probability_field": "latex_probability",
+            "fallback_probability_field": "probability",
+            "missing_probability_field": "display_if_missing"
+          }
+        }
+      ],
+      "solution": {
+        "strategy": "نحسب احتمال كل بطاقة ثم احتمالات الأحداث A وB وD حسب عدد الكريات المسحوبة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "احتمالات البطاقات",
+            "explanation": "\\[\nP(C_1)=\\frac25,\\qquad P(C_2)=\\frac15,\\qquad P(C_3)=\\frac25.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "فروع C₁",
+            "explanation": "\\[\nP(A|C_1)=\\frac46=\\frac23,\\qquad P(B|C_1)=\\frac26=\\frac13.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "فروع C₂",
+            "explanation": "\\[\nP(A|C_2)=\\frac{\\binom42}{\\binom62}=\\frac25,\n\\quad P(B|C_2)=\\frac1{15},\n\\quad P(D|C_2)=\\frac8{15}.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "فروع C₃",
+            "explanation": "\\[\nP(A|C_3)=\\frac{\\binom43}{\\binom63}=\\frac15,\n\\qquad P(D|C_3)=\\frac45.\n\\]"
+          }
+        ],
+        "solution_graphs": [
+          {
+            "id": "2024_s1_probability_ex01_tree_solution",
+            "type": "probability_tree",
+            "render_mode": "json",
+            "capture": false,
+            "title": "شجرة الاحتمالات المكتملة",
+            "direction": "ltr",
+            "canvas": {
+              "width": 860,
+              "height": 620,
+              "padding": 24
+            },
+            "style": {
+              "node_radius": 5,
+              "edge_width": 2,
+              "label_font_size": 18,
+              "probability_font_size": 17,
+              "show_arrow_heads": false
+            },
+            "nodes": [
+              {
+                "id": "root",
+                "kind": "root",
+                "x": 70,
+                "y": 310,
+                "label": ""
+              },
+              {
+                "id": "c1",
+                "kind": "branch",
+                "x": 300,
+                "y": 115,
+                "label": "C₁"
+              },
+              {
+                "id": "c2",
+                "kind": "branch",
+                "x": 300,
+                "y": 310,
+                "label": "C₂"
+              },
+              {
+                "id": "c3",
+                "kind": "branch",
+                "x": 300,
+                "y": 505,
+                "label": "C₃"
+              },
+              {
+                "id": "c1_a",
+                "kind": "event",
+                "x": 720,
+                "y": 70,
+                "label": "A"
+              },
+              {
+                "id": "c1_b",
+                "kind": "event",
+                "x": 720,
+                "y": 155,
+                "label": "B"
+              },
+              {
+                "id": "c2_a",
+                "kind": "event",
+                "x": 720,
+                "y": 235,
+                "label": "A"
+              },
+              {
+                "id": "c2_b",
+                "kind": "event",
+                "x": 720,
+                "y": 310,
+                "label": "B"
+              },
+              {
+                "id": "c2_d",
+                "kind": "event",
+                "x": 720,
+                "y": 385,
+                "label": "D"
+              },
+              {
+                "id": "c3_a",
+                "kind": "event",
+                "x": 720,
+                "y": 465,
+                "label": "A"
+              },
+              {
+                "id": "c3_d",
+                "kind": "event",
+                "x": 720,
+                "y": 550,
+                "label": "D"
+              }
+            ],
+            "edges": [
+              {
+                "id": "e_root_c1",
+                "from": "root",
+                "to": "c1",
+                "probability": "2/5",
+                "latex_probability": "\\frac{2}{5}",
+                "display_if_missing": "",
+                "is_given_in_statement": false
+              },
+              {
+                "id": "e_root_c2",
+                "from": "root",
+                "to": "c2",
+                "probability": "1/5",
+                "latex_probability": "\\frac{1}{5}",
+                "display_if_missing": "",
+                "is_given_in_statement": false
+              },
+              {
+                "id": "e_root_c3",
+                "from": "root",
+                "to": "c3",
+                "probability": "2/5",
+                "latex_probability": "\\frac{2}{5}",
+                "display_if_missing": "",
+                "is_given_in_statement": false
+              },
+              {
+                "id": "e_c1_a",
+                "from": "c1",
+                "to": "c1_a",
+                "probability": "2/3",
+                "latex_probability": "\\frac{2}{3}",
+                "display_if_missing": "",
+                "is_given_in_statement": false
+              },
+              {
+                "id": "e_c1_b",
+                "from": "c1",
+                "to": "c1_b",
+                "probability": "1/3",
+                "latex_probability": "\\frac{1}{3}",
+                "display_if_missing": "",
+                "is_given_in_statement": false
+              },
+              {
+                "id": "e_c2_a",
+                "from": "c2",
+                "to": "c2_a",
+                "probability": "2/5",
+                "latex_probability": "\\frac{2}{5}",
+                "display_if_missing": "",
+                "is_given_in_statement": false
+              },
+              {
+                "id": "e_c2_b",
+                "from": "c2",
+                "to": "c2_b",
+                "probability": "1/15",
+                "latex_probability": "\\frac{1}{15}",
+                "display_if_missing": "",
+                "is_given_in_statement": false
+              },
+              {
+                "id": "e_c2_d",
+                "from": "c2",
+                "to": "c2_d",
+                "probability": "8/15",
+                "latex_probability": "\\frac{8}{15}",
+                "display_if_missing": "",
+                "is_given_in_statement": false
+              },
+              {
+                "id": "e_c3_a",
+                "from": "c3",
+                "to": "c3_a",
+                "probability": "1/5",
+                "latex_probability": "\\frac{1}{5}",
+                "display_if_missing": "",
+                "is_given_in_statement": false
+              },
+              {
+                "id": "e_c3_d",
+                "from": "c3",
+                "to": "c3_d",
+                "probability": "4/5",
+                "latex_probability": "\\frac{4}{5}",
+                "display_if_missing": "",
+                "is_given_in_statement": false
+              }
+            ],
+            "react_renderer": {
+              "component": "ProbabilityTreeRenderer",
+              "source": "nodes_edges",
+              "probability_field": "latex_probability",
+              "fallback_probability_field": "probability",
+              "missing_probability_field": "display_if_missing"
+            }
+          }
+        ],
+        "final_answer": "\\[P(C_1)=\\frac25,\\ P(C_2)=\\frac15,\\ P(C_3)=\\frac25.\\]\n\\[P(A|C_1)=\\frac23,\\ P(B|C_1)=\\frac13.\\]\n\\[P(A|C_2)=\\frac25,\\ P(B|C_2)=\\frac1{15},\\ P(D|C_2)=\\frac8{15}.\\]\n\\[P(A|C_3)=\\frac15,\\ P(D|C_3)=\\frac45.\\]"
+      }
+    },
+    {
+      "id": "2024_s1_probability_ex01_q1c",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "ج) احسب \\(P(A)\\)، \\(P(B)\\) و \\(P(D)\\).",
+      "axis_tags": [
+        "probability_tree_total_probability"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نطبق قانون الاحتمالات الكلية باستعمال C₁ وC₂ وC₃.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب P(A)",
+            "explanation": "\\[\nP(A)=\\frac25\\times\\frac23+\\frac15\\times\\frac25+\\frac25\\times\\frac15=\\frac{32}{75}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب P(B)",
+            "explanation": "\\[\nP(B)=\\frac25\\times\\frac13+\\frac15\\times\\frac1{15}=\\frac{11}{75}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب P(D)",
+            "explanation": "\\[\nP(D)=\\frac15\\times\\frac8{15}+\\frac25\\times\\frac45=\\frac{32}{75}.\n\\]"
+          }
+        ],
+        "final_answer": "\\[P(A)=\\frac{32}{75},\\qquad P(B)=\\frac{11}{75},\\qquad P(D)=\\frac{32}{75}.\\]"
+      }
+    },
+    {
+      "id": "2024_s1_probability_ex01_q2",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "2) احسب احتمال أن تكون البطاقة المتحصل عليها تحمل الرقم 3 علما أن الكريات المسحوبة حمراء.",
+      "axis_tags": [
+        "conditional_probability"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "المطلوب هو الاحتمال الشرطي \\(P_A(C_3)\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب P(A∩C₃)",
+            "explanation": "\\[\nP(A\\cap C_3)=P(C_3)P(A|C_3)=\\frac25\\times\\frac15=\\frac2{25}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "الاحتمال الشرطي",
+            "explanation": "\\[\nP_A(C_3)=\\frac{P(A\\cap C_3)}{P(A)}=\\frac{\\frac2{25}}{\\frac{32}{75}}=\\frac3{16}.\n\\]"
+          }
+        ],
+        "final_answer": "\\[P_A(C_3)=\\frac3{16}.\\]"
+      }
+    },
+    {
+      "id": "2024_s1_probability_ex01_q3",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "3) \\(X\\) المتغير العشوائي الذي يرفق بكل عملية سحب عدد الألوان المتحصل عليها.\n– عين قانون احتمال المتغير العشوائي \\(X\\) ثم احسب الأمل الرياضياتي \\(E(75X+1917)\\).",
+      "axis_tags": [
+        "random_variable_probability_distribution_expectation"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "عدد الألوان المتحصل عليها يكون 1 أو 2.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "قيم X",
+            "explanation": "\\[X\\in\\{1,2\\}.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "احتمال X=1",
+            "explanation": "لون واحد يعني كريات حمراء فقط أو خضراء فقط:\n\\[\nP(X=1)=P(A)+P(B)=\\frac{32}{75}+\\frac{11}{75}=\\frac{43}{75}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "احتمال X=2",
+            "explanation": "\\[P(X=2)=P(D)=\\frac{32}{75}.\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "قانون الاحتمال",
+            "explanation": "\\[\n\\begin{array}{c|cc}\nx_i&1&2\\\\\\hline\nP(X=x_i)&\\frac{43}{75}&\\frac{32}{75}\n\\end{array}\n\\]"
+          },
+          {
+            "step_number": 5,
+            "title": "حساب الأمل",
+            "explanation": "\\[\nE(X)=1\\times\\frac{43}{75}+2\\times\\frac{32}{75}=\\frac{107}{75}.\n\\]\n\\[\nE(75X+1917)=75E(X)+1917=107+1917=2024.\n\\]"
+          }
+        ],
+        "final_answer": "\\[\n\\begin{array}{c|cc}\nx_i&1&2\\\\\\hline\nP(X=x_i)&\\frac{43}{75}&\\frac{32}{75}\n\\end{array}\n\\]\n\\[E(75X+1917)=2024.\\]"
+      }
+    },
+    {
+      "id": "2024_s1_probability_ex01_q4",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "4) إذا كان عدد الكريات الحمراء في الصندوق \\(U_2\\) هو \\(n+4\\) حيث \\(n\\) عدد طبيعي.\n– جد قيمة \\(n\\) التي من أجلها يكون \\(P_{C_3}(A)=\\frac{7}{15}\\).",
+      "axis_tags": [
+        "conditional_probability",
+        "counting_combinations"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "عند تحقق C₃ نسحب ثلاث كريات من صندوق فيه n+4 حمراء وكريتان خضراوان.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "كتابة الاحتمال",
+            "explanation": "العدد الكلي للكريات هو \\(n+6\\):\n\\[\nP_{C_3}(A)=\\frac{\\binom{n+4}{3}}{\\binom{n+6}{3}}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حل المعادلة",
+            "explanation": "\\[\n\\frac{\\binom{n+4}{3}}{\\binom{n+6}{3}}=\\frac7{15}\\Longleftrightarrow 4n^2-n-60=0.\n\\]\nالحل الطبيعي هو \\(n=4\\)."
+          }
+        ],
+        "final_answer": "\\[n=4.\\]"
+      }
+    }
+  ],
+  "rendering_contract": {
+    "no_capture": true,
+    "external_image_required": false,
+    "external_svg_required": false,
+    "graph_source": "inline_json",
+    "supported_graph_types": [
+      "probability_tree"
+    ],
+    "react_note": "الشجرة موجودة بالكامل داخل JSON. ارسم كل edge من إحداثيات node[from] إلى node[to]. اعرض latex_probability إن كانت موجودة. لا يوجد أي image path أو SVG خارجي."
+  },
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2024(8).pdf",
+    "statement_figure_policy": "لا Capture. شجرة الاحتمالات معاد بناؤها داخل JSON.",
+    "solution_figure_policy": "الشجرة المكتملة موجودة داخل solution_graphs كبيانات JSON.",
+    "renderer": "ProbabilityTreeRenderer(nodes + edges)"
+  }
+}

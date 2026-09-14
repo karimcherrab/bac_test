@@ -1,0 +1,252 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "session": "ordinary",
+  "year": 2022,
+  "chapter_code": "sequences",
+  "chapter_title": "المتتاليات العددية",
+  "branches": [
+    {
+      "code": "science",
+      "name": "شعبة علوم تجريبية"
+    }
+  ],
+  "source_pdf": "2022.pdf",
+  "comparison_source": "bac_sequence_scientifique(20260823-105202).pdf",
+  "source_verification": {
+    "statement_checked_against_original_bac": true,
+    "solution_checked_against_official_correction": true,
+    "solution_style": "حل مفصل ومبسط بخطوات صغيرة، مع إظهار الحسابات الوسيطة التي اختصرها التصحيح الرسمي.",
+    "statement_policy": "نص التمرين والأسئلة منقول من موضوع البكالوريا دون إضافة معطيات جديدة."
+  },
+  "version": "4.2-2022-science-sequences-subject1-ex03",
+  "exercise_number": 3,
+  "subject_number": 1,
+  "points": 5,
+  "source_page": 2,
+  "source_pages": [
+    2
+  ],
+  "solution_source_pages": [
+    6
+  ],
+  "title": "التمرين الثالث — بكالوريا الجزائر 2022 — الموضوع الأول — شعبة علوم تجريبية",
+  "statement": "المتتالية العددية \\((u_n)\\) معرفة على \\(\\mathbb N\\) بـ: \\(u_0=-4\\) و \\(u_{n+1}=-\\frac12u_n+1\\).",
+  "statement_graphs": [
+    {
+      "id": "2022_s1_ex03_source_graph",
+      "type": "source_figure",
+      "source_page": 2,
+      "description": "الشكل المقابل في نص البكالوريا للمستقيمين المستعملين في تمثيل الحدود بيانيا."
+    }
+  ],
+  "questions": [
+    {
+      "id": "2022_s1_ex03_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) انقل الشكل المقابل على ورقة الإجابة ثم مثل على حامل محور الفواصل الحدود: \\(u_0\\)، \\(u_1\\)، \\(u_2\\) و \\(u_3\\) مبرزا خطوط التمثيل.",
+      "axis_tags": [
+        "graphical_sequence"
+      ],
+      "statement_graphs": [
+        "2022_s1_ex03_source_graph"
+      ],
+      "solution": {
+        "strategy": "نستعمل طريقة السلم بين المستقيم الممثل للدالة \\(f(x)=-\\frac12x+1\\) والمستقيم \\(y=x\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "البداية من u_0",
+            "explanation": "نضع \\(u_0=-4\\) على محور الفواصل."
+          },
+          {
+            "step_number": 2,
+            "title": "إنشاء u_1",
+            "explanation": "من \\(u_0\\) نصعد عموديا إلى المستقيم الممثل لـ\\(f\\)، ثم نتحرك أفقيا إلى المستقيم \\(y=x\\). فاصلة النقطة الجديدة تمثل \\(u_1\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "إنشاء u_2 وu_3",
+            "explanation": "نكرر نفس العملية انطلاقا من \\(u_1\\) للحصول على \\(u_2\\)، ثم من \\(u_2\\) للحصول على \\(u_3\\)."
+          },
+          {
+            "step_number": 4,
+            "title": "للتأكد فقط",
+            "explanation": "من علاقة الرجوع نجد حسابيا: \\(u_1=3\\)، \\(u_2=-\\frac12\\)، \\(u_3=\\frac54\\). هذه القيم تساعد على التحقق من صحة الرسم، مع أن السؤال يطلب التمثيل البياني."
+          }
+        ],
+        "final_answer": "تمثل الحدود بيانيا كما في طريقة السلم: \\(u_0=-4\\)، \\(u_1=3\\)، \\(u_2=-\\frac12\\)، \\(u_3=\\frac54\\)."
+      }
+    },
+    {
+      "id": "2022_s1_ex03_q2a",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2) أ- هل المتتالية \\((u_n)\\) رتيبة؟ برر إجابتك.",
+      "axis_tags": [
+        "sequence_monotonicity"
+      ],
+      "solution": {
+        "strategy": "يكفي مقارنة بعض الحدود الأولى لإثبات أنها ليست رتيبة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "مقارنة u_0 وu_1",
+            "explanation": "لدينا:\n\\[\nu_0=-4<u_1=3.\n\\]\nإذن في البداية حدث تزايد."
+          },
+          {
+            "step_number": 2,
+            "title": "مقارنة u_1 وu_2",
+            "explanation": "لكن:\n\\[\nu_1=3>u_2=-\\frac12.\n\\]\nإذن بعد ذلك حدث تناقص."
+          },
+          {
+            "step_number": 3,
+            "title": "الاستنتاج",
+            "explanation": "بما أن اتجاه التغير ليس ثابتا، فالمتتالية ليست رتيبة."
+          }
+        ],
+        "final_answer": "\\(\\boxed{(u_n)\\text{ ليست رتيبة}}\\)."
+      }
+    },
+    {
+      "id": "2022_s1_ex03_q2b",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "ب- ضع تخمينا حول تقارب المتتالية \\((u_n)\\).",
+      "axis_tags": [
+        "graphical_conjecture",
+        "sequence_convergence"
+      ],
+      "statement_graphs": [
+        "2022_s1_ex03_source_graph"
+      ],
+      "solution": {
+        "strategy": "نقرأ سلوك الحدود من التمثيل البياني.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "ملاحظة من الرسم",
+            "explanation": "الحدود تتناوب حول فاصلة نقطة تقاطع المستقيمين وتقترب منها تدريجيا."
+          },
+          {
+            "step_number": 2,
+            "title": "تحديد قيمة التقاطع",
+            "explanation": "نقطة الثبات تحقق:\n\\[\nx=-\\frac12x+1.\n\\]\nومنها:\n\\[\n\\frac32x=1\\Rightarrow x=\\frac23.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "التخمين",
+            "explanation": "نتخمن إذن أن المتتالية متقاربة نحو \\(\\frac23\\)."
+          }
+        ],
+        "final_answer": "التخمين: \\(\\boxed{u_n\\to\\frac23}\\)."
+      }
+    },
+    {
+      "id": "2022_s1_ex03_q3a",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "3) المتتالية العددية \\((v_n)\\) المعرفة على \\(\\mathbb N\\) بـ: \\(v_n=\\left(u_n-\\frac23\\right)^2\\). أ- بين أن المتتالية \\((v_n)\\) هندسية أساسها \\(\\frac14\\) ثم احسب \\(v_0\\).",
+      "axis_tags": [
+        "auxiliary_sequence",
+        "geometric_sequence"
+      ],
+      "solution": {
+        "strategy": "نحسب \\(u_{n+1}-\\frac23\\) بدلالة \\(u_n-\\frac23\\)، ثم نربع.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تحويل علاقة الرجوع",
+            "explanation": "لدينا:\n\\[\nu_{n+1}-\\frac23=-\\frac12u_n+1-\\frac23.\n\\]\nأي:\n\\[\nu_{n+1}-\\frac23=-\\frac12u_n+\\frac13.\n\\]\nنأخذ \\(-\\frac12\\) عاملا مشتركا:\n\\[\nu_{n+1}-\\frac23=-\\frac12\\left(u_n-\\frac23\\right).\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب v_{n+1}",
+            "explanation": "بالتربيع:\n\\[\nv_{n+1}=\\left(u_{n+1}-\\frac23\\right)^2\n=\\frac14\\left(u_n-\\frac23\\right)^2\n=\\frac14v_n.\n\\]\nإذن \\((v_n)\\) هندسية أساسها \\(\\frac14\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "حساب v_0",
+            "explanation": "\\[\nv_0=\\left(-4-\\frac23\\right)^2\n=\\left(-\\frac{14}{3}\\right)^2\n=\\frac{196}{9}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{q=\\frac14,\\quad v_0=\\frac{196}{9}}\\)."
+      }
+    },
+    {
+      "id": "2022_s1_ex03_q3b",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "ب- عبر عن \\(v_n\\) بدلالة \\(n\\) ثم احسب \\(\\lim_{n\\to+\\infty}v_n\\) واستنتج أن \\((u_n)\\) متقاربة.",
+      "axis_tags": [
+        "geometric_sequence_general_term",
+        "sequence_limit",
+        "sequence_convergence"
+      ],
+      "solution": {
+        "strategy": "نستعمل الحد العام للمتتالية الهندسية ثم تعريف \\(v_n\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "كتابة v_n",
+            "explanation": "بما أن \\(v_0=\\frac{196}{9}\\) والأساس \\(\\frac14\\):\n\\[\n\\boxed{v_n=\\frac{196}{9}\\left(\\frac14\\right)^n}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب نهاية v_n",
+            "explanation": "لأن:\n\\[\n0<\\frac14<1,\n\\]\nفإن:\n\\[\n\\left(\\frac14\\right)^n\\to0.\n\\]\nومن ثم:\n\\[\n\\boxed{v_n\\to0}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "العودة إلى u_n",
+            "explanation": "لكن:\n\\[\nv_n=\\left(u_n-\\frac23\\right)^2.\n\\]\nإذن:\n\\[\n\\left(u_n-\\frac23\\right)^2\\to0.\n\\]\nومن ثم:\n\\[\nu_n-\\frac23\\to0.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "الاستنتاج",
+            "explanation": "\\[\n\\boxed{u_n\\to\\frac23}.\n\\]\nإذن \\((u_n)\\) متقاربة."
+          }
+        ],
+        "final_answer": "\\(\\boxed{v_n=\\frac{196}{9}(\\frac14)^n}\\)، \\(\\boxed{\\lim v_n=0}\\)، و \\(\\boxed{\\lim u_n=\\frac23}\\)."
+      }
+    },
+    {
+      "id": "2022_s1_ex03_q4",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "4) بين أنه من أجل كل عدد طبيعي \\(n\\): \\(v_0\\times v_1\\times\\cdots\\times v_{n-1}=\\left(\\frac{14}{3}\\right)^{2n}\\times\\left(\\frac12\\right)^{n^2-n}\\).",
+      "axis_tags": [
+        "sequence_product",
+        "geometric_product"
+      ],
+      "solution": {
+        "strategy": "نعوض العبارة الصريحة لـ\\(v_k\\) ثم نجمع الأسس.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "كتابة v_k",
+            "explanation": "لدينا:\n\\[\nv_k=\\frac{196}{9}\\left(\\frac14\\right)^k\n=\\left(\\frac{14}{3}\\right)^2\\left(\\frac12\\right)^{2k}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "تكوين الجداء",
+            "explanation": "إذن:\n\\[\n\\prod_{k=0}^{n-1}v_k\n=\\left(\\frac{14}{3}\\right)^{2n}\n\\left(\\frac12\\right)^{2(0+1+\\cdots+n-1)}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب مجموع الأسس",
+            "explanation": "\\[\n0+1+\\cdots+(n-1)=\\frac{n(n-1)}2.\n\\]\nإذن الأس الكلي هو:\n\\[\n2\\times\\frac{n(n-1)}2=n^2-n.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "النتيجة",
+            "explanation": "\\[\n\\boxed{v_0v_1\\cdots v_{n-1}=\\left(\\frac{14}{3}\\right)^{2n}\\left(\\frac12\\right)^{n^2-n}}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{v_0v_1\\cdots v_{n-1}=(\\frac{14}{3})^{2n}(\\frac12)^{n^2-n}}\\)."
+      }
+    }
+  ]
+}

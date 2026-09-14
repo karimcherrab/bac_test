@@ -1,0 +1,328 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "session": "ordinary",
+  "year": 2016,
+  "year_variant": "2016_2",
+  "chapter_code": "sequences",
+  "chapter_title": "المتتاليات العددية",
+  "branches": [
+    {
+      "code": "science",
+      "name": "شعبة علوم تجريبية"
+    }
+  ],
+  "source_pdf": "2016_2(4).pdf",
+  "comparison_source": "bac_sequence_scientifique(20260823-103207).pdf",
+  "source_verification": {
+    "statement_checked_against_original_bac": true,
+    "solution_checked_against_official_correction": true,
+    "solution_style": "حل مفصل ومبسط بخطوات صغيرة، مع إظهار الحسابات التي اختصرها التصحيح الرسمي.",
+    "statement_policy": "نص السؤال منقول من موضوع البكالوريا دون إضافة معطيات جديدة.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  },
+  "version": "4.2-2016_2-science-sequences-subject1-ex03",
+  "exercise_number": 3,
+  "subject_number": 1,
+  "points": 5,
+  "source_page": 2,
+  "source_pages": [
+    2
+  ],
+  "solution_source_pages": [
+    6
+  ],
+  "title": "التمرين الثالث — بكالوريا الجزائر 2016_2 — الموضوع الأول — شعبة علوم تجريبية",
+  "statement": "نعتبر الدالة العددية \\(f\\) المعرفة على المجال \\(I=[0;4]\\) كما يلي: \\(f(x)=\\frac{13x}{9x+13}\\).",
+  "statement_graphs": [],
+  "axis_tags": [
+    "function_monotonicity",
+    "invariant_interval",
+    "recursive_sequence",
+    "induction_bounds",
+    "sequence_monotonicity",
+    "sequence_convergence",
+    "arithmetic_auxiliary_sequence",
+    "explicit_sequence_formula",
+    "sequence_limit"
+  ],
+  "questions": [
+    {
+      "id": "2016_2_s1_ex03_q1a",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1- أ) بين أن الدالة \\(f\\) متزايدة تماما على المجال \\(I\\).",
+      "axis_tags": [
+        "function_monotonicity"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب مشتقة الدالة \\(f\\)، ثم ندرس إشارتها على المجال \\(I=[0;4]\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب المشتقة",
+            "explanation": "لدينا:\n\\[\nf(x)=\\frac{13x}{9x+13}.\n\\]\nباستعمال مشتقة خارج دالتين:\n\\[\nf'(x)=\\frac{13(9x+13)-13x\\times9}{(9x+13)^2}.\n\\]\nنبسط البسط:\n\\[\n13(9x+13)-117x=117x+169-117x=169.\n\\]\nإذن:\n\\[\n\\boxed{f'(x)=\\frac{169}{(9x+13)^2}}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "دراسة إشارة المشتقة",
+            "explanation": "لكل \\(x\\in[0;4]\\)، لدينا:\n\\[\n9x+13>0\n\\]\nوبالتالي:\n\\[\n(9x+13)^2>0.\n\\]\nكما أن \\(169>0\\)، ومنه:\n\\[\nf'(x)>0.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الاستنتاج",
+            "explanation": "بما أن \\(f'(x)>0\\) على كامل المجال \\(I\\)، فإن الدالة \\(f\\) متزايدة تماما على \\(I=[0;4]\\)."
+          }
+        ],
+        "final_answer": "\\(\\boxed{f\\text{ متزايدة تماما على }I=[0;4]}\\)."
+      }
+    },
+    {
+      "id": "2016_2_s1_ex03_q1b",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "ب) بين أنه من أجل كل عدد حقيقي \\(x\\) من المجال \\(I\\)، \\(f(x)\\) ينتمي إلى \\(I\\).",
+      "axis_tags": [
+        "invariant_interval"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "بما أن \\(f\\) متزايدة على \\([0;4]\\)، نحصر \\(f(x)\\) بين صورتي طرفي المجال.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "استعمال تزايد f",
+            "explanation": "إذا كان:\n\\[\n0\\le x\\le4,\n\\]\nوبما أن \\(f\\) متزايدة تماما، فإن:\n\\[\nf(0)\\le f(x)\\le f(4).\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب f(0)",
+            "explanation": "\\[\nf(0)=\\frac{13\\times0}{9\\times0+13}=0.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب f(4)",
+            "explanation": "\\[\nf(4)=\\frac{13\\times4}{9\\times4+13}\n=\\frac{52}{36+13}\n=\\frac{52}{49}.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "التحقق من الانتماء إلى I",
+            "explanation": "إذن:\n\\[\n0\\le f(x)\\le\\frac{52}{49}.\n\\]\nولأن:\n\\[\n\\frac{52}{49}<4,\n\\]\nفإن:\n\\[\n0\\le f(x)\\le4.\n\\]\nأي:\n\\[\nf(x)\\in[0;4]=I.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{\\forall x\\in I,\\ f(x)\\in I}\\)."
+      }
+    },
+    {
+      "id": "2016_2_s1_ex03_q2a",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "2- لتكن المتتالية العددية \\((u_n)\\) المعرفة على \\(\\mathbb N\\) بحدها الأول \\(u_0=4\\) و \\(u_{n+1}=f(u_n)\\) من أجل كل عدد طبيعي \\(n\\). أ) برهن بالتراجع أنه من أجل كل عدد طبيعي \\(n\\): \\(0\\le u_n\\le4\\).",
+      "axis_tags": [
+        "recursive_sequence",
+        "induction_bounds"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نبرهن الخاصية \\(0\\le u_n\\le4\\) بالتراجع، باستعمال النتيجة السابقة التي تبين أن \\(f(I)\\subset I\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التحقق عند n=0",
+            "explanation": "لدينا:\n\\[\nu_0=4.\n\\]\nومن ثم:\n\\[\n0\\le u_0\\le4.\n\\]\nإذن الخاصية صحيحة عند الرتبة \\(0\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "فرضية التراجع",
+            "explanation": "نفترض أنه عند رتبة طبيعية \\(n\\):\n\\[\n0\\le u_n\\le4.\n\\]\nأي أن:\n\\[\nu_n\\in I.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الانتقال إلى n+1",
+            "explanation": "من السؤال السابق، إذا كان \\(x\\in I\\) فإن \\(f(x)\\in I\\). وبما أن \\(u_n\\in I\\)، فإن:\n\\[\nf(u_n)\\in I.\n\\]\nلكن:\n\\[\nu_{n+1}=f(u_n).\n\\]\nإذن:\n\\[\n0\\le u_{n+1}\\le4.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "الخلاصة",
+            "explanation": "بالتراجع نحصل على:\n\\[\n\\boxed{0\\le u_n\\le4\\quad\\forall n\\in\\mathbb N}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{0\\le u_n\\le4\\text{ لكل }n\\in\\mathbb N}\\)."
+      }
+    },
+    {
+      "id": "2016_2_s1_ex03_q2b",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "ب) ادرس اتجاه تغير المتتالية \\((u_n)\\)، ثم استنتج أنها متقاربة.",
+      "axis_tags": [
+        "sequence_monotonicity",
+        "sequence_convergence"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب الفرق \\(u_{n+1}-u_n\\)، ثم ندرس إشارته باستعمال \\(u_n\\ge0\\). بعد ذلك نستعمل مبرهنة المتتالية الرتيبة والمحدودة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب الفرق",
+            "explanation": "لدينا:\n\\[\nu_{n+1}=\\frac{13u_n}{9u_n+13}.\n\\]\nإذن:\n\\[\nu_{n+1}-u_n\n=\\frac{13u_n}{9u_n+13}-u_n.\n\\]\nنوحد المقام:\n\\[\nu_{n+1}-u_n\n=\\frac{13u_n-u_n(9u_n+13)}{9u_n+13}.\n\\]\nوبالتبسيط:\n\\[\nu_{n+1}-u_n\n=\\frac{-9u_n^2}{9u_n+13}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "دراسة الإشارة",
+            "explanation": "من السؤال السابق:\n\\[\nu_n\\ge0.\n\\]\nإذن:\n\\[\n-9u_n^2\\le0.\n\\]\nكما أن:\n\\[\n9u_n+13>0.\n\\]\nومن ثم:\n\\[\nu_{n+1}-u_n\\le0.\n\\]\nإذن المتتالية \\((u_n)\\) متناقصة."
+          },
+          {
+            "step_number": 3,
+            "title": "إثبات المحدودية",
+            "explanation": "ثبتنا أن:\n\\[\n0\\le u_n\\le4.\n\\]\nإذن المتتالية محدودة من الأسفل بالعدد \\(0\\)."
+          },
+          {
+            "step_number": 4,
+            "title": "استنتاج التقارب",
+            "explanation": "كل متتالية متناقصة ومحدودة من الأسفل متقاربة. إذن \\((u_n)\\) متقاربة."
+          }
+        ],
+        "final_answer": "\\(\\boxed{(u_n)\\text{ متناقصة ومتقاربة}}\\)."
+      }
+    },
+    {
+      "id": "2016_2_s1_ex03_q3",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "3- بين أنه من أجل كل عدد طبيعي \\(n\\): \\(u_n\\ne0\\).",
+      "axis_tags": [
+        "sequence_sign"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نثبت في الحقيقة أن \\(u_n>0\\) لكل \\(n\\)، وهذا أقوى من المطلوب.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التحقق عند n=0",
+            "explanation": "لدينا:\n\\[\nu_0=4>0.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "فرضية التراجع",
+            "explanation": "نفترض أن:\n\\[\nu_n>0.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الانتقال إلى n+1",
+            "explanation": "لدينا:\n\\[\nu_{n+1}=\\frac{13u_n}{9u_n+13}.\n\\]\nإذا كان \\(u_n>0\\)، فإن البسط \\(13u_n>0\\)، كما أن المقام:\n\\[\n9u_n+13>0.\n\\]\nإذن:\n\\[\nu_{n+1}>0.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "الخلاصة",
+            "explanation": "بالتراجع:\n\\[\nu_n>0\n\\]\nلكل \\(n\\in\\mathbb N\\)، وبالتالي:\n\\[\n\\boxed{u_n\\ne0}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{u_n\\ne0\\text{ لكل }n\\in\\mathbb N}\\)."
+      }
+    },
+    {
+      "id": "2016_2_s1_ex03_q4a",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "4- لتكن \\((v_n)\\) المتتالية العددية المعرفة على \\(\\mathbb N\\) كما يلي: \\(v_n=2+\\frac{13}{u_n}\\). أ) برهن أن المتتالية \\((v_n)\\) حسابية يطلب تعيين أساسها وحدها الأول \\(v_0\\).",
+      "axis_tags": [
+        "arithmetic_auxiliary_sequence"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب \\(v_{n+1}\\) ونحاول كتابته على الشكل \\(v_n+r\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "كتابة v_{n+1}",
+            "explanation": "لدينا:\n\\[\nv_{n+1}=2+\\frac{13}{u_{n+1}}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "استعمال علاقة u_{n+1}",
+            "explanation": "بما أن:\n\\[\nu_{n+1}=\\frac{13u_n}{9u_n+13},\n\\]\nفإن:\n\\[\n\\frac{13}{u_{n+1}}\n=13\\times\\frac{9u_n+13}{13u_n}\n=\\frac{9u_n+13}{u_n}\n=9+\\frac{13}{u_n}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "إظهار العلاقة الحسابية",
+            "explanation": "إذن:\n\\[\nv_{n+1}=2+9+\\frac{13}{u_n}.\n\\]\nلكن:\n\\[\nv_n=2+\\frac{13}{u_n}.\n\\]\nومن ثم:\n\\[\nv_{n+1}=v_n+9.\n\\]\nإذن \\((v_n)\\) متتالية حسابية أساسها:\n\\[\nr=9.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "حساب الحد الأول",
+            "explanation": "\\[\nv_0=2+\\frac{13}{u_0}\n=2+\\frac{13}{4}\n=\\frac{8}{4}+\\frac{13}{4}\n=\\frac{21}{4}.\n\\]"
+          }
+        ],
+        "final_answer": "\\((v_n)\\) حسابية أساسها \\(\\boxed{9}\\)، وحدها الأول \\(\\boxed{v_0=\\frac{21}{4}}\\)."
+      }
+    },
+    {
+      "id": "2016_2_s1_ex03_q4b",
+      "display_order": 7,
+      "content_type": "question",
+      "text": "ب) اكتب \\(v_n\\) بدلالة \\(n\\).",
+      "axis_tags": [
+        "arithmetic_sequence_general_term"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل صيغة الحد العام لمتتالية حسابية معرفة ابتداء من الرتبة \\(0\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "صيغة الحد العام",
+            "explanation": "إذا كانت متتالية حسابية حدها الأول \\(v_0\\) وأساسها \\(r\\)، فإن:\n\\[\nv_n=v_0+nr.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "التعويض",
+            "explanation": "لدينا:\n\\[\nv_0=\\frac{21}{4},\\qquad r=9.\n\\]\nإذن:\n\\[\n\\boxed{v_n=\\frac{21}{4}+9n}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{v_n=\\frac{21}{4}+9n}\\)."
+      }
+    },
+    {
+      "id": "2016_2_s1_ex03_q4c",
+      "display_order": 8,
+      "content_type": "question",
+      "text": "ج) استنتج أن: \\(u_n=\\frac{52}{36n+13}\\) وذلك من أجل كل عدد طبيعي \\(n\\)، ثم احسب \\(\\lim_{n\\to+\\infty}u_n\\).",
+      "axis_tags": [
+        "explicit_sequence_formula",
+        "sequence_limit"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل تعريف \\(v_n\\) مع عبارته الصريحة، ثم نحل بالنسبة إلى \\(u_n\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "مساواة عبارتي v_n",
+            "explanation": "لدينا من التعريف:\n\\[\nv_n=2+\\frac{13}{u_n}.\n\\]\nومن السؤال السابق:\n\\[\nv_n=\\frac{21}{4}+9n.\n\\]\nإذن:\n\\[\n2+\\frac{13}{u_n}=\\frac{21}{4}+9n.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "استخراج 13/u_n",
+            "explanation": "نطرح \\(2=\\frac84\\):\n\\[\n\\frac{13}{u_n}=\\frac{21}{4}-\\frac84+9n\n=\\frac{13}{4}+9n.\n\\]\nنوحد الكتابة:\n\\[\n\\frac{13}{u_n}=\\frac{13+36n}{4}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "استخراج u_n",
+            "explanation": "بما أن \\(u_n\\ne0\\):\n\\[\n13\\times4=u_n(36n+13).\n\\]\nومن ثم:\n\\[\n\\boxed{u_n=\\frac{52}{36n+13}}.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "حساب النهاية",
+            "explanation": "عندما \\(n\\to+\\infty\\):\n\\[\n36n+13\\to+\\infty.\n\\]\nإذن:\n\\[\n\\frac{52}{36n+13}\\to0.\n\\]\nومن ثم:\n\\[\n\\boxed{\\lim_{n\\to+\\infty}u_n=0}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{u_n=\\frac{52}{36n+13}}\\)، و \\(\\boxed{\\lim_{n\\to+\\infty}u_n=0}\\)."
+      }
+    }
+  ]
+}

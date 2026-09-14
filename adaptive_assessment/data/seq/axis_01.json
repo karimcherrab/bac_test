@@ -1,0 +1,1009 @@
+{
+  "schema_version": "2.0",
+  "subject": {
+    "code": "math",
+    "title": "الرياضيات"
+  },
+  "branch": {
+    "code": "science",
+    "title": "علوم تجريبية"
+  },
+  "chapter": {
+    "code": "sequences",
+    "title": "المتتاليات العددية"
+  },
+  "axis": {
+    "tag": "seq_definition_notation_methods",
+    "title": "المتتالية العددية: المفهوم، الترميز وطرق التعريف"
+  },
+  "source_summary": {
+    "lesson_files_count": 1,
+    "bac_files_count": 1,
+    "years_covered": [
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "notes": [
+      "هذا الملف مخصص لاختبار أفكار البكالوريا فقط.",
+      "لا توجد داخله أفكار درس مستقلة أو أسئلة تأسيسية خارج أفكار BAC الأربع المحددة.",
+      "المحور الأول في الاختبار يقتصر على: حساب الحدود الأولى، فهم العلاقة التراجعية، شرط الثبات، والعلاقة التراجعية من الرتبة الثانية.",
+      "وجود skills سببه متطلبات بنية الاستيراد، وكل skill مرتبط مباشرة بفكرة BAC واحدة فقط."
+    ]
+  },
+  "lesson_scope": {
+    "learning_outcomes": [
+      "إتقان أفكار البكالوريا الأربع المرتبطة مباشرة بالمحور الأول."
+    ],
+    "concepts": [
+      "حساب الحدود الأولى من علاقة تراجعية.",
+      "الانتقال من u_n إلى u_{n+1} باستعمال f.",
+      "شرط ثبات المتتالية f(α)=α.",
+      "العلاقة التراجعية من الرتبة الثانية وتخفيضها بفرق الحدود."
+    ],
+    "methods": [
+      "التعويض المتتابع لحساب الحدود الأولى.",
+      "استعمال u_{n+1}=f(u_n) كقاعدة انتقال.",
+      "حل معادلة النقطة الثابتة f(α)=α.",
+      "تعريف فرق الحدود لتخفيض علاقة من الرتبة الثانية."
+    ],
+    "prerequisites": [],
+    "excluded_topics": [
+      "الترميز والدليل والرتبة كأسئلة مستقلة.",
+      "حساب حدود من حد عام مباشر كأسئلة مستقلة.",
+      "اتجاه التغير.",
+      "الحصر.",
+      "الاستدلال بالتراجع كفكرة مستقلة.",
+      "النهايات والتقارب.",
+      "المتتاليات الحسابية والهندسية كأفكار مستقلة.",
+      "التمثيل البياني.",
+      "المجاميع والجداءات."
+    ]
+  },
+  "skills": [
+    {
+      "skill_code": "BAC_SEQ_FIRST_TERMS",
+      "title": "حساب الحدود الأولى من علاقة تراجعية",
+      "description": "مهارة بكالوريا تقيس حساب الحدود الأولى انطلاقًا من حد ابتدائي وعلاقة تراجعية.",
+      "order": 1,
+      "importance": "critical",
+      "prerequisites": [],
+      "ideas": [
+        {
+          "idea_code": "SEQ_BAC_01",
+          "title": "حساب الحدود الأولى من علاقة تراجعية",
+          "description": "حساب الحدود الأولى مثل u_1 وu_2 وu_3 انطلاقًا من حد ابتدائي مثل u_0 والعلاقة التراجعية المعطاة.",
+          "difficulty": "medium",
+          "generation_guidance": {
+            "allowed_structures": [
+              "u_0 معلوم و u_{n+1}=f(u_n) ثم حساب u_1 أو u_1,u_2,u_3.",
+              "حدان ابتدائيان وعلاقة من الرتبة الثانية ثم حساب حد أو حدود لاحقة."
+            ],
+            "must_test": [
+              "اختيار قيمة n الصحيحة.",
+              "التعويض الصحيح.",
+              "الحساب المتتابع دون القفز على حد لازم."
+            ],
+            "may_vary": [
+              "القيم العددية",
+              "شكل f",
+              "عدد الحدود المطلوبة"
+            ],
+            "must_not_change": [
+              "جوهر الفكرة هو حساب حدود أولى من التعريف التراجعي."
+            ],
+            "forbidden_concepts": [
+              "النهايات",
+              "الرتابة كهدف مستقل",
+              "الحصر",
+              "المجاميع"
+            ]
+          }
+        }
+      ],
+      "common_errors": [
+        {
+          "code": "SEQ_BAC_01_START_WRONG",
+          "description": "اختيار قيمة n لا تنتج الحد المطلوب.",
+          "severity": "high",
+          "related_skill_idea_codes": [
+            "SEQ_BAC_01"
+          ]
+        },
+        {
+          "code": "SEQ_BAC_01_CHAIN_BREAK",
+          "description": "عدم استعمال قيمة الحد المحسوب في الخطوة التالية.",
+          "severity": "high",
+          "related_skill_idea_codes": [
+            "SEQ_BAC_01"
+          ]
+        }
+      ],
+      "mastery_requirements": {
+        "required_idea_codes": [
+          "SEQ_BAC_01"
+        ],
+        "minimum_successful_ideas": 1,
+        "notes": "هذه المهارة مخصصة لاختبار فكرة بكالوريا فقط، ولا تحتوي على أفكار شرح المحور."
+      }
+    },
+    {
+      "skill_code": "BAC_SEQ_RECURSIVE_TRANSITION",
+      "title": "فهم واستعمال العلاقة التراجعية",
+      "description": "مهارة بكالوريا تقيس فهم قاعدة الانتقال u_{n+1}=f(u_n) واستعمالها للوصول إلى الحد الموالي.",
+      "order": 2,
+      "importance": "critical",
+      "prerequisites": [],
+      "ideas": [
+        {
+          "idea_code": "SEQ_BAC_02",
+          "title": "التعامل مع متتالية معرفة بعلاقة تراجعية",
+          "description": "فهم واستعمال العلاقة u_{n+1}=f(u_n) باعتبارها قاعدة انتقال من الحد u_n إلى الحد الموالي u_{n+1}.",
+          "difficulty": "medium",
+          "generation_guidance": {
+            "allowed_structures": [
+              "u_0 معلوم و u_{n+1}=f(u_n).",
+              "طلب تحديد التعبير الذي يعطي الحد الموالي أو استعمال العلاقة عند رتبة محددة."
+            ],
+            "must_test": [
+              "فهم أن u_{n+1} يعتمد على u_n.",
+              "فهم إزاحة الدليل من n إلى n+1.",
+              "استعمال الحد السابق بصورة صحيحة."
+            ],
+            "may_vary": [
+              "الدالة f",
+              "الحد الابتدائي",
+              "رتبة البداية"
+            ],
+            "must_not_change": [
+              "يبقى الهدف فهم واستعمال التعريف التراجعي."
+            ],
+            "forbidden_concepts": [
+              "النهايات",
+              "المجاميع",
+              "المتتاليات المساعدة كهدف رئيسي"
+            ]
+          }
+        }
+      ],
+      "common_errors": [
+        {
+          "code": "SEQ_BAC_02_INDEX_SHIFT",
+          "description": "الخلط بين u_n وu_{n+1} عند التعويض في العلاقة.",
+          "severity": "high",
+          "related_skill_idea_codes": [
+            "SEQ_BAC_02"
+          ]
+        },
+        {
+          "code": "SEQ_BAC_02_RECURSION_MISREAD",
+          "description": "معاملة العلاقة التراجعية كأنها حد عام مباشر لا يحتاج إلى حد سابق.",
+          "severity": "high",
+          "related_skill_idea_codes": [
+            "SEQ_BAC_02"
+          ]
+        }
+      ],
+      "mastery_requirements": {
+        "required_idea_codes": [
+          "SEQ_BAC_02"
+        ],
+        "minimum_successful_ideas": 1,
+        "notes": "هذه المهارة مخصصة لاختبار فكرة بكالوريا فقط، ولا تحتوي على أفكار شرح المحور."
+      }
+    },
+    {
+      "skill_code": "BAC_SEQ_FIXED_SEQUENCE",
+      "title": "تحديد شرط ثبات المتتالية",
+      "description": "مهارة بكالوريا تقيس تعيين القيمة الابتدائية أو المعامل الذي يجعل المتتالية ثابتة باستعمال f(α)=α.",
+      "order": 3,
+      "importance": "high",
+      "prerequisites": [],
+      "ideas": [
+        {
+          "idea_code": "SEQ_BAC_03",
+          "title": "تحديد قيمة الحد الأول أو المعامل التي تجعل المتتالية ثابتة",
+          "description": "البحث عن قيمة ابتدائية أو معامل α تجعل المتتالية المعرفة تراجعيًا ثابتة، وذلك باستعمال شرط النقطة الثابتة f(α)=α.",
+          "difficulty": "medium",
+          "generation_guidance": {
+            "allowed_structures": [
+              "u_0=α و u_{n+1}=f(u_n)، ثم تعيين α حتى تكون المتتالية ثابتة.",
+              "إعطاء قيمة خاصة لـ α وطلب إثبات أن u_n يساوي ثابتًا لكل n."
+            ],
+            "must_test": [
+              "معنى المتتالية الثابتة",
+              "شرط f(α)=α"
+            ],
+            "may_vary": [
+              "شكل f",
+              "القيمة الثابتة"
+            ],
+            "must_not_change": [
+              "جوهر السؤال هو الثبات الناتج عن نقطة ثابتة."
+            ],
+            "forbidden_concepts": [
+              "النهايات",
+              "المجاميع"
+            ]
+          }
+        }
+      ],
+      "common_errors": [
+        {
+          "code": "SEQ_BAC_03_FIXED_POINT_WRONG",
+          "description": "عدم تحويل شرط الثبات إلى المعادلة f(α)=α.",
+          "severity": "high",
+          "related_skill_idea_codes": [
+            "SEQ_BAC_03"
+          ]
+        }
+      ],
+      "mastery_requirements": {
+        "required_idea_codes": [
+          "SEQ_BAC_03"
+        ],
+        "minimum_successful_ideas": 1,
+        "notes": "هذه المهارة مخصصة لاختبار فكرة بكالوريا فقط، ولا تحتوي على أفكار شرح المحور."
+      }
+    },
+    {
+      "skill_code": "BAC_SEQ_SECOND_ORDER",
+      "title": "العلاقة التراجعية من الرتبة الثانية",
+      "description": "مهارة بكالوريا تقيس التعامل مع علاقة من الرتبة الثانية وتخفيضها باستعمال فرق الحدود.",
+      "order": 4,
+      "importance": "medium",
+      "prerequisites": [],
+      "ideas": [
+        {
+          "idea_code": "SEQ_BAC_04",
+          "title": "متتالية تراجعية من الرتبة الثانية وتخفيضها باستعمال فرق الحدود",
+          "description": "التعامل مع علاقة من الشكل u_{n+2}=a u_{n+1}+b u_n ثم إدخال فرق الحدود أو متتالية مساعدة لتبسيط العلاقة؛ ظهر هذا النمط في بكالوريا 2009.",
+          "difficulty": "hard",
+          "generation_guidance": {
+            "allowed_structures": [
+              "إعطاء u_0 وu_1 وعلاقة u_{n+2}=a u_{n+1}+b u_n، ثم تعريف فرق الحدود."
+            ],
+            "must_test": [
+              "فهم الحاجة إلى حدين ابتدائيين.",
+              "الانتقال الصحيح من علاقة الرتبة الثانية إلى علاقة تخص فرق الحدود."
+            ],
+            "may_vary": [
+              "المعاملان a وb",
+              "القيم الابتدائية"
+            ],
+            "must_not_change": [
+              "يبقى جوهر الفكرة علاقة تراجعية من الرتبة الثانية وتخفيضها بفرق الحدود."
+            ],
+            "forbidden_concepts": [
+              "إدخال أفكار من محاور أخرى كهدف مستقل"
+            ]
+          }
+        }
+      ],
+      "common_errors": [
+        {
+          "code": "SEQ_BAC_04_ORDER_TWO_DATA",
+          "description": "نسيان أن علاقة من الرتبة الثانية تحتاج حدين ابتدائيين.",
+          "severity": "high",
+          "related_skill_idea_codes": [
+            "SEQ_BAC_04"
+          ]
+        },
+        {
+          "code": "SEQ_BAC_04_DIFF_SHIFT",
+          "description": "الخلط بين v_n=u_{n+1}-u_n وv_{n+1}=u_{n+2}-u_{n+1}.",
+          "severity": "high",
+          "related_skill_idea_codes": [
+            "SEQ_BAC_04"
+          ]
+        }
+      ],
+      "mastery_requirements": {
+        "required_idea_codes": [
+          "SEQ_BAC_04"
+        ],
+        "minimum_successful_ideas": 1,
+        "notes": "هذه المهارة مخصصة لاختبار فكرة بكالوريا فقط، ولا تحتوي على أفكار شرح المحور."
+      }
+    }
+  ],
+  "bac_ideas": [
+    {
+      "idea_code": "SEQ_BAC_01",
+      "title": "حساب الحدود الأولى من علاقة تراجعية",
+      "description": "حساب الحدود الأولى مثل u_1 وu_2 وu_3 انطلاقًا من حد ابتدائي مثل u_0 والعلاقة التراجعية المعطاة.",
+      "bac_priority": "critical",
+      "frequency_level": "high",
+      "occurrence_count": 8,
+      "years": [
+        2009,
+        2015,
+        2017,
+        2018,
+        2020,
+        2024,
+        2025,
+        2026
+      ],
+      "last_seen_year": 2026,
+      "skill_refs": [
+        {
+          "skill_code": "BAC_SEQ_FIRST_TERMS",
+          "skill_idea_codes": [
+            "SEQ_BAC_01"
+          ],
+          "role": "primary"
+        }
+      ],
+      "prerequisites": [],
+      "external_prerequisites": [],
+      "difficulty_range": {
+        "min": 1,
+        "max": 2
+      },
+      "variants": [
+        {
+          "variant_code": "SEQ_BAC_01_V01",
+          "title": "حساب حد واحد من الحد السابق",
+          "description": "استعمال u_{n+1}=f(u_n) مع حد ابتدائي لحساب حد تالٍ واحد.",
+          "years": [
+            2017,
+            2020,
+            2025,
+            2026
+          ],
+          "occurrence_count": 4,
+          "difficulty": 1,
+          "skill_idea_codes": [
+            "SEQ_BAC_01"
+          ],
+          "distinguishing_feature": "الانتقال المباشر من حد معلوم إلى الحد الموالي."
+        },
+        {
+          "variant_code": "SEQ_BAC_01_V02",
+          "title": "حساب عدة حدود أولى بالتتابع",
+          "description": "حساب u_1 ثم u_2 ثم u_3 باستعمال كل نتيجة في الخطوة التالية.",
+          "years": [
+            2015,
+            2018,
+            2024
+          ],
+          "occurrence_count": 3,
+          "difficulty": 1,
+          "skill_idea_codes": [
+            "SEQ_BAC_01"
+          ],
+          "distinguishing_feature": "الحساب على شكل سلسلة متتابعة من الحدود."
+        },
+        {
+          "variant_code": "SEQ_BAC_01_V03",
+          "title": "حساب حدود مع علاقة من الرتبة الثانية",
+          "description": "استعمال حدين ابتدائيين وعلاقة تراجعية من الرتبة الثانية لحساب حدود لاحقة.",
+          "years": [
+            2009
+          ],
+          "occurrence_count": 1,
+          "difficulty": 2,
+          "skill_idea_codes": [
+            "SEQ_BAC_01"
+          ],
+          "distinguishing_feature": "كل حد جديد يعتمد على حدين سابقين."
+        }
+      ],
+      "common_errors": [
+        {
+          "code": "SEQ_BAC_01_START_WRONG",
+          "description": "اختيار قيمة n لا تنتج الحد المطلوب.",
+          "severity": "high",
+          "related_skill_idea_codes": [
+            "SEQ_BAC_01"
+          ]
+        },
+        {
+          "code": "SEQ_BAC_01_CHAIN_BREAK",
+          "description": "عدم استعمال قيمة الحد المحسوب في الخطوة التالية.",
+          "severity": "high",
+          "related_skill_idea_codes": [
+            "SEQ_BAC_01"
+          ]
+        }
+      ],
+      "bac_occurrences": [
+        {
+          "year": 2009,
+          "branch": "science",
+          "exercise": "1",
+          "question": "1",
+          "variant_code": "SEQ_BAC_01_V03",
+          "summary": "استعمال علاقة تراجعية من الرتبة الثانية لحساب حدود لازمة في بداية التمرين.",
+          "skill_idea_codes": [
+            "SEQ_BAC_01"
+          ]
+        },
+        {
+          "year": 2015,
+          "branch": "science",
+          "exercise": "3",
+          "question": "1",
+          "variant_code": "SEQ_BAC_01_V02",
+          "summary": "حساب u_1 وu_2 وu_3 انطلاقًا من u_0 وعلاقة تراجعية.",
+          "skill_idea_codes": [
+            "SEQ_BAC_01"
+          ]
+        },
+        {
+          "year": 2017,
+          "branch": "science",
+          "exercise": "1",
+          "question": "1",
+          "variant_code": "SEQ_BAC_01_V01",
+          "summary": "حساب حدود أولى من تعريف تراجعي مباشر.",
+          "skill_idea_codes": [
+            "SEQ_BAC_01"
+          ]
+        },
+        {
+          "year": 2018,
+          "branch": "science",
+          "exercise": "1",
+          "question": "1",
+          "variant_code": "SEQ_BAC_01_V02",
+          "summary": "حساب u_1 وu_2 وu_3 بالتتابع من العلاقة التراجعية.",
+          "skill_idea_codes": [
+            "SEQ_BAC_01"
+          ]
+        },
+        {
+          "year": 2020,
+          "branch": "science",
+          "exercise": "3",
+          "question": "1",
+          "variant_code": "SEQ_BAC_01_V01",
+          "summary": "حساب حدود أولى انطلاقًا من u_0 وعلاقة تراجعية.",
+          "skill_idea_codes": [
+            "SEQ_BAC_01"
+          ]
+        },
+        {
+          "year": 2024,
+          "branch": "science",
+          "exercise": "3",
+          "question": "1",
+          "variant_code": "SEQ_BAC_01_V02",
+          "summary": "حساب u_1 وu_2 وu_3 من علاقة تراجعية كسرية.",
+          "skill_idea_codes": [
+            "SEQ_BAC_01"
+          ]
+        },
+        {
+          "year": 2025,
+          "branch": "science",
+          "exercise": "3",
+          "question": "2-a",
+          "variant_code": "SEQ_BAC_01_V01",
+          "summary": "حساب u_1 وu_2 باستعمال u_{n+1}=f(u_n).",
+          "skill_idea_codes": [
+            "SEQ_BAC_01"
+          ]
+        },
+        {
+          "year": 2026,
+          "branch": "science",
+          "exercise": "3",
+          "question": "2-a",
+          "variant_code": "SEQ_BAC_01_V01",
+          "summary": "حساب u_1 وu_2 باستعمال العلاقة التراجعية المعطاة.",
+          "skill_idea_codes": [
+            "SEQ_BAC_01"
+          ]
+        }
+      ],
+      "mastery_requirements": {
+        "must_cover_variants": [
+          "SEQ_BAC_01_V01",
+          "SEQ_BAC_01_V02"
+        ],
+        "minimum_successful_variants": 1,
+        "requires_bac_style_question": true,
+        "required_skill_idea_codes": [
+          "SEQ_BAC_01"
+        ],
+        "notes": "هذه هي الفكرة الأساسية الأكثر مباشرة في المحور الأول."
+      },
+      "generation_guidance": {
+        "allowed_structures": [
+          "u_0 معلوم و u_{n+1}=f(u_n) ثم حساب u_1 أو u_1,u_2,u_3.",
+          "حدان ابتدائيان وعلاقة من الرتبة الثانية ثم حساب حد أو حدود لاحقة."
+        ],
+        "must_test": [
+          "اختيار قيمة n الصحيحة.",
+          "التعويض الصحيح.",
+          "الحساب المتتابع دون القفز على حد لازم."
+        ],
+        "may_vary": [
+          "القيم العددية",
+          "شكل f",
+          "عدد الحدود المطلوبة"
+        ],
+        "must_not_change": [
+          "جوهر الفكرة هو حساب حدود أولى من التعريف التراجعي."
+        ],
+        "forbidden_concepts": [
+          "النهايات",
+          "الرتابة كهدف مستقل",
+          "الحصر",
+          "المجاميع"
+        ]
+      }
+    },
+    {
+      "idea_code": "SEQ_BAC_02",
+      "title": "التعامل مع متتالية معرفة بعلاقة تراجعية",
+      "description": "فهم واستعمال العلاقة u_{n+1}=f(u_n) باعتبارها قاعدة انتقال من الحد u_n إلى الحد الموالي u_{n+1}.",
+      "bac_priority": "critical",
+      "frequency_level": "very_high",
+      "occurrence_count": 19,
+      "years": [
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "last_seen_year": 2026,
+      "skill_refs": [
+        {
+          "skill_code": "BAC_SEQ_RECURSIVE_TRANSITION",
+          "skill_idea_codes": [
+            "SEQ_BAC_02"
+          ],
+          "role": "primary"
+        }
+      ],
+      "prerequisites": [],
+      "external_prerequisites": [],
+      "difficulty_range": {
+        "min": 1,
+        "max": 2
+      },
+      "variants": [
+        {
+          "variant_code": "SEQ_BAC_02_V01",
+          "title": "قراءة قاعدة الانتقال u_n إلى u_{n+1}",
+          "description": "تحديد كيف تُستعمل العلاقة التراجعية للحصول على الحد الموالي من الحد الحالي.",
+          "years": [
+            2008,
+            2009,
+            2010,
+            2011,
+            2012,
+            2013,
+            2014,
+            2015,
+            2016,
+            2017,
+            2018,
+            2019,
+            2020,
+            2021,
+            2022,
+            2023,
+            2024,
+            2025,
+            2026
+          ],
+          "occurrence_count": 19,
+          "difficulty": 1,
+          "skill_idea_codes": [
+            "SEQ_BAC_02"
+          ],
+          "distinguishing_feature": "التركيز على معنى العلاقة التراجعية وآلية الانتقال بين حدين متتاليين."
+        }
+      ],
+      "common_errors": [
+        {
+          "code": "SEQ_BAC_02_INDEX_SHIFT",
+          "description": "الخلط بين u_n وu_{n+1} عند التعويض في العلاقة.",
+          "severity": "high",
+          "related_skill_idea_codes": [
+            "SEQ_BAC_02"
+          ]
+        },
+        {
+          "code": "SEQ_BAC_02_RECURSION_MISREAD",
+          "description": "معاملة العلاقة التراجعية كأنها حد عام مباشر لا يحتاج إلى حد سابق.",
+          "severity": "high",
+          "related_skill_idea_codes": [
+            "SEQ_BAC_02"
+          ]
+        }
+      ],
+      "bac_occurrences": [
+        {
+          "year": 2008,
+          "branch": "science",
+          "exercise": "3",
+          "question": "2",
+          "variant_code": "SEQ_BAC_02_V01",
+          "summary": "استعمال علاقة من الشكل u_{n+1}=f(u_n) داخل دراسة المتتالية.",
+          "skill_idea_codes": [
+            "SEQ_BAC_02"
+          ]
+        },
+        {
+          "year": 2026,
+          "branch": "science",
+          "exercise": "3",
+          "question": "2",
+          "variant_code": "SEQ_BAC_02_V01",
+          "summary": "استعمال العلاقة u_{n+1}=f(u_n) للانتقال بين حدود المتتالية.",
+          "skill_idea_codes": [
+            "SEQ_BAC_02"
+          ]
+        }
+      ],
+      "mastery_requirements": {
+        "must_cover_variants": [
+          "SEQ_BAC_02_V01"
+        ],
+        "minimum_successful_variants": 1,
+        "requires_bac_style_question": true,
+        "required_skill_idea_codes": [
+          "SEQ_BAC_02"
+        ],
+        "notes": "هذه الفكرة تقيس فهم بنية التعريف التراجعي نفسه، وليس فقط الحساب العددي للحدود."
+      },
+      "generation_guidance": {
+        "allowed_structures": [
+          "u_0 معلوم و u_{n+1}=f(u_n).",
+          "طلب تحديد التعبير الذي يعطي الحد الموالي أو استعمال العلاقة عند رتبة محددة."
+        ],
+        "must_test": [
+          "فهم أن u_{n+1} يعتمد على u_n.",
+          "فهم إزاحة الدليل من n إلى n+1.",
+          "استعمال الحد السابق بصورة صحيحة."
+        ],
+        "may_vary": [
+          "الدالة f",
+          "الحد الابتدائي",
+          "رتبة البداية"
+        ],
+        "must_not_change": [
+          "يبقى الهدف فهم واستعمال التعريف التراجعي."
+        ],
+        "forbidden_concepts": [
+          "النهايات",
+          "المجاميع",
+          "المتتاليات المساعدة كهدف رئيسي"
+        ]
+      }
+    },
+    {
+      "idea_code": "SEQ_BAC_03",
+      "title": "تحديد قيمة الحد الأول أو المعامل التي تجعل المتتالية ثابتة",
+      "description": "البحث عن قيمة ابتدائية أو معامل α تجعل المتتالية المعرفة تراجعيًا ثابتة، وذلك باستعمال شرط النقطة الثابتة f(α)=α.",
+      "bac_priority": "high",
+      "frequency_level": "low",
+      "occurrence_count": 2,
+      "years": [
+        2017,
+        2020
+      ],
+      "last_seen_year": 2020,
+      "skill_refs": [
+        {
+          "skill_code": "BAC_SEQ_FIXED_SEQUENCE",
+          "skill_idea_codes": [
+            "SEQ_BAC_03"
+          ],
+          "role": "primary"
+        }
+      ],
+      "prerequisites": [],
+      "external_prerequisites": [],
+      "difficulty_range": {
+        "min": 2,
+        "max": 2
+      },
+      "variants": [
+        {
+          "variant_code": "SEQ_BAC_03_V01",
+          "title": "تعيين α حتى تكون المتتالية ثابتة",
+          "description": "حل f(α)=α عندما يكون u_0=α.",
+          "years": [
+            2017
+          ],
+          "occurrence_count": 1,
+          "difficulty": 2,
+          "skill_idea_codes": [
+            "SEQ_BAC_03"
+          ],
+          "distinguishing_feature": "المطلوب تعيين القيمة الابتدائية بنفسها."
+        },
+        {
+          "variant_code": "SEQ_BAC_03_V02",
+          "title": "التحقق من حالة ثابتة خاصة",
+          "description": "إثبات أن قيمة ابتدائية خاصة تجعل جميع الحدود ثابتة.",
+          "years": [
+            2020
+          ],
+          "occurrence_count": 1,
+          "difficulty": 2,
+          "skill_idea_codes": [
+            "SEQ_BAC_03"
+          ],
+          "distinguishing_feature": "القيمة الخاصة معطاة ويطلب إثبات استمرار الثبات."
+        }
+      ],
+      "common_errors": [
+        {
+          "code": "SEQ_BAC_03_FIXED_POINT_WRONG",
+          "description": "عدم تحويل شرط الثبات إلى المعادلة f(α)=α.",
+          "severity": "high",
+          "related_skill_idea_codes": [
+            "SEQ_BAC_03"
+          ]
+        }
+      ],
+      "bac_occurrences": [
+        {
+          "year": 2017,
+          "session": "2017_2",
+          "branch": "science",
+          "exercise": "2",
+          "question": "I",
+          "variant_code": "SEQ_BAC_03_V01",
+          "summary": "تعيين α حتى تكون المتتالية المعرفة بـ u_0=α وu_{n+1}=f(u_n) ثابتة.",
+          "skill_idea_codes": [
+            "SEQ_BAC_03"
+          ]
+        },
+        {
+          "year": 2020,
+          "branch": "science",
+          "exercise": "3",
+          "question": "1",
+          "variant_code": "SEQ_BAC_03_V02",
+          "summary": "دراسة الحالة الخاصة α=-4 وإثبات أن المتتالية ثابتة.",
+          "skill_idea_codes": [
+            "SEQ_BAC_03"
+          ]
+        }
+      ],
+      "mastery_requirements": {
+        "must_cover_variants": [
+          "SEQ_BAC_03_V01"
+        ],
+        "minimum_successful_variants": 1,
+        "requires_bac_style_question": true,
+        "required_skill_idea_codes": [
+          "SEQ_BAC_03"
+        ],
+        "notes": "فكرة قليلة التكرار لكنها واضحة ومميزة في البكالوريا."
+      },
+      "generation_guidance": {
+        "allowed_structures": [
+          "u_0=α و u_{n+1}=f(u_n)، ثم تعيين α حتى تكون المتتالية ثابتة.",
+          "إعطاء قيمة خاصة لـ α وطلب إثبات أن u_n يساوي ثابتًا لكل n."
+        ],
+        "must_test": [
+          "معنى المتتالية الثابتة",
+          "شرط f(α)=α"
+        ],
+        "may_vary": [
+          "شكل f",
+          "القيمة الثابتة"
+        ],
+        "must_not_change": [
+          "جوهر السؤال هو الثبات الناتج عن نقطة ثابتة."
+        ],
+        "forbidden_concepts": [
+          "النهايات",
+          "المجاميع"
+        ]
+      }
+    },
+    {
+      "idea_code": "SEQ_BAC_04",
+      "title": "متتالية تراجعية من الرتبة الثانية وتخفيضها باستعمال فرق الحدود",
+      "description": "التعامل مع علاقة من الشكل u_{n+2}=a u_{n+1}+b u_n ثم إدخال فرق الحدود أو متتالية مساعدة لتبسيط العلاقة؛ ظهر هذا النمط في بكالوريا 2009.",
+      "bac_priority": "medium",
+      "frequency_level": "rare",
+      "occurrence_count": 1,
+      "years": [
+        2009
+      ],
+      "last_seen_year": 2009,
+      "skill_refs": [
+        {
+          "skill_code": "BAC_SEQ_SECOND_ORDER",
+          "skill_idea_codes": [
+            "SEQ_BAC_04"
+          ],
+          "role": "primary"
+        }
+      ],
+      "prerequisites": [],
+      "external_prerequisites": [],
+      "difficulty_range": {
+        "min": 2,
+        "max": 3
+      },
+      "variants": [
+        {
+          "variant_code": "SEQ_BAC_04_V01",
+          "title": "الرتبة الثانية مع فرق الحدود",
+          "description": "تعريف v_n=u_{n+1}-u_n ثم استعمال العلاقة الأصلية لاشتقاق علاقة أبسط لـ v_n.",
+          "years": [
+            2009
+          ],
+          "occurrence_count": 1,
+          "difficulty": 3,
+          "skill_idea_codes": [
+            "SEQ_BAC_04"
+          ],
+          "distinguishing_feature": "كل حد من u يعتمد على حدين سابقين، ثم يُستعمل الفرق لتخفيض الرتبة."
+        }
+      ],
+      "common_errors": [
+        {
+          "code": "SEQ_BAC_04_ORDER_TWO_DATA",
+          "description": "نسيان أن علاقة من الرتبة الثانية تحتاج حدين ابتدائيين.",
+          "severity": "high",
+          "related_skill_idea_codes": [
+            "SEQ_BAC_04"
+          ]
+        },
+        {
+          "code": "SEQ_BAC_04_DIFF_SHIFT",
+          "description": "الخلط بين v_n=u_{n+1}-u_n وv_{n+1}=u_{n+2}-u_{n+1}.",
+          "severity": "high",
+          "related_skill_idea_codes": [
+            "SEQ_BAC_04"
+          ]
+        }
+      ],
+      "bac_occurrences": [
+        {
+          "year": 2009,
+          "branch": "science",
+          "exercise": "1",
+          "question": "1-2",
+          "variant_code": "SEQ_BAC_04_V01",
+          "summary": "متتالية u_n معرفة بعلاقة تراجعية من الرتبة الثانية، ثم تعريف v_n=u_{n+1}-u_n لتبسيط الدراسة.",
+          "skill_idea_codes": [
+            "SEQ_BAC_04"
+          ]
+        }
+      ],
+      "mastery_requirements": {
+        "must_cover_variants": [
+          "SEQ_BAC_04_V01"
+        ],
+        "minimum_successful_variants": 1,
+        "requires_bac_style_question": true,
+        "required_skill_idea_codes": [
+          "SEQ_BAC_04"
+        ],
+        "notes": "فكرة تاريخية نادرة؛ تُحفظ في بنك BAC ولا يلزم فرضها في كل اختبار للمحور."
+      },
+      "generation_guidance": {
+        "allowed_structures": [
+          "إعطاء u_0 وu_1 وعلاقة u_{n+2}=a u_{n+1}+b u_n، ثم تعريف فرق الحدود."
+        ],
+        "must_test": [
+          "فهم الحاجة إلى حدين ابتدائيين.",
+          "الانتقال الصحيح من علاقة الرتبة الثانية إلى علاقة تخص فرق الحدود."
+        ],
+        "may_vary": [
+          "المعاملان a وb",
+          "القيم الابتدائية"
+        ],
+        "must_not_change": [
+          "يبقى جوهر الفكرة علاقة تراجعية من الرتبة الثانية وتخفيضها بفرق الحدود."
+        ],
+        "forbidden_concepts": [
+          "إدخال أفكار من محاور أخرى كهدف مستقل"
+        ]
+      }
+    }
+  ],
+  "coverage_summary": {
+    "total_skills": 4,
+    "total_skill_ideas": 4,
+    "total_bac_ideas": 4,
+    "total_variants": 7,
+    "critical_bac_ideas": [
+      "SEQ_BAC_01",
+      "SEQ_BAC_02"
+    ],
+    "high_priority_bac_ideas": [
+      "SEQ_BAC_03"
+    ],
+    "skills_covered_by_bac": [
+      "BAC_SEQ_FIRST_TERMS",
+      "BAC_SEQ_RECURSIVE_TRANSITION",
+      "BAC_SEQ_FIXED_SEQUENCE",
+      "BAC_SEQ_SECOND_ORDER"
+    ],
+    "skills_not_seen_in_bac": [],
+    "skill_ideas_not_seen_in_bac": [],
+    "years_covered": [
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "bac_statistics": {
+      "total_bac_ideas": 4,
+      "total_variants": 7,
+      "most_frequent_idea": "SEQ_BAC_02",
+      "most_frequent_direct_calculation_idea": "SEQ_BAC_01",
+      "latest_bac_year": 2026,
+      "rare_ideas": [
+        "SEQ_BAC_04"
+      ],
+      "years_with_direct_first_term_calculation": [
+        2009,
+        2015,
+        2017,
+        2018,
+        2020,
+        2024,
+        2025,
+        2026
+      ],
+      "bac_idea_codes": [
+        "SEQ_BAC_01",
+        "SEQ_BAC_02",
+        "SEQ_BAC_03",
+        "SEQ_BAC_04"
+      ]
+    }
+  }
+}

@@ -1,0 +1,212 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "graph_schema_version": "1.0-react-json",
+  "version": "4.2-2020-math-probability-subject2-ex02-react-ready",
+  "session": "ordinary",
+  "year": 2020,
+  "chapter_code": "probability",
+  "chapter_title": "الاحتمالات",
+  "axis_tags": [
+    "probability_language_probability_law",
+    "counting_combinations",
+    "conditional_probability",
+    "random_variable_probability_distribution_expectation"
+  ],
+  "branches": [
+    {
+      "code": "math",
+      "name": "شعبة رياضيات"
+    }
+  ],
+  "exercise_number": 2,
+  "subject_number": 2,
+  "source_page": 3,
+  "source_pages": [
+    3
+  ],
+  "solution_source_pages": [
+    8,
+    9
+  ],
+  "title": "التمرين الثاني — بكالوريا الجزائر 2020 — الموضوع الثاني — شعبة رياضيات — الاحتمالات",
+  "statement": "يحتوي صندوق على كريات متماثلة منها: \\(n\\) كرية بيضاء تحمل العدد \\(\\pi\\) (\\(n\\) عدد طبيعي و \\(n\\ge2\\)) و 4 كريات حمراء تحمل الأعداد \\(\\frac{\\pi}{2}\\)، \\(\\frac{\\pi}{2}\\)، \\(\\frac{\\pi}{3}\\) و \\(\\pi\\) و كريتين خضراوين تحملان العددين \\(\\frac{\\pi}{2}\\) و \\(\\frac{\\pi}{3}\\).\nنسحب عشوائيا كريتين في آن واحد من هذا الصندوق.",
+  "questions": [
+    {
+      "id": "2020_s2_probability_ex02_q1a",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) أ. احسب احتمال كل من \\(A\\) و \\(B\\) حيث:\n\\(A\\): \"سحب كريتين من نفس اللون\" و \\(B\\): \"سحب كريتين تحملان نفس العدد علما أنهما من نفس اللون\".",
+      "axis_tags": [
+        "probability_language_probability_law",
+        "counting_combinations",
+        "conditional_probability"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل التوفيقات. الحادثة B معرفة بشرط أن الكريتين من نفس اللون.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب P(A)",
+            "explanation": "عدد الكريات الكلي هو \\(n+6\\). للحصول على كريتين من نفس اللون:\n\\[\nP(A)=\\frac{\\binom n2+\\binom42+\\binom22}{\\binom{n+6}{2}}=\\frac{n^2-n+14}{(n+5)(n+6)}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب P(B)",
+            "explanation": "داخل الحادثة \\(A\\):\nكل زوج أبيض يحمل العدد \\(\\pi\\)، وفي الأحمر يوجد زوج واحد فقط يحمل العدد نفسه وهو الزوج \\(\\frac\\pi2,\\frac\\pi2\\)، ولا يوجد زوج أخضر يحمل العدد نفسه.\n\\[\nP(B)=\\frac{\\binom n2+1}{\\binom n2+7}=\\frac{n^2-n+2}{n^2-n+14}.\n\\]"
+          }
+        ],
+        "final_answer": "\\[P(A)=\\frac{n^2-n+14}{(n+5)(n+6)},\\qquad P(B)=\\frac{n^2-n+2}{n^2-n+14}.\\]"
+      }
+    },
+    {
+      "id": "2020_s2_probability_ex02_q1b",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "ب. عين العدد الطبيعي \\(n\\) حتى يكون: \\(P(A)=\\frac{17}{55}\\).",
+      "axis_tags": [
+        "probability_language_probability_law"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نعوض عبارة P(A) ونحل المعادلة مع الشرط n≥2.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "المعادلة",
+            "explanation": "\\[\n\\frac{n^2-n+14}{(n+5)(n+6)}=\\frac{17}{55}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "الحل",
+            "explanation": "\\[\n55(n^2-n+14)=17(n+5)(n+6)\n\\Longrightarrow 19n^2-121n+130=0.\n\\]\nنجد \\(n=5\\) هو الحل الطبيعي الموافق للشرط."
+          }
+        ],
+        "final_answer": "\\[n=5.\\]"
+      }
+    },
+    {
+      "id": "2020_s2_probability_ex02_q2a",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "2) نفرض في ما يلي: \\(n=5\\) و نسمي \\(\\alpha\\) و \\(\\beta\\) العددين الظاهرين على الكريتين المسحوبتين.\nنعتبر \\(X\\) المتغير العشوائي الذي يرفق بكل نتيجة سحب العدد: \\(\\cos(\\alpha)\\cos(\\beta)\\).\nأ. برر أن قيم المتغير العشوائي \\(X\\) هي: \\(-\\frac12\\)، \\(0\\)، \\(\\frac14\\)، \\(1\\).",
+      "axis_tags": [
+        "random_variable_probability_distribution_expectation"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب قيم جيب التمام للأعداد المكتوبة على الكريات ثم نكوّن الجداءات الممكنة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "قيم جيب التمام",
+            "explanation": "\\[\\cos\\pi=-1,\\qquad \\cos\\frac\\pi2=0,\\qquad \\cos\\frac\\pi3=\\frac12.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "قيم X",
+            "explanation": "\\[X\\in\\left\\{-\\frac12,0,\\frac14,1\\right\\}.\\]"
+          }
+        ],
+        "final_answer": "\\[X\\in\\left\\{-\\frac12,0,\\frac14,1\\right\\}.\\]"
+      }
+    },
+    {
+      "id": "2020_s2_probability_ex02_q2b",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "ب. بين أن: \\(P(X=0)=\\frac{27}{55}\\).",
+      "axis_tags": [
+        "random_variable_probability_distribution_expectation",
+        "counting_combinations"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "يكون الجداء صفرا إذا احتوت السحبة على الأقل على كرية تحمل العدد π/2.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "عد الكريات",
+            "explanation": "عند \\(n=5\\) يصبح العدد الكلي للكريات \\(11\\)، منها 3 كريات تحمل العدد \\(\\frac\\pi2\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "عد الأزواج الموافقة",
+            "explanation": "\\[\nN=\\binom31\\binom81+\\binom32=24+3=27.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الاحتمال",
+            "explanation": "\\[P(X=0)=\\frac{27}{\\binom{11}{2}}=\\frac{27}{55}.\\]"
+          }
+        ],
+        "final_answer": "\\[P(X=0)=\\frac{27}{55}.\\]"
+      }
+    },
+    {
+      "id": "2020_s2_probability_ex02_q2c",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "ج. عين قانون احتمال المتغير العشوائي \\(X\\) واحسب أمله الرياضياتي \\(E(X)\\).",
+      "axis_tags": [
+        "random_variable_probability_distribution_expectation",
+        "counting_combinations"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "عند n=5 توجد 6 كريات تحمل π، و3 تحمل π/2، و2 تحمل π/3.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "احتمال X=-1/2",
+            "explanation": "\\[P\\left(X=-\\frac12\\right)=\\frac{6\\times2}{55}=\\frac{12}{55}.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "احتمال X=0",
+            "explanation": "\\[P(X=0)=\\frac{27}{55}.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "احتمال X=1/4",
+            "explanation": "\\[P\\left(X=\\frac14\\right)=\\frac{\\binom22}{55}=\\frac1{55}.\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "احتمال X=1",
+            "explanation": "\\[P(X=1)=\\frac{\\binom62}{55}=\\frac{15}{55}.\\]"
+          },
+          {
+            "step_number": 5,
+            "title": "قانون الاحتمال",
+            "explanation": "\\[\\begin{array}{c|cccc}x_i&-\\frac12&0&\\frac14&1\\\\\\hline P(X=x_i)&\\frac{12}{55}&\\frac{27}{55}&\\frac1{55}&\\frac{15}{55}\\end{array}\\]"
+          },
+          {
+            "step_number": 6,
+            "title": "الأمل الرياضياتي",
+            "explanation": "\\[E(X)=-\\frac12\\times\\frac{12}{55}+\\frac14\\times\\frac1{55}+\\frac{15}{55}=\\frac{37}{220}.\\]"
+          }
+        ],
+        "final_answer": "\\[\\begin{array}{c|cccc}x_i&-\\frac12&0&\\frac14&1\\\\\\hline P(X=x_i)&\\frac{12}{55}&\\frac{27}{55}&\\frac1{55}&\\frac{15}{55}\\end{array}\\]\n\\[E(X)=\\frac{37}{220}.\\]"
+      }
+    }
+  ],
+  "rendering_contract": {
+    "no_capture": true,
+    "external_image_required": false,
+    "external_svg_required": false,
+    "graph_source": "inline_json",
+    "supported_graph_types": [],
+    "react_note": "هذا التمرين لا يحتاج رسما. جميع الجداول مكتوبة بصيغة LaTeX داخل الحل."
+  },
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2020(7).pdf",
+    "statement_figure_policy": "لا يوجد رسم مطلوب.",
+    "solution_figure_policy": "لا Capture ولا SVG.",
+    "renderer": "MathJax/KaTeX + standard content renderer"
+  }
+}

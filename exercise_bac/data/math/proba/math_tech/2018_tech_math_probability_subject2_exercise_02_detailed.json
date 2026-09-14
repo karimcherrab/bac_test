@@ -1,0 +1,206 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2018-tech-math-probability-subject2-ex02-detailed",
+  "session": "ordinary",
+  "year": 2018,
+  "chapter_code": "probability",
+  "chapter_title": "الاحتمالات",
+  "axis_tags": [
+    "probability_language_law",
+    "probability_counting_modeling",
+    "random_variable_probability_law",
+    "random_variable_expected_value"
+  ],
+  "branches": [
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "exercise_number": 2,
+  "subject_number": 2,
+  "source_page": 4,
+  "source_pages": [
+    4
+  ],
+  "solution_source_pages": [
+    10
+  ],
+  "title": "التمرين الثاني — بكالوريا الجزائر 2018 — الموضوع الثاني — شعبة تقني رياضي",
+  "statement": "كيس به 7 كريات متماثلة، لا نفرق بينها باللمس، منها 3 بيضاء و 4 خضراء.\nنسحب عشوائيا و في آن واحد كريتين من الكيس.",
+  "questions": [
+    {
+      "id": "2018_s2_probability_ex02_qI1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "I) 1) احسب احتمال الحادثة \\(A\\) : \" سحب كريتين مختلفتين في اللون \".",
+      "axis_tags": [
+        "probability_language_law",
+        "probability_counting_modeling"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "لأن السحب يتم في آن واحد لكريتين من بين 7 كريات، نستعمل التوفيقات. نحسب عدد الحالات الممكنة، ثم عدد الحالات التي نحصل فيها على كرية بيضاء وكرية خضراء.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب عدد الحالات الممكنة",
+            "explanation": "لدينا 7 كريات ونسحب كريتين في آن واحد، إذن عدد السحبات الممكنة هو:\n\\[\\binom{7}{2}=\\frac{7\\times6}{2}=21.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب الحالات الموافقة للحادثة A",
+            "explanation": "حتى تكون الكريتان مختلفتين في اللون، نسحب كرية واحدة من بين 3 بيضاء وكرية واحدة من بين 4 خضراء.\nإذن عدد الحالات الموافقة هو:\n\\[\\binom{3}{1}\\binom{4}{1}=3\\times4=12.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب الاحتمال",
+            "explanation": "إذن:\n\\[P(A)=\\frac{12}{21}=\\frac{4}{7}.\\]"
+          }
+        ],
+        "final_answer": "\\[P(A)=\\frac{4}{7}.\\]"
+      }
+    },
+    {
+      "id": "2018_s2_probability_ex02_qI2",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2) احسب احتمال الحادثة \\(B\\) : \" سحب كريتين من نفس اللون \".",
+      "axis_tags": [
+        "probability_language_law",
+        "probability_counting_modeling"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "الحادثة B هي سحب كريتين من نفس اللون، أي إما كريتين بيضاوين أو كريتين خضراوين. ويمكن أيضا ملاحظة أن B هي الحادثة العكسية لـ A.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "استعمال الحادثة العكسية",
+            "explanation": "الحادثة \\(A\\) تعني سحب كريتين مختلفتين في اللون، والحادثة \\(B\\) تعني سحب كريتين من نفس اللون، لذلك:\n\\[B=\\overline{A}.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب الاحتمال",
+            "explanation": "نعلم أن:\n\\[P(B)=1-P(A).\\]\nوبما أن:\n\\[P(A)=\\frac{4}{7},\\]\nفإن:\n\\[P(B)=1-\\frac{4}{7}=\\frac{3}{7}.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "تحقق مباشر",
+            "explanation": "يمكن التحقق مباشرة:\n\\[P(B)=\\frac{\\binom{3}{2}+\\binom{4}{2}}{\\binom{7}{2}}=\\frac{3+6}{21}=\\frac{9}{21}=\\frac{3}{7}.\\]"
+          }
+        ],
+        "final_answer": "\\[P(B)=\\frac{3}{7}.\\]"
+      }
+    },
+    {
+      "id": "2018_s2_probability_ex02_qII1",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "II) نقترح اللعبة التالية: للمشاركة يدفع اللاعب \\(\\alpha(DA)\\)، ( حيث \\(\\alpha\\) عدد طبيعي معطى و \\(DA\\) تعني دينار جزائري).\nفإذا سحب كريتين بيضاوين يتحصل على \\(100DA\\)، و إذا سحب كريتين مختلفتين في اللون يتحصل على \\(50DA\\)، وإذا سحب كريتين خضراوين يخسر ما دفعه. وليكن \\(X\\) المتغير العشوائي الذي يمثل ربح أو خسارة اللاعب بدلالة \\(\\alpha\\).\n1) برر أن قيم المتغير العشوائي هي \\(\\{100-\\alpha,50-\\alpha,-\\alpha\\}\\) ثم عرف قانون احتماله.",
+      "axis_tags": [
+        "random_variable_probability_law",
+        "probability_counting_modeling"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحدد أولا الربح الصافي في كل حالة، أي المبلغ الذي يتحصل عليه اللاعب ناقص مبلغ المشاركة \\(\\alpha\\). ثم نحسب احتمال كل حالة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حالة سحب كريتين بيضاوين",
+            "explanation": "اللاعب دفع \\(\\alpha\\) دينارا ثم يتحصل على \\(100\\) دينار، لذلك ربحه الصافي هو:\n\\[X=100-\\alpha.\\]\nواحتمال سحب كريتين بيضاوين هو:\n\\[P(X=100-\\alpha)=\\frac{\\binom{3}{2}}{\\binom{7}{2}}=\\frac{3}{21}=\\frac{1}{7}.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حالة سحب كريتين مختلفتين في اللون",
+            "explanation": "في هذه الحالة يتحصل اللاعب على \\(50\\) دينارا بعد أن دفع \\(\\alpha\\)، إذن:\n\\[X=50-\\alpha.\\]\nواحتمال هذه الحالة هو احتمال الحادثة \\(A\\):\n\\[P(X=50-\\alpha)=\\frac{12}{21}=\\frac{4}{7}.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حالة سحب كريتين خضراوين",
+            "explanation": "في هذه الحالة يخسر اللاعب ما دفعه، لذلك:\n\\[X=-\\alpha.\\]\nواحتمال سحب كريتين خضراوين هو:\n\\[P(X=-\\alpha)=\\frac{\\binom{4}{2}}{\\binom{7}{2}}=\\frac{6}{21}=\\frac{2}{7}.\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "كتابة قانون احتمال X",
+            "explanation": "إذن قيم المتغير العشوائي هي:\n\\[\\{100-\\alpha,\\;50-\\alpha,\\;-\\alpha\\}.\\]\nوقانون احتماله هو:\n\\[\n\\begin{array}{c|ccc}\n x_i & 100-\\alpha & 50-\\alpha & -\\alpha\\\\ \\hline\n P(X=x_i) & \\frac17 & \\frac47 & \\frac27\n\\end{array}\n\\]\nونتحقق أن مجموع الاحتمالات يساوي:\n\\[\\frac17+\\frac47+\\frac27=1.\\]"
+          }
+        ],
+        "tables": [
+          {
+            "title": "قانون احتمال المتغير العشوائي X",
+            "headers": [
+              "\\(x_i\\)",
+              "\\(100-\\alpha\\)",
+              "\\(50-\\alpha\\)",
+              "\\(-\\alpha\\)"
+            ],
+            "rows": [
+              [
+                "\\(P(X=x_i)\\)",
+                "\\(\\frac{1}{7}\\)",
+                "\\(\\frac{4}{7}\\)",
+                "\\(\\frac{2}{7}\\)"
+              ]
+            ]
+          }
+        ],
+        "final_answer": "\\[X\\in\\{100-\\alpha,50-\\alpha,-\\alpha\\},\\qquad P(X=100-\\alpha)=\\frac17,\\quad P(X=50-\\alpha)=\\frac47,\\quad P(X=-\\alpha)=\\frac27.\\]"
+      }
+    },
+    {
+      "id": "2018_s2_probability_ex02_qII2",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "2) بين أن الأمل الرياضياتي للمتغير العشوائي \\(X\\) بدلالة \\(\\alpha\\) هو : \\(E(X)=-\\alpha+\\frac{300}{7}\\).\nثم أوجد أكبر قيمة ممكنة لـ \\(\\alpha\\) حتى تكون اللعبة في صالح اللاعب.",
+      "axis_tags": [
+        "random_variable_expected_value"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل تعريف الأمل الرياضياتي: نضرب كل قيمة للمتغير العشوائي في احتمالها ثم نجمع. بعد ذلك تكون اللعبة في صالح اللاعب عندما يكون الأمل الرياضياتي موجبا.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "كتابة عبارة الأمل الرياضياتي",
+            "explanation": "حسب قانون احتمال \\(X\\):\n\\[E(X)=(100-\\alpha)\\times\\frac17+(50-\\alpha)\\times\\frac47+(-\\alpha)\\times\\frac27.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "نشر وتبسيط العبارة",
+            "explanation": "نوسع الحدود:\n\\[E(X)=\\frac{100-\\alpha+200-4\\alpha-2\\alpha}{7}.\\]\nإذن:\n\\[E(X)=\\frac{300-7\\alpha}{7}=\\frac{300}{7}-\\alpha.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "شرط أن تكون اللعبة في صالح اللاعب",
+            "explanation": "تكون اللعبة في صالح اللاعب عندما يكون متوسط ربحه موجبا، أي:\n\\[E(X)>0.\\]\nومن ثم:\n\\[-\\alpha+\\frac{300}{7}>0.\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "حل المتراجحة",
+            "explanation": "لدينا:\n\\[\\alpha<\\frac{300}{7}.\\]\nوبالقيمة العشرية:\n\\[\\frac{300}{7}\\approx42.857.\\]"
+          },
+          {
+            "step_number": 5,
+            "title": "استعمال كون α عددا طبيعيا",
+            "explanation": "بما أن \\(\\alpha\\) عدد طبيعي ويجب أن يكون أصغر تماما من \\(42.857\\)، فإن أكبر قيمة طبيعية ممكنة هي:\n\\[\\alpha=42.\\]"
+          }
+        ],
+        "final_answer": "\\[E(X)=-\\alpha+\\frac{300}{7},\\qquad \\alpha_{\\max}=42\\;DA.\\]"
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "statement_checked_against_image": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2018(5).pdf",
+    "statement_image": "2018_exo01(6).jpg",
+    "statement_figure_policy": "لا يوجد شكل لازم في نص التمرين.",
+    "solution_figure_policy": "لا يحتاج الحل إلى رسم.",
+    "renderer": "MathJax + structured tables"
+  }
+}

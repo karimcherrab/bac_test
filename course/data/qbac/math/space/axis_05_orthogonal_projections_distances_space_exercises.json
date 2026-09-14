@@ -1,0 +1,465 @@
+{
+  "version": 1,
+  "language": "ar",
+  "direction": "rtl",
+  "subject_code": "math",
+  "chapter_code": "space_geometry",
+  "tag": "orthogonal_projections_distances_space",
+  "title": "تمارين المحور الخامس: الإسقاطات العمودية والمسافات في الفضاء",
+  "question_count": 13,
+  "questions": [
+    {
+      "id": "space_projection_distance_axis05_01",
+      "number": 1,
+      "title": "المسافة بين نقطتين",
+      "text": "نعتبر النقطتين \\(A(1;-1;2)\\) و\\(B(3;2;6)\\). احسب المسافة \\(AB\\).",
+      "skill": "حساب المسافة بين نقطتين في الفضاء.",
+      "difficulty": "easy",
+      "solution": {
+        "steps": [
+          {
+            "order": 1,
+            "explanation": "نحسب أولًا إحداثيات الشعاع \\(\\overrightarrow{AB}\\).",
+            "calculation": "\\[\\overrightarrow{AB}=(3-1;2-(-1);6-2)=(2;3;4).\\]"
+          },
+          {
+            "order": 2,
+            "explanation": "المسافة \\(AB\\) هي معيار الشعاع \\(\\overrightarrow{AB}\\).",
+            "calculation": "\\[AB=\\sqrt{2^2+3^2+4^2}=\\sqrt{4+9+16}=\\sqrt{29}.\\]"
+          }
+        ],
+        "final_answer": "\\(AB=\\sqrt{29}\\)."
+      }
+    },
+    {
+      "id": "space_projection_distance_axis05_02",
+      "number": 2,
+      "title": "التحقق من مسقط عمودي على مستقيم",
+      "text": "نعتبر النقطة \\(A(1;2;0)\\) والمستقيم \\((D)\\) ذا شعاع التوجيه \\(\\vec u=(1;1;0)\\). نعلم أن النقطة \\(H\\left(\\frac32;\\frac32;0\\right)\\) تنتمي إلى \\((D)\\). تحقق أن \\(H\\) هي المسقط العمودي للنقطة \\(A\\) على \\((D)\\).",
+      "skill": "التحقق من أن نقطة هي مسقط عمودي على مستقيم.",
+      "difficulty": "easy",
+      "solution": {
+        "steps": [
+          {
+            "order": 1,
+            "explanation": "بما أن المعطى يثبت أن \\(H\\in(D)\\)، يبقى فقط التحقق من التعامد."
+          },
+          {
+            "order": 2,
+            "calculation": "\\[\\overrightarrow{AH}=\\left(\\frac12;-\\frac12;0\\right).\\]"
+          },
+          {
+            "order": 3,
+            "calculation": "\\[\\overrightarrow{AH}\\cdot\\vec u=\\frac12-\\frac12+0=0.\\]"
+          },
+          {
+            "order": 4,
+            "explanation": "إذن \\(AH\\perp(D)\\). ومع \\(H\\in(D)\\)، تكون \\(H\\) هي المسقط العمودي لـ\\(A\\) على \\((D)\\)."
+          }
+        ],
+        "final_answer": "\\(H\\) هي المسقط العمودي للنقطة \\(A\\) على المستقيم \\((D)\\)."
+      }
+    },
+    {
+      "id": "space_projection_distance_axis05_03",
+      "number": 3,
+      "title": "إيجاد المسقط على مستقيم",
+      "text": "نعتبر النقطة \\(A(1;2;0)\\) والمستقيم:\n\\[(D):\\begin{cases}x=t\\\\y=t\\\\z=0\\end{cases}\\quad(t\\in\\mathbb R).\\]\nعين إحداثيات المسقط العمودي \\(H\\) للنقطة \\(A\\) على \\((D)\\).",
+      "skill": "إيجاد المسقط العمودي لنقطة على مستقيم.",
+      "difficulty": "medium",
+      "solution": {
+        "steps": [
+          {
+            "order": 1,
+            "explanation": "بما أن \\(H\\in(D)\\)، نكتب:",
+            "result": "\\(H(t;t;0)\\)."
+          },
+          {
+            "order": 2,
+            "calculation": "\\[\\overrightarrow{AH}=(t-1;t-2;0).\\]"
+          },
+          {
+            "order": 3,
+            "result": "شعاع توجيه المستقيم هو \\(\\vec u=(1;1;0)\\)."
+          },
+          {
+            "order": 4,
+            "explanation": "بما أن \\(H\\) مسقط عمودي، فإن:",
+            "calculation": "\\[(t-1)+(t-2)=0.\\]"
+          },
+          {
+            "order": 5,
+            "calculation": "\\[2t-3=0\\Rightarrow t=\\frac32.\\]"
+          },
+          {
+            "order": 6,
+            "result": "\\[H\\left(\\frac32;\\frac32;0\\right).\\]"
+          }
+        ],
+        "final_answer": "\\(H\\left(\\frac32;\\frac32;0\\right)\\)."
+      }
+    },
+    {
+      "id": "space_projection_distance_axis05_04",
+      "number": 4,
+      "title": "المسافة من نقطة إلى مستقيم",
+      "text": "في التمرين السابق وجدنا أن مسقط \\(A(1;2;0)\\) على المستقيم \\((D)\\) هو \\(H\\left(\\frac32;\\frac32;0\\right)\\). احسب \\(d(A,D)\\).",
+      "skill": "حساب المسافة من نقطة إلى مستقيم بعد إيجاد المسقط العمودي.",
+      "difficulty": "medium",
+      "solution": {
+        "steps": [
+          {
+            "order": 1,
+            "explanation": "بما أن \\(H\\) هو المسقط العمودي، فإن:",
+            "result": "\\(d(A,D)=AH\\)."
+          },
+          {
+            "order": 2,
+            "calculation": "\\[AH=\\sqrt{\\left(\\frac32-1\\right)^2+\\left(\\frac32-2\\right)^2}.\\]"
+          },
+          {
+            "order": 3,
+            "calculation": "\\[AH=\\sqrt{\\frac14+\\frac14}=\\sqrt{\\frac12}=\\frac{\\sqrt2}{2}.\\]"
+          }
+        ],
+        "final_answer": "\\(d(A,D)=\\frac{\\sqrt2}{2}\\)."
+      }
+    },
+    {
+      "id": "space_projection_distance_axis05_05",
+      "number": 5,
+      "title": "المسافة المباشرة إلى مستوى",
+      "text": "نعتبر النقطة \\(A(1;1;3)\\) والمستوى \\((P):x+y+z-2=0\\). احسب المسافة \\(d(A,P)\\).",
+      "skill": "استعمال الصيغة المباشرة للمسافة من نقطة إلى مستوى.",
+      "difficulty": "easy",
+      "solution": {
+        "steps": [
+          {
+            "order": 1,
+            "explanation": "نستعمل الصيغة:",
+            "calculation": "\\[d(A,P)=\\frac{|ax_A+by_A+cz_A+d|}{\\sqrt{a^2+b^2+c^2}}.\\]"
+          },
+          {
+            "order": 2,
+            "calculation": "\\[d(A,P)=\\frac{|1+1+3-2|}{\\sqrt{1+1+1}}=\\frac{3}{\\sqrt3}.\\]"
+          },
+          {
+            "order": 3,
+            "calculation": "\\[d(A,P)=\\sqrt3.\\]"
+          }
+        ],
+        "final_answer": "\\(d(A,P)=\\sqrt3\\)."
+      }
+    },
+    {
+      "id": "space_projection_distance_axis05_06",
+      "number": 6,
+      "title": "إيجاد المسقط على مستوى",
+      "text": "نعتبر النقطة \\(A(1;1;3)\\) والمستوى \\((P):x+y+z-2=0\\). عين إحداثيات المسقط العمودي \\(H\\) للنقطة \\(A\\) على \\((P)\\).",
+      "skill": "إيجاد المسقط العمودي لنقطة على مستوى.",
+      "difficulty": "medium",
+      "solution": {
+        "steps": [
+          {
+            "order": 1,
+            "result": "شعاع ناظمي للمستوى هو \\(\\vec n=(1;1;1)\\)."
+          },
+          {
+            "order": 2,
+            "explanation": "المستقيم العمودي على \\((P)\\) والمار بـ\\(A\\) يكتب:",
+            "calculation": "\\[\\begin{cases}x=1+t\\\\y=1+t\\\\z=3+t\\end{cases}.\\]"
+          },
+          {
+            "order": 3,
+            "explanation": "النقطة \\(H\\) تنتمي إلى هذا المستقيم وإلى المستوى. نعوض في معادلة المستوى.",
+            "calculation": "\\[(1+t)+(1+t)+(3+t)-2=0.\\]"
+          },
+          {
+            "order": 4,
+            "calculation": "\\[3+3t=0\\Rightarrow t=-1.\\]"
+          },
+          {
+            "order": 5,
+            "result": "\\[H(0;0;2).\\]"
+          }
+        ],
+        "final_answer": "\\(H(0;0;2)\\)."
+      }
+    },
+    {
+      "id": "space_projection_distance_axis05_07",
+      "number": 7,
+      "title": "التحقق بطريقتين من المسافة",
+      "text": "نعتبر \\(A(1;1;3)\\)، \\(H(0;0;2)\\) و\\((P):x+y+z-2=0\\)، حيث \\(H\\) هو المسقط العمودي لـ\\(A\\) على \\((P)\\). تحقق أن \\(AH=d(A,P)\\).",
+      "skill": "الربط بين المسقط العمودي والصيغة المباشرة للمسافة.",
+      "difficulty": "medium",
+      "solution": {
+        "steps": [
+          {
+            "order": 1,
+            "calculation": "\\[AH=\\sqrt{(0-1)^2+(0-1)^2+(2-3)^2}=\\sqrt3.\\]"
+          },
+          {
+            "order": 2,
+            "calculation": "\\[d(A,P)=\\frac{|1+1+3-2|}{\\sqrt3}=\\sqrt3.\\]"
+          },
+          {
+            "order": 3,
+            "result": "\\[AH=d(A,P)=\\sqrt3.\\]"
+          }
+        ],
+        "final_answer": "\\(AH=d(A,P)=\\sqrt3\\)."
+      }
+    },
+    {
+      "id": "space_projection_distance_axis05_08",
+      "number": 8,
+      "title": "مسقط على مستقيم بتمثيل غير بسيط",
+      "text": "نعتبر النقطة \\(A(2;-1;3)\\) والمستقيم:\n\\[(D):\\begin{cases}x=1+t\\\\y=1+2t\\\\z=-t\\end{cases}\\quad(t\\in\\mathbb R).\\]\nعين المسقط العمودي \\(H\\) للنقطة \\(A\\) على \\((D)\\).",
+      "skill": "إيجاد المسقط العمودي على مستقيم في حالة عامة.",
+      "difficulty": "hard",
+      "solution": {
+        "steps": [
+          {
+            "order": 1,
+            "result": "\\(H(1+t;1+2t;-t)\\)."
+          },
+          {
+            "order": 2,
+            "calculation": "\\[\\overrightarrow{AH}=(t-1;2+2t;-t-3).\\]"
+          },
+          {
+            "order": 3,
+            "result": "شعاع توجيه المستقيم هو \\(\\vec u=(1;2;-1)\\)."
+          },
+          {
+            "order": 4,
+            "calculation": "\\[(t-1)+2(2+2t)+(-1)(-t-3)=0.\\]"
+          },
+          {
+            "order": 5,
+            "calculation": "\\[t-1+4+4t+t+3=0\\Rightarrow6t+6=0.\\]"
+          },
+          {
+            "order": 6,
+            "calculation": "\\[t=-1.\\]"
+          },
+          {
+            "order": 7,
+            "result": "\\[H(0;-1;1).\\]"
+          }
+        ],
+        "final_answer": "\\(H(0;-1;1)\\)."
+      }
+    },
+    {
+      "id": "space_projection_distance_axis05_09",
+      "number": 9,
+      "title": "المسافة إلى مستقيم في حالة عامة",
+      "text": "في التمرين السابق وجدنا أن المسقط العمودي للنقطة \\(A(2;-1;3)\\) على \\((D)\\) هو \\(H(0;-1;1)\\). احسب \\(d(A,D)\\).",
+      "skill": "حساب المسافة إلى مستقيم بعد إيجاد المسقط في حالة عامة.",
+      "difficulty": "hard",
+      "solution": {
+        "steps": [
+          {
+            "order": 1,
+            "result": "\\(d(A,D)=AH\\)."
+          },
+          {
+            "order": 2,
+            "calculation": "\\[AH=\\sqrt{(0-2)^2+(-1+1)^2+(1-3)^2}.\\]"
+          },
+          {
+            "order": 3,
+            "calculation": "\\[AH=\\sqrt{4+0+4}=\\sqrt8=2\\sqrt2.\\]"
+          }
+        ],
+        "final_answer": "\\(d(A,D)=2\\sqrt2\\)."
+      }
+    },
+    {
+      "id": "space_projection_distance_axis05_10",
+      "number": 10,
+      "title": "مسافة نقطة إلى مستوى بمعاملات غير بسيطة",
+      "text": "نعتبر النقطة \\(A(2;-1;4)\\) والمستوى \\((P):2x-y+2z-3=0\\). احسب \\(d(A,P)\\).",
+      "skill": "تطبيق الصيغة المباشرة للمسافة إلى مستوى بمعاملات مختلفة.",
+      "difficulty": "medium",
+      "solution": {
+        "steps": [
+          {
+            "order": 1,
+            "calculation": "\\[d(A,P)=\\frac{|2(2)-(-1)+2(4)-3|}{\\sqrt{2^2+(-1)^2+2^2}}.\\]"
+          },
+          {
+            "order": 2,
+            "calculation": "\\[d(A,P)=\\frac{|4+1+8-3|}{\\sqrt9}=\\frac{10}{3}.\\]"
+          }
+        ],
+        "final_answer": "\\(d(A,P)=\\frac{10}{3}\\)."
+      }
+    },
+    {
+      "id": "space_projection_distance_axis05_11",
+      "number": 11,
+      "title": "مستقيم تقاطع مستويين ثم مسافة",
+      "text": "نعتبر المستقيم \\((D)\\) الناتج عن تقاطع المستويين:\n\\[(P_1):x=0\\]\nو\n\\[(P_2):y=0.\\]\nوالنقطة \\(A(2;3;1)\\).\n1) اكتب تمثيلًا وسيطيًا للمستقيم \\((D)\\).\n2) عين المسقط العمودي \\(H\\) للنقطة \\(A\\) على \\((D)\\).\n3) احسب \\(d(A,D)\\).",
+      "skill": "إيجاد مستقيم تقاطع مستويين ثم حساب المسقط والمسافة إليه.",
+      "difficulty": "hard",
+      "solution": {
+        "steps": [
+          {
+            "order": 1,
+            "title": "تمثيل مستقيم التقاطع",
+            "explanation": "من \\(x=0\\) و\\(y=0\\)، يكون:",
+            "calculation": "\\[(D):\\begin{cases}x=0\\\\y=0\\\\z=t\\end{cases}\\quad(t\\in\\mathbb R).\\]"
+          },
+          {
+            "order": 2,
+            "title": "تعيين المسقط",
+            "result": "\\(H(0;0;t)\\)، وشعاع توجيه \\((D)\\) هو \\((0;0;1)\\)."
+          },
+          {
+            "order": 3,
+            "calculation": "\\[\\overrightarrow{AH}=(-2;-3;t-1).\\]"
+          },
+          {
+            "order": 4,
+            "calculation": "\\[\\overrightarrow{AH}\\cdot(0;0;1)=t-1=0.\\]"
+          },
+          {
+            "order": 5,
+            "calculation": "\\[t=1\\Rightarrow H(0;0;1).\\]"
+          },
+          {
+            "order": 6,
+            "title": "حساب المسافة",
+            "calculation": "\\[d(A,D)=AH=\\sqrt{(-2)^2+(-3)^2}=\\sqrt{13}.\\]"
+          }
+        ],
+        "final_answer": "\\((D):x=0,y=0,z=t\\)، و\\(H(0;0;1)\\)، و\\(d(A,D)=\\sqrt{13}\\)."
+      }
+    },
+    {
+      "id": "space_projection_distance_axis05_12",
+      "number": 12,
+      "title": "إيجاد مسقط على مستوى ثم حساب المسافة",
+      "text": "نعتبر النقطة \\(A(4;1;-1)\\) والمستوى \\((P):2x-y+2z-3=0\\).\n1) عين المسقط العمودي \\(H\\) للنقطة \\(A\\) على \\((P)\\).\n2) احسب \\(AH\\).\n3) تحقق أن النتيجة تساوي \\(d(A,P)\\) المحسوبة بالصيغة المباشرة.",
+      "skill": "حل كامل للمسقط على مستوى والتحقق من المسافة بطريقتين.",
+      "difficulty": "hard",
+      "solution": {
+        "steps": [
+          {
+            "order": 1,
+            "result": "شعاع ناظمي للمستوى هو \\(\\vec n=(2;-1;2)\\)."
+          },
+          {
+            "order": 2,
+            "explanation": "المستقيم العمودي على \\((P)\\) والمار بـ\\(A\\):",
+            "calculation": "\\[\\begin{cases}x=4+2t\\\\y=1-t\\\\z=-1+2t\\end{cases}.\\]"
+          },
+          {
+            "order": 3,
+            "explanation": "نعوض في معادلة المستوى.",
+            "calculation": "\\[2(4+2t)-(1-t)+2(-1+2t)-3=0.\\]"
+          },
+          {
+            "order": 4,
+            "calculation": "\\[8+4t-1+t-2+4t-3=0\\Rightarrow2+9t=0.\\]"
+          },
+          {
+            "order": 5,
+            "calculation": "\\[t=-\\frac29.\\]"
+          },
+          {
+            "order": 6,
+            "result": "\\[H\\left(\\frac{32}{9};\\frac{11}{9};-\\frac{13}{9}\\right).\\]"
+          },
+          {
+            "order": 7,
+            "explanation": "بما أن \\(\\overrightarrow{AH}=t\\vec n\\)، فإن:",
+            "calculation": "\\[AH=|t|\\|\\vec n\\|=\\frac29\\sqrt{4+1+4}=\\frac29\\times3=\\frac23.\\]"
+          },
+          {
+            "order": 8,
+            "explanation": "نحسب أيضًا بالصيغة المباشرة:",
+            "calculation": "\\[d(A,P)=\\frac{|2(4)-1+2(-1)-3|}{3}=\\frac{|2|}{3}=\\frac23.\\]"
+          }
+        ],
+        "final_answer": "\\[H\\left(\\frac{32}{9};\\frac{11}{9};-\\frac{13}{9}\\right),\\qquad AH=d(A,P)=\\frac23.\\]"
+      }
+    },
+    {
+      "id": "space_projection_distance_axis05_13",
+      "number": 13,
+      "title": "تمرين شامل للمحور",
+      "text": "في الفضاء المنسوب إلى معلم متعامد ومتجانس، نعتبر النقطة \\(A(2;1;4)\\)، والمستقيم:\n\\[(D):\\begin{cases}x=1+t\\\\y=2-t\\\\z=t\\end{cases}\\quad(t\\in\\mathbb R)\\]\nوالمستوى:\n\\[(P):x+2y+2z-5=0.\\]\n1) عين المسقط العمودي \\(H\\) للنقطة \\(A\\) على \\((D)\\).\n2) احسب \\(d(A,D)\\).\n3) احسب \\(d(A,P)\\) باستعمال الصيغة المباشرة.\n4) عين المسقط العمودي \\(K\\) للنقطة \\(A\\) على \\((P)\\).\n5) تحقق أن \\(AK=d(A,P)\\).",
+      "skill": "دمج الإسقاط على مستقيم والإسقاط على مستوى وحساب المسافات.",
+      "difficulty": "hard",
+      "solution": {
+        "steps": [
+          {
+            "order": 1,
+            "title": "المسقط H على المستقيم",
+            "result": "\\(H(1+t;2-t;t)\\)، وشعاع توجيه \\((D)\\) هو \\(\\vec u=(1;-1;1)\\)."
+          },
+          {
+            "order": 2,
+            "calculation": "\\[\\overrightarrow{AH}=(t-1;1-t;t-4).\\]"
+          },
+          {
+            "order": 3,
+            "calculation": "\\[(t-1)-(1-t)+(t-4)=0.\\]"
+          },
+          {
+            "order": 4,
+            "calculation": "\\[3t-6=0\\Rightarrow t=2.\\]"
+          },
+          {
+            "order": 5,
+            "result": "\\[H(3;0;2).\\]"
+          },
+          {
+            "order": 6,
+            "title": "المسافة إلى المستقيم",
+            "calculation": "\\[AH=\\sqrt{(3-2)^2+(0-1)^2+(2-4)^2}=\\sqrt6.\\]"
+          },
+          {
+            "order": 7,
+            "title": "المسافة إلى المستوى",
+            "calculation": "\\[d(A,P)=\\frac{|2+2(1)+2(4)-5|}{\\sqrt{1+4+4}}=\\frac7{3}.\\]"
+          },
+          {
+            "order": 8,
+            "title": "المسقط K على المستوى",
+            "result": "ناظمي \\((P)\\) هو \\(\\vec n=(1;2;2)\\)."
+          },
+          {
+            "order": 9,
+            "explanation": "المستقيم العمودي على \\((P)\\) والمار بـ\\(A\\):",
+            "calculation": "\\[\\begin{cases}x=2+s\\\\y=1+2s\\\\z=4+2s\\end{cases}.\\]"
+          },
+          {
+            "order": 10,
+            "explanation": "نعوض في معادلة المستوى.",
+            "calculation": "\\[(2+s)+2(1+2s)+2(4+2s)-5=0.\\]"
+          },
+          {
+            "order": 11,
+            "calculation": "\\[7+9s=0\\Rightarrow s=-\\frac79.\\]"
+          },
+          {
+            "order": 12,
+            "result": "\\[K\\left(\\frac{11}{9};-\\frac59;\\frac{22}{9}\\right).\\]"
+          },
+          {
+            "order": 13,
+            "title": "التحقق",
+            "explanation": "بما أن \\(\\overrightarrow{AK}=s\\vec n\\)، فإن:",
+            "calculation": "\\[AK=|s|\\|\\vec n\\|=\\frac79\\times3=\\frac73.\\]"
+          }
+        ],
+        "final_answer": "\\[H(3;0;2),\\quad d(A,D)=\\sqrt6,\\quad d(A,P)=\\frac73,\\quad K\\left(\\frac{11}{9};-\\frac59;\\frac{22}{9}\\right),\\quad AK=\\frac73.\\]"
+      }
+    }
+  ]
+}

@@ -1,0 +1,322 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2016-science-space-subject2-ex01-detailed",
+  "session": "ordinary",
+  "year": 2016,
+  "chapter_code": "space_geometry",
+  "chapter_title": "الهندسة في الفضاء",
+  "axis_tags": [
+    "space_cartesian_plane_normal_vector",
+    "space_relative_positions_intersections",
+    "space_parametric_line",
+    "space_perpendicular_line_plane",
+    "space_median_centroid",
+    "space_locus_sphere"
+  ],
+  "branches": [
+    {
+      "code": "science",
+      "name": "شعبة علوم تجريبية"
+    }
+  ],
+  "exercise_number": 1,
+  "subject_number": 2,
+  "source_page": 3,
+  "source_pages": [
+    3
+  ],
+  "solution_source_pages": [
+    8
+  ],
+  "title": "التمرين الأول — بكالوريا الجزائر 2016 — الموضوع الثاني — شعبة علوم تجريبية",
+  "statement": "الفضاء منسوب إلى المعلم المتعامد والمتجانس \\((O;\\vec{i},\\vec{j},\\vec{k})\\) ونعتبر النقط \\(A(2;1;-3)\\)، \\(B(0;-1;2)\\) و \\(C(-3;-1;-1)\\).",
+  "questions": [
+    {
+      "id": "2016_s2_space_ex01_q1a",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1- أ) بين أن النقط \\(A\\)، \\(B\\) و \\(C\\) تعين مستويا.",
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب شعاعين من A ونثبت أنهما غير مرتبطين خطيا.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب شعاعين",
+            "explanation": "\\[\\overrightarrow{AB}=(-2,-2,5),\\qquad \\overrightarrow{AC}=(-5,-2,2).\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "عدم الارتباط الخطي",
+            "explanation": "لو كانا مرتبطين لكانت نسب المركبات متساوية، لكن \\(\\frac{-2}{-5}\\neq\\frac{-2}{-2}\\). إذن الشعاعان غير مرتبطين خطيا."
+          }
+        ],
+        "final_answer": "النقط \\(A,B,C\\) غير مستقيمية، وبالتالي تعين مستويا \\((ABC)\\)."
+      }
+    },
+    {
+      "id": "2016_s2_space_ex01_q1b",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "ب) بين أن المعادلة: \\(2x-7y-2z-3=0\\) معادلة ديكارتية للمستوي \\((ABC)\\).",
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نتحقق أن النقاط الثلاث تحقق المعادلة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "النقطة A",
+            "explanation": "\\[2(2)-7(1)-2(-3)-3=4-7+6-3=0.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "النقطة B",
+            "explanation": "\\[2(0)-7(-1)-2(2)-3=7-4-3=0.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "النقطة C",
+            "explanation": "\\[2(-3)-7(-1)-2(-1)-3=-6+7+2-3=0.\\]"
+          }
+        ],
+        "final_answer": "\\[(ABC):2x-7y-2z-3=0.\\]"
+      }
+    },
+    {
+      "id": "2016_s2_space_ex01_q2",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "2- اكتب معادلة ديكارتية للمستوي \\((P)\\) الذي يشمل النقطة \\(A\\) ويعامد المستقيم \\((BC)\\).",
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "إذا كان المستوى P عموديا على BC فإن شعاع توجيه BC يصلح شعاعا ناظميا لـP.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "شعاع BC",
+            "explanation": "\\[\\overrightarrow{BC}=C-B=(-3,0,-3)=-3(1,0,1).\\]\nإذن يمكن أخذ \\(\\vec n_P=(1,0,1)\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "استعمال النقطة A",
+            "explanation": "المستوى يمر بـ\\(A(2,1,-3)\\)، لذلك:\n\\[(x-2)+(z+3)=0.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "التبسيط",
+            "explanation": "\\[x+z+1=0.\\]"
+          }
+        ],
+        "final_answer": "\\[(P):x+z+1=0.\\]"
+      }
+    },
+    {
+      "id": "2016_s2_space_ex01_q3a",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "3- أ) جد تمثيلا وسيطيا للمستقيم \\((D)\\) تقاطع المستويين \\((ABC)\\) و \\((P)\\).",
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحل نظام معادلتي المستويين باختيار z وسيطا.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "نظام التقاطع",
+            "explanation": "\\[\\begin{cases}2x-7y-2z-3=0\\\\x+z+1=0\\end{cases}.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "اختيار وسيط",
+            "explanation": "نضع \\(z=t\\). من المعادلة الثانية:\n\\[x=-t-1.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب y",
+            "explanation": "بالتعويض في الأولى:\n\\[2(-t-1)-7y-2t-3=0\\Rightarrow -4t-7y-5=0\\Rightarrow y=-\\frac47t-\\frac57.\\]"
+          }
+        ],
+        "final_answer": "\\[(D):\\begin{cases}x=-t-1\\\\y=-\\frac47t-\\frac57\\\\z=t\\end{cases}\\quad(t\\in\\mathbb R).\\]"
+      }
+    },
+    {
+      "id": "2016_s2_space_ex01_q3b",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "ب) بين أن المستقيم \\((D)\\) عمود في المثلث \\(ABC\\).",
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "D يقع في المستوى ABC ويمر بالنقطة A، ثم نثبت أنه عمودي على BC؛ فيكون الارتفاع الصادر من A.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "مرور D بالنقطة A",
+            "explanation": "عند \\(t=-3\\):\n\\[x=2,\\quad y=1,\\quad z=-3.\\]\nإذن \\(A\\in(D)\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "العمودية على BC",
+            "explanation": "بما أن \\((D)\\subset(P)\\)، والمستوى \\((P)\\) عمودي على \\((BC)\\)، و\\((BC)\\) يقطع \\((P)\\) في \\(A\\)، فإن اتجاه \\((D)\\) عمودي على \\((BC)\\). ويمكن التحقق حسابيا بشعاع توجيه \\((D)=(-7,-4,7)\\) و\\(\\overrightarrow{BC}=(-3,0,-3)\\):\n\\[(-7,-4,7)\\cdot(-3,0,-3)=21-21=0.\\]"
+          }
+        ],
+        "final_answer": "المستقيم \\((D)\\) هو ارتفاع المثلث \\(ABC\\) الصادر من الرأس \\(A\\)."
+      }
+    },
+    {
+      "id": "2016_s2_space_ex01_q4a",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "4- ليكن \\((\\Delta)\\) المتوسط المتعلق بالضلع \\([AC]\\) في المثلث \\(ABC\\). أ) بين أن الجملة:\n\\[\\begin{cases}x=-\\frac12-\\frac12k\\\\y=k\\\\z=-2-4k\\end{cases}\\quad;k\\in\\mathbb R\\]\nتمثيل وسيطي للمستقيم \\((\\Delta)\\).",
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحدد منتصف AC ثم نثبت أن التمثيل المعطى يصف المستقيم المار بـB ومنتصف AC.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "منتصف AC",
+            "explanation": "إذا رمزنا له بـ\\(I\\)، فإن:\n\\[I\\left(\\frac{2+(-3)}2,\\frac{1+(-1)}2,\\frac{-3+(-1)}2\\right)=\\left(-\\frac12,0,-2\\right).\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "النقطة I في التمثيل",
+            "explanation": "عند \\(k=0\\) نحصل على \\(I(-\\frac12,0,-2)\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "النقطة B في التمثيل",
+            "explanation": "عند \\(k=-1\\):\n\\[x=0,\\quad y=-1,\\quad z=2,\\]\nأي نحصل على \\(B(0,-1,2)\\)."
+          },
+          {
+            "step_number": 4,
+            "title": "الاستنتاج",
+            "explanation": "إذن المستقيم الممثل بالجملة يمر بـB ومنتصف AC، فهو المتوسط المتعلق بالضلع \\([AC]\\)."
+          }
+        ],
+        "final_answer": "الجملة المعطاة تمثيل وسيطي للمستقيم \\((\\Delta)\\)."
+      }
+    },
+    {
+      "id": "2016_s2_space_ex01_q4b",
+      "display_order": 7,
+      "content_type": "question",
+      "text": "ب) بين أن المستقيمين \\((D)\\) و \\((\\Delta)\\) يتقاطعان في نقطة \\(G\\) يطلب تعيين إحداثياتها.",
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نساوي إحداثيات نقطة من D بإحداثيات نقطة من Δ ونحل.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "استعمال إحداثيات التقاطع",
+            "explanation": "من التصحيح الرسمي نقطة التقاطع هي:\n\\[G\\left(-\\frac13,-\\frac13,-\\frac23\\right).\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "التحقق في Δ",
+            "explanation": "بوضع \\(k=-\\frac13\\):\n\\[x=-\\frac12+\\frac16=-\\frac13,\\quad y=-\\frac13,\\quad z=-2+\\frac43=-\\frac23.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "التحقق في D",
+            "explanation": "بوضع \\(t=-\\frac23\\):\n\\[x=-(-\\frac23)-1=-\\frac13,\\quad y=\\frac8{21}-\\frac{15}{21}=-\\frac13,\\quad z=-\\frac23.\\]"
+          }
+        ],
+        "final_answer": "\\[(D)\\cap(\\Delta)=\\left\\{G\\left(-\\frac13;-\\frac13;-\\frac23\\right)\\right\\}.\\]"
+      }
+    },
+    {
+      "id": "2016_s2_space_ex01_q4c",
+      "display_order": 8,
+      "content_type": "question",
+      "text": "ج) بين أن المثلث \\(ABC\\) متساوي الساقين.",
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب طولي AB وAC.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب AB²",
+            "explanation": "\\[AB^2=(-2)^2+(-2)^2+5^2=4+4+25=33.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب AC²",
+            "explanation": "\\[AC^2=(-5)^2+(-2)^2+2^2=25+4+4=33.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الاستنتاج",
+            "explanation": "\\[AB=AC=\\sqrt{33}.\\]"
+          }
+        ],
+        "final_answer": "المثلث \\(ABC\\) متساوي الساقين في \\(A\\)."
+      }
+    },
+    {
+      "id": "2016_s2_space_ex01_q4d",
+      "display_order": 9,
+      "content_type": "question",
+      "text": "د) ماذا تمثل النقطة \\(G\\) بالنسبة للمثلث \\(ABC\\)؟",
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "G تنتمي إلى المتوسط Δ وإلى الارتفاع D. وفي مثلث متساوي الساقين، الارتفاع الصادر من الرأس A هو أيضا متوسط؛ فيكون G نقطة تقاطع متوسطين.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "المستقيم Δ",
+            "explanation": "\\((\\Delta)\\) متوسط متعلق بالضلع \\([AC]\\)، أي متوسط صادر من \\(B\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "المستقيم D",
+            "explanation": "المثلث متساوي الساقين في \\(A\\)، و\\((D)\\) ارتفاع صادر من \\(A\\)، لذلك هو أيضا متوسط صادر من \\(A\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "الاستنتاج",
+            "explanation": "نقطة تقاطع متوسطين في مثلث هي مركز ثقله."
+          }
+        ],
+        "final_answer": "النقطة \\(G\\) هي مركز ثقل المثلث \\(ABC\\)."
+      }
+    },
+    {
+      "id": "2016_s2_space_ex01_q5",
+      "display_order": 10,
+      "content_type": "question",
+      "text": "5- عين طبيعة وعناصر المجموعة \\((E)\\) للنقط \\(M\\) من الفضاء التي تحقق \\(\\left\\|\\overrightarrow{MA}+\\overrightarrow{MB}+\\overrightarrow{MC}\\right\\|=3\\).",
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل خاصية مركز الثقل G: مجموع الأشعة من M نحو الرؤوس يساوي ثلاثة أضعاف الشعاع MG.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "استعمال مركز الثقل",
+            "explanation": "بما أن \\(G\\) مركز ثقل \\(A,B,C\\)، فإن:\n\\[\\overrightarrow{MA}+\\overrightarrow{MB}+\\overrightarrow{MC}=3\\overrightarrow{MG}.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "أخذ المعيار",
+            "explanation": "\\[\\left\\|3\\overrightarrow{MG}\\right\\|=3\\Rightarrow3MG=3\\Rightarrow MG=1.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "تحديد المجموعة",
+            "explanation": "مجموعة نقاط الفضاء التي تبعد مسافة ثابتة \\(1\\) عن النقطة \\(G\\) هي سطح كرة."
+          }
+        ],
+        "final_answer": "\\((E)\\) سطح كرة مركزها \\[G\\left(-\\frac13;-\\frac13;-\\frac23\\right)\\] ونصف قطرها \\(r=1\\)."
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2016_2(1).pdf",
+    "statement_page": 3,
+    "correction_page": 8,
+    "statement_figure_policy": "لا يوجد شكل لازم.",
+    "solution_figure_policy": "لا يحتاج الحل إلى رسم.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  }
+}

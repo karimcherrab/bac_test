@@ -1,0 +1,205 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2013-tech-math-space-subject2-ex01-detailed",
+  "session": "ordinary",
+  "year": 2013,
+  "chapter_code": "space_geometry",
+  "chapter_title": "الهندسة في الفضاء",
+  "axis_tags": [
+    "space_parametric_line_plane",
+    "space_relative_positions_intersections",
+    "space_cartesian_plane_normal_vector",
+    "space_common_perpendicular_distance"
+  ],
+  "branches": [
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "exercise_number": 1,
+  "subject_number": 2,
+  "source_page": 3,
+  "source_pages": [
+    3
+  ],
+  "solution_source_pages": [
+    8
+  ],
+  "title": "التمرين الأول — بكالوريا الجزائر 2013 — الموضوع الثاني — شعبة تقني رياضي",
+  "statement": "في الفضاء المنسوب إلى المعلم المتعامد المتجانس \\((O;\\vec{i},\\vec{j},\\vec{k})\\)، نعتبر النقطتين \\(A(2;-5;4)\\) و\\(B(3;-4;6)\\) والمستقيم \\((\\Delta)\\) المعرف بالتمثيل الوسيطي التالي:\n\\[\\begin{cases}x=1+t\\\\y=2-t\\\\z=4+t\\end{cases}\\qquad (t\\in\\mathbb R).\\]",
+  "questions": [
+    {
+      "id": "2013_s2_space_ex01_q1a",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1- أ) اكتب تمثيلا وسيطيا للمستقيم \\((D)\\) المار من النقطتين \\(A\\) و\\(B\\).",
+      "axis_tags": [
+        "space_parametric_line_plane"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب شعاع التوجيه AB ثم نستعمل النقطة A لكتابة التمثيل الوسيطي.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب AB",
+            "explanation": "\\[\\overrightarrow{AB}=B-A=(1,1,2).\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "كتابة التمثيل",
+            "explanation": "\\[D:\\begin{cases}x=2+k\\\\y=-5+k\\\\z=4+2k\\end{cases}\\qquad k\\in\\mathbb R.\\]"
+          }
+        ],
+        "final_answer": "\\[D:\\begin{cases}x=2+k\\\\y=-5+k\\\\z=4+2k\\end{cases},\\quad k\\in\\mathbb R.\\]"
+      }
+    },
+    {
+      "id": "2013_s2_space_ex01_q1b",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "ب) ادرس الوضع النسبي للمستقيمين \\((\\Delta)\\) و\\((D)\\).",
+      "axis_tags": [
+        "space_relative_positions_intersections"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نقارن شعاعي التوجيه أولا، ثم نتحقق هل يوجد تقاطع. إذا لم يكونا متوازيين ولا متقاطعين فهما متخالفان.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "مقارنة شعاعي التوجيه",
+            "explanation": "شعاع توجيه \\((\\Delta)\\) هو:\n\\[\\vec u_\\Delta=(1,-1,1).\\]\nوشعاع توجيه \\((D)\\) هو:\n\\[\\vec u_D=(1,1,2).\\]\nوهما غير متوازيين."
+          },
+          {
+            "step_number": 2,
+            "title": "اختبار وجود نقطة مشتركة",
+            "explanation": "لو كانا متقاطعين لوجد \\(t,k\\) يحققان:\n\\[1+t=2+k,\\quad 2-t=-5+k,\\quad 4+t=4+2k.\\]\nمن الأولى \\(k=t-1\\)، ومن الثانية نحصل على \\(t=4\\) و\\(k=3\\). لكن المعادلة الثالثة تصبح:\n\\[8=10\\]\nوهو مستحيل."
+          }
+        ],
+        "final_answer": "المستقيمان \\((\\Delta)\\) و\\((D)\\) متخالفان، أي ليسا من نفس المستوي."
+      }
+    },
+    {
+      "id": "2013_s2_space_ex01_q2",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "2- \\((P)\\) المستوي الذي يشمل \\((D)\\) ويوازي \\((\\Delta)\\). برهن أن \\(\\vec n(3;1;-2)\\) شعاع ناظمي للمستوي \\((P)\\)، ثم عين معادلة ديكارتية للمستوي \\((P)\\).",
+      "axis_tags": [
+        "space_cartesian_plane_normal_vector",
+        "space_dot_product_orthogonality"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "المستوي P يحتوي اتجاه D ويحتوي أيضا اتجاها موازيا لـΔ، لذا يجب أن يكون شعاعه الناظم عموديا على شعاعي التوجيه.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التحقق مع اتجاه D",
+            "explanation": "\\[\\vec n\\cdot\\vec u_D=(3,1,-2)\\cdot(1,1,2)=3+1-4=0.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "التحقق مع اتجاه Δ",
+            "explanation": "\\[\\vec n\\cdot\\vec u_\\Delta=(3,1,-2)\\cdot(1,-1,1)=3-1-2=0.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "كتابة معادلة P",
+            "explanation": "بما أن \\(\\vec n=(3,1,-2)\\)، فالمعادلة من الشكل:\n\\[3x+y-2z+d=0.\\]\nو\\(A(2,-5,4)\\in P\\)، إذن:\n\\[6-5-8+d=0\\Rightarrow d=7.\\]"
+          }
+        ],
+        "final_answer": "\\[P:3x+y-2z+7=0.\\]"
+      }
+    },
+    {
+      "id": "2013_s2_space_ex01_q3a",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "3- \\(M\\) نقطة كيفية من \\((\\Delta)\\) و\\(N\\) نقطة كيفية من \\((D)\\). أ) عين إحداثيات النقطتين \\(M\\) و\\(N\\) بحيث يكون المستقيم \\((MN)\\) عموديا على كل من \\((\\Delta)\\) و\\((D)\\).",
+      "axis_tags": [
+        "space_common_perpendicular_distance",
+        "space_dot_product_orthogonality"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نكتب M وN بدلالة وسيطين، ثم نفرض أن MN عمودي على شعاعي توجيه المستقيمين.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "كتابة M و N",
+            "explanation": "نكتب:\n\\[M(1+t,2-t,4+t),\\]\n\\[N(2+k,-5+k,4+2k).\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب MN",
+            "explanation": "\\[\\overrightarrow{MN}=N-M=(1+k-t,-7+k+t,2k-t).\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "فرض التعامد مع Δ",
+            "explanation": "\\[\\overrightarrow{MN}\\cdot(1,-1,1)=0.\\]\nأي:\n\\[(1+k-t)-(-7+k+t)+(2k-t)=0\\]\n\\[8+2k-3t=0.\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "فرض التعامد مع D",
+            "explanation": "\\[\\overrightarrow{MN}\\cdot(1,1,2)=0.\\]\nأي:\n\\[(1+k-t)+(-7+k+t)+2(2k-t)=0\\]\n\\[-6+6k-2t=0.\\]"
+          },
+          {
+            "step_number": 5,
+            "title": "حل الجملة",
+            "explanation": "نحل:\n\\[\\begin{cases}8+2k-3t=0\\\\-6+6k-2t=0\\end{cases}\\]\nفنجد:\n\\[t=\\frac{30}{7},\\qquad k=\\frac{17}{7}.\\]"
+          },
+          {
+            "step_number": 6,
+            "title": "إحداثيات M و N",
+            "explanation": "\\[M\\left(\\frac{37}{7},-\\frac{16}{7},\\frac{58}{7}\\right),\\]\n\\[N\\left(\\frac{31}{7},-\\frac{18}{7},\\frac{62}{7}\\right).\\]"
+          }
+        ],
+        "final_answer": "\\[M\\left(\\frac{37}{7},-\\frac{16}{7},\\frac{58}{7}\\right),\\qquad N\\left(\\frac{31}{7},-\\frac{18}{7},\\frac{62}{7}\\right).\\]"
+      }
+    },
+    {
+      "id": "2013_s2_space_ex01_q3b",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "ب) احسب المسافة بين نقطة كيفية من \\((\\Delta)\\) والمستوي \\((P)\\).",
+      "axis_tags": [
+        "space_projections_distances"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "بما أن Δ يوازي P، فالمسافة من أي نقطة من Δ إلى P ثابتة. نختار نقطة سهلة من Δ.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "اختيار نقطة من Δ",
+            "explanation": "عند \\(t=0\\) نحصل على النقطة:\n\\[M_0(1,2,4).\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "تطبيق صيغة المسافة",
+            "explanation": "\\[d(M_0,P)=\\frac{|3\\times1+2-2\\times4+7|}{\\sqrt{3^2+1^2+(-2)^2}}.\\]\n\\[d(M_0,P)=\\frac4{\\sqrt{14}}=\\frac{2\\sqrt{14}}7.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "ملاحظة",
+            "explanation": "هذه هي أيضا المسافة بين المستقيمين المتخالفين \\((\\Delta)\\) و\\((D)\\)، لأن \\((D)\\subset(P)\\) و\\((\\Delta)\\parallel(P)\\)، كما أن القطعة \\([MN]\\) عمودية على كليهما."
+          }
+        ],
+        "final_answer": "\\[d(\\Delta,P)=\\frac{2\\sqrt{14}}7.\\]"
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2013(2).pdf",
+    "statement_figure_policy": "لا يوجد شكل هندسي إلزامي في نص التمرين.",
+    "solution_figure_policy": "الحل مستقل عن أي رسم.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  }
+}

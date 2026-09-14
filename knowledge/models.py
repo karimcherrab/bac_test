@@ -140,178 +140,178 @@ from course.models import Chapter, Axis
 # Modifie cet import selon l'emplacement réel de ton modèle Student.
 
 
-class StudentSession(models.Model):
-    """
-    Session de conversation entre un étudiant et le tuteur IA.
-
-    Une session est liée à :
-    - un étudiant ;
-    - un chapitre précis ;
-    - éventuellement un axe actuel du chapitre.
-    """
-
-    id = models.UUIDField(
-        primary_key=True,
-        default=uuid.uuid4,
-        editable=False,
-    )
-
-    student = models.ForeignKey(
-        Student,
-        on_delete=models.CASCADE,
-        related_name="tutor_sessions",
-        verbose_name="Étudiant",
-    )
-
-    title = models.CharField(
-        max_length=255,
-        blank=True,
-        default="",
-        verbose_name="Titre de la session",
-    )
-
-    chapter = models.ForeignKey(
-        Chapter,
-        on_delete=models.SET_NULL,
-        null=True,
-        blank=True,
-        related_name="student_sessions",
-        verbose_name="Chapitre actuel",
-    )
-
-    current_axis = models.ForeignKey(
-        Axis,
-        on_delete=models.SET_NULL,
-        null=True,
-        blank=True,
-        related_name="student_sessions",
-        verbose_name="Axe actuel",
-    )
-
-    current_skill = models.CharField(
-        max_length=100,
-        blank=True,
-        default="",
-        verbose_name="Compétence actuelle",
-    )
-
-    current_intent = models.CharField(
-        max_length=100,
-        blank=True,
-        default="",
-        verbose_name="Intention actuelle",
-    )
-
-    last_question = models.TextField(
-        blank=True,
-        default="",
-        verbose_name="Dernière question",
-    )
-
-    last_answer = models.TextField(
-        blank=True,
-        default="",
-        verbose_name="Dernière réponse",
-    )
-
-    metadata = models.JSONField(
-        default=dict,
-        blank=True,
-        verbose_name="Métadonnées",
-    )
-
-    is_active = models.BooleanField(
-        default=True,
-        db_index=True,
-        verbose_name="Session active",
-    )
-
-    created_at = models.DateTimeField(
-        auto_now_add=True,
-        verbose_name="Date de création",
-    )
-
-    updated_at = models.DateTimeField(
-        auto_now=True,
-        verbose_name="Dernière modification",
-    )
-
-
-
-class StudentMessage(models.Model):
-    """
-    Message appartenant à une session du tuteur IA.
-    """
-
-    ROLE_STUDENT = "student"
-    ROLE_ASSISTANT = "assistant"
-    ROLE_SYSTEM = "system"
-
-    ROLE_CHOICES = [
-        (ROLE_STUDENT, "Student"),
-        (ROLE_ASSISTANT, "Assistant"),
-        (ROLE_SYSTEM, "System"),
-    ]
-
-    session = models.ForeignKey(
-        StudentSession,
-        on_delete=models.CASCADE,
-        related_name="messages",
-        verbose_name="Session",
-    )
-
-    role = models.CharField(
-        max_length=20,
-        choices=ROLE_CHOICES,
-        db_index=True,
-        verbose_name="Rôle",
-    )
-
-    content = models.TextField(
-        verbose_name="Contenu",
-    )
-
-    intent = models.CharField(
-        max_length=100,
-        blank=True,
-        default="",
-        verbose_name="Intention",
-    )
-
-    mode = models.CharField(
-        max_length=100,
-        blank=True,
-        default="",
-        verbose_name="Mode",
-    )
-
-    chapter = models.ForeignKey(
-        Chapter,
-        on_delete=models.SET_NULL,
-        null=True,
-        blank=True,
-        related_name="student_messages",
-        verbose_name="Chapitre du message",
-    )
-
-    axis = models.ForeignKey(
-        Axis,
-        on_delete=models.SET_NULL,
-        null=True,
-        blank=True,
-        related_name="student_messages",
-        verbose_name="Axe du message",
-    )
-
-    metadata = models.JSONField(
-        default=dict,
-        blank=True,
-        verbose_name="Métadonnées",
-    )
-
-    created_at = models.DateTimeField(
-        auto_now_add=True,
-        db_index=True,
-        verbose_name="Date de création",
-    )
+# class StudentSession(models.Model):
+#     """
+#     Session de conversation entre un étudiant et le tuteur IA.
+#
+#     Une session est liée à :
+#     - un étudiant ;
+#     - un chapitre précis ;
+#     - éventuellement un axe actuel du chapitre.
+#     """
+#
+#     id = models.UUIDField(
+#         primary_key=True,
+#         default=uuid.uuid4,
+#         editable=False,
+#     )
+#
+#     student = models.ForeignKey(
+#         Student,
+#         on_delete=models.CASCADE,
+#         related_name="tutor_sessions",
+#         verbose_name="Étudiant",
+#     )
+#
+#     title = models.CharField(
+#         max_length=255,
+#         blank=True,
+#         default="",
+#         verbose_name="Titre de la session",
+#     )
+#
+#     chapter = models.ForeignKey(
+#         Chapter,
+#         on_delete=models.SET_NULL,
+#         null=True,
+#         blank=True,
+#         related_name="student_sessions",
+#         verbose_name="Chapitre actuel",
+#     )
+#
+#     current_axis = models.ForeignKey(
+#         Axis,
+#         on_delete=models.SET_NULL,
+#         null=True,
+#         blank=True,
+#         related_name="student_sessions",
+#         verbose_name="Axe actuel",
+#     )
+#
+#     current_skill = models.CharField(
+#         max_length=100,
+#         blank=True,
+#         default="",
+#         verbose_name="Compétence actuelle",
+#     )
+#
+#     current_intent = models.CharField(
+#         max_length=100,
+#         blank=True,
+#         default="",
+#         verbose_name="Intention actuelle",
+#     )
+#
+#     last_question = models.TextField(
+#         blank=True,
+#         default="",
+#         verbose_name="Dernière question",
+#     )
+#
+#     last_answer = models.TextField(
+#         blank=True,
+#         default="",
+#         verbose_name="Dernière réponse",
+#     )
+#
+#     metadata = models.JSONField(
+#         default=dict,
+#         blank=True,
+#         verbose_name="Métadonnées",
+#     )
+#
+#     is_active = models.BooleanField(
+#         default=True,
+#         db_index=True,
+#         verbose_name="Session active",
+#     )
+#
+#     created_at = models.DateTimeField(
+#         auto_now_add=True,
+#         verbose_name="Date de création",
+#     )
+#
+#     updated_at = models.DateTimeField(
+#         auto_now=True,
+#         verbose_name="Dernière modification",
+#     )
+#
+#
+#
+# class StudentMessage(models.Model):
+#     """
+#     Message appartenant à une session du tuteur IA.
+#     """
+#
+#     ROLE_STUDENT = "student"
+#     ROLE_ASSISTANT = "assistant"
+#     ROLE_SYSTEM = "system"
+#
+#     ROLE_CHOICES = [
+#         (ROLE_STUDENT, "Student"),
+#         (ROLE_ASSISTANT, "Assistant"),
+#         (ROLE_SYSTEM, "System"),
+#     ]
+#
+#     session = models.ForeignKey(
+#         StudentSession,
+#         on_delete=models.CASCADE,
+#         related_name="messages",
+#         verbose_name="Session",
+#     )
+#
+#     role = models.CharField(
+#         max_length=20,
+#         choices=ROLE_CHOICES,
+#         db_index=True,
+#         verbose_name="Rôle",
+#     )
+#
+#     content = models.TextField(
+#         verbose_name="Contenu",
+#     )
+#
+#     intent = models.CharField(
+#         max_length=100,
+#         blank=True,
+#         default="",
+#         verbose_name="Intention",
+#     )
+#
+#     mode = models.CharField(
+#         max_length=100,
+#         blank=True,
+#         default="",
+#         verbose_name="Mode",
+#     )
+#
+#     chapter = models.ForeignKey(
+#         Chapter,
+#         on_delete=models.SET_NULL,
+#         null=True,
+#         blank=True,
+#         related_name="student_messages",
+#         verbose_name="Chapitre du message",
+#     )
+#
+#     axis = models.ForeignKey(
+#         Axis,
+#         on_delete=models.SET_NULL,
+#         null=True,
+#         blank=True,
+#         related_name="student_messages",
+#         verbose_name="Axe du message",
+#     )
+#
+#     metadata = models.JSONField(
+#         default=dict,
+#         blank=True,
+#         verbose_name="Métadonnées",
+#     )
+#
+#     created_at = models.DateTimeField(
+#         auto_now_add=True,
+#         db_index=True,
+#         verbose_name="Date de création",
+#     )
 

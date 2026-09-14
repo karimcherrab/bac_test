@@ -1,0 +1,372 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2015-math-space-subject1-ex01-detailed",
+  "session": "ordinary",
+  "year": 2015,
+  "chapter_code": "space_geometry",
+  "chapter_title": "الهندسة في الفضاء",
+  "axis_tags": [
+    "space_parametric_line_plane",
+    "space_barycenter",
+    "space_cartesian_plane_normal_vector",
+    "space_point_loci_sphere",
+    "space_distances_projections",
+    "space_areas_volumes"
+  ],
+  "branches": [
+    {
+      "code": "math",
+      "name": "شعبة رياضيات"
+    }
+  ],
+  "exercise_number": 1,
+  "subject_number": 1,
+  "source_page": 1,
+  "source_pages": [
+    1
+  ],
+  "solution_source_pages": [
+    7
+  ],
+  "title": "التمرين الأول — بكالوريا الجزائر 2015 — الموضوع الأول — شعبة رياضيات",
+  "statement": "الفضاء منسوب إلى المعلم المتعامد والمتجانس \\((O;\\vec{i},\\vec{j},\\vec{k})\\).\nنعتبر النقط \\(A(1;5;4)\\)، \\(B(10;4;3)\\)، \\(C(4;3;5)\\) و \\(D(0;4;5)\\).",
+  "questions": [
+    {
+      "id": "2015_s1_space_ex01_q1a",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) أ) بين أن النقط \\(A\\)، \\(B\\) و \\(C\\) ليست في استقامية.",
+      "axis_tags": [
+        "space_parametric_line_plane"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب شعاعين لهما نفس المبدأ ثم نتحقق أنهما غير متوازيين.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب الشعاعين",
+            "explanation": "\\[\n\\overrightarrow{AB}=B-A=(9,-1,-1),\n\\qquad\n\\overrightarrow{AC}=C-A=(3,-2,1).\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "التحقق من عدم التوازي",
+            "explanation": "الشعاعان \\((9,-1,-1)\\) و\\((3,-2,1)\\) غير متناسبين، إذن \\(\\overrightarrow{AB}\\) و\\(\\overrightarrow{AC}\\) غير متوازيين."
+          }
+        ],
+        "final_answer": "النقط \\(A\\)، \\(B\\)، \\(C\\) ليست في استقامية."
+      }
+    },
+    {
+      "id": "2015_s1_space_ex01_q1b",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "ب) بين أن النقط \\(A\\)، \\(B\\)، \\(C\\) و \\(D\\) من نفس المستوي.",
+      "axis_tags": [
+        "space_parametric_line_plane"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نعبر عن \\(\\overrightarrow{AD}\\) بدلالة \\(\\overrightarrow{AB}\\) و\\(\\overrightarrow{AC}\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب AD",
+            "explanation": "\\[\\overrightarrow{AD}=D-A=(-1,-1,1).\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "إيجاد علاقة خطية",
+            "explanation": "نلاحظ أن:\n\\[\n\\overrightarrow{AD}=-\\frac13\\overrightarrow{AB}+\\frac23\\overrightarrow{AC}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الاستنتاج",
+            "explanation": "إذن \\(\\overrightarrow{AD}\\) تركيب خطي من شعاعين موجّهين للمستوى \\((ABC)\\)، ومن ثم \\(D\\in(ABC)\\)."
+          }
+        ],
+        "final_answer": "النقط \\(A\\)، \\(B\\)، \\(C\\)، \\(D\\) من نفس المستوي."
+      }
+    },
+    {
+      "id": "2015_s1_space_ex01_q1c",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "ج) استنتج أن النقطة \\(D\\) هي مرجح النقط \\(A\\) و \\(B\\) و \\(C\\) المرفقة بمعاملات يطلب تعيينها.",
+      "axis_tags": [
+        "space_barycenter"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحوّل العلاقة الشعاعية السابقة إلى علاقة مرجح.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تحويل العلاقة",
+            "explanation": "من:\n\\[\n\\overrightarrow{AD}=-\\frac13\\overrightarrow{AB}+\\frac23\\overrightarrow{AC}\n\\]\nنستنتج:\n\\[\n2\\overrightarrow{DA}-\\overrightarrow{DB}+2\\overrightarrow{DC}=\\vec0.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "المرجح",
+            "explanation": "مجموع المعاملات \\(2-1+2=3\\neq0\\)، إذن العلاقة تعرف مرجحا."
+          }
+        ],
+        "final_answer": "\\(D\\) مرجح الجملة \\(\\{(A;2),(B;-1),(C;2)\\}\\)."
+      }
+    },
+    {
+      "id": "2015_s1_space_ex01_q1d",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "د) عين إحداثيات النقطة \\(E\\) نظيرة النقطة \\(A\\) بالنسبة إلى النقطة \\(D\\).",
+      "axis_tags": [
+        "space_barycenter"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "بما أن D منتصف [AE] فإن \\(E=2D-A\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب الإحداثيات",
+            "explanation": "\\[\nE=2D-A=2(0,4,5)-(1,5,4)=(-1,3,6).\n\\]"
+          }
+        ],
+        "final_answer": "\\[E(-1;3;6).\\]"
+      }
+    },
+    {
+      "id": "2015_s1_space_ex01_q1e",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "هـ) اكتب معادلة ديكارتية للمستوي \\((\\mathcal{P})\\) المحوري للقطعة \\([AE]\\).",
+      "axis_tags": [
+        "space_cartesian_plane_normal_vector",
+        "space_distances_projections"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "المستوى المحوري لـ[AE] يمر بمنتصفها D ويعامد المستقيم AE.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "شعاع ناظم",
+            "explanation": "\\[\n\\overrightarrow{AE}=E-A=(-2,-2,2).\n\\]\nيمكن أخذ \\((1,1,-1)\\) شعاعا ناظما للمستوى."
+          },
+          {
+            "step_number": 2,
+            "title": "كتابة المعادلة",
+            "explanation": "المستوى يمر بـ\\(D(0,4,5)\\):\n\\[\nx+y-z+d=0.\n\\]\nوبالتعويض:\n\\[\n4-5+d=0\\Rightarrow d=1.\n\\]"
+          }
+        ],
+        "final_answer": "\\[(\\mathcal P):x+y-z+1=0.\\]"
+      }
+    },
+    {
+      "id": "2015_s1_space_ex01_q2",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "2) عين \\((\\Gamma)\\) مجموعة النقط \\(M\\) من الفضاء حيث:\n\\[\n\\left\\|2\\overrightarrow{MA}-\\overrightarrow{MB}+2\\overrightarrow{MC}\\right\\|=\\left\\|3\\overrightarrow{MD}-3\\overrightarrow{MA}\\right\\|.\n\\]",
+      "axis_tags": [
+        "space_barycenter",
+        "space_point_loci_sphere"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل علاقة المرجح الخاصة بالنقطة D لتبسيط الطرف الأول.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تبسيط الطرف الأول",
+            "explanation": "بما أن \\(D\\) مرجح \\(\\{(A;2),(B;-1),(C;2)\\}\\)، فإن:\n\\[\n2\\overrightarrow{MA}-\\overrightarrow{MB}+2\\overrightarrow{MC}=3\\overrightarrow{MD}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "تبسيط الطرف الثاني",
+            "explanation": "\\[\n3\\overrightarrow{MD}-3\\overrightarrow{MA}=3\\overrightarrow{AD}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "تحويل الشرط",
+            "explanation": "إذن:\n\\[\n3MD=3AD\\Rightarrow MD=AD.\n\\]\nولدينا:\n\\[\nAD=\\sqrt{(-1)^2+(-1)^2+1^2}=\\sqrt3.\n\\]"
+          }
+        ],
+        "final_answer": "\\((\\Gamma)\\) سطح كرة مركزها \\(D\\) ونصف قطرها \\(\\sqrt3\\)."
+      }
+    },
+    {
+      "id": "2015_s1_space_ex01_q3a",
+      "display_order": 7,
+      "content_type": "question",
+      "text": "3) أ) تحقق أن النقطة \\(F(1;8;10)\\) تنتمي إلى المستوي \\((\\mathcal{P})\\).",
+      "axis_tags": [
+        "space_cartesian_plane_normal_vector"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نعوض إحداثيات F في معادلة المستوى.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التعويض",
+            "explanation": "\\[1+8-10+1=0.\\]"
+          }
+        ],
+        "final_answer": "\\[F\\in(\\mathcal P).\\]"
+      }
+    },
+    {
+      "id": "2015_s1_space_ex01_q3b",
+      "display_order": 8,
+      "content_type": "question",
+      "text": "ب) المستقيم \\((FD)\\) يقطع \\((\\Gamma)\\) في النقطتين \\(G\\) و \\(H\\).\nحدد طبيعة الرباعي \\(AGEH\\)، ثم احسب مساحته.",
+      "axis_tags": [
+        "space_point_loci_sphere",
+        "space_areas_volumes"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل أن AE وGH قطران للكرة وأنهما متعامدان.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "القطران",
+            "explanation": "بما أن \\(D\\) منتصف \\([AE]\\) و\\(AD=ED=\\sqrt3\\)، فإن \\([AE]\\) قطر للكرة.\nكما أن المستقيم \\((FD)\\) يمر بالمركز \\(D\\)، ولذلك \\([GH]\\) قطر آخر للكرة."
+          },
+          {
+            "step_number": 2,
+            "title": "التعامد",
+            "explanation": "\\[\n\\overrightarrow{AD}=(-1,-1,1),\\qquad \\overrightarrow{DF}=(1,4,5).\n\\]\n\\[\n\\overrightarrow{AD}\\cdot\\overrightarrow{DF}=-1-4+5=0.\n\\]\nإذن \\(AE\\perp GH\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "طبيعة الرباعي",
+            "explanation": "القطران \\([AE]\\) و\\([GH]\\) متعامدان، متساويان، وينصف كل منهما الآخر في \\(D\\)، إذن الرباعي \\(AGEH\\) مربع."
+          },
+          {
+            "step_number": 4,
+            "title": "المساحة",
+            "explanation": "\\[\nAE=GH=2\\sqrt3.\n\\]\nمساحة المربع باستعمال القطرين:\n\\[\nS_{AGEH}=\\frac12\\,AE\\times GH=\\frac12(2\\sqrt3)(2\\sqrt3)=6.\n\\]"
+          }
+        ],
+        "final_answer": "الرباعي \\(AGEH\\) مربع ومساحته \\(6\\) وحدات مربعة."
+      }
+    },
+    {
+      "id": "2015_s1_space_ex01_q4a",
+      "display_order": 9,
+      "content_type": "question",
+      "text": "4) \\((\\Delta)\\) المستقيم الذي يشمل النقطة \\(D\\) ويعامد المستوي \\((AEH)\\).\nأ) بين أن الشعاع \\(\\overrightarrow{AC}\\) ناظمي للمستوي \\((AEH)\\).",
+      "axis_tags": [
+        "space_dot_product_orthogonality",
+        "space_cartesian_plane_normal_vector"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نبين أن AC عمودي على اتجاهين غير متوازيين من المستوى AEH.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التعامد مع AE",
+            "explanation": "\\[\n\\overrightarrow{AC}=(3,-2,1),\\qquad \\overrightarrow{AE}=(-2,-2,2).\n\\]\n\\[\n\\overrightarrow{AC}\\cdot\\overrightarrow{AE}=-6+4+2=0.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "التعامد مع EH",
+            "explanation": "بما أن \\((EH)=(GH)\\subset(FD)\\)، يكفي التحقق من:\n\\[\n\\overrightarrow{AC}\\cdot\\overrightarrow{DF}=3(1)-2(4)+1(5)=0.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\overrightarrow{AC}\\) شعاع ناظمي للمستوي \\((AEH)\\)."
+      }
+    },
+    {
+      "id": "2015_s1_space_ex01_q4b",
+      "display_order": 10,
+      "content_type": "question",
+      "text": "ب) تحقق أنه من أجل كل عدد حقيقي \\(t\\)، النقطة \\(N(3t;4-2t;5+t)\\) تنتمي إلى المستقيم \\((\\Delta)\\).",
+      "axis_tags": [
+        "space_parametric_line_plane"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نكتب تمثيلا وسيطيا للمستقيم المار بـD والموجه بـAC.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تمثيل Δ",
+            "explanation": "بما أن \\((\\Delta)\\) يمر بـ\\(D(0,4,5)\\) ويعامد \\((AEH)\\)، وشعاع \\(\\overrightarrow{AC}=(3,-2,1)\\) ناظمي للمستوى، فإن:\n\\[\n(\\Delta):\\begin{cases}\nx=3t\\\\\ny=4-2t\\\\\nz=5+t\n\\end{cases}\n\\quad ;\\ t\\in\\mathbb R.\n\\]"
+          }
+        ],
+        "final_answer": "\\[N(3t;4-2t;5+t)\\in(\\Delta)\\quad \\forall t\\in\\mathbb R.\\]"
+      }
+    },
+    {
+      "id": "2015_s1_space_ex01_q4c",
+      "display_order": 11,
+      "content_type": "question",
+      "text": "ج) بين أنه من أجل كل عدد حقيقي \\(t\\)، حجم المجسم \\(NAGEH\\) هو \\(v(t)\\) حيث \\(v(t)=2|t|\\sqrt{14}\\ uv\\) (\\(uv\\) وحدة الحجم).",
+      "axis_tags": [
+        "space_areas_volumes"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "المجسم هرم قاعدته المربع AGEH وارتفاعه المسافة ND.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "مساحة القاعدة",
+            "explanation": "\\[S_{AGEH}=6.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب الارتفاع",
+            "explanation": "\\[\n\\overrightarrow{DN}=t\\overrightarrow{AC},\n\\qquad \\|\\overrightarrow{AC}\\|=\\sqrt{3^2+(-2)^2+1^2}=\\sqrt{14}.\n\\]\nإذن:\n\\[\nDN=|t|\\sqrt{14}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب الحجم",
+            "explanation": "\\[\nv(t)=\\frac13\\times S_{AGEH}\\times DN=\\frac13\\times6\\times|t|\\sqrt{14}=2|t|\\sqrt{14}\\ uv.\n\\]"
+          }
+        ],
+        "final_answer": "\\[v(t)=2|t|\\sqrt{14}\\ uv.\\]"
+      }
+    },
+    {
+      "id": "2015_s1_space_ex01_q4d",
+      "display_order": 12,
+      "content_type": "question",
+      "text": "د) عين إحداثيات كل من النقطتين \\(N_1\\) و \\(N_2\\) من \\((\\Delta)\\) اللتين يكون من أجلهما \\(v(t)=2\\sqrt3\\ uv\\).",
+      "axis_tags": [
+        "space_parametric_line_plane",
+        "space_areas_volumes"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحل معادلة الحجم ثم نعوض قيمتي t في التمثيل الوسيطي للمستقيم.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تحديد t",
+            "explanation": "\\[\n2|t|\\sqrt{14}=2\\sqrt3\n\\Rightarrow |t|=\\sqrt{\\frac3{14}}.\n\\]\nإذن:\n\\[\nt=\\pm\\sqrt{\\frac3{14}}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "إحداثيات النقطتين",
+            "explanation": "إذا وضعنا \\(a=\\sqrt{\\frac3{14}}\\)، فإن:\n\\[\nN_1(3a;4-2a;5+a),\n\\qquad\nN_2(-3a;4+2a;5-a).\n\\]"
+          }
+        ],
+        "final_answer": "\\[N_1\\left(3\\sqrt{\\frac3{14}};4-2\\sqrt{\\frac3{14}};5+\\sqrt{\\frac3{14}}\\right),\\]\n\\[N_2\\left(-3\\sqrt{\\frac3{14}};4+2\\sqrt{\\frac3{14}};5-\\sqrt{\\frac3{14}}\\right).\\]"
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2015(10).pdf",
+    "statement_figure_policy": "لا يوجد شكل هندسي إلزامي في نص التمرين.",
+    "solution_figure_policy": "الحل مستقل عن أي رسم.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  }
+}

@@ -1,0 +1,230 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2019-math-space-subject1-ex02-detailed",
+  "session": "ordinary",
+  "year": 2019,
+  "chapter_code": "space_geometry",
+  "chapter_title": "الهندسة في الفضاء",
+  "axis_tags": [
+    "space_dot_product_orthogonality",
+    "space_cartesian_plane_normal_vector",
+    "space_parametric_line_plane",
+    "space_relative_positions_intersections",
+    "space_distances_projections"
+  ],
+  "branches": [
+    {
+      "code": "math",
+      "name": "شعبة رياضيات"
+    }
+  ],
+  "exercise_number": 2,
+  "subject_number": 1,
+  "source_page": 1,
+  "source_pages": [
+    1,
+    2
+  ],
+  "solution_source_pages": [
+    6,
+    7
+  ],
+  "title": "التمرين الثاني — بكالوريا الجزائر 2019 — الموضوع الأول — شعبة رياضيات",
+  "statement": "الفضاء منسوب إلى المعلم المتعامد المتجانس \\((O;\\vec{i},\\vec{j},\\vec{k})\\)، نعتبر النقط \\(A(1;0;-1)\\) و \\(B(1;-2;0)\\) و \\(C(1;2;3)\\).",
+  "questions": [
+    {
+      "id": "2019_s1_space_ex02_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) بين أن المثلث \\(ABC\\) قائم في \\(A\\).",
+      "axis_tags": [
+        "space_dot_product_orthogonality"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب الشعاعين \\(\\overrightarrow{AB}\\) و \\(\\overrightarrow{AC}\\)، ثم نحسب جداءهما السلمي.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب الشعاعين",
+            "explanation": "\\[\n\\overrightarrow{AB}=B-A=(0,-2,1),\n\\qquad\n\\overrightarrow{AC}=C-A=(0,2,4).\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب الجداء السلمي",
+            "explanation": "\\[\n\\overrightarrow{AB}\\cdot\\overrightarrow{AC}=0\\times0+(-2)\\times2+1\\times4=0.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الاستنتاج",
+            "explanation": "بما أن \\(\\overrightarrow{AB}\\cdot\\overrightarrow{AC}=0\\)، فإن \\(AB\\perp AC\\)، ومنه المثلث \\(ABC\\) قائم في \\(A\\)."
+          }
+        ],
+        "final_answer": "المثلث \\(ABC\\) قائم في \\(A\\)."
+      }
+    },
+    {
+      "id": "2019_s1_space_ex02_q2",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2) اكتب معادلة للمستوي \\((Q)\\) الذي يشمل \\(A\\) و \\(\\overrightarrow{AC}\\) شعاع ناظمي له.",
+      "axis_tags": [
+        "space_cartesian_plane_normal_vector"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل الشعاع \\(\\overrightarrow{AC}\\) شعاعًا ناظميًا للمستوي، ثم نعوض بإحداثيات النقطة \\(A\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تحديد شعاع ناظمي",
+            "explanation": "\\[\n\\overrightarrow{AC}=(0,2,4)=2(0,1,2).\n\\]\nإذن يمكن أخذ \\(\\vec n_Q=(0,1,2)\\) شعاعًا ناظميًا للمستوي \\((Q)\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "كتابة معادلة المستوي",
+            "explanation": "معادلة \\((Q)\\) من الشكل:\n\\[\ny+2z+d=0.\n\\]\nوبما أن \\(A(1,0,-1)\\in(Q)\\):\n\\[\n0+2(-1)+d=0\\Rightarrow d=2.\n\\]"
+          }
+        ],
+        "final_answer": "\\[(Q):y+2z+2=0.\\]"
+      }
+    },
+    {
+      "id": "2019_s1_space_ex02_q3a",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "3) \\(m\\) وسيط حقيقي و \\((P_m)\\) مستو حيث: \\((m-1)x+2y-z-m=0\\) معادلة له.\nأ) أثبت أنه عندما يتغير \\(m\\) في \\(\\mathbb{R}\\) فإن المستوي \\((P_m)\\) يحوي مستقيما ثابتا \\((\\Delta)\\) يطلب تعيين تمثيل وسيطي له.\n- تحقق أن \\(A\\) و \\(C\\) نقطتان من المستقيم \\((\\Delta)\\).",
+      "axis_tags": [
+        "space_parametric_line_plane",
+        "space_relative_positions_intersections"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نرتب معادلة \\((P_m)\\) حسب الوسيط \\(m\\)، ثم نستخرج معادلتين لا تتغيران مع \\(m\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "ترتيب معادلة Pm",
+            "explanation": "\\[\n(m-1)x+2y-z-m=0\n\\]\nتكافئ:\n\\[\nm(x-1)+(-x+2y-z)=0.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "تعيين المستقيم الثابت",
+            "explanation": "النقط التي تحقق المعادلة مهما كانت قيمة \\(m\\) تحقق:\n\\[\n\\begin{cases}\nx-1=0\\\\\n-x+2y-z=0\n\\end{cases}\n\\]\nأي:\n\\[\n\\begin{cases}\nx=1\\\\\nz=2y-1\n\\end{cases}\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "التمثيل الوسيطي لـ Δ",
+            "explanation": "نضع \\(y=t\\)، فنحصل على:\n\\[\n(\\Delta):\\begin{cases}\nx=1\\\\\ny=t\\\\\nz=2t-1\n\\end{cases}\n\\quad ;\\ t\\in\\mathbb{R}.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "التحقق من انتماء A و C",
+            "explanation": "بالنسبة إلى \\(A(1,0,-1)\\)، نأخذ \\(t=0\\)، فنحصل على \\(A\\).\nوبالنسبة إلى \\(C(1,2,3)\\)، نأخذ \\(t=2\\)، فنحصل على \\(C\\).\nإذن:\n\\[\nA\\in(\\Delta)\\quad\\text{و}\\quad C\\in(\\Delta).\n\\]"
+          }
+        ],
+        "final_answer": "\\[(\\Delta):\\begin{cases}x=1\\\\y=t\\\\z=2t-1\\end{cases},\\quad t\\in\\mathbb{R},\\]\nو \\(A,C\\in(\\Delta)\\)."
+      }
+    },
+    {
+      "id": "2019_s1_space_ex02_q3b",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "ب) تحقق أنه مهما كان \\(m\\) من \\(\\mathbb{R}\\) فإن المستوي \\((P_m)\\) يعامد المستوي \\((Q)\\).",
+      "axis_tags": [
+        "space_dot_product_orthogonality",
+        "space_cartesian_plane_normal_vector"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحدد شعاعًا ناظميًا لكل مستو ثم نحسب الجداء السلمي.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الشعاعان الناظميان",
+            "explanation": "للمستوي \\((P_m)\\) شعاع ناظمي:\n\\[\n\\vec n_m=(m-1,2,-1).\n\\]\nوللمستوي \\((Q)\\) شعاع ناظمي:\n\\[\n\\vec n_Q=(0,1,2).\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب الجداء السلمي",
+            "explanation": "\\[\n\\vec n_m\\cdot\\vec n_Q=(m-1)\\times0+2\\times1+(-1)\\times2=0.\n\\]"
+          }
+        ],
+        "final_answer": "\\[(P_m)\\perp(Q)\\quad \\forall m\\in\\mathbb{R}.\\]"
+      }
+    },
+    {
+      "id": "2019_s1_space_ex02_q4a",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "4) لتكن \\(d(m)\\) المسافة بين النقطة \\(B\\) و المستوي \\((P_m)\\).\nأ) أثبت أن: \\(d(m)=\\frac{5}{\\sqrt{m^2-2m+6}}\\) ثم عين قيمة \\(m\\) التي تكون من أجلها \\(d(m)\\) أعظمية واحسبها.",
+      "axis_tags": [
+        "space_distances_projections"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نطبق صيغة المسافة بين نقطة ومستوى، ثم نبحث عن أصغر قيمة للمقام.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تطبيق صيغة المسافة",
+            "explanation": "لدينا \\(B(1,-2,0)\\)، ومنه:\n\\[\nd(m)=\\frac{|(m-1)(1)+2(-2)-0-m|}{\\sqrt{(m-1)^2+2^2+(-1)^2}}.\n\\]\nأي:\n\\[\nd(m)=\\frac{5}{\\sqrt{m^2-2m+6}}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "البحث عن القيمة الأعظمية",
+            "explanation": "نكتب:\n\\[\nm^2-2m+6=(m-1)^2+5.\n\\]\nيكون المقام أصغر ما يمكن عندما \\(m=1\\)، وبالتالي تكون \\(d(m)\\) أعظمية عند \\(m=1\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "حساب القيمة الأعظمية",
+            "explanation": "\\[\nd(1)=\\frac{5}{\\sqrt5}=\\sqrt5.\n\\]"
+          }
+        ],
+        "final_answer": "\\[m=1,\\qquad d_{\\max}=\\sqrt5.\\]"
+      }
+    },
+    {
+      "id": "2019_s1_space_ex02_q4b",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "ب) استنتج أنه إذا كانت \\(d(m)\\) أعظمية فإن النقطة \\(A\\) هي المسقط العمودي للنقطة \\(B\\) على \\((P_m)\\).",
+      "axis_tags": [
+        "space_distances_projections",
+        "space_dot_product_orthogonality"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "عند القيمة التي تجعل المسافة أعظمية لدينا \\(m=1\\). نتحقق أن A تنتمي إلى \\((P_1)\\) وأن \\(AB\\) عمودي على \\((P_1)\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "معادلة P1",
+            "explanation": "عند \\(m=1\\):\n\\[\n(P_1):2y-z-1=0.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "التحقق من انتماء A",
+            "explanation": "للنقطة \\(A(1,0,-1)\\):\n\\[\n2(0)-(-1)-1=0.\n\\]\nإذن \\(A\\in(P_1)\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "إثبات التعامد",
+            "explanation": "\\[\n\\overrightarrow{AB}=(0,-2,1).\n\\]\nوشعاع ناظمي لـ\\((P_1)\\) هو \\((0,2,-1)=-\\overrightarrow{AB}\\)، إذن \\((AB)\\perp(P_1)\\)."
+          }
+        ],
+        "final_answer": "عندما تكون \\(d(m)\\) أعظمية يكون \\(m=1\\)، وعندها تكون \\(A\\) المسقط العمودي للنقطة \\(B\\) على \\((P_1)\\)."
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2019(8).pdf",
+    "statement_figure_policy": "لا يوجد شكل هندسي إلزامي في نص التمرين.",
+    "solution_figure_policy": "الحل مستقل عن أي رسم.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  }
+}

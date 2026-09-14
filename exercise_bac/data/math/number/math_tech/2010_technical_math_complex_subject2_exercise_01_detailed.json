@@ -1,0 +1,236 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "session": "ordinary",
+  "year": 2010,
+  "chapter_code": "complex_numbers",
+  "chapter_title": "الأعداد المركبة",
+  "branches": [
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "exercise_number": 1,
+  "version": "4.2-2010-technical-math-complex-subject2-ex01",
+  "subject_number": 2,
+  "source_page": 3,
+  "source_pages": [
+    3
+  ],
+  "solution_source_pages": [
+    8
+  ],
+  "title": "التمرين الأول — بكالوريا الجزائر 2010 — الموضوع الثاني — شعبة تقني رياضي",
+  "axis_tags": [
+    "complex_exponential_form",
+    "complex_square_roots",
+    "complex_geometry",
+    "complex_locus"
+  ],
+  "statement": "",
+  "questions": [
+    {
+      "id": "2010_tm_s2_complex_ex01_q1a",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) أ- اكتب على الشكل الأسي العدد المركب \\(a\\) حيث: \\(a=-2+2i\\sqrt3\\).",
+      "axis_tags": [
+        "complex_exponential_form"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب طويلة العدد ثم نحدد عمدة له من إشارتَي الجزأين الحقيقي والتخيلي.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب الطويلة",
+            "explanation": "لدينا:\n\\[\n|a|=\\sqrt{(-2)^2+(2\\sqrt3)^2}=\\sqrt{4+12}=4.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "تحديد العمدة",
+            "explanation": "الجزء الحقيقي سالب والتخيلي موجب، إذن النقطة في الربع الثاني. كما أن:\n\\[\n\\cos\\theta=\\frac{-2}{4}=-\\frac12,\n\\qquad\n\\sin\\theta=\\frac{2\\sqrt3}{4}=\\frac{\\sqrt3}{2}.\n\\]\nإذن يمكن أخذ:\n\\[\n\\theta=\\frac{2\\pi}{3}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الشكل الأسي",
+            "explanation": "إذن:\n\\[\na=4e^{i\\frac{2\\pi}{3}}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(a=4e^{i2\\pi/3}\\)."
+      }
+    },
+    {
+      "id": "2010_tm_s2_complex_ex01_q1b",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "ب- حل في مجموعة الأعداد المركبة \\(\\mathbb{C}\\) المعادلة ذات المجهول \\(Z\\): \\(Z^2=-2+2i\\sqrt3\\).",
+      "axis_tags": [
+        "complex_square_roots"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل الشكل الأسي لـ\\(a\\). إذا كتبنا \\(Z=re^{i\\theta}\\)، فإن \\(Z^2=r^2e^{i2\\theta}\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تعويض الشكل الأسي",
+            "explanation": "من السؤال السابق:\n\\[\nZ^2=4e^{i\\frac{2\\pi}{3}}.\n\\]\nنضع:\n\\[\nZ=re^{i\\theta}.\n\\]\nإذن:\n\\[\nr^2e^{i2\\theta}=4e^{i\\frac{2\\pi}{3}}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "مقارنة الطويلتين",
+            "explanation": "لدينا:\n\\[\nr^2=4,\n\\]\nومع \\(r\\ge0\\):\n\\[\nr=2.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "مقارنة العمد",
+            "explanation": "لدينا:\n\\[\n2\\theta=\\frac{2\\pi}{3}+2k\\pi.\n\\]\nإذن:\n\\[\n\\theta=\\frac{\\pi}{3}+k\\pi.\n\\]\nفنحصل على حلين مختلفين:\n\\[\nZ_1=2e^{i\\pi/3},\\qquad Z_2=2e^{i4\\pi/3}.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "الكتابة الجبرية عند الحاجة",
+            "explanation": "لدينا:\n\\[\nZ_1=1+i\\sqrt3,\n\\qquad\nZ_2=-1-i\\sqrt3.\n\\]"
+          }
+        ],
+        "final_answer": "\\(Z_1=2e^{i\\pi/3}=1+i\\sqrt3\\)، و\\(Z_2=2e^{i4\\pi/3}=-1-i\\sqrt3\\)."
+      }
+    },
+    {
+      "id": "2010_tm_s2_complex_ex01_q2a",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "2) ينسب المستوى إلى المعلم المتعامد والمتجانس \\((O;\\vec u,\\vec v)\\). \\(A,B,C\\) النقط التي لواحقها \\(Z_A=-2\\)، \\(Z_B=-1-\\sqrt3 i\\) و \\(Z_C=1+\\sqrt3 i\\) على الترتيب.\nأ- احسب طويلة العدد المركب \\(\\frac{Z_C-Z_A}{Z_B-Z_A}\\) وعمدة له.",
+      "axis_tags": [
+        "complex_geometry",
+        "complex_modulus",
+        "complex_argument"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب النسبة ونبسطها، ثم نستخرج الطويلة والعمدة مباشرة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب الفروق",
+            "explanation": "لدينا:\n\\[\nZ_C-Z_A=(1+\\sqrt3 i)-(-2)=3+\\sqrt3 i,\n\\]\nو:\n\\[\nZ_B-Z_A=(-1-\\sqrt3 i)-(-2)=1-\\sqrt3 i.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "تبسيط النسبة",
+            "explanation": "إذن:\n\\[\n\\frac{Z_C-Z_A}{Z_B-Z_A}=\\frac{3+\\sqrt3 i}{1-\\sqrt3 i}.\n\\]\nنضرب البسط والمقام في \\(1+\\sqrt3 i\\):\n\\[\n\\frac{(3+\\sqrt3 i)(1+\\sqrt3 i)}{1+3}\n=\\frac{4\\sqrt3 i}{4}=i\\sqrt3.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الطويلة والعمدة",
+            "explanation": "بالنسبة إلى \\(i\\sqrt3\\):\n\\[\n|i\\sqrt3|=\\sqrt3,\n\\]\nوإحدى عمده:\n\\[\n\\frac{\\pi}{2}.\n\\]"
+          }
+        ],
+        "final_answer": "الطويلة \\(\\sqrt3\\)، وإحدى العمد \\(\\frac{\\pi}{2}\\)."
+      }
+    },
+    {
+      "id": "2010_tm_s2_complex_ex01_q2b",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "ب- استنتج طبيعة المثلث \\(ABC\\).",
+      "axis_tags": [
+        "complex_geometry"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "عمدة النسبة تمثل الزاوية الموجهة بين \\(\\overrightarrow{AB}\\) و\\(\\overrightarrow{AC}\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تفسير العمدة هندسيًا",
+            "explanation": "لدينا:\n\\[\n\\arg\\left(\\frac{Z_C-Z_A}{Z_B-Z_A}\\right)\n=(\\overrightarrow{AB},\\overrightarrow{AC})\n=\\frac{\\pi}{2}\\ [2\\pi].\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "الاستنتاج",
+            "explanation": "إذن:\n\\[\n\\overrightarrow{AB}\\perp\\overrightarrow{AC}.\n\\]\nوعليه فإن الزاوية \\(\\widehat{BAC}\\) قائمة."
+          }
+        ],
+        "final_answer": "المثلث \\(ABC\\) قائم في \\(A\\)."
+      }
+    },
+    {
+      "id": "2010_tm_s2_complex_ex01_q3a",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "3) لتكن \\((E)\\) مجموعة النقط \\(M\\) ذات اللاحقة \\(z\\) حيث: \\(\\arg(\\overline z+2)=\\frac{\\pi}{3}\\).\nأ- تحقق أن \\(B\\) تنتمي إلى \\((E)\\).",
+      "axis_tags": [
+        "complex_locus"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نعوض لاحقة \\(B\\) في الشرط المعطى.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب مرافق لاحقة B",
+            "explanation": "لدينا:\n\\[\nz_B=-1-\\sqrt3 i,\n\\]\nإذن:\n\\[\n\\overline{z_B}=-1+\\sqrt3 i.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "إضافة 2",
+            "explanation": "نحصل على:\n\\[\n\\overline{z_B}+2=1+\\sqrt3 i.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب العمدة",
+            "explanation": "العدد \\(1+\\sqrt3 i\\) يقع في الربع الأول، و:\n\\[\n\\tan\\theta=\\sqrt3.\n\\]\nإذن:\n\\[\n\\arg(\\overline{z_B}+2)=\\frac{\\pi}{3}\\ [2\\pi].\n\\]\nوبالتالي \\(B\\in(E)\\)."
+          }
+        ],
+        "final_answer": "\\(B\\in(E)\\)."
+      }
+    },
+    {
+      "id": "2010_tm_s2_complex_ex01_q3b",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "ب- عين المجموعة \\((E)\\).",
+      "axis_tags": [
+        "complex_locus",
+        "complex_argument"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل العلاقة بين عمدة عدد مركب وعمدة مرافقه، ثم نفسر الشرط هندسيًا انطلاقًا من النقطة \\(A\\) ذات اللاحقة \\(-2\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "إعادة كتابة العبارة",
+            "explanation": "بما أن \\(2\\) حقيقي:\n\\[\n\\overline z+2=\\overline{z+2}.\n\\]\nإذن:\n\\[\n\\arg(\\overline{z+2})=\\frac{\\pi}{3}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "استعمال عمدة المرافق",
+            "explanation": "نعلم أن:\n\\[\n\\arg(\\overline w)=-\\arg(w)\\ [2\\pi].\n\\]\nإذن:\n\\[\n\\arg(z+2)=-\\frac{\\pi}{3}\\ [2\\pi].\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "التفسير الهندسي",
+            "explanation": "بما أن \\(z_A=-2\\)، فإن:\n\\[\nz+2=z-z_A\n\\]\nهي لاحقة المتجهة \\(\\overrightarrow{AM}\\). وبالتالي يجب أن يكون اتجاه \\(\\overrightarrow{AM}\\) ذا عمدة \\(-\\frac{\\pi}{3}\\)."
+          },
+          {
+            "step_number": 4,
+            "title": "تحديد نصف المستقيم",
+            "explanation": "النقطة \\(B\\) تحقق الشرط، ولذلك الاتجاه هو اتجاه \\(\\overrightarrow{AB}\\). النقطة \\(A\\) نفسها مستثناة لأن \\(z+2=0\\) وعمدة الصفر غير معرفة. إذن:\n\\[\nE=[AB)\\setminus\\{A\\}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(E=[AB)\\setminus\\{A\\}\\)، أي نصف المستقيم ذي المبدأ \\(A\\) والمار بـ\\(B\\)، مع استثناء \\(A\\)."
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2010(1).pdf",
+    "statement_page": 3,
+    "correction_page": 8
+  }
+}

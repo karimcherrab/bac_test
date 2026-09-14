@@ -1,0 +1,174 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2017-science-space-subject2-ex01-detailed",
+  "session": "ordinary",
+  "year": 2017,
+  "chapter_code": "space_geometry",
+  "chapter_title": "الهندسة في الفضاء",
+  "axis_tags": [
+    "space_collinearity_coplanarity",
+    "space_cartesian_plane_normal_vector",
+    "space_parametric_line",
+    "space_relative_positions_intersections",
+    "space_perpendicular_lines",
+    "space_triangle_orthocenter"
+  ],
+  "branches": [
+    {
+      "code": "science",
+      "name": "شعبة علوم تجريبية"
+    }
+  ],
+  "exercise_number": 1,
+  "subject_number": 2,
+  "source_page": 3,
+  "source_pages": [
+    3
+  ],
+  "solution_source_pages": [
+    8
+  ],
+  "title": "التمرين الأول — بكالوريا الجزائر 2017 — الموضوع الثاني — شعبة علوم تجريبية",
+  "statement": "الفضاء منسوب إلى المعلم المتعامد والمتجانس \\((O;\\vec{i},\\vec{j},\\vec{k})\\)، نعتبر النقط \\(A(3;0;0)\\)، \\(B(0;2;0)\\) و \\(C(0;0;1)\\).",
+  "questions": [
+    {
+      "id": "2017_s2_space_ex01_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) بين أن النقط \\(A\\)، \\(B\\) و \\(C\\) تعين مستويا، ثم تحقق أن: \\(2x+3y+6z-6=0\\) معادلة للمستوى \\((ABC)\\).",
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نثبت أن النقاط غير مستقيمية، ثم نتحقق أنها تحقق المعادلة المقترحة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب شعاعين",
+            "explanation": "\\[\\overrightarrow{AB}=(-3,2,0),\\qquad \\overrightarrow{AC}=(-3,0,1).\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "إثبات عدم الاستقامية",
+            "explanation": "الشعاعان غير مرتبطين خطيا، لأن المركبة الثانية لـ\\(\\overrightarrow{AB}\\) تساوي \\(2\\)، بينما المركبة الثانية لـ\\(\\overrightarrow{AC}\\) تساوي \\(0\\). إذن النقط الثلاث تعين مستويا."
+          },
+          {
+            "step_number": 3,
+            "title": "التحقق من A",
+            "explanation": "\\[2(3)+3(0)+6(0)-6=0.\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "التحقق من B",
+            "explanation": "\\[2(0)+3(2)+6(0)-6=0.\\]"
+          },
+          {
+            "step_number": 5,
+            "title": "التحقق من C",
+            "explanation": "\\[2(0)+3(0)+6(1)-6=0.\\]"
+          }
+        ],
+        "final_answer": "\\[(ABC):2x+3y+6z-6=0.\\]"
+      }
+    },
+    {
+      "id": "2017_s2_space_ex01_q2",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2) اكتب تمثيلا وسيطيا للمستقيم \\((\\Delta)\\) العمودي على المستوى \\((ABC)\\) والذي يشمل المبدأ \\(O\\).",
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "المستقيم العمودي على المستوى يأخذ شعاع ناظم المستوى شعاع توجيه له.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "شعاع ناظمي للمستوى",
+            "explanation": "من المعادلة:\n\\[2x+3y+6z-6=0\\]\nنأخذ:\n\\[\\vec n=(2,3,6).\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "كتابة التمثيل الوسيطي",
+            "explanation": "بما أن \\((\\Delta)\\) يمر بالمبدأ \\(O(0,0,0)\\) وله شعاع توجيه \\((2,3,6)\\):\n\\[\\begin{cases}x=2t\\\\y=3t\\\\z=6t\\end{cases}\\qquad t\\in\\mathbb R.\\]"
+          }
+        ],
+        "final_answer": "\\[(\\Delta):\\begin{cases}x=2t\\\\y=3t\\\\z=6t\\end{cases},\\qquad t\\in\\mathbb R.\\]"
+      }
+    },
+    {
+      "id": "2017_s2_space_ex01_q3",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "3) جد إحداثيات \\(H\\) نقطة تقاطع \\((\\Delta)\\) و \\((ABC)\\).",
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نعوض التمثيل الوسيطي للمستقيم Δ في معادلة المستوى.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التعويض",
+            "explanation": "نعوض \\(x=2t\\)، \\(y=3t\\)، \\(z=6t\\) في:\n\\[2x+3y+6z-6=0.\\]\nفنحصل على:\n\\[4t+9t+36t-6=0.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب t",
+            "explanation": "\\[49t=6\\Rightarrow t=\\frac6{49}.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب الإحداثيات",
+            "explanation": "\\[x=\\frac{12}{49},\\qquad y=\\frac{18}{49},\\qquad z=\\frac{36}{49}.\\]"
+          }
+        ],
+        "final_answer": "\\[H\\left(\\frac{12}{49};\\frac{18}{49};\\frac{36}{49}\\right).\\]"
+      }
+    },
+    {
+      "id": "2017_s2_space_ex01_q4",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "4) بين أن \\((BH)\\) عمودي على \\((AC)\\)، ثم استنتج أن \\(H\\) هي نقطة تلاقي أعمدة المثلث \\(ABC\\).",
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نثبت أولا BH⊥AC بالجداء السلمي، ثم نثبت أن AH⊥BC أيضا، فيكون H تقاطع ارتفاعين من المثلث.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب شعاع BH",
+            "explanation": "\\[\\overrightarrow{BH}=H-B=\\left(\\frac{12}{49},\\frac{18}{49}-2,\\frac{36}{49}\\right)=\\left(\\frac{12}{49},-\\frac{80}{49},\\frac{36}{49}\\right).\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب شعاع AC",
+            "explanation": "\\[\\overrightarrow{AC}=C-A=(-3,0,1).\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "إثبات BH⊥AC",
+            "explanation": "\\[\\overrightarrow{BH}\\cdot\\overrightarrow{AC}=\\frac{12}{49}(-3)+\\left(-\\frac{80}{49}\\right)0+\\frac{36}{49}(1)=0.\\]\nإذن:\n\\[(BH)\\perp(AC).\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "إثبات أن AH ارتفاع ثان",
+            "explanation": "\\[\\overrightarrow{AH}=H-A=\\left(-\\frac{135}{49},\\frac{18}{49},\\frac{36}{49}\\right),\\]\nو\n\\[\\overrightarrow{BC}=C-B=(0,-2,1).\\]\nنحسب:\n\\[\\overrightarrow{AH}\\cdot\\overrightarrow{BC}=0-\\frac{36}{49}+\\frac{36}{49}=0.\\]\nإذن:\n\\[(AH)\\perp(BC).\\]"
+          },
+          {
+            "step_number": 5,
+            "title": "الاستنتاج",
+            "explanation": "المستقيم \\((BH)\\) ارتفاع صادر من \\(B\\)، والمستقيم \\((AH)\\) ارتفاع صادر من \\(A\\). وهما يتقاطعان في \\(H\\)."
+          }
+        ],
+        "final_answer": "\\((BH)\\perp(AC)\\)، و\\((AH)\\perp(BC)\\)، وبالتالي \\(H\\) هي نقطة تلاقي أعمدة المثلث \\(ABC\\)."
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2017(3).pdf",
+    "statement_page": 3,
+    "correction_page": 8,
+    "statement_figure_policy": "لا يوجد شكل لازم في نص التمرين.",
+    "solution_figure_policy": "لا يحتاج الحل إلى رسم.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  }
+}

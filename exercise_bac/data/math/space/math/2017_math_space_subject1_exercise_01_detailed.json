@@ -1,0 +1,178 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2017-math-space-subject1-ex01-detailed",
+  "session": "ordinary",
+  "year": 2017,
+  "chapter_code": "space_geometry",
+  "chapter_title": "الهندسة في الفضاء",
+  "axis_tags": [
+    "space_parametric_line_plane",
+    "space_relative_positions_intersections",
+    "space_cartesian_plane_normal_vector",
+    "space_sphere_tangent_plane",
+    "space_distances_projections"
+  ],
+  "branches": [
+    {
+      "code": "math",
+      "name": "شعبة رياضيات"
+    }
+  ],
+  "exercise_number": 1,
+  "subject_number": 1,
+  "source_page": 1,
+  "source_pages": [
+    1
+  ],
+  "solution_source_pages": [
+    5
+  ],
+  "title": "التمرين الأول — بكالوريا الجزائر 2017 — الموضوع الأول — شعبة رياضيات",
+  "statement": "الفضاء منسوب إلى المعلم المتعامد والمتجانس \\((O;\\vec{i},\\vec{j},\\vec{k})\\).\nنعتبر النقطتين \\(A(-1;1;-2)\\) و \\(B(1;-3;-4)\\) والمستقيم \\((\\Delta)\\) ذا التمثيل الوسيطي\n\\[\n\\begin{cases}\nx=t-2\\\\\ny=-t+2\\\\\nz=2t-4\n\\end{cases}\n\\quad ;\\ t\\in\\mathbb{R}\n\\]\nوليكن \\((\\Delta')\\) المستقيم الذي يشمل النقطة \\(B\\) و \\(\\vec u(-1;2;1)\\) شعاع توجيه له.",
+  "questions": [
+    {
+      "id": "2017_s1_space_ex01_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) بين أن المستقيمين \\((\\Delta)\\) و \\((\\Delta')\\) يتقاطعان في نقطة يطلب تعيين إحداثياتها.",
+      "axis_tags": [
+        "space_parametric_line_plane",
+        "space_relative_positions_intersections"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نكتب تمثيلا وسيطيا للمستقيم \\((\\Delta')\\)، ثم نحل نظام مساواة إحداثيات نقطتي المستقيمين.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "كتابة تمثيل وسيطي لـ Δ′",
+            "explanation": "بما أن \\((\\Delta')\\) يمر بالنقطة \\(B(1,-3,-4)\\) وشعاع توجيهه \\((-1,2,1)\\)، فإن:\n\\[\n(\\Delta'):\\begin{cases}\nx=1-t'\\\\\ny=-3+2t'\\\\\nz=-4+t'\n\\end{cases}\n\\quad ;\\ t'\\in\\mathbb R.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حل نظام التقاطع",
+            "explanation": "نساوي إحداثيات نقطة من \\((\\Delta)\\) مع نقطة من \\((\\Delta')\\):\n\\[\n\\begin{cases}\nt-2=1-t'\\\\\n-t+2=-3+2t'\\\\\n2t-4=-4+t'\n\\end{cases}\n\\]\nفنجد:\n\\[\nt=1,\\qquad t'=2.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "إحداثيات نقطة التقاطع",
+            "explanation": "بالتعويض بـ\\(t=1\\) في \\((\\Delta)\\):\n\\[\n(-1,1,-2).\n\\]\nوهي النقطة \\(A\\)."
+          }
+        ],
+        "final_answer": "\\[(\\Delta)\\cap(\\Delta')=\\{A(-1;1;-2)\\}.\\]"
+      }
+    },
+    {
+      "id": "2017_s1_space_ex01_q2",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2) ليكن \\((P)\\) المستوي المعين بالمستقيمين \\((\\Delta)\\) و \\((\\Delta')\\).\nاكتب تمثيلا وسيطيا للمستوي \\((P)\\)، ثم استنتج معادلة ديكارتية له.",
+      "axis_tags": [
+        "space_parametric_line_plane",
+        "space_cartesian_plane_normal_vector"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "المستقيمان يتقاطعان في \\(A\\)، لذلك نستعمل \\(A\\) نقطة من المستوى وشعاعي توجيه المستقيمين كاتجاهين للمستوى.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "شعاعا توجيه المستوى",
+            "explanation": "شعاع توجيه \\((\\Delta)\\) هو:\n\\[\n\\vec v=(1,-1,2),\n\\]\nوشعاع توجيه \\((\\Delta')\\) هو:\n\\[\n\\vec u=(-1,2,1).\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "التمثيل الوسيطي للمستوى",
+            "explanation": "باستعمال النقطة \\(A(-1,1,-2)\\):\n\\[\n(P):\\begin{cases}\nx=-1+\\alpha-\\beta\\\\\ny=1-\\alpha+2\\beta\\\\\nz=-2+2\\alpha+\\beta\n\\end{cases}\n\\quad ;\\ (\\alpha,\\beta)\\in\\mathbb R^2.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "تحديد شعاع ناظم",
+            "explanation": "نأخذ جداء شعاعي التوجيه فنحصل على شعاع ناظم يمكن اختياره:\n\\[\n\\vec n=(5,3,-1).\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "المعادلة الديكارتية",
+            "explanation": "معادلة المستوى من الشكل:\n\\[\n5x+3y-z+d=0.\n\\]\nوباستعمال \\(A(-1,1,-2)\\):\n\\[\n-5+3+2+d=0\\Rightarrow d=0.\n\\]"
+          }
+        ],
+        "final_answer": "\\[(P):\\begin{cases}x=-1+\\alpha-\\beta\\\\y=1-\\alpha+2\\beta\\\\z=-2+2\\alpha+\\beta\\end{cases},\\quad (\\alpha,\\beta)\\in\\mathbb R^2,\\]\n\\[(P):5x+3y-z=0.\\]"
+      }
+    },
+    {
+      "id": "2017_s1_space_ex01_q3",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "3) نسمي \\((S)\\) مجموعة النقط \\(M(x;y;z)\\) من الفضاء التي تحقق: \\(AM^2+BM^2=20\\).\nبين أن \\((S)\\) سطح كرة مركزها منتصف القطعة \\([AB]\\) ونصف قطرها \\(2\\).",
+      "axis_tags": [
+        "space_sphere_tangent_plane",
+        "space_point_loci_sphere"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل منتصف القطعة \\([AB]\\) وعلاقة متوازي الأضلاع لتحويل مجموع مربعي المسافتين.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تحديد منتصف AB",
+            "explanation": "إذا كان \\(I\\) منتصف \\([AB]\\)، فإن:\n\\[\nI\\left(0,-1,-3\\right).\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب AI",
+            "explanation": "\\[\nAI^2=(1)^2+(-2)^2+(-1)^2=6.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "استعمال العلاقة",
+            "explanation": "لدينا لكل نقطة \\(M\\):\n\\[\nAM^2+BM^2=2IM^2+2AI^2.\n\\]\nإذن:\n\\[\n20=2IM^2+12\\Rightarrow IM^2=4.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "الاستنتاج",
+            "explanation": "إذن:\n\\[\nIM=2.\n\\]\nفتكون \\((S)\\) كرة مركزها \\(I(0,-1,-3)\\) ونصف قطرها \\(2\\)."
+          }
+        ],
+        "final_answer": "\\((S)\\) سطح كرة مركزها \\(I(0;-1;-3)\\) ونصف قطرها \\(2\\)، ومعادلتها:\n\\[x^2+(y+1)^2+(z+3)^2=4.\\]"
+      }
+    },
+    {
+      "id": "2017_s1_space_ex01_q4",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "4) حدد الوضع النسبي للمستوي \\((P)\\) وسطح الكرة \\((S)\\).",
+      "axis_tags": [
+        "space_sphere_tangent_plane",
+        "space_relative_positions_intersections",
+        "space_distances_projections"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب المسافة من مركز الكرة إلى المستوى ونقارنها بنصف القطر.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "المسافة من المركز إلى P",
+            "explanation": "مركز الكرة هو \\(I(0,-1,-3)\\)، ومعادلة \\((P)\\):\n\\[\n5x+3y-z=0.\n\\]\nإذن:\n\\[\nd(I,(P))=\\frac{|5(0)+3(-1)-(-3)|}{\\sqrt{25+9+1}}=0.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "الاستنتاج",
+            "explanation": "بما أن مركز الكرة ينتمي إلى المستوى، فإن المستوى يقطع الكرة وفق دائرة كبرى مركزها \\(I\\) ونصف قطرها يساوي نصف قطر الكرة، أي \\(2\\)."
+          }
+        ],
+        "final_answer": "المستوي \\((P)\\) يقطع سطح الكرة \\((S)\\) وفق دائرة مركزها \\(I(0;-1;-3)\\) ونصف قطرها \\(2\\)."
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2017(10).pdf",
+    "statement_figure_policy": "لا يوجد شكل هندسي إلزامي في نص التمرين.",
+    "solution_figure_policy": "الحل مستقل عن أي رسم.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  }
+}

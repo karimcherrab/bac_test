@@ -24,7 +24,7 @@ from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/knowledge/', include("knowledge.urls")),
+    # path('api/knowledge/', include("knowledge.urls")),
     path('api/', include("axis_revision.urls")),
     path('api/bac/', include("generated_bac.urls")),
     path('api/account/', include("accounts.urls")),
@@ -40,4 +40,27 @@ urlpatterns = [
         "api/tutor/",
         include("tutor.urls"),
     ),
+    path(
+        "api/adaptive-assessment/",
+        include("adaptive_assessment.urls"),
+    ),
+
+path(
+        "api/tutor-chat/",
+        include("tutor_chat.urls"),
+    ),
+path("api/memory-practice/", include("memory_practice.urls")),
+    path(
+        "api/payments/",
+        include(
+            "payments.urls"
+        ),
+    ),
+path(
+    "api/admin-panel/",
+    include("admin_panel.urls"),
+),
+
+
+
 ]

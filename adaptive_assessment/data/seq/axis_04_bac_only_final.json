@@ -1,0 +1,858 @@
+{
+  "schema_version": "2.0",
+  "subject": {
+    "code": "math",
+    "title": "الرياضيات"
+  },
+  "branch": {
+    "code": "science",
+    "title": "علوم تجريبية"
+  },
+  "chapter": {
+    "code": "sequences",
+    "title": "المتتاليات العددية"
+  },
+  "axis": {
+    "tag": "seq_monotonicity",
+    "title": "اتجاه تغير المتتالية ودراسة اتجاه التغير"
+  },
+  "source_summary": {
+    "lesson_files_count": 1,
+    "bac_files_count": 1,
+    "years_covered": [
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "notes": [
+      "هذا الملف مخصص لاختبار أفكار البكالوريا فقط في محور اتجاه تغير المتتالية.",
+      "skills موجودة كمصفوفة فارغة لمنع ظهور أفكار المحور العامة في الاختبار.",
+      "bac_ideas محصورة حصريا في SEQ_BAC_17 إلى SEQ_BAC_22.",
+      "SEQ_BAC_19 محفوظة كفكرة مستقلة لأنها تربط دراسة f(x)-x مباشرة باتجاه تغير متتالية تراجعية."
+    ]
+  },
+  "lesson_scope": {
+    "learning_outcomes": [
+      "إتقان أفكار البكالوريا الست المرتبطة بدراسة اتجاه تغير المتتالية."
+    ],
+    "concepts": [
+      "إشارة u_{n+1}-u_n.",
+      "استعمال الحصر السابق لتحديد الإشارة.",
+      "العلاقة u_{n+1}-u_n=f(u_n)-u_n.",
+      "العلاقة بين فرقين متتاليين.",
+      "عدم الرتابة بسبب التناوب.",
+      "خارج حدين متتاليين لمتتالية موجبة."
+    ],
+    "methods": [
+      "الفرق بين حدين متتاليين.",
+      "استعمال حصر سابق.",
+      "دراسة f(x)-x.",
+      "تمرير إشارة الفروق.",
+      "دراسة النسبة u_{n+1}/u_n."
+    ],
+    "prerequisites": [],
+    "excluded_topics": [
+      "التخمين البياني كفكرة مستقلة.",
+      "الحصر كهدف مستقل.",
+      "النهايات والتقارب.",
+      "المتتاليات الحسابية والهندسية كأفكار مستقلة.",
+      "المجاميع والجداءات.",
+      "أي فكرة خارج SEQ_BAC_17 إلى SEQ_BAC_22."
+    ]
+  },
+  "skills": [],
+  "bac_ideas": [
+    {
+      "idea_code": "SEQ_BAC_17",
+      "title": "دراسة إشارة u_{n+1}-u_n لاستنتاج التزايد أو التناقص",
+      "description": "حساب الفرق u_{n+1}-u_n ثم دراسة إشارته من أجل كل n، واستنتاج أن المتتالية متزايدة أو متناقصة.",
+      "bac_priority": "critical",
+      "frequency_level": "very_high",
+      "occurrence_count": 10,
+      "years": [
+        2008,
+        2010,
+        2012,
+        2013,
+        2015,
+        2016,
+        2017,
+        2019,
+        2023,
+        2026
+      ],
+      "last_seen_year": 2026,
+      "skill_refs": [],
+      "required_skills": [],
+      "prerequisites": [],
+      "external_prerequisites": [],
+      "difficulty_range": {
+        "min": 1,
+        "max": 3
+      },
+      "variants": [
+        {
+          "variant_code": "SEQ_BAC_17_V01",
+          "title": "فرق قابل للتحليل مباشرة",
+          "description": "كتابة u_{n+1}-u_n على شكل جداء أو كسر ثم تحديد الإشارة.",
+          "years": [
+            2008,
+            2010,
+            2012,
+            2015,
+            2016,
+            2017,
+            2023,
+            2026
+          ],
+          "occurrence_count": 8,
+          "difficulty": 2,
+          "skill_idea_codes": [],
+          "required_skills": [],
+          "distinguishing_feature": "إشارة الفرق تُستخرج مباشرة بعد التبسيط."
+        },
+        {
+          "variant_code": "SEQ_BAC_17_V02",
+          "title": "فرق يحتاج إلى خاصية سابقة",
+          "description": "تبسيط الفرق ثم استعمال نتيجة سابقة حول u_n أو مجالها لتحديد الإشارة.",
+          "years": [
+            2013,
+            2019
+          ],
+          "occurrence_count": 2,
+          "difficulty": 3,
+          "skill_idea_codes": [],
+          "required_skills": [],
+          "distinguishing_feature": "إشارة الفرق لا تظهر إلا بعد استثمار معلومة سابقة."
+        }
+      ],
+      "common_errors": [
+        {
+          "code": "SEQ_BAC_17_SIGN_CONCLUSION",
+          "description": "حساب الفرق بصورة صحيحة ثم عكس الاستنتاج بين التزايد والتناقص.",
+          "severity": "high",
+          "related_skill_idea_codes": []
+        },
+        {
+          "code": "SEQ_BAC_17_PARTIAL_SIGN",
+          "description": "دراسة الإشارة لعدد محدود من القيم بدل إثباتها لكل n.",
+          "severity": "high",
+          "related_skill_idea_codes": []
+        }
+      ],
+      "bac_occurrences": [
+        {
+          "year": 2008,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "دراسة اتجاه تغير متتالية باستعمال فرق حدين متتاليين.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2010,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "استنتاج اتجاه التغير انطلاقا من إشارة u_{n+1}-u_n.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2012,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "دراسة رتابة متتالية تراجعية باستعمال الفرق.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2013,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "تحديد إشارة الفرق باستعمال نتائج سابقة ثم استنتاج الرتابة.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2015,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "دراسة تناقص المتتالية انطلاقا من فرق حدين متتاليين.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2016,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "إثبات اتجاه تغير المتتالية بواسطة الفرق.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2017,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "دراسة اتجاه تغير المتتالية انطلاقا من u_{n+1}-u_n.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2019,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "استعمال الفرق مع حصر سابق لتحديد الرتابة.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2023,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "إثبات رتابة المتتالية باستعمال الفرق.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2026,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "استنتاج اتجاه تغير متتالية تراجعية من إشارة الفرق.",
+          "skill_idea_codes": []
+        }
+      ],
+      "mastery_requirements": {
+        "must_cover_variants": [
+          "SEQ_BAC_17_V01"
+        ],
+        "minimum_successful_variants": 1,
+        "requires_bac_style_question": true,
+        "required_skill_idea_codes": [],
+        "notes": "هذه هي الطريقة الأكثر مباشرة وشيوعا في أسئلة الرتابة."
+      },
+      "generation_guidance": {
+        "allowed_structures": [
+          "إعطاء متتالية تراجعية وطلب دراسة إشارة u_{n+1}-u_n.",
+          "إعطاء حد عام وطلب حساب الفرق ثم استنتاج اتجاه التغير."
+        ],
+        "must_test": [
+          "حساب الفرق الصحيح.",
+          "تبسيط الفرق إلى صيغة يمكن دراسة إشارتها.",
+          "ربط إشارة الفرق بالرتابة."
+        ],
+        "may_vary": [
+          "شكل المتتالية",
+          "طريقة التحليل",
+          "المجال الذي ينتمي إليه u_n"
+        ],
+        "must_not_change": [
+          "جوهر الفكرة هو دراسة إشارة u_{n+1}-u_n."
+        ],
+        "forbidden_concepts": [
+          "الاكتفاء بحساب حدود أولى",
+          "الاعتماد على الرسم كبرهان نهائي"
+        ]
+      }
+    },
+    {
+      "idea_code": "SEQ_BAC_18",
+      "title": "استعمال الحصر السابق لتحديد إشارة الفرق",
+      "description": "استثمار نتيجة سابقة مثل u_n<L أو a<u_n<b لتحديد إشارة u_{n+1}-u_n، ومن ثم استنتاج اتجاه تغير المتتالية.",
+      "bac_priority": "critical",
+      "frequency_level": "high",
+      "occurrence_count": 7,
+      "years": [
+        2010,
+        2012,
+        2013,
+        2016,
+        2019,
+        2023,
+        2026
+      ],
+      "last_seen_year": 2026,
+      "skill_refs": [],
+      "required_skills": [],
+      "prerequisites": [],
+      "external_prerequisites": [],
+      "difficulty_range": {
+        "min": 2,
+        "max": 3
+      },
+      "variants": [
+        {
+          "variant_code": "SEQ_BAC_18_V01",
+          "title": "حصر حول نقطة تثبيت L",
+          "description": "استعمال u_n<L أو u_n>L لتحديد إشارة عامل يظهر في الفرق.",
+          "years": [
+            2010,
+            2012,
+            2013,
+            2016,
+            2019,
+            2026
+          ],
+          "occurrence_count": 6,
+          "difficulty": 3,
+          "skill_idea_codes": [],
+          "required_skills": [],
+          "distinguishing_feature": "الحصر السابق هو الذي يحسم إشارة الفرق."
+        },
+        {
+          "variant_code": "SEQ_BAC_18_V02",
+          "title": "استعمال مجال ثابت عام",
+          "description": "استعمال a<u_n<b لتحديد إشارة عبارة تعتمد على u_n داخل الفرق.",
+          "years": [
+            2023
+          ],
+          "occurrence_count": 1,
+          "difficulty": 3,
+          "skill_idea_codes": [],
+          "required_skills": [],
+          "distinguishing_feature": "الإشارة تستنتج من مجال ثابت لا من نقطة تثبيت واحدة."
+        }
+      ],
+      "common_errors": [
+        {
+          "code": "SEQ_BAC_18_BOUND_UNUSED",
+          "description": "إثبات الحصر في سؤال سابق ثم عدم استعماله عند دراسة إشارة الفرق.",
+          "severity": "high",
+          "related_skill_idea_codes": []
+        }
+      ],
+      "bac_occurrences": [
+        {
+          "year": 2010,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "استعمال حصر سابق للمتتالية لتحديد إشارة الفرق.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2012,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "استثمار الحصر السابق لإثبات التزايد أو التناقص.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2013,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "استعمال u_n داخل مجال ثابت لتحديد إشارة u_{n+1}-u_n.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2016,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "الربط بين الحصر السابق وإشارة الفرق.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2019,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "استعمال حصر المتتالية حول 7 لتحديد اتجاه التغير.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2023,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "استعمال مجال ثابت للحدود في دراسة الرتابة.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2026,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "استعمال نتيجة حصر سابقة لحسم إشارة الفرق.",
+          "skill_idea_codes": []
+        }
+      ],
+      "mastery_requirements": {
+        "must_cover_variants": [
+          "SEQ_BAC_18_V01"
+        ],
+        "minimum_successful_variants": 1,
+        "requires_bac_style_question": true,
+        "required_skill_idea_codes": [],
+        "notes": "الفكرة تقيس الربط بين سؤال الحصر السابق وسؤال الرتابة، ولا تعيد اختبار الحصر نفسه."
+      },
+      "generation_guidance": {
+        "allowed_structures": [
+          "بعد إثبات u_n<L، اطلب دراسة إشارة u_{n+1}-u_n.",
+          "بعد إثبات a<u_n<b، اطلب استنتاج الرتابة."
+        ],
+        "must_test": [
+          "التعرف على العامل الذي تحدد إشارته من الحصر",
+          "ربط الحصر بالفرق"
+        ],
+        "may_vary": [
+          "L",
+          "المجال الثابت",
+          "شكل الفرق"
+        ],
+        "must_not_change": [
+          "يجب أن تكون نتيجة الحصر السابقة ضرورية لتحديد الإشارة."
+        ],
+        "forbidden_concepts": [
+          "إعادة إثبات الحصر كسؤال مستقل داخل هذه الفكرة"
+        ]
+      }
+    },
+    {
+      "idea_code": "SEQ_BAC_19",
+      "title": "استعمال f(x)-x لدراسة اتجاه تغير متتالية تراجعية",
+      "description": "عندما تكون u_{n+1}=f(u_n)، نستعمل u_{n+1}-u_n=f(u_n)-u_n، ثم ندرس إشارة f(x)-x على المجال الذي تنتمي إليه حدود المتتالية.",
+      "bac_priority": "critical",
+      "frequency_level": "medium",
+      "occurrence_count": 2,
+      "years": [
+        2019,
+        2026
+      ],
+      "last_seen_year": 2026,
+      "skill_refs": [],
+      "required_skills": [],
+      "prerequisites": [],
+      "external_prerequisites": [],
+      "difficulty_range": {
+        "min": 2,
+        "max": 3
+      },
+      "variants": [
+        {
+          "variant_code": "SEQ_BAC_19_V01",
+          "title": "دراسة إشارة f(x)-x على مجال ثابت",
+          "description": "تحديد إشارة f(x)-x على I ثم التعويض x=u_n لأن u_n∈I.",
+          "years": [
+            2019,
+            2026
+          ],
+          "occurrence_count": 2,
+          "difficulty": 3,
+          "skill_idea_codes": [],
+          "required_skills": [],
+          "distinguishing_feature": "الربط المباشر بين دراسة دالة f(x)-x واتجاه تغير المتتالية."
+        }
+      ],
+      "common_errors": [
+        {
+          "code": "SEQ_BAC_19_DOMAIN_MISSING",
+          "description": "استعمال إشارة f(x)-x دون التحقق من أن u_n ينتمي إلى المجال الذي دُرست عليه الإشارة.",
+          "severity": "high",
+          "related_skill_idea_codes": []
+        },
+        {
+          "code": "SEQ_BAC_19_LINK_MISSING",
+          "description": "دراسة f(x)-x صحيحة لكن دون كتابة u_{n+1}-u_n=f(u_n)-u_n.",
+          "severity": "high",
+          "related_skill_idea_codes": []
+        }
+      ],
+      "bac_occurrences": [
+        {
+          "year": 2019,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "دراسة f(x)-x ثم استعمال u_{n+1}-u_n=f(u_n)-u_n لاستنتاج الرتابة.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2026,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "بنية مشابهة تربط إشارة f(x)-x باتجاه تغير متتالية تراجعية.",
+          "skill_idea_codes": []
+        }
+      ],
+      "mastery_requirements": {
+        "must_cover_variants": [
+          "SEQ_BAC_19_V01"
+        ],
+        "minimum_successful_variants": 1,
+        "requires_bac_style_question": true,
+        "required_skill_idea_codes": [],
+        "notes": "هذه فكرة BAC خاصة بالمتتاليات التراجعية، ولا ينبغي اعتبارها مجرد سؤال دراسة دالة."
+      },
+      "generation_guidance": {
+        "allowed_structures": [
+          "دراسة إشارة f(x)-x على I ثم إعطاء u_{n+1}=f(u_n) وu_n∈I.",
+          "استخراج الرتابة مباشرة من جدول إشارة f(x)-x مع تبرير الرابط."
+        ],
+        "must_test": [
+          "دراسة أو قراءة إشارة f(x)-x",
+          "التعويض x=u_n",
+          "استخلاص إشارة الفرق"
+        ],
+        "may_vary": [
+          "الدالة f",
+          "المجال I",
+          "اتجاه الرتابة"
+        ],
+        "must_not_change": [
+          "لا بد من استعمال الهوية u_{n+1}-u_n=f(u_n)-u_n."
+        ],
+        "forbidden_concepts": [
+          "دراسة f فقط دون ربطها بالمتتالية"
+        ]
+      }
+    },
+    {
+      "idea_code": "SEQ_BAC_20",
+      "title": "استعمال العلاقة بين فرقين متتاليين لإثبات ثبات إشارة الفروق",
+      "description": "استعمال علاقة من الشكل u_{n+2}-u_{n+1}=q(u_{n+1}-u_n)، ثم تحديد إشارة الفرق الأول وتمريرها إلى جميع الفروق لاستنتاج الرتابة.",
+      "bac_priority": "high",
+      "frequency_level": "rare",
+      "occurrence_count": 1,
+      "years": [
+        2017
+      ],
+      "last_seen_year": 2017,
+      "skill_refs": [],
+      "required_skills": [],
+      "prerequisites": [],
+      "external_prerequisites": [],
+      "difficulty_range": {
+        "min": 3,
+        "max": 3
+      },
+      "variants": [
+        {
+          "variant_code": "SEQ_BAC_20_V01",
+          "title": "فرق الحدود يشكل علاقة هندسية",
+          "description": "ربط كل فرق بالفرق السابق بمعامل ثابت q ثم استنتاج ثبات الإشارة.",
+          "years": [
+            2017
+          ],
+          "occurrence_count": 1,
+          "difficulty": 3,
+          "skill_idea_codes": [],
+          "required_skills": [],
+          "distinguishing_feature": "إشارة الفروق تنتقل من رتبة إلى التالية بعلاقة ضرب ثابتة."
+        }
+      ],
+      "common_errors": [
+        {
+          "code": "SEQ_BAC_20_Q_SIGN_IGNORED",
+          "description": "عدم الانتباه إلى إشارة q وتأثيرها في انتقال إشارة الفروق.",
+          "severity": "high",
+          "related_skill_idea_codes": []
+        }
+      ],
+      "bac_occurrences": [
+        {
+          "year": 2017,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "استعمال علاقة بين فرقين متتاليين لإثبات الرتابة.",
+          "skill_idea_codes": [],
+          "session": "2017_2"
+        }
+      ],
+      "mastery_requirements": {
+        "must_cover_variants": [
+          "SEQ_BAC_20_V01"
+        ],
+        "minimum_successful_variants": 1,
+        "requires_bac_style_question": true,
+        "required_skill_idea_codes": [],
+        "notes": "فكرة نادرة لكنها مميزة في 2017_2."
+      },
+      "generation_guidance": {
+        "allowed_structures": [
+          "إعطاء علاقة Δ_{n+1}=qΔ_n مع Δ_n=u_{n+1}-u_n ثم طلب الرتابة."
+        ],
+        "must_test": [
+          "إشارة الفرق الأول",
+          "إشارة q",
+          "انتقال الإشارة لجميع الفروق"
+        ],
+        "may_vary": [
+          "q موجب",
+          "q سالب مع مناقشة السلوك"
+        ],
+        "must_not_change": [
+          "الرتابة تستنتج من علاقة بين الفروق المتتالية."
+        ],
+        "forbidden_concepts": [
+          "حساب الفرق منفردا دون استثمار العلاقة بين الفروق"
+        ]
+      }
+    },
+    {
+      "idea_code": "SEQ_BAC_21",
+      "title": "الحكم أن المتتالية ليست رتيبة بسبب التناوب حول نقطة التثبيت",
+      "description": "ملاحظة أن الحدود تنتقل بالتناوب فوق وتحت قيمة ثابتة، أو أن فرق الحدود يغير إشارته، ومن ثم الحكم أن المتتالية ليست رتيبة.",
+      "bac_priority": "high",
+      "frequency_level": "low",
+      "occurrence_count": 1,
+      "years": [
+        2022
+      ],
+      "last_seen_year": 2022,
+      "skill_refs": [],
+      "required_skills": [],
+      "prerequisites": [],
+      "external_prerequisites": [],
+      "difficulty_range": {
+        "min": 2,
+        "max": 3
+      },
+      "variants": [
+        {
+          "variant_code": "SEQ_BAC_21_V01",
+          "title": "تناوب حول نقطة التثبيت",
+          "description": "إثبات أو ملاحظة أن u_n-L يغير إشارته حسب parity أو حسب العلاقة التراجعية.",
+          "years": [
+            2022
+          ],
+          "occurrence_count": 1,
+          "difficulty": 2,
+          "skill_idea_codes": [],
+          "required_skills": [],
+          "distinguishing_feature": "السلوك المتناوب يمنع الرتابة حتى لو كانت المتتالية متقاربة."
+        }
+      ],
+      "common_errors": [
+        {
+          "code": "SEQ_BAC_21_OSCILLATION_MEANS_DIVERGENCE",
+          "description": "اعتبار عدم الرتابة أو التذبذب دليلا على أن المتتالية غير متقاربة.",
+          "severity": "high",
+          "related_skill_idea_codes": []
+        }
+      ],
+      "bac_occurrences": [
+        {
+          "year": 2022,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "الحكم أن المتتالية ليست رتيبة بسبب تناوب الحدود حول نقطة التثبيت.",
+          "skill_idea_codes": []
+        }
+      ],
+      "mastery_requirements": {
+        "must_cover_variants": [
+          "SEQ_BAC_21_V01"
+        ],
+        "minimum_successful_variants": 1,
+        "requires_bac_style_question": true,
+        "required_skill_idea_codes": [],
+        "notes": "يجب التفريق بين عدم الرتابة وبين التقارب أو التباعد."
+      },
+      "generation_guidance": {
+        "allowed_structures": [
+          "إظهار أن u_{2n} وu_{2n+1} يقعان على جهتين مختلفتين من L ثم طلب الحكم على الرتابة."
+        ],
+        "must_test": [
+          "اكتشاف تغير الاتجاه",
+          "صياغة أن المتتالية غير رتيبة"
+        ],
+        "may_vary": [
+          "تذبذب حول L",
+          "تغير إشارة الفرق"
+        ],
+        "must_not_change": [
+          "المطلوب الحكم على الرتابة، لا على التقارب."
+        ],
+        "forbidden_concepts": [
+          "استنتاج التباعد تلقائيا من عدم الرتابة"
+        ]
+      }
+    },
+    {
+      "idea_code": "SEQ_BAC_22",
+      "title": "دراسة الرتابة انطلاقا من الحد العام أو النسبة",
+      "description": "عندما تكون u_n معرفة بحد عام، تدرس الرتابة إما بمقارنة u_{n+1} وu_n مباشرة أو باستعمال النسبة u_{n+1}/u_n عندما تكون الحدود موجبة.",
+      "bac_priority": "high",
+      "frequency_level": "medium",
+      "occurrence_count": 2,
+      "years": [
+        2014,
+        2024
+      ],
+      "last_seen_year": 2024,
+      "skill_refs": [],
+      "required_skills": [],
+      "prerequisites": [],
+      "external_prerequisites": [],
+      "difficulty_range": {
+        "min": 2,
+        "max": 3
+      },
+      "variants": [
+        {
+          "variant_code": "SEQ_BAC_22_V01",
+          "title": "استعمال خارج حدين متتاليين",
+          "description": "عندما u_n>0، دراسة u_{n+1}/u_n ومقارنته بـ1.",
+          "years": [
+            2024
+          ],
+          "occurrence_count": 1,
+          "difficulty": 2,
+          "skill_idea_codes": [],
+          "required_skills": [],
+          "distinguishing_feature": "الرتابة تستنتج من مقارنة النسبة بالعدد 1."
+        },
+        {
+          "variant_code": "SEQ_BAC_22_V02",
+          "title": "دراسة الرتابة من صيغة الحد العام",
+          "description": "استعمال الصيغة الصريحة للحد العام للمقارنة بين u_{n+1} وu_n.",
+          "years": [
+            2014
+          ],
+          "occurrence_count": 1,
+          "difficulty": 2,
+          "skill_idea_codes": [],
+          "required_skills": [],
+          "distinguishing_feature": "لا توجد علاقة تراجعية؛ الدراسة تنطلق مباشرة من u_n=f(n)."
+        }
+      ],
+      "common_errors": [
+        {
+          "code": "SEQ_BAC_22_RATIO_WITHOUT_POSITIVITY",
+          "description": "استعمال معيار u_{n+1}/u_n>1 دون التأكد من أن الحدود موجبة.",
+          "severity": "high",
+          "related_skill_idea_codes": []
+        }
+      ],
+      "bac_occurrences": [
+        {
+          "year": 2014,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "دراسة الرتابة انطلاقا من صيغة صريحة للحد العام.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2024,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "دراسة رتابة u_n=n/2^n باستعمال المقارنة أو النسبة بين حدين متتاليين.",
+          "skill_idea_codes": []
+        }
+      ],
+      "mastery_requirements": {
+        "must_cover_variants": [
+          "SEQ_BAC_22_V01"
+        ],
+        "minimum_successful_variants": 1,
+        "requires_bac_style_question": true,
+        "required_skill_idea_codes": [],
+        "notes": "Variant النسبة مهم لأنه يختبر اختيار الأداة المناسبة عندما تكون الحدود موجبة."
+      },
+      "generation_guidance": {
+        "allowed_structures": [
+          "متتالية موجبة معرفة بحد عام ثم طلب دراسة u_{n+1}/u_n.",
+          "حد عام مباشر ثم طلب مقارنة u_{n+1} وu_n."
+        ],
+        "must_test": [
+          "اختيار الأداة المناسبة",
+          "التأكد من شرط الإيجابية عند استعمال النسبة",
+          "استنتاج الرتابة"
+        ],
+        "may_vary": [
+          "كسر",
+          "أس",
+          "جداء n مع قوة"
+        ],
+        "must_not_change": [
+          "الرتابة تستنتج من الحد العام أو النسبة، لا من مخطط بياني."
+        ],
+        "forbidden_concepts": [
+          "استعمال النسبة دون تحقق من الإيجابية"
+        ]
+      }
+    }
+  ],
+  "coverage_summary": {
+    "total_skills": 0,
+    "total_skill_ideas": 0,
+    "total_bac_ideas": 6,
+    "total_variants": 9,
+    "critical_bac_ideas": [
+      "SEQ_BAC_17",
+      "SEQ_BAC_18",
+      "SEQ_BAC_19"
+    ],
+    "high_priority_bac_ideas": [
+      "SEQ_BAC_20",
+      "SEQ_BAC_21",
+      "SEQ_BAC_22"
+    ],
+    "skills_covered_by_bac": [],
+    "skills_not_seen_in_bac": [],
+    "skill_ideas_not_seen_in_bac": [],
+    "years_covered": [
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "bac_statistics": {
+      "total_bac_ideas": 6,
+      "total_variants": 9,
+      "most_frequent_idea": "SEQ_BAC_17",
+      "latest_bac_year": 2026,
+      "rare_ideas": [
+        "SEQ_BAC_20",
+        "SEQ_BAC_21"
+      ],
+      "idea_occurrence_counts": {
+        "SEQ_BAC_17": 10,
+        "SEQ_BAC_18": 7,
+        "SEQ_BAC_19": 2,
+        "SEQ_BAC_20": 1,
+        "SEQ_BAC_21": 1,
+        "SEQ_BAC_22": 2
+      }
+    }
+  }
+}

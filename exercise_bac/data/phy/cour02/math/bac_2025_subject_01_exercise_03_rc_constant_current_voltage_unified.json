@@ -1,0 +1,467 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "5.0-physics-bac-unified",
+  "version": "5.0-2025-subject01-ex03-rc-constant-current-voltage-inline-svg-unified",
+  "session": "ordinary",
+  "year": 2025,
+  "subject_number": 1,
+  "chapter_code": "electrical_system_evolution",
+  "chapter_title": "تطور جملة كهربائية",
+  "axis_tags": [
+    "rc_circuit",
+    "capacitor_charging",
+    "constant_current_source",
+    "constant_voltage_source",
+    "time_constant",
+    "oscilloscope"
+  ],
+  "branches": [
+    {
+      "code": "math",
+      "name": "شعبة رياضيات"
+    },
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "exercise_number": 3,
+  "source_page": 3,
+  "source_pages": [
+    3
+  ],
+  "solution_source_pages": [
+    12,
+    13
+  ],
+  "title": "التمرين الثالث — بكالوريا الجزائر 2025 — الموضوع الأول — شحن مكثفة بمولد تيار ثابت ومولد توتر ثابت",
+  "statement": "التمرين الثالث: (06 نقاط)\nيهدف هذا التمرين إلى دراسة شحن مكثفة بمولد تيار ثابت وبمولد توتر ثابت وإيجاد مميزات ثنائيات الأقطاب.\nأولا: شحن مكثفة بمولد تيار ثابت\nتتكون دارة كهربائية على التسلسل من مكثفة فارغة سعتها C وناقل أومي مقاومته R ومولد لتيار ثابت شدته I=1mA وراسم اهتزاز ذي ذاكرة وقاطعة K (الشكل 1).\nنغلق القاطعة K في اللحظة t=0 نعتبرها مبدأ للأزمنة.\nنتحصل على المنحنيين البيانيين ① و② الموضحين في الشكل 2.\n1. عرف مولد التيار الثابت.\n2. انسب لكل منحنى بياني مدخل راسم الاهتزاز المناسب مع التعليل.\n3. بين أن عبارة التوتر الكهربائي بين طرفي المكثفة تكتب كما يلي: u_C(t)=I·t/C.\n4. جد بيانيا قيمة كل من C سعة المكثفة باستعمال العبارة السابقة وR مقاومة الناقل الأومي.\nثانيا: شحن مكثفة بمولد توتر ثابت\nنفرغ المكثفة السابقة تماما ونستبدل مولد التيار بمولد للتوتر الثابت قوته المحركة الكهربائية E في الدارة السابقة.\nنغلق القاطعة K في اللحظة t=0 نعتبرها مبدأ جديدا للأزمنة الشكل 3.\nفنتحصل على المنحنيين البيانيين ③ و④ الموضحين في الشكل 4.\n1. عرف مولد التوتر الثابت.\n2. انسب لكل منحنى بياني مدخل راسم الاهتزاز المناسب مع التعليل.\n3. شدة التيار الكهربائي الأعظمية المار في الدارة I₀=1mA في اللحظة t=0، تأكد أن مقاومة الناقل الأومي R=10⁴Ω.\n4. جد بيانيا τ ثابت الزمن مع توضيح الطريقة المتبعة ثم احسب C سعة المكثفة.\n5. علق على نتائج دراسة شحن مكثفة بمولد تيار ثابت وبمولد توتر ثابت في إيجاد مميزات ثنائيات الأقطاب.",
+  "figures": [
+    {
+      "id": "2025_s01_ex03_fig1",
+      "type": "svg",
+      "usage": "statement",
+      "placement": "statement",
+      "title": "الشكل 1",
+      "description": "دارة شحن مكثفة فارغة بمولد تيار ثابت وراسم اهتزاز.",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 820 500\" role=\"img\" aria-label=\"الشكل 1 - دارة شحن مكثفة بمولد تيار ثابت\">\n<rect width=\"820\" height=\"500\" fill=\"white\"/>\n<defs><marker id=\"arr25rc1\" markerWidth=\"10\" markerHeight=\"10\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L0,6 L9,3 z\" fill=\"#111827\"/></marker></defs>\n<!-- loop -->\n<line x1=\"160\" y1=\"110\" x2=\"300\" y2=\"110\" stroke=\"#111827\" stroke-width=\"4\"/>\n<circle cx=\"340\" cy=\"110\" r=\"28\" fill=\"white\" stroke=\"#111827\" stroke-width=\"4\"/>\n<text x=\"333\" y=\"120\" font-size=\"28\">I</text>\n<line x1=\"368\" y1=\"110\" x2=\"485\" y2=\"110\" stroke=\"#111827\" stroke-width=\"4\"/>\n<!-- switch -->\n<circle cx=\"500\" cy=\"110\" r=\"6\" fill=\"#111827\"/><circle cx=\"565\" cy=\"110\" r=\"6\" fill=\"#111827\"/>\n<line x1=\"500\" y1=\"110\" x2=\"552\" y2=\"85\" stroke=\"#111827\" stroke-width=\"4\"/>\n<text x=\"520\" y=\"72\" font-size=\"26\">K</text>\n<line x1=\"565\" y1=\"110\" x2=\"650\" y2=\"110\" stroke=\"#111827\" stroke-width=\"4\"/>\n<line x1=\"650\" y1=\"110\" x2=\"650\" y2=\"350\" stroke=\"#111827\" stroke-width=\"4\"/>\n<line x1=\"160\" y1=\"110\" x2=\"160\" y2=\"350\" stroke=\"#111827\" stroke-width=\"4\"/>\n\n<!-- middle R-C branch -->\n<line x1=\"160\" y1=\"270\" x2=\"260\" y2=\"270\" stroke=\"#111827\" stroke-width=\"4\"/>\n<rect x=\"260\" y=\"245\" width=\"120\" height=\"50\" fill=\"white\" stroke=\"#111827\" stroke-width=\"4\"/>\n<text x=\"310\" y=\"235\" font-size=\"27\">R</text>\n<line x1=\"380\" y1=\"270\" x2=\"465\" y2=\"270\" stroke=\"#111827\" stroke-width=\"4\"/>\n<!-- capacitor -->\n<line x1=\"465\" y1=\"225\" x2=\"465\" y2=\"315\" stroke=\"#111827\" stroke-width=\"5\"/>\n<line x1=\"495\" y1=\"225\" x2=\"495\" y2=\"315\" stroke=\"#111827\" stroke-width=\"5\"/>\n<text x=\"470\" y=\"205\" font-size=\"27\">C</text>\n<line x1=\"495\" y1=\"270\" x2=\"650\" y2=\"270\" stroke=\"#111827\" stroke-width=\"4\"/>\n<!-- ground -->\n<line x1=\"430\" y1=\"270\" x2=\"430\" y2=\"350\" stroke=\"#111827\" stroke-width=\"3\"/>\n<line x1=\"400\" y1=\"350\" x2=\"460\" y2=\"350\" stroke=\"#111827\" stroke-width=\"3\"/>\n<line x1=\"410\" y1=\"360\" x2=\"450\" y2=\"360\" stroke=\"#111827\" stroke-width=\"3\"/>\n<line x1=\"420\" y1=\"370\" x2=\"440\" y2=\"370\" stroke=\"#111827\" stroke-width=\"3\"/>\n\n<!-- scope inputs -->\n<line x1=\"160\" y1=\"350\" x2=\"160\" y2=\"405\" stroke=\"#111827\" stroke-width=\"3\" marker-end=\"url(#arr25rc1)\"/>\n<text x=\"105\" y=\"435\" font-size=\"26\">Y₂</text>\n<line x1=\"650\" y1=\"350\" x2=\"650\" y2=\"405\" stroke=\"#111827\" stroke-width=\"3\" marker-end=\"url(#arr25rc1)\"/>\n<text x=\"620\" y=\"435\" font-size=\"24\">Y₁+INV</text>\n<!-- current arrow -->\n<line x1=\"300\" y1=\"70\" x2=\"220\" y2=\"70\" stroke=\"#111827\" stroke-width=\"3\" marker-end=\"url(#arr25rc1)\"/>\n<text x=\"252\" y=\"55\" font-size=\"26\">I</text>\n<text x=\"410\" y=\"475\" text-anchor=\"middle\" font-size=\"23\" direction=\"rtl\">الشكل 1</text>\n</svg>",
+      "render_mode": "inline",
+      "responsive": true
+    },
+    {
+      "id": "2025_s01_ex03_fig2",
+      "type": "svg",
+      "usage": "statement",
+      "placement": "statement",
+      "title": "الشكل 2",
+      "description": "المنحنيان ① و② المسجلان أثناء الشحن بمولد تيار ثابت.",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 480\" role=\"img\" aria-label=\"الشكل 2 - توتر المقاومة والمكثفة عند الشحن بمولد تيار ثابت\">\n<rect width=\"760\" height=\"480\" fill=\"white\"/>\n<defs><marker id=\"arr25rc2\" markerWidth=\"9\" markerHeight=\"9\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L0,6 L9,3 z\" fill=\"#111827\"/></marker></defs>\n<g stroke=\"#d1d5db\" stroke-width=\"1\">\n<line x1=\"90\" y1=\"365\" x2=\"665\" y2=\"365\"/><line x1=\"90\" y1=\"337\" x2=\"665\" y2=\"337\"/><line x1=\"90\" y1=\"309\" x2=\"665\" y2=\"309\"/><line x1=\"90\" y1=\"281\" x2=\"665\" y2=\"281\"/><line x1=\"90\" y1=\"253\" x2=\"665\" y2=\"253\"/><line x1=\"90\" y1=\"225\" x2=\"665\" y2=\"225\"/><line x1=\"90\" y1=\"197\" x2=\"665\" y2=\"197\"/><line x1=\"90\" y1=\"169\" x2=\"665\" y2=\"169\"/><line x1=\"90\" y1=\"141\" x2=\"665\" y2=\"141\"/><line x1=\"90\" y1=\"113\" x2=\"665\" y2=\"113\"/><line x1=\"90\" y1=\"85\" x2=\"665\" y2=\"85\"/><line x1=\"90.0\" y1=\"65\" x2=\"90.0\" y2=\"365\"/><line x1=\"137.5\" y1=\"65\" x2=\"137.5\" y2=\"365\"/><line x1=\"185.0\" y1=\"65\" x2=\"185.0\" y2=\"365\"/><line x1=\"232.5\" y1=\"65\" x2=\"232.5\" y2=\"365\"/><line x1=\"280.0\" y1=\"65\" x2=\"280.0\" y2=\"365\"/><line x1=\"327.5\" y1=\"65\" x2=\"327.5\" y2=\"365\"/><line x1=\"375.0\" y1=\"65\" x2=\"375.0\" y2=\"365\"/><line x1=\"422.5\" y1=\"65\" x2=\"422.5\" y2=\"365\"/><line x1=\"470.0\" y1=\"65\" x2=\"470.0\" y2=\"365\"/><line x1=\"517.5\" y1=\"65\" x2=\"517.5\" y2=\"365\"/><line x1=\"565.0\" y1=\"65\" x2=\"565.0\" y2=\"365\"/><line x1=\"612.5\" y1=\"65\" x2=\"612.5\" y2=\"365\"/><line x1=\"660.0\" y1=\"65\" x2=\"660.0\" y2=\"365\"/>\n</g>\n<line x1=\"90\" y1=\"365\" x2=\"705\" y2=\"365\" stroke=\"#111827\" stroke-width=\"3\" marker-end=\"url(#arr25rc2)\"/>\n<line x1=\"90\" y1=\"390\" x2=\"90\" y2=\"45\" stroke=\"#111827\" stroke-width=\"3\" marker-end=\"url(#arr25rc2)\"/>\n<!-- curve 1: uR=10V constant -->\n<line x1=\"90\" y1=\"85\" x2=\"650\" y2=\"85\" stroke=\"#111827\" stroke-width=\"5\"/>\n<circle cx=\"320\" cy=\"85\" r=\"20\" fill=\"white\" stroke=\"#111827\" stroke-width=\"2\"/><text x=\"312\" y=\"94\" font-size=\"24\">①</text>\n<!-- curve 2: uC=2.5t, reaches 10V at 4s -->\n<line x1=\"90\" y1=\"365\" x2=\"650\" y2=\"85\" stroke=\"#111827\" stroke-width=\"5\"/>\n<circle cx=\"300\" cy=\"260\" r=\"20\" fill=\"white\" stroke=\"#111827\" stroke-width=\"2\"/><text x=\"292\" y=\"269\" font-size=\"24\">②</text>\n<text x=\"20\" y=\"57\" font-size=\"25\">u(V)</text>\n<text x=\"690\" y=\"400\" font-size=\"25\">t(s)</text>\n<text x=\"52\" y=\"312\" font-size=\"21\">2</text>\n<text x=\"135\" y=\"395\" font-size=\"21\">1</text>\n<text x=\"380\" y=\"450\" text-anchor=\"middle\" font-size=\"23\" direction=\"rtl\">الشكل 2</text>\n</svg>",
+      "render_mode": "inline",
+      "responsive": true
+    },
+    {
+      "id": "2025_s01_ex03_fig3",
+      "type": "svg",
+      "usage": "statement",
+      "placement": "statement",
+      "title": "الشكل 3",
+      "description": "دارة شحن المكثفة بمولد توتر ثابت.",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 820 500\" role=\"img\" aria-label=\"الشكل 3 - دارة شحن مكثفة بمولد توتر ثابت\">\n<rect width=\"820\" height=\"500\" fill=\"white\"/>\n<defs><marker id=\"arr25rc3\" markerWidth=\"10\" markerHeight=\"10\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L0,6 L9,3 z\" fill=\"#111827\"/></marker></defs>\n<line x1=\"160\" y1=\"110\" x2=\"300\" y2=\"110\" stroke=\"#111827\" stroke-width=\"4\"/>\n<circle cx=\"340\" cy=\"110\" r=\"28\" fill=\"white\" stroke=\"#111827\" stroke-width=\"4\"/>\n<text x=\"330\" y=\"120\" font-size=\"28\">E</text>\n<line x1=\"368\" y1=\"110\" x2=\"485\" y2=\"110\" stroke=\"#111827\" stroke-width=\"4\"/>\n<circle cx=\"500\" cy=\"110\" r=\"6\" fill=\"#111827\"/><circle cx=\"565\" cy=\"110\" r=\"6\" fill=\"#111827\"/>\n<line x1=\"500\" y1=\"110\" x2=\"552\" y2=\"85\" stroke=\"#111827\" stroke-width=\"4\"/>\n<text x=\"520\" y=\"72\" font-size=\"26\">K</text>\n<line x1=\"565\" y1=\"110\" x2=\"650\" y2=\"110\" stroke=\"#111827\" stroke-width=\"4\"/>\n<line x1=\"650\" y1=\"110\" x2=\"650\" y2=\"350\" stroke=\"#111827\" stroke-width=\"4\"/>\n<line x1=\"160\" y1=\"110\" x2=\"160\" y2=\"350\" stroke=\"#111827\" stroke-width=\"4\"/>\n\n<line x1=\"160\" y1=\"270\" x2=\"260\" y2=\"270\" stroke=\"#111827\" stroke-width=\"4\"/>\n<rect x=\"260\" y=\"245\" width=\"120\" height=\"50\" fill=\"white\" stroke=\"#111827\" stroke-width=\"4\"/>\n<text x=\"310\" y=\"235\" font-size=\"27\">R</text>\n<line x1=\"380\" y1=\"270\" x2=\"465\" y2=\"270\" stroke=\"#111827\" stroke-width=\"4\"/>\n<line x1=\"465\" y1=\"225\" x2=\"465\" y2=\"315\" stroke=\"#111827\" stroke-width=\"5\"/>\n<line x1=\"495\" y1=\"225\" x2=\"495\" y2=\"315\" stroke=\"#111827\" stroke-width=\"5\"/>\n<text x=\"470\" y=\"205\" font-size=\"27\">C</text>\n<line x1=\"495\" y1=\"270\" x2=\"650\" y2=\"270\" stroke=\"#111827\" stroke-width=\"4\"/>\n<line x1=\"430\" y1=\"270\" x2=\"430\" y2=\"350\" stroke=\"#111827\" stroke-width=\"3\"/>\n<line x1=\"400\" y1=\"350\" x2=\"460\" y2=\"350\" stroke=\"#111827\" stroke-width=\"3\"/>\n<line x1=\"410\" y1=\"360\" x2=\"450\" y2=\"360\" stroke=\"#111827\" stroke-width=\"3\"/>\n<line x1=\"420\" y1=\"370\" x2=\"440\" y2=\"370\" stroke=\"#111827\" stroke-width=\"3\"/>\n\n<line x1=\"160\" y1=\"350\" x2=\"160\" y2=\"405\" stroke=\"#111827\" stroke-width=\"3\" marker-end=\"url(#arr25rc3)\"/>\n<text x=\"105\" y=\"435\" font-size=\"26\">Y₂</text>\n<line x1=\"650\" y1=\"350\" x2=\"650\" y2=\"405\" stroke=\"#111827\" stroke-width=\"3\" marker-end=\"url(#arr25rc3)\"/>\n<text x=\"620\" y=\"435\" font-size=\"24\">Y₁+INV</text>\n<text x=\"410\" y=\"475\" text-anchor=\"middle\" font-size=\"23\" direction=\"rtl\">الشكل 3</text>\n</svg>",
+      "render_mode": "inline",
+      "responsive": true
+    },
+    {
+      "id": "2025_s01_ex03_fig4",
+      "type": "svg",
+      "usage": "statement",
+      "placement": "statement",
+      "title": "الشكل 4",
+      "description": "المنحنيان ③ و④ أثناء شحن المكثفة بمولد توتر ثابت.",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 480\" role=\"img\" aria-label=\"الشكل 4 - توتر المكثفة والمقاومة عند الشحن بمولد توتر ثابت\">\n<rect width=\"760\" height=\"480\" fill=\"white\"/>\n<defs><marker id=\"arr25rc4\" markerWidth=\"9\" markerHeight=\"9\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L0,6 L9,3 z\" fill=\"#111827\"/></marker></defs>\n<g stroke=\"#d1d5db\" stroke-width=\"1\">\n<line x1=\"90\" y1=\"365\" x2=\"665\" y2=\"365\"/><line x1=\"90\" y1=\"337\" x2=\"665\" y2=\"337\"/><line x1=\"90\" y1=\"309\" x2=\"665\" y2=\"309\"/><line x1=\"90\" y1=\"281\" x2=\"665\" y2=\"281\"/><line x1=\"90\" y1=\"253\" x2=\"665\" y2=\"253\"/><line x1=\"90\" y1=\"225\" x2=\"665\" y2=\"225\"/><line x1=\"90\" y1=\"197\" x2=\"665\" y2=\"197\"/><line x1=\"90\" y1=\"169\" x2=\"665\" y2=\"169\"/><line x1=\"90\" y1=\"141\" x2=\"665\" y2=\"141\"/><line x1=\"90\" y1=\"113\" x2=\"665\" y2=\"113\"/><line x1=\"90\" y1=\"85\" x2=\"665\" y2=\"85\"/>\n<line x1=\"90.0\" y1=\"65\" x2=\"90.0\" y2=\"365\"/><line x1=\"137.5\" y1=\"65\" x2=\"137.5\" y2=\"365\"/><line x1=\"185.0\" y1=\"65\" x2=\"185.0\" y2=\"365\"/><line x1=\"232.5\" y1=\"65\" x2=\"232.5\" y2=\"365\"/><line x1=\"280.0\" y1=\"65\" x2=\"280.0\" y2=\"365\"/><line x1=\"327.5\" y1=\"65\" x2=\"327.5\" y2=\"365\"/><line x1=\"375.0\" y1=\"65\" x2=\"375.0\" y2=\"365\"/><line x1=\"422.5\" y1=\"65\" x2=\"422.5\" y2=\"365\"/><line x1=\"470.0\" y1=\"65\" x2=\"470.0\" y2=\"365\"/><line x1=\"517.5\" y1=\"65\" x2=\"517.5\" y2=\"365\"/><line x1=\"565.0\" y1=\"65\" x2=\"565.0\" y2=\"365\"/><line x1=\"612.5\" y1=\"65\" x2=\"612.5\" y2=\"365\"/><line x1=\"660.0\" y1=\"65\" x2=\"660.0\" y2=\"365\"/>\n</g>\n<line x1=\"90\" y1=\"365\" x2=\"705\" y2=\"365\" stroke=\"#111827\" stroke-width=\"3\" marker-end=\"url(#arr25rc4)\"/>\n<line x1=\"90\" y1=\"390\" x2=\"90\" y2=\"45\" stroke=\"#111827\" stroke-width=\"3\" marker-end=\"url(#arr25rc4)\"/>\n<polyline points=\"90.0,365.0 94.8,358.1 99.5,351.3 104.2,344.8 109.0,338.4 113.8,332.1 118.5,326.0 123.2,320.0 128.0,314.2 132.8,308.6 137.5,303.1 142.2,297.7 147.0,292.4 151.8,287.3 156.5,282.3 161.2,277.4 166.0,272.7 170.8,268.1 175.5,263.5 180.2,259.1 185.0,254.8 189.8,250.6 194.5,246.5 199.2,242.6 204.0,238.7 208.8,234.9 213.5,231.2 218.2,227.6 223.0,224.0 227.8,220.6 232.5,217.3 237.3,214.0 242.0,210.8 246.7,207.7 251.5,204.7 256.2,201.7 261.0,198.8 265.8,196.0 270.5,193.3 275.2,190.6 280.0,188.0 284.8,185.5 289.5,183.0 294.2,180.6 299.0,178.2 303.8,175.9 308.5,173.7 313.2,171.5 318.0,169.3 322.8,167.3 327.5,165.2 332.2,163.2 337.0,161.3 341.8,159.4 346.5,157.6 351.2,155.8 356.0,154.0 360.8,152.3 365.5,150.7 370.2,149.1 375.0,147.5 379.8,145.9 384.5,144.4 389.2,143.0 394.0,141.5 398.8,140.1 403.5,138.8 408.2,137.4 413.0,136.2 417.8,134.9 422.5,133.7 427.2,132.5 432.0,131.3 436.7,130.1 441.5,129.0 446.2,127.9 451.0,126.9 455.8,125.8 460.5,124.8 465.2,123.9 470.0,122.9 474.7,122.0 479.5,121.0 484.3,120.2 489.0,119.3 493.8,118.4 498.5,117.6 503.2,116.8 508.0,116.0 512.8,115.3 517.5,114.5 522.2,113.8 527.0,113.1 531.8,112.4 536.5,111.7 541.2,111.0 546.0,110.4 550.8,109.8 555.5,109.2 560.2,108.6 565.0,108.0 569.8,107.4 574.5,106.9 579.2,106.3 584.0,105.8 588.8,105.3 593.5,104.8 598.2,104.3 603.0,103.8 607.8,103.4 612.5,102.9 617.2,102.5 622.0,102.0 626.8,101.6 631.5,101.2 636.2,100.8 641.0,100.4 645.8,100.0 650.5,99.7 655.2,99.3 660.0,98.9\" fill=\"none\" stroke=\"#111827\" stroke-width=\"5\"/>\n<polyline points=\"90.0,85.0 94.8,91.9 99.5,98.7 104.2,105.2 109.0,111.6 113.8,117.9 118.5,124.0 123.2,130.0 128.0,135.8 132.8,141.4 137.5,146.9 142.2,152.3 147.0,157.6 151.8,162.7 156.5,167.7 161.2,172.6 166.0,177.3 170.8,181.9 175.5,186.5 180.2,190.9 185.0,195.2 189.8,199.4 194.5,203.5 199.2,207.4 204.0,211.3 208.8,215.1 213.5,218.8 218.2,222.4 223.0,226.0 227.8,229.4 232.5,232.7 237.3,236.0 242.0,239.2 246.7,242.3 251.5,245.3 256.2,248.3 261.0,251.2 265.8,254.0 270.5,256.7 275.2,259.4 280.0,262.0 284.8,264.5 289.5,267.0 294.2,269.4 299.0,271.8 303.8,274.1 308.5,276.3 313.2,278.5 318.0,280.7 322.8,282.7 327.5,284.8 332.2,286.8 337.0,288.7 341.8,290.6 346.5,292.4 351.2,294.2 356.0,296.0 360.8,297.7 365.5,299.3 370.2,300.9 375.0,302.5 379.8,304.1 384.5,305.6 389.2,307.0 394.0,308.5 398.8,309.9 403.5,311.2 408.2,312.6 413.0,313.8 417.8,315.1 422.5,316.3 427.2,317.5 432.0,318.7 436.7,319.9 441.5,321.0 446.2,322.1 451.0,323.1 455.8,324.2 460.5,325.2 465.2,326.1 470.0,327.1 474.7,328.0 479.5,329.0 484.3,329.8 489.0,330.7 493.8,331.6 498.5,332.4 503.2,333.2 508.0,334.0 512.8,334.7 517.5,335.5 522.2,336.2 527.0,336.9 531.8,337.6 536.5,338.3 541.2,339.0 546.0,339.6 550.8,340.2 555.5,340.8 560.2,341.4 565.0,342.0 569.8,342.6 574.5,343.1 579.2,343.7 584.0,344.2 588.8,344.7 593.5,345.2 598.2,345.7 603.0,346.2 607.8,346.6 612.5,347.1 617.2,347.5 622.0,348.0 626.8,348.4 631.5,348.8 636.2,349.2 641.0,349.6 645.8,350.0 650.5,350.3 655.2,350.7 660.0,351.1\" fill=\"none\" stroke=\"#111827\" stroke-width=\"5\"/>\n<circle cx=\"500\" cy=\"100\" r=\"20\" fill=\"white\" stroke=\"#111827\" stroke-width=\"2\"/><text x=\"492\" y=\"109\" font-size=\"24\">③</text>\n<circle cx=\"500\" cy=\"330\" r=\"20\" fill=\"white\" stroke=\"#111827\" stroke-width=\"2\"/><text x=\"492\" y=\"339\" font-size=\"24\">④</text>\n<!-- tau -->\n<line x1=\"280.0\" y1=\"365\" x2=\"280.0\" y2=\"188.6\" stroke=\"#6b7280\" stroke-width=\"2\" stroke-dasharray=\"7 5\"/>\n<text x=\"20\" y=\"57\" font-size=\"25\">u(V)</text>\n<text x=\"690\" y=\"400\" font-size=\"25\">t(s)</text>\n<text x=\"52\" y=\"312\" font-size=\"21\">2</text>\n<text x=\"272.0\" y=\"395\" font-size=\"21\">4</text>\n<text x=\"380\" y=\"450\" text-anchor=\"middle\" font-size=\"23\" direction=\"rtl\">الشكل 4</text>\n</svg>",
+      "render_mode": "inline",
+      "responsive": true
+    }
+  ],
+  "tables": [],
+  "question_groups": [
+    {
+      "id": "part_first",
+      "label": "أولا",
+      "title": "شحن مكثفة بمولد تيار ثابت",
+      "context": "",
+      "question_ids": [
+        "2025_s01_ex03_q1_part_01",
+        "2025_s01_ex03_q1_part_02",
+        "2025_s01_ex03_q1_part_03",
+        "2025_s01_ex03_q1_part_04"
+      ]
+    },
+    {
+      "id": "part_second",
+      "label": "ثانيا",
+      "title": "شحن مكثفة بمولد توتر ثابت",
+      "context": "نفرغ المكثفة السابقة تماما ونستبدل مولد التيار بمولد للتوتر الثابت قوته المحركة الكهربائية E في الدارة السابقة.\nنغلق القاطعة K في اللحظة t=0 نعتبرها مبدأ جديدا للأزمنة الشكل 3.\nفنتحصل على المنحنيين البيانيين ③ و④ الموضحين في الشكل 4.",
+      "question_ids": [
+        "2025_s01_ex03_q1_part_05",
+        "2025_s01_ex03_q1_part_06",
+        "2025_s01_ex03_q1_part_07",
+        "2025_s01_ex03_q1_part_08",
+        "2025_s01_ex03_q1_part_09"
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "2025_s01_ex03_q1_part_01",
+      "display_order": 1,
+      "label": "1",
+      "group_id": "part_first",
+      "content_type": "question",
+      "text": "عرف مولد التيار الثابت.",
+      "axis_tags": [
+        "rc_circuit",
+        "capacitor_charging",
+        "constant_current_source",
+        "constant_voltage_source",
+        "time_constant",
+        "oscilloscope"
+      ],
+      "figures": [],
+      "tables": [],
+      "solution": {
+        "strategy": "نحل هذا المطلوب مستقلا باستعمال معطيات التمرين والقانون الفيزيائي المناسب، ثم نتحقق من النتيجة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "مولد التيار الثابت",
+            "explanation": "مولد التيار الثابت عنصر كهربائي ثنائي القطب يولد تيارا ثابتا في دارة مغلقة.",
+            "result": "",
+            "figures": [],
+            "tables": []
+          }
+        ],
+        "final_answer": "مولد التيار الثابت عنصر كهربائي ثنائي القطب يولد تيارا ثابتا في دارة مغلقة.",
+        "verification": "",
+        "hints": [],
+        "common_mistakes": []
+      }
+    },
+    {
+      "id": "2025_s01_ex03_q1_part_02",
+      "display_order": 2,
+      "label": "2",
+      "group_id": "part_first",
+      "content_type": "question",
+      "text": "انسب لكل منحنى بياني مدخل راسم الاهتزاز المناسب مع التعليل.",
+      "axis_tags": [
+        "rc_circuit",
+        "capacitor_charging",
+        "constant_current_source",
+        "constant_voltage_source",
+        "time_constant",
+        "oscilloscope"
+      ],
+      "figures": [],
+      "tables": [],
+      "solution": {
+        "strategy": "نستخرج المعلومة المطلوبة مباشرة من البيان (ميل، تقاطع أو قراءة قيمة)، ثم نعوض في العلاقة الفيزيائية المناسبة إن لزم.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "إسناد المنحنيين",
+            "explanation": "المدخل \\(Y_1+INV\\) يعاين التوتر \\(u_C(t)\\) بين طرفي المكثفة. في اللحظة \\(t=0\\) تكون المكثفة فارغة، أي \\(u_C(0)=0\\)، لذلك يوافق هذا المدخل المنحنى \\(\\boxed{②}\\). أما المدخل \\(Y_2\\) فيعاين التوتر \\(u_R(t)\\) بين طرفي الناقل الأومي، وبما أن \\(I\\) ثابت فإن \\(u_R=RI\\) ثابت، ولذلك يوافق المنحنى \\(\\boxed{①}\\).",
+            "result": "\\(\\boxed{②}\\) ، \\(\\boxed{①}\\)",
+            "figures": [],
+            "tables": []
+          }
+        ],
+        "final_answer": "النتيجة: \\(\\boxed{②}\\) ، \\(\\boxed{①}\\)",
+        "verification": "",
+        "hints": [],
+        "common_mistakes": []
+      }
+    },
+    {
+      "id": "2025_s01_ex03_q1_part_03",
+      "display_order": 3,
+      "label": "3",
+      "group_id": "part_first",
+      "content_type": "question",
+      "text": "بين أن عبارة التوتر الكهربائي بين طرفي المكثفة تكتب كما يلي: u_C(t)=I·t/C.",
+      "axis_tags": [
+        "rc_circuit",
+        "capacitor_charging",
+        "constant_current_source",
+        "constant_voltage_source",
+        "time_constant",
+        "oscilloscope"
+      ],
+      "figures": [],
+      "tables": [],
+      "solution": {
+        "strategy": "نحل هذا المطلوب مستقلا باستعمال معطيات التمرين والقانون الفيزيائي المناسب، ثم نتحقق من النتيجة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "عبارة u_C(t)",
+            "explanation": "لدينا \\[q(t)=C\\,u_C(t)\\] ومع تيار ثابت: \\[I=\\frac{dq}{dt}.\\] إذن \\(q(t)=It\\) لأن المكثفة فارغة في البداية، ومنه: \\[\\boxed{u_C(t)=\\frac{It}{C}}.\\]",
+            "result": "\\(\\boxed{u_C(t)=\\frac{It}{C}}\\)",
+            "figures": [],
+            "tables": []
+          }
+        ],
+        "final_answer": "النتيجة: \\(\\boxed{u_C(t)=\\frac{It}{C}}\\)",
+        "verification": "",
+        "hints": [],
+        "common_mistakes": []
+      }
+    },
+    {
+      "id": "2025_s01_ex03_q1_part_04",
+      "display_order": 4,
+      "label": "4",
+      "group_id": "part_first",
+      "content_type": "question",
+      "text": "جد بيانيا قيمة كل من C سعة المكثفة باستعمال العبارة السابقة وR مقاومة الناقل الأومي.",
+      "axis_tags": [
+        "rc_circuit",
+        "capacitor_charging",
+        "constant_current_source",
+        "constant_voltage_source",
+        "time_constant",
+        "oscilloscope"
+      ],
+      "figures": [],
+      "tables": [],
+      "solution": {
+        "strategy": "نستخرج المعلومة المطلوبة مباشرة من البيان (ميل، تقاطع أو قراءة قيمة)، ثم نعوض في العلاقة الفيزيائية المناسبة إن لزم.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب C بيانيا",
+            "explanation": "من البيان نقرأ عند \\(t=4s\\): \\(u_C=10V\\). إذن: \\[C=\\frac{It}{u_C}=\\frac{1\\times10^{-3}\\times4}{10}=\\boxed{4\\times10^{-4}F}.\\]",
+            "result": "\\(\\boxed{4\\times10^{-4}F}\\)",
+            "figures": [],
+            "tables": []
+          },
+          {
+            "step_number": 2,
+            "title": "حساب R",
+            "explanation": "من المنحنى ①: \\(u_R=10V\\) ومع \\(I=1mA\\): \\[R=\\frac{u_R}{I}=\\frac{10}{1\\times10^{-3}}=\\boxed{10^4\\Omega}.\\]",
+            "result": "\\(\\boxed{10^4\\Omega}\\)",
+            "figures": [],
+            "tables": []
+          }
+        ],
+        "final_answer": "النتيجة: \\(\\boxed{4\\times10^{-4}F}\\) ، \\(\\boxed{10^4\\Omega}\\)",
+        "verification": "",
+        "hints": [],
+        "common_mistakes": []
+      }
+    },
+    {
+      "id": "2025_s01_ex03_q1_part_05",
+      "display_order": 5,
+      "label": "1",
+      "group_id": "part_second",
+      "content_type": "question",
+      "text": "عرف مولد التوتر الثابت.",
+      "axis_tags": [
+        "rc_circuit",
+        "capacitor_charging",
+        "constant_current_source",
+        "constant_voltage_source",
+        "time_constant",
+        "oscilloscope"
+      ],
+      "figures": [],
+      "tables": [],
+      "solution": {
+        "strategy": "نحل هذا المطلوب مستقلا باستعمال معطيات التمرين والقانون الفيزيائي المناسب، ثم نتحقق من النتيجة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "مولد التوتر الثابت",
+            "explanation": "مولد التوتر الثابت عنصر كهربائي ثنائي القطب يحافظ على توتر ثابت بين طرفيه.",
+            "result": "",
+            "figures": [],
+            "tables": []
+          }
+        ],
+        "final_answer": "مولد التوتر الثابت عنصر كهربائي ثنائي القطب يحافظ على توتر ثابت بين طرفيه.",
+        "verification": "",
+        "hints": [],
+        "common_mistakes": []
+      }
+    },
+    {
+      "id": "2025_s01_ex03_q1_part_06",
+      "display_order": 6,
+      "label": "2",
+      "group_id": "part_second",
+      "content_type": "question",
+      "text": "انسب لكل منحنى بياني مدخل راسم الاهتزاز المناسب مع التعليل.",
+      "axis_tags": [
+        "rc_circuit",
+        "capacitor_charging",
+        "constant_current_source",
+        "constant_voltage_source",
+        "time_constant",
+        "oscilloscope"
+      ],
+      "figures": [],
+      "tables": [],
+      "solution": {
+        "strategy": "نستخرج المعلومة المطلوبة مباشرة من البيان (ميل، تقاطع أو قراءة قيمة)، ثم نعوض في العلاقة الفيزيائية المناسبة إن لزم.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "إسناد المنحنيين",
+            "explanation": "المدخل \\(Y_1+INV\\) يعاين \\(u_C(t)\\). ولأن المكثفة فارغة في البداية \\(u_C(0)=0\\)، فهو يوافق المنحنى التصاعدي \\(\\boxed{③}\\). المدخل \\(Y_2\\) يعاين \\(u_R(t)\\)، وعند \\(t=0\\): \\(u_R=E-u_C=E\\)، ثم يتناقص نحو الصفر، لذلك يوافق المنحنى \\(\\boxed{④}\\).",
+            "result": "\\(\\boxed{③}\\) ، \\(\\boxed{④}\\)",
+            "figures": [],
+            "tables": []
+          }
+        ],
+        "final_answer": "النتيجة: \\(\\boxed{③}\\) ، \\(\\boxed{④}\\)",
+        "verification": "",
+        "hints": [],
+        "common_mistakes": []
+      }
+    },
+    {
+      "id": "2025_s01_ex03_q1_part_07",
+      "display_order": 7,
+      "label": "3",
+      "group_id": "part_second",
+      "content_type": "question",
+      "text": "شدة التيار الكهربائي الأعظمية المار في الدارة I₀=1mA في اللحظة t=0، تأكد أن مقاومة الناقل الأومي R=10⁴Ω.",
+      "axis_tags": [
+        "rc_circuit",
+        "capacitor_charging",
+        "constant_current_source",
+        "constant_voltage_source",
+        "time_constant",
+        "oscilloscope"
+      ],
+      "figures": [],
+      "tables": [],
+      "solution": {
+        "strategy": "نحل هذا المطلوب مستقلا باستعمال معطيات التمرين والقانون الفيزيائي المناسب، ثم نتحقق من النتيجة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التأكد من R",
+            "explanation": "عند \\(t=0\\) نقرأ \\(u_R(0)=10V\\)، ومع \\(I_0=1mA\\): \\[R=\\frac{u_R(0)}{I_0}=\\frac{10}{10^{-3}}=\\boxed{10^4\\Omega}.\\]",
+            "result": "\\(\\boxed{10^4\\Omega}\\)",
+            "figures": [],
+            "tables": []
+          }
+        ],
+        "final_answer": "النتيجة: \\(\\boxed{10^4\\Omega}\\)",
+        "verification": "",
+        "hints": [],
+        "common_mistakes": []
+      }
+    },
+    {
+      "id": "2025_s01_ex03_q1_part_08",
+      "display_order": 8,
+      "label": "4",
+      "group_id": "part_second",
+      "content_type": "question",
+      "text": "جد بيانيا τ ثابت الزمن مع توضيح الطريقة المتبعة ثم احسب C سعة المكثفة.",
+      "axis_tags": [
+        "rc_circuit",
+        "capacitor_charging",
+        "constant_current_source",
+        "constant_voltage_source",
+        "time_constant",
+        "oscilloscope"
+      ],
+      "figures": [],
+      "tables": [],
+      "solution": {
+        "strategy": "نستخرج المعلومة المطلوبة مباشرة من البيان (ميل، تقاطع أو قراءة قيمة)، ثم نعوض في العلاقة الفيزيائية المناسبة إن لزم.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "ثابت الزمن τ",
+            "explanation": "باستعمال طريقة \\(63\\%\\): عند \\(t=\\tau\\) يكون \\(u_C(\\tau)=0.63E\\). بما أن \\(E=10V\\)، نبحث عن \\(u_C=6.3V\\)، ومن البيان نجد: \\[\\boxed{\\tau=4s}.\\]",
+            "result": "\\(\\boxed{\\tau=4s}\\)",
+            "figures": [],
+            "tables": []
+          },
+          {
+            "step_number": 2,
+            "title": "حساب C",
+            "explanation": "لدارة \\(RC\\): \\[\\tau=RC.\\] لذلك: \\[C=\\frac{\\tau}{R}=\\frac{4}{10^4}=\\boxed{4\\times10^{-4}F}.\\]",
+            "result": "\\(\\boxed{4\\times10^{-4}F}\\)",
+            "figures": [],
+            "tables": []
+          }
+        ],
+        "final_answer": "النتيجة: \\(\\boxed{\\tau=4s}\\) ، \\(\\boxed{4\\times10^{-4}F}\\)",
+        "verification": "",
+        "hints": [],
+        "common_mistakes": []
+      }
+    },
+    {
+      "id": "2025_s01_ex03_q1_part_09",
+      "display_order": 9,
+      "label": "5",
+      "group_id": "part_second",
+      "content_type": "question",
+      "text": "علق على نتائج دراسة شحن مكثفة بمولد تيار ثابت وبمولد توتر ثابت في إيجاد مميزات ثنائيات الأقطاب.",
+      "axis_tags": [
+        "rc_circuit",
+        "capacitor_charging",
+        "constant_current_source",
+        "constant_voltage_source",
+        "time_constant",
+        "oscilloscope"
+      ],
+      "figures": [],
+      "tables": [],
+      "solution": {
+        "strategy": "نربط الملاحظة أو النتيجة بالقانون الفيزيائي والفرضيات المعطاة، ثم نصوغ الاستنتاج بوضوح.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التعليق",
+            "explanation": "نحصل على نفس مميزات ثنائي القطب RC بالطريقتين: نفس المقاومة R ونفس سعة المكثفة C. لذلك يمكن إيجاد مميزات ثنائيات الأقطاب باستعمال مولد تيار ثابت أو مولد توتر ثابت.",
+            "result": "",
+            "figures": [],
+            "tables": []
+          }
+        ],
+        "final_answer": "نحصل على نفس مميزات ثنائي القطب RC بالطريقتين: نفس المقاومة R ونفس سعة المكثفة C. لذلك يمكن إيجاد مميزات ثنائيات الأقطاب باستعمال مولد تيار ثابت أو مولد توتر ثابت.",
+        "verification": "",
+        "hints": [],
+        "common_mistakes": []
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2025(20260911-114135).pdf",
+    "statement_figure_policy": "الأشكال 1 و2 و3 و4 كلها مخططات/منحنيات كهربائية قابلة لإعادة الرسم؛ أدرجت SVG مباشرة داخل JSON ولا توجد صور خارجية.",
+    "renderer": "InlineSvgGraph",
+    "source_page_numbering": "نص التمرين في الصفحة 3 من PDF، والتصحيح في الصفحتين 12 و13.",
+    "react_compatibility": "Schema 5.0 موحد: statement يحتوي نص التمرين الكامل، وquestions ذرية، وكل سؤال يملك solution مستقلة؛ لا يحتاج React إلى تقسيم النص أو مطابقة خطوات الحل وقت العرض.",
+    "asset_base_path": "/phy/bac/math/2025/electricity/rc_charging/",
+    "correction_notes": [
+      "التصحيح الرسمي: ② يمثل u_C و① يمثل u_R عند الشحن بمولد تيار ثابت.",
+      "C=4×10^-4F وR=10^4Ω.",
+      "عند الشحن بمولد توتر ثابت: ③ يمثل u_C و④ يمثل u_R، E=10V، τ=4s، C=4×10^-4F."
+    ],
+    "unified_schema": true,
+    "question_structure": "atomic",
+    "solution_structure": "per-question",
+    "statement_structure": "full_exercise_text"
+  },
+  "source_statement_full": "التمرين الثالث: (06 نقاط)\nيهدف هذا التمرين إلى دراسة شحن مكثفة بمولد تيار ثابت وبمولد توتر ثابت وإيجاد مميزات ثنائيات الأقطاب.\nأولا: شحن مكثفة بمولد تيار ثابت\nتتكون دارة كهربائية على التسلسل من مكثفة فارغة سعتها C وناقل أومي مقاومته R ومولد لتيار ثابت شدته I=1mA وراسم اهتزاز ذي ذاكرة وقاطعة K (الشكل 1).\nنغلق القاطعة K في اللحظة t=0 نعتبرها مبدأ للأزمنة.\nنتحصل على المنحنيين البيانيين ① و② الموضحين في الشكل 2.\n1. عرف مولد التيار الثابت.\n2. انسب لكل منحنى بياني مدخل راسم الاهتزاز المناسب مع التعليل.\n3. بين أن عبارة التوتر الكهربائي بين طرفي المكثفة تكتب كما يلي: u_C(t)=I·t/C.\n4. جد بيانيا قيمة كل من C سعة المكثفة باستعمال العبارة السابقة وR مقاومة الناقل الأومي.\nثانيا: شحن مكثفة بمولد توتر ثابت\nنفرغ المكثفة السابقة تماما ونستبدل مولد التيار بمولد للتوتر الثابت قوته المحركة الكهربائية E في الدارة السابقة.\nنغلق القاطعة K في اللحظة t=0 نعتبرها مبدأ جديدا للأزمنة الشكل 3.\nفنتحصل على المنحنيين البيانيين ③ و④ الموضحين في الشكل 4.\n1. عرف مولد التوتر الثابت.\n2. انسب لكل منحنى بياني مدخل راسم الاهتزاز المناسب مع التعليل.\n3. شدة التيار الكهربائي الأعظمية المار في الدارة I₀=1mA في اللحظة t=0، تأكد أن مقاومة الناقل الأومي R=10⁴Ω.\n4. جد بيانيا τ ثابت الزمن مع توضيح الطريقة المتبعة ثم احسب C سعة المكثفة.\n5. علق على نتائج دراسة شحن مكثفة بمولد تيار ثابت وبمولد توتر ثابت في إيجاد مميزات ثنائيات الأقطاب."
+}

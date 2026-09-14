@@ -1,0 +1,274 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "session": "ordinary",
+  "year": 2016,
+  "year_variant": "2016_2",
+  "chapter_code": "sequences",
+  "chapter_title": "المتتاليات العددية",
+  "branches": [
+    {
+      "code": "science",
+      "name": "شعبة علوم تجريبية"
+    }
+  ],
+  "source_pdf": "2016_2(4).pdf",
+  "comparison_source": "bac_sequence_scientifique(20260823-103207).pdf",
+  "source_verification": {
+    "statement_checked_against_original_bac": true,
+    "solution_checked_against_official_correction": true,
+    "solution_style": "حل مفصل ومبسط بخطوات صغيرة، مع إظهار الحسابات التي اختصرها التصحيح الرسمي.",
+    "statement_policy": "نص السؤال منقول من موضوع البكالوريا دون إضافة معطيات جديدة.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  },
+  "version": "4.2-2016_2-science-sequences-subject2-ex03",
+  "exercise_number": 3,
+  "subject_number": 2,
+  "points": 4.5,
+  "source_page": 4,
+  "source_pages": [
+    4
+  ],
+  "solution_source_pages": [
+    9
+  ],
+  "title": "التمرين الثالث — بكالوريا الجزائر 2016_2 — الموضوع الثاني — شعبة علوم تجريبية",
+  "statement": "متتالية عددية \\((u_n)\\) معرفة على \\(\\mathbb N\\) بحدها الأول \\(u_0=0\\) ومن أجل كل عدد طبيعي \\(n\\): \\(u_{n+1}=\\frac{2u_n+2}{u_n+3}\\). ولتكن المتتالية \\((v_n)\\) المعرفة من أجل كل عدد طبيعي \\(n\\) بـ: \\(v_n=\\frac{u_n-1}{u_n+2}\\).",
+  "statement_graphs": [],
+  "axis_tags": [
+    "recursive_sequence",
+    "auxiliary_geometric_sequence",
+    "geometric_sequence",
+    "explicit_sequence_formula",
+    "sequence_limit",
+    "geometric_sum",
+    "transformed_sum"
+  ],
+  "questions": [
+    {
+      "id": "2016_2_s2_ex03_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1- بين أن المتتالية \\((v_n)\\) هندسية يطلب تعيين أساسها \\(q\\) وحدها الأول \\(v_0\\).",
+      "axis_tags": [
+        "auxiliary_geometric_sequence",
+        "geometric_sequence"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب \\(v_{n+1}\\) بدلالة \\(v_n\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "كتابة v_{n+1}",
+            "explanation": "من تعريف المتتالية:\n\\[\nv_{n+1}=\\frac{u_{n+1}-1}{u_{n+1}+2}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب u_{n+1}-1",
+            "explanation": "لدينا:\n\\[\nu_{n+1}=\\frac{2u_n+2}{u_n+3}.\n\\]\nإذن:\n\\[\nu_{n+1}-1\n=\\frac{2u_n+2-(u_n+3)}{u_n+3}\n=\\frac{u_n-1}{u_n+3}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب u_{n+1}+2",
+            "explanation": "\\[\nu_{n+1}+2\n=\\frac{2u_n+2+2(u_n+3)}{u_n+3}\n=\\frac{4u_n+8}{u_n+3}\n=\\frac{4(u_n+2)}{u_n+3}.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "إظهار العلاقة الهندسية",
+            "explanation": "إذن:\n\\[\nv_{n+1}\n=\\frac{\\frac{u_n-1}{u_n+3}}{\\frac{4(u_n+2)}{u_n+3}}\n=\\frac14\\frac{u_n-1}{u_n+2}\n=\\frac14v_n.\n\\]\nإذن \\((v_n)\\) هندسية أساسها:\n\\[\nq=\\frac14.\n\\]"
+          },
+          {
+            "step_number": 5,
+            "title": "حساب الحد الأول",
+            "explanation": "\\[\nv_0=\\frac{u_0-1}{u_0+2}\n=\\frac{0-1}{0+2}\n=-\\frac12.\n\\]"
+          }
+        ],
+        "final_answer": "\\((v_n)\\) هندسية أساسها \\(\\boxed{q=\\frac14}\\)، وحدها الأول \\(\\boxed{v_0=-\\frac12}\\)."
+      }
+    },
+    {
+      "id": "2016_2_s2_ex03_q2a",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2- أ) عبر بدلالة \\(n\\) عن عبارة الحد العام \\(v_n\\).",
+      "axis_tags": [
+        "geometric_sequence_general_term"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نطبق صيغة الحد العام لمتتالية هندسية معرفة ابتداء من \\(v_0\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "صيغة الحد العام",
+            "explanation": "لدينا:\n\\[\nv_n=v_0q^n.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "التعويض",
+            "explanation": "بما أن:\n\\[\nv_0=-\\frac12,\\qquad q=\\frac14,\n\\]\nفإن:\n\\[\n\\boxed{v_n=-\\frac12\\left(\\frac14\\right)^n}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{v_n=-\\frac12(\\frac14)^n}\\)."
+      }
+    },
+    {
+      "id": "2016_2_s2_ex03_q2b",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "ب) استنتج عبارة الحد العام \\(u_n\\) بدلالة \\(n\\).",
+      "axis_tags": [
+        "explicit_sequence_formula"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحل العلاقة \\(v_n=\\frac{u_n-1}{u_n+2}\\) بالنسبة إلى \\(u_n\\)، ثم نعوض عبارة \\(v_n\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "استخراج u_n بدلالة v_n",
+            "explanation": "من:\n\\[\nv_n=\\frac{u_n-1}{u_n+2},\n\\]\nنكتب:\n\\[\nv_n(u_n+2)=u_n-1.\n\\]\nأي:\n\\[\nv_nu_n+2v_n=u_n-1.\n\\]\nنجمع حدود \\(u_n\\):\n\\[\nu_n(v_n-1)=-(1+2v_n).\n\\]\nإذن:\n\\[\nu_n=\\frac{1+2v_n}{1-v_n}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "تعويض v_n",
+            "explanation": "لدينا:\n\\[\nv_n=-\\frac12\\left(\\frac14\\right)^n.\n\\]\nإذن:\n\\[\n2v_n=-\\left(\\frac14\\right)^n.\n\\]\nومن ثم:\n\\[\nu_n=\frac{1-(\\frac14)^n}{1+\\frac12(\\frac14)^n}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "كتابة العبارة كما في التصحيح",
+            "explanation": "بما أن:\n\\[\n\\left(\\frac14\\right)^n=\\left(\\frac12\\right)^{2n}\n\\]\nو\n\\[\n\\frac12\\left(\\frac14\\right)^n=\\left(\\frac12\\right)^{2n+1},\n\\]\nفإن:\n\\[\n\\boxed{u_n=\\frac{1-(\\frac12)^{2n}}{1+(\\frac12)^{2n+1}}}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{u_n=\\frac{1-(\\frac12)^{2n}}{1+(\\frac12)^{2n+1}}}\\)."
+      }
+    },
+    {
+      "id": "2016_2_s2_ex03_q2c",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "ج) احسب \\(\\lim_{n\\to+\\infty}u_n\\).",
+      "axis_tags": [
+        "sequence_limit"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل العبارة الصريحة لـ \\(u_n\\) وحقيقة أن قوى \\(\\frac12\\) تؤول إلى الصفر.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "نهاية القوى",
+            "explanation": "بما أن:\n\\[\n0<\\frac12<1,\n\\]\nفإن:\n\\[\n\\left(\\frac12\\right)^{2n}\\to0\n\\]\nو\n\\[\n\\left(\\frac12\\right)^{2n+1}\\to0.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب النهاية",
+            "explanation": "إذن:\n\\[\n\\lim_{n\\to+\\infty}u_n\n=\\frac{1-0}{1+0}=1.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{\\lim_{n\\to+\\infty}u_n=1}\\)."
+      }
+    },
+    {
+      "id": "2016_2_s2_ex03_q3a",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "3- أ) احسب بدلالة \\(n\\) المجموع: \\(S_n=v_0+v_1+\\ldots+v_n\\).",
+      "axis_tags": [
+        "geometric_sum"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "المجموع هو مجموع أول \\(n+1\\) حدود من متتالية هندسية.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "صيغة المجموع الهندسي",
+            "explanation": "لدينا:\n\\[\nS_n=v_0\\frac{1-q^{n+1}}{1-q}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "التعويض",
+            "explanation": "مع:\n\\[\nv_0=-\\frac12,\\qquad q=\\frac14,\n\\]\nنحصل على:\n\\[\nS_n=-\\frac12\\times\\frac{1-(\\frac14)^{n+1}}{1-\\frac14}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "التبسيط",
+            "explanation": "بما أن:\n\\[\n1-\\frac14=\\frac34,\n\\]\nفإن:\n\\[\nS_n=-\\frac12\\times\\frac43\\left[1-\\left(\\frac14\\right)^{n+1}\\right].\n\\]\nإذن:\n\\[\n\\boxed{S_n=-\\frac23\\left[1-\\left(\\frac14\\right)^{n+1}\\right]}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{S_n=-\\frac23[1-(\\frac14)^{n+1}]}\\)."
+      }
+    },
+    {
+      "id": "2016_2_s2_ex03_q3b",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "ب) تحقق أن: \\(\\frac{1}{u_n+2}=\\frac13(1-v_n)\\) وذلك من أجل كل عدد طبيعي \\(n\\).",
+      "axis_tags": [
+        "algebraic_transformation"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نبدأ من تعريف \\(v_n\\) ونحوّله إلى صيغة تحتوي على \\(\\frac1{u_n+2}\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الانطلاق من تعريف v_n",
+            "explanation": "لدينا:\n\\[\nv_n=\\frac{u_n-1}{u_n+2}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "إعادة كتابة البسط",
+            "explanation": "نلاحظ أن:\n\\[\nu_n-1=(u_n+2)-3.\n\\]\nإذن:\n\\[\nv_n=\\frac{(u_n+2)-3}{u_n+2}\n=1-\\frac3{u_n+2}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "استخراج 1/(u_n+2)",
+            "explanation": "من:\n\\[\nv_n=1-\\frac3{u_n+2}\n\\]\nنحصل على:\n\\[\n\\frac3{u_n+2}=1-v_n.\n\\]\nوبالقسمة على \\(3\\):\n\\[\n\\boxed{\\frac1{u_n+2}=\\frac13(1-v_n)}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{\\frac1{u_n+2}=\\frac13(1-v_n)}\\)."
+      }
+    },
+    {
+      "id": "2016_2_s2_ex03_q3c",
+      "display_order": 7,
+      "content_type": "question",
+      "text": "ج) استنتج بدلالة \\(n\\) المجموع: \\(S'_n=\\frac1{u_0+2}+\\frac1{u_1+2}+\\ldots+\\frac1{u_n+2}\\).",
+      "axis_tags": [
+        "transformed_sum",
+        "geometric_sum"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل العلاقة السابقة حدًا بحد، ثم نعوض مجموع \\(v_0+\\cdots+v_n\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تحويل كل حد",
+            "explanation": "من السؤال السابق:\n\\[\n\\frac1{u_k+2}=\\frac13(1-v_k).\n\\]\nإذن:\n\\[\nS'_n=\\sum_{k=0}^{n}\\frac1{u_k+2}\n=\\frac13\\sum_{k=0}^{n}(1-v_k).\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "فصل المجموع",
+            "explanation": "لدينا \\(n+1\\) حدًا من العدد \\(1\\)، وبالتالي:\n\\[\nS'_n=\\frac13\\left[(n+1)-\\sum_{k=0}^{n}v_k\\right].\n\\]\nأي:\n\\[\nS'_n=\\frac13[(n+1)-S_n].\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "تعويض S_n",
+            "explanation": "نعوض:\n\\[\nS_n=-\\frac23\\left[1-\\left(\\frac14\\right)^{n+1}\\right].\n\\]\nفنحصل على:\n\\[\nS'_n=\\frac13\\left[n+1+\\frac23\\left(1-\\left(\\frac14\\right)^{n+1}\\right)\\right].\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "التبسيط النهائي",
+            "explanation": "نوحد على المقام \\(3\\) داخل القوس:\n\\[\nS'_n=\\frac19\\left[3n+3+2-2\\left(\\frac14\\right)^{n+1}\\right].\n\\]\nإذن:\n\\[\n\\boxed{S'_n=\\frac19\\left[3n+5-2\\left(\\frac14\\right)^{n+1}\\right]}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{S'_n=\\frac19[3n+5-2(\\frac14)^{n+1}]}\\)."
+      }
+    }
+  ]
+}

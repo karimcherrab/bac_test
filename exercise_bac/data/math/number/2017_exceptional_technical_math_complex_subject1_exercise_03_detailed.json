@@ -1,0 +1,245 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "session": "exceptional",
+  "year": 2017,
+  "chapter_code": "complex_numbers",
+  "chapter_title": "الأعداد المركبة",
+  "branches": [
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "version": "4.2-2017-exceptional-technical-math-complex-subject1-ex03",
+  "subject_number": 1,
+  "exercise_number": 3,
+  "source_page": 1,
+  "source_pages": [
+    1,
+    2
+  ],
+  "solution_source_pages": [
+    5,
+    6
+  ],
+  "title": "التمرين الثالث — بكالوريا الجزائر الاستثنائية 2017 — الموضوع الأول — شعبة تقني رياضي",
+  "axis_tags": [
+    "complex_equations",
+    "complex_exponential_form",
+    "complex_rotation",
+    "complex_geometry",
+    "complex_sequences"
+  ],
+  "statement": "",
+  "questions": [
+    {
+      "id": "2017_exc_tm_s1_complex_ex03_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "I) حل في مجموعة الأعداد المركبة \\(\\mathbb{C}\\) المعادلة ذات المجهول المركب \\(z\\) الآتية:\n\\[\n(z-4)(z^2-2z+4)=0.\n\\]",
+      "axis_tags": [
+        "complex_equations"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل خاصية الجداء المعدوم، ثم نحل المعادلة من الدرجة الثانية باستعمال المميز.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حل العامل الأول",
+            "explanation": "\\[\nz-4=0\\Rightarrow z=4.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حل المعادلة التربيعية",
+            "explanation": "نحل:\n\\[\nz^2-2z+4=0.\n\\]\nالمميز:\n\\[\n\\Delta=(-2)^2-4\\times1\\times4=4-16=-12.\n\\]\nونكتب:\n\\[\n-12=(2i\\sqrt3)^2.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "استخراج الجذرين",
+            "explanation": "\\[\nz=\\frac{2\\pm2i\\sqrt3}{2}=1\\pm i\\sqrt3.\n\\]"
+          }
+        ],
+        "final_answer": "\\(S=\\{4,\\ 1+i\\sqrt3,\\ 1-i\\sqrt3\\}\\)."
+      }
+    },
+    {
+      "id": "2017_exc_tm_s1_complex_ex03_q2_1",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "II) المستوى المركب منسوب إلى المعلم المتعامد المتجانس \\((O;\\vec u,\\vec v)\\). نعتبر النقط \\(A\\)، \\(B\\) و \\(C\\) التي لواحقها \\(z_A=4\\)، \\(z_B=1+i\\sqrt3\\) و \\(z_C=1-i\\sqrt3\\).\n1) اكتب العدد المركب \\(\\frac{z_C-z_A}{z_B-z_A}\\) على الشكل الأسي ثم استنتج طبيعة المثلث \\(ABC\\).",
+      "axis_tags": [
+        "complex_exponential_form",
+        "complex_geometry"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب النسبة جبريًا، ثم نحدد طويلتها وعمدتها. الطويلة تسمح بمقارنة ضلعين، والعمدة تعطينا الزاوية عند A.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب الفروق",
+            "explanation": "\\[\nz_C-z_A=(1-i\\sqrt3)-4=-3-i\\sqrt3,\n\\]\nو:\n\\[\nz_B-z_A=(1+i\\sqrt3)-4=-3+i\\sqrt3.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب النسبة",
+            "explanation": "\\[\n\\frac{z_C-z_A}{z_B-z_A}\n=\\frac{-3-i\\sqrt3}{-3+i\\sqrt3}.\n\\]\nكلا البسط والمقام طويلته \\(2\\sqrt3\\)، لذلك طويلة النسبة تساوي \\(1\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "تحديد العمدة",
+            "explanation": "يمكن كتابة:\n\\[\n-3-i\\sqrt3=2\\sqrt3\\,e^{-i5\\pi/6},\n\\]\nو:\n\\[\n-3+i\\sqrt3=2\\sqrt3\\,e^{i5\\pi/6}.\n\\]\nإذن:\n\\[\n\\frac{z_C-z_A}{z_B-z_A}\n=e^{-i5\\pi/3}=e^{i\\pi/3}.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "استنتاج طبيعة المثلث",
+            "explanation": "بما أن طويلة النسبة تساوي \\(1\\)، فإن:\n\\[\nAC=AB.\n\\]\nوبما أن عمدتها \\(\\frac{\\pi}{3}\\)، فإن:\n\\[\n\\widehat{BAC}=\\frac{\\pi}{3}.\n\\]\nمثلث متساوي الساقين في \\(A\\) وزاويته عند \\(A\\) تساوي \\(60^\\circ\\)، إذن زواياه الثلاث كلها \\(60^\\circ\\)."
+          }
+        ],
+        "final_answer": "\\(\\frac{z_C-z_A}{z_B-z_A}=e^{i\\pi/3}\\)، ومنه المثلث \\(ABC\\) متقايس الأضلاع."
+      }
+    },
+    {
+      "id": "2017_exc_tm_s1_complex_ex03_q2_2a",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "2) أ) عين لاحقة النقطة \\(D\\) صورة \\(B\\) بالدوران \\(r\\) الذي مركزه المبدأ \\(O\\) وزاويته \\(\\frac{2\\pi}{3}\\).",
+      "axis_tags": [
+        "complex_rotation"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل صيغة الدوران مركزه O: \\(z_D=e^{i2\\pi/3}z_B\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "كتابة zB على الشكل الأسي",
+            "explanation": "لدينا:\n\\[\nz_B=1+i\\sqrt3=2e^{i\\pi/3}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "تطبيق الدوران",
+            "explanation": "\\[\nz_D=e^{i2\\pi/3}z_B\n=2e^{i\\pi}= -2.\n\\]"
+          }
+        ],
+        "final_answer": "\\(z_D=-2\\)."
+      }
+    },
+    {
+      "id": "2017_exc_tm_s1_complex_ex03_q2_2b",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "ب) عين طبيعة الرباعي \\(ABDC\\).",
+      "axis_tags": [
+        "complex_geometry"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب أطوال أضلاع الرباعي، ثم نتحقق من تساويها.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب AB و AC",
+            "explanation": "من كون \\(ABC\\) متقايس الأضلاع:\n\\[\nAB=AC=2\\sqrt3.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب BD",
+            "explanation": "\\[\nBD=|z_D-z_B|=|-2-(1+i\\sqrt3)|=|-3-i\\sqrt3|=2\\sqrt3.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب DC",
+            "explanation": "\\[\nDC=|z_C-z_D|=|1-i\\sqrt3+2|=|3-i\\sqrt3|=2\\sqrt3.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "الاستنتاج",
+            "explanation": "وجدنا:\n\\[\nAB=BD=DC=CA=2\\sqrt3.\n\\]\nإذن الرباعي \\(ABDC\\) معين."
+          }
+        ],
+        "final_answer": "الرباعي \\(ABDC\\) معين."
+      }
+    },
+    {
+      "id": "2017_exc_tm_s1_complex_ex03_q3a",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "3) من أجل كل عدد طبيعي \\(n\\)، نضع: \\(z_n=(z_B)^n+(z_C)^n\\).\nأ) بين أن: من أجل كل عدد طبيعي \\(n\\)، \\(z_n=2^{n+1}\\cos\\left(\\frac{n\\pi}{3}\\right)\\).",
+      "axis_tags": [
+        "complex_sequences",
+        "complex_powers"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نكتب zB وzC على الشكل الأسي، ثم نستعمل صيغة أويلر.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الشكل الأسي",
+            "explanation": "\\[\nz_B=2e^{i\\pi/3},\n\\qquad\nz_C=2e^{-i\\pi/3}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "رفع للقوة n",
+            "explanation": "\\[\n(z_B)^n=2^ne^{in\\pi/3},\n\\qquad\n(z_C)^n=2^ne^{-in\\pi/3}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الجمع",
+            "explanation": "\\[\nz_n=2^n\\left(e^{in\\pi/3}+e^{-in\\pi/3}\\right).\n\\]\nوباستخدام:\n\\[\ne^{i\\alpha}+e^{-i\\alpha}=2\\cos\\alpha,\n\\]\nنحصل على:\n\\[\nz_n=2^{n+1}\\cos\\left(\\frac{n\\pi}{3}\\right).\n\\]"
+          }
+        ],
+        "final_answer": "\\(z_n=2^{n+1}\\cos\\left(\\frac{n\\pi}{3}\\right)\\)."
+      }
+    },
+    {
+      "id": "2017_exc_tm_s1_complex_ex03_q3b",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "ب) نضع من أجل كل عدد طبيعي \\(n\\): \\(t_n=z_{6n}\\). عبر عن \\(t_n\\) بدلالة \\(n\\) ثم احسب \\(P_n\\) بدلالة \\(n\\) حيث \\(P_n=t_0\\times t_1\\times t_2\\times\\cdots\\times t_n\\).",
+      "axis_tags": [
+        "complex_sequences",
+        "complex_powers"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نعوض 6n في عبارة z_n، ثم نحسب حاصل الضرب باستعمال مجموع الأسس.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب tn",
+            "explanation": "لدينا:\n\\[\nt_n=z_{6n}=2^{6n+1}\\cos\\left(\\frac{6n\\pi}{3}\\right).\n\\]\nلكن:\n\\[\n\\cos(2n\\pi)=1.\n\\]\nإذن:\n\\[\nt_n=2^{6n+1}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "كتابة حاصل الضرب",
+            "explanation": "\\[\nP_n=\\prod_{k=0}^{n}t_k\n=\\prod_{k=0}^{n}2^{6k+1}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "جمع الأسس",
+            "explanation": "\\[\nP_n=2^{\\sum_{k=0}^{n}(6k+1)}.\n\\]\nولدينا:\n\\[\n\\sum_{k=0}^{n}(6k+1)=6\\frac{n(n+1)}{2}+n+1\n=3n(n+1)+n+1\n=(n+1)(3n+1).\n\\]"
+          }
+        ],
+        "final_answer": "\\(t_n=2^{6n+1}\\)، و\\(P_n=2^{(n+1)(3n+1)}\\)."
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_official_correction": true,
+    "source_pdf": "2017_2(1).pdf",
+    "statement_pages": [
+      1,
+      2
+    ],
+    "correction_pages": [
+      5,
+      6
+    ]
+  }
+}

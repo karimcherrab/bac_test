@@ -1,0 +1,538 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2023-subject01-ex02-shot-put-projectile-inline-svg",
+  "session": "ordinary",
+  "year": 2023,
+  "chapter_code": "mechanical_system_evolution",
+  "chapter_title": "تطور جملة ميكانيكية",
+  "axis_tags": [
+    "projectile_motion",
+    "free_fall_motion",
+    "newton_laws_and_forces",
+    "experimental_motion_graph"
+  ],
+  "branches": [
+    {
+      "code": "math",
+      "name": "شعبة رياضيات"
+    },
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "exercise_number": 2,
+  "source_page": 2,
+  "source_pages": [
+    2,
+    3
+  ],
+  "solution_source_pages": [
+    12,
+    13
+  ],
+  "title": "التمرين الثاني — بكالوريا الجزائر 2023 — الموضوع الأول — قذف الكرة المعدنية",
+  "statement": "التمرين الثاني: (04 نقاط)\nتعرف رياضة رمي الجلة عند الرجال على أنها إحدى منافسات ألعاب القوى التي يرمي خلالها اللاعب كرة معدنية ثقيلة من الحديد الصلب. يتم تنفيذ رمي الكرة المعدنية من حافة الدائرة المخصصة، ثم قياس المسافة الأفقية المحققة، من حافة الدائرة المعلمة إلى غاية اصطدامها بأرضية الملعب.\nفي حصة تدريبية، حاول رياضي البحث عن الزاوية التي يرسل بها الكرة المعدنية حتى يحقق أبعد مسافة أفقية.\nI- تحليل ودراسة فيديو حركة قذف الكرة المعدنية:\nيرمي الرياضي الكرة من موضع M₀ منطبق على مركز عطالة الكرة، إحداثيتيه (x₀=0,5m ; y₀=2,1m)، في لحظة نعتبرها مبدأ للأزمنة (t=0)، بسرعة ابتدائية قيمتها v₀=12,9m.s⁻¹ مركبتيها (v₀x ; v₀y)، ويصنع حامل شعاعها زاوية α مع الأفق.\nلدراسة حركة مركز عطالة الكرة، نختار معلما متعامدا ومتجانسا (O,i,j) مرتبطا بسطح الأرض نعتبره غاليليا (الشكل(3)).\nالمعطيات:\n- تسارع الجاذبية الأرضية: g=9,8m.s⁻².\n- الكتلة الحجمية للهواء: ρ₀=1,3kg.m⁻³.\n- خصائص الكرة المعدنية: الكتلة m=7,27kg، الكتلة الحجمية ρ=8000kg.m⁻³.",
+  "figures": [
+    {
+      "id": "2023_s01_ex02_fig3",
+      "type": "svg",
+      "usage": "statement",
+      "placement": "statement",
+      "title": "الشكل (3)",
+      "description": "المعلم الأرضي ووضعية القذف الابتدائية من النقطة M₀.",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 900 520\" role=\"img\" aria-label=\"الشكل 3 - قذف الكرة المعدنية\">\n<rect width=\"900\" height=\"520\" fill=\"white\"/>\n<defs><marker id=\"a23sp\" markerWidth=\"10\" markerHeight=\"10\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L0,6 L9,3 z\" fill=\"#111827\"/></marker></defs>\n<!-- axes -->\n<line x1=\"120\" y1=\"420\" x2=\"800\" y2=\"420\" stroke=\"#111827\" stroke-width=\"3\" marker-end=\"url(#a23sp)\"/>\n<line x1=\"150\" y1=\"455\" x2=\"150\" y2=\"70\" stroke=\"#111827\" stroke-width=\"3\" marker-end=\"url(#a23sp)\"/>\n<text x=\"810\" y=\"450\" font-size=\"28\">x(m)</text>\n<text x=\"95\" y=\"80\" font-size=\"28\">y(m)</text>\n<text x=\"128\" y=\"455\" font-size=\"26\">O</text>\n\n<!-- simple athlete schematic -->\n<circle cx=\"175\" cy=\"265\" r=\"23\" fill=\"none\" stroke=\"#111827\" stroke-width=\"4\"/>\n<line x1=\"175\" y1=\"288\" x2=\"175\" y2=\"350\" stroke=\"#111827\" stroke-width=\"5\"/>\n<line x1=\"175\" y1=\"310\" x2=\"135\" y2=\"345\" stroke=\"#111827\" stroke-width=\"5\"/>\n<line x1=\"175\" y1=\"310\" x2=\"220\" y2=\"280\" stroke=\"#111827\" stroke-width=\"5\"/>\n<line x1=\"175\" y1=\"350\" x2=\"140\" y2=\"405\" stroke=\"#111827\" stroke-width=\"5\"/>\n<line x1=\"175\" y1=\"350\" x2=\"205\" y2=\"405\" stroke=\"#111827\" stroke-width=\"5\"/>\n\n<!-- M0 -->\n<circle cx=\"225\" cy=\"260\" r=\"9\" fill=\"#111827\"/>\n<text x=\"236\" y=\"253\" font-size=\"25\">M₀</text>\n\n<!-- initial velocity -->\n<line x1=\"225\" y1=\"260\" x2=\"355\" y2=\"165\" stroke=\"#111827\" stroke-width=\"4\" marker-end=\"url(#a23sp)\"/>\n<text x=\"338\" y=\"150\" font-size=\"26\">v₀</text>\n<line x1=\"225\" y1=\"260\" x2=\"380\" y2=\"260\" stroke=\"#6b7280\" stroke-width=\"2\" stroke-dasharray=\"8 6\"/>\n<path d=\"M295 260 A70 70 0 0 1 330 205\" fill=\"none\" stroke=\"#111827\" stroke-width=\"2\"/>\n<text x=\"304\" y=\"238\" font-size=\"27\">α</text>\n\n<!-- initial-coordinate guides -->\n<line x1=\"225\" y1=\"260\" x2=\"225\" y2=\"420\" stroke=\"#9ca3af\" stroke-width=\"2\" stroke-dasharray=\"6 5\"/>\n<line x1=\"150\" y1=\"260\" x2=\"225\" y2=\"260\" stroke=\"#9ca3af\" stroke-width=\"2\" stroke-dasharray=\"6 5\"/>\n<text x=\"175\" y=\"445\" font-size=\"21\">x₀=0,5m</text>\n<text x=\"68\" y=\"270\" font-size=\"21\">y₀=2,1m</text>\n\n<!-- landing point M -->\n<circle cx=\"720\" cy=\"420\" r=\"7\" fill=\"#111827\"/>\n<text x=\"710\" y=\"455\" font-size=\"26\">M</text>\n<text x=\"450\" y=\"495\" text-anchor=\"middle\" font-size=\"23\" direction=\"rtl\">الشكل (3)</text>\n</svg>",
+      "render_mode": "inline",
+      "responsive": true
+    },
+    {
+      "id": "2023_s01_ex02_fig4",
+      "type": "svg",
+      "usage": "statement",
+      "placement": "statement",
+      "title": "الشكل (4)",
+      "description": "المسافة الأفقية المحققة x_M بدلالة زاوية القذف α.",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 780 480\" role=\"img\" aria-label=\"الشكل 4 - المسافة المحققة بدلالة زاوية القذف\">\n<rect width=\"780\" height=\"480\" fill=\"white\"/>\n<defs><marker id=\"a23rg\" markerWidth=\"9\" markerHeight=\"9\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L0,6 L9,3 z\" fill=\"#111827\"/></marker></defs>\n<g stroke=\"#d1d5db\" stroke-width=\"1\">\n<line x1=\"95\" y1=\"365\" x2=\"690\" y2=\"365\"/><line x1=\"95\" y1=\"337\" x2=\"690\" y2=\"337\"/><line x1=\"95\" y1=\"309\" x2=\"690\" y2=\"309\"/><line x1=\"95\" y1=\"281\" x2=\"690\" y2=\"281\"/><line x1=\"95\" y1=\"253\" x2=\"690\" y2=\"253\"/><line x1=\"95\" y1=\"225\" x2=\"690\" y2=\"225\"/><line x1=\"95\" y1=\"197\" x2=\"690\" y2=\"197\"/><line x1=\"95\" y1=\"169\" x2=\"690\" y2=\"169\"/><line x1=\"95\" y1=\"141\" x2=\"690\" y2=\"141\"/><line x1=\"95\" y1=\"113\" x2=\"690\" y2=\"113\"/><line x1=\"95\" y1=\"85\" x2=\"690\" y2=\"85\"/>\n<line x1=\"110.0\" y1=\"65\" x2=\"110.0\" y2=\"365\"/><line x1=\"138.5\" y1=\"65\" x2=\"138.5\" y2=\"365\"/><line x1=\"167.0\" y1=\"65\" x2=\"167.0\" y2=\"365\"/><line x1=\"195.5\" y1=\"65\" x2=\"195.5\" y2=\"365\"/><line x1=\"224.0\" y1=\"65\" x2=\"224.0\" y2=\"365\"/><line x1=\"252.5\" y1=\"65\" x2=\"252.5\" y2=\"365\"/><line x1=\"281.0\" y1=\"65\" x2=\"281.0\" y2=\"365\"/><line x1=\"309.5\" y1=\"65\" x2=\"309.5\" y2=\"365\"/><line x1=\"338.0\" y1=\"65\" x2=\"338.0\" y2=\"365\"/><line x1=\"366.5\" y1=\"65\" x2=\"366.5\" y2=\"365\"/><line x1=\"395.0\" y1=\"65\" x2=\"395.0\" y2=\"365\"/><line x1=\"423.5\" y1=\"65\" x2=\"423.5\" y2=\"365\"/><line x1=\"452.0\" y1=\"65\" x2=\"452.0\" y2=\"365\"/><line x1=\"480.5\" y1=\"65\" x2=\"480.5\" y2=\"365\"/><line x1=\"509.0\" y1=\"65\" x2=\"509.0\" y2=\"365\"/><line x1=\"537.5\" y1=\"65\" x2=\"537.5\" y2=\"365\"/><line x1=\"566.0\" y1=\"65\" x2=\"566.0\" y2=\"365\"/><line x1=\"594.5\" y1=\"65\" x2=\"594.5\" y2=\"365\"/><line x1=\"623.0\" y1=\"65\" x2=\"623.0\" y2=\"365\"/><line x1=\"651.5\" y1=\"65\" x2=\"651.5\" y2=\"365\"/><line x1=\"680.0\" y1=\"65\" x2=\"680.0\" y2=\"365\"/>\n</g>\n<line x1=\"95\" y1=\"365\" x2=\"715\" y2=\"365\" stroke=\"#111827\" stroke-width=\"3\" marker-end=\"url(#a23rg)\"/>\n<line x1=\"95\" y1=\"390\" x2=\"95\" y2=\"45\" stroke=\"#111827\" stroke-width=\"3\" marker-end=\"url(#a23rg)\"/>\n<polyline points=\"110.0,156.3 117.1,152.2 124.2,148.2 131.4,144.4 138.5,140.8 145.6,137.3 152.8,133.9 159.9,130.7 167.0,127.6 174.1,124.7 181.2,122.0 188.4,119.3 195.5,116.9 202.6,114.6 209.8,112.4 216.9,110.4 224.0,108.5 231.1,106.8 238.2,105.3 245.4,103.9 252.5,102.6 259.6,101.6 266.8,100.6 273.9,99.9 281.0,99.3 288.1,98.8 295.2,98.5 302.4,98.4 309.5,98.4 316.6,98.6 323.8,98.9 330.9,99.4 338.0,100.1 345.1,100.9 352.2,101.9 359.4,103.0 366.5,104.3 373.6,105.8 380.8,107.4 387.9,109.2 395.0,111.2 402.1,113.3 409.2,115.6 416.4,118.0 423.5,120.6 430.6,123.4 437.8,126.3 444.9,129.4 452.0,132.7 459.1,136.1 466.2,139.7 473.4,143.4 480.5,147.3 487.6,151.4 494.8,155.6 501.9,160.0 509.0,164.6 516.1,169.3 523.2,174.2 530.4,179.3 537.5,184.5 544.6,189.8 551.8,195.4 558.9,201.1 566.0,207.0 573.1,213.0 580.2,219.2 587.4,225.5 594.5,232.0 601.6,238.7 608.8,245.5 615.9,252.5 623.0,259.7 630.1,267.0 637.2,274.5 644.4,282.1 651.5,289.9 658.6,297.9 665.8,306.0 672.9,314.2 680.0,322.7\" fill=\"none\" stroke=\"#111827\" stroke-width=\"5\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n<line x1=\"309.5\" y1=\"365\" x2=\"309.5\" y2=\"82\" stroke=\"#6b7280\" stroke-width=\"2\" stroke-dasharray=\"7 6\"/>\n<text x=\"18\" y=\"57\" font-size=\"25\">x_M(m)</text>\n<text x=\"690\" y=\"400\" font-size=\"25\">α(°)</text>\n<text x=\"97\" y=\"395\" font-size=\"20\">35</text>\n<text x=\"299.5\" y=\"395\" font-size=\"20\">42</text>\n<text x=\"665\" y=\"395\" font-size=\"20\">55</text>\n<text x=\"42\" y=\"93\" font-size=\"20\">19,47</text>\n<text x=\"390\" y=\"450\" text-anchor=\"middle\" font-size=\"23\" direction=\"rtl\">الشكل (4): x_M=f(α)</text>\n</svg>",
+      "render_mode": "inline",
+      "responsive": true
+    }
+  ],
+  "statement_graphs": [
+    {
+      "id": "2023_s01_ex02_fig3",
+      "type": "svg",
+      "usage": "statement",
+      "placement": "statement",
+      "title": "الشكل (3)",
+      "description": "المعلم الأرضي ووضعية القذف الابتدائية من النقطة M₀.",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 900 520\" role=\"img\" aria-label=\"الشكل 3 - قذف الكرة المعدنية\">\n<rect width=\"900\" height=\"520\" fill=\"white\"/>\n<defs><marker id=\"a23sp\" markerWidth=\"10\" markerHeight=\"10\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L0,6 L9,3 z\" fill=\"#111827\"/></marker></defs>\n<!-- axes -->\n<line x1=\"120\" y1=\"420\" x2=\"800\" y2=\"420\" stroke=\"#111827\" stroke-width=\"3\" marker-end=\"url(#a23sp)\"/>\n<line x1=\"150\" y1=\"455\" x2=\"150\" y2=\"70\" stroke=\"#111827\" stroke-width=\"3\" marker-end=\"url(#a23sp)\"/>\n<text x=\"810\" y=\"450\" font-size=\"28\">x(m)</text>\n<text x=\"95\" y=\"80\" font-size=\"28\">y(m)</text>\n<text x=\"128\" y=\"455\" font-size=\"26\">O</text>\n\n<!-- simple athlete schematic -->\n<circle cx=\"175\" cy=\"265\" r=\"23\" fill=\"none\" stroke=\"#111827\" stroke-width=\"4\"/>\n<line x1=\"175\" y1=\"288\" x2=\"175\" y2=\"350\" stroke=\"#111827\" stroke-width=\"5\"/>\n<line x1=\"175\" y1=\"310\" x2=\"135\" y2=\"345\" stroke=\"#111827\" stroke-width=\"5\"/>\n<line x1=\"175\" y1=\"310\" x2=\"220\" y2=\"280\" stroke=\"#111827\" stroke-width=\"5\"/>\n<line x1=\"175\" y1=\"350\" x2=\"140\" y2=\"405\" stroke=\"#111827\" stroke-width=\"5\"/>\n<line x1=\"175\" y1=\"350\" x2=\"205\" y2=\"405\" stroke=\"#111827\" stroke-width=\"5\"/>\n\n<!-- M0 -->\n<circle cx=\"225\" cy=\"260\" r=\"9\" fill=\"#111827\"/>\n<text x=\"236\" y=\"253\" font-size=\"25\">M₀</text>\n\n<!-- initial velocity -->\n<line x1=\"225\" y1=\"260\" x2=\"355\" y2=\"165\" stroke=\"#111827\" stroke-width=\"4\" marker-end=\"url(#a23sp)\"/>\n<text x=\"338\" y=\"150\" font-size=\"26\">v₀</text>\n<line x1=\"225\" y1=\"260\" x2=\"380\" y2=\"260\" stroke=\"#6b7280\" stroke-width=\"2\" stroke-dasharray=\"8 6\"/>\n<path d=\"M295 260 A70 70 0 0 1 330 205\" fill=\"none\" stroke=\"#111827\" stroke-width=\"2\"/>\n<text x=\"304\" y=\"238\" font-size=\"27\">α</text>\n\n<!-- initial-coordinate guides -->\n<line x1=\"225\" y1=\"260\" x2=\"225\" y2=\"420\" stroke=\"#9ca3af\" stroke-width=\"2\" stroke-dasharray=\"6 5\"/>\n<line x1=\"150\" y1=\"260\" x2=\"225\" y2=\"260\" stroke=\"#9ca3af\" stroke-width=\"2\" stroke-dasharray=\"6 5\"/>\n<text x=\"175\" y=\"445\" font-size=\"21\">x₀=0,5m</text>\n<text x=\"68\" y=\"270\" font-size=\"21\">y₀=2,1m</text>\n\n<!-- landing point M -->\n<circle cx=\"720\" cy=\"420\" r=\"7\" fill=\"#111827\"/>\n<text x=\"710\" y=\"455\" font-size=\"26\">M</text>\n<text x=\"450\" y=\"495\" text-anchor=\"middle\" font-size=\"23\" direction=\"rtl\">الشكل (3)</text>\n</svg>",
+      "render_mode": "inline",
+      "responsive": true
+    },
+    {
+      "id": "2023_s01_ex02_fig4",
+      "type": "svg",
+      "usage": "statement",
+      "placement": "statement",
+      "title": "الشكل (4)",
+      "description": "المسافة الأفقية المحققة x_M بدلالة زاوية القذف α.",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 780 480\" role=\"img\" aria-label=\"الشكل 4 - المسافة المحققة بدلالة زاوية القذف\">\n<rect width=\"780\" height=\"480\" fill=\"white\"/>\n<defs><marker id=\"a23rg\" markerWidth=\"9\" markerHeight=\"9\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L0,6 L9,3 z\" fill=\"#111827\"/></marker></defs>\n<g stroke=\"#d1d5db\" stroke-width=\"1\">\n<line x1=\"95\" y1=\"365\" x2=\"690\" y2=\"365\"/><line x1=\"95\" y1=\"337\" x2=\"690\" y2=\"337\"/><line x1=\"95\" y1=\"309\" x2=\"690\" y2=\"309\"/><line x1=\"95\" y1=\"281\" x2=\"690\" y2=\"281\"/><line x1=\"95\" y1=\"253\" x2=\"690\" y2=\"253\"/><line x1=\"95\" y1=\"225\" x2=\"690\" y2=\"225\"/><line x1=\"95\" y1=\"197\" x2=\"690\" y2=\"197\"/><line x1=\"95\" y1=\"169\" x2=\"690\" y2=\"169\"/><line x1=\"95\" y1=\"141\" x2=\"690\" y2=\"141\"/><line x1=\"95\" y1=\"113\" x2=\"690\" y2=\"113\"/><line x1=\"95\" y1=\"85\" x2=\"690\" y2=\"85\"/>\n<line x1=\"110.0\" y1=\"65\" x2=\"110.0\" y2=\"365\"/><line x1=\"138.5\" y1=\"65\" x2=\"138.5\" y2=\"365\"/><line x1=\"167.0\" y1=\"65\" x2=\"167.0\" y2=\"365\"/><line x1=\"195.5\" y1=\"65\" x2=\"195.5\" y2=\"365\"/><line x1=\"224.0\" y1=\"65\" x2=\"224.0\" y2=\"365\"/><line x1=\"252.5\" y1=\"65\" x2=\"252.5\" y2=\"365\"/><line x1=\"281.0\" y1=\"65\" x2=\"281.0\" y2=\"365\"/><line x1=\"309.5\" y1=\"65\" x2=\"309.5\" y2=\"365\"/><line x1=\"338.0\" y1=\"65\" x2=\"338.0\" y2=\"365\"/><line x1=\"366.5\" y1=\"65\" x2=\"366.5\" y2=\"365\"/><line x1=\"395.0\" y1=\"65\" x2=\"395.0\" y2=\"365\"/><line x1=\"423.5\" y1=\"65\" x2=\"423.5\" y2=\"365\"/><line x1=\"452.0\" y1=\"65\" x2=\"452.0\" y2=\"365\"/><line x1=\"480.5\" y1=\"65\" x2=\"480.5\" y2=\"365\"/><line x1=\"509.0\" y1=\"65\" x2=\"509.0\" y2=\"365\"/><line x1=\"537.5\" y1=\"65\" x2=\"537.5\" y2=\"365\"/><line x1=\"566.0\" y1=\"65\" x2=\"566.0\" y2=\"365\"/><line x1=\"594.5\" y1=\"65\" x2=\"594.5\" y2=\"365\"/><line x1=\"623.0\" y1=\"65\" x2=\"623.0\" y2=\"365\"/><line x1=\"651.5\" y1=\"65\" x2=\"651.5\" y2=\"365\"/><line x1=\"680.0\" y1=\"65\" x2=\"680.0\" y2=\"365\"/>\n</g>\n<line x1=\"95\" y1=\"365\" x2=\"715\" y2=\"365\" stroke=\"#111827\" stroke-width=\"3\" marker-end=\"url(#a23rg)\"/>\n<line x1=\"95\" y1=\"390\" x2=\"95\" y2=\"45\" stroke=\"#111827\" stroke-width=\"3\" marker-end=\"url(#a23rg)\"/>\n<polyline points=\"110.0,156.3 117.1,152.2 124.2,148.2 131.4,144.4 138.5,140.8 145.6,137.3 152.8,133.9 159.9,130.7 167.0,127.6 174.1,124.7 181.2,122.0 188.4,119.3 195.5,116.9 202.6,114.6 209.8,112.4 216.9,110.4 224.0,108.5 231.1,106.8 238.2,105.3 245.4,103.9 252.5,102.6 259.6,101.6 266.8,100.6 273.9,99.9 281.0,99.3 288.1,98.8 295.2,98.5 302.4,98.4 309.5,98.4 316.6,98.6 323.8,98.9 330.9,99.4 338.0,100.1 345.1,100.9 352.2,101.9 359.4,103.0 366.5,104.3 373.6,105.8 380.8,107.4 387.9,109.2 395.0,111.2 402.1,113.3 409.2,115.6 416.4,118.0 423.5,120.6 430.6,123.4 437.8,126.3 444.9,129.4 452.0,132.7 459.1,136.1 466.2,139.7 473.4,143.4 480.5,147.3 487.6,151.4 494.8,155.6 501.9,160.0 509.0,164.6 516.1,169.3 523.2,174.2 530.4,179.3 537.5,184.5 544.6,189.8 551.8,195.4 558.9,201.1 566.0,207.0 573.1,213.0 580.2,219.2 587.4,225.5 594.5,232.0 601.6,238.7 608.8,245.5 615.9,252.5 623.0,259.7 630.1,267.0 637.2,274.5 644.4,282.1 651.5,289.9 658.6,297.9 665.8,306.0 672.9,314.2 680.0,322.7\" fill=\"none\" stroke=\"#111827\" stroke-width=\"5\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n<line x1=\"309.5\" y1=\"365\" x2=\"309.5\" y2=\"82\" stroke=\"#6b7280\" stroke-width=\"2\" stroke-dasharray=\"7 6\"/>\n<text x=\"18\" y=\"57\" font-size=\"25\">x_M(m)</text>\n<text x=\"690\" y=\"400\" font-size=\"25\">α(°)</text>\n<text x=\"97\" y=\"395\" font-size=\"20\">35</text>\n<text x=\"299.5\" y=\"395\" font-size=\"20\">42</text>\n<text x=\"665\" y=\"395\" font-size=\"20\">55</text>\n<text x=\"42\" y=\"93\" font-size=\"20\">19,47</text>\n<text x=\"390\" y=\"450\" text-anchor=\"middle\" font-size=\"23\" direction=\"rtl\">الشكل (4): x_M=f(α)</text>\n</svg>",
+      "render_mode": "inline",
+      "responsive": true
+    }
+  ],
+  "questions": [
+    {
+      "content_type": "question",
+      "axis_tags": [
+        "projectile_motion",
+        "free_fall_motion",
+        "newton_laws_and_forces",
+        "experimental_motion_graph"
+      ],
+      "id": "2023_s01_ex02_q1_part_01",
+      "source_question_id": "2023_s01_ex02_q1",
+      "number": 1,
+      "display_order": 1,
+      "display_label": "1.1",
+      "text": "1.1 شعاع الموضع OM₀.",
+      "section_title": "I. تحليل ودراسة فيديو حركة قذف الكرة المعدنية",
+      "context": "1. اكتب في المعلم (O,i,j) في اللحظة الابتدائية t=0، العبارات الشعاعية لـ:",
+      "solution": {
+        "strategy": "نحل هذا المطلوب مستقلا باستعمال معطيات التمرين والقانون الفيزيائي المناسب، ثم نتحقق من النتيجة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "1.1 — شعاع الموضع الابتدائي",
+            "explanation": "بما أن \\(x_0=0.5m\\) و\\(y_0=2.1m\\): \\[\\boxed{\\overrightarrow{OM_0}=0.5\\,\\vec i+2.1\\,\\vec j}\\].",
+            "source_step_number": 1,
+            "result": "\\(\\boxed{\\overrightarrow{OM_0}=0.5\\,\\vec i+2.1\\,\\vec j}\\)"
+          }
+        ],
+        "final_answer": "النتيجة: \\(\\boxed{\\overrightarrow{OM_0}=0.5\\,\\vec i+2.1\\,\\vec j}\\)"
+      },
+      "source_mapping": {
+        "source_line": 2,
+        "source_context_before_lines": [
+          1
+        ],
+        "source_context_after_lines": [],
+        "source_step_indexes": [
+          0
+        ]
+      }
+    },
+    {
+      "content_type": "question",
+      "axis_tags": [
+        "projectile_motion",
+        "free_fall_motion",
+        "newton_laws_and_forces",
+        "experimental_motion_graph"
+      ],
+      "id": "2023_s01_ex02_q1_part_02",
+      "source_question_id": "2023_s01_ex02_q1",
+      "number": 2,
+      "display_order": 2,
+      "display_label": "2.1",
+      "text": "2.1 شعاع السرعة الابتدائية v₀ بدلالة α.",
+      "solution": {
+        "strategy": "نحل هذا المطلوب مستقلا باستعمال معطيات التمرين والقانون الفيزيائي المناسب، ثم نتحقق من النتيجة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "2.1 — شعاع السرعة الابتدائية",
+            "explanation": "\\[v_{0x}=v_0\\cos\\alpha,\\qquad v_{0y}=v_0\\sin\\alpha.\\] ومع \\(v_0=12.9m.s^{-1}\\): \\[\\boxed{\\vec v_0=12.9\\cos\\alpha\\,\\vec i+12.9\\sin\\alpha\\,\\vec j}.\\]",
+            "source_step_number": 2,
+            "result": "\\(\\boxed{\\vec v_0=12.9\\cos\\alpha\\,\\vec i+12.9\\sin\\alpha\\,\\vec j}\\)"
+          }
+        ],
+        "final_answer": "النتيجة: \\(\\boxed{\\vec v_0=12.9\\cos\\alpha\\,\\vec i+12.9\\sin\\alpha\\,\\vec j}\\)"
+      },
+      "source_mapping": {
+        "source_line": 3,
+        "source_context_before_lines": [],
+        "source_context_after_lines": [],
+        "source_step_indexes": [
+          1
+        ]
+      }
+    },
+    {
+      "content_type": "question",
+      "axis_tags": [
+        "projectile_motion",
+        "free_fall_motion",
+        "newton_laws_and_forces",
+        "experimental_motion_graph"
+      ],
+      "id": "2023_s01_ex02_q1_part_03",
+      "source_question_id": "2023_s01_ex02_q1",
+      "number": 3,
+      "display_order": 3,
+      "display_label": "1.2",
+      "text": "1.2 بين أن شدة دافعة أرخميدس مهملة أمام ثقل الكرة.",
+      "context": "2. من أجل إحصاء القوى الخارجية المؤثرة على الكرة المعدنية:",
+      "solution": {
+        "strategy": "نحل هذا المطلوب مستقلا باستعمال معطيات التمرين والقانون الفيزيائي المناسب، ثم نتحقق من النتيجة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "1.2 — إهمال دافعة أرخميدس",
+            "explanation": "\\[P=mg=\\rho Vg,\\qquad \\Pi=\\rho_0Vg.\\] لذلك \\[\\frac{P}{\\Pi}=\\frac{\\rho}{\\rho_0}=\\frac{8000}{1.3}\\approx\\boxed{6154}.\\] إذن دافعة أرخميدس مهملة أمام الثقل.",
+            "source_step_number": 3,
+            "result": "\\(\\boxed{6154}\\)"
+          }
+        ],
+        "final_answer": "النتيجة: \\(\\boxed{6154}\\)"
+      },
+      "source_mapping": {
+        "source_line": 5,
+        "source_context_before_lines": [
+          4
+        ],
+        "source_context_after_lines": [],
+        "source_step_indexes": [
+          2
+        ]
+      }
+    },
+    {
+      "content_type": "question",
+      "axis_tags": [
+        "projectile_motion",
+        "free_fall_motion",
+        "newton_laws_and_forces",
+        "experimental_motion_graph"
+      ],
+      "id": "2023_s01_ex02_q1_part_04",
+      "source_question_id": "2023_s01_ex02_q1",
+      "number": 4,
+      "display_order": 4,
+      "display_label": "2.2",
+      "text": "2.2 باعتبار أن قوة احتكاك الكرة مع الهواء تعطى بالعبارة f=0,003v²، حيث لا تتجاوز سرعة مركز عطالة الكرة القيمة v=15m.s⁻¹ لما تصطدم بسطح الأرض، بين أنه يمكن إهمالها أمام ثقل الكرة.",
+      "solution": {
+        "strategy": "نحل هذا المطلوب مستقلا باستعمال معطيات التمرين والقانون الفيزيائي المناسب، ثم نتحقق من النتيجة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "2.2 — إهمال احتكاك الهواء",
+            "explanation": "أكبر قيمة للاحتكاك عندما \\(v=15m.s^{-1}\\): \\[f_{max}=0.003(15)^2=0.675N.\\] والثقل: \\[P=mg=7.27\\times9.8=71.246N.\\] ومنه \\[\\frac{P}{f_{max}}\\approx\\boxed{105.5}.\\] لذلك يمكن إهمال مقاومة الهواء أمام الثقل.",
+            "source_step_number": 4,
+            "result": "\\(\\boxed{105.5}\\)"
+          }
+        ],
+        "final_answer": "النتيجة: \\(\\boxed{105.5}\\)"
+      },
+      "source_mapping": {
+        "source_line": 6,
+        "source_context_before_lines": [],
+        "source_context_after_lines": [],
+        "source_step_indexes": [
+          3
+        ]
+      }
+    },
+    {
+      "content_type": "question",
+      "axis_tags": [
+        "projectile_motion",
+        "free_fall_motion",
+        "newton_laws_and_forces",
+        "experimental_motion_graph"
+      ],
+      "id": "2023_s01_ex02_q1_part_05",
+      "source_question_id": "2023_s01_ex02_q1",
+      "number": 5,
+      "display_order": 5,
+      "display_label": "1.3",
+      "text": "1.3 العبارة الشعاعية لشعاع تسارع مركز عطالة الكرة a_G في المعلم (O,i,j).",
+      "context": "3. بتطبيق القانون الثاني لنيوتن، جد:",
+      "solution": {
+        "strategy": "نحل هذا المطلوب مستقلا باستعمال معطيات التمرين والقانون الفيزيائي المناسب، ثم نتحقق من النتيجة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "1.3 — شعاع التسارع",
+            "explanation": "بعد إهمال دافعة أرخميدس والاحتكاك، القوة الوحيدة هي الثقل: \\[m\\vec a_G=m\\vec g.\\] بالإسقاط: \\(a_x=0\\)، \\(a_y=-g\\). إذن \\[\\boxed{\\vec a_G=-g\\,\\vec j=-9.8\\,\\vec j\\;(m.s^{-2})}.\\]",
+            "source_step_number": 5,
+            "result": "\\(\\boxed{\\vec a_G=-g\\,\\vec j=-9.8\\,\\vec j\\;(m.s^{-2})}\\)"
+          }
+        ],
+        "final_answer": "النتيجة: \\(\\boxed{\\vec a_G=-g\\,\\vec j=-9.8\\,\\vec j\\;(m.s^{-2})}\\)"
+      },
+      "source_mapping": {
+        "source_line": 8,
+        "source_context_before_lines": [
+          7
+        ],
+        "source_context_after_lines": [],
+        "source_step_indexes": [
+          4
+        ]
+      }
+    },
+    {
+      "content_type": "question",
+      "axis_tags": [
+        "projectile_motion",
+        "free_fall_motion",
+        "newton_laws_and_forces",
+        "experimental_motion_graph"
+      ],
+      "id": "2023_s01_ex02_q1_part_06",
+      "source_question_id": "2023_s01_ex02_q1",
+      "number": 6,
+      "display_order": 6,
+      "display_label": "2.3",
+      "text": "2.3 المعادلتان الزمنيتان اللتان تحققهما السرعتان v_x(t) وv_y(t) لمركز عطالة الكرة.",
+      "solution": {
+        "strategy": "نحل هذا المطلوب مستقلا باستعمال معطيات التمرين والقانون الفيزيائي المناسب، ثم نتحقق من النتيجة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "2.3 — المعادلتان الزمنيتان للسرعة",
+            "explanation": "بالتكامل مع الشروط الابتدائية: \\[\\boxed{v_x(t)=v_0\\cos\\alpha=12.9\\cos\\alpha}\\] و \\[\\boxed{v_y(t)=-gt+v_0\\sin\\alpha=-9.8t+12.9\\sin\\alpha}.\\]",
+            "source_step_number": 6,
+            "result": "\\(\\boxed{v_x(t)=v_0\\cos\\alpha=12.9\\cos\\alpha}\\) ، \\(\\boxed{v_y(t)=-gt+v_0\\sin\\alpha=-9.8t+12.9\\sin\\alpha}\\)"
+          }
+        ],
+        "final_answer": "النتيجة: \\(\\boxed{v_x(t)=v_0\\cos\\alpha=12.9\\cos\\alpha}\\) ، \\(\\boxed{v_y(t)=-gt+v_0\\sin\\alpha=-9.8t+12.9\\sin\\alpha}\\)"
+      },
+      "source_mapping": {
+        "source_line": 9,
+        "source_context_before_lines": [],
+        "source_context_after_lines": [],
+        "source_step_indexes": [
+          5
+        ]
+      }
+    },
+    {
+      "content_type": "question",
+      "axis_tags": [
+        "projectile_motion",
+        "free_fall_motion",
+        "newton_laws_and_forces",
+        "experimental_motion_graph"
+      ],
+      "id": "2023_s01_ex02_q1_part_07",
+      "source_question_id": "2023_s01_ex02_q1",
+      "number": 7,
+      "display_order": 7,
+      "display_label": "3.3",
+      "text": "3.3 المعادلتان الزمنيتان اللتان تحققهما الإحداثيتان x(t) وy(t) لمركز عطالة الكرة.",
+      "solution": {
+        "strategy": "نحل هذا المطلوب مستقلا باستعمال معطيات التمرين والقانون الفيزيائي المناسب، ثم نتحقق من النتيجة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "3.3 — المعادلتان الزمنيتان للموضع",
+            "explanation": "\\[\\boxed{x(t)=x_0+v_0\\cos\\alpha\\,t=0.5+12.9\\cos\\alpha\\,t}\\] و \\[\\boxed{y(t)=y_0+v_0\\sin\\alpha\\,t-\\frac12gt^2=2.1+12.9\\sin\\alpha\\,t-4.9t^2}.\\]",
+            "source_step_number": 7,
+            "result": "\\(\\boxed{x(t)=x_0+v_0\\cos\\alpha\\,t=0.5+12.9\\cos\\alpha\\,t}\\) ، \\(\\boxed{y(t)=y_0+v_0\\sin\\alpha\\,t-\\frac12gt^2=2.1+12.9\\sin\\alpha\\,t-4.9t^2}\\)"
+          }
+        ],
+        "final_answer": "النتيجة: \\(\\boxed{x(t)=x_0+v_0\\cos\\alpha\\,t=0.5+12.9\\cos\\alpha\\,t}\\) ، \\(\\boxed{y(t)=y_0+v_0\\sin\\alpha\\,t-\\frac12gt^2=2.1+12.9\\sin\\alpha\\,t-4.9t^2}\\)"
+      },
+      "source_mapping": {
+        "source_line": 10,
+        "source_context_before_lines": [],
+        "source_context_after_lines": [],
+        "source_step_indexes": [
+          6
+        ]
+      }
+    },
+    {
+      "content_type": "question",
+      "axis_tags": [
+        "projectile_motion",
+        "free_fall_motion",
+        "newton_laws_and_forces",
+        "experimental_motion_graph"
+      ],
+      "id": "2023_s01_ex02_q1_part_08",
+      "source_question_id": "2023_s01_ex02_q1",
+      "number": 8,
+      "display_order": 8,
+      "display_label": "II-1",
+      "text": "1. قيمة الزاوية α التي تحقق إنجازا مهما للرياضي.",
+      "section_title": "II. إبراز تأثير زاوية القذف α على المسافة المحققة",
+      "context": "II- إبراز تأثير زاوية القذف α على المسافة المحققة:\nباستعمال برنامج معلوماتي مناسب، تم الحصول على المنحنى البياني (الشكل(4)) الممثل لتغيرات المسافة المسجلة OM=x_M بدلالة زاوية القذف α، حيث M هو موضع اصطدام الكرة بأرضية الملعب، والزاوية α محصورة بين 35° و55°.\nبالاعتماد على المنحنى البياني، جد:",
+      "solution": {
+        "strategy": "نحل هذا المطلوب مستقلا باستعمال معطيات التمرين والقانون الفيزيائي المناسب، ثم نتحقق من النتيجة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "II-1 — زاوية القذف المثلى",
+            "explanation": "من قمة المنحنى \\(x_M=f(\\alpha)\\): \\[\\boxed{\\alpha\\approx42^\\circ}.\\] ووفق التصحيح تقبل القراءة في المجال \\(41^\\circ\\le\\alpha\\le43^\\circ\\).",
+            "source_step_number": 8,
+            "result": "\\(\\boxed{\\alpha\\approx42^\\circ}\\)"
+          }
+        ],
+        "final_answer": "النتيجة: \\(\\boxed{\\alpha\\approx42^\\circ}\\)"
+      },
+      "source_mapping": {
+        "source_line": 14,
+        "source_context_before_lines": [
+          11,
+          12,
+          13
+        ],
+        "source_context_after_lines": [],
+        "source_step_indexes": [
+          7
+        ]
+      }
+    },
+    {
+      "content_type": "question",
+      "axis_tags": [
+        "projectile_motion",
+        "free_fall_motion",
+        "newton_laws_and_forces",
+        "experimental_motion_graph"
+      ],
+      "id": "2023_s01_ex02_q1_part_09",
+      "source_question_id": "2023_s01_ex02_q1",
+      "number": 9,
+      "display_order": 9,
+      "display_label": "II-2",
+      "text": "2. قيمة x_M الموافقة في هذه الحالة.",
+      "solution": {
+        "strategy": "نحل هذا المطلوب مستقلا باستعمال معطيات التمرين والقانون الفيزيائي المناسب، ثم نتحقق من النتيجة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "II-2 — المسافة الموافقة",
+            "explanation": "من المنحنى عند الزاوية المثلى: \\[\\boxed{x_M\\approx19.47m}.\\]",
+            "source_step_number": 9,
+            "result": "\\(\\boxed{x_M\\approx19.47m}\\)"
+          }
+        ],
+        "final_answer": "النتيجة: \\(\\boxed{x_M\\approx19.47m}\\)"
+      },
+      "source_mapping": {
+        "source_line": 15,
+        "source_context_before_lines": [],
+        "source_context_after_lines": [],
+        "source_step_indexes": [
+          8
+        ]
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2023(20260911-113236).pdf",
+    "statement_figure_policy": "الشكلان 3 و4 قابلان لإعادة الرسم؛ أدرجا SVG مباشرة داخل JSON، دون صور خارجية.",
+    "renderer": "InlineSvgGraph",
+    "source_page_numbering": "نص التمرين في الصفحتين 2 و3 من PDF، والتصحيح في الصفحتين 12 و13.",
+    "react_compatibility": "نفس بنية ملفات bac_2019 المستعملة سابقا.",
+    "asset_base_path": "/phy/bac/math/2023/mechanics/shot_put/",
+    "correction_notes": [
+      "التصحيح الرسمي: P/Π=6154، P/f≈105.5، a_G=-g j، α≈42° (تقبل 41° إلى 43°)، x_M=19.47m."
+    ]
+  },
+  "subject_number": 1,
+  "asset_base_path": "/phy/bac/math/2023/mechanics/shot_put/",
+  "legacy_combined_questions": [
+    {
+      "id": "2023_s01_ex02_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1. اكتب في المعلم (O,i,j) في اللحظة الابتدائية t=0، العبارات الشعاعية لـ:\n1.1 شعاع الموضع OM₀.\n2.1 شعاع السرعة الابتدائية v₀ بدلالة α.\n2. من أجل إحصاء القوى الخارجية المؤثرة على الكرة المعدنية:\n1.2 بين أن شدة دافعة أرخميدس مهملة أمام ثقل الكرة.\n2.2 باعتبار أن قوة احتكاك الكرة مع الهواء تعطى بالعبارة f=0,003v²، حيث لا تتجاوز سرعة مركز عطالة الكرة القيمة v=15m.s⁻¹ لما تصطدم بسطح الأرض، بين أنه يمكن إهمالها أمام ثقل الكرة.\n3. بتطبيق القانون الثاني لنيوتن، جد:\n1.3 العبارة الشعاعية لشعاع تسارع مركز عطالة الكرة a_G في المعلم (O,i,j).\n2.3 المعادلتان الزمنيتان اللتان تحققهما السرعتان v_x(t) وv_y(t) لمركز عطالة الكرة.\n3.3 المعادلتان الزمنيتان اللتان تحققهما الإحداثيتان x(t) وy(t) لمركز عطالة الكرة.\nII- إبراز تأثير زاوية القذف α على المسافة المحققة:\nباستعمال برنامج معلوماتي مناسب، تم الحصول على المنحنى البياني (الشكل(4)) الممثل لتغيرات المسافة المسجلة OM=x_M بدلالة زاوية القذف α، حيث M هو موضع اصطدام الكرة بأرضية الملعب، والزاوية α محصورة بين 35° و55°.\nبالاعتماد على المنحنى البياني، جد:\n1. قيمة الزاوية α التي تحقق إنجازا مهما للرياضي.\n2. قيمة x_M الموافقة في هذه الحالة.",
+      "axis_tags": [
+        "projectile_motion",
+        "free_fall_motion",
+        "newton_laws_and_forces",
+        "experimental_motion_graph"
+      ],
+      "figures": [
+        {
+          "id": "2023_s01_ex02_fig3",
+          "type": "svg",
+          "usage": "statement",
+          "placement": "statement",
+          "title": "الشكل (3)",
+          "description": "المعلم الأرضي ووضعية القذف الابتدائية من النقطة M₀.",
+          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 900 520\" role=\"img\" aria-label=\"الشكل 3 - قذف الكرة المعدنية\">\n<rect width=\"900\" height=\"520\" fill=\"white\"/>\n<defs><marker id=\"a23sp\" markerWidth=\"10\" markerHeight=\"10\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L0,6 L9,3 z\" fill=\"#111827\"/></marker></defs>\n<!-- axes -->\n<line x1=\"120\" y1=\"420\" x2=\"800\" y2=\"420\" stroke=\"#111827\" stroke-width=\"3\" marker-end=\"url(#a23sp)\"/>\n<line x1=\"150\" y1=\"455\" x2=\"150\" y2=\"70\" stroke=\"#111827\" stroke-width=\"3\" marker-end=\"url(#a23sp)\"/>\n<text x=\"810\" y=\"450\" font-size=\"28\">x(m)</text>\n<text x=\"95\" y=\"80\" font-size=\"28\">y(m)</text>\n<text x=\"128\" y=\"455\" font-size=\"26\">O</text>\n\n<!-- simple athlete schematic -->\n<circle cx=\"175\" cy=\"265\" r=\"23\" fill=\"none\" stroke=\"#111827\" stroke-width=\"4\"/>\n<line x1=\"175\" y1=\"288\" x2=\"175\" y2=\"350\" stroke=\"#111827\" stroke-width=\"5\"/>\n<line x1=\"175\" y1=\"310\" x2=\"135\" y2=\"345\" stroke=\"#111827\" stroke-width=\"5\"/>\n<line x1=\"175\" y1=\"310\" x2=\"220\" y2=\"280\" stroke=\"#111827\" stroke-width=\"5\"/>\n<line x1=\"175\" y1=\"350\" x2=\"140\" y2=\"405\" stroke=\"#111827\" stroke-width=\"5\"/>\n<line x1=\"175\" y1=\"350\" x2=\"205\" y2=\"405\" stroke=\"#111827\" stroke-width=\"5\"/>\n\n<!-- M0 -->\n<circle cx=\"225\" cy=\"260\" r=\"9\" fill=\"#111827\"/>\n<text x=\"236\" y=\"253\" font-size=\"25\">M₀</text>\n\n<!-- initial velocity -->\n<line x1=\"225\" y1=\"260\" x2=\"355\" y2=\"165\" stroke=\"#111827\" stroke-width=\"4\" marker-end=\"url(#a23sp)\"/>\n<text x=\"338\" y=\"150\" font-size=\"26\">v₀</text>\n<line x1=\"225\" y1=\"260\" x2=\"380\" y2=\"260\" stroke=\"#6b7280\" stroke-width=\"2\" stroke-dasharray=\"8 6\"/>\n<path d=\"M295 260 A70 70 0 0 1 330 205\" fill=\"none\" stroke=\"#111827\" stroke-width=\"2\"/>\n<text x=\"304\" y=\"238\" font-size=\"27\">α</text>\n\n<!-- initial-coordinate guides -->\n<line x1=\"225\" y1=\"260\" x2=\"225\" y2=\"420\" stroke=\"#9ca3af\" stroke-width=\"2\" stroke-dasharray=\"6 5\"/>\n<line x1=\"150\" y1=\"260\" x2=\"225\" y2=\"260\" stroke=\"#9ca3af\" stroke-width=\"2\" stroke-dasharray=\"6 5\"/>\n<text x=\"175\" y=\"445\" font-size=\"21\">x₀=0,5m</text>\n<text x=\"68\" y=\"270\" font-size=\"21\">y₀=2,1m</text>\n\n<!-- landing point M -->\n<circle cx=\"720\" cy=\"420\" r=\"7\" fill=\"#111827\"/>\n<text x=\"710\" y=\"455\" font-size=\"26\">M</text>\n<text x=\"450\" y=\"495\" text-anchor=\"middle\" font-size=\"23\" direction=\"rtl\">الشكل (3)</text>\n</svg>",
+          "render_mode": "inline",
+          "responsive": true
+        },
+        {
+          "id": "2023_s01_ex02_fig4",
+          "type": "svg",
+          "usage": "statement",
+          "placement": "statement",
+          "title": "الشكل (4)",
+          "description": "المسافة الأفقية المحققة x_M بدلالة زاوية القذف α.",
+          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 780 480\" role=\"img\" aria-label=\"الشكل 4 - المسافة المحققة بدلالة زاوية القذف\">\n<rect width=\"780\" height=\"480\" fill=\"white\"/>\n<defs><marker id=\"a23rg\" markerWidth=\"9\" markerHeight=\"9\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L0,6 L9,3 z\" fill=\"#111827\"/></marker></defs>\n<g stroke=\"#d1d5db\" stroke-width=\"1\">\n<line x1=\"95\" y1=\"365\" x2=\"690\" y2=\"365\"/><line x1=\"95\" y1=\"337\" x2=\"690\" y2=\"337\"/><line x1=\"95\" y1=\"309\" x2=\"690\" y2=\"309\"/><line x1=\"95\" y1=\"281\" x2=\"690\" y2=\"281\"/><line x1=\"95\" y1=\"253\" x2=\"690\" y2=\"253\"/><line x1=\"95\" y1=\"225\" x2=\"690\" y2=\"225\"/><line x1=\"95\" y1=\"197\" x2=\"690\" y2=\"197\"/><line x1=\"95\" y1=\"169\" x2=\"690\" y2=\"169\"/><line x1=\"95\" y1=\"141\" x2=\"690\" y2=\"141\"/><line x1=\"95\" y1=\"113\" x2=\"690\" y2=\"113\"/><line x1=\"95\" y1=\"85\" x2=\"690\" y2=\"85\"/>\n<line x1=\"110.0\" y1=\"65\" x2=\"110.0\" y2=\"365\"/><line x1=\"138.5\" y1=\"65\" x2=\"138.5\" y2=\"365\"/><line x1=\"167.0\" y1=\"65\" x2=\"167.0\" y2=\"365\"/><line x1=\"195.5\" y1=\"65\" x2=\"195.5\" y2=\"365\"/><line x1=\"224.0\" y1=\"65\" x2=\"224.0\" y2=\"365\"/><line x1=\"252.5\" y1=\"65\" x2=\"252.5\" y2=\"365\"/><line x1=\"281.0\" y1=\"65\" x2=\"281.0\" y2=\"365\"/><line x1=\"309.5\" y1=\"65\" x2=\"309.5\" y2=\"365\"/><line x1=\"338.0\" y1=\"65\" x2=\"338.0\" y2=\"365\"/><line x1=\"366.5\" y1=\"65\" x2=\"366.5\" y2=\"365\"/><line x1=\"395.0\" y1=\"65\" x2=\"395.0\" y2=\"365\"/><line x1=\"423.5\" y1=\"65\" x2=\"423.5\" y2=\"365\"/><line x1=\"452.0\" y1=\"65\" x2=\"452.0\" y2=\"365\"/><line x1=\"480.5\" y1=\"65\" x2=\"480.5\" y2=\"365\"/><line x1=\"509.0\" y1=\"65\" x2=\"509.0\" y2=\"365\"/><line x1=\"537.5\" y1=\"65\" x2=\"537.5\" y2=\"365\"/><line x1=\"566.0\" y1=\"65\" x2=\"566.0\" y2=\"365\"/><line x1=\"594.5\" y1=\"65\" x2=\"594.5\" y2=\"365\"/><line x1=\"623.0\" y1=\"65\" x2=\"623.0\" y2=\"365\"/><line x1=\"651.5\" y1=\"65\" x2=\"651.5\" y2=\"365\"/><line x1=\"680.0\" y1=\"65\" x2=\"680.0\" y2=\"365\"/>\n</g>\n<line x1=\"95\" y1=\"365\" x2=\"715\" y2=\"365\" stroke=\"#111827\" stroke-width=\"3\" marker-end=\"url(#a23rg)\"/>\n<line x1=\"95\" y1=\"390\" x2=\"95\" y2=\"45\" stroke=\"#111827\" stroke-width=\"3\" marker-end=\"url(#a23rg)\"/>\n<polyline points=\"110.0,156.3 117.1,152.2 124.2,148.2 131.4,144.4 138.5,140.8 145.6,137.3 152.8,133.9 159.9,130.7 167.0,127.6 174.1,124.7 181.2,122.0 188.4,119.3 195.5,116.9 202.6,114.6 209.8,112.4 216.9,110.4 224.0,108.5 231.1,106.8 238.2,105.3 245.4,103.9 252.5,102.6 259.6,101.6 266.8,100.6 273.9,99.9 281.0,99.3 288.1,98.8 295.2,98.5 302.4,98.4 309.5,98.4 316.6,98.6 323.8,98.9 330.9,99.4 338.0,100.1 345.1,100.9 352.2,101.9 359.4,103.0 366.5,104.3 373.6,105.8 380.8,107.4 387.9,109.2 395.0,111.2 402.1,113.3 409.2,115.6 416.4,118.0 423.5,120.6 430.6,123.4 437.8,126.3 444.9,129.4 452.0,132.7 459.1,136.1 466.2,139.7 473.4,143.4 480.5,147.3 487.6,151.4 494.8,155.6 501.9,160.0 509.0,164.6 516.1,169.3 523.2,174.2 530.4,179.3 537.5,184.5 544.6,189.8 551.8,195.4 558.9,201.1 566.0,207.0 573.1,213.0 580.2,219.2 587.4,225.5 594.5,232.0 601.6,238.7 608.8,245.5 615.9,252.5 623.0,259.7 630.1,267.0 637.2,274.5 644.4,282.1 651.5,289.9 658.6,297.9 665.8,306.0 672.9,314.2 680.0,322.7\" fill=\"none\" stroke=\"#111827\" stroke-width=\"5\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n<line x1=\"309.5\" y1=\"365\" x2=\"309.5\" y2=\"82\" stroke=\"#6b7280\" stroke-width=\"2\" stroke-dasharray=\"7 6\"/>\n<text x=\"18\" y=\"57\" font-size=\"25\">x_M(m)</text>\n<text x=\"690\" y=\"400\" font-size=\"25\">α(°)</text>\n<text x=\"97\" y=\"395\" font-size=\"20\">35</text>\n<text x=\"299.5\" y=\"395\" font-size=\"20\">42</text>\n<text x=\"665\" y=\"395\" font-size=\"20\">55</text>\n<text x=\"42\" y=\"93\" font-size=\"20\">19,47</text>\n<text x=\"390\" y=\"450\" text-anchor=\"middle\" font-size=\"23\" direction=\"rtl\">الشكل (4): x_M=f(α)</text>\n</svg>",
+          "render_mode": "inline",
+          "responsive": true
+        }
+      ],
+      "solution": {
+        "strategy": "نقارن دافعة أرخميدس والاحتكاك بالثقل لإثبات إمكان إهمالهما، ثم نطبق القانون الثاني لنيوتن على حركة قذف تحت تأثير الثقل فقط، وأخيرا نقرأ من الشكل (4) زاوية القذف التي تعطي أكبر مسافة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "1.1 — شعاع الموضع الابتدائي",
+            "explanation": "بما أن \\(x_0=0.5m\\) و\\(y_0=2.1m\\): \\[\\boxed{\\overrightarrow{OM_0}=0.5\\,\\vec i+2.1\\,\\vec j}\\]."
+          },
+          {
+            "step_number": 2,
+            "title": "2.1 — شعاع السرعة الابتدائية",
+            "explanation": "\\[v_{0x}=v_0\\cos\\alpha,\\qquad v_{0y}=v_0\\sin\\alpha.\\] ومع \\(v_0=12.9m.s^{-1}\\): \\[\\boxed{\\vec v_0=12.9\\cos\\alpha\\,\\vec i+12.9\\sin\\alpha\\,\\vec j}.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "1.2 — إهمال دافعة أرخميدس",
+            "explanation": "\\[P=mg=\\rho Vg,\\qquad \\Pi=\\rho_0Vg.\\] لذلك \\[\\frac{P}{\\Pi}=\\frac{\\rho}{\\rho_0}=\\frac{8000}{1.3}\\approx\\boxed{6154}.\\] إذن دافعة أرخميدس مهملة أمام الثقل."
+          },
+          {
+            "step_number": 4,
+            "title": "2.2 — إهمال احتكاك الهواء",
+            "explanation": "أكبر قيمة للاحتكاك عندما \\(v=15m.s^{-1}\\): \\[f_{max}=0.003(15)^2=0.675N.\\] والثقل: \\[P=mg=7.27\\times9.8=71.246N.\\] ومنه \\[\\frac{P}{f_{max}}\\approx\\boxed{105.5}.\\] لذلك يمكن إهمال مقاومة الهواء أمام الثقل."
+          },
+          {
+            "step_number": 5,
+            "title": "1.3 — شعاع التسارع",
+            "explanation": "بعد إهمال دافعة أرخميدس والاحتكاك، القوة الوحيدة هي الثقل: \\[m\\vec a_G=m\\vec g.\\] بالإسقاط: \\(a_x=0\\)، \\(a_y=-g\\). إذن \\[\\boxed{\\vec a_G=-g\\,\\vec j=-9.8\\,\\vec j\\;(m.s^{-2})}.\\]"
+          },
+          {
+            "step_number": 6,
+            "title": "2.3 — المعادلتان الزمنيتان للسرعة",
+            "explanation": "بالتكامل مع الشروط الابتدائية: \\[\\boxed{v_x(t)=v_0\\cos\\alpha=12.9\\cos\\alpha}\\] و \\[\\boxed{v_y(t)=-gt+v_0\\sin\\alpha=-9.8t+12.9\\sin\\alpha}.\\]"
+          },
+          {
+            "step_number": 7,
+            "title": "3.3 — المعادلتان الزمنيتان للموضع",
+            "explanation": "\\[\\boxed{x(t)=x_0+v_0\\cos\\alpha\\,t=0.5+12.9\\cos\\alpha\\,t}\\] و \\[\\boxed{y(t)=y_0+v_0\\sin\\alpha\\,t-\\frac12gt^2=2.1+12.9\\sin\\alpha\\,t-4.9t^2}.\\]"
+          },
+          {
+            "step_number": 8,
+            "title": "II-1 — زاوية القذف المثلى",
+            "explanation": "من قمة المنحنى \\(x_M=f(\\alpha)\\): \\[\\boxed{\\alpha\\approx42^\\circ}.\\] ووفق التصحيح تقبل القراءة في المجال \\(41^\\circ\\le\\alpha\\le43^\\circ\\)."
+          },
+          {
+            "step_number": 9,
+            "title": "II-2 — المسافة الموافقة",
+            "explanation": "من المنحنى عند الزاوية المثلى: \\[\\boxed{x_M\\approx19.47m}.\\]"
+          }
+        ],
+        "final_answer": "\\(\\overrightarrow{OM_0}=0.5\\vec i+2.1\\vec j\\)، \\(\\vec v_0=12.9\\cos\\alpha\\,\\vec i+12.9\\sin\\alpha\\,\\vec j\\). \\(P/\\Pi\\approx6154\\) و\\(P/f_{max}\\approx105.5\\)، لذلك نهمل الدافعة والاحتكاك. \\(\\vec a_G=-9.8\\vec j\\). \\(v_x=12.9\\cos\\alpha\\)، \\(v_y=-9.8t+12.9\\sin\\alpha\\). \\(x=0.5+12.9\\cos\\alpha\\,t\\)، \\(y=2.1+12.9\\sin\\alpha\\,t-4.9t^2\\). من البيان: \\(\\alpha\\approx42^\\circ\\) و\\(x_M\\approx19.47m\\)."
+      }
+    }
+  ],
+  "question_structure": {
+    "mode": "atomic",
+    "version": "1.0",
+    "preserves_original": true,
+    "note_ar": "تم تقسيم السؤال المركب إلى مطالب مستقلة مع الاحتفاظ بالسؤال الأصلي والحل الأصلي كاملين داخل legacy_combined_questions دون حذف أي محتوى."
+  }
+}

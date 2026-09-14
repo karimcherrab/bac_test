@@ -1,0 +1,372 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "session": "ordinary",
+  "year": 2026,
+  "chapter_code": "sequences",
+  "chapter_title": "المتتاليات العددية",
+  "branches": [
+    {
+      "code": "science",
+      "name": "شعبة علوم تجريبية"
+    }
+  ],
+  "source_pdf": "2026(3).pdf",
+  "comparison_source": "bac_sequence_scientifique(20260823-110547).pdf",
+  "source_verification": {
+    "statement_checked_against_original_bac": true,
+    "statement_checked_against_sequence_compilation": true,
+    "official_correction_available_in_supplied_files": false,
+    "solution_checked_algebraically": true,
+    "solution_style": "حل مفصل ومبسط بخطوات صغيرة، مع إظهار جميع الحسابات الوسيطة.",
+    "statement_policy": "نص التمرين والأسئلة منقول من موضوع البكالوريا دون إضافة أسئلة أو معطيات جديدة.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  },
+  "version": "4.2-2026-science-sequences-subject2-ex03",
+  "exercise_number": 3,
+  "subject_number": 2,
+  "points": 5,
+  "source_pages": [
+    3,
+    4
+  ],
+  "title": "التمرين الثالث — بكالوريا الجزائر 2026 — الموضوع الثاني — شعبة علوم تجريبية",
+  "statement": "الدالة \\(f\\) المعرفة على \\(]-\\infty;\\frac32[\\) بـ: \\(f(x)=\\frac{-6x+2}{2x-3}\\)، و\\((C_f)\\) تمثيلها البياني، و\\((\\Delta)\\) المستقيم ذو المعادلة \\(y=x\\). والمتتالية العددية \\((u_n)\\) المعرفة بـ: \\(u_0=0\\)، ومن أجل كل عدد طبيعي \\(n\\): \\(u_{n+1}=f(u_n)\\).",
+  "statement_graphs": [
+    {
+      "id": "2026_s2_ex03_source_graph",
+      "type": "source_figure",
+      "source_page": 4,
+      "description": "الشكل المرافق للتمرين: المنحنى (Cf) للدالة f(x)=(-6x+2)/(2x-3) والمستقيم (Δ): y=x."
+    }
+  ],
+  "questions": [
+    {
+      "id": "2026_s2_ex03_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) بقراءة بيانية، حدد اتجاه تغير الدالة \\(f\\) وبرر أنه: من أجل كل \\(x\\) من \\([-2;0]\\)، \\(f(x)-x\\le0\\).",
+      "axis_tags": [
+        "function_monotonicity",
+        "function_sign"
+      ],
+      "statement_graphs": [
+        "2026_s2_ex03_source_graph"
+      ],
+      "solution": {
+        "strategy": "القراءة البيانية تبين أن \\(f\\) متزايدة، ويمكن تبرير المتراجحة جبريا بدراسة إشارة \\(f(x)-x\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "اتجاه تغير f",
+            "explanation": "من المنحنى \\((C_f)\\) نلاحظ أن \\(f\\) متزايدة. ويمكن التحقق حسابيا أيضا:\n\\[\nf'(x)=\\frac{14}{(2x-3)^2}>0\n\\]\nعلى مجال تعريفها."
+          },
+          {
+            "step_number": 2,
+            "title": "حساب f(x)-x",
+            "explanation": "\\[\nf(x)-x\n=\\frac{-6x+2}{2x-3}-x\n=\\frac{-6x+2-x(2x-3)}{2x-3}.\n\\]\nإذن:\n\\[\nf(x)-x=\\frac{-2x^2-3x+2}{2x-3}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "تحليل البسط",
+            "explanation": "لدينا:\n\\[\n-2x^2-3x+2=-(2x-1)(x+2).\n\\]\nوعلى \\([-2,0]\\):\n\\[\n2x-1<0,\n\\qquad\nx+2\\ge0.\n\\]\nإذن:\n\\[\n-(2x-1)(x+2)\\ge0.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "إشارة المقام",
+            "explanation": "على \\([-2,0]\\):\n\\[\n2x-3<0.\n\\]\nإذن خارج القسمة غير موجب:\n\\[\n\\boxed{f(x)-x\\le0}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{f\\text{ متزايدة تماما، و }f(x)-x\\le0\\text{ على }[-2,0]}\\)."
+      }
+    },
+    {
+      "id": "2026_s2_ex03_q2a",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2) أ) انقل الشكل على ورقة الإجابة ثم مثل على حامل محور الفواصل الحدود: \\(u_0\\)، \\(u_1\\)، \\(u_2\\) و \\(u_3\\) (دون حسابها مبرزا خطوط التمثيل).",
+      "axis_tags": [
+        "graphical_sequence"
+      ],
+      "statement_graphs": [
+        "2026_s2_ex03_source_graph"
+      ],
+      "solution": {
+        "strategy": "نستعمل طريقة السلم بين المنحنى \\((C_f)\\) والمستقيم \\((\\Delta):y=x\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "وضع u_0",
+            "explanation": "نضع \\(u_0=0\\) على محور الفواصل."
+          },
+          {
+            "step_number": 2,
+            "title": "إنشاء u_1",
+            "explanation": "من \\(u_0\\) نصل عموديا إلى المنحنى \\((C_f)\\)، ثم أفقيا إلى المستقيم \\(y=x\\)، ثم نقرأ الفاصلة الجديدة \\(u_1\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "إنشاء u_2 وu_3",
+            "explanation": "نكرر نفس البناء انطلاقا من \\(u_1\\) للحصول على \\(u_2\\)، ثم من \\(u_2\\) للحصول على \\(u_3\\)."
+          }
+        ],
+        "final_answer": "تمثل الحدود \\(u_0,u_1,u_2,u_3\\) بيانيا بطريقة السلم كما في الشكل."
+      }
+    },
+    {
+      "id": "2026_s2_ex03_q2b",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "ب) خمن اتجاه تغير المتتالية \\((u_n)\\) وتقاربها.",
+      "axis_tags": [
+        "graphical_conjecture",
+        "sequence_convergence"
+      ],
+      "statement_graphs": [
+        "2026_s2_ex03_source_graph"
+      ],
+      "solution": {
+        "strategy": "نقرأ السلوك من التمثيل البياني.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "اتجاه التغير",
+            "explanation": "من خطوط التمثيل نلاحظ أن الحدود تنتقل من \\(0\\) نحو قيم أصغر فأصغر، لذلك نتخمن أن \\((u_n)\\) متناقصة تماما."
+          },
+          {
+            "step_number": 2,
+            "title": "التقارب",
+            "explanation": "الحدود تقترب من فاصلة نقطة تقاطع \\((C_f)\\) مع \\(y=x\\) الواقعة عند \\(x=-2\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "التخمين",
+            "explanation": "إذن نتخمن أن:\n\\[\n\\boxed{u_n\\to-2}.\n\\]"
+          }
+        ],
+        "final_answer": "التخمين: \\(\\boxed{(u_n)\\text{ متناقصة تماما ومتقاربة نحو }-2}\\)."
+      }
+    },
+    {
+      "id": "2026_s2_ex03_q3a",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "3) أ) برهن بالتراجع أنه: من أجل كل عدد طبيعي \\(n\\)، \\(-2<u_n\\le0\\).",
+      "axis_tags": [
+        "induction",
+        "sequence_bounds"
+      ],
+      "solution": {
+        "strategy": "نثبت الحصر بالتراجع باستعمال تزايد الدالة \\(f\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التحقق عند n=0",
+            "explanation": "لدينا:\n\\[\nu_0=0.\n\\]\nإذن:\n\\[\n-2<u_0\\le0.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "فرضية التراجع",
+            "explanation": "نفترض:\n\\[\n-2<u_n\\le0.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "استعمال تزايد f",
+            "explanation": "بما أن \\(f\\) متزايدة تماما:\n\\[\nf(-2)<f(u_n)\\le f(0).\n\\]\nنحسب:\n\\[\nf(-2)=\\frac{14}{-7}=-2,\n\\qquad\nf(0)=\\frac2{-3}=-\\frac23.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "الانتقال",
+            "explanation": "إذن:\n\\[\n-2<u_{n+1}\\le-\\frac23<0.\n\\]\nومن ثم:\n\\[\n-2<u_{n+1}\\le0.\n\\]"
+          },
+          {
+            "step_number": 5,
+            "title": "الخلاصة",
+            "explanation": "بالتراجع:\n\\[\n\\boxed{-2<u_n\\le0\\quad\\forall n\\in\\mathbb N}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{-2<u_n\\le0}\\) لكل \\(n\\)."
+      }
+    },
+    {
+      "id": "2026_s2_ex03_q3b",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "ب) حدد اتجاه تغير المتتالية \\((u_n)\\).",
+      "axis_tags": [
+        "sequence_monotonicity"
+      ],
+      "solution": {
+        "strategy": "نستعمل المتراجحة \\(f(x)-x\\le0\\) على المجال الذي تنتمي إليه الحدود.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "استعمال الحصر",
+            "explanation": "من السؤال السابق:\n\\[\nu_n\\in]-2,0].\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "تطبيق النتيجة السابقة",
+            "explanation": "على \\([-2,0]\\) لدينا:\n\\[\nf(x)-x\\le0.\n\\]\nإذن بوضع \\(x=u_n\\):\n\\[\nf(u_n)-u_n\\le0.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الربط بعلاقة الرجوع",
+            "explanation": "لكن:\n\\[\nu_{n+1}=f(u_n).\n\\]\nإذن:\n\\[\nu_{n+1}-u_n\\le0.\n\\]\nوفي الحقيقة الحد \\(-2\\) لا يتحقق، لذا يكون الفرق سالبا تماما."
+          },
+          {
+            "step_number": 4,
+            "title": "الاستنتاج",
+            "explanation": "\\[\n\\boxed{(u_n)\\text{ متناقصة تماما}}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{(u_n)\\text{ متناقصة تماما}}\\)."
+      }
+    },
+    {
+      "id": "2026_s2_ex03_q4a",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "4) المتتالية العددية \\((v_n)\\) المعرفة على \\(\\mathbb N\\) بـ: \\(v_n=\\frac{4+2u_n}{1-2u_n}\\). أ) أثبت أن المتتالية \\((v_n)\\) هندسية أساسها \\(\\frac27\\)، يطلب كتابة عبارة \\(v_n\\) بدلالة \\(n\\).",
+      "axis_tags": [
+        "auxiliary_sequence",
+        "geometric_sequence"
+      ],
+      "solution": {
+        "strategy": "نحسب \\(v_{n+1}\\) بدلالة \\(v_n\\)، ثم نحسب الحد الأول.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "كتابة u_{n+1}",
+            "explanation": "\\[\nu_{n+1}=\\frac{-6u_n+2}{2u_n-3}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب 4+2u_{n+1}",
+            "explanation": "\\[\n4+2u_{n+1}\n=4+2\\frac{-6u_n+2}{2u_n-3}\n=\\frac{4(2u_n-3)-12u_n+4}{2u_n-3}.\n\\]\nإذن:\n\\[\n4+2u_{n+1}=\\frac{-4u_n-8}{2u_n-3}\n=\\frac{-4(u_n+2)}{2u_n-3}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب 1-2u_{n+1}",
+            "explanation": "\\[\n1-2u_{n+1}\n=1-2\\frac{-6u_n+2}{2u_n-3}\n=\\frac{2u_n-3+12u_n-4}{2u_n-3}\n=\\frac{14u_n-7}{2u_n-3}\n=\\frac{7(2u_n-1)}{2u_n-3}.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "إظهار العلاقة الهندسية",
+            "explanation": "إذن:\n\\[\nv_{n+1}\n=\\frac{-4(u_n+2)}{7(2u_n-1)}.\n\\]\nلكن:\n\\[\nv_n=\\frac{2(u_n+2)}{1-2u_n}\n=-\\frac{2(u_n+2)}{2u_n-1}.\n\\]\nومن ثم:\n\\[\n\\boxed{v_{n+1}=\\frac27v_n}.\n\\]"
+          },
+          {
+            "step_number": 5,
+            "title": "حساب v_0 والحد العام",
+            "explanation": "\\[\nv_0=\\frac{4+2\\times0}{1-2\\times0}=4.\n\\]\nإذن:\n\\[\n\\boxed{v_n=4\\left(\\frac27\\right)^n}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{v_n=4(\\frac27)^n}\\)."
+      }
+    },
+    {
+      "id": "2026_s2_ex03_q4b",
+      "display_order": 7,
+      "content_type": "question",
+      "text": "ب) عبر عن \\(u_n\\) بدلالة \\(n\\) ثم احسب نهاية المتتالية \\((u_n)\\).",
+      "axis_tags": [
+        "explicit_sequence_formula",
+        "sequence_limit"
+      ],
+      "solution": {
+        "strategy": "نحل تعريف \\(v_n\\) بالنسبة إلى \\(u_n\\)، ثم نعوض العبارة الصريحة لـ\\(v_n\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الانطلاق من تعريف v_n",
+            "explanation": "\\[\nv_n=\\frac{4+2u_n}{1-2u_n}.\n\\]\nإذن:\n\\[\nv_n(1-2u_n)=4+2u_n.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "تجميع حدود u_n",
+            "explanation": "\\[\nv_n-4=2u_n(v_n+1).\n\\]\nومن ثم:\n\\[\n\\boxed{u_n=\\frac{v_n-4}{2(v_n+1)}}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "التعويض عن v_n",
+            "explanation": "بما أن:\n\\[\nv_n=4\\left(\\frac27\\right)^n,\n\\]\nفإن:\n\\[\n\\boxed{u_n=\frac{2[(\\frac27)^n-1]}{1+4(\\frac27)^n}}.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "حساب النهاية",
+            "explanation": "بما أن:\n\\[\n\\left(\\frac27\\right)^n\\to0,\n\\]\nفإن:\n\\[\n\\lim u_n=\\frac{2(0-1)}{1+0}=-2.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{u_n=\\frac{2[(\\frac27)^n-1]}{1+4(\\frac27)^n}}\\)، و \\(\\boxed{\\lim u_n=-2}\\)."
+      }
+    },
+    {
+      "id": "2026_s2_ex03_q5a",
+      "display_order": 8,
+      "content_type": "question",
+      "text": "5) المتتالية العددية \\((w_n)\\) المعرفة على \\(\\mathbb N\\) بـ: \\(w_n=\\ln(v_n)\\). أ) بين أن المتتالية \\((w_n)\\) حسابية، يطلب تعيين أساسها وحدها الأول.",
+      "axis_tags": [
+        "logarithm_sequence",
+        "arithmetic_sequence"
+      ],
+      "solution": {
+        "strategy": "نعوض العبارة الصريحة لـ\\(v_n\\)، ثم نستعمل خواص اللوغاريتم.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "كتابة w_n",
+            "explanation": "لدينا:\n\\[\nv_n=4\\left(\\frac27\\right)^n>0.\n\\]\nإذن:\n\\[\nw_n=\\ln4+n\\ln\\left(\\frac27\\right).\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "تبسيط العبارة",
+            "explanation": "\\[\n\\ln4=2\\ln2,\n\\qquad\n\\ln\\left(\\frac27\\right)=\\ln2-\\ln7.\n\\]\nإذن:\n\\[\nw_n=2\\ln2+n(\\ln2-\\ln7).\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الاستنتاج",
+            "explanation": "هذه عبارة حد عام لمتتالية حسابية، لذلك أساسها:\n\\[\n\\boxed{r=\\ln2-\\ln7},\n\\]\nوحدها الأول:\n\\[\n\\boxed{w_0=2\\ln2}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{r=\\ln2-\\ln7,\\quad w_0=2\\ln2}\\)."
+      }
+    },
+    {
+      "id": "2026_s2_ex03_q5b",
+      "display_order": 9,
+      "content_type": "question",
+      "text": "ب) بين أنه: من أجل كل \\(n\\) من \\(\\mathbb N\\)، \\(w_0+w_1+\\cdots+w_n=\\frac12(n+1)[(\\ln2-\\ln7)n+4\\ln2]\\).",
+      "axis_tags": [
+        "arithmetic_sum",
+        "sequence_sum"
+      ],
+      "solution": {
+        "strategy": "نستعمل صيغة مجموع أول \\(n+1\\) حدود من متتالية حسابية.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "صيغة المجموع",
+            "explanation": "بما أن \\((w_n)\\) حسابية:\n\\[\nW_n=w_0+w_1+\\cdots+w_n\n=\\frac{n+1}{2}(w_0+w_n).\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "كتابة w_n",
+            "explanation": "لدينا:\n\\[\nw_n=2\\ln2+n(\\ln2-\\ln7).\n\\]\nوبالتالي:\n\\[\nw_0+w_n\n=2\\ln2+2\\ln2+n(\\ln2-\\ln7).\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "التبسيط",
+            "explanation": "\\[\nw_0+w_n=4\\ln2+n(\\ln2-\\ln7).\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "النتيجة",
+            "explanation": "إذن:\n\\[\n\\boxed{w_0+w_1+\\cdots+w_n\n=\\frac12(n+1)[(\\ln2-\\ln7)n+4\\ln2]}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{w_0+\\cdots+w_n=\\frac12(n+1)[(\\ln2-\\ln7)n+4\\ln2]}\\)."
+      }
+    }
+  ]
+}

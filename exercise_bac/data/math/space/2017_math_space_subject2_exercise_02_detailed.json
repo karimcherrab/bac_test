@@ -1,0 +1,174 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2017-math-space-subject2-ex02-detailed",
+  "session": "ordinary",
+  "year": 2017,
+  "chapter_code": "space_geometry",
+  "chapter_title": "الهندسة في الفضاء",
+  "axis_tags": [
+    "space_parametric_line_plane",
+    "space_cartesian_plane_normal_vector",
+    "space_sphere_tangent_plane",
+    "space_relative_positions_intersections",
+    "space_distances_projections"
+  ],
+  "branches": [
+    {
+      "code": "math",
+      "name": "شعبة رياضيات"
+    }
+  ],
+  "exercise_number": 2,
+  "subject_number": 2,
+  "source_page": 3,
+  "source_pages": [
+    3
+  ],
+  "solution_source_pages": [
+    10,
+    11
+  ],
+  "title": "التمرين الثاني — بكالوريا الجزائر 2017 — الموضوع الثاني — شعبة رياضيات",
+  "statement": "الفضاء منسوب إلى المعلم المتعامد والمتجانس \\((O;\\vec{i},\\vec{j},\\vec{k})\\)، \\((P)\\) مستو تمثيله الوسيطي:\n\\[\n\\begin{cases}\nx=-t-2\\lambda+2\\\\\ny=3t+4\\lambda-3\\\\\nz=3t+4\\lambda-1\n\\end{cases}\n\\]\nحيث \\(t\\) و \\(\\lambda\\) عددان حقيقيان.",
+  "questions": [
+    {
+      "id": "2017_s2_space_ex02_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) عين معادلة ديكارتية للمستوي \\((P)\\).",
+      "axis_tags": [
+        "space_parametric_line_plane",
+        "space_cartesian_plane_normal_vector"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستخرج شعاعي توجيه من التمثيل الوسيطي ونحدد شعاعا ناظما للمستوى.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "شعاعا توجيه المستوى",
+            "explanation": "\\[\n\\vec u=(-1,3,3),\\qquad \\vec v=(-2,4,4).\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "شعاع ناظم",
+            "explanation": "يمكن أخذ:\n\\[\n\\vec n=(0,1,-1).\n\\]\nإذ:\n\\[\n\\vec n\\cdot\\vec u=3-3=0,\n\\qquad\n\\vec n\\cdot\\vec v=4-4=0.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "كتابة المعادلة",
+            "explanation": "عند \\(t=\\lambda=0\\) نحصل على النقطة \\((2,-3,-1)\\). إذن معادلة المستوى من الشكل:\n\\[\ny-z+d=0.\n\\]\nوبالتعويض:\n\\[-3-(-1)+d=0\\Rightarrow d=2.\\]"
+          }
+        ],
+        "final_answer": "\\[(P):y-z+2=0.\\]"
+      }
+    },
+    {
+      "id": "2017_s2_space_ex02_q2a",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2) ليكن \\(\\alpha\\) عددا حقيقيا من المجال \\(\\left[-\\frac{\\pi}{2};\\frac{\\pi}{2}\\right]\\)، ولتكن \\((E_\\alpha)\\) مجموعة النقط \\(M(x;y;z)\\) من الفضاء حيث\n\\[\nx^2+y^2+z^2-2x\\cos\\alpha-2y\\sin\\alpha-z-\\frac34=0.\n\\]\nأ) بين أن: من أجل كل \\(\\alpha\\) من المجال السابق، \\((E_\\alpha)\\) هي سطح كرة يطلب تعيين إحداثيات مركزها \\(\\omega_\\alpha\\) بدلالة \\(\\alpha\\) ونصف قطرها \\(R\\).",
+      "axis_tags": [
+        "space_sphere_tangent_plane"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نكمل المربعات بالنسبة إلى x وy وz.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "إكمال المربعات",
+            "explanation": "\\[\nx^2-2x\\cos\\alpha=(x-\\cos\\alpha)^2-\\cos^2\\alpha,\n\\]\n\\[\ny^2-2y\\sin\\alpha=(y-\\sin\\alpha)^2-\\sin^2\\alpha,\n\\]\n\\[\nz^2-z=\\left(z-\\frac12\\right)^2-\\frac14.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "معادلة الكرة",
+            "explanation": "باستعمال \\(\\cos^2\\alpha+\\sin^2\\alpha=1\\)، تصبح المعادلة:\n\\[\n(x-\\cos\\alpha)^2+(y-\\sin\\alpha)^2+\\left(z-\\frac12\\right)^2=2.\n\\]"
+          }
+        ],
+        "final_answer": "\\((E_\\alpha)\\) سطح كرة مركزها \\[\\omega_\\alpha\\left(\\cos\\alpha;\\sin\\alpha;\\frac12\\right)\\] ونصف قطرها \\[R=\\sqrt2.\\]"
+      }
+    },
+    {
+      "id": "2017_s2_space_ex02_q2b",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "ب) ادرس حسب قيم العدد الحقيقي \\(\\alpha\\) الوضع النسبي للمستوي \\((P)\\) و سطح الكرة \\((E_\\alpha)\\).",
+      "axis_tags": [
+        "space_sphere_tangent_plane",
+        "space_relative_positions_intersections",
+        "space_distances_projections"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب المسافة من مركز الكرة إلى المستوى ثم نقارنها بنصف القطر \\(\\sqrt2\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب المسافة",
+            "explanation": "معادلة \\((P)\\) هي \\(y-z+2=0\\)، ومركز الكرة:\n\\[\n\\omega_\\alpha\\left(\\cos\\alpha,\\sin\\alpha,\\frac12\\right).\n\\]\nإذن:\n\\[\nd(\\omega_\\alpha,(P))=\\frac{\\left|\\sin\\alpha-\\frac12+2\\right|}{\\sqrt2}=\\frac{\\frac32+\\sin\\alpha}{\\sqrt2}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حالة التقاطع في دائرة",
+            "explanation": "لدينا \\(d<R\\) إذا وفقط إذا:\n\\[\n\\frac{\\frac32+\\sin\\alpha}{\\sqrt2}<\\sqrt2\\Longleftrightarrow \\sin\\alpha<\\frac12.\n\\]\nوعلى المجال المعطى:\n\\[\n\\alpha\\in\\left[-\\frac\\pi2,\\frac\\pi6\\right[.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حالة التماس",
+            "explanation": "\\[\nd=R\\Longleftrightarrow \\sin\\alpha=\\frac12\\Longleftrightarrow \\alpha=\\frac\\pi6.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "حالة عدم التقاطع",
+            "explanation": "\\[\nd>R\\Longleftrightarrow \\sin\\alpha>\\frac12\\Longleftrightarrow \\alpha\\in\\left]\\frac\\pi6,\\frac\\pi2\\right].\n\\]"
+          }
+        ],
+        "final_answer": "إذا \\(\\alpha\\in\\left[-\\frac\\pi2,\\frac\\pi6\\right[\\) فإن \\((P)\\) يقطع \\((E_\\alpha)\\) في دائرة؛ إذا \\(\\alpha=\\frac\\pi6\\) فإن \\((P)\\) مماس لـ\\((E_\\alpha)\\)؛ إذا \\(\\alpha\\in\\left]\\frac\\pi6,\\frac\\pi2\\right]\\) فلا يوجد تقاطع."
+      }
+    },
+    {
+      "id": "2017_s2_space_ex02_q3",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "3) في الحالة التي يكون فيها المستوي \\((P)\\) مماسا لسطح الكرة \\((E_\\alpha)\\)، عين تمثيلا وسيطيا للمستقيم \\((D)\\) الذي يشمل النقطة \\(\\omega_\\alpha\\) والعمودي على المستوي \\((P)\\) واستنتج إحداثيات \\(I\\) نقطة تماس \\((E_\\alpha)\\) مع المستوي \\((P)\\).",
+      "axis_tags": [
+        "space_sphere_tangent_plane",
+        "space_parametric_line_plane",
+        "space_distances_projections"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "في حالة التماس لدينا \\(\\alpha=\\pi/6\\). نحدد مركز الكرة، ثم نكتب المستقيم العمودي على P والمار بالمركز، ونجد تقاطعه مع P.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "مركز الكرة في حالة التماس",
+            "explanation": "عند \\(\\alpha=\\frac\\pi6\\):\n\\[\n\\omega_\\alpha\\left(\\frac{\\sqrt3}{2},\\frac12,\\frac12\\right).\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "التمثيل الوسيطي للمستقيم D",
+            "explanation": "شعاع ناظم للمستوى \\((P):y-z+2=0\\) هو \\((0,1,-1)\\)، إذن:\n\\[\n(D):\\begin{cases}\nx=\\frac{\\sqrt3}{2}\\\\\ny=\\frac12+t\\\\\nz=\\frac12-t\n\\end{cases}\n\\quad ;\\ t\\in\\mathbb R.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "إحداثيات نقطة التماس I",
+            "explanation": "النقطة \\(I\\) هي تقاطع \\((D)\\) مع \\((P)\\). نعوض في \\(y-z+2=0\\):\n\\[\n\\left(\\frac12+t\\right)-\\left(\\frac12-t\\right)+2=0\n\\Rightarrow 2t+2=0\n\\Rightarrow t=-1.\n\\]\nإذن:\n\\[\nI\\left(\\frac{\\sqrt3}{2},-\\frac12,\\frac32\\right).\n\\]"
+          }
+        ],
+        "final_answer": "\\[(D):\\begin{cases}x=\\frac{\\sqrt3}{2}\\\\y=\\frac12+t\\\\z=\\frac12-t\\end{cases},\\quad t\\in\\mathbb R,\\]\n\\[I\\left(\\frac{\\sqrt3}{2};-\\frac12;\\frac32\\right).\\]"
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2017(10).pdf",
+    "statement_figure_policy": "لا يوجد شكل هندسي إلزامي في نص التمرين.",
+    "solution_figure_policy": "الحل مستقل عن أي رسم.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  }
+}

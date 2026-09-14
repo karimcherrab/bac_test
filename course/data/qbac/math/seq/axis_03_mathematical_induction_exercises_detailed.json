@@ -1,0 +1,3283 @@
+{
+  "version": 1,
+  "language": "ar",
+  "direction": "rtl",
+  "subject_code": "math",
+  "chapter_code": "sequences",
+  "tag": "mathematical_induction",
+  "axis_tag": "mathematical_induction",
+  "title": "سلسلة تدريبية شاملة: الاستدلال بالتراجع",
+  "question_count": 13,
+  "max_questions": 13,
+  "selection_summary": {
+    "rule": "تمارين مرتبطة فقط بمحور الاستدلال بالتراجع، مرتبة من السهل إلى الصعب: تحديد الخاصية، اختيار رتبة البداية، التحقق، الوراثة، المساواة، المجاميع، المتراجحات، الإيجابية، الحصر، وإثبات صيغة حد عام لمتتالية تراجعية.",
+    "source_axis": "الاستدلال بالتراجع",
+    "full_exercise_text": true,
+    "detailed_solution": true,
+    "pedagogical_progression": true,
+    "solution_access": "direct",
+    "attempt_before_solution": false,
+    "one_step_at_a_time": true,
+    "animate_solution_steps": true,
+    "bac_writing": true,
+    "understanding_check": true,
+    "supports_graphs": false,
+    "react_component": "UniversalMathExerciseRenderer"
+  },
+  "questions": [
+    {
+      "id": "mathematical_induction_practice_01",
+      "year": null,
+      "source_file": null,
+      "source_page": null,
+      "exercise": "تمرين تدريبي 1",
+      "number": "1",
+      "title": "تحديد الخاصية ورتبة البداية",
+      "text": "نريد إثبات أنه لكل \\(n\\ge3\\): \\(2n+1\\ge7\\). اكتب الخاصية \\(P(n)\\) وحدد رتبة البداية فقط.",
+      "standalone_text": "نريد إثبات أنه لكل \\(n\\ge3\\): \\(2n+1\\ge7\\). اكتب الخاصية \\(P(n)\\) وحدد رتبة البداية فقط.",
+      "context": "تمرين تدريبي مبني مباشرة على محور الاستدلال بالتراجع.",
+      "tag": "mathematical_induction",
+      "axis": "الاستدلال بالتراجع",
+      "secondary_tags": [],
+      "skill": "صياغة الخاصية وتحديد رتبة البداية.",
+      "difficulty": "easy",
+      "question_type": "axis_practice",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "tables": [],
+      "variation_tables": [],
+      "sign_tables": [],
+      "graph_data": null,
+      "solution": {
+        "title": "الحل المفصل: تحديد الخاصية ورتبة البداية",
+        "main_idea": "صياغة الخاصية وتحديد رتبة البداية.",
+        "method_name": "الخاصية → التحقق → فرضية التراجع → الانتقال → الخاتمة",
+        "before_start": [
+          "اكتب الخاصية P(n) كما هي مطلوبة.",
+          "حدد رتبة البداية بدقة.",
+          "في الانتقال استعمل فرضية التراجع فعلًا."
+        ],
+        "strategy": "نعرّف الخاصية، نتحقق من البداية، نفترضها عند k، نثبتها عند k+1، ثم نختم بمبدأ التراجع.",
+        "detailed_explanation": "هذا الحل مكتوب بطريقة تدريجية حتى يرى التلميذ وظيفة كل مرحلة من مراحل الاستدلال بالتراجع، ولا ينتقل إلى المرحلة التالية قبل إكمال السابقة.",
+        "uses_graph": false,
+        "uses_images": false,
+        "uses_tables": false,
+        "uses_variation_table": false,
+        "uses_sign_table": false,
+        "steps": [
+          {
+            "number": "1",
+            "order": 1,
+            "title": "كتابة الخاصية",
+            "goal": "تحويل المطلوب إلى P(n).",
+            "rule_used": "تعريف P(n)",
+            "explanation": "نكتب نفس العبارة المطلوب إثباتها.",
+            "construction": [],
+            "calculation": "\\[P(n):\\quad 2n+1\\ge7.\\]",
+            "calculation_lines": [
+              "\\[P(n):\\quad 2n+1\\ge7.\\]"
+            ],
+            "result": "تم تحديد الخاصية.",
+            "conclusion": "تم تحديد الخاصية.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "نكتب نفس العبارة المطلوب إثباتها.",
+            "why": "نكتب نفس العبارة المطلوب إثباتها.",
+            "calculation_breakdown": [],
+            "student_action": "حاول كتابة هذه المرحلة وحدك، ثم قارنها بالحل."
+          },
+          {
+            "number": "2",
+            "order": 2,
+            "title": "تحديد البداية",
+            "goal": "اختيار أول رتبة في المجال.",
+            "rule_used": "رتبة البداية",
+            "explanation": "السؤال يقول لكل n≥3، إذن أول رتبة هي 3.",
+            "construction": [],
+            "calculation": "\\[n_0=3.\\]",
+            "calculation_lines": [
+              "\\[n_0=3.\\]"
+            ],
+            "result": "نبدأ التحقق عند n=3.",
+            "conclusion": "نبدأ التحقق عند n=3.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "السؤال يقول لكل n≥3، إذن أول رتبة هي 3.",
+            "why": "السؤال يقول لكل n≥3، إذن أول رتبة هي 3.",
+            "calculation_breakdown": [],
+            "student_action": "حاول كتابة هذه المرحلة وحدك، ثم قارنها بالحل."
+          }
+        ],
+        "final_answer": "\\(P(n):2n+1\\ge7\\)، ورتبة البداية هي \\(n_0=3\\).",
+        "verification": "التعويض بـ n=3 يعطي 7≥7، لذلك البداية مناسبة.",
+        "common_mistakes": [
+          {
+            "mistake": "نسيان مرحلة التحقق عند رتبة البداية.",
+            "correction": "ابدأ دائمًا بإثبات الخاصية عند أول رتبة يحددها السؤال."
+          },
+          {
+            "mistake": "افتراض أن الخاصية صحيحة لكل n.",
+            "correction": "نفترضها صحيحة عند رتبة ثابتة k فقط، ثم نثبتها عند k+1."
+          },
+          {
+            "mistake": "عدم استعمال فرضية التراجع في الانتقال.",
+            "correction": "يجب أن يظهر بوضوح أين استعملت P(k) للوصول إلى P(k+1)."
+          },
+          {
+            "mistake": "إنهاء الحساب دون خاتمة.",
+            "correction": "اختم دائمًا بعبارة: حسب مبدأ الاستدلال بالتراجع، الخاصية صحيحة لكل الرتب المطلوبة."
+          }
+        ],
+        "hints": [
+          {
+            "level": 1,
+            "hint": "اقرأ جيدًا: لكل n≥3."
+          },
+          {
+            "level": 2,
+            "hint": "اكتب المطلوب كما هو بعد P(n)."
+          }
+        ],
+        "alternative_method": "",
+        "images": [],
+        "tables": [],
+        "variation_tables": [],
+        "sign_tables": [],
+        "graph_data": null,
+        "presentation": {
+          "show_graph_first": false,
+          "show_one_step_at_a_time": true,
+          "react_component": "UniversalMathExerciseRenderer",
+          "rtl": true,
+          "show_graph_in_question": false,
+          "show_graph_in_solution": false,
+          "animate_steps": true,
+          "solution_open_mode": "on_button_click",
+          "solution_access": "direct",
+          "attempt_required": false,
+          "show_final_answer_after_last_step": true,
+          "show_verification_after_final_answer": true,
+          "show_bac_writing": true,
+          "show_understanding_check": true,
+          "math_direction": "ltr"
+        },
+        "is_complete": true,
+        "solution_access": "direct",
+        "attempt_required": false,
+        "bac_writing": [
+          "نعتبر الخاصية \\(P(n):\\ldots\\).",
+          "نتحقق من صحتها عند رتبة البداية.",
+          "نفرض أن \\(P(k)\\) صحيحة.",
+          "نثبت أن \\(P(k+1)\\) صحيحة باستعمال فرضية التراجع.",
+          "إذن حسب مبدأ الاستدلال بالتراجع، الخاصية صحيحة لكل الرتب المطلوبة."
+        ],
+        "understanding_check": {
+          "question": "ما المراحل الخمس الأساسية للبرهان بالتراجع؟",
+          "answer": "تعريف الخاصية، التحقق، فرضية التراجع، الانتقال، ثم الخاتمة."
+        },
+        "takeaway": "رتبة البداية تؤخذ من مجال السؤال، وليست دائمًا 0.",
+        "proof_logic_check": {
+          "initialization_present": true,
+          "induction_hypothesis_present": true,
+          "hypothesis_used_in_transition": true,
+          "correct_conclusion_present": true,
+          "no_circular_reasoning": true
+        }
+      },
+      "display_order": 1,
+      "learning_stage": "axis_practice",
+      "learning_stage_label": "تمرين تطبيقي",
+      "pedagogical_objective": "صياغة الخاصية وتحديد رتبة البداية.",
+      "solution_access": "direct",
+      "attempt_required": false,
+      "start_rank": 3
+    },
+    {
+      "id": "mathematical_induction_practice_02",
+      "year": null,
+      "source_file": null,
+      "source_page": null,
+      "exercise": "تمرين تدريبي 2",
+      "number": "2",
+      "title": "إثبات مساواة بسيطة بالتراجع",
+      "text": "أثبت بالتراجع أنه لكل \\(n\\in\\mathbb N\\): \\(2+4+6+\\cdots+2n=n(n+1)\\)، مع اعتبار أن المجموع يساوي صفرًا عند \\(n=0\\).",
+      "standalone_text": "أثبت بالتراجع أنه لكل \\(n\\in\\mathbb N\\): \\(2+4+6+\\cdots+2n=n(n+1)\\)، مع اعتبار أن المجموع يساوي صفرًا عند \\(n=0\\).",
+      "context": "تمرين تدريبي مبني مباشرة على محور الاستدلال بالتراجع.",
+      "tag": "mathematical_induction",
+      "axis": "الاستدلال بالتراجع",
+      "secondary_tags": [],
+      "skill": "إثبات صيغة مجموع بسيطة.",
+      "difficulty": "easy",
+      "question_type": "axis_practice",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "tables": [],
+      "variation_tables": [],
+      "sign_tables": [],
+      "graph_data": null,
+      "solution": {
+        "title": "الحل المفصل: إثبات مساواة بسيطة بالتراجع",
+        "main_idea": "إثبات صيغة مجموع بسيطة.",
+        "method_name": "الخاصية → التحقق → فرضية التراجع → الانتقال → الخاتمة",
+        "before_start": [
+          "اكتب الخاصية P(n) كما هي مطلوبة.",
+          "حدد رتبة البداية بدقة.",
+          "في الانتقال استعمل فرضية التراجع فعلًا."
+        ],
+        "strategy": "نعرّف الخاصية، نتحقق من البداية، نفترضها عند k، نثبتها عند k+1، ثم نختم بمبدأ التراجع.",
+        "detailed_explanation": "هذا الحل مكتوب بطريقة تدريجية حتى يرى التلميذ وظيفة كل مرحلة من مراحل الاستدلال بالتراجع، ولا ينتقل إلى المرحلة التالية قبل إكمال السابقة.",
+        "uses_graph": false,
+        "uses_images": false,
+        "uses_tables": false,
+        "uses_variation_table": false,
+        "uses_sign_table": false,
+        "steps": [
+          {
+            "number": "1",
+            "order": 1,
+            "title": "الخاصية",
+            "goal": "صياغة المطلوب.",
+            "rule_used": "تعريف P(n)",
+            "explanation": "نكتب صيغة المجموع كما هي.",
+            "construction": [],
+            "calculation": "\\[P(n):\\quad 2+4+\\cdots+2n=n(n+1).\\]",
+            "calculation_lines": [
+              "\\[P(n):\\quad 2+4+\\cdots+2n=n(n+1).\\]"
+            ],
+            "result": "حددنا الخاصية.",
+            "conclusion": "حددنا الخاصية.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "نكتب صيغة المجموع كما هي.",
+            "why": "نكتب صيغة المجموع كما هي.",
+            "calculation_breakdown": [],
+            "student_action": "حاول كتابة هذه المرحلة وحدك، ثم قارنها بالحل."
+          },
+          {
+            "number": "2",
+            "order": 2,
+            "title": "التحقق عند n=0",
+            "goal": "إثبات البداية.",
+            "rule_used": "مرحلة التحقق",
+            "explanation": "عند n=0 لا يوجد حد في المجموع، فيساوي 0.",
+            "construction": [],
+            "calculation": "\\[0=0\\times1.\\]",
+            "calculation_lines": [
+              "\\[0=0\\times1.\\]"
+            ],
+            "result": "\\(P(0)\\) صحيحة.",
+            "conclusion": "\\(P(0)\\) صحيحة.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "عند n=0 لا يوجد حد في المجموع، فيساوي 0.",
+            "why": "عند n=0 لا يوجد حد في المجموع، فيساوي 0.",
+            "calculation_breakdown": [],
+            "student_action": "حاول كتابة هذه المرحلة وحدك، ثم قارنها بالحل."
+          },
+          {
+            "number": "3",
+            "order": 3,
+            "title": "فرضية التراجع",
+            "goal": "افتراض P(k).",
+            "rule_used": "فرضية التراجع",
+            "explanation": "نفترض صحة الصيغة عند رتبة k.",
+            "construction": [],
+            "calculation": "\\[2+4+\\cdots+2k=k(k+1).\\]",
+            "calculation_lines": [
+              "\\[2+4+\\cdots+2k=k(k+1).\\]"
+            ],
+            "result": "هذه هي فرضية التراجع.",
+            "conclusion": "هذه هي فرضية التراجع.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "نفترض صحة الصيغة عند رتبة k.",
+            "why": "نفترض صحة الصيغة عند رتبة k.",
+            "calculation_breakdown": [],
+            "student_action": "حاول كتابة هذه المرحلة وحدك، ثم قارنها بالحل."
+          },
+          {
+            "number": "4",
+            "order": 4,
+            "title": "الانتقال",
+            "goal": "إثبات الصيغة عند k+1.",
+            "rule_used": "الوراثة",
+            "explanation": "نضيف الحد الجديد 2(k+1) ثم نستعمل الفرضية.",
+            "construction": [],
+            "calculation": "\\[2+4+\\cdots+2k+2(k+1)\\]\n\\[=k(k+1)+2(k+1)\\]\n\\[=(k+1)(k+2).\\]",
+            "calculation_lines": [
+              "\\[2+4+\\cdots+2k+2(k+1)\\]",
+              "\\[=k(k+1)+2(k+1)\\]",
+              "\\[=(k+1)(k+2).\\]"
+            ],
+            "result": "وهذه هي صيغة P(k+1).",
+            "conclusion": "وهذه هي صيغة P(k+1).",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "نضيف الحد الجديد 2(k+1) ثم نستعمل الفرضية.",
+            "why": "نضيف الحد الجديد 2(k+1) ثم نستعمل الفرضية.",
+            "calculation_breakdown": [],
+            "student_action": "حاول كتابة هذه المرحلة وحدك، ثم قارنها بالحل."
+          },
+          {
+            "number": "5",
+            "order": 5,
+            "title": "الخاتمة",
+            "goal": "تعميم النتيجة.",
+            "rule_used": "مبدأ التراجع",
+            "explanation": "البداية صحيحة والخاصية وراثية.",
+            "construction": [],
+            "calculation": "\\[\\forall n\\in\\mathbb N,\\quad 2+4+\\cdots+2n=n(n+1).\\]",
+            "calculation_lines": [
+              "\\[\\forall n\\in\\mathbb N,\\quad 2+4+\\cdots+2n=n(n+1).\\]"
+            ],
+            "result": "تم الإثبات.",
+            "conclusion": "تم الإثبات.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "البداية صحيحة والخاصية وراثية.",
+            "why": "البداية صحيحة والخاصية وراثية.",
+            "calculation_breakdown": [],
+            "student_action": "حاول كتابة هذه المرحلة وحدك، ثم قارنها بالحل."
+          }
+        ],
+        "final_answer": "\\(\\boxed{2+4+\\cdots+2n=n(n+1)}\\) لكل \\(n\\in\\mathbb N\\).",
+        "verification": "عند n=3: 2+4+6=12 و3×4=12.",
+        "common_mistakes": [
+          {
+            "mistake": "نسيان مرحلة التحقق عند رتبة البداية.",
+            "correction": "ابدأ دائمًا بإثبات الخاصية عند أول رتبة يحددها السؤال."
+          },
+          {
+            "mistake": "افتراض أن الخاصية صحيحة لكل n.",
+            "correction": "نفترضها صحيحة عند رتبة ثابتة k فقط، ثم نثبتها عند k+1."
+          },
+          {
+            "mistake": "عدم استعمال فرضية التراجع في الانتقال.",
+            "correction": "يجب أن يظهر بوضوح أين استعملت P(k) للوصول إلى P(k+1)."
+          },
+          {
+            "mistake": "إنهاء الحساب دون خاتمة.",
+            "correction": "اختم دائمًا بعبارة: حسب مبدأ الاستدلال بالتراجع، الخاصية صحيحة لكل الرتب المطلوبة."
+          }
+        ],
+        "hints": [
+          {
+            "level": 1,
+            "hint": "افصل الحد الأخير."
+          },
+          {
+            "level": 2,
+            "hint": "استعمل فرضية التراجع مكان الجزء 2+4+...+2k."
+          }
+        ],
+        "alternative_method": "",
+        "images": [],
+        "tables": [],
+        "variation_tables": [],
+        "sign_tables": [],
+        "graph_data": null,
+        "presentation": {
+          "show_graph_first": false,
+          "show_one_step_at_a_time": true,
+          "react_component": "UniversalMathExerciseRenderer",
+          "rtl": true,
+          "show_graph_in_question": false,
+          "show_graph_in_solution": false,
+          "animate_steps": true,
+          "solution_open_mode": "on_button_click",
+          "solution_access": "direct",
+          "attempt_required": false,
+          "show_final_answer_after_last_step": true,
+          "show_verification_after_final_answer": true,
+          "show_bac_writing": true,
+          "show_understanding_check": true,
+          "math_direction": "ltr"
+        },
+        "is_complete": true,
+        "solution_access": "direct",
+        "attempt_required": false,
+        "bac_writing": [
+          "نعتبر الخاصية \\(P(n):\\ldots\\).",
+          "نتحقق من صحتها عند رتبة البداية.",
+          "نفرض أن \\(P(k)\\) صحيحة.",
+          "نثبت أن \\(P(k+1)\\) صحيحة باستعمال فرضية التراجع.",
+          "إذن حسب مبدأ الاستدلال بالتراجع، الخاصية صحيحة لكل الرتب المطلوبة."
+        ],
+        "understanding_check": {
+          "question": "ما المراحل الخمس الأساسية للبرهان بالتراجع؟",
+          "answer": "تعريف الخاصية، التحقق، فرضية التراجع، الانتقال، ثم الخاتمة."
+        },
+        "takeaway": "في المجاميع: افصل الحد الجديد ثم عوّض الجزء القديم بفرضية التراجع.",
+        "proof_logic_check": {
+          "initialization_present": true,
+          "induction_hypothesis_present": true,
+          "hypothesis_used_in_transition": true,
+          "correct_conclusion_present": true,
+          "no_circular_reasoning": true
+        }
+      },
+      "display_order": 2,
+      "learning_stage": "axis_practice",
+      "learning_stage_label": "تمرين تطبيقي",
+      "pedagogical_objective": "إثبات صيغة مجموع بسيطة.",
+      "solution_access": "direct",
+      "attempt_required": false
+    },
+    {
+      "id": "mathematical_induction_practice_03",
+      "year": null,
+      "source_file": null,
+      "source_page": null,
+      "exercise": "تمرين تدريبي 3",
+      "number": "3",
+      "title": "إثبات مجموع الأعداد الفردية",
+      "text": "أثبت بالتراجع أنه لكل \\(n\\ge1\\): \\(1+3+5+\\cdots+(2n-1)=n^2\\).",
+      "standalone_text": "أثبت بالتراجع أنه لكل \\(n\\ge1\\): \\(1+3+5+\\cdots+(2n-1)=n^2\\).",
+      "context": "تمرين تدريبي مبني مباشرة على محور الاستدلال بالتراجع.",
+      "tag": "mathematical_induction",
+      "axis": "الاستدلال بالتراجع",
+      "secondary_tags": [],
+      "skill": "إثبات مساواة بالتراجع.",
+      "difficulty": "easy",
+      "question_type": "axis_practice",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "tables": [],
+      "variation_tables": [],
+      "sign_tables": [],
+      "graph_data": null,
+      "solution": {
+        "title": "الحل المفصل: إثبات مجموع الأعداد الفردية",
+        "main_idea": "إثبات مساواة بالتراجع.",
+        "method_name": "الخاصية → التحقق → فرضية التراجع → الانتقال → الخاتمة",
+        "before_start": [
+          "اكتب الخاصية P(n) كما هي مطلوبة.",
+          "حدد رتبة البداية بدقة.",
+          "في الانتقال استعمل فرضية التراجع فعلًا."
+        ],
+        "strategy": "نعرّف الخاصية، نتحقق من البداية، نفترضها عند k، نثبتها عند k+1، ثم نختم بمبدأ التراجع.",
+        "detailed_explanation": "هذا الحل مكتوب بطريقة تدريجية حتى يرى التلميذ وظيفة كل مرحلة من مراحل الاستدلال بالتراجع، ولا ينتقل إلى المرحلة التالية قبل إكمال السابقة.",
+        "uses_graph": false,
+        "uses_images": false,
+        "uses_tables": false,
+        "uses_variation_table": false,
+        "uses_sign_table": false,
+        "steps": [
+          {
+            "number": "1",
+            "order": 1,
+            "title": "الخاصية",
+            "goal": "كتابة المطلوب.",
+            "rule_used": "تعريف P(n)",
+            "explanation": "الصيغة هي مجموع أول n عدد فردي.",
+            "construction": [],
+            "calculation": "\\[P(n):\\quad 1+3+\\cdots+(2n-1)=n^2.\\]",
+            "calculation_lines": [
+              "\\[P(n):\\quad 1+3+\\cdots+(2n-1)=n^2.\\]"
+            ],
+            "result": "تم تعريف الخاصية.",
+            "conclusion": "تم تعريف الخاصية.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "الصيغة هي مجموع أول n عدد فردي.",
+            "why": "الصيغة هي مجموع أول n عدد فردي.",
+            "calculation_breakdown": [],
+            "student_action": "حاول كتابة هذه المرحلة وحدك، ثم قارنها بالحل."
+          },
+          {
+            "number": "2",
+            "order": 2,
+            "title": "التحقق",
+            "goal": "التحقق عند n=1.",
+            "rule_used": "مرحلة التحقق",
+            "explanation": "أول مجموع هو 1.",
+            "construction": [],
+            "calculation": "\\[1=1^2.\\]",
+            "calculation_lines": [
+              "\\[1=1^2.\\]"
+            ],
+            "result": "\\(P(1)\\) صحيحة.",
+            "conclusion": "\\(P(1)\\) صحيحة.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "أول مجموع هو 1.",
+            "why": "أول مجموع هو 1.",
+            "calculation_breakdown": [],
+            "student_action": "حاول كتابة هذه المرحلة وحدك، ثم قارنها بالحل."
+          },
+          {
+            "number": "3",
+            "order": 3,
+            "title": "الفرضية",
+            "goal": "افتراض P(k).",
+            "rule_used": "فرضية التراجع",
+            "explanation": "نفترض الصيغة صحيحة عند k.",
+            "construction": [],
+            "calculation": "\\[1+3+\\cdots+(2k-1)=k^2.\\]",
+            "calculation_lines": [
+              "\\[1+3+\\cdots+(2k-1)=k^2.\\]"
+            ],
+            "result": "هذه هي P(k).",
+            "conclusion": "هذه هي P(k).",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "نفترض الصيغة صحيحة عند k.",
+            "why": "نفترض الصيغة صحيحة عند k.",
+            "calculation_breakdown": [],
+            "student_action": "حاول كتابة هذه المرحلة وحدك، ثم قارنها بالحل."
+          },
+          {
+            "number": "4",
+            "order": 4,
+            "title": "الانتقال",
+            "goal": "إضافة الحد الفردي التالي.",
+            "rule_used": "الوراثة",
+            "explanation": "الحد التالي هو 2(k+1)-1=2k+1.",
+            "construction": [],
+            "calculation": "\\[1+3+\\cdots+(2k-1)+(2k+1)\\]\n\\[=k^2+2k+1\\]\n\\[=(k+1)^2.\\]",
+            "calculation_lines": [
+              "\\[1+3+\\cdots+(2k-1)+(2k+1)\\]",
+              "\\[=k^2+2k+1\\]",
+              "\\[=(k+1)^2.\\]"
+            ],
+            "result": "\\(P(k+1)\\) صحيحة.",
+            "conclusion": "\\(P(k+1)\\) صحيحة.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "الحد التالي هو 2(k+1)-1=2k+1.",
+            "why": "الحد التالي هو 2(k+1)-1=2k+1.",
+            "calculation_breakdown": [],
+            "student_action": "حاول كتابة هذه المرحلة وحدك، ثم قارنها بالحل."
+          },
+          {
+            "number": "5",
+            "order": 5,
+            "title": "الخاتمة",
+            "goal": "تطبيق مبدأ التراجع.",
+            "rule_used": "مبدأ التراجع",
+            "explanation": "تحققت البداية والوراثة.",
+            "construction": [],
+            "calculation": "\\[\\forall n\\ge1,\\quad 1+3+\\cdots+(2n-1)=n^2.\\]",
+            "calculation_lines": [
+              "\\[\\forall n\\ge1,\\quad 1+3+\\cdots+(2n-1)=n^2.\\]"
+            ],
+            "result": "تم الإثبات.",
+            "conclusion": "تم الإثبات.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "تحققت البداية والوراثة.",
+            "why": "تحققت البداية والوراثة.",
+            "calculation_breakdown": [],
+            "student_action": "حاول كتابة هذه المرحلة وحدك، ثم قارنها بالحل."
+          }
+        ],
+        "final_answer": "\\(\\boxed{1+3+\\cdots+(2n-1)=n^2}\\).",
+        "verification": "عند n=4: 1+3+5+7=16=4².",
+        "common_mistakes": [
+          {
+            "mistake": "نسيان مرحلة التحقق عند رتبة البداية.",
+            "correction": "ابدأ دائمًا بإثبات الخاصية عند أول رتبة يحددها السؤال."
+          },
+          {
+            "mistake": "افتراض أن الخاصية صحيحة لكل n.",
+            "correction": "نفترضها صحيحة عند رتبة ثابتة k فقط، ثم نثبتها عند k+1."
+          },
+          {
+            "mistake": "عدم استعمال فرضية التراجع في الانتقال.",
+            "correction": "يجب أن يظهر بوضوح أين استعملت P(k) للوصول إلى P(k+1)."
+          },
+          {
+            "mistake": "إنهاء الحساب دون خاتمة.",
+            "correction": "اختم دائمًا بعبارة: حسب مبدأ الاستدلال بالتراجع، الخاصية صحيحة لكل الرتب المطلوبة."
+          }
+        ],
+        "hints": [
+          {
+            "level": 1,
+            "hint": "ما الحد الذي يضاف عند الانتقال من k إلى k+1؟"
+          },
+          {
+            "level": 2,
+            "hint": "بسّط k²+2k+1."
+          }
+        ],
+        "alternative_method": "",
+        "images": [],
+        "tables": [],
+        "variation_tables": [],
+        "sign_tables": [],
+        "graph_data": null,
+        "presentation": {
+          "show_graph_first": false,
+          "show_one_step_at_a_time": true,
+          "react_component": "UniversalMathExerciseRenderer",
+          "rtl": true,
+          "show_graph_in_question": false,
+          "show_graph_in_solution": false,
+          "animate_steps": true,
+          "solution_open_mode": "on_button_click",
+          "solution_access": "direct",
+          "attempt_required": false,
+          "show_final_answer_after_last_step": true,
+          "show_verification_after_final_answer": true,
+          "show_bac_writing": true,
+          "show_understanding_check": true,
+          "math_direction": "ltr"
+        },
+        "is_complete": true,
+        "solution_access": "direct",
+        "attempt_required": false,
+        "bac_writing": [
+          "نعتبر الخاصية \\(P(n):\\ldots\\).",
+          "نتحقق من صحتها عند رتبة البداية.",
+          "نفرض أن \\(P(k)\\) صحيحة.",
+          "نثبت أن \\(P(k+1)\\) صحيحة باستعمال فرضية التراجع.",
+          "إذن حسب مبدأ الاستدلال بالتراجع، الخاصية صحيحة لكل الرتب المطلوبة."
+        ],
+        "understanding_check": {
+          "question": "ما المراحل الخمس الأساسية للبرهان بالتراجع؟",
+          "answer": "تعريف الخاصية، التحقق، فرضية التراجع، الانتقال، ثم الخاتمة."
+        },
+        "takeaway": "الحد الجديد في الانتقال هو دائمًا الحد الموافق للرتبة k+1.",
+        "proof_logic_check": {
+          "initialization_present": true,
+          "induction_hypothesis_present": true,
+          "hypothesis_used_in_transition": true,
+          "correct_conclusion_present": true,
+          "no_circular_reasoning": true
+        }
+      },
+      "display_order": 3,
+      "learning_stage": "axis_practice",
+      "learning_stage_label": "تمرين تطبيقي",
+      "pedagogical_objective": "إثبات مساواة بالتراجع.",
+      "solution_access": "direct",
+      "attempt_required": false
+    },
+    {
+      "id": "mathematical_induction_practice_04",
+      "year": null,
+      "source_file": null,
+      "source_page": null,
+      "exercise": "تمرين تدريبي 4",
+      "number": "4",
+      "title": "إثبات متراجحة أساسية",
+      "text": "أثبت بالتراجع أنه لكل \\(n\\ge1\\): \\(3^n\\ge2n+1\\).",
+      "standalone_text": "أثبت بالتراجع أنه لكل \\(n\\ge1\\): \\(3^n\\ge2n+1\\).",
+      "context": "تمرين تدريبي مبني مباشرة على محور الاستدلال بالتراجع.",
+      "tag": "mathematical_induction",
+      "axis": "الاستدلال بالتراجع",
+      "secondary_tags": [],
+      "skill": "إثبات متراجحة بالتراجع.",
+      "difficulty": "medium",
+      "question_type": "axis_practice",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "tables": [],
+      "variation_tables": [],
+      "sign_tables": [],
+      "graph_data": null,
+      "solution": {
+        "title": "الحل المفصل: إثبات متراجحة أساسية",
+        "main_idea": "إثبات متراجحة بالتراجع.",
+        "method_name": "الخاصية → التحقق → فرضية التراجع → الانتقال → الخاتمة",
+        "before_start": [
+          "اكتب الخاصية P(n) كما هي مطلوبة.",
+          "حدد رتبة البداية بدقة.",
+          "في الانتقال استعمل فرضية التراجع فعلًا."
+        ],
+        "strategy": "نعرّف الخاصية، نتحقق من البداية، نفترضها عند k، نثبتها عند k+1، ثم نختم بمبدأ التراجع.",
+        "detailed_explanation": "هذا الحل مكتوب بطريقة تدريجية حتى يرى التلميذ وظيفة كل مرحلة من مراحل الاستدلال بالتراجع، ولا ينتقل إلى المرحلة التالية قبل إكمال السابقة.",
+        "uses_graph": false,
+        "uses_images": false,
+        "uses_tables": false,
+        "uses_variation_table": false,
+        "uses_sign_table": false,
+        "steps": [
+          {
+            "number": "1",
+            "order": 1,
+            "title": "الخاصية",
+            "goal": "كتابة المتراجحة المطلوبة.",
+            "rule_used": "تعريف P(n)",
+            "explanation": "نريد إثبات نفس المتراجحة لكل n≥1.",
+            "construction": [],
+            "calculation": "\\[P(n):\\quad 3^n\\ge2n+1.\\]",
+            "calculation_lines": [
+              "\\[P(n):\\quad 3^n\\ge2n+1.\\]"
+            ],
+            "result": "تم تعريف P(n).",
+            "conclusion": "تم تعريف P(n).",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "نريد إثبات نفس المتراجحة لكل n≥1.",
+            "why": "نريد إثبات نفس المتراجحة لكل n≥1.",
+            "calculation_breakdown": [],
+            "student_action": "حاول كتابة هذه المرحلة وحدك، ثم قارنها بالحل."
+          },
+          {
+            "number": "2",
+            "order": 2,
+            "title": "التحقق",
+            "goal": "التحقق عند n=1.",
+            "rule_used": "مرحلة التحقق",
+            "explanation": "نحسب الطرفين.",
+            "construction": [],
+            "calculation": "\\[3^1=3\\ge3=2\\times1+1.\\]",
+            "calculation_lines": [
+              "\\[3^1=3\\ge3=2\\times1+1.\\]"
+            ],
+            "result": "\\(P(1)\\) صحيحة.",
+            "conclusion": "\\(P(1)\\) صحيحة.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "نحسب الطرفين.",
+            "why": "نحسب الطرفين.",
+            "calculation_breakdown": [],
+            "student_action": "حاول كتابة هذه المرحلة وحدك، ثم قارنها بالحل."
+          },
+          {
+            "number": "3",
+            "order": 3,
+            "title": "الفرضية",
+            "goal": "افتراض P(k).",
+            "rule_used": "فرضية التراجع",
+            "explanation": "نفترض أن المتراجحة صحيحة عند k.",
+            "construction": [],
+            "calculation": "\\[3^k\\ge2k+1.\\]",
+            "calculation_lines": [
+              "\\[3^k\\ge2k+1.\\]"
+            ],
+            "result": "سنستعملها في الطرف الأيسر.",
+            "conclusion": "سنستعملها في الطرف الأيسر.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "نفترض أن المتراجحة صحيحة عند k.",
+            "why": "نفترض أن المتراجحة صحيحة عند k.",
+            "calculation_breakdown": [],
+            "student_action": "حاول كتابة هذه المرحلة وحدك، ثم قارنها بالحل."
+          },
+          {
+            "number": "4",
+            "order": 4,
+            "title": "الانتقال",
+            "goal": "إثبات P(k+1).",
+            "rule_used": "الوراثة",
+            "explanation": "نضرب فرضية التراجع في 3 وهو عدد موجب.",
+            "construction": [],
+            "calculation": "\\[3^{k+1}=3\\cdot3^k\\ge3(2k+1)=6k+3.\\]\n\\[6k+3-(2k+3)=4k\\ge0.\\]\n\\[\\Rightarrow 3^{k+1}\\ge2k+3=2(k+1)+1.\\]",
+            "calculation_lines": [
+              "\\[3^{k+1}=3\\cdot3^k\\ge3(2k+1)=6k+3.\\]",
+              "\\[6k+3-(2k+3)=4k\\ge0.\\]",
+              "\\[\\Rightarrow 3^{k+1}\\ge2k+3=2(k+1)+1.\\]"
+            ],
+            "result": "\\(P(k+1)\\) صحيحة.",
+            "conclusion": "\\(P(k+1)\\) صحيحة.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "نضرب فرضية التراجع في 3 وهو عدد موجب.",
+            "why": "نضرب فرضية التراجع في 3 وهو عدد موجب.",
+            "calculation_breakdown": [],
+            "student_action": "حاول كتابة هذه المرحلة وحدك، ثم قارنها بالحل."
+          },
+          {
+            "number": "5",
+            "order": 5,
+            "title": "الخاتمة",
+            "goal": "تعميم النتيجة.",
+            "rule_used": "مبدأ التراجع",
+            "explanation": "الخاصية صحيحة عند 1 ووراثية.",
+            "construction": [],
+            "calculation": "\\[\\forall n\\ge1,\\quad 3^n\\ge2n+1.\\]",
+            "calculation_lines": [
+              "\\[\\forall n\\ge1,\\quad 3^n\\ge2n+1.\\]"
+            ],
+            "result": "تم الإثبات.",
+            "conclusion": "تم الإثبات.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "الخاصية صحيحة عند 1 ووراثية.",
+            "why": "الخاصية صحيحة عند 1 ووراثية.",
+            "calculation_breakdown": [],
+            "student_action": "حاول كتابة هذه المرحلة وحدك، ثم قارنها بالحل."
+          }
+        ],
+        "final_answer": "\\(\\boxed{3^n\\ge2n+1}\\) لكل \\(n\\ge1\\).",
+        "verification": "عند n=2: 9≥5، وعند n=3: 27≥7.",
+        "common_mistakes": [
+          {
+            "mistake": "نسيان مرحلة التحقق عند رتبة البداية.",
+            "correction": "ابدأ دائمًا بإثبات الخاصية عند أول رتبة يحددها السؤال."
+          },
+          {
+            "mistake": "افتراض أن الخاصية صحيحة لكل n.",
+            "correction": "نفترضها صحيحة عند رتبة ثابتة k فقط، ثم نثبتها عند k+1."
+          },
+          {
+            "mistake": "عدم استعمال فرضية التراجع في الانتقال.",
+            "correction": "يجب أن يظهر بوضوح أين استعملت P(k) للوصول إلى P(k+1)."
+          },
+          {
+            "mistake": "إنهاء الحساب دون خاتمة.",
+            "correction": "اختم دائمًا بعبارة: حسب مبدأ الاستدلال بالتراجع، الخاصية صحيحة لكل الرتب المطلوبة."
+          }
+        ],
+        "hints": [
+          {
+            "level": 1,
+            "hint": "ابدأ من 3^{k+1}=3×3^k."
+          },
+          {
+            "level": 2,
+            "hint": "استعمل أن k≥1 وبالتالي 4k≥0."
+          }
+        ],
+        "alternative_method": "",
+        "images": [],
+        "tables": [],
+        "variation_tables": [],
+        "sign_tables": [],
+        "graph_data": null,
+        "presentation": {
+          "show_graph_first": false,
+          "show_one_step_at_a_time": true,
+          "react_component": "UniversalMathExerciseRenderer",
+          "rtl": true,
+          "show_graph_in_question": false,
+          "show_graph_in_solution": false,
+          "animate_steps": true,
+          "solution_open_mode": "on_button_click",
+          "solution_access": "direct",
+          "attempt_required": false,
+          "show_final_answer_after_last_step": true,
+          "show_verification_after_final_answer": true,
+          "show_bac_writing": true,
+          "show_understanding_check": true,
+          "math_direction": "ltr"
+        },
+        "is_complete": true,
+        "solution_access": "direct",
+        "attempt_required": false,
+        "bac_writing": [
+          "نعتبر الخاصية \\(P(n):\\ldots\\).",
+          "نتحقق من صحتها عند رتبة البداية.",
+          "نفرض أن \\(P(k)\\) صحيحة.",
+          "نثبت أن \\(P(k+1)\\) صحيحة باستعمال فرضية التراجع.",
+          "إذن حسب مبدأ الاستدلال بالتراجع، الخاصية صحيحة لكل الرتب المطلوبة."
+        ],
+        "understanding_check": {
+          "question": "ما المراحل الخمس الأساسية للبرهان بالتراجع؟",
+          "answer": "تعريف الخاصية، التحقق، فرضية التراجع، الانتقال، ثم الخاتمة."
+        },
+        "takeaway": "في المتراجحات، انتبه إلى إشارة العدد الذي تضرب فيه.",
+        "proof_logic_check": {
+          "initialization_present": true,
+          "induction_hypothesis_present": true,
+          "hypothesis_used_in_transition": true,
+          "correct_conclusion_present": true,
+          "no_circular_reasoning": true
+        }
+      },
+      "display_order": 4,
+      "learning_stage": "axis_practice",
+      "learning_stage_label": "تمرين تطبيقي",
+      "pedagogical_objective": "إثبات متراجحة بالتراجع.",
+      "solution_access": "direct",
+      "attempt_required": false
+    },
+    {
+      "id": "mathematical_induction_practice_05",
+      "year": null,
+      "source_file": null,
+      "source_page": null,
+      "exercise": "تمرين تدريبي 5",
+      "number": "5",
+      "title": "إثبات إيجابية متتالية",
+      "text": "لتكن \\((u_n)\\) معرفة بـ \\(u_0=3\\) و\\(u_{n+1}=\\frac{u_n+2}{3}\\). أثبت بالتراجع أن \\(u_n>0\\) لكل \\(n\\in\\mathbb N\\).",
+      "standalone_text": "لتكن \\((u_n)\\) معرفة بـ \\(u_0=3\\) و\\(u_{n+1}=\\frac{u_n+2}{3}\\). أثبت بالتراجع أن \\(u_n>0\\) لكل \\(n\\in\\mathbb N\\).",
+      "context": "تمرين تدريبي مبني مباشرة على محور الاستدلال بالتراجع.",
+      "tag": "mathematical_induction",
+      "axis": "الاستدلال بالتراجع",
+      "secondary_tags": [],
+      "skill": "إثبات إيجابية متتالية تراجعية.",
+      "difficulty": "medium",
+      "question_type": "axis_practice",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "tables": [],
+      "variation_tables": [],
+      "sign_tables": [],
+      "graph_data": null,
+      "solution": {
+        "title": "الحل المفصل: إثبات إيجابية متتالية",
+        "main_idea": "إثبات إيجابية متتالية تراجعية.",
+        "method_name": "الخاصية → التحقق → فرضية التراجع → الانتقال → الخاتمة",
+        "before_start": [
+          "اكتب الخاصية P(n) كما هي مطلوبة.",
+          "حدد رتبة البداية بدقة.",
+          "في الانتقال استعمل فرضية التراجع فعلًا."
+        ],
+        "strategy": "نعرّف الخاصية، نتحقق من البداية، نفترضها عند k، نثبتها عند k+1، ثم نختم بمبدأ التراجع.",
+        "detailed_explanation": "هذا الحل مكتوب بطريقة تدريجية حتى يرى التلميذ وظيفة كل مرحلة من مراحل الاستدلال بالتراجع، ولا ينتقل إلى المرحلة التالية قبل إكمال السابقة.",
+        "uses_graph": false,
+        "uses_images": false,
+        "uses_tables": false,
+        "uses_variation_table": false,
+        "uses_sign_table": false,
+        "steps": [
+          {
+            "number": "1",
+            "order": 1,
+            "title": "الخاصية",
+            "goal": "كتابة الإيجابية المطلوبة.",
+            "rule_used": "تعريف P(n)",
+            "explanation": "نريد أن يبقى كل حد موجبًا.",
+            "construction": [],
+            "calculation": "\\[P(n):\\quad u_n>0.\\]",
+            "calculation_lines": [
+              "\\[P(n):\\quad u_n>0.\\]"
+            ],
+            "result": "تم تحديد الخاصية.",
+            "conclusion": "تم تحديد الخاصية.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "نريد أن يبقى كل حد موجبًا.",
+            "why": "نريد أن يبقى كل حد موجبًا.",
+            "calculation_breakdown": [],
+            "student_action": "حاول كتابة هذه المرحلة وحدك، ثم قارنها بالحل."
+          },
+          {
+            "number": "2",
+            "order": 2,
+            "title": "التحقق",
+            "goal": "فحص u0.",
+            "rule_used": "مرحلة التحقق",
+            "explanation": "الحد الابتدائي موجب.",
+            "construction": [],
+            "calculation": "\\[u_0=3>0.\\]",
+            "calculation_lines": [
+              "\\[u_0=3>0.\\]"
+            ],
+            "result": "\\(P(0)\\) صحيحة.",
+            "conclusion": "\\(P(0)\\) صحيحة.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "الحد الابتدائي موجب.",
+            "why": "الحد الابتدائي موجب.",
+            "calculation_breakdown": [],
+            "student_action": "حاول كتابة هذه المرحلة وحدك، ثم قارنها بالحل."
+          },
+          {
+            "number": "3",
+            "order": 3,
+            "title": "الفرضية",
+            "goal": "افتراض إيجابية uk.",
+            "rule_used": "فرضية التراجع",
+            "explanation": "نفترض أن u_k موجب.",
+            "construction": [],
+            "calculation": "\\[u_k>0.\\]",
+            "calculation_lines": [
+              "\\[u_k>0.\\]"
+            ],
+            "result": "سنستعمل هذه الإيجابية.",
+            "conclusion": "سنستعمل هذه الإيجابية.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "نفترض أن u_k موجب.",
+            "why": "نفترض أن u_k موجب.",
+            "calculation_breakdown": [],
+            "student_action": "حاول كتابة هذه المرحلة وحدك، ثم قارنها بالحل."
+          },
+          {
+            "number": "4",
+            "order": 4,
+            "title": "الانتقال",
+            "goal": "إثبات إيجابية u_{k+1}.",
+            "rule_used": "الوراثة",
+            "explanation": "إذا كان u_k>0 فإن u_k+2>0، والقسمة على 3 الموجب تحفظ الإشارة.",
+            "construction": [],
+            "calculation": "\\[u_k+2>2>0,\\]\n\\[u_{k+1}=\\frac{u_k+2}{3}>0.\\]",
+            "calculation_lines": [
+              "\\[u_k+2>2>0,\\]",
+              "\\[u_{k+1}=\\frac{u_k+2}{3}>0.\\]"
+            ],
+            "result": "\\(P(k+1)\\) صحيحة.",
+            "conclusion": "\\(P(k+1)\\) صحيحة.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "إذا كان u_k>0 فإن u_k+2>0، والقسمة على 3 الموجب تحفظ الإشارة.",
+            "why": "إذا كان u_k>0 فإن u_k+2>0، والقسمة على 3 الموجب تحفظ الإشارة.",
+            "calculation_breakdown": [],
+            "student_action": "حاول كتابة هذه المرحلة وحدك، ثم قارنها بالحل."
+          },
+          {
+            "number": "5",
+            "order": 5,
+            "title": "الخاتمة",
+            "goal": "تعميم الإيجابية.",
+            "rule_used": "مبدأ التراجع",
+            "explanation": "تحققت البداية والوراثة.",
+            "construction": [],
+            "calculation": "\\[\\forall n\\in\\mathbb N,\\quad u_n>0.\\]",
+            "calculation_lines": [
+              "\\[\\forall n\\in\\mathbb N,\\quad u_n>0.\\]"
+            ],
+            "result": "تم الإثبات.",
+            "conclusion": "تم الإثبات.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "تحققت البداية والوراثة.",
+            "why": "تحققت البداية والوراثة.",
+            "calculation_breakdown": [],
+            "student_action": "حاول كتابة هذه المرحلة وحدك، ثم قارنها بالحل."
+          }
+        ],
+        "final_answer": "\\(\\boxed{u_n>0}\\) لكل \\(n\\in\\mathbb N\\).",
+        "verification": "العلاقة نفسها تحول كل عدد موجب إلى عدد موجب.",
+        "common_mistakes": [
+          {
+            "mistake": "نسيان مرحلة التحقق عند رتبة البداية.",
+            "correction": "ابدأ دائمًا بإثبات الخاصية عند أول رتبة يحددها السؤال."
+          },
+          {
+            "mistake": "افتراض أن الخاصية صحيحة لكل n.",
+            "correction": "نفترضها صحيحة عند رتبة ثابتة k فقط، ثم نثبتها عند k+1."
+          },
+          {
+            "mistake": "عدم استعمال فرضية التراجع في الانتقال.",
+            "correction": "يجب أن يظهر بوضوح أين استعملت P(k) للوصول إلى P(k+1)."
+          },
+          {
+            "mistake": "إنهاء الحساب دون خاتمة.",
+            "correction": "اختم دائمًا بعبارة: حسب مبدأ الاستدلال بالتراجع، الخاصية صحيحة لكل الرتب المطلوبة."
+          }
+        ],
+        "hints": [
+          {
+            "level": 1,
+            "hint": "ابدأ من u_k>0."
+          },
+          {
+            "level": 2,
+            "hint": "حدد إشارة البسط ثم المقام."
+          }
+        ],
+        "alternative_method": "",
+        "images": [],
+        "tables": [],
+        "variation_tables": [],
+        "sign_tables": [],
+        "graph_data": null,
+        "presentation": {
+          "show_graph_first": false,
+          "show_one_step_at_a_time": true,
+          "react_component": "UniversalMathExerciseRenderer",
+          "rtl": true,
+          "show_graph_in_question": false,
+          "show_graph_in_solution": false,
+          "animate_steps": true,
+          "solution_open_mode": "on_button_click",
+          "solution_access": "direct",
+          "attempt_required": false,
+          "show_final_answer_after_last_step": true,
+          "show_verification_after_final_answer": true,
+          "show_bac_writing": true,
+          "show_understanding_check": true,
+          "math_direction": "ltr"
+        },
+        "is_complete": true,
+        "solution_access": "direct",
+        "attempt_required": false,
+        "bac_writing": [
+          "نعتبر الخاصية \\(P(n):\\ldots\\).",
+          "نتحقق من صحتها عند رتبة البداية.",
+          "نفرض أن \\(P(k)\\) صحيحة.",
+          "نثبت أن \\(P(k+1)\\) صحيحة باستعمال فرضية التراجع.",
+          "إذن حسب مبدأ الاستدلال بالتراجع، الخاصية صحيحة لكل الرتب المطلوبة."
+        ],
+        "understanding_check": {
+          "question": "ما المراحل الخمس الأساسية للبرهان بالتراجع؟",
+          "answer": "تعريف الخاصية، التحقق، فرضية التراجع، الانتقال، ثم الخاتمة."
+        },
+        "takeaway": "لإثبات الإيجابية، استعمل فرضية التراجع داخل العلاقة التراجعية.",
+        "proof_logic_check": {
+          "initialization_present": true,
+          "induction_hypothesis_present": true,
+          "hypothesis_used_in_transition": true,
+          "correct_conclusion_present": true,
+          "no_circular_reasoning": true
+        }
+      },
+      "display_order": 5,
+      "learning_stage": "axis_practice",
+      "learning_stage_label": "تمرين تطبيقي",
+      "pedagogical_objective": "إثبات إيجابية متتالية تراجعية.",
+      "solution_access": "direct",
+      "attempt_required": false
+    },
+    {
+      "id": "mathematical_induction_practice_06",
+      "year": null,
+      "source_file": null,
+      "source_page": null,
+      "exercise": "تمرين تدريبي 6",
+      "number": "6",
+      "title": "إثبات حصر بسيط",
+      "text": "لتكن \\((u_n)\\) معرفة بـ \\(u_0=1\\) و\\(u_{n+1}=\\frac{u_n+2}{2}\\). أثبت بالتراجع أن \\(1\\le u_n\\le2\\) لكل \\(n\\in\\mathbb N\\).",
+      "standalone_text": "لتكن \\((u_n)\\) معرفة بـ \\(u_0=1\\) و\\(u_{n+1}=\\frac{u_n+2}{2}\\). أثبت بالتراجع أن \\(1\\le u_n\\le2\\) لكل \\(n\\in\\mathbb N\\).",
+      "context": "تمرين تدريبي مبني مباشرة على محور الاستدلال بالتراجع.",
+      "tag": "mathematical_induction",
+      "axis": "الاستدلال بالتراجع",
+      "secondary_tags": [],
+      "skill": "إثبات حصر متتالية.",
+      "difficulty": "medium",
+      "question_type": "axis_practice",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "tables": [],
+      "variation_tables": [],
+      "sign_tables": [],
+      "graph_data": null,
+      "solution": {
+        "title": "الحل المفصل: إثبات حصر بسيط",
+        "main_idea": "إثبات حصر متتالية.",
+        "method_name": "الخاصية → التحقق → فرضية التراجع → الانتقال → الخاتمة",
+        "before_start": [
+          "اكتب الخاصية P(n) كما هي مطلوبة.",
+          "حدد رتبة البداية بدقة.",
+          "في الانتقال استعمل فرضية التراجع فعلًا."
+        ],
+        "strategy": "نعرّف الخاصية، نتحقق من البداية، نفترضها عند k، نثبتها عند k+1، ثم نختم بمبدأ التراجع.",
+        "detailed_explanation": "هذا الحل مكتوب بطريقة تدريجية حتى يرى التلميذ وظيفة كل مرحلة من مراحل الاستدلال بالتراجع، ولا ينتقل إلى المرحلة التالية قبل إكمال السابقة.",
+        "uses_graph": false,
+        "uses_images": false,
+        "uses_tables": false,
+        "uses_variation_table": false,
+        "uses_sign_table": false,
+        "steps": [
+          {
+            "number": "1",
+            "order": 1,
+            "title": "الخاصية",
+            "goal": "كتابة الحصر كاملًا.",
+            "rule_used": "تعريف P(n)",
+            "explanation": "يجب وضع الحدين داخل الخاصية.",
+            "construction": [],
+            "calculation": "\\[P(n):\\quad 1\\le u_n\\le2.\\]",
+            "calculation_lines": [
+              "\\[P(n):\\quad 1\\le u_n\\le2.\\]"
+            ],
+            "result": "تم تعريف الخاصية.",
+            "conclusion": "تم تعريف الخاصية.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "يجب وضع الحدين داخل الخاصية.",
+            "why": "يجب وضع الحدين داخل الخاصية.",
+            "calculation_breakdown": [],
+            "student_action": "حاول كتابة هذه المرحلة وحدك، ثم قارنها بالحل."
+          },
+          {
+            "number": "2",
+            "order": 2,
+            "title": "التحقق",
+            "goal": "التحقق عند n=0.",
+            "rule_used": "مرحلة التحقق",
+            "explanation": "u0 يحقق الحصر.",
+            "construction": [],
+            "calculation": "\\[1\\le u_0=1\\le2.\\]",
+            "calculation_lines": [
+              "\\[1\\le u_0=1\\le2.\\]"
+            ],
+            "result": "\\(P(0)\\) صحيحة.",
+            "conclusion": "\\(P(0)\\) صحيحة.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "u0 يحقق الحصر.",
+            "why": "u0 يحقق الحصر.",
+            "calculation_breakdown": [],
+            "student_action": "حاول كتابة هذه المرحلة وحدك، ثم قارنها بالحل."
+          },
+          {
+            "number": "3",
+            "order": 3,
+            "title": "الفرضية",
+            "goal": "افتراض الحصر عند k.",
+            "rule_used": "فرضية التراجع",
+            "explanation": "نفترض أن uk بين 1 و2.",
+            "construction": [],
+            "calculation": "\\[1\\le u_k\\le2.\\]",
+            "calculation_lines": [
+              "\\[1\\le u_k\\le2.\\]"
+            ],
+            "result": "سنثبت الحصر نفسه للحد التالي.",
+            "conclusion": "سنثبت الحصر نفسه للحد التالي.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "نفترض أن uk بين 1 و2.",
+            "why": "نفترض أن uk بين 1 و2.",
+            "calculation_breakdown": [],
+            "student_action": "حاول كتابة هذه المرحلة وحدك، ثم قارنها بالحل."
+          },
+          {
+            "number": "4",
+            "order": 4,
+            "title": "الحد السفلي",
+            "goal": "إثبات u_{k+1}≥1.",
+            "rule_used": "الوراثة",
+            "explanation": "من u_k≥1 نحصل على حد سفلي للحد التالي.",
+            "construction": [],
+            "calculation": "\\[u_k+2\\ge3,\\]\n\\[u_{k+1}=\\frac{u_k+2}{2}\\ge\\frac32\\ge1.\\]",
+            "calculation_lines": [
+              "\\[u_k+2\\ge3,\\]",
+              "\\[u_{k+1}=\\frac{u_k+2}{2}\\ge\\frac32\\ge1.\\]"
+            ],
+            "result": "\\(u_{k+1}\\ge1\\).",
+            "conclusion": "\\(u_{k+1}\\ge1\\).",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "من u_k≥1 نحصل على حد سفلي للحد التالي.",
+            "why": "من u_k≥1 نحصل على حد سفلي للحد التالي.",
+            "calculation_breakdown": [],
+            "student_action": "حاول كتابة هذه المرحلة وحدك، ثم قارنها بالحل."
+          },
+          {
+            "number": "5",
+            "order": 5,
+            "title": "الحد العلوي",
+            "goal": "إثبات u_{k+1}≤2.",
+            "rule_used": "الوراثة",
+            "explanation": "من u_k≤2 نحصل على حد علوي.",
+            "construction": [],
+            "calculation": "\\[u_k+2\\le4,\\]\n\\[u_{k+1}\\le2.\\]",
+            "calculation_lines": [
+              "\\[u_k+2\\le4,\\]",
+              "\\[u_{k+1}\\le2.\\]"
+            ],
+            "result": "\\(u_{k+1}\\le2\\).",
+            "conclusion": "\\(u_{k+1}\\le2\\).",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "من u_k≤2 نحصل على حد علوي.",
+            "why": "من u_k≤2 نحصل على حد علوي.",
+            "calculation_breakdown": [],
+            "student_action": "حاول كتابة هذه المرحلة وحدك، ثم قارنها بالحل."
+          },
+          {
+            "number": "6",
+            "order": 6,
+            "title": "الخاتمة",
+            "goal": "جمع النتيجتين وتطبيق التراجع.",
+            "rule_used": "مبدأ التراجع",
+            "explanation": "حصلنا على الحصر كاملًا عند k+1.",
+            "construction": [],
+            "calculation": "\\[1\\le u_{k+1}\\le2.\\]\n\\[\\forall n\\in\\mathbb N,\\quad1\\le u_n\\le2.\\]",
+            "calculation_lines": [
+              "\\[1\\le u_{k+1}\\le2.\\]",
+              "\\[\\forall n\\in\\mathbb N,\\quad1\\le u_n\\le2.\\]"
+            ],
+            "result": "تم الإثبات.",
+            "conclusion": "تم الإثبات.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "حصلنا على الحصر كاملًا عند k+1.",
+            "why": "حصلنا على الحصر كاملًا عند k+1.",
+            "calculation_breakdown": [],
+            "student_action": "حاول كتابة هذه المرحلة وحدك، ثم قارنها بالحل."
+          }
+        ],
+        "final_answer": "\\(\\boxed{1\\le u_n\\le2}\\) لكل \\(n\\in\\mathbb N\\).",
+        "verification": "من فرضية الحصر استعملنا الجهة السفلى والجهة العليا كل واحدة في مكانها.",
+        "common_mistakes": [
+          {
+            "mistake": "نسيان مرحلة التحقق عند رتبة البداية.",
+            "correction": "ابدأ دائمًا بإثبات الخاصية عند أول رتبة يحددها السؤال."
+          },
+          {
+            "mistake": "افتراض أن الخاصية صحيحة لكل n.",
+            "correction": "نفترضها صحيحة عند رتبة ثابتة k فقط، ثم نثبتها عند k+1."
+          },
+          {
+            "mistake": "عدم استعمال فرضية التراجع في الانتقال.",
+            "correction": "يجب أن يظهر بوضوح أين استعملت P(k) للوصول إلى P(k+1)."
+          },
+          {
+            "mistake": "إنهاء الحساب دون خاتمة.",
+            "correction": "اختم دائمًا بعبارة: حسب مبدأ الاستدلال بالتراجع، الخاصية صحيحة لكل الرتب المطلوبة."
+          },
+          {
+            "mistake": "إثبات u_{k+1}≤2 فقط.",
+            "correction": "الحصر الكامل يتطلب إثبات 1≤u_{k+1} وu_{k+1}≤2."
+          }
+        ],
+        "hints": [
+          {
+            "level": 1,
+            "hint": "لا تثبت جهة واحدة فقط."
+          },
+          {
+            "level": 2,
+            "hint": "استعمل u_k≥1 للحد السفلي وu_k≤2 للحد العلوي."
+          }
+        ],
+        "alternative_method": "",
+        "images": [],
+        "tables": [],
+        "variation_tables": [],
+        "sign_tables": [],
+        "graph_data": null,
+        "presentation": {
+          "show_graph_first": false,
+          "show_one_step_at_a_time": true,
+          "react_component": "UniversalMathExerciseRenderer",
+          "rtl": true,
+          "show_graph_in_question": false,
+          "show_graph_in_solution": false,
+          "animate_steps": true,
+          "solution_open_mode": "on_button_click",
+          "solution_access": "direct",
+          "attempt_required": false,
+          "show_final_answer_after_last_step": true,
+          "show_verification_after_final_answer": true,
+          "show_bac_writing": true,
+          "show_understanding_check": true,
+          "math_direction": "ltr"
+        },
+        "is_complete": true,
+        "solution_access": "direct",
+        "attempt_required": false,
+        "bac_writing": [
+          "نعتبر الخاصية \\(P(n):\\ldots\\).",
+          "نتحقق من صحتها عند رتبة البداية.",
+          "نفرض أن \\(P(k)\\) صحيحة.",
+          "نثبت أن \\(P(k+1)\\) صحيحة باستعمال فرضية التراجع.",
+          "إذن حسب مبدأ الاستدلال بالتراجع، الخاصية صحيحة لكل الرتب المطلوبة."
+        ],
+        "understanding_check": {
+          "question": "ما المراحل الخمس الأساسية للبرهان بالتراجع؟",
+          "answer": "تعريف الخاصية، التحقق، فرضية التراجع، الانتقال، ثم الخاتمة."
+        },
+        "takeaway": "الحصر يحتاج إلى إثبات الحد السفلي والحد العلوي معًا.",
+        "proof_logic_check": {
+          "initialization_present": true,
+          "induction_hypothesis_present": true,
+          "hypothesis_used_in_transition": true,
+          "correct_conclusion_present": true,
+          "no_circular_reasoning": true
+        }
+      },
+      "display_order": 6,
+      "learning_stage": "axis_practice",
+      "learning_stage_label": "تمرين تطبيقي",
+      "pedagogical_objective": "إثبات حصر متتالية.",
+      "solution_access": "direct",
+      "attempt_required": false
+    },
+    {
+      "id": "mathematical_induction_practice_07",
+      "year": null,
+      "source_file": null,
+      "source_page": null,
+      "exercise": "تمرين تدريبي 7",
+      "number": "7",
+      "title": "إثبات صيغة حد عام",
+      "text": "لتكن \\((u_n)\\) معرفة بـ \\(u_0=2\\) و\\(u_{n+1}=3u_n+2\\). أثبت بالتراجع أن \\(u_n=3^{n+1}-1\\) لكل \\(n\\in\\mathbb N\\).",
+      "standalone_text": "لتكن \\((u_n)\\) معرفة بـ \\(u_0=2\\) و\\(u_{n+1}=3u_n+2\\). أثبت بالتراجع أن \\(u_n=3^{n+1}-1\\) لكل \\(n\\in\\mathbb N\\).",
+      "context": "تمرين تدريبي مبني مباشرة على محور الاستدلال بالتراجع.",
+      "tag": "mathematical_induction",
+      "axis": "الاستدلال بالتراجع",
+      "secondary_tags": [],
+      "skill": "إثبات صيغة حد عام لمتتالية تراجعية.",
+      "difficulty": "medium",
+      "question_type": "axis_practice",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "tables": [],
+      "variation_tables": [],
+      "sign_tables": [],
+      "graph_data": null,
+      "solution": {
+        "title": "الحل المفصل: إثبات صيغة حد عام",
+        "main_idea": "إثبات صيغة حد عام لمتتالية تراجعية.",
+        "method_name": "الخاصية → التحقق → فرضية التراجع → الانتقال → الخاتمة",
+        "before_start": [
+          "اكتب الخاصية P(n) كما هي مطلوبة.",
+          "حدد رتبة البداية بدقة.",
+          "في الانتقال استعمل فرضية التراجع فعلًا."
+        ],
+        "strategy": "نعرّف الخاصية، نتحقق من البداية، نفترضها عند k، نثبتها عند k+1، ثم نختم بمبدأ التراجع.",
+        "detailed_explanation": "هذا الحل مكتوب بطريقة تدريجية حتى يرى التلميذ وظيفة كل مرحلة من مراحل الاستدلال بالتراجع، ولا ينتقل إلى المرحلة التالية قبل إكمال السابقة.",
+        "uses_graph": false,
+        "uses_images": false,
+        "uses_tables": false,
+        "uses_variation_table": false,
+        "uses_sign_table": false,
+        "steps": [
+          {
+            "number": "1",
+            "order": 1,
+            "title": "الخاصية",
+            "goal": "كتابة الصيغة المطلوبة.",
+            "rule_used": "تعريف P(n)",
+            "explanation": "نحوّل المطلوب إلى خاصية.",
+            "construction": [],
+            "calculation": "\\[P(n):\\quad u_n=3^{n+1}-1.\\]",
+            "calculation_lines": [
+              "\\[P(n):\\quad u_n=3^{n+1}-1.\\]"
+            ],
+            "result": "تم تعريف الخاصية.",
+            "conclusion": "تم تعريف الخاصية.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "نحوّل المطلوب إلى خاصية.",
+            "why": "نحوّل المطلوب إلى خاصية.",
+            "calculation_breakdown": [],
+            "student_action": "حاول كتابة هذه المرحلة وحدك، ثم قارنها بالحل."
+          },
+          {
+            "number": "2",
+            "order": 2,
+            "title": "التحقق",
+            "goal": "التحقق عند n=0.",
+            "rule_used": "مرحلة التحقق",
+            "explanation": "نقارن u0 مع الصيغة.",
+            "construction": [],
+            "calculation": "\\[3^{0+1}-1=3-1=2=u_0.\\]",
+            "calculation_lines": [
+              "\\[3^{0+1}-1=3-1=2=u_0.\\]"
+            ],
+            "result": "\\(P(0)\\) صحيحة.",
+            "conclusion": "\\(P(0)\\) صحيحة.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "نقارن u0 مع الصيغة.",
+            "why": "نقارن u0 مع الصيغة.",
+            "calculation_breakdown": [],
+            "student_action": "حاول كتابة هذه المرحلة وحدك، ثم قارنها بالحل."
+          },
+          {
+            "number": "3",
+            "order": 3,
+            "title": "الفرضية",
+            "goal": "افتراض الصيغة عند k.",
+            "rule_used": "فرضية التراجع",
+            "explanation": "نفترض أن الصيغة صحيحة للحد uk.",
+            "construction": [],
+            "calculation": "\\[u_k=3^{k+1}-1.\\]",
+            "calculation_lines": [
+              "\\[u_k=3^{k+1}-1.\\]"
+            ],
+            "result": "هذه هي فرضية التراجع.",
+            "conclusion": "هذه هي فرضية التراجع.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "نفترض أن الصيغة صحيحة للحد uk.",
+            "why": "نفترض أن الصيغة صحيحة للحد uk.",
+            "calculation_breakdown": [],
+            "student_action": "حاول كتابة هذه المرحلة وحدك، ثم قارنها بالحل."
+          },
+          {
+            "number": "4",
+            "order": 4,
+            "title": "الانتقال",
+            "goal": "إثبات صيغة u_{k+1}.",
+            "rule_used": "الوراثة",
+            "explanation": "نعوض u_k داخل العلاقة التراجعية.",
+            "construction": [],
+            "calculation": "\\[u_{k+1}=3u_k+2\\]\n\\[=3(3^{k+1}-1)+2\\]\n\\[=3^{k+2}-1\\]\n\\[=3^{(k+1)+1}-1.\\]",
+            "calculation_lines": [
+              "\\[u_{k+1}=3u_k+2\\]",
+              "\\[=3(3^{k+1}-1)+2\\]",
+              "\\[=3^{k+2}-1\\]",
+              "\\[=3^{(k+1)+1}-1.\\]"
+            ],
+            "result": "\\(P(k+1)\\) صحيحة.",
+            "conclusion": "\\(P(k+1)\\) صحيحة.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "نعوض u_k داخل العلاقة التراجعية.",
+            "why": "نعوض u_k داخل العلاقة التراجعية.",
+            "calculation_breakdown": [],
+            "student_action": "حاول كتابة هذه المرحلة وحدك، ثم قارنها بالحل."
+          },
+          {
+            "number": "5",
+            "order": 5,
+            "title": "الخاتمة",
+            "goal": "تطبيق المبدأ.",
+            "rule_used": "مبدأ التراجع",
+            "explanation": "البداية صحيحة والخاصية وراثية.",
+            "construction": [],
+            "calculation": "\\[\\forall n\\in\\mathbb N,\\quad u_n=3^{n+1}-1.\\]",
+            "calculation_lines": [
+              "\\[\\forall n\\in\\mathbb N,\\quad u_n=3^{n+1}-1.\\]"
+            ],
+            "result": "تم الإثبات.",
+            "conclusion": "تم الإثبات.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "البداية صحيحة والخاصية وراثية.",
+            "why": "البداية صحيحة والخاصية وراثية.",
+            "calculation_breakdown": [],
+            "student_action": "حاول كتابة هذه المرحلة وحدك، ثم قارنها بالحل."
+          }
+        ],
+        "final_answer": "\\(\\boxed{u_n=3^{n+1}-1}\\).",
+        "verification": "عند n=1: العلاقة تعطي u1=8، والصيغة تعطي 3²−1=8.",
+        "common_mistakes": [
+          {
+            "mistake": "نسيان مرحلة التحقق عند رتبة البداية.",
+            "correction": "ابدأ دائمًا بإثبات الخاصية عند أول رتبة يحددها السؤال."
+          },
+          {
+            "mistake": "افتراض أن الخاصية صحيحة لكل n.",
+            "correction": "نفترضها صحيحة عند رتبة ثابتة k فقط، ثم نثبتها عند k+1."
+          },
+          {
+            "mistake": "عدم استعمال فرضية التراجع في الانتقال.",
+            "correction": "يجب أن يظهر بوضوح أين استعملت P(k) للوصول إلى P(k+1)."
+          },
+          {
+            "mistake": "إنهاء الحساب دون خاتمة.",
+            "correction": "اختم دائمًا بعبارة: حسب مبدأ الاستدلال بالتراجع، الخاصية صحيحة لكل الرتب المطلوبة."
+          }
+        ],
+        "hints": [
+          {
+            "level": 1,
+            "hint": "عوّض فرضية التراجع داخل u_{k+1}=3u_k+2."
+          },
+          {
+            "level": 2,
+            "hint": "رتب الأسس حتى تحصل على k+2."
+          }
+        ],
+        "alternative_method": "",
+        "images": [],
+        "tables": [],
+        "variation_tables": [],
+        "sign_tables": [],
+        "graph_data": null,
+        "presentation": {
+          "show_graph_first": false,
+          "show_one_step_at_a_time": true,
+          "react_component": "UniversalMathExerciseRenderer",
+          "rtl": true,
+          "show_graph_in_question": false,
+          "show_graph_in_solution": false,
+          "animate_steps": true,
+          "solution_open_mode": "on_button_click",
+          "solution_access": "direct",
+          "attempt_required": false,
+          "show_final_answer_after_last_step": true,
+          "show_verification_after_final_answer": true,
+          "show_bac_writing": true,
+          "show_understanding_check": true,
+          "math_direction": "ltr"
+        },
+        "is_complete": true,
+        "solution_access": "direct",
+        "attempt_required": false,
+        "bac_writing": [
+          "نعتبر الخاصية \\(P(n):\\ldots\\).",
+          "نتحقق من صحتها عند رتبة البداية.",
+          "نفرض أن \\(P(k)\\) صحيحة.",
+          "نثبت أن \\(P(k+1)\\) صحيحة باستعمال فرضية التراجع.",
+          "إذن حسب مبدأ الاستدلال بالتراجع، الخاصية صحيحة لكل الرتب المطلوبة."
+        ],
+        "understanding_check": {
+          "question": "ما المراحل الخمس الأساسية للبرهان بالتراجع؟",
+          "answer": "تعريف الخاصية، التحقق، فرضية التراجع، الانتقال، ثم الخاتمة."
+        },
+        "takeaway": "عند إثبات حد عام، عوض الصيغة المفترضة داخل العلاقة التراجعية.",
+        "proof_logic_check": {
+          "initialization_present": true,
+          "induction_hypothesis_present": true,
+          "hypothesis_used_in_transition": true,
+          "correct_conclusion_present": true,
+          "no_circular_reasoning": true
+        }
+      },
+      "display_order": 7,
+      "learning_stage": "axis_practice",
+      "learning_stage_label": "تمرين تطبيقي",
+      "pedagogical_objective": "إثبات صيغة حد عام لمتتالية تراجعية.",
+      "solution_access": "direct",
+      "attempt_required": false
+    },
+    {
+      "id": "mathematical_induction_practice_08",
+      "year": null,
+      "source_file": null,
+      "source_page": null,
+      "exercise": "تمرين تدريبي 8",
+      "number": "8",
+      "title": "إثبات علاقة بين حدين",
+      "text": "لتكن \\((u_n)\\) معرفة بـ \\(u_0=1\\) و\\(u_{n+1}=2u_n+1\\). أثبت بالتراجع أن \\(u_n+1=2^{n+1}\\) لكل \\(n\\in\\mathbb N\\).",
+      "standalone_text": "لتكن \\((u_n)\\) معرفة بـ \\(u_0=1\\) و\\(u_{n+1}=2u_n+1\\). أثبت بالتراجع أن \\(u_n+1=2^{n+1}\\) لكل \\(n\\in\\mathbb N\\).",
+      "context": "تمرين تدريبي مبني مباشرة على محور الاستدلال بالتراجع.",
+      "tag": "mathematical_induction",
+      "axis": "الاستدلال بالتراجع",
+      "secondary_tags": [],
+      "skill": "إثبات علاقة جبرية مرتبطة بمتتالية.",
+      "difficulty": "medium",
+      "question_type": "axis_practice",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "tables": [],
+      "variation_tables": [],
+      "sign_tables": [],
+      "graph_data": null,
+      "solution": {
+        "title": "الحل المفصل: إثبات علاقة بين حدين",
+        "main_idea": "إثبات علاقة جبرية مرتبطة بمتتالية.",
+        "method_name": "الخاصية → التحقق → فرضية التراجع → الانتقال → الخاتمة",
+        "before_start": [
+          "اكتب الخاصية P(n) كما هي مطلوبة.",
+          "حدد رتبة البداية بدقة.",
+          "في الانتقال استعمل فرضية التراجع فعلًا."
+        ],
+        "strategy": "نعرّف الخاصية، نتحقق من البداية، نفترضها عند k، نثبتها عند k+1، ثم نختم بمبدأ التراجع.",
+        "detailed_explanation": "هذا الحل مكتوب بطريقة تدريجية حتى يرى التلميذ وظيفة كل مرحلة من مراحل الاستدلال بالتراجع، ولا ينتقل إلى المرحلة التالية قبل إكمال السابقة.",
+        "uses_graph": false,
+        "uses_images": false,
+        "uses_tables": false,
+        "uses_variation_table": false,
+        "uses_sign_table": false,
+        "steps": [
+          {
+            "number": "1",
+            "order": 1,
+            "title": "الخاصية",
+            "goal": "صياغة العلاقة.",
+            "rule_used": "تعريف P(n)",
+            "explanation": "نكتب المطلوب كما هو.",
+            "construction": [],
+            "calculation": "\\[P(n):\\quad u_n+1=2^{n+1}.\\]",
+            "calculation_lines": [
+              "\\[P(n):\\quad u_n+1=2^{n+1}.\\]"
+            ],
+            "result": "تم تحديد P(n).",
+            "conclusion": "تم تحديد P(n).",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "نكتب المطلوب كما هو.",
+            "why": "نكتب المطلوب كما هو.",
+            "calculation_breakdown": [],
+            "student_action": "حاول كتابة هذه المرحلة وحدك، ثم قارنها بالحل."
+          },
+          {
+            "number": "2",
+            "order": 2,
+            "title": "التحقق",
+            "goal": "التحقق عند n=0.",
+            "rule_used": "مرحلة التحقق",
+            "explanation": "نعوض الحد الابتدائي.",
+            "construction": [],
+            "calculation": "\\[u_0+1=1+1=2=2^1.\\]",
+            "calculation_lines": [
+              "\\[u_0+1=1+1=2=2^1.\\]"
+            ],
+            "result": "\\(P(0)\\) صحيحة.",
+            "conclusion": "\\(P(0)\\) صحيحة.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "نعوض الحد الابتدائي.",
+            "why": "نعوض الحد الابتدائي.",
+            "calculation_breakdown": [],
+            "student_action": "حاول كتابة هذه المرحلة وحدك، ثم قارنها بالحل."
+          },
+          {
+            "number": "3",
+            "order": 3,
+            "title": "الفرضية",
+            "goal": "افتراض العلاقة عند k.",
+            "rule_used": "فرضية التراجع",
+            "explanation": "نفترض أن u_k+1 يساوي القوة المطلوبة.",
+            "construction": [],
+            "calculation": "\\[u_k+1=2^{k+1}.\\]",
+            "calculation_lines": [
+              "\\[u_k+1=2^{k+1}.\\]"
+            ],
+            "result": "هذه هي فرضية التراجع.",
+            "conclusion": "هذه هي فرضية التراجع.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "نفترض أن u_k+1 يساوي القوة المطلوبة.",
+            "why": "نفترض أن u_k+1 يساوي القوة المطلوبة.",
+            "calculation_breakdown": [],
+            "student_action": "حاول كتابة هذه المرحلة وحدك، ثم قارنها بالحل."
+          },
+          {
+            "number": "4",
+            "order": 4,
+            "title": "الانتقال",
+            "goal": "إثبات العلاقة عند k+1.",
+            "rule_used": "الوراثة",
+            "explanation": "نحسب u_{k+1}+1 ثم نستعمل الفرضية.",
+            "construction": [],
+            "calculation": "\\[u_{k+1}+1=2u_k+1+1\\]\n\\[=2(u_k+1)\\]\n\\[=2\\cdot2^{k+1}=2^{k+2}.\\]",
+            "calculation_lines": [
+              "\\[u_{k+1}+1=2u_k+1+1\\]",
+              "\\[=2(u_k+1)\\]",
+              "\\[=2\\cdot2^{k+1}=2^{k+2}.\\]"
+            ],
+            "result": "\\(P(k+1)\\) صحيحة.",
+            "conclusion": "\\(P(k+1)\\) صحيحة.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "نحسب u_{k+1}+1 ثم نستعمل الفرضية.",
+            "why": "نحسب u_{k+1}+1 ثم نستعمل الفرضية.",
+            "calculation_breakdown": [],
+            "student_action": "حاول كتابة هذه المرحلة وحدك، ثم قارنها بالحل."
+          },
+          {
+            "number": "5",
+            "order": 5,
+            "title": "الخاتمة",
+            "goal": "تعميم النتيجة.",
+            "rule_used": "مبدأ التراجع",
+            "explanation": "البداية والوراثة متحققتان.",
+            "construction": [],
+            "calculation": "\\[\\forall n\\in\\mathbb N,\\quad u_n+1=2^{n+1}.\\]",
+            "calculation_lines": [
+              "\\[\\forall n\\in\\mathbb N,\\quad u_n+1=2^{n+1}.\\]"
+            ],
+            "result": "تم الإثبات.",
+            "conclusion": "تم الإثبات.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "البداية والوراثة متحققتان.",
+            "why": "البداية والوراثة متحققتان.",
+            "calculation_breakdown": [],
+            "student_action": "حاول كتابة هذه المرحلة وحدك، ثم قارنها بالحل."
+          }
+        ],
+        "final_answer": "\\(\\boxed{u_n+1=2^{n+1}}\\).",
+        "verification": "العلاقة تكافئ u_n=2^{n+1}-1، وهي متوافقة مع الحدود الأولى 1،3،7...",
+        "common_mistakes": [
+          {
+            "mistake": "نسيان مرحلة التحقق عند رتبة البداية.",
+            "correction": "ابدأ دائمًا بإثبات الخاصية عند أول رتبة يحددها السؤال."
+          },
+          {
+            "mistake": "افتراض أن الخاصية صحيحة لكل n.",
+            "correction": "نفترضها صحيحة عند رتبة ثابتة k فقط، ثم نثبتها عند k+1."
+          },
+          {
+            "mistake": "عدم استعمال فرضية التراجع في الانتقال.",
+            "correction": "يجب أن يظهر بوضوح أين استعملت P(k) للوصول إلى P(k+1)."
+          },
+          {
+            "mistake": "إنهاء الحساب دون خاتمة.",
+            "correction": "اختم دائمًا بعبارة: حسب مبدأ الاستدلال بالتراجع، الخاصية صحيحة لكل الرتب المطلوبة."
+          }
+        ],
+        "hints": [
+          {
+            "level": 1,
+            "hint": "ابدأ من u_{k+1}+1."
+          },
+          {
+            "level": 2,
+            "hint": "حاول إظهار العامل u_k+1."
+          }
+        ],
+        "alternative_method": "",
+        "images": [],
+        "tables": [],
+        "variation_tables": [],
+        "sign_tables": [],
+        "graph_data": null,
+        "presentation": {
+          "show_graph_first": false,
+          "show_one_step_at_a_time": true,
+          "react_component": "UniversalMathExerciseRenderer",
+          "rtl": true,
+          "show_graph_in_question": false,
+          "show_graph_in_solution": false,
+          "animate_steps": true,
+          "solution_open_mode": "on_button_click",
+          "solution_access": "direct",
+          "attempt_required": false,
+          "show_final_answer_after_last_step": true,
+          "show_verification_after_final_answer": true,
+          "show_bac_writing": true,
+          "show_understanding_check": true,
+          "math_direction": "ltr"
+        },
+        "is_complete": true,
+        "solution_access": "direct",
+        "attempt_required": false,
+        "bac_writing": [
+          "نعتبر الخاصية \\(P(n):\\ldots\\).",
+          "نتحقق من صحتها عند رتبة البداية.",
+          "نفرض أن \\(P(k)\\) صحيحة.",
+          "نثبت أن \\(P(k+1)\\) صحيحة باستعمال فرضية التراجع.",
+          "إذن حسب مبدأ الاستدلال بالتراجع، الخاصية صحيحة لكل الرتب المطلوبة."
+        ],
+        "understanding_check": {
+          "question": "ما المراحل الخمس الأساسية للبرهان بالتراجع؟",
+          "answer": "تعريف الخاصية، التحقق، فرضية التراجع، الانتقال، ثم الخاتمة."
+        },
+        "takeaway": "أحيانًا نعيد كتابة العبارة عند k+1 حتى يظهر شكل فرضية التراجع.",
+        "proof_logic_check": {
+          "initialization_present": true,
+          "induction_hypothesis_present": true,
+          "hypothesis_used_in_transition": true,
+          "correct_conclusion_present": true,
+          "no_circular_reasoning": true
+        }
+      },
+      "display_order": 8,
+      "learning_stage": "axis_practice",
+      "learning_stage_label": "تمرين تطبيقي",
+      "pedagogical_objective": "إثبات علاقة جبرية مرتبطة بمتتالية.",
+      "solution_access": "direct",
+      "attempt_required": false
+    },
+    {
+      "id": "mathematical_induction_practice_09",
+      "year": null,
+      "source_file": null,
+      "source_page": null,
+      "exercise": "تمرين تدريبي 9",
+      "number": "9",
+      "title": "إثبات حصر مع كسر",
+      "text": "لتكن \\((u_n)\\) معرفة بـ \\(u_0=\\frac32\\) و\\(u_{n+1}=\\frac{u_n+2}{4-u_n}\\). أثبت بالتراجع أن \\(1\\le u_n\\le2\\) لكل \\(n\\in\\mathbb N\\).",
+      "standalone_text": "لتكن \\((u_n)\\) معرفة بـ \\(u_0=\\frac32\\) و\\(u_{n+1}=\\frac{u_n+2}{4-u_n}\\). أثبت بالتراجع أن \\(1\\le u_n\\le2\\) لكل \\(n\\in\\mathbb N\\).",
+      "context": "تمرين تدريبي مبني مباشرة على محور الاستدلال بالتراجع.",
+      "tag": "mathematical_induction",
+      "axis": "الاستدلال بالتراجع",
+      "secondary_tags": [],
+      "skill": "إثبات حصر مع الانتباه إلى إشارة المقام.",
+      "difficulty": "hard",
+      "question_type": "axis_practice",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "tables": [],
+      "variation_tables": [],
+      "sign_tables": [],
+      "graph_data": null,
+      "solution": {
+        "title": "الحل المفصل: إثبات حصر مع كسر",
+        "main_idea": "إثبات حصر مع الانتباه إلى إشارة المقام.",
+        "method_name": "الخاصية → التحقق → فرضية التراجع → الانتقال → الخاتمة",
+        "before_start": [
+          "اكتب الخاصية P(n) كما هي مطلوبة.",
+          "حدد رتبة البداية بدقة.",
+          "في الانتقال استعمل فرضية التراجع فعلًا."
+        ],
+        "strategy": "نعرّف الخاصية، نتحقق من البداية، نفترضها عند k، نثبتها عند k+1، ثم نختم بمبدأ التراجع.",
+        "detailed_explanation": "هذا الحل مكتوب بطريقة تدريجية حتى يرى التلميذ وظيفة كل مرحلة من مراحل الاستدلال بالتراجع، ولا ينتقل إلى المرحلة التالية قبل إكمال السابقة.",
+        "uses_graph": false,
+        "uses_images": false,
+        "uses_tables": false,
+        "uses_variation_table": false,
+        "uses_sign_table": false,
+        "steps": [
+          {
+            "number": "1",
+            "order": 1,
+            "title": "الخاصية",
+            "goal": "كتابة الحصر.",
+            "rule_used": "تعريف P(n)",
+            "explanation": "نكتب الحصر كاملًا.",
+            "construction": [],
+            "calculation": "\\[P(n):\\quad 1\\le u_n\\le2.\\]",
+            "calculation_lines": [
+              "\\[P(n):\\quad 1\\le u_n\\le2.\\]"
+            ],
+            "result": "تم تعريف الخاصية.",
+            "conclusion": "تم تعريف الخاصية.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "نكتب الحصر كاملًا.",
+            "why": "نكتب الحصر كاملًا.",
+            "calculation_breakdown": [],
+            "student_action": "حاول كتابة هذه المرحلة وحدك، ثم قارنها بالحل."
+          },
+          {
+            "number": "2",
+            "order": 2,
+            "title": "التحقق",
+            "goal": "فحص u0.",
+            "rule_used": "مرحلة التحقق",
+            "explanation": "الحد الابتدائي داخل المجال.",
+            "construction": [],
+            "calculation": "\\[1\\le\\frac32\\le2.\\]",
+            "calculation_lines": [
+              "\\[1\\le\\frac32\\le2.\\]"
+            ],
+            "result": "\\(P(0)\\) صحيحة.",
+            "conclusion": "\\(P(0)\\) صحيحة.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "الحد الابتدائي داخل المجال.",
+            "why": "الحد الابتدائي داخل المجال.",
+            "calculation_breakdown": [],
+            "student_action": "حاول كتابة هذه المرحلة وحدك، ثم قارنها بالحل."
+          },
+          {
+            "number": "3",
+            "order": 3,
+            "title": "الفرضية وإشارة المقام",
+            "goal": "تهيئة الانتقال.",
+            "rule_used": "فرضية التراجع",
+            "explanation": "نفترض الحصر عند k، ومنه المقام موجب.",
+            "construction": [],
+            "calculation": "\\[1\\le u_k\\le2,\\]\n\\[4-u_k\\ge2>0.\\]",
+            "calculation_lines": [
+              "\\[1\\le u_k\\le2,\\]",
+              "\\[4-u_k\\ge2>0.\\]"
+            ],
+            "result": "يمكننا التعامل مع الكسور بأمان.",
+            "conclusion": "يمكننا التعامل مع الكسور بأمان.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "نفترض الحصر عند k، ومنه المقام موجب.",
+            "why": "نفترض الحصر عند k، ومنه المقام موجب.",
+            "calculation_breakdown": [],
+            "student_action": "حاول كتابة هذه المرحلة وحدك، ثم قارنها بالحل."
+          },
+          {
+            "number": "4",
+            "order": 4,
+            "title": "الحد السفلي",
+            "goal": "إثبات u_{k+1}≥1.",
+            "rule_used": "الوراثة",
+            "explanation": "ندرس الفرق u_{k+1}-1.",
+            "construction": [],
+            "calculation": "\\[u_{k+1}-1=\\frac{u_k+2}{4-u_k}-1\\]\n\\[=\\frac{2(u_k-1)}{4-u_k}\\ge0.\\]",
+            "calculation_lines": [
+              "\\[u_{k+1}-1=\\frac{u_k+2}{4-u_k}-1\\]",
+              "\\[=\\frac{2(u_k-1)}{4-u_k}\\ge0.\\]"
+            ],
+            "result": "\\(u_{k+1}\\ge1\\).",
+            "conclusion": "\\(u_{k+1}\\ge1\\).",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "ندرس الفرق u_{k+1}-1.",
+            "why": "ندرس الفرق u_{k+1}-1.",
+            "calculation_breakdown": [],
+            "student_action": "حاول كتابة هذه المرحلة وحدك، ثم قارنها بالحل."
+          },
+          {
+            "number": "5",
+            "order": 5,
+            "title": "الحد العلوي",
+            "goal": "إثبات u_{k+1}≤2.",
+            "rule_used": "الوراثة",
+            "explanation": "ندرس الفرق 2-u_{k+1}.",
+            "construction": [],
+            "calculation": "\\[2-u_{k+1}=2-\\frac{u_k+2}{4-u_k}\\]\n\\[=\\frac{3(2-u_k)}{4-u_k}\\ge0.\\]",
+            "calculation_lines": [
+              "\\[2-u_{k+1}=2-\\frac{u_k+2}{4-u_k}\\]",
+              "\\[=\\frac{3(2-u_k)}{4-u_k}\\ge0.\\]"
+            ],
+            "result": "\\(u_{k+1}\\le2\\).",
+            "conclusion": "\\(u_{k+1}\\le2\\).",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "ندرس الفرق 2-u_{k+1}.",
+            "why": "ندرس الفرق 2-u_{k+1}.",
+            "calculation_breakdown": [],
+            "student_action": "حاول كتابة هذه المرحلة وحدك، ثم قارنها بالحل."
+          },
+          {
+            "number": "6",
+            "order": 6,
+            "title": "الخاتمة",
+            "goal": "تطبيق مبدأ التراجع.",
+            "rule_used": "مبدأ التراجع",
+            "explanation": "الحصر انتقل من k إلى k+1.",
+            "construction": [],
+            "calculation": "\\[\\forall n\\in\\mathbb N,\\quad1\\le u_n\\le2.\\]",
+            "calculation_lines": [
+              "\\[\\forall n\\in\\mathbb N,\\quad1\\le u_n\\le2.\\]"
+            ],
+            "result": "تم الإثبات.",
+            "conclusion": "تم الإثبات.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "الحصر انتقل من k إلى k+1.",
+            "why": "الحصر انتقل من k إلى k+1.",
+            "calculation_breakdown": [],
+            "student_action": "حاول كتابة هذه المرحلة وحدك، ثم قارنها بالحل."
+          }
+        ],
+        "final_answer": "\\(\\boxed{1\\le u_n\\le2}\\) لكل \\(n\\in\\mathbb N\\).",
+        "verification": "إشارة المقام موجبة لأن 4-u_k≥2، وهذا ضروري لصحة استنتاجات الإشارة.",
+        "common_mistakes": [
+          {
+            "mistake": "نسيان مرحلة التحقق عند رتبة البداية.",
+            "correction": "ابدأ دائمًا بإثبات الخاصية عند أول رتبة يحددها السؤال."
+          },
+          {
+            "mistake": "افتراض أن الخاصية صحيحة لكل n.",
+            "correction": "نفترضها صحيحة عند رتبة ثابتة k فقط، ثم نثبتها عند k+1."
+          },
+          {
+            "mistake": "عدم استعمال فرضية التراجع في الانتقال.",
+            "correction": "يجب أن يظهر بوضوح أين استعملت P(k) للوصول إلى P(k+1)."
+          },
+          {
+            "mistake": "إنهاء الحساب دون خاتمة.",
+            "correction": "اختم دائمًا بعبارة: حسب مبدأ الاستدلال بالتراجع، الخاصية صحيحة لكل الرتب المطلوبة."
+          },
+          {
+            "mistake": "الضرب في 4-u_k دون معرفة إشارته.",
+            "correction": "من الحصر u_k≤2 نستنتج أولًا أن 4-u_k≥2>0."
+          }
+        ],
+        "hints": [
+          {
+            "level": 1,
+            "hint": "أثبت أولًا أن المقام موجب."
+          },
+          {
+            "level": 2,
+            "hint": "ادرس u_{k+1}-1 ثم 2-u_{k+1}."
+          }
+        ],
+        "alternative_method": "",
+        "images": [],
+        "tables": [],
+        "variation_tables": [],
+        "sign_tables": [],
+        "graph_data": null,
+        "presentation": {
+          "show_graph_first": false,
+          "show_one_step_at_a_time": true,
+          "react_component": "UniversalMathExerciseRenderer",
+          "rtl": true,
+          "show_graph_in_question": false,
+          "show_graph_in_solution": false,
+          "animate_steps": true,
+          "solution_open_mode": "on_button_click",
+          "solution_access": "direct",
+          "attempt_required": false,
+          "show_final_answer_after_last_step": true,
+          "show_verification_after_final_answer": true,
+          "show_bac_writing": true,
+          "show_understanding_check": true,
+          "math_direction": "ltr"
+        },
+        "is_complete": true,
+        "solution_access": "direct",
+        "attempt_required": false,
+        "bac_writing": [
+          "نعتبر الخاصية \\(P(n):\\ldots\\).",
+          "نتحقق من صحتها عند رتبة البداية.",
+          "نفرض أن \\(P(k)\\) صحيحة.",
+          "نثبت أن \\(P(k+1)\\) صحيحة باستعمال فرضية التراجع.",
+          "إذن حسب مبدأ الاستدلال بالتراجع، الخاصية صحيحة لكل الرتب المطلوبة."
+        ],
+        "understanding_check": {
+          "question": "ما المراحل الخمس الأساسية للبرهان بالتراجع؟",
+          "answer": "تعريف الخاصية، التحقق، فرضية التراجع، الانتقال، ثم الخاتمة."
+        },
+        "takeaway": "في الحصر الكسري، دراسة الفروق مع حدود المجال غالبًا أسهل من الحصر المباشر.",
+        "proof_logic_check": {
+          "initialization_present": true,
+          "induction_hypothesis_present": true,
+          "hypothesis_used_in_transition": true,
+          "correct_conclusion_present": true,
+          "no_circular_reasoning": true
+        }
+      },
+      "display_order": 9,
+      "learning_stage": "axis_practice",
+      "learning_stage_label": "تمرين تطبيقي",
+      "pedagogical_objective": "إثبات حصر مع الانتباه إلى إشارة المقام.",
+      "solution_access": "direct",
+      "attempt_required": false
+    },
+    {
+      "id": "mathematical_induction_practice_10",
+      "year": null,
+      "source_file": null,
+      "source_page": null,
+      "exercise": "تمرين تدريبي 10",
+      "number": "10",
+      "title": "إثبات متراجحة تبدأ من رتبة غير صفرية",
+      "text": "أثبت بالتراجع أنه لكل \\(n\\ge4\\): \\(2^n\\ge n^2\\).",
+      "standalone_text": "أثبت بالتراجع أنه لكل \\(n\\ge4\\): \\(2^n\\ge n^2\\).",
+      "context": "تمرين تدريبي مبني مباشرة على محور الاستدلال بالتراجع.",
+      "tag": "mathematical_induction",
+      "axis": "الاستدلال بالتراجع",
+      "secondary_tags": [],
+      "skill": "اختيار رتبة البداية الصحيحة وإثبات متراجحة.",
+      "difficulty": "hard",
+      "question_type": "axis_practice",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "tables": [],
+      "variation_tables": [],
+      "sign_tables": [],
+      "graph_data": null,
+      "solution": {
+        "title": "الحل المفصل: إثبات متراجحة تبدأ من رتبة غير صفرية",
+        "main_idea": "اختيار رتبة البداية الصحيحة وإثبات متراجحة.",
+        "method_name": "الخاصية → التحقق → فرضية التراجع → الانتقال → الخاتمة",
+        "before_start": [
+          "اكتب الخاصية P(n) كما هي مطلوبة.",
+          "حدد رتبة البداية بدقة.",
+          "في الانتقال استعمل فرضية التراجع فعلًا."
+        ],
+        "strategy": "نعرّف الخاصية، نتحقق من البداية، نفترضها عند k، نثبتها عند k+1، ثم نختم بمبدأ التراجع.",
+        "detailed_explanation": "هذا الحل مكتوب بطريقة تدريجية حتى يرى التلميذ وظيفة كل مرحلة من مراحل الاستدلال بالتراجع، ولا ينتقل إلى المرحلة التالية قبل إكمال السابقة.",
+        "uses_graph": false,
+        "uses_images": false,
+        "uses_tables": false,
+        "uses_variation_table": false,
+        "uses_sign_table": false,
+        "steps": [
+          {
+            "number": "1",
+            "order": 1,
+            "title": "الخاصية والبداية",
+            "goal": "تحديد P(n) وn0.",
+            "rule_used": "تعريف P(n)",
+            "explanation": "المطلوب يبدأ عند 4.",
+            "construction": [],
+            "calculation": "\\[P(n):\\quad 2^n\\ge n^2,\\qquad n_0=4.\\]",
+            "calculation_lines": [
+              "\\[P(n):\\quad 2^n\\ge n^2,\\qquad n_0=4.\\]"
+            ],
+            "result": "سنبدأ من n=4.",
+            "conclusion": "سنبدأ من n=4.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "المطلوب يبدأ عند 4.",
+            "why": "المطلوب يبدأ عند 4.",
+            "calculation_breakdown": [],
+            "student_action": "حاول كتابة هذه المرحلة وحدك، ثم قارنها بالحل."
+          },
+          {
+            "number": "2",
+            "order": 2,
+            "title": "التحقق",
+            "goal": "التحقق عند 4.",
+            "rule_used": "مرحلة التحقق",
+            "explanation": "نحسب الطرفين.",
+            "construction": [],
+            "calculation": "\\[2^4=16=4^2.\\]",
+            "calculation_lines": [
+              "\\[2^4=16=4^2.\\]"
+            ],
+            "result": "\\(P(4)\\) صحيحة.",
+            "conclusion": "\\(P(4)\\) صحيحة.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "نحسب الطرفين.",
+            "why": "نحسب الطرفين.",
+            "calculation_breakdown": [],
+            "student_action": "حاول كتابة هذه المرحلة وحدك، ثم قارنها بالحل."
+          },
+          {
+            "number": "3",
+            "order": 3,
+            "title": "الفرضية",
+            "goal": "افتراض P(k).",
+            "rule_used": "فرضية التراجع",
+            "explanation": "نفترض k≥4 و2^k≥k².",
+            "construction": [],
+            "calculation": "\\[2^k\\ge k^2.\\]",
+            "calculation_lines": [
+              "\\[2^k\\ge k^2.\\]"
+            ],
+            "result": "هذه هي فرضية التراجع.",
+            "conclusion": "هذه هي فرضية التراجع.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "نفترض k≥4 و2^k≥k².",
+            "why": "نفترض k≥4 و2^k≥k².",
+            "calculation_breakdown": [],
+            "student_action": "حاول كتابة هذه المرحلة وحدك، ثم قارنها بالحل."
+          },
+          {
+            "number": "4",
+            "order": 4,
+            "title": "الانتقال",
+            "goal": "إثبات P(k+1).",
+            "rule_used": "الوراثة",
+            "explanation": "نبدأ من 2^{k+1} ونستعمل الفرضية.",
+            "construction": [],
+            "calculation": "\\[2^{k+1}=2\\cdot2^k\\ge2k^2.\\]\n\\[2k^2-(k+1)^2=k^2-2k-1.\\]\n\\[k\\ge4\\Rightarrow k^2-2k-1\\ge16-8-1=7>0.\\]\n\\[\\Rightarrow2^{k+1}\\ge(k+1)^2.\\]",
+            "calculation_lines": [
+              "\\[2^{k+1}=2\\cdot2^k\\ge2k^2.\\]",
+              "\\[2k^2-(k+1)^2=k^2-2k-1.\\]",
+              "\\[k\\ge4\\Rightarrow k^2-2k-1\\ge16-8-1=7>0.\\]",
+              "\\[\\Rightarrow2^{k+1}\\ge(k+1)^2.\\]"
+            ],
+            "result": "\\(P(k+1)\\) صحيحة.",
+            "conclusion": "\\(P(k+1)\\) صحيحة.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "نبدأ من 2^{k+1} ونستعمل الفرضية.",
+            "why": "نبدأ من 2^{k+1} ونستعمل الفرضية.",
+            "calculation_breakdown": [],
+            "student_action": "حاول كتابة هذه المرحلة وحدك، ثم قارنها بالحل."
+          },
+          {
+            "number": "5",
+            "order": 5,
+            "title": "الخاتمة",
+            "goal": "تطبيق مبدأ التراجع.",
+            "rule_used": "مبدأ التراجع",
+            "explanation": "الخاصية صحيحة عند 4 ووراثية بعد ذلك.",
+            "construction": [],
+            "calculation": "\\[\\forall n\\ge4,\\quad2^n\\ge n^2.\\]",
+            "calculation_lines": [
+              "\\[\\forall n\\ge4,\\quad2^n\\ge n^2.\\]"
+            ],
+            "result": "تم الإثبات.",
+            "conclusion": "تم الإثبات.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "الخاصية صحيحة عند 4 ووراثية بعد ذلك.",
+            "why": "الخاصية صحيحة عند 4 ووراثية بعد ذلك.",
+            "calculation_breakdown": [],
+            "student_action": "حاول كتابة هذه المرحلة وحدك، ثم قارنها بالحل."
+          }
+        ],
+        "final_answer": "\\(\\boxed{2^n\\ge n^2}\\) لكل \\(n\\ge4\\).",
+        "verification": "البداية عند 4 ضرورية لأن السؤال نفسه يحدد المجال n≥4.",
+        "common_mistakes": [
+          {
+            "mistake": "نسيان مرحلة التحقق عند رتبة البداية.",
+            "correction": "ابدأ دائمًا بإثبات الخاصية عند أول رتبة يحددها السؤال."
+          },
+          {
+            "mistake": "افتراض أن الخاصية صحيحة لكل n.",
+            "correction": "نفترضها صحيحة عند رتبة ثابتة k فقط، ثم نثبتها عند k+1."
+          },
+          {
+            "mistake": "عدم استعمال فرضية التراجع في الانتقال.",
+            "correction": "يجب أن يظهر بوضوح أين استعملت P(k) للوصول إلى P(k+1)."
+          },
+          {
+            "mistake": "إنهاء الحساب دون خاتمة.",
+            "correction": "اختم دائمًا بعبارة: حسب مبدأ الاستدلال بالتراجع، الخاصية صحيحة لكل الرتب المطلوبة."
+          }
+        ],
+        "hints": [
+          {
+            "level": 1,
+            "hint": "لا تبدأ من n=0."
+          },
+          {
+            "level": 2,
+            "hint": "بعد استعمال الفرضية قارن 2k² مع (k+1)²."
+          }
+        ],
+        "alternative_method": "",
+        "images": [],
+        "tables": [],
+        "variation_tables": [],
+        "sign_tables": [],
+        "graph_data": null,
+        "presentation": {
+          "show_graph_first": false,
+          "show_one_step_at_a_time": true,
+          "react_component": "UniversalMathExerciseRenderer",
+          "rtl": true,
+          "show_graph_in_question": false,
+          "show_graph_in_solution": false,
+          "animate_steps": true,
+          "solution_open_mode": "on_button_click",
+          "solution_access": "direct",
+          "attempt_required": false,
+          "show_final_answer_after_last_step": true,
+          "show_verification_after_final_answer": true,
+          "show_bac_writing": true,
+          "show_understanding_check": true,
+          "math_direction": "ltr"
+        },
+        "is_complete": true,
+        "solution_access": "direct",
+        "attempt_required": false,
+        "bac_writing": [
+          "نعتبر الخاصية \\(P(n):\\ldots\\).",
+          "نتحقق من صحتها عند رتبة البداية.",
+          "نفرض أن \\(P(k)\\) صحيحة.",
+          "نثبت أن \\(P(k+1)\\) صحيحة باستعمال فرضية التراجع.",
+          "إذن حسب مبدأ الاستدلال بالتراجع، الخاصية صحيحة لكل الرتب المطلوبة."
+        ],
+        "understanding_check": {
+          "question": "ما المراحل الخمس الأساسية للبرهان بالتراجع؟",
+          "answer": "تعريف الخاصية، التحقق، فرضية التراجع، الانتقال، ثم الخاتمة."
+        },
+        "takeaway": "رتبة البداية جزء من البرهان وليست تفصيلًا شكليًا.",
+        "proof_logic_check": {
+          "initialization_present": true,
+          "induction_hypothesis_present": true,
+          "hypothesis_used_in_transition": true,
+          "correct_conclusion_present": true,
+          "no_circular_reasoning": true
+        }
+      },
+      "display_order": 10,
+      "learning_stage": "axis_practice",
+      "learning_stage_label": "تمرين تطبيقي",
+      "pedagogical_objective": "اختيار رتبة البداية الصحيحة وإثبات متراجحة.",
+      "solution_access": "direct",
+      "attempt_required": false,
+      "start_rank": 4
+    },
+    {
+      "id": "mathematical_induction_practice_11",
+      "year": null,
+      "source_file": null,
+      "source_page": null,
+      "exercise": "تمرين تدريبي 11",
+      "number": "11",
+      "title": "إثبات قابلية القسمة",
+      "text": "أثبت بالتراجع أنه لكل \\(n\\in\\mathbb N\\): العدد \\(5^{n+1}-1\\) قابل للقسمة على \\(4\\).",
+      "standalone_text": "أثبت بالتراجع أنه لكل \\(n\\in\\mathbb N\\): العدد \\(5^{n+1}-1\\) قابل للقسمة على \\(4\\).",
+      "context": "تمرين تدريبي مبني مباشرة على محور الاستدلال بالتراجع.",
+      "tag": "mathematical_induction",
+      "axis": "الاستدلال بالتراجع",
+      "secondary_tags": [],
+      "skill": "إثبات قابلية القسمة بالتراجع.",
+      "difficulty": "hard",
+      "question_type": "axis_practice",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "tables": [],
+      "variation_tables": [],
+      "sign_tables": [],
+      "graph_data": null,
+      "solution": {
+        "title": "الحل المفصل: إثبات قابلية القسمة",
+        "main_idea": "إثبات قابلية القسمة بالتراجع.",
+        "method_name": "الخاصية → التحقق → فرضية التراجع → الانتقال → الخاتمة",
+        "before_start": [
+          "اكتب الخاصية P(n) كما هي مطلوبة.",
+          "حدد رتبة البداية بدقة.",
+          "في الانتقال استعمل فرضية التراجع فعلًا."
+        ],
+        "strategy": "نعرّف الخاصية، نتحقق من البداية، نفترضها عند k، نثبتها عند k+1، ثم نختم بمبدأ التراجع.",
+        "detailed_explanation": "هذا الحل مكتوب بطريقة تدريجية حتى يرى التلميذ وظيفة كل مرحلة من مراحل الاستدلال بالتراجع، ولا ينتقل إلى المرحلة التالية قبل إكمال السابقة.",
+        "uses_graph": false,
+        "uses_images": false,
+        "uses_tables": false,
+        "uses_variation_table": false,
+        "uses_sign_table": false,
+        "steps": [
+          {
+            "number": "1",
+            "order": 1,
+            "title": "الخاصية",
+            "goal": "تحويل القابلية للقسمة إلى صياغة مناسبة.",
+            "rule_used": "تعريف P(n)",
+            "explanation": "نكتب أن العدد من مضاعفات 4.",
+            "construction": [],
+            "calculation": "\\[P(n):\\quad 4\\mid(5^{n+1}-1).\\]",
+            "calculation_lines": [
+              "\\[P(n):\\quad 4\\mid(5^{n+1}-1).\\]"
+            ],
+            "result": "تم تعريف الخاصية.",
+            "conclusion": "تم تعريف الخاصية.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "نكتب أن العدد من مضاعفات 4.",
+            "why": "نكتب أن العدد من مضاعفات 4.",
+            "calculation_breakdown": [],
+            "student_action": "حاول كتابة هذه المرحلة وحدك، ثم قارنها بالحل."
+          },
+          {
+            "number": "2",
+            "order": 2,
+            "title": "التحقق",
+            "goal": "فحص n=0.",
+            "rule_used": "مرحلة التحقق",
+            "explanation": "نحسب العدد.",
+            "construction": [],
+            "calculation": "\\[5^{1}-1=4,\\quad4\\mid4.\\]",
+            "calculation_lines": [
+              "\\[5^{1}-1=4,\\quad4\\mid4.\\]"
+            ],
+            "result": "\\(P(0)\\) صحيحة.",
+            "conclusion": "\\(P(0)\\) صحيحة.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "نحسب العدد.",
+            "why": "نحسب العدد.",
+            "calculation_breakdown": [],
+            "student_action": "حاول كتابة هذه المرحلة وحدك، ثم قارنها بالحل."
+          },
+          {
+            "number": "3",
+            "order": 3,
+            "title": "الفرضية",
+            "goal": "افتراض قابلية القسمة عند k.",
+            "rule_used": "فرضية التراجع",
+            "explanation": "هذا يعني وجود عدد صحيح m بحيث 5^{k+1}-1=4m.",
+            "construction": [],
+            "calculation": "\\[5^{k+1}-1=4m,\\quad m\\in\\mathbb Z.\\]",
+            "calculation_lines": [
+              "\\[5^{k+1}-1=4m,\\quad m\\in\\mathbb Z.\\]"
+            ],
+            "result": "سنستعمل هذه الصيغة.",
+            "conclusion": "سنستعمل هذه الصيغة.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "هذا يعني وجود عدد صحيح m بحيث 5^{k+1}-1=4m.",
+            "why": "هذا يعني وجود عدد صحيح m بحيث 5^{k+1}-1=4m.",
+            "calculation_breakdown": [],
+            "student_action": "حاول كتابة هذه المرحلة وحدك، ثم قارنها بالحل."
+          },
+          {
+            "number": "4",
+            "order": 4,
+            "title": "الانتقال",
+            "goal": "إثبات القابلية عند k+1.",
+            "rule_used": "الوراثة",
+            "explanation": "نعيد كتابة العدد الجديد باستعمال القديم.",
+            "construction": [],
+            "calculation": "\\[5^{k+2}-1=5\\cdot5^{k+1}-1\\]\n\\[=5(5^{k+1}-1)+4\\]\n\\[=5\\cdot4m+4=4(5m+1).\\]",
+            "calculation_lines": [
+              "\\[5^{k+2}-1=5\\cdot5^{k+1}-1\\]",
+              "\\[=5(5^{k+1}-1)+4\\]",
+              "\\[=5\\cdot4m+4=4(5m+1).\\]"
+            ],
+            "result": "إذن العدد الجديد من مضاعفات 4.",
+            "conclusion": "إذن العدد الجديد من مضاعفات 4.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "نعيد كتابة العدد الجديد باستعمال القديم.",
+            "why": "نعيد كتابة العدد الجديد باستعمال القديم.",
+            "calculation_breakdown": [],
+            "student_action": "حاول كتابة هذه المرحلة وحدك، ثم قارنها بالحل."
+          },
+          {
+            "number": "5",
+            "order": 5,
+            "title": "الخاتمة",
+            "goal": "تعميم النتيجة.",
+            "rule_used": "مبدأ التراجع",
+            "explanation": "تحققت البداية والوراثة.",
+            "construction": [],
+            "calculation": "\\[\\forall n\\in\\mathbb N,\\quad4\\mid(5^{n+1}-1).\\]",
+            "calculation_lines": [
+              "\\[\\forall n\\in\\mathbb N,\\quad4\\mid(5^{n+1}-1).\\]"
+            ],
+            "result": "تم الإثبات.",
+            "conclusion": "تم الإثبات.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "تحققت البداية والوراثة.",
+            "why": "تحققت البداية والوراثة.",
+            "calculation_breakdown": [],
+            "student_action": "حاول كتابة هذه المرحلة وحدك، ثم قارنها بالحل."
+          }
+        ],
+        "final_answer": "\\(\\boxed{4\\mid(5^{n+1}-1)}\\).",
+        "verification": "عند n=1: 25−1=24 وهو يقبل القسمة على 4.",
+        "common_mistakes": [
+          {
+            "mistake": "نسيان مرحلة التحقق عند رتبة البداية.",
+            "correction": "ابدأ دائمًا بإثبات الخاصية عند أول رتبة يحددها السؤال."
+          },
+          {
+            "mistake": "افتراض أن الخاصية صحيحة لكل n.",
+            "correction": "نفترضها صحيحة عند رتبة ثابتة k فقط، ثم نثبتها عند k+1."
+          },
+          {
+            "mistake": "عدم استعمال فرضية التراجع في الانتقال.",
+            "correction": "يجب أن يظهر بوضوح أين استعملت P(k) للوصول إلى P(k+1)."
+          },
+          {
+            "mistake": "إنهاء الحساب دون خاتمة.",
+            "correction": "اختم دائمًا بعبارة: حسب مبدأ الاستدلال بالتراجع، الخاصية صحيحة لكل الرتب المطلوبة."
+          }
+        ],
+        "hints": [
+          {
+            "level": 1,
+            "hint": "حوّل فرضية القسمة إلى 5^{k+1}-1=4m."
+          },
+          {
+            "level": 2,
+            "hint": "حاول إظهار العدد القديم داخل العدد الجديد."
+          }
+        ],
+        "alternative_method": "",
+        "images": [],
+        "tables": [],
+        "variation_tables": [],
+        "sign_tables": [],
+        "graph_data": null,
+        "presentation": {
+          "show_graph_first": false,
+          "show_one_step_at_a_time": true,
+          "react_component": "UniversalMathExerciseRenderer",
+          "rtl": true,
+          "show_graph_in_question": false,
+          "show_graph_in_solution": false,
+          "animate_steps": true,
+          "solution_open_mode": "on_button_click",
+          "solution_access": "direct",
+          "attempt_required": false,
+          "show_final_answer_after_last_step": true,
+          "show_verification_after_final_answer": true,
+          "show_bac_writing": true,
+          "show_understanding_check": true,
+          "math_direction": "ltr"
+        },
+        "is_complete": true,
+        "solution_access": "direct",
+        "attempt_required": false,
+        "bac_writing": [
+          "نعتبر الخاصية \\(P(n):\\ldots\\).",
+          "نتحقق من صحتها عند رتبة البداية.",
+          "نفرض أن \\(P(k)\\) صحيحة.",
+          "نثبت أن \\(P(k+1)\\) صحيحة باستعمال فرضية التراجع.",
+          "إذن حسب مبدأ الاستدلال بالتراجع، الخاصية صحيحة لكل الرتب المطلوبة."
+        ],
+        "understanding_check": {
+          "question": "ما المراحل الخمس الأساسية للبرهان بالتراجع؟",
+          "answer": "تعريف الخاصية، التحقق، فرضية التراجع، الانتقال، ثم الخاتمة."
+        },
+        "takeaway": "في القابلية للقسمة، اكتب فرضية التراجع على شكل مضاعف صريح.",
+        "proof_logic_check": {
+          "initialization_present": true,
+          "induction_hypothesis_present": true,
+          "hypothesis_used_in_transition": true,
+          "correct_conclusion_present": true,
+          "no_circular_reasoning": true
+        }
+      },
+      "display_order": 11,
+      "learning_stage": "axis_practice",
+      "learning_stage_label": "تمرين تطبيقي",
+      "pedagogical_objective": "إثبات قابلية القسمة بالتراجع.",
+      "solution_access": "direct",
+      "attempt_required": false
+    },
+    {
+      "id": "mathematical_induction_practice_12",
+      "year": null,
+      "source_file": null,
+      "source_page": null,
+      "exercise": "تمرين تدريبي 12",
+      "number": "12",
+      "title": "تراجع من الرتبة الثانية",
+      "text": "لتكن \\((u_n)\\) معرفة بـ \\(u_0=0\\)، \\(u_1=1\\)، و\\(u_{n+2}=3u_{n+1}-2u_n\\). أثبت بالتراجع أن \\(u_n=2^n-1\\) لكل \\(n\\in\\mathbb N\\).",
+      "standalone_text": "لتكن \\((u_n)\\) معرفة بـ \\(u_0=0\\)، \\(u_1=1\\)، و\\(u_{n+2}=3u_{n+1}-2u_n\\). أثبت بالتراجع أن \\(u_n=2^n-1\\) لكل \\(n\\in\\mathbb N\\).",
+      "context": "تمرين تدريبي مبني مباشرة على محور الاستدلال بالتراجع.",
+      "tag": "mathematical_induction",
+      "axis": "الاستدلال بالتراجع",
+      "secondary_tags": [],
+      "skill": "تراجع يحتاج إلى فرضيتين متتاليتين.",
+      "difficulty": "hard",
+      "question_type": "axis_practice",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "tables": [],
+      "variation_tables": [],
+      "sign_tables": [],
+      "graph_data": null,
+      "solution": {
+        "title": "الحل المفصل: تراجع من الرتبة الثانية",
+        "main_idea": "تراجع يحتاج إلى فرضيتين متتاليتين.",
+        "method_name": "الخاصية → التحقق → فرضية التراجع → الانتقال → الخاتمة",
+        "before_start": [
+          "اكتب الخاصية P(n) كما هي مطلوبة.",
+          "حدد رتبة البداية بدقة.",
+          "في الانتقال استعمل فرضية التراجع فعلًا."
+        ],
+        "strategy": "نعرّف الخاصية، نتحقق من البداية، نفترضها عند k، نثبتها عند k+1، ثم نختم بمبدأ التراجع.",
+        "detailed_explanation": "هذا الحل مكتوب بطريقة تدريجية حتى يرى التلميذ وظيفة كل مرحلة من مراحل الاستدلال بالتراجع، ولا ينتقل إلى المرحلة التالية قبل إكمال السابقة.",
+        "uses_graph": false,
+        "uses_images": false,
+        "uses_tables": false,
+        "uses_variation_table": false,
+        "uses_sign_table": false,
+        "steps": [
+          {
+            "number": "1",
+            "order": 1,
+            "title": "الخاصية",
+            "goal": "كتابة الصيغة.",
+            "rule_used": "تعريف P(n)",
+            "explanation": "نريد إثبات الصيغة لكل n.",
+            "construction": [],
+            "calculation": "\\[P(n):\\quad u_n=2^n-1.\\]",
+            "calculation_lines": [
+              "\\[P(n):\\quad u_n=2^n-1.\\]"
+            ],
+            "result": "تم تعريف الخاصية.",
+            "conclusion": "تم تعريف الخاصية.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "نريد إثبات الصيغة لكل n.",
+            "why": "نريد إثبات الصيغة لكل n.",
+            "calculation_breakdown": [],
+            "student_action": "حاول كتابة هذه المرحلة وحدك، ثم قارنها بالحل."
+          },
+          {
+            "number": "2",
+            "order": 2,
+            "title": "التحقق عند 0 و1",
+            "goal": "لأن العلاقة من الرتبة الثانية.",
+            "rule_used": "مرحلة التحقق",
+            "explanation": "نحتاج إلى رتبتين ابتدائيتين.",
+            "construction": [],
+            "calculation": "\\[u_0=0=2^0-1,\\]\n\\[u_1=1=2^1-1.\\]",
+            "calculation_lines": [
+              "\\[u_0=0=2^0-1,\\]",
+              "\\[u_1=1=2^1-1.\\]"
+            ],
+            "result": "الصيغة صحيحة عند 0 و1.",
+            "conclusion": "الصيغة صحيحة عند 0 و1.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "نحتاج إلى رتبتين ابتدائيتين.",
+            "why": "نحتاج إلى رتبتين ابتدائيتين.",
+            "calculation_breakdown": [],
+            "student_action": "حاول كتابة هذه المرحلة وحدك، ثم قارنها بالحل."
+          },
+          {
+            "number": "3",
+            "order": 3,
+            "title": "فرضية التراجع",
+            "goal": "افتراض الصيغة عند k وk+1.",
+            "rule_used": "فرضية التراجع من الرتبة الثانية",
+            "explanation": "لإيجاد u_{k+2} نحتاج الحدين السابقين.",
+            "construction": [],
+            "calculation": "\\[u_k=2^k-1,\\]\n\\[u_{k+1}=2^{k+1}-1.\\]",
+            "calculation_lines": [
+              "\\[u_k=2^k-1,\\]",
+              "\\[u_{k+1}=2^{k+1}-1.\\]"
+            ],
+            "result": "هذه هي الفرضيتان اللازمتان.",
+            "conclusion": "هذه هي الفرضيتان اللازمتان.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "لإيجاد u_{k+2} نحتاج الحدين السابقين.",
+            "why": "لإيجاد u_{k+2} نحتاج الحدين السابقين.",
+            "calculation_breakdown": [],
+            "student_action": "حاول كتابة هذه المرحلة وحدك، ثم قارنها بالحل."
+          },
+          {
+            "number": "4",
+            "order": 4,
+            "title": "الانتقال",
+            "goal": "إثبات الصيغة عند k+2.",
+            "rule_used": "الوراثة",
+            "explanation": "نعوض الصيغتين داخل العلاقة.",
+            "construction": [],
+            "calculation": "\\[u_{k+2}=3u_{k+1}-2u_k\\]\n\\[=3(2^{k+1}-1)-2(2^k-1)\\]\n\\[=6\\cdot2^k-3-2\\cdot2^k+2\\]\n\\[=4\\cdot2^k-1=2^{k+2}-1.\\]",
+            "calculation_lines": [
+              "\\[u_{k+2}=3u_{k+1}-2u_k\\]",
+              "\\[=3(2^{k+1}-1)-2(2^k-1)\\]",
+              "\\[=6\\cdot2^k-3-2\\cdot2^k+2\\]",
+              "\\[=4\\cdot2^k-1=2^{k+2}-1.\\]"
+            ],
+            "result": "الصيغة صحيحة عند k+2.",
+            "conclusion": "الصيغة صحيحة عند k+2.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "نعوض الصيغتين داخل العلاقة.",
+            "why": "نعوض الصيغتين داخل العلاقة.",
+            "calculation_breakdown": [],
+            "student_action": "حاول كتابة هذه المرحلة وحدك، ثم قارنها بالحل."
+          },
+          {
+            "number": "5",
+            "order": 5,
+            "title": "الخاتمة",
+            "goal": "تعميم الصيغة.",
+            "rule_used": "مبدأ التراجع المناسب",
+            "explanation": "تحققت الرتبتان الابتدائيتان والانتقال.",
+            "construction": [],
+            "calculation": "\\[\\forall n\\in\\mathbb N,\\quad u_n=2^n-1.\\]",
+            "calculation_lines": [
+              "\\[\\forall n\\in\\mathbb N,\\quad u_n=2^n-1.\\]"
+            ],
+            "result": "تم الإثبات.",
+            "conclusion": "تم الإثبات.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "تحققت الرتبتان الابتدائيتان والانتقال.",
+            "why": "تحققت الرتبتان الابتدائيتان والانتقال.",
+            "calculation_breakdown": [],
+            "student_action": "حاول كتابة هذه المرحلة وحدك، ثم قارنها بالحل."
+          }
+        ],
+        "final_answer": "\\(\\boxed{u_n=2^n-1}\\).",
+        "verification": "العلاقة تعتمد على حدين سابقين، لذلك فحص رتبتين وفرضيتين أمر طبيعي.",
+        "common_mistakes": [
+          {
+            "mistake": "نسيان مرحلة التحقق عند رتبة البداية.",
+            "correction": "ابدأ دائمًا بإثبات الخاصية عند أول رتبة يحددها السؤال."
+          },
+          {
+            "mistake": "افتراض أن الخاصية صحيحة لكل n.",
+            "correction": "نفترضها صحيحة عند رتبة ثابتة k فقط، ثم نثبتها عند k+1."
+          },
+          {
+            "mistake": "عدم استعمال فرضية التراجع في الانتقال.",
+            "correction": "يجب أن يظهر بوضوح أين استعملت P(k) للوصول إلى P(k+1)."
+          },
+          {
+            "mistake": "إنهاء الحساب دون خاتمة.",
+            "correction": "اختم دائمًا بعبارة: حسب مبدأ الاستدلال بالتراجع، الخاصية صحيحة لكل الرتب المطلوبة."
+          },
+          {
+            "mistake": "التحقق من n=0 فقط.",
+            "correction": "العلاقة تعتمد على حدين سابقين، لذلك نحتاج أيضًا إلى التحقق عند n=1."
+          }
+        ],
+        "hints": [
+          {
+            "level": 1,
+            "hint": "لاحظ أن u_{n+2} يعتمد على u_{n+1} وu_n."
+          },
+          {
+            "level": 2,
+            "hint": "تحقق من n=0 وn=1 معًا."
+          }
+        ],
+        "alternative_method": "",
+        "images": [],
+        "tables": [],
+        "variation_tables": [],
+        "sign_tables": [],
+        "graph_data": null,
+        "presentation": {
+          "show_graph_first": false,
+          "show_one_step_at_a_time": true,
+          "react_component": "UniversalMathExerciseRenderer",
+          "rtl": true,
+          "show_graph_in_question": false,
+          "show_graph_in_solution": false,
+          "animate_steps": true,
+          "solution_open_mode": "on_button_click",
+          "solution_access": "direct",
+          "attempt_required": false,
+          "show_final_answer_after_last_step": true,
+          "show_verification_after_final_answer": true,
+          "show_bac_writing": true,
+          "show_understanding_check": true,
+          "math_direction": "ltr"
+        },
+        "is_complete": true,
+        "solution_access": "direct",
+        "attempt_required": false,
+        "bac_writing": [
+          "نعتبر الخاصية \\(P(n):\\ldots\\).",
+          "نتحقق من صحتها عند رتبة البداية.",
+          "نفرض أن \\(P(k)\\) صحيحة.",
+          "نثبت أن \\(P(k+1)\\) صحيحة باستعمال فرضية التراجع.",
+          "إذن حسب مبدأ الاستدلال بالتراجع، الخاصية صحيحة لكل الرتب المطلوبة."
+        ],
+        "understanding_check": {
+          "question": "ما المراحل الخمس الأساسية للبرهان بالتراجع؟",
+          "answer": "تعريف الخاصية، التحقق، فرضية التراجع، الانتقال، ثم الخاتمة."
+        },
+        "takeaway": "في التراجع من الرتبة الثانية، نحتاج عادة إلى حالتين ابتدائيتين وفرضيتين متتاليتين.",
+        "proof_logic_check": {
+          "initialization_present": true,
+          "induction_hypothesis_present": true,
+          "hypothesis_used_in_transition": true,
+          "correct_conclusion_present": true,
+          "no_circular_reasoning": true
+        }
+      },
+      "display_order": 12,
+      "learning_stage": "axis_practice",
+      "learning_stage_label": "تمرين تطبيقي",
+      "pedagogical_objective": "تراجع يحتاج إلى فرضيتين متتاليتين.",
+      "solution_access": "direct",
+      "attempt_required": false
+    },
+    {
+      "id": "mathematical_induction_practice_13",
+      "year": null,
+      "source_file": null,
+      "source_page": null,
+      "exercise": "تمرين تدريبي 13",
+      "number": "13",
+      "title": "تمرين شامل: حصر ثم صيغة",
+      "text": "لتكن \\((u_n)\\) معرفة بـ \\(u_0=2\\) و\\(u_{n+1}=\\frac12u_n+1\\). أ) أثبت بالتراجع أن \\(2\\le u_n\\le3\\) لكل \\(n\\in\\mathbb N\\). ب) أثبت بالتراجع أن \\(u_n=2\\) لكل \\(n\\in\\mathbb N\\).",
+      "standalone_text": "لتكن \\((u_n)\\) معرفة بـ \\(u_0=2\\) و\\(u_{n+1}=\\frac12u_n+1\\). أ) أثبت بالتراجع أن \\(2\\le u_n\\le3\\) لكل \\(n\\in\\mathbb N\\). ب) أثبت بالتراجع أن \\(u_n=2\\) لكل \\(n\\in\\mathbb N\\).",
+      "context": "تمرين تدريبي مبني مباشرة على محور الاستدلال بالتراجع.",
+      "tag": "mathematical_induction",
+      "axis": "الاستدلال بالتراجع",
+      "secondary_tags": [],
+      "skill": "التمييز بين خاصية صحيحة وحصر أوسع ثم إثبات الثبات.",
+      "difficulty": "hard",
+      "question_type": "axis_practice",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "tables": [],
+      "variation_tables": [],
+      "sign_tables": [],
+      "graph_data": null,
+      "solution": {
+        "title": "الحل المفصل: تمرين شامل: حصر ثم صيغة",
+        "main_idea": "التمييز بين خاصية صحيحة وحصر أوسع ثم إثبات الثبات.",
+        "method_name": "الخاصية → التحقق → فرضية التراجع → الانتقال → الخاتمة",
+        "before_start": [
+          "اكتب الخاصية P(n) كما هي مطلوبة.",
+          "حدد رتبة البداية بدقة.",
+          "في الانتقال استعمل فرضية التراجع فعلًا."
+        ],
+        "strategy": "نعرّف الخاصية، نتحقق من البداية، نفترضها عند k، نثبتها عند k+1، ثم نختم بمبدأ التراجع.",
+        "detailed_explanation": "هذا الحل مكتوب بطريقة تدريجية حتى يرى التلميذ وظيفة كل مرحلة من مراحل الاستدلال بالتراجع، ولا ينتقل إلى المرحلة التالية قبل إكمال السابقة.",
+        "uses_graph": false,
+        "uses_images": false,
+        "uses_tables": false,
+        "uses_variation_table": false,
+        "uses_sign_table": false,
+        "steps": [
+          {
+            "number": "1",
+            "order": 1,
+            "title": "الجزء أ: الخاصية",
+            "goal": "كتابة الحصر.",
+            "rule_used": "تعريف P(n)",
+            "explanation": "نبدأ بالحصر المطلوب.",
+            "construction": [],
+            "calculation": "\\[P(n):\\quad2\\le u_n\\le3.\\]",
+            "calculation_lines": [
+              "\\[P(n):\\quad2\\le u_n\\le3.\\]"
+            ],
+            "result": "تم تعريف الخاصية الأولى.",
+            "conclusion": "تم تعريف الخاصية الأولى.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "نبدأ بالحصر المطلوب.",
+            "why": "نبدأ بالحصر المطلوب.",
+            "calculation_breakdown": [],
+            "student_action": "حاول كتابة هذه المرحلة وحدك، ثم قارنها بالحل."
+          },
+          {
+            "number": "2",
+            "order": 2,
+            "title": "الجزء أ: التحقق",
+            "goal": "فحص u0.",
+            "rule_used": "مرحلة التحقق",
+            "explanation": "u0=2 داخل المجال.",
+            "construction": [],
+            "calculation": "\\[2\\le2\\le3.\\]",
+            "calculation_lines": [
+              "\\[2\\le2\\le3.\\]"
+            ],
+            "result": "\\(P(0)\\) صحيحة.",
+            "conclusion": "\\(P(0)\\) صحيحة.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "u0=2 داخل المجال.",
+            "why": "u0=2 داخل المجال.",
+            "calculation_breakdown": [],
+            "student_action": "حاول كتابة هذه المرحلة وحدك، ثم قارنها بالحل."
+          },
+          {
+            "number": "3",
+            "order": 3,
+            "title": "الجزء أ: الانتقال",
+            "goal": "استعمال الحصر عند k.",
+            "rule_used": "الوراثة",
+            "explanation": "من 2≤u_k≤3 نحصل على حصر الحد التالي.",
+            "construction": [],
+            "calculation": "\\[1\\le\\frac12u_k\\le\\frac32,\\]\n\\[2\\le\\frac12u_k+1\\le\\frac52\\le3.\\]\n\\[2\\le u_{k+1}\\le3.\\]",
+            "calculation_lines": [
+              "\\[1\\le\\frac12u_k\\le\\frac32,\\]",
+              "\\[2\\le\\frac12u_k+1\\le\\frac52\\le3.\\]",
+              "\\[2\\le u_{k+1}\\le3.\\]"
+            ],
+            "result": "الحصر وراثي.",
+            "conclusion": "الحصر وراثي.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "من 2≤u_k≤3 نحصل على حصر الحد التالي.",
+            "why": "من 2≤u_k≤3 نحصل على حصر الحد التالي.",
+            "calculation_breakdown": [],
+            "student_action": "حاول كتابة هذه المرحلة وحدك، ثم قارنها بالحل."
+          },
+          {
+            "number": "4",
+            "order": 4,
+            "title": "الجزء أ: الخاتمة",
+            "goal": "تعميم الحصر.",
+            "rule_used": "مبدأ التراجع",
+            "explanation": "الحصر صحيح لكل n.",
+            "construction": [],
+            "calculation": "\\[\\forall n\\in\\mathbb N,\\quad2\\le u_n\\le3.\\]",
+            "calculation_lines": [
+              "\\[\\forall n\\in\\mathbb N,\\quad2\\le u_n\\le3.\\]"
+            ],
+            "result": "تم إثبات الجزء أ.",
+            "conclusion": "تم إثبات الجزء أ.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "الحصر صحيح لكل n.",
+            "why": "الحصر صحيح لكل n.",
+            "calculation_breakdown": [],
+            "student_action": "حاول كتابة هذه المرحلة وحدك، ثم قارنها بالحل."
+          },
+          {
+            "number": "5",
+            "order": 5,
+            "title": "الجزء ب: الخاصية",
+            "goal": "إثبات الثبات.",
+            "rule_used": "تعريف Q(n)",
+            "explanation": "نعرّف خاصية ثانية.",
+            "construction": [],
+            "calculation": "\\[Q(n):\\quad u_n=2.\\]",
+            "calculation_lines": [
+              "\\[Q(n):\\quad u_n=2.\\]"
+            ],
+            "result": "سنثبت الآن الثبات.",
+            "conclusion": "سنثبت الآن الثبات.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "نعرّف خاصية ثانية.",
+            "why": "نعرّف خاصية ثانية.",
+            "calculation_breakdown": [],
+            "student_action": "حاول كتابة هذه المرحلة وحدك، ثم قارنها بالحل."
+          },
+          {
+            "number": "6",
+            "order": 6,
+            "title": "الجزء ب: التحقق والانتقال",
+            "goal": "إثبات Q(0) ثم Q(k+1).",
+            "rule_used": "مبدأ التراجع",
+            "explanation": "u0=2، وإذا كان u_k=2 فإن العلاقة تعيد القيمة نفسها.",
+            "construction": [],
+            "calculation": "\\[u_0=2,\\]\n\\[u_k=2\\Rightarrow u_{k+1}=\\frac12\\times2+1=2.\\]",
+            "calculation_lines": [
+              "\\[u_0=2,\\]",
+              "\\[u_k=2\\Rightarrow u_{k+1}=\\frac12\\times2+1=2.\\]"
+            ],
+            "result": "Q(0) صحيحة وQ(k)⇒Q(k+1).",
+            "conclusion": "Q(0) صحيحة وQ(k)⇒Q(k+1).",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "u0=2، وإذا كان u_k=2 فإن العلاقة تعيد القيمة نفسها.",
+            "why": "u0=2، وإذا كان u_k=2 فإن العلاقة تعيد القيمة نفسها.",
+            "calculation_breakdown": [],
+            "student_action": "حاول كتابة هذه المرحلة وحدك، ثم قارنها بالحل."
+          },
+          {
+            "number": "7",
+            "order": 7,
+            "title": "الخاتمة النهائية",
+            "goal": "تطبيق مبدأ التراجع.",
+            "rule_used": "مبدأ التراجع",
+            "explanation": "المتتالية ثابتة.",
+            "construction": [],
+            "calculation": "\\[\\forall n\\in\\mathbb N,\\quad u_n=2.\\]",
+            "calculation_lines": [
+              "\\[\\forall n\\in\\mathbb N,\\quad u_n=2.\\]"
+            ],
+            "result": "تم الإثبات.",
+            "conclusion": "تم الإثبات.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "المتتالية ثابتة.",
+            "why": "المتتالية ثابتة.",
+            "calculation_breakdown": [],
+            "student_action": "حاول كتابة هذه المرحلة وحدك، ثم قارنها بالحل."
+          }
+        ],
+        "final_answer": "أ) \\(2\\le u_n\\le3\\). ب) في الحقيقة \\(\\boxed{u_n=2}\\) لكل \\(n\\).",
+        "verification": "بالتعويض المباشر في العلاقة: إذا وصلنا إلى 2 فإن الحد التالي يبقى 2، والحد الأول أصلًا يساوي 2.",
+        "common_mistakes": [
+          {
+            "mistake": "نسيان مرحلة التحقق عند رتبة البداية.",
+            "correction": "ابدأ دائمًا بإثبات الخاصية عند أول رتبة يحددها السؤال."
+          },
+          {
+            "mistake": "افتراض أن الخاصية صحيحة لكل n.",
+            "correction": "نفترضها صحيحة عند رتبة ثابتة k فقط، ثم نثبتها عند k+1."
+          },
+          {
+            "mistake": "عدم استعمال فرضية التراجع في الانتقال.",
+            "correction": "يجب أن يظهر بوضوح أين استعملت P(k) للوصول إلى P(k+1)."
+          },
+          {
+            "mistake": "إنهاء الحساب دون خاتمة.",
+            "correction": "اختم دائمًا بعبارة: حسب مبدأ الاستدلال بالتراجع، الخاصية صحيحة لكل الرتب المطلوبة."
+          }
+        ],
+        "hints": [
+          {
+            "level": 1,
+            "hint": "في الجزء أ أثبت الحصر فقط."
+          },
+          {
+            "level": 2,
+            "hint": "في الجزء ب عرّف خاصية جديدة Q(n):u_n=2."
+          }
+        ],
+        "alternative_method": "",
+        "images": [],
+        "tables": [],
+        "variation_tables": [],
+        "sign_tables": [],
+        "graph_data": null,
+        "presentation": {
+          "show_graph_first": false,
+          "show_one_step_at_a_time": true,
+          "react_component": "UniversalMathExerciseRenderer",
+          "rtl": true,
+          "show_graph_in_question": false,
+          "show_graph_in_solution": false,
+          "animate_steps": true,
+          "solution_open_mode": "on_button_click",
+          "solution_access": "direct",
+          "attempt_required": false,
+          "show_final_answer_after_last_step": true,
+          "show_verification_after_final_answer": true,
+          "show_bac_writing": true,
+          "show_understanding_check": true,
+          "math_direction": "ltr"
+        },
+        "is_complete": true,
+        "solution_access": "direct",
+        "attempt_required": false,
+        "bac_writing": [
+          "نعتبر الخاصية \\(P(n):\\ldots\\).",
+          "نتحقق من صحتها عند رتبة البداية.",
+          "نفرض أن \\(P(k)\\) صحيحة.",
+          "نثبت أن \\(P(k+1)\\) صحيحة باستعمال فرضية التراجع.",
+          "إذن حسب مبدأ الاستدلال بالتراجع، الخاصية صحيحة لكل الرتب المطلوبة."
+        ],
+        "understanding_check": {
+          "question": "ما المراحل الخمس الأساسية للبرهان بالتراجع؟",
+          "answer": "تعريف الخاصية، التحقق، فرضية التراجع، الانتقال، ثم الخاتمة."
+        },
+        "takeaway": "يمكن إثبات خاصيتين مختلفتين بالتراجع لنفس المتتالية، ويجب تعريف كل خاصية بوضوح.",
+        "proof_logic_check": {
+          "initialization_present": true,
+          "induction_hypothesis_present": true,
+          "hypothesis_used_in_transition": true,
+          "correct_conclusion_present": true,
+          "no_circular_reasoning": true
+        }
+      },
+      "display_order": 13,
+      "learning_stage": "axis_practice",
+      "learning_stage_label": "تمرين تطبيقي",
+      "pedagogical_objective": "التمييز بين خاصية صحيحة وحصر أوسع ثم إثبات الثبات.",
+      "solution_access": "direct",
+      "attempt_required": false
+    }
+  ]
+}

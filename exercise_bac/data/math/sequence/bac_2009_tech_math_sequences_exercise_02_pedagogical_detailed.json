@@ -1,0 +1,250 @@
+{
+  "schema_version": "4.5-bac-source",
+  "version": "4.2-2009-tech-math-sequences-ex02",
+  "language": "ar",
+  "direction": "rtl",
+  "year": 2009,
+  "session": " ordinary",
+  "chapter_code": "sequences",
+  "chapter_title": "sequences",
+  "exercise_number": 2,
+  "points": 4,
+  "source_pages": [
+    1
+  ],
+  "solution_source_pages": [
+    5
+  ],
+  "branches": [
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "title": "التمرين الثاني — بكالوريا الجزائر 2009 — المتتالية الهندسية ومجموع حدودها",
+  "axis_tags": [
+    "geometric_sequence",
+    "geometric_sequence_general_term",
+    "geometric_sum",
+    "divisibility",
+    "sequence_equations"
+  ],
+  "statement": "التمرين الثاني: (04 نقاط)\n\n1. أ) عين الأعداد الطبيعية التي مربع كل منها يقسم 2009.\n\\(u_0\\) و \\(a\\) عددان طبيعيان غير معدومين، \\((u_n)\\) متتالية هندسية أساسها \\(a\\) وحدها الأول \\(u_0\\) بحيث:\n\\[u_1^2+u_2+35a^2=2009.\\]\nب) احسب \\(a\\) و \\(u_0\\).\n\n2. نضع \\(a=7\\) و \\(u_0=2\\)، احسب \\(u_n\\) بدلالة \\(n\\).\n\n3. نضع \\(S_n=u_0+u_1+\\cdots+u_n\\).\nأ) عبر عن \\(S_n\\) بدلالة \\(n\\).\nب) عين العدد الطبيعي \\(n\\) حتى يكون \\(S_n=800\\).",
+  "figures": [],
+  "questions": [
+    {
+      "text": "1-أ- عين الأعداد الطبيعية التي مربع كل منها يقسم 2009.",
+      "solution": {
+        "strategy": "نفكك العدد 2009 إلى عوامل أولية، ثم نبحث عن الأعداد الطبيعية التي يكون مربعها قاسما له.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تفكيك العدد 2009",
+            "explanation": "لدينا:\n\\[2009=49\\times41=7^2\\times41.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "البحث عن المربعات التي تقسم 2009",
+            "explanation": "العامل الوحيد الذي يظهر بأس يساوي 2 هو \\(7\\). لذلك المربعات الكاملة التي تقسم \\(2009\\) هي:\n\\[1^2=1\\quad\\text{و}\\quad7^2=49.\\]",
+            "result": "الأعداد الطبيعية المطلوبة هي 1 و7."
+          }
+        ],
+        "final_answer": "\\(\\boxed{1\\text{ و }7}\\).",
+        "verification": "تمت مراجعة الحل مع الإجابة النموذجية وسلم التنقيط الرسمي المرفق لبكالوريا 2009، الموضوع الأول، التمرين الثاني.",
+        "common_mistakes": [
+          "البحث عن قواسم 2009 بدل البحث عن الأعداد التي مربعاتها تقسم 2009."
+        ],
+        "hints": [
+          "ابدأ من التفكيك: 2009=7²×41."
+        ],
+        "introduction": "المطلوب ليس كل قواسم 2009، بل الأعداد التي يكون مربعها قاسما لـ2009.",
+        "summary": "بما أن 2009=7²×41، فالعددان هما 1 و7.",
+        "answer_style": "explain_then_calculate_then_conclude"
+      },
+      "id": "2009_tech_math_ex02_q1a",
+      "display_order": 1,
+      "content_type": "question"
+    },
+    {
+      "text": "1-ب- \\(u_0\\) و \\(a\\) عددان طبيعيان غير معدومين، \\((u_n)\\) متتالية هندسية أساسها \\(a\\) وحدها الأول \\(u_0\\) بحيث \\(u_1^2+u_2+35a^2=2009\\). احسب \\(a\\) و \\(u_0\\).",
+      "solution": {
+        "strategy": "نعبر عن u₁ وu₂ باستعمال u₀ وa، ثم نستعمل نتيجة السؤال السابق.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "كتابة u₁ وu₂",
+            "explanation": "بما أن \\((u_n)\\) متتالية هندسية أساسها \\(a\\):\n\\[u_1=u_0a,\\qquad u_2=u_0a^2.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "التعويض في المعادلة",
+            "explanation": "نعوض في:\n\\[u_1^2+u_2+35a^2=2009.\\]\nفنحصل على:\n\\[(u_0a)^2+u_0a^2+35a^2=2009\\]\nأي:\n\\[a^2(u_0^2+u_0+35)=2009.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "تحديد a",
+            "explanation": "إذن \\(a^2\\) يقسم \\(2009\\). ومن السؤال 1-أ:\n\\[a=1\\quad\\text{أو}\\quad a=7.\\]\nإذا كان \\(a=1\\)، نحصل على \\(u_0^2+u_0+35=2009\\)، ولا يعطي ذلك عددا طبيعيا \\(u_0\\). لذلك هذه الحالة مرفوضة.",
+            "result": "\\(a=7\\)."
+          },
+          {
+            "step_number": 4,
+            "title": "تحديد u₀",
+            "explanation": "عند \\(a=7\\):\n\\[49(u_0^2+u_0+35)=2009.\\]\nوبالقسمة على 49:\n\\[u_0^2+u_0+35=41\\]\nومنها:\n\\[u_0^2+u_0-6=0\\]\n\\[(u_0-2)(u_0+3)=0.\\]\nوبما أن \\(u_0\\) طبيعي غير معدوم:",
+            "result": "\\(u_0=2\\)."
+          }
+        ],
+        "final_answer": "\\(\\boxed{a=7\\quad\\text{و}\\quad u_0=2}\\).",
+        "verification": "تمت مراجعة الحل مع الإجابة النموذجية وسلم التنقيط الرسمي المرفق لبكالوريا 2009، الموضوع الأول، التمرين الثاني.",
+        "common_mistakes": [
+          "نسيان أن u₂=u₀a² وليس u₀a.",
+          "قبول الجذر السالب u₀=-3 رغم أن u₀ طبيعي."
+        ],
+        "hints": [
+          "في متتالية هندسية: u₁=u₀a وu₂=u₀a²."
+        ],
+        "introduction": "نستعمل تعريف المتتالية الهندسية ثم نتيجة السؤال الأول.",
+        "summary": "بعد استخراج a² عاملا مشتركا نجد a=7 ثم u₀=2.",
+        "answer_style": "explain_then_calculate_then_conclude"
+      },
+      "id": "2009_tech_math_ex02_q1b",
+      "display_order": 2,
+      "content_type": "question"
+    },
+    {
+      "text": "2- نضع \\(a=7\\) و \\(u_0=2\\)، احسب \\(u_n\\) بدلالة \\(n\\).",
+      "solution": {
+        "strategy": "نطبق صيغة الحد العام لمتتالية هندسية معلومة الحد الأول والأساس.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تذكير بالقانون",
+            "explanation": "إذا كانت متتالية هندسية حدها الأول \\(u_0\\) وأساسها \\(a\\)، فإن:\n\\[u_n=u_0a^n.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "التعويض",
+            "explanation": "لدينا \\(u_0=2\\) و\\(a=7\\)، إذن:\n\\[u_n=2\\times7^n.\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{u_n=2\\times7^n}\\).",
+        "verification": "تمت مراجعة الحل مع الإجابة النموذجية وسلم التنقيط الرسمي المرفق لبكالوريا 2009، الموضوع الأول، التمرين الثاني.",
+        "common_mistakes": [
+          "استعمال 7^{n-1} رغم أن الحد الأول هو u₀."
+        ],
+        "hints": [
+          "بما أن البداية من u₀ فالصيغة هي u_n=u₀a^n."
+        ],
+        "introduction": "نطبق مباشرة صيغة الحد العام للمتتالية الهندسية.",
+        "summary": "u_n=2×7^n.",
+        "answer_style": "explain_then_calculate_then_conclude"
+      },
+      "id": "2009_tech_math_ex02_q2",
+      "display_order": 3,
+      "content_type": "question"
+    },
+    {
+      "text": "3-أ- نضع \\(S_n=u_0+u_1+\\cdots+u_n\\). عبر عن \\(S_n\\) بدلالة \\(n\\).",
+      "solution": {
+        "strategy": "نستعمل قانون مجموع الحدود الأولى لمتتالية هندسية.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "كتابة المجموع",
+            "explanation": "بما أن \\(u_k=2\\times7^k\\):\n\\[S_n=2+2\\times7+2\\times7^2+\\cdots+2\\times7^n.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "تطبيق قانون المجموع",
+            "explanation": "لدينا \\(n+1\\) حدا، لذلك:\n\\[S_n=2\\frac{7^{n+1}-1}{7-1}.\\]\nوبالتبسيط:",
+            "result": "\\[S_n=\\frac{7^{n+1}-1}{3}.\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{S_n=\\frac{7^{n+1}-1}{3}}\\).",
+        "verification": "تمت مراجعة الحل مع الإجابة النموذجية وسلم التنقيط الرسمي المرفق لبكالوريا 2009، الموضوع الأول، التمرين الثاني.",
+        "common_mistakes": [
+          "نسيان أن المجموع من u₀ إلى u_n يحتوي على n+1 حدا."
+        ],
+        "hints": [
+          "استعمل مجموع 1+q+...+q^n."
+        ],
+        "introduction": "المجموع المطلوب مجموع حدود متتالية هندسية.",
+        "summary": "S_n=(7^{n+1}-1)/3.",
+        "answer_style": "explain_then_calculate_then_conclude"
+      },
+      "id": "2009_tech_math_ex02_q3a",
+      "display_order": 4,
+      "content_type": "question"
+    },
+    {
+      "text": "3-ب- عين العدد الطبيعي \\(n\\) حتى يكون \\(S_n=800\\).",
+      "solution": {
+        "strategy": "نعوض عبارة S_n التي وجدناها ثم نحل المعادلة الأسية البسيطة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التعويض",
+            "explanation": "نريد:\n\\[S_n=800.\\]\nوبما أن:\n\\[S_n=\\frac{7^{n+1}-1}{3},\\]\nفإن:\n\\[\\frac{7^{n+1}-1}{3}=800.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "تبسيط المعادلة",
+            "explanation": "\\[7^{n+1}-1=2400\\]\n\\[7^{n+1}=2401.\\]\nلكن:\n\\[2401=7^4.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "تحديد n",
+            "explanation": "إذن:\n\\[7^{n+1}=7^4\\Rightarrow n+1=4.\\]",
+            "result": "\\(n=3\\)."
+          }
+        ],
+        "final_answer": "\\(\\boxed{n=3}\\).",
+        "verification": "تمت مراجعة الحل مع الإجابة النموذجية وسلم التنقيط الرسمي المرفق لبكالوريا 2009، الموضوع الأول، التمرين الثاني.",
+        "common_mistakes": [
+          "الخلط بين n وn+1 في أس 7."
+        ],
+        "hints": [
+          "لاحظ أن 2401=7⁴."
+        ],
+        "introduction": "نستعمل عبارة S_n التي حصلنا عليها في السؤال السابق.",
+        "summary": "S_n=800 عندما n=3.",
+        "answer_style": "explain_then_calculate_then_conclude"
+      },
+      "id": "2009_tech_math_ex02_q3b",
+      "display_order": 5,
+      "content_type": "question"
+    }
+  ],
+  "source_reference": {
+    "file": "2009(6).pdf",
+    "statement_pages": [
+      1
+    ],
+    "solution_pages": [
+      5
+    ],
+    "source_faithful_statement": true,
+    "solution_reviewed_against_source": true
+  },
+  "display": {
+    "layout": "question_by_question",
+    "show_statement_first": true,
+    "show_statement_figures": true,
+    "show_solution_after_click": true,
+    "show_solution_figures": true
+  },
+  "review_status": {
+    "statement_compared_with_original_pdf": true,
+    "questions_compared_with_original_pdf": true,
+    "source_figures_checked": true,
+    "solution_checked_against_correction": true,
+    "latex_normalized_only": true,
+    "react_ready": true
+  },
+  "given_data": {
+    "sequence_type": "geometric",
+    "u0": "2",
+    "ratio": "7",
+    "general_term": "u_n=2*7^n",
+    "sum": "S_n=(7^(n+1)-1)/3"
+  }
+}

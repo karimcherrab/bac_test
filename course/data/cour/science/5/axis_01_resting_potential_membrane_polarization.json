@@ -1,0 +1,386 @@
+{
+  "tag": "resting_potential_membrane_polarization",
+  "title": "كمون الراحة وأصل الاستقطاب الغشائي",
+  "order": 1,
+  "is_active": true,
+  "branches": ["science"],
+  "content": {
+    "language": "ar",
+    "direction": "rtl",
+    "chapter_code": "neural_communication",
+    "chapter_title": "الاتصال العصبي",
+    "axis_tag": "resting_potential_membrane_polarization",
+    "estimated_minutes": 45,
+    "difficulty": "easy",
+    "lesson_goal": "أن يفسر التلميذ نشأة كمون الراحة وثباته انطلاقا من التوزع غير المتساوي للشوارد والنفاذية الانتقائية للغشاء والنقل النشط.",
+    "prerequisites": [
+      "معرفة أن الغشاء الهيولي يفصل الوسط داخل الخلية عن الوسط خارجها.",
+      "معرفة مفهوم الشاردة وتدرج التركيز والانتشار.",
+      "معرفة أن بعض البروتينات الغشائية تعمل قنوات أو نواقل."
+    ],
+    "learning_outcomes": [
+      "يقرأ تسجيلا كهربائيا ويميز بين فرق كمون معدوم وكمون راحة يساوي نحو -70 mV.",
+      "يصف الغشاء في الراحة بأنه مستقطب: الداخل سالب بالنسبة إلى الخارج.",
+      "يقارن تراكيز Na⁺ وK⁺ داخل الليف العصبي وخارجه.",
+      "يربط كمون الراحة بالتوزع غير المتساوي للشوارد وبحيوية الليف العصبي.",
+      "يفسر سلبية الداخل بخروج K⁺ عبر قنوات التسرب أكثر من دخول Na⁺.",
+      "يستغل تجارب Na⁺ المشع والتبريد وDNP وATP وغياب K⁺ للكشف عن النقل النشط.",
+      "يميز بين دور قنوات التسرب في نشأة فرق الكمون ودور مضخة Na⁺/K⁺ في حفظ التدرجات وثباته.",
+      "ينجز مخططا وظيفيا يلخص نشأة كمون الراحة وثباته."
+    ],
+    "learning_path": [
+      {
+        "id": "step_1",
+        "type": "problem",
+        "component": "DiscoveryQuestion",
+        "title": "كيف يكون لليف ساكن فرق كهربائي؟",
+        "content": {
+          "question": "الليف العصبي لا يرسل رسالة عصبية الآن، ومع ذلك يسجل جهاز القياس -70 mV عند إدخال قطب داخل الليف. من أين جاءت هذه القيمة؟ وكيف تبقى ثابتة؟",
+          "teacher": "سنقسم المشكلة إلى جزأين: ما الذي ينشئ فرق الشحنات؟ وما الآلية التي تحافظ عليه مع مرور الزمن؟",
+          "action": {"label": "ابدأ بالتسجيل الكهربائي", "next_step": "step_2"}
+        },
+        "display_order": 1
+      },
+      {
+        "id": "step_2",
+        "type": "real_evidence",
+        "component": "RealEvidenceGallery",
+        "title": "الدليل 1: قراءة كمون الراحة",
+        "content": {
+          "intro": "يوضع القطب المرجعي خارج الليف، ثم ينتقل قطب القياس من الخارج إلى الداخل. تابع تغير التسجيل.",
+          "figures": [{
+            "src": "/science/neural-communication/axis-01/resting_potential_recording.png",
+            "alt": "تسجيل كهربائي لليف عصبي يبين الانتقال من صفر إلى ناقص سبعين ميلي فولط",
+            "caption": "عندما يكون القطبان خارج الليف يسجل الجهاز 0 mV، وعند إدخال قطب القياس يسجل نحو -70 mV.",
+            "source_label": "الوثيقة 1 - الصفحة 1 من ملف كمون الراحة"
+          }],
+          "guided_reading": [
+            {"label": "القطبان خارج الليف", "text": "لا يوجد فرق كمون بين موضعي القياس، لذلك تكون القيمة 0 mV."},
+            {"label": "قطب داخل الليف وآخر خارجه", "text": "تنخفض القيمة إلى نحو -70 mV؛ أي إن داخل الليف أكثر سلبية من خارجه."},
+            {"label": "التسمية", "text": "فرق الكمون الثابت المسجل في غياب التنبيه هو كمون الراحة، والغشاء في هذه الحالة مستقطب."}
+          ],
+          "takeaway": "الإشارة السالبة لا تعني غياب الكهرباء؛ بل تعني أن الجهة الداخلية سالبة بالنسبة إلى الجهة الخارجية المرجعية."
+        },
+        "display_order": 2
+      },
+      {
+        "id": "step_3",
+        "type": "short_explanation",
+        "component": "ShortExplanation",
+        "title": "ثلاث أفكار قبل تفسير -70 mV",
+        "content": {
+          "blocks": [
+            {"title": "فرق الكمون", "text": "مقارنة كهربائية بين جهتين من الغشاء، وتقاس بالميلي فولط mV."},
+            {"title": "الاستقطاب", "text": "اختلاف توزع الشحنات بين جانبي الغشاء؛ في الراحة يكون الداخل سالبا بالنسبة إلى الخارج."},
+            {"title": "التدرج", "text": "تميل الشاردة إلى الانتشار من الوسط الأعلى تركيزا نحو الوسط الأقل تركيزا إذا وجدت قناة تسمح بمرورها."}
+          ],
+          "memory_tip": "الخارج هو المرجع، لذلك -70 mV تعني: الداخل أقل منه بسبعين ميلي فولط.",
+          "attention": "لا نصف كامل الوسط الداخلي بأنه كتلة سالبة والخارج بأنه كتلة موجبة؛ فصل الشحنات الذي يصنع الكمون يتركز قرب سطحي الغشاء."
+        },
+        "display_order": 3
+      },
+      {
+        "id": "step_4",
+        "type": "real_evidence",
+        "component": "RealEvidenceGallery",
+        "title": "الدليل 2: أين توجد Na⁺ وK⁺؟",
+        "content": {
+          "intro": "تقارن الوثيقة ليفا عصبيا حيا بليف ميت من حيث تراكيز الشوارد والكمون الغشائي.",
+          "figures": [{
+            "src": "/science/neural-communication/axis-01/ion_distribution_live_dead.png",
+            "alt": "جدول مقارنة تراكيز الصوديوم والبوتاسيوم داخل وخارج ليف حي وميت مع التسجيل الكهربائي",
+            "caption": "في الليف الحي: Na⁺ مرتفع خارجا وK⁺ مرتفع داخلا مع كمون -70 mV؛ في الليف الميت تتساوى التراكيز ويصبح الكمون معدوما.",
+            "source_label": "الوثيقة 2 - الصفحة 2"
+          }],
+          "guided_reading": [
+            {"label": "Na⁺ في الليف الحي", "text": "تركيزه خارج الليف 440 mmol/L وداخله 50 mmol/L؛ أي إنه أعلى خارجا بنحو تسع مرات."},
+            {"label": "K⁺ في الليف الحي", "text": "تركيزه داخل الليف 400 mmol/L وخارجه 20 mmol/L؛ أي إنه أعلى داخلا بعشرين مرة."},
+            {"label": "الليف الميت", "text": "تتساوى تراكيز كل شاردة على الجانبين ويسجل فرق كمون يساوي 0 mV."},
+            {"label": "العلاقة", "text": "يرتبط وجود كمون الراحة بالتوزع غير المتساوي للشوارد وبحيوية الليف، لكن الجدول وحده لا يفسر لماذا يصبح الداخل سالبا."}
+          ],
+          "takeaway": "التوزع الشاردي غير المتساوي شرط أساسي لكمون الراحة، ونحتاج الآن إلى دراسة نفاذية الغشاء لتفسير الإشارة السالبة."
+        },
+        "display_order": 4
+      },
+      {
+        "id": "step_5",
+        "type": "real_evidence",
+        "component": "RealEvidenceGallery",
+        "title": "الدليل 3: لماذا يكون الداخل سالبا؟",
+        "content": {
+          "intro": "تبين الوثيقة قنوات التسرب المفتوحة في الراحة، كما تبين أثر رفع التركيز الداخلي لـK⁺ في الكمون الغشائي.",
+          "figures": [{
+            "src": "/science/neural-communication/axis-01/leak_channels_k_gradient.png",
+            "alt": "قنوات تسرب البوتاسيوم والصوديوم ومنحنى تغير الكمون الغشائي بدلالة التركيز الداخلي للبوتاسيوم",
+            "caption": "قنوات K⁺ المفتوحة أكثر عددا من قنوات Na⁺، ويتغير الكمون عند تغيير التركيز الداخلي لـK⁺.",
+            "source_label": "الوثيقة 3 - الصفحة 2"
+          }],
+          "guided_reading": [
+            {"label": "اتجاه K⁺", "text": "لأن تركيزه أعلى داخل الليف، ينتشر K⁺ نحو الخارج عبر قنوات التسرب الخاصة به."},
+            {"label": "اتجاه Na⁺", "text": "لأن تركيزه أعلى خارج الليف، يتسرب مقدار قليل من Na⁺ نحو الداخل."},
+            {"label": "النفاذية الانتقائية", "text": "عدد قنوات تسرب K⁺ المفتوحة أكبر؛ لذلك تكون نفاذية الغشاء لـK⁺ أكبر من نفاذيته لـNa⁺ في الراحة."},
+            {"label": "النتيجة الكهربائية", "text": "خروج الشحنات الموجبة المحمولة على K⁺ يفوق دخول الشحنات الموجبة المحمولة على Na⁺، فيصبح الوجه الداخلي سالبا نسبيا."},
+            {"label": "دليل المنحنى", "text": "تغير الكمون بتغير التركيز الداخلي لـK⁺ يبين أن تدرج K⁺ ونفاذية الغشاء له عاملان أساسيان في كمون الراحة."}
+          ],
+          "takeaway": "ينشأ معظم كمون الراحة من الانتشار غير المتكافئ للشوارد، خاصة خروج K⁺ عبر قنوات التسرب الأكثر عددا."
+        },
+        "display_order": 5
+      },
+      {
+        "id": "step_6",
+        "type": "key_rule",
+        "component": "KeyRuleCard",
+        "title": "قاعدة نشأة كمون الراحة",
+        "content": {
+          "rule": "التوزع غير المتساوي لـNa⁺ وK⁺ يوفر تدرجات التركيز، والنفاذية الانتقائية تجعل خروج K⁺ أكبر من دخول Na⁺؛ فتفقد الجهة الداخلية شحنات موجبة أكثر مما تكتسب، ويظهر كمون راحة سالب يقارب -70 mV.",
+          "simple_flow": "K⁺ مرتفع داخلا + قنوات K⁺ أكثر → خروج K⁺ أكبر من دخول Na⁺ → سلبية نسبية داخل الغشاء → كمون الراحة",
+          "do_not_confuse": [
+            "قنوات التسرب تمرر الشوارد وفق تدرجها ولا تستهلك ATP.",
+            "التركيز غير المتساوي وحده لا يكفي؛ يجب أن تكون هناك نفاذية انتقائية.",
+            "المضخة ليست قناة تسرب، ودورها الرئيس هو حفظ التدرجات الشاردية على المدى الطويل."
+          ],
+          "memory_tip": "K⁺ يخرج أكثر، لذلك يبقى الداخل أكثر سلبية."
+        },
+        "display_order": 6
+      },
+      {
+        "id": "step_7",
+        "type": "real_evidence",
+        "component": "RealEvidenceGallery",
+        "title": "الدليل 4: هل خروج Na⁺ يحتاج طاقة؟",
+        "content": {
+          "intro": "تتبع التجارب Na⁺ المشع. في تجربة الدخول يظهر الإشعاع داخل الليف بعد وضعه في وسط يحوي Na⁺ مشعا. وفي تجربة الخروج تقاس كمية Na⁺ المشع المطرودة مع تغيير الشروط.",
+          "figures": [{
+            "src": "/science/neural-communication/axis-01/radioactive_sodium_experiments.png",
+            "alt": "تجارب الصوديوم المشع وتأثير الحرارة وDNP وATP والبوتاسيوم الخارجي في تدفقه",
+            "caption": "ينخفض التدفق الخارجي لـNa⁺ عند التبريد أو منع تركيب ATP أو نزع K⁺ الخارجي، ويستعاد عند عودة الشرط المناسب.",
+            "source_label": "الوثيقة 4 - الصفحة 3"
+          }],
+          "guided_reading": [
+            {"label": "الحالة 1: الحرارة", "text": "يضعف خروج Na⁺ المشع عند 0 °C ويعود عند 18 °C؛ ما يدل على تدخل آلية حيوية حساسة للحرارة."},
+            {"label": "الحالة 2: DNP", "text": "يمنع DNP تركيب ATP فينخفض خروج Na⁺، ثم تؤدي إضافة ATP إلى استعادة التدفق حسب الكمية المضافة."},
+            {"label": "الحالة 3: K⁺ الخارجي", "text": "ينخفض خروج Na⁺ عند نزع K⁺ من الوسط الخارجي ويعود عند إضافته؛ أي إن نقل Na⁺ إلى الخارج مقترن بنقل K⁺ إلى الداخل."},
+            {"label": "الاستنتاج", "text": "طرح Na⁺ نحو الخارج يتم بنقل نشط يستهلك ATP ويتطلب وجود K⁺ خارج الخلية."}
+          ],
+          "takeaway": "تثبت التجارب وجود ناقل نشط يطرد Na⁺ إلى الخارج ويدخل K⁺ إلى الداخل مستعملا طاقة ATP."
+        },
+        "display_order": 7
+      },
+      {
+        "id": "step_8",
+        "type": "real_evidence",
+        "component": "RealEvidenceGallery",
+        "title": "الدليل 5: كيف تعمل مضخة Na⁺/K⁺؟",
+        "content": {
+          "intro": "المضخة بروتين غشائي يغير شكله خلال دورة مرتبطة بإماهة ATP.",
+          "figures": [{
+            "src": "/science/neural-communication/axis-01/sodium_potassium_pump.png",
+            "alt": "مراحل عمل مضخة الصوديوم والبوتاسيوم عبر الغشاء",
+            "caption": "تنقل المضخة في كل دورة 3 Na⁺ إلى الخارج و2 K⁺ إلى الداخل باستهلاك ATP.",
+            "source_label": "الوثيقة 5 - الصفحة 3"
+          }],
+          "guided_reading": [
+            {"label": "1. تثبيت Na⁺", "text": "ترتبط ثلاثة شوارد Na⁺ بالمضخة من الجهة الداخلية."},
+            {"label": "2. استعمال ATP", "text": "تؤدي إماهة ATP وفسفرة المضخة إلى تغير شكلها."},
+            {"label": "3. طرح Na⁺", "text": "تحرر المضخة 3 Na⁺ في الوسط الخارجي عكس تدرج التركيز."},
+            {"label": "4. إدخال K⁺", "text": "ترتبط شوارد K⁺ من الخارج، ثم تعود المضخة إلى شكلها الأول وتحرر 2 K⁺ في الداخل."}
+          ],
+          "takeaway": "المضخة تعاكس التسرب المستمر: تعيد Na⁺ إلى الخارج وK⁺ إلى الداخل، فتحافظ على التدرجات الشاردية الضرورية لثبات كمون الراحة."
+        },
+        "display_order": 8
+      },
+      {
+        "id": "step_9",
+        "type": "comparison",
+        "component": "VisualComparison",
+        "title": "القنوات والمضخة: لا تخلط بينهما",
+        "content": {
+          "columns": [
+            {"title": "قنوات التسرب", "items": ["مفتوحة في الراحة", "مرور وفق تدرج التركيز", "لا تستهلك ATP", "نفاذية K⁺ أكبر", "تسهم مباشرة في نشأة فرق الكمون"]},
+            {"title": "مضخة Na⁺/K⁺", "items": ["ناقل بروتيني يتغير شكله", "نقل عكس تدرج التركيز", "تستهلك ATP", "تخرج 3 Na⁺ وتدخل 2 K⁺", "تحافظ على التدرجات وعلى ثبات الكمون"]}
+          ],
+          "attention": "إذا توقفت المضخة لا تختفي قيمة -70 mV في اللحظة نفسها، لكن التدرجات تتبدد تدريجيا بسبب التسرب فيضعف كمون الراحة ثم يزول.",
+          "memory_tip": "القنوات تصنع الاختلال الكهربائي بالانتشار، والمضخة تحفظ شروطه بالنقل النشط."
+        },
+        "display_order": 9
+      },
+      {
+        "id": "step_10",
+        "type": "quick_check",
+        "component": "QuickCheck",
+        "title": "اختبر فهمك أثناء الدرس",
+        "content": {
+          "questions": [
+            {"id": "qc1", "question": "ماذا تعني القيمة -70 mV؟", "choices": ["داخل الليف سالب بالنسبة إلى الخارج", "لا توجد شحنات داخل الليف", "خارج الليف سالب بالنسبة إلى الداخل"], "correct_answer": "داخل الليف سالب بالنسبة إلى الخارج", "explanation": "الإشارة تعتمد على الخارج بوصفه مرجعا للقياس."},
+            {"id": "qc2", "question": "ما السبب المباشر الأهم لسلبية داخل الليف في الراحة؟", "choices": ["خروج K⁺ أكبر من دخول Na⁺", "دخول K⁺ أكبر من خروج Na⁺", "تساوي مرور الشوارد"], "correct_answer": "خروج K⁺ أكبر من دخول Na⁺", "explanation": "نفاذية الغشاء لـK⁺ أكبر بسبب كثرة قنوات تسربه."},
+            {"id": "qc3", "question": "أي عملية تحتاج ATP؟", "choices": ["عمل مضخة Na⁺/K⁺", "تسرب K⁺ وفق تدرجه", "تسرب Na⁺ وفق تدرجه"], "correct_answer": "عمل مضخة Na⁺/K⁺", "explanation": "النقل عكس التدرج عملية نشطة تحتاج إلى الطاقة."}
+          ]
+        },
+        "display_order": 10
+      },
+      {
+        "id": "step_11",
+        "type": "bac_method",
+        "component": "BacMethodCard",
+        "title": "كيف تبني الإجابة في البكالوريا؟",
+        "content": {
+          "skill": "تفسير مصدر كمون الراحة وآلية ثباته انطلاقا من الوثائق",
+          "method": [
+            {"label": "1. صف التسجيل", "text": "حدد شرط القياس ثم اذكر الانتقال من 0 إلى -70 mV واستنتج أن الغشاء مستقطب."},
+            {"label": "2. قارن التراكيز", "text": "Na⁺ أعلى خارجا وK⁺ أعلى داخلا في الليف الحي، بينما تتساوى في الليف الميت مع زوال الكمون."},
+            {"label": "3. فسر النفاذية", "text": "قنوات K⁺ المفتوحة أكثر من قنوات Na⁺، لذلك خروج K⁺ أكبر من دخول Na⁺ فيصبح الداخل سالبا نسبيا."},
+            {"label": "4. استدل على النقل النشط", "text": "انخفاض خروج Na⁺ عند التبريد أو منع ATP وعودته بإضافة ATP دليل على آلية نشطة."},
+            {"label": "5. ادمج", "text": "القنوات والتدرجات تنشئ فرق الكمون، والمضخة المستهلكة لـATP تحفظ التدرجات فتؤمن ثباته."
+            }
+          ],
+          "bac_sentence": "ينتج كمون الراحة عن التوزع غير المتساوي لشوارد Na⁺ وK⁺ وعن النفاذية الانتقائية للغشاء؛ إذ يكون خروج K⁺ عبر قنوات التسرب أكبر من دخول Na⁺، فيصبح الداخل سالبا بالنسبة إلى الخارج. وتحافظ مضخة Na⁺/K⁺ على هذا التوزع بطرد 3 Na⁺ وإدخال 2 K⁺ عكس تدرج التركيز باستهلاك ATP، فتضمن ثبات كمون الراحة.",
+          "common_mistakes": [
+            "القول إن -70 mV يعني غياب الشحنات أو انعدام النشاط الخلوي.",
+            "نسب نشأة الكمون إلى المضخة وحدها وإهمال النفاذية الانتقائية وقنوات K⁺.",
+            "القول إن K⁺ يدخل عبر قناة التسرب في الراحة رغم أن تدرجه يدفعه إلى الخارج.",
+            "القول إن قنوات التسرب تستهلك ATP.",
+            "نسيان أن المضخة تطرد 3 Na⁺ وتدخل 2 K⁺."
+          ]
+        },
+        "display_order": 11
+      },
+      {
+        "id": "step_12",
+        "type": "final_visual_map",
+        "component": "InteractiveSummaryMap",
+        "title": "خريطة المحور كاملة",
+        "content": {
+          "map": [
+            {"node": "توزع غير متساو", "relation": "Na⁺ عال خارجا وK⁺ عال داخلا", "target": "تدرجات تركيز"},
+            {"node": "قنوات التسرب", "relation": "نفاذية K⁺ أكبر من Na⁺", "target": "خروج موجب أكبر"},
+            {"node": "خروج K⁺", "relation": "يفوق دخول Na⁺", "target": "داخل سالب نسبيا"},
+            {"node": "استقطاب الغشاء", "relation": "يسجل كهربائيا", "target": "كمون راحة نحو -70 mV"},
+            {"node": "مضخة Na⁺/K⁺", "relation": "3 Na⁺ خارجا و2 K⁺ داخلا باستعمال ATP", "target": "حفظ التدرجات وثبات الكمون"}
+          ],
+          "memory_tip": "تدرجات + نفاذية انتقائية = نشأة الكمون؛ مضخة + ATP = ثبات التدرجات.",
+          "next_axis_bridge": {"question": "ماذا يحدث لكمون الغشاء عندما يتلقى الليف العصبي تنبيها فعالا؟", "next_concept": "كمون العمل ومراحله"}
+        },
+        "display_order": 12
+      },
+      {
+        "id": "step_13",
+        "type": "quiz",
+        "component": "FinalQuiz",
+        "title": "اختبار نهاية المحور",
+        "content": {
+          "questions": [
+            {"id": "q1", "question": "عند وضع قطب داخل الليف وآخر خارجه، سجل الجهاز -70 mV. ما الاستنتاج الصحيح؟", "choices": ["الغشاء مستقطب والداخل سالب بالنسبة إلى الخارج", "الغشاء غير مستقطب", "الداخل والخارج لهما الكمون نفسه"], "correct_answer": "الغشاء مستقطب والداخل سالب بالنسبة إلى الخارج", "explanation": "فرق الكمون السالب هو كمون الراحة."},
+            {"id": "q2", "question": "أي توزيع يوافق الليف العصبي الحي في الراحة؟", "choices": ["Na⁺ مرتفع خارجا وK⁺ مرتفع داخلا", "Na⁺ وK⁺ متساويان على الجانبين", "Na⁺ مرتفع داخلا وK⁺ مرتفع خارجا"], "correct_answer": "Na⁺ مرتفع خارجا وK⁺ مرتفع داخلا", "explanation": "هذا التوزع يوفر تدرجي الانتشار الضروريين."},
+            {"id": "q3", "question": "لماذا يكون خروج K⁺ أكبر من دخول Na⁺ في الراحة؟", "choices": ["لأن قنوات تسرب K⁺ المفتوحة أكثر", "لأن K⁺ يستعمل ATP داخل القناة", "لأن تركيز K⁺ أعلى خارجا"], "correct_answer": "لأن قنوات تسرب K⁺ المفتوحة أكثر", "explanation": "الغشاء أكثر نفاذية لـK⁺ في الراحة."},
+            {"id": "q4", "question": "ماذا يدل انخفاض تدفق Na⁺ الخارجي بوجود DNP ثم عودته بعد إضافة ATP؟", "choices": ["طرح Na⁺ نقل نشط يحتاج ATP", "طرح Na⁺ انتشار بسيط", "قنوات التسرب تصنع ATP"], "correct_answer": "طرح Na⁺ نقل نشط يحتاج ATP", "explanation": "DNP يمنع تركيب ATP، وعودة التدفق بعد إضافته تربط العملية بالطاقة."},
+            {"id": "q5", "question": "ما الدور الأدق لمضخة Na⁺/K⁺ في هذا المحور؟", "choices": ["المحافظة على التدرجات الشاردية وثبات كمون الراحة", "فتح قنوات التسرب", "مساواة تراكيز الشوارد على الجانبين"], "correct_answer": "المحافظة على التدرجات الشاردية وثبات كمون الراحة", "explanation": "تعوض المضخة التسرب المستمر بنقل الشوارد عكس تدرجاتها."}
+          ],
+          "mastery_threshold": 4
+        },
+        "display_order": 13
+      }
+    ],
+    "document_bank": [
+      {
+        "document_id": "nc_axis01_doc01_resting_recording",
+        "file_name": "resting_potential_recording.png",
+        "src": "/science/neural-communication/axis-01/resting_potential_recording.png",
+        "document_type": "electrophysiological_recording",
+        "source": {"kind": "lesson_pdf", "page": 1, "figure": "الوثيقة (1)"},
+        "skills": ["read_voltage_recording", "identify_reference", "infer_polarization"],
+        "scientific_entities": ["ليف عصبي", "قطب قياس", "كمون الراحة", "-70 mV"],
+        "pedagogical_roles": ["lesson_evidence", "axis_exercise", "ai_axis_exercise"],
+        "difficulty": 1,
+        "interpretation_scope": "تثبت وجود فرق كمون سالب داخل الليف بالنسبة إلى الخارج في الراحة.",
+        "safe_claims": ["تكون القيمة 0 mV عندما يكون القطبان خارج الليف.", "يسجل نحو -70 mV عند إدخال قطب القياس.", "الغشاء مستقطب في الراحة."],
+        "forbidden_inferences": ["اعتبار -70 mV شحنة كلية للخلية.", "القول إن جميع العصبونات تملك القيمة الدقيقة نفسها دون اختلاف."],
+        "ai_generation": {"allowed": true, "allowed_question_types": ["observe", "read_value", "infer"], "max_documents_with": 2}
+      },
+      {
+        "document_id": "nc_axis01_doc02_ion_distribution",
+        "file_name": "ion_distribution_live_dead.png",
+        "src": "/science/neural-communication/axis-01/ion_distribution_live_dead.png",
+        "document_type": "comparative_table_and_recording",
+        "source": {"kind": "lesson_pdf", "page": 2, "figure": "الوثيقة (2)"},
+        "skills": ["compare_concentrations", "calculate_ratio", "link_ions_to_potential"],
+        "scientific_entities": ["Na⁺", "K⁺", "ليف حي", "ليف ميت", "كمون غشائي"],
+        "pedagogical_roles": ["lesson_evidence", "axis_exercise", "ai_axis_exercise", "bac_similar"],
+        "difficulty": 2,
+        "interpretation_scope": "تربط التوزع الشاردي غير المتساوي وحيوية الليف بوجود كمون الراحة، ولا تفسر وحدها سلبية الداخل.",
+        "safe_claims": ["Na⁺ أعلى خارج الليف الحي.", "K⁺ أعلى داخل الليف الحي.", "تتساوى التراكيز ويزول الكمون في الليف الميت."],
+        "forbidden_inferences": ["استنتاج اتجاه تدفق الشوارد دون الاستعانة بالنفاذية.", "القول إن الليف الميت يحافظ على -70 mV."],
+        "ai_generation": {"allowed": true, "allowed_question_types": ["compare", "calculate_ratio", "infer_partial"], "max_documents_with": 3}
+      },
+      {
+        "document_id": "nc_axis01_doc03_leak_channels",
+        "file_name": "leak_channels_k_gradient.png",
+        "src": "/science/neural-communication/axis-01/leak_channels_k_gradient.png",
+        "document_type": "membrane_model_and_graph",
+        "source": {"kind": "lesson_pdf", "page": 2, "figure": "الوثيقة (3)"},
+        "skills": ["interpret_membrane_model", "read_graph", "explain_selective_permeability"],
+        "scientific_entities": ["قناة تسرب K⁺", "قناة تسرب Na⁺", "نفاذية انتقائية", "تدرج K⁺"],
+        "pedagogical_roles": ["lesson_evidence", "axis_exercise", "ai_axis_exercise", "bac_similar"],
+        "difficulty": 3,
+        "interpretation_scope": "تفسر الدور الرئيس لتدرج K⁺ وكثرة قنوات تسربه في نشأة سلبية الداخل.",
+        "safe_claims": ["قنوات K⁺ المفتوحة أكثر من قنوات Na⁺.", "خروج K⁺ أكبر من دخول Na⁺ في الراحة.", "يتأثر الكمون بالتركيز الداخلي لـK⁺."],
+        "forbidden_inferences": ["القول إن قنوات التسرب تنقل الشوارد عكس التدرج.", "القول إن قنوات التسرب تستهلك ATP."],
+        "ai_generation": {"allowed": true, "allowed_question_types": ["observe", "interpret_graph", "explain", "cross_document_reasoning"], "preferred_pair": "nc_axis01_doc02_ion_distribution"}
+      },
+      {
+        "document_id": "nc_axis01_doc04_radioactive_na",
+        "file_name": "radioactive_sodium_experiments.png",
+        "src": "/science/neural-communication/axis-01/radioactive_sodium_experiments.png",
+        "document_type": "radioactive_tracer_and_inhibitor_experiments",
+        "source": {"kind": "lesson_pdf", "page": 3, "figure": "الوثيقة (4)"},
+        "skills": ["analyze_experimental_conditions", "interpret_inhibitor", "infer_active_transport"],
+        "scientific_entities": ["Na⁺ مشع", "DNP", "ATP", "K⁺ خارجي", "درجة الحرارة"],
+        "pedagogical_roles": ["lesson_evidence", "axis_exercise", "ai_axis_exercise", "bac_similar"],
+        "difficulty": 4,
+        "interpretation_scope": "تثبت أن التدفق الخارجي لـNa⁺ عملية حيوية مرتبطة بـATP ومقترنة بوجود K⁺ الخارجي.",
+        "safe_claims": ["التبريد يخفض تدفق Na⁺ الخارجي.", "DNP يخفض التدفق وإضافة ATP تعيده.", "نزع K⁺ الخارجي يخفض التدفق وإضافته تعيده."],
+        "forbidden_inferences": ["القول إن DNP يغلق قناة Na⁺ مباشرة.", "اعتبار الإشعاع طاقة تستعملها المضخة."],
+        "ai_generation": {"allowed": true, "allowed_question_types": ["analyze_conditions", "compare_curves", "infer", "validate_hypothesis"], "max_documents_with": 2}
+      },
+      {
+        "document_id": "nc_axis01_doc05_na_k_pump",
+        "file_name": "sodium_potassium_pump.png",
+        "src": "/science/neural-communication/axis-01/sodium_potassium_pump.png",
+        "document_type": "transport_cycle_model",
+        "source": {"kind": "lesson_pdf", "page": 3, "figure": "الوثيقة (5)"},
+        "skills": ["order_cycle_steps", "identify_stoichiometry", "explain_gradient_maintenance"],
+        "scientific_entities": ["مضخة Na⁺/K⁺", "ATP", "ADP", "3 Na⁺", "2 K⁺"],
+        "pedagogical_roles": ["lesson_evidence", "axis_exercise", "ai_axis_exercise", "bac_similar"],
+        "difficulty": 3,
+        "interpretation_scope": "توضح دورة المضخة واتجاه الشوارد وعددها ودور ATP في حفظ التدرجات.",
+        "safe_claims": ["تطرح المضخة 3 Na⁺ نحو الخارج.", "تدخل 2 K⁺ نحو الداخل.", "تستهلك ATP وتنقل عكس التدرج."],
+        "forbidden_inferences": ["القول إن المضخة تنقل 3 K⁺ إلى الداخل.", "اعتبار المضخة قناة مفتوحة دائما."],
+        "ai_generation": {"allowed": true, "allowed_question_types": ["order_steps", "label", "explain", "compare_with_channels"], "max_documents_with": 2}
+      }
+    ],
+    "presentation": {
+      "hook": "كيف يسجل ليف عصبي ساكن قيمة كهربائية تساوي نحو -70 mV؟",
+      "promise": "ستحل اللغز من تسجيل حقيقي وجدول تراكيز وتجارب على الشوارد، ثم تفرق نهائيا بين القنوات والمضخة.",
+      "rhythm": ["اسأل", "اقرأ التسجيل", "قارن", "فسر النفاذية", "حلل التجارب", "ميز", "لخص"],
+      "mode": "evidence_story_learning",
+      "student_first": true,
+      "reveal_teacher_after_think": true,
+      "max_text_lines_per_card": 6,
+      "avoid_repetition": true,
+      "show_progress_as_journey": true
+    },
+    "scientific_quality_control": {
+      "version": "1.0",
+      "rules": [
+        "فسر الإشارة -70 mV دائما بالنسبة إلى الوسط الخارجي المرجعي.",
+        "افصل بين التوزع الشاردي والنفاذية الانتقائية: كلاهما ضروري للتفسير.",
+        "اعتبر نفاذية K⁺ الأكبر العامل الغشائي الرئيس في سلبية الداخل أثناء الراحة.",
+        "لا تنسب نشأة كمون الراحة إلى المضخة وحدها؛ دورها الرئيس حفظ التدرجات وثبات الكمون.",
+        "قنوات التسرب نقل سلبي وفق التدرج ولا تستهلك ATP.",
+        "المضخة نقل نشط: 3 Na⁺ إلى الخارج و2 K⁺ إلى الداخل لكل دورة مرتبطة بـATP.",
+        "DNP يمنع تركيب ATP في الوثيقة؛ لا يوصف بأنه يسد المضخة مباشرة دون دليل.",
+        "لا تعتبر نقاط الوسم المشع شحنات كهربائية أو مصدرا للطاقة."
+      ]
+    },
+    "curriculum_goal": "تحديد مصدر الكمون الغشائي لليف العصبي أثناء الراحة والآليات البروتينية التي تؤمن ثباته."
+  }
+}

@@ -1,0 +1,288 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "graph_schema_version": "1.0-react-json",
+  "version": "4.2-2021-math-sequences-subject1-ex01-react-ready",
+  "session": "ordinary",
+  "year": 2021,
+  "chapter_code": "sequences",
+  "chapter_title": "المتتاليات العددية",
+  "axis_tags": [
+    "sequence_definition_notation_methods",
+    "mathematical_induction",
+    "sequence_monotonicity",
+    "bounded_sequence",
+    "geometric_sequences",
+    "limits_convergence_divergence",
+    "sequence_sums"
+  ],
+  "branches": [
+    {
+      "code": "math",
+      "name": "شعبة رياضيات"
+    }
+  ],
+  "exercise_number": 1,
+  "subject_number": 1,
+  "source_page": 1,
+  "source_pages": [
+    1
+  ],
+  "solution_source_pages": [
+    5
+  ],
+  "title": "التمرين الأول — بكالوريا الجزائر 2021 — الموضوع الأول — شعبة رياضيات — المتتاليات",
+  "statement": "المتتالية العددية \\((u_n)\\) معرفة بـ: \\(u_0=-\\frac{3}{2}\\) و من أجل كل عدد طبيعي \\(n\\):\n\\[\nu_{n+1}=\\frac{11u_n+4}{-4u_n+1}.\n\\]",
+  "questions": [
+    {
+      "id": "2021_s1_sequences_ex01_q1a",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) أ. تحقق أنه من أجل كل عدد طبيعي \\(n\\):\n\\[\nu_{n+1}=-\\frac{11}{4}+\\frac{27}{4(-4u_n+1)}.\n\\]",
+      "axis_tags": [
+        "sequence_definition_notation_methods"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "ننطلق من الطرف الأيمن ونوحد المقام.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "توحيد المقام",
+            "explanation": "\\[\n-\\frac{11}{4}+\\frac{27}{4(-4u_n+1)}\n=\\frac{-11(-4u_n+1)+27}{4(-4u_n+1)}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "التبسيط",
+            "explanation": "\\[\n\\frac{44u_n-11+27}{4(-4u_n+1)}\n=\\frac{44u_n+16}{4(-4u_n+1)}\n=\\frac{11u_n+4}{-4u_n+1}\n=u_{n+1}.\n\\]"
+          }
+        ],
+        "final_answer": "\\[u_{n+1}=-\\frac{11}{4}+\\frac{27}{4(-4u_n+1)}.\\]"
+      }
+    },
+    {
+      "id": "2021_s1_sequences_ex01_q1b",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "ب. برهن بالتراجع أنه من أجل كل عدد طبيعي \\(n\\):\n\\[\n-2<u_n<-1.\n\\]",
+      "axis_tags": [
+        "mathematical_induction",
+        "bounded_sequence"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نثبت الخاصية بالتراجع باستعمال الكتابة المحصل عليها في السؤال السابق.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التحقق عند n=0",
+            "explanation": "\\[\nu_0=-\\frac32,\n\\]\nومن ثم:\n\\[\n-2<u_0<-1.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "فرضية التراجع",
+            "explanation": "نفترض أنه من أجل عدد طبيعي \\(n\\):\n\\[\n-2<u_n<-1.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حصر المقام",
+            "explanation": "من:\n\\[\n-2<u_n<-1\n\\]\nنحصل على:\n\\[\n5<-4u_n+1<9.\n\\]\nوبالتالي:\n\\[\n\\frac34<\\frac{27}{4(-4u_n+1)}<\\frac{27}{20}.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "حصر uₙ₊₁",
+            "explanation": "وباستعمال:\n\\[\nu_{n+1}=-\\frac{11}{4}+\\frac{27}{4(-4u_n+1)},\n\\]\nنجد:\n\\[\n-2<u_{n+1}<-\\frac75<-1.\n\\]\nإذن خصوصا:\n\\[\n-2<u_{n+1}<-1.\n\\]"
+          }
+        ],
+        "final_answer": "\\[-2<u_n<-1\\quad\\forall n\\in\\mathbb N.\\]"
+      }
+    },
+    {
+      "id": "2021_s1_sequences_ex01_q1c",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "جـ. بين أن المتتالية \\((u_n)\\) متناقصة تماما ثم استنتج أنها متقاربة.",
+      "axis_tags": [
+        "sequence_monotonicity",
+        "bounded_sequence",
+        "limits_convergence_divergence"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب الفرق \\(u_{n+1}-u_n\\) ثم نحدد إشارته باستعمال \\(-2<u_n<-1\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب الفرق",
+            "explanation": "\\[\nu_{n+1}-u_n\n=\\frac{11u_n+4}{-4u_n+1}-u_n\n=\\frac{4u_n^2+10u_n+4}{-4u_n+1}\n=\\frac{2(2u_n+1)(u_n+2)}{-4u_n+1}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "إشارة الفرق",
+            "explanation": "بما أن \\(-2<u_n<-1\\)، فإن:\n\\[\n2u_n+1<0,\\qquad u_n+2>0,\\qquad -4u_n+1>0.\n\\]\nإذن:\n\\[\nu_{n+1}-u_n<0.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "التقارب",
+            "explanation": "إذن \\((u_n)\\) متناقصة تماما. كما أنها محدودة من الأسفل بالعدد \\(-2\\)، فتكون متقاربة."
+          }
+        ],
+        "final_answer": "المتتالية \\((u_n)\\) متناقصة تماما ومحدودة من الأسفل، وبالتالي فهي متقاربة."
+      }
+    },
+    {
+      "id": "2021_s1_sequences_ex01_q2a",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "2) المتتالية العددية \\((v_n)\\) معرفة من أجل كل عدد طبيعي \\(n\\) بـ:\n\\[\nv_n=\\frac{2u_n+1}{u_n+2}.\n\\]\nأ. بين أن المتتالية \\((v_n)\\) هندسية أساسها \\(3\\) ثم احسب حدها الأول.",
+      "axis_tags": [
+        "geometric_sequences"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب \\(v_{n+1}\\) بدلالة \\(u_n\\) ثم نقارنه بـ \\(v_n\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب 2uₙ₊₁+1",
+            "explanation": "\\[\n2u_{n+1}+1\n=2\\frac{11u_n+4}{-4u_n+1}+1\n=\\frac{18u_n+9}{-4u_n+1}\n=\\frac{9(2u_n+1)}{-4u_n+1}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب uₙ₊₁+2",
+            "explanation": "\\[\nu_{n+1}+2\n=\\frac{11u_n+4}{-4u_n+1}+2\n=\\frac{3u_n+6}{-4u_n+1}\n=\\frac{3(u_n+2)}{-4u_n+1}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب vₙ₊₁",
+            "explanation": "\\[\nv_{n+1}=\\frac{2u_{n+1}+1}{u_{n+1}+2}\n=\\frac{9(2u_n+1)}{3(u_n+2)}\n=3v_n.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "الحد الأول",
+            "explanation": "\\[\nv_0=\\frac{2u_0+1}{u_0+2}\n=\\frac{-3+1}{-\\frac32+2}\n=\\frac{-2}{\\frac12}\n=-4.\n\\]"
+          }
+        ],
+        "final_answer": "\\[(v_n)\\text{ هندسية أساسها }3\\text{ وحدها الأول }v_0=-4.\\]"
+      }
+    },
+    {
+      "id": "2021_s1_sequences_ex01_q2b",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "ب. اكتب \\(v_n\\) بدلالة \\(n\\) ثم استنتج أنه من أجل كل عدد طبيعي \\(n\\):\n\\[\nu_n=\\frac{3}{2+4\\times3^n}-2.\n\\]",
+      "axis_tags": [
+        "geometric_sequences",
+        "sequence_definition_notation_methods"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نكتب الحد العام لـ \\(v_n\\) ثم نحل العلاقة التي تربط \\(v_n\\) و\\(u_n\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "عبارة vₙ",
+            "explanation": "بما أن \\((v_n)\\) هندسية أساسها \\(3\\) وحدها الأول \\(-4\\):\n\\[\nv_n=-4\\times3^n.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "استخراج uₙ",
+            "explanation": "من:\n\\[\n\\frac{2u_n+1}{u_n+2}=-4\\times3^n,\n\\]\nنجد:\n\\[\n2u_n+1=-4\\times3^n(u_n+2).\n\\]\nإذن:\n\\[\nu_n(2+4\\times3^n)=-(1+8\\times3^n).\n\\]\nوبالتبسيط:\n\\[\nu_n=\\frac{3}{2+4\\times3^n}-2.\n\\]"
+          }
+        ],
+        "final_answer": "\\[v_n=-4\\times3^n,\\qquad u_n=\\frac{3}{2+4\\times3^n}-2.\\]"
+      }
+    },
+    {
+      "id": "2021_s1_sequences_ex01_q2c",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "جـ. احسب \\(\\displaystyle\\lim_{n\\to+\\infty}u_n\\).",
+      "axis_tags": [
+        "limits_convergence_divergence"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل العبارة الصريحة لـ \\(u_n\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "النهاية",
+            "explanation": "بما أن:\n\\[\n3^n\\to+\\infty,\n\\]\nفإن:\n\\[\n\\frac{3}{2+4\\times3^n}\\to0.\n\\]\nومن ثم:\n\\[\nu_n\\to-2.\n\\]"
+          }
+        ],
+        "final_answer": "\\[\\boxed{\\lim_{n\\to+\\infty}u_n=-2}.\\]"
+      }
+    },
+    {
+      "id": "2021_s1_sequences_ex01_q3a",
+      "display_order": 7,
+      "content_type": "question",
+      "text": "3) أ. تحقق أنه من أجل كل عدد طبيعي \\(n\\):\n\\[\n\\frac{3}{u_n+2}-2=-v_n.\n\\]",
+      "axis_tags": [
+        "sequence_definition_notation_methods"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نوحد المقام ونستعمل تعريف \\(v_n\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التبسيط",
+            "explanation": "\\[\n\\frac{3}{u_n+2}-2\n=\\frac{3-2u_n-4}{u_n+2}\n=-\\frac{2u_n+1}{u_n+2}\n=-v_n.\n\\]"
+          }
+        ],
+        "final_answer": "\\[\\frac{3}{u_n+2}-2=-v_n.\\]"
+      }
+    },
+    {
+      "id": "2021_s1_sequences_ex01_q3b",
+      "display_order": 8,
+      "content_type": "question",
+      "text": "ب. نضع من أجل كل عدد طبيعي \\(n\\):\n\\[\nS_n=\\ln\\left(\\frac{3}{u_0+2}-2\\right)+\\ln\\left(\\frac{3}{u_1+2}-2\\right)+\\cdots+\\ln\\left(\\frac{3}{u_n+2}-2\\right).\n\\]\nاحسب \\(S_n\\) بدلالة \\(n\\).",
+      "axis_tags": [
+        "sequence_sums",
+        "geometric_sequences"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل السؤال السابق ثم نعوض عبارة \\(v_k\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تحويل حدود اللوغاريتم",
+            "explanation": "من السؤال السابق:\n\\[\n\\frac{3}{u_k+2}-2=-v_k.\n\\]\nولأن:\n\\[\nv_k=-4\\times3^k,\n\\]\nفإن:\n\\[\n-v_k=4\\times3^k>0.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "كتابة Sₙ",
+            "explanation": "\\[\nS_n=\\sum_{k=0}^{n}\\ln(4\\times3^k).\n\\]\nوباستخدام \\(\\ln(ab)=\\ln a+\\ln b\\):\n\\[\nS_n=\\sum_{k=0}^{n}(\\ln4+k\\ln3).\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب المجموع",
+            "explanation": "\\[\nS_n=(n+1)\\ln4+\\left(0+1+\\cdots+n\\right)\\ln3.\n\\]\n\\[\n0+1+\\cdots+n=\\frac{n(n+1)}2.\n\\]\nإذن:\n\\[\nS_n=(n+1)\\ln4+\\frac{n(n+1)}2\\ln3.\n\\]"
+          }
+        ],
+        "final_answer": "\\[\\boxed{S_n=(n+1)\\ln4+\\frac{n(n+1)}2\\ln3}.\\]"
+      }
+    }
+  ],
+  "rendering_contract": {
+    "no_capture": true,
+    "external_image_required": false,
+    "external_svg_required": false,
+    "graph_source": "inline_json",
+    "supported_graph_types": [],
+    "react_note": "هذا التمرين لا يحتاج رسما. لا يوجد Capture ولا صورة خارجية ولا SVG. جميع الصيغ قابلة للعرض مباشرة في React باستعمال MathJax أو KaTeX."
+  },
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2021(8).pdf",
+    "statement_figure_policy": "لا يوجد رسم في نص التمرين.",
+    "solution_figure_policy": "لا Capture ولا صورة خارجية.",
+    "renderer": "MathJax/KaTeX + standard content renderer"
+  }
+}

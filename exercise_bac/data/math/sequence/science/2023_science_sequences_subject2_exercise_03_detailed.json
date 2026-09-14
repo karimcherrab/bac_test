@@ -1,0 +1,224 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "session": "ordinary",
+  "year": 2023,
+  "chapter_code": "sequences",
+  "chapter_title": "المتتاليات العددية",
+  "branches": [
+    {
+      "code": "science",
+      "name": "شعبة علوم تجريبية"
+    }
+  ],
+  "source_pdf": "2023(2).pdf",
+  "comparison_source": "bac_sequence_scientifique(20260823-105736).pdf",
+  "source_verification": {
+    "statement_checked_against_original_bac": true,
+    "solution_checked_against_official_correction": true,
+    "solution_style": "حل مفصل ومبسط بخطوات صغيرة، مع إظهار الحسابات الوسيطة التي اختصرها التصحيح الرسمي.",
+    "statement_policy": "نص التمرين والأسئلة منقول من موضوع البكالوريا دون إضافة معطيات جديدة."
+  },
+  "version": "4.2-2023-science-sequences-subject2-ex03",
+  "exercise_number": 3,
+  "subject_number": 2,
+  "points": 5,
+  "source_pages": [
+    3,
+    4
+  ],
+  "solution_source_pages": [
+    8,
+    9
+  ],
+  "title": "التمرين الثالث — بكالوريا الجزائر 2023 — الموضوع الثاني — شعبة علوم تجريبية",
+  "statement": "المتتالية العددية \\((u_n)\\) المعرفة بـ: \\(u_0=0\\)، ومن أجل كل عدد طبيعي \\(n\\): \\(u_{n+1}=\\frac45u_n+1\\).",
+  "statement_graphs": [],
+  "questions": [
+    {
+      "id": "2023_s2_ex03_q1a",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) أ) برهن بالتراجع أنه: من أجل كل عدد طبيعي \\(n\\)، \\(u_n<5\\).",
+      "axis_tags": [
+        "induction",
+        "sequence_bounds"
+      ],
+      "solution": {
+        "strategy": "نثبت الخاصية \\(u_n<5\\) بالتراجع.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التحقق عند n=0",
+            "explanation": "لدينا:\n\\[\nu_0=0<5.\n\\]\nإذن الخاصية صحيحة عند الرتبة \\(0\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "فرضية التراجع",
+            "explanation": "نفترض أنه عند رتبة طبيعية \\(n\\):\n\\[\nu_n<5.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الانتقال إلى n+1",
+            "explanation": "لدينا:\n\\[\nu_{n+1}=\\frac45u_n+1.\n\\]\nوبما أن \\(u_n<5\\):\n\\[\n\\frac45u_n<4.\n\\]\nإذن:\n\\[\nu_{n+1}<4+1=5.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "الخلاصة",
+            "explanation": "بالتراجع:\n\\[\n\\boxed{u_n<5\\quad\\forall n\\in\\mathbb N}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{u_n<5\\text{ لكل }n\\in\\mathbb N}\\)."
+      }
+    },
+    {
+      "id": "2023_s2_ex03_q1b",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "ب) بين أن المتتالية \\((u_n)\\) متزايدة تماما.",
+      "axis_tags": [
+        "sequence_monotonicity"
+      ],
+      "solution": {
+        "strategy": "نحسب الفرق \\(u_{n+1}-u_n\\) ثم نستعمل \\(u_n<5\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب الفرق",
+            "explanation": "\\[\nu_{n+1}-u_n=\\frac45u_n+1-u_n.\n\\]\nإذن:\n\\[\nu_{n+1}-u_n=1-\\frac15u_n\n=\\frac15(5-u_n).\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "دراسة الإشارة",
+            "explanation": "من السؤال السابق:\n\\[\nu_n<5.\n\\]\nإذن:\n\\[\n5-u_n>0.\n\\]\nوعليه:\n\\[\nu_{n+1}-u_n>0.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الاستنتاج",
+            "explanation": "إذن:\n\\[\nu_{n+1}>u_n\n\\]\nلكل \\(n\\)، ومن ثم \\((u_n)\\) متزايدة تماما."
+          }
+        ],
+        "final_answer": "\\(\\boxed{(u_n)\\text{ متزايدة تماما}}\\)."
+      }
+    },
+    {
+      "id": "2023_s2_ex03_q2a",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "2) نضع: من أجل كل عدد طبيعي \\(n\\)، \\(v_n=u_n-5\\). أ) أثبت أن المتتالية \\((v_n)\\) هندسية أساسها \\(\\frac45\\)، يطلب تعيين حدها الأول \\(v_0\\).",
+      "axis_tags": [
+        "auxiliary_sequence",
+        "geometric_sequence"
+      ],
+      "solution": {
+        "strategy": "نحسب \\(v_{n+1}\\) بدلالة \\(v_n\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب v_{n+1}",
+            "explanation": "حسب التعريف:\n\\[\nv_{n+1}=u_{n+1}-5.\n\\]\nوبالتعويض:\n\\[\nv_{n+1}=\\frac45u_n+1-5\n=\\frac45u_n-4.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "استخراج العامل",
+            "explanation": "نكتب:\n\\[\n-4=\\frac45(-5).\n\\]\nإذن:\n\\[\nv_{n+1}=\\frac45(u_n-5)=\\frac45v_n.\n\\]\nفتكون \\((v_n)\\) هندسية أساسها:\n\\[\n\\boxed{q=\\frac45}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب v_0",
+            "explanation": "\\[\nv_0=u_0-5=0-5=-5.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{q=\\frac45,\\quad v_0=-5}\\)."
+      }
+    },
+    {
+      "id": "2023_s2_ex03_q2b",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "ب) اكتب عبارة \\(v_n\\) بدلالة \\(n\\) ثم استنتج أنه: من أجل كل عدد طبيعي \\(n\\)، \\(u_n=-5\\left(\\frac45\\right)^n+5\\).",
+      "axis_tags": [
+        "geometric_sequence_general_term",
+        "explicit_sequence_formula"
+      ],
+      "solution": {
+        "strategy": "نكتب الحد العام للمتتالية الهندسية ثم نعود إلى تعريف \\(v_n\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "كتابة v_n",
+            "explanation": "بما أن \\((v_n)\\) هندسية، حدها الأول \\(v_0=-5\\) وأساسها \\(\\frac45\\):\n\\[\n\\boxed{v_n=-5\\left(\\frac45\\right)^n}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "استخراج u_n",
+            "explanation": "من:\n\\[\nv_n=u_n-5,\n\\]\nنحصل على:\n\\[\nu_n=v_n+5.\n\\]\nإذن:\n\\[\n\\boxed{u_n=-5\\left(\\frac45\\right)^n+5}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{v_n=-5(\\frac45)^n}\\)، و \\(\\boxed{u_n=-5(\\frac45)^n+5}\\)."
+      }
+    },
+    {
+      "id": "2023_s2_ex03_q2c",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "جـ) احسب \\(\\lim_{n\\to+\\infty}u_n\\).",
+      "axis_tags": [
+        "sequence_limit"
+      ],
+      "solution": {
+        "strategy": "نستعمل العبارة الصريحة لـ\\(u_n\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "نهاية القوة",
+            "explanation": "لدينا:\n\\[\n0<\\frac45<1.\n\\]\nإذن:\n\\[\n\\left(\\frac45\\right)^n\\to0.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب النهاية",
+            "explanation": "من:\n\\[\nu_n=-5\\left(\\frac45\\right)^n+5,\n\\]\nنستنتج:\n\\[\n\\boxed{\\lim_{n\\to+\\infty}u_n=5}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{\\lim_{n\\to+\\infty}u_n=5}\\)."
+      }
+    },
+    {
+      "id": "2023_s2_ex03_q3",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "3) نضع: من أجل كل عدد طبيعي \\(n\\)، \\(S_n=v_0+v_1+\\cdots+v_n\\) و \\(T_n=u_0+u_1+\\cdots+u_n\\). احسب \\(S_n\\) بدلالة \\(n\\) ثم بين أنه من أجل كل عدد طبيعي \\(n\\): \\(T_n=5n-20\\left[1-\\left(\\frac45\\right)^n\\right]\\).",
+      "axis_tags": [
+        "geometric_sum",
+        "sequence_sum"
+      ],
+      "solution": {
+        "strategy": "نحسب مجموع المتتالية الهندسية \\((v_n)\\)، ثم نستعمل العلاقة \\(u_k=v_k+5\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب S_n",
+            "explanation": "لدينا:\n\\[\nv_0=-5,\n\\qquad q=\\frac45.\n\\]\nإذن:\n\\[\nS_n=v_0\\frac{1-q^{n+1}}{1-q}.\n\\]\nوبالتعويض:\n\\[\nS_n=-5\\frac{1-(\\frac45)^{n+1}}{1-\\frac45}.\n\\]\nوبما أن:\n\\[\n1-\\frac45=\\frac15,\n\\]\nفنحصل على:\n\\[\n\\boxed{S_n=-25\\left[1-\\left(\\frac45\\right)^{n+1}\\right]}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "ربط T_n بـ S_n",
+            "explanation": "من:\n\\[\nu_k=v_k+5,\n\\]\nنجد:\n\\[\nT_n=\\sum_{k=0}^{n}(v_k+5)\n=S_n+5(n+1).\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "التعويض عن S_n",
+            "explanation": "\\[\nT_n=-25\\left[1-\\left(\\frac45\\right)^{n+1}\\right]+5(n+1).\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "التبسيط",
+            "explanation": "نوسع:\n\\[\nT_n=-25+25\\left(\\frac45\\right)^{n+1}+5n+5.\n\\]\nإذن:\n\\[\nT_n=5n-20+25\\left(\\frac45\\right)^{n+1}.\n\\]\nلكن:\n\\[\n25\\left(\\frac45\\right)^{n+1}\n=20\\left(\\frac45\\right)^n.\n\\]\nومن ثم:\n\\[\n\\boxed{T_n=5n-20\\left[1-\\left(\\frac45\\right)^n\\right]}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{S_n=-25[1-(\\frac45)^{n+1}]}\\)، و \\(\\boxed{T_n=5n-20[1-(\\frac45)^n]}\\)."
+      }
+    }
+  ]
+}

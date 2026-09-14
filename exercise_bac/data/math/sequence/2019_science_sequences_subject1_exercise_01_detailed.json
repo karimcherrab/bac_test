@@ -1,0 +1,209 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "session": "ordinary",
+  "year": 2019,
+  "chapter_code": "sequences",
+  "chapter_title": "المتتاليات العددية",
+  "branches": [
+    {
+      "code": "science",
+      "name": "شعبة علوم تجريبية"
+    }
+  ],
+  "source_pdf": "2019(4).pdf",
+  "comparison_source": "bac_sequence_scientifique(20260823-104446).pdf",
+  "source_verification": {
+    "statement_checked_against_original_bac": true,
+    "solution_checked_against_official_correction": true,
+    "solution_style": "حل مفصل ومبسط بخطوات صغيرة، مع الحفاظ على نص السؤال والنتائج الرسمية.",
+    "statement_policy": "نص التمرين والأسئلة منقول من موضوع البكالوريا دون إضافة معطيات جديدة."
+  },
+  "version": "4.2-2019-science-sequences-subject1-ex01",
+  "exercise_number": 1,
+  "subject_number": 1,
+  "points": 4,
+  "source_page": 1,
+  "source_pages": [
+    1
+  ],
+  "solution_source_pages": [
+    5
+  ],
+  "title": "التمرين الأول — بكالوريا الجزائر 2019 — الموضوع الأول — شعبة علوم تجريبية",
+  "statement": "\\((u_n)\\) المتتالية العددية المعرفة بـ: \\(u_0=13\\)، ومن أجل كل عدد طبيعي \\(n\\): \\(u_{n+1}=\\frac15u_n+\\frac45\\).",
+  "statement_graphs": [],
+  "questions": [
+    {
+      "id": "2019_s1_ex01_q1a",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) أ) برهن بالتراجع أنه: من أجل كل عدد طبيعي \\(n\\)، \\(u_n>1\\).",
+      "axis_tags": [
+        "induction_bounds"
+      ],
+      "solution": {
+        "strategy": "نبرهن الخاصية \\(u_n>1\\) بالتراجع.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التحقق عند n=0",
+            "explanation": "لدينا:\n\\[\nu_0=13>1.\n\\]\nإذن الخاصية صحيحة عند الرتبة \\(0\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "فرضية التراجع",
+            "explanation": "نفترض أنه عند رتبة طبيعية \\(n\\):\n\\[\nu_n>1.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الانتقال إلى n+1",
+            "explanation": "من علاقة الرجوع:\n\\[\nu_{n+1}=\\frac15u_n+\\frac45.\n\\]\nإذن:\n\\[\nu_{n+1}-1=\\frac15u_n+\\frac45-1\n=\\frac15(u_n-1).\n\\]\nوبما أن \\(u_n-1>0\\)، فإن:\n\\[\nu_{n+1}-1>0.\n\\]\nومن ثم:\n\\[\nu_{n+1}>1.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "الخلاصة",
+            "explanation": "بالتراجع:\n\\[\n\\boxed{u_n>1\\quad\\forall n\\in\\mathbb N}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{u_n>1\\text{ لكل }n\\in\\mathbb N}\\)."
+      }
+    },
+    {
+      "id": "2019_s1_ex01_q1b",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "ب) ادرس اتجاه تغير المتتالية \\((u_n)\\) واستنتج أنها متقاربة.",
+      "axis_tags": [
+        "sequence_monotonicity",
+        "sequence_convergence"
+      ],
+      "solution": {
+        "strategy": "نحسب الفرق \\(u_{n+1}-u_n\\)، ثم نستعمل النتيجة السابقة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب الفرق",
+            "explanation": "\\[\nu_{n+1}-u_n\n=\\frac15u_n+\\frac45-u_n\n=\\frac45(1-u_n).\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "دراسة الإشارة",
+            "explanation": "بما أن \\(u_n>1\\)، فإن:\n\\[\n1-u_n<0.\n\\]\nوبما أن \\(\\frac45>0\\):\n\\[\nu_{n+1}-u_n<0.\n\\]\nإذن \\((u_n)\\) متناقصة تماما."
+          },
+          {
+            "step_number": 3,
+            "title": "إثبات التقارب",
+            "explanation": "ولدينا أيضا:\n\\[\nu_n>1.\n\\]\nإذن المتتالية محدودة من الأسفل بالعدد \\(1\\). وكل متتالية متناقصة ومحدودة من الأسفل متقاربة."
+          }
+        ],
+        "final_answer": "\\(\\boxed{(u_n)\\text{ متناقصة تماما ومتقاربة}}\\)."
+      }
+    },
+    {
+      "id": "2019_s1_ex01_q2",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "2) \\((v_n)\\) المتتالية العددية المعرفة على \\(\\mathbb N\\) بـ: \\(v_n=\\ln(u_n-1)\\). أثبت أن المتتالية \\((v_n)\\) حسابية يطلب تعيين أساسها وحدها الأول.",
+      "axis_tags": [
+        "auxiliary_sequence",
+        "arithmetic_sequence",
+        "logarithm"
+      ],
+      "solution": {
+        "strategy": "نحسب \\(v_{n+1}-v_n\\) باستعمال علاقة \\(u_{n+1}-1=\\frac15(u_n-1)\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "كتابة v_{n+1}",
+            "explanation": "\\[\nv_{n+1}=\\ln(u_{n+1}-1).\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "استعمال علاقة الرجوع",
+            "explanation": "وجدنا:\n\\[\nu_{n+1}-1=\\frac15(u_n-1).\n\\]\nإذن:\n\\[\nv_{n+1}=\\ln\\left(\\frac15(u_n-1)\\right).\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "استعمال خواص اللوغاريتم",
+            "explanation": "\\[\nv_{n+1}=\\ln(u_n-1)+\\ln\\left(\\frac15\\right)\n=v_n-\\ln5.\n\\]\nإذن:\n\\[\n\\boxed{v_{n+1}-v_n=-\\ln5}.\n\\]\nفتكون \\((v_n)\\) حسابية أساسها \\(-\\ln5\\)."
+          },
+          {
+            "step_number": 4,
+            "title": "حساب الحد الأول",
+            "explanation": "\\[\nv_0=\\ln(u_0-1)=\\ln(13-1)=\\ln12.\n\\]"
+          }
+        ],
+        "final_answer": "\\((v_n)\\) حسابية أساسها \\(\\boxed{-\\ln5}\\)، وحدها الأول \\(\\boxed{v_0=\\ln12}\\)."
+      }
+    },
+    {
+      "id": "2019_s1_ex01_q3",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "3) اكتب \\(v_n\\) بدلالة \\(n\\)، ثم بين أنه: من أجل كل عدد طبيعي \\(n\\)، \\(u_n=1+\\frac{12}{5^n}\\). واحسب عندئذ \\(\\lim_{n\\to+\\infty}u_n\\).",
+      "axis_tags": [
+        "arithmetic_sequence_general_term",
+        "explicit_sequence_formula",
+        "sequence_limit"
+      ],
+      "solution": {
+        "strategy": "نكتب الحد العام للمتتالية الحسابية \\((v_n)\\)، ثم نعود إلى تعريفها لاستخراج \\(u_n\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "كتابة v_n",
+            "explanation": "بما أن \\((v_n)\\) حسابية:\n\\[\nv_n=v_0+n(-\\ln5)\n=\\ln12-n\\ln5.\n\\]\nوباستخدام \\(n\\ln5=\\ln(5^n)\\):\n\\[\n\\boxed{v_n=\\ln\\left(\\frac{12}{5^n}\\right)}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "العودة إلى تعريف v_n",
+            "explanation": "لدينا:\n\\[\nv_n=\\ln(u_n-1).\n\\]\nومن جهة أخرى:\n\\[\nv_n=\\ln\\left(\\frac{12}{5^n}\\right).\n\\]\nإذن، لأن اللوغاريتم دالة تقابلية على \\(]0,+\\infty[\\):\n\\[\nu_n-1=\\frac{12}{5^n}.\n\\]\nومن ثم:\n\\[\n\\boxed{u_n=1+\\frac{12}{5^n}}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب النهاية",
+            "explanation": "بما أن \\(5^n\\to+\\infty\\)، فإن:\n\\[\n\\frac{12}{5^n}\\to0.\n\\]\nإذن:\n\\[\n\\boxed{\\lim_{n\\to+\\infty}u_n=1}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{v_n=\\ln(12/5^n)}\\)، \\(\\boxed{u_n=1+12/5^n}\\)، و\\(\\boxed{\\lim u_n=1}\\)."
+      }
+    },
+    {
+      "id": "2019_s1_ex01_q4",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "4) بين أنه: من أجل كل عدد طبيعي \\(n\\)، \\((u_0-1)(u_1-1)\\times\\cdots\\times(u_n-1)=\\left(\\frac{12}{5^{\\frac n2}}\\right)^{n+1}\\).",
+      "axis_tags": [
+        "sequence_product"
+      ],
+      "solution": {
+        "strategy": "نعوض العبارة الصريحة \\(u_k-1=\\frac{12}{5^k}\\)، ثم نجمع الأسس.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "كتابة كل عامل",
+            "explanation": "من السؤال السابق:\n\\[\nu_k-1=\\frac{12}{5^k}.\n\\]\nإذن:\n\\[\n(u_0-1)(u_1-1)\\cdots(u_n-1)\n=\\prod_{k=0}^{n}\\frac{12}{5^k}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "فصل الثابت عن القوى",
+            "explanation": "يوجد \\(n+1\\) عاملًا من العدد \\(12\\)، لذلك:\n\\[\n\\prod_{k=0}^{n}\\frac{12}{5^k}\n=\\frac{12^{n+1}}{5^{0+1+2+\\cdots+n}}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب مجموع الأسس",
+            "explanation": "نعلم أن:\n\\[\n0+1+2+\\cdots+n=\\frac{n(n+1)}2.\n\\]\nإذن:\n\\[\n\\frac{12^{n+1}}{5^{\\frac{n(n+1)}2}}.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "إعادة الكتابة بالشكل المطلوب",
+            "explanation": "نكتب:\n\\[\n5^{\\frac{n(n+1)}2}=\\left(5^{\\frac n2}\\right)^{n+1}.\n\\]\nإذن:\n\\[\n\\boxed{(u_0-1)(u_1-1)\\cdots(u_n-1)\n=\\left(\\frac{12}{5^{n/2}}\\right)^{n+1}}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{(u_0-1)(u_1-1)\\cdots(u_n-1)=\\left(\\frac{12}{5^{n/2}}\\right)^{n+1}}\\)."
+      }
+    }
+  ]
+}

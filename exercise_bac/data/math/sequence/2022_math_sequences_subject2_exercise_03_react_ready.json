@@ -1,0 +1,236 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "graph_schema_version": "1.0-react-json",
+  "version": "4.2-2022-math-sequences-subject2-ex03-react-ready",
+  "session": "ordinary",
+  "year": 2022,
+  "chapter_code": "sequences",
+  "chapter_title": "المتتاليات العددية",
+  "axis_tags": [
+    "sequence_definition_notation_methods",
+    "mathematical_induction",
+    "sequence_monotonicity",
+    "bounded_sequence",
+    "geometric_sequences",
+    "limits_convergence_divergence",
+    "sequence_products"
+  ],
+  "branches": [
+    {
+      "code": "math",
+      "name": "شعبة رياضيات"
+    }
+  ],
+  "exercise_number": 3,
+  "subject_number": 2,
+  "source_page": 3,
+  "source_pages": [
+    3,
+    4
+  ],
+  "solution_source_pages": [
+    9
+  ],
+  "title": "التمرين الثالث — بكالوريا الجزائر 2022 — الموضوع الثاني — شعبة رياضيات — المتتاليات",
+  "statement": "المتتاليتان العدديتان \\((v_n)\\) و \\((u_n)\\) المعرفتان على \\(\\mathbb{N}\\) بـ:\n\\[\nu_0=0,\\qquad u_{n+1}=-\\frac13u_n^2+\\frac23u_n+\\frac23\n\\]\nو \\(v_n=u_n-1\\).",
+  "questions": [
+    {
+      "id": "2022_s2_sequences_ex03_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) بين أنه من أجل كل عدد طبيعي \\(n\\)،\n\\[\nv_{n+1}=-\\frac13(v_n)^2.\n\\]",
+      "axis_tags": [
+        "sequence_definition_notation_methods"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل \\(v_{n+1}=u_{n+1}-1\\) ثم نعوض علاقة الرجوع.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التعويض",
+            "explanation": "\\[\nv_{n+1}=u_{n+1}-1\n=-\\frac13u_n^2+\\frac23u_n+\\frac23-1.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "التبسيط",
+            "explanation": "\\[\nv_{n+1}=-\\frac13(u_n^2-2u_n+1)\n=-\\frac13(u_n-1)^2\n=-\\frac13(v_n)^2.\n\\]"
+          }
+        ],
+        "final_answer": "\\[v_{n+1}=-\\frac13(v_n)^2.\\]"
+      }
+    },
+    {
+      "id": "2022_s2_sequences_ex03_q2",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2) برهن بالتراجع أنه من أجل كل عدد طبيعي \\(n\\)، \\(-3\\le v_n<0\\).",
+      "axis_tags": [
+        "mathematical_induction",
+        "bounded_sequence"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل التراجع مع العلاقة \\(v_{n+1}=-\\frac13v_n^2\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التحقق عند n=0",
+            "explanation": "\\[\nv_0=u_0-1=-1,\n\\]\nإذن:\n\\[\n-3\\le v_0<0.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "خطوة التراجع",
+            "explanation": "نفترض \\(-3\\le v_n<0\\). عندئذ:\n\\[\n0<v_n^2\\le9.\n\\]\nوبالضرب في \\(-\\frac13\\):\n\\[\n-3\\le-\\frac13v_n^2<0.\n\\]\nأي:\n\\[\n-3\\le v_{n+1}<0.\n\\]"
+          }
+        ],
+        "final_answer": "\\[-3\\le v_n<0\\quad\\forall n\\in\\mathbb N.\\]"
+      }
+    },
+    {
+      "id": "2022_s2_sequences_ex03_q3",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "3) ادرس اتجاه تغير المتتالية \\((v_n)\\) ثم استنتج أن \\((v_n)\\) متقاربة.",
+      "axis_tags": [
+        "sequence_monotonicity",
+        "bounded_sequence",
+        "limits_convergence_divergence"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب الفرق \\(v_{n+1}-v_n\\) ثم نستعمل الحصر السابق.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب الفرق",
+            "explanation": "\\[\nv_{n+1}-v_n\n=-\\frac13v_n^2-v_n\n=-v_n\\left(\\frac13v_n+1\\right).\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "الإشارة",
+            "explanation": "بما أن \\(-3\\le v_n<0\\)، فإن \\(-v_n>0\\) و\\(\\frac13v_n+1\\ge0\\). ومن حدود المتتالية المحصل عليها ابتداء من \\(v_0=-1\\) نكون في الواقع داخل \\(]-3,0[\\)، لذلك:\n\\[\nv_{n+1}-v_n>0.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "التقارب",
+            "explanation": "إذن \\((v_n)\\) متزايدة تماما ومحدودة من الأعلى بالعدد \\(0\\)، ومن ثم فهي متقاربة."
+          }
+        ],
+        "final_answer": "المتتالية \\((v_n)\\) متزايدة تماما ومحدودة من الأعلى، إذن هي متقاربة."
+      }
+    },
+    {
+      "id": "2022_s2_sequences_ex03_q4a",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "4) المتتالية \\((w_n)\\) المعرفة من أجل كل عدد طبيعي \\(n\\) بـ:\n\\[\nw_n=\\ln\\left(-\\frac{3}{v_n}\\right).\n\\]\nأ- بين أن \\((w_n)\\) متتالية هندسية أساسها \\(2\\) يطلب حساب حدها الأول \\(w_0\\).",
+      "axis_tags": [
+        "geometric_sequences"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نعوض علاقة \\(v_{n+1}\\) داخل تعريف \\(w_{n+1}\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب wₙ₊₁",
+            "explanation": "\\[\nw_{n+1}=\\ln\\left(-\\frac3{v_{n+1}}\\right)\n=\\ln\\left(\\frac9{v_n^2}\\right)\n=2\\ln\\left(-\\frac3{v_n}\\right)\n=2w_n.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "الحد الأول",
+            "explanation": "\\[\nw_0=\\ln\\left(-\\frac3{v_0}\\right)=\\ln3.\n\\]"
+          }
+        ],
+        "final_answer": "\\[(w_n)\\text{ هندسية أساسها }2\\text{ وحدها الأول }w_0=\\ln3.\\]"
+      }
+    },
+    {
+      "id": "2022_s2_sequences_ex03_q4b",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "ب- اكتب \\(w_n\\) بدلالة \\(n\\)، ثم استنتج \\(v_n\\) و \\(u_n\\) بدلالة \\(n\\) واحسب \\(\\displaystyle\\lim_{n\\to+\\infty}u_n\\).",
+      "axis_tags": [
+        "geometric_sequences",
+        "limits_convergence_divergence"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نكتب الحد العام لـ \\(w_n\\) ثم نعود إلى تعريفه.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "عبارة wₙ",
+            "explanation": "\\[\nw_n=w_0\\,2^n=2^n\\ln3.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "استخراج vₙ",
+            "explanation": "من:\n\\[\n\\ln\\left(-\\frac3{v_n}\\right)=2^n\\ln3,\n\\]\nنحصل على:\n\\[\n-\\frac3{v_n}=3^{2^n}.\n\\]\nإذن:\n\\[\nv_n=-3^{1-2^n}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "استخراج uₙ",
+            "explanation": "بما أن \\(v_n=u_n-1\\)، فإن:\n\\[\nu_n=1+v_n=1-3^{1-2^n}.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "النهاية",
+            "explanation": "عندما \\(n\\to+\\infty\\)، فإن \\(1-2^n\\to-\\infty\\)، ومنه:\n\\[\n3^{1-2^n}\\to0.\n\\]\nإذن:\n\\[\nu_n\\to1.\n\\]"
+          }
+        ],
+        "final_answer": "\\[w_n=2^n\\ln3,\\qquad v_n=-3^{1-2^n},\\qquad u_n=1-3^{1-2^n},\\qquad \\boxed{\\lim_{n\\to+\\infty}u_n=1}.\\]"
+      }
+    },
+    {
+      "id": "2022_s2_sequences_ex03_q5",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "5) احسب بدلالة \\(n\\) الجداء \\(P_n\\) حيث:\n\\[\nP_n=\\frac1{v_0}\\times\\frac1{v_1}\\times\\cdots\\times\\frac1{v_n}.\n\\]",
+      "axis_tags": [
+        "sequence_products"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل العبارة الصريحة لـ \\(v_k\\) ثم نجمع الأسس.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "مقلوب vₖ",
+            "explanation": "\\[\nv_k=-3^{1-2^k}\n\\Rightarrow\n\\frac1{v_k}=-3^{2^k-1}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب الجداء",
+            "explanation": "\\[\nP_n=\\prod_{k=0}^{n}\\left(-3^{2^k-1}\\right)\n=(-1)^{n+1}3^{\\sum_{k=0}^{n}(2^k-1)}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "تبسيط الأس",
+            "explanation": "\\[\n\\sum_{k=0}^{n}2^k=2^{n+1}-1,\n\\]\nإذن:\n\\[\n\\sum_{k=0}^{n}(2^k-1)=2^{n+1}-1-(n+1)=2^{n+1}-n-2.\n\\]"
+          }
+        ],
+        "final_answer": "\\[\\boxed{P_n=(-1)^{n+1}3^{2^{n+1}-n-2}}.\\]"
+      }
+    }
+  ],
+  "rendering_contract": {
+    "no_capture": true,
+    "external_image_required": false,
+    "external_svg_required": false,
+    "graph_source": "inline_json",
+    "supported_graph_types": [],
+    "react_note": "هذا التمرين لا يحتاج رسما. جميع الصيغ تعرض مباشرة بـ MathJax أو KaTeX."
+  },
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2022(4).pdf",
+    "statement_figure_policy": "لا يوجد رسم في نص هذا التمرين.",
+    "solution_figure_policy": "لا Capture ولا صورة خارجية.",
+    "renderer": "MathJax/KaTeX + standard content renderer"
+  }
+}

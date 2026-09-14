@@ -1,0 +1,213 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "session": "ordinary",
+  "year": 2013,
+  "chapter_code": "complex_numbers",
+  "chapter_title": "الأعداد المركبة",
+  "branches": [
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "version": "4.2-2013-technical-math-complex-subject2-ex02",
+  "subject_number": 2,
+  "exercise_number": 2,
+  "source_page": 3,
+  "source_pages": [
+    3
+  ],
+  "solution_source_pages": [
+    8
+  ],
+  "title": "التمرين الثاني — بكالوريا الجزائر 2013 — الموضوع الثاني — شعبة تقني رياضي",
+  "axis_tags": [
+    "complex_equations",
+    "complex_direct_similarity",
+    "complex_barycenter",
+    "complex_exponential_form",
+    "complex_geometric_locus"
+  ],
+  "statement": "",
+  "questions": [
+    {
+      "id": "2013_tm_s2_complex_ex02_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) حل في مجموعة الأعداد المركبة \\(\\mathbb{C}\\) المعادلة ذات المجهول \\(z\\): \\((z+5-i\\sqrt3)(z^2+2z+4)=0\\).",
+      "axis_tags": [
+        "complex_equations"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل خاصية الجداء المعدوم، ثم نحل المعادلة من الدرجة الثانية.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حل العامل الأول",
+            "explanation": "\\[\nz+5-i\\sqrt3=0\n\\]\nومنها:\n\\[\nz=-5+i\\sqrt3.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حل العامل الثاني",
+            "explanation": "نحل:\n\\[\nz^2+2z+4=0.\n\\]\nالمميز:\n\\[\n\\Delta=4-16=-12=(2i\\sqrt3)^2.\n\\]\nإذن:\n\\[\nz=-1\\pm i\\sqrt3.\n\\]"
+          }
+        ],
+        "final_answer": "\\(S=\\{-5+i\\sqrt3,\\ -1-i\\sqrt3,\\ -1+i\\sqrt3\\}\\)."
+      }
+    },
+    {
+      "id": "2013_tm_s2_complex_ex02_q2",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2) المستوى منسوب إلى المعلم المتعامد المتجانس \\((O;\\vec u,\\vec v)\\). \\(A\\)، \\(B\\) و \\(C\\) النقط التي لواحقها على الترتيب \\(z_A=-1-i\\sqrt3\\)، \\(z_B=-1+i\\sqrt3\\) و \\(z_C=-5+i\\sqrt3\\).\n\\(S\\) التشابه المباشر الذي يحول \\(A\\) إلى \\(C\\) ويحول \\(O\\) إلى \\(B\\).\n- جد الكتابة المركبة للتشابه المباشر \\(S\\)، ثم عين العناصر المميزة له.",
+      "axis_tags": [
+        "complex_direct_similarity"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نكتب التشابه المباشر على الشكل \\(z'=az+b\\). بما أن O يتحول إلى B فنجد b مباشرة، ثم نستعمل صورة A لإيجاد a. بعد ذلك نستخرج النسبة والزاوية والمركز.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "استعمال صورة O",
+            "explanation": "نكتب:\n\\[\nz'=az+b.\n\\]\nبما أن \\(O\\) لاحقته \\(0\\) وصورته \\(B\\)، فإن:\n\\[\nb=z_B=-1+i\\sqrt3.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "استعمال صورة A",
+            "explanation": "لدينا:\n\\[\nz_C=az_A+b.\n\\]\nإذن:\n\\[\na=\\frac{z_C-b}{z_A}.\n\\]\nوبالتعويض:\n\\[\na=\\frac{(-5+i\\sqrt3)-(-1+i\\sqrt3)}{-1-i\\sqrt3}\n=\\frac{-4}{-1-i\\sqrt3}.\n\\]\nوبتبسيط الكسر:\n\\[\na=1-i\\sqrt3.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الكتابة المركبة",
+            "explanation": "إذن:\n\\[\nz'=(1-i\\sqrt3)z-1+i\\sqrt3.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "النسبة والزاوية",
+            "explanation": "لدينا:\n\\[\n1-i\\sqrt3=2e^{-i\\pi/3}.\n\\]\nإذن نسبة التشابه:\n\\[\nk=2,\n\\]\nوزاويته:\n\\[\n\\theta=-\\frac{\\pi}{3}.\n\\]"
+          },
+          {
+            "step_number": 5,
+            "title": "حساب المركز",
+            "explanation": "مركز التشابه \\(\\Omega\\) هو النقطة الثابتة، أي لاحقتها \\(z_\\Omega\\) تحقق:\n\\[\nz_\\Omega=(1-i\\sqrt3)z_\\Omega-1+i\\sqrt3.\n\\]\nإذن:\n\\[\n(i\\sqrt3)z_\\Omega=-1+i\\sqrt3.\n\\]\nومنها:\n\\[\nz_\\Omega=1+i\\frac{\\sqrt3}{3}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(z'=(1-i\\sqrt3)z-1+i\\sqrt3\\). النسبة \\(2\\)، الزاوية \\(-\\pi/3\\)، والمركز لاحقته \\(1+i\\frac{\\sqrt3}{3}\\)."
+      }
+    },
+    {
+      "id": "2013_tm_s2_complex_ex02_q3a",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "3) أ) عين \\(z_D\\) لاحقة النقطة \\(D\\) مرجح الجملة \\(\\{(A;2),(B;-1),(C;1)\\}\\).",
+      "axis_tags": [
+        "complex_barycenter"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نطبق صيغة لاحقة المرجح. مجموع المعاملات يساوي 2.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب مجموع المعاملات",
+            "explanation": "\\[\n2-1+1=2\\neq0.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب zD",
+            "explanation": "\\[\nz_D=\\frac{2z_A-z_B+z_C}{2}.\n\\]\nنعوض:\n\\[\nz_D=\\frac{2(-1-i\\sqrt3)-(-1+i\\sqrt3)+(-5+i\\sqrt3)}{2}.\n\\]\nتبسيط البسط يعطي:\n\\[\n-6-2i\\sqrt3.\n\\]\nإذن:\n\\[\nz_D=-3-i\\sqrt3.\n\\]"
+          }
+        ],
+        "final_answer": "\\(z_D=-3-i\\sqrt3\\)."
+      }
+    },
+    {
+      "id": "2013_tm_s2_complex_ex02_q3b",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "ب) اكتب العدد المركب \\(\\frac{z_B-z_A}{z_D-z_A}\\) على الشكل الأسي، ثم استنتج طبيعة المثلث \\(ABD\\).",
+      "axis_tags": [
+        "complex_exponential_form",
+        "complex_geometry"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب النسبة، ثم نحدد طويلتها وعمدتها. الطويلة تعطي نسبة AB/AD والعمدة تعطي الزاوية بين AD وAB.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب الفروق",
+            "explanation": "\\[\nz_B-z_A=(-1+i\\sqrt3)-(-1-i\\sqrt3)=2i\\sqrt3.\n\\]\nكما أن:\n\\[\nz_D-z_A=(-3-i\\sqrt3)-(-1-i\\sqrt3)=-2.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب النسبة",
+            "explanation": "\\[\n\\frac{z_B-z_A}{z_D-z_A}\n=\\frac{2i\\sqrt3}{-2}=-i\\sqrt3.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الشكل الأسي",
+            "explanation": "طويلة \\(-i\\sqrt3\\) هي \\(\\sqrt3\\)، وعمدة له \\(-\\frac{\\pi}{2}\\). إذن:\n\\[\n-i\\sqrt3=\\sqrt3e^{-i\\pi/2}.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "الاستنتاج الهندسي",
+            "explanation": "العمدة \\(-\\frac{\\pi}{2}\\) تعني أن:\n\\[\nAB\\perp AD.\n\\]\nإذن المثلث \\(ABD\\) قائم في \\(A\\)."
+          }
+        ],
+        "final_answer": "\\(\\frac{z_B-z_A}{z_D-z_A}=\\sqrt3e^{-i\\pi/2}\\)، والمثلث \\(ABD\\) قائم في \\(A\\)."
+      }
+    },
+    {
+      "id": "2013_tm_s2_complex_ex02_q3c",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "ج) عين \\((\\Gamma)\\) مجموعة النقط \\(M\\) من المستوى حيث: \\(\\left\\|2\\overrightarrow{MA}-\\overrightarrow{MB}+\\overrightarrow{MC}\\right\\|=\\left\\|\\overrightarrow{MA}-\\overrightarrow{MB}\\right\\|\\).",
+      "axis_tags": [
+        "complex_barycenter",
+        "complex_geometric_locus"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل علاقة المرجح لتبسيط الطرف الأيسر، ونلاحظ أن الطرف الأيمن يساوي طول AB وهو ثابت. نحصل في النهاية على دائرة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تبسيط الطرف الأيسر",
+            "explanation": "بما أن \\(D\\) مرجح الجملة \\(\\{(A;2),(B;-1),(C;1)\\}\\) ومجموع المعاملات يساوي \\(2\\)، فإن:\n\\[\n2\\overrightarrow{MA}-\\overrightarrow{MB}+\\overrightarrow{MC}=2\\overrightarrow{MD}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "تبسيط الطرف الأيمن",
+            "explanation": "لدينا:\n\\[\n\\overrightarrow{MA}-\\overrightarrow{MB}=\\overrightarrow{BA}.\n\\]\nإذن:\n\\[\n\\left\\|\\overrightarrow{MA}-\\overrightarrow{MB}\\right\\|=AB.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "تحويل المعادلة",
+            "explanation": "تصبح المعادلة:\n\\[\n2MD=AB.\n\\]\nومن السؤال السابق:\n\\[\nAB=|z_B-z_A|=|2i\\sqrt3|=2\\sqrt3.\n\\]\nإذن:\n\\[\nMD=\\sqrt3.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "تحديد المجموعة",
+            "explanation": "إذن \\((\\Gamma)\\) هي دائرة مركزها \\(D\\) ونصف قطرها:\n\\[\n\\sqrt3.\n\\]"
+          }
+        ],
+        "final_answer": "\\((\\Gamma)\\) دائرة مركزها \\(D\\) ونصف قطرها \\(\\sqrt3\\)."
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2013(1).pdf",
+    "statement_page": 3,
+    "correction_page": 8,
+    "statement_figure_policy": "لا يوجد شكل أصلي ضروري في نص التمرين.",
+    "solution_figure_policy": "لم تتم إضافة رسوم غير لازمة.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  }
+}

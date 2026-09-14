@@ -1,0 +1,314 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "session": "ordinary",
+  "year": 2016,
+  "chapter_code": "sequences",
+  "chapter_title": "المتتاليات العددية",
+  "branches": [
+    {
+      "code": "science",
+      "name": "شعبة علوم تجريبية"
+    }
+  ],
+  "source_pdf": "2016(4).pdf",
+  "comparison_source": "bac_sequence_scientifique(10).pdf",
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "solution_style": "حل مفصل ومبسط، مع الحفاظ على النتيجة الرسمية وإظهار الخطوات الوسيطة التي اختصرها التصحيح النموذجي.",
+    "statement_figure_policy": "لا يضاف إلى نص السؤال أي شكل غير موجود في الموضوع الأصلي. إذا كان السؤال يطلب إنشاء رسم، يوضع الشرح داخل الحل.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  },
+  "version": "4.2-2016-science-sequences-subject2-ex02",
+  "exercise_number": 2,
+  "subject_number": 2,
+  "source_page": 3,
+  "source_pages": [
+    3
+  ],
+  "solution_source_pages": [
+    8,
+    9
+  ],
+  "title": "التمرين الثاني — بكالوريا الجزائر 2016 — الموضوع الثاني — شعبة علوم تجريبية",
+  "statement": "I) \\(f\\) الدالة العددية المعرفة على المجال \\([0;+\\infty[\\) بـ: \\(f(x)=\\frac{5x}{x+2}\\).",
+  "statement_graphs": [],
+  "questions": [
+    {
+      "id": "2016_s2_sequences_ex02_I1a",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) أ) احسب \\(\\lim_{x\\to+\\infty}f(x)\\).",
+      "axis_tags": [
+        "function_limit"
+      ],
+      "solution": {
+        "strategy": "نقسم البسط والمقام على \\(x\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "إعادة الكتابة",
+            "explanation": "\\[\nf(x)=\\frac{5x}{x+2}=\\frac5{1+\\frac2x}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "المرور إلى النهاية",
+            "explanation": "عندما \\(x\\to+\\infty\\):\n\\[\n\\frac2x\\to0.\n\\]\nإذن:\n\\[\nf(x)\\to\\frac5{1+0}=5.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{\\lim_{x\\to+\\infty}f(x)=5}\\)."
+      }
+    },
+    {
+      "id": "2016_s2_sequences_ex02_I1b",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "ب) ادرس اتجاه تغير الدالة \\(f\\) ثم شكل جدول تغيراتها.",
+      "axis_tags": [
+        "function_monotonicity"
+      ],
+      "solution": {
+        "strategy": "نحسب المشتقة ونحدد إشارتها.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب المشتقة",
+            "explanation": "\\[\nf'(x)=\\frac{5(x+2)-5x}{(x+2)^2}=\\frac{10}{(x+2)^2}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "إشارة المشتقة",
+            "explanation": "لكل \\(x\\ge0\\):\n\\[\n(x+2)^2>0,\n\\]\nإذن:\n\\[\nf'(x)>0.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الاستنتاج",
+            "explanation": "إذن \\(f\\) متزايدة تماما على \\([0;+\\infty[\\)، من \\(f(0)=0\\) نحو النهاية \\(5\\)."
+          }
+        ],
+        "final_answer": "\\(\\boxed{f\\text{ متزايدة تماما على }[0;+\\infty[}\\)."
+      }
+    },
+    {
+      "id": "2016_s2_sequences_ex02_I2",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "2) بين أنه من أجل كل عدد حقيقي \\(x\\) من المجال \\([0;+\\infty[\\): \\(f(x)\\ge0\\).",
+      "axis_tags": [
+        "function_sign"
+      ],
+      "solution": {
+        "strategy": "ندرس إشارة البسط والمقام.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "إشارة البسط",
+            "explanation": "إذا كان \\(x\\ge0\\)، فإن:\n\\[\n5x\\ge0.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "إشارة المقام",
+            "explanation": "ولأن \\(x\\ge0\\):\n\\[\nx+2>0.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "النتيجة",
+            "explanation": "إذن خارج عدد غير سالب على عدد موجب غير سالب:\n\\[\nf(x)=\\frac{5x}{x+2}\\ge0.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{f(x)\\ge0\\text{ لكل }x\\ge0}\\)."
+      }
+    },
+    {
+      "id": "2016_s2_sequences_ex02_II1a",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "II) \\((u_n)\\) المتتالية العددية المعرفة على \\(\\mathbb N\\) بحدها الأول \\(u_0=1\\) و من أجل كل عدد طبيعي \\(n\\)، \\(u_{n+1}=\\frac{5u_n}{u_n+2}\\). 1) أ) برهن بالتراجع أنه من أجل كل عدد طبيعي \\(n\\): \\(1\\le u_n\\le3\\).",
+      "axis_tags": [
+        "induction_bounds"
+      ],
+      "solution": {
+        "strategy": "نثبت الخاصية بالتراجع، مع استعمال أن \\(f\\) متزايدة تماما.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التحقق عند n=0",
+            "explanation": "لدينا \\(u_0=1\\)، ومن ثم:\n\\[\n1\\le u_0\\le3.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "فرضية التراجع",
+            "explanation": "نفترض:\n\\[\n1\\le u_n\\le3.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "استعمال تزايد f",
+            "explanation": "بما أن \\(f\\) متزايدة تماما:\n\\[\nf(1)\\le f(u_n)\\le f(3).\n\\]\nنحسب:\n\\[\nf(1)=\\frac53,\n\\qquad\nf(3)=3.\n\\]\nوبما أن \\(u_{n+1}=f(u_n)\\):\n\\[\n\\frac53\\le u_{n+1}\\le3.\n\\]\nومن ثم بالتأكيد:\n\\[\n1\\le u_{n+1}\\le3.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "الخلاصة",
+            "explanation": "بالتراجع:\n\\[\n\\boxed{1\\le u_n\\le3\\quad\\forall n\\in\\mathbb N}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{1\\le u_n\\le3}\\) لكل \\(n\\in\\mathbb N\\)."
+      }
+    },
+    {
+      "id": "2016_s2_sequences_ex02_II1b",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "ب) ادرس اتجاه تغير المتتالية \\((u_n)\\)، ثم استنتج أنها متقاربة.",
+      "axis_tags": [
+        "sequence_monotonicity",
+        "sequence_convergence"
+      ],
+      "solution": {
+        "strategy": "نحسب الفرق \\(u_{n+1}-u_n\\)، ثم نستعمل الحصر السابق.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب الفرق",
+            "explanation": "\\[\nu_{n+1}-u_n=\\frac{5u_n}{u_n+2}-u_n.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "توحيد المقام",
+            "explanation": "\\[\nu_{n+1}-u_n\n=\\frac{5u_n-u_n(u_n+2)}{u_n+2}\n=\\frac{u_n(3-u_n)}{u_n+2}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "دراسة الإشارة",
+            "explanation": "من \\(1\\le u_n\\le3\\)، لدينا \\(u_n>0\\)، و\\(3-u_n\\ge0\\)، و\\(u_n+2>0\\). إذن:\n\\[\nu_{n+1}-u_n\\ge0.\n\\]\nفتكون \\((u_n)\\) متزايدة."
+          },
+          {
+            "step_number": 4,
+            "title": "التقارب",
+            "explanation": "كما أن \\(u_n\\le3\\) لكل \\(n\\)، فهي محدودة من الأعلى. وكل متتالية متزايدة ومحدودة من الأعلى متقاربة."
+          }
+        ],
+        "final_answer": "\\(\\boxed{(u_n)\\text{ متزايدة ومتقاربة}}\\)."
+      }
+    },
+    {
+      "id": "2016_s2_sequences_ex02_II2a",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "2) \\((v_n)\\) المتتالية العددية المعرفة على \\(\\mathbb N\\) كما يلي: \\(v_n=1-\\frac3{u_n}\\). أ) برهن أن \\((v_n)\\) متتالية هندسية أساسها \\(\\frac25\\)، يطلب حساب حدها الأول \\(v_0\\).",
+      "axis_tags": [
+        "auxiliary_sequence",
+        "geometric_sequence"
+      ],
+      "solution": {
+        "strategy": "نحسب \\(v_{n+1}\\) انطلاقا من علاقة رجوع \\(u_n\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب v_{n+1}",
+            "explanation": "\\[\nv_{n+1}=1-\\frac3{u_{n+1}}.\n\\]\nوبما أن:\n\\[\nu_{n+1}=\\frac{5u_n}{u_n+2},\n\\]\nفإن:\n\\[\n\\frac3{u_{n+1}}=\\frac{3(u_n+2)}{5u_n}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "التبسيط",
+            "explanation": "\\[\nv_{n+1}\n=1-\\frac{3(u_n+2)}{5u_n}\n=\\frac{5u_n-3u_n-6}{5u_n}\n=\\frac{2(u_n-3)}{5u_n}.\n\\]\nلكن:\n\\[\nv_n=1-\\frac3{u_n}=\\frac{u_n-3}{u_n}.\n\\]\nإذن:\n\\[\nv_{n+1}=\\frac25v_n.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب v_0",
+            "explanation": "\\[\nv_0=1-\\frac3{u_0}=1-3=-2.\n\\]"
+          }
+        ],
+        "final_answer": "\\((v_n)\\) هندسية أساسها \\(\\boxed{\\frac25}\\)، وحدها الأول \\(\\boxed{v_0=-2}\\)."
+      }
+    },
+    {
+      "id": "2016_s2_sequences_ex02_II2b",
+      "display_order": 7,
+      "content_type": "question",
+      "text": "ب) اكتب بدلالة \\(n\\) عبارة \\(v_n\\) ثم استنتج عبارة \\(u_n\\) بدلالة \\(n\\).",
+      "axis_tags": [
+        "geometric_sequence_general_term",
+        "explicit_sequence_formula"
+      ],
+      "solution": {
+        "strategy": "نكتب الحد العام لـ\\(v_n\\)، ثم نحل تعريف \\(v_n\\) بالنسبة إلى \\(u_n\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الحد العام لـ v_n",
+            "explanation": "بما أن \\(v_0=-2\\) والأساس \\(\\frac25\\):\n\\[\nv_n=-2\\left(\\frac25\\right)^n.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "العودة إلى u_n",
+            "explanation": "من:\n\\[\n1-\\frac3{u_n}=-2\\left(\\frac25\\right)^n\n\\]\nنحصل على:\n\\[\n\\frac3{u_n}=1+2\\left(\\frac25\\right)^n.\n\\]\nإذن:\n\\[\n\\boxed{u_n=\\frac3{1+2(\\frac25)^n}}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{v_n=-2(\\frac25)^n}\\)، و\\(\\boxed{u_n=\\frac3{1+2(\\frac25)^n}}\\)."
+      }
+    },
+    {
+      "id": "2016_s2_sequences_ex02_II2c",
+      "display_order": 8,
+      "content_type": "question",
+      "text": "ج) احسب نهاية المتتالية \\((u_n)\\).",
+      "axis_tags": [
+        "sequence_limit"
+      ],
+      "solution": {
+        "strategy": "نستعمل العبارة الصريحة لـ\\(u_n\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "نهاية القوة",
+            "explanation": "بما أن:\n\\[\n0<\\frac25<1,\n\\]\nفإن:\n\\[\n\\left(\\frac25\\right)^n\\to0.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "نهاية u_n",
+            "explanation": "\\[\nu_n=\\frac3{1+2(\\frac25)^n}\\to\\frac3{1+0}=3.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{\\lim_{n\\to+\\infty}u_n=3}\\)."
+      }
+    },
+    {
+      "id": "2016_s2_sequences_ex02_II3",
+      "display_order": 9,
+      "content_type": "question",
+      "text": "3) اكتب بدلالة \\(n\\) المجموع \\(S_n\\) حيث: \\(S_n=\\frac1{u_0}+\\frac1{u_1}+\\frac1{u_2}+\\cdots+\\frac1{u_n}\\).",
+      "axis_tags": [
+        "sequence_sum",
+        "geometric_sum"
+      ],
+      "solution": {
+        "strategy": "نحوّل \\(\\frac1{u_n}\\) باستعمال تعريف \\(v_n\\)، ثم نحسب مجموع حدود متتالية هندسية.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التعبير عن 1/u_n بدلالة v_n",
+            "explanation": "من:\n\\[\nv_n=1-\\frac3{u_n}\n\\]\nنحصل على:\n\\[\n\\frac3{u_n}=1-v_n,\n\\]\nأي:\n\\[\n\\frac1{u_n}=\\frac13(1-v_n).\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "جمع الحدود",
+            "explanation": "\\[\nS_n=\\sum_{k=0}^{n}\\frac1{u_k}\n=\\frac13\\sum_{k=0}^{n}(1-v_k).\n\\]\nإذن:\n\\[\nS_n=\\frac13\\left[(n+1)-\\sum_{k=0}^{n}v_k\\right].\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب مجموع v_k",
+            "explanation": "بما أن \\(v_k=-2(\\frac25)^k\\):\n\\[\n\\sum_{k=0}^{n}v_k\n=-2\\frac{1-(\\frac25)^{n+1}}{1-\\frac25}\n=-\\frac{10}{3}\\left[1-\\left(\\frac25\\right)^{n+1}\\right].\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "العبارة النهائية",
+            "explanation": "إذن:\n\\[\nS_n=\\frac13\\left[n+1+\\frac{10}{3}\\left(1-\\left(\\frac25\\right)^{n+1}\\right)\\right].\n\\]\nأي أيضا:\n\\[\n\\boxed{S_n=\\frac{n+1}{3}+\\frac{10}{9}\\left[1-\\left(\\frac25\\right)^{n+1}\\right]}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{S_n=\\frac{n+1}{3}+\\frac{10}{9}\\left[1-(\\frac25)^{n+1}\\right]}\\)."
+      }
+    }
+  ]
+}

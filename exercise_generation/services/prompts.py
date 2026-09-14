@@ -16,269 +16,137 @@ def _text(value: Any) -> str:
     return str(value or "").strip()
 
 
-def _short_error(value: str, max_length: int = 500) -> str:
+def _short_error(value: str, max_length: int = 700) -> str:
     text = _text(value)
     return text if len(text) <= max_length else text[:max_length].rstrip() + "..."
 
 
-def _visual_schema() -> list[dict[str, Any]]:
-    return [
-        {
-            "type": "table",
-            "title": "",
-            "headers": [""],
-            "rows": [[""]],
-            "caption": "",
-        },
-        {
-            "type": "circuit",
-            "title": "",
-            "width": 720,
-            "height": 360,
-            "components": [
-                {
-                    "id": "R1",
-                    "type": "resistor",
-                    "label": "$R$",
-                    "value": "$100\\,\\Omega$",
-                    "x": 300,
-                    "y": 120,
-                    "rotation": 0,
-                }
-            ],
-            "wires": [
-                {"x1": 100, "y1": 120, "x2": 250, "y2": 120, "label": ""}
-            ],
-            "caption": "",
-        },
-        {
-            "type": "diagram",
-            "title": "",
-            "width": 720,
-            "height": 360,
-            "elements": [
-                {
-                    "type": "arrow",
-                    "x1": 120,
-                    "y1": 240,
-                    "x2": 300,
-                    "y2": 120,
-                    "label": "$\\vec{F}$",
-                }
-            ],
-            "caption": "",
-        },
-    ]
-
-
-def _build_output_schema(*, force_graph: bool) -> dict[str, Any]:
+def _output_schema(*, force_graph: bool) -> dict[str, Any]:
     return {
         "exercise": {
             "title": "",
             "question": "",
             "skill": "",
-            "hints": [
-                {"level": 1, "hint": ""},
-                {"level": 2, "hint": ""},
+            "document_references": [
+                {"id": "document_01", "path": "مسار من القائمة المسموحة حرفيا", "title": "", "placement": "statement"}
             ],
+            "hints": [{"level": 1, "hint": ""}, {"level": 2, "hint": ""}],
             "visuals": [],
             "solution": {
                 "strategy": "",
                 "detailed_explanation": "",
-                "steps": [
-                    {
-                        "order": 1,
-                        "title": "حل المطلب 1",
-                        "explanation": "",
-                        "calculation": "",
-                        "result": "",
-                    }
-                ],
+                "steps": [{"order": 1, "title": "الملاحظة", "explanation": "", "calculation": "", "result": ""}],
                 "final_answer": "",
                 "verification": "",
-                "common_mistakes": [
-                    {"mistake": "", "why_wrong": "", "correction": ""}
-                ],
+                "common_mistakes": [{"mistake": "", "why_wrong": "", "correction": ""}],
                 "alternative_method": "",
                 "is_complete": True,
             },
             "requires_graph": force_graph,
-            "graph_spec": (
-                {
-                    "graph_type": "function",
-                    "title": "",
-                    "expression_python": "",
-                    "expression_label": "",
-                    "initial_value": 1,
-                    "iterations": 6,
-                    "x_min": 0,
-                    "x_max": 5,
-                    "y_min": 0,
-                    "y_max": 5,
-                    "step": 0.1,
-                }
-                if force_graph
-                else {}
-            ),
+            "graph_spec": {
+                "graph_type": "function", "title": "", "expression_python": "", "expression_label": "",
+                "initial_value": 1, "iterations": 6, "x_min": 0, "x_max": 5, "y_min": 0, "y_max": 5, "step": 0.1,
+            } if force_graph else {},
         }
     }
 
 
-def _subject_rules(subject_kind: str) -> str:
+def _subject_rules(subject_kind: str, has_documents: bool) -> str:
+    if subject_kind == "natural_sciences":
+        document_rule = "يجب استعمال وثيقة واحدة صالحة على الأقل من القائمة المسموحة." if has_documents else "لا توجد وثيقة مسترجعة؛ أنشئ تمرينا نصيا قصيرا ولا تخترع صورة أو جدولا تجريبيا."
+        return f"""
+قواعد إلزامية خاصة بعلوم الطبيعة والحياة:
+- أنت أستاذ علوم جزائري ومصحح بكالوريا، وتبني وضعية استدلالية لا سؤال حفظ مباشر.
+- {document_rule}
+- اتبع التسلسل: سياق علمي قصير ← تقديم الوثيقة ← مطالب تحليل/تفسير/استنتاج ← تركيب أو نص علمي عند الحاجة.
+- لا تنسخ نص مرجع بكالوريا، لكن حافظ على مستوى لغته وأفعاله المنهجية.
+- كل معلومة عددية أو منحنى أو جدول أو رسم يجب أن يكون ظاهرًا في الوثيقة المستعملة؛ ممنوع اختراع قيمة غير موجودة.
+- لا تعدّل الصورة ولا مسارها ولا تسمياتها ولا اتجاه الأسهم ولا القيم.
+- لا تستعمل وثيقة موسومة solution_reference_only، ولا صورة حل، ولا مخطط تصحيح.
+- احترم answer_invariants حرفيًا، ولا تقع في forbidden_changes.
+- اذكر داخل question: «باستغلال الوثيقة...» واجعل كل مطلب قابلا للحل منها مع معارف المحور.
+- الحل يكتب بالطريقة: ملاحظة دقيقة من الوثيقة ← تفسير علمي ← استنتاج يجيب عن المطلوب.
+- إذا طلب نص علمي، اجعله مقدمة وعرضًا وخاتمة بلغة بسيطة ودقيقة.
+- document_references تحتوي فقط id/path/title من قائمة الوثائق المسموحة وplacement="statement".
+- لا تنشئ SVG أو base64 أو رابطًا أو path جديدًا، واجعل visuals=[] لأن الوثائق صور جاهزة يعرضها React.
+""".strip()
     if subject_kind == "physics":
         return """
-قواعد خاصة بالفيزياء:
-- أنت أستاذ فيزياء جزائري للسنة الثالثة ثانوي.
-- حافظ على الوحدات الدولية والرموز الفيزيائية الصحيحة.
-- عندما يحتاج التمرين جدول قياسات، أضف visual من type=table بدل كتابة الجدول كسطر نصي طويل.
-- عندما يحتاج التمرين دارة كهربائية، أضف visual من type=circuit ببنية components وwires.
-- عندما يحتاج التمرين مخططًا ميكانيكيًا أو شعاعًا أو مسارًا، أضف visual من type=diagram.
-- لا تضف أي visual إن كان التمرين مفهومًا وقابلًا للحل دون شكل.
-- يجب أن يحتوي نص question على إحالة واضحة مثل: «اعتمادًا على الجدول الآتي» أو «لدينا الدارة المبينة» عندما يوجد visual.
-- visual جزء من معطيات التمرين، وليس جزءًا من الحل.
-- لا ترسل SVG أو HTML أو base64 أو صورة. أرسل بيانات JSON فقط ليقوم React بالرسم.
-- في circuit استعمل فقط الأنواع: resistor, capacitor, battery, generator, switch, lamp, ammeter, voltmeter, coil, node.
-- إحداثيات circuit وdiagram تكون داخل width/height وبقيم موجبة.
-- استعمل LaTeX داخل labels والقيم، مثل $U_R$ و$R=100\\,\\Omega$.
+قواعد الفيزياء: حافظ على الوحدات والرموز. يمكن استعمال table/circuit/diagram المولدة بنيويا، ولا تخترع صورة. استعمل LaTeX صحيحا.
 """.strip()
-
     return """
-قواعد خاصة بالرياضيات:
-- أنت أستاذ رياضيات جزائري للسنة الثالثة ثانوي.
-- لا تضف visual من نوع circuit.
-- يمكن استعمال visual من type=table فقط إذا كانت المعطيات جدوليّة فعلًا.
-- الرسوم البيانية الرياضية تبقى عبر requires_graph وgraph_spec لكي يحسبها الخادم بدقة.
-- لا ترسل نقاط منحنى يدويًا داخل visuals.
+قواعد الرياضيات: لا تستعمل circuit. استعمل graph_spec فقط للمحور البياني المفروض، ولا ترسل نقاط منحنى يدويا.
 """.strip()
 
 
 def build_bac_like_exercise_prompt(
-    *,
-    subject_kind: str,
-    subject_name: str,
-    axis_title: str,
-    axis_tag: str,
-    lesson_context: dict[str, Any],
-    bac_references: list[dict[str, Any]],
-    previous_titles: list[str],
-    exercise_number: int,
-    compact_mode: bool = False,
-    force_graph: bool = False,
-    previous_error: str = "",
+    *, subject_kind: str, subject_name: str, axis_title: str, axis_tag: str,
+    lesson_context: dict[str, Any], bac_references: list[dict[str, Any]],
+    previous_titles: list[str], exercise_number: int, compact_mode: bool = False,
+    force_graph: bool = False, previous_error: str = "", allowed_documents: list[dict[str, Any]] | None = None,
 ) -> str:
-    reference_limit = MAX_REFERENCES_COMPACT if compact_mode else MAX_REFERENCES_NORMAL
-    references = bac_references[:reference_limit] if isinstance(bac_references, list) else []
+    limit = MAX_REFERENCES_COMPACT if compact_mode else MAX_REFERENCES_NORMAL
+    references = bac_references[:limit] if isinstance(bac_references, list) else []
+    references_for_prompt = []
+    for reference in references:
+        if not isinstance(reference, dict):
+            continue
+        compact_reference = {key: value for key, value in reference.items() if key != "documents"}
+        compact_reference["available_document_ids"] = [
+            _text(item.get("id")) for item in reference.get("documents", [])[:4]
+            if isinstance(item, dict)
+        ]
+        references_for_prompt.append(compact_reference)
     titles = previous_titles[-MAX_PREVIOUS_TITLES:] if isinstance(previous_titles, list) else []
-    output_schema = _build_output_schema(force_graph=force_graph)
-
-    if force_graph:
-        graph_rules = """
-قواعد الرسم البياني الرياضي:
-- هذا المحور بياني، لذلك يجب أن يحتوي السؤال على طلب بياني واضح.
-- اجعل requires_graph=true وأعد graph_spec كاملًا.
-- expression_python تعبير Python بدلالة x فقط، واستعمل ** للقوة.
-- لا ترسل نقاط المنحنى؛ الخادم يحسب graph_data.
-- إذا كان الرسم مخطط سلم اجعل graph_type=cobweb.
-""".strip()
-    else:
-        graph_rules = """
-قواعد graph_spec:
-- اجعل requires_graph=false وgraph_spec={} ما لم يكن هذا محور رياضيات بيانيًا مفروضًا من الخادم.
-- الرسومات الفيزيائية لا تستعمل graph_spec؛ استعمل visuals بدلًا منه.
-""".strip()
-
-    retry_rules = ""
-    if previous_error:
-        retry_rules = f"""
-تصحيح المحاولة السابقة:
-{_short_error(previous_error)}
-أعد إنشاء النتيجة من البداية، ولا تكمل JSON السابق، وأغلق كل النصوص والقوائم والأقواس.
-""".strip()
-
-    compact_rules = ""
-    if compact_mode:
-        compact_rules = """
-هذه محاولة تصحيح مختصرة:
-- اختصر strategy وdetailed_explanation.
-- لا تكرر الحساب نفسه في أكثر من حقل.
-- اجعل كل خطوة قصيرة وكاملة.
-""".strip()
+    documents = allowed_documents if isinstance(allowed_documents, list) else []
+    retry = f"المحاولة السابقة رُفضت بسبب: {_short_error(previous_error)}\nصحح السبب ولا تكرر الإخراج السابق." if previous_error else ""
+    compact = "اختصر الشرح دون حذف أي مطلب أو دليل من الوثيقة." if compact_mode else ""
 
     return f"""
-أنت أستاذ جزائري متخصص في مادة {subject_name or ('الفيزياء' if subject_kind == 'physics' else 'الرياضيات')} للسنة الثالثة ثانوي ومصحح للبكالوريا الجزائرية.
+أنت أستاذ جزائري خبير في بناء تمارين البكالوريا لمادة {subject_name}.
+أنشئ تمرينًا تدريبيًا جديدًا واحدًا فقط داخل المحور المحدد، بصيغة JSON فقط.
 
-مهمتك إنشاء تمرين تدريبي جديد واحد فقط، قريب من أسلوب البكالوريا، ومحصور في المحور الحالي.
+المادة الداخلية: {subject_kind}
+رقم النسخة: {exercise_number}
+المحور: {axis_title}
+وسم المحور: {axis_tag}
 
-رقم التمرين: {exercise_number}
-المادة: {subject_name}
-نوع المادة الداخلي: {subject_kind}
-المحور الوحيد المسموح:
-- العنوان: {axis_title}
-- الوسم: {axis_tag}
-
-محتوى المحور المسموح:
+محتوى الدرس المسموح، وهو المصدر العلمي الأول:
 {_json(lesson_context)}
 
-أسئلة بكالوريا من المحور نفسه، للاستلهام في الأسلوب فقط:
-{_json(references)}
+مراجع بكالوريا للاستلهام في البنية والمنهجية فقط، لا للنسخ:
+{_json(references_for_prompt)}
 
-ممنوع نسخ نص أو أعداد أو ترتيب مطالب أي مرجع حرفيًا.
-عناوين تمارين سابقة ممنوع تكرارها:
+الوثائق العلمية المسموح استعمالها حصرا:
+{_json(documents)}
+
+عناوين سابقة ممنوع تكرارها:
 {_json(titles)}
 
-قواعد الحصر في المحور:
-1. السؤال وكل مطالبه من المحور الحالي فقط.
-2. لا تدخل مفهومًا من محور آخر.
-3. استعمل فقط القواعد والطرق الموجودة في lesson_context.
-4. المرجع أسلوبي فقط ولا يضيف معرفة جديدة.
-5. إذا احتجت مفهومًا غير موجود، غيّر السؤال.
+قواعد عامة إلزامية:
+1. لا تدخل أي مفهوم خارج المحور ومحتوى الدرس.
+2. لا تنسخ نص المرجع أو أرقامه أو ترتيب مطالبه حرفيًا.
+3. أنشئ سياقًا جديدًا، لكن لا تغيّر حقائق الوثيقة المستعملة.
+4. من مطلبين إلى أربعة، مرتبة 1)، 2)، 3)، وبأفعال بكالوريا واضحة.
+5. ضع كل المعطيات الضرورية في السؤال أو في الوثيقة المشار إليها.
+6. حل جميع المطالب بالترتيب، وبأسلوب يفهمه التلميذ الضعيف.
+7. كل خطوة تحتوي title وexplanation وcalculation وresult؛ اترك calculation="" إن لم يوجد حساب.
+8. final_answer يجمع الأجوبة النهائية، وverification يراجع التوافق مع الوثيقة.
+9. التلميحات متدرجة ولا تكشف الجواب مباشرة.
+10. ممنوع Markdown وcode fences وأي نص خارج JSON.
 
-قواعد السؤال:
-1. أنشئ وضعية جديدة بأعداد وعلاقات جديدة.
-2. من مطلب واحد إلى أربعة حسب الحاجة فقط.
-3. ضع كل المعطيات الضرورية في question أو visuals.
-4. رقّم المطالب بوضوح: 1)، 2)، 3).
-5. لا تذكر السنة المرجعية ولا الذكاء الاصطناعي.
-6. الحسابات معقولة ومناسبة للبكالوريا وليست جامعية.
+{_subject_rules(subject_kind, bool(documents))}
 
-قواعد الحل:
-1. حل جميع المطالب بالترتيب نفسه.
-2. اشرح لتلميذ ضعيف المستوى دون قفزات.
-3. كل خطوة تحتوي title وexplanation وcalculation وresult.
-4. calculation يحتوي الحساب الضروري فقط.
-5. final_answer يلخص جميع الأجوبة.
-6. verification مختصر ومفيد.
-7. التلميحات متدرجة ولا تكشف الحل مباشرة.
-8. is_complete=true بعد حل جميع المطالب.
+قواعد الرسم البياني:
+- requires_graph={str(force_graph).lower()}.
+- إن كان false أرسل graph_spec={{}}.
+- علوم الطبيعة لا تستعمل graph_spec لرسم وثيقة؛ تستعمل document_references فقط.
 
-قواعد LaTeX داخل JSON:
-1. استعمل $...$ لكل تعبير رياضي أو فيزيائي.
-2. أمثلة: $u_n=3n+2$، $U_R=R\\,I$، $\\tau=RC$، $v=\\Delta x/\\Delta t$.
-3. استعمل أوامر LaTeX القياسية: \\frac, \\sqrt, \\times, \\mathrm, \\vec عند الحاجة.
-4. لأن النص داخل JSON، يجب أن تكون الشرطة المائلة مهروبة بشكل JSON صحيح.
-5. لا تستعمل Markdown ولا code fences.
+{compact}
+{retry}
 
-{_subject_rules(subject_kind)}
-
-قواعد visuals:
-- القيمة الافتراضية visuals=[] إذا لم يحتج السؤال شكلاً.
-- الأنواع المدعومة فقط: table, circuit, diagram.
-- لا تضع visual فارغًا.
-- لا تستخدم أي visual للمظهر فقط؛ يجب أن يكون جزءًا مفيدًا من معطيات السؤال.
-- نموذج الأنواع المتاحة للاستدلال على البنية فقط:
-{_json(_visual_schema())}
-
-{graph_rules}
-{compact_rules}
-{retry_rules}
-
-قواعد JSON:
-- أعد JSON صالحًا فقط، بلا Markdown أو نص خارجي.
-- استعمل علامات اقتباس مزدوجة وأغلق كل البنى.
-- لا تضف مفاتيح خارج النموذج المطلوب.
-
-النموذج المطلوب:
-{_json(output_schema)}
+أعد هذا النموذج وحده مع ملء القيم:
+{_json(_output_schema(force_graph=force_graph))}
 """.strip()
 
 
@@ -286,19 +154,13 @@ class ExercisePromptBuilder:
     @staticmethod
     def build(axis, difficulty: str = "medium", exercise_type: str = "bac", skill: str = "", include_solution: bool = True) -> str:
         subject = getattr(getattr(axis, "chapter", None), "subject", None)
-        subject_name = _text(getattr(subject, "name", "")) or "الرياضيات"
-        subject_source = f"{getattr(subject, 'code', '')} {subject_name}".lower()
-        subject_kind = "physics" if any(k in subject_source for k in ("phys", "فيزياء", "physics")) else "math"
-        lesson_context = axis.content if isinstance(axis.content, dict) else {"title": axis.title, "content": _text(axis.content)}
-        return build_bac_like_exercise_prompt(
-            subject_kind=subject_kind,
-            subject_name=subject_name,
-            axis_title=axis.title,
-            axis_tag=axis.tag,
-            lesson_context=lesson_context,
-            bac_references=[],
-            previous_titles=[],
-            exercise_number=1,
-            compact_mode=False,
-            force_graph=False,
-        )
+        subject_name = _text(getattr(subject, "name", "")) or "المادة"
+        source = f"{getattr(subject, 'code', '')} {subject_name}".lower()
+        if any(x in source for x in ("science", "sciences", "svt", "طبيعة", "علوم")):
+            kind = "natural_sciences"
+        elif any(x in source for x in ("phys", "physics", "فيزياء")):
+            kind = "physics"
+        else:
+            kind = "math"
+        content = axis.content if isinstance(axis.content, dict) else {"title": axis.title, "content": _text(axis.content)}
+        return build_bac_like_exercise_prompt(subject_kind=kind, subject_name=subject_name, axis_title=axis.title, axis_tag=axis.tag, lesson_context=content, bac_references=[], previous_titles=[], exercise_number=1, force_graph=False, allowed_documents=[])

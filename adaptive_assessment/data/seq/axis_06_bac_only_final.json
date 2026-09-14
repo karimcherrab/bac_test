@@ -1,0 +1,2568 @@
+{
+  "schema_version": "2.0",
+  "subject": {
+    "code": "math",
+    "title": "الرياضيات"
+  },
+  "branch": {
+    "code": "science",
+    "title": "علوم تجريبية"
+  },
+  "chapter": {
+    "code": "sequences",
+    "title": "المتتاليات العددية"
+  },
+  "axis": {
+    "tag": "geometric_sequences",
+    "title": "المتتالية الهندسية"
+  },
+  "source_summary": {
+    "lesson_files_count": 1,
+    "bac_files_count": 1,
+    "years_covered": [
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "notes": [
+      "هذا الملف مخصص لاختبار أفكار البكالوريا فقط في محور المتتالية الهندسية.",
+      "skills موجودة كمصفوفة فارغة لمنع ظهور أفكار شرح المحور في الاختبار.",
+      "bac_ideas محصورة حصريا في SEQ_BAC_31 إلى SEQ_BAC_48.",
+      "هذا المحور غني بالـ variants لأن فكرة التحويل إلى متتالية هندسية ظهرت بعدة أشكال: إزاحة، فرق، تحويل كسري، مقلوب، مربع بعد، وتحويل مركب يحتوي a^n.",
+      "occurrence_count هنا يمثل عدد السنوات/الجلسات الممثلة في mapping الخاص بكل فكرة داخل هذا الملف، وليس عدد كل البنود الجزئية داخل جميع المواضيع."
+    ]
+  },
+  "lesson_scope": {
+    "learning_outcomes": [
+      "إتقان أفكار البكالوريا الثماني عشرة المرتبطة بالمتتالية الهندسية والتحويلات والمجاميع والجداءات التابعة لها."
+    ],
+    "concepts": [
+      "التعرف على المتتالية الهندسية.",
+      "الأساس والحد الأول.",
+      "التحويل بالإزاحة.",
+      "فرق الحدود.",
+      "التحويل الكسري.",
+      "التحويل بالمقلوب.",
+      "مربع البعد عن نقطة التثبيت.",
+      "تحويل يحتوي a^n.",
+      "الحد العام والرجوع إلى u_n.",
+      "النهاية من الهندسية المساعدة.",
+      "المجاميع الهندسية.",
+      "المجاميع الموزونة.",
+      "مجاميع المقلوبات.",
+      "الجداءات.",
+      "مجاميع اللوغاريتمات."
+    ],
+    "methods": [
+      "إثبات v_{n+1}=qv_n.",
+      "كتابة v_n=v_0q^n.",
+      "عكس التحويل للرجوع إلى u_n.",
+      "استعمال |q|<1 في النهايات.",
+      "استعمال صيغة مجموع هندسي.",
+      "تحويل جداء أو مجموع معقد باستغلال البنية الهندسية."
+    ],
+    "prerequisites": [],
+    "excluded_topics": [
+      "أي فكرة درس عامة لم تظهر ضمن أفكار BAC المحددة.",
+      "المتتالية الحسابية كهدف مستقل إلا إذا نتجت من ln|v_n| في SEQ_BAC_48.",
+      "أي فكرة خارج SEQ_BAC_31 إلى SEQ_BAC_48."
+    ]
+  },
+  "skills": [],
+  "bac_ideas": [
+    {
+      "idea_code": "SEQ_BAC_31",
+      "title": "التعرف على متتالية هندسية معطاة مباشرة",
+      "description": "إثبات أو ملاحظة أن متتالية معطاة مباشرة تحقق v_{n+1}=qv_n أو أن خارج حدين متتاليين ثابت، ثم استنتاج أنها هندسية.",
+      "bac_priority": "high",
+      "frequency_level": "medium",
+      "occurrence_count": 4,
+      "years": [
+        2009,
+        2013,
+        2014,
+        2022
+      ],
+      "last_seen_year": 2022,
+      "skill_refs": [],
+      "required_skills": [],
+      "prerequisites": [],
+      "external_prerequisites": [],
+      "difficulty_range": {
+        "min": 1,
+        "max": 2
+      },
+      "variants": [
+        {
+          "variant_code": "SEQ_BAC_31_V01",
+          "title": "التعرف بالعلاقة v_{n+1}=qv_n",
+          "description": "إظهار أن الحد الموالي يساوي الحد الحالي مضروبا في ثابت q.",
+          "years": [
+            2009,
+            2013,
+            2014,
+            2022
+          ],
+          "occurrence_count": 4,
+          "difficulty": 1,
+          "skill_idea_codes": [],
+          "required_skills": [],
+          "distinguishing_feature": "المتتالية الهندسية معطاة أو تظهر مباشرة دون تحويل معقد."
+        }
+      ],
+      "common_errors": [
+        {
+          "code": "SEQ_BAC_31_RATIO_NOT_CONSTANT",
+          "description": "حساب نسب لبعض الحدود فقط دون إثبات ثباتها لكل n.",
+          "severity": "high",
+          "related_skill_idea_codes": []
+        }
+      ],
+      "bac_occurrences": [
+        {
+          "year": 2009,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_31: التعرف على متتالية هندسية معطاة مباشرة.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2013,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_31: التعرف على متتالية هندسية معطاة مباشرة.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2014,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_31: التعرف على متتالية هندسية معطاة مباشرة.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2022,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_31: التعرف على متتالية هندسية معطاة مباشرة.",
+          "skill_idea_codes": []
+        }
+      ],
+      "mastery_requirements": {
+        "must_cover_variants": [
+          "SEQ_BAC_31_V01"
+        ],
+        "minimum_successful_variants": 1,
+        "requires_bac_style_question": true,
+        "required_skill_idea_codes": [],
+        "notes": "هذه الفكرة جزء من بنك أفكار البكالوريا للمحور السادس فقط."
+      },
+      "generation_guidance": {
+        "allowed_structures": [
+          "إعطاء v_n أو علاقة بين v_{n+1} وv_n ثم طلب إثبات أنها هندسية."
+        ],
+        "must_test": [
+          "استخراج q",
+          "إثبات أن q ثابت"
+        ],
+        "may_vary": [
+          "الحد الأول",
+          "الأساس",
+          "دليل البداية"
+        ],
+        "must_not_change": [
+          "جوهر السؤال هو التعرف على البنية الهندسية مباشرة."
+        ],
+        "forbidden_concepts": [
+          "تحويل حسابي أو كسري غير لازم"
+        ]
+      }
+    },
+    {
+      "idea_code": "SEQ_BAC_32",
+      "title": "تعيين أساس المتتالية الهندسية وحدها الأول",
+      "description": "بعد إثبات أو معرفة أن المتتالية هندسية، تعيين الأساس q والحد الأول اللازم لكتابة حدها العام.",
+      "bac_priority": "critical",
+      "frequency_level": "very_high",
+      "occurrence_count": 15,
+      "years": [
+        2009,
+        2010,
+        2011,
+        2013,
+        2014,
+        2016,
+        2017,
+        2018,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "last_seen_year": 2026,
+      "skill_refs": [],
+      "required_skills": [],
+      "prerequisites": [],
+      "external_prerequisites": [],
+      "difficulty_range": {
+        "min": 1,
+        "max": 2
+      },
+      "variants": [
+        {
+          "variant_code": "SEQ_BAC_32_V01",
+          "title": "استخراج q من العلاقة",
+          "description": "قراءة q من v_{n+1}=qv_n ثم حساب الحد الأول.",
+          "years": [
+            2009,
+            2010,
+            2011,
+            2013,
+            2014,
+            2016,
+            2017,
+            2018,
+            2020,
+            2021,
+            2022,
+            2023,
+            2024,
+            2025,
+            2026
+          ],
+          "occurrence_count": 15,
+          "difficulty": 1,
+          "skill_idea_codes": [],
+          "required_skills": [],
+          "distinguishing_feature": "الأساس يظهر مباشرة بعد تبسيط العلاقة."
+        }
+      ],
+      "common_errors": [
+        {
+          "code": "SEQ_BAC_32_WRONG_FIRST_TERM",
+          "description": "اختيار حد أول لا يوافق رتبة بداية المتتالية.",
+          "severity": "high",
+          "related_skill_idea_codes": []
+        },
+        {
+          "code": "SEQ_BAC_32_Q_SIGN",
+          "description": "إهمال إشارة q، خصوصا عندما يكون الأساس سالبا.",
+          "severity": "high",
+          "related_skill_idea_codes": []
+        }
+      ],
+      "bac_occurrences": [
+        {
+          "year": 2009,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_32: تعيين أساس المتتالية الهندسية وحدها الأول.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2010,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_32: تعيين أساس المتتالية الهندسية وحدها الأول.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2011,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_32: تعيين أساس المتتالية الهندسية وحدها الأول.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2013,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_32: تعيين أساس المتتالية الهندسية وحدها الأول.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2014,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_32: تعيين أساس المتتالية الهندسية وحدها الأول.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2016,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_32: تعيين أساس المتتالية الهندسية وحدها الأول.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2017,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_32: تعيين أساس المتتالية الهندسية وحدها الأول.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2018,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_32: تعيين أساس المتتالية الهندسية وحدها الأول.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2020,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_32: تعيين أساس المتتالية الهندسية وحدها الأول.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2021,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_32: تعيين أساس المتتالية الهندسية وحدها الأول.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2022,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_32: تعيين أساس المتتالية الهندسية وحدها الأول.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2023,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_32: تعيين أساس المتتالية الهندسية وحدها الأول.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2024,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_32: تعيين أساس المتتالية الهندسية وحدها الأول.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2025,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_32: تعيين أساس المتتالية الهندسية وحدها الأول.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2026,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_32: تعيين أساس المتتالية الهندسية وحدها الأول.",
+          "skill_idea_codes": []
+        }
+      ],
+      "mastery_requirements": {
+        "must_cover_variants": [
+          "SEQ_BAC_32_V01"
+        ],
+        "minimum_successful_variants": 1,
+        "requires_bac_style_question": true,
+        "required_skill_idea_codes": [],
+        "notes": "هذه الفكرة جزء من بنك أفكار البكالوريا للمحور السادس فقط."
+      },
+      "generation_guidance": {
+        "allowed_structures": [
+          "إثبات هندسية v_n ثم طلب q والحد الأول."
+        ],
+        "must_test": [
+          "تحديد q",
+          "تحديد الحد الأول الصحيح حسب دليل البداية"
+        ],
+        "may_vary": [
+          "q موجب",
+          "q سالب",
+          "بداية من v_0 أو v_1"
+        ],
+        "must_not_change": [
+          "يجب استخراج q والحد الأول للمتتالية الهندسية."
+        ],
+        "forbidden_concepts": [
+          "اعتبار الحد الأول دائما v_0"
+        ]
+      }
+    },
+    {
+      "idea_code": "SEQ_BAC_33",
+      "title": "تحديد q والحد الأول من نظام معادلات يحتوي حدودا ومجموعا أو جداء",
+      "description": "استغلال معطيات تربط حدود متتالية هندسية أو مجموعها أو جداءها، لتكوين نظام وحلّه من أجل q والحد الأول.",
+      "bac_priority": "high",
+      "frequency_level": "low",
+      "occurrence_count": 2,
+      "years": [
+        2009,
+        2022
+      ],
+      "last_seen_year": 2022,
+      "skill_refs": [],
+      "required_skills": [],
+      "prerequisites": [],
+      "external_prerequisites": [],
+      "difficulty_range": {
+        "min": 2,
+        "max": 3
+      },
+      "variants": [
+        {
+          "variant_code": "SEQ_BAC_33_V01",
+          "title": "نظام من حدود ومجموع",
+          "description": "استعمال شروط على حدود ومجموع هندسي لتعيين q والحد الأول.",
+          "years": [
+            2009
+          ],
+          "occurrence_count": 1,
+          "difficulty": 3,
+          "skill_idea_codes": [],
+          "required_skills": [],
+          "distinguishing_feature": "المعطيات لا تعطي q مباشرة بل عبر نظام."
+        },
+        {
+          "variant_code": "SEQ_BAC_33_V02",
+          "title": "نظام يتضمن علاقة لوغاريتمية أو جداء",
+          "description": "استعمال شروط غير مباشرة على الحدود لتعيين عناصر المتتالية الهندسية.",
+          "years": [
+            2022
+          ],
+          "occurrence_count": 1,
+          "difficulty": 3,
+          "skill_idea_codes": [],
+          "required_skills": [],
+          "distinguishing_feature": "المعطيات تتضمن جداء أو لوغاريتمات أو شروط مركبة."
+        }
+      ],
+      "common_errors": [
+        {
+          "code": "SEQ_BAC_33_SYSTEM_MODEL",
+          "description": "ترجمة المعطيات إلى نظام خاطئ.",
+          "severity": "high",
+          "related_skill_idea_codes": []
+        },
+        {
+          "code": "SEQ_BAC_33_REJECT_Q",
+          "description": "عدم رفض قيمة q التي لا توافق شروط المسألة.",
+          "severity": "high",
+          "related_skill_idea_codes": []
+        }
+      ],
+      "bac_occurrences": [
+        {
+          "year": 2009,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_33: تحديد q والحد الأول من نظام معادلات يحتوي حدودا ومجموعا أو جداء.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2022,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_33: تحديد q والحد الأول من نظام معادلات يحتوي حدودا ومجموعا أو جداء.",
+          "skill_idea_codes": []
+        }
+      ],
+      "mastery_requirements": {
+        "must_cover_variants": [
+          "SEQ_BAC_33_V01"
+        ],
+        "minimum_successful_variants": 1,
+        "requires_bac_style_question": true,
+        "required_skill_idea_codes": [],
+        "notes": "هذه الفكرة جزء من بنك أفكار البكالوريا للمحور السادس فقط."
+      },
+      "generation_guidance": {
+        "allowed_structures": [
+          "معطيات على حدود ومجموع/جداء ثم طلب q والحد الأول."
+        ],
+        "must_test": [
+          "ترجمة المعطيات",
+          "حل النظام",
+          "التحقق من القيم"
+        ],
+        "may_vary": [
+          "عدد المعادلات",
+          "نوع المعطيات"
+        ],
+        "must_not_change": [
+          "q والحد الأول لا يكونان معطيين مباشرة."
+        ],
+        "forbidden_concepts": [
+          "نظام لا علاقة له ببنية هندسية"
+        ]
+      }
+    },
+    {
+      "idea_code": "SEQ_BAC_34",
+      "title": "المتتالية المساعدة بالإزاحة v_n=u_n-L",
+      "description": "اختيار أو استعمال متتالية مساعدة من الشكل v_n=u_n-L، حيث L نقطة تثبيت، ثم إثبات أن v_n هندسية.",
+      "bac_priority": "critical",
+      "frequency_level": "very_high",
+      "occurrence_count": 6,
+      "years": [
+        2008,
+        2010,
+        2014,
+        2020,
+        2021,
+        2023
+      ],
+      "last_seen_year": 2023,
+      "skill_refs": [],
+      "required_skills": [],
+      "prerequisites": [],
+      "external_prerequisites": [],
+      "difficulty_range": {
+        "min": 2,
+        "max": 3
+      },
+      "variants": [
+        {
+          "variant_code": "SEQ_BAC_34_V01",
+          "title": "إزاحة نحو نقطة تثبيت",
+          "description": "تعريف v_n=u_n-L ثم إثبات v_{n+1}=qv_n.",
+          "years": [
+            2008,
+            2010,
+            2014,
+            2020,
+            2021,
+            2023
+          ],
+          "occurrence_count": 6,
+          "difficulty": 2,
+          "skill_idea_codes": [],
+          "required_skills": [],
+          "distinguishing_feature": "التحويل هو طرح قيمة ثابتة L من u_n."
+        }
+      ],
+      "common_errors": [
+        {
+          "code": "SEQ_BAC_34_WRONG_L",
+          "description": "اختيار قيمة L لا تحقق التبسيط المطلوب.",
+          "severity": "high",
+          "related_skill_idea_codes": []
+        },
+        {
+          "code": "SEQ_BAC_34_EXPANSION",
+          "description": "خطأ عند تبسيط v_{n+1}=u_{n+1}-L.",
+          "severity": "high",
+          "related_skill_idea_codes": []
+        }
+      ],
+      "bac_occurrences": [
+        {
+          "year": 2008,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_34: المتتالية المساعدة بالإزاحة v_n=u_n-L.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2010,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_34: المتتالية المساعدة بالإزاحة v_n=u_n-L.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2014,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_34: المتتالية المساعدة بالإزاحة v_n=u_n-L.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2020,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_34: المتتالية المساعدة بالإزاحة v_n=u_n-L.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2021,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_34: المتتالية المساعدة بالإزاحة v_n=u_n-L.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2023,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_34: المتتالية المساعدة بالإزاحة v_n=u_n-L.",
+          "skill_idea_codes": []
+        }
+      ],
+      "mastery_requirements": {
+        "must_cover_variants": [
+          "SEQ_BAC_34_V01"
+        ],
+        "minimum_successful_variants": 1,
+        "requires_bac_style_question": true,
+        "required_skill_idea_codes": [],
+        "notes": "هذه الفكرة جزء من بنك أفكار البكالوريا للمحور السادس فقط."
+      },
+      "generation_guidance": {
+        "allowed_structures": [
+          "تعريف v_n=u_n-L ثم إثبات أنها هندسية."
+        ],
+        "must_test": [
+          "تحديد L أو استعماله",
+          "حساب v_{n+1}",
+          "استخراج q"
+        ],
+        "may_vary": [
+          "L",
+          "شكل علاقة u_n",
+          "قيمة q"
+        ],
+        "must_not_change": [
+          "التحويل يجب أن يكون إزاحة u_n-L."
+        ],
+        "forbidden_concepts": [
+          "تحويل كسري مكان الإزاحة"
+        ]
+      }
+    },
+    {
+      "idea_code": "SEQ_BAC_35",
+      "title": "استعمال فرق حدين لتحويل علاقة تراجعية من الرتبة الثانية إلى هندسية",
+      "description": "تعريف v_n=u_{n+1}-u_n ثم استغلال العلاقة التراجعية من الرتبة الثانية للحصول على v_{n+1}=qv_n.",
+      "bac_priority": "high",
+      "frequency_level": "rare",
+      "occurrence_count": 1,
+      "years": [
+        2009
+      ],
+      "last_seen_year": 2009,
+      "skill_refs": [],
+      "required_skills": [],
+      "prerequisites": [],
+      "external_prerequisites": [],
+      "difficulty_range": {
+        "min": 2,
+        "max": 3
+      },
+      "variants": [
+        {
+          "variant_code": "SEQ_BAC_35_V01",
+          "title": "فرق الحدود",
+          "description": "تعريف v_n=u_{n+1}-u_n وتحويل علاقة الرتبة الثانية إلى علاقة هندسية.",
+          "years": [
+            2009
+          ],
+          "occurrence_count": 1,
+          "difficulty": 3,
+          "skill_idea_codes": [],
+          "required_skills": [],
+          "distinguishing_feature": "المتتالية الهندسية هي متتالية الفروق."
+        }
+      ],
+      "common_errors": [
+        {
+          "code": "SEQ_BAC_35_SHIFT",
+          "description": "الخلط بين v_n وv_{n+1} عند تغيير الرتب.",
+          "severity": "high",
+          "related_skill_idea_codes": []
+        }
+      ],
+      "bac_occurrences": [
+        {
+          "year": 2009,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_35: استعمال فرق حدين لتحويل علاقة تراجعية من الرتبة الثانية إلى هندسية.",
+          "skill_idea_codes": []
+        }
+      ],
+      "mastery_requirements": {
+        "must_cover_variants": [
+          "SEQ_BAC_35_V01"
+        ],
+        "minimum_successful_variants": 1,
+        "requires_bac_style_question": true,
+        "required_skill_idea_codes": [],
+        "notes": "هذه الفكرة جزء من بنك أفكار البكالوريا للمحور السادس فقط."
+      },
+      "generation_guidance": {
+        "allowed_structures": [
+          "u_{n+2}=au_{n+1}+bu_n ثم v_n=u_{n+1}-u_n."
+        ],
+        "must_test": [
+          "حساب v_{n+1}",
+          "استعمال علاقة u",
+          "استخراج q"
+        ],
+        "may_vary": [
+          "معاملات العلاقة"
+        ],
+        "must_not_change": [
+          "المتتالية الهندسية يجب أن تكون مبنية على فرق حدين متتاليين."
+        ],
+        "forbidden_concepts": [
+          "تحويل بالمقلوب أو الإزاحة"
+        ]
+      }
+    },
+    {
+      "idea_code": "SEQ_BAC_36",
+      "title": "التحويل الكسري من الشكل (u_n-a)/(u_n-b) إلى متتالية هندسية",
+      "description": "تعريف متتالية مساعدة بتحويل كسري Möbius مثل v_n=(u_n-a)/(u_n-b)، ثم إثبات v_{n+1}=qv_n.",
+      "bac_priority": "critical",
+      "frequency_level": "very_high",
+      "occurrence_count": 6,
+      "years": [
+        2013,
+        2016,
+        2017,
+        2024,
+        2025,
+        2026
+      ],
+      "last_seen_year": 2026,
+      "skill_refs": [],
+      "required_skills": [],
+      "prerequisites": [],
+      "external_prerequisites": [],
+      "difficulty_range": {
+        "min": 2,
+        "max": 3
+      },
+      "variants": [
+        {
+          "variant_code": "SEQ_BAC_36_V01",
+          "title": "تحويل كسري مباشر",
+          "description": "إثبات هندسية v_n=(u_n-a)/(u_n-b).",
+          "years": [
+            2013,
+            2017,
+            2024,
+            2025,
+            2026
+          ],
+          "occurrence_count": 5,
+          "difficulty": 3,
+          "skill_idea_codes": [],
+          "required_skills": [],
+          "distinguishing_feature": "التحويل يعتمد على نسبتي بعدين عن نقطتين ثابتتين."
+        },
+        {
+          "variant_code": "SEQ_BAC_36_V02",
+          "title": "تحويل كسري في موضوع إضافي",
+          "description": "نفس البنية في الموضوعين الإضافيين 2016_2 و2017_2.",
+          "years": [
+            2016,
+            2017
+          ],
+          "occurrence_count": 2,
+          "difficulty": 3,
+          "skill_idea_codes": [],
+          "required_skills": [],
+          "distinguishing_feature": "النمط نفسه ظهر في جلسات إضافية أيضا."
+        }
+      ],
+      "common_errors": [
+        {
+          "code": "SEQ_BAC_36_DENOMINATOR",
+          "description": "إهمال شرط عدم انعدام المقام.",
+          "severity": "high",
+          "related_skill_idea_codes": []
+        },
+        {
+          "code": "SEQ_BAC_36_ALGEBRA",
+          "description": "خطأ جبري عند تبسيط v_{n+1}/v_n.",
+          "severity": "high",
+          "related_skill_idea_codes": []
+        }
+      ],
+      "bac_occurrences": [
+        {
+          "year": 2013,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_36: التحويل الكسري من الشكل (u_n-a)/(u_n-b) إلى متتالية هندسية.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2016,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_36: التحويل الكسري من الشكل (u_n-a)/(u_n-b) إلى متتالية هندسية.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2017,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_36: التحويل الكسري من الشكل (u_n-a)/(u_n-b) إلى متتالية هندسية.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2024,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_36: التحويل الكسري من الشكل (u_n-a)/(u_n-b) إلى متتالية هندسية.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2025,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_36: التحويل الكسري من الشكل (u_n-a)/(u_n-b) إلى متتالية هندسية.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2026,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_36: التحويل الكسري من الشكل (u_n-a)/(u_n-b) إلى متتالية هندسية.",
+          "skill_idea_codes": []
+        }
+      ],
+      "mastery_requirements": {
+        "must_cover_variants": [
+          "SEQ_BAC_36_V01"
+        ],
+        "minimum_successful_variants": 1,
+        "requires_bac_style_question": true,
+        "required_skill_idea_codes": [],
+        "notes": "هذه الفكرة جزء من بنك أفكار البكالوريا للمحور السادس فقط."
+      },
+      "generation_guidance": {
+        "allowed_structures": [
+          "تعريف v_n=(u_n-a)/(u_n-b) أو تحويل كسري مكافئ."
+        ],
+        "must_test": [
+          "حساب v_{n+1}",
+          "التعويض بعلاقة u",
+          "اختزال النسبة إلى q ثابت"
+        ],
+        "may_vary": [
+          "a",
+          "b",
+          "q",
+          "شكل العلاقة التراجعية"
+        ],
+        "must_not_change": [
+          "جوهر الفكرة تحويل كسري إلى هندسية."
+        ],
+        "forbidden_concepts": [
+          "تحويل حسابي باللوغاريتم"
+        ]
+      }
+    },
+    {
+      "idea_code": "SEQ_BAC_37",
+      "title": "التحويل بالمقلوب إلى متتالية هندسية",
+      "description": "تعريف متتالية مساعدة من الشكل v_n=1/(u_n+a) أو v_n=1/u_n-c ثم إثبات أنها هندسية.",
+      "bac_priority": "critical",
+      "frequency_level": "medium",
+      "occurrence_count": 3,
+      "years": [
+        2016,
+        2018,
+        2023
+      ],
+      "last_seen_year": 2023,
+      "skill_refs": [],
+      "required_skills": [],
+      "prerequisites": [],
+      "external_prerequisites": [],
+      "difficulty_range": {
+        "min": 2,
+        "max": 3
+      },
+      "variants": [
+        {
+          "variant_code": "SEQ_BAC_37_V01",
+          "title": "مقلوب مع إزاحة",
+          "description": "استعمال v_n=1/(u_n+a).",
+          "years": [
+            2016,
+            2018
+          ],
+          "occurrence_count": 2,
+          "difficulty": 3,
+          "skill_idea_codes": [],
+          "required_skills": [],
+          "distinguishing_feature": "المتتالية المساعدة مقلوب عبارة خطية في u_n."
+        },
+        {
+          "variant_code": "SEQ_BAC_37_V02",
+          "title": "مقلوب ناقص ثابت",
+          "description": "استعمال v_n=1/u_n-c.",
+          "years": [
+            2023
+          ],
+          "occurrence_count": 1,
+          "difficulty": 3,
+          "skill_idea_codes": [],
+          "required_skills": [],
+          "distinguishing_feature": "يضاف أو يطرح ثابت بعد أخذ المقلوب."
+        }
+      ],
+      "common_errors": [
+        {
+          "code": "SEQ_BAC_37_DOMAIN",
+          "description": "إهمال شرط عدم انعدام المقام.",
+          "severity": "high",
+          "related_skill_idea_codes": []
+        },
+        {
+          "code": "SEQ_BAC_37_RECIPROCAL",
+          "description": "خطأ في قلب الكسر أو توحيد المقامات.",
+          "severity": "high",
+          "related_skill_idea_codes": []
+        }
+      ],
+      "bac_occurrences": [
+        {
+          "year": 2016,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_37: التحويل بالمقلوب إلى متتالية هندسية.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2018,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_37: التحويل بالمقلوب إلى متتالية هندسية.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2023,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_37: التحويل بالمقلوب إلى متتالية هندسية.",
+          "skill_idea_codes": []
+        }
+      ],
+      "mastery_requirements": {
+        "must_cover_variants": [
+          "SEQ_BAC_37_V01"
+        ],
+        "minimum_successful_variants": 1,
+        "requires_bac_style_question": true,
+        "required_skill_idea_codes": [],
+        "notes": "هذه الفكرة جزء من بنك أفكار البكالوريا للمحور السادس فقط."
+      },
+      "generation_guidance": {
+        "allowed_structures": [
+          "v_n=1/(u_n+a)",
+          "v_n=1/u_n-c"
+        ],
+        "must_test": [
+          "شرط المقام",
+          "حساب v_{n+1}",
+          "إثبات v_{n+1}=qv_n"
+        ],
+        "may_vary": [
+          "a",
+          "c",
+          "q"
+        ],
+        "must_not_change": [
+          "المقلوب عنصر أساسي في التحويل."
+        ],
+        "forbidden_concepts": [
+          "تحويل Möbius عام إذا لم يحتج إلى مقلوب"
+        ]
+      }
+    },
+    {
+      "idea_code": "SEQ_BAC_38",
+      "title": "استعمال مربع البعد عن نقطة التثبيت للحصول على متتالية هندسية",
+      "description": "عندما يكون السلوك متذبذبا، تعريف v_n=(u_n-L)^2 ثم إثبات أن v_n هندسية للتخلص من تغير الإشارة.",
+      "bac_priority": "high",
+      "frequency_level": "rare",
+      "occurrence_count": 1,
+      "years": [
+        2022
+      ],
+      "last_seen_year": 2022,
+      "skill_refs": [],
+      "required_skills": [],
+      "prerequisites": [],
+      "external_prerequisites": [],
+      "difficulty_range": {
+        "min": 2,
+        "max": 3
+      },
+      "variants": [
+        {
+          "variant_code": "SEQ_BAC_38_V01",
+          "title": "مربع البعد عن L",
+          "description": "تعريف v_n=(u_n-L)^2 وإثبات هندسيتها.",
+          "years": [
+            2022
+          ],
+          "occurrence_count": 1,
+          "difficulty": 3,
+          "skill_idea_codes": [],
+          "required_skills": [],
+          "distinguishing_feature": "التربيع يزيل التناوب في إشارة u_n-L."
+        }
+      ],
+      "common_errors": [
+        {
+          "code": "SEQ_BAC_38_SQUARE_EXPANSION",
+          "description": "خطأ في تربيع العلاقة أو في استخراج معامل q.",
+          "severity": "high",
+          "related_skill_idea_codes": []
+        }
+      ],
+      "bac_occurrences": [
+        {
+          "year": 2022,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_38: استعمال مربع البعد عن نقطة التثبيت للحصول على متتالية هندسية.",
+          "skill_idea_codes": []
+        }
+      ],
+      "mastery_requirements": {
+        "must_cover_variants": [
+          "SEQ_BAC_38_V01"
+        ],
+        "minimum_successful_variants": 1,
+        "requires_bac_style_question": true,
+        "required_skill_idea_codes": [],
+        "notes": "هذه الفكرة جزء من بنك أفكار البكالوريا للمحور السادس فقط."
+      },
+      "generation_guidance": {
+        "allowed_structures": [
+          "سلوك متذبذب حول L ثم v_n=(u_n-L)^2."
+        ],
+        "must_test": [
+          "حساب u_{n+1}-L",
+          "التربيع",
+          "إثبات النسبة الثابتة"
+        ],
+        "may_vary": [
+          "L",
+          "معامل الانكماش"
+        ],
+        "must_not_change": [
+          "المتتالية المساعدة هي مربع البعد عن نقطة التثبيت."
+        ],
+        "forbidden_concepts": [
+          "إزاحة بسيطة فقط"
+        ]
+      }
+    },
+    {
+      "idea_code": "SEQ_BAC_39",
+      "title": "متتالية مساعدة مركبة تحتوي a^n",
+      "description": "تعريف متتالية من الشكل v_n=a^n\\phi(u_n)، مثل 3^n(1-2/u_n)، ثم إثبات أنها هندسية أو ثابتة هندسيا.",
+      "bac_priority": "high",
+      "frequency_level": "rare",
+      "occurrence_count": 1,
+      "years": [
+        2025
+      ],
+      "last_seen_year": 2025,
+      "skill_refs": [],
+      "required_skills": [],
+      "prerequisites": [],
+      "external_prerequisites": [],
+      "difficulty_range": {
+        "min": 3,
+        "max": 3
+      },
+      "variants": [
+        {
+          "variant_code": "SEQ_BAC_39_V01",
+          "title": "قوة أسية مضروبة في تحويل لـu_n",
+          "description": "إدخال عامل a^n مع تحويل كسري أو مقلوب في u_n.",
+          "years": [
+            2025
+          ],
+          "occurrence_count": 1,
+          "difficulty": 3,
+          "skill_idea_codes": [],
+          "required_skills": [],
+          "distinguishing_feature": "التحويل يجمع اعتمادا صريحا على n وتحويلا في u_n."
+        }
+      ],
+      "common_errors": [
+        {
+          "code": "SEQ_BAC_39_POWER_SHIFT",
+          "description": "نسيان أن a^{n+1}=a·a^n.",
+          "severity": "high",
+          "related_skill_idea_codes": []
+        },
+        {
+          "code": "SEQ_BAC_39_COMPOSITE_SIMPLIFY",
+          "description": "عدم تبسيط الجزء المرتبط بـu_{n+1} بصورة صحيحة.",
+          "severity": "high",
+          "related_skill_idea_codes": []
+        }
+      ],
+      "bac_occurrences": [
+        {
+          "year": 2025,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_39: متتالية مساعدة مركبة تحتوي a^n.",
+          "skill_idea_codes": []
+        }
+      ],
+      "mastery_requirements": {
+        "must_cover_variants": [
+          "SEQ_BAC_39_V01"
+        ],
+        "minimum_successful_variants": 1,
+        "requires_bac_style_question": true,
+        "required_skill_idea_codes": [],
+        "notes": "هذه الفكرة جزء من بنك أفكار البكالوريا للمحور السادس فقط."
+      },
+      "generation_guidance": {
+        "allowed_structures": [
+          "v_n=a^n φ(u_n) مع علاقة تراجعية مناسبة."
+        ],
+        "must_test": [
+          "تغيير n إلى n+1",
+          "استخراج العامل a",
+          "استعمال علاقة u"
+        ],
+        "may_vary": [
+          "a",
+          "φ"
+        ],
+        "must_not_change": [
+          "يجب أن يحتوي التحويل على a^n صراحة."
+        ],
+        "forbidden_concepts": [
+          "تحويل بسيط لا يعتمد على n"
+        ]
+      }
+    },
+    {
+      "idea_code": "SEQ_BAC_40",
+      "title": "كتابة الحد العام للمتتالية الهندسية المساعدة ثم الرجوع إلى u_n",
+      "description": "بعد إثبات هندسية v_n، كتابة v_n=v_0q^n أو الصيغة المناسبة، ثم حل علاقة التحويل من أجل u_n.",
+      "bac_priority": "critical",
+      "frequency_level": "very_high",
+      "occurrence_count": 15,
+      "years": [
+        2008,
+        2009,
+        2010,
+        2013,
+        2014,
+        2016,
+        2017,
+        2018,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "last_seen_year": 2026,
+      "skill_refs": [],
+      "required_skills": [],
+      "prerequisites": [],
+      "external_prerequisites": [],
+      "difficulty_range": {
+        "min": 2,
+        "max": 3
+      },
+      "variants": [
+        {
+          "variant_code": "SEQ_BAC_40_V01",
+          "title": "الرجوع من إزاحة",
+          "description": "من v_n=u_n-L إلى u_n=L+v_n.",
+          "years": [
+            2008,
+            2010,
+            2014,
+            2020,
+            2021,
+            2023
+          ],
+          "occurrence_count": 6,
+          "difficulty": 2,
+          "skill_idea_codes": [],
+          "required_skills": [],
+          "distinguishing_feature": "الرجوع جبري مباشر."
+        },
+        {
+          "variant_code": "SEQ_BAC_40_V02",
+          "title": "الرجوع من تحويل كسري أو مقلوب",
+          "description": "حل علاقة v_n=(u_n-a)/(u_n-b) أو v_n=1/(u_n+a) من أجل u_n.",
+          "years": [
+            2013,
+            2016,
+            2017,
+            2018,
+            2022,
+            2024,
+            2025,
+            2026
+          ],
+          "occurrence_count": 8,
+          "difficulty": 3,
+          "skill_idea_codes": [],
+          "required_skills": [],
+          "distinguishing_feature": "الرجوع يتطلب حل علاقة كسرية."
+        }
+      ],
+      "common_errors": [
+        {
+          "code": "SEQ_BAC_40_GEOM_FORM",
+          "description": "خطأ في صيغة الحد العام بسبب دليل البداية.",
+          "severity": "high",
+          "related_skill_idea_codes": []
+        },
+        {
+          "code": "SEQ_BAC_40_INVERSE_TRANSFORM",
+          "description": "خطأ عند عكس التحويل للرجوع إلى u_n.",
+          "severity": "high",
+          "related_skill_idea_codes": []
+        }
+      ],
+      "bac_occurrences": [
+        {
+          "year": 2008,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_40: كتابة الحد العام للمتتالية الهندسية المساعدة ثم الرجوع إلى u_n.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2009,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_40: كتابة الحد العام للمتتالية الهندسية المساعدة ثم الرجوع إلى u_n.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2010,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_40: كتابة الحد العام للمتتالية الهندسية المساعدة ثم الرجوع إلى u_n.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2013,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_40: كتابة الحد العام للمتتالية الهندسية المساعدة ثم الرجوع إلى u_n.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2014,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_40: كتابة الحد العام للمتتالية الهندسية المساعدة ثم الرجوع إلى u_n.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2016,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_40: كتابة الحد العام للمتتالية الهندسية المساعدة ثم الرجوع إلى u_n.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2017,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_40: كتابة الحد العام للمتتالية الهندسية المساعدة ثم الرجوع إلى u_n.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2018,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_40: كتابة الحد العام للمتتالية الهندسية المساعدة ثم الرجوع إلى u_n.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2020,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_40: كتابة الحد العام للمتتالية الهندسية المساعدة ثم الرجوع إلى u_n.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2021,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_40: كتابة الحد العام للمتتالية الهندسية المساعدة ثم الرجوع إلى u_n.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2022,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_40: كتابة الحد العام للمتتالية الهندسية المساعدة ثم الرجوع إلى u_n.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2023,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_40: كتابة الحد العام للمتتالية الهندسية المساعدة ثم الرجوع إلى u_n.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2024,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_40: كتابة الحد العام للمتتالية الهندسية المساعدة ثم الرجوع إلى u_n.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2025,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_40: كتابة الحد العام للمتتالية الهندسية المساعدة ثم الرجوع إلى u_n.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2026,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_40: كتابة الحد العام للمتتالية الهندسية المساعدة ثم الرجوع إلى u_n.",
+          "skill_idea_codes": []
+        }
+      ],
+      "mastery_requirements": {
+        "must_cover_variants": [
+          "SEQ_BAC_40_V01"
+        ],
+        "minimum_successful_variants": 1,
+        "requires_bac_style_question": true,
+        "required_skill_idea_codes": [],
+        "notes": "هذه الفكرة جزء من بنك أفكار البكالوريا للمحور السادس فقط."
+      },
+      "generation_guidance": {
+        "allowed_structures": [
+          "إثبات هندسية v_n ثم طلب v_n بدلالة n وبعدها u_n."
+        ],
+        "must_test": [
+          "الحد العام الهندسي",
+          "دليل البداية",
+          "عكس التحويل"
+        ],
+        "may_vary": [
+          "نوع التحويل",
+          "q",
+          "v_0 أو v_1"
+        ],
+        "must_not_change": [
+          "الرجوع إلى u_n يجب أن يعتمد على الحد العام لـv_n."
+        ],
+        "forbidden_concepts": [
+          "إعطاء u_n مباشرة دون استغلال v_n"
+        ]
+      }
+    },
+    {
+      "idea_code": "SEQ_BAC_41",
+      "title": "استخراج نهاية u_n من المتتالية الهندسية المساعدة",
+      "description": "بعد كتابة v_n أو معرفة نهايتها، استغلال q^n→0 عندما |q|<1 ثم الرجوع إلى u_n لاستخراج النهاية.",
+      "bac_priority": "critical",
+      "frequency_level": "very_high",
+      "occurrence_count": 14,
+      "years": [
+        2008,
+        2010,
+        2013,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "last_seen_year": 2026,
+      "skill_refs": [],
+      "required_skills": [],
+      "prerequisites": [],
+      "external_prerequisites": [],
+      "difficulty_range": {
+        "min": 2,
+        "max": 3
+      },
+      "variants": [
+        {
+          "variant_code": "SEQ_BAC_41_V01",
+          "title": "نهاية بعد إزاحة",
+          "description": "إذا v_n=u_n-L وv_n→0، استنتاج u_n→L.",
+          "years": [
+            2008,
+            2010,
+            2013,
+            2016,
+            2020,
+            2021,
+            2023
+          ],
+          "occurrence_count": 7,
+          "difficulty": 2,
+          "skill_idea_codes": [],
+          "required_skills": [],
+          "distinguishing_feature": "النهاية تستخرج مباشرة من الإزاحة."
+        },
+        {
+          "variant_code": "SEQ_BAC_41_V02",
+          "title": "نهاية بعد تحويل كسري أو مقلوب",
+          "description": "استعمال v_n→0 أو قيمة معروفة ثم حل العلاقة الحدية من أجل u_n.",
+          "years": [
+            2017,
+            2018,
+            2019,
+            2022,
+            2024,
+            2025,
+            2026
+          ],
+          "occurrence_count": 7,
+          "difficulty": 3,
+          "skill_idea_codes": [],
+          "required_skills": [],
+          "distinguishing_feature": "النهاية تحتاج الرجوع من تحويل غير خطي."
+        }
+      ],
+      "common_errors": [
+        {
+          "code": "SEQ_BAC_41_Q_CONDITION",
+          "description": "استعمال q^n→0 دون التحقق من |q|<1.",
+          "severity": "high",
+          "related_skill_idea_codes": []
+        },
+        {
+          "code": "SEQ_BAC_41_LIMIT_BACK",
+          "description": "خطأ في الرجوع من نهاية v_n إلى نهاية u_n.",
+          "severity": "high",
+          "related_skill_idea_codes": []
+        }
+      ],
+      "bac_occurrences": [
+        {
+          "year": 2008,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_41: استخراج نهاية u_n من المتتالية الهندسية المساعدة.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2010,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_41: استخراج نهاية u_n من المتتالية الهندسية المساعدة.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2013,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_41: استخراج نهاية u_n من المتتالية الهندسية المساعدة.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2016,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_41: استخراج نهاية u_n من المتتالية الهندسية المساعدة.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2017,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_41: استخراج نهاية u_n من المتتالية الهندسية المساعدة.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2018,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_41: استخراج نهاية u_n من المتتالية الهندسية المساعدة.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2019,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_41: استخراج نهاية u_n من المتتالية الهندسية المساعدة.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2020,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_41: استخراج نهاية u_n من المتتالية الهندسية المساعدة.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2021,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_41: استخراج نهاية u_n من المتتالية الهندسية المساعدة.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2022,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_41: استخراج نهاية u_n من المتتالية الهندسية المساعدة.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2023,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_41: استخراج نهاية u_n من المتتالية الهندسية المساعدة.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2024,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_41: استخراج نهاية u_n من المتتالية الهندسية المساعدة.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2025,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_41: استخراج نهاية u_n من المتتالية الهندسية المساعدة.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2026,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_41: استخراج نهاية u_n من المتتالية الهندسية المساعدة.",
+          "skill_idea_codes": []
+        }
+      ],
+      "mastery_requirements": {
+        "must_cover_variants": [
+          "SEQ_BAC_41_V01"
+        ],
+        "minimum_successful_variants": 1,
+        "requires_bac_style_question": true,
+        "required_skill_idea_codes": [],
+        "notes": "هذه الفكرة جزء من بنك أفكار البكالوريا للمحور السادس فقط."
+      },
+      "generation_guidance": {
+        "allowed_structures": [
+          "v_n هندسية و|q|<1 ثم طلب lim u_n."
+        ],
+        "must_test": [
+          "نهاية q^n",
+          "نهاية v_n",
+          "الرجوع إلى u_n"
+        ],
+        "may_vary": [
+          "q موجب أو سالب مع |q|<1",
+          "نوع التحويل"
+        ],
+        "must_not_change": [
+          "نهاية u_n يجب أن تستنتج من المتتالية الهندسية المساعدة."
+        ],
+        "forbidden_concepts": [
+          "حساب النهاية مباشرة دون استعمال v_n"
+        ]
+      }
+    },
+    {
+      "idea_code": "SEQ_BAC_42",
+      "title": "حساب مجموع هندسي عادي",
+      "description": "حساب مجموع من الشكل v_0+v_1+...+v_n أو v_p+...+v_n باستعمال صيغة مجموع متتالية هندسية.",
+      "bac_priority": "critical",
+      "frequency_level": "high",
+      "occurrence_count": 8,
+      "years": [
+        2009,
+        2010,
+        2011,
+        2014,
+        2017,
+        2020,
+        2023,
+        2025
+      ],
+      "last_seen_year": 2025,
+      "skill_refs": [],
+      "required_skills": [],
+      "prerequisites": [],
+      "external_prerequisites": [],
+      "difficulty_range": {
+        "min": 1,
+        "max": 2
+      },
+      "variants": [
+        {
+          "variant_code": "SEQ_BAC_42_V01",
+          "title": "مجموع من v_0 إلى v_n",
+          "description": "استعمال S_n=v_0(1-q^{n+1})/(1-q) عندما q≠1.",
+          "years": [
+            2009,
+            2010,
+            2011,
+            2014,
+            2020,
+            2023,
+            2025
+          ],
+          "occurrence_count": 7,
+          "difficulty": 1,
+          "skill_idea_codes": [],
+          "required_skills": [],
+          "distinguishing_feature": "المجموع يبدأ من الحد الأول للمتتالية."
+        },
+        {
+          "variant_code": "SEQ_BAC_42_V02",
+          "title": "مجموع يبدأ من رتبة ثابتة غير صفرية",
+          "description": "حساب مجموع هندسي بعد استخراج عامل q^p.",
+          "years": [
+            2017
+          ],
+          "occurrence_count": 1,
+          "difficulty": 2,
+          "skill_idea_codes": [],
+          "required_skills": [],
+          "distinguishing_feature": "دليل البداية ليس صفرا."
+        }
+      ],
+      "common_errors": [
+        {
+          "code": "SEQ_BAC_42_TERM_COUNT",
+          "description": "الخطأ في عدد الحدود أو في أس q الأخير.",
+          "severity": "high",
+          "related_skill_idea_codes": []
+        },
+        {
+          "code": "SEQ_BAC_42_FORMULA_SIGN",
+          "description": "الخلط بين 1-q^{n+1} وq^{n+1}-1.",
+          "severity": "medium",
+          "related_skill_idea_codes": []
+        }
+      ],
+      "bac_occurrences": [
+        {
+          "year": 2009,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_42: حساب مجموع هندسي عادي.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2010,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_42: حساب مجموع هندسي عادي.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2011,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_42: حساب مجموع هندسي عادي.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2014,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_42: حساب مجموع هندسي عادي.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2017,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_42: حساب مجموع هندسي عادي.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2020,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_42: حساب مجموع هندسي عادي.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2023,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_42: حساب مجموع هندسي عادي.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2025,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_42: حساب مجموع هندسي عادي.",
+          "skill_idea_codes": []
+        }
+      ],
+      "mastery_requirements": {
+        "must_cover_variants": [
+          "SEQ_BAC_42_V01"
+        ],
+        "minimum_successful_variants": 1,
+        "requires_bac_style_question": true,
+        "required_skill_idea_codes": [],
+        "notes": "هذه الفكرة جزء من بنك أفكار البكالوريا للمحور السادس فقط."
+      },
+      "generation_guidance": {
+        "allowed_structures": [
+          "S_n=v_0+...+v_n",
+          "S_n=v_p+...+v_n"
+        ],
+        "must_test": [
+          "عدد الحدود",
+          "الحد الأول في المجموع",
+          "الأساس q"
+        ],
+        "may_vary": [
+          "رتبة البداية",
+          "q"
+        ],
+        "must_not_change": [
+          "المجموع هندسي."
+        ],
+        "forbidden_concepts": [
+          "مجموع حسابي"
+        ]
+      }
+    },
+    {
+      "idea_code": "SEQ_BAC_43",
+      "title": "حساب مجموع هندسي يبدأ من رتبة متغيرة",
+      "description": "حساب مجموع مثل v_n+v_{n+1}+...+v_{n+p} أو مجموع يمتد من رتبة تعتمد على n إلى رتبة أخرى.",
+      "bac_priority": "high",
+      "frequency_level": "low",
+      "occurrence_count": 2,
+      "years": [
+        2017,
+        2024
+      ],
+      "last_seen_year": 2024,
+      "skill_refs": [],
+      "required_skills": [],
+      "prerequisites": [],
+      "external_prerequisites": [],
+      "difficulty_range": {
+        "min": 2,
+        "max": 3
+      },
+      "variants": [
+        {
+          "variant_code": "SEQ_BAC_43_V01",
+          "title": "مجموع نافذة هندسية",
+          "description": "استخراج v_n كعامل ثم جمع 1+q+...+q^p.",
+          "years": [
+            2017,
+            2024
+          ],
+          "occurrence_count": 2,
+          "difficulty": 2,
+          "skill_idea_codes": [],
+          "required_skills": [],
+          "distinguishing_feature": "الحد الأول للمجموع نفسه يعتمد على n."
+        }
+      ],
+      "common_errors": [
+        {
+          "code": "SEQ_BAC_43_FACTOR",
+          "description": "عدم استخراج v_n أو q^n عاملا مشتركا بشكل صحيح.",
+          "severity": "high",
+          "related_skill_idea_codes": []
+        }
+      ],
+      "bac_occurrences": [
+        {
+          "year": 2017,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_43: حساب مجموع هندسي يبدأ من رتبة متغيرة.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2024,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_43: حساب مجموع هندسي يبدأ من رتبة متغيرة.",
+          "skill_idea_codes": []
+        }
+      ],
+      "mastery_requirements": {
+        "must_cover_variants": [
+          "SEQ_BAC_43_V01"
+        ],
+        "minimum_successful_variants": 1,
+        "requires_bac_style_question": true,
+        "required_skill_idea_codes": [],
+        "notes": "هذه الفكرة جزء من بنك أفكار البكالوريا للمحور السادس فقط."
+      },
+      "generation_guidance": {
+        "allowed_structures": [
+          "v_n+...+v_{n+p}"
+        ],
+        "must_test": [
+          "استخراج العامل",
+          "عدد الحدود p+1",
+          "صيغة المجموع"
+        ],
+        "may_vary": [
+          "p",
+          "q"
+        ],
+        "must_not_change": [
+          "بداية المجموع تعتمد على n."
+        ],
+        "forbidden_concepts": [
+          "مجموع ثابت البداية فقط"
+        ]
+      }
+    },
+    {
+      "idea_code": "SEQ_BAC_44",
+      "title": "حساب مجموع هندسي موزون",
+      "description": "حساب مجموع مثل v_0+5v_1+5^2v_2+... بعد ملاحظة أن الحدود الموزونة نفسها تشكل متتالية هندسية جديدة.",
+      "bac_priority": "high",
+      "frequency_level": "rare",
+      "occurrence_count": 1,
+      "years": [
+        2025
+      ],
+      "last_seen_year": 2025,
+      "skill_refs": [],
+      "required_skills": [],
+      "prerequisites": [],
+      "external_prerequisites": [],
+      "difficulty_range": {
+        "min": 2,
+        "max": 3
+      },
+      "variants": [
+        {
+          "variant_code": "SEQ_BAC_44_V01",
+          "title": "أوزان على شكل a^k",
+          "description": "تحويل a^k v_k إلى متتالية هندسية ثم جمعها.",
+          "years": [
+            2025
+          ],
+          "occurrence_count": 1,
+          "difficulty": 3,
+          "skill_idea_codes": [],
+          "required_skills": [],
+          "distinguishing_feature": "الأوزان الأسية تغير الأساس الفعلي للمجموع."
+        }
+      ],
+      "common_errors": [
+        {
+          "code": "SEQ_BAC_44_EFFECTIVE_RATIO",
+          "description": "عدم حساب الأساس الجديد للحدود الموزونة.",
+          "severity": "high",
+          "related_skill_idea_codes": []
+        }
+      ],
+      "bac_occurrences": [
+        {
+          "year": 2025,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_44: حساب مجموع هندسي موزون.",
+          "skill_idea_codes": []
+        }
+      ],
+      "mastery_requirements": {
+        "must_cover_variants": [
+          "SEQ_BAC_44_V01"
+        ],
+        "minimum_successful_variants": 1,
+        "requires_bac_style_question": true,
+        "required_skill_idea_codes": [],
+        "notes": "هذه الفكرة جزء من بنك أفكار البكالوريا للمحور السادس فقط."
+      },
+      "generation_guidance": {
+        "allowed_structures": [
+          "Σ a^k v_k عندما v_k هندسية."
+        ],
+        "must_test": [
+          "كتابة الحد العام الموزون",
+          "استخراج الأساس الجديد",
+          "حساب المجموع"
+        ],
+        "may_vary": [
+          "a",
+          "q"
+        ],
+        "must_not_change": [
+          "المجموع يحتوي أوزانا أسية."
+        ],
+        "forbidden_concepts": [
+          "مجموع هندسي عادي بلا أوزان"
+        ]
+      }
+    },
+    {
+      "idea_code": "SEQ_BAC_45",
+      "title": "استنتاج مجموع حدود u_n من مجموع v_n",
+      "description": "استعمال علاقة بسيطة بين u_n وv_n مثل u_n=L+v_n، ثم تحويل مجموع u_n إلى مجموع ثابتات زائد مجموع هندسي.",
+      "bac_priority": "high",
+      "frequency_level": "medium",
+      "occurrence_count": 4,
+      "years": [
+        2010,
+        2014,
+        2020,
+        2023
+      ],
+      "last_seen_year": 2023,
+      "skill_refs": [],
+      "required_skills": [],
+      "prerequisites": [],
+      "external_prerequisites": [],
+      "difficulty_range": {
+        "min": 2,
+        "max": 3
+      },
+      "variants": [
+        {
+          "variant_code": "SEQ_BAC_45_V01",
+          "title": "الرجوع من إزاحة داخل المجموع",
+          "description": "إذا u_n=L+v_n، فإن مجموع u_n يحسب من مجموع v_n.",
+          "years": [
+            2010,
+            2014,
+            2020,
+            2023
+          ],
+          "occurrence_count": 4,
+          "difficulty": 2,
+          "skill_idea_codes": [],
+          "required_skills": [],
+          "distinguishing_feature": "المجموع الأصلي يفك إلى جزء ثابت وجزء هندسي."
+        }
+      ],
+      "common_errors": [
+        {
+          "code": "SEQ_BAC_45_CONSTANT_COUNT",
+          "description": "نسيان ضرب الثابت L في عدد الحدود.",
+          "severity": "high",
+          "related_skill_idea_codes": []
+        }
+      ],
+      "bac_occurrences": [
+        {
+          "year": 2010,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_45: استنتاج مجموع حدود u_n من مجموع v_n.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2014,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_45: استنتاج مجموع حدود u_n من مجموع v_n.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2020,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_45: استنتاج مجموع حدود u_n من مجموع v_n.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2023,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_45: استنتاج مجموع حدود u_n من مجموع v_n.",
+          "skill_idea_codes": []
+        }
+      ],
+      "mastery_requirements": {
+        "must_cover_variants": [
+          "SEQ_BAC_45_V01"
+        ],
+        "minimum_successful_variants": 1,
+        "requires_bac_style_question": true,
+        "required_skill_idea_codes": [],
+        "notes": "هذه الفكرة جزء من بنك أفكار البكالوريا للمحور السادس فقط."
+      },
+      "generation_guidance": {
+        "allowed_structures": [
+          "u_k=L+v_k ثم طلب Σu_k."
+        ],
+        "must_test": [
+          "فك المجموع",
+          "عدد الحدود",
+          "استعمال مجموع v_k"
+        ],
+        "may_vary": [
+          "L",
+          "رتب المجموع"
+        ],
+        "must_not_change": [
+          "المجموع الأصلي يجب أن يستنتج من مجموع المتتالية الهندسية المساعدة."
+        ],
+        "forbidden_concepts": [
+          "حساب Σu_k مباشرة دون v_k"
+        ]
+      }
+    },
+    {
+      "idea_code": "SEQ_BAC_46",
+      "title": "استنتاج مجموع مقلوبات باستعمال علاقة بين u_n وv_n",
+      "description": "تحويل مجموع من الشكل Σ1/(u_n+a) إلى مجموع هندسي أو إلى تعبير يمكن حسابه باستعمال المتتالية المساعدة.",
+      "bac_priority": "critical",
+      "frequency_level": "high",
+      "occurrence_count": 4,
+      "years": [
+        2016,
+        2017,
+        2024,
+        2026
+      ],
+      "last_seen_year": 2026,
+      "skill_refs": [],
+      "required_skills": [],
+      "prerequisites": [],
+      "external_prerequisites": [],
+      "difficulty_range": {
+        "min": 2,
+        "max": 3
+      },
+      "variants": [
+        {
+          "variant_code": "SEQ_BAC_46_V01",
+          "title": "المقلوب يساوي تعبيرا خطيا في v_n",
+          "description": "استخراج 1/(u_n+a)=A+Bv_n ثم جمع الحدود.",
+          "years": [
+            2016,
+            2017,
+            2024,
+            2026
+          ],
+          "occurrence_count": 4,
+          "difficulty": 3,
+          "skill_idea_codes": [],
+          "required_skills": [],
+          "distinguishing_feature": "المجموع المطلوب ليس v_n مباشرة بل مقلوبات u_n."
+        }
+      ],
+      "common_errors": [
+        {
+          "code": "SEQ_BAC_46_TRANSFORM_SUM",
+          "description": "خطأ في التعبير عن المقلوب بدلالة v_n.",
+          "severity": "high",
+          "related_skill_idea_codes": []
+        },
+        {
+          "code": "SEQ_BAC_46_INDEX",
+          "description": "الخطأ في رتب بداية ونهاية المجموع.",
+          "severity": "high",
+          "related_skill_idea_codes": []
+        }
+      ],
+      "bac_occurrences": [
+        {
+          "year": 2016,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_46: استنتاج مجموع مقلوبات باستعمال علاقة بين u_n وv_n.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2017,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_46: استنتاج مجموع مقلوبات باستعمال علاقة بين u_n وv_n.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2024,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_46: استنتاج مجموع مقلوبات باستعمال علاقة بين u_n وv_n.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2026,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_46: استنتاج مجموع مقلوبات باستعمال علاقة بين u_n وv_n.",
+          "skill_idea_codes": []
+        }
+      ],
+      "mastery_requirements": {
+        "must_cover_variants": [
+          "SEQ_BAC_46_V01"
+        ],
+        "minimum_successful_variants": 1,
+        "requires_bac_style_question": true,
+        "required_skill_idea_codes": [],
+        "notes": "هذه الفكرة جزء من بنك أفكار البكالوريا للمحور السادس فقط."
+      },
+      "generation_guidance": {
+        "allowed_structures": [
+          "Σ1/(u_k+a) مع تحويل مساعد مناسب."
+        ],
+        "must_test": [
+          "استخراج العلاقة مع v_k",
+          "تحويل المجموع",
+          "استعمال صيغة هندسية"
+        ],
+        "may_vary": [
+          "a",
+          "حدود الجمع"
+        ],
+        "must_not_change": [
+          "المجموع يجب أن يعتمد على مقلوبات مرتبطة بمتتالية هندسية مساعدة."
+        ],
+        "forbidden_concepts": [
+          "مجموع مقلوبات عشوائي لا علاقة له بـv_n"
+        ]
+      }
+    },
+    {
+      "idea_code": "SEQ_BAC_47",
+      "title": "حساب جداء حدود هندسية أو حدود مرتبطة بها",
+      "description": "استعمال الحد العام الهندسي أو خواص الأسس لحساب جداء من الشكل v_0v_1...v_n أو جداء حدود مرتبطة بمتتالية هندسية.",
+      "bac_priority": "high",
+      "frequency_level": "medium",
+      "occurrence_count": 4,
+      "years": [
+        2012,
+        2019,
+        2021,
+        2022
+      ],
+      "last_seen_year": 2022,
+      "skill_refs": [],
+      "required_skills": [],
+      "prerequisites": [],
+      "external_prerequisites": [],
+      "difficulty_range": {
+        "min": 2,
+        "max": 3
+      },
+      "variants": [
+        {
+          "variant_code": "SEQ_BAC_47_V01",
+          "title": "جداء حدود هندسية",
+          "description": "تعويض v_k=v_0q^k ثم جمع الأسس داخل الجداء.",
+          "years": [
+            2012,
+            2022
+          ],
+          "occurrence_count": 2,
+          "difficulty": 2,
+          "skill_idea_codes": [],
+          "required_skills": [],
+          "distinguishing_feature": "الجداء مباشر على حدود المتتالية الهندسية."
+        },
+        {
+          "variant_code": "SEQ_BAC_47_V02",
+          "title": "جداء حدود مرتبطة بتحويل هندسي",
+          "description": "تحويل الجداء إلى صيغة أسية أو لوغاريتمية باستعمال بنية v_n.",
+          "years": [
+            2019,
+            2021
+          ],
+          "occurrence_count": 2,
+          "difficulty": 3,
+          "skill_idea_codes": [],
+          "required_skills": [],
+          "distinguishing_feature": "الجداء لا يكون على v_n مباشرة بل على تعبير مرتبط بها."
+        }
+      ],
+      "common_errors": [
+        {
+          "code": "SEQ_BAC_47_EXPONENT_SUM",
+          "description": "خطأ في مجموع الأسس 0+1+...+n.",
+          "severity": "high",
+          "related_skill_idea_codes": []
+        },
+        {
+          "code": "SEQ_BAC_47_TERM_COUNT",
+          "description": "الخطأ في عدد العوامل.",
+          "severity": "high",
+          "related_skill_idea_codes": []
+        }
+      ],
+      "bac_occurrences": [
+        {
+          "year": 2012,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_47: حساب جداء حدود هندسية أو حدود مرتبطة بها.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2019,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_47: حساب جداء حدود هندسية أو حدود مرتبطة بها.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2021,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_47: حساب جداء حدود هندسية أو حدود مرتبطة بها.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2022,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_47: حساب جداء حدود هندسية أو حدود مرتبطة بها.",
+          "skill_idea_codes": []
+        }
+      ],
+      "mastery_requirements": {
+        "must_cover_variants": [
+          "SEQ_BAC_47_V01"
+        ],
+        "minimum_successful_variants": 1,
+        "requires_bac_style_question": true,
+        "required_skill_idea_codes": [],
+        "notes": "هذه الفكرة جزء من بنك أفكار البكالوريا للمحور السادس فقط."
+      },
+      "generation_guidance": {
+        "allowed_structures": [
+          "Πv_k",
+          "جداء تعبيرات مرتبطة بمتتالية هندسية"
+        ],
+        "must_test": [
+          "الحد العام",
+          "جمع الأسس",
+          "عدد العوامل"
+        ],
+        "may_vary": [
+          "رتبة البداية",
+          "رتبة النهاية"
+        ],
+        "must_not_change": [
+          "الجداء يجب أن يستغل البنية الهندسية."
+        ],
+        "forbidden_concepts": [
+          "جداء لا يستخدم q أو الحد العام"
+        ]
+      }
+    },
+    {
+      "idea_code": "SEQ_BAC_48",
+      "title": "حساب مجموع لوغاريتمات حدود هندسية",
+      "description": "استعمال أن ln|v_n| يشكل متتالية حسابية عندما تكون |v_n| هندسية، ثم حساب مجموع من الشكل Σln|v_k|.",
+      "bac_priority": "high",
+      "frequency_level": "low",
+      "occurrence_count": 2,
+      "years": [
+        2015,
+        2025
+      ],
+      "last_seen_year": 2025,
+      "skill_refs": [],
+      "required_skills": [],
+      "prerequisites": [],
+      "external_prerequisites": [],
+      "difficulty_range": {
+        "min": 2,
+        "max": 3
+      },
+      "variants": [
+        {
+          "variant_code": "SEQ_BAC_48_V01",
+          "title": "مجموع ln|v_k|",
+          "description": "إذا v_n=v_0q^n، فإن ln|v_n|=ln|v_0|+n ln|q| ثم يحسب مجموع حسابي.",
+          "years": [
+            2015,
+            2025
+          ],
+          "occurrence_count": 2,
+          "difficulty": 3,
+          "skill_idea_codes": [],
+          "required_skills": [],
+          "distinguishing_feature": "السؤال يبدأ بمتتالية هندسية وينتهي بمجموع لوغاريتمي حسابي."
+        }
+      ],
+      "common_errors": [
+        {
+          "code": "SEQ_BAC_48_LOG_ABS",
+          "description": "إهمال القيمة المطلقة أو شرط تعريف اللوغاريتم.",
+          "severity": "high",
+          "related_skill_idea_codes": []
+        },
+        {
+          "code": "SEQ_BAC_48_ARITH_SUM",
+          "description": "الخطأ في اعتبار ln|v_n| هندسية بدل حسابية.",
+          "severity": "high",
+          "related_skill_idea_codes": []
+        }
+      ],
+      "bac_occurrences": [
+        {
+          "year": 2015,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_48: حساب مجموع لوغاريتمات حدود هندسية.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2025,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_48: حساب مجموع لوغاريتمات حدود هندسية.",
+          "skill_idea_codes": []
+        }
+      ],
+      "mastery_requirements": {
+        "must_cover_variants": [
+          "SEQ_BAC_48_V01"
+        ],
+        "minimum_successful_variants": 1,
+        "requires_bac_style_question": true,
+        "required_skill_idea_codes": [],
+        "notes": "هذه الفكرة جزء من بنك أفكار البكالوريا للمحور السادس فقط."
+      },
+      "generation_guidance": {
+        "allowed_structures": [
+          "T_n=Σln|v_k| بعد إثبات هندسية v_n."
+        ],
+        "must_test": [
+          "كتابة ln|v_n|",
+          "تمييز الحسابية الناتجة",
+          "حساب مجموعها"
+        ],
+        "may_vary": [
+          "v_0",
+          "q",
+          "رتب الجمع"
+        ],
+        "must_not_change": [
+          "يجب استغلال اللوغاريتم لتحويل البنية الهندسية إلى حسابية."
+        ],
+        "forbidden_concepts": [
+          "مجموع لوغاريتمات غير مرتبط بمتتالية هندسية"
+        ]
+      }
+    }
+  ],
+  "coverage_summary": {
+    "total_skills": 0,
+    "total_skill_ideas": 0,
+    "total_bac_ideas": 18,
+    "total_variants": 25,
+    "critical_bac_ideas": [
+      "SEQ_BAC_32",
+      "SEQ_BAC_34",
+      "SEQ_BAC_36",
+      "SEQ_BAC_37",
+      "SEQ_BAC_40",
+      "SEQ_BAC_41",
+      "SEQ_BAC_42",
+      "SEQ_BAC_46"
+    ],
+    "high_priority_bac_ideas": [
+      "SEQ_BAC_31",
+      "SEQ_BAC_33",
+      "SEQ_BAC_35",
+      "SEQ_BAC_38",
+      "SEQ_BAC_39",
+      "SEQ_BAC_43",
+      "SEQ_BAC_44",
+      "SEQ_BAC_45",
+      "SEQ_BAC_47",
+      "SEQ_BAC_48"
+    ],
+    "skills_covered_by_bac": [],
+    "skills_not_seen_in_bac": [],
+    "skill_ideas_not_seen_in_bac": [],
+    "years_covered": [
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "bac_statistics": {
+      "total_bac_ideas": 18,
+      "total_variants": 25,
+      "most_frequent_ideas": [
+        "SEQ_BAC_32",
+        "SEQ_BAC_40",
+        "SEQ_BAC_41"
+      ],
+      "latest_bac_year": 2026,
+      "rare_ideas": [
+        "SEQ_BAC_35",
+        "SEQ_BAC_38",
+        "SEQ_BAC_39",
+        "SEQ_BAC_44"
+      ],
+      "idea_occurrence_counts": {
+        "SEQ_BAC_31": 4,
+        "SEQ_BAC_32": 15,
+        "SEQ_BAC_33": 2,
+        "SEQ_BAC_34": 6,
+        "SEQ_BAC_35": 1,
+        "SEQ_BAC_36": 6,
+        "SEQ_BAC_37": 3,
+        "SEQ_BAC_38": 1,
+        "SEQ_BAC_39": 1,
+        "SEQ_BAC_40": 15,
+        "SEQ_BAC_41": 14,
+        "SEQ_BAC_42": 8,
+        "SEQ_BAC_43": 2,
+        "SEQ_BAC_44": 1,
+        "SEQ_BAC_45": 4,
+        "SEQ_BAC_46": 4,
+        "SEQ_BAC_47": 4,
+        "SEQ_BAC_48": 2
+      }
+    }
+  }
+}

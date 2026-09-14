@@ -1,0 +1,240 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "session": "ordinary",
+  "year": 2014,
+  "chapter_code": "complex_numbers",
+  "chapter_title": "الأعداد المركبة",
+  "branches": [
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "version": "4.2-2014-technical-math-complex-subject1-ex01",
+  "subject_number": 1,
+  "exercise_number": 1,
+  "source_page": 1,
+  "source_pages": [
+    1
+  ],
+  "solution_source_pages": [
+    5
+  ],
+  "title": "التمرين الأول — بكالوريا الجزائر 2014 — الموضوع الأول — شعبة تقني رياضي",
+  "axis_tags": [
+    "complex_equations",
+    "complex_exponential_form",
+    "complex_direct_similarity",
+    "complex_geometry",
+    "complex_geometric_locus"
+  ],
+  "statement": "",
+  "questions": [
+    {
+      "id": "2014_tm_s1_complex_ex01_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) حل في مجموعة الأعداد المركبة \\(\\mathbb{C}\\) المعادلة: \\((z-i)(z^2-2\\sqrt3\\,z+4)=0\\).",
+      "axis_tags": [
+        "complex_equations"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل خاصية الجداء المعدوم، فنحل العامل الخطي ثم المعادلة من الدرجة الثانية.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حل العامل الأول",
+            "explanation": "\\[\nz-i=0\\Rightarrow z=i.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حل المعادلة الثانية",
+            "explanation": "نحل:\n\\[\nz^2-2\\sqrt3\\,z+4=0.\n\\]\nالمميز:\n\\[\n\\Delta=(2\\sqrt3)^2-16=12-16=-4=(2i)^2.\n\\]\nإذن:\n\\[\nz=\\frac{2\\sqrt3\\pm2i}{2}=\\sqrt3\\pm i.\n\\]"
+          }
+        ],
+        "final_answer": "\\(S=\\{i,\\sqrt3+i,\\sqrt3-i\\}\\)."
+      }
+    },
+    {
+      "id": "2014_tm_s1_complex_ex01_q2a",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2) المستوى المركب منسوب إلى المعلم المتعامد المتجانس \\((O;\\vec u,\\vec v)\\). نسمي \\(A\\)، \\(B\\) و \\(C\\) نقط المستوى التي لواحقها على الترتيب: \\(z_1=\\sqrt3+i\\)، \\(z_2=\\sqrt3-i\\) و \\(z_3=i\\).\nأ) اكتب العدد \\(\\frac{z_1}{z_2}\\) على الشكل الأسي.",
+      "axis_tags": [
+        "complex_exponential_form"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نكتب z1 وz2 على الشكل الأسي أو نحسب النسبة مباشرة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "كتابة z1 و z2",
+            "explanation": "لدينا:\n\\[\nz_1=2e^{i\\pi/6},\\qquad z_2=2e^{-i\\pi/6}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب النسبة",
+            "explanation": "\\[\n\\frac{z_1}{z_2}=e^{i\\pi/6-i(-\\pi/6)}=e^{i\\pi/3}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\frac{z_1}{z_2}=e^{i\\pi/3}\\)."
+      }
+    },
+    {
+      "id": "2014_tm_s1_complex_ex01_q2b",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "ب) هل توجد قيم للعدد الطبيعي \\(n\\) يكون من أجلها العدد المركب \\(\\left(\\frac{z_1}{z_2}\\right)^n\\) تخيليا صرفا؟ برر إجابتك.",
+      "axis_tags": [
+        "complex_powers"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل الشكل الأسي السابق. العدد يكون تخيليا صرفا عندما تكون عمدته مساوية لـ \\(\\frac{\\pi}{2}+k\\pi\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "رفع النسبة للقوة n",
+            "explanation": "من السؤال السابق:\n\\[\n\\left(\\frac{z_1}{z_2}\\right)^n=e^{in\\pi/3}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "شرط العدد التخيلي الصرف",
+            "explanation": "لكي يكون العدد تخيليا صرفا يجب أن يوجد \\(k\\in\\mathbb Z\\) بحيث:\n\\[\n\\frac{n\\pi}{3}=\\frac{\\pi}{2}+k\\pi.\n\\]\nإذن:\n\\[\n2n=3+6k.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "فحص المعادلة",
+            "explanation": "الطرف الأيسر زوجي، والطرف الأيمن فردي، وهذا مستحيل. إذن لا يوجد أي عدد طبيعي \\(n\\) يحقق الشرط."
+          }
+        ],
+        "final_answer": "لا توجد أي قيمة طبيعية لـ \\(n\\) تجعل \\(\\left(\\frac{z_1}{z_2}\\right)^n\\) تخيليا صرفا."
+      }
+    },
+    {
+      "id": "2014_tm_s1_complex_ex01_q3a",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "3) أ) عين العبارة المركبة للتشابه المباشر \\(S\\) الذي مركزه \\(A\\) ويحول \\(B\\) إلى \\(C\\)، محددا نسبته وزاويته.",
+      "axis_tags": [
+        "complex_direct_similarity"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل الصيغة \\(z'-z_A=a(z-z_A)\\)، ونحسب المعامل a من صورة B وهي C.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب معامل التشابه",
+            "explanation": "لدينا:\n\\[\na=\\frac{z_C-z_A}{z_B-z_A}.\n\\]\nأي:\n\\[\na=\\frac{i-(\\sqrt3+i)}{(\\sqrt3-i)-(\\sqrt3+i)}\n=\\frac{-\\sqrt3}{-2i}=-\\frac{\\sqrt3}{2}i.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "كتابة المعامل أسيًا",
+            "explanation": "\\[\n-\\frac{\\sqrt3}{2}i=\\frac{\\sqrt3}{2}e^{-i\\pi/2}.\n\\]\nإذن نسبة التشابه:\n\\[\nk=\\frac{\\sqrt3}{2},\n\\]\nوزاويته:\n\\[\n\\theta=-\\frac{\\pi}{2}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "العبارة المركبة",
+            "explanation": "الصيغة حول المركز \\(A\\) هي:\n\\[\nz'-z_1=-\\frac{\\sqrt3}{2}i(z-z_1).\n\\]\nوبالنشر:\n\\[\nz'=-\\frac{\\sqrt3}{2}iz+\\frac{\\sqrt3}{2}+\\frac52i.\n\\]"
+          }
+        ],
+        "final_answer": "\\(z'=-\\frac{\\sqrt3}{2}iz+\\frac{\\sqrt3}{2}+\\frac52i\\)، النسبة \\(\\frac{\\sqrt3}{2}\\)، والزاوية \\(-\\frac{\\pi}{2}\\)."
+      }
+    },
+    {
+      "id": "2014_tm_s1_complex_ex01_q3b",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "ب) استنتج طبيعة المثلث \\(ABC\\).",
+      "axis_tags": [
+        "complex_geometry"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "التشابه مركزه A يحول B إلى C بزاوية قائمة، لذلك AB عمودي على AC.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "استعمال زاوية التشابه",
+            "explanation": "زاوية التشابه هي:\n\\[\n-\\frac{\\pi}{2}.\n\\]\nإذن الشعاع \\(\\overrightarrow{AB}\\) يتحول إلى شعاع مواز لـ \\(\\overrightarrow{AC}\\) بعد دوران بزاوية قائمة."
+          },
+          {
+            "step_number": 2,
+            "title": "الاستنتاج",
+            "explanation": "إذن:\n\\[\nAB\\perp AC.\n\\]\nوعليه فالمثلث \\(ABC\\) قائم في \\(A\\)."
+          }
+        ],
+        "final_answer": "المثلث \\(ABC\\) قائم في \\(A\\)."
+      }
+    },
+    {
+      "id": "2014_tm_s1_complex_ex01_q4a",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "4) أ) عين العناصر المميزة لـ \\((E)\\) مجموعة النقط \\(M\\) من المستوى ذات اللاحقة \\(z\\) والتي تحقق:\n\\[\n|z-z_1|^2+|z-z_3|^2=5.\n\\]",
+      "axis_tags": [
+        "complex_geometric_locus"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل علاقة مجموع مربعي المسافتين إلى نقطتين ثابتتين بالنسبة إلى منتصف القطعة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تحديد النقطتين",
+            "explanation": "لدينا:\n\\[\nA(\\sqrt3,1),\\qquad C(0,1).\n\\]\nإذن الشرط هو:\n\\[\nMA^2+MC^2=5.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "استعمال منتصف AC",
+            "explanation": "ليكن \\(\\Omega\\) منتصف \\([AC]\\). إذن:\n\\[\n\\Omega\\left(\\frac{\\sqrt3}{2},1\\right).\n\\]\nوبحسب علاقة أبولونيوس:\n\\[\nMA^2+MC^2=2M\\Omega^2+\\frac{AC^2}{2}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب نصف القطر",
+            "explanation": "لدينا:\n\\[\nAC=\\sqrt3 \\Rightarrow AC^2=3.\n\\]\nإذن:\n\\[\n5=2M\\Omega^2+\\frac32.\n\\]\nومنها:\n\\[\n2M\\Omega^2=\\frac72,\n\\]\nأي:\n\\[\nM\\Omega^2=\\frac74.\n\\]\nإذن:\n\\[\nM\\Omega=\\frac{\\sqrt7}{2}.\n\\]"
+          }
+        ],
+        "final_answer": "\\((E)\\) دائرة مركزها \\(\\Omega(\\frac{\\sqrt3}{2},1)\\) ونصف قطرها \\(\\frac{\\sqrt7}{2}\\)."
+      }
+    },
+    {
+      "id": "2014_tm_s1_complex_ex01_q4b",
+      "display_order": 7,
+      "content_type": "question",
+      "text": "ب) عين \\((E')\\) مجموعة النقط \\(M\\) من المستوى التي لاحقتها \\(z\\) حيث: \\(|z-z_1|=|z-z_3|\\).",
+      "axis_tags": [
+        "complex_geometric_locus"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "تساوي المسافتين إلى A وC يعني أن M تنتمي إلى محور القطعة [AC].",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تفسير الشرط",
+            "explanation": "\\[\n|z-z_1|=|z-z_3|\\iff MA=MC.\n\\]\nإذن \\((E')\\) هو محور القطعة \\([AC]\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "معادلة المحور",
+            "explanation": "النقطتان \\(A(\\sqrt3,1)\\) و\\(C(0,1)\\) لهما نفس الترتيب، فالقطعة \\([AC]\\) أفقية. منتصفها فاصلتُه:\n\\[\n\\frac{\\sqrt3}{2}.\n\\]\nإذن محور القطعة هو المستقيم العمودي:\n\\[\nx=\\frac{\\sqrt3}{2}.\n\\]"
+          }
+        ],
+        "final_answer": "\\((E')\\) هو محور القطعة \\([AC]\\)، ومعادلته \\(x=\\frac{\\sqrt3}{2}\\)."
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2014(1).pdf",
+    "statement_page": 1,
+    "correction_page": 5
+  }
+}

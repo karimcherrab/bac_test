@@ -1,0 +1,199 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "session": "ordinary",
+  "year": 2025,
+  "chapter_code": "probability",
+  "chapter_title": "الاحتمالات",
+  "branches": [
+    {
+      "code": "science",
+      "name": "شعبة علوم تجريبية"
+    }
+  ],
+  "version": "4.2-2025-science-probability-subject2-ex02",
+  "axis_tags": [
+    "probability_counting",
+    "probability_events_law",
+    "probability_tree_total_probability",
+    "probability_conditional",
+    "probability_draw_modeling"
+  ],
+  "exercise_number": 2,
+  "subject_number": 2,
+  "source_page": 3,
+  "source_pages": [
+    3
+  ],
+  "solution_source_pages": [
+    8,
+    9
+  ],
+  "title": "التمرين الثاني — بكالوريا الجزائر 2025 — الموضوع الثاني — شعبة علوم تجريبية",
+  "statement": "I) يحتوي صندوق U₁ على 6 كريات متماثلة ولا نفرق بينها باللمس منها: 3 كريات خضراء وكريتان حمراوان وكرية بيضاء واحدة. نسحب عشوائيا من الصندوق U₁ كريتين في آن واحد ونعتبر الحادثتين:\nE : « الحصول على كرية حمراء واحدة فقط » ، F : « الحصول على كريتين من نفس اللون ».\n1) احسب P(E) احتمال الحادثة E\n2) بين أن P(F) احتمال الحادثة F يساوي 4/15 ثم استنتج احتمال الحصول على كريتين من لونين مختلفين.\nII) يحتوي صندوق آخر U₂ على 6 كريات متماثلة ولا نفرق بينها باللمس منها: 4 كريات خضراء وكريتان حمراوان.\nنرمز بـ V، R، B إلى خضراء، حمراء، بيضاء على الترتيب، ونسحب عشوائيا من U₂ كرية واحدة ونسجل لونها.\n- إذا كانت الكرية المسحوبة خضراء، نسحب كرية أخرى من U₂ دون إرجاع الكرية الأولى.\n- وإذا كانت الكرية المسحوبة حمراء، نسحب كرية واحدة من U₁.\n1) انقل واملأ شجرة الاحتمالات المقابلة.\n2) أ) ما احتمال الحصول على كرية حمراء في السحب الثاني؟\nب) بين أن احتمال الحصول على كرية خضراء في السحب الأول علما أن الكرية الثانية المسحوبة حمراء يساوي 12/17",
+  "questions": [
+    {
+      "id": "2025_s2_probability_ex02_I_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "I) 1) احسب \\(P(E)\\) احتمال الحادثة \\(E\\).",
+      "axis_tags": [
+        "probability_counting",
+        "probability_events_law"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "السحب لكريتين في آن واحد، لذلك نستعمل التوفيقات. للحصول على كرية حمراء واحدة فقط نختار حمراء واحدة من 2 وكرية غير حمراء من 4.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "عدد الحالات الممكنة",
+            "explanation": "\\[\\binom62=15\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "عدد الحالات الملائمة",
+            "explanation": "لدينا كريتان حمراوان و4 كريات غير حمراء:\n\\[\\binom21\\binom41=2\\times4=8\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب الاحتمال",
+            "explanation": "\\[P(E)=\\frac{8}{15}\\]"
+          }
+        ],
+        "final_answer": "\\(\\displaystyle P(E)=\\frac8{15}\\)."
+      }
+    },
+    {
+      "id": "2025_s2_probability_ex02_I_q2",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "I) 2) بين أن \\(P(F)\\) احتمال الحادثة \\(F\\) يساوي \\(\\frac4{15}\\) ثم استنتج احتمال الحصول على كريتين من لونين مختلفين.",
+      "axis_tags": [
+        "probability_counting",
+        "probability_events_law"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "الكريتان من نفس اللون تعنيان إما خضراوين أو حمراوين. لا يمكن سحب كريتين بيضاوين لوجود كرية بيضاء واحدة فقط.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب P(F)",
+            "explanation": "\\[P(F)=\\frac{\\binom32+\\binom22}{\\binom62}\\]\n\\[P(F)=\\frac{3+1}{15}=\\frac4{15}\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "لونان مختلفان",
+            "explanation": "الحصول على كريتين من لونين مختلفين هو الحادثة المضادة لـ \\(F\\):\n\\[P(\\overline F)=1-\\frac4{15}=\\frac{11}{15}\\]"
+          }
+        ],
+        "final_answer": "\\(\\displaystyle P(F)=\\frac4{15}\\)، واحتمال الحصول على كريتين من لونين مختلفين هو \\(\\displaystyle\\frac{11}{15}\\)."
+      }
+    },
+    {
+      "id": "2025_s2_probability_ex02_II_q1",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "II) 1) انقل واملأ شجرة الاحتمالات المقابلة.",
+      "axis_tags": [
+        "probability_tree_total_probability",
+        "probability_draw_modeling"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب فروع السحب الأول من U₂، ثم ننتبه إلى أن الصندوق المستعمل في السحب الثاني يتغير حسب لون الكرية الأولى.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "السحب الأول من U₂",
+            "explanation": "في \\(U_2\\) أربع خضراء وكريتان حمراوان:\n\\[P(V)=\\frac46=\\frac23,\\qquad P(R)=\\frac26=\\frac13\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "بعد سحب خضراء",
+            "explanation": "إذا كانت الأولى خضراء، نسحب ثانية من \\(U_2\\) دون إرجاع الأولى. يبقى 3 خضراء و2 حمراء من أصل 5:\n\\[P(V\\mid V)=\\frac35,\\qquad P(R\\mid V)=\\frac25\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "بعد سحب حمراء",
+            "explanation": "إذا كانت الأولى حمراء، يكون السحب الثاني من \\(U_1\\)، الذي يحتوي 3 خضراء و2 حمراء و1 بيضاء:\n\\[P(V\\mid R)=\\frac36=\\frac12\\]\n\\[P(R\\mid R)=\\frac26=\\frac13\\]\n\\[P(B\\mid R)=\\frac16\\]"
+          }
+        ],
+        "final_answer": "الشجرة: أولا \\(V:\\frac23\\)، \\(R:\\frac13\\). بعد \\(V\\): \\(V:\\frac35\\)، \\(R:\\frac25\\). بعد \\(R\\): \\(V:\\frac12\\)، \\(R:\\frac13\\)، \\(B:\\frac16\\)."
+      }
+    },
+    {
+      "id": "2025_s2_probability_ex02_II_q2a",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "II) 2) أ) ما احتمال الحصول على كرية حمراء في السحب الثاني؟",
+      "axis_tags": [
+        "probability_tree_total_probability"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "يمكن أن تكون الكرية الثانية حمراء عبر مسارين: الأولى خضراء ثم الثانية حمراء، أو الأولى حمراء ثم الثانية حمراء.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "المسار V ثم R",
+            "explanation": "\\[P(V\\cap R_2)=\\frac23\\times\\frac25=\\frac4{15}\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "المسار R ثم R",
+            "explanation": "\\[P(R_1\\cap R_2)=\\frac13\\times\\frac13=\\frac19\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "جمع المسارين",
+            "explanation": "\\[P(R_2)=\\frac4{15}+\\frac19=\\frac{12+5}{45}=\\frac{17}{45}\\]"
+          }
+        ],
+        "final_answer": "\\(\\displaystyle P(R_2)=\\frac{17}{45}\\)."
+      }
+    },
+    {
+      "id": "2025_s2_probability_ex02_II_q2b",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "II) 2) ب) بين أن احتمال الحصول على كرية خضراء في السحب الأول علما أن الكرية الثانية المسحوبة حمراء يساوي \\(\\frac{12}{17}\\).",
+      "axis_tags": [
+        "probability_conditional",
+        "probability_tree_total_probability"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "هذا احتمال شرطي. نرمز إلى الحصول على خضراء في السحب الأول بـ \\(V_1\\)، وإلى الحصول على حمراء في السحب الثاني بـ \\(R_2\\)، ثم نستعمل \\(P_{R_2}(V_1)=\\frac{P(V_1\\cap R_2)}{P(R_2)}\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب التقاطع",
+            "explanation": "من الشجرة:\n\\[P(V_1\\cap R_2)=\\frac23\\times\\frac25=\\frac4{15}\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "استعمال نتيجة السؤال السابق",
+            "explanation": "\\[P(R_2)=\\frac{17}{45}\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب الاحتمال الشرطي",
+            "explanation": "\\[P_{R_2}(V_1)=\\frac{P(V_1\\cap R_2)}{P(R_2)}\\]\n\\[P_{R_2}(V_1)=\\frac{4/15}{17/45}=\\frac4{15}\\times\\frac{45}{17}=\\frac{12}{17}\\]"
+          }
+        ],
+        "final_answer": "\\(\\displaystyle P_{R_2}(V_1)=\\frac{12}{17}\\)."
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2025(1).pdf",
+    "statement_figure_policy": "شجرة احتمالات جزئية معطاة في الجزء II ويطلب إكمالها.",
+    "solution_figure_policy": "تم تفصيل جميع فروع الشجرة واحتمالاتها داخل الحل.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  }
+}

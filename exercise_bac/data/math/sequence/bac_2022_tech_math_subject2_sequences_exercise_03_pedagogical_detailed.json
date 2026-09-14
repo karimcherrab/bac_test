@@ -1,0 +1,273 @@
+{
+  "schema_version": "4.5-bac-source",
+  "language": "ar",
+  "direction": "rtl",
+  "year": 2022,
+  "chapter_code": "sequences",
+  "chapter_title": "sequences",
+  "exercise_number": 3,
+  "points": 5,
+  "branches": [
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "figures": [],
+  "display": {
+    "layout": "question_by_question",
+    "show_statement_first": true,
+    "show_statement_figures": true,
+    "show_solution_after_click": true,
+    "show_solution_figures": true
+  },
+  "review_status": {
+    "statement_compared_with_original_pdf": true,
+    "questions_compared_with_original_pdf": true,
+    "source_figures_checked": true,
+    "solution_checked_against_correction": true,
+    "latex_normalized_only": true,
+    "react_ready": true
+  },
+  "version": "4.2-2022-tech-math-subject2-sequences-ex03",
+  "session": "ordinary",
+  "source_pages": [
+    3,
+    4
+  ],
+  "solution_source_pages": [
+    8,
+    9
+  ],
+  "title": "التمرين الثالث — بكالوريا الجزائر 2022 — المتتاليات",
+  "axis_tags": [
+    "recursive_sequence",
+    "mathematical_induction",
+    "bounded_sequence",
+    "sequence_monotonicity",
+    "sequence_convergence",
+    "geometric_sequence",
+    "telescoping_sum",
+    "explicit_formula",
+    "sequence_limit",
+    "sequence_sum"
+  ],
+  "statement": "التمرين الثالث: (05 نقاط)\n\nالمتتالية العددية \\((u_n)\\) المعرفة بحدها الأول \\(u_0\\) حيث \\(u_0=0\\) ومن أجل كل عدد طبيعي \\(n\\):\n\\[\nu_{n+1}=\\frac12(u_n-2).\n\\]\n\n1) برهن بالتراجع أنه من أجل كل عدد طبيعي \\(n\\)، \\(u_n>-2\\).\n\n2) ادرس اتجاه تغير المتتالية \\((u_n)\\) ثم استنتج أن \\((u_n)\\) متقاربة.\n\n3) المتتالية العددية \\((v_n)\\) المعرفة على \\(\\mathbb N\\) كما يلي:\n\\[\nv_n=\\frac1{u_{n+1}-u_n}.\n\\]\nأ- برهن أن المتتالية \\((v_n)\\) هندسية أساسها \\(2\\) ثم اكتب \\(v_n\\) بدلالة \\(n\\).\n\nب- احسب، بدلالة \\(n\\)، المجموع \\(S_n\\) حيث:\n\\[\nS_n=\\frac1{v_0}+\\frac1{v_1}+\\cdots+\\frac1{v_n}.\n\\]\n\n4) أ- بين أنه من أجل كل عدد طبيعي \\(n\\):\n\\[\nu_n=2\\left(\\frac1{2^n}-1\\right)\n\\]\nثم احسب \\(\\lim_{n\\to+\\infty}u_n\\).\n\nب- احسب بدلالة \\(n\\) المجموع \\(S'_n\\) حيث \\(S'_n=u_0+u_1+\\cdots+u_n\\).",
+  "questions": [
+    {
+      "id": "2022_s2_e3_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) برهن بالتراجع أن \\(u_n>-2\\).",
+      "solution": {
+        "introduction": "نستعمل التراجع.",
+        "strategy": "نثبت البداية ثم الانتقال.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "البداية",
+            "explanation": "\\[u_0=0>-2.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "الانتقال",
+            "explanation": "إذا \\(u_n>-2\\) فإن \\(u_n-2>-4\\)، وبالتالي \\[u_{n+1}=\\frac12(u_n-2)>-2.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الخلاصة",
+            "explanation": "إذن بالتراجع \\(u_n>-2\\) لكل n.",
+            "result": "الحصر مثبت."
+          }
+        ],
+        "final_answer": "\\(\\boxed{u_n>-2}\\).",
+        "verification": "تمت مراجعة الحل مع الإجابة النموذجية الرسمية لبكالوريا 2022، الموضوع الثاني، التمرين الثالث.",
+        "common_mistakes": [],
+        "hints": [],
+        "summary": "",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2022_s2_e3_q2",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2) ادرس اتجاه تغير \\((u_n)\\) ثم استنتج تقاربها.",
+      "solution": {
+        "introduction": "نحسب الفرق.",
+        "strategy": "نستعمل الحصر السابق.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الفرق",
+            "explanation": "\\[u_{n+1}-u_n=-\\frac12(u_n+2).\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "الإشارة",
+            "explanation": "لأن \\(u_n>-2\\)، فإن الفرق سالب.",
+            "result": "المتتالية متناقصة تماما."
+          },
+          {
+            "step_number": 3,
+            "title": "التقارب",
+            "explanation": "هي متناقصة ومحدودة من الأسفل بـ -2، إذن متقاربة.",
+            "result": "متقاربة."
+          }
+        ],
+        "final_answer": "\\(\\boxed{(u_n)\\text{ متناقصة تماما ومتقاربة}}\\).",
+        "verification": "تمت مراجعة الحل مع الإجابة النموذجية الرسمية لبكالوريا 2022، الموضوع الثاني، التمرين الثالث.",
+        "common_mistakes": [],
+        "hints": [],
+        "summary": "",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2022_s2_e3_q3a",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "3-أ) برهن أن \\((v_n)\\) هندسية أساسها 2 ثم اكتب \\(v_n\\).",
+      "solution": {
+        "introduction": "نقارن فرقين متتاليين.",
+        "strategy": "ثم نحسب v₀.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الفروق",
+            "explanation": "\\[u_{n+2}-u_{n+1}=\\frac12(u_{n+1}-u_n).\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "النسبة",
+            "explanation": "\\[v_{n+1}=\\frac1{u_{n+2}-u_{n+1}}=2v_n.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "v₀ والحد العام",
+            "explanation": "\\[u_1=-1,\\quad v_0=-1\\Rightarrow v_n=-2^n.\\]",
+            "result": "\\(v_n=-2^n\\)."
+          }
+        ],
+        "final_answer": "\\(\\boxed{v_n=-2^n}\\).",
+        "verification": "تمت مراجعة الحل مع الإجابة النموذجية الرسمية لبكالوريا 2022، الموضوع الثاني، التمرين الثالث.",
+        "common_mistakes": [],
+        "hints": [],
+        "summary": "",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2022_s2_e3_q3b",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "3-ب) احسب \\(S_n=1/v_0+\\cdots+1/v_n\\).",
+      "solution": {
+        "introduction": "نعوض v_k.",
+        "strategy": "مجموع هندسي.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الحساب",
+            "explanation": "\\[\\frac1{v_k}=-(\\frac12)^k\\Rightarrow S_n=-\\frac{1-(1/2)^{n+1}}{1-1/2}=2[(\\frac12)^{n+1}-1].\\]",
+            "result": "النتيجة."
+          }
+        ],
+        "final_answer": "\\(\\boxed{S_n=2[(\\frac12)^{n+1}-1]}\\).",
+        "verification": "تمت مراجعة الحل مع الإجابة النموذجية الرسمية لبكالوريا 2022، الموضوع الثاني، التمرين الثالث.",
+        "common_mistakes": [],
+        "hints": [],
+        "summary": "",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2022_s2_e3_q4a",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "4-أ) بين أن \\(u_n=2(1/2^n-1)\\) ثم احسب النهاية.",
+      "solution": {
+        "introduction": "نستعمل مجموع الفروق.",
+        "strategy": "1/v_k=u_{k+1}-u_k.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التلسكب",
+            "explanation": "\\[S_{n-1}=(u_1-u_0)+\\cdots+(u_n-u_{n-1})=u_n.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "uₙ",
+            "explanation": "\\[u_n=2[(\\frac12)^n-1]=2(\\frac1{2^n}-1).\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "النهاية",
+            "explanation": "\\[\\frac1{2^n}\\to0\\Rightarrow u_n\\to-2.\\]",
+            "result": "\\(-2\\)."
+          }
+        ],
+        "final_answer": "\\(\\boxed{u_n=2(\\frac1{2^n}-1)},\\ \\boxed{\\lim u_n=-2}\\).",
+        "verification": "تمت مراجعة الحل مع الإجابة النموذجية الرسمية لبكالوريا 2022، الموضوع الثاني، التمرين الثالث.",
+        "common_mistakes": [],
+        "hints": [],
+        "summary": "",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2022_s2_e3_q4b",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "4-ب) احسب \\(S'_n=u_0+\\cdots+u_n\\).",
+      "solution": {
+        "introduction": "نعوض u_k.",
+        "strategy": "نفصل المجموع الهندسي عن الثابت.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التعويض",
+            "explanation": "\\[S'_n=2\\sum_{k=0}^n(\\frac12)^k-2(n+1).\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "الحساب",
+            "explanation": "\\[S'_n=4[1-(\\frac12)^{n+1}]-2(n+1)=2-2n-\\frac1{2^{n-1}}.\\]",
+            "result": "النتيجة."
+          }
+        ],
+        "final_answer": "\\(\\boxed{S'_n=2-2n-\\frac1{2^{n-1}}}\\).",
+        "verification": "تمت مراجعة الحل مع الإجابة النموذجية الرسمية لبكالوريا 2022، الموضوع الثاني، التمرين الثالث.",
+        "common_mistakes": [],
+        "hints": [],
+        "summary": "",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    }
+  ],
+  "source_reference": {
+    "file": "2022(1).pdf",
+    "statement_pages": [
+      3,
+      4
+    ],
+    "solution_pages": [
+      8,
+      9
+    ],
+    "source_faithful_statement": true,
+    "solution_reviewed_against_source": true
+  },
+  "given_data": {
+    "u0": "0",
+    "lower_bound": "-2",
+    "monotonicity": "strictly_decreasing",
+    "v0": "-1",
+    "ratio_v": "2",
+    "explicit_v": "-2^n",
+    "S_n": "2*((1/2)^(n+1)-1)",
+    "explicit_u": "2*(1/2^n-1)",
+    "limit_u": "-2",
+    "S'_n": "2-2n-1/2^(n-1)"
+  }
+}

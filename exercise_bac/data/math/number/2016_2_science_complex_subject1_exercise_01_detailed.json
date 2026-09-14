@@ -1,0 +1,315 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2016-2-science-complex-subject1-ex01-detailed",
+  "session": "ordinary",
+  "year": 2016,
+  "chapter_code": "complex_numbers",
+  "chapter_title": "الأعداد المركبة",
+  "axis_tags": [
+    "complex_algebraic_geometric_form",
+    "complex_argument_trigonometric_form",
+    "complex_exponential_demoivre",
+    "complex_roots_equations",
+    "complex_modulus_geometric_interpretation",
+    "complex_geometric_applications_loci",
+    "complex_point_transformations",
+    "complex_algebra_conjugate"
+  ],
+  "branches": [
+    {
+      "code": "science",
+      "name": "شعبة علوم تجريبية"
+    }
+  ],
+  "exercise_number": 1,
+  "subject_number": 1,
+  "source_page": 1,
+  "source_pages": [
+    1
+  ],
+  "solution_source_pages": [
+    5
+  ],
+  "title": "التمرين الأول — بكالوريا الجزائر 2016 — الموضوع الأول — شعبة علوم تجريبية",
+  "statement": "نضع من أجل كل عدد مركب z: \\(P(z)=z^3-24\\sqrt3\\). نحل المعادلة \\(P(z)=0\\)، ثم نعتبر في المستوى المركب النقط \\(A,B,C\\) ذات اللواحق \\(z_A=-\\sqrt3+3i\\)، \\(z_B=-\\sqrt3-3i\\)، \\(z_C=2\\sqrt3\\). ندرس دورانًا مركزه A يحول B إلى C، ثم صورة C بانسحاب شعاعه \\(\\overrightarrow{AB}\\)، وأخيرًا مجموعة النقط غير المعدومة التي تحقق \\(\\arg\\left(\\frac{z}{\\overline z}\\right)=2k\\pi\\)، حيث \\(k\\in\\mathbb Z\\).",
+  "questions": [
+    {
+      "id": "2016_2_s1_complex_ex01_q1a",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1- أ) تحقق أن \\(P(2\\sqrt3)=0\\)، حيث \\(P(z)=z^3-24\\sqrt3\\).",
+      "axis_tags": [
+        "complex_roots_equations"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نعوض مباشرة \\(z=2\\sqrt3\\) في كثير الحدود ثم نبسط.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التعويض",
+            "explanation": "\\[P(2\\sqrt3)=(2\\sqrt3)^3-24\\sqrt3.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "الحساب",
+            "explanation": "\\[(2\\sqrt3)^3=8(\\sqrt3)^3=8\\times3\\sqrt3=24\\sqrt3.\\]\nإذن:\n\\[P(2\\sqrt3)=24\\sqrt3-24\\sqrt3=0.\\]"
+          }
+        ],
+        "final_answer": "\\(P(2\\sqrt3)=0\\)، إذن \\(2\\sqrt3\\) جذر لـ \\(P\\)."
+      }
+    },
+    {
+      "id": "2016_2_s1_complex_ex01_q1b",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "ب) جد العددين الحقيقيين \\(a\\) و\\(b\\) بحيث: \\(P(z)=(z-2\\sqrt3)(z^2+az+b)\\).",
+      "axis_tags": [
+        "complex_algebraic_geometric_form"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "ننشر الجداء ثم نقارن معاملات الحدود من نفس الدرجة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "نشر الجداء",
+            "explanation": "\\[(z-2\\sqrt3)(z^2+az+b)=z^3+(a-2\\sqrt3)z^2+(b-2\\sqrt3a)z-2\\sqrt3b.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "مقارنة معامل z²",
+            "explanation": "في \\(P(z)=z^3-24\\sqrt3\\) معامل \\(z^2\\) يساوي صفرًا، إذن:\n\\[a-2\\sqrt3=0\\Rightarrow a=2\\sqrt3.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "مقارنة معامل z",
+            "explanation": "معامل \\(z\\) يساوي صفرًا، ومنه:\n\\[b-2\\sqrt3a=0.\\]\nبالتعويض عن \\(a=2\\sqrt3\\):\n\\[b-12=0\\Rightarrow b=12.\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "التحقق من الحد الثابت",
+            "explanation": "\\[-2\\sqrt3\\times12=-24\\sqrt3\\] وهو الحد الثابت المطلوب."
+          }
+        ],
+        "final_answer": "\\(a=2\\sqrt3\\)، \\(b=12\\)، وبالتالي \\(P(z)=(z-2\\sqrt3)(z^2+2\\sqrt3z+12)\\)."
+      }
+    },
+    {
+      "id": "2016_2_s1_complex_ex01_q1c",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "ج) حل في مجموعة الأعداد المركبة \\(C\\) المعادلة \\(P(z)=0\\).",
+      "axis_tags": [
+        "complex_roots_equations"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل التحليل السابق ثم نحل العامل التربيعي.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تفكيك المعادلة",
+            "explanation": "\\[P(z)=0\\iff(z-2\\sqrt3)(z^2+2\\sqrt3z+12)=0.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "الحل الأول",
+            "explanation": "\\[z-2\\sqrt3=0\\Rightarrow z=2\\sqrt3.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حل المعادلة التربيعية",
+            "explanation": "\\[z^2+2\\sqrt3z+12=0.\\]\nمميزها:\n\\[\\Delta=(2\\sqrt3)^2-48=12-48=-36=(6i)^2.\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "استخراج الحلين",
+            "explanation": "\\[z=\\frac{-2\\sqrt3\\pm6i}{2}=-\\sqrt3\\pm3i.\\]"
+          }
+        ],
+        "final_answer": "\\(S=\\{2\\sqrt3,\\,-\\sqrt3+3i,\\,-\\sqrt3-3i\\}\\)."
+      }
+    },
+    {
+      "id": "2016_2_s1_complex_ex01_q2a",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "2- أ) اكتب على الشكل الجبري العدد المركب \\(\\frac{z_C-z_A}{z_B-z_A}\\).",
+      "axis_tags": [
+        "complex_algebraic_geometric_form"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب البسط والمقام ثم نبسط خارج القسمة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب البسط",
+            "explanation": "\\[z_C-z_A=2\\sqrt3-(-\\sqrt3+3i)=3\\sqrt3-3i.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب المقام",
+            "explanation": "\\[z_B-z_A=(-\\sqrt3-3i)-(-\\sqrt3+3i)=-6i.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "القسمة",
+            "explanation": "\\[\\frac{z_C-z_A}{z_B-z_A}=\\frac{3\\sqrt3-3i}{-6i}.\\]\nنقسم كل حد على \\(-6i\\):\n\\[\\frac{z_C-z_A}{z_B-z_A}=\\frac12+i\\frac{\\sqrt3}{2}.\\]"
+          }
+        ],
+        "final_answer": "\\(\\frac{z_C-z_A}{z_B-z_A}=\\frac12+i\\frac{\\sqrt3}{2}=e^{i\\pi/3}\\)."
+      }
+    },
+    {
+      "id": "2016_2_s1_complex_ex01_q2b",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "ب) بين أنه يوجد دوران \\(r\\) مركزه \\(A\\) ويحول النقطة \\(B\\) إلى النقطة \\(C\\)، مع تعيين زاويته.",
+      "axis_tags": [
+        "complex_point_transformations",
+        "complex_argument_trigonometric_form"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل النسبة المركبة المحسوبة في السؤال السابق ونقارنها بصيغة دوران مركزه A.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "استعمال النسبة",
+            "explanation": "\\[\\frac{z_C-z_A}{z_B-z_A}=e^{i\\pi/3}.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "إعادة الكتابة",
+            "explanation": "\\[z_C-z_A=e^{i\\pi/3}(z_B-z_A).\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الاستنتاج",
+            "explanation": "هذه هي الصيغة المركبة لدوران مركزه \\(A\\) وزاويته \\(\\frac\\pi3\\) يحول \\(B\\) إلى \\(C\\)."
+          }
+        ],
+        "final_answer": "يوجد دوران مركزه \\(A\\) وزاويته \\(\\frac\\pi3\\) يحول \\(B\\) إلى \\(C\\)."
+      }
+    },
+    {
+      "id": "2016_2_s1_complex_ex01_q2c",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "ج) استنتج طبيعة المثلث \\(ABC\\).",
+      "axis_tags": [
+        "complex_modulus_geometric_interpretation",
+        "complex_geometric_applications_loci"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "الدوران يحافظ على الأطوال، كما أن زاويته تعطي الزاوية عند A.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تساوي الأطوال",
+            "explanation": "من الدوران مركزه \\(A\\) الذي يحول \\(B\\) إلى \\(C\\):\n\\[AB=AC.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "الزاوية",
+            "explanation": "\\[(\\overrightarrow{AB},\\overrightarrow{AC})=\\frac\\pi3.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الاستنتاج",
+            "explanation": "لدينا ضلعان متساويان والزاوية المحصورة بينهما \\(60^\\circ\\)، ومنه يكون الضلع الثالث مساويًا لهما أيضًا."
+          }
+        ],
+        "final_answer": "المثلث \\(ABC\\) متساوي الأضلاع."
+      }
+    },
+    {
+      "id": "2016_2_s1_complex_ex01_q2d",
+      "display_order": 7,
+      "content_type": "question",
+      "text": "د) عين \\(z_D\\) لاحقة النقطة \\(D\\) صورة النقطة \\(C\\) بالانسحاب الذي شعاعه \\(\\overrightarrow{AB}\\)، ثم حدد بدقة طبيعة الرباعي \\(ABDC\\).",
+      "axis_tags": [
+        "complex_point_transformations",
+        "complex_geometric_applications_loci"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "في الانسحاب ذي الشعاع \\(\\overrightarrow{AB}\\)، نضيف لاحقة الشعاع \\(z_B-z_A\\) إلى لاحقة C، ثم نستعمل خصائص المثلث المتساوي الأضلاع.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "لاحقة شعاع AB",
+            "explanation": "\\[z_B-z_A=-6i.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب z_D",
+            "explanation": "\\[z_D=z_C+(z_B-z_A)=2\\sqrt3-6i.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "إثبات أن الرباعي متوازي أضلاع",
+            "explanation": "بما أن الانسحاب يحول \\(A\\) إلى \\(B\\) و\\(C\\) إلى \\(D\\)، فإن:\n\\[\\overrightarrow{AB}=\\overrightarrow{CD}.\\]\nإذن الرباعي \\(ABDC\\) متوازي أضلاع."
+          },
+          {
+            "step_number": 4,
+            "title": "تحديد طبيعته بدقة",
+            "explanation": "من السؤال السابق، المثلث \\(ABC\\) متساوي الأضلاع، إذن:\n\\[AB=AC.\\]\nوهما ضلعان متجاوران في متوازي الأضلاع \\(ABDC\\)، لذا أضلاعه الأربعة متساوية."
+          }
+        ],
+        "final_answer": "\\(z_D=2\\sqrt3-6i\\)، والرباعي \\(ABDC\\) معين."
+      }
+    },
+    {
+      "id": "2016_2_s1_complex_ex01_q3",
+      "display_order": 8,
+      "content_type": "question",
+      "text": "3) عين مجموعة النقط \\((\\Gamma)\\) من المستوى ذات اللاحقة غير المعدومة \\(z\\) بحيث: \\(\\arg\\left(\\frac{z}{\\overline z}\\right)=2k\\pi\\)، حيث \\(k\\in\\mathbb Z\\).",
+      "axis_tags": [
+        "complex_algebra_conjugate",
+        "complex_argument_trigonometric_form",
+        "complex_geometric_applications_loci"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نكتب z على الشكل الأسي ونستعمل أن مرافقه يعكس إشارة الحجة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "كتابة z",
+            "explanation": "بما أن \\(z\\neq0\\)، نكتب:\n\\[z=re^{i\\theta},\\qquad r>0.\\]\nومن ثم:\n\\[\\overline z=re^{-i\\theta}.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب النسبة",
+            "explanation": "\\[\\frac{z}{\\overline z}=e^{i2\\theta}.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "تطبيق شرط الحجة",
+            "explanation": "\\[\\arg\\left(\\frac{z}{\\overline z}\\right)=2k\\pi\\Rightarrow 2\\theta=2k\\pi.\\]\nإذن:\n\\[\\theta=k\\pi.\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "التفسير الهندسي",
+            "explanation": "الحجة \\(0\\) أو \\(\\pi\\) تعني أن z عدد حقيقي غير معدوم، أي أن M تقع على محور الفواصل مع استبعاد المبدأ."
+          }
+        ],
+        "final_answer": "\\((\\Gamma)\\) هو محور الفواصل \\((Ox)\\) مع استبعاد النقطة \\(O\\)."
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2016_2.pdf",
+    "statement_figure_policy": "لا يوجد شكل إلزامي في نص التمرين.",
+    "solution_figure_policy": "يمكن تمثيل المثلث والمعين ومحور الفواصل عند العرض.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  }
+}

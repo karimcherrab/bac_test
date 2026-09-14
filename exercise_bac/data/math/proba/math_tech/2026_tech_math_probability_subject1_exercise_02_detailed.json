@@ -1,0 +1,221 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2026-tech-math-probability-subject1-ex02-detailed",
+  "session": "ordinary",
+  "year": 2026,
+  "chapter_code": "probability",
+  "chapter_title": "الاحتمالات",
+  "axis_tags": [
+    "probability_language_law",
+    "probability_counting_modeling",
+    "random_variable_probability_law",
+    "random_variable_expected_value"
+  ],
+  "branches": [
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "exercise_number": 2,
+  "subject_number": 1,
+  "source_page": 1,
+  "source_pages": [
+    1
+  ],
+  "solution_source_pages": [],
+  "title": "التمرين الثاني — بكالوريا الجزائر 2026 — الموضوع الأول — شعبة تقني رياضي",
+  "statement": "يحتوي كيس على 10 كريات متماثلة ولا نفرق بينها باللمس، منها: كريتان بيضاوان مرقمتان بـ: 0 ، 2، وأربع كريات حمراء مرقمة بـ: 0 ، 1 ، 2 ، 3 وأربع كريات خضراء مرقمة بـ: 1 ، 2 ، 3 ، 4.\nنسحب عشوائيا من الكيس ثلاث كريات في آن واحد ونعتبر الحوادث:",
+  "questions": [
+    {
+      "id": "2026_s1_probability_ex02_q1a",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "A : « سحب كرية حمراء على الأقل » ، B : « سحب ثلاث كريات جداء أرقامها معدوم »\nC : « سحب ثلاث كريات من نفس اللون » ، D : « سحب ثلاث كريات مجموع أرقامها أكبر من أو يساوي 8 »\n1) أ) احسب \\(P(A)\\) ، \\(P(B)\\) ، \\(P(C)\\) احتمالات الحوادث A ، B و C على الترتيب.",
+      "axis_tags": [
+        "probability_language_law",
+        "probability_counting_modeling"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "السحب يتم في آن واحد، لذلك لا نهتم بالترتيب ونستعمل التوفيقات. عدد الحالات الممكنة هو اختيار 3 كريات من أصل 10.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب عدد الحالات الممكنة",
+            "explanation": "لدينا:\n\\[|\\Omega|=\\binom{10}{3}=120.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب P(A)",
+            "explanation": "الحادثة \\(A\\) تعني سحب كرية حمراء على الأقل.\nالأسهل أن نحسب الحادثة العكسية: عدم سحب أي كرية حمراء.\nعدد الكريات غير الحمراء هو 6، إذن:\n\\[P(\\overline A)=\\frac{\\binom63}{\\binom{10}{3}}=\\frac{20}{120}.\\]\nومن ثم:\n\\[P(A)=1-\\frac{20}{120}=\\frac{100}{120}=\\frac56.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب P(B)",
+            "explanation": "يكون جداء الأرقام معدوما إذا ظهرت على الأقل كرية تحمل الرقم 0.\nيوجد في الكيس كريتان تحملان الرقم 0: البيضاء رقم 0 والحمراء رقم 0.\nإذن الحادثة العكسية \\(\\overline B\\) هي سحب 3 كريات كلها ذات أرقام غير معدومة، وعددها 8.\nلذلك:\n\\[P(B)=1-\\frac{\\binom83}{\\binom{10}{3}}=1-\\frac{56}{120}=\\frac{64}{120}=\\frac{8}{15}.\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "حساب P(C)",
+            "explanation": "الحادثة \\(C\\) تعني سحب ثلاث كريات من نفس اللون.\nلا يمكن سحب 3 بيضاء لأن عدد الكريات البيضاء 2 فقط.\nيمكن سحب 3 حمراء من أصل 4، أو 3 خضراء من أصل 4.\nإذن:\n\\[P(C)=\\frac{\\binom43+\\binom43}{\\binom{10}{3}}=\\frac{4+4}{120}=\\frac{8}{120}=\\frac1{15}.\\]"
+          }
+        ],
+        "final_answer": "\\[P(A)=\\frac56,\\qquad P(B)=\\frac{8}{15},\\qquad P(C)=\\frac1{15}.\\]"
+      }
+    },
+    {
+      "id": "2026_s1_probability_ex02_q1b",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "ب) بين أن: \\(P(D)=\\frac{17}{120}\\) وأن: \\(P(C\\cap D)=\\frac{1}{60}\\).",
+      "axis_tags": [
+        "probability_language_law",
+        "probability_counting_modeling"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "لإثبات \\(P(D)\\) نعد جميع السحبات الثلاثية التي يكون مجموع أرقامها أكبر من أو يساوي 8. ولحساب \\(C\\cap D\\) نضيف شرط أن تكون الكريات الثلاث من نفس اللون.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تجميع الكريات حسب الرقم",
+            "explanation": "الأرقام الموجودة على الكريات هي:\n- الرقم 0 على كريتين.\n- الرقم 1 على كريتين.\n- الرقم 2 على ثلاث كريات.\n- الرقم 3 على كريتين.\n- الرقم 4 على كرية واحدة."
+          },
+          {
+            "step_number": 2,
+            "title": "تحديد أنماط الأرقام التي تحقق D",
+            "explanation": "نبحث عن ثلاثيات أرقام مجموعها \\(\\ge 8\\).\nالأنماط الممكنة هي:\n\\[(1,3,4),\\ (2,2,4),\\ (2,3,3),\\ (2,3,4).\\]\nولا توجد إمكانية \\((3,3,4)\\) مع أعداد أكبر أخرى لأننا نسحب ثلاث كريات فقط، لكن هذا النمط موجود أيضا ومجموعه 10؛ لذلك نضيفه كذلك.\nإذن الأنماط هي:\n\\[(1,3,4),\\ (2,2,4),\\ (2,3,3),\\ (2,3,4),\\ (3,3,4).\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "عد الحالات الموافقة لـ D",
+            "explanation": "نحسب عدد السحبات لكل نمط:\n\\[(1,3,4):\\ 2\\times2\\times1=4.\\]\n\\[(2,2,4):\\ \\binom32\\times1=3.\\]\n\\[(2,3,3):\\ 3\\times\\binom22=3.\\]\n\\[(2,3,4):\\ 3\\times2\\times1=6.\\]\n\\[(3,3,4):\\ \\binom22\\times1=1.\\]\nإذن المجموع:\n\\[4+3+3+6+1=17.\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "حساب P(D)",
+            "explanation": "إذن:\n\\[P(D)=\\frac{17}{120}.\\]"
+          },
+          {
+            "step_number": 5,
+            "title": "حساب P(C∩D)",
+            "explanation": "حتى يتحقق \\(C\\cap D\\) يجب أن تكون الكريات الثلاث من نفس اللون ومجموع أرقامها \\(\\ge8\\).\nبالنسبة إلى الحمراء أرقامها \\(0,1,2,3\\)، وأكبر مجموع لثلاث منها هو:\n\\[1+2+3=6<8.\\]\nإذن لا توجد حالة حمراء ملائمة.\nبالنسبة إلى الخضراء أرقامها \\(1,2,3,4\\). السحبات الثلاثية ذات المجموع \\(\\ge8\\) هي:\n\\[(1,3,4)\\quad\\text{و}\\quad(2,3,4).\\]\nأي حالتان فقط.\nإذن:\n\\[P(C\\cap D)=\\frac{2}{120}=\\frac1{60}.\\]"
+          }
+        ],
+        "final_answer": "\\[P(D)=\\frac{17}{120},\\qquad P(C\\cap D)=\\frac1{60}.\\]"
+      }
+    },
+    {
+      "id": "2026_s1_probability_ex02_q1c",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "جـ) استنتج حساب احتمال الحادثة E : « سحب ثلاث كريات مجموع أرقامها أصغر من أو يساوي 7 ».",
+      "axis_tags": [
+        "probability_language_law"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "الحادثة \\(E\\) هي الحادثة العكسية لـ \\(D\\)، لأن مجموع الأرقام إما أن يكون \\(\\le7\\) أو \\(\\ge8\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "العلاقة بين E و D",
+            "explanation": "\\[E=\\overline D.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب الاحتمال",
+            "explanation": "بما أن:\n\\[P(D)=\\frac{17}{120},\\]\nفإن:\n\\[P(E)=1-P(D)=1-\\frac{17}{120}=\\frac{103}{120}.\\]"
+          }
+        ],
+        "final_answer": "\\[P(E)=\\frac{103}{120}.\\]"
+      }
+    },
+    {
+      "id": "2026_s1_probability_ex02_q2",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "2) X المتغير العشوائي الذي يرفق بكل عملية سحب لثلاث كريات، عدد الكريات التي تحمل رقما فرديا.\n- عين قانون احتمال المتغير العشوائي X ثم احسب أمله الرياضياتي \\(E(X)\\).",
+      "axis_tags": [
+        "random_variable_probability_law",
+        "random_variable_expected_value"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نعد أولا الكريات ذات الأرقام الفردية. لدينا 4 كريات فردية و6 كريات زوجية، ثم نستعمل قانون التوزيع فوق الهندسي عند سحب 3 كريات.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تحديد عدد الكريات الفردية",
+            "explanation": "الكريات ذات الأرقام الفردية هي: الحمراء 1، الحمراء 3، الخضراء 1، الخضراء 3.\nإذن عددها 4.\nوعدد الكريات ذات الأرقام الزوجية هو 6."
+          },
+          {
+            "step_number": 2,
+            "title": "تحديد قيم X",
+            "explanation": "عند سحب 3 كريات يمكن أن يكون عدد الكريات ذات الرقم الفردي:\n\\[X\\in\\{0,1,2,3\\}.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب P(X=0)",
+            "explanation": "نسحب 3 كريات زوجية من أصل 6:\n\\[P(X=0)=\\frac{\\binom60\\binom63}{\\binom{10}{3}}=\\frac{20}{120}=\\frac16.\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "حساب P(X=1)",
+            "explanation": "نختار كرية فردية واحدة من 4 وكريتين زوجيتين من 6:\n\\[P(X=1)=\\frac{\\binom41\\binom62}{120}=\\frac{4\\times15}{120}=\\frac12.\\]"
+          },
+          {
+            "step_number": 5,
+            "title": "حساب P(X=2)",
+            "explanation": "نختار كريتين فرديتين من 4 وكرية زوجية واحدة من 6:\n\\[P(X=2)=\\frac{\\binom42\\binom61}{120}=\\frac{6\\times6}{120}=\\frac3{10}.\\]"
+          },
+          {
+            "step_number": 6,
+            "title": "حساب P(X=3)",
+            "explanation": "نختار 3 كريات فردية من أصل 4:\n\\[P(X=3)=\\frac{\\binom43}{120}=\\frac4{120}=\\frac1{30}.\\]"
+          },
+          {
+            "step_number": 7,
+            "title": "حساب الأمل الرياضياتي",
+            "explanation": "\\[E(X)=0\\times\\frac16+1\\times\\frac12+2\\times\\frac3{10}+3\\times\\frac1{30}.\\]\nإذن:\n\\[E(X)=\\frac12+\\frac35+\\frac1{10}=\\frac65.\\]"
+          }
+        ],
+        "tables": [
+          {
+            "title": "قانون احتمال المتغير العشوائي X",
+            "headers": [
+              "\\(x_i\\)",
+              "0",
+              "1",
+              "2",
+              "3"
+            ],
+            "rows": [
+              [
+                "\\(P(X=x_i)\\)",
+                "\\(\\frac16\\)",
+                "\\(\\frac12\\)",
+                "\\(\\frac3{10}\\)",
+                "\\(\\frac1{30}\\)"
+              ]
+            ]
+          }
+        ],
+        "final_answer": "\\[P(X=0)=\\frac16,\\quad P(X=1)=\\frac12,\\quad P(X=2)=\\frac3{10},\\quad P(X=3)=\\frac1{30}.\\]\n\\[E(X)=\\frac65.\\]"
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "statement_checked_against_image": true,
+    "solution_checked_against_correction": false,
+    "source_pdf": "2026(2).pdf",
+    "statement_image": "2026_exo01(2).jpg",
+    "statement_figure_policy": "لا يوجد شكل لازم في نص التمرين.",
+    "solution_figure_policy": "لا يحتاج الحل إلى رسم.",
+    "renderer": "MathJax + structured tables"
+  }
+}

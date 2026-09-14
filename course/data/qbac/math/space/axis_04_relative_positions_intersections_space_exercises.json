@@ -1,0 +1,441 @@
+{
+  "version": 1,
+  "language": "ar",
+  "direction": "rtl",
+  "subject_code": "math",
+  "chapter_code": "space_geometry",
+  "tag": "relative_positions_intersections_space",
+  "title": "تمارين المحور الرابع: الأوضاع النسبية والتقاطعات في الفضاء",
+  "question_count": 13,
+  "questions": [
+    {
+      "id": "space_positions_axis04_01",
+      "number": 1,
+      "title": "مستقيمان متوازيان",
+      "text": "نعتبر المستقيمين:\n\\[(D_1):\\begin{cases}x=1+2t\\\\y=-1+t\\\\z=3-t\\end{cases}\\]\nو\n\\[(D_2):\\begin{cases}x=4+4s\\\\y=2+2s\\\\z=-1-2s\\end{cases}\\]\nحيث \\(t,s\\in\\mathbb R\\). بين أن المستقيمين متوازيان.",
+      "skill": "تمييز مستقيمين متوازيين باستعمال شعاعي التوجيه.",
+      "difficulty": "easy",
+      "solution": {
+        "steps": [
+          {
+            "order": 1,
+            "result": "شعاع توجيه \\((D_1)\\) هو \\(\\vec u_1=(2;1;-1)\\)."
+          },
+          {
+            "order": 2,
+            "result": "شعاع توجيه \\((D_2)\\) هو \\(\\vec u_2=(4;2;-2)\\)."
+          },
+          {
+            "order": 3,
+            "calculation": "\\[\\vec u_2=2\\vec u_1.\\]"
+          },
+          {
+            "order": 4,
+            "explanation": "إذن شعاعا التوجيه متوازيان، وبالتالي المستقيمان متوازيان أو منطبقان. النقطة \\(A(1;-1;3)\\) من \\((D_1)\\) لا تنتمي إلى \\((D_2)\\)، لذلك فهما متوازيان متميزان."
+          }
+        ],
+        "final_answer": "\\((D_1)\\parallel(D_2)\\) وهما مستقيمان متميزان."
+      }
+    },
+    {
+      "id": "space_positions_axis04_02",
+      "number": 2,
+      "title": "نقطة تقاطع مستقيمين",
+      "text": "نعتبر المستقيمين:\n\\[(D_1):\\begin{cases}x=t\\\\y=t\\\\z=t\\end{cases}\\]\nو\n\\[(D_2):\\begin{cases}x=1-s\\\\y=s\\\\z=1-s\\end{cases}\\]\nحيث \\(t,s\\in\\mathbb R\\). حدد وضعهما النسبي، وإذا كانا متقاطعين عين نقطة التقاطع.",
+      "skill": "إيجاد نقطة تقاطع مستقيمين من تمثيلين وسيطيين.",
+      "difficulty": "easy",
+      "solution": {
+        "steps": [
+          {
+            "order": 1,
+            "explanation": "عند نقطة التقاطع يجب أن تتساوى الإحداثيات.",
+            "calculation": "\\[t=1-s,\\qquad t=s,\\qquad t=1-s.\\]"
+          },
+          {
+            "order": 2,
+            "explanation": "من \\(t=s\\) و\\(t=1-s\\):",
+            "calculation": "\\[s=1-s\\Rightarrow2s=1\\Rightarrow s=\\frac12.\\]"
+          },
+          {
+            "order": 3,
+            "calculation": "\\[t=\\frac12.\\]"
+          },
+          {
+            "order": 4,
+            "result": "إذن نقطة التقاطع هي \\(I\\left(\\frac12;\\frac12;\\frac12\\right)\\)."
+          }
+        ],
+        "final_answer": "المستقيمان متقاطعان في \\(I\\left(\\frac12;\\frac12;\\frac12\\right)\\)."
+      }
+    },
+    {
+      "id": "space_positions_axis04_03",
+      "number": 3,
+      "title": "مستقيمان غير مستويين",
+      "text": "نعتبر المستقيمين:\n\\[(D_1):\\begin{cases}x=t\\\\y=0\\\\z=0\\end{cases}\\]\nو\n\\[(D_2):\\begin{cases}x=0\\\\y=1+s\\\\z=s\\end{cases}\\]\nحيث \\(t,s\\in\\mathbb R\\). حدد وضعهما النسبي.",
+      "skill": "تمييز المستقيمين غير المستويين عن المستقيمين المتقاطعين.",
+      "difficulty": "medium",
+      "solution": {
+        "steps": [
+          {
+            "order": 1,
+            "result": "\\(\\vec u_1=(1;0;0)\\) و\\(\\vec u_2=(0;1;1)\\)، وهما غير متوازيين."
+          },
+          {
+            "order": 2,
+            "explanation": "نبحث عن نقطة مشتركة. من الإحداثي \\(x\\): \\(t=0\\). ومن الإحداثي \\(z\\): \\(s=0\\)."
+          },
+          {
+            "order": 3,
+            "explanation": "عند \\(s=0\\)، الإحداثي \\(y\\) في \\((D_2)\\) يساوي \\(1\\)، بينما في \\((D_1)\\) يساوي دائمًا \\(0\\).",
+            "result": "إذن لا توجد نقطة مشتركة."
+          },
+          {
+            "order": 4,
+            "explanation": "المستقيمان غير متوازيين ولا يتقاطعان، لذلك هما غير مستويين."
+          }
+        ],
+        "final_answer": "\\((D_1)\\) و\\((D_2)\\) مستقيمان غير مستويين."
+      }
+    },
+    {
+      "id": "space_positions_axis04_04",
+      "number": 4,
+      "title": "مستقيم يقطع مستوى",
+      "text": "نعتبر المستقيم:\n\\[(D):\\begin{cases}x=1+t\\\\y=t\\\\z=t\\end{cases}\\]\nوالمستوى \\((P):x+y+z-4=0\\). عين نقطة تقاطع \\((D)\\) مع \\((P)\\).",
+      "skill": "حساب نقطة تقاطع مستقيم ومستوى.",
+      "difficulty": "easy",
+      "solution": {
+        "steps": [
+          {
+            "order": 1,
+            "explanation": "نعوض إحداثيات نقطة من المستقيم في معادلة المستوى.",
+            "calculation": "\\[(1+t)+t+t-4=0.\\]"
+          },
+          {
+            "order": 2,
+            "calculation": "\\[3t-3=0\\Rightarrow t=1.\\]"
+          },
+          {
+            "order": 3,
+            "explanation": "نعوض \\(t=1\\) في تمثيل المستقيم.",
+            "calculation": "\\[x=2,\\quad y=1,\\quad z=1.\\]"
+          }
+        ],
+        "final_answer": "\\[(D)\\cap(P)=\\{I(2;1;1)\\}.\\]"
+      }
+    },
+    {
+      "id": "space_positions_axis04_05",
+      "number": 5,
+      "title": "مستقيم موازٍ أم محتوى؟",
+      "text": "نعتبر المستوى \\((P):x+y-z-1=0\\) والمستقيم:\n\\[(D):\\begin{cases}x=1+t\\\\y=t\\\\z=2t\\end{cases}\\quad(t\\in\\mathbb R).\\]\nحدد الوضع النسبي للمستقيم \\((D)\\) والمستوى \\((P)\\).",
+      "skill": "التمييز بين مستقيم موازٍ لمستوى ومستقيم محتوى فيه.",
+      "difficulty": "medium",
+      "solution": {
+        "steps": [
+          {
+            "order": 1,
+            "result": "شعاع توجيه المستقيم هو \\(\\vec u=(1;1;2)\\)، وناظمي المستوى هو \\(\\vec n=(1;1;-1)\\)."
+          },
+          {
+            "order": 2,
+            "calculation": "\\[\\vec u\\cdot\\vec n=1+1-2=0.\\]"
+          },
+          {
+            "order": 3,
+            "explanation": "إذن اتجاه المستقيم موازٍ للمستوى. نختبر نقطة من المستقيم، مثل \\(A(1;0;0)\\) عند \\(t=0\\)."
+          },
+          {
+            "order": 4,
+            "calculation": "\\[1+0-0-1=0.\\]"
+          },
+          {
+            "order": 5,
+            "explanation": "النقطة \\(A\\) تنتمي إلى المستوى، واتجاه المستقيم موازٍ له، لذلك المستقيم كله محتوى في المستوى."
+          }
+        ],
+        "final_answer": "\\((D)\\subset(P)\\)."
+      }
+    },
+    {
+      "id": "space_positions_axis04_06",
+      "number": 6,
+      "title": "مستقيم موازٍ لمستوى ومتميز عنه",
+      "text": "نعتبر المستوى \\((P):x+y-z-1=0\\) والمستقيم:\n\\[(D):\\begin{cases}x=2+t\\\\y=t\\\\z=2t\\end{cases}\\quad(t\\in\\mathbb R).\\]\nحدد الوضع النسبي للمستقيم والمستوى.",
+      "skill": "إثبات أن مستقيمًا موازٍ لمستوى ومتميز عنه.",
+      "difficulty": "medium",
+      "solution": {
+        "steps": [
+          {
+            "order": 1,
+            "result": "\\(\\vec u=(1;1;2)\\)، و\\(\\vec n=(1;1;-1)\\)."
+          },
+          {
+            "order": 2,
+            "calculation": "\\[\\vec u\\cdot\\vec n=1+1-2=0.\\]"
+          },
+          {
+            "order": 3,
+            "explanation": "إذن اتجاه المستقيم موازٍ للمستوى. نأخذ النقطة \\(A(2;0;0)\\) من المستقيم."
+          },
+          {
+            "order": 4,
+            "calculation": "\\[2+0-0-1=1\\neq0.\\]"
+          },
+          {
+            "order": 5,
+            "explanation": "النقطة لا تنتمي إلى المستوى، إذن المستقيم موازٍ للمستوى ومتميز عنه."
+          }
+        ],
+        "final_answer": "\\((D)\\parallel(P)\\) و\\((D)\\not\\subset(P)\\)."
+      }
+    },
+    {
+      "id": "space_positions_axis04_07",
+      "number": 7,
+      "title": "مستقيمان متعامدان",
+      "text": "نعتبر المستقيمين:\n\\[(D_1):\\begin{cases}x=t\\\\y=2t\\\\z=-t\\end{cases}\\]\nو\n\\[(D_2):\\begin{cases}x=3s\\\\y=-s\\\\z=s\\end{cases}\\]\nحيث \\(t,s\\in\\mathbb R\\). بين أن المستقيمين متعامدان.",
+      "skill": "إثبات تعامد مستقيمين بعد إثبات تقاطعهما.",
+      "difficulty": "medium",
+      "solution": {
+        "steps": [
+          {
+            "order": 1,
+            "explanation": "عند \\(t=0\\) و\\(s=0\\) نحصل على النقطة \\(O(0;0;0)\\)، إذن المستقيمان متقاطعان."
+          },
+          {
+            "order": 2,
+            "result": "\\(\\vec u_1=(1;2;-1)\\)، و\\(\\vec u_2=(3;-1;1)\\)."
+          },
+          {
+            "order": 3,
+            "calculation": "\\[\\vec u_1\\cdot\\vec u_2=3-2-1=0.\\]"
+          },
+          {
+            "order": 4,
+            "explanation": "بما أنهما متقاطعان وشعاعا توجيههما متعامدان، فالمستقيمان متعامدان."
+          }
+        ],
+        "final_answer": "\\((D_1)\\perp(D_2)\\)."
+      }
+    },
+    {
+      "id": "space_positions_axis04_08",
+      "number": 8,
+      "title": "مستويان متوازيان أم منطبقان؟",
+      "text": "نعتبر المستويين:\n\\[(P):2x-y+z-3=0\\]\nو\n\\[(Q):4x-2y+2z-6=0.\\]\nحدد الوضع النسبي للمستويين.",
+      "skill": "تمييز المستويين المنطبقين من المعادلتين.",
+      "difficulty": "medium",
+      "solution": {
+        "steps": [
+          {
+            "order": 1,
+            "explanation": "نلاحظ أن جميع معاملات معادلة \\((Q)\\) هي ضعف معاملات معادلة \\((P)\\).",
+            "calculation": "\\[4x-2y+2z-6=2(2x-y+z-3).\\]"
+          },
+          {
+            "order": 2,
+            "explanation": "إذن المعادلتان تمثلان المستوى نفسه."
+          }
+        ],
+        "final_answer": "\\((P)=(Q)\\)، أي إن المستويين منطبقان."
+      }
+    },
+    {
+      "id": "space_positions_axis04_09",
+      "number": 9,
+      "title": "مستويان متوازيان متميزان",
+      "text": "نعتبر المستويين:\n\\[(P):x-2y+z-1=0\\]\nو\n\\[(Q):2x-4y+2z+3=0.\\]\nحدد الوضع النسبي للمستويين.",
+      "skill": "تمييز مستويين متوازيين متميزين.",
+      "difficulty": "medium",
+      "solution": {
+        "steps": [
+          {
+            "order": 1,
+            "result": "\\(\\vec n_P=(1;-2;1)\\)، و\\(\\vec n_Q=(2;-4;2)=2\\vec n_P\\)."
+          },
+          {
+            "order": 2,
+            "explanation": "إذن المستويان متوازيان أو منطبقان."
+          },
+          {
+            "order": 3,
+            "explanation": "لو كانا منطبقين لوجب أن تكون المعادلة الثانية ضعف الأولى كاملة، وعندها يكون الثابت \\(-2\\)، لكنه هنا \\(+3\\)."
+          },
+          {
+            "order": 4,
+            "result": "إذن المستويان متوازيان ومتميزان."
+          }
+        ],
+        "final_answer": "\\((P)\\parallel(Q)\\) وهما متميزان."
+      }
+    },
+    {
+      "id": "space_positions_axis04_10",
+      "number": 10,
+      "title": "مستقيم تقاطع مستويين",
+      "text": "نعتبر المستويين:\n\\[(P_1):x+y+z=1\\]\nو\n\\[(P_2):x-y=0.\\]\nعين تمثيلًا وسيطيًا لمستقيم تقاطعهما.",
+      "skill": "إيجاد تمثيل وسيطي لمستقيم تقاطع مستويين.",
+      "difficulty": "hard",
+      "solution": {
+        "steps": [
+          {
+            "order": 1,
+            "explanation": "من المعادلة الثانية:",
+            "calculation": "\\[x=y.\\]"
+          },
+          {
+            "order": 2,
+            "explanation": "نختار \\(x=y=t\\)."
+          },
+          {
+            "order": 3,
+            "explanation": "نعوض في المعادلة الأولى.",
+            "calculation": "\\[t+t+z=1\\Rightarrow z=1-2t.\\]"
+          },
+          {
+            "order": 4,
+            "result": "\\[\\begin{cases}x=t\\\\y=t\\\\z=1-2t\\end{cases}\\quad(t\\in\\mathbb R).\\]"
+          }
+        ],
+        "final_answer": "\\[(P_1)\\cap(P_2):\\begin{cases}x=t\\\\y=t\\\\z=1-2t\\end{cases},\\quad t\\in\\mathbb R.\\]"
+      }
+    },
+    {
+      "id": "space_positions_axis04_11",
+      "number": 11,
+      "title": "تعامد مستويين",
+      "text": "نعتبر المستويين:\n\\[(P):x+y=0\\]\nو\n\\[(Q):x-y+z=0.\\]\nبين أن المستويين متعامدان، ثم عين تمثيلًا وسيطيًا لمستقيم تقاطعهما.",
+      "skill": "إثبات تعامد مستويين ثم حساب مستقيم تقاطعهما.",
+      "difficulty": "hard",
+      "solution": {
+        "steps": [
+          {
+            "order": 1,
+            "result": "\\(\\vec n_P=(1;1;0)\\)، و\\(\\vec n_Q=(1;-1;1)\\)."
+          },
+          {
+            "order": 2,
+            "calculation": "\\[\\vec n_P\\cdot\\vec n_Q=1-1+0=0.\\]"
+          },
+          {
+            "order": 3,
+            "explanation": "إذن المستويان متعامدان."
+          },
+          {
+            "order": 4,
+            "explanation": "لإيجاد التقاطع، من \\(x+y=0\\) نجد \\(y=-x\\). نعوض في \\(x-y+z=0\\):",
+            "calculation": "\\[x-(-x)+z=0\\Rightarrow z=-2x.\\]"
+          },
+          {
+            "order": 5,
+            "explanation": "نضع \\(x=t\\).",
+            "result": "\\[\\begin{cases}x=t\\\\y=-t\\\\z=-2t\\end{cases}\\quad(t\\in\\mathbb R).\\]"
+          }
+        ],
+        "final_answer": "\\((P)\\perp(Q)\\)، وتقاطعُهما المستقيم \\((x,y,z)=t(1;-1;-2)\\)."
+      }
+    },
+    {
+      "id": "space_positions_axis04_12",
+      "number": 12,
+      "title": "تقاطع ثلاثة مستويات",
+      "text": "نعتبر المستويات:\n\\[(P_1):x+y+z=3\\]\n\\[(P_2):x-y=1\\]\n\\[(P_3):z=1.\\]\nعين التقاطع المشترك للمستويات الثلاثة.",
+      "skill": "حساب نقطة التقاطع المشتركة لثلاثة مستويات.",
+      "difficulty": "hard",
+      "solution": {
+        "steps": [
+          {
+            "order": 1,
+            "explanation": "من \\((P_3)\\):",
+            "calculation": "\\[z=1.\\]"
+          },
+          {
+            "order": 2,
+            "explanation": "نعوض في \\((P_1)\\).",
+            "calculation": "\\[x+y+1=3\\Rightarrow x+y=2.\\]"
+          },
+          {
+            "order": 3,
+            "explanation": "ولدينا من \\((P_2)\\):",
+            "calculation": "\\[x-y=1.\\]"
+          },
+          {
+            "order": 4,
+            "explanation": "نجمع المعادلتين.",
+            "calculation": "\\[2x=3\\Rightarrow x=\\frac32.\\]"
+          },
+          {
+            "order": 5,
+            "calculation": "\\[y=2-\\frac32=\\frac12.\\]"
+          }
+        ],
+        "final_answer": "\\[(P_1)\\cap(P_2)\\cap(P_3)=\\left\\{I\\left(\\frac32;\\frac12;1\\right)\\right\\}.\\]"
+      }
+    },
+    {
+      "id": "space_positions_axis04_13",
+      "number": 13,
+      "title": "تمرين شامل للمحور",
+      "text": "في الفضاء المنسوب إلى معلم متعامد ومتجانس، نعتبر المستقيم:\n\\[(D):\\begin{cases}x=1+t\\\\y=t\\\\z=1-t\\end{cases}\\quad(t\\in\\mathbb R)\\]\nوالمستويين:\n\\[(P):x+y+z-2=0\\]\n\\[(Q):x-y=0.\\]\n1) حدد الوضع النسبي للمستقيم \\((D)\\) والمستوى \\((P)\\).\n2) حدد الوضع النسبي للمستقيم \\((D)\\) والمستوى \\((Q)\\)، وعين نقطة تقاطعهما إن وجدت.\n3) بين أن المستويين \\((P)\\) و\\((Q)\\) متقاطعان.\n4) عين تمثيلًا وسيطيًا لمستقيم التقاطع \\(\\Delta=(P)\\cap(Q)\\).\n5) تحقق هل نقطة تقاطع \\((D)\\) مع \\((Q)\\) تنتمي إلى \\(\\Delta\\).",
+      "skill": "دمج دراسة مستقيم مع مستوى وتقاطع مستويين والتحقق من الانتماء.",
+      "difficulty": "hard",
+      "solution": {
+        "steps": [
+          {
+            "order": 1,
+            "title": "دراسة D مع P",
+            "explanation": "شعاع توجيه \\((D)\\) هو \\(\\vec u=(1;1;-1)\\)، وناظمي \\((P)\\) هو \\(\\vec n_P=(1;1;1)\\).",
+            "calculation": "\\[\\vec u\\cdot\\vec n_P=1+1-1=1\\neq0.\\]",
+            "result": "إذن \\((D)\\) يقطع \\((P)\\) في نقطة وحيدة."
+          },
+          {
+            "order": 2,
+            "explanation": "نعوض تمثيل \\((D)\\) في معادلة \\((P)\\).",
+            "calculation": "\\[(1+t)+t+(1-t)-2=0\\Rightarrow t=0.\\]",
+            "result": "نقطة التقاطع هي \\(A(1;0;1)\\)."
+          },
+          {
+            "order": 3,
+            "title": "دراسة D مع Q",
+            "explanation": "نعوض في \\(x-y=0\\).",
+            "calculation": "\\[(1+t)-t=1\\neq0.\\]",
+            "result": "لا توجد نقطة تقاطع بين \\((D)\\) و\\((Q)\\)."
+          },
+          {
+            "order": 4,
+            "explanation": "كما أن \\(\\vec n_Q=(1;-1;0)\\)، و:",
+            "calculation": "\\[\\vec u\\cdot\\vec n_Q=1-1=0.\\]",
+            "result": "إذن \\((D)\\parallel(Q)\\) وهو غير محتوى فيه."
+          },
+          {
+            "order": 5,
+            "title": "دراسة P وQ",
+            "result": "\\(\\vec n_P=(1;1;1)\\) و\\(\\vec n_Q=(1;-1;0)\\) غير متوازيين، إذن المستويان متقاطعان وفق مستقيم."
+          },
+          {
+            "order": 6,
+            "title": "إيجاد Delta",
+            "explanation": "من \\(x-y=0\\) نجد \\(x=y\\). نضع \\(x=y=s\\)."
+          },
+          {
+            "order": 7,
+            "calculation": "\\[s+s+z-2=0\\Rightarrow z=2-2s.\\]"
+          },
+          {
+            "order": 8,
+            "result": "\\[\\Delta:\\begin{cases}x=s\\\\y=s\\\\z=2-2s\\end{cases}\\quad(s\\in\\mathbb R).\\]"
+          },
+          {
+            "order": 9,
+            "title": "السؤال الأخير",
+            "explanation": "لا توجد أصلًا نقطة تقاطع بين \\((D)\\) و\\((Q)\\)، لذلك لا توجد نقطة من هذا النوع لاختبار انتمائها إلى \\(\\Delta\\).",
+            "result": "السؤال 5 جوابه: لا توجد نقطة \\((D)\\cap(Q)\\)."
+          }
+        ],
+        "final_answer": "\\((D)\\) يقطع \\((P)\\) في \\(A(1;0;1)\\)، و\\((D)\\parallel(Q)\\) دون تقاطع، و\\((P)\\cap(Q)=\\Delta\\) حيث \\(x=s,\\ y=s,\\ z=2-2s\\)."
+      }
+    }
+  ]
+}

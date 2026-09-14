@@ -1,0 +1,193 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "graph_schema_version": "1.0-react-json",
+  "version": "4.2-2021-math-probability-subject2-ex02-react-ready",
+  "session": "ordinary",
+  "year": 2021,
+  "chapter_code": "probability",
+  "chapter_title": "الاحتمالات",
+  "axis_tags": [
+    "fundamental_counting_principle",
+    "probability_language_probability_law",
+    "random_variable_probability_distribution_expectation"
+  ],
+  "branches": [
+    {
+      "code": "math",
+      "name": "شعبة رياضيات"
+    }
+  ],
+  "exercise_number": 2,
+  "subject_number": 2,
+  "source_page": 3,
+  "source_pages": [
+    3
+  ],
+  "solution_source_pages": [
+    8
+  ],
+  "title": "التمرين الثاني — بكالوريا الجزائر 2021 — الموضوع الثاني — شعبة رياضيات — الاحتمالات",
+  "statement": "يراد تشكيل عشوائيا لجنة تضم رئيسا ونائبا له من بين ثلاثة رجال \\(H_1\\)، \\(H_2\\)، \\(H_3\\) و أربع نساء \\(F_1\\)، \\(F_2\\)، \\(F_3\\)، \\(F_4\\).",
+  "questions": [
+    {
+      "id": "2021_s2_probability_ex02_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) بين أن عدد اللجان التي يمكن تشكيلها هو 42",
+      "axis_tags": [
+        "fundamental_counting_principle"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "منصب الرئيس يختلف عن منصب النائب، لذلك نختار الرئيس أولا ثم النائب.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "اختيار الرئيس",
+            "explanation": "لدينا 7 أشخاص، إذن لدينا 7 اختيارات للرئيس."
+          },
+          {
+            "step_number": 2,
+            "title": "اختيار النائب",
+            "explanation": "بعد اختيار الرئيس يبقى 6 أشخاص لاختيار النائب."
+          },
+          {
+            "step_number": 3,
+            "title": "عدد اللجان",
+            "explanation": "\\[7\\times6=42.\\]"
+          }
+        ],
+        "final_answer": "\\[42\\] لجنة."
+      }
+    },
+    {
+      "id": "2021_s2_probability_ex02_q2a",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2) نعتبر الحوادث الآتية:\n\\(A\\) \"اللجنة من نفس الجنس\"\n\\(B\\) \"اللجنة من جنسين مختلفين\"\n\\(C\\) \"\\(H_1\\) هو الرئيس\"\n\\(E\\) \"اللجنة لا تضم كلا من \\(H_1\\) و \\(F_1\\)\"\nأ. احسب \\(P(A)\\) احتمال الحدث \\(A\\) ثم استنتج \\(P(B)\\)",
+      "axis_tags": [
+        "probability_language_probability_law",
+        "fundamental_counting_principle"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نعد اللجان المرتبة التي يكون عضواها من الجنس نفسه ثم نستعمل الحادثة العكسية.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "لجنة من رجلين",
+            "explanation": "\\[3\\times2=6.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "لجنة من امرأتين",
+            "explanation": "\\[4\\times3=12.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب P(A)",
+            "explanation": "\\[\nP(A)=\\frac{6+12}{42}=\\frac{18}{42}=\\frac37.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "استنتاج P(B)",
+            "explanation": "الحادثتان \\(A\\) و\\(B\\) متتامتان، ومنه:\n\\[\nP(B)=1-P(A)=1-\\frac37=\\frac47.\n\\]"
+          }
+        ],
+        "final_answer": "\\[P(A)=\\frac37,\\qquad P(B)=\\frac47.\\]"
+      }
+    },
+    {
+      "id": "2021_s2_probability_ex02_q2b",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "ب. احسب \\(P(C)\\) و \\(P(E)\\)",
+      "axis_tags": [
+        "probability_language_probability_law",
+        "fundamental_counting_principle"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نعد اللجان الموافقة لكل حادثة من أصل 42 لجنة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب P(C)",
+            "explanation": "إذا كان \\(H_1\\) هو الرئيس، فالنائب يمكن أن يكون أي شخص من الستة الباقين:\n\\[\nP(C)=\\frac6{42}=\\frac17.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب P(E)",
+            "explanation": "حتى لا تضم اللجنة كلا من \\(H_1\\) و\\(F_1\\)، نختار الرئيس والنائب من الأشخاص الخمسة الآخرين:\n\\[\n5\\times4=20.\n\\]\nإذن:\n\\[\nP(E)=\\frac{20}{42}=\\frac{10}{21}.\n\\]"
+          }
+        ],
+        "final_answer": "\\[P(C)=\\frac17,\\qquad P(E)=\\frac{10}{21}.\\]"
+      }
+    },
+    {
+      "id": "2021_s2_probability_ex02_q3",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "3) المتغير العشوائي \\(X\\) يرفق بكل لجنة عدد الرجال فيها.\nعين قانون احتمال \\(X\\) ثم احسب أمله الرياضياتي \\(E(X)\\).",
+      "axis_tags": [
+        "random_variable_probability_distribution_expectation",
+        "fundamental_counting_principle"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "عدد الرجال في لجنة من شخصين يمكن أن يكون 0 أو 1 أو 2، ثم نعد اللجان الموافقة لكل حالة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "قيم X",
+            "explanation": "\\[X\\in\\{0,1,2\\}.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "احتمال X=0",
+            "explanation": "لجنة من امرأتين:\n\\[\nP(X=0)=\\frac{4\\times3}{42}=\\frac{12}{42}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "احتمال X=1",
+            "explanation": "لجنة من رجل وامرأة مع اعتبار منصبي الرئيس والنائب:\n\\[\n3\\times4+4\\times3=24.\n\\]\n\\[\nP(X=1)=\\frac{24}{42}.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "احتمال X=2",
+            "explanation": "لجنة من رجلين:\n\\[\nP(X=2)=\\frac{3\\times2}{42}=\\frac6{42}.\n\\]"
+          },
+          {
+            "step_number": 5,
+            "title": "قانون الاحتمال",
+            "explanation": "\\[\n\\begin{array}{c|ccc}\nx_i&0&1&2\\\\\\hline\nP(X=x_i)&\\frac{12}{42}&\\frac{24}{42}&\\frac6{42}\n\\end{array}\n\\]"
+          },
+          {
+            "step_number": 6,
+            "title": "الأمل الرياضياتي",
+            "explanation": "\\[\nE(X)=0\\times\\frac{12}{42}+1\\times\\frac{24}{42}+2\\times\\frac6{42}=\\frac{36}{42}=\\frac67.\n\\]"
+          }
+        ],
+        "final_answer": "\\[\n\\begin{array}{c|ccc}\nx_i&0&1&2\\\\\\hline\nP(X=x_i)&\\frac{12}{42}&\\frac{24}{42}&\\frac6{42}\n\\end{array}\n\\]\n\\[E(X)=\\frac67.\\]"
+      }
+    }
+  ],
+  "rendering_contract": {
+    "no_capture": true,
+    "external_image_required": false,
+    "external_svg_required": false,
+    "graph_source": "inline_json",
+    "supported_graph_types": [],
+    "react_note": "هذا التمرين لا يحتاج رسما. قانون الاحتمال يعرض بجدول LaTeX داخل React."
+  },
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2021(7).pdf",
+    "statement_figure_policy": "لا يوجد رسم في نص التمرين.",
+    "solution_figure_policy": "لا Capture ولا SVG.",
+    "renderer": "MathJax/KaTeX + standard content renderer"
+  }
+}

@@ -1,0 +1,256 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "session": "ordinary",
+  "year": 2017,
+  "chapter_code": "complex_numbers",
+  "chapter_title": "الأعداد المركبة",
+  "branches": [
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "version": "4.2-2017-technical-math-complex-subject2-ex03",
+  "subject_number": 2,
+  "exercise_number": 3,
+  "source_page": 3,
+  "source_pages": [
+    3
+  ],
+  "solution_source_pages": [
+    9,
+    10
+  ],
+  "title": "التمرين الثالث — بكالوريا الجزائر 2017 — الموضوع الثاني — شعبة تقني رياضي",
+  "axis_tags": [
+    "complex_exponential_form",
+    "complex_powers",
+    "complex_homothety",
+    "complex_geometry",
+    "complex_barycenter",
+    "complex_geometric_locus"
+  ],
+  "statement": "المستوى المركب منسوب إلى المعلم المتعامد والمتجانس \\((O;\\vec u,\\vec v)\\). نعتبر النقط \\(A\\)، \\(B\\)، \\(C\\) و \\(D\\) التي لواحقها: \\(z_A=1+i\\)، \\(z_B=\\overline{z_A}\\)، \\(z_C=\\frac12(1-i)\\) و \\(z_D=\\overline{z_C}\\).",
+  "questions": [
+    {
+      "id": "2017_tm_s2_complex_ex03_q1a",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) أ) اكتب \\(z_A\\) و \\(z_C\\) على الشكل الأسي ثم استنتج الشكل الأسي للعددين \\(z_B\\) و \\(z_D\\).",
+      "axis_tags": [
+        "complex_exponential_form"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب طويلة وعمدة zA وzC، ثم نستعمل خاصية مرافق العدد المركب لاستنتاج الشكل الأسي لـzB وzD.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الشكل الأسي لـ zA",
+            "explanation": "\\[\nz_A=1+i.\n\\]\nطويلته:\n\\[\n|z_A|=\\sqrt2,\n\\]\nوعمدة له:\n\\[\n\\frac{\\pi}{4}.\n\\]\nإذن:\n\\[\nz_A=\\sqrt2e^{i\\pi/4}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "الشكل الأسي لـ zC",
+            "explanation": "\\[\nz_C=\\frac12(1-i)=\\frac12-\\frac12i.\n\\]\nطويلته:\n\\[\n|z_C|=\\sqrt{\\frac14+\\frac14}=\\frac{\\sqrt2}{2},\n\\]\nوعمدة له:\n\\[\n-\\frac{\\pi}{4}.\n\\]\nإذن:\n\\[\nz_C=\\frac{\\sqrt2}{2}e^{-i\\pi/4}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "استنتاج zB و zD",
+            "explanation": "بما أن \\(z_B=\\overline{z_A}\\)، فإن:\n\\[\nz_B=\\sqrt2e^{-i\\pi/4}.\n\\]\nوبما أن \\(z_D=\\overline{z_C}\\)، فإن:\n\\[\nz_D=\\frac{\\sqrt2}{2}e^{i\\pi/4}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(z_A=\\sqrt2e^{i\\pi/4}\\)، \\(z_B=\\sqrt2e^{-i\\pi/4}\\)، \\(z_C=\\frac{\\sqrt2}{2}e^{-i\\pi/4}\\)، \\(z_D=\\frac{\\sqrt2}{2}e^{i\\pi/4}\\)."
+      }
+    },
+    {
+      "id": "2017_tm_s2_complex_ex03_q1b",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "ب) عين قيم العدد الطبيعي \\(n\\) التي تحقق: \\((z_A)^n=(z_B)^n\\).",
+      "axis_tags": [
+        "complex_powers"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نقسم الطرفين على \\((z_B)^n\\) لأن zB غير منعدم، ثم نستعمل الشكل الأسي للنسبة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تحويل المعادلة",
+            "explanation": "\\[\n(z_A)^n=(z_B)^n\n\\iff\n\\left(\\frac{z_A}{z_B}\\right)^n=1.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب النسبة",
+            "explanation": "\\[\n\\frac{z_A}{z_B}\n=\\frac{\\sqrt2e^{i\\pi/4}}{\\sqrt2e^{-i\\pi/4}}\n=e^{i\\pi/2}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حل شرط القوة",
+            "explanation": "\\[\ne^{in\\pi/2}=1\n\\iff\n\\frac{n\\pi}{2}=2k\\pi.\n\\]\nإذن:\n\\[\nn=4k,\n\\qquad k\\in\\mathbb N.\n\\]"
+          }
+        ],
+        "final_answer": "\\(n=4k\\) حيث \\(k\\in\\mathbb N\\)."
+      }
+    },
+    {
+      "id": "2017_tm_s2_complex_ex03_q2a",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "2) أ) اوجد نسبة ومركز التحاكي \\(h\\) الذي يحول \\(D\\) إلى \\(A\\) ويحول \\(C\\) إلى \\(B\\).",
+      "axis_tags": [
+        "complex_homothety"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نلاحظ مباشرة العلاقة بين لواحق A وD وبين B وC.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "مقارنة zA و zD",
+            "explanation": "لدينا:\n\\[\nz_D=\\frac12+\\frac12i.\n\\]\nومن ثم:\n\\[\n2z_D=1+i=z_A.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "مقارنة zB و zC",
+            "explanation": "\\[\nz_C=\\frac12-\\frac12i.\n\\]\nإذن:\n\\[\n2z_C=1-i=z_B.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "التعرف على التحاكي",
+            "explanation": "العلاقة:\n\\[\nz'=2z\n\\]\nتمثل تحاكيًا مركزه \\(O\\) ونسبته \\(2\\). وهو يحول \\(D\\) إلى \\(A\\) و\\(C\\) إلى \\(B\\)."
+          }
+        ],
+        "final_answer": "مركز التحاكي هو \\(O\\)، ونسبته \\(2\\)، وكتابته المركبة \\(z'=2z\\)."
+      }
+    },
+    {
+      "id": "2017_tm_s2_complex_ex03_q2b",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "ب) احسب طويلة العدد المركب \\(\\frac{z_C-z_B}{z_D-z_A}\\) ثم استنتج طبيعة الرباعي \\(ADCB\\).",
+      "axis_tags": [
+        "complex_modulus_argument",
+        "complex_geometry"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب الطويلة المطلوبة، ثم نستعمل التحاكي السابق لاستخراج التوازي ونقارن الضلعين الجانبيين لإثبات أنه شبه منحرف متساوي الساقين.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب الفروق",
+            "explanation": "\\[\nz_C-z_B=\\left(\\frac12-\\frac12i\\right)-(1-i)\n=-\\frac12+\\frac12i,\n\\]\nو:\n\\[\nz_D-z_A=\\left(\\frac12+\\frac12i\\right)-(1+i)\n=-\\frac12-\\frac12i.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب الطويلة",
+            "explanation": "لدينا:\n\\[\n|z_C-z_B|=\\sqrt{\\frac14+\\frac14}=\\frac{\\sqrt2}{2},\n\\]\nوكذلك:\n\\[\n|z_D-z_A|=\\frac{\\sqrt2}{2}.\n\\]\nإذن:\n\\[\n\\left|\\frac{z_C-z_B}{z_D-z_A}\\right|=1.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "استخراج التوازي",
+            "explanation": "بما أن التحاكي مركزه \\(O\\) ونسبته \\(2\\) يحول \\(D\\) إلى \\(A\\) و\\(C\\) إلى \\(B\\)، فإن القطعة \\([DC]\\) تتحول إلى \\([AB]\\). لذلك:\n\\[\nAB\\parallel DC,\n\\qquad\nAB=2DC.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "مقارنة الضلعين الجانبيين",
+            "explanation": "من الطويلة المحسوبة:\n\\[\nBC=AD.\n\\]\nإذن الرباعي \\(ADCB\\) له ضلعان متقابلان متوازيان، وضلعاه غير المتوازيين متساويان."
+          },
+          {
+            "step_number": 5,
+            "title": "الاستنتاج",
+            "explanation": "إذن الرباعي \\(ADCB\\) شبه منحرف متساوي الساقين."
+          }
+        ],
+        "final_answer": "\\(\\left|\\frac{z_C-z_B}{z_D-z_A}\\right|=1\\)، والرباعي \\(ADCB\\) شبه منحرف متساوي الساقين."
+      }
+    },
+    {
+      "id": "2017_tm_s2_complex_ex03_q3",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "3) جد \\(z_G\\) لاحقة النقطة \\(G\\) مرجح الجملة \\(\\{(A;2),(B;2),(C;-1),(D;-1)\\}\\).",
+      "axis_tags": [
+        "complex_barycenter"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل صيغة لاحقة المرجح بعد حساب مجموع المعاملات.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "مجموع المعاملات",
+            "explanation": "\\[\n2+2-1-1=2\\neq0.\n\\]\nإذن المرجح موجود."
+          },
+          {
+            "step_number": 2,
+            "title": "كتابة لاحقة G",
+            "explanation": "\\[\nz_G=\\frac{2z_A+2z_B-z_C-z_D}{2}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "التعويض والتبسيط",
+            "explanation": "لدينا:\n\\[\nz_A+z_B=(1+i)+(1-i)=2,\n\\]\nإذن:\n\\[\n2z_A+2z_B=4.\n\\]\nكما أن:\n\\[\nz_C+z_D=\\left(\\frac12-\\frac12i\\right)+\\left(\\frac12+\\frac12i\\right)=1.\n\\]\nومن ثم:\n\\[\nz_G=\\frac{4-1}{2}=\\frac32.\n\\]"
+          }
+        ],
+        "final_answer": "\\(z_G=\\frac32\\)."
+      }
+    },
+    {
+      "id": "2017_tm_s2_complex_ex03_q4",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "4) لتكن \\((\\Gamma)\\) مجموعة النقط \\(M\\) من المستوى بحيث:\n\\[\n\\left\\|2\\overrightarrow{MA}+2\\overrightarrow{MB}-\\overrightarrow{MC}-\\overrightarrow{MD}\\right\\|=\\sqrt5.\n\\]\nبين أن \\(A\\) نقطة من \\((\\Gamma)\\)، ثم حدد طبيعة المجموعة \\((\\Gamma)\\) وعناصرها المميزة وأنشئها.",
+      "axis_tags": [
+        "complex_barycenter",
+        "complex_geometric_locus"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل خاصية المرجح G لتبسيط مجموع المتجهات، ثم نحصل على معادلة دائرة. بعدها نتحقق من انتماء A بحساب AG.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "استعمال خاصية المرجح",
+            "explanation": "بما أن \\(G\\) مرجح الجملة \\(\\{(A;2),(B;2),(C;-1),(D;-1)\\}\\) ومجموع المعاملات يساوي \\(2\\)، فإن:\n\\[\n2\\overrightarrow{MA}+2\\overrightarrow{MB}-\\overrightarrow{MC}-\\overrightarrow{MD}\n=2\\overrightarrow{MG}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "تبسيط شرط المجموعة",
+            "explanation": "إذن:\n\\[\n\\|2\\overrightarrow{MG}\\|=\\sqrt5.\n\\]\nأي:\n\\[\n2MG=\\sqrt5.\n\\]\nومنها:\n\\[\nMG=\\frac{\\sqrt5}{2}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "تحديد طبيعة المجموعة",
+            "explanation": "إذن \\((\\Gamma)\\) دائرة مركزها \\(G\\) ونصف قطرها:\n\\[\nR=\\frac{\\sqrt5}{2}.\n\\]\nوبما أن:\n\\[\nz_G=\\frac32,\n\\]\nفإن:\n\\[\nG\\left(\\frac32,0\\right).\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "التحقق من انتماء A",
+            "explanation": "لدينا:\n\\[\nA(1,1),\n\\qquad\nG\\left(\\frac32,0\\right).\n\\]\nإذن:\n\\[\nAG^2=\\left(1-\\frac32\\right)^2+(1-0)^2\n=\\frac14+1=\\frac54.\n\\]\nومنها:\n\\[\nAG=\\frac{\\sqrt5}{2}.\n\\]\nإذن:\n\\[\nA\\in(\\Gamma).\n\\]"
+          },
+          {
+            "step_number": 5,
+            "title": "الإنشاء",
+            "explanation": "نحدد النقطة \\(G\\left(\\frac32,0\\right)\\)، ثم نرسم الدائرة مركزها \\(G\\) والمارة بالنقطة \\(A\\)، لأن \\(GA=\\frac{\\sqrt5}{2}\\)."
+          }
+        ],
+        "final_answer": "\\((\\Gamma)\\) دائرة مركزها \\(G(\\frac32,0)\\) ونصف قطرها \\(\\frac{\\sqrt5}{2}\\)، والنقطة \\(A\\) تنتمي إليها."
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_official_correction": true,
+    "source_pdf": "2017(1).pdf",
+    "statement_page": 3,
+    "correction_pages": [
+      9,
+      10
+    ]
+  }
+}

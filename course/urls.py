@@ -9,7 +9,7 @@ from .views import (
     ChapterListView,
     SubjectDetailView,
     SubjectListView, AxisQuestionSummaryListView, AxisQuestionListView, QuestionDetailView, SubjectByBranchView,
-    QuestionSimpleSolutionAPIView,
+    QuestionSimpleSolutionAPIView, ChapterByIdView,
 )
 
 
@@ -115,5 +115,9 @@ urlpatterns = [
         QuestionSimpleSolutionAPIView.as_view(),
         name="question-simple-solution",
     ),
-
+    path(
+        "chapters/<int:chapter_id>/",
+        ChapterByIdView.as_view(),
+        name="chapter-by-id",
+    ),
 ]

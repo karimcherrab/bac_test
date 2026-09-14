@@ -1,0 +1,230 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "session": "ordinary",
+  "year": 2020,
+  "chapter_code": "sequences",
+  "chapter_title": "المتتاليات العددية",
+  "branches": [
+    {
+      "code": "science",
+      "name": "شعبة علوم تجريبية"
+    }
+  ],
+  "source_pdf": "2020(2).pdf",
+  "comparison_source": "bac_sequence_scientifique(20260823-104740).pdf",
+  "source_verification": {
+    "statement_checked_against_original_bac": true,
+    "solution_checked_against_official_correction": true,
+    "solution_style": "حل مفصل ومبسط بخطوات صغيرة، مع إظهار الحسابات الوسيطة التي اختصرها التصحيح الرسمي.",
+    "statement_policy": "نص التمرين والأسئلة منقول من موضوع البكالوريا دون إضافة معطيات جديدة."
+  },
+  "version": "4.2-2020-science-sequences-subject2-ex03",
+  "exercise_number": 3,
+  "subject_number": 2,
+  "points": 5,
+  "source_page": 4,
+  "source_pages": [
+    4
+  ],
+  "solution_source_pages": [
+    8,
+    9
+  ],
+  "title": "التمرين الثالث — بكالوريا الجزائر 2020 — الموضوع الثاني — شعبة علوم تجريبية",
+  "statement": "المتتالية العددية \\((u_n)\\) معرفة كما يلي: \\(u_0=0\\)، ومن أجل كل عدد طبيعي \\(n\\): \\(u_{n+1}=3u_n-2n+3\\).",
+  "statement_graphs": [],
+  "questions": [
+    {
+      "id": "2020_s2_ex03_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) احسب كلا من \\(u_1\\) و \\(u_2\\) ثم خمن اتجاه تغير المتتالية \\((u_n)\\).",
+      "axis_tags": [
+        "sequence_terms",
+        "sequence_conjecture"
+      ],
+      "solution": {
+        "strategy": "نعوض بالتتابع في علاقة الرجوع، ثم نقارن الحدود الأولى.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب u_1",
+            "explanation": "عند \\(n=0\\):\n\\[\nu_1=3u_0-2\\times0+3.\n\\]\nوبما أن \\(u_0=0\\):\n\\[\n\\boxed{u_1=3}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب u_2",
+            "explanation": "عند \\(n=1\\):\n\\[\nu_2=3u_1-2\\times1+3.\n\\]\nوبالتعويض عن \\(u_1=3\\):\n\\[\nu_2=9-2+3=10.\n\\]\nإذن:\n\\[\n\\boxed{u_2=10}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "التخمين",
+            "explanation": "لدينا:\n\\[\nu_0=0<u_1=3<u_2=10.\n\\]\nإذن نتخمن أن المتتالية \\((u_n)\\) متزايدة تماما."
+          }
+        ],
+        "final_answer": "\\(\\boxed{u_1=3,\\ u_2=10}\\)، والتخمين: \\(\\boxed{(u_n)\\text{ متزايدة تماما}}\\)."
+      }
+    },
+    {
+      "id": "2020_s2_ex03_q2a",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2) لتكن \\((v_n)\\) المتتالية العددية المعرفة على \\(\\mathbb N\\) بـ: \\(v_n=u_n-n+1\\). أ) بين أن \\((v_n)\\) متتالية هندسية أساسها \\(3\\)، يطلب حساب حدها الأول.",
+      "axis_tags": [
+        "auxiliary_sequence",
+        "geometric_sequence"
+      ],
+      "solution": {
+        "strategy": "نحسب \\(v_{n+1}\\) بدلالة \\(v_n\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "كتابة v_{n+1}",
+            "explanation": "لدينا:\n\\[\nv_{n+1}=u_{n+1}-(n+1)+1=u_{n+1}-n.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "تعويض u_{n+1}",
+            "explanation": "\\[\nv_{n+1}=3u_n-2n+3-n\n=3u_n-3n+3.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "استخراج العامل 3",
+            "explanation": "\\[\nv_{n+1}=3(u_n-n+1).\n\\]\nلكن:\n\\[\nv_n=u_n-n+1.\n\\]\nإذن:\n\\[\n\\boxed{v_{n+1}=3v_n}.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "حساب الحد الأول",
+            "explanation": "\\[\nv_0=u_0-0+1=0+1=1.\n\\]\nإذن \\((v_n)\\) هندسية أساسها \\(3\\) وحدها الأول \\(1\\)."
+          }
+        ],
+        "final_answer": "\\(\\boxed{q=3,\\quad v_0=1}\\)."
+      }
+    },
+    {
+      "id": "2020_s2_ex03_q2b",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "ب) اكتب الحد العام \\(v_n\\) بدلالة \\(n\\) ثم استنتج عبارة الحد العام \\(u_n\\) بدلالة \\(n\\).",
+      "axis_tags": [
+        "geometric_sequence_general_term",
+        "explicit_sequence_formula"
+      ],
+      "solution": {
+        "strategy": "نكتب الحد العام للمتتالية الهندسية ثم نستعمل تعريف \\(v_n\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "كتابة v_n",
+            "explanation": "بما أن \\((v_n)\\) هندسية، \\(v_0=1\\) وأساسها \\(3\\):\n\\[\nv_n=v_0\\times3^n.\n\\]\nإذن:\n\\[\n\\boxed{v_n=3^n}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "استخراج u_n",
+            "explanation": "من:\n\\[\nv_n=u_n-n+1\n\\]\nنحصل على:\n\\[\nu_n=v_n+n-1.\n\\]\nإذن:\n\\[\n\\boxed{u_n=3^n+n-1}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{v_n=3^n}\\)، و \\(\\boxed{u_n=3^n+n-1}\\)."
+      }
+    },
+    {
+      "id": "2020_s2_ex03_q2c",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "جـ) ادرس اتجاه تغير المتتالية \\((u_n)\\).",
+      "axis_tags": [
+        "sequence_monotonicity"
+      ],
+      "solution": {
+        "strategy": "نحسب الفرق \\(u_{n+1}-u_n\\) باستعمال العبارة الصريحة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "كتابة الحدين",
+            "explanation": "لدينا:\n\\[\nu_n=3^n+n-1.\n\\]\nإذن:\n\\[\nu_{n+1}=3^{n+1}+n.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب الفرق",
+            "explanation": "\\[\nu_{n+1}-u_n\n=3^{n+1}+n-(3^n+n-1).\n\\]\nبالتبسيط:\n\\[\nu_{n+1}-u_n=3^{n+1}-3^n+1.\n\\]\nأي:\n\\[\n\\boxed{u_{n+1}-u_n=2\\cdot3^n+1}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "دراسة الإشارة",
+            "explanation": "لكل \\(n\\in\\mathbb N\\):\n\\[\n3^n>0.\n\\]\nإذن:\n\\[\n2\\cdot3^n+1>0.\n\\]\nومن ثم:\n\\[\nu_{n+1}>u_n.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{(u_n)\\text{ متزايدة تماما}}\\)."
+      }
+    },
+    {
+      "id": "2020_s2_ex03_q3a",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "3) من أجل كل عدد طبيعي \\(n\\) نضع: \\(S_n=u_0+u_1+\\cdots+u_n\\). أ) بين أنه من أجل كل عدد طبيعي \\(n\\): \\(S_n=\\frac12(3^{n+1}+n^2-n-3)\\).",
+      "axis_tags": [
+        "sequence_sum",
+        "geometric_sum",
+        "arithmetic_sum"
+      ],
+      "solution": {
+        "strategy": "نعوض \\(u_k=3^k+k-1\\)، ثم نحسب مجموعا هندسيا ومجموع الأعداد الطبيعية.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تعويض u_k",
+            "explanation": "\\[\nS_n=\\sum_{k=0}^{n}(3^k+k-1).\n\\]\nإذن:\n\\[\nS_n=\\sum_{k=0}^{n}3^k+\\sum_{k=0}^{n}k-\\sum_{k=0}^{n}1.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "المجموع الهندسي",
+            "explanation": "\\[\n\\sum_{k=0}^{n}3^k=\\frac{3^{n+1}-1}{3-1}=\\frac{3^{n+1}-1}{2}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "مجموع k والثوابت",
+            "explanation": "\\[\n\\sum_{k=0}^{n}k=\\frac{n(n+1)}2,\n\\qquad\n\\sum_{k=0}^{n}1=n+1.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "تجميع النتائج",
+            "explanation": "إذن:\n\\[\nS_n=\\frac{3^{n+1}-1}{2}+\\frac{n(n+1)}2-(n+1).\n\\]\nنوحد على المقام \\(2\\):\n\\[\nS_n=\\frac{3^{n+1}-1+n^2+n-2n-2}{2}.\n\\]\nوبالتبسيط:\n\\[\n\\boxed{S_n=\\frac12(3^{n+1}+n^2-n-3)}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{S_n=\\frac12(3^{n+1}+n^2-n-3)}\\)."
+      }
+    },
+    {
+      "id": "2020_s2_ex03_q3b",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "ب) احسب: \\(\\lim_{n\\to+\\infty}S_n\\).",
+      "axis_tags": [
+        "sequence_limit"
+      ],
+      "solution": {
+        "strategy": "نستعمل العبارة الصريحة لـ\\(S_n\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "العبارة الصريحة",
+            "explanation": "لدينا:\n\\[\nS_n=\\frac12(3^{n+1}+n^2-n-3).\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "السلوك عند اللانهاية",
+            "explanation": "عندما \\(n\\to+\\infty\\):\n\\[\n3^{n+1}\\to+\\infty\n\\]\nوكذلك:\n\\[\nn^2-n-3\\to+\\infty.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "النتيجة",
+            "explanation": "إذن:\n\\[\n\\boxed{\\lim_{n\\to+\\infty}S_n=+\\infty}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{\\lim_{n\\to+\\infty}S_n=+\\infty}\\)."
+      }
+    }
+  ]
+}

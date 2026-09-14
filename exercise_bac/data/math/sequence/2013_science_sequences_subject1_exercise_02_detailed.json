@@ -1,0 +1,226 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "session": "ordinary",
+  "year": 2013,
+  "chapter_code": "sequences",
+  "chapter_title": "المتتاليات العددية",
+  "branches": [
+    {
+      "code": "science",
+      "name": "شعبة علوم تجريبية"
+    }
+  ],
+  "source_pdf": "2013(4).pdf",
+  "comparison_source": "bac_sequence_scientifique(7).pdf",
+  "version": "4.2-2013-science-sequences-subject1-ex02",
+  "exercise_number": 2,
+  "subject_number": 1,
+  "source_page": 1,
+  "solution_source_pages": [
+    5
+  ],
+  "title": "التمرين الثاني — بكالوريا الجزائر 2013 — الموضوع الأول — شعبة علوم تجريبية",
+  "statement": "",
+  "statement_graphs": [],
+  "questions": [
+    {
+      "id": "2013_s1_sequences_ex02_I1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "I) المتتالية \\((v_n)\\) معرفة على \\(\\mathbb N\\) بـ: \\(v_n=\\frac{5^{n+1}}{6^n}\\). 1) بين أن \\((v_n)\\) متتالية هندسية يطلب تحديد أساسها و حدها الأول.",
+      "axis_tags": [
+        "geometric_sequence"
+      ],
+      "solution": {
+        "strategy": "نكتب \\(v_n\\) على شكل ثابت مضروب في قوة، أو نحسب النسبة \\(\\frac{v_{n+1}}{v_n}\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "إعادة كتابة الحد العام",
+            "explanation": "\\[\nv_n=\\frac{5^{n+1}}{6^n}=5\\left(\\frac56\\right)^n.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "تحديد الأساس",
+            "explanation": "إذن \\((v_n)\\) متتالية هندسية أساسها:\n\\[\nq=\\frac56.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "تحديد الحد الأول",
+            "explanation": "عند \\(n=0\\):\n\\[\nv_0=\\frac{5^{1}}{6^0}=5.\n\\]"
+          }
+        ],
+        "final_answer": "\\((v_n)\\) هندسية أساسها \\(\\boxed{\\frac56}\\) وحدها الأول \\(\\boxed{v_0=5}\\)."
+      }
+    },
+    {
+      "id": "2013_s1_sequences_ex02_I2",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2) احسب \\(\\lim_{n\\to+\\infty}v_n\\).",
+      "axis_tags": [
+        "geometric_sequence_limit"
+      ],
+      "solution": {
+        "strategy": "لدينا \\(v_n=5(\\frac56)^n\\)، وأساس المتتالية الهندسية محصور بين 0 و1.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "نهاية القوة",
+            "explanation": "بما أن:\n\\[\n0<\\frac56<1,\n\\]\nفإن:\n\\[\n\\left(\\frac56\\right)^n\\longrightarrow0.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "نهاية v_n",
+            "explanation": "\\[\nv_n=5\\left(\\frac56\\right)^n\\longrightarrow5\\times0=0.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{\\lim_{n\\to+\\infty}v_n=0}\\)."
+      }
+    },
+    {
+      "id": "2013_s1_sequences_ex02_II1",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "II) المتتالية \\((u_n)\\) المعرفة بـ: \\(u_0=1\\)، و من أجل كل عدد طبيعي \\(n\\)، \\(u_{n+1}=\\sqrt{5u_n+6}\\). 1) برهن بالتراجع أنه، من أجل كل عدد طبيعي \\(n\\)، \\(1\\le u_n\\le6\\).",
+      "axis_tags": [
+        "recursive_sequence",
+        "induction_bounds"
+      ],
+      "solution": {
+        "strategy": "نبرهن الخاصية \\(1\\le u_n\\le6\\) بالتراجع.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التحقق عند n=0",
+            "explanation": "لدينا \\(u_0=1\\)، وبالتالي:\n\\[\n1\\le u_0\\le6.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "فرضية التراجع",
+            "explanation": "نفترض أنه من أجل رتبة \\(n\\):\n\\[\n1\\le u_n\\le6.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "استعمال الحصر",
+            "explanation": "من \\(1\\le u_n\\le6\\) نحصل على:\n\\[\n11\\le5u_n+6\\le36.\n\\]\nوبأخذ الجذر:\n\\[\n\\sqrt{11}\\le u_{n+1}\\le6.\n\\]\nوبما أن \\(\\sqrt{11}>1\\)، فإن:\n\\[\n1\\le u_{n+1}\\le6.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "الخلاصة",
+            "explanation": "إذن بالتراجع:\n\\[\n\\boxed{1\\le u_n\\le6\\quad\\forall n\\in\\mathbb N}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{1\\le u_n\\le6}\\) لكل \\(n\\in\\mathbb N\\)."
+      }
+    },
+    {
+      "id": "2013_s1_sequences_ex02_II2",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "2) ادرس اتجاه تغير المتتالية \\((u_n)\\).",
+      "axis_tags": [
+        "sequence_monotonicity"
+      ],
+      "solution": {
+        "strategy": "ندرس إشارة الفرق \\(u_{n+1}-u_n\\) باستعمال المرافق والحصر السابق.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "كتابة الفرق",
+            "explanation": "\\[\nu_{n+1}-u_n=\\sqrt{5u_n+6}-u_n.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "استعمال المرافق",
+            "explanation": "\\[\nu_{n+1}-u_n=\\frac{5u_n+6-u_n^2}{\\sqrt{5u_n+6}+u_n}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "تحليل البسط",
+            "explanation": "\\[\n5u_n+6-u_n^2=(6-u_n)(u_n+1).\n\\]\nإذن:\n\\[\nu_{n+1}-u_n=\\frac{(6-u_n)(u_n+1)}{\\sqrt{5u_n+6}+u_n}.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "دراسة الإشارة",
+            "explanation": "من \\(1\\le u_n\\le6\\) يكون \\(6-u_n\\ge0\\)، و\\(u_n+1>0\\)، والمقام موجب؛ لذلك:\n\\[\nu_{n+1}-u_n\\ge0.\n\\]\nوبما أن الحدود لا تبلغ 6 ابتداء من \\(u_0=1\\)، يكون الفرق موجبا، فتكون المتتالية متزايدة تماما."
+          }
+        ],
+        "final_answer": "\\((u_n)\\) متزايدة تماما."
+      }
+    },
+    {
+      "id": "2013_s1_sequences_ex02_II3a",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "3) أ) برهن أنه، من أجل كل عدد طبيعي \\(n\\)، \\(6-u_{n+1}\\le\\frac56(6-u_n)\\).",
+      "axis_tags": [
+        "recursive_inequality"
+      ],
+      "solution": {
+        "strategy": "نحوّل \\(6-u_{n+1}\\) باستعمال المرافق، ثم نستعمل \\(u_n\\ge1\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "استعمال علاقة الرجوع",
+            "explanation": "\\[\n6-u_{n+1}=6-\\sqrt{5u_n+6}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "الضرب في المرافق",
+            "explanation": "\\[\n6-u_{n+1}=\\frac{36-(5u_n+6)}{6+\\sqrt{5u_n+6}}\n=\\frac{5(6-u_n)}{6+\\sqrt{5u_n+6}}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حصر المعامل",
+            "explanation": "لدينا \\(u_n\\ge1\\)، وبالتالي \\(\\sqrt{5u_n+6}>0\\)، ومنه:\n\\[\n6+\\sqrt{5u_n+6}\\ge6.\n\\]\nلذلك:\n\\[\n\\frac5{6+\\sqrt{5u_n+6}}\\le\\frac56.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "النتيجة",
+            "explanation": "وبما أن \\(6-u_n\\ge0\\):\n\\[\n\\boxed{6-u_{n+1}\\le\\frac56(6-u_n)}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{6-u_{n+1}\\le\\frac56(6-u_n)}\\)."
+      }
+    },
+    {
+      "id": "2013_s1_sequences_ex02_II3b",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "ب) بين أنه، من أجل كل عدد طبيعي \\(n\\)، \\(0\\le6-u_n\\le v_n\\). استنتج \\(\\lim_{n\\to+\\infty}u_n\\).",
+      "axis_tags": [
+        "comparison_sequence",
+        "sequence_limit"
+      ],
+      "solution": {
+        "strategy": "نستعمل البرهان بالتراجع مع المتتالية \\(v_n=5(\\frac56)^n\\)، ثم مبرهنة الحصر.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الرتبة الأولى",
+            "explanation": "عند \\(n=0\\):\n\\[\n6-u_0=5=v_0,\n\\]\nإذن:\n\\[\n0\\le6-u_0\\le v_0.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "خطوة التراجع",
+            "explanation": "نفترض:\n\\[\n0\\le6-u_n\\le v_n.\n\\]\nومن السؤال السابق:\n\\[\n0\\le6-u_{n+1}\\le\\frac56(6-u_n)\\le\\frac56v_n.\n\\]\nولأن \\((v_n)\\) هندسية أساسها \\(\\frac56\\):\n\\[\n\\frac56v_n=v_{n+1}.\n\\]\nإذن:\n\\[\n0\\le6-u_{n+1}\\le v_{n+1}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الحصر",
+            "explanation": "إذن لكل \\(n\\):\n\\[\n0\\le6-u_n\\le v_n.\n\\]\nوقد وجدنا أن \\(v_n\\to0\\). بمبرهنة الحصر:\n\\[\n6-u_n\\to0.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "نهاية u_n",
+            "explanation": "من \\(6-u_n\\to0\\) نستنتج:\n\\[\nu_n\\to6.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{0\\le6-u_n\\le v_n}\\) و \\(\\boxed{\\lim_{n\\to+\\infty}u_n=6}\\)."
+      }
+    }
+  ]
+}

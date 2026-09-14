@@ -1,0 +1,418 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "5.0-physics-bac-unified",
+  "version": "5.0-2025-subject02-ex03-rl-bell-coil-inline-svg-unified",
+  "session": "ordinary",
+  "year": 2025,
+  "subject_number": 2,
+  "chapter_code": "electrical_system_evolution",
+  "chapter_title": "تطور جملة كهربائية",
+  "axis_tags": [
+    "rl_circuit",
+    "inductor_transient",
+    "time_constant",
+    "ohms_law",
+    "kirchhoff_voltage_law",
+    "oscilloscope"
+  ],
+  "branches": [
+    {
+      "code": "math",
+      "name": "شعبة رياضيات"
+    },
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "exercise_number": 3,
+  "source_page": 7,
+  "source_pages": [
+    7,
+    8
+  ],
+  "solution_source_pages": [
+    17,
+    18
+  ],
+  "title": "التمرين الثالث — بكالوريا الجزائر 2025 — الموضوع الثاني — دارة RL ووشيعة الجرس الكهربائي",
+  "statement": "التمرين الثالث: (06 نقاط)\nيستعمل الجرس الكهربائي في أجهزة الإنذار وتعد الوشيعة جزءا أساسيا من نظام تركيبه وتشغيله.\nيهدف هذا التمرين إلى إيجاد المقادير المميزة لوشيعة جرس كهربائي.\nنحقق دارة كهربائية (الشكل 3) باستعمال العناصر الآتية:\n- مولد توتر مثالي قوته المحركة الكهربائية E=12V؛\n- الوشيعة b لجرس كهربائي ذاتيتها L ومقاومتها r؛\n- ناقل أومي مقاومته R=5Ω؛\n- قاطعة K وأسلاك توصيل.\nنغلق القاطعة K في اللحظة t=0.\n1. أعد رسم مخطط الدارة الممثلة في الشكل 3 ثم مثل عليه سهمي التوترين u_b وu_R بين طرفي الوشيعة والناقل الأومي على الترتيب وموضحا عليه كيفية ربط راسم الاهتزاز ذي ذاكرة بين طرفي الناقل الأومي.\n2. نتحصل على المنحنى البياني لتطور التوتر الكهربائي بدلالة الزمن u_R=f(t) كما في الشكل 4. فسر لماذا يسمح هذا المنحنى بمتابعة تطور شدة التيار المار في الدارة؟\n3. باستغلال المنحنى البياني:\n1.3 حدد النظامين الانتقالي والدائم وبين كيفية تطور شدة التيار الكهربائي في كل نظام.\n2.3 احسب I شدة التيار في النظام الدائم.\n4. بتطبيق قانون جمع التوترات، بين أن المعادلة التفاضلية التي تحققها شدة التيار الكهربائي i(t) تكتب على الشكل: di(t)/dt + (1/α)i(t)=E/L، حيث α ثابت يطلب تعيين عبارته وتحقق أنه متجانس مع الزمن باستعمال التحليل البعدي.\n5. انطلاقا من المعادلة التفاضلية السابقة بين أن الشدة الأعظمية للتيار الكهربائي المار في الدارة تكتب بالعلاقة: I=E/(R+r).\n6. تأكد من أن مقاومة الوشيعة r=3Ω.\n7. جد قيمة τ ثابت الزمن بيانيا ثم استنتج قيمة L ذاتية الوشيعة.",
+  "figures": [
+    {
+      "id": "2025_s02_ex03_fig3",
+      "type": "svg",
+      "usage": "statement",
+      "placement": "statement",
+      "title": "الشكل 3",
+      "description": "دارة كهربائية على التسلسل تحتوي مولد E، وشيعة b(L,r)، ناقل أومي R وقاطعة K.",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 500\" role=\"img\" aria-label=\"الشكل 3 - دارة RL\">\n<rect width=\"760\" height=\"500\" fill=\"white\"/>\n<defs><marker id=\"arr25rl\" markerWidth=\"10\" markerHeight=\"10\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L0,6 L9,3 z\" fill=\"#111827\"/></marker></defs>\n<!-- generator -->\n<line x1=\"150\" y1=\"105\" x2=\"270\" y2=\"105\" stroke=\"#111827\" stroke-width=\"4\"/>\n<circle cx=\"150\" cy=\"250\" r=\"38\" fill=\"white\" stroke=\"#111827\" stroke-width=\"4\"/>\n<text x=\"140\" y=\"260\" font-size=\"28\">E</text>\n<line x1=\"150\" y1=\"105\" x2=\"150\" y2=\"212\" stroke=\"#111827\" stroke-width=\"4\"/>\n<line x1=\"150\" y1=\"288\" x2=\"150\" y2=\"405\" stroke=\"#111827\" stroke-width=\"4\"/>\n<line x1=\"150\" y1=\"405\" x2=\"540\" y2=\"405\" stroke=\"#111827\" stroke-width=\"4\"/>\n<!-- switch -->\n<circle cx=\"285\" cy=\"105\" r=\"6\" fill=\"#111827\"/><circle cx=\"355\" cy=\"105\" r=\"6\" fill=\"#111827\"/>\n<line x1=\"285\" y1=\"105\" x2=\"340\" y2=\"80\" stroke=\"#111827\" stroke-width=\"4\"/>\n<text x=\"310\" y=\"68\" font-size=\"26\">K</text>\n<line x1=\"355\" y1=\"105\" x2=\"540\" y2=\"105\" stroke=\"#111827\" stroke-width=\"4\"/>\n<line x1=\"540\" y1=\"105\" x2=\"540\" y2=\"145\" stroke=\"#111827\" stroke-width=\"4\"/>\n<!-- coil -->\n<path d=\"M540 145\nc-35 0 -35 28 0 28\nc-35 0 -35 28 0 28\nc-35 0 -35 28 0 28\nc-35 0 -35 28 0 28\nc-35 0 -35 28 0 28\" fill=\"none\" stroke=\"#111827\" stroke-width=\"4\"/>\n<text x=\"570\" y=\"205\" font-size=\"26\">b(L,r)</text>\n<line x1=\"540\" y1=\"285\" x2=\"540\" y2=\"305\" stroke=\"#111827\" stroke-width=\"4\"/>\n<!-- resistor -->\n<rect x=\"510\" y=\"305\" width=\"60\" height=\"80\" fill=\"white\" stroke=\"#111827\" stroke-width=\"4\"/>\n<text x=\"585\" y=\"350\" font-size=\"28\">R</text>\n<line x1=\"540\" y1=\"385\" x2=\"540\" y2=\"405\" stroke=\"#111827\" stroke-width=\"4\"/>\n<!-- voltage arrows -->\n<line x1=\"605\" y1=\"150\" x2=\"605\" y2=\"275\" stroke=\"#111827\" stroke-width=\"3\" marker-end=\"url(#arr25rl)\"/>\n<text x=\"620\" y=\"220\" font-size=\"24\">u_b</text>\n<line x1=\"605\" y1=\"305\" x2=\"605\" y2=\"385\" stroke=\"#111827\" stroke-width=\"3\" marker-end=\"url(#arr25rl)\"/>\n<text x=\"620\" y=\"350\" font-size=\"24\">u_R</text>\n<!-- current -->\n<line x1=\"200\" y1=\"75\" x2=\"265\" y2=\"75\" stroke=\"#111827\" stroke-width=\"3\" marker-end=\"url(#arr25rl)\"/>\n<text x=\"225\" y=\"60\" font-size=\"24\">i</text>\n<text x=\"380\" y=\"465\" text-anchor=\"middle\" font-size=\"23\" direction=\"rtl\">الشكل 3</text>\n</svg>",
+      "render_mode": "inline",
+      "responsive": true
+    },
+    {
+      "id": "2025_s02_ex03_fig4",
+      "type": "svg",
+      "usage": "statement",
+      "placement": "statement",
+      "title": "الشكل 4",
+      "description": "تطور التوتر u_R بين طرفي الناقل الأومي بدلالة الزمن.",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 480\" role=\"img\" aria-label=\"الشكل 4 - تطور u_R بدلالة الزمن\">\n<rect width=\"760\" height=\"480\" fill=\"white\"/>\n<defs><marker id=\"arr25rlg\" markerWidth=\"9\" markerHeight=\"9\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L0,6 L9,3 z\" fill=\"#111827\"/></marker></defs>\n<g stroke=\"#d1d5db\" stroke-width=\"1\">\n<line x1=\"90\" y1=\"365\" x2=\"665\" y2=\"365\"/><line x1=\"90\" y1=\"337\" x2=\"665\" y2=\"337\"/><line x1=\"90\" y1=\"309\" x2=\"665\" y2=\"309\"/><line x1=\"90\" y1=\"281\" x2=\"665\" y2=\"281\"/><line x1=\"90\" y1=\"253\" x2=\"665\" y2=\"253\"/><line x1=\"90\" y1=\"225\" x2=\"665\" y2=\"225\"/><line x1=\"90\" y1=\"197\" x2=\"665\" y2=\"197\"/><line x1=\"90\" y1=\"169\" x2=\"665\" y2=\"169\"/><line x1=\"90\" y1=\"141\" x2=\"665\" y2=\"141\"/><line x1=\"90\" y1=\"113\" x2=\"665\" y2=\"113\"/><line x1=\"90\" y1=\"85\" x2=\"665\" y2=\"85\"/>\n<line x1=\"90.0\" y1=\"65\" x2=\"90.0\" y2=\"365\"/><line x1=\"137.5\" y1=\"65\" x2=\"137.5\" y2=\"365\"/><line x1=\"185.0\" y1=\"65\" x2=\"185.0\" y2=\"365\"/><line x1=\"232.5\" y1=\"65\" x2=\"232.5\" y2=\"365\"/><line x1=\"280.0\" y1=\"65\" x2=\"280.0\" y2=\"365\"/><line x1=\"327.5\" y1=\"65\" x2=\"327.5\" y2=\"365\"/><line x1=\"375.0\" y1=\"65\" x2=\"375.0\" y2=\"365\"/><line x1=\"422.5\" y1=\"65\" x2=\"422.5\" y2=\"365\"/><line x1=\"470.0\" y1=\"65\" x2=\"470.0\" y2=\"365\"/><line x1=\"517.5\" y1=\"65\" x2=\"517.5\" y2=\"365\"/><line x1=\"565.0\" y1=\"65\" x2=\"565.0\" y2=\"365\"/><line x1=\"612.5\" y1=\"65\" x2=\"612.5\" y2=\"365\"/><line x1=\"660.0\" y1=\"65\" x2=\"660.0\" y2=\"365\"/>\n</g>\n<line x1=\"90\" y1=\"365\" x2=\"705\" y2=\"365\" stroke=\"#111827\" stroke-width=\"3\" marker-end=\"url(#arr25rlg)\"/>\n<line x1=\"90\" y1=\"390\" x2=\"90\" y2=\"45\" stroke=\"#111827\" stroke-width=\"3\" marker-end=\"url(#arr25rlg)\"/>\n<polyline points=\"90.0,365.0 94.1,352.2 98.1,340.0 102.2,328.4 106.3,317.4 110.4,306.9 114.4,297.0 118.5,287.5 122.6,278.5 126.6,269.9 130.7,261.7 134.8,253.9 138.9,246.6 142.9,239.5 147.0,232.9 151.1,226.5 155.1,220.4 159.2,214.7 163.3,209.2 167.4,204.0 171.4,199.1 175.5,194.4 179.6,189.9 183.6,185.6 187.7,181.6 191.8,177.7 195.9,174.0 199.9,170.6 204.0,167.2 208.1,164.1 212.1,161.1 216.2,158.2 220.3,155.5 224.4,152.9 228.4,150.5 232.5,148.1 236.6,145.9 240.6,143.8 244.7,141.8 248.8,139.8 252.9,138.0 256.9,136.3 261.0,134.6 265.1,133.1 269.1,131.6 273.2,130.2 277.3,128.8 281.4,127.5 285.4,126.3 289.5,125.2 293.6,124.0 297.6,123.0 301.7,122.0 305.8,121.0 309.9,120.1 313.9,119.3 318.0,118.5 322.1,117.7 326.1,116.9 330.2,116.2 334.3,115.6 338.4,114.9 342.4,114.3 346.5,113.7 350.6,113.2 354.6,112.7 358.7,112.2 362.8,111.7 366.9,111.3 370.9,110.8 375.0,110.4 379.1,110.0 383.1,109.7 387.2,109.3 391.3,109.0 395.4,108.7 399.4,108.4 403.5,108.1 407.6,107.8 411.6,107.6 415.7,107.3 419.8,107.1 423.9,106.9 427.9,106.6 432.0,106.4 436.1,106.2 440.1,106.1 444.2,105.9 448.3,105.7 452.4,105.6 456.4,105.4 460.5,105.3 464.6,105.1 468.6,105.0 472.7,104.9 476.8,104.8 480.9,104.7 484.9,104.6 489.0,104.5 493.1,104.4 497.1,104.3 501.2,104.2 505.3,104.1 509.4,104.0 513.4,103.9 517.5,103.9 521.6,103.8 525.6,103.7 529.7,103.7 533.8,103.6 537.9,103.6 541.9,103.5 546.0,103.5 550.1,103.4 554.1,103.4 558.2,103.3 562.3,103.3 566.4,103.3 570.4,103.2 574.5,103.2 578.6,103.2 582.6,103.1 586.7,103.1 590.8,103.1 594.9,103.0 598.9,103.0 603.0,103.0 607.1,103.0 611.1,102.9 615.2,102.9 619.3,102.9 623.4,102.9 627.4,102.9 631.5,102.8 635.6,102.8 639.6,102.8 643.7,102.8 647.8,102.8 651.9,102.8 655.9,102.8 660.0,102.7\" fill=\"none\" stroke=\"#111827\" stroke-width=\"5\"/>\n<!-- tangent at t=0 crossing asymptote near tau -->\n<line x1=\"90\" y1=\"365\" x2=\"171.4\" y2=\"102.5\" stroke=\"#6b7280\" stroke-width=\"3\" stroke-dasharray=\"8 6\"/>\n<line x1=\"90\" y1=\"102.5\" x2=\"660\" y2=\"102.5\" stroke=\"#6b7280\" stroke-width=\"2\" stroke-dasharray=\"8 6\"/>\n<text x=\"18\" y=\"57\" font-size=\"25\">u_R(V)</text>\n<text x=\"675\" y=\"400\" font-size=\"24\">t(ms)</text>\n<text x=\"48\" y=\"319.5\" font-size=\"21\">1,5</text>\n<text x=\"153.4\" y=\"395\" font-size=\"21\">100</text>\n<text x=\"380\" y=\"450\" text-anchor=\"middle\" font-size=\"23\" direction=\"rtl\">الشكل 4</text>\n</svg>",
+      "render_mode": "inline",
+      "responsive": true
+    }
+  ],
+  "tables": [],
+  "question_groups": [
+    {
+      "id": "main_before_3",
+      "label": "",
+      "title": "",
+      "context": "",
+      "question_ids": [
+        "2025_s02_ex03_q1_part_01",
+        "2025_s02_ex03_q1_part_02"
+      ]
+    },
+    {
+      "id": "part_3",
+      "label": "3",
+      "title": "استغلال المنحنى البياني",
+      "context": "3. باستغلال المنحنى البياني:",
+      "question_ids": [
+        "2025_s02_ex03_q1_part_03",
+        "2025_s02_ex03_q1_part_04"
+      ]
+    },
+    {
+      "id": "main_after_3",
+      "label": "",
+      "title": "",
+      "context": "",
+      "question_ids": [
+        "2025_s02_ex03_q1_part_05",
+        "2025_s02_ex03_q1_part_06",
+        "2025_s02_ex03_q1_part_07",
+        "2025_s02_ex03_q1_part_08"
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "2025_s02_ex03_q1_part_01",
+      "display_order": 1,
+      "label": "1",
+      "group_id": "main_before_3",
+      "content_type": "question",
+      "text": "أعد رسم مخطط الدارة الممثلة في الشكل 3 ثم مثل عليه سهمي التوترين u_b وu_R بين طرفي الوشيعة والناقل الأومي على الترتيب وموضحا عليه كيفية ربط راسم الاهتزاز ذي ذاكرة بين طرفي الناقل الأومي.",
+      "axis_tags": [
+        "rl_circuit",
+        "inductor_transient",
+        "time_constant",
+        "ohms_law",
+        "kirchhoff_voltage_law",
+        "oscilloscope"
+      ],
+      "figures": [],
+      "tables": [],
+      "solution": {
+        "strategy": "نحدد الجملة المدروسة والقوى الخارجية واتجاه كل قوة، ثم نمثل الأشعة وفق المعلم واتجاه الحركة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "مخطط الدارة والتوترات",
+            "explanation": "يوصل راسم الاهتزاز على طرفي الناقل الأومي R لقياس u_R. يختار سهم u_R وفق جهة التيار على المقاومة، وسهم u_b بين طرفي الوشيعة. المخطط مرفق في الشكل 3 المعاد رسمه.",
+            "result": "",
+            "figures": [],
+            "tables": []
+          }
+        ],
+        "final_answer": "يوصل راسم الاهتزاز على طرفي الناقل الأومي R لقياس u_R. يختار سهم u_R وفق جهة التيار على المقاومة، وسهم u_b بين طرفي الوشيعة. المخطط مرفق في الشكل 3 المعاد رسمه.",
+        "verification": "",
+        "hints": [],
+        "common_mistakes": []
+      }
+    },
+    {
+      "id": "2025_s02_ex03_q1_part_02",
+      "display_order": 2,
+      "label": "2",
+      "group_id": "main_before_3",
+      "content_type": "question",
+      "text": "نتحصل على المنحنى البياني لتطور التوتر الكهربائي بدلالة الزمن u_R=f(t) كما في الشكل 4. فسر لماذا يسمح هذا المنحنى بمتابعة تطور شدة التيار المار في الدارة؟",
+      "axis_tags": [
+        "rl_circuit",
+        "inductor_transient",
+        "time_constant",
+        "ohms_law",
+        "kirchhoff_voltage_law",
+        "oscilloscope"
+      ],
+      "figures": [],
+      "tables": [],
+      "solution": {
+        "strategy": "نستخرج المعلومة المطلوبة مباشرة من البيان (ميل، تقاطع أو قراءة قيمة)، ثم نعوض في العلاقة الفيزيائية المناسبة إن لزم.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "لماذا يسمح u_R(t) بمتابعة التيار؟",
+            "explanation": "حسب قانون أوم: \\[\\boxed{u_R(t)=R\\,i(t)}.\\] وبما أن \\(R\\) ثابتة، فإن \\(u_R(t)\\) يتناسب طرديا مع \\(i(t)\\)، لذلك يمثل تطور التوتر نفس كيفية تطور شدة التيار.",
+            "result": "\\(\\boxed{u_R(t)=R\\,i(t)}\\)",
+            "figures": [],
+            "tables": []
+          }
+        ],
+        "final_answer": "النتيجة: \\(\\boxed{u_R(t)=R\\,i(t)}\\)",
+        "verification": "",
+        "hints": [],
+        "common_mistakes": []
+      }
+    },
+    {
+      "id": "2025_s02_ex03_q1_part_03",
+      "display_order": 3,
+      "label": "1.3",
+      "group_id": "part_3",
+      "content_type": "question",
+      "text": "حدد النظامين الانتقالي والدائم وبين كيفية تطور شدة التيار الكهربائي في كل نظام.",
+      "axis_tags": [
+        "rl_circuit",
+        "inductor_transient",
+        "time_constant",
+        "ohms_law",
+        "kirchhoff_voltage_law",
+        "oscilloscope"
+      ],
+      "figures": [],
+      "tables": [],
+      "solution": {
+        "strategy": "نستعمل المعطيات والعلاقة الفيزيائية المناسبة لهذا المطلوب، ثم نعوض عدديا مع احترام الوحدات.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "النظامان الانتقالي والدائم",
+            "explanation": "من البيان: النظام الانتقالي تقريبا \\[\\boxed{0\\le t\\le500ms}\\] وفيه تزداد شدة التيار من الصفر مع الزمن حتى تقترب من قيمتها الأعظمية. النظام الدائم تقريبا \\[\\boxed{500ms\\le t\\le700ms}\\] وفيه تصبح شدة التيار ثابتة \\(i=I\\).",
+            "result": "\\(\\boxed{0\\le t\\le500ms}\\) ، \\(\\boxed{500ms\\le t\\le700ms}\\)",
+            "figures": [],
+            "tables": []
+          }
+        ],
+        "final_answer": "النتيجة: \\(\\boxed{0\\le t\\le500ms}\\) ، \\(\\boxed{500ms\\le t\\le700ms}\\)",
+        "verification": "",
+        "hints": [],
+        "common_mistakes": []
+      }
+    },
+    {
+      "id": "2025_s02_ex03_q1_part_04",
+      "display_order": 4,
+      "label": "2.3",
+      "group_id": "part_3",
+      "content_type": "question",
+      "text": "احسب I شدة التيار في النظام الدائم.",
+      "axis_tags": [
+        "rl_circuit",
+        "inductor_transient",
+        "time_constant",
+        "ohms_law",
+        "kirchhoff_voltage_law",
+        "oscilloscope"
+      ],
+      "figures": [],
+      "tables": [],
+      "solution": {
+        "strategy": "نستعمل المعطيات والعلاقة الفيزيائية المناسبة لهذا المطلوب، ثم نعوض عدديا مع احترام الوحدات.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "شدة التيار في النظام الدائم",
+            "explanation": "من البيان: \\[u_{R,\\max}=7.5V.\\] وبما أن \\(u_R=Ri\\): \\[I=\\frac{u_{R,\\max}}{R}=\\frac{7.5}{5}=\\boxed{1.5A}.\\]",
+            "result": "\\(\\boxed{1.5A}\\)",
+            "figures": [],
+            "tables": []
+          }
+        ],
+        "final_answer": "النتيجة: \\(\\boxed{1.5A}\\)",
+        "verification": "",
+        "hints": [],
+        "common_mistakes": []
+      }
+    },
+    {
+      "id": "2025_s02_ex03_q1_part_05",
+      "display_order": 5,
+      "label": "4",
+      "group_id": "main_after_3",
+      "content_type": "question",
+      "text": "بتطبيق قانون جمع التوترات، بين أن المعادلة التفاضلية التي تحققها شدة التيار الكهربائي i(t) تكتب على الشكل: di(t)/dt + (1/α)i(t)=E/L، حيث α ثابت يطلب تعيين عبارته وتحقق أنه متجانس مع الزمن باستعمال التحليل البعدي.",
+      "axis_tags": [
+        "rl_circuit",
+        "inductor_transient",
+        "time_constant",
+        "ohms_law",
+        "kirchhoff_voltage_law",
+        "oscilloscope"
+      ],
+      "figures": [],
+      "tables": [],
+      "solution": {
+        "strategy": "نحصي القوى ثم نطبق القانون الثاني لنيوتن ونسقطه على المحور المناسب للحصول على المعادلة التفاضلية المطلوبة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "المعادلة التفاضلية",
+            "explanation": "قانون جمع التوترات: \\[u_R(t)+u_b(t)=E.\\] وللوشيعة: \\(u_b=L\\,di/dt+r\\,i\\)، وللمقاومة \\(u_R=Ri\\). إذن: \\[Ri+L\\frac{di}{dt}+ri=E.\\] بالقسمة على \\(L\\): \\[\\boxed{\\frac{di}{dt}+\\frac{R+r}{L}i=\\frac{E}{L}}.\\] وبالمقارنة مع \\(\\frac{di}{dt}+\\frac1\\alpha i=\\frac EL\\): \\[\\boxed{\\alpha=\\frac{L}{R+r}}.\\]",
+            "result": "\\(\\boxed{\\frac{di}{dt}+\\frac{R+r}{L}i=\\frac{E}{L}}\\) ، \\(\\boxed{\\alpha=\\frac{L}{R+r}}\\)",
+            "figures": [],
+            "tables": []
+          },
+          {
+            "step_number": 2,
+            "title": "التحليل البعدي للثابت α",
+            "explanation": "\\[\\alpha=\\frac{L}{R}.\\] وباستعمال \\(u=L\\,di/dt\\) و\\(u=Ri\\): \\[[L]=\\frac{[u][t]}{[i]},\\qquad [R]=\\frac{[u]}{[i]}.\\] لذلك \\[\\boxed{[\\alpha]=\\frac{[L]}{[R]}=[t]}\\] أي أنه متجانس مع الزمن.",
+            "result": "\\(\\boxed{[\\alpha]=\\frac{[L]}{[R]}=[t]}\\)",
+            "figures": [],
+            "tables": []
+          }
+        ],
+        "final_answer": "النتيجة: \\(\\boxed{\\frac{di}{dt}+\\frac{R+r}{L}i=\\frac{E}{L}}\\) ، \\(\\boxed{\\alpha=\\frac{L}{R+r}}\\) ، \\(\\boxed{[\\alpha]=\\frac{[L]}{[R]}=[t]}\\)",
+        "verification": "",
+        "hints": [],
+        "common_mistakes": []
+      }
+    },
+    {
+      "id": "2025_s02_ex03_q1_part_06",
+      "display_order": 6,
+      "label": "5",
+      "group_id": "main_after_3",
+      "content_type": "question",
+      "text": "انطلاقا من المعادلة التفاضلية السابقة بين أن الشدة الأعظمية للتيار الكهربائي المار في الدارة تكتب بالعلاقة: I=E/(R+r).",
+      "axis_tags": [
+        "rl_circuit",
+        "inductor_transient",
+        "time_constant",
+        "ohms_law",
+        "kirchhoff_voltage_law",
+        "oscilloscope"
+      ],
+      "figures": [],
+      "tables": [],
+      "solution": {
+        "strategy": "نحصي القوى ثم نطبق القانون الثاني لنيوتن ونسقطه على المحور المناسب للحصول على المعادلة التفاضلية المطلوبة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الشدة الأعظمية",
+            "explanation": "في النظام الدائم: \\(\\frac{di}{dt}=0\\) و\\(i=I\\). بالتعويض في المعادلة التفاضلية: \\[\\frac{R+r}{L}I=\\frac EL\\] ومنه \\[\\boxed{I=\\frac{E}{R+r}}.\\]",
+            "result": "\\(\\boxed{I=\\frac{E}{R+r}}\\)",
+            "figures": [],
+            "tables": []
+          }
+        ],
+        "final_answer": "النتيجة: \\(\\boxed{I=\\frac{E}{R+r}}\\)",
+        "verification": "",
+        "hints": [],
+        "common_mistakes": []
+      }
+    },
+    {
+      "id": "2025_s02_ex03_q1_part_07",
+      "display_order": 7,
+      "label": "6",
+      "group_id": "main_after_3",
+      "content_type": "question",
+      "text": "تأكد من أن مقاومة الوشيعة r=3Ω.",
+      "axis_tags": [
+        "rl_circuit",
+        "inductor_transient",
+        "time_constant",
+        "ohms_law",
+        "kirchhoff_voltage_law",
+        "oscilloscope"
+      ],
+      "figures": [],
+      "tables": [],
+      "solution": {
+        "strategy": "نحل هذا المطلوب مستقلا باستعمال معطيات التمرين والقانون الفيزيائي المناسب، ثم نتحقق من النتيجة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "مقاومة الوشيعة",
+            "explanation": "\\[r=\\frac EI-R=\\frac{12}{1.5}-5=8-5=\\boxed{3\\Omega}.\\]",
+            "result": "\\(\\boxed{3\\Omega}\\)",
+            "figures": [],
+            "tables": []
+          }
+        ],
+        "final_answer": "النتيجة: \\(\\boxed{3\\Omega}\\)",
+        "verification": "",
+        "hints": [],
+        "common_mistakes": []
+      }
+    },
+    {
+      "id": "2025_s02_ex03_q1_part_08",
+      "display_order": 8,
+      "label": "7",
+      "group_id": "main_after_3",
+      "content_type": "question",
+      "text": "جد قيمة τ ثابت الزمن بيانيا ثم استنتج قيمة L ذاتية الوشيعة.",
+      "axis_tags": [
+        "rl_circuit",
+        "inductor_transient",
+        "time_constant",
+        "ohms_law",
+        "kirchhoff_voltage_law",
+        "oscilloscope"
+      ],
+      "figures": [],
+      "tables": [],
+      "solution": {
+        "strategy": "نستخرج المعلومة المطلوبة مباشرة من البيان (ميل، تقاطع أو قراءة قيمة)، ثم نعوض في العلاقة الفيزيائية المناسبة إن لزم.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "ثابت الزمن",
+            "explanation": "باستعمال طريقة المماس في الأصل وقراءة تقاطعه مع القيمة النهائية من البيان: \\[\\boxed{\\tau=100ms=0.10s}.\\]",
+            "result": "\\(\\boxed{\\tau=100ms=0.10s}\\)",
+            "figures": [],
+            "tables": []
+          },
+          {
+            "step_number": 2,
+            "title": "ذاتية الوشيعة",
+            "explanation": "لدارة RL: \\[\\tau=\\frac{L}{R+r}.\\] إذن: \\[L=\\tau(R+r)=0.10(5+3)=\\boxed{0.8H}.\\]",
+            "result": "\\(\\boxed{0.8H}\\)",
+            "figures": [],
+            "tables": []
+          }
+        ],
+        "final_answer": "النتيجة: \\(\\boxed{\\tau=100ms=0.10s}\\) ، \\(\\boxed{0.8H}\\)",
+        "verification": "",
+        "hints": [],
+        "common_mistakes": []
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2025(20260911-114135).pdf",
+    "statement_figure_policy": "مخطط الدارة RL والمنحنى u_R=f(t) قابلان لإعادة الرسم؛ أدرجا SVG مباشرة داخل JSON، دون صور خارجية.",
+    "renderer": "InlineSvgGraph",
+    "source_page_numbering": "نص التمرين يبدأ في الصفحة 7 ويكتمل في الصفحة 8 من PDF، والتصحيح في الصفحتين 17 و18.",
+    "react_compatibility": "Schema 5.0 موحد: statement يحتوي نص التمرين الكامل، وquestions ذرية، وكل سؤال يملك solution مستقلة؛ لا يحتاج React إلى تقسيم النص أو مطابقة خطوات الحل وقت العرض.",
+    "asset_base_path": "/phy/bac/math/2025/electricity/rl_bell/",
+    "correction_notes": [
+      "التصحيح الرسمي: u_R=Ri ولذلك يمكن متابعة تطور i(t) من u_R(t).",
+      "النظام الانتقالي 0 إلى 500ms، والنظام الدائم من 500ms تقريبا.",
+      "u_Rmax=7.5V، I=1.5A، r=3Ω، τ=100ms، L=0.8H."
+    ],
+    "unified_schema": true,
+    "question_structure": "atomic",
+    "solution_structure": "per-question",
+    "statement_structure": "full_exercise_text"
+  },
+  "source_statement_full": "التمرين الثالث: (06 نقاط)\nيستعمل الجرس الكهربائي في أجهزة الإنذار وتعد الوشيعة جزءا أساسيا من نظام تركيبه وتشغيله.\nيهدف هذا التمرين إلى إيجاد المقادير المميزة لوشيعة جرس كهربائي.\nنحقق دارة كهربائية (الشكل 3) باستعمال العناصر الآتية:\n- مولد توتر مثالي قوته المحركة الكهربائية E=12V؛\n- الوشيعة b لجرس كهربائي ذاتيتها L ومقاومتها r؛\n- ناقل أومي مقاومته R=5Ω؛\n- قاطعة K وأسلاك توصيل.\nنغلق القاطعة K في اللحظة t=0.\n1. أعد رسم مخطط الدارة الممثلة في الشكل 3 ثم مثل عليه سهمي التوترين u_b وu_R بين طرفي الوشيعة والناقل الأومي على الترتيب وموضحا عليه كيفية ربط راسم الاهتزاز ذي ذاكرة بين طرفي الناقل الأومي.\n2. نتحصل على المنحنى البياني لتطور التوتر الكهربائي بدلالة الزمن u_R=f(t) كما في الشكل 4. فسر لماذا يسمح هذا المنحنى بمتابعة تطور شدة التيار المار في الدارة؟\n3. باستغلال المنحنى البياني:\n1.3 حدد النظامين الانتقالي والدائم وبين كيفية تطور شدة التيار الكهربائي في كل نظام.\n2.3 احسب I شدة التيار في النظام الدائم.\n4. بتطبيق قانون جمع التوترات، بين أن المعادلة التفاضلية التي تحققها شدة التيار الكهربائي i(t) تكتب على الشكل: di(t)/dt + (1/α)i(t)=E/L، حيث α ثابت يطلب تعيين عبارته وتحقق أنه متجانس مع الزمن باستعمال التحليل البعدي.\n5. انطلاقا من المعادلة التفاضلية السابقة بين أن الشدة الأعظمية للتيار الكهربائي المار في الدارة تكتب بالعلاقة: I=E/(R+r).\n6. تأكد من أن مقاومة الوشيعة r=3Ω.\n7. جد قيمة τ ثابت الزمن بيانيا ثم استنتج قيمة L ذاتية الوشيعة."
+}

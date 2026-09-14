@@ -1,0 +1,130 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2008-technical-math-complex-subject2-ex03",
+  "session": "ordinary",
+  "year": 2008,
+  "chapter_code": "complex_numbers",
+  "chapter_title": "الأعداد المركبة",
+  "axis_tags": [
+    "complex_quadratic_equation",
+    "complex_exponential_form",
+    "complex_argument_geometry",
+    "equilateral_triangle"
+  ],
+  "branches": [
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "exercise_number": 3,
+  "subject_number": 2,
+  "source_page": 3,
+  "source_pages": [
+    3
+  ],
+  "solution_source_pages": [
+    8
+  ],
+  "title": "التمرين الثالث — بكالوريا الجزائر 2008 — الموضوع الثاني — شعبة تقني رياضي",
+  "statement": "\\(r\\) عدد حقيقي موجب تماما و \\(\\theta\\) عدد حقيقي كيفي.",
+  "questions": [
+    {
+      "id": "2008_tm_s2_complex_ex03_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) حل في مجموعة الأعداد المركبة \\(\\mathbb{C}\\) المعادلة ذات المجهول \\(z\\):\n\\[\nz^2-2i\\left(r\\cos\\frac{\\theta}{2}\\right)z-r^2=0\n\\]\nاكتب الحلين على الشكل الأسي.",
+      "axis_tags": [
+        "complex_quadratic_equation",
+        "complex_exponential_form"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب مميز المعادلة، ثم نستخرج الجذرين. بعد ذلك نحول كل جذر من الشكل الجبري إلى الشكل الأسي بالتعرف على جيب وجيب تمام زاويتين مناسبتين.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "نحدد معاملات المعادلة",
+            "explanation": "المعادلة هي:\n\\[\nz^2-2ir\\cos\\frac{\\theta}{2}\\,z-r^2=0.\n\\]\nإذن:\n\\[\na=1,\\qquad b=-2ir\\cos\\frac{\\theta}{2},\\qquad c=-r^2.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "نحسب المميز",
+            "explanation": "لدينا:\n\\[\n\\Delta=b^2-4ac.\n\\]\nإذن:\n\\[\n\\Delta=\\left(-2ir\\cos\\frac{\\theta}{2}\\right)^2+4r^2.\n\\]\nوبما أن \\(i^2=-1\\):\n\\[\n\\Delta=-4r^2\\cos^2\\frac{\\theta}{2}+4r^2.\n\\]\nنستعمل \\(1-\\cos^2x=\\sin^2x\\)، فنحصل على:\n\\[\n\\Delta=4r^2\\sin^2\\frac{\\theta}{2}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "نستخرج الحلين",
+            "explanation": "يمكن أخذ جذر للمميز:\n\\[\n\\delta=2r\\sin\\frac{\\theta}{2}.\n\\]\nإذن:\n\\[\nz=\\frac{2ir\\cos\\frac{\\theta}{2}\\pm2r\\sin\\frac{\\theta}{2}}{2}.\n\\]\nفنحصل على:\n\\[\nz_1=r\\sin\\frac{\\theta}{2}+ir\\cos\\frac{\\theta}{2},\n\\]\nو\n\\[\nz_2=-r\\sin\\frac{\\theta}{2}+ir\\cos\\frac{\\theta}{2}.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "نكتب z1 على الشكل الأسي",
+            "explanation": "نكتب:\n\\[\nz_1=r\\left(\\sin\\frac{\\theta}{2}+i\\cos\\frac{\\theta}{2}\\right).\n\\]\nونعلم أن:\n\\[\n\\sin\\frac{\\theta}{2}=\\cos\\left(\\frac{\\pi}{2}-\\frac{\\theta}{2}\\right),\n\\]\nو\n\\[\n\\cos\\frac{\\theta}{2}=\\sin\\left(\\frac{\\pi}{2}-\\frac{\\theta}{2}\\right).\n\\]\nإذن:\n\\[\nz_1=r e^{i\\left(\\frac{\\pi}{2}-\\frac{\\theta}{2}\\right)}.\n\\]"
+          },
+          {
+            "step_number": 5,
+            "title": "نكتب z2 على الشكل الأسي",
+            "explanation": "لدينا:\n\\[\nz_2=r\\left(-\\sin\\frac{\\theta}{2}+i\\cos\\frac{\\theta}{2}\\right).\n\\]\nكما أن:\n\\[\n-\\sin\\frac{\\theta}{2}=\\cos\\left(\\frac{\\pi}{2}+\\frac{\\theta}{2}\\right),\n\\]\nو\n\\[\n\\cos\\frac{\\theta}{2}=\\sin\\left(\\frac{\\pi}{2}+\\frac{\\theta}{2}\\right).\n\\]\nإذن:\n\\[\nz_2=r e^{i\\left(\\frac{\\pi}{2}+\\frac{\\theta}{2}\\right)}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(z_1=r e^{i(\\frac{\\pi}{2}-\\frac{\\theta}{2})}\\)، و\\(z_2=r e^{i(\\frac{\\pi}{2}+\\frac{\\theta}{2})}\\)."
+      }
+    },
+    {
+      "id": "2008_tm_s2_complex_ex03_q2",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2) في المستوى المركب المنسوب إلى المعلم المتعامد والمتجانس \\((O;\\vec{u},\\vec{v})\\) نعتبر النقطتين \\(A\\) و \\(B\\) صورتي الحلين. عين \\(\\theta\\) حتى يكون المثلث \\(OAB\\) متقايس الأضلاع.",
+      "axis_tags": [
+        "complex_argument_geometry",
+        "equilateral_triangle"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "من الشكل الأسي للحلين نجد مباشرة أن \\(OA=OB=r\\). لكي يكون المثلث متقايس الأضلاع يكفي أن تكون الزاوية بين الشعاعين \\(OA\\) و\\(OB\\) مساوية لـ \\(\\pi/3\\) بترديد \\(2\\pi\\)، مع مراعاة الاتجاهين.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "نحسب OA و OB",
+            "explanation": "من السؤال السابق:\n\\[\n|z_1|=r,\\qquad |z_2|=r.\n\\]\nإذن:\n\\[\nOA=OB=r.\n\\]\nفالمثلث \\(OAB\\) متساوي الساقين في \\(O\\) دائمًا."
+          },
+          {
+            "step_number": 2,
+            "title": "نحسب الزاوية AOB",
+            "explanation": "حجة \\(z_1\\) هي:\n\\[\n\\frac{\\pi}{2}-\\frac{\\theta}{2},\n\\]\nوحجة \\(z_2\\) هي:\n\\[\n\\frac{\\pi}{2}+\\frac{\\theta}{2}.\n\\]\nإذن فرق الحجتين هو:\n\\[\n\\left(\\frac{\\pi}{2}+\\frac{\\theta}{2}\\right)-\\left(\\frac{\\pi}{2}-\\frac{\\theta}{2}\\right)=\\theta.\n\\]\nأي أن الزاوية الموجهة بين \\(OA\\) و\\(OB\\) مرتبطة بـ \\(\\theta\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "نفرض شرط المثلث المتقايس الأضلاع",
+            "explanation": "حتى يكون \\(OAB\\) متقايس الأضلاع، ومع كون \\(OA=OB\\)، يجب أن تكون الزاوية عند \\(O\\) مساوية لـ:\n\\[\n\\frac{\\pi}{3}.\n\\]\nوبسبب دورية الزوايا، نحصل على حالتين:\n\\[\n\\theta=\\frac{\\pi}{3}+2k\\pi\n\\]\nأو\n\\[\n\\theta=-\\frac{\\pi}{3}+2k\\pi,\n\\]\nحيث \\(k\\in\\mathbb{Z}\\)."
+          },
+          {
+            "step_number": 4,
+            "title": "تمثيل هندسي مبسط",
+            "explanation": "في الحالتين تكون الأطوال الثلاثة \\(OA\\)، \\(OB\\)، \\(AB\\) متساوية، لذلك يكون المثلث \\(OAB\\) متقايس الأضلاع.",
+            "graph_data": {
+              "diagram_type": "equilateral_triangle",
+              "title": "المثلث OAB عند تحقق الشرط",
+              "description": "تمثيل توضيحي لمثلث متقايس الأضلاع حيث OA=OB=AB=r.",
+              "svg": "<svg viewBox=\"0 0 620 420\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"110\" y1=\"320\" x2=\"510\" y2=\"320\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"110\" y1=\"320\" x2=\"310\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"510\" y1=\"320\" x2=\"310\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"110\" cy=\"320\" r=\"5\" fill=\"currentColor\"/><text x=\"88\" y=\"350\" font-size=\"20\">A</text><circle cx=\"510\" cy=\"320\" r=\"5\" fill=\"currentColor\"/><text x=\"516\" y=\"350\" font-size=\"20\">B</text><circle cx=\"310\" cy=\"70\" r=\"5\" fill=\"currentColor\"/><text x=\"300\" y=\"55\" font-size=\"20\">O</text><text x=\"190\" y=\"185\" font-size=\"20\">r</text><text x=\"425\" y=\"185\" font-size=\"20\">r</text><text x=\"300\" y=\"345\" font-size=\"20\">r</text></svg>",
+              "render_mode": "inline",
+              "responsive": true
+            }
+          }
+        ],
+        "final_answer": "\\(\\theta=\\frac{\\pi}{3}+2k\\pi\\) أو \\(\\theta=-\\frac{\\pi}{3}+2k\\pi\\)، حيث \\(k\\in\\mathbb{Z}\\)."
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2008(2).pdf",
+    "statement_figure_policy": "لا يوجد شكل مطلوب في نص هذا التمرين.",
+    "solution_figure_policy": "أضيف رسم هندسي توضيحي في الحل فقط دون تغيير معطيات نص البكالوريا.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  }
+}

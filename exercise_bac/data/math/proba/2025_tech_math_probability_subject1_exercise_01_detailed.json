@@ -1,0 +1,218 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2025-tech-math-probability-subject1-ex01-detailed",
+  "session": "ordinary",
+  "year": 2025,
+  "chapter_code": "probability",
+  "chapter_title": "الاحتمالات",
+  "axis_tags": [
+    "probability_language_law",
+    "probability_counting_modeling",
+    "random_variable_probability_law",
+    "random_variable_expected_value",
+    "successive_draw_without_replacement"
+  ],
+  "branches": [
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "exercise_number": 1,
+  "subject_number": 1,
+  "source_page": 1,
+  "source_pages": [
+    1
+  ],
+  "solution_source_pages": [
+    5
+  ],
+  "title": "التمرين الأول — بكالوريا الجزائر 2025 — الموضوع الأول — شعبة تقني رياضي",
+  "statement": "يحتوي صندوق على 10 كريات متماثلة ولا نفرق بينها باللمس منها: كريتان خضراوان مرقمتان بـ: 1 ، 2\nوثلاث كريات بيضاء مرقمة بـ: 1 ، 1 ، 2 وخمس كريات حمراء مرقمة بـ: 1 ، 1 ، 2 ، 2 ، 3",
+  "questions": [
+    {
+      "id": "2025_s1_probability_ex01_qI1a",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "I) نسحب عشوائيا من الصندوق 3 كريات في آن واحد، ونعتبر الحوادث الآتية:\nA : « الحصول على 3 كريات مختلفة الألوان مثنى مثنى » ، B : « الحصول على 3 كريات تحمل نفس الرقم »\nC : « الحصول على 3 كريات مجموع أرقامها 6 »\n1) أ) احسب \\(P(A)\\) ، \\(P(B)\\) و \\(P(C)\\) احتمالات الحوادث A ، B و C على الترتيب.",
+      "axis_tags": [
+        "probability_language_law",
+        "probability_counting_modeling"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "السحب يتم في آن واحد، لذلك لا نهتم بالترتيب ونستعمل التوفيقات. عدد الحالات الممكنة هو اختيار 3 كريات من أصل 10.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب عدد الحالات الممكنة",
+            "explanation": "لدينا:\n\\[|\\Omega|=\\binom{10}{3}=120.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب P(A)",
+            "explanation": "الحادثة \\(A\\) تعني الحصول على ثلاث كريات مختلفة الألوان مثنى مثنى، أي كرية خضراء وكرية بيضاء وكرية حمراء.\nإذن عدد الحالات الملائمة هو:\n\\[\\binom21\\binom31\\binom51=2\\times3\\times5=30.\\]\nومن ثم:\n\\[P(A)=\\frac{30}{120}=\\frac14.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب P(B)",
+            "explanation": "الحادثة \\(B\\) تعني أن الكريات الثلاث تحمل نفس الرقم.\nعدد الكريات التي تحمل الرقم 1 هو 5، وعدد الكريات التي تحمل الرقم 2 هو 4، بينما الرقم 3 موجود على كرية واحدة فقط.\nإذن:\n\\[P(B)=\\frac{\\binom53+\\binom43}{\\binom{10}{3}}=\\frac{10+4}{120}=\\frac{14}{120}=\\frac7{60}.\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "تحديد الحالات التي تحقق C",
+            "explanation": "نريد أن يكون مجموع الأرقام على الكريات الثلاث مساويا 6.\nالحالات العددية الممكنة هي:\n\\[1+2+3=6\\]\nأو:\n\\[2+2+2=6.\\]"
+          },
+          {
+            "step_number": 5,
+            "title": "حساب P(C)",
+            "explanation": "لدينا 5 كريات تحمل الرقم 1، و4 كريات تحمل الرقم 2، وكرية واحدة تحمل الرقم 3.\nللحالة \\(1+2+3\\):\n\\[\\binom51\\binom41\\binom11=20.\\]\nوللحالة \\(2+2+2\\):\n\\[\\binom43=4.\\]\nإذن عدد الحالات الملائمة هو:\n\\[20+4=24.\\]\nومن ثم:\n\\[P(C)=\\frac{24}{120}=\\frac15.\\]"
+          }
+        ],
+        "final_answer": "\\[P(A)=\\frac14,\\qquad P(B)=\\frac7{60},\\qquad P(C)=\\frac15.\\]"
+      }
+    },
+    {
+      "id": "2025_s1_probability_ex01_qI1b",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "ب) احسب \\(P(A\\cap B)\\) ثم استنتج حساب \\(P(A\\cup B)\\).",
+      "axis_tags": [
+        "probability_language_law",
+        "probability_counting_modeling"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "الحادثة \\(A\\cap B\\) تعني في الوقت نفسه: ثلاث كريات مختلفة الألوان وتحمل كلها نفس الرقم. نحسب هذه الحالات حسب الرقم 1 ثم الرقم 2.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الحالات الملائمة للرقم 1",
+            "explanation": "للحصول على ثلاث كريات مختلفة الألوان وكلها تحمل الرقم 1:\nلدينا كرية خضراء واحدة تحمل 1، وكريتان بيضاوان تحملان 1، وكريتان حمراوان تحملان 1.\nإذن عدد الحالات:\n\\[1\\times2\\times2=4.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "الحالات الملائمة للرقم 2",
+            "explanation": "للحصول على ثلاث كريات مختلفة الألوان وكلها تحمل الرقم 2:\nلدينا كرية خضراء واحدة، وكرية بيضاء واحدة، وكريتان حمراوان تحمل الرقم 2.\nإذن عدد الحالات:\n\\[1\\times1\\times2=2.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب P(A∩B)",
+            "explanation": "إجمالي الحالات الملائمة هو:\n\\[4+2=6.\\]\nإذن:\n\\[P(A\\cap B)=\\frac6{120}=\\frac1{20}.\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "حساب P(A∪B)",
+            "explanation": "نستعمل:\n\\[P(A\\cup B)=P(A)+P(B)-P(A\\cap B).\\]\nإذن:\n\\[P(A\\cup B)=\\frac14+\\frac7{60}-\\frac1{20}.\\]\nنوحد المقامات:\n\\[P(A\\cup B)=\\frac{15+7-3}{60}=\\frac{19}{60}.\\]"
+          }
+        ],
+        "final_answer": "\\[P(A\\cap B)=\\frac1{20},\\qquad P(A\\cup B)=\\frac{19}{60}.\\]"
+      }
+    },
+    {
+      "id": "2025_s1_probability_ex01_qI2",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "2) X المتغير العشوائي الذي يرفق بكل عملية سحب لـ 3 كريات بالكيفية السابقة عدد ألوان الكريات المسحوبة.\n- عين قانون احتمال المتغير العشوائي X ثم احسب أمله الرياضياتي.",
+      "axis_tags": [
+        "random_variable_probability_law",
+        "random_variable_expected_value"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "عند سحب 3 كريات، يمكن الحصول على لون واحد أو لونين أو ثلاثة ألوان. نحسب احتمال كل حالة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تحديد قيم X",
+            "explanation": "\\[X(\\Omega)=\\{1,2,3\\}.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب P(X=1)",
+            "explanation": "الحصول على لون واحد يعني أن الكريات الثلاث من نفس اللون.\nلا يمكن سحب 3 خضر لأن عددها 2 فقط.\nإذن:\n\\[P(X=1)=\\frac{\\binom33+\\binom53}{120}=\\frac{1+10}{120}=\\frac{11}{120}.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب P(X=3)",
+            "explanation": "الحصول على ثلاثة ألوان يعني كرية من كل لون، وهي الحادثة \\(A\\).\nإذن:\n\\[P(X=3)=\\frac{30}{120}=\\frac14.\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "حساب P(X=2)",
+            "explanation": "الاحتمالات الثلاثة مجموعها 1، لذلك:\n\\[P(X=2)=1-P(X=1)-P(X=3).\\]\nإذن:\n\\[P(X=2)=1-\\frac{11}{120}-\\frac{30}{120}=\\frac{79}{120}.\\]"
+          },
+          {
+            "step_number": 5,
+            "title": "حساب الأمل الرياضياتي",
+            "explanation": "\\[E(X)=1\\times\\frac{11}{120}+2\\times\\frac{79}{120}+3\\times\\frac{30}{120}.\\]\nومن ثم:\n\\[E(X)=\\frac{11+158+90}{120}=\\frac{259}{120}.\\]"
+          }
+        ],
+        "tables": [
+          {
+            "title": "قانون احتمال المتغير العشوائي X",
+            "headers": [
+              "\\(x_i\\)",
+              "1",
+              "2",
+              "3"
+            ],
+            "rows": [
+              [
+                "\\(P(X=x_i)\\)",
+                "\\(\\frac{11}{120}\\)",
+                "\\(\\frac{79}{120}\\)",
+                "\\(\\frac{30}{120}\\)"
+              ]
+            ]
+          }
+        ],
+        "final_answer": "\\[P(X=1)=\\frac{11}{120},\\quad P(X=2)=\\frac{79}{120},\\quad P(X=3)=\\frac{30}{120}.\\]\n\\[E(X)=\\frac{259}{120}.\\]"
+      }
+    },
+    {
+      "id": "2025_s1_probability_ex01_qII",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "II) نسحب عشوائيا من الصندوق 3 كريات على التوالي دون إرجاع.\n- ما احتمال ألا يبقى في الصندوق أية كرية خضراء؟",
+      "axis_tags": [
+        "successive_draw_without_replacement",
+        "probability_counting_modeling"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "حتى لا تبقى أي كرية خضراء في الصندوق بعد سحب 3 كريات، يجب أن نسحب الكريتين الخضراوين معا، وتكون الكرية الثالثة من بين الكريات الثماني غير الخضراء.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "عدد السحبات المرتبة الممكنة",
+            "explanation": "لأن السحب متتال دون إرجاع، فإن عدد السحبات المرتبة هو:\n\\[A_{10}^{3}=10\\times9\\times8=720.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "عدد السحبات الملائمة",
+            "explanation": "نختار الكريتين الخضراوين، ثم كرية واحدة من 8 كريات غير خضراء.\nالكريات الثلاث المختارة يمكن ترتيبها في \\(3!\\) طرق.\nإذن عدد السحبات الملائمة:\n\\[3!\\times8=48.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب الاحتمال",
+            "explanation": "\\[P=\\frac{48}{720}=\\frac1{15}.\\]"
+          }
+        ],
+        "final_answer": "\\[P=\\frac1{15}.\\]"
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "statement_checked_against_image": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2025(2).pdf",
+    "statement_image": "2025_exo01(2).jpg",
+    "statement_figure_policy": "لا يوجد شكل لازم في نص التمرين.",
+    "solution_figure_policy": "لا يحتاج الحل إلى رسم.",
+    "renderer": "MathJax + structured tables"
+  }
+}

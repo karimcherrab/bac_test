@@ -1,0 +1,237 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2016-science-space-subject2-ex01-detailed",
+  "session": "ordinary",
+  "year": 2016,
+  "chapter_code": "space_geometry",
+  "chapter_title": "الهندسة في الفضاء",
+  "axis_tags": [
+    "space_parametric_line",
+    "space_perpendicular_lines",
+    "space_cartesian_plane_normal_vector",
+    "space_orthogonal_projection",
+    "space_parametric_plane",
+    "space_relative_positions_intersections",
+    "space_areas_volumes"
+  ],
+  "branches": [
+    {
+      "code": "science",
+      "name": "شعبة علوم تجريبية"
+    }
+  ],
+  "exercise_number": 1,
+  "subject_number": 2,
+  "source_page": 3,
+  "source_pages": [
+    3
+  ],
+  "solution_source_pages": [
+    8
+  ],
+  "title": "التمرين الأول — بكالوريا الجزائر 2016 — الموضوع الثاني — شعبة علوم تجريبية",
+  "statement": "الفضاء منسوب إلى المعلم المتعامد والمتجانس \\((O;\\vec{i},\\vec{j},\\vec{k})\\)، نعتبر النقطتين \\(A(5;-1;-2)\\) و \\(B(3;12;-7)\\).\n\\((\\Delta)\\) المستقيم المعرف بالتمثيل الوسيطي التالي:\n\\[\\begin{cases}x=1+3k\\\\y=1+2k\\\\z=4k\\end{cases}\\qquad(k\\in\\mathbb R).\\]",
+  "questions": [
+    {
+      "id": "2016_s2_space_ex01_q1a",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) أ) عين تمثيلا وسيطيا للمستقيم \\((\\Delta')\\) الذي يشمل النقطة \\(A\\) و \\(\\vec u(-2;1;1)\\) شعاع توجيه له.",
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل النقطة A وشعاع التوجيه u.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "كتابة التمثيل الوسيطي",
+            "explanation": "\\[(\\Delta'):\\begin{cases}x=5-2t\\\\y=-1+t\\\\z=-2+t\\end{cases}\\quad(t\\in\\mathbb R).\\]"
+          }
+        ],
+        "final_answer": "\\[(\\Delta'):\\begin{cases}x=5-2t\\\\y=-1+t\\\\z=-2+t\\end{cases},\\quad t\\in\\mathbb R.\\]"
+      }
+    },
+    {
+      "id": "2016_s2_space_ex01_q1b",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "ب) بين أن المستقيمين \\((\\Delta)\\) و \\((\\Delta')\\) متعامدان، ثم تحقق أن النقطة \\(C(1;1;0)\\) نقطة تقاطعهما.",
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب الجداء السلمي لشعاعي التوجيه ثم نتحقق أن C تحقق التمثيلين.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "شعاعا التوجيه",
+            "explanation": "\\[\\vec v=(3,2,4),\\qquad \\vec u=(-2,1,1).\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "إثبات التعامد",
+            "explanation": "\\[\\vec u\\cdot\\vec v=-6+2+4=0.\\] إذن \\((\\Delta)\\perp(\\Delta')\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "نقطة التقاطع",
+            "explanation": "في \\((\\Delta)\\)، عند \\(k=0\\) نحصل على \\(C(1,1,0)\\). وفي \\((\\Delta')\\)، عند \\(t=2\\) نحصل أيضا على \\((1,1,0)\\)."
+          }
+        ],
+        "final_answer": "\\[(\\Delta)\\perp(\\Delta'),\\qquad (\\Delta)\\cap(\\Delta')=\\{C(1;1;0)\\}.\\]"
+      }
+    },
+    {
+      "id": "2016_s2_space_ex01_q2a",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "2) \\((P)\\) المستوى المعين بالمستقيمين \\((\\Delta)\\) و \\((\\Delta')\\). أ) بين أن الشعاع \\(\\vec n(2;11;-7)\\) ناظمي للمستوى \\((P)\\)، ثم جد معادلة ديكارتية له.",
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نثبت أن n عمودي على شعاعي توجيه المستقيمين، ثم نستعمل نقطة C من المستوى.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التحقق مع u",
+            "explanation": "\\[(2,11,-7)\\cdot(-2,1,1)=-4+11-7=0.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "التحقق مع v",
+            "explanation": "\\[(2,11,-7)\\cdot(3,2,4)=6+22-28=0.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "المعادلة الديكارتية",
+            "explanation": "بما أن \\(C(1,1,0)\\in(P)\\):\n\\[2(x-1)+11(y-1)-7z=0\\Rightarrow 2x+11y-7z-13=0.\\]"
+          }
+        ],
+        "final_answer": "\\[(P):2x+11y-7z-13=0.\\]"
+      }
+    },
+    {
+      "id": "2016_s2_space_ex01_q2b",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "ب) بين أن النقطة \\(C\\) هي المسقط العمودي للنقطة \\(B\\) على المستوى \\((P)\\).",
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نثبت أن C تنتمي إلى P وأن BC عمودي على P.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "انتماء C",
+            "explanation": "\\[2(1)+11(1)-7(0)-13=0\\Rightarrow C\\in(P).\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب BC",
+            "explanation": "\\[\\overrightarrow{BC}=C-B=(-2,-11,7)=-(2,11,-7).\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الاستنتاج",
+            "explanation": "إذن \\(BC\\) مواز لشعاع ناظمي للمستوى، وبالتالي \\((BC)\\perp(P)\\)."
+          }
+        ],
+        "final_answer": "النقطة \\(C\\) هي المسقط العمودي للنقطة \\(B\\) على المستوى \\((P)\\)."
+      }
+    },
+    {
+      "id": "2016_s2_space_ex01_q3a",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "3) \\(\\alpha\\) و \\(\\beta\\) عددان حقيقيان و \\((P')\\) مجموعة النقط \\(M(x;y;z)\\) من الفضاء المعرفة بـ:\n\\[\\begin{cases}x=3-\\beta\\\\y=12+12\\alpha+9\\beta\\\\z=-7-6\\alpha-11\\beta\\end{cases}\\]\nأ) أثبت أن المجموعة \\((P')\\) هي مستو ثم تحقق أن \\(13x-y-2z-41=0\\) هي معادلة ديكارتية له.",
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستخرج نقطة ثابتة وشعاعين غير مرتبطين خطيا، ثم نتحقق من المعادلة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "النقطة والشعاعان",
+            "explanation": "عند \\(\\alpha=\\beta=0\\) نحصل على \\(B(3,12,-7)\\)، وشعاعا التوجيه هما \\(\\vec w=(0,12,-6)\\) و\\(\\vec v=(-1,9,-11)\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "إثبات أنها مستوى",
+            "explanation": "الشعاعان غير مرتبطين خطيا، لذلك المجموعة \\((P')\\) مستوى."
+          },
+          {
+            "step_number": 3,
+            "title": "التحقق من المعادلة",
+            "explanation": "بالتعويض:\n\\[13(3-\\beta)-(12+12\\alpha+9\\beta)-2(-7-6\\alpha-11\\beta)-41=0.\\]\nإذن جميع نقاط \\((P')\\) تحقق المعادلة."
+          }
+        ],
+        "final_answer": "\\[(P'):13x-y-2z-41=0.\\]"
+      }
+    },
+    {
+      "id": "2016_s2_space_ex01_q3b",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "ب) عين إحداثيات \\(D\\) و \\(E\\) نقطتي تقاطع المستوى \\((P')\\) مع المستقيمين \\((\\Delta)\\) و \\((\\Delta')\\) على الترتيب.",
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نعوض تمثيل كل مستقيم في معادلة P'.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب D",
+            "explanation": "على \\((\\Delta)\\): \\(x=1+3k,y=1+2k,z=4k\\). بالتعويض:\n\\[13(1+3k)-(1+2k)-8k-41=0\\Rightarrow29k-29=0\\Rightarrow k=1.\\]\nإذن \\[D(4,3,4).\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب E",
+            "explanation": "على \\((\\Delta')\\): \\(x=5-2t,y=-1+t,z=-2+t\\). بالتعويض:\n\\[13(5-2t)-(-1+t)-2(-2+t)-41=0\\Rightarrow29-29t=0\\Rightarrow t=1.\\]\nإذن \\[E(3,0,-1).\\]"
+          }
+        ],
+        "final_answer": "\\[D(4;3;4),\\qquad E(3;0;-1).\\]"
+      }
+    },
+    {
+      "id": "2016_s2_space_ex01_q3c",
+      "display_order": 7,
+      "content_type": "question",
+      "text": "ج) احسب حجم رباعي الوجوه \\(BCDE\\).",
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نعتبر CDE قاعدة. بما أن CD وCE على المستقيمين المتعامدين Δ وΔ' فالمثلث CDE قائم في C، وCB عمودي على المستوى P الذي يحتوي القاعدة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب CD",
+            "explanation": "\\[\\overrightarrow{CD}=(3,2,4)\\Rightarrow CD=\\sqrt{29}.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب CE",
+            "explanation": "\\[\\overrightarrow{CE}=(2,-1,-1)\\Rightarrow CE=\\sqrt6.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "مساحة القاعدة",
+            "explanation": "\\[S_{CDE}=\\frac12\\,CD\\times CE=\\frac{\\sqrt{174}}2.\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "الارتفاع",
+            "explanation": "\\[\\overrightarrow{CB}=(2,11,-7)\\Rightarrow CB=\\sqrt{174}.\\]\nومن السؤال السابق \\((CB)\\perp(P)\\)، لذا \\(CB\\) ارتفاع رباعي الوجوه على القاعدة CDE."
+          },
+          {
+            "step_number": 5,
+            "title": "الحجم",
+            "explanation": "\\[V_{BCDE}=\\frac13S_{CDE}\\times CB=\\frac13\\times\\frac{\\sqrt{174}}2\\times\\sqrt{174}=29.\\]"
+          }
+        ],
+        "final_answer": "\\[V_{BCDE}=29\\] وحدة حجم."
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2016.pdf",
+    "statement_figure_policy": "لا يوجد شكل لازم في نص التمرين.",
+    "solution_figure_policy": "لا يحتاج الحل إلى رسم.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  }
+}

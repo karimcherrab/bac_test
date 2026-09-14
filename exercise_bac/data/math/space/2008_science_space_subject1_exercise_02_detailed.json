@@ -1,0 +1,187 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2008-science-space-subject1-ex02-detailed",
+  "session": "ordinary",
+  "year": 2008,
+  "chapter_code": "space_geometry",
+  "chapter_title": "الهندسة في الفضاء",
+  "axis_tags": [
+    "space_cartesian_plane_normal_vector",
+    "space_relative_positions_intersections",
+    "space_parametric_line",
+    "space_distances",
+    "space_barycenter"
+  ],
+  "branches": [
+    {
+      "code": "science",
+      "name": "شعبة علوم تجريبية"
+    }
+  ],
+  "exercise_number": 2,
+  "subject_number": 1,
+  "source_page": 1,
+  "source_pages": [
+    1
+  ],
+  "solution_source_pages": [
+    5,
+    6
+  ],
+  "title": "التمرين الثاني — بكالوريا الجزائر 2008 — الموضوع الأول — شعبة علوم تجريبية",
+  "statement": "الفضاء منسوب إلى معلم متعامد و متجانس \\((O;\\vec{i},\\vec{j},\\vec{k})\\) نعتبر المستوى \\((P)\\) الذي معادلته :\n\\[x+2y-z+7=0\\]\nو النقط \\(A(2,0,1)\\) و \\(B(3,2,0)\\) و \\(C(-1,-2,2)\\).",
+  "questions": [
+    {
+      "id": "2008_s1_space_ex02_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1- تحقق أن النقط \\(A\\) و \\(B\\) و \\(C\\) ليست على استقامية، ثم بين أن المعادلة الديكارتية للمستوى \\((ABC)\\) هي : \\(y+2z-2=0\\).",
+      "axis_tags": [
+        "space_cartesian_plane_normal_vector"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نثبت أولا أن النقط الثلاث غير مستقيمية باستعمال شعاعين لهما نفس المبدأ، ثم نتحقق أن النقط الثلاث تحقق المعادلة المقترحة للمستوى.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب شعاعين من النقطة A",
+            "explanation": "نحسب:\n\\[\\overrightarrow{AB}=B-A=(3-2,\\,2-0,\\,0-1)=(1,2,-1).\\]\nو\n\\[\\overrightarrow{AC}=C-A=(-1-2,\\,-2-0,\\,2-1)=(-3,-2,1).\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "التحقق من عدم الاستقامية",
+            "explanation": "لو كانت النقط \\(A,B,C\\) على استقامة واحدة لكان الشعاعان \\(\\overrightarrow{AB}\\) و\\(\\overrightarrow{AC}\\) مرتبطين خطيا.\nلكن لا يوجد عدد حقيقي \\(\\lambda\\) يحقق في الوقت نفسه:\n\\[(-3,-2,1)=\\lambda(1,2,-1).\\]\nفمن المركبة الأولى نحصل على \\(\\lambda=-3\\)، بينما من المركبة الثانية نحصل على \\(\\lambda=-1\\).\nإذن الشعاعان غير مرتبطين خطيا، ومنه النقط \\(A,B,C\\) ليست على استقامية."
+          },
+          {
+            "step_number": 3,
+            "title": "التحقق من انتماء A و B و C إلى المستوى المقترح",
+            "explanation": "نختبر المعادلة:\n\\[y+2z-2=0.\\]\nبالنسبة إلى \\(A(2,0,1)\\):\n\\[0+2\\times1-2=0.\\]\nبالنسبة إلى \\(B(3,2,0)\\):\n\\[2+2\\times0-2=0.\\]\nبالنسبة إلى \\(C(-1,-2,2)\\):\n\\[-2+2\\times2-2=0.\\]\nإذن النقط الثلاث تنتمي إلى هذا المستوى."
+          },
+          {
+            "step_number": 4,
+            "title": "الاستنتاج",
+            "explanation": "بما أن \\(A,B,C\\) ثلاث نقط غير مستقيمية، فهي تحدد مستوى وحيدا. وبما أنها كلها تحقق المعادلة \\(y+2z-2=0\\)، فإن هذه هي معادلة المستوى \\((ABC)\\)."
+          }
+        ],
+        "final_answer": "النقط \\(A,B,C\\) ليست على استقامية، ومعادلة المستوى \\((ABC)\\) هي \\(y+2z-2=0\\)."
+      }
+    },
+    {
+      "id": "2008_s1_space_ex02_q2a",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2- أ- تحقق أن المستويين \\((P)\\) و \\((ABC)\\) متعامدان، ثم عين تمثيلا وسيطيا للمستقيم \\((\\Delta)\\) مستقيم تقاطع \\((P)\\) و\\((ABC)\\).",
+      "axis_tags": [
+        "space_cartesian_plane_normal_vector",
+        "space_relative_positions_intersections",
+        "space_parametric_line"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نأخذ شعاعا ناظميا لكل مستوى. إذا كان الشعاعان الناظمان متعامدين فالمستويان متعامدان. بعد ذلك نحل معادلتي المستويين معا للحصول على تمثيل وسيطي لمستقيم التقاطع.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تعيين شعاعين ناظمين",
+            "explanation": "من معادلة \\((P)\\):\n\\[x+2y-z+7=0\\]\nشعاع ناظمي له هو:\n\\[\\vec n_P=(1,2,-1).\\]\nومن معادلة \\((ABC)\\):\n\\[y+2z-2=0\\]\nشعاع ناظمي له هو:\n\\[\\vec n_{ABC}=(0,1,2).\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "التحقق من التعامد",
+            "explanation": "نحسب الجداء السلمي:\n\\[\\vec n_P\\cdot\\vec n_{ABC}=1\\times0+2\\times1+(-1)\\times2=0.\\]\nإذن الشعاعان الناظمان متعامدان، وبالتالي:\n\\[(P)\\perp(ABC).\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حل معادلتي المستويين معا",
+            "explanation": "مستقيم التقاطع \\((\\Delta)\\) يحقق:\n\\[\\begin{cases}\nx+2y-z+7=0\\\\\ny+2z-2=0\n\\end{cases}\\]\nنضع:\n\\[z=t,\\quad t\\in\\mathbb{R}.\\]\nمن المعادلة الثانية:\n\\[y+2t-2=0\\Rightarrow y=-2t+2.\\]\nنعوض في المعادلة الأولى:\n\\[x+2(-2t+2)-t+7=0\\]\n\\[x-5t+11=0\\Rightarrow x=5t-11.\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "كتابة التمثيل الوسيطي",
+            "explanation": "إذن تمثيل وسيطي للمستقيم \\((\\Delta)\\) هو:\n\\[\\begin{cases}\nx=5t-11\\\\\ny=-2t+2\\\\\nz=t\n\\end{cases}\\qquad(t\\in\\mathbb{R}).\\]"
+          }
+        ],
+        "final_answer": "\\((P)\\perp(ABC)\\)، و\\(\\Delta:\\;\\begin{cases}x=5t-11\\\\y=-2t+2\\\\z=t\\end{cases},\\;t\\in\\mathbb{R}.\\)"
+      }
+    },
+    {
+      "id": "2008_s1_space_ex02_q2b",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "ب- احسب المسافة بين النقطة \\(A\\) و المستقيم \\((\\Delta)\\).",
+      "axis_tags": [
+        "space_distances"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "بما أن \\(A\\) تنتمي إلى \\((ABC)\\)، والمستويان \\((P)\\) و\\((ABC)\\) متعامدان، فإن المسافة من \\(A\\) إلى مستقيم التقاطع \\(\\Delta\\) تساوي المسافة من \\(A\\) إلى المستوى \\((P)\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التحقق من أن A تنتمي إلى (ABC)",
+            "explanation": "لدينا \\(A(2,0,1)\\)، وبالتالي:\n\\[0+2\\times1-2=0.\\]\nإذن:\n\\[A\\in(ABC).\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "استعمال تعامد المستويين",
+            "explanation": "بما أن \\((P)\\perp(ABC)\\) و\\(\\Delta=(P)\\cap(ABC)\\)، فإن العمود النازل من \\(A\\) على \\((P)\\) داخل المستوى \\((ABC)\\) يكون عموديا أيضا على \\(\\Delta\\).\nلذلك:\n\\[d(A,\\Delta)=d(A,(P)).\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "تطبيق صيغة المسافة من نقطة إلى مستوى",
+            "explanation": "معادلة \\((P)\\) هي:\n\\[x+2y-z+7=0.\\]\nإذن:\n\\[d(A,(P))=\\frac{|2+2\\times0-1+7|}{\\sqrt{1^2+2^2+(-1)^2}}.\\]\nومن ثم:\n\\[d(A,(P))=\\frac{8}{\\sqrt6}=\\frac{4\\sqrt6}{3}.\\]"
+          }
+        ],
+        "final_answer": "\\[d(A,\\Delta)=\\frac{4\\sqrt6}{3}.\\]"
+      }
+    },
+    {
+      "id": "2008_s1_space_ex02_q3",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "3- لتكن \\(G\\) مرجح الجملة \\(\\{(A,1),(B,\\alpha),(C,\\beta)\\}\\) حيث \\(\\alpha,\\beta\\) عددان حقيقيان يحققان \\(1+\\alpha+\\beta\\ne0\\). عين \\(\\alpha\\) حتى تنتمي النقطة \\(G\\) إلى المستقيم \\((\\Delta)\\).",
+      "axis_tags": [
+        "space_barycenter",
+        "space_relative_positions_intersections"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نكتب إحداثيات المرجح \\(G\\). وبما أن \\(G\\) مرجح لنقط كلها من المستوى \\((ABC)\\)، فهو ينتمي تلقائيا إلى \\((ABC)\\). لكي ينتمي إلى \\(\\Delta\\) يكفي إذن أن ينتمي أيضا إلى \\((P)\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "كتابة إحداثيات المرجح G",
+            "explanation": "بما أن:\n\\[G=\\operatorname{bar}\\{(A,1),(B,\\alpha),(C,\\beta)\\}\\]\nو\\(1+\\alpha+\\beta\\ne0\\)، فإن:\n\\[x_G=\\frac{2+3\\alpha-\\beta}{1+\\alpha+\\beta},\\]\n\\[y_G=\\frac{2\\alpha-2\\beta}{1+\\alpha+\\beta},\\]\n\\[z_G=\\frac{1+2\\beta}{1+\\alpha+\\beta}.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "استعمال شرط الانتماء إلى (P)",
+            "explanation": "لكي تكون \\(G\\in\\Delta\\)، وبما أن \\(G\\in(ABC)\\) أصلا، يكفي أن تحقق معادلة \\((P)\\):\n\\[x_G+2y_G-z_G+7=0.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "التعويض والتبسيط",
+            "explanation": "نعوض إحداثيات \\(G\\):\n\\[\\frac{2+3\\alpha-\\beta+2(2\\alpha-2\\beta)-(1+2\\beta)+7(1+\\alpha+\\beta)}{1+\\alpha+\\beta}=0.\\]\nبتجميع الحدود في البسط نحصل على:\n\\[8+14\\alpha=0.\\]\nنلاحظ أن حدود \\(\\beta\\) تختزل."
+          },
+          {
+            "step_number": 4,
+            "title": "إيجاد alpha",
+            "explanation": "\\[14\\alpha=-8\\Rightarrow \\alpha=-\\frac{8}{14}=-\\frac47.\\]"
+          }
+        ],
+        "final_answer": "\\[\\alpha=-\\frac47.\\]"
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2008.pdf",
+    "statement_figure_policy": "لا يوجد شكل لازم في نص التمرين.",
+    "solution_figure_policy": "لا يحتاج الحل إلى رسم.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  }
+}

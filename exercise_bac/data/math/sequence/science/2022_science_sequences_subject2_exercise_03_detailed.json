@@ -1,0 +1,269 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "session": "ordinary",
+  "year": 2022,
+  "chapter_code": "sequences",
+  "chapter_title": "المتتاليات العددية",
+  "branches": [
+    {
+      "code": "science",
+      "name": "شعبة علوم تجريبية"
+    }
+  ],
+  "source_pdf": "2022.pdf",
+  "comparison_source": "bac_sequence_scientifique(20260823-105202).pdf",
+  "source_verification": {
+    "statement_checked_against_original_bac": true,
+    "solution_checked_against_official_correction": true,
+    "solution_style": "حل مفصل ومبسط بخطوات صغيرة، مع إظهار الحسابات الوسيطة التي اختصرها التصحيح الرسمي.",
+    "statement_policy": "نص التمرين والأسئلة منقول من موضوع البكالوريا دون إضافة معطيات جديدة."
+  },
+  "version": "4.2-2022-science-sequences-subject2-ex03",
+  "exercise_number": 3,
+  "subject_number": 2,
+  "points": 5,
+  "source_page": 4,
+  "source_pages": [
+    4
+  ],
+  "solution_source_pages": [
+    9
+  ],
+  "title": "التمرين الثالث — بكالوريا الجزائر 2022 — الموضوع الثاني — شعبة علوم تجريبية",
+  "statement": "المتتالية الهندسية \\((u_n)\\) المعرفة على \\(\\mathbb N\\) وحدودها موجبة تماما حيث: \\(u_0\\times u_2=e^2\\) و \\(\\ln u_1+\\ln u_7=-4\\).",
+  "statement_graphs": [],
+  "questions": [
+    {
+      "id": "2022_s2_ex03_q1a",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) أ- عين \\(u_1\\) والأساس \\(q\\) للمتتالية \\((u_n)\\).",
+      "axis_tags": [
+        "geometric_sequence",
+        "logarithm"
+      ],
+      "solution": {
+        "strategy": "نستعمل خواص المتتالية الهندسية ثم شرط اللوغاريتم.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "إيجاد u_1",
+            "explanation": "بما أن \\((u_n)\\) هندسية:\n\\[\nu_0u_2=(u_1)^2.\n\\]\nومعطى أن:\n\\[\nu_0u_2=e^2.\n\\]\nإذن:\n\\[\nu_1^2=e^2.\n\\]\nوبما أن الحدود موجبة تماما:\n\\[\n\\boxed{u_1=e}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "استعمال u_7",
+            "explanation": "لدينا:\n\\[\nu_7=u_1q^6=e\\,q^6.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "استعمال الشرط اللوغاريتمي",
+            "explanation": "\\[\n\\ln u_1+\\ln u_7=-4.\n\\]\nأي:\n\\[\n1+\\ln(e q^6)=-4.\n\\]\nومن ثم:\n\\[\n1+(1+6\\ln q)=-4.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "حل بالنسبة إلى q",
+            "explanation": "\\[\n6\\ln q=-6\\Rightarrow \\ln q=-1.\n\\]\nإذن:\n\\[\n\\boxed{q=e^{-1}=\\frac1e}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{u_1=e,\\quad q=\\frac1e}\\)."
+      }
+    },
+    {
+      "id": "2022_s2_ex03_q1b",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "ب- تحقق أنه من أجل كل عدد طبيعي \\(n\\): \\(u_n=e^{2-n}\\).",
+      "axis_tags": [
+        "geometric_sequence_general_term"
+      ],
+      "solution": {
+        "strategy": "نستعمل \\(u_1=e\\) و\\(q=1/e\\)، ثم نعيد الكتابة انطلاقا من الرتبة صفر.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب u_0",
+            "explanation": "بما أن:\n\\[\nu_1=u_0q,\n\\]\nفإن:\n\\[\nu_0=\\frac{u_1}{q}=\\frac{e}{1/e}=e^2.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "الحد العام",
+            "explanation": "\\[\nu_n=u_0q^n=e^2\\left(\\frac1e\\right)^n=e^{2-n}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "النتيجة",
+            "explanation": "\\[\n\\boxed{u_n=e^{2-n}}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{u_n=e^{2-n}}\\)."
+      }
+    },
+    {
+      "id": "2022_s2_ex03_q2",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "2) احسب، بدلالة \\(n\\)، المجموع \\(S_n\\) حيث: \\(S_n=u_0+u_1+\\cdots+u_n\\).",
+      "axis_tags": [
+        "geometric_sum",
+        "sequence_sum"
+      ],
+      "solution": {
+        "strategy": "المجموع هو مجموع أول \\(n+1\\) حدود من متتالية هندسية.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "صيغة المجموع",
+            "explanation": "لدينا:\n\\[\nS_n=u_0\\frac{1-q^{n+1}}{1-q}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "التعويض",
+            "explanation": "نعوض:\n\\[\nu_0=e^2,\\qquad q=\\frac1e.\n\\]\nإذن:\n\\[\nS_n=e^2\\frac{1-e^{-(n+1)}}{1-e^{-1}}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "التبسيط",
+            "explanation": "بما أن:\n\\[\n1-e^{-1}=\\frac{e-1}{e},\n\\]\nفنحصل على:\n\\[\n\\boxed{S_n=\\frac{e^3}{e-1}\\left(1-\\frac1{e^{n+1}}\\right)}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{S_n=\\frac{e^3}{e-1}(1-e^{-(n+1)})}\\)."
+      }
+    },
+    {
+      "id": "2022_s2_ex03_q3a",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "3) نعتبر المتتالية العددية \\((v_n)\\) المعرفة بـ: \\(v_0=e^3\\)، ومن أجل كل عدد طبيعي \\(n\\): \\(v_{n+1}=v_n+u_n\\). أ- برهن بالتراجع أنه من أجل كل عدد طبيعي \\(n\\): \\(v_n=\\frac{e^{3-n}-e^4}{1-e}\\).",
+      "axis_tags": [
+        "induction",
+        "recursive_sequence"
+      ],
+      "solution": {
+        "strategy": "نبرهن الصيغة المعطاة بالتراجع.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التحقق عند n=0",
+            "explanation": "الطرف الأيمن يساوي:\n\\[\n\\frac{e^3-e^4}{1-e}=e^3.\n\\]\nوهذا يساوي \\(v_0\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "فرضية التراجع",
+            "explanation": "نفترض:\n\\[\nv_n=\\frac{e^{3-n}-e^4}{1-e}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب v_{n+1}",
+            "explanation": "من علاقة الرجوع:\n\\[\nv_{n+1}=v_n+u_n.\n\\]\nوبما أن:\n\\[\nu_n=e^{2-n},\n\\]\nفنحصل على:\n\\[\nv_{n+1}=\\frac{e^{3-n}-e^4}{1-e}+e^{2-n}.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "توحيد المقام",
+            "explanation": "\\[\nv_{n+1}=\\frac{e^{3-n}-e^4+(1-e)e^{2-n}}{1-e}.\n\\]\nوبالتبسيط:\n\\[\ne^{3-n}+(1-e)e^{2-n}=e^{2-n}.\n\\]\nإذن:\n\\[\nv_{n+1}=\\frac{e^{2-n}-e^4}{1-e}\n=\\frac{e^{3-(n+1)}-e^4}{1-e}.\n\\]"
+          },
+          {
+            "step_number": 5,
+            "title": "الخلاصة",
+            "explanation": "إذن الصيغة صحيحة لكل \\(n\\in\\mathbb N\\)."
+          }
+        ],
+        "final_answer": "\\(\\boxed{v_n=\\frac{e^{3-n}-e^4}{1-e}}\\)."
+      }
+    },
+    {
+      "id": "2022_s2_ex03_q3b",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "ب- بين أن \\((v_n)\\) متقاربة.",
+      "axis_tags": [
+        "sequence_limit",
+        "sequence_convergence"
+      ],
+      "solution": {
+        "strategy": "نحسب نهاية العبارة الصريحة لـ\\(v_n\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "نهاية e^{3-n}",
+            "explanation": "عندما \\(n\\to+\\infty\\):\n\\[\ne^{3-n}\\to0.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب النهاية",
+            "explanation": "إذن:\n\\[\n\\lim v_n=\\frac{-e^4}{1-e}=\\frac{e^4}{e-1}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الاستنتاج",
+            "explanation": "بما أن النهاية عدد حقيقي، فإن المتتالية \\((v_n)\\) متقاربة."
+          }
+        ],
+        "final_answer": "\\(\\boxed{\\lim_{n\\to+\\infty}v_n=\\frac{e^4}{e-1}}\\)."
+      }
+    },
+    {
+      "id": "2022_s2_ex03_q4a",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "4) أ- بين أنه من أجل كل عدد طبيعي \\(n\\): \\(\\frac1e v_n=\\frac1{1-e}(u_n-e^3)\\).",
+      "axis_tags": [
+        "algebraic_transformation"
+      ],
+      "solution": {
+        "strategy": "نبدأ من العبارة الصريحة لـ\\(v_n\\) ونستعمل \\(u_n=e^{2-n}\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "قسمة v_n على e",
+            "explanation": "\\[\n\\frac1e v_n\n=\\frac{e^{2-n}-e^3}{1-e}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "التعرف على u_n",
+            "explanation": "لكن:\n\\[\nu_n=e^{2-n}.\n\\]\nإذن:\n\\[\n\\boxed{\\frac1e v_n=\\frac1{1-e}(u_n-e^3)}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{\\frac1e v_n=\\frac1{1-e}(u_n-e^3)}\\)."
+      }
+    },
+    {
+      "id": "2022_s2_ex03_q4b",
+      "display_order": 7,
+      "content_type": "question",
+      "text": "ب- نعتبر المجموع \\(S'_n\\) حيث: \\(S'_n=\\frac1e v_0+\\frac1e v_1+\\cdots+\\frac1e v_n\\). تحقق أنه من أجل كل عدد طبيعي \\(n\\): \\(S'_n=\\frac1{1-e}[S_n-(n+1)e^3]\\).",
+      "axis_tags": [
+        "sequence_sum",
+        "transformed_sum"
+      ],
+      "solution": {
+        "strategy": "نجمع العلاقة السابقة من الرتبة \\(0\\) إلى الرتبة \\(n\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "جمع الطرفين",
+            "explanation": "من أجل كل \\(k\\):\n\\[\n\\frac1e v_k=\\frac1{1-e}(u_k-e^3).\n\\]\nإذن:\n\\[\nS'_n=\\sum_{k=0}^{n}\\frac1e v_k\n=\\frac1{1-e}\\sum_{k=0}^{n}(u_k-e^3).\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "فصل المجموع",
+            "explanation": "\\[\nS'_n=\\frac1{1-e}\\left(\\sum_{k=0}^{n}u_k-\\sum_{k=0}^{n}e^3\\right).\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "التعرف على S_n",
+            "explanation": "لدينا:\n\\[\n\\sum_{k=0}^{n}u_k=S_n\n\\]\nويوجد \\(n+1\\) حدًا يساوي \\(e^3\\)، إذن:\n\\[\n\\sum_{k=0}^{n}e^3=(n+1)e^3.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "النتيجة",
+            "explanation": "\\[\n\\boxed{S'_n=\\frac1{1-e}[S_n-(n+1)e^3]}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{S'_n=\\frac1{1-e}[S_n-(n+1)e^3]}\\)."
+      }
+    }
+  ]
+}

@@ -1,0 +1,192 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "session": "ordinary",
+  "year": 2026,
+  "chapter_code": "probability",
+  "chapter_title": "الاحتمالات",
+  "branches": [
+    {
+      "code": "science",
+      "name": "شعبة علوم تجريبية"
+    }
+  ],
+  "version": "4.2-2026-science-probability-subject2-ex01",
+  "axis_tags": [
+    "probability_events_law",
+    "probability_counting",
+    "probability_conditional",
+    "random_variable_probability_law_expectation"
+  ],
+  "exercise_number": 1,
+  "subject_number": 2,
+  "source_page": 3,
+  "source_pages": [
+    3
+  ],
+  "title": "التمرين الأول — بكالوريا الجزائر 2026 — الموضوع الثاني — شعبة علوم تجريبية",
+  "statement": "I) يحتوي كيس على 10 كريات متماثلة ولا نفرق بينها باللمس ذات الألوان الأخضر، الأحمر والأبيض.\nنسحب من الكيس بطريقة عشوائية كرية واحدة وتعرف قانون احتمال هذه التجربة بالجدول الآتي:\nالكرية المسحوبة: بيضاء، حمراء، خضراء.\nالاحتمال: 2a ، a ، 1/10 حيث a∈R.\n- احسب قيمة a ثم استنتج عدد كل من الكريات الخضراء، الحمراء، البيضاء.\nII) نفرض أن الكيس يحتوي على كرية واحدة خضراء، 3 كريات حمراء و6 كريات بيضاء.\nنسحب عشوائيا وفي آن واحد ثلاث كريات من هذا الكيس ونعتبر الحوادث:\nA : « الحصول على كرية حمراء واحدة فقط »\nB : « الحصول على كريتين بالضبط من نفس اللون »\nC : « الحصول على ثلاث كريات ليست كلها من نفس اللون »\n1) أ) احسب P(A)، P(B) و P(C) احتمالات الحوادث A، B و C على الترتيب.\nب) احسب احتمال الحصول على كريتين بيضاوين علما أننا لا نحصل على الكرية الخضراء.\n2) X المتغير العشوائي الذي يرفق بكل عملية سحب لثلاث كريات، عدد الألوان التي تحملها الكريات المسحوبة.\n- بين أن: P(X=2)=27/40 وعين قانون احتمال المتغير العشوائي X ثم احسب أمله الرياضياتي E(X).",
+  "questions": [
+    {
+      "id": "2026_s2_probability_ex01_qI",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "I) احسب قيمة \\(a\\) ثم استنتج عدد كل من الكريات الخضراء، الحمراء، البيضاء.",
+      "axis_tags": [
+        "probability_events_law"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "مجموع احتمالات جميع الألوان يساوي 1، ثم نحول كل احتمال إلى عدد كريات من أصل 10.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب a",
+            "explanation": "لدينا:\n\\[2a+a+\\frac1{10}=1\\]\n\\[3a=\\frac9{10}\\]\nإذن:\n\\[a=\\frac3{10}\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "عدد الكريات الخضراء",
+            "explanation": "احتمال الخضراء هو \\(\\frac1{10}\\)، ومن أصل 10 كريات يكون عددها:\n\\[10\\times\\frac1{10}=1\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "عدد الكريات الحمراء",
+            "explanation": "احتمال الحمراء هو:\n\\[a=\\frac3{10}\\]\nإذن عدد الكريات الحمراء:\n\\[10\\times\\frac3{10}=3\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "عدد الكريات البيضاء",
+            "explanation": "احتمال البيضاء هو:\n\\[2a=\\frac6{10}\\]\nإذن عدد الكريات البيضاء:\n\\[10\\times\\frac6{10}=6\\]"
+          }
+        ],
+        "final_answer": "\\(a=\\frac3{10}\\)، وعدد الكريات: خضراء \\(1\\)، حمراء \\(3\\)، بيضاء \\(6\\)."
+      }
+    },
+    {
+      "id": "2026_s2_probability_ex01_q1a",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "II) 1) أ) احسب \\(P(A)\\)، \\(P(B)\\) و \\(P(C)\\) احتمالات الحوادث \\(A\\)، \\(B\\) و \\(C\\) على الترتيب.",
+      "axis_tags": [
+        "probability_events_law",
+        "probability_counting"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "عدد السحبات الممكنة هو \\(\\binom{10}{3}=120\\). نحسب لكل حادثة عدد الحالات الملائمة مباشرة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "عدد الحالات الممكنة",
+            "explanation": "\\[|\\Omega|=\\binom{10}{3}=120\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب P(A)",
+            "explanation": "الحادثة \\(A\\): الحصول على كرية حمراء واحدة فقط.\n\nنختار كرية حمراء واحدة من 3 وكريتين غير حمراوين من 7:\n\\[P(A)=\\frac{\\binom31\\binom72}{120}=\\frac{3\\times21}{120}=\\frac{21}{40}\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب P(B)",
+            "explanation": "الحادثة \\(B\\): الحصول على كريتين بالضبط من نفس اللون.\n\nزوج أحمر + كرية من لون آخر:\n\\[\\binom32\\times7=3\\times7=21\\]\nزوج أبيض + كرية من لون آخر:\n\\[\\binom62\\times4=15\\times4=60\\]\nولا يمكن تكوين زوج أخضر لأن لدينا كرية خضراء واحدة فقط.\n\nإذن:\n\\[P(B)=\\frac{21+60}{120}=\\frac{81}{120}=\\frac{27}{40}\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "حساب P(C)",
+            "explanation": "الحادثة \\(C\\): الكريات الثلاث ليست كلها من نفس اللون.\n\nالحادثة المضادة هي الحصول على ثلاث كريات من نفس اللون.\n\nثلاث حمراء:\n\\[\\binom33=1\\]\nثلاث بيضاء:\n\\[\\binom63=20\\]\nثلاث خضراء غير ممكنة.\n\nإذن:\n\\[P(\\overline C)=\\frac{1+20}{120}=\\frac{21}{120}=\\frac7{40}\\]\nومن ثم:\n\\[P(C)=1-\\frac7{40}=\\frac{33}{40}\\]"
+          }
+        ],
+        "final_answer": "\\(P(A)=\\frac{21}{40}\\)، \\(P(B)=\\frac{27}{40}\\)، \\(P(C)=\\frac{33}{40}\\)."
+      }
+    },
+    {
+      "id": "2026_s2_probability_ex01_q1b",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "ب) احسب احتمال الحصول على كريتين بيضاوين علما أننا لا نحصل على الكرية الخضراء.",
+      "axis_tags": [
+        "probability_conditional",
+        "probability_counting"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "بما أننا نعلم أن الكرية الخضراء لم تسحب، تصبح السحبة مكونة من 3 كريات مختارة من 9 كريات: 6 بيضاء و3 حمراء. المطلوب أن يكون بينها بالضبط كريتان بيضاوان.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "عدد الحالات تحت الشرط",
+            "explanation": "بعد استبعاد الكرية الخضراء، لدينا 9 كريات، ونختار منها 3:\n\\[\\binom93=84\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "عدد الحالات الملائمة",
+            "explanation": "نختار كريتين بيضاوين من 6 وكرية حمراء واحدة من 3:\n\\[\\binom62\\binom31=15\\times3=45\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب الاحتمال",
+            "explanation": "\\[P=\\frac{45}{84}=\\frac{15}{28}\\]"
+          }
+        ],
+        "final_answer": "\\(\\displaystyle \\frac{15}{28}\\)."
+      }
+    },
+    {
+      "id": "2026_s2_probability_ex01_q2",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "2) \\(X\\) المتغير العشوائي الذي يرفق بكل عملية سحب لثلاث كريات، عدد الألوان التي تحملها الكريات المسحوبة. - بين أن: \\(P(X=2)=\\frac{27}{40}\\) وعين قانون احتمال المتغير العشوائي \\(X\\) ثم احسب أمله الرياضياتي \\(E(X)\\).",
+      "axis_tags": [
+        "random_variable_probability_law_expectation",
+        "probability_counting"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "عند سحب ثلاث كريات، يمكن أن يظهر لون واحد أو لونان أو ثلاثة ألوان. القيمة \\(X=2\\) هي نفسها حالة الحصول على كريتين بالضبط من نفس اللون.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "قيم المتغير X",
+            "explanation": "\\[X(\\Omega)=\\{1,2,3\\}\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب P(X=1)",
+            "explanation": "ظهور لون واحد يعني أن الكريات الثلاث من نفس اللون.\n\nثلاث حمراء أو ثلاث بيضاء:\n\\[P(X=1)=\\frac{\\binom33+\\binom63}{120}=\\frac{1+20}{120}=\\frac7{40}\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "تبيان P(X=2)",
+            "explanation": "ظهور لونين بالضبط يعني أن لدينا كريتين من لون واحد وكرية من لون آخر، وهي الحادثة \\(B\\) المحسوبة سابقا.\nإذن:\n\\[P(X=2)=P(B)=\\frac{27}{40}\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "حساب P(X=3)",
+            "explanation": "ظهور ثلاثة ألوان يعني سحب كرية خضراء وكرية حمراء وكرية بيضاء:\n\\[P(X=3)=\\frac{1\\times3\\times6}{120}=\\frac{18}{120}=\\frac3{20}\\]"
+          },
+          {
+            "step_number": 5,
+            "title": "قانون احتمال X",
+            "explanation": "\\[\\begin{array}{c|ccc}x_i&1&2&3\\\\\\hline P(X=x_i)&\\frac7{40}&\\frac{27}{40}&\\frac3{20}\\end{array}\\]"
+          },
+          {
+            "step_number": 6,
+            "title": "حساب الأمل الرياضياتي",
+            "explanation": "\\[E(X)=1\\times\\frac7{40}+2\\times\\frac{27}{40}+3\\times\\frac3{20}\\]\n\\[E(X)=\\frac7{40}+\\frac{54}{40}+\\frac{18}{40}=\\frac{79}{40}\\]"
+          }
+        ],
+        "final_answer": "قانون \\(X\\): \\(P(X=1)=\\frac7{40}\\)، \\(P(X=2)=\\frac{27}{40}\\)، \\(P(X=3)=\\frac3{20}\\)، و \\(E(X)=\\frac{79}{40}\\)."
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_by_direct_calculation": true,
+    "source_pdf": "2026(1).pdf",
+    "statement_figure_policy": "يوجد جدول احتمالات بسيط في الجزء I وتم تحويل محتواه نصيا داخل statement.",
+    "solution_figure_policy": "لا يحتاج الحل إلى رسم.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  }
+}

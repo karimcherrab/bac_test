@@ -1,0 +1,240 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2014-science-space-subject2-ex02-detailed",
+  "session": "ordinary",
+  "year": 2014,
+  "chapter_code": "space_geometry",
+  "chapter_title": "الهندسة في الفضاء",
+  "axis_tags": [
+    "space_collinearity_coplanarity",
+    "space_parametric_plane",
+    "space_cartesian_plane_normal_vector",
+    "space_relative_positions_intersections",
+    "space_parametric_line",
+    "space_distances",
+    "space_locus_union_planes"
+  ],
+  "branches": [
+    {
+      "code": "science",
+      "name": "شعبة علوم تجريبية"
+    }
+  ],
+  "exercise_number": 2,
+  "subject_number": 2,
+  "source_page": 3,
+  "source_pages": [
+    3
+  ],
+  "solution_source_pages": [
+    8
+  ],
+  "title": "التمرين الثاني — بكالوريا الجزائر 2014 — الموضوع الثاني — شعبة علوم تجريبية",
+  "statement": "الفضاء منسوب إلى المعلم المتعامد والمتجانس \\((O;\\vec{i},\\vec{j},\\vec{k})\\)، نعتبر النقط \\(A(1;-1;-2)\\)، \\(B(1;-2;-3)\\) و \\(C(2;0;0)\\).",
+  "questions": [
+    {
+      "id": "2014_s2_space_ex02_q1a",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) أ) برهن أن \\(A\\)، \\(B\\) و \\(C\\) ليست في استقامية.",
+      "axis_tags": [
+        "space_collinearity_coplanarity"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب شعاعين من النقطة A ثم نتحقق أنهما غير مرتبطين خطيا.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب AB وAC",
+            "explanation": "\\[\\overrightarrow{AB}=B-A=(0,-1,-1),\\qquad \\overrightarrow{AC}=C-A=(1,1,2).\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "التحقق",
+            "explanation": "الشعاعان غير مرتبطين خطيا لأن المركبة الأولى لـ\\(\\overrightarrow{AB}\\) تساوي \\(0\\)، بينما المركبة الأولى لـ\\(\\overrightarrow{AC}\\) تساوي \\(1\\)."
+          }
+        ],
+        "final_answer": "النقط \\(A\\)، \\(B\\) و \\(C\\) ليست في استقامية."
+      }
+    },
+    {
+      "id": "2014_s2_space_ex02_q1b",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "ب) اكتب تمثيلا وسيطيا للمستوى \\((ABC)\\).",
+      "axis_tags": [
+        "space_parametric_plane"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل النقطة A وشعاعين غير مرتبطين من المستوى هما AB وAC.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "كتابة التمثيل",
+            "explanation": "كل نقطة \\(M(x,y,z)\\) من المستوى تحقق:\n\\[\\overrightarrow{AM}=\\alpha\\overrightarrow{AB}+\\beta\\overrightarrow{AC}.\\]\nأي:\n\\[(x-1,y+1,z+2)=\\alpha(0,-1,-1)+\\beta(1,1,2).\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "استخراج الإحداثيات",
+            "explanation": "\\[\\begin{cases}x=1+\\beta\\\\y=-1-\\alpha+\\beta\\\\z=-2-\\alpha+2\\beta\\end{cases}\\qquad (\\alpha,\\beta\\in\\mathbb R).\\]"
+          }
+        ],
+        "final_answer": "\\[(ABC):\\begin{cases}x=1+\\beta\\\\y=-1-\\alpha+\\beta\\\\z=-2-\\alpha+2\\beta\\end{cases},\\quad \\alpha,\\beta\\in\\mathbb R.\\]"
+      }
+    },
+    {
+      "id": "2014_s2_space_ex02_q1c",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "ج) تحقق أن \\(x+y-z-2=0\\) هي معادلة ديكارتية للمستوى \\((ABC)\\).",
+      "axis_tags": [
+        "space_cartesian_plane_normal_vector"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نعوض التمثيل الوسيطي في المعادلة المقترحة، أو نتحقق من انتماء A وB وC إليها.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التحقق باستعمال A",
+            "explanation": "\\[1+(-1)-(-2)-2=0.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "التحقق باستعمال B",
+            "explanation": "\\[1+(-2)-(-3)-2=0.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "التحقق باستعمال C",
+            "explanation": "\\[2+0-0-2=0.\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "الاستنتاج",
+            "explanation": "بما أن \\(A,B,C\\) غير مستقيمية وتنتمي كلها إلى المستوى ذي المعادلة المقترحة، فإن هذه المعادلة هي معادلة \\((ABC)\\)."
+          }
+        ],
+        "final_answer": "\\[(ABC):x+y-z-2=0.\\]"
+      }
+    },
+    {
+      "id": "2014_s2_space_ex02_q2",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "2) نعتبر المستويين \\((P)\\) و \\((Q)\\) المعرفين بمعادلتيهما كما يلي: \\((P):x-y-2z+5=0\\) و \\((Q):3x+2y-z+10=0\\). برهن أن \\((P)\\) و \\((Q)\\) يتقاطعان وفق المستقيم \\((\\Delta)\\) ذي التمثيل الوسيطي: \\(\\begin{cases}x=t-3\\\\y=-t\\\\z=t+1\\end{cases}\\;(t\\in\\mathbb R)\\).",
+      "axis_tags": [
+        "space_relative_positions_intersections",
+        "space_parametric_line"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نثبت أن P وQ غير متوازيين، ثم نثبت أن كل نقطة من Δ تنتمي إلى المستويين.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "إثبات أن المستويين غير متوازيين",
+            "explanation": "شعاع ناظمي لـ\\((P)\\):\n\\[\\vec n_P=(1,-1,-2).\\]\nوشعاع ناظمي لـ\\((Q)\\):\n\\[\\vec n_Q=(3,2,-1).\\]\nوهما غير مرتبطين خطيا، لذلك يتقاطع المستويان وفق مستقيم."
+          },
+          {
+            "step_number": 2,
+            "title": "التحقق من أن Δ محتوى في P",
+            "explanation": "نعوض \\(x=t-3\\)، \\(y=-t\\)، \\(z=t+1\\):\n\\[(t-3)-(-t)-2(t+1)+5=0.\\]\nإذن \\((\\Delta)\\subset(P)\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "التحقق من أن Δ محتوى في Q",
+            "explanation": "\\[3(t-3)+2(-t)-(t+1)+10=0.\\]\nإذن \\((\\Delta)\\subset(Q)\\)."
+          }
+        ],
+        "final_answer": "\\[(P)\\cap(Q)=(\\Delta),\\quad (\\Delta):\\begin{cases}x=t-3\\\\y=-t\\\\z=t+1\\end{cases},\\ t\\in\\mathbb R.\\]"
+      }
+    },
+    {
+      "id": "2014_s2_space_ex02_q3",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "3) عين تقاطع المستويات \\((ABC)\\)، \\((P)\\) و \\((Q)\\).",
+      "axis_tags": [
+        "space_relative_positions_intersections",
+        "space_parametric_line"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "بما أن \\((P)\\cap(Q)=\\Delta\\)، نبحث عن نقطة من Δ تنتمي أيضا إلى المستوى \\((ABC)\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التعويض في معادلة ABC",
+            "explanation": "معادلة \\((ABC)\\):\n\\[x+y-z-2=0.\\]\nنعوض تمثيل \\(\\Delta\\):\n\\[(t-3)+(-t)-(t+1)-2=0.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "إيجاد t",
+            "explanation": "\\[-t-6=0\\Rightarrow t=-6.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب نقطة التقاطع",
+            "explanation": "عند \\(t=-6\\):\n\\[x=-9,\\qquad y=6,\\qquad z=-5.\\]\nإذن نقطة التقاطع هي \\(E(-9,6,-5)\\)."
+          }
+        ],
+        "final_answer": "\\[(ABC)\\cap(P)\\cap(Q)=\\{E(-9;6;-5)\\}.\\]"
+      }
+    },
+    {
+      "id": "2014_s2_space_ex02_q4",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "4) لتكن \\(M(x;y;z)\\) نقطة من الفضاء. نسمي \\(d(M,(P))\\) المسافة بين \\(M\\) و المستوى \\((P)\\) و \\(d(M,(Q))\\) المسافة بين \\(M\\) و المستوى \\((Q)\\). عين المجموعة \\((\\Gamma)\\) للنقط \\(M\\) بحيث: \\(\\sqrt6\\times d(M,(P))=\\sqrt{14}\\times d(M,(Q))\\).",
+      "axis_tags": [
+        "space_distances",
+        "space_locus_union_planes"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نكتب صيغتي المسافتين، ثم نستفيد من المعاملين \\(\\sqrt6\\) و\\(\\sqrt{14}\\) لاختزال المقامين، وبعدها نحل معادلة القيم المطلقة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "كتابة المسافتين",
+            "explanation": "لدينا:\n\\[d(M,(P))=\\frac{|x-y-2z+5|}{\\sqrt{1^2+(-1)^2+(-2)^2}}=\\frac{|x-y-2z+5|}{\\sqrt6}.\\]\nوكذلك:\n\\[d(M,(Q))=\\frac{|3x+2y-z+10|}{\\sqrt{3^2+2^2+(-1)^2}}=\\frac{|3x+2y-z+10|}{\\sqrt{14}}.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "اختزال الشرط",
+            "explanation": "الشرط:\n\\[\\sqrt6\\,d(M,(P))=\\sqrt{14}\\,d(M,(Q))\\]\nيصبح:\n\\[|x-y-2z+5|=|3x+2y-z+10|.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الحالة الأولى",
+            "explanation": "إما:\n\\[x-y-2z+5=3x+2y-z+10.\\]\nبنقل الحدود:\n\\[2x+3y+z+5=0.\\]\nنسمي هذا المستوى \\((P_1)\\)."
+          },
+          {
+            "step_number": 4,
+            "title": "الحالة الثانية",
+            "explanation": "أو:\n\\[x-y-2z+5=-(3x+2y-z+10).\\]\nأي:\n\\[4x+y-3z+15=0.\\]\nنسمي هذا المستوى \\((P_2)\\)."
+          },
+          {
+            "step_number": 5,
+            "title": "الاستنتاج",
+            "explanation": "كل نقطة تحقق الشرط تنتمي إلى أحد المستويين، والعكس صحيح."
+          }
+        ],
+        "final_answer": "\\[(\\Gamma)=(P_1)\\cup(P_2),\\]\nحيث:\n\\[(P_1):2x+3y+z+5=0,\\qquad (P_2):4x+y-3z+15=0.\\]"
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2014.pdf",
+    "statement_figure_policy": "لا يوجد شكل لازم في نص التمرين.",
+    "solution_figure_policy": "لا يحتاج الحل إلى رسم.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  }
+}

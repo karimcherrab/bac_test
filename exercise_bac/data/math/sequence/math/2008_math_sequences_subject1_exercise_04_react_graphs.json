@@ -1,0 +1,427 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "graph_schema_version": "1.0-react-json",
+  "version": "4.2-2008-math-sequences-subject1-ex04-react-graphs",
+  "session": "ordinary",
+  "year": 2008,
+  "chapter_code": "sequences",
+  "chapter_title": "المتتاليات العددية",
+  "axis_tags": [
+    "sequence_graphical_representation",
+    "sequence_monotonicity",
+    "mathematical_induction",
+    "bounded_sequence",
+    "limits_convergence_divergence"
+  ],
+  "branches": [
+    {
+      "code": "math",
+      "name": "شعبة رياضيات"
+    }
+  ],
+  "exercise_number": 4,
+  "subject_number": 1,
+  "source_page": 2,
+  "source_pages": [
+    2
+  ],
+  "solution_source_pages": [
+    6,
+    7
+  ],
+  "title": "التمرين 4 — بكالوريا الجزائر 2008 — الموضوع الأول — شعبة رياضيات — المتتاليات",
+  "statement": "نعتبر الدالة \\(f\\) المعرفة على المجال \\([1;+\\infty[\\) بالعبارة : \\[f(x)=3+\\sqrt{x-1}.\\]\nيرمز \\((C)\\) إلى منحنى \\(f\\) في المستوى المزود بالمعلم المتعامد والمتجانس \\((O;\\vec i,\\vec j)\\).\n(الوحدة على المحورين \\(2cm\\)).",
+  "questions": [
+    {
+      "id": "2008_s1_sequences_ex04_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) احسب \\(\\displaystyle\\lim_{x\\to1^+}\\frac{f(x)-f(1)}{x-1}\\) وفسر النتيجة هندسيا.\n- ادرس تغيرات الدالة \\(f\\).\n- باستعمال منحنى دالة \"الجذر التربيعي\"، أنشئ المنحنى \\((C)\\).\n- ارسم في نفس المعلم المستقيم \\((D)\\) الذي معادلته : \\(y=x\\).",
+      "axis_tags": [
+        "sequence_graphical_representation"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب النهاية، ثم مشتقة f، وبعدها نحدد شكل المنحنى والمستقيم y=x.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب النهاية",
+            "explanation": "لدينا \\(f(1)=3\\)، ومنه:\n\\[\n\\frac{f(x)-f(1)}{x-1}=\\frac{\\sqrt{x-1}}{x-1}=\\frac1{\\sqrt{x-1}}.\n\\]\nوعندما \\(x\\to1^+\\):\n\\[\n\\frac1{\\sqrt{x-1}}\\to+\\infty.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "التفسير الهندسي",
+            "explanation": "للمنحنى \\((C)\\) عند النقطة ذات الفاصلة \\(1\\) نصف مماس عمودي مواز لمحور التراتيب."
+          },
+          {
+            "step_number": 3,
+            "title": "دراسة التغيرات",
+            "explanation": "من أجل \\(x>1\\):\n\\[\nf'(x)=\\frac1{2\\sqrt{x-1}}>0.\n\\]\nإذن \\(f\\) متزايدة تماما على \\([1;+\\infty[\\)."
+          },
+          {
+            "step_number": 4,
+            "title": "إنشاء المنحنى",
+            "explanation": "المنحنى \\((C)\\) هو منحنى \\(y=\\sqrt{x}\\) مزاح وحدة نحو اليمين و3 وحدات نحو الأعلى، والمستقيم \\((D)\\) معادلته \\(y=x\\)."
+          }
+        ],
+        "solution_graphs": [
+          {
+            "id": "2008_s1_sequences_ex04_function_graph",
+            "type": "function_plot",
+            "render_mode": "json",
+            "capture": false,
+            "direction": "ltr",
+            "canvas": {
+              "width": 860,
+              "height": 620,
+              "padding": 28
+            },
+            "viewport": {
+              "x_min": 0,
+              "x_max": 7,
+              "y_min": 0,
+              "y_max": 7,
+              "x_tick": 1,
+              "y_tick": 1,
+              "equal_scale": true
+            },
+            "axes": {
+              "show": true,
+              "x_label": "x",
+              "y_label": "y",
+              "grid": true
+            },
+            "curves": [
+              {
+                "id": "curve_c",
+                "kind": "function",
+                "label": "(C)",
+                "formula": "3 + sqrt(x - 1)",
+                "latex_formula": "f(x)=3+\\sqrt{x-1}",
+                "domain": [
+                  1,
+                  7
+                ]
+              },
+              {
+                "id": "line_d",
+                "kind": "line",
+                "label": "(D)",
+                "formula": "x",
+                "latex_formula": "y=x",
+                "domain": [
+                  0,
+                  7
+                ]
+              }
+            ],
+            "special_points": [
+              {
+                "id": "a",
+                "x": 1,
+                "y": 3,
+                "label": "A(1,3)",
+                "note": "نصف مماس عمودي عند x=1"
+              },
+              {
+                "id": "fixed",
+                "x": 5,
+                "y": 5,
+                "label": "(5,5)",
+                "note": "نقطة تقاطع (C) و(D)"
+              }
+            ],
+            "react_renderer": {
+              "component": "FunctionPlotRenderer",
+              "source": "curves_special_points"
+            }
+          }
+        ],
+        "final_answer": "\\[\\lim_{x\\to1^+}\\frac{f(x)-f(1)}{x-1}=+\\infty.\\]\nوالدالة \\(f\\) متزايدة تماما على \\([1;+\\infty[\\)."
+      }
+    },
+    {
+      "id": "2008_s1_sequences_ex04_q2a",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2) تعرف المتتالية \\((U_n)\\) على المجموعة \\(\\mathbb N\\) كالآتي:\n\\[\n\\begin{cases}\nU_0=2\\\\\nU_{n+1}=f(U_n)\n\\end{cases}\n\\]\n1- باستعمال \\((D)\\) و \\((C)\\)، مثل الحدود \\(U_0\\)، \\(U_1\\)، \\(U_2\\) على محور الفواصل.",
+      "axis_tags": [
+        "sequence_graphical_representation"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب أول حدين ثم نستعمل طريقة السلم بين المنحنى C والمستقيم D.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب U₁",
+            "explanation": "\\[\nU_1=f(U_0)=f(2)=3+\\sqrt{2-1}=4.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب U₂",
+            "explanation": "\\[\nU_2=f(U_1)=f(4)=3+\\sqrt3.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "التمثيل البياني",
+            "explanation": "نبدأ من \\(U_0=2\\) على محور الفواصل، نصعد عموديا إلى المنحنى \\((C)\\)، ثم أفقيا إلى المستقيم \\((D)\\)، ونكرر العملية للحصول على \\(U_1\\) ثم \\(U_2\\)."
+          }
+        ],
+        "solution_graphs": [
+          {
+            "id": "2008_s1_sequences_ex04_cobweb",
+            "type": "sequence_cobweb",
+            "render_mode": "json",
+            "capture": false,
+            "direction": "ltr",
+            "canvas": {
+              "width": 860,
+              "height": 620,
+              "padding": 28
+            },
+            "viewport": {
+              "x_min": 0,
+              "x_max": 6,
+              "y_min": 0,
+              "y_max": 6,
+              "x_tick": 1,
+              "y_tick": 1,
+              "equal_scale": true
+            },
+            "axes": {
+              "show": true,
+              "x_label": "x",
+              "y_label": "y",
+              "grid": true
+            },
+            "curves": [
+              {
+                "id": "curve_c",
+                "kind": "function",
+                "label": "(C)",
+                "formula": "3 + sqrt(x - 1)",
+                "latex_formula": "f(x)=3+\\sqrt{x-1}",
+                "domain": [
+                  1,
+                  6
+                ]
+              },
+              {
+                "id": "line_d",
+                "kind": "line",
+                "label": "(D)",
+                "formula": "x",
+                "latex_formula": "y=x",
+                "domain": [
+                  0,
+                  6
+                ]
+              }
+            ],
+            "sequence": {
+              "recurrence": "u_(n+1)=3+sqrt(u_n-1)",
+              "latex_recurrence": "U_{n+1}=3+\\sqrt{U_n-1}",
+              "values": [
+                {
+                  "n": 0,
+                  "value": 2,
+                  "latex": "U_0=2"
+                },
+                {
+                  "n": 1,
+                  "value": 4,
+                  "latex": "U_1=4"
+                },
+                {
+                  "n": 2,
+                  "value": 4.732050807568877,
+                  "latex": "U_2=3+\\sqrt3"
+                }
+              ]
+            },
+            "segments": [
+              {
+                "from": [
+                  2,
+                  0
+                ],
+                "to": [
+                  2,
+                  4
+                ],
+                "role": "vertical_to_curve"
+              },
+              {
+                "from": [
+                  2,
+                  4
+                ],
+                "to": [
+                  4,
+                  4
+                ],
+                "role": "horizontal_to_y_equals_x"
+              },
+              {
+                "from": [
+                  4,
+                  4
+                ],
+                "to": [
+                  4,
+                  4.732050807568877
+                ],
+                "role": "vertical_to_curve"
+              },
+              {
+                "from": [
+                  4,
+                  4.732050807568877
+                ],
+                "to": [
+                  4.732050807568877,
+                  4.732050807568877
+                ],
+                "role": "horizontal_to_y_equals_x"
+              }
+            ],
+            "x_axis_markers": [
+              {
+                "x": 2,
+                "label": "U₀"
+              },
+              {
+                "x": 4,
+                "label": "U₁"
+              },
+              {
+                "x": 4.732050807568877,
+                "label": "U₂"
+              }
+            ],
+            "react_renderer": {
+              "component": "SequenceCobwebRenderer",
+              "source": "curves_sequence_segments"
+            }
+          }
+        ],
+        "final_answer": "\\[U_0=2,\\qquad U_1=4,\\qquad U_2=3+\\sqrt3.\\]"
+      }
+    },
+    {
+      "id": "2008_s1_sequences_ex04_q2b",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "ب- ضع تخمينا حول اتجاه تغير المتتالية \\((U_n)\\) وتقاربها.",
+      "axis_tags": [
+        "sequence_monotonicity",
+        "limits_convergence_divergence"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "من التمثيل البياني نلاحظ أن الحدود تتحرك نحو نقطة تقاطع C وD.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التخمين",
+            "explanation": "يظهر بيانيا أن المتتالية \\((U_n)\\) متزايدة ومحدودة من الأعلى، وأن حدودها تقترب من \\(5\\)."
+          }
+        ],
+        "final_answer": "التخمين: \\((U_n)\\) متزايدة ومتقاربة نحو \\(5\\)."
+      }
+    },
+    {
+      "id": "2008_s1_sequences_ex04_q3a",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "3) أ- برهن بالتراجع أنه من أجل كل عدد طبيعي \\(n\\) لدينا : \\(2\\le U_n\\le5\\) و \\(U_{n+1}>U_n\\).",
+      "axis_tags": [
+        "mathematical_induction",
+        "bounded_sequence",
+        "sequence_monotonicity"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نثبت أولا الحصر بالتراجع، ثم التزايد باستعمال أن f متزايدة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التحقق من الحصر عند n=0",
+            "explanation": "\\[U_0=2\\Rightarrow 2\\le U_0\\le5.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "خطوة التراجع للحصر",
+            "explanation": "نفترض \\(2\\le U_n\\le5\\). عندئذ:\n\\[\n1\\le U_n-1\\le4\n\\Rightarrow\n1\\le\\sqrt{U_n-1}\\le2.\n\\]\nومن ثم:\n\\[\n4\\le U_{n+1}=3+\\sqrt{U_n-1}\\le5.\n\\]\nوبالتالي \\(2\\le U_{n+1}\\le5\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "بداية التزايد",
+            "explanation": "\\[\nU_1=4>2=U_0.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "خطوة التراجع للتزايد",
+            "explanation": "إذا كان \\(U_{n+1}>U_n\\)، وبما أن \\(f\\) متزايدة تماما، فإن:\n\\[\nU_{n+2}=f(U_{n+1})>f(U_n)=U_{n+1}.\n\\]\nإذن \\(U_{n+1}>U_n\\) لكل \\(n\\in\\mathbb N\\)."
+          }
+        ],
+        "final_answer": "\\[2\\le U_n\\le5\\quad\\text{و}\\quad U_{n+1}>U_n\\quad\\forall n\\in\\mathbb N.\\]"
+      }
+    },
+    {
+      "id": "2008_s1_sequences_ex04_q3b",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "ب- استنتج أن \\((U_n)\\) متقاربة. احسب \\(\\displaystyle\\lim_{n\\to+\\infty}U_n\\).",
+      "axis_tags": [
+        "limits_convergence_divergence",
+        "bounded_sequence"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "المتتالية متزايدة ومحدودة من الأعلى، إذن هي متقاربة. ثم نمر إلى النهاية في علاقة الرجوع.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "إثبات التقارب",
+            "explanation": "بما أن \\((U_n)\\) متزايدة ومحدودة من الأعلى بالعدد \\(5\\)، فإنها متقاربة."
+          },
+          {
+            "step_number": 2,
+            "title": "معادلة النهاية",
+            "explanation": "لنفرض:\n\\[\n\\lim_{n\\to+\\infty}U_n=\\ell.\n\\]\nمن علاقة الرجوع واستمرارية \\(f\\):\n\\[\n\\ell=3+\\sqrt{\\ell-1}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حل المعادلة",
+            "explanation": "لدينا \\(\\ell\\ge3\\)، وبعد التربيع:\n\\[\n(\\ell-3)^2=\\ell-1\n\\Longleftrightarrow\n\\ell^2-7\\ell+10=0\n\\Longleftrightarrow\n(\\ell-2)(\\ell-5)=0.\n\\]\nوبما أن \\(\\ell\\ge3\\)، فإن \\(\\ell=5\\)."
+          }
+        ],
+        "final_answer": "\\[\\lim_{n\\to+\\infty}U_n=5.\\]"
+      }
+    }
+  ],
+  "rendering_contract": {
+    "no_capture": true,
+    "external_image_required": false,
+    "external_svg_required": false,
+    "graph_source": "inline_json",
+    "supported_graph_types": [
+      "function_plot",
+      "sequence_cobweb"
+    ],
+    "react_note": "لا يوجد أي Capture. الرسم الأول يعرض curve C والخط D من بيانات curves. والرسم الثاني يعرض تمثيل U0 وU1 وU2 بطريقة cobweb من segments وx_axis_markers."
+  },
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2008(20260826-134924).pdf",
+    "statement_figure_policy": "لا Capture. الرسوم المطلوبة أعيد بناؤها كبيانات JSON قابلة للعرض في React.",
+    "solution_figure_policy": "منحنى f والمستقيم y=x وتمثيل الحدود U0,U1,U2 موجودة داخل JSON.",
+    "renderer": "FunctionPlotRenderer + SequenceCobwebRenderer"
+  }
+}

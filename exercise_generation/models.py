@@ -57,7 +57,11 @@ class GeneratedExercise(models.Model):
         default=list,
         blank=True,
     )
-
+    generation_metadata = models.JSONField(
+        default=dict,
+        blank=True,
+        verbose_name="بيانات التوليد",
+    )
     final_answer = models.TextField(
         blank=True,
         default="",

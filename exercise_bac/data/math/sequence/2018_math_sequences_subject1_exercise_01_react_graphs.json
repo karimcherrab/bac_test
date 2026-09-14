@@ -1,0 +1,471 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "graph_schema_version": "1.0-react-json",
+  "version": "4.2-2018-math-sequences-subject1-ex01-react-graphs",
+  "session": "ordinary",
+  "year": 2018,
+  "chapter_code": "sequences",
+  "chapter_title": "المتتاليات العددية",
+  "axis_tags": [
+    "sequence_graphical_representation",
+    "sequence_monotonicity",
+    "mathematical_induction",
+    "bounded_sequence",
+    "limits_convergence_divergence",
+    "sequence_sums"
+  ],
+  "branches": [
+    {
+      "code": "math",
+      "name": "شعبة رياضيات"
+    }
+  ],
+  "exercise_number": 1,
+  "subject_number": 1,
+  "source_page": 1,
+  "source_pages": [
+    1
+  ],
+  "solution_source_pages": [
+    7
+  ],
+  "title": "التمرين الأول — بكالوريا الجزائر 2018 — الموضوع الأول — شعبة رياضيات — المتتاليات",
+  "statement": "الدالة العددية \\(f\\) المعرفة على المجال \\(]-\\infty;1[\\) بـ:\n\\[\nf(x)=\\frac{x^2+1}{x-1}.\n\\]\nالمتتالية العددية \\((u_n)\\) المعرفة على \\(\\mathbb N\\) بحدها الأول \\(u_0=-3\\) ومن أجل كل عدد طبيعي \\(n\\)، \\(u_{n+1}=f(u_n)\\).\nليكن \\((C_f)\\) التمثيل البياني للدالة \\(f\\) في المستوي المنسوب إلى المعلم المتعامد المتجانس \\((O;\\vec i,\\vec j)\\) و \\((\\Delta)\\) هو المستقيم ذو المعادلة \\(y=x\\) (أنظر الشكل المقابل).",
+  "statement_graphs": [
+    {
+      "id": "2018_s1_sequences_ex01_function_plot",
+      "type": "function_plot",
+      "render_mode": "json",
+      "capture": false,
+      "direction": "ltr",
+      "canvas": {
+        "width": 900,
+        "height": 650,
+        "padding": 30
+      },
+      "viewport": {
+        "x_min": -3.6,
+        "x_max": 1.15,
+        "y_min": -3.3,
+        "y_max": 1.25,
+        "x_tick": 0.5,
+        "y_tick": 0.5,
+        "equal_scale": true
+      },
+      "axes": {
+        "show": true,
+        "x_label": "x",
+        "y_label": "y",
+        "grid": true
+      },
+      "curves": [
+        {
+          "id": "curve_cf",
+          "kind": "function",
+          "label": "(C_f)",
+          "formula": "(x*x + 1)/(x - 1)",
+          "latex_formula": "f(x)=\\frac{x^2+1}{x-1}",
+          "domain": [
+            -3.6,
+            0.97
+          ]
+        },
+        {
+          "id": "line_delta",
+          "kind": "line",
+          "label": "(Δ)",
+          "formula": "x",
+          "latex_formula": "y=x",
+          "domain": [
+            -3.6,
+            1.15
+          ]
+        }
+      ],
+      "special_points": [
+        {
+          "id": "fixed_point",
+          "x": -1,
+          "y": -1,
+          "label": "(-1,-1)",
+          "note": "نقطة تقاطع (C_f) مع (Δ)"
+        },
+        {
+          "id": "u0_curve",
+          "x": -3,
+          "y": -2.5,
+          "label": "(-3,-5/2)"
+        }
+      ],
+      "asymptotes": [
+        {
+          "kind": "vertical",
+          "x": 1,
+          "latex": "x=1",
+          "show": false
+        }
+      ],
+      "react_renderer": {
+        "component": "FunctionPlotRenderer",
+        "source": "curves_special_points"
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "2018_s1_sequences_ex01_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) أعد رسم الشكل على ورقة الإجابة ثم مثل الحدود \\(u_0\\)، \\(u_1\\)، \\(u_2\\) و \\(u_3\\) على محور الفواصل دون حسابها مبرزا خطوط التمثيل، أعط تخمينا حول اتجاه تغير المتتالية \\((u_n)\\) و تقاربها.",
+      "axis_tags": [
+        "sequence_graphical_representation",
+        "sequence_monotonicity",
+        "limits_convergence_divergence"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل طريقة السلم بين المنحنى \\((C_f)\\) والمستقيم \\((\\Delta):y=x\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تمثيل الحدود",
+            "explanation": "نبدأ من \\(u_0=-3\\) على محور الفواصل، نصعد عموديا حتى المنحنى \\((C_f)\\)، ثم نتحرك أفقيا حتى المستقيم \\((\\Delta)\\)، ونكرر العملية للحصول على \\(u_1,u_2,u_3\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "التخمين",
+            "explanation": "من التمثيل نلاحظ أن الحدود تتحرك من \\(-3\\) نحو \\(-1\\) مع ازدياد قيمها."
+          }
+        ],
+        "solution_graphs": [
+          {
+            "id": "2018_s1_sequences_ex01_cobweb",
+            "type": "sequence_cobweb",
+            "render_mode": "json",
+            "capture": false,
+            "direction": "ltr",
+            "canvas": {
+              "width": 900,
+              "height": 650,
+              "padding": 30
+            },
+            "viewport": {
+              "x_min": -3.4,
+              "x_max": -0.75,
+              "y_min": -3.15,
+              "y_max": -0.75,
+              "x_tick": 0.25,
+              "y_tick": 0.25,
+              "equal_scale": true
+            },
+            "axes": {
+              "show": true,
+              "x_label": "x",
+              "y_label": "y",
+              "grid": true
+            },
+            "curves": [
+              {
+                "id": "curve_cf",
+                "kind": "function",
+                "label": "(C_f)",
+                "formula": "(x*x + 1)/(x - 1)",
+                "latex_formula": "f(x)=\\frac{x^2+1}{x-1}",
+                "domain": [
+                  -3.4,
+                  -0.75
+                ]
+              },
+              {
+                "id": "line_delta",
+                "kind": "line",
+                "label": "(Δ)",
+                "formula": "x",
+                "latex_formula": "y=x",
+                "domain": [
+                  -3.4,
+                  -0.75
+                ]
+              }
+            ],
+            "sequence": {
+              "recurrence": "u_(n+1)=(u_n^2+1)/(u_n-1)",
+              "latex_recurrence": "u_{n+1}=\\frac{u_n^2+1}{u_n-1}",
+              "values": [
+                {
+                  "n": 0,
+                  "value": -3.0,
+                  "latex": "u_0=-3"
+                },
+                {
+                  "n": 1,
+                  "value": -2.5,
+                  "latex": "u_1=-\\frac52"
+                },
+                {
+                  "n": 2,
+                  "value": -2.0714285714285716,
+                  "latex": "u_2=-\\frac{29}{14}"
+                },
+                {
+                  "n": 3,
+                  "value": -1.7225913621262459,
+                  "latex": "u_3=-\\frac{1037}{602}"
+                }
+              ]
+            },
+            "segments": [
+              {
+                "from": [
+                  -3.0,
+                  0
+                ],
+                "to": [
+                  -3.0,
+                  -2.5
+                ],
+                "role": "vertical_to_curve"
+              },
+              {
+                "from": [
+                  -3.0,
+                  -2.5
+                ],
+                "to": [
+                  -2.5,
+                  -2.5
+                ],
+                "role": "horizontal_to_y_equals_x"
+              },
+              {
+                "from": [
+                  -2.5,
+                  -2.5
+                ],
+                "to": [
+                  -2.5,
+                  -2.0714285714285716
+                ],
+                "role": "vertical_to_curve"
+              },
+              {
+                "from": [
+                  -2.5,
+                  -2.0714285714285716
+                ],
+                "to": [
+                  -2.0714285714285716,
+                  -2.0714285714285716
+                ],
+                "role": "horizontal_to_y_equals_x"
+              },
+              {
+                "from": [
+                  -2.0714285714285716,
+                  -2.0714285714285716
+                ],
+                "to": [
+                  -2.0714285714285716,
+                  -1.7225913621262459
+                ],
+                "role": "vertical_to_curve"
+              },
+              {
+                "from": [
+                  -2.0714285714285716,
+                  -1.7225913621262459
+                ],
+                "to": [
+                  -1.7225913621262459,
+                  -1.7225913621262459
+                ],
+                "role": "horizontal_to_y_equals_x"
+              }
+            ],
+            "x_axis_markers": [
+              {
+                "x": -3.0,
+                "label": "u₀"
+              },
+              {
+                "x": -2.5,
+                "label": "u₁"
+              },
+              {
+                "x": -2.0714285714285716,
+                "label": "u₂"
+              },
+              {
+                "x": -1.7225913621262459,
+                "label": "u₃"
+              },
+              {
+                "x": -1,
+                "label": "-1"
+              }
+            ],
+            "react_renderer": {
+              "component": "SequenceCobwebRenderer",
+              "source": "curves_sequence_segments"
+            }
+          }
+        ],
+        "final_answer": "التخمين: المتتالية \\((u_n)\\) متزايدة تماما ومتقاربة نحو \\(-1\\)."
+      }
+    },
+    {
+      "id": "2018_s1_sequences_ex01_q2",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2) برهن بالتراجع أنه من أجل كل عدد طبيعي \\(n\\): \\[-3\\le u_n<-1.\\]",
+      "axis_tags": [
+        "mathematical_induction",
+        "bounded_sequence"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نثبت الخاصية بالتراجع باستعمال تزايد الدالة \\(f\\) على المجال \\([-3,-1[\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التحقق عند n=0",
+            "explanation": "\\[\nu_0=-3,\n\\]\nإذن:\n\\[\n-3\\le u_0<-1.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "تزايد f على المجال",
+            "explanation": "\\[\nf'(x)=\\frac{x^2-2x-1}{(x-1)^2}.\n\\]\nومن أجل \\(x\\in[-3,-1[\\) يكون \\(x^2-2x-1>0\\)، إذن \\(f\\) متزايدة على هذا المجال."
+          },
+          {
+            "step_number": 3,
+            "title": "خطوة التراجع",
+            "explanation": "نفترض:\n\\[\n-3\\le u_n<-1.\n\\]\nوبما أن \\(f\\) متزايدة:\n\\[\nf(-3)\\le f(u_n)<f(-1).\n\\]\nأي:\n\\[\n-\\frac52\\le u_{n+1}<-1.\n\\]\nومن ثم بالتأكيد:\n\\[\n-3\\le u_{n+1}<-1.\n\\]"
+          }
+        ],
+        "final_answer": "\\[-3\\le u_n<-1\\quad\\forall n\\in\\mathbb N.\\]"
+      }
+    },
+    {
+      "id": "2018_s1_sequences_ex01_q3a",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "3) أ. بين أنه من أجل كل عدد طبيعي \\(n\\):\n\\[\nu_{n+1}+1\\ge\\frac34(u_n+1).\n\\]",
+      "axis_tags": [
+        "sequence_monotonicity",
+        "limits_convergence_divergence"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب الفرق بين الطرفين ونستعمل الحصر \\(-3\\le u_n<-1\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "إعادة كتابة uₙ₊₁+1",
+            "explanation": "\\[\nu_{n+1}+1=\\frac{u_n^2+1}{u_n-1}+1=\\frac{u_n(u_n+1)}{u_n-1}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب الفرق",
+            "explanation": "\\[\nu_{n+1}+1-\\frac34(u_n+1)\n=(u_n+1)\\left(\\frac{u_n}{u_n-1}-\\frac34\\right)\n=\\frac{(u_n+1)(u_n+3)}{4(u_n-1)}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الإشارة",
+            "explanation": "من \\(-3\\le u_n<-1\\) لدينا:\n\\[\nu_n+1<0,\\qquad u_n+3\\ge0,\\qquad u_n-1<0.\n\\]\nإذن:\n\\[\n\\frac{(u_n+1)(u_n+3)}{4(u_n-1)}\\ge0.\n\\]"
+          }
+        ],
+        "final_answer": "\\[u_{n+1}+1\\ge\\frac34(u_n+1).\\]"
+      }
+    },
+    {
+      "id": "2018_s1_sequences_ex01_q3b",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "ب. استنتج أنه من أجل كل عدد طبيعي \\(n\\):\n\\[\nu_n+1\\ge-2\\left(\\frac34\\right)^n\n\\]\nثم \\(\\displaystyle\\lim_{n\\to+\\infty}u_n\\).",
+      "axis_tags": [
+        "mathematical_induction",
+        "limits_convergence_divergence"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نكرر المتراجحة السابقة ابتداء من \\(u_0+1=-2\\)، ثم نستعمل الحصر.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تكرار المتراجحة",
+            "explanation": "من السؤال السابق:\n\\[\nu_{n+1}+1\\ge\\frac34(u_n+1).\n\\]\nوبالتكرار:\n\\[\nu_n+1\\ge\\left(\\frac34\\right)^n(u_0+1).\n\\]\nوبما أن \\(u_0+1=-2\\):\n\\[\nu_n+1\\ge-2\\left(\\frac34\\right)^n.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "الحصر",
+            "explanation": "ومن السؤال 2 لدينا \\(u_n<-1\\)، أي:\n\\[\nu_n+1<0.\n\\]\nإذن:\n\\[\n-2\\left(\\frac34\\right)^n\\le u_n+1<0.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "النهاية",
+            "explanation": "بما أن:\n\\[\n\\left(\\frac34\\right)^n\\to0,\n\\]\nفحسب مبرهنة الحصر:\n\\[\nu_n+1\\to0.\n\\]\nومن ثم:\n\\[\nu_n\\to-1.\n\\]"
+          }
+        ],
+        "final_answer": "\\[u_n+1\\ge-2\\left(\\frac34\\right)^n,\\qquad \\boxed{\\lim_{n\\to+\\infty}u_n=-1}.\\]"
+      }
+    },
+    {
+      "id": "2018_s1_sequences_ex01_q4",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "4) نضع \\(S_n=u_0+u_1+\\cdots+u_n\\).\n- بين أنه من أجل كل عدد طبيعي \\(n\\):\n\\[\n8\\left[\\left(\\frac34\\right)^{n+1}-1\\right]\\le (u_0+1)+(u_1+1)+\\cdots+(u_n+1)<0\n\\]\nواستنتج \\(\\displaystyle\\lim_{n\\to+\\infty}S_n\\).",
+      "axis_tags": [
+        "sequence_sums",
+        "limits_convergence_divergence"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نجمع المتراجحات المحصل عليها في السؤال 3 ثم نربط المجموع بـ \\(S_n\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "جمع الحدود",
+            "explanation": "لكل \\(k\\in\\{0,1,\\ldots,n\\}\\):\n\\[\n-2\\left(\\frac34\\right)^k\\le u_k+1<0.\n\\]\nبجمع هذه المتراجحات:\n\\[\n-2\\sum_{k=0}^{n}\\left(\\frac34\\right)^k\\le\\sum_{k=0}^{n}(u_k+1)<0.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب المجموع الهندسي",
+            "explanation": "\\[\n-2\\sum_{k=0}^{n}\\left(\\frac34\\right)^k=-2\\frac{1-\\left(\\frac34\\right)^{n+1}}{1-\\frac34}\n=8\\left[\\left(\\frac34\\right)^{n+1}-1\\right].\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الربط بـ Sₙ",
+            "explanation": "لدينا:\n\\[\n(u_0+1)+\\cdots+(u_n+1)=S_n+n+1.\n\\]\nومن الطرف الأيمن للمتراجحة:\n\\[\nS_n+n+1<0\n\\Rightarrow\nS_n<-n-1.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "نهاية Sₙ",
+            "explanation": "بما أن:\n\\[\n-n-1\\to-\\infty\n\\]\nو \\(S_n<-n-1\\)، فإن:\n\\[\nS_n\\to-\\infty.\n\\]"
+          }
+        ],
+        "final_answer": "\\[8\\left[\\left(\\frac34\\right)^{n+1}-1\\right]\\le\\sum_{k=0}^{n}(u_k+1)<0,\\]\n\\[\\boxed{\\lim_{n\\to+\\infty}S_n=-\\infty}.\\]"
+      }
+    }
+  ],
+  "rendering_contract": {
+    "no_capture": true,
+    "external_image_required": false,
+    "external_svg_required": false,
+    "graph_source": "inline_json",
+    "supported_graph_types": [
+      "function_plot",
+      "sequence_cobweb"
+    ],
+    "react_note": "لا يوجد Capture ولا SVG خارجي. الرسم الأصلي للتمرين أعيد بناؤه داخل JSON من خلال function_plot، وتمثيل u0,u1,u2,u3 أعيد بناؤه داخل solution_graphs بطريقة sequence_cobweb."
+  },
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2018(20260826-235420).pdf",
+    "statement_figure_policy": "لا Capture. منحنى (C_f) والمستقيم (Δ) معاد بناؤهما داخل JSON.",
+    "solution_figure_policy": "تمثيل حدود المتتالية معاد بناؤه كـ cobweb داخل JSON.",
+    "renderer": "FunctionPlotRenderer + SequenceCobwebRenderer"
+  }
+}

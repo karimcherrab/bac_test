@@ -1,0 +1,223 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "session": "ordinary",
+  "year": 2024,
+  "chapter_code": "probability",
+  "chapter_title": "الاحتمالات",
+  "branches": [
+    {
+      "code": "science",
+      "name": "شعبة علوم تجريبية"
+    }
+  ],
+  "version": "4.2-2024-science-probability-subject2-ex01",
+  "axis_tags": [
+    "probability_events_law",
+    "probability_tree_total_probability",
+    "probability_conditional",
+    "probability_independence",
+    "random_variable_probability_law_expectation",
+    "probability_draw_modeling"
+  ],
+  "exercise_number": 1,
+  "subject_number": 2,
+  "source_page": 3,
+  "source_pages": [
+    3
+  ],
+  "solution_source_pages": [
+    7
+  ],
+  "title": "التمرين الأول — بكالوريا الجزائر 2024 — الموضوع الثاني — شعبة علوم تجريبية",
+  "statement": "يحتوي كيس على 5 قطع كهربائية غير متمايزة ولا نفرق بينها باللمس، منها 3 قطع سليمة وقطعتان غير سليمتين.\nنرمز إلى القطعة السليمة بالرمز S وإلى القطعة غير السليمة بالرمز S̄\nنسحب عشوائيا من الكيس 3 قطع على التوالي مع الإرجاع، ونعتبر الحوادث:\nA : \"القطعة الأولى المسحوبة سليمة\"\nB : \"سحب قطعة واحدة فقط سليمة\"\nC : \"القطعة الثالثة المسحوبة سليمة\"\n1) شكل شجرة الاحتمالات التي تنمذج هذه التجربة.\n2) احسب P(A) ، P(B) احتمالي الحادثتين A و B ثم بين أن: P(C)=3/5\n3) احسب الاحتمال الشرطي P_C(A)، هل الحادثتان A و C مستقلتان؟\n4) نرفق بكل قطعة سليمة العدد 10 وبكل قطعة غير سليمة العدد -10، ونعتبر X المتغير العشوائي الذي يرفق بكل عملية سحب من الكيس لثلاث قطع مجموع الأعداد المرفقة بها.\nأ) برر أن قيم المتغير العشوائي X هي: -30 ، -10 ، 10 ، 30\nب) عين قانون احتمال المتغير العشوائي X ثم احسب أمله الرياضياتي E(X)",
+  "questions": [
+    {
+      "id": "2024_s2_probability_ex01_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) شكل شجرة الاحتمالات التي تنمذج هذه التجربة.",
+      "axis_tags": [
+        "probability_tree_total_probability",
+        "probability_draw_modeling"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "بما أن السحب مع الإرجاع، تبقى الاحتمالات نفسها في كل سحبة: \\(P(S)=\\frac35\\) و\\(P(\\overline S)=\\frac25\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "احتمالا كل سحبة",
+            "explanation": "لدينا 3 قطع سليمة من أصل 5 وقطعتان غير سليمتين:\n\\[P(S)=\\frac35,\\qquad P(\\overline S)=\\frac25\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "أثر الإرجاع",
+            "explanation": "بعد كل سحبة نعيد القطعة إلى الكيس، لذلك في السحبات الثلاث تبقى احتمالات الفروع نفسها: \\(\\frac35\\) نحو \\(S\\) و\\(\\frac25\\) نحو \\(\\overline S\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "الشجرة",
+            "explanation": "من البداية فرعان \\(S\\) و\\(\\overline S\\). ومن كل فرع في المستوى الثاني نرسم من جديد \\(S\\) باحتمال \\(\\frac35\\) و\\(\\overline S\\) باحتمال \\(\\frac25\\)، ونكرر الشيء نفسه في المستوى الثالث. فنحصل على 8 مسارات ممكنة للسحبات الثلاث."
+          }
+        ],
+        "final_answer": "في كل مستوى من مستويات الشجرة: \\(S\\) باحتمال \\(\\frac35\\)، و\\(\\overline S\\) باحتمال \\(\\frac25\\)."
+      }
+    },
+    {
+      "id": "2024_s2_probability_ex01_q2",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2) احسب \\(P(A)\\) ، \\(P(B)\\) احتمالي الحادثتين \\(A\\) و \\(B\\) ثم بين أن: \\(P(C)=\\frac35\\).",
+      "axis_tags": [
+        "probability_events_law",
+        "probability_tree_total_probability"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل احتمالات فروع الشجرة واستقلال السحبات الناتج عن الإرجاع.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب P(A)",
+            "explanation": "الحادثة \\(A\\) تعني أن القطعة الأولى سليمة مباشرة:\n\\[P(A)=\\frac35\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب P(B)",
+            "explanation": "الحادثة \\(B\\) تعني الحصول على قطعة سليمة واحدة فقط بين السحبات الثلاث. توجد 3 مواضع ممكنة للقطعة السليمة، واحتمال كل ترتيب هو:\n\\[\\frac35\\left(\\frac25\\right)^2\\]\nإذن:\n\\[P(B)=3\\times\\frac35\\times\\left(\\frac25\\right)^2=\\frac{36}{125}\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب P(C)",
+            "explanation": "الحادثة \\(C\\) تعني أن القطعة الثالثة سليمة. بسبب الإرجاع لا يتغير تركيب الكيس، لذلك:\n\\[P(C)=\\frac35\\]\nويمكن أيضا جمع احتمالات المسارات الأربعة التي تنتهي بـ \\(S\\)."
+          }
+        ],
+        "final_answer": "\\(P(A)=\\frac35\\)، \\(P(B)=\\frac{36}{125}\\)، \\(P(C)=\\frac35\\)."
+      }
+    },
+    {
+      "id": "2024_s2_probability_ex01_q3",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "3) احسب الاحتمال الشرطي \\(P_C(A)\\)، هل الحادثتان \\(A\\) و \\(C\\) مستقلتان؟",
+      "axis_tags": [
+        "probability_conditional",
+        "probability_independence"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب أولا \\(P(A\\cap C)\\)، ثم نستعمل تعريف الاحتمال الشرطي ونختبر شرط الاستقلال.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب P(A∩C)",
+            "explanation": "نريد أن تكون القطعة الأولى والثالثة سليمتين، بينما الثانية يمكن أن تكون سليمة أو غير سليمة:\n\\[P(A\\cap C)=\\left(\\frac35\\right)^3+\\left(\\frac35\\right)^2\\left(\\frac25\\right)\\]\n\\[P(A\\cap C)=\\frac{27}{125}+\\frac{18}{125}=\\frac{45}{125}=\\frac9{25}\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب P_C(A)",
+            "explanation": "\\[P_C(A)=\\frac{P(A\\cap C)}{P(C)}=\\frac{9/25}{3/5}=\\frac35\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "اختبار الاستقلال",
+            "explanation": "وجدنا:\n\\[P_C(A)=\\frac35=P(A)\\]\nإذن الحادثتان \\(A\\) و\\(C\\) مستقلتان. ويمكن أيضا التحقق من:\n\\[P(A\\cap C)=\\frac9{25}=\\frac35\\times\\frac35=P(A)P(C)\\]"
+          }
+        ],
+        "final_answer": "\\(P_C(A)=\\frac35\\)، والحادثتان \\(A\\) و\\(C\\) مستقلتان."
+      }
+    },
+    {
+      "id": "2024_s2_probability_ex01_q4a",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "4) أ) برر أن قيم المتغير العشوائي \\(X\\) هي: \\(-30\\) ، \\(-10\\) ، \\(10\\) ، \\(30\\).",
+      "axis_tags": [
+        "random_variable_probability_law_expectation"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "قيمة X هي مجموع ثلاثة أعداد، كل عدد يساوي 10 للقطعة السليمة أو -10 للقطعة غير السليمة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "لا توجد قطعة سليمة",
+            "explanation": "\\[-10-10-10=-30\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "قطعة سليمة واحدة",
+            "explanation": "\\[10-10-10=-10\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "قطعتان سليمتان",
+            "explanation": "\\[10+10-10=10\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "ثلاث قطع سليمة",
+            "explanation": "\\[10+10+10=30\\]\nإذن:\n\\[X(\\Omega)=\\{-30,-10,10,30\\}\\]"
+          }
+        ],
+        "final_answer": "\\(\\displaystyle X(\\Omega)=\\{-30,-10,10,30\\}\\)."
+      }
+    },
+    {
+      "id": "2024_s2_probability_ex01_q4b",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "ب) عين قانون احتمال المتغير العشوائي \\(X\\) ثم احسب أمله الرياضياتي \\(E(X)\\).",
+      "axis_tags": [
+        "random_variable_probability_law_expectation"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "كل قيمة لـX تقابل عددا محددا من القطع السليمة بين السحبات الثلاث. نستعمل قانون ثنائي الحد مع \\(p=\\frac35\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "P(X=-30)",
+            "explanation": "لا توجد أي قطعة سليمة:\n\\[P(X=-30)=\\left(\\frac25\\right)^3=\\frac8{125}\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "P(X=-10)",
+            "explanation": "قطعة سليمة واحدة فقط:\n\\[P(X=-10)=\\binom31\\frac35\\left(\\frac25\\right)^2=\\frac{36}{125}\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "P(X=10)",
+            "explanation": "قطعتان سليمتان وقطعة غير سليمة:\n\\[P(X=10)=\\binom32\\left(\\frac35\\right)^2\\frac25=\\frac{54}{125}\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "P(X=30)",
+            "explanation": "القطع الثلاث سليمة:\n\\[P(X=30)=\\left(\\frac35\\right)^3=\\frac{27}{125}\\]"
+          },
+          {
+            "step_number": 5,
+            "title": "قانون الاحتمال",
+            "explanation": "\\[\\begin{array}{c|cccc}x_i&-30&-10&10&30\\\\\\hline P(X=x_i)&\\frac8{125}&\\frac{36}{125}&\\frac{54}{125}&\\frac{27}{125}\\end{array}\\]"
+          },
+          {
+            "step_number": 6,
+            "title": "حساب الأمل الرياضياتي",
+            "explanation": "\\[E(X)=(-30)\\frac8{125}+(-10)\\frac{36}{125}+10\\frac{54}{125}+30\\frac{27}{125}\\]\n\\[E(X)=\\frac{-240-360+540+810}{125}=\\frac{750}{125}=6\\]"
+          }
+        ],
+        "final_answer": "قانون \\(X\\): \\(\\frac8{125},\\frac{36}{125},\\frac{54}{125},\\frac{27}{125}\\) للقيم \\(-30,-10,10,30\\) على الترتيب، و\\(E(X)=6\\)."
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2024(1).pdf",
+    "statement_figure_policy": "الشجرة مطلوبة من التلميذ وليست معطاة في نص التمرين.",
+    "solution_figure_policy": "تم تفصيل جميع فروع الشجرة واحتمالاتها ضمن الحل.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  }
+}

@@ -1,0 +1,193 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2017-tech-math-space-subject1-ex01-detailed",
+  "session": "ordinary",
+  "year": 2017,
+  "chapter_code": "space_geometry",
+  "chapter_title": "الهندسة في الفضاء",
+  "axis_tags": [
+    "space_cartesian_plane_normal_vector",
+    "space_relative_positions_intersections",
+    "space_parametric_line_plane",
+    "space_barycenter",
+    "space_loci",
+    "space_sphere_locus"
+  ],
+  "branches": [
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "exercise_number": 1,
+  "subject_number": 1,
+  "source_page": 1,
+  "source_pages": [
+    1
+  ],
+  "solution_source_pages": [
+    5
+  ],
+  "title": "التمرين الأول — بكالوريا الجزائر 2017 — الموضوع الأول — شعبة تقني رياضي",
+  "statement": "الفضاء منسوب إلى المعلم المتعامد والمتجانس \\((O;\\vec{i},\\vec{j},\\vec{k})\\). نعتبر النقط \\(A(2;2;0)\\)، \\(B(0;-2;2)\\) و\\(C(1;1;3)\\).",
+  "questions": [
+    {
+      "id": "2017_s1_space_ex01_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) اكتب معادلة ديكارتية للمستوي \\((P)\\) الذي يشمل النقطة \\(A\\) ويعامد المستقيم \\((BC)\\).",
+      "axis_tags": [
+        "space_cartesian_plane_normal_vector"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "بما أن المستوي P عمودي على المستقيم BC، فإن شعاع توجيه BC يكون شعاعا ناظميا للمستوي.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب شعاع BC",
+            "explanation": "\\[\\overrightarrow{BC}=C-B=(1-0,1-(-2),3-2)=(1,3,1).\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "كتابة الشكل العام للمعادلة",
+            "explanation": "إذن يمكن أخذ \\(\\vec n=(1,3,1)\\) شعاعا ناظميا للمستوي \\((P)\\)، فتكون معادلته من الشكل:\n\\[x+3y+z+d=0.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "استعمال مرور P بالنقطة A",
+            "explanation": "بما أن \\(A(2,2,0)\\in(P)\\)، فإن:\n\\[2+3\\times2+0+d=0\\Rightarrow d=-8.\\]"
+          }
+        ],
+        "final_answer": "\\[(P):x+3y+z-8=0.\\]"
+      }
+    },
+    {
+      "id": "2017_s1_space_ex01_q2",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2) نعتبر \\((P')\\) المستوي المحوري للقطعة \\([AB]\\)، تحقق أن معادلة \\((P')\\) هي: \\(x+2y-z=0\\).",
+      "axis_tags": [
+        "space_cartesian_plane_normal_vector",
+        "space_loci"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "المستوي المحوري للقطعة AB يمر بمنتصفها ويكون عموديا على المستقيم AB.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب منتصف AB",
+            "explanation": "منتصف القطعة \\([AB]\\) هو:\n\\[I\\left(\\frac{2+0}{2},\\frac{2+(-2)}{2},\\frac{0+2}{2}\\right)=(1,0,1).\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب شعاع AB",
+            "explanation": "\\[\\overrightarrow{AB}=B-A=(-2,-4,2)=-2(1,2,-1).\\]\nإذن \\((1,2,-1)\\) شعاع ناظمي للمستوي المحوري."
+          },
+          {
+            "step_number": 3,
+            "title": "كتابة المعادلة",
+            "explanation": "معادلة المستوي المار بـ\\(I(1,0,1)\\) وناظمه \\((1,2,-1)\\) هي:\n\\[(x-1)+2(y-0)-(z-1)=0.\\]\nوبالتبسيط:\n\\[x+2y-z=0.\\]"
+          }
+        ],
+        "final_answer": "\\[(P'):x+2y-z=0.\\]"
+      }
+    },
+    {
+      "id": "2017_s1_space_ex01_q3",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "3) بين أن المستويين \\((P)\\) و\\((P')\\) يتقاطعان وفق مستقيم \\((\\Delta)\\)، يطلب إيجاد تمثيل وسيطي له.",
+      "axis_tags": [
+        "space_relative_positions_intersections",
+        "space_parametric_line_plane"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحل جملة معادلتي المستويين ونختار أحد المتغيرات وسيطا حرا.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "جملة المستويين",
+            "explanation": "\\[\\begin{cases}x+3y+z-8=0\\\\x+2y-z=0\\end{cases}\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "اختيار وسيط",
+            "explanation": "نأخذ \\(z=t\\). من المعادلة الثانية:\n\\[x=-2y+t.\\]\nنعوض في الأولى:\n\\[-2y+t+3y+t-8=0\\Rightarrow y=8-2t.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب x",
+            "explanation": "\\[x=-2(8-2t)+t=5t-16.\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "التمثيل الوسيطي",
+            "explanation": "\\[(\\Delta):\\begin{cases}x=5t-16\\\\y=-2t+8\\\\z=t\\end{cases}\\qquad t\\in\\mathbb R.\\]"
+          }
+        ],
+        "final_answer": "\\[(\\Delta):\\begin{cases}x=5t-16\\\\y=-2t+8\\\\z=t\\end{cases},\\quad t\\in\\mathbb R.\\]"
+      }
+    },
+    {
+      "id": "2017_s1_space_ex01_q4",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "4) بين أن النقطة \\(G\\) مرجح الجملة المثقلة \\(\\{(A;1),(B;1),(C;-12)\\}\\) هي نقطة تقاطع \\((\\Delta)\\) و\\((ABC)\\)، ثم عين \\((E)\\) مجموعة النقط \\(M\\) من الفضاء التي تحقق: \\(\\left\\|\\overrightarrow{MA}+\\overrightarrow{MB}-12\\overrightarrow{MC}\\right\\|=10\\left\\|\\overrightarrow{OA}\\right\\|\\).",
+      "axis_tags": [
+        "space_barycenter",
+        "space_relative_positions_intersections",
+        "space_sphere_locus"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب إحداثيات المرجح G، ثم نثبت أنه ينتمي إلى Δ و(ABC). بعد ذلك نستعمل خاصية المرجح لتحويل المجموع الشعاعي إلى متجهة مرتبطة بـMG.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب إحداثيات G",
+            "explanation": "مجموع المعاملات هو:\n\\[1+1-12=-10\\neq0.\\]\nإذن:\n\\[\\overrightarrow{OG}=\\frac{\\overrightarrow{OA}+\\overrightarrow{OB}-12\\overrightarrow{OC}}{-10}.\\]\nومن ثم:\n\\[x_G=\\frac{2+0-12}{-10}=1,\\]\n\\[y_G=\\frac{2-2-12}{-10}=\\frac65,\\]\n\\[z_G=\\frac{0+2-36}{-10}=\\frac{17}{5}.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "إثبات أن G تنتمي إلى (ABC)",
+            "explanation": "بما أن \\(G\\) مرجح للنقط \\(A,B,C\\) ومجموع المعاملات غير منعدم، فإن \\(G\\) تنتمي إلى المستوي \\((ABC)\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "إثبات أن G تنتمي إلى Δ",
+            "explanation": "في تمثيل \\(\\Delta\\) نأخذ:\n\\[t=\\frac{17}{5}.\\]\nفنحصل على:\n\\[x=5\\times\\frac{17}{5}-16=1,\\]\n\\[y=-2\\times\\frac{17}{5}+8=\\frac65,\\]\n\\[z=\\frac{17}{5}.\\]\nوهي إحداثيات \\(G\\)، إذن \\(G\\in\\Delta\\)."
+          },
+          {
+            "step_number": 4,
+            "title": "نقطة التقاطع",
+            "explanation": "إذن:\n\\[\\{G\\}=(ABC)\\cap\\Delta.\\]"
+          },
+          {
+            "step_number": 5,
+            "title": "استعمال خاصية المرجح",
+            "explanation": "لكل نقطة \\(M\\):\n\\[\\overrightarrow{MA}+\\overrightarrow{MB}-12\\overrightarrow{MC}=(1+1-12)\\overrightarrow{MG}=-10\\overrightarrow{MG}.\\]"
+          },
+          {
+            "step_number": 6,
+            "title": "تحويل الشرط",
+            "explanation": "الشرط يصبح:\n\\[10MG=10\\,OA\\Rightarrow MG=OA.\\]\nولدينا:\n\\[OA=\\sqrt{2^2+2^2}=2\\sqrt2.\\]"
+          }
+        ],
+        "final_answer": "\\[G\\left(1;\\frac65;\\frac{17}{5}\\right),\\qquad \\{G\\}=(ABC)\\cap\\Delta.\\]\nومجموعة النقط \\((E)\\) هي سطح كرة مركزها \\(G\\) ونصف قطرها \\[R=OA=2\\sqrt2.\\]"
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2017(2).pdf",
+    "statement_figure_policy": "لا يوجد شكل هندسي إلزامي في نص التمرين.",
+    "solution_figure_policy": "الحل مستقل عن أي رسم.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  }
+}

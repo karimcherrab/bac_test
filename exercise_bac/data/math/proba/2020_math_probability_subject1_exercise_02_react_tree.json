@@ -1,0 +1,478 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "graph_schema_version": "1.0-react-json",
+  "version": "4.2-2020-math-probability-subject1-ex02-react-tree",
+  "session": "ordinary",
+  "year": 2020,
+  "chapter_code": "probability",
+  "chapter_title": "الاحتمالات",
+  "axis_tags": [
+    "probability_tree_total_probability",
+    "probability_language_probability_law",
+    "random_variable_probability_distribution_expectation"
+  ],
+  "branches": [
+    {
+      "code": "math",
+      "name": "شعبة رياضيات"
+    }
+  ],
+  "exercise_number": 2,
+  "subject_number": 1,
+  "source_page": 1,
+  "source_pages": [
+    1
+  ],
+  "solution_source_pages": [
+    5
+  ],
+  "title": "التمرين الثاني — بكالوريا الجزائر 2020 — الموضوع الأول — شعبة رياضيات — الاحتمالات",
+  "statement": "صندوق به 5 كريات بيضاء و 3 كريات حمراء ( كل الكريات متماثلة لا نفرق بينها باللمس).\nنسحب من الصندوق كرية واحدة حيث: إذا ظهرت كرية حمراء نعيدها إلى الصندوق ونضيف له كرية بيضاء وإذا ظهرت كرية بيضاء نعيدها إلى الصندوق ونضيف له كرية حمراء، ثم نكرر العملية مرة ثانية.",
+  "questions": [
+    {
+      "id": "2020_s1_probability_ex02_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) انقل شجرة الاحتمالات المقابلة التي تنمذج هذه التجربة ثم أكملها.",
+      "axis_tags": [
+        "probability_tree_total_probability"
+      ],
+      "statement_graphs": [
+        {
+          "id": "2020_s1_probability_ex02_tree_statement",
+          "type": "probability_tree",
+          "render_mode": "json",
+          "capture": false,
+          "title": "شجرة الاحتمالات كما وردت في نص التمرين",
+          "direction": "ltr",
+          "canvas": {
+            "width": 900,
+            "height": 480,
+            "padding": 24
+          },
+          "style": {
+            "node_radius": 5,
+            "edge_width": 2,
+            "label_font_size": 18,
+            "probability_font_size": 17,
+            "show_arrow_heads": false
+          },
+          "nodes": [
+            {
+              "id": "root",
+              "kind": "root",
+              "x": 70,
+              "y": 240,
+              "label": ""
+            },
+            {
+              "id": "r1",
+              "kind": "branch",
+              "x": 320,
+              "y": 135,
+              "label": "R"
+            },
+            {
+              "id": "b1",
+              "kind": "branch",
+              "x": 320,
+              "y": 350,
+              "label": "B"
+            },
+            {
+              "id": "rr",
+              "kind": "event",
+              "x": 700,
+              "y": 75,
+              "label": "R"
+            },
+            {
+              "id": "rb",
+              "kind": "event",
+              "x": 700,
+              "y": 190,
+              "label": "B"
+            },
+            {
+              "id": "br",
+              "kind": "event",
+              "x": 700,
+              "y": 300,
+              "label": "R"
+            },
+            {
+              "id": "bb",
+              "kind": "event",
+              "x": 700,
+              "y": 415,
+              "label": "B"
+            }
+          ],
+          "edges": [
+            {
+              "id": "e_root_r",
+              "from": "root",
+              "to": "r1",
+              "probability": null,
+              "latex_probability": null,
+              "display_if_missing": "",
+              "is_given_in_statement": false
+            },
+            {
+              "id": "e_root_b",
+              "from": "root",
+              "to": "b1",
+              "probability": null,
+              "latex_probability": null,
+              "display_if_missing": "",
+              "is_given_in_statement": false
+            },
+            {
+              "id": "e_r_r",
+              "from": "r1",
+              "to": "rr",
+              "probability": null,
+              "latex_probability": null,
+              "display_if_missing": "",
+              "is_given_in_statement": false
+            },
+            {
+              "id": "e_r_b",
+              "from": "r1",
+              "to": "rb",
+              "probability": null,
+              "latex_probability": null,
+              "display_if_missing": "",
+              "is_given_in_statement": false
+            },
+            {
+              "id": "e_b_r",
+              "from": "b1",
+              "to": "br",
+              "probability": "4/9",
+              "latex_probability": "\\frac{4}{9}",
+              "is_given_in_statement": true
+            },
+            {
+              "id": "e_b_b",
+              "from": "b1",
+              "to": "bb",
+              "probability": null,
+              "latex_probability": null,
+              "display_if_missing": "",
+              "is_given_in_statement": false
+            }
+          ],
+          "react_renderer": {
+            "component": "ProbabilityTreeRenderer",
+            "source": "nodes_edges",
+            "probability_field": "latex_probability",
+            "fallback_probability_field": "probability",
+            "missing_probability_field": "display_if_missing"
+          }
+        }
+      ],
+      "solution": {
+        "strategy": "نحسب احتمالات السحب الأول ثم احتمالات السحب الثاني حسب لون الكرية المسحوبة أولا.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "السحب الأول",
+            "explanation": "\\[P(R)=\\frac{3}{8},\\qquad P(B)=\\frac{5}{8}.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "بعد سحب كرية حمراء",
+            "explanation": "نعيد الكرية الحمراء ثم نضيف كرية بيضاء، فيصبح الصندوق فيه 3 حمراء و6 بيضاء:\n\\[P(R|R)=\\frac{3}{9},\\qquad P(B|R)=\\frac{6}{9}.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "بعد سحب كرية بيضاء",
+            "explanation": "نعيد الكرية البيضاء ثم نضيف كرية حمراء، فيصبح الصندوق فيه 4 حمراء و5 بيضاء:\n\\[P(R|B)=\\frac{4}{9},\\qquad P(B|B)=\\frac{5}{9}.\\]"
+          }
+        ],
+        "solution_graphs": [
+          {
+            "id": "2020_s1_probability_ex02_tree_solution",
+            "type": "probability_tree",
+            "render_mode": "json",
+            "capture": false,
+            "title": "شجرة الاحتمالات المكتملة",
+            "direction": "ltr",
+            "canvas": {
+              "width": 900,
+              "height": 480,
+              "padding": 24
+            },
+            "style": {
+              "node_radius": 5,
+              "edge_width": 2,
+              "label_font_size": 18,
+              "probability_font_size": 17,
+              "show_arrow_heads": false
+            },
+            "nodes": [
+              {
+                "id": "root",
+                "kind": "root",
+                "x": 70,
+                "y": 240,
+                "label": ""
+              },
+              {
+                "id": "r1",
+                "kind": "branch",
+                "x": 320,
+                "y": 135,
+                "label": "R"
+              },
+              {
+                "id": "b1",
+                "kind": "branch",
+                "x": 320,
+                "y": 350,
+                "label": "B"
+              },
+              {
+                "id": "rr",
+                "kind": "event",
+                "x": 700,
+                "y": 75,
+                "label": "R"
+              },
+              {
+                "id": "rb",
+                "kind": "event",
+                "x": 700,
+                "y": 190,
+                "label": "B"
+              },
+              {
+                "id": "br",
+                "kind": "event",
+                "x": 700,
+                "y": 300,
+                "label": "R"
+              },
+              {
+                "id": "bb",
+                "kind": "event",
+                "x": 700,
+                "y": 415,
+                "label": "B"
+              }
+            ],
+            "edges": [
+              {
+                "id": "e_root_r",
+                "from": "root",
+                "to": "r1",
+                "probability": "3/8",
+                "latex_probability": "\\frac{3}{8}",
+                "display_if_missing": "",
+                "is_given_in_statement": false
+              },
+              {
+                "id": "e_root_b",
+                "from": "root",
+                "to": "b1",
+                "probability": "5/8",
+                "latex_probability": "\\frac{5}{8}",
+                "display_if_missing": "",
+                "is_given_in_statement": false
+              },
+              {
+                "id": "e_r_r",
+                "from": "r1",
+                "to": "rr",
+                "probability": "3/9",
+                "latex_probability": "\\frac{3}{9}",
+                "display_if_missing": "",
+                "is_given_in_statement": false
+              },
+              {
+                "id": "e_r_b",
+                "from": "r1",
+                "to": "rb",
+                "probability": "6/9",
+                "latex_probability": "\\frac{6}{9}",
+                "display_if_missing": "",
+                "is_given_in_statement": false
+              },
+              {
+                "id": "e_b_r",
+                "from": "b1",
+                "to": "br",
+                "probability": "4/9",
+                "latex_probability": "\\frac{4}{9}",
+                "is_given_in_statement": true
+              },
+              {
+                "id": "e_b_b",
+                "from": "b1",
+                "to": "bb",
+                "probability": "5/9",
+                "latex_probability": "\\frac{5}{9}",
+                "display_if_missing": "",
+                "is_given_in_statement": false
+              }
+            ],
+            "react_renderer": {
+              "component": "ProbabilityTreeRenderer",
+              "source": "nodes_edges",
+              "probability_field": "latex_probability",
+              "fallback_probability_field": "probability",
+              "missing_probability_field": "display_if_missing"
+            }
+          }
+        ],
+        "final_answer": "\\[P(R)=\\frac38,\\ P(B)=\\frac58,\\ P(R|R)=\\frac39,\\ P(B|R)=\\frac69,\\ P(R|B)=\\frac49,\\ P(B|B)=\\frac59.\\]"
+      }
+    },
+    {
+      "id": "2020_s1_probability_ex02_q2",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2) بين أن احتمال أن يوجد في الصندوق 7 كريات بيضاء هو \\(\\frac{1}{8}\\).",
+      "axis_tags": [
+        "probability_tree_total_probability"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "حتى يصبح عدد الكريات البيضاء 7 يجب أن نسحب كرية حمراء في المرتين.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "المسار المناسب",
+            "explanation": "نبدأ بـ5 كريات بيضاء، وكل مرة نسحب فيها كرية حمراء نضيف كرية بيضاء. إذن الوصول إلى 7 كريات بيضاء يوافق المسار \\(RR\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "الحساب",
+            "explanation": "\\[P(RR)=\\frac38\\times\\frac39=\\frac18.\\]"
+          }
+        ],
+        "final_answer": "\\[P(7\\text{ كريات بيضاء})=\\frac18.\\]"
+      }
+    },
+    {
+      "id": "2020_s1_probability_ex02_q3",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "3) احسب احتمال أن يوجد في الصندوق 4 كريات حمراء على الأقل.",
+      "axis_tags": [
+        "probability_language_probability_law",
+        "probability_tree_total_probability"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل الحادثة العكسية: الحالة الوحيدة التي لا يصل فيها عدد الكريات الحمراء إلى 4 هي سحب حمراء في المرتين.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الحادثة العكسية",
+            "explanation": "عند المسار \\(RR\\) لا نضيف أي كرية حمراء، فيبقى عدد الحمراء 3."
+          },
+          {
+            "step_number": 2,
+            "title": "الحساب",
+            "explanation": "\\[P=1-P(RR)=1-\\frac18=\\frac78.\\]"
+          }
+        ],
+        "final_answer": "\\[P=\\frac78.\\]"
+      }
+    },
+    {
+      "id": "2020_s1_probability_ex02_q4a",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "4) ليكن المتغير العشوائي \\(X\\) الذي يأخذ كقيمة عدد الكريات البيضاء الموجودة في الصندوق بعد العملية الثانية.\nأ. برر أن قيم المتغير العشوائي \\(X\\) هي: 5، 6 و 7.",
+      "axis_tags": [
+        "random_variable_probability_distribution_expectation"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحدد عدد الكريات البيضاء بعد كل مسار ممكن في الشجرة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "المسار RR",
+            "explanation": "نضيف كرية بيضاء مرتين، إذن \\(X=7\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "المساران RB و BR",
+            "explanation": "نضيف كرية بيضاء مرة واحدة، إذن \\(X=6\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "المسار BB",
+            "explanation": "لا نضيف أي كرية بيضاء، إذن \\(X=5\\)."
+          }
+        ],
+        "final_answer": "\\[X\\in\\{5,6,7\\}.\\]"
+      }
+    },
+    {
+      "id": "2020_s1_probability_ex02_q4b",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "ب. عرف قانون الاحتمال للمتغير العشوائي \\(X\\)، ثم احسب أمله الرياضياتي.",
+      "axis_tags": [
+        "random_variable_probability_distribution_expectation"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب احتمال كل قيمة باستعمال مسارات الشجرة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "احتمال X=5",
+            "explanation": "\\[P(X=5)=\\frac58\\times\\frac59=\\frac{25}{72}.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "احتمال X=6",
+            "explanation": "\\[P(X=6)=\\frac38\\times\\frac69+\\frac58\\times\\frac49=\\frac{38}{72}.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "احتمال X=7",
+            "explanation": "\\[P(X=7)=\\frac38\\times\\frac39=\\frac9{72}.\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "قانون الاحتمال",
+            "explanation": "\\[\\begin{array}{c|ccc}x_i&5&6&7\\\\\\hline P(X=x_i)&\\frac{25}{72}&\\frac{38}{72}&\\frac9{72}\\end{array}\\]"
+          },
+          {
+            "step_number": 5,
+            "title": "الأمل الرياضياتي",
+            "explanation": "\\[E(X)=5\\times\\frac{25}{72}+6\\times\\frac{38}{72}+7\\times\\frac9{72}=\\frac{52}{9}.\\]"
+          }
+        ],
+        "final_answer": "\\[\\begin{array}{c|ccc}x_i&5&6&7\\\\\\hline P(X=x_i)&\\frac{25}{72}&\\frac{38}{72}&\\frac9{72}\\end{array}\\]\n\\[E(X)=\\frac{52}{9}.\\]"
+      }
+    }
+  ],
+  "rendering_contract": {
+    "no_capture": true,
+    "external_image_required": false,
+    "external_svg_required": false,
+    "graph_source": "inline_json",
+    "supported_graph_types": [
+      "probability_tree"
+    ],
+    "react_note": "ارسم الشجرة من nodes و edges. لكل edge استخدم from و to للوصول إلى إحداثيات العقدتين. اعرض latex_probability إذا كانت موجودة. لا يوجد أي path لصورة أو SVG."
+  },
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2020(7).pdf",
+    "statement_figure_policy": "لا Capture. شجرة الاحتمالات معاد بناؤها داخل JSON.",
+    "solution_figure_policy": "الشجرة المكتملة موجودة داخل solution_graphs كبيانات JSON.",
+    "renderer": "ProbabilityTreeRenderer(nodes + edges)"
+  }
+}

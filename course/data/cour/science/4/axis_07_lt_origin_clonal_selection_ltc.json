@@ -1,0 +1,338 @@
+{
+  "tag": "immune-defense-axis-07",
+  "title": "منشأ الخلايا LT والانتقاء اللمي وتكوين LTc",
+  "order": 7,
+  "is_active": true,
+  "branches": ["science"],
+  "content": {
+    "language": "ar",
+    "direction": "rtl",
+    "chapter_code": "immune_defense",
+    "chapter_title": "دور البروتينات في الدفاع عن الذات",
+    "axis_tag": "immune-defense-axis-07",
+    "estimated_minutes": 65,
+    "difficulty": 4,
+    "lesson_goal": "أن يشرح التلميذ منشأ الخلايا LT ومقر اكتسابها الكفاءة المناعية، ويميز بين LT4 وLT8، ثم يرتب مراحل الانتقاء اللمي والتكاثر والتمايز المؤدية إلى تكوين LTc وخلايا الذاكرة.",
+    "prerequisites": [
+      "معرفة دور CMH I والببتيد المستضدي",
+      "معرفة المستقبل الغشائي TCR",
+      "فهم آلية تعرف LTc على الخلية المستهدفة",
+      "التمييز الأولي بين الرد المناعي الخلطي والخلوي"
+    ],
+    "learning_outcomes": [
+      "يميز بين منشأ الخلية LT ومقر نضجها.",
+      "يقارن بين LT4 وLT8 من حيث المؤشر الغشائي والدور.",
+      "يفسر انتقاء اللمة التي يحمل TCR الخاص بها تكاملا مع المعقد المعروض.",
+      "يرتب مراحل تكوين LTc ترتيبا صحيحا.",
+      "يفسر تشكل خلايا LT ذاكرية ودورها في الاستجابة الثانوية.",
+      "يقارن بين تكوين الخلايا البلازمية وتكوين LTc."
+    ],
+    "learning_path": [
+      {
+        "id": "step_1",
+        "type": "problem",
+        "component": "DiscoveryQuestion",
+        "title": "من أين تأتي الخلايا LTc؟",
+        "content": {
+          "question": "تعرفنا سابقا على أن LTc تقصي الخلايا المصابة. فهل توجد LTc منفذة منذ البداية، أم تتكون بعد تعرف خلية لمفاوية سابقة على المستضد؟",
+          "teacher": "سنميز أولا بين منشأ الخلايا LT ومقر نضجها، ثم نتتبع تحول LT8 المنتقاة إلى LTc.",
+          "action": {"label": "ابدأ الاستقصاء", "next_step": "step_2"}
+        },
+        "display_order": 1
+      },
+      {
+        "id": "step_2",
+        "type": "evidence",
+        "component": "RealEvidence",
+        "title": "تجربة تحديد منشأ الخلايا LT ومقر نضجها",
+        "content": {
+          "document_id": "immune_axis07_doc01_origin",
+          "src": "/science/immune-defense/axis-07/lt_origin_experiment.png",
+          "instruction": "قارن نتائج المجموعات الثلاث، ثم حدد العضو الذي ينتج الخلايا LT والعضو الضروري لنضجها.",
+          "analysis_steps": [
+            "الأشعة X تخرب الخلايا اللمفاوية، لذلك يعاد بناء الجهاز اللمفاوي بالعضو المزروع.",
+            "زرع نقي العظام بعد استئصال التيموس يعطي LB فقط، ما يدل على أن نقي العظام مصدر الخلايا اللمفاوية الأولية.",
+            "غياب LT عند غياب التيموس يدل على أن التيموس ضروري لاكتساب LT الكفاءة المناعية."
+          ],
+          "conclusion": "تتشكل طلائع الخلايا LT في النخاع العظمي الأحمر، ثم تهاجر إلى الغدة التيموسية حيث تنضج وتكتسب كفاءتها المناعية."
+        },
+        "display_order": 2
+      },
+      {
+        "id": "step_3",
+        "type": "explanation",
+        "component": "ShortExplanation",
+        "title": "المنشأ ليس هو مقر النضج",
+        "content": {
+          "paragraphs": [
+            "المنشأ هو المكان الذي تتشكل فيه الطلائع اللمفاوية: النخاع العظمي الأحمر.",
+            "مقر النضج هو المكان الذي تكتسب فيه الخلايا LT مستقبلات TCR النوعية وتصبح قادرة مناعيا: الغدة التيموسية.",
+            "بعد النضج تهاجر الخلايا LT إلى الأعضاء اللمفاوية المحيطية مثل العقد اللمفاوية والطحال."
+          ],
+          "common_error": "لا تقل إن الخلايا LT تتشكل في التيموس؛ الصحيح أنها تتشكل في النخاع العظمي وتنضج في التيموس."
+        },
+        "display_order": 3
+      },
+      {
+        "id": "step_4",
+        "type": "evidence",
+        "component": "RealEvidence",
+        "title": "كيف تظهر LT4 وLT8؟",
+        "content": {
+          "document_id": "immune_axis07_doc02_maturation",
+          "src": "/science/immune-defense/axis-07/lt_maturation_cd4_cd8.png",
+          "instruction": "اتبع اتجاه الأسهم من نقي العظام إلى التيموس ثم إلى الأعضاء اللمفاوية، وحدد المؤشر المميز لكل نوع.",
+          "observations": [
+            "كلتا الخليتين تحملان مستقبلات TCR نوعية.",
+            "الخلايا LT4 تحمل المؤشر CD4.",
+            "الخلايا LT8 تحمل المؤشر CD8.",
+            "الخلايا الناضجة تغادر التيموس إلى الأعضاء اللمفاوية المحيطية."
+          ]
+        },
+        "display_order": 4
+      },
+      {
+        "id": "step_5",
+        "type": "comparison",
+        "component": "VisualComparison",
+        "title": "مقارنة LT4 وLT8",
+        "content": {
+          "columns": ["العنصر", "LT4", "LT8"],
+          "rows": [
+            ["المؤشر الغشائي", "CD4", "CD8"],
+            ["المعقد المتعرف عليه غالبا", "CMH II–ببتيد", "CMH I–ببتيد"],
+            ["المصير بعد التنشيط", "خلايا مساعدة LTh وخلايا ذاكرة", "خلايا قاتلة LTc وخلايا ذاكرة"],
+            ["الدور", "تنسيق وتحفيز الرد المناعي", "إعطاء لمة منفذة تقصي الخلايا المستهدفة"]
+          ],
+          "note": "CD4 وCD8 مؤشرات تمييز، أما نوعية التعرف على المستضد فتحددها بنية TCR."
+        },
+        "display_order": 5
+      },
+      {
+        "id": "step_6",
+        "type": "explanation",
+        "component": "ShortExplanation",
+        "title": "ما المقصود بالانتقاء اللمي؟",
+        "content": {
+          "paragraphs": [
+            "توجد في العضوية لمات عديدة من LT8، وتحمل كل لمة مستقبل TCR ذا بنية مختلفة.",
+            "عندما تعرض خلية مستهدفة المعقد CMH I–ببتيد مستضدي، لا ترتبط به إلا خلية LT8 التي يملك TCR لديها تكاملا بنيويا معه.",
+            "هذه الخلية الموافقة هي التي تُنتقى وتُنشط، بينما تبقى اللمات غير الموافقة دون تنشيط."
+          ],
+          "definition": "الانتقاء اللمي هو اختيار اللمة اللمفاوية التي تحمل مستقبلات غشائية مكملة نوعيا للمستضد المعروض."
+        },
+        "display_order": 6
+      },
+      {
+        "id": "step_7",
+        "type": "evidence",
+        "component": "RealEvidence",
+        "title": "الدليل الزمني على التكاثر ثم التمايز",
+        "content": {
+          "document_id": "immune_axis07_doc03_curve",
+          "src": "/science/immune-defense/axis-07/lt8_cellular_changes_curve.png",
+          "instruction": "رتب الظواهر الثلاث بحسب بداية ظهورها: تضاعف ADN، الانقسامات الخيطية، اكتساب السمية الخلوية.",
+          "answer": [
+            "يبدأ تضاعف ADN أولا، وهو تهيئة للانقسام.",
+            "تظهر الانقسامات الخيطية بعده، فتزداد أعداد الخلايا المنتقاة.",
+            "يحدث اكتساب القدرة السمية أخيرا، ما يدل على تمايز LT8 إلى LTc."
+          ],
+          "conclusion": "بعد الانتقاء تمر LT8 بتكاثر لمي، ثم تتمايز بعض الخلايا الناتجة إلى LTc منفذة."
+        },
+        "display_order": 7
+      },
+      {
+        "id": "step_8",
+        "type": "evidence",
+        "component": "RealEvidence",
+        "title": "مخطط الانتقاء اللمي وتكوين LTc",
+        "content": {
+          "document_id": "immune_axis07_doc04_selection",
+          "src": "/science/immune-defense/axis-07/lt8_clonal_selection_ltc.png",
+          "instruction": "فسر لماذا تتكاثر لمة واحدة فقط، ثم حدد صفتي الخلايا LTc الناتجة.",
+          "guided_answer": [
+            "تعرض الخلية المستهدفة المعقد CMH I–ببتيد مستضدي.",
+            "ينتقى LT8 الذي يتكامل TCR لديه مع هذا المعقد.",
+            "تتكاثر الخلية المنتقاة لتعطي لمة تحمل TCR نفسه.",
+            "تتمايز خلايا من اللمة إلى LTc لها النوعية نفسها وقدرة تنفيذية."
+          ]
+        },
+        "display_order": 8
+      },
+      {
+        "id": "step_9",
+        "type": "rule",
+        "component": "KeyRule",
+        "title": "السلسلة الكاملة لتكوين LTc",
+        "content": {
+          "formula": "LT غير ناضجة ← نضج تيموسي ← LT8 كفؤة ← تعرف نوعي وانتقاء ← تنشيط ← تكاثر لمي ← تمايز ← LTc منفذة + LT8 ذاكرية",
+          "details": [
+            "النضج يسبق مواجهة المستضد.",
+            "الانتقاء لا يصنع النوعية؛ بل يختار خلية تحمل TCR الموافق مسبقا.",
+            "التكاثر يحافظ على النوعية لأن الخلايا البنات تحمل TCR نفسه.",
+            "التمايز يمنح بعض الخلايا القدرة التنفيذية، بينما تحفظ خلايا الذاكرة المعلومة المناعية."
+          ]
+        },
+        "display_order": 9
+      },
+      {
+        "id": "step_10",
+        "type": "comparison",
+        "component": "VisualComparison",
+        "title": "الخلايا المنفذة والخلايا الذاكرية",
+        "content": {
+          "columns": ["الصفة", "LTc منفذة", "LT8 ذاكرية"],
+          "rows": [
+            ["الوظيفة", "إقصاء الخلية المستهدفة الموافقة", "البقاء والاستجابة السريعة عند دخول المستضد نفسه"],
+            ["مدة البقاء", "مرتبطة بمرحلة الاستجابة الحالية", "طويلة نسبيا"],
+            ["النوعية", "تحمل TCR الموافق", "تحمل TCR الموافق نفسه"],
+            ["أثرها", "تنفيذ الرد الأولي", "تقوية وتسريع الرد الثانوي"]
+          ]
+        },
+        "display_order": 10
+      },
+      {
+        "id": "step_11",
+        "type": "method",
+        "component": "BacMethodCard",
+        "title": "منهجية تحليل وثيقة الانتقاء اللمي",
+        "content": {
+          "steps": [
+            "أحدد تنوع اللمات قبل التماس من خلال اختلاف TCR.",
+            "أحدد المعقد الذي تعرضه الخلية: CMH I–ببتيد مستضدي.",
+            "أستخرج معيار الانتقاء: التكامل البنيوي بين TCR والمعقد.",
+            "أتبع مصير الخلية المنتقاة: تنشيط ثم تكاثر ثم تمايز.",
+            "أصوغ الاستنتاج دون خلط بين الانتقاء والتكاثر والتمايز."
+          ],
+          "model_conclusion": "ينتقي المستضد لمة LT8 الموافقة بفضل التكامل بين TCR والمعقد CMH I–ببتيد، ثم تتكاثر الخلايا المنتقاة وتتمايز إلى LTc منفذة وخلايا ذاكرية لها النوعية نفسها."
+        },
+        "display_order": 11
+      },
+      {
+        "id": "step_12",
+        "type": "summary",
+        "component": "InteractiveSummaryMap",
+        "title": "الخريطة التحصيلية للمحور",
+        "content": {
+          "nodes": [
+            {"id": "origin", "label": "النخاع العظمي الأحمر", "detail": "منشأ طلائع LT"},
+            {"id": "thymus", "label": "الغدة التيموسية", "detail": "نضج واكتساب TCR وCD4 أو CD8"},
+            {"id": "lt8", "label": "LT8 كفؤة", "detail": "تحمل CD8 وTCR نوعيا"},
+            {"id": "selection", "label": "الانتقاء اللمي", "detail": "اختيار TCR الموافق للمعقد المعروض"},
+            {"id": "expansion", "label": "التكاثر اللمي", "detail": "تكوين نسيلة ذات النوعية نفسها"},
+            {"id": "differentiation", "label": "التمايز", "detail": "LTc منفذة وخلايا ذاكرية"}
+          ],
+          "edges": [
+            ["origin", "thymus"], ["thymus", "lt8"], ["lt8", "selection"],
+            ["selection", "expansion"], ["expansion", "differentiation"]
+          ]
+        },
+        "display_order": 12
+      },
+      {
+        "id": "step_13",
+        "type": "assessment",
+        "component": "FinalQuiz",
+        "title": "اختبر فهمك",
+        "content": {
+          "passing_score": 5,
+          "questions": [
+            {"id": "q1", "type": "mcq", "question": "أين تتشكل طلائع الخلايا LT وأين تنضج؟", "options": ["تتشكل في النخاع العظمي وتنضج في التيموس", "تتشكل وتنضج في التيموس", "تتشكل في الطحال وتنضج في النخاع", "تتشكل وتنضج في العقد"], "answer": 0, "explanation": "النخاع العظمي هو المنشأ، والتيموس هو مقر النضج."},
+            {"id": "q2", "type": "mcq", "question": "ما المؤشر الغشائي المميز للخلايا LT8؟", "options": ["CD4", "CD8", "BCR", "HLA II فقط"], "answer": 1, "explanation": "LT8 تحمل CD8، بينما LT4 تحمل CD4."},
+            {"id": "q3", "type": "mcq", "question": "ما الذي يحدد اختيار لمة LT8 معينة؟", "options": ["كبر حجم الخلية", "تكامل TCR مع المعقد CMH I–ببتيد", "وجود CD8 وحده", "عدد الخلايا في اللمة"], "answer": 1, "explanation": "الانتقاء نوعي ويعتمد على تكامل TCR مع المعقد المعروض."},
+            {"id": "q4", "type": "ordering", "question": "رتب المراحل بعد مواجهة LT8 للمستضد.", "items": ["التعرف والانتقاء", "التكاثر اللمي", "التمايز", "تكوين LTc وخلايا الذاكرة"], "answer": [0,1,2,3], "explanation": "ينتقى الموافق أولا، ثم يزداد عدده، ثم يكتسب المصير الوظيفي."},
+            {"id": "q5", "type": "true_false", "question": "الانتقاء اللمي يجعل جميع خلايا LT8 تغير TCR كي يلائم المستضد.", "answer": false, "explanation": "الانتقاء يختار خلية تحمل TCR الموافق مسبقا ولا يغير مستقبلات جميع الخلايا."},
+            {"id": "q6", "type": "mcq", "question": "ما القاسم المشترك بين تكوين الخلايا البلازمية وتكوين LTc؟", "options": ["كلاهما ينتج من انتقاء وتكاثر وتمايز خلية لمفاوية نوعية", "كلاهما ينضج في التيموس", "كلاهما يفرز أجساما مضادة", "كلاهما يقصي الخلايا المصابة مباشرة"], "answer": 0, "explanation": "المساران يشتركان في الانتقاء والتكاثر والتمايز، لكن الخلية الأصلية والناتج المنفذ مختلفان."}
+          ]
+        },
+        "display_order": 13
+      }
+    ],
+    "document_bank": [
+      {
+        "document_id": "immune_axis07_doc01_origin",
+        "file_name": "lt_origin_experiment.png",
+        "src": "/science/immune-defense/axis-07/lt_origin_experiment.png",
+        "document_type": "experimental_results_table",
+        "source": {"kind": "lesson_pdf", "file": "الرد المناعي الخلوي 2025(1).pdf", "page": 4, "figure": "الوثيقة (4)"},
+        "skills": ["compare_groups", "infer_cell_origin", "distinguish_origin_maturation"],
+        "scientific_entities": ["النخاع العظمي الأحمر", "الغدة التيموسية", "LT", "LB", "الأشعة X"],
+        "pedagogical_roles": ["lesson_evidence", "axis_exercise", "bac_similar"],
+        "difficulty": 3,
+        "interpretation_scope": "تحديد منشأ LT ومقر نضجها من نتائج تجريبية.",
+        "safe_claims": ["نقي العظام مصدر طلائع LT.", "التيموس ضروري لنضج LT."],
+        "forbidden_inferences": ["اعتبار التيموس منشأ الخلايا LT.", "اعتبار الأشعة X منشطة للمناعة."],
+        "ai_generation": {"allowed": true, "allowed_question_types": ["compare", "infer", "justify"], "max_documents_with": 2}
+      },
+      {
+        "document_id": "immune_axis07_doc02_maturation",
+        "file_name": "lt_maturation_cd4_cd8.png",
+        "src": "/science/immune-defense/axis-07/lt_maturation_cd4_cd8.png",
+        "document_type": "maturation_migration_diagram",
+        "source": {"kind": "lesson_pdf", "file": "الرد المناعي الخلوي 2025(1).pdf", "page": 4, "figure": "الوثيقة (5)"},
+        "skills": ["read_functional_diagram", "compare_lt4_lt8", "trace_cell_migration"],
+        "scientific_entities": ["LT4", "LT8", "CD4", "CD8", "TCR", "التيموس"],
+        "pedagogical_roles": ["lesson_explanation", "axis_exercise"],
+        "difficulty": 2,
+        "interpretation_scope": "تتبع نضج LT وتمييز LT4 عن LT8.",
+        "safe_claims": ["LT4 تحمل CD4 وLT8 تحمل CD8.", "كلا النوعين يحمل TCR نوعيا."],
+        "forbidden_inferences": ["اعتبار CD4 أو CD8 هو مستقبل المستضد النوعي."],
+        "ai_generation": {"allowed": true, "allowed_question_types": ["label", "compare", "trace"], "max_documents_with": 2}
+      },
+      {
+        "document_id": "immune_axis07_doc03_curve",
+        "file_name": "lt8_cellular_changes_curve.png",
+        "src": "/science/immune-defense/axis-07/lt8_cellular_changes_curve.png",
+        "document_type": "time_course_curve",
+        "source": {"kind": "lesson_pdf", "file": "الرد المناعي الخلوي 2025(1).pdf", "page": 5, "figure": "الوثيقة (6)"},
+        "skills": ["analyze_curve", "order_events", "infer_ltc_origin"],
+        "scientific_entities": ["LT8", "ADN", "الانقسام الخيطي", "السمية الخلوية", "LTc"],
+        "pedagogical_roles": ["lesson_evidence", "axis_exercise", "bac_similar"],
+        "difficulty": 4,
+        "interpretation_scope": "إثبات أن التكاثر يسبق اكتساب الوظيفة التنفيذية.",
+        "safe_claims": ["تضاعف ADN يسبق الانقسامات.", "اكتساب السمية يدل على التمايز إلى LTc."],
+        "forbidden_inferences": ["اعتبار تضاعف ADN تمايزا.", "القول إن كل LT8 هي LTc قبل التنشيط."],
+        "ai_generation": {"allowed": true, "allowed_question_types": ["read_curve", "order", "infer"], "max_documents_with": 2}
+      },
+      {
+        "document_id": "immune_axis07_doc04_selection",
+        "file_name": "lt8_clonal_selection_ltc.png",
+        "src": "/science/immune-defense/axis-07/lt8_clonal_selection_ltc.png",
+        "document_type": "clonal_selection_diagram",
+        "source": {"kind": "lesson_pdf", "file": "الرد المناعي الخلوي 2025(1).pdf", "page": 5, "figure": "الوثيقة (7)"},
+        "skills": ["explain_clonal_selection", "sequence_response", "link_tcr_specificity"],
+        "scientific_entities": ["LT8", "LTc", "TCR", "CMH I", "ببتيد مستضدي", "الانتقاء اللمي"],
+        "pedagogical_roles": ["lesson_core_diagram", "axis_exercise", "bac_similar", "ai_axis_exercise"],
+        "difficulty": 4,
+        "interpretation_scope": "شرح الانتقاء والتكاثر والتمايز المؤدي إلى LTc.",
+        "safe_claims": ["ينتقى LT8 ذو TCR الموافق.", "الخلايا الناتجة تحافظ على النوعية نفسها."],
+        "forbidden_inferences": ["القول إن المستضد يصنع TCR جديدا.", "اعتبار التكاثر والانتقاء مرحلة واحدة."],
+        "ai_generation": {"allowed": true, "allowed_question_types": ["explain", "sequence", "predict", "complete_diagram"], "max_documents_with": 2}
+      }
+    ],
+    "presentation": {
+      "style": "modern_science_lesson",
+      "rtl": true,
+      "show_progress": true,
+      "image_policy": "scientific_documents_only",
+      "color_semantics": {"origin": "blue", "selection": "violet", "proliferation": "green", "differentiation": "orange", "memory": "teal"}
+    },
+    "scientific_quality_control": {
+      "validated": true,
+      "guardrails": [
+        "التمييز الصريح بين منشأ LT في النخاع العظمي ونضجها في التيموس.",
+        "CD4 وCD8 مؤشرات تمييز، بينما TCR مسؤول عن نوعية التعرف.",
+        "LTc تنتج من تمايز LT8 المنتقاة والمنشطة ولا تعد مرادفا لكل LT8.",
+        "الانتقاء يختار لمة موجودة مسبقا ولا يوجه الخلايا لتصنيع TCR حسب المستضد.",
+        "التسلسل الصحيح: تعرف وانتقاء ثم تكاثر ثم تمايز.",
+        "خلايا الذاكرة تحفظ النوعية وتفسر سرعة الرد الثانوي."
+      ],
+      "scope_limits": [
+        "لا يتوسع المحور في تفاصيل الانتقاء الإيجابي والسلبي داخل التيموس.",
+        "لا يعيد شرح آلية البرفورين والغرانزيم بالتفصيل لأنها عولجت في المحور السابق.",
+        "لا يتعمق في شبكة الأنترلوكينات لأنها تعالج في محور التحفيز والتعاون الخلوي."
+      ]
+    },
+    "curriculum_goal": "بناء تصور متسلسل لمنشأ الخلايا LT واكتسابها الكفاءة المناعية ثم الانتقاء اللمي والتكاثر والتمايز المؤدي إلى خلايا LTc منفذة وخلايا ذاكرية."
+  }
+}

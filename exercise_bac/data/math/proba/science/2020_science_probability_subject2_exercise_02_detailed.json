@@ -1,0 +1,249 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "session": "ordinary",
+  "year": 2020,
+  "chapter_code": "probability",
+  "chapter_title": "الاحتمالات",
+  "branches": [
+    {
+      "code": "science",
+      "name": "شعبة علوم تجريبية"
+    }
+  ],
+  "version": "4.2-2020-science-probability-subject2-ex02",
+  "axis_tags": [
+    "probability_events_law",
+    "probability_conditional",
+    "probability_tree_total_probability",
+    "random_variable_probability_law_expectation",
+    "probability_draw_modeling"
+  ],
+  "exercise_number": 2,
+  "subject_number": 2,
+  "source_page": 3,
+  "source_pages": [
+    3
+  ],
+  "solution_source_pages": [
+    8
+  ],
+  "title": "التمرين الثاني — بكالوريا الجزائر 2020 — الموضوع الثاني — شعبة علوم تجريبية",
+  "statement": "كيس به ثلاث كريات بيضاء وكريتين حمراوين لا نميز بينها عند اللمس، نسحب عشوائيا كريتين على التوالي من الكيس بالكيفية التالية: إذا كانت الكرية المسحوبة بيضاء نعيدها إلى الكيس و إذا كانت حمراء لا نعيدها إلى الكيس.",
+  "statement_graph_data": {
+    "type": "probability_tree",
+    "title": "شجرة الاحتمالات المعطاة في نص التمرين",
+    "nodes": [
+      {
+        "id": "root",
+        "label": ""
+      },
+      {
+        "id": "B1",
+        "label": "B",
+        "parent": "root"
+      },
+      {
+        "id": "R1",
+        "label": "R",
+        "parent": "root"
+      },
+      {
+        "id": "B1B2",
+        "label": "B",
+        "parent": "B1"
+      },
+      {
+        "id": "B1R2",
+        "label": "R",
+        "parent": "B1",
+        "edge_label": "\\frac25"
+      },
+      {
+        "id": "R1B2",
+        "label": "B",
+        "parent": "R1",
+        "edge_label": "\\frac34"
+      },
+      {
+        "id": "R1R2",
+        "label": "R",
+        "parent": "R1"
+      }
+    ]
+  },
+  "questions": [
+    {
+      "id": "2020_s2_probability_ex02_q1a",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) أ. انقل شجرة الاحتمالات المقابلة ثم أكملها.\n\\(B\\) يرمز إلى الحصول على كرية بيضاء و \\(R\\) إلى الحصول على كرية حمراء.",
+      "axis_tags": [
+        "probability_tree_total_probability",
+        "probability_draw_modeling"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب احتمالي اللون في السحب الأول، ثم ننتبه إلى قاعدة الإرجاع: إذا كانت الكرة الأولى بيضاء تعاد إلى الكيس فيبقى محتواه كما هو، أما إذا كانت حمراء فلا تعاد فيتغير محتوى الكيس قبل السحب الثاني.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "السحب الأول",
+            "explanation": "في البداية يحتوي الكيس على \\(3\\) كريات بيضاء و\\(2\\) حمراوين، أي \\(5\\) كريات.\n\nإذن:\n\\[P(B)=\\frac35,\\qquad P(R)=\\frac25\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "بعد سحب كرة بيضاء",
+            "explanation": "إذا كانت الكرة الأولى بيضاء فإننا نعيدها إلى الكيس، لذلك يبقى الكيس مكونا من \\(3\\) بيضاء و\\(2\\) حمراء.\n\nإذن:\n\\[P(B\\mid B)=\\frac35,\\qquad P(R\\mid B)=\\frac25\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "بعد سحب كرة حمراء",
+            "explanation": "إذا كانت الكرة الأولى حمراء فلا نعيدها إلى الكيس.\n\nيبقى في الكيس \\(3\\) كريات بيضاء وكرة حمراء واحدة، أي \\(4\\) كريات.\n\nإذن:\n\\[P(B\\mid R)=\\frac34,\\qquad P(R\\mid R)=\\frac14\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "الشجرة المكتملة",
+            "explanation": "القيم التي توضع على فروع الشجرة هي:\n\\[\\frac35,\\ \\frac25,\\ \\frac35,\\ \\frac25,\\ \\frac34,\\ \\frac14\\]"
+          }
+        ],
+        "final_answer": "\\(P(B)=\\frac35\\)، \\(P(R)=\\frac25\\)، \\(P(B\\mid B)=\\frac35\\)، \\(P(R\\mid B)=\\frac25\\)، \\(P(B\\mid R)=\\frac34\\)، \\(P(R\\mid R)=\\frac14\\)."
+      }
+    },
+    {
+      "id": "2020_s2_probability_ex02_q1b",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "ب. احسب احتمال أن تكون الكرية المسحوبة الثانية حمراء.",
+      "axis_tags": [
+        "probability_tree_total_probability",
+        "probability_conditional"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "الكرة الثانية تكون حمراء عبر مسارين: الأولى بيضاء ثم الثانية حمراء، أو الأولى حمراء ثم الثانية حمراء. نجمع احتمالي المسارين.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "المسار الأول: B ثم R",
+            "explanation": "احتمال أن تكون الأولى بيضاء ثم الثانية حمراء هو:\n\\[P(B\\cap R)=\\frac35\\times\\frac25=\\frac6{25}\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "المسار الثاني: R ثم R",
+            "explanation": "احتمال أن تكون الأولى حمراء ثم الثانية حمراء هو:\n\\[P(R\\cap R)=\\frac25\\times\\frac14=\\frac1{10}\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "جمع الاحتمالين",
+            "explanation": "إذن احتمال أن تكون الكرة الثانية حمراء هو:\n\\[P(R_2)=\\frac6{25}+\\frac1{10}\\]\nنوحد المقام إلى \\(50\\):\n\\[P(R_2)=\\frac{12}{50}+\\frac5{50}=\\frac{17}{50}\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "النتيجة النهائية",
+            "explanation": "\\[\\boxed{P(R_2)=\\frac{17}{50}}\\]"
+          }
+        ],
+        "final_answer": "\\(\\displaystyle \\frac{17}{50}\\)."
+      }
+    },
+    {
+      "id": "2020_s2_probability_ex02_q2a",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "2) ليكن \\(X\\) المتغير العشوائي الذي يرفق بكل سحب لكريتين عدد الكريات الحمراء المسحوبة.\nأ. عين مجموعة قيم المتغير العشوائي \\(X\\).",
+      "axis_tags": [
+        "random_variable_probability_law_expectation"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "ننظر إلى عدد الكريات الحمراء الممكن سحبها عند سحب كرتين: قد لا نسحب أي كرة حمراء، أو نسحب واحدة، أو نسحب كرتين حمراوين.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تحديد القيم الممكنة",
+            "explanation": "بما أننا نسحب كرتين، فإن عدد الكريات الحمراء المسحوبة يمكن أن يكون:\n\n- \\(0\\): إذا كانت الكرتان بيضاوين.\n- \\(1\\): إذا كانت إحدى الكرتين حمراء والأخرى بيضاء.\n- \\(2\\): إذا كانت الكرتان حمراوين.\n\nإذن:\n\\[X\\in\\{0,1,2\\}\\]"
+          }
+        ],
+        "final_answer": "\\(\\displaystyle X(\\Omega)=\\{0,1,2\\}\\)."
+      }
+    },
+    {
+      "id": "2020_s2_probability_ex02_q2b",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "ب. بين أن: \\(P(X=1)=\\frac{27}{50}\\)، ثم عرف قانون احتمال المتغير العشوائي \\(X\\).",
+      "axis_tags": [
+        "random_variable_probability_law_expectation",
+        "probability_tree_total_probability"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "للحصول على كرة حمراء واحدة بالضبط هناك مساران: بيضاء ثم حمراء، أو حمراء ثم بيضاء. بعد ذلك نحسب \\(P(X=0)\\) و\\(P(X=2)\\) من الشجرة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب P(X=1)",
+            "explanation": "الحدث \\(X=1\\) يتحقق في حالتين:\n\n- الأولى بيضاء والثانية حمراء:\n\\[\\frac35\\times\\frac25=\\frac6{25}\\]\n\n- الأولى حمراء والثانية بيضاء:\n\\[\\frac25\\times\\frac34=\\frac3{10}\\]\n\nإذن:\n\\[P(X=1)=\\frac6{25}+\\frac3{10}\\]\nنوحد المقام إلى \\(50\\):\n\\[P(X=1)=\\frac{12}{50}+\\frac{15}{50}=\\frac{27}{50}\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب P(X=0)",
+            "explanation": "حتى يكون \\(X=0\\)، يجب أن تكون الكرتان بيضاوين:\n\\[P(X=0)=\\frac35\\times\\frac35=\\frac9{25}\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب P(X=2)",
+            "explanation": "حتى يكون \\(X=2\\)، يجب أن تكون الكرتان حمراوين:\n\\[P(X=2)=\\frac25\\times\\frac14=\\frac1{10}\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "قانون احتمال X",
+            "explanation": "إذن قانون الاحتمال هو:\n\\[\n\\begin{array}{c|ccc}\nx_i&0&1&2\\\\ \\hline\nP(X=x_i)&\\frac9{25}&\\frac{27}{50}&\\frac1{10}\n\\end{array}\n\\]\n\nونتحقق من المجموع:\n\\[\\frac9{25}+\\frac{27}{50}+\\frac1{10}=\\frac{18+27+5}{50}=1\\]"
+          }
+        ],
+        "final_answer": "\\(P(X=0)=\\frac9{25}\\)، \\(P(X=1)=\\frac{27}{50}\\)، \\(P(X=2)=\\frac1{10}\\)."
+      }
+    },
+    {
+      "id": "2020_s2_probability_ex02_q2c",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "ج. احسب \\(E(X)\\) الأمل الرياضياتي للمتغير العشوائي \\(X\\).",
+      "axis_tags": [
+        "random_variable_probability_law_expectation"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل تعريف الأمل الرياضي: نضرب كل قيمة للمتغير \\(X\\) في احتمالها ثم نجمع.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تطبيق تعريف الأمل الرياضي",
+            "explanation": "لدينا:\n\\[E(X)=0\\times P(X=0)+1\\times P(X=1)+2\\times P(X=2)\\]\nبالتعويض:\n\\[E(X)=0\\times\\frac9{25}+1\\times\\frac{27}{50}+2\\times\\frac1{10}\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "تبسيط الحساب",
+            "explanation": "\\[E(X)=\\frac{27}{50}+\\frac{2}{10}\\]\n\\[E(X)=\\frac{27}{50}+\\frac{10}{50}=\\frac{37}{50}\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "النتيجة النهائية",
+            "explanation": "\\[\\boxed{E(X)=\\frac{37}{50}}\\]"
+          }
+        ],
+        "final_answer": "\\(\\displaystyle E(X)=\\frac{37}{50}\\)."
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2020.pdf",
+    "statement_figure_policy": "تم تمثيل شجرة الاحتمالات الواردة في نص التمرين ضمن statement_graph_data.",
+    "solution_figure_policy": "يستعمل الحل نفس شجرة الاحتمالات ويكمل جميع الفروع.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  }
+}

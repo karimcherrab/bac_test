@@ -1,0 +1,483 @@
+{
+  "tag": "straight_stair_design_calculation",
+  "title": "تصميم وحساب المدرج المستقيم",
+  "order": 8,
+  "is_active": true,
+  "branches": [
+    "math_tech"
+  ],
+  "content": {
+    "language": "ar",
+    "direction": "rtl",
+    "chapter_code": "superstructure_elements",
+    "axis_tag": "straight_stair_design_calculation",
+    "chapter_title": "عناصر المنشأ العلوي",
+    "estimated_minutes": 55,
+    "difficulty": "medium",
+    "lesson_goal": "تمكين التلميذ من استعمال رموز حساب المدرج المستقيم، حساب عدد القائمات، توزيعها على القلبات، وحساب عرض النائمة باستعمال علاقة الخطوة المتوسطة.",
+    "prerequisites": [
+      "معرفة مكونات المدرج المستقيم: النائمة، القائمة، القلبة والفاصل.",
+      "فهم الفرق بين ارتفاع القائمة h وعرض النائمة g.",
+      "القدرة على تحويل المتر إلى السنتيمتر."
+    ],
+    "learning_outcomes": [
+      "يتعرف على الرموز H وh وn وg.",
+      "يحسب عدد القائمات بالعلاقة n = H / h.",
+      "يحدد عدد النائمات في القلبة الواحدة عند الحاجة.",
+      "يوزع عدد القائمات على قلبتين متماثلتين.",
+      "يستعمل علاقة الخطوة المتوسطة 2h + g = 64 cm.",
+      "يستخرج عرض النائمة g = 64 - 2h.",
+      "ينجز حسابًا كاملاً لمدرج مستقيم من المعطيات.",
+      "يتحقق من توافق الوحدات قبل الحساب.",
+      "يتجنب الخلط بين h وg وH وn."
+    ],
+    "learning_path": [
+      {
+        "id": "step_1",
+        "type": "motivation",
+        "title": "من الشكل إلى الحساب",
+        "content": {
+          "teacher": "بعد أن تعلمت مكونات المدرج وأنواعه، ننتقل الآن إلى تصميمه حسابيًا. الهدف هو معرفة عدد القائمات وعرض النائمة انطلاقًا من علو الطابق وعلو القائمة.",
+          "question": "إذا عرفنا علو الطابق H وعلو القائمة h، فما أول قيمة نحسبها؟",
+          "choices": [
+            "عدد القائمات n",
+            "عرض النافذة",
+            "سمك الجدار"
+          ],
+          "correct_answer": "عدد القائمات n",
+          "explanation": "يحسب عدد القائمات بالعلاقة n = H / h.",
+          "takeaway": "الحساب يبدأ من الارتفاع الكلي للطابق وارتفاع القائمة."
+        }
+      },
+      {
+        "id": "step_2",
+        "type": "concept",
+        "title": "رموز الحساب",
+        "content": {
+          "teacher": "يستعمل الدرس أربعة رموز أساسية: H لعلو الطابق، h لعلو القائمة، n لعدد القائمات، وg لعرض النائمة. وللقلبة الواحدة يذكر أن عدد النائمات يساوي n - 1.",
+          "key_points": [
+            "H = علو الطابق.",
+            "h = علو القائمة.",
+            "n = عدد القائمات.",
+            "n - 1 = عدد النائمات في القلبة الواحدة.",
+            "g = عرض النائمة."
+          ],
+          "graph": {
+            "id": "stair_calculation_symbols",
+            "type": "diagram",
+            "diagram_type": "educational_diagram",
+            "title": "رموز حساب المدرج",
+            "description": "رسم يوضح H وh وg وعدد القائمات.",
+            "svg": "<svg viewBox=\"0 0 1120 620\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"رموز حساب المدرج\">\n<text x=\"560\" y=\"50\" font-size=\"34\" text-anchor=\"middle\">رموز حساب المدرج المستقيم</text>\n<path d=\"M160 470 H280 V420 H400 V370 H520 V320 H640 V270 H760 V220 H880\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"7\"/>\n<line x1=\"160\" y1=\"500\" x2=\"880\" y2=\"500\" stroke=\"currentColor\" stroke-width=\"4\"/>\n<line x1=\"930\" y1=\"220\" x2=\"930\" y2=\"470\" stroke=\"currentColor\" stroke-width=\"4\"/>\n<line x1=\"915\" y1=\"220\" x2=\"945\" y2=\"220\" stroke=\"currentColor\" stroke-width=\"4\"/>\n<line x1=\"915\" y1=\"470\" x2=\"945\" y2=\"470\" stroke=\"currentColor\" stroke-width=\"4\"/>\n<text x=\"985\" y=\"350\" font-size=\"30\">H</text>\n<text x=\"985\" y=\"385\" font-size=\"23\">علو الطابق</text>\n<line x1=\"280\" y1=\"555\" x2=\"400\" y2=\"555\" stroke=\"currentColor\" stroke-width=\"4\"/>\n<line x1=\"280\" y1=\"542\" x2=\"280\" y2=\"568\" stroke=\"currentColor\" stroke-width=\"4\"/>\n<line x1=\"400\" y1=\"542\" x2=\"400\" y2=\"568\" stroke=\"currentColor\" stroke-width=\"4\"/>\n<text x=\"340\" y=\"595\" font-size=\"28\" text-anchor=\"middle\">g</text>\n<line x1=\"105\" y1=\"420\" x2=\"105\" y2=\"470\" stroke=\"currentColor\" stroke-width=\"4\"/>\n<line x1=\"93\" y1=\"420\" x2=\"117\" y2=\"420\" stroke=\"currentColor\" stroke-width=\"4\"/>\n<line x1=\"93\" y1=\"470\" x2=\"117\" y2=\"470\" stroke=\"currentColor\" stroke-width=\"4\"/>\n<text x=\"65\" y=\"452\" font-size=\"28\">h</text>\n<text x=\"560\" y=\"140\" font-size=\"28\" text-anchor=\"middle\">n = عدد القائمات</text>\n<text x=\"560\" y=\"180\" font-size=\"28\" text-anchor=\"middle\">n − 1 = عدد النائمات في القلبة الواحدة</text>\n</svg>",
+            "alt_text": "مدرج مبسط مع الرموز H وh وg وn.",
+            "render_mode": "inline_step",
+            "responsive": true
+          },
+          "takeaway": "H كبير للطابق، h صغير للقائمة، g للنائمة، n للعدد."
+        }
+      },
+      {
+        "id": "step_3",
+        "type": "method",
+        "title": "قبل الحساب: وحّد الوحدات",
+        "content": {
+          "teacher": "لا تقسم 3.06 m على 17 cm مباشرة. يجب أن تكون الوحدات من نفس النوع. في مثال الدرس نحول 3.06 m إلى 306 cm ثم نطبق العلاقة.",
+          "algorithm": [
+            "حدد وحدة H.",
+            "حدد وحدة h.",
+            "إذا اختلفتا، حوّل إحداهما حتى تصبح الوحدتان متماثلتين.",
+            "بعد ذلك فقط طبق n = H / h."
+          ],
+          "attention": "أكثر خطأ مباشر هو القسمة بين متر وسنتيمتر دون تحويل.",
+          "takeaway": "وحدات موحدة أولًا، حساب ثانيًا."
+        }
+      },
+      {
+        "id": "step_4",
+        "type": "concept",
+        "title": "حساب عدد القائمات",
+        "content": {
+          "teacher": "بعد توحيد الوحدات، يحسب عدد القائمات بقسمة علو الطابق H على علو القائمة h.",
+          "definition": "العلاقة الأساسية لحساب عدد القائمات هي: n = H / h.",
+          "formula": {
+            "latex": "n = \\frac{H}{h}",
+            "variables": {
+              "n": "عدد القائمات",
+              "H": "علو الطابق",
+              "h": "علو القائمة"
+            }
+          },
+          "graph": {
+            "id": "stair_formulas",
+            "type": "diagram",
+            "diagram_type": "educational_diagram",
+            "title": "العلاقات الأساسية",
+            "description": "رسم يجمع علاقة عدد القائمات وعلاقة الخطوة المتوسطة.",
+            "svg": "<svg viewBox=\"0 0 1120 560\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"قوانين حساب المدرج\">\n<text x=\"560\" y=\"55\" font-size=\"34\" text-anchor=\"middle\">العلاقات الأساسية للحساب</text>\n<rect x=\"120\" y=\"120\" width=\"390\" height=\"300\" rx=\"24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"4\"/>\n<text x=\"315\" y=\"180\" font-size=\"29\" text-anchor=\"middle\">حساب عدد القائمات</text>\n<text x=\"315\" y=\"270\" font-size=\"48\" text-anchor=\"middle\">n = H / h</text>\n<text x=\"315\" y=\"335\" font-size=\"24\" text-anchor=\"middle\">H: علو الطابق</text>\n<text x=\"315\" y=\"375\" font-size=\"24\" text-anchor=\"middle\">h: علو القائمة</text>\n<rect x=\"610\" y=\"120\" width=\"390\" height=\"300\" rx=\"24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"4\"/>\n<text x=\"805\" y=\"180\" font-size=\"29\" text-anchor=\"middle\">علاقة الخطوة المتوسطة</text>\n<text x=\"805\" y=\"270\" font-size=\"48\" text-anchor=\"middle\">2h + g = 64 cm</text>\n<text x=\"805\" y=\"335\" font-size=\"24\" text-anchor=\"middle\">g = 64 − 2h</text>\n<text x=\"805\" y=\"375\" font-size=\"24\" text-anchor=\"middle\">g: عرض النائمة</text>\n</svg>",
+            "alt_text": "صندوقان يعرضان n=H/h و2h+g=64cm.",
+            "render_mode": "inline_step",
+            "responsive": true
+          },
+          "takeaway": "عدد القائمات = علو الطابق ÷ علو القائمة."
+        }
+      },
+      {
+        "id": "step_5",
+        "type": "concept",
+        "title": "عدد النائمات",
+        "content": {
+          "teacher": "بالنسبة إلى قلبة واحدة، يذكر الدرس أن عدد النائمات يساوي عدد القائمات ناقص واحد.",
+          "formula": {
+            "latex": "N_{treads} = n - 1",
+            "variables": {
+              "n": "عدد القائمات في القلبة",
+              "N_treads": "عدد النائمات"
+            }
+          },
+          "example": "إذا كانت القلبة تحتوي 9 قائمات، فإن عدد النائمات فيها يساوي 8.",
+          "attention": "لا تستعمل n - 1 على كامل المدرج دون الانتباه إلى عدد القلبات وطريقة توزيع القائمات.",
+          "takeaway": "في القلبة الواحدة: عدد النائمات = عدد القائمات − 1."
+        }
+      },
+      {
+        "id": "step_6",
+        "type": "concept",
+        "title": "علاقة الخطوة المتوسطة",
+        "content": {
+          "teacher": "لحساب عرض النائمة g يستعمل الدرس علاقة الخطوة المتوسطة: قائمتان + نائمة = 64 cm.",
+          "definition": "علاقة الخطوة المتوسطة المستعملة في الدرس هي: 2h + g = 64 cm.",
+          "formula": {
+            "latex": "2h + g = 64\\,cm",
+            "derived": "g = 64 - 2h"
+          },
+          "takeaway": "إذا عرفت h، يمكنك مباشرة حساب g."
+        }
+      },
+      {
+        "id": "step_7",
+        "type": "worked_example",
+        "title": "مثال المصدر: H = 3.06 m و h = 17 cm",
+        "content": {
+          "statement": "مدرج مستقيم ذو قلبتين، علو الطابق H = 3.06 m وعلو القائمة h = 17 cm. احسب عدد القائمات وعرض النائمة.",
+          "steps": [
+            "نحوّل H إلى السنتيمتر: 3.06 m = 306 cm.",
+            "نحسب عدد القائمات: n = H / h = 306 / 17 = 18.",
+            "بما أن المدرج ذو قلبتين متماثلتين: 18 = 2 × 9، أي 9 قائمات في كل قلبة.",
+            "نطبق علاقة الخطوة المتوسطة: 2h + g = 64.",
+            "نعوض h = 17 cm: g = 64 - 2 × 17 = 30 cm."
+          ],
+          "final_answer": "عدد القائمات = 18، أي 9 قائمات لكل قلبة، وعرض النائمة g = 30 cm.",
+          "graph": {
+            "id": "stair_example_306",
+            "type": "diagram",
+            "diagram_type": "educational_diagram",
+            "title": "مثال حساب كامل",
+            "description": "تلخيص بصري لمثال H=3.06m وh=17cm.",
+            "svg": "<svg viewBox=\"0 0 1120 600\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"مثال حساب مدرج بقلبتين\">\n<text x=\"560\" y=\"48\" font-size=\"34\" text-anchor=\"middle\">مثال: H = 3.06 m و h = 17 cm</text>\n<rect x=\"90\" y=\"105\" width=\"940\" height=\"390\" rx=\"24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"4\"/>\n<text x=\"560\" y=\"165\" font-size=\"30\" text-anchor=\"middle\">نحوّل علو الطابق: 3.06 m = 306 cm</text>\n<text x=\"560\" y=\"225\" font-size=\"36\" text-anchor=\"middle\">n = H / h = 306 / 17 = 18 قائمة</text>\n<text x=\"560\" y=\"285\" font-size=\"34\" text-anchor=\"middle\">مدرج ذو قلبتين متماثلتين: 18 = 2 × 9</text>\n<text x=\"560\" y=\"345\" font-size=\"36\" text-anchor=\"middle\">2h + g = 64</text>\n<text x=\"560\" y=\"405\" font-size=\"36\" text-anchor=\"middle\">g = 64 − 2 × 17 = 30 cm</text>\n<text x=\"560\" y=\"465\" font-size=\"28\" text-anchor=\"middle\">النتيجة: 18 قائمة، 9 قائمات لكل قلبة، عرض النائمة 30 cm</text>\n</svg>",
+            "alt_text": "خطوات حساب 18 قائمة و30 سم للنائمة.",
+            "render_mode": "inline_step",
+            "responsive": true
+          },
+          "takeaway": "النتيجة في مثال الدرس: n = 18 وg = 30 cm."
+        }
+      },
+      {
+        "id": "step_8",
+        "type": "method",
+        "title": "منهجية الحل خطوة بخطوة",
+        "content": {
+          "teacher": "يمكن حل أغلب تمارين هذا المحور بنفس التسلسل.",
+          "algorithm": [
+            "اكتب المعطيات H وh.",
+            "وحّد الوحدات.",
+            "احسب n = H / h.",
+            "إذا كان المدرج ذا قلبتين متماثلتين، وزع عدد القائمات على القلبتين.",
+            "احسب عدد النائمات في كل قلبة عند الطلب.",
+            "احسب g من العلاقة 2h + g = 64 cm.",
+            "اكتب النتيجة مع الوحدات."
+          ],
+          "graph": {
+            "id": "stair_calculation_workflow",
+            "type": "diagram",
+            "diagram_type": "educational_diagram",
+            "title": "خريطة الحل",
+            "description": "رسم يوضح ترتيب خطوات حساب المدرج.",
+            "svg": "<svg viewBox=\"0 0 1120 460\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"منهجية حساب المدرج\">\n<defs><marker id=\"a\" markerWidth=\"10\" markerHeight=\"10\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L0,6 L9,3 z\" fill=\"currentColor\"/></marker></defs>\n<text x=\"560\" y=\"55\" font-size=\"34\" text-anchor=\"middle\">منهجية الحساب</text>\n<rect x=\"825\" y=\"145\" width=\"210\" height=\"95\" rx=\"18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"4\"/>\n<rect x=\"575\" y=\"145\" width=\"200\" height=\"95\" rx=\"18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"4\"/>\n<rect x=\"325\" y=\"145\" width=\"200\" height=\"95\" rx=\"18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"4\"/>\n<rect x=\"75\" y=\"145\" width=\"200\" height=\"95\" rx=\"18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"4\"/>\n<text x=\"930\" y=\"195\" font-size=\"25\" text-anchor=\"middle\">توحيد الوحدات</text>\n<text x=\"675\" y=\"195\" font-size=\"25\" text-anchor=\"middle\">n = H / h</text>\n<text x=\"425\" y=\"195\" font-size=\"25\" text-anchor=\"middle\">تقسيم القلبات</text>\n<text x=\"175\" y=\"195\" font-size=\"25\" text-anchor=\"middle\">g = 64 − 2h</text>\n<line x1=\"815\" y1=\"192\" x2=\"785\" y2=\"192\" stroke=\"currentColor\" stroke-width=\"5\" marker-end=\"url(#a)\"/>\n<line x1=\"565\" y1=\"192\" x2=\"535\" y2=\"192\" stroke=\"currentColor\" stroke-width=\"5\" marker-end=\"url(#a)\"/>\n<line x1=\"315\" y1=\"192\" x2=\"285\" y2=\"192\" stroke=\"currentColor\" stroke-width=\"5\" marker-end=\"url(#a)\"/>\n<text x=\"560\" y=\"330\" font-size=\"27\" text-anchor=\"middle\">المعطيات → عدد القائمات → توزيعها على القلبات → عرض النائمة</text>\n</svg>",
+            "alt_text": "أربع مراحل: توحيد الوحدات ثم n ثم توزيع القلبات ثم g.",
+            "render_mode": "inline_step",
+            "responsive": true
+          },
+          "takeaway": "المعطيات → الوحدات → n → توزيع القلبات → g."
+        }
+      },
+      {
+        "id": "step_9",
+        "type": "worked_example",
+        "title": "مثال إضافي: H = 2.80 m و h = 17.5 cm",
+        "content": {
+          "statement": "علو طابق H = 2.80 m وعلو القائمة h = 17.5 cm. احسب n وg.",
+          "steps": [
+            "نحوّل H: 2.80 m = 280 cm.",
+            "n = 280 / 17.5 = 16 قائمة.",
+            "g = 64 - 2 × 17.5.",
+            "g = 64 - 35 = 29 cm."
+          ],
+          "final_answer": "n = 16 قائمة وg = 29 cm.",
+          "attention": "هذا المثال تطبيقي باستعمال نفس علاقات المصدر.",
+          "takeaway": "تغيير المعطيات لا يغير منهجية الحل."
+        }
+      },
+      {
+        "id": "step_10",
+        "type": "comparison",
+        "title": "لا تخلط بين الرموز",
+        "content": {
+          "teacher": "معظم أخطاء هذا المحور تأتي من الخلط بين الارتفاع الكلي وارتفاع الدرجة أو بين النائمة والقائمة.",
+          "comparison": [
+            {
+              "item": "H",
+              "role": "علو الطابق كاملًا.",
+              "difference": "قيمة كبيرة تمثل الارتفاع الكلي."
+            },
+            {
+              "item": "h",
+              "role": "علو القائمة الواحدة.",
+              "difference": "قيمة صغيرة تخص درجة واحدة."
+            },
+            {
+              "item": "g",
+              "role": "عرض النائمة.",
+              "difference": "بعد أفقي."
+            },
+            {
+              "item": "n",
+              "role": "عدد القائمات.",
+              "difference": "عدد بلا وحدة."
+            }
+          ],
+          "takeaway": "H وh ارتفاعات، g عرض، n عدد."
+        }
+      },
+      {
+        "id": "step_11",
+        "type": "bac_method",
+        "title": "طريقة معالجة سؤال حساب المدرج",
+        "content": {
+          "teacher": "في سؤال البكالوريا أو التطبيق، اكتب العلاقات قبل التعويض العددي حتى تكون إجابتك منظمة وواضحة.",
+          "algorithm": [
+            "المعطيات: H = ... ، h = ...",
+            "تحويل الوحدات إن لزم.",
+            "عدد القائمات: n = H / h.",
+            "توزيع القائمات على القلبات إذا طلب.",
+            "عدد النائمات = n - 1 للقلبة الواحدة إذا كان مطلوبًا.",
+            "علاقة بلوندل في الدرس: 2h + g = 64 cm.",
+            "استنتاج g = 64 - 2h.",
+            "كتابة النتيجة النهائية مع cm حيث يلزم."
+          ],
+          "answer_templates": [
+            "n = H / h = ...",
+            "2h + g = 64 cm ⇒ g = 64 - 2h = ... cm",
+            "إذن عدد القائمات ... وعرض النائمة ... cm."
+          ],
+          "takeaway": "العلاقة → التعويض → الحساب → النتيجة."
+        }
+      },
+      {
+        "id": "step_12",
+        "type": "common_mistakes",
+        "title": "أخطاء شائعة",
+        "content": {
+          "mistakes": [
+            {
+              "title": "عدم توحيد الوحدات",
+              "wrong": "n = 3.06 / 17.",
+              "correct": "نحوّل 3.06 m إلى 306 cm ثم نحسب 306 / 17."
+            },
+            {
+              "title": "عكس H وh",
+              "wrong": "n = h / H.",
+              "correct": "n = H / h."
+            },
+            {
+              "title": "نسيان العدد 2 في علاقة بلوندل",
+              "wrong": "h + g = 64.",
+              "correct": "العلاقة المستعملة في الدرس: 2h + g = 64 cm."
+            },
+            {
+              "title": "الخلط بين n وg",
+              "wrong": "g هو عدد القائمات.",
+              "correct": "n عدد القائمات، وg عرض النائمة."
+            },
+            {
+              "title": "نسيان الوحدة",
+              "wrong": "g = 30 فقط.",
+              "correct": "g = 30 cm."
+            }
+          ],
+          "takeaway": "الوحدات والرموز أهم من السرعة في الحساب."
+        }
+      },
+      {
+        "id": "step_13",
+        "type": "summary",
+        "title": "خلاصة الحساب",
+        "content": {
+          "remember": [
+            "H = علو الطابق.",
+            "h = علو القائمة.",
+            "n = عدد القائمات.",
+            "g = عرض النائمة.",
+            "n = H / h.",
+            "في القلبة الواحدة: عدد النائمات = n - 1.",
+            "علاقة الخطوة المتوسطة: 2h + g = 64 cm.",
+            "إذن g = 64 - 2h.",
+            "في مثال المصدر: H=306 cm وh=17 cm ⇒ n=18 وg=30 cm."
+          ],
+          "memory_formula": "n = H/h | 2h + g = 64 cm",
+          "takeaway": "احفظ علاقتين وافهم معنى كل رمز."
+        }
+      },
+      {
+        "id": "step_14",
+        "type": "quiz",
+        "title": "اختبار الإتقان",
+        "content": {
+          "instruction": "أجب عن الأسئلة دون الرجوع إلى الخلاصة.",
+          "questions": [
+            {
+              "id": "q1",
+              "question": "ماذا يمثل الرمز H؟",
+              "choices": [
+                "علو الطابق",
+                "عرض النائمة",
+                "عدد القائمات",
+                "علو القائمة"
+              ],
+              "correct_answer": "علو الطابق",
+              "hint": "هو الارتفاع الكلي.",
+              "explanation": "H يمثل علو الطابق."
+            },
+            {
+              "id": "q2",
+              "question": "ماذا يمثل الرمز h؟",
+              "choices": [
+                "علو القائمة",
+                "علو الطابق",
+                "عدد النائمات",
+                "عرض القلبة"
+              ],
+              "correct_answer": "علو القائمة",
+              "hint": "هو ارتفاع جزء واحد من الدرجة.",
+              "explanation": "h يمثل علو القائمة."
+            },
+            {
+              "id": "q3",
+              "question": "ما العلاقة الصحيحة لحساب عدد القائمات؟",
+              "choices": [
+                "n = H / h",
+                "n = h / H",
+                "n = H × h",
+                "n = 64 - h"
+              ],
+              "correct_answer": "n = H / h",
+              "hint": "الارتفاع الكلي مقسوم على ارتفاع قائمة واحدة.",
+              "explanation": "هذه هي العلاقة الواردة في الدرس."
+            },
+            {
+              "id": "q4",
+              "question": "ما علاقة الخطوة المتوسطة المستعملة في الدرس؟",
+              "choices": [
+                "2h + g = 64 cm",
+                "h + g = 100",
+                "2g + h = 64",
+                "H + h = g"
+              ],
+              "correct_answer": "2h + g = 64 cm",
+              "hint": "قائمتان + نائمة.",
+              "explanation": "العلاقة هي 2h + g = 64 cm."
+            },
+            {
+              "id": "q5",
+              "question": "إذا كان H=306 cm وh=17 cm، فما n؟",
+              "choices": [
+                "18",
+                "17",
+                "30",
+                "9"
+              ],
+              "correct_answer": "18",
+              "hint": "306 ÷ 17.",
+              "explanation": "n = 306 / 17 = 18."
+            },
+            {
+              "id": "q6",
+              "question": "في المثال H=306 cm وh=17 cm، ما g؟",
+              "choices": [
+                "30 cm",
+                "17 cm",
+                "18 cm",
+                "64 cm"
+              ],
+              "correct_answer": "30 cm",
+              "hint": "g = 64 - 2×17.",
+              "explanation": "g = 64 - 34 = 30 cm."
+            },
+            {
+              "id": "q7",
+              "question": "إذا كانت القلبة تحتوي 9 قائمات، فكم عدد النائمات فيها وفق قاعدة الدرس؟",
+              "choices": [
+                "8",
+                "9",
+                "10",
+                "18"
+              ],
+              "correct_answer": "8",
+              "hint": "عدد النائمات = n - 1.",
+              "explanation": "9 - 1 = 8 نائمات."
+            },
+            {
+              "id": "q8",
+              "question": "ما أول خطوة قبل حساب n إذا كان H بالمتر وh بالسنتيمتر؟",
+              "choices": [
+                "توحيد الوحدات",
+                "حساب g أولًا",
+                "ضرب H في h",
+                "تقسيم القلبة مباشرة"
+              ],
+              "correct_answer": "توحيد الوحدات",
+              "hint": "لا تقسم وحدتين مختلفتين.",
+              "explanation": "يجب تحويل القيم إلى نفس الوحدة أولًا."
+            },
+            {
+              "id": "q9",
+              "question": "إذا كان h=17.5 cm، فما g حسب العلاقة 2h+g=64؟",
+              "choices": [
+                "29 cm",
+                "17.5 cm",
+                "35 cm",
+                "46.5 cm"
+              ],
+              "correct_answer": "29 cm",
+              "hint": "64 - 35.",
+              "explanation": "g = 64 - 2×17.5 = 29 cm."
+            },
+            {
+              "id": "q10",
+              "question": "أي عبارة صحيحة؟",
+              "choices": [
+                "n عدد بلا وحدة وg يقاس بالطول",
+                "n يقاس بالسنتيمتر",
+                "g هو عدد القائمات",
+                "H هو عرض النائمة"
+              ],
+              "correct_answer": "n عدد بلا وحدة وg يقاس بالطول",
+              "hint": "فرّق بين العدد والبعد الهندسي.",
+              "explanation": "n عدد، أما g فهو طول ويكتب بوحدة مثل cm."
+            }
+          ],
+          "mastery_threshold": 8
+        }
+      }
+    ]
+  }
+}

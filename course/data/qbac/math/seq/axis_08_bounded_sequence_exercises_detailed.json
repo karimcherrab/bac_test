@@ -1,0 +1,1268 @@
+{
+  "version": 3,
+  "language": "ar",
+  "direction": "rtl",
+  "subject_code": "math",
+  "chapter_code": "sequences",
+  "tag": "seq_bounded",
+  "title": "المتتالية المحدودة — تمارين تدريبية متدرجة مع حلول مفصلة",
+  "source_axis_file": "axis_08_bounded_sequence_simple(1).json",
+  "reference_bac_file": "question_bac_03_seq_bounded_exercises_REVIEWED_FINAL_V2.json",
+  "question_count": 13,
+  "selection_policy": {
+    "minimum_requested": 10,
+    "maximum_requested": 15,
+    "final_question_count": 13,
+    "policy": "تمارين جديدة مرتبطة حصريًا بمحور المتتالية المحدودة، مرتبة من السهل إلى الصعب، وتغطي مهارات الدرس وأفكار ملف البكالوريا المرجعي دون نسخ الأسئلة الأصلية.",
+    "covered_skills": [
+      "معنى المتتالية المحدودة",
+      "المحدودية من الأعلى ومن الأسفل",
+      "استخراج حصر من الحد العام",
+      "مقارنة البسط بالمقام",
+      "إعادة كتابة الحد العام",
+      "استعمال القيمة المطلقة",
+      "استعمال الرتابة لإيجاد حاجز",
+      "إثبات الحصر بالتراجع",
+      "الحصر في المتتاليات التراجعية الجذرية",
+      "استعمال المرافق",
+      "متراجحة التقلص",
+      "تكرار متراجحة التقلص"
+    ]
+  },
+  "questions": [
+    {
+      "id": "axis08_bounded_practice_01",
+      "year": null,
+      "source_file": null,
+      "source_page": null,
+      "exercise": "axis08_practice_01",
+      "number": "1",
+      "text": "لتكن \\(u_n=\\frac{1}{n+2}\\) حيث \\(n\\in\\mathbb N\\). أثبت أن \\((u_n)\\) متتالية محدودة، وحدد حدًا سفليًا وحدًا علويًا لها.",
+      "context": "حصر مباشر انطلاقًا من n≥0.",
+      "tag": "seq_bounded",
+      "axis": "المتتالية المحدودة",
+      "secondary_tags": [],
+      "skill": "حصر كسر بسيط",
+      "difficulty": "easy",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمرين تدريبي جديد خاص بالمحور، مبني على مهارات الدرس وأنماط أفكار البكالوريا المرجعية دون نسخ نص تمرين بكالوريا.",
+      "solution": {
+        "strategy": "ننطلق من n≥0 ثم نحصر المقام ومنه الكسر.",
+        "detailed_explanation": "المقام موجب ويزداد، لذلك يمكن الحصول مباشرة على حصر ثابت للحد.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "حصر المقام",
+            "goal": "استعمال n≥0",
+            "rule_used": "خواص المتراجحات",
+            "explanation": "نضيف 2 للطرفين.",
+            "calculation_lines": [
+              "\\[n\\ge0\\Rightarrow n+2\\ge2.\\]"
+            ],
+            "conclusion": "المقام موجب ولا يقل عن 2."
+          },
+          {
+            "order": 2,
+            "title": "حصر الكسر",
+            "goal": "استخراج حصر u_n",
+            "rule_used": "مقلوب أعداد موجبة",
+            "explanation": "بما أن n+2≥2>0 فإن مقلوبه موجب ولا يتجاوز 1/2.",
+            "calculation_lines": [
+              "\\[0<\\frac1{n+2}\\le\\frac12.\\]",
+              "\\[0<u_n\\le\\frac12.\\]"
+            ],
+            "conclusion": "حصلنا على حصر ثابت."
+          },
+          {
+            "order": 3,
+            "title": "الخاتمة",
+            "goal": "إثبات المحدودية",
+            "rule_used": "تعريف المتتالية المحدودة",
+            "explanation": "جميع الحدود بين حاجزين ثابتين.",
+            "calculation_lines": [
+              "\\[0\\le u_n\\le\\frac12.\\]"
+            ],
+            "conclusion": "0 حد سفلي و1/2 حد علوي."
+          }
+        ],
+        "final_answer": "\\(\\boxed{0<u_n\\le\\frac12}\\)، إذن \\((u_n)\\) محدودة.",
+        "verification": "عند n=0 نجد u_0=1/2، وهو يوافق الحد العلوي.",
+        "common_mistakes": [
+          {
+            "mistake": "الاكتفاء بقول u_n>0.",
+            "correction": "هذا يثبت المحدودية من الأسفل فقط؛ نحتاج حدًا علويًا أيضًا."
+          }
+        ],
+        "hints": [
+          "ابدأ من n≥0.",
+          "ادرس المقام قبل الكسر."
+        ],
+        "alternative_method": "",
+        "is_complete": true,
+        "method": [
+          "حصر المقام",
+          "حصر الكسر",
+          "الخاتمة"
+        ],
+        "understanding_check": [
+          "ما الحاجز السفلي والحاجز العلوي اللذان حصلنا عليهما؟",
+          "هل الحاجزان ثابتان أم يعتمدان على n؟",
+          "هل الحصر مثبت لكل n أم لعدة حدود فقط؟"
+        ],
+        "academic_writing_tip": "عند إثبات المحدودية، اكتب المتراجحات بالتدرج ثم اختم بحصر واضح من الشكل B≤u_n≤A، مع التأكيد أن A وB ثابتان."
+      }
+    },
+    {
+      "id": "axis08_bounded_practice_02",
+      "year": null,
+      "source_file": null,
+      "source_page": null,
+      "exercise": "axis08_practice_02",
+      "number": "2",
+      "text": "لتكن \\(u_n=\\frac{n}{n+1}\\). أثبت أن \\((u_n)\\) محدودة.",
+      "context": "مقارنة البسط بالمقام.",
+      "tag": "seq_bounded",
+      "axis": "المتتالية المحدودة",
+      "secondary_tags": [],
+      "skill": "مقارنة البسط والمقام",
+      "difficulty": "easy",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمرين تدريبي جديد خاص بالمحور، مبني على مهارات الدرس وأنماط أفكار البكالوريا المرجعية دون نسخ نص تمرين بكالوريا.",
+      "solution": {
+        "strategy": "نثبت أن الكسر غير سالب وأصغر من 1.",
+        "detailed_explanation": "لدينا n≥0 والمقام أكبر من البسط بمقدار 1.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "الإشارة",
+            "goal": "إثبات الحد السفلي",
+            "rule_used": "إشارة الكسر",
+            "explanation": "البسط غير سالب والمقام موجب.",
+            "calculation_lines": [
+              "\\[n\\ge0,\\quad n+1>0.\\]",
+              "\\[u_n\\ge0.\\]"
+            ],
+            "conclusion": "0 حد سفلي."
+          },
+          {
+            "order": 2,
+            "title": "المقارنة مع 1",
+            "goal": "إثبات الحد العلوي",
+            "rule_used": "مقارنة كسر موجب بالواحد",
+            "explanation": "المقام أكبر من البسط.",
+            "calculation_lines": [
+              "\\[n<n+1.\\]",
+              "\\[\\frac n{n+1}<1.\\]"
+            ],
+            "conclusion": "1 حد علوي."
+          },
+          {
+            "order": 3,
+            "title": "الخاتمة",
+            "goal": "إثبات المحدودية",
+            "rule_used": "تعريف المحدودية",
+            "explanation": "نجمع الطرفين.",
+            "calculation_lines": [
+              "\\[0\\le u_n<1.\\]"
+            ],
+            "conclusion": "المتتالية محدودة."
+          }
+        ],
+        "final_answer": "\\(\\boxed{0\\le u_n<1}\\)، وبالتالي \\((u_n)\\) محدودة.",
+        "verification": "u_0=0، وباقي الحدود أصغر من 1.",
+        "common_mistakes": [
+          {
+            "mistake": "اعتبار 1 أكبر حد بالضرورة.",
+            "correction": "1 حد علوي، ولا يلزم أن يكون حدًا من المتتالية."
+          }
+        ],
+        "hints": [
+          "قارن n وn+1."
+        ],
+        "alternative_method": "",
+        "is_complete": true,
+        "method": [
+          "الإشارة",
+          "الحد العلوي",
+          "الخاتمة"
+        ],
+        "understanding_check": [
+          "ما الحاجز السفلي والحاجز العلوي اللذان حصلنا عليهما؟",
+          "هل الحاجزان ثابتان أم يعتمدان على n؟",
+          "هل الحصر مثبت لكل n أم لعدة حدود فقط؟"
+        ],
+        "academic_writing_tip": "عند إثبات المحدودية، اكتب المتراجحات بالتدرج ثم اختم بحصر واضح من الشكل B≤u_n≤A، مع التأكيد أن A وB ثابتان."
+      }
+    },
+    {
+      "id": "axis08_bounded_practice_03",
+      "year": null,
+      "source_file": null,
+      "source_page": null,
+      "exercise": "axis08_practice_03",
+      "number": "3",
+      "text": "لتكن \\(u_n=n^2+2\\). ادرس محدودية \\((u_n)\\): هل هي محدودة من الأعلى؟ من الأسفل؟ وهل هي محدودة من الجهتين؟",
+      "context": "تمييز المحدودية من جهة واحدة عن المحدودية الكاملة.",
+      "tag": "seq_bounded",
+      "axis": "المتتالية المحدودة",
+      "secondary_tags": [],
+      "skill": "محدودية من جهة واحدة",
+      "difficulty": "easy",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمرين تدريبي جديد خاص بالمحور، مبني على مهارات الدرس وأنماط أفكار البكالوريا المرجعية دون نسخ نص تمرين بكالوريا.",
+      "solution": {
+        "strategy": "نستعمل n²≥0 للحد السفلي، ثم ندرس نمو الحدود لإثبات غياب حد علوي.",
+        "detailed_explanation": "وجود حد سفلي وحده لا يكفي للقول إن المتتالية محدودة.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "الحد السفلي",
+            "goal": "إثبات المحدودية من الأسفل",
+            "rule_used": "n²≥0",
+            "explanation": "نضيف 2.",
+            "calculation_lines": [
+              "\\[n^2\\ge0\\Rightarrow n^2+2\\ge2.\\]",
+              "\\[u_n\\ge2.\\]"
+            ],
+            "conclusion": "2 حد سفلي."
+          },
+          {
+            "order": 2,
+            "title": "الحد العلوي",
+            "goal": "فحص وجود سقف ثابت",
+            "rule_used": "نمو n²",
+            "explanation": "عندما تكبر n يمكن أن تتجاوز n²+2 أي عدد ثابت.",
+            "calculation_lines": [
+              "\\[n^2+2\\to+\\infty.\\]"
+            ],
+            "conclusion": "لا يوجد حد علوي ثابت."
+          },
+          {
+            "order": 3,
+            "title": "الخاتمة",
+            "goal": "تصنيف المتتالية",
+            "rule_used": "تعريف المحدودية",
+            "explanation": "هي محصورة من جهة واحدة فقط.",
+            "calculation_lines": [
+              "\\[u_n\\ge2.\\]"
+            ],
+            "conclusion": "محدودة من الأسفل فقط وليست محدودة."
+          }
+        ],
+        "final_answer": "المتتالية \\(\\boxed{\\text{محدودة من الأسفل فقط}}\\)، وليست محدودة من الجهتين.",
+        "verification": "الحدود 2،3،6،11،... تكبر، وهذا ينسجم مع النتيجة.",
+        "common_mistakes": [
+          {
+            "mistake": "القول إنها محدودة لأن u_n≥2.",
+            "correction": "هذا يثبت وجود أرضية فقط، وليس سقفًا."
+          }
+        ],
+        "hints": [
+          "استعمل n²≥0.",
+          "اسأل هل يمكن إيجاد عدد ثابت أكبر من كل الحدود؟"
+        ],
+        "alternative_method": "",
+        "is_complete": true,
+        "method": [
+          "الحد السفلي",
+          "غياب الحد العلوي",
+          "التصنيف"
+        ],
+        "understanding_check": [
+          "ما الحاجز السفلي والحاجز العلوي اللذان حصلنا عليهما؟",
+          "هل الحاجزان ثابتان أم يعتمدان على n؟",
+          "هل الحصر مثبت لكل n أم لعدة حدود فقط؟"
+        ],
+        "academic_writing_tip": "عند إثبات المحدودية، اكتب المتراجحات بالتدرج ثم اختم بحصر واضح من الشكل B≤u_n≤A، مع التأكيد أن A وB ثابتان."
+      }
+    },
+    {
+      "id": "axis08_bounded_practice_04",
+      "year": null,
+      "source_file": null,
+      "source_page": null,
+      "exercise": "axis08_practice_04",
+      "number": "4",
+      "text": "لتكن \\(u_n=3-\\frac{2}{n+1}\\). أثبت أن \\((u_n)\\) محدودة وحدد حصرًا مناسبًا لها.",
+      "context": "إعادة كتابة/حصر جزء كسري.",
+      "tag": "seq_bounded",
+      "axis": "المتتالية المحدودة",
+      "secondary_tags": [],
+      "skill": "حصر عبارة ثابت ناقص كسر",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمرين تدريبي جديد خاص بالمحور، مبني على مهارات الدرس وأنماط أفكار البكالوريا المرجعية دون نسخ نص تمرين بكالوريا.",
+      "solution": {
+        "strategy": "نحصر 2/(n+1) أولًا ثم نطرح الحصر من 3.",
+        "detailed_explanation": "من n≥0 نحصل على 0<1/(n+1)≤1.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "حصر الكسر",
+            "goal": "حصر الجزء المتغير",
+            "rule_used": "n+1≥1",
+            "explanation": "نضرب حصر المقلوب في 2.",
+            "calculation_lines": [
+              "\\[0<\\frac1{n+1}\\le1.\\]",
+              "\\[0<\\frac2{n+1}\\le2.\\]"
+            ],
+            "conclusion": "الكسر بين 0 و2."
+          },
+          {
+            "order": 2,
+            "title": "طرح من 3",
+            "goal": "الحصول على حصر u_n",
+            "rule_used": "خواص المتراجحات",
+            "explanation": "نطرح الأطراف من 3 مع الانتباه للترتيب.",
+            "calculation_lines": [
+              "\\[1\\le3-\\frac2{n+1}<3.\\]"
+            ],
+            "conclusion": "\\(1\\le u_n<3\\)."
+          },
+          {
+            "order": 3,
+            "title": "الخاتمة",
+            "goal": "إثبات المحدودية",
+            "rule_used": "تعريف المحدودية",
+            "explanation": "1 و3 حاجزان ثابتان.",
+            "calculation_lines": [
+              "\\[1\\le u_n<3.\\]"
+            ],
+            "conclusion": "المتتالية محدودة."
+          }
+        ],
+        "final_answer": "\\(\\boxed{1\\le u_n<3}\\)، إذن \\((u_n)\\) محدودة.",
+        "verification": "u_0=1، ومع زيادة n يقترب الحد من 3 دون تجاوزه.",
+        "common_mistakes": [
+          {
+            "mistake": "عكس جهة الحصر خطأ عند الطرح.",
+            "correction": "اكتب العملية بتأنٍ: إذا 0<x≤2 فإن 1≤3-x<3."
+          }
+        ],
+        "hints": [
+          "احصر الكسر أولًا.",
+          "ثم اطرح من 3."
+        ],
+        "alternative_method": "",
+        "is_complete": true,
+        "method": [
+          "حصر الكسر",
+          "تحويل الحصر",
+          "الخاتمة"
+        ],
+        "understanding_check": [
+          "ما الحاجز السفلي والحاجز العلوي اللذان حصلنا عليهما؟",
+          "هل الحاجزان ثابتان أم يعتمدان على n؟",
+          "هل الحصر مثبت لكل n أم لعدة حدود فقط؟"
+        ],
+        "academic_writing_tip": "عند إثبات المحدودية، اكتب المتراجحات بالتدرج ثم اختم بحصر واضح من الشكل B≤u_n≤A، مع التأكيد أن A وB ثابتان."
+      }
+    },
+    {
+      "id": "axis08_bounded_practice_05",
+      "year": null,
+      "source_file": null,
+      "source_page": null,
+      "exercise": "axis08_practice_05",
+      "number": "5",
+      "text": "لتكن \\(u_n=(-1)^n\\frac{n+1}{n+2}\\). باستعمال القيمة المطلقة، أثبت أن \\((u_n)\\) محدودة.",
+      "context": "توظيف القيمة المطلقة لإعطاء حصر من الجهتين.",
+      "tag": "seq_bounded",
+      "axis": "المتتالية المحدودة",
+      "secondary_tags": [],
+      "skill": "القيمة المطلقة",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمرين تدريبي جديد خاص بالمحور، مبني على مهارات الدرس وأنماط أفكار البكالوريا المرجعية دون نسخ نص تمرين بكالوريا.",
+      "solution": {
+        "strategy": "نحسب |u_n| ثم نقارنه بالعدد 1.",
+        "detailed_explanation": "العامل (-1)^n يغير الإشارة فقط، لذلك القيمة المطلقة تلغيه.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "القيمة المطلقة",
+            "goal": "إزالة التذبذب في الإشارة",
+            "rule_used": "|(-1)^n|=1",
+            "explanation": "نأخذ القيمة المطلقة.",
+            "calculation_lines": [
+              "\\[|u_n|=\\left|(-1)^n\\right|\\frac{n+1}{n+2}=\\frac{n+1}{n+2}.\\]"
+            ],
+            "conclusion": "اختفت الإشارة المتناوبة."
+          },
+          {
+            "order": 2,
+            "title": "المقارنة",
+            "goal": "إيجاد ثابت M",
+            "rule_used": "البسط أصغر من المقام",
+            "explanation": "n+1<n+2.",
+            "calculation_lines": [
+              "\\[0\\le\\frac{n+1}{n+2}<1.\\]",
+              "\\[|u_n|<1.\\]"
+            ],
+            "conclusion": "يمكن أخذ M=1."
+          },
+          {
+            "order": 3,
+            "title": "الرجوع إلى u_n",
+            "goal": "إثبات الحصر",
+            "rule_used": "قاعدة القيمة المطلقة",
+            "explanation": "|u_n|<1 تعني أن u_n بين -1 و1.",
+            "calculation_lines": [
+              "\\[-1<u_n<1.\\]"
+            ],
+            "conclusion": "المتتالية محدودة."
+          }
+        ],
+        "final_answer": "\\(\\boxed{-1<u_n<1}\\)، وبالتالي \\((u_n)\\) محدودة.",
+        "verification": "القيمة المطلقة لكل حد أصغر من 1.",
+        "common_mistakes": [
+          {
+            "mistake": "القول 0≤u_n<1.",
+            "correction": "u_n قد تكون سالبة بسبب (-1)^n."
+          },
+          {
+            "mistake": "نسيان أن |(-1)^n|=1.",
+            "correction": "القيمة المطلقة تزيل أثر الإشارة."
+          }
+        ],
+        "hints": [
+          "احسب |u_n|.",
+          "استعمل |u_n|≤M ⇒ -M≤u_n≤M."
+        ],
+        "alternative_method": "",
+        "is_complete": true,
+        "method": [
+          "القيمة المطلقة",
+          "المقارنة",
+          "الحصر"
+        ],
+        "understanding_check": [
+          "ما الحاجز السفلي والحاجز العلوي اللذان حصلنا عليهما؟",
+          "هل الحاجزان ثابتان أم يعتمدان على n؟",
+          "هل الحصر مثبت لكل n أم لعدة حدود فقط؟"
+        ],
+        "academic_writing_tip": "عند إثبات المحدودية، اكتب المتراجحات بالتدرج ثم اختم بحصر واضح من الشكل B≤u_n≤A، مع التأكيد أن A وB ثابتان."
+      }
+    },
+    {
+      "id": "axis08_bounded_practice_06",
+      "year": null,
+      "source_file": null,
+      "source_page": null,
+      "exercise": "axis08_practice_06",
+      "number": "6",
+      "text": "لتكن \\(u_n=\\frac{2n+3}{n+2}\\). أعد كتابة \\(u_n\\) على شكل \\(a+\\frac{b}{n+2}\\)، ثم أثبت أن المتتالية محدودة.",
+      "context": "إعادة كتابة الحد العام لتسهيل الحصر.",
+      "tag": "seq_bounded",
+      "axis": "المتتالية المحدودة",
+      "secondary_tags": [],
+      "skill": "إعادة الكتابة والحصر",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمرين تدريبي جديد خاص بالمحور، مبني على مهارات الدرس وأنماط أفكار البكالوريا المرجعية دون نسخ نص تمرين بكالوريا.",
+      "solution": {
+        "strategy": "نكتب البسط بدلالة المقام ثم نحصر الكسر البسيط.",
+        "detailed_explanation": "إعادة الكتابة تجعل الحاجزين ظاهرين.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "إعادة الكتابة",
+            "goal": "إظهار ثابت وكسر",
+            "rule_used": "تفكيك جبري",
+            "explanation": "نكتب 2n+3=2(n+2)-1.",
+            "calculation_lines": [
+              "\\[2n+3=2(n+2)-1.\\]",
+              "\\[u_n=2-\\frac1{n+2}.\\]"
+            ],
+            "conclusion": "صيغة أبسط للحصر."
+          },
+          {
+            "order": 2,
+            "title": "حصر الكسر",
+            "goal": "إيجاد مجال للكسر",
+            "rule_used": "n+2≥2",
+            "explanation": "المقلوب موجب ولا يتجاوز 1/2.",
+            "calculation_lines": [
+              "\\[0<\\frac1{n+2}\\le\\frac12.\\]"
+            ],
+            "conclusion": "الكسر محصور."
+          },
+          {
+            "order": 3,
+            "title": "حصر u_n",
+            "goal": "استخراج الحاجزين",
+            "rule_used": "طرح المتراجحات",
+            "explanation": "نطرح الكسر من 2.",
+            "calculation_lines": [
+              "\\[\\frac32\\le2-\\frac1{n+2}<2.\\]",
+              "\\[\\frac32\\le u_n<2.\\]"
+            ],
+            "conclusion": "المتتالية محدودة."
+          }
+        ],
+        "final_answer": "\\(\\boxed{\\frac32\\le u_n<2}\\)، إذن \\((u_n)\\) محدودة.",
+        "verification": "عند n=0 نجد u_0=3/2.",
+        "common_mistakes": [
+          {
+            "mistake": "محاولة المقارنة دون تبسيط العبارة.",
+            "correction": "إعادة الكتابة تجعل الحصر مباشرًا."
+          }
+        ],
+        "hints": [
+          "اكتب 2n+3 باستعمال n+2.",
+          "بعدها احصر 1/(n+2)."
+        ],
+        "alternative_method": "",
+        "is_complete": true,
+        "method": [
+          "إعادة الكتابة",
+          "حصر الكسر",
+          "الحصر النهائي"
+        ],
+        "understanding_check": [
+          "ما الحاجز السفلي والحاجز العلوي اللذان حصلنا عليهما؟",
+          "هل الحاجزان ثابتان أم يعتمدان على n؟",
+          "هل الحصر مثبت لكل n أم لعدة حدود فقط؟"
+        ],
+        "academic_writing_tip": "عند إثبات المحدودية، اكتب المتراجحات بالتدرج ثم اختم بحصر واضح من الشكل B≤u_n≤A، مع التأكيد أن A وB ثابتان."
+      }
+    },
+    {
+      "id": "axis08_bounded_practice_07",
+      "year": null,
+      "source_file": null,
+      "source_page": null,
+      "exercise": "axis08_practice_07",
+      "number": "7",
+      "text": "نعلم أن \\((u_n)\\) متزايدة وأن \\(u_0=-2\\)، كما أن \\(u_n\\le5\\) لكل \\(n\\). أثبت أن \\((u_n)\\) محدودة.",
+      "context": "استعمال الرتابة للحصول على أحد الحاجزين.",
+      "tag": "seq_bounded",
+      "axis": "المتتالية المحدودة",
+      "secondary_tags": [],
+      "skill": "الرتابة والمحدودية",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمرين تدريبي جديد خاص بالمحور، مبني على مهارات الدرس وأنماط أفكار البكالوريا المرجعية دون نسخ نص تمرين بكالوريا.",
+      "solution": {
+        "strategy": "المتزايدة تعطينا حدًا سفليًا طبيعيًا هو الحد الأول، والمعطى يعطينا الحد العلوي.",
+        "detailed_explanation": "الرتابة وحدها لا تكفي، لكن مع وجود سقف ثابت نحصل على المحدودية.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "الحد السفلي",
+            "goal": "استعمال التزايد",
+            "rule_used": "خاصية المتتالية المتزايدة",
+            "explanation": "كل حد لاحق لا يقل عن الحد الأول.",
+            "calculation_lines": [
+              "\\[u_n\\ge u_0=-2.\\]"
+            ],
+            "conclusion": "-2 حد سفلي."
+          },
+          {
+            "order": 2,
+            "title": "الحد العلوي",
+            "goal": "استعمال المعطى",
+            "rule_used": "الحصر المعطى",
+            "explanation": "لدينا مباشرة u_n≤5.",
+            "calculation_lines": [
+              "\\[u_n\\le5.\\]"
+            ],
+            "conclusion": "5 حد علوي."
+          },
+          {
+            "order": 3,
+            "title": "الخاتمة",
+            "goal": "جمع الحاجزين",
+            "rule_used": "تعريف المحدودية",
+            "explanation": "نكتب الحصر الكامل.",
+            "calculation_lines": [
+              "\\[-2\\le u_n\\le5.\\]"
+            ],
+            "conclusion": "المتتالية محدودة."
+          }
+        ],
+        "final_answer": "\\(\\boxed{-2\\le u_n\\le5}\\)، وبالتالي \\((u_n)\\) محدودة.",
+        "verification": "الحاجزان -2 و5 ثابتان ولا يعتمدان على n.",
+        "common_mistakes": [
+          {
+            "mistake": "القول متزايدة إذن محدودة.",
+            "correction": "المتزايدة قد تكون غير محدودة من الأعلى؛ نحتاج أيضًا u_n≤5."
+          }
+        ],
+        "hints": [
+          "ما الذي تعطيه الرتابة بالنسبة إلى u_0؟"
+        ],
+        "alternative_method": "",
+        "is_complete": true,
+        "method": [
+          "الحد السفلي",
+          "الحد العلوي",
+          "الخاتمة"
+        ],
+        "understanding_check": [
+          "ما الحاجز السفلي والحاجز العلوي اللذان حصلنا عليهما؟",
+          "هل الحاجزان ثابتان أم يعتمدان على n؟",
+          "هل الحصر مثبت لكل n أم لعدة حدود فقط؟"
+        ],
+        "academic_writing_tip": "عند إثبات المحدودية، اكتب المتراجحات بالتدرج ثم اختم بحصر واضح من الشكل B≤u_n≤A، مع التأكيد أن A وB ثابتان."
+      }
+    },
+    {
+      "id": "axis08_bounded_practice_08",
+      "year": null,
+      "source_file": null,
+      "source_page": null,
+      "exercise": "axis08_practice_08",
+      "number": "8",
+      "text": "لتكن \\((u_n)\\) معرفة بـ \\(u_0=1\\) و\\(u_{n+1}=\\frac{u_n+3}{2}\\). أثبت بالتراجع أنه من أجل كل \\(n\\in\\mathbb N\\): \\(1\\le u_n<3\\). استنتج أن المتتالية محدودة.",
+      "context": "حصر متتالية تراجعية بالتراجع.",
+      "tag": "seq_bounded",
+      "axis": "المتتالية المحدودة",
+      "secondary_tags": [],
+      "skill": "الحصر بالتراجع",
+      "difficulty": "hard",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمرين تدريبي جديد خاص بالمحور، مبني على مهارات الدرس وأنماط أفكار البكالوريا المرجعية دون نسخ نص تمرين بكالوريا.",
+      "solution": {
+        "strategy": "نثبت الخاصية P(n): 1≤u_n<3 بالتراجع.",
+        "detailed_explanation": "هذا النوع من الأسئلة يحتاج إثبات أن المجال [1,3[ مستقر بالعلاقة التراجعية.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "البداية",
+            "goal": "التحقق عند n=0",
+            "rule_used": "التعويض",
+            "explanation": "u_0=1.",
+            "calculation_lines": [
+              "\\[1\\le u_0=1<3.\\]"
+            ],
+            "conclusion": "P(0) صحيحة."
+          },
+          {
+            "order": 2,
+            "title": "فرضية التراجع",
+            "goal": "افتراض الحصر عند n",
+            "rule_used": "مبدأ التراجع",
+            "explanation": "نفترض 1≤u_n<3.",
+            "calculation_lines": [
+              "\\[1\\le u_n<3.\\]"
+            ],
+            "conclusion": "نريد الحصر نفسه لـu_{n+1}."
+          },
+          {
+            "order": 3,
+            "title": "الحد السفلي",
+            "goal": "إثبات u_{n+1}≥1",
+            "rule_used": "تحويل المتراجحة",
+            "explanation": "من u_n≥1.",
+            "calculation_lines": [
+              "\\[u_n+3\\ge4.\\]",
+              "\\[u_{n+1}=\\frac{u_n+3}{2}\\ge2\\ge1.\\]"
+            ],
+            "conclusion": "u_{n+1}≥1."
+          },
+          {
+            "order": 4,
+            "title": "الحد العلوي",
+            "goal": "إثبات u_{n+1}<3",
+            "rule_used": "تحويل المتراجحة",
+            "explanation": "من u_n<3.",
+            "calculation_lines": [
+              "\\[u_n+3<6.\\]",
+              "\\[u_{n+1}<3.\\]"
+            ],
+            "conclusion": "u_{n+1}<3."
+          },
+          {
+            "order": 5,
+            "title": "الخاتمة",
+            "goal": "إتمام التراجع",
+            "rule_used": "مبدأ الاستدلال بالتراجع",
+            "explanation": "ثبتت البداية والانتقال.",
+            "calculation_lines": [
+              "\\[\\boxed{1\\le u_n<3\\quad\\forall n\\in\\mathbb N}.\\]"
+            ],
+            "conclusion": "المتتالية محدودة."
+          }
+        ],
+        "final_answer": "\\(\\boxed{1\\le u_n<3}\\) لكل \\(n\\)، ومنه \\((u_n)\\) محدودة.",
+        "verification": "u_1=2 وu_2=2.5، وهما داخل المجال.",
+        "common_mistakes": [
+          {
+            "mistake": "حساب عدة حدود بدل البرهان.",
+            "correction": "المطلوب إثبات الحصر لكل n، لذلك نستعمل التراجع."
+          },
+          {
+            "mistake": "نسيان خطوة البداية.",
+            "correction": "التراجع يتطلب البداية ثم الانتقال."
+          }
+        ],
+        "hints": [
+          "عرّف P(n).",
+          "أثبت كل طرف من الحصر على حدة."
+        ],
+        "alternative_method": "",
+        "is_complete": true,
+        "method": [
+          "البداية",
+          "فرضية التراجع",
+          "الانتقال",
+          "الخاتمة"
+        ],
+        "understanding_check": [
+          "ما الحاجز السفلي والحاجز العلوي اللذان حصلنا عليهما؟",
+          "هل الحاجزان ثابتان أم يعتمدان على n؟",
+          "هل الحصر مثبت لكل n أم لعدة حدود فقط؟"
+        ],
+        "academic_writing_tip": "عند إثبات المحدودية، اكتب المتراجحات بالتدرج ثم اختم بحصر واضح من الشكل B≤u_n≤A، مع التأكيد أن A وB ثابتان."
+      }
+    },
+    {
+      "id": "axis08_bounded_practice_09",
+      "year": null,
+      "source_file": null,
+      "source_page": null,
+      "exercise": "axis08_practice_09",
+      "number": "9",
+      "text": "لتكن \\((u_n)\\) معرفة بـ \\(u_0=0\\) و\\(u_{n+1}=\\sqrt{u_n+6}\\). أثبت بالتراجع أن \\(0\\le u_n<3\\) لكل \\(n\\)، ثم استنتج أن \\((u_n)\\) محدودة.",
+      "context": "حصر تراجعي يحتوي على جذر.",
+      "tag": "seq_bounded",
+      "axis": "المتتالية المحدودة",
+      "secondary_tags": [],
+      "skill": "الحصر بالتراجع مع الجذر",
+      "difficulty": "hard",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمرين تدريبي جديد خاص بالمحور، مبني على مهارات الدرس وأنماط أفكار البكالوريا المرجعية دون نسخ نص تمرين بكالوريا.",
+      "solution": {
+        "strategy": "نثبت أن المجال [0,3[ مستقر بالعلاقة u↦√(u+6).",
+        "detailed_explanation": "نستعمل أن الجذر غير سالب وأنه دالة متزايدة.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "البداية",
+            "goal": "التحقق عند n=0",
+            "rule_used": "التعويض",
+            "explanation": "الحد الأول يحقق الحصر.",
+            "calculation_lines": [
+              "\\[0\\le u_0=0<3.\\]"
+            ],
+            "conclusion": "البداية صحيحة."
+          },
+          {
+            "order": 2,
+            "title": "الفرضية",
+            "goal": "افتراض الحصر",
+            "rule_used": "التراجع",
+            "explanation": "نفترض 0≤u_n<3.",
+            "calculation_lines": [
+              "\\[0\\le u_n<3.\\]"
+            ],
+            "conclusion": "ننتقل إلى n+1."
+          },
+          {
+            "order": 3,
+            "title": "الحد السفلي",
+            "goal": "إثبات عدم السلبية",
+            "rule_used": "الجذر التربيعي غير سالب",
+            "explanation": "كل جذر تربيعي معرف هنا غير سالب.",
+            "calculation_lines": [
+              "\\[u_{n+1}=\\sqrt{u_n+6}\\ge0.\\]"
+            ],
+            "conclusion": "u_{n+1}≥0."
+          },
+          {
+            "order": 4,
+            "title": "الحد العلوي",
+            "goal": "إثبات u_{n+1}<3",
+            "rule_used": "تزايد الجذر",
+            "explanation": "من u_n<3 نحصل على u_n+6<9.",
+            "calculation_lines": [
+              "\\[u_n+6<9.\\]",
+              "\\[\\sqrt{u_n+6}<3.\\]",
+              "\\[u_{n+1}<3.\\]"
+            ],
+            "conclusion": "الحد العلوي ثابت."
+          },
+          {
+            "order": 5,
+            "title": "الخاتمة",
+            "goal": "إتمام التراجع",
+            "rule_used": "مبدأ التراجع",
+            "explanation": "المجال محفوظ.",
+            "calculation_lines": [
+              "\\[\\boxed{0\\le u_n<3}.\\]"
+            ],
+            "conclusion": "المتتالية محدودة."
+          }
+        ],
+        "final_answer": "\\(\\boxed{0\\le u_n<3}\\) لكل \\(n\\)، وبالتالي \\((u_n)\\) محدودة.",
+        "verification": "u_1=√6 وهو بين 0 و3.",
+        "common_mistakes": [
+          {
+            "mistake": "تربيع متراجحات دون الانتباه للإشارة.",
+            "correction": "هنا الأطراف غير سالبة، ويمكن استعمال تزايد الجذر مباشرة."
+          }
+        ],
+        "hints": [
+          "استعمل أن الجذر غير سالب.",
+          "لإثبات <3 حاول الوصول إلى ما داخل الجذر <9."
+        ],
+        "alternative_method": "",
+        "is_complete": true,
+        "method": [
+          "البداية",
+          "عدم السلبية",
+          "الحد العلوي",
+          "التراجع"
+        ],
+        "understanding_check": [
+          "ما الحاجز السفلي والحاجز العلوي اللذان حصلنا عليهما؟",
+          "هل الحاجزان ثابتان أم يعتمدان على n؟",
+          "هل الحصر مثبت لكل n أم لعدة حدود فقط؟"
+        ],
+        "academic_writing_tip": "عند إثبات المحدودية، اكتب المتراجحات بالتدرج ثم اختم بحصر واضح من الشكل B≤u_n≤A، مع التأكيد أن A وB ثابتان."
+      }
+    },
+    {
+      "id": "axis08_bounded_practice_10",
+      "year": null,
+      "source_file": null,
+      "source_page": null,
+      "exercise": "axis08_practice_10",
+      "number": "10",
+      "text": "لتكن \\(u_n=\\frac{n^2-2n+3}{n^2+1}\\). أثبت أن \\((u_n)\\) محدودة بإيجاد حصر ثابت مناسب.",
+      "context": "حصر كسر جبري غير مباشر.",
+      "tag": "seq_bounded",
+      "axis": "المتتالية المحدودة",
+      "secondary_tags": [],
+      "skill": "حصر كسر جبري",
+      "difficulty": "hard",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمرين تدريبي جديد خاص بالمحور، مبني على مهارات الدرس وأنماط أفكار البكالوريا المرجعية دون نسخ نص تمرين بكالوريا.",
+      "solution": {
+        "strategy": "نبحث عن حد سفلي وحد علوي بسيطين باستعمال مربعات موجبة.",
+        "detailed_explanation": "يمكن إثبات 0<u_n≤3 دون الحاجة إلى إيجاد أفضل حصر ممكن.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "إشارة البسط",
+            "goal": "إثبات الحد السفلي",
+            "rule_used": "إكمال مربع",
+            "explanation": "نكتب البسط على شكل مربع زائد ثابت.",
+            "calculation_lines": [
+              "\\[n^2-2n+3=(n-1)^2+2>0.\\]",
+              "\\[n^2+1>0.\\]",
+              "\\[u_n>0.\\]"
+            ],
+            "conclusion": "0 حد سفلي."
+          },
+          {
+            "order": 2,
+            "title": "حد علوي بسيط",
+            "goal": "إثبات u_n≤3",
+            "rule_used": "مقارنة البسط بمضاعف المقام",
+            "explanation": "نقارن البسط بـ3(n²+1).",
+            "calculation_lines": [
+              "\\[3(n^2+1)-(n^2-2n+3)=2n^2+2n=2n(n+1)\\ge0.\\]",
+              "\\[n^2-2n+3\\le3(n^2+1).\\]",
+              "\\[u_n\\le3.\\]"
+            ],
+            "conclusion": "3 حد علوي."
+          },
+          {
+            "order": 3,
+            "title": "الخاتمة",
+            "goal": "إثبات المحدودية",
+            "rule_used": "تعريف المحدودية",
+            "explanation": "الحاجزان ثابتان.",
+            "calculation_lines": [
+              "\\[0<u_n\\le3.\\]"
+            ],
+            "conclusion": "المتتالية محدودة."
+          }
+        ],
+        "final_answer": "\\(\\boxed{0<u_n\\le3}\\)، إذن \\((u_n)\\) محدودة.",
+        "verification": "عند n=0 نجد u_0=3، لذا الحد العلوي 3 مناسب فعلًا.",
+        "common_mistakes": [
+          {
+            "mistake": "البحث بالضرورة عن أصغر حد علوي.",
+            "correction": "لإثبات المحدودية يكفي أي حاجزين ثابتين صحيحين."
+          },
+          {
+            "mistake": "نسيان إشارة المقام.",
+            "correction": "يجب إثبات أن المقام موجب قبل القسمة."
+          }
+        ],
+        "hints": [
+          "أثبت أولًا أن البسط موجب.",
+          "لحد علوي جرّب مقارنة البسط بـ3 مرات المقام."
+        ],
+        "alternative_method": "",
+        "is_complete": true,
+        "method": [
+          "الحد السفلي",
+          "الحد العلوي",
+          "الخاتمة"
+        ],
+        "understanding_check": [
+          "ما الحاجز السفلي والحاجز العلوي اللذان حصلنا عليهما؟",
+          "هل الحاجزان ثابتان أم يعتمدان على n؟",
+          "هل الحصر مثبت لكل n أم لعدة حدود فقط؟"
+        ],
+        "academic_writing_tip": "عند إثبات المحدودية، اكتب المتراجحات بالتدرج ثم اختم بحصر واضح من الشكل B≤u_n≤A، مع التأكيد أن A وB ثابتان."
+      }
+    },
+    {
+      "id": "axis08_bounded_practice_11",
+      "year": null,
+      "source_file": null,
+      "source_page": null,
+      "exercise": "axis08_practice_11",
+      "number": "11",
+      "text": "لتكن \\((u_n)\\) معرفة بـ \\(u_0=2\\) و\\(u_{n+1}=\\sqrt{3u_n+4}\\). أثبت بالتراجع أن \\(2\\le u_n<4\\) لكل \\(n\\). ثم أثبت أن \\((u_n)\\) محدودة.",
+      "context": "حصر تراجعي قريب من نمط البكالوريا.",
+      "tag": "seq_bounded",
+      "axis": "المتتالية المحدودة",
+      "secondary_tags": [],
+      "skill": "الحصر بالتراجع في متتالية جذرية",
+      "difficulty": "hard",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمرين تدريبي جديد خاص بالمحور، مبني على مهارات الدرس وأنماط أفكار البكالوريا المرجعية دون نسخ نص تمرين بكالوريا.",
+      "solution": {
+        "strategy": "نثبت ثبات المجال [2,4[ تحت العلاقة التراجعية.",
+        "detailed_explanation": "نعالج الطرفين منفصلين باستعمال تزايد دالة الجذر.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "البداية",
+            "goal": "التحقق من P(0)",
+            "rule_used": "التعويض",
+            "explanation": "u_0=2.",
+            "calculation_lines": [
+              "\\[2\\le2<4.\\]"
+            ],
+            "conclusion": "P(0) صحيحة."
+          },
+          {
+            "order": 2,
+            "title": "الفرضية",
+            "goal": "افتراض P(n)",
+            "rule_used": "التراجع",
+            "explanation": "نفترض 2≤u_n<4.",
+            "calculation_lines": [
+              "\\[2\\le u_n<4.\\]"
+            ],
+            "conclusion": "نثبت P(n+1)."
+          },
+          {
+            "order": 3,
+            "title": "الحد السفلي",
+            "goal": "إثبات u_{n+1}≥2",
+            "rule_used": "تزايد الجذر",
+            "explanation": "من u_n≥2.",
+            "calculation_lines": [
+              "\\[3u_n+4\\ge10.\\]",
+              "\\[u_{n+1}=\\sqrt{3u_n+4}\\ge\\sqrt{10}>2.\\]"
+            ],
+            "conclusion": "u_{n+1}≥2."
+          },
+          {
+            "order": 4,
+            "title": "الحد العلوي",
+            "goal": "إثبات u_{n+1}<4",
+            "rule_used": "تزايد الجذر",
+            "explanation": "من u_n<4.",
+            "calculation_lines": [
+              "\\[3u_n+4<16.\\]",
+              "\\[u_{n+1}<4.\\]"
+            ],
+            "conclusion": "u_{n+1}<4."
+          },
+          {
+            "order": 5,
+            "title": "الخاتمة",
+            "goal": "إتمام البرهان",
+            "rule_used": "مبدأ التراجع",
+            "explanation": "ثبت الانتقال.",
+            "calculation_lines": [
+              "\\[\\boxed{2\\le u_n<4\\quad\\forall n}.\\]"
+            ],
+            "conclusion": "المتتالية محدودة."
+          }
+        ],
+        "final_answer": "\\(\\boxed{2\\le u_n<4}\\)، وبالتالي \\((u_n)\\) محدودة.",
+        "verification": "u_1=√10≈3.16 وهو داخل المجال.",
+        "common_mistakes": [
+          {
+            "mistake": "استعمال u_n<4 دون أن يكون مثبتًا.",
+            "correction": "في المتتالية التراجعية يجب إثبات الحصر أولًا بالتراجع."
+          }
+        ],
+        "hints": [
+          "افصل الحد السفلي عن العلوي.",
+          "استعمل تزايد الجذر."
+        ],
+        "alternative_method": "",
+        "is_complete": true,
+        "method": [
+          "البداية",
+          "الفرضية",
+          "الانتقال",
+          "المحدودية"
+        ],
+        "understanding_check": [
+          "ما الحاجز السفلي والحاجز العلوي اللذان حصلنا عليهما؟",
+          "هل الحاجزان ثابتان أم يعتمدان على n؟",
+          "هل الحصر مثبت لكل n أم لعدة حدود فقط؟"
+        ],
+        "academic_writing_tip": "عند إثبات المحدودية، اكتب المتراجحات بالتدرج ثم اختم بحصر واضح من الشكل B≤u_n≤A، مع التأكيد أن A وB ثابتان."
+      }
+    },
+    {
+      "id": "axis08_bounded_practice_12",
+      "year": null,
+      "source_file": null,
+      "source_page": null,
+      "exercise": "axis08_practice_12",
+      "number": "12",
+      "text": "لتكن \\((u_n)\\) معرفة بـ \\(u_0=0\\) و\\(u_{n+1}=\\sqrt{2u_n+8}\\). (1) أثبت بالتراجع أن \\(0\\le u_n<4\\). (2) أثبت أن \\(4-u_{n+1}\\le\\frac12(4-u_n)\\).",
+      "context": "تدريب على الحصر ثم متراجحة تقلص باستعمال المرافق، على نمط أفكار البكالوريا.",
+      "tag": "seq_bounded",
+      "axis": "المتتالية المحدودة",
+      "secondary_tags": [],
+      "skill": "الحصر والمرافق",
+      "difficulty": "hard",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمرين تدريبي جديد خاص بالمحور، مبني على مهارات الدرس وأنماط أفكار البكالوريا المرجعية دون نسخ نص تمرين بكالوريا.",
+      "solution": {
+        "strategy": "نثبت الحصر أولًا، ثم نحول الفرق باستعمال المرافق حتى يظهر العامل 4-u_n.",
+        "detailed_explanation": "الحصر ضروري لتحديد إشارات العوامل وتقدير المعامل.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "إثبات الحصر",
+            "goal": "إثبات 0≤u_n<4",
+            "rule_used": "الاستدلال بالتراجع",
+            "explanation": "البداية u_0=0. وإذا 0≤u_n<4 فإن الجذر غير سالب، ومن u_n<4 نحصل على 2u_n+8<16.",
+            "calculation_lines": [
+              "\\[0\\le u_0<4.\\]",
+              "\\[0\\le u_n<4\\Rightarrow0\\le u_{n+1}<4.\\]",
+              "\\[\\boxed{0\\le u_n<4}.\\]"
+            ],
+            "conclusion": "ثبت الحصر لكل n."
+          },
+          {
+            "order": 2,
+            "title": "كتابة الفرق",
+            "goal": "التهيئة للمرافق",
+            "rule_used": "العلاقة التراجعية",
+            "explanation": "نعوض u_{n+1}.",
+            "calculation_lines": [
+              "\\[4-u_{n+1}=4-\\sqrt{2u_n+8}.\\]"
+            ],
+            "conclusion": "فرق يحوي جذرًا."
+          },
+          {
+            "order": 3,
+            "title": "المرافق",
+            "goal": "إظهار 4-u_n",
+            "rule_used": "فرق مربعين",
+            "explanation": "نضرب ونقسم في المرافق.",
+            "calculation_lines": [
+              "\\[4-u_{n+1}=\\frac{16-(2u_n+8)}{4+\\sqrt{2u_n+8}}.\\]",
+              "\\[=\\frac{2(4-u_n)}{4+u_{n+1}}.\\]"
+            ],
+            "conclusion": "ظهر العامل المطلوب."
+          },
+          {
+            "order": 4,
+            "title": "تقدير المعامل",
+            "goal": "الوصول إلى 1/2",
+            "rule_used": "الحصر السابق",
+            "explanation": "u_{n+1}≥0 يجعل المقام ≥4.",
+            "calculation_lines": [
+              "\\[\\frac2{4+u_{n+1}}\\le\\frac12.\\]",
+              "\\[4-u_n>0.\\]",
+              "\\[\\boxed{4-u_{n+1}\\le\\frac12(4-u_n)}.\\]"
+            ],
+            "conclusion": "ثبتت متراجحة التقلص."
+          }
+        ],
+        "final_answer": "\\(\\boxed{0\\le u_n<4}\\) و\\(\\boxed{4-u_{n+1}\\le\\frac12(4-u_n)}\\).",
+        "verification": "الحصر يجعل 4-u_n موجبًا، وهو ما يسمح بالضرب دون تغيير جهة المتراجحة.",
+        "common_mistakes": [
+          {
+            "mistake": "استعمال المرافق قبل إثبات الحصر.",
+            "correction": "الحصر يوفر الإشارات اللازمة."
+          },
+          {
+            "mistake": "نسيان المقام عند استعمال المرافق.",
+            "correction": "يجب الضرب والقسمة في المرافق نفسه."
+          }
+        ],
+        "hints": [
+          "ابدأ بالحصر بالتراجع.",
+          "في الفرق استعمل المرافق 4+√(2u_n+8)."
+        ],
+        "alternative_method": "",
+        "is_complete": true,
+        "method": [
+          "الحصر",
+          "المرافق",
+          "تقدير المعامل",
+          "المتراجحة"
+        ],
+        "understanding_check": [
+          "ما الحاجز السفلي والحاجز العلوي اللذان حصلنا عليهما؟",
+          "هل الحاجزان ثابتان أم يعتمدان على n؟",
+          "هل الحصر مثبت لكل n أم لعدة حدود فقط؟"
+        ],
+        "academic_writing_tip": "عند إثبات المحدودية، اكتب المتراجحات بالتدرج ثم اختم بحصر واضح من الشكل B≤u_n≤A، مع التأكيد أن A وB ثابتان."
+      }
+    },
+    {
+      "id": "axis08_bounded_practice_13",
+      "year": null,
+      "source_file": null,
+      "source_page": null,
+      "exercise": "axis08_practice_13",
+      "number": "13",
+      "text": "لتكن \\((u_n)\\) معرفة بـ \\(u_0=1\\) و\\(u_{n+1}=\\sqrt{5u_n+6}\\). (1) أثبت بالتراجع أن \\(1\\le u_n<6\\). (2) أثبت أن \\(6-u_{n+1}\\le\\frac56(6-u_n)\\). (3) استنتج أن \\(0<6-u_n\\le5\\left(\\frac56\\right)^n\\).",
+      "context": "تمرين مركب يجمع الحصر بالتراجع والمرافق وتكرار متراجحة التقلص.",
+      "tag": "seq_bounded",
+      "axis": "المتتالية المحدودة",
+      "secondary_tags": [],
+      "skill": "الحصر والتقلص والتكرار",
+      "difficulty": "hard",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمرين تدريبي جديد خاص بالمحور، مبني على مهارات الدرس وأنماط أفكار البكالوريا المرجعية دون نسخ نص تمرين بكالوريا.",
+      "solution": {
+        "strategy": "نثبت الحصر، ثم متراجحة تقلص، ثم نكررها حتى الحد الأول.",
+        "detailed_explanation": "هذا يجمع أهم الأدوات التي تظهر في مسائل المحدودية التراجعية.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "الحصر بالتراجع",
+            "goal": "إثبات 1≤u_n<6",
+            "rule_used": "مبدأ التراجع",
+            "explanation": "البداية واضحة. ومن 1≤u_n<6 نحصل على الجذر داخل المجال المطلوب.",
+            "calculation_lines": [
+              "\\[1\\le u_0=1<6.\\]",
+              "\\[u_n<6\\Rightarrow5u_n+6<36\\Rightarrow u_{n+1}<6.\\]",
+              "\\[u_n\\ge1\\Rightarrow u_{n+1}=\\sqrt{5u_n+6}>1.\\]",
+              "\\[\\boxed{1\\le u_n<6}.\\]"
+            ],
+            "conclusion": "ثبت الحصر."
+          },
+          {
+            "order": 2,
+            "title": "المرافق",
+            "goal": "تحويل 6-u_{n+1}",
+            "rule_used": "فرق مربعين",
+            "explanation": "نضرب ونقسم في 6+u_{n+1}.",
+            "calculation_lines": [
+              "\\[6-u_{n+1}=\\frac{36-(5u_n+6)}{6+u_{n+1}}.\\]",
+              "\\[=\\frac{5(6-u_n)}{6+u_{n+1}}.\\]"
+            ],
+            "conclusion": "ظهر العامل 6-u_n."
+          },
+          {
+            "order": 3,
+            "title": "التقلص",
+            "goal": "إثبات المتراجحة",
+            "rule_used": "تقدير معامل موجب",
+            "explanation": "من u_{n+1}≥1 يكون المقام ≥7، وبالأخص ≥6.",
+            "calculation_lines": [
+              "\\[\\frac5{6+u_{n+1}}\\le\\frac56.\\]",
+              "\\[6-u_n>0.\\]",
+              "\\[\\boxed{6-u_{n+1}\\le\\frac56(6-u_n)}.\\]"
+            ],
+            "conclusion": "ثبتت متراجحة التقلص."
+          },
+          {
+            "order": 4,
+            "title": "التكرار",
+            "goal": "استخراج حصر بدلالة n",
+            "rule_used": "التطبيق المتكرر",
+            "explanation": "نكرر المتراجحة حتى u_0.",
+            "calculation_lines": [
+              "\\[6-u_n\\le\\left(\\frac56\\right)^n(6-u_0).\\]",
+              "\\[6-u_0=5.\\]",
+              "\\[6-u_n\\le5\\left(\\frac56\\right)^n.\\]"
+            ],
+            "conclusion": "ثبت الطرف العلوي."
+          },
+          {
+            "order": 5,
+            "title": "إضافة الطرف السفلي",
+            "goal": "كتابة الحصر النهائي",
+            "rule_used": "u_n<6",
+            "explanation": "من الحصر السابق 6-u_n>0.",
+            "calculation_lines": [
+              "\\[\\boxed{0<6-u_n\\le5\\left(\\frac56\\right)^n}.\\]"
+            ],
+            "conclusion": "الحصر النهائي صحيح لكل n."
+          }
+        ],
+        "final_answer": "\\(\\boxed{1\\le u_n<6}\\)، و\\(\\boxed{6-u_{n+1}\\le\\frac56(6-u_n)}\\)، ومنه \\(\\boxed{0<6-u_n\\le5(\\frac56)^n}\\).",
+        "verification": "عند n=0 يصبح الطرف العلوي 5، وهو يساوي 6-u_0.",
+        "common_mistakes": [
+          {
+            "mistake": "القفز مباشرة إلى الحصر الهندسي.",
+            "correction": "يجب أولًا إثبات متراجحة التقلص ثم تكرارها."
+          },
+          {
+            "mistake": "الضرب في 6-u_n دون معرفة الإشارة.",
+            "correction": "من u_n<6 نحصل على 6-u_n>0."
+          }
+        ],
+        "hints": [
+          "أثبت الحصر قبل استعماله.",
+          "استعمل المرافق.",
+          "كرر المتراجحة n مرة."
+        ],
+        "alternative_method": "",
+        "is_complete": true,
+        "method": [
+          "الحصر بالتراجع",
+          "المرافق",
+          "التقلص",
+          "التكرار",
+          "الحصر النهائي"
+        ],
+        "understanding_check": [
+          "ما الحاجز السفلي والحاجز العلوي اللذان حصلنا عليهما؟",
+          "هل الحاجزان ثابتان أم يعتمدان على n؟",
+          "هل الحصر مثبت لكل n أم لعدة حدود فقط؟"
+        ],
+        "academic_writing_tip": "عند إثبات المحدودية، اكتب المتراجحات بالتدرج ثم اختم بحصر واضح من الشكل B≤u_n≤A، مع التأكيد أن A وB ثابتان."
+      }
+    }
+  ]
+}

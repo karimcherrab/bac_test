@@ -1,0 +1,150 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2026-tech-math-probability-subject2-ex02-detailed",
+  "session": "ordinary",
+  "year": 2026,
+  "chapter_code": "probability",
+  "chapter_title": "الاحتمالات",
+  "axis_tags": [
+    "probability_language_law",
+    "probability_counting_modeling",
+    "successive_draw_without_replacement",
+    "successive_draw_with_replacement"
+  ],
+  "branches": [
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "exercise_number": 2,
+  "subject_number": 2,
+  "source_page": 3,
+  "source_pages": [
+    3
+  ],
+  "solution_source_pages": [],
+  "title": "التمرين الثاني — بكالوريا الجزائر 2026 — الموضوع الثاني — شعبة تقني رياضي",
+  "statement": "يحتوي كيس على 11 كرية متماثلة ولا نفرق بينها باللمس، منها:\nكريتان بيضاوان، خمس كريات حمراء، ثلاث كريات خضراء وكرية واحدة سوداء.",
+  "questions": [
+    {
+      "id": "2026_s2_probability_ex02_q1a",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) نسحب عشوائيا من الكيس ثلاث كريات على التوالي دون إرجاع ونعتبر الحوادث:\nA : « سحب ثلاث كريات من نفس اللون » ، B : « سحب كرية واحدة بيضاء فقط »\nC : « سحب كرية حمراء على الأكثر » ، D : « سحب كريتين حمراوين على الأقل »\nأ) احسب \\(P(A)\\) ، \\(P(B)\\) ، \\(P(C)\\) و \\(P(D)\\) احتمالات الحوادث A ، B ، C و D على الترتيب.",
+      "axis_tags": [
+        "probability_language_law",
+        "probability_counting_modeling",
+        "successive_draw_without_replacement"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "رغم أن السحب متتال دون إرجاع، فإن كل مجموعة من 3 كريات لها نفس عدد الترتيبات، لذلك يمكن الحساب بالتوفيقات بصورة أبسط. عدد المجموعات الممكنة هو \\(\\binom{11}{3}=165\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب P(A)",
+            "explanation": "الحادثة \\(A\\) تعني سحب ثلاث كريات من نفس اللون.\nيمكن سحب 3 حمراء من 5، أو 3 خضراء من 3.\nلا يمكن سحب 3 بيضاء لأن عددها 2، ولا 3 سوداء لأن عددها 1.\nإذن:\n\\[P(A)=\\frac{\\binom53+\\binom33}{\\binom{11}{3}}=\\frac{10+1}{165}=\\frac{11}{165}=\\frac1{15}.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب P(B)",
+            "explanation": "الحادثة \\(B\\) تعني سحب كرية بيضاء واحدة فقط.\nنختار كرية بيضاء واحدة من 2، ثم كريتين من 9 كريات غير بيضاء:\n\\[P(B)=\\frac{\\binom21\\binom92}{165}=\\frac{2\\times36}{165}=\\frac{72}{165}=\\frac{24}{55}.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب P(C)",
+            "explanation": "الحادثة \\(C\\) تعني سحب كرية حمراء على الأكثر، أي 0 حمراء أو 1 حمراء.\nعدد الكريات غير الحمراء هو 6.\nإذن:\n\\[P(C)=\\frac{\\binom63+\\binom51\\binom62}{165}.\\]\nومن ثم:\n\\[P(C)=\\frac{20+5\\times15}{165}=\\frac{95}{165}=\\frac{19}{33}.\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "حساب P(D)",
+            "explanation": "الحادثة \\(D\\) تعني سحب كريتين حمراوين على الأقل، أي بالضبط 2 حمراء أو 3 حمراء.\nإذن:\n\\[P(D)=\\frac{\\binom52\\binom61+\\binom53}{165}.\\]\nومن ثم:\n\\[P(D)=\\frac{10\\times6+10}{165}=\\frac{70}{165}=\\frac{14}{33}.\\]"
+          }
+        ],
+        "final_answer": "\\[P(A)=\\frac1{15},\\qquad P(B)=\\frac{24}{55},\\qquad P(C)=\\frac{19}{33},\\qquad P(D)=\\frac{14}{33}.\\]"
+      }
+    },
+    {
+      "id": "2026_s2_probability_ex02_q1b",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "ب) بين أن: \\(P(A\\cap D)=\\frac{2}{33}\\) ثم استنتج حساب \\(P(A\\cup D)\\).",
+      "axis_tags": [
+        "probability_language_law",
+        "probability_counting_modeling"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "لتحقيق \\(A\\cap D\\) يجب أن تكون الكريات الثلاث من نفس اللون وأن يكون بينها على الأقل كريتان حمراوان. هذا يفرض أن تكون الكريات الثلاث حمراء.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب P(A∩D)",
+            "explanation": "الحالة الوحيدة الموافقة هي سحب 3 كريات حمراء من أصل 5:\n\\[P(A\\cap D)=\\frac{\\binom53}{\\binom{11}{3}}=\\frac{10}{165}=\\frac2{33}.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "استعمال قانون الاتحاد",
+            "explanation": "\\[P(A\\cup D)=P(A)+P(D)-P(A\\cap D).\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "التعويض",
+            "explanation": "\\[P(A\\cup D)=\\frac1{15}+\\frac{14}{33}-\\frac2{33}.\\]\nنوحد المقامات إلى 165:\n\\[P(A\\cup D)=\\frac{11+70-10}{165}=\\frac{71}{165}.\\]"
+          }
+        ],
+        "final_answer": "\\[P(A\\cap D)=\\frac2{33},\\qquad P(A\\cup D)=\\frac{71}{165}.\\]"
+      }
+    },
+    {
+      "id": "2026_s2_probability_ex02_q2",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "2) نفرض أن عدد الكريات السوداء في الكيس هو \\(n\\) حيث: \\(n\\ge2\\) ونسحب منه كريتين على التوالي مع الإرجاع.\n- عين قيمة \\(n\\) حتى يكون احتمال سحب كريتين سوداويين يساوي \\(\\frac14\\).",
+      "axis_tags": [
+        "successive_draw_with_replacement",
+        "probability_counting_modeling"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "تبقى أعداد الكريات غير السوداء كما هي: 2 بيضاء + 5 حمراء + 3 خضراء = 10 كريات. إذا أصبح عدد السوداء \\(n\\)، يصبح مجموع الكريات \\(n+10\\). ومع الإرجاع يبقى احتمال السواد نفسه في السحبتين.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "احتمال سحب كرية سوداء في سحبة واحدة",
+            "explanation": "عدد الكريات السوداء هو \\(n\\)، ومجموع الكريات هو:\n\\[n+10.\\]\nإذن:\n\\[P(\\text{سوداء})=\\frac{n}{n+10}.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "احتمال سحب كريتين سوداويين مع الإرجاع",
+            "explanation": "لأن السحب مع الإرجاع، فإن السحبتين مستقلتان:\n\\[P(\\text{سوداء ثم سوداء})=\\left(\\frac{n}{n+10}\\right)^2.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "استعمال المعطى",
+            "explanation": "حسب نص التمرين:\n\\[\\left(\\frac{n}{n+10}\\right)^2=\\frac14.\\]\nوبما أن \\(n>0\\)، نأخذ الجذر الموجب:\n\\[\\frac{n}{n+10}=\\frac12.\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "حل المعادلة",
+            "explanation": "\\[2n=n+10.\\]\nإذن:\n\\[n=10.\\]"
+          }
+        ],
+        "final_answer": "\\[n=10.\\]"
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "statement_checked_against_image": true,
+    "solution_checked_against_correction": false,
+    "source_pdf": "2026(2).pdf",
+    "statement_image": "2026_exo02(3).jpg",
+    "statement_figure_policy": "لا يوجد شكل لازم في نص التمرين.",
+    "solution_figure_policy": "لا يحتاج الحل إلى رسم.",
+    "renderer": "MathJax + structured tables"
+  }
+}

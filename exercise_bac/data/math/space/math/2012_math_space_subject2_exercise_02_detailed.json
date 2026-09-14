@@ -1,0 +1,231 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2012-math-space-subject2-ex02-detailed",
+  "session": "ordinary",
+  "year": 2012,
+  "chapter_code": "space_geometry",
+  "chapter_title": "الهندسة في الفضاء",
+  "axis_tags": [
+    "space_parametric_line_plane",
+    "space_relative_positions_intersections",
+    "space_barycenter",
+    "space_point_loci",
+    "space_sphere_tangent_plane",
+    "space_distances_projections"
+  ],
+  "branches": [
+    {
+      "code": "math",
+      "name": "شعبة رياضيات"
+    }
+  ],
+  "exercise_number": 2,
+  "subject_number": 2,
+  "source_page": 3,
+  "source_pages": [
+    3
+  ],
+  "solution_source_pages": [
+    7
+  ],
+  "title": "التمرين الثاني — بكالوريا الجزائر 2012 — الموضوع الثاني — شعبة رياضيات",
+  "statement": "نعتبر في الفضاء المنسوب إلى المعلم المتعامد والمتجانس \\((O;\\vec{i},\\vec{j},\\vec{k})\\)، النقط \\(A(1;1;1)\\) و \\(B(1;-1;0)\\) و \\(C(2;0;1)\\).",
+  "questions": [
+    {
+      "id": "2012_s2_space_ex02_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) بين أن النقط \\(A\\) و \\(B\\) و \\(C\\) تعين مستويا \\((P_1)\\) يطلب تعيين تمثيل وسيطي له.",
+      "axis_tags": [
+        "space_parametric_line_plane"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب شعاعين من المستوى ونتحقق أنهما غير متوازيين، ثم نستعملهما لكتابة تمثيل وسيطي للمستوى.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب شعاعين من المستوى",
+            "explanation": "\\[\n\\overrightarrow{AB}=(0,-2,-1),\n\\qquad\n\\overrightarrow{AC}=(1,-1,0).\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "إثبات تعيين مستوى",
+            "explanation": "الشعاعان \\(\\overrightarrow{AB}\\) و\\(\\overrightarrow{AC}\\) غير متوازيين، إذن النقط \\(A,B,C\\) غير مستقيمية وتعين مستويا \\((P_1)\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "التمثيل الوسيطي للمستوى",
+            "explanation": "باستعمال النقطة \\(A(1,1,1)\\) والشعاعين \\(\\overrightarrow{AC}\\) و\\(\\overrightarrow{AB}\\):\n\\[\n(P_1):\\begin{cases}\nx=1+\\mu\\\\\ny=1-2\\lambda-\\mu\\\\\nz=1-\\lambda\n\\end{cases}\n\\quad ;\\ (\\lambda,\\mu)\\in\\mathbb{R}^2.\n\\]"
+          }
+        ],
+        "final_answer": "\\[\n(P_1):\\begin{cases}\nx=1+\\mu\\\\\ny=1-2\\lambda-\\mu\\\\\nz=1-\\lambda\n\\end{cases}\n\\quad ;\\ (\\lambda,\\mu)\\in\\mathbb{R}^2.\n\\]"
+      }
+    },
+    {
+      "id": "2012_s2_space_ex02_q2",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2) \\((P_2)\\) المستوي الذي: \\(x-2y-2z+6=0\\) معادلة ديكارتية له.\n- بين أن \\((P_1)\\) و \\((P_2)\\) يتقاطعان وفق مستقيم \\((\\Delta)\\) يطلب تعيين تمثيل وسيطي له.",
+      "axis_tags": [
+        "space_relative_positions_intersections",
+        "space_parametric_line_plane"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستخرج معادلة ديكارتية للمستوى \\((P_1)\\)، ثم نحل نظام معادلتي المستويين.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "معادلة P1",
+            "explanation": "شعاع ناظم لـ\\((P_1)\\) هو \\((1,1,-2)\\)، ومنه:\n\\[\n(P_1):x+y-2z=0.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حل نظام التقاطع",
+            "explanation": "\\[\n\\begin{cases}\nx+y-2z=0\\\\\nx-2y-2z+6=0\n\\end{cases}\n\\]\nبطرح المعادلتين نحصل على \\(y=2\\). نضع \\(z=1-t\\)، فنجد \\(x=-2t\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "التمثيل الوسيطي للمستقيم",
+            "explanation": "\\[\n(\\Delta):\\begin{cases}\nx=-2t\\\\\ny=2\\\\\nz=1-t\n\\end{cases}\n\\quad ;\\ t\\in\\mathbb{R}.\n\\]"
+          }
+        ],
+        "final_answer": "\\[\n(\\Delta):\\begin{cases}\nx=-2t\\\\\ny=2\\\\\nz=1-t\n\\end{cases}\n\\quad ;\\ t\\in\\mathbb{R}.\n\\]"
+      }
+    },
+    {
+      "id": "2012_s2_space_ex02_q3",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "3) بين أن النقطة \\(O\\) هي مرجح الجملة: \\(\\{(A;1),(B;1),(C;-1)\\}\\).",
+      "axis_tags": [
+        "space_barycenter"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نطبق شرط المرجح ونحسب \\(\\overrightarrow{OA}+\\overrightarrow{OB}-\\overrightarrow{OC}\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "مجموع المعاملات",
+            "explanation": "\\[1+1-1=1\\neq0.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "التحقق من علاقة المرجح",
+            "explanation": "\\[\n\\overrightarrow{OA}+\\overrightarrow{OB}-\\overrightarrow{OC}\n=(1,1,1)+(1,-1,0)-(2,0,1)=(0,0,0).\n\\]"
+          }
+        ],
+        "final_answer": "\\(O\\) هو مرجح الجملة \\(\\{(A;1),(B;1),(C;-1)\\}\\)."
+      }
+    },
+    {
+      "id": "2012_s2_space_ex02_q4a",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "4) أ- عين \\((S)\\) مجموعة النقط \\(M(x;y;z)\\) من الفضاء التي تحقق: \\(\\left\\|\\overrightarrow{MA}+\\overrightarrow{MB}-\\overrightarrow{MC}\\right\\|=2\\sqrt3\\).",
+      "axis_tags": [
+        "space_barycenter",
+        "space_point_loci",
+        "space_sphere_tangent_plane"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل كون \\(O\\) مرجح الجملة لتحويل مجموع الأشعة إلى شعاع واحد.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "استعمال علاقة المرجح",
+            "explanation": "بما أن \\(O\\) مرجح الجملة ذات المعاملات \\(1,1,-1\\) ومجموعها يساوي \\(1\\)، فإن:\n\\[\n\\overrightarrow{MA}+\\overrightarrow{MB}-\\overrightarrow{MC}=\\overrightarrow{MO}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "تحويل الشرط",
+            "explanation": "الشرط يصبح:\n\\[\nMO=2\\sqrt3.\n\\]\nإذن \\((S)\\) سطح كرة مركزها \\(O\\) ونصف قطرها \\(2\\sqrt3\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "معادلة الكرة",
+            "explanation": "\\[(S):x^2+y^2+z^2=12.\\]"
+          }
+        ],
+        "final_answer": "\\((S)\\) سطح كرة مركزها \\(O\\) ونصف قطرها \\(2\\sqrt3\\)، ومعادلتها \\(x^2+y^2+z^2=12\\)."
+      }
+    },
+    {
+      "id": "2012_s2_space_ex02_q4b",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "ب- احسب إحداثيات \\(D\\) و \\(E\\) نقطتي تقاطع \\((S)\\) و \\((\\Delta)\\).",
+      "axis_tags": [
+        "space_relative_positions_intersections",
+        "space_sphere_tangent_plane"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نعوض التمثيل الوسيطي للمستقيم \\((\\Delta)\\) في معادلة الكرة \\((S)\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التعويض في معادلة الكرة",
+            "explanation": "على \\((\\Delta)\\):\n\\[\nx=-2t,\\quad y=2,\\quad z=1-t.\n\\]\nنعوض في \\(x^2+y^2+z^2=12\\):\n\\[\n4t^2+4+(1-t)^2=12.\n\\]\nأي:\n\\[\n5t^2-2t-7=0.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حل المعادلة",
+            "explanation": "\\[t=-1\\quad \\text{أو}\\quad t=\\frac75.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "إحداثيات نقطتي التقاطع",
+            "explanation": "عند \\(t=-1\\):\n\\[\nE(2,2,2).\n\\]\nوعند \\(t=\\frac75\\):\n\\[\nD\\left(-\\frac{14}{5},2,-\\frac25\\right).\n\\]"
+          }
+        ],
+        "final_answer": "\\[D\\left(-\\frac{14}{5};2;-\\frac25\\right),\\qquad E(2;2;2).\\]"
+      }
+    },
+    {
+      "id": "2012_s2_space_ex02_q4c",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "ج- ما هي طبيعة المثلث \\(ODE\\)؟ ثم استنتج المسافة بين \\(O\\) و \\((\\Delta)\\).",
+      "axis_tags": [
+        "space_distances_projections",
+        "space_sphere_tangent_plane"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "النقطتان \\(D\\) و\\(E\\) تنتميان إلى كرة مركزها \\(O\\)، لذلك \\(OD=OE\\). ثم نحسب ارتفاع المثلث المتساوي الساقين على القاعدة \\(DE\\)، وهو المسافة من \\(O\\) إلى \\((\\Delta)\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "طبيعة المثلث",
+            "explanation": "لأن \\(D,E\\in(S)\\) و\\((S)\\) كرة مركزها \\(O\\) ونصف قطرها \\(2\\sqrt3\\):\n\\[\nOD=OE=2\\sqrt3.\n\\]\nإذن المثلث \\(ODE\\) متساوي الساقين في \\(O\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "حساب DE",
+            "explanation": "\\[\n\\overrightarrow{DE}=\\left(\\frac{24}{5},0,\\frac{12}{5}\\right),\n\\]\nومن ثم:\n\\[\nDE=\\frac{12\\sqrt5}{5}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "استخراج المسافة إلى المستقيم",
+            "explanation": "ليكن \\(H\\) منتصف \\([DE]\\). في مثلث متساوي الساقين، \\(OH\\perp DE\\)، إذن \\(OH=d(O;(\\Delta))\\).\n\\[\nOH^2=OD^2-\\left(\\frac{DE}{2}\\right)^2\n=12-\\left(\\frac{6\\sqrt5}{5}\\right)^2\n=12-\\frac{36}{5}=\\frac{24}{5}.\n\\]\nإذن:\n\\[\nd(O;(\\Delta))=OH=\\sqrt{\\frac{24}{5}}=\\frac{2\\sqrt{30}}{5}.\n\\]"
+          }
+        ],
+        "final_answer": "المثلث \\(ODE\\) متساوي الساقين في \\(O\\)، و\\[d(O;(\\Delta))=\\frac{2\\sqrt{30}}{5}.\\]"
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2012(20260826-122028).pdf",
+    "statement_figure_policy": "لا يوجد شكل هندسي إلزامي في نص التمرين.",
+    "solution_figure_policy": "الحل مستقل عن أي رسم.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  }
+}

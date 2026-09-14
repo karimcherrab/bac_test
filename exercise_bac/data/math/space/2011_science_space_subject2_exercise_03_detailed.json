@@ -1,0 +1,256 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2011-science-space-subject2-ex03-detailed",
+  "session": "ordinary",
+  "year": 2011,
+  "chapter_code": "space_geometry",
+  "chapter_title": "الهندسة في الفضاء",
+  "axis_tags": [
+    "space_parametric_line",
+    "space_relative_positions_intersections",
+    "space_dot_product",
+    "space_distances",
+    "space_minimization_distance"
+  ],
+  "branches": [
+    {
+      "code": "science",
+      "name": "شعبة علوم تجريبية"
+    }
+  ],
+  "exercise_number": 3,
+  "subject_number": 2,
+  "source_page": 3,
+  "source_pages": [
+    3,
+    4
+  ],
+  "solution_source_pages": [
+    8
+  ],
+  "title": "التمرين الثالث — بكالوريا الجزائر 2011 — الموضوع الثاني — شعبة علوم تجريبية",
+  "statement": "نعتبر في الفضاء المنسوب إلى المعلم المتعامد والمتجانس \\((O;\\vec{i},\\vec{j},\\vec{k})\\) النقط \\(A(0;1;5)\\)، \\(B(2;1;7)\\) و \\(C(3;-3;6)\\).",
+  "questions": [
+    {
+      "id": "2011_s2_space_ex03_q1a",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1. أ- اكتب تمثيلا وسيطيا للمستقيم \\((\\Delta)\\) الذي يشمل النقطة \\(B\\) و \\(\\vec u(1;-4;-1)\\) شعاع توجيه له.",
+      "axis_tags": [
+        "space_parametric_line"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل إحداثيات نقطة من المستقيم وشعاع توجيهه.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الصيغة",
+            "explanation": "بما أن \\(B(2,1,7)\\) و \\(\\vec u=(1,-4,-1)\\)، فإن:\n\\[x=2+\\lambda,\\quad y=1-4\\lambda,\\quad z=7-\\lambda.\\]"
+          }
+        ],
+        "final_answer": "\\[(\\Delta):\\begin{cases}x=2+\\lambda\\\\y=1-4\\lambda\\\\z=7-\\lambda\\end{cases},\\quad \\lambda\\in\\mathbb R.\\]"
+      }
+    },
+    {
+      "id": "2011_s2_space_ex03_q1b",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "ب- تحقق أن النقطة \\(C\\) تنتمي إلى المستقيم \\((\\Delta)\\).",
+      "axis_tags": [
+        "space_relative_positions_intersections",
+        "space_parametric_line"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نعوض بقيمة للوسيط ونرى هل نحصل على إحداثيات C.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "إيجاد الوسيط",
+            "explanation": "من \\(x=2+\\lambda=3\\) نجد:\n\\[\\lambda=1.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "التحقق",
+            "explanation": "عند \\(\\lambda=1\\):\n\\[y=1-4=-3,\\qquad z=7-1=6.\\]\nإذن نحصل على \\(C(3,-3,6)\\)."
+          }
+        ],
+        "final_answer": "\\[C\\in(\\Delta).\\]"
+      }
+    },
+    {
+      "id": "2011_s2_space_ex03_q1c",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "ج- بين أن الشعاعين \\(\\overrightarrow{AB}\\) و \\(\\overrightarrow{BC}\\) متعامدان.",
+      "axis_tags": [
+        "space_dot_product"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب الشعاعين ثم جداءهما السلمي.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب AB",
+            "explanation": "\\[\\overrightarrow{AB}=B-A=(2,0,2).\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب BC",
+            "explanation": "\\[\\overrightarrow{BC}=C-B=(1,-4,-1).\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الجداء السلمي",
+            "explanation": "\\[\\overrightarrow{AB}\\cdot\\overrightarrow{BC}=2\\times1+0\\times(-4)+2\\times(-1)=0.\\]"
+          }
+        ],
+        "final_answer": "\\[\\overrightarrow{AB}\\perp\\overrightarrow{BC}.\\]"
+      }
+    },
+    {
+      "id": "2011_s2_space_ex03_q1d",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "د- استنتج المسافة بين النقطة \\(A\\) والمستقيم \\((\\Delta)\\).",
+      "axis_tags": [
+        "space_distances"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "بما أن B تنتمي إلى Δ وAB عمودي على شعاع توجيه Δ، فإن AB هو العمود النازل من A على Δ.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "ربط النتيجة السابقة بالمستقيم Δ",
+            "explanation": "لدينا \\(\\overrightarrow{BC}=(1,-4,-1)=\\vec u\\)، أي أن \\(BC\\) مواز للمستقيم \\(\\Delta\\). ومن السؤال السابق:\n\\[\\overrightarrow{AB}\\perp\\overrightarrow{BC}.\\]\nإذن \\(AB\\perp\\Delta\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "حساب AB",
+            "explanation": "\\[AB=\\sqrt{2^2+0^2+2^2}=\\sqrt8=2\\sqrt2.\\]"
+          }
+        ],
+        "final_answer": "\\[d(A,\\Delta)=AB=2\\sqrt2.\\]"
+      }
+    },
+    {
+      "id": "2011_s2_space_ex03_q2a",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "2. نعتبر النقطة \\(M(2+t;1-4t;7-t)\\) حيث \\(t\\) عدد حقيقي، ولتكن الدالة \\(h\\) المعرفة على \\(\\mathbb R\\) بـ: \\(h(t)=AM\\). أ- اكتب عبارة \\(h(t)\\) بدلالة \\(t\\).",
+      "axis_tags": [
+        "space_distances",
+        "space_minimization_distance"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب إحداثيات الشعاع AM ثم طوله.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب AM",
+            "explanation": "لدينا \\(A(0,1,5)\\) و \\(M(2+t,1-4t,7-t)\\)، لذلك:\n\\[\\overrightarrow{AM}=(2+t,-4t,2-t).\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب الطول",
+            "explanation": "\\[AM=\\sqrt{(2+t)^2+(-4t)^2+(2-t)^2}.\\]\nوبالتوسيع:\n\\[(2+t)^2+(2-t)^2=8+2t^2.\\]\nإذن:\n\\[AM=\\sqrt{18t^2+8}.\\]"
+          }
+        ],
+        "final_answer": "\\[h(t)=\\sqrt{18t^2+8}.\\]"
+      }
+    },
+    {
+      "id": "2011_s2_space_ex03_q2b",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "ب- بين أنه من أجل كل عدد حقيقي \\(t\\): \\(h'(t)=\\frac{18t}{\\sqrt{18t^2+8}}\\).",
+      "axis_tags": [
+        "space_minimization_distance"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نشتق دالة من الشكل جذر دالة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "كتابة h على شكل قوة",
+            "explanation": "\\[h(t)=(18t^2+8)^{1/2}.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "الاشتقاق",
+            "explanation": "\\[h'(t)=\\frac12(18t^2+8)^{-1/2}\\times36t.\\]\nإذن:\n\\[h'(t)=\\frac{18t}{\\sqrt{18t^2+8}}.\\]"
+          }
+        ],
+        "final_answer": "\\[h'(t)=\\frac{18t}{\\sqrt{18t^2+8}}.\\]"
+      }
+    },
+    {
+      "id": "2011_s2_space_ex03_q2c",
+      "display_order": 7,
+      "content_type": "question",
+      "text": "ج- استنتج قيمة العدد الحقيقي \\(t\\) التي تكون من أجلها المسافة \\(AM\\) أصغر ما يمكن.",
+      "axis_tags": [
+        "space_minimization_distance"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحدد إشارة المشتقة ثم نعين موضع القيمة الصغرى.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "إشارة المشتقة",
+            "explanation": "المقام \\(\\sqrt{18t^2+8}\\) موجب دائما، لذلك إشارة \\(h'(t)\\) هي إشارة \\(t\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "القيمة الصغرى",
+            "explanation": "إذن \\(h\\) متناقصة على \\(]-\\infty,0]\\) ومتزايدة على \\([0,+\\infty[\\). لذلك تبلغ أصغر قيمة عند:\n\\[t=0.\\]"
+          }
+        ],
+        "final_answer": "\\[t=0.\\]"
+      }
+    },
+    {
+      "id": "2011_s2_space_ex03_q2d",
+      "display_order": 8,
+      "content_type": "question",
+      "text": "د- قارن بين القيمة الصغرى للدالة \\(h\\) و المسافة بين النقطة \\(A\\) و المستقيم \\((\\Delta)\\).",
+      "axis_tags": [
+        "space_distances",
+        "space_minimization_distance"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب h(0) ثم نقارنها بالمسافة المحسوبة سابقا.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب القيمة الصغرى",
+            "explanation": "\\[h(0)=\\sqrt8=2\\sqrt2.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "المقارنة",
+            "explanation": "وجدنا سابقا:\n\\[d(A,\\Delta)=2\\sqrt2.\\]\nإذن القيمة الصغرى لـ\\(h\\) تساوي المسافة من \\(A\\) إلى \\(\\Delta\\)."
+          }
+        ],
+        "final_answer": "\\[\\min h=d(A,\\Delta)=2\\sqrt2.\\]"
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2011.pdf",
+    "statement_figure_policy": "لا يوجد شكل لازم في نص التمرين.",
+    "solution_figure_policy": "لا يحتاج الحل إلى رسم.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  }
+}

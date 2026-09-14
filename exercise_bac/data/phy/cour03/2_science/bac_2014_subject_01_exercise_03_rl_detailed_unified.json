@@ -1,0 +1,426 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "5.0-physics-bac-unified",
+  "version": "5.0-2014-subject-01-exercise-03-rl-unified-detailed-kvl-v4",
+  "session": "ordinary",
+  "year": 2014,
+  "subject_number": 1,
+  "chapter_code": "electrical_phenomena_evolution",
+  "chapter_title": "تطور دراسة ظواهر كهربائية",
+  "axis_tags": [
+    "electric_circuits_fundamentals",
+    "inductor_fundamental_relations",
+    "rl_current_establishment_differential_equation",
+    "rl_time_constant_graphical_analysis",
+    "rl_energy"
+  ],
+  "branches": [
+    {
+      "code": "science",
+      "name": "شعبة علوم تجريبية"
+    }
+  ],
+  "exercise_number": 3,
+  "source_page": 3,
+  "source_pages": [
+    3
+  ],
+  "solution_source_pages": [
+    10,
+    11
+  ],
+  "title": "التمرين الثالث — بكالوريا الجزائر 2014 — الموضوع الأول — شعبة علوم تجريبية",
+  "statement": "التمرين الثالث: (04 نقاط)\nحققنا الدارة الكهربائية المتكونة من العناصر الكهربائية التالية:\nمولد توتر كهربائي ثابت \\(E\\)، وشيعة ذاتيتها \\(L\\) ومقاومتها \\(r=10\\Omega\\)، ناقل أومي مقاومته \\(R=50\\Omega\\)، وقاطعة \\(K\\)، موصولة على التسلسل (الشكل-3).\nنغلق القاطعة \\(K\\) عند اللحظة \\(t=0\\).",
+  "statement_figures": [
+    {
+      "id": "2014_s1_e3_f3",
+      "type": "svg",
+      "usage": "statement",
+      "placement": "statement",
+      "title": "الشكل 3. الدارة الكهربائية RL",
+      "description": "مولد E، وشيعة (L,r=10Ω)، ناقل أومي R=50Ω وقاطعة K.",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 900 555\" role=\"img\" aria-label=\"الشكل 3: دارة RL\">\n  <rect width=\"100%\" height=\"100%\" fill=\"white\"/>\n  \n<defs>\n  <marker id=\"a14s1\" markerWidth=\"10\" markerHeight=\"10\" refX=\"8\" refY=\"5\" orient=\"auto\">\n    <path d=\"M0,0 L10,5 L0,10 z\" fill=\"#111827\"/>\n  </marker>\n</defs>\n<!-- source -->\n<circle cx=\"170\" cy=\"270\" r=\"55\" fill=\"white\" stroke=\"#111827\" stroke-width=\"4\"/>\n<line x1=\"170\" y1=\"120\" x2=\"170\" y2=\"215\" stroke=\"#111827\" stroke-width=\"4\"/>\n<line x1=\"170\" y1=\"325\" x2=\"170\" y2=\"430\" stroke=\"#111827\" stroke-width=\"4\"/>\n<line x1=\"125\" y1=\"325\" x2=\"125\" y2=\"215\" stroke=\"#111827\" stroke-width=\"3\" marker-end=\"url(#a14s1)\"/>\n<text x=\"92\" y=\"280\" font-size=\"30\" font-family=\"DejaVu Sans,Arial,sans-serif\">E</text>\n\n<!-- switch/top -->\n<path d=\"M170 120 H300\" stroke=\"#111827\" stroke-width=\"4\"/>\n<circle cx=\"300\" cy=\"120\" r=\"7\" fill=\"#111827\"/>\n<circle cx=\"355\" cy=\"120\" r=\"7\" fill=\"#111827\"/>\n<line x1=\"300\" y1=\"120\" x2=\"348\" y2=\"88\" stroke=\"#111827\" stroke-width=\"4\"/>\n<text x=\"313\" y=\"72\" font-size=\"27\" font-family=\"DejaVu Sans,Arial,sans-serif\">K</text>\n<path d=\"M355 120 H570\" stroke=\"#111827\" stroke-width=\"4\"/>\n<circle cx=\"570\" cy=\"120\" r=\"6\" fill=\"#111827\"/>\n<text x=\"585\" y=\"105\" font-size=\"24\" font-family=\"DejaVu Sans,Arial,sans-serif\">A</text>\n\n<!-- inductor -->\n<path d=\"M570 120 V165\" stroke=\"#111827\" stroke-width=\"4\"/>\n<path d=\"M570 165\n c-38 18 -38 36 0 54\n c38 18 38 36 0 54\n c-38 18 -38 36 0 54\" stroke=\"#111827\" stroke-width=\"4\" fill=\"none\"/>\n<text x=\"620\" y=\"255\" font-size=\"27\" font-family=\"DejaVu Sans,Arial,sans-serif\">L,r</text>\n<path d=\"M570 327 V350\" stroke=\"#111827\" stroke-width=\"4\"/>\n<circle cx=\"570\" cy=\"350\" r=\"6\" fill=\"#111827\"/>\n<text x=\"585\" y=\"355\" font-size=\"24\" font-family=\"DejaVu Sans,Arial,sans-serif\">B</text>\n\n<!-- resistor -->\n<rect x=\"537\" y=\"365\" width=\"66\" height=\"105\" fill=\"white\" stroke=\"#111827\" stroke-width=\"4\"/>\n<text x=\"625\" y=\"425\" font-size=\"27\" font-family=\"DejaVu Sans,Arial,sans-serif\">R</text>\n<line x1=\"570\" y1=\"350\" x2=\"570\" y2=\"365\" stroke=\"#111827\" stroke-width=\"4\"/>\n<path d=\"M570 470 V490 H170 V430\" stroke=\"#111827\" stroke-width=\"4\" fill=\"none\"/>\n<circle cx=\"570\" cy=\"490\" r=\"6\" fill=\"#111827\"/>\n<text x=\"585\" y=\"505\" font-size=\"24\" font-family=\"DejaVu Sans,Arial,sans-serif\">C</text>\n\n<text x=\"420\" y=\"535\" text-anchor=\"middle\" font-size=\"23\" font-family=\"DejaVu Sans,Arial,sans-serif\" direction=\"rtl\">الشكل 3</text>\n\n</svg>",
+      "render_mode": "inline",
+      "responsive": true,
+      "file_path": "public/phy/bac/2014/subject_01/exercise_03/figure_03_rl_circuit.svg"
+    }
+  ],
+  "statement_tables": [],
+  "question_groups": [
+    {
+      "id": "group_2014_s01_e03_q2",
+      "label": "2",
+      "title": "",
+      "context": "لمشاهدة التوتر الكهربائي بين طرفي الناقل الأومي \\(u_R=u_{BC}\\) على شاشة راسم اهتزاز مهبطي ذي ذاكرة:"
+    }
+  ],
+  "questions": [
+    {
+      "id": "2014_s01_e03_q1a",
+      "display_order": 1,
+      "label": "1-أ",
+      "group_id": null,
+      "content_type": "question",
+      "text": "أعد رسم الدارة الكهربائية وحدد جهة التيار الكهربائي مع التعليل.",
+      "axis_tags": [
+        "electric_circuits_fundamentals"
+      ],
+      "figures": [],
+      "tables": [],
+      "solution": {
+        "strategy": "سنحل السؤال بطريقة بسيطة ومفهومة: ننجز الحل على مراحل: جهة التيار.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "جهة التيار",
+            "explanation": "التيار الاصطلاحي يخرج من القطب الموجب للمولد، يمر عبر القاطعة ثم الوشيعة والمقاومة، ويعود إلى القطب السالب.",
+            "calculation": "",
+            "result": "",
+            "figures": [
+              {
+                "id": "2014_s1_e3_sol_circuit",
+                "diagram_type": "2014_s1_e3_sol_circuit",
+                "usage": "solution",
+                "title": "الدارة الموجهة وربط راسم الاهتزاز",
+                "description": "اتجاه التيار وربط مدخل Y بين B وC لمشاهدة uBC=uR.",
+                "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 900 555\" role=\"img\" aria-label=\"الشكل 3: دارة RL\">\n  <rect width=\"100%\" height=\"100%\" fill=\"white\"/>\n  \n<defs>\n  <marker id=\"a14s1\" markerWidth=\"10\" markerHeight=\"10\" refX=\"8\" refY=\"5\" orient=\"auto\">\n    <path d=\"M0,0 L10,5 L0,10 z\" fill=\"#111827\"/>\n  </marker>\n</defs>\n<!-- source -->\n<circle cx=\"170\" cy=\"270\" r=\"55\" fill=\"white\" stroke=\"#111827\" stroke-width=\"4\"/>\n<line x1=\"170\" y1=\"120\" x2=\"170\" y2=\"215\" stroke=\"#111827\" stroke-width=\"4\"/>\n<line x1=\"170\" y1=\"325\" x2=\"170\" y2=\"430\" stroke=\"#111827\" stroke-width=\"4\"/>\n<line x1=\"125\" y1=\"325\" x2=\"125\" y2=\"215\" stroke=\"#111827\" stroke-width=\"3\" marker-end=\"url(#a14s1)\"/>\n<text x=\"92\" y=\"280\" font-size=\"30\" font-family=\"DejaVu Sans,Arial,sans-serif\">E</text>\n\n<!-- switch/top -->\n<path d=\"M170 120 H300\" stroke=\"#111827\" stroke-width=\"4\"/>\n<circle cx=\"300\" cy=\"120\" r=\"7\" fill=\"#111827\"/>\n<circle cx=\"355\" cy=\"120\" r=\"7\" fill=\"#111827\"/>\n<line x1=\"300\" y1=\"120\" x2=\"348\" y2=\"88\" stroke=\"#111827\" stroke-width=\"4\"/>\n<text x=\"313\" y=\"72\" font-size=\"27\" font-family=\"DejaVu Sans,Arial,sans-serif\">K</text>\n<path d=\"M355 120 H570\" stroke=\"#111827\" stroke-width=\"4\"/>\n<circle cx=\"570\" cy=\"120\" r=\"6\" fill=\"#111827\"/>\n<text x=\"585\" y=\"105\" font-size=\"24\" font-family=\"DejaVu Sans,Arial,sans-serif\">A</text>\n\n<!-- inductor -->\n<path d=\"M570 120 V165\" stroke=\"#111827\" stroke-width=\"4\"/>\n<path d=\"M570 165\n c-38 18 -38 36 0 54\n c38 18 38 36 0 54\n c-38 18 -38 36 0 54\" stroke=\"#111827\" stroke-width=\"4\" fill=\"none\"/>\n<text x=\"620\" y=\"255\" font-size=\"27\" font-family=\"DejaVu Sans,Arial,sans-serif\">L,r</text>\n<path d=\"M570 327 V350\" stroke=\"#111827\" stroke-width=\"4\"/>\n<circle cx=\"570\" cy=\"350\" r=\"6\" fill=\"#111827\"/>\n<text x=\"585\" y=\"355\" font-size=\"24\" font-family=\"DejaVu Sans,Arial,sans-serif\">B</text>\n\n<!-- resistor -->\n<rect x=\"537\" y=\"365\" width=\"66\" height=\"105\" fill=\"white\" stroke=\"#111827\" stroke-width=\"4\"/>\n<text x=\"625\" y=\"425\" font-size=\"27\" font-family=\"DejaVu Sans,Arial,sans-serif\">R</text>\n<line x1=\"570\" y1=\"350\" x2=\"570\" y2=\"365\" stroke=\"#111827\" stroke-width=\"4\"/>\n<path d=\"M570 470 V490 H170 V430\" stroke=\"#111827\" stroke-width=\"4\" fill=\"none\"/>\n<circle cx=\"570\" cy=\"490\" r=\"6\" fill=\"#111827\"/>\n<text x=\"585\" y=\"505\" font-size=\"24\" font-family=\"DejaVu Sans,Arial,sans-serif\">C</text>\n\n<text x=\"420\" y=\"535\" text-anchor=\"middle\" font-size=\"23\" font-family=\"DejaVu Sans,Arial,sans-serif\" direction=\"rtl\">الشكل 3</text>\n\n\n<defs>\n  <marker id=\"blue14s1\" markerWidth=\"10\" markerHeight=\"10\" refX=\"8\" refY=\"5\" orient=\"auto\">\n    <path d=\"M0,0 L10,5 L0,10 z\" fill=\"#2563eb\"/>\n  </marker>\n</defs>\n<line x1=\"390\" y1=\"82\" x2=\"500\" y2=\"82\" stroke=\"#2563eb\" stroke-width=\"3\" marker-end=\"url(#blue14s1)\"/>\n<text x=\"445\" y=\"58\" font-size=\"24\" font-family=\"DejaVu Sans,Arial,sans-serif\" fill=\"#2563eb\">i</text>\n<line x1=\"690\" y1=\"350\" x2=\"690\" y2=\"490\" stroke=\"#2563eb\" stroke-width=\"3\" marker-end=\"url(#blue14s1)\"/>\n<text x=\"720\" y=\"425\" font-size=\"22\" font-family=\"DejaVu Sans,Arial,sans-serif\" fill=\"#2563eb\">uBC=uR</text>\n<!-- scope -->\n<line x1=\"570\" y1=\"350\" x2=\"795\" y2=\"350\" stroke=\"#2563eb\" stroke-width=\"2.5\"/>\n<text x=\"810\" y=\"357\" font-size=\"22\" font-family=\"DejaVu Sans,Arial,sans-serif\" fill=\"#2563eb\">Y</text>\n<line x1=\"570\" y1=\"490\" x2=\"795\" y2=\"490\" stroke=\"#2563eb\" stroke-width=\"2.5\"/>\n<text x=\"810\" y=\"497\" font-size=\"22\" font-family=\"DejaVu Sans,Arial,sans-serif\" fill=\"#2563eb\">M</text>\n</svg>",
+                "render_mode": "inline",
+                "responsive": true,
+                "file_path": "public/phy/bac/2014/subject_01/exercise_03/solution_rl_circuit_scope.svg",
+                "type": "svg",
+                "placement": "solution"
+              }
+            ],
+            "tables": []
+          }
+        ],
+        "final_answer": "جهة التيار الاصطلاحي من القطب الموجب للمولد عبر القاطعة والوشيعة والمقاومة نحو القطب السالب، كما في الرسم.",
+        "verification": "التحقق: نراجع الإشارة والوحدة الفيزيائية ونتأكد أن النتيجة منسجمة مع المنحنى أو مع السلوك الفيزيائي للدارة.",
+        "hints": [
+          "استخرج المعطيات من النص أو الشكل ثم طبّق العلاقة الفيزيائية المناسبة خطوة بخطوة."
+        ],
+        "common_mistakes": [
+          "لا تعوض عدديًا قبل كتابة العلاقة الحرفية المنظِّمة للحل."
+        ]
+      }
+    },
+    {
+      "id": "2014_s01_e03_q1b",
+      "display_order": 2,
+      "label": "1-ب",
+      "group_id": null,
+      "content_type": "question",
+      "text": "أعط عبارة شدة التيار الكهربائي \\(I_0\\) في النظام الدائم.",
+      "axis_tags": [
+        "electric_circuits_fundamentals"
+      ],
+      "figures": [],
+      "tables": [],
+      "solution": {
+        "strategy": "سنحل السؤال بطريقة بسيطة ومفهومة: ننجز الحل على مراحل: شدة التيار في النظام الدائم.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "شدة التيار في النظام الدائم",
+            "explanation": "في النظام الدائم \\(di/dt=0\\)، لذلك تصبح مقاومة الدارة الكلية \\(R+r\\): \\[\\boxed{I_0=\\frac{E}{R+r}}.\\]",
+            "calculation": "",
+            "result": "\\(I_0=\\frac{E}{R+r}\\)",
+            "figures": [],
+            "tables": []
+          }
+        ],
+        "final_answer": "\\(I_0=\\frac{E}{R+r}\\)",
+        "verification": "التحقق: نراجع الإشارة والوحدة الفيزيائية ونتأكد أن النتيجة منسجمة مع المنحنى أو مع السلوك الفيزيائي للدارة.",
+        "hints": [
+          "استخرج المعطيات من النص أو الشكل ثم طبّق العلاقة الفيزيائية المناسبة خطوة بخطوة."
+        ],
+        "common_mistakes": [
+          "لا تعوض عدديًا قبل كتابة العلاقة الحرفية المنظِّمة للحل."
+        ]
+      }
+    },
+    {
+      "id": "2014_s01_e03_q2a",
+      "display_order": 3,
+      "label": "2-أ",
+      "group_id": "group_2014_s01_e03_q2",
+      "content_type": "question",
+      "text": "بين كيفية التوصيل براسم الاهتزاز المهبطي لمشاهدة تطور \\(u_{BC}\\)، ممثلا كيفية تغيره بدلالة الزمن وما هو المقدار الفيزيائي الذي يمثله في التطور؟",
+      "axis_tags": [
+        "inductor_fundamental_relations",
+        "rl_current_establishment_differential_equation",
+        "rl_time_constant_graphical_analysis",
+        "rl_energy"
+      ],
+      "figures": [],
+      "tables": [],
+      "solution": {
+        "strategy": "سنحل السؤال بطريقة بسيطة ومفهومة: ننجز الحل على مراحل: ربط راسم الاهتزاز، ثم شكل uBC(t).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "ربط راسم الاهتزاز",
+            "explanation": "يوصل مدخل \\(Y\\) بالنقطة \\(B\\) والمرجع بالنقطة \\(C\\)، فيعرض الجهاز مباشرة \\(u_{BC}=u_R\\). وبما أن \\(u_{BC}=Ri\\)، فإن تطور \\(u_{BC}(t)\\) له نفس شكل تطور شدة التيار \\(i(t)\\).",
+            "calculation": "",
+            "result": "",
+            "figures": [
+              {
+                "id": "2014_s1_e3_sol_circuit",
+                "diagram_type": "2014_s1_e3_sol_circuit",
+                "usage": "solution",
+                "title": "الدارة الموجهة وربط راسم الاهتزاز",
+                "description": "اتجاه التيار وربط مدخل Y بين B وC لمشاهدة uBC=uR.",
+                "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 900 555\" role=\"img\" aria-label=\"الشكل 3: دارة RL\">\n  <rect width=\"100%\" height=\"100%\" fill=\"white\"/>\n  \n<defs>\n  <marker id=\"a14s1\" markerWidth=\"10\" markerHeight=\"10\" refX=\"8\" refY=\"5\" orient=\"auto\">\n    <path d=\"M0,0 L10,5 L0,10 z\" fill=\"#111827\"/>\n  </marker>\n</defs>\n<!-- source -->\n<circle cx=\"170\" cy=\"270\" r=\"55\" fill=\"white\" stroke=\"#111827\" stroke-width=\"4\"/>\n<line x1=\"170\" y1=\"120\" x2=\"170\" y2=\"215\" stroke=\"#111827\" stroke-width=\"4\"/>\n<line x1=\"170\" y1=\"325\" x2=\"170\" y2=\"430\" stroke=\"#111827\" stroke-width=\"4\"/>\n<line x1=\"125\" y1=\"325\" x2=\"125\" y2=\"215\" stroke=\"#111827\" stroke-width=\"3\" marker-end=\"url(#a14s1)\"/>\n<text x=\"92\" y=\"280\" font-size=\"30\" font-family=\"DejaVu Sans,Arial,sans-serif\">E</text>\n\n<!-- switch/top -->\n<path d=\"M170 120 H300\" stroke=\"#111827\" stroke-width=\"4\"/>\n<circle cx=\"300\" cy=\"120\" r=\"7\" fill=\"#111827\"/>\n<circle cx=\"355\" cy=\"120\" r=\"7\" fill=\"#111827\"/>\n<line x1=\"300\" y1=\"120\" x2=\"348\" y2=\"88\" stroke=\"#111827\" stroke-width=\"4\"/>\n<text x=\"313\" y=\"72\" font-size=\"27\" font-family=\"DejaVu Sans,Arial,sans-serif\">K</text>\n<path d=\"M355 120 H570\" stroke=\"#111827\" stroke-width=\"4\"/>\n<circle cx=\"570\" cy=\"120\" r=\"6\" fill=\"#111827\"/>\n<text x=\"585\" y=\"105\" font-size=\"24\" font-family=\"DejaVu Sans,Arial,sans-serif\">A</text>\n\n<!-- inductor -->\n<path d=\"M570 120 V165\" stroke=\"#111827\" stroke-width=\"4\"/>\n<path d=\"M570 165\n c-38 18 -38 36 0 54\n c38 18 38 36 0 54\n c-38 18 -38 36 0 54\" stroke=\"#111827\" stroke-width=\"4\" fill=\"none\"/>\n<text x=\"620\" y=\"255\" font-size=\"27\" font-family=\"DejaVu Sans,Arial,sans-serif\">L,r</text>\n<path d=\"M570 327 V350\" stroke=\"#111827\" stroke-width=\"4\"/>\n<circle cx=\"570\" cy=\"350\" r=\"6\" fill=\"#111827\"/>\n<text x=\"585\" y=\"355\" font-size=\"24\" font-family=\"DejaVu Sans,Arial,sans-serif\">B</text>\n\n<!-- resistor -->\n<rect x=\"537\" y=\"365\" width=\"66\" height=\"105\" fill=\"white\" stroke=\"#111827\" stroke-width=\"4\"/>\n<text x=\"625\" y=\"425\" font-size=\"27\" font-family=\"DejaVu Sans,Arial,sans-serif\">R</text>\n<line x1=\"570\" y1=\"350\" x2=\"570\" y2=\"365\" stroke=\"#111827\" stroke-width=\"4\"/>\n<path d=\"M570 470 V490 H170 V430\" stroke=\"#111827\" stroke-width=\"4\" fill=\"none\"/>\n<circle cx=\"570\" cy=\"490\" r=\"6\" fill=\"#111827\"/>\n<text x=\"585\" y=\"505\" font-size=\"24\" font-family=\"DejaVu Sans,Arial,sans-serif\">C</text>\n\n<text x=\"420\" y=\"535\" text-anchor=\"middle\" font-size=\"23\" font-family=\"DejaVu Sans,Arial,sans-serif\" direction=\"rtl\">الشكل 3</text>\n\n\n<defs>\n  <marker id=\"blue14s1\" markerWidth=\"10\" markerHeight=\"10\" refX=\"8\" refY=\"5\" orient=\"auto\">\n    <path d=\"M0,0 L10,5 L0,10 z\" fill=\"#2563eb\"/>\n  </marker>\n</defs>\n<line x1=\"390\" y1=\"82\" x2=\"500\" y2=\"82\" stroke=\"#2563eb\" stroke-width=\"3\" marker-end=\"url(#blue14s1)\"/>\n<text x=\"445\" y=\"58\" font-size=\"24\" font-family=\"DejaVu Sans,Arial,sans-serif\" fill=\"#2563eb\">i</text>\n<line x1=\"690\" y1=\"350\" x2=\"690\" y2=\"490\" stroke=\"#2563eb\" stroke-width=\"3\" marker-end=\"url(#blue14s1)\"/>\n<text x=\"720\" y=\"425\" font-size=\"22\" font-family=\"DejaVu Sans,Arial,sans-serif\" fill=\"#2563eb\">uBC=uR</text>\n<!-- scope -->\n<line x1=\"570\" y1=\"350\" x2=\"795\" y2=\"350\" stroke=\"#2563eb\" stroke-width=\"2.5\"/>\n<text x=\"810\" y=\"357\" font-size=\"22\" font-family=\"DejaVu Sans,Arial,sans-serif\" fill=\"#2563eb\">Y</text>\n<line x1=\"570\" y1=\"490\" x2=\"795\" y2=\"490\" stroke=\"#2563eb\" stroke-width=\"2.5\"/>\n<text x=\"810\" y=\"497\" font-size=\"22\" font-family=\"DejaVu Sans,Arial,sans-serif\" fill=\"#2563eb\">M</text>\n</svg>",
+                "render_mode": "inline",
+                "responsive": true,
+                "file_path": "public/phy/bac/2014/subject_01/exercise_03/solution_rl_circuit_scope.svg",
+                "type": "svg",
+                "placement": "solution"
+              }
+            ],
+            "tables": []
+          },
+          {
+            "step_number": 2,
+            "title": "شكل uBC(t)",
+            "explanation": "بما أن \\(i(t)=0.2(1-e^{-50t})\\) و\\(R=50\\Omega\\): \\[u_{BC}(t)=Ri(t)=10(1-e^{-50t})\\,V.\\] فهو منحنى أسي متزايد من 0 نحو 10V.",
+            "calculation": "",
+            "result": "",
+            "figures": [
+              {
+                "id": "2014_s1_e3_sol_graph",
+                "diagram_type": "2014_s1_e3_sol_graph",
+                "usage": "solution",
+                "title": "تطور uBC(t)",
+                "description": "uBC(t)=10(1-e^-50t)، القيمة النهائية 10V وثابت الزمن 0.02s.",
+                "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 900 570\" role=\"img\" aria-label=\"منحنى uBC(t) في دارة RL\">\n  <rect width=\"100%\" height=\"100%\" fill=\"white\"/>\n  <line x1=\"135.0\" y1=\"85\" x2=\"135.0\" y2=\"470\" stroke=\"#d1d5db\" stroke-width=\"1\"/><line x1=\"189.6\" y1=\"85\" x2=\"189.6\" y2=\"470\" stroke=\"#d1d5db\" stroke-width=\"1\"/><line x1=\"244.2\" y1=\"85\" x2=\"244.2\" y2=\"470\" stroke=\"#d1d5db\" stroke-width=\"1\"/><line x1=\"298.8\" y1=\"85\" x2=\"298.8\" y2=\"470\" stroke=\"#d1d5db\" stroke-width=\"1\"/><line x1=\"353.3\" y1=\"85\" x2=\"353.3\" y2=\"470\" stroke=\"#d1d5db\" stroke-width=\"1\"/><line x1=\"407.9\" y1=\"85\" x2=\"407.9\" y2=\"470\" stroke=\"#d1d5db\" stroke-width=\"1\"/><line x1=\"462.5\" y1=\"85\" x2=\"462.5\" y2=\"470\" stroke=\"#d1d5db\" stroke-width=\"1\"/><line x1=\"517.1\" y1=\"85\" x2=\"517.1\" y2=\"470\" stroke=\"#d1d5db\" stroke-width=\"1\"/><line x1=\"571.7\" y1=\"85\" x2=\"571.7\" y2=\"470\" stroke=\"#d1d5db\" stroke-width=\"1\"/><line x1=\"626.2\" y1=\"85\" x2=\"626.2\" y2=\"470\" stroke=\"#d1d5db\" stroke-width=\"1\"/><line x1=\"680.8\" y1=\"85\" x2=\"680.8\" y2=\"470\" stroke=\"#d1d5db\" stroke-width=\"1\"/><line x1=\"735.4\" y1=\"85\" x2=\"735.4\" y2=\"470\" stroke=\"#d1d5db\" stroke-width=\"1\"/><line x1=\"790.0\" y1=\"85\" x2=\"790.0\" y2=\"470\" stroke=\"#d1d5db\" stroke-width=\"1\"/><line x1=\"135\" y1=\"470.0\" x2=\"790\" y2=\"470.0\" stroke=\"#d1d5db\" stroke-width=\"1\"/><line x1=\"135\" y1=\"437.9\" x2=\"790\" y2=\"437.9\" stroke=\"#d1d5db\" stroke-width=\"1\"/><line x1=\"135\" y1=\"405.8\" x2=\"790\" y2=\"405.8\" stroke=\"#d1d5db\" stroke-width=\"1\"/><line x1=\"135\" y1=\"373.8\" x2=\"790\" y2=\"373.8\" stroke=\"#d1d5db\" stroke-width=\"1\"/><line x1=\"135\" y1=\"341.7\" x2=\"790\" y2=\"341.7\" stroke=\"#d1d5db\" stroke-width=\"1\"/><line x1=\"135\" y1=\"309.6\" x2=\"790\" y2=\"309.6\" stroke=\"#d1d5db\" stroke-width=\"1\"/><line x1=\"135\" y1=\"277.5\" x2=\"790\" y2=\"277.5\" stroke=\"#d1d5db\" stroke-width=\"1\"/><line x1=\"135\" y1=\"245.4\" x2=\"790\" y2=\"245.4\" stroke=\"#d1d5db\" stroke-width=\"1\"/><line x1=\"135\" y1=\"213.3\" x2=\"790\" y2=\"213.3\" stroke=\"#d1d5db\" stroke-width=\"1\"/><line x1=\"135\" y1=\"181.2\" x2=\"790\" y2=\"181.2\" stroke=\"#d1d5db\" stroke-width=\"1\"/><line x1=\"135\" y1=\"149.2\" x2=\"790\" y2=\"149.2\" stroke=\"#d1d5db\" stroke-width=\"1\"/><line x1=\"135\" y1=\"117.1\" x2=\"790\" y2=\"117.1\" stroke=\"#d1d5db\" stroke-width=\"1\"/><line x1=\"135\" y1=\"85.0\" x2=\"790\" y2=\"85.0\" stroke=\"#d1d5db\" stroke-width=\"1\"/><line x1=\"135\" y1=\"470\" x2=\"820\" y2=\"470\" stroke=\"#111827\" stroke-width=\"3\"/><line x1=\"135\" y1=\"470\" x2=\"135\" y2=\"65\" stroke=\"#111827\" stroke-width=\"3\"/><polyline points=\"135.00,470.00 137.35,463.17 139.70,456.49 142.04,449.95 144.39,443.56 146.74,437.29 149.09,431.16 151.43,425.16 153.78,419.29 156.13,413.54 158.48,407.92 160.82,402.41 163.17,397.02 165.52,391.75 167.87,386.59 170.22,381.54 172.56,376.60 174.91,371.76 177.26,367.02 179.61,362.39 181.95,357.85 184.30,353.41 186.65,349.06 189.00,344.81 191.34,340.65 193.69,336.57 196.04,332.59 198.39,328.68 200.73,324.87 203.08,321.13 205.43,317.47 207.78,313.89 210.13,310.38 212.47,306.95 214.82,303.60 217.17,300.31 219.52,297.10 221.86,293.95 224.21,290.87 226.56,287.85 228.91,284.90 231.25,282.01 233.60,279.19 235.95,276.42 238.30,273.71 240.65,271.06 242.99,268.47 245.34,265.93 247.69,263.45 250.04,261.02 252.38,258.64 254.73,256.31 257.08,254.03 259.43,251.80 261.77,249.61 264.12,247.48 266.47,245.39 268.82,243.34 271.16,241.33 273.51,239.37 275.86,237.45 278.21,235.58 280.56,233.74 282.90,231.94 285.25,230.18 287.60,228.45 289.95,226.77 292.29,225.12 294.64,223.50 296.99,221.92 299.34,220.37 301.68,218.86 304.03,217.37 306.38,215.92 308.73,214.50 311.08,213.11 313.42,211.75 315.77,210.42 318.12,209.12 320.47,207.84 322.81,206.59 325.16,205.37 327.51,204.17 329.86,203.00 332.20,201.86 334.55,200.74 336.90,199.64 339.25,198.57 341.59,197.52 343.94,196.49 346.29,195.48 348.64,194.50 350.99,193.53 353.33,192.59 355.68,191.66 358.03,190.76 360.38,189.87 362.72,189.01 365.07,188.16 367.42,187.33 369.77,186.52 372.11,185.72 374.46,184.95 376.81,184.18 379.16,183.44 381.51,182.71 383.85,182.00 386.20,181.30 388.55,180.61 390.90,179.95 393.24,179.29 395.59,178.65 397.94,178.02 400.29,177.41 402.63,176.81 404.98,176.22 407.33,175.64 409.68,175.08 412.03,174.53 414.37,173.99 416.72,173.46 419.07,172.94 421.42,172.44 423.76,171.94 426.11,171.46 428.46,170.98 430.81,170.52 433.15,170.07 435.50,169.62 437.85,169.19 440.20,168.76 442.54,168.34 444.89,167.94 447.24,167.54 449.59,167.15 451.94,166.76 454.28,166.39 456.63,166.02 458.98,165.66 461.33,165.31 463.67,164.97 466.02,164.63 468.37,164.30 470.72,163.98 473.06,163.67 475.41,163.36 477.76,163.06 480.11,162.76 482.46,162.47 484.80,162.19 487.15,161.91 489.50,161.64 491.85,161.37 494.19,161.12 496.54,160.86 498.89,160.61 501.24,160.37 503.58,160.13 505.93,159.90 508.28,159.67 510.63,159.45 512.97,159.23 515.32,159.01 517.67,158.80 520.02,158.60 522.37,158.40 524.71,158.20 527.06,158.01 529.41,157.82 531.76,157.64 534.10,157.46 536.45,157.28 538.80,157.11 541.15,156.94 543.49,156.77 545.84,156.61 548.19,156.45 550.54,156.30 552.89,156.15 555.23,156.00 557.58,155.85 559.93,155.71 562.28,155.57 564.62,155.43 566.97,155.30 569.32,155.17 571.67,155.04 574.01,154.92 576.36,154.80 578.71,154.68 581.06,154.56 583.41,154.44 585.75,154.33 588.10,154.22 590.45,154.11 592.80,154.01 595.14,153.91 597.49,153.81 599.84,153.71 602.19,153.61 604.53,153.52 606.88,153.42 609.23,153.33 611.58,153.24 613.92,153.16 616.27,153.07 618.62,152.99 620.97,152.91 623.32,152.83 625.66,152.75 628.01,152.67 630.36,152.60 632.71,152.53 635.05,152.45 637.40,152.38 639.75,152.32 642.10,152.25 644.44,152.18 646.79,152.12 649.14,152.06 651.49,152.00 653.84,151.93 656.18,151.88 658.53,151.82 660.88,151.76 663.23,151.71 665.57,151.65 667.92,151.60 670.27,151.55 672.62,151.50 674.96,151.45 677.31,151.40 679.66,151.35 682.01,151.31 684.35,151.26 686.70,151.22 689.05,151.17 691.40,151.13 693.75,151.09 696.09,151.05 698.44,151.01 700.79,150.97 703.14,150.93 705.48,150.89 707.83,150.85 710.18,150.82 712.53,150.78 714.87,150.75 717.22,150.72 719.57,150.68 721.92,150.65 724.27,150.62 726.61,150.59 728.96,150.56 731.31,150.53 733.66,150.50 736.00,150.47 738.35,150.44 740.70,150.42 743.05,150.39 745.39,150.36 747.74,150.34 750.09,150.31 752.44,150.29 754.78,150.26 757.13,150.24 759.48,150.22 761.83,150.20 764.18,150.17 766.52,150.15 768.87,150.13 771.22,150.11 773.57,150.09 775.91,150.07 778.26,150.05 780.61,150.03 782.96,150.01 785.30,150.00 787.65,149.98 790.00,149.96\" fill=\"none\" stroke=\"#111827\" stroke-width=\"5\"/><line x1=\"135\" y1=\"149.2\" x2=\"790\" y2=\"149.2\" stroke=\"#6b7280\" stroke-width=\"2\" stroke-dasharray=\"8 6\"/><line x1=\"135\" y1=\"267.9\" x2=\"244.2\" y2=\"267.9\" stroke=\"#2563eb\" stroke-width=\"2.2\" stroke-dasharray=\"8 6\"/><line x1=\"244.2\" y1=\"470\" x2=\"244.2\" y2=\"267.9\" stroke=\"#2563eb\" stroke-width=\"2.2\" stroke-dasharray=\"8 6\"/><text x=\"38\" y=\"66\" font-size=\"26\" font-family=\"DejaVu Sans,Arial,sans-serif\">uBC(V)</text><text x=\"828\" y=\"478\" font-size=\"24\" font-family=\"DejaVu Sans,Arial,sans-serif\">t(s)</text><text x=\"150\" y=\"257.9\" font-size=\"20\" font-family=\"DejaVu Sans,Arial,sans-serif\" fill=\"#2563eb\">0,63 Umax = 6,3 V</text><text x=\"244.2\" y=\"525\" text-anchor=\"middle\" font-size=\"20\" font-family=\"DejaVu Sans,Arial,sans-serif\" fill=\"#2563eb\">τ=0,02 s</text><text x=\"590\" y=\"139.2\" font-size=\"20\" font-family=\"DejaVu Sans,Arial,sans-serif\" fill=\"#2563eb\">Umax=10 V</text>\n</svg>",
+                "render_mode": "inline",
+                "responsive": true,
+                "file_path": "public/phy/bac/2014/subject_01/exercise_03/solution_uBC_vs_t.svg",
+                "type": "svg",
+                "placement": "solution"
+              }
+            ],
+            "tables": []
+          }
+        ],
+        "final_answer": "يوصل \\(Y\\) بالنقطة \\(B\\) والمرجع بالنقطة \\(C\\)، و\\(u_{BC}(t)=10(1-e^{-50t})V\\) له نفس شكل تطور \\(i(t)\\).",
+        "verification": "التحقق: نراجع الإشارة والوحدة الفيزيائية ونتأكد أن النتيجة منسجمة مع المنحنى أو مع السلوك الفيزيائي للدارة.",
+        "hints": [
+          "ابدأ بتحديد العناصر الكهربائية واتجاه التيار الاصطلاحي قبل رسم الأسهم أو المخطط."
+        ],
+        "common_mistakes": [
+          "لا تترك الرسم دون تسميات؛ سمّ العناصر والتوترات وجهة التيار بوضوح."
+        ]
+      }
+    },
+    {
+      "id": "2014_s01_e03_q2b",
+      "display_order": 4,
+      "label": "2-ب",
+      "group_id": "group_2014_s01_e03_q2",
+      "content_type": "question",
+      "text": "بتطبيق قانون جمع التوترات، أوجد المعادلة التفاضلية لشدة التيار \\(i(t)\\) المار في الدارة.",
+      "axis_tags": [
+        "inductor_fundamental_relations",
+        "rl_current_establishment_differential_equation",
+        "rl_time_constant_graphical_analysis",
+        "rl_energy"
+      ],
+      "figures": [],
+      "tables": [],
+      "solution": {
+        "strategy": "سنحل السؤال خطوة بخطوة وبأسلوب مبسط: نرسم الدارة أولًا ونحدد جهة التيار والتوترات المرجعية، ثم نطبق قانون جمع التوترات، وبعدها نعوّض بعلاقات العناصر حتى نصل إلى النتيجة النهائية المطلوبة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "رسم الدارة وتوجيه التوترات",
+            "explanation": "نمثل على الرسم جهة التيار \\(i\\)، وتوتر المقاومة \\(u_R\\)، وتوتر الوشيعة الحقيقية \\(u_b\\) بين طرفي الثنائي \\((L,r)\\). هذا يجعل تطبيق القانون واضحًا.",
+            "calculation": "",
+            "result": "",
+            "figures": [
+              {
+                "id": "2014_s01_e03_q2b_kvl",
+                "type": "svg",
+                "usage": "solution",
+                "placement": "solution",
+                "title": "الدارة وتوجيه التوترات في دارة RL",
+                "description": "رسم توضيحي داخل الحل يبين الدارة، جهة التيار، واتجاهات التوترات المرجعية المستعملة عند تطبيق قانون جمع التوترات.",
+                "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 960 420\" role=\"img\" aria-label=\"رسم الدارة مع توجيه التوترات والتيار\">\n<rect width=\"100%\" height=\"100%\" fill=\"white\"/>\n\n<defs>\n  <marker id=\"arr\" markerWidth=\"10\" markerHeight=\"10\" refX=\"8\" refY=\"5\" orient=\"auto\">\n    <path d=\"M0,0 L10,5 L0,10 z\" fill=\"#111827\"/>\n  </marker>\n</defs>\n\n<text x=\"480\" y=\"34\" text-anchor=\"middle\" font-size=\"26\" font-family=\"DejaVu Sans,Arial,sans-serif\" font-weight=\"700\">رسم الدارة مع توجيه التوترات والتيار</text>\n\n<text x=\"480\" y=\"64\" text-anchor=\"middle\" font-size=\"20\" font-family=\"DejaVu Sans,Arial,sans-serif\">اختيار مرجعي للتوترات والتيار في دارة RL</text>\n<line x1=\"150\" y1=\"110\" x2=\"150\" y2=\"290\" stroke=\"#111827\" stroke-width=\"4\"/>\n<line x1=\"185\" y1=\"130\" x2=\"185\" y2=\"270\" stroke=\"#111827\" stroke-width=\"8\"/>\n<text x=\"120\" y=\"205\" font-size=\"28\" font-family=\"DejaVu Sans,Arial,sans-serif\">E</text>\n<text x=\"145\" y=\"98\" font-size=\"22\" font-family=\"DejaVu Sans,Arial,sans-serif\">−</text>\n<text x=\"181\" y=\"98\" font-size=\"22\" font-family=\"DejaVu Sans,Arial,sans-serif\">+</text>\n<path d=\"M185 130 H280\" stroke=\"#111827\" stroke-width=\"4\" fill=\"none\"/>\n<path d=\"M150 290 H720\" stroke=\"#111827\" stroke-width=\"4\" fill=\"none\"/>\n<path d=\"M680 130 H720 V290\" stroke=\"#111827\" stroke-width=\"4\" fill=\"none\"/>\n<rect x=\"280\" y=\"102\" width=\"160\" height=\"56\" fill=\"white\" stroke=\"#111827\" stroke-width=\"4\"/>\n<text x=\"360\" y=\"138\" text-anchor=\"middle\" font-size=\"28\" font-family=\"DejaVu Sans,Arial,sans-serif\">R</text>\n<path d=\"M440 130 H485 c18 -38 36 -38 54 0 c18 38 36 38 54 0 c18 -38 36 -38 54 0\" stroke=\"#111827\" stroke-width=\"4\" fill=\"none\"/>\n<path d=\"M647 130 H680\" stroke=\"#111827\" stroke-width=\"4\"/>\n<text x=\"560\" y=\"88\" text-anchor=\"middle\" font-size=\"25\" font-family=\"DejaVu Sans,Arial,sans-serif\">(L,r)</text>\n<line x1=\"215\" y1=\"78\" x2=\"650\" y2=\"78\" stroke=\"#111827\" stroke-width=\"3\" marker-end=\"url(#arr)\"/>\n<text x=\"435\" y=\"62\" text-anchor=\"middle\" font-size=\"24\" font-family=\"DejaVu Sans,Arial,sans-serif\" font-style=\"italic\">i</text>\n<line x1=\"290\" y1=\"210\" x2=\"430\" y2=\"210\" stroke=\"#111827\" stroke-width=\"3\" marker-end=\"url(#arr)\"/>\n<text x=\"360\" y=\"198\" text-anchor=\"middle\" font-size=\"23\" font-family=\"DejaVu Sans,Arial,sans-serif\">u_R</text>\n<line x1=\"470\" y1=\"210\" x2=\"670\" y2=\"210\" stroke=\"#111827\" stroke-width=\"3\" marker-end=\"url(#arr)\"/>\n<text x=\"570\" y=\"198\" text-anchor=\"middle\" font-size=\"23\" font-family=\"DejaVu Sans,Arial,sans-serif\">u_b</text>\n<line x1=\"108\" y1=\"278\" x2=\"108\" y2=\"132\" stroke=\"#111827\" stroke-width=\"3\" marker-end=\"url(#arr)\"/>\n<text x=\"84\" y=\"212\" font-size=\"23\" font-family=\"DejaVu Sans,Arial,sans-serif\">E</text>\n<text x=\"480\" y=\"360\" text-anchor=\"middle\" font-size=\"22\" font-family=\"DejaVu Sans,Arial,sans-serif\">قانون جمع التوترات على الحلقة: E = u_R + u_b</text>\n\n</svg>",
+                "render_mode": "inline",
+                "responsive": true
+              }
+            ],
+            "tables": []
+          },
+          {
+            "step_number": 2,
+            "title": "قانون جمع التوترات",
+            "explanation": "على الحلقة يكون توتر المولد مساويًا لمجموع توتري المقاومة والوشيعة:",
+            "calculation": "\\[E=u_R+u_b\\]",
+            "result": "\\(E=u_R+u_b\\)",
+            "figures": [],
+            "tables": []
+          },
+          {
+            "step_number": 3,
+            "title": "علاقات العناصر",
+            "explanation": "على المقاومة \\(u_R=Ri\\)، أما الوشيعة الحقيقية فتكتب على الشكل \\(u_b=ri+L\\dfrac{di}{dt}\\).",
+            "calculation": "\\[u_R=Ri,\\qquad u_b=ri+L\\frac{di}{dt}\\]",
+            "result": "",
+            "figures": [],
+            "tables": []
+          },
+          {
+            "step_number": 4,
+            "title": "التعويض وجمع الحدود",
+            "explanation": "بالتعويض في علاقة الحلقة نحصل على \\(E=Ri+ri+L\\dfrac{di}{dt}\\). بجمع الحدود المتشابهة نكتب:",
+            "calculation": "\\[E=Ri+ri+L\\frac{di}{dt}\\]",
+            "result": "\\(L\\frac{di}{dt}+(R+r)i=E\\)",
+            "figures": [],
+            "tables": []
+          },
+          {
+            "step_number": 5,
+            "title": "الشكل النظامي",
+            "explanation": "إذا كان المطلوب الشكل النظامي نقسم الطرفين على \\(L\\) فنصل إلى المعادلة النهائية.",
+            "calculation": "\\[\\frac{di}{dt}+\\frac{R+r}{L}i=\\frac{E}{L}\\]",
+            "result": "\\(L\\frac{di}{dt}+(R+r)i=E\\)؛ \\(\\frac{di}{dt}+\\frac{R+r}{L}i=\\frac{E}{L}\\)",
+            "figures": [],
+            "tables": []
+          }
+        ],
+        "final_answer": "\\(L\\frac{di}{dt}+(R+r)i=E\\)؛ \\(\\frac{di}{dt}+\\frac{R+r}{L}i=\\frac{E}{L}\\)",
+        "verification": "التحقق: النتيجة النهائية منسجمة مع كون الدارة من الرتبة الأولى، كما أن الإشارات والعلاقات المستعملة موافقة لتوجيهات التوترات الممثلة على الرسم.",
+        "hints": [
+          "ابدأ دائمًا برسم الدارة وتوجيه التوترات والتيار قبل تطبيق قانون جمع التوترات.",
+          "بعد كتابة علاقة الحلقة، عوّض بعلاقات العناصر ثم رتّب الحدود خطوة بخطوة."
+        ],
+        "common_mistakes": [
+          "الخطأ الشائع هو الخطأ في إشارة التوترات بسبب غياب التوجيه المرجعي على الرسم.",
+          "لا تنتقل مباشرة إلى النتيجة؛ اكتب قانون جمع التوترات ثم التعويض ثم الترتيب النهائي."
+        ]
+      }
+    },
+    {
+      "id": "2014_s01_e03_q2c",
+      "display_order": 5,
+      "label": "2-ج",
+      "group_id": "group_2014_s01_e03_q2",
+      "content_type": "question",
+      "text": "إن حل المعادلة التفاضلية السابقة هو \\[i(t)=0.2\\left(1-e^{-50t}\\right)\\] حيث الزمن \\(t\\) بالثانية وشدة التيار بالأمبير (A). استنتج قيمة كل من \\(E\\) و\\(\\tau\\) ثابت الزمن و\\(L\\).",
+      "axis_tags": [
+        "inductor_fundamental_relations",
+        "rl_current_establishment_differential_equation",
+        "rl_time_constant_graphical_analysis",
+        "rl_energy"
+      ],
+      "figures": [],
+      "tables": [],
+      "solution": {
+        "strategy": "سنحل السؤال بطريقة بسيطة ومفهومة: ننجز الحل على مراحل: استخراج I0 وτ، ثم حساب E، ثم حساب L.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "استخراج I0 وτ",
+            "explanation": "بالمقارنة مع \\(i(t)=I_0(1-e^{-t/\\tau})\\): \\[\\boxed{I_0=0.2A},\\qquad \\boxed{\\frac1\\tau=50s^{-1}}.\\] لذلك: \\[\\boxed{\\tau=0.02s}.\\]",
+            "calculation": "",
+            "result": "\\(I_0=0.2A\\)؛ \\(\\frac1\\tau=50s^{-1}\\)؛ \\(\\tau=0.02s\\)",
+            "figures": [],
+            "tables": []
+          },
+          {
+            "step_number": 2,
+            "title": "حساب E",
+            "explanation": "\\[E=I_0(R+r)=0.2(50+10)=\\boxed{12V}.\\]",
+            "calculation": "",
+            "result": "\\(12V\\)",
+            "figures": [],
+            "tables": []
+          },
+          {
+            "step_number": 3,
+            "title": "حساب L",
+            "explanation": "\\[\\tau=\\frac{L}{R+r}\\Rightarrow L=\\tau(R+r)=0.02(60)=\\boxed{1.2H}.\\]",
+            "calculation": "",
+            "result": "\\(1.2H\\)",
+            "figures": [],
+            "tables": []
+          }
+        ],
+        "final_answer": "\\(E=12V\\)، \\(\\tau=0.02s\\)، \\(L=1.2H\\).",
+        "verification": "التحقق: المعادلة النهائية يجب أن تكون من الرتبة الأولى وتربط المقدار المدروس بمشتقته الأولى.",
+        "hints": [
+          "ثابت الزمن يُقرأ عادة من المماس عند الأصل أو عند بلوغ 63% من القيمة النهائية في الشحن.",
+          "اكتب العلاقة الحرفية أولًا، ثم عوّض بعلاقات العناصر، وبعدها رتّب الحدود بهدوء."
+        ],
+        "common_mistakes": [
+          "من الأخطاء المتكررة نسيان التوجيه المرجعي للتوترات أو الخطأ في الإشارة بعد التعويض."
+        ]
+      }
+    },
+    {
+      "id": "2014_s01_e03_q2d",
+      "display_order": 6,
+      "label": "2-د",
+      "group_id": "group_2014_s01_e03_q2",
+      "content_type": "question",
+      "text": "اكتب العبارة اللحظية للطاقة المخزنة في الوشيعة واحسب قيمتها في اللحظة \\(t=\\tau\\).",
+      "axis_tags": [
+        "inductor_fundamental_relations",
+        "rl_current_establishment_differential_equation",
+        "rl_time_constant_graphical_analysis",
+        "rl_energy"
+      ],
+      "figures": [],
+      "tables": [],
+      "solution": {
+        "strategy": "سنحل السؤال بطريقة بسيطة ومفهومة: ننجز الحل على مراحل: طاقة الوشيعة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "طاقة الوشيعة",
+            "explanation": "\\[E_L(t)=\\frac12Li^2(t).\\] عند \\(t=\\tau\\): \\[i(\\tau)=0.2(1-e^{-1})\\approx0.126A.\\] ومنه: \\[E_L(\\tau)=\\frac12\\times1.2\\times(0.126)^2\\approx\\boxed{9.5\\times10^{-3}J}.\\]",
+            "calculation": "",
+            "result": "\\(9.5\\times10^{-3}J\\)",
+            "figures": [],
+            "tables": []
+          }
+        ],
+        "final_answer": "\\(9.5\\times10^{-3}J\\)",
+        "verification": "التحقق: نراجع الإشارة والوحدة الفيزيائية ونتأكد أن النتيجة منسجمة مع المنحنى أو مع السلوك الفيزيائي للدارة.",
+        "hints": [
+          "استخرج المعطيات من النص أو الشكل ثم طبّق العلاقة الفيزيائية المناسبة خطوة بخطوة."
+        ],
+        "common_mistakes": [
+          "لا تعوض عدديًا قبل كتابة العلاقة الحرفية المنظِّمة للحل."
+        ]
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2014(20260907-123500).pdf",
+    "statement_figure_policy": "الشكل 3 أعيد رسمه SVG؛ لا توجد صورة حقيقية تحتاج إلى قص.",
+    "solution_figure_policy": "أضيف SVG للدارة الموجهة وربط راسم الاهتزاز وSVG لتطور uBC(t).",
+    "source_page_numbering": "نص التمرين في صفحة PDF 3؛ التصحيح في صفحتي PDF 10 و11.",
+    "react_compatibility": "الملف جاهز للعرض المباشر دون Regex: statement ثم statement_figures ثم question_groups ثم questions.",
+    "transcription_policy": "الحفاظ على نص الأسئلة والمعطيات، وتحويل الرموز والمعادلات إلى LaTeX فقط.",
+    "correction_notes": [
+      "I0=0.2A، E=12V، τ=0.02s، L=1.2H.",
+      "الطاقة عند t=τ ≈9.5×10^-3J.",
+      "أعيدت المعالجة لإنتاج حلول أكثر تفصيلا وبأسلوب مبسط، مع إضافة رسوم توضيحية خاصة بتطبيق قانون جمع التوترات تبين الدارة واتجاه التيار والتوترات المرجعية."
+    ],
+    "safety_reference": {
+      "title": "غير مطبق",
+      "url": ""
+    },
+    "unified_schema": true,
+    "unified_schema_version": "5.0-physics-bac-unified",
+    "question_split_policy": "تم فصل المطالب الفرعية الرسمية فقط، مع إبقاء المطالب المركبة الرسمية كسؤال واحد متعدد الخطوات.",
+    "media_policy": "رسومات نص التمرين في statement_figures أو questions[].figures، ورسومات الحل داخل solution.steps[].figures فقط.",
+    "table_policy": "الجداول منظمة دلاليا في statement_tables أو questions[].tables أو solution.steps[].tables حسب موضعها."
+  }
+}

@@ -1,0 +1,191 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "session": "ordinary",
+  "year": 2024,
+  "chapter_code": "sequences",
+  "chapter_title": "المتتاليات العددية",
+  "branches": [
+    {
+      "code": "science",
+      "name": "شعبة علوم تجريبية"
+    }
+  ],
+  "source_pdf": "2024(3).pdf",
+  "comparison_source": "bac_sequence_scientifique(20260823-110027).pdf",
+  "source_verification": {
+    "statement_checked_against_original_bac": true,
+    "solution_checked_against_official_correction": true,
+    "solution_style": "حل مفصل ومبسط بخطوات صغيرة، مع إظهار الحسابات الوسيطة التي اختصرها التصحيح الرسمي.",
+    "statement_policy": "نص التمرين والأسئلة منقول من موضوع البكالوريا دون إضافة معطيات جديدة."
+  },
+  "version": "4.2-2024-science-sequences-subject2-ex03",
+  "exercise_number": 3,
+  "subject_number": 2,
+  "points": 5,
+  "source_pages": [
+    3,
+    4
+  ],
+  "solution_source_pages": [
+    7,
+    8
+  ],
+  "title": "التمرين الثالث — بكالوريا الجزائر 2024 — الموضوع الثاني — شعبة علوم تجريبية",
+  "statement": "1) \\(f\\) الدالة العددية المعرفة على المجال \\([2;+\\infty[\\) كما يلي: \\(f(x)=\\frac{x+1}{2x}\\). 2) \\((u_n)\\) المتتالية العددية المعرفة من أجل كل عدد طبيعي \\(n\\)، \\(n\\ge2\\)، بـ: \\(u_n=\\frac{n}{2^n}\\).",
+  "statement_graphs": [],
+  "questions": [
+    {
+      "id": "2024_s2_ex03_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) شكل جدول تغيرات الدالة \\(f\\) ثم استنتج أنه من أجل كل \\(x\\) من \\([2;+\\infty[\\) فإن: \\(\\frac12<f(x)\\le\\frac34\\).",
+      "axis_tags": [
+        "function_monotonicity",
+        "function_bounds"
+      ],
+      "solution": {
+        "strategy": "نحسب مشتقة \\(f\\)، نحدد اتجاه تغيرها، ثم نستنتج حصر قيمها.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "إعادة كتابة f",
+            "explanation": "لدينا:\n\\[\nf(x)=\\frac{x+1}{2x}\n=\\frac12+\\frac1{2x}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب المشتقة",
+            "explanation": "\\[\nf'(x)=-\\frac1{2x^2}.\n\\]\nولكل \\(x\\ge2\\):\n\\[\nf'(x)<0.\n\\]\nإذن \\(f\\) متناقصة تماما على \\([2,+\\infty[\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "قيمة f عند 2",
+            "explanation": "\\[\nf(2)=\\frac{2+1}{2\\times2}=\\frac34.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "النهاية عند +∞",
+            "explanation": "من:\n\\[\nf(x)=\\frac12+\\frac1{2x},\n\\]\nنجد:\n\\[\n\\lim_{x\\to+\\infty}f(x)=\\frac12.\n\\]"
+          },
+          {
+            "step_number": 5,
+            "title": "الاستنتاج",
+            "explanation": "بما أن \\(f\\) متناقصة من \\(\\frac34\\) نحو \\(\\frac12\\) دون أن تبلغ \\(\\frac12\\)، فإن:\n\\[\n\\boxed{\\frac12<f(x)\\le\\frac34}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{f\\text{ متناقصة تماما على }[2,+\\infty[}\\)، و \\(\\boxed{\\frac12<f(x)\\le\\frac34}\\)."
+      }
+    },
+    {
+      "id": "2024_s2_ex03_q2a",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2) \\((u_n)\\) المتتالية العددية المعرفة من أجل كل عدد طبيعي \\(n\\)، \\(n\\ge2\\)، بـ: \\(u_n=\\frac{n}{2^n}\\). أ) بين أنه: من أجل كل \\(n\\) من \\(\\mathbb N\\)، \\(n\\ge2\\)، فإن: \\(\\frac{u_{n+1}}{u_n}\\le\\frac34\\).",
+      "axis_tags": [
+        "sequence_ratio",
+        "comparison"
+      ],
+      "solution": {
+        "strategy": "نحسب النسبة \\(u_{n+1}/u_n\\)، ثم نتعرف عليها كقيمة للدالة \\(f\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب u_{n+1}",
+            "explanation": "\\[\nu_{n+1}=\\frac{n+1}{2^{n+1}}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب النسبة",
+            "explanation": "\\[\n\\frac{u_{n+1}}{u_n}\n=\\frac{\\frac{n+1}{2^{n+1}}}{\\frac{n}{2^n}}\n=\\frac{n+1}{2n}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الربط بالدالة f",
+            "explanation": "لكن:\n\\[\nf(n)=\\frac{n+1}{2n}.\n\\]\nومن السؤال السابق، لكل \\(n\\ge2\\):\n\\[\nf(n)\\le\\frac34.\n\\]\nإذن:\n\\[\n\\boxed{\\frac{u_{n+1}}{u_n}\\le\\frac34}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{\\frac{u_{n+1}}{u_n}\\le\\frac34}\\)."
+      }
+    },
+    {
+      "id": "2024_s2_ex03_q2b",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "ب) أثبت أنه: من أجل كل \\(n\\) من \\(\\mathbb N\\) حيث \\(n\\ge2\\)، فإن: \\(u_n\\le\\frac12\\left(\\frac34\\right)^{n-2}\\) ثم استنتج \\(\\lim_{n\\to+\\infty}u_n\\).",
+      "axis_tags": [
+        "induction",
+        "comparison_sequence",
+        "sequence_limit"
+      ],
+      "solution": {
+        "strategy": "نستعمل المتراجحة السابقة بالتكرار، ثم نطبق مبرهنة الحصر.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "كتابة المتراجحة الأساسية",
+            "explanation": "من السؤال السابق:\n\\[\n\\frac{u_{k+1}}{u_k}\\le\\frac34.\n\\]\nوبما أن \\(u_k>0\\):\n\\[\nu_{k+1}\\le\\frac34u_k.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "تكرار المتراجحة",
+            "explanation": "بالتطبيق المتكرر ابتداء من الرتبة \\(2\\):\n\\[\nu_n\\le u_2\\left(\\frac34\\right)^{n-2}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب u_2",
+            "explanation": "\\[\nu_2=\\frac2{2^2}=\\frac12.\n\\]\nإذن:\n\\[\n\\boxed{u_n\\le\\frac12\\left(\\frac34\\right)^{n-2}}.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "حساب النهاية",
+            "explanation": "كما أن \\(u_n>0\\)، وبالتالي:\n\\[\n0<u_n\\le\\frac12\\left(\\frac34\\right)^{n-2}.\n\\]\nوبما أن:\n\\[\n\\left(\\frac34\\right)^{n-2}\\to0,\n\\]\nفإن مبرهنة الحصر تعطي:\n\\[\n\\boxed{\\lim_{n\\to+\\infty}u_n=0}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{u_n\\le\\frac12(\\frac34)^{n-2}}\\)، و \\(\\boxed{\\lim u_n=0}\\)."
+      }
+    },
+    {
+      "id": "2024_s2_ex03_q2c",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "جـ) نضع: من أجل كل \\(n\\) من \\(\\mathbb N\\)، \\(n\\ge2\\): \\(S_n=\\frac{u_2}{2}+\\frac{u_3}{3}+\\cdots+\\frac{u_n}{n}\\). بين أن: \\(S_n=\\frac12\\left[1-\\left(\\frac12\\right)^{n-1}\\right]\\) ثم عين العدد الطبيعي \\(n\\) حتى يكون: \\(S_n=\\frac{511}{1024}\\).",
+      "axis_tags": [
+        "geometric_sum",
+        "sequence_sum",
+        "equation"
+      ],
+      "solution": {
+        "strategy": "نعوض \\(u_k=\\frac{k}{2^k}\\)، فيتحول كل حد إلى قوة للعدد \\(\\frac12\\)، ثم نحل المعادلة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تبسيط الحد العام داخل المجموع",
+            "explanation": "لدينا:\n\\[\n\\frac{u_k}{k}\n=\\frac{\\frac{k}{2^k}}{k}\n=\\frac1{2^k}.\n\\]\nإذن:\n\\[\nS_n=\\frac1{2^2}+\\frac1{2^3}+\\cdots+\\frac1{2^n}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب المجموع الهندسي",
+            "explanation": "هذا مجموع هندسي حدّه الأول \\(\\frac14\\) وأساسه \\(\\frac12\\)، وعدد حدوده \\(n-1\\):\n\\[\nS_n=\\frac14\\frac{1-(\\frac12)^{n-1}}{1-\\frac12}.\n\\]\nإذن:\n\\[\n\\boxed{S_n=\\frac12\\left[1-\\left(\\frac12\\right)^{n-1}\\right]}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "استعمال القيمة المعطاة",
+            "explanation": "نحل:\n\\[\n\\frac12\\left[1-\\left(\\frac12\\right)^{n-1}\\right]\n=\\frac{511}{1024}.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "إزالة العامل 1/2",
+            "explanation": "نضرب الطرفين في \\(2\\):\n\\[\n1-\\left(\\frac12\\right)^{n-1}\n=\\frac{511}{512}.\n\\]\nإذن:\n\\[\n\\left(\\frac12\\right)^{n-1}\n=1-\\frac{511}{512}\n=\\frac1{512}.\n\\]"
+          },
+          {
+            "step_number": 5,
+            "title": "التعرف على القوة",
+            "explanation": "لدينا:\n\\[\n512=2^9,\n\\]\nإذن:\n\\[\n\\frac1{512}=\\left(\\frac12\\right)^9.\n\\]\nوعليه:\n\\[\nn-1=9.\n\\]\nومن ثم:\n\\[\n\\boxed{n=10}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{S_n=\\frac12[1-(\\frac12)^{n-1}]}\\)، و \\(\\boxed{n=10}\\)."
+      }
+    }
+  ]
+}

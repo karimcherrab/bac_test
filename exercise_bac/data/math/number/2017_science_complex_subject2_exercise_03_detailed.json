@@ -1,0 +1,216 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2017-science-complex-subject2-ex03-detailed",
+  "session": "ordinary",
+  "year": 2017,
+  "chapter_code": "complex_numbers",
+  "chapter_title": "الأعداد المركبة",
+  "axis_tags": [
+    "complex_modulus_geometric_interpretation",
+    "complex_algebra_conjugate",
+    "complex_exponential_demoivre",
+    "complex_point_transformations",
+    "complex_argument_trigonometric_form"
+  ],
+  "branches": [
+    {
+      "code": "science",
+      "name": "شعبة علوم تجريبية"
+    }
+  ],
+  "exercise_number": 3,
+  "subject_number": 2,
+  "source_page": 4,
+  "source_pages": [
+    4
+  ],
+  "solution_source_pages": [
+    9
+  ],
+  "title": "التمرين الثالث — بكالوريا الجزائر 2017 — الموضوع الثاني — شعبة علوم تجريبية",
+  "statement": "المستوى المركب منسوب إلى المعلم المتعامد والمتجانس \\((O;\\vec u,\\vec v)\\). أجب بصحيح أو خطأ مع التعليل في كل حالة من الحالات الخمس.",
+  "questions": [
+    {
+      "id": "2017_s2_complex_ex03_q1",
+      "display_order": 1,
+      "content_type": "true_false",
+      "text": "1) مجموعة حلول المعادلة \\(\\left|\\frac{z+1-i}{z-i}\\right|=1\\) في المجموعة \\(C\\) هي \\(S=\\left\\{-\\frac12+i\\right\\}\\).",
+      "axis_tags": [
+        "complex_modulus_geometric_interpretation"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحول مساواة الطويلتين إلى مساواة مسافتين ثم نحدد المحل الهندسي.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "شرط التعريف",
+            "explanation": "يجب أن يكون \\(z\\neq i\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "تحويل المعادلة",
+            "explanation": "\\[\\left|\\frac{z+1-i}{z-i}\\right|=1\\iff |z+1-i|=|z-i|.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "التفسير الهندسي",
+            "explanation": "إذا رمزنا إلى النقطة ذات اللاحقة \\(-1+i\\) بـ A، وإلى النقطة ذات اللاحقة \\(i\\) بـ B، فالشرط هو \\(MA=MB\\). إذن مجموعة الحلول هي المنصف العمودي للقطعة \\([AB]\\)، وليست نقطة واحدة."
+          },
+          {
+            "step_number": 4,
+            "title": "بصيغة ديكارتية",
+            "explanation": "إذا \\(z=x+iy\\):\n\\[(x+1)^2+(y-1)^2=x^2+(y-1)^2\\Rightarrow x=-\\frac12.\\]"
+          }
+        ],
+        "final_answer": "العبارة خاطئة. مجموعة الحلول هي المستقيم \\(\\operatorname{Re}(z)=-\\frac12\\)، وليست المجموعة ذات العنصر الوحيد \\(-\\frac12+i\\)."
+      }
+    },
+    {
+      "id": "2017_s2_complex_ex03_q2",
+      "display_order": 2,
+      "content_type": "true_false",
+      "text": "2) من أجل كل عدد مركب \\(z\\): \\((z+2)(\\overline z+2)=|z+2|^2\\).",
+      "axis_tags": [
+        "complex_algebra_conjugate"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل الهوية الأساسية \\(w\\overline w=|w|^2\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "اختيار w",
+            "explanation": "نضع:\n\\[w=z+2.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب المرافق",
+            "explanation": "بما أن \\(2\\) حقيقي:\n\\[\\overline w=\\overline{z+2}=\\overline z+2.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "تطبيق الهوية",
+            "explanation": "\\[(z+2)(\\overline z+2)=w\\overline w=|w|^2=|z+2|^2.\\]"
+          }
+        ],
+        "final_answer": "العبارة صحيحة."
+      }
+    },
+    {
+      "id": "2017_s2_complex_ex03_q3",
+      "display_order": 3,
+      "content_type": "true_false",
+      "text": "3) من أجل كل عدد طبيعي \\(n\\): \\(\\left(\\frac12+i\\frac{\\sqrt3}{2}\\right)^{3n}=1\\).",
+      "axis_tags": [
+        "complex_exponential_demoivre",
+        "complex_argument_trigonometric_form"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نكتب العدد على الشكل الأسي ثم نستعمل خواص القوى.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الشكل الأسي",
+            "explanation": "\\[\\frac12+i\\frac{\\sqrt3}{2}=e^{i\\pi/3}.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "رفع للقوة 3n",
+            "explanation": "\\[\\left(e^{i\\pi/3}\\right)^{3n}=e^{in\\pi}=(-1)^n.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "اختبار العبارة",
+            "explanation": "القيمة ليست دائمًا \\(1\\). مثلًا عند \\(n=1\\):\n\\[(-1)^1=-1\\neq1.\\]"
+          }
+        ],
+        "final_answer": "العبارة خاطئة؛ القيمة تساوي \\((-1)^n\\)، وتساوي 1 فقط عندما يكون \\(n\\) زوجيًا."
+      }
+    },
+    {
+      "id": "2017_s2_complex_ex03_q4",
+      "display_order": 4,
+      "content_type": "true_false",
+      "text": "4) \\(S\\) التشابه المباشر الذي مركزه النقطة \\(\\Omega\\) ذات اللاحقة \\(1\\)، ونسبته \\(3\\)، وزاويته \\(\\frac\\pi2\\). صورة الدائرة \\((C)\\) ذات المركز \\(\\omega(0;1)\\) ونصف القطر \\(3\\) بالتشابه \\(S\\) هي الدائرة \\((C')\\) ذات المركز \\(\\omega'(-2;-3)\\) ونصف القطر \\(9\\).",
+      "axis_tags": [
+        "complex_point_transformations"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نتحقق من صورة مركز الدائرة ومن تحول نصف القطر تحت التشابه.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "المعطيات المركبة",
+            "explanation": "مركز التشابه \\(\\Omega\\) لاحقته \\(1\\)، ومركز الدائرة \\(\\omega(0;1)\\) لاحقته \\(i\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "صيغة التشابه",
+            "explanation": "معامل التشابه هو:\n\\[3e^{i\\pi/2}=3i.\\]\nإذن:\n\\[z'-1=3i(z-1).\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "صورة المركز ω",
+            "explanation": "نعوض \\(z=i\\):\n\\[z_{\\omega'}-1=3i(i-1)=-3-3i.\\]\nومن ثم:\n\\[z_{\\omega'}=-2-3i.\\]\nأي \\(\\omega'(-2,-3)\\)."
+          },
+          {
+            "step_number": 4,
+            "title": "نصف القطر",
+            "explanation": "التشابه ذو النسبة \\(3\\) يضرب الأطوال في \\(3\\):\n\\[R'=3\\times3=9.\\]"
+          }
+        ],
+        "final_answer": "العبارة صحيحة."
+      }
+    },
+    {
+      "id": "2017_s2_complex_ex03_q5",
+      "display_order": 5,
+      "content_type": "true_false",
+      "text": "5) من أجل كل عدد حقيقي \\(\\alpha\\): إذا كان \\(Z=(\\sin\\alpha+i\\cos\\alpha)(\\cos\\alpha-i\\sin\\alpha)\\)، فإن \\(\\arg(Z)=\\frac\\pi2-2\\alpha+2k\\pi\\)، حيث \\(k\\) عدد صحيح.",
+      "axis_tags": [
+        "complex_argument_trigonometric_form",
+        "complex_exponential_demoivre"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحول العاملين إلى شكل أسي ثم نجمع الحجج.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "العامل الأول",
+            "explanation": "\\[\\sin\\alpha+i\\cos\\alpha=\\cos\\left(\\frac\\pi2-\\alpha\\right)+i\\sin\\left(\\frac\\pi2-\\alpha\\right)=e^{i(\\pi/2-\\alpha)}.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "العامل الثاني",
+            "explanation": "\\[\\cos\\alpha-i\\sin\\alpha=e^{-i\\alpha}.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب Z",
+            "explanation": "\\[Z=e^{i(\\pi/2-\\alpha)}e^{-i\\alpha}=e^{i(\\pi/2-2\\alpha)}.\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "الحجة",
+            "explanation": "\\[\\arg(Z)=\\frac\\pi2-2\\alpha+2k\\pi,\\qquad k\\in\\mathbb Z.\\]"
+          }
+        ],
+        "final_answer": "العبارة صحيحة."
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2017.pdf",
+    "statement_figure_policy": "لا يوجد شكل إلزامي في نص تمرين الصح والخطأ.",
+    "solution_figure_policy": "التعليل جبري وهندسي ولا يحتاج إلى رسم إلزامي.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  }
+}

@@ -1,0 +1,218 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "session": "ordinary",
+  "year": 2023,
+  "chapter_code": "sequences",
+  "chapter_title": "المتتاليات العددية",
+  "branches": [
+    {
+      "code": "science",
+      "name": "شعبة علوم تجريبية"
+    }
+  ],
+  "source_pdf": "2023(2).pdf",
+  "comparison_source": "bac_sequence_scientifique(20260823-105736).pdf",
+  "source_verification": {
+    "statement_checked_against_original_bac": true,
+    "solution_checked_against_official_correction": true,
+    "solution_style": "حل مفصل ومبسط بخطوات صغيرة، مع إظهار الحسابات الوسيطة التي اختصرها التصحيح الرسمي.",
+    "statement_policy": "نص التمرين والأسئلة منقول من موضوع البكالوريا دون إضافة معطيات جديدة."
+  },
+  "version": "4.2-2023-science-sequences-subject1-ex03",
+  "exercise_number": 3,
+  "subject_number": 1,
+  "points": 5,
+  "source_pages": [
+    1,
+    2
+  ],
+  "solution_source_pages": [
+    6
+  ],
+  "title": "التمرين الثالث — بكالوريا الجزائر 2023 — الموضوع الأول — شعبة علوم تجريبية",
+  "statement": "المتتالية \\((u_n)\\) المعرفة بـ: \\(u_0=\\frac12\\)، ومن أجل كل عدد طبيعي \\(n\\): \\(u_{n+1}=-1+\\frac{2}{2-u_n}\\).",
+  "statement_graphs": [],
+  "questions": [
+    {
+      "id": "2023_s1_ex03_q1a",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) أ) برهن بالتراجع أنه: من أجل كل عدد طبيعي \\(n\\)، \\(0<u_n\\le\\frac12\\).",
+      "axis_tags": [
+        "induction",
+        "sequence_bounds"
+      ],
+      "solution": {
+        "strategy": "نبرهن الحصر بالتراجع.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التحقق عند n=0",
+            "explanation": "لدينا:\n\\[\nu_0=\\frac12.\n\\]\nإذن مباشرة:\n\\[\n0<u_0\\le\\frac12.\n\\]\nفالخاصية صحيحة عند الرتبة \\(0\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "فرضية التراجع",
+            "explanation": "نفترض أنه عند رتبة طبيعية \\(n\\):\n\\[\n0<u_n\\le\\frac12.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "إعادة كتابة u_{n+1}",
+            "explanation": "لدينا:\n\\[\nu_{n+1}=-1+\\frac2{2-u_n}\n=\\frac{-(2-u_n)+2}{2-u_n}\n=\\frac{u_n}{2-u_n}.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "إثبات أن u_{n+1}>0",
+            "explanation": "من فرضية التراجع:\n\\[\nu_n>0\n\\]\nوكذلك:\n\\[\n2-u_n\\ge 2-\\frac12=\\frac32>0.\n\\]\nإذن:\n\\[\nu_{n+1}=\\frac{u_n}{2-u_n}>0.\n\\]"
+          },
+          {
+            "step_number": 5,
+            "title": "إثبات أن u_{n+1}≤1/2",
+            "explanation": "بما أن المقام موجب:\n\\[\n\\frac{u_n}{2-u_n}\\le\\frac12\n\\iff 2u_n\\le2-u_n\n\\iff 3u_n\\le2.\n\\]\nومن \\(u_n\\le\\frac12\\) نحصل على:\n\\[\n3u_n\\le\\frac32<2.\n\\]\nإذن:\n\\[\nu_{n+1}\\le\\frac12.\n\\]"
+          },
+          {
+            "step_number": 6,
+            "title": "الخلاصة",
+            "explanation": "إذن:\n\\[\n0<u_{n+1}\\le\\frac12.\n\\]\nوبالتالي بالتراجع:\n\\[\n\\boxed{0<u_n\\le\\frac12\\quad\\forall n\\in\\mathbb N}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{0<u_n\\le\\frac12\\text{ لكل }n\\in\\mathbb N}\\)."
+      }
+    },
+    {
+      "id": "2023_s1_ex03_q1b",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "ب) بين أن المتتالية \\((u_n)\\) متناقصة تماما.",
+      "axis_tags": [
+        "sequence_monotonicity"
+      ],
+      "solution": {
+        "strategy": "نحسب الفرق \\(u_{n+1}-u_n\\) ثم نستعمل الحصر السابق.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب الفرق",
+            "explanation": "من:\n\\[\nu_{n+1}=\\frac{u_n}{2-u_n},\n\\]\nنكتب:\n\\[\nu_{n+1}-u_n\n=\\frac{u_n}{2-u_n}-u_n.\n\\]\nبتوحيد المقام:\n\\[\nu_{n+1}-u_n\n=\\frac{u_n-u_n(2-u_n)}{2-u_n}.\n\\]\nإذن:\n\\[\n\\boxed{u_{n+1}-u_n=\\frac{(u_n-1)u_n}{2-u_n}}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "دراسة الإشارة",
+            "explanation": "من السؤال السابق:\n\\[\n0<u_n\\le\\frac12.\n\\]\nإذن:\n\\[\nu_n>0,\n\\qquad\nu_n-1<0,\n\\qquad\n2-u_n>0.\n\\]\nوعليه:\n\\[\nu_{n+1}-u_n<0.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الاستنتاج",
+            "explanation": "إذن:\n\\[\nu_{n+1}<u_n\n\\]\nلكل \\(n\\)، ومن ثم المتتالية \\((u_n)\\) متناقصة تماما."
+          }
+        ],
+        "final_answer": "\\(\\boxed{(u_n)\\text{ متناقصة تماما}}\\)."
+      }
+    },
+    {
+      "id": "2023_s1_ex03_q2a",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "2) نضع: من أجل كل عدد طبيعي \\(n\\)، \\(v_n=\\frac1{u_n}-1\\). أ) أثبت أن المتتالية \\((v_n)\\) هندسية أساسها \\(2\\) ثم اكتب عبارة \\(v_n\\) بدلالة \\(n\\).",
+      "axis_tags": [
+        "auxiliary_sequence",
+        "geometric_sequence"
+      ],
+      "solution": {
+        "strategy": "نحسب \\(v_{n+1}\\) باستعمال علاقة الرجوع.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "استعمال صيغة u_{n+1}",
+            "explanation": "لدينا:\n\\[\nu_{n+1}=\\frac{u_n}{2-u_n}.\n\\]\nإذن:\n\\[\n\\frac1{u_{n+1}}=\\frac{2-u_n}{u_n}\n=\\frac2{u_n}-1.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب v_{n+1}",
+            "explanation": "حسب التعريف:\n\\[\nv_{n+1}=\\frac1{u_{n+1}}-1.\n\\]\nإذن:\n\\[\nv_{n+1}=\\frac2{u_n}-2\n=2\\left(\\frac1{u_n}-1\\right).\n\\]\nأي:\n\\[\n\\boxed{v_{n+1}=2v_n}.\n\\]\nإذن \\((v_n)\\) هندسية أساسها \\(2\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "حساب الحد الأول",
+            "explanation": "\\[\nv_0=\\frac1{u_0}-1\n=\\frac1{1/2}-1=2-1=1.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "كتابة الحد العام",
+            "explanation": "بما أن \\(v_0=1\\) والأساس \\(q=2\\):\n\\[\nv_n=v_0q^n=2^n.\n\\]\nإذن:\n\\[\n\\boxed{v_n=2^n}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{q=2,\\quad v_n=2^n}\\)."
+      }
+    },
+    {
+      "id": "2023_s1_ex03_q2b",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "ب) استنتج أنه: من أجل كل عدد طبيعي \\(n\\)، \\(u_n=\\frac1{2^n+1}\\) ثم احسب \\(\\lim_{n\\to+\\infty}u_n\\).",
+      "axis_tags": [
+        "explicit_sequence_formula",
+        "sequence_limit"
+      ],
+      "solution": {
+        "strategy": "نعود إلى تعريف \\(v_n\\) ثم نعوض عبارته الصريحة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الانطلاق من تعريف v_n",
+            "explanation": "لدينا:\n\\[\nv_n=\\frac1{u_n}-1.\n\\]\nومن السؤال السابق:\n\\[\nv_n=2^n.\n\\]\nإذن:\n\\[\n\\frac1{u_n}-1=2^n.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "استخراج u_n",
+            "explanation": "\\[\n\\frac1{u_n}=2^n+1.\n\\]\nومن ثم:\n\\[\n\\boxed{u_n=\\frac1{2^n+1}}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب النهاية",
+            "explanation": "عندما \\(n\\to+\\infty\\):\n\\[\n2^n+1\\to+\\infty.\n\\]\nإذن:\n\\[\n\\boxed{\\lim_{n\\to+\\infty}u_n=0}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{u_n=\\frac1{2^n+1}}\\)، و \\(\\boxed{\\lim u_n=0}\\)."
+      }
+    },
+    {
+      "id": "2023_s1_ex03_q3",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "3) نضع: من أجل كل عدد طبيعي \\(n\\)، \\(S_n=v_0+v_1+\\cdots+v_n\\) و \\(T_n=\\frac1{u_0}+\\frac1{u_1}+\\cdots+\\frac1{u_n}\\). احسب \\(S_n\\) بدلالة \\(n\\) ثم بين أنه من أجل كل عدد طبيعي \\(n\\): \\(T_n=2^{n+1}+n\\).",
+      "axis_tags": [
+        "geometric_sum",
+        "sequence_sum"
+      ],
+      "solution": {
+        "strategy": "نحسب أولا مجموع المتتالية الهندسية \\((v_n)\\)، ثم نستعمل العلاقة \\(\\frac1{u_k}=v_k+1\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب S_n",
+            "explanation": "لدينا:\n\\[\nv_k=2^k.\n\\]\nإذن:\n\\[\nS_n=1+2+2^2+\\cdots+2^n.\n\\]\nوهذا مجموع هندسي أساسه \\(2\\):\n\\[\nS_n=\\frac{1-2^{n+1}}{1-2}=2^{n+1}-1.\n\\]\nإذن:\n\\[\n\\boxed{S_n=2^{n+1}-1}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "ربط T_n بـ S_n",
+            "explanation": "من تعريف \\(v_k\\):\n\\[\nv_k=\\frac1{u_k}-1.\n\\]\nإذن:\n\\[\n\\frac1{u_k}=v_k+1.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "جمع الحدود",
+            "explanation": "وعليه:\n\\[\nT_n=\\sum_{k=0}^{n}(v_k+1)\n=\\sum_{k=0}^{n}v_k+(n+1).\n\\]\nأي:\n\\[\nT_n=S_n+n+1.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "التعويض عن S_n",
+            "explanation": "\\[\nT_n=(2^{n+1}-1)+(n+1)=2^{n+1}+n.\n\\]\nإذن:\n\\[\n\\boxed{T_n=2^{n+1}+n}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{S_n=2^{n+1}-1}\\)، و \\(\\boxed{T_n=2^{n+1}+n}\\)."
+      }
+    }
+  ]
+}

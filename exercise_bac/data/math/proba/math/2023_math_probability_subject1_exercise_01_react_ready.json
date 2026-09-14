@@ -1,0 +1,205 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "graph_schema_version": "1.0-react-json",
+  "version": "4.2-2023-math-probability-subject1-ex01-react-ready",
+  "session": "ordinary",
+  "year": 2023,
+  "chapter_code": "probability",
+  "chapter_title": "الاحتمالات",
+  "axis_tags": [
+    "probability_language_probability_law",
+    "counting_combinations",
+    "conditional_probability",
+    "random_variable_probability_distribution_expectation",
+    "repeated_independent_trials"
+  ],
+  "branches": [
+    {
+      "code": "math",
+      "name": "شعبة رياضيات"
+    }
+  ],
+  "exercise_number": 1,
+  "subject_number": 1,
+  "source_page": 1,
+  "source_pages": [
+    1
+  ],
+  "solution_source_pages": [
+    6
+  ],
+  "title": "التمرين الأول — بكالوريا الجزائر 2023 — الموضوع الأول — شعبة رياضيات — الاحتمالات",
+  "statement": "يحتوي كيس على 10 كريات متماثلة ولا نفرق بينها باللمس، منها كريتان حمراوان مرقمتان بـ: 2 ، -3 وخمس كريات بيضاء مرقمة بـ: 0 ، 1 ، 1 ، 2 ، -2 وثلاث كريات خضراء مرقمة بـ: 0 ، 1 ، 2\nنسحب عشوائيا وفي آن واحد ثلاث كريات من الكيس ونعتبر الحوادث A ، B ، C الآتية:\nA \"الحصول على 3 كريات من نفس اللون\" ، B \"الحصول على الألوان الثلاثة\"\nC \"الحصول على 3 كريات مجموع أرقامها معدوم\"",
+  "questions": [
+    {
+      "id": "2023_s1_probability_ex01_q1a",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) أ) احسب \\(P(A)\\) و \\(P(B)\\) ثم بين أن: \\(P(C)=\\frac{3}{20}\\).",
+      "axis_tags": [
+        "probability_language_probability_law",
+        "counting_combinations"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "السحب يتم في آن واحد، لذلك نستعمل التوفيقات. عدد السحبات الممكنة هو اختيار 3 كريات من أصل 10.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "عدد الحالات الممكنة",
+            "explanation": "\\[|\\Omega|=\\binom{10}{3}=120.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب P(A)",
+            "explanation": "حتى نحصل على 3 كريات من نفس اللون، يمكن سحب 3 بيضاء أو 3 خضراء فقط، لأن عدد الكريات الحمراء هو 2:\n\\[\nP(A)=\\frac{\\binom53+\\binom33}{\\binom{10}{3}}=\\frac{10+1}{120}=\\frac{11}{120}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب P(B)",
+            "explanation": "للحصول على الألوان الثلاثة نختار كرية حمراء وكرية بيضاء وكرية خضراء:\n\\[\nP(B)=\\frac{\\binom21\\binom51\\binom31}{\\binom{10}{3}}=\\frac{30}{120}=\\frac14.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "الحالات التي يكون فيها مجموع الأرقام معدوما",
+            "explanation": "التركيبات الممكنة للأرقام هي:\n\\[\n\\{-2,2,0\\},\\qquad \\{-2,1,1\\},\\qquad \\{2,1,-3\\}.\n\\]\nوبعد عد الكريات الفعلية الموافقة لهذه التركيبات نجد 18 سحبة ملائمة."
+          },
+          {
+            "step_number": 5,
+            "title": "حساب P(C)",
+            "explanation": "\\[\nP(C)=\\frac{18}{120}=\\frac{3}{20}.\n\\]"
+          }
+        ],
+        "final_answer": "\\[P(A)=\\frac{11}{120},\\qquad P(B)=\\frac14,\\qquad P(C)=\\frac3{20}.\\]"
+      }
+    },
+    {
+      "id": "2023_s1_probability_ex01_q1b",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "ب) احسب \\(P(A\\cap C)\\) ثم استنتج \\(P_C(A)\\).",
+      "axis_tags": [
+        "conditional_probability",
+        "counting_combinations"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحدد السحبات التي تحقق في الوقت نفسه: ثلاث كريات من نفس اللون ومجموع أرقامها معدوم، ثم نستعمل تعريف الاحتمال الشرطي.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الحالات الموافقة لـ A∩C",
+            "explanation": "الحالتان الممكنتان من نفس اللون هما بين الكريات البيضاء:\n\\[\n\\{-2,1,1\\},\\qquad \\{-2,2,0\\}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب P(A∩C)",
+            "explanation": "\\[\nP(A\\cap C)=\\frac{2}{120}=\\frac1{60}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب الاحتمال الشرطي",
+            "explanation": "\\[\nP_C(A)=P(A\\mid C)=\\frac{P(A\\cap C)}{P(C)}=\\frac{\\frac1{60}}{\\frac3{20}}=\\frac19.\n\\]"
+          }
+        ],
+        "final_answer": "\\[P(A\\cap C)=\\frac1{60},\\qquad P_C(A)=\\frac19.\\]"
+      }
+    },
+    {
+      "id": "2023_s1_probability_ex01_q2",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "2) نعتبر المتغير العشوائي \\(X\\) الذي يرفق بكل عملية سحب لثلاث كريات عدد الألوان المتحصل عليها.\nعين قانون الاحتمال للمتغير العشوائي \\(X\\) ثم احسب أمله الرياضياتي \\(E(X)\\).",
+      "axis_tags": [
+        "random_variable_probability_distribution_expectation"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "عدد الألوان الممكن الحصول عليها عند سحب 3 كريات هو 1 أو 2 أو 3.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "قيم X",
+            "explanation": "\\[X\\in\\{1,2,3\\}.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "احتمال X=1",
+            "explanation": "القيمة \\(X=1\\) تعني سحب 3 كريات من نفس اللون، أي الحادثة \\(A\\):\n\\[\nP(X=1)=\\frac{11}{120}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "احتمال X=3",
+            "explanation": "القيمة \\(X=3\\) تعني الحصول على الألوان الثلاثة، أي الحادثة \\(B\\):\n\\[\nP(X=3)=\\frac14=\\frac{30}{120}.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "احتمال X=2",
+            "explanation": "\\[\nP(X=2)=1-P(X=1)-P(X=3)\n=1-\\frac{11}{120}-\\frac{30}{120}=\\frac{79}{120}.\n\\]"
+          },
+          {
+            "step_number": 5,
+            "title": "قانون الاحتمال",
+            "explanation": "\\[\n\\begin{array}{c|ccc}\nx_i&1&2&3\\\\\\hline\nP(X=x_i)&\\frac{11}{120}&\\frac{79}{120}&\\frac{30}{120}\n\\end{array}\n\\]"
+          },
+          {
+            "step_number": 6,
+            "title": "حساب الأمل الرياضياتي",
+            "explanation": "\\[\nE(X)=1\\times\\frac{11}{120}+2\\times\\frac{79}{120}+3\\times\\frac{30}{120}=\\frac{259}{120}.\n\\]"
+          }
+        ],
+        "final_answer": "\\[\n\\begin{array}{c|ccc}\nx_i&1&2&3\\\\\\hline\nP(X=x_i)&\\frac{11}{120}&\\frac{79}{120}&\\frac{30}{120}\n\\end{array}\n\\]\n\\[E(X)=\\frac{259}{120}.\\]"
+      }
+    },
+    {
+      "id": "2023_s1_probability_ex01_q3",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "3) نسحب الآن عشوائيا من الكيس ثلاث كريات على التوالي وبإرجاع.\nاحسب احتمال الحصول على ثلاث كريات جداء أرقامها معدوم.",
+      "axis_tags": [
+        "repeated_independent_trials",
+        "probability_language_probability_law"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "يكون الجداء معدوما إذا ظهرت كرية رقمها 0 مرة واحدة على الأقل. نستعمل الحادثة العكسية.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "احتمال عدم سحب الصفر في سحب واحد",
+            "explanation": "في الكيس كريتان رقمهما 0، إذن 8 كريات رقمها غير معدوم:\n\\[\nP(\\text{رقم غير معدوم})=\\frac8{10}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "ثلاث سحبات مع الإرجاع",
+            "explanation": "بما أن السحب مع الإرجاع فالسحبات مستقلة:\n\\[\nP(\\text{عدم ظهور الصفر في السحبات الثلاث})=\\left(\\frac8{10}\\right)^3=\\frac{64}{125}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الاحتمال المطلوب",
+            "explanation": "\\[\nP=1-\\frac{64}{125}=\\frac{61}{125}.\n\\]"
+          }
+        ],
+        "final_answer": "\\[P=\\frac{61}{125}.\\]"
+      }
+    }
+  ],
+  "rendering_contract": {
+    "no_capture": true,
+    "external_image_required": false,
+    "external_svg_required": false,
+    "graph_source": "inline_json",
+    "supported_graph_types": [],
+    "react_note": "هذا التمرين لا يحتاج رسما أو شجرة. الجداول الرياضية تعرض مباشرة بصيغة LaTeX في React."
+  },
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2023(8).pdf",
+    "statement_figure_policy": "لا يوجد رسم في نص التمرين.",
+    "solution_figure_policy": "لا Capture ولا SVG ولا صورة خارجية.",
+    "renderer": "MathJax/KaTeX + standard content renderer"
+  }
+}

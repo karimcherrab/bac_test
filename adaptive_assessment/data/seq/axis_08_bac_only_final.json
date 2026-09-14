@@ -1,0 +1,1199 @@
+{
+  "schema_version": "2.0",
+  "subject": {
+    "code": "math",
+    "title": "الرياضيات"
+  },
+  "branch": {
+    "code": "science",
+    "title": "علوم تجريبية"
+  },
+  "chapter": {
+    "code": "sequences",
+    "title": "المتتاليات العددية"
+  },
+  "axis": {
+    "tag": "seq_bounded",
+    "title": "المتتالية المحدودة"
+  },
+  "source_summary": {
+    "lesson_files_count": 1,
+    "bac_files_count": 1,
+    "years_covered": [
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "notes": [
+      "هذا الملف مخصص لاختبار أفكار البكالوريا فقط في محور المتتالية المحدودة.",
+      "skills موجودة كمصفوفة فارغة لمنع ظهور أفكار شرح المحور في الاختبار.",
+      "bac_ideas محصورة حصريا في SEQ_BAC_58 إلى SEQ_BAC_64.",
+      "هذا المحور يعمل غالبا كجسر نحو الرتابة والتقارب: الحصر يثبت أولا، ثم يُستعمل لاحقا لإثبات اتجاه التغير أو اختيار النهاية."
+    ]
+  },
+  "lesson_scope": {
+    "learning_outcomes": [
+      "إتقان أفكار البكالوريا السبع المرتبطة بالحصر والتحديد وتوظيفهما في دراسة المتتالية."
+    ],
+    "concepts": [
+      "الحصر من جهتين.",
+      "التحديد من الأعلى.",
+      "التحديد من الأسفل.",
+      "إيجابية تعبير لضمان التعريف.",
+      "استقرار المجال f(I)⊂I.",
+      "اختيار النهاية باستعمال الحصر.",
+      "الحصر حول نقطة التثبيت."
+    ],
+    "methods": [
+      "إثبات a<u_n<b.",
+      "إثبات u_n≤M أو u_n≥m.",
+      "إثبات شروط تعريف اللوغاريتم أو المقلوب.",
+      "إثبات f(I)⊂I ثم التراجع.",
+      "استعمال الحصر لاختيار جذر معادلة النهاية.",
+      "استعمال الحصر في دراسة الرتابة."
+    ],
+    "prerequisites": [],
+    "excluded_topics": [
+      "أي فكرة درس عامة خارج أفكار BAC المحددة.",
+      "حساب النهاية كهدف مستقل.",
+      "التمثيل البياني كهدف مستقل.",
+      "أي فكرة خارج SEQ_BAC_58 إلى SEQ_BAC_64."
+    ]
+  },
+  "skills": [],
+  "bac_ideas": [
+    {
+      "idea_code": "SEQ_BAC_58",
+      "title": "إثبات أن جميع الحدود تقع بين عددين ثابتين",
+      "description": "إثبات حصر من الشكل a<u_n<b أو a≤u_n≤b لجميع n، غالبا باستعمال علاقة تراجعية والتراجع، بهدف ضمان بقاء المتتالية داخل مجال ثابت.",
+      "bac_priority": "critical",
+      "frequency_level": "very_high",
+      "occurrence_count": 9,
+      "years": [
+        2008,
+        2012,
+        2013,
+        2016,
+        2017,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "last_seen_year": 2026,
+      "skill_refs": [],
+      "required_skills": [],
+      "prerequisites": [],
+      "external_prerequisites": [],
+      "difficulty_range": {
+        "min": 2,
+        "max": 3
+      },
+      "variants": [
+        {
+          "variant_code": "SEQ_BAC_58_V01",
+          "title": "حصر صارم من جهتين",
+          "description": "إثبات a<u_n<b لكل n.",
+          "years": [
+            2008,
+            2012,
+            2013,
+            2016,
+            2017,
+            2025,
+            2026
+          ],
+          "occurrence_count": 7,
+          "difficulty": 2,
+          "skill_idea_codes": [],
+          "required_skills": [],
+          "distinguishing_feature": "الحد محصور بين عددين ثابتين بمتراجحتين صارمتين."
+        },
+        {
+          "variant_code": "SEQ_BAC_58_V02",
+          "title": "حصر غير صارم من جهتين",
+          "description": "إثبات a≤u_n≤b لكل n.",
+          "years": [
+            2023,
+            2024
+          ],
+          "occurrence_count": 2,
+          "difficulty": 2,
+          "skill_idea_codes": [],
+          "required_skills": [],
+          "distinguishing_feature": "الحصر يسمح بالمساواة مع أحد الحدين أو كليهما."
+        }
+      ],
+      "common_errors": [
+        {
+          "code": "SEQ_BAC_58_ONE_SIDE_ONLY",
+          "description": "إثبات جهة واحدة من الحصر واعتبار الحصر الكامل محققا.",
+          "severity": "high",
+          "related_skill_idea_codes": []
+        },
+        {
+          "code": "SEQ_BAC_58_INDUCTION_BREAK",
+          "description": "عدم استعمال فرضية الحصر لإثباتها عند الرتبة التالية.",
+          "severity": "high",
+          "related_skill_idea_codes": []
+        }
+      ],
+      "bac_occurrences": [
+        {
+          "year": 2008,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_58: إثبات أن جميع الحدود تقع بين عددين ثابتين.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2012,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_58: إثبات أن جميع الحدود تقع بين عددين ثابتين.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2013,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_58: إثبات أن جميع الحدود تقع بين عددين ثابتين.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2016,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_58: إثبات أن جميع الحدود تقع بين عددين ثابتين.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2017,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_58: إثبات أن جميع الحدود تقع بين عددين ثابتين.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2023,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_58: إثبات أن جميع الحدود تقع بين عددين ثابتين.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2024,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_58: إثبات أن جميع الحدود تقع بين عددين ثابتين.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2025,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_58: إثبات أن جميع الحدود تقع بين عددين ثابتين.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2026,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_58: إثبات أن جميع الحدود تقع بين عددين ثابتين.",
+          "skill_idea_codes": []
+        }
+      ],
+      "mastery_requirements": {
+        "must_cover_variants": [
+          "SEQ_BAC_58_V01"
+        ],
+        "minimum_successful_variants": 1,
+        "requires_bac_style_question": true,
+        "required_skill_idea_codes": [],
+        "notes": "هذه أكثر فكرة مباشرة في محور المتتالية المحدودة، وغالبا تستعمل لاحقا في الرتابة أو التقارب."
+      },
+      "generation_guidance": {
+        "allowed_structures": [
+          "متتالية تراجعية ثم طلب إثبات a<u_n<b.",
+          "إثبات حصر ثنائي قبل دراسة الرتابة أو النهاية."
+        ],
+        "must_test": [
+          "الحد السفلي",
+          "الحد العلوي",
+          "صحة الحصر لكل n"
+        ],
+        "may_vary": [
+          "a",
+          "b",
+          "دليل البداية"
+        ],
+        "must_not_change": [
+          "يجب أن يكون الحصر بثابتين لا يعتمدان على n."
+        ],
+        "forbidden_concepts": [
+          "تحويل السؤال إلى نهاية فقط"
+        ]
+      }
+    },
+    {
+      "idea_code": "SEQ_BAC_59",
+      "title": "إثبات أن المتتالية محدودة من الأعلى ثم دمج ذلك مع التزايد",
+      "description": "إثبات وجود ثابت M بحيث u_n≤M لجميع n، ثم استعمال ذلك عادة مع كون المتتالية متزايدة لاستنتاج التقارب.",
+      "bac_priority": "critical",
+      "frequency_level": "high",
+      "occurrence_count": 8,
+      "years": [
+        2008,
+        2012,
+        2013,
+        2016,
+        2017,
+        2019,
+        2023,
+        2026
+      ],
+      "last_seen_year": 2026,
+      "skill_refs": [],
+      "required_skills": [],
+      "prerequisites": [],
+      "external_prerequisites": [],
+      "difficulty_range": {
+        "min": 2,
+        "max": 3
+      },
+      "variants": [
+        {
+          "variant_code": "SEQ_BAC_59_V01",
+          "title": "حد علوي يساوي نقطة تثبيت",
+          "description": "إثبات u_n<L لجميع n ثم استعماله مع التزايد.",
+          "years": [
+            2008,
+            2012,
+            2013,
+            2016,
+            2017,
+            2019,
+            2026
+          ],
+          "occurrence_count": 7,
+          "difficulty": 2,
+          "skill_idea_codes": [],
+          "required_skills": [],
+          "distinguishing_feature": "الحد العلوي غالبا هو قيمة النهاية المتوقعة أو نقطة تثبيت."
+        },
+        {
+          "variant_code": "SEQ_BAC_59_V02",
+          "title": "حد علوي ثابت عام",
+          "description": "إثبات u_n≤M دون أن يكون M بالضرورة نقطة تثبيت.",
+          "years": [
+            2023
+          ],
+          "occurrence_count": 1,
+          "difficulty": 2,
+          "skill_idea_codes": [],
+          "required_skills": [],
+          "distinguishing_feature": "المطلوب فقط التحديد من الأعلى."
+        }
+      ],
+      "common_errors": [
+        {
+          "code": "SEQ_BAC_59_BOUND_NOT_GLOBAL",
+          "description": "إثبات u_n≤M لبعض الحدود فقط لا لجميع n.",
+          "severity": "high",
+          "related_skill_idea_codes": []
+        },
+        {
+          "code": "SEQ_BAC_59_CONVERGENCE_TOO_EARLY",
+          "description": "استنتاج التقارب من التحديد من الأعلى وحده دون الرتابة.",
+          "severity": "high",
+          "related_skill_idea_codes": []
+        }
+      ],
+      "bac_occurrences": [
+        {
+          "year": 2008,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_59: إثبات أن المتتالية محدودة من الأعلى ثم دمج ذلك مع التزايد.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2012,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_59: إثبات أن المتتالية محدودة من الأعلى ثم دمج ذلك مع التزايد.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2013,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_59: إثبات أن المتتالية محدودة من الأعلى ثم دمج ذلك مع التزايد.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2016,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_59: إثبات أن المتتالية محدودة من الأعلى ثم دمج ذلك مع التزايد.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2017,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_59: إثبات أن المتتالية محدودة من الأعلى ثم دمج ذلك مع التزايد.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2019,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_59: إثبات أن المتتالية محدودة من الأعلى ثم دمج ذلك مع التزايد.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2023,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_59: إثبات أن المتتالية محدودة من الأعلى ثم دمج ذلك مع التزايد.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2026,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_59: إثبات أن المتتالية محدودة من الأعلى ثم دمج ذلك مع التزايد.",
+          "skill_idea_codes": []
+        }
+      ],
+      "mastery_requirements": {
+        "must_cover_variants": [
+          "SEQ_BAC_59_V01"
+        ],
+        "minimum_successful_variants": 1,
+        "requires_bac_style_question": true,
+        "required_skill_idea_codes": [],
+        "notes": "هذه الفكرة تعمل غالبا كجسر مباشر نحو SEQ_BAC_49 في محور التقارب."
+      },
+      "generation_guidance": {
+        "allowed_structures": [
+          "إثبات u_n<L ثم إثبات أنها متزايدة.",
+          "إثبات التحديد من الأعلى تمهيدا لمبرهنة التقارب الرتيب."
+        ],
+        "must_test": [
+          "ثبات الحد العلوي",
+          "شموله لجميع n",
+          "الربط بالتزايد عند الطلب"
+        ],
+        "may_vary": [
+          "M",
+          "L",
+          "طريقة الإثبات"
+        ],
+        "must_not_change": [
+          "الفكرة الأساسية هي التحديد من الأعلى."
+        ],
+        "forbidden_concepts": [
+          "الاكتفاء بالتزايد دون حد علوي"
+        ]
+      }
+    },
+    {
+      "idea_code": "SEQ_BAC_60",
+      "title": "إثبات أن المتتالية محدودة من الأسفل ثم دمج ذلك مع التناقص",
+      "description": "إثبات وجود ثابت m بحيث u_n≥m لجميع n، ثم استعمال ذلك عادة مع كون المتتالية متناقصة لاستنتاج التقارب.",
+      "bac_priority": "high",
+      "frequency_level": "medium",
+      "occurrence_count": 2,
+      "years": [
+        2015,
+        2021
+      ],
+      "last_seen_year": 2021,
+      "skill_refs": [],
+      "required_skills": [],
+      "prerequisites": [],
+      "external_prerequisites": [],
+      "difficulty_range": {
+        "min": 2,
+        "max": 3
+      },
+      "variants": [
+        {
+          "variant_code": "SEQ_BAC_60_V01",
+          "title": "حد سفلي ثابت مع متتالية متناقصة",
+          "description": "إثبات u_n≥m ثم استعماله مع التناقص.",
+          "years": [
+            2015,
+            2021
+          ],
+          "occurrence_count": 2,
+          "difficulty": 2,
+          "skill_idea_codes": [],
+          "required_skills": [],
+          "distinguishing_feature": "الحد السفلي يمنع المتتالية المتناقصة من النزول دون قيمة ثابتة."
+        }
+      ],
+      "common_errors": [
+        {
+          "code": "SEQ_BAC_60_BOUND_NOT_GLOBAL",
+          "description": "التحقق من حد سفلي لعدد محدود من الرتب فقط.",
+          "severity": "high",
+          "related_skill_idea_codes": []
+        },
+        {
+          "code": "SEQ_BAC_60_CONVERGENCE_TOO_EARLY",
+          "description": "استنتاج التقارب من التحديد من الأسفل وحده.",
+          "severity": "high",
+          "related_skill_idea_codes": []
+        }
+      ],
+      "bac_occurrences": [
+        {
+          "year": 2015,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_60: إثبات أن المتتالية محدودة من الأسفل ثم دمج ذلك مع التناقص.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2021,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_60: إثبات أن المتتالية محدودة من الأسفل ثم دمج ذلك مع التناقص.",
+          "skill_idea_codes": []
+        }
+      ],
+      "mastery_requirements": {
+        "must_cover_variants": [
+          "SEQ_BAC_60_V01"
+        ],
+        "minimum_successful_variants": 1,
+        "requires_bac_style_question": true,
+        "required_skill_idea_codes": [],
+        "notes": "أقل تكرارا من الحد العلوي، لكنها بنية BAC واضحة عندما تكون المتتالية متناقصة."
+      },
+      "generation_guidance": {
+        "allowed_structures": [
+          "إثبات u_n≥m ثم إثبات التناقص.",
+          "تحديد من الأسفل تمهيدا للتقارب."
+        ],
+        "must_test": [
+          "إثبات الحد السفلي",
+          "شموله لكل n",
+          "الربط بالتناقص"
+        ],
+        "may_vary": [
+          "m",
+          "العلاقة التراجعية"
+        ],
+        "must_not_change": [
+          "الفكرة الأساسية هي التحديد من الأسفل."
+        ],
+        "forbidden_concepts": [
+          "التناقص وحده"
+        ]
+      }
+    },
+    {
+      "idea_code": "SEQ_BAC_61",
+      "title": "إثبات إيجابية تعبير مرتبط بالحد لضمان تعريف الجذر أو اللوغاريتم أو المقلوب",
+      "description": "إثبات خاصية مثل u_n>0 أو u_n+a>0 أو u_n+a≠0 قبل استعمال جذر أو ln أو 1/(u_n+a)، لضمان أن التحويل اللاحق معرف.",
+      "bac_priority": "critical",
+      "frequency_level": "high",
+      "occurrence_count": 7,
+      "years": [
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2023,
+        2026
+      ],
+      "last_seen_year": 2026,
+      "skill_refs": [],
+      "required_skills": [],
+      "prerequisites": [],
+      "external_prerequisites": [],
+      "difficulty_range": {
+        "min": 1,
+        "max": 3
+      },
+      "variants": [
+        {
+          "variant_code": "SEQ_BAC_61_V01",
+          "title": "إيجابية من أجل اللوغاريتم",
+          "description": "إثبات u_n-a>0 قبل تعريف ln(u_n-a).",
+          "years": [
+            2019,
+            2026
+          ],
+          "occurrence_count": 2,
+          "difficulty": 2,
+          "skill_idea_codes": [],
+          "required_skills": [],
+          "distinguishing_feature": "شرط التعريف مرتبط باللوغاريتم."
+        },
+        {
+          "variant_code": "SEQ_BAC_61_V02",
+          "title": "عدم انعدام المقام أو إيجابية المقلوب",
+          "description": "إثبات u_n+a≠0 أو u_n+a>0 قبل تعريف 1/(u_n+a).",
+          "years": [
+            2016,
+            2017,
+            2018,
+            2023
+          ],
+          "occurrence_count": 4,
+          "difficulty": 2,
+          "skill_idea_codes": [],
+          "required_skills": [],
+          "distinguishing_feature": "شرط التعريف مرتبط بالمقلوب."
+        },
+        {
+          "variant_code": "SEQ_BAC_61_V03",
+          "title": "إيجابية مباشرة للحد",
+          "description": "إثبات u_n>0 لاستعماله في خطوات لاحقة.",
+          "years": [
+            2015
+          ],
+          "occurrence_count": 1,
+          "difficulty": 1,
+          "skill_idea_codes": [],
+          "required_skills": [],
+          "distinguishing_feature": "الخاصية المطلوبة تخص الحد نفسه."
+        }
+      ],
+      "common_errors": [
+        {
+          "code": "SEQ_BAC_61_DOMAIN_IGNORED",
+          "description": "استعمال ln أو المقلوب قبل إثبات شرط التعريف.",
+          "severity": "high",
+          "related_skill_idea_codes": []
+        },
+        {
+          "code": "SEQ_BAC_61_NONZERO_VS_POSITIVE",
+          "description": "الخلط بين شرط عدم الانعدام وشرط الإيجابية.",
+          "severity": "high",
+          "related_skill_idea_codes": []
+        }
+      ],
+      "bac_occurrences": [
+        {
+          "year": 2015,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_61: إثبات إيجابية تعبير مرتبط بالحد لضمان تعريف الجذر أو اللوغاريتم أو المقلوب.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2016,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_61: إثبات إيجابية تعبير مرتبط بالحد لضمان تعريف الجذر أو اللوغاريتم أو المقلوب.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2017,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_61: إثبات إيجابية تعبير مرتبط بالحد لضمان تعريف الجذر أو اللوغاريتم أو المقلوب.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2018,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_61: إثبات إيجابية تعبير مرتبط بالحد لضمان تعريف الجذر أو اللوغاريتم أو المقلوب.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2019,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_61: إثبات إيجابية تعبير مرتبط بالحد لضمان تعريف الجذر أو اللوغاريتم أو المقلوب.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2023,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_61: إثبات إيجابية تعبير مرتبط بالحد لضمان تعريف الجذر أو اللوغاريتم أو المقلوب.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2026,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_61: إثبات إيجابية تعبير مرتبط بالحد لضمان تعريف الجذر أو اللوغاريتم أو المقلوب.",
+          "skill_idea_codes": []
+        }
+      ],
+      "mastery_requirements": {
+        "must_cover_variants": [
+          "SEQ_BAC_61_V01"
+        ],
+        "minimum_successful_variants": 1,
+        "requires_bac_style_question": true,
+        "required_skill_idea_codes": [],
+        "notes": "هذه ليست مجرد فكرة إشارة؛ هدفها البكالوري ضمان شرعية تحويل لاحق."
+      },
+      "generation_guidance": {
+        "allowed_structures": [
+          "إثبات u_n-a>0 قبل تعريف v_n=ln(u_n-a).",
+          "إثبات u_n+a≠0 قبل تعريف v_n=1/(u_n+a)."
+        ],
+        "must_test": [
+          "تحديد شرط التعريف",
+          "إثبات الشرط لكل n",
+          "ربطه بالتحويل اللاحق"
+        ],
+        "may_vary": [
+          "لوغاريتم",
+          "مقلوب",
+          "جذر"
+        ],
+        "must_not_change": [
+          "الإيجابية/عدم الانعدام يجب أن تكون لازمة لتعريف تعبير لاحق."
+        ],
+        "forbidden_concepts": [
+          "إيجابية لا دور لها في التمرين"
+        ]
+      }
+    },
+    {
+      "idea_code": "SEQ_BAC_62",
+      "title": "إثبات أن المجال ثابت بواسطة f(I)⊂I ثم استعمال التراجع",
+      "description": "إذا كانت u_{n+1}=f(u_n)، إثبات أن f ترسل المجال I إلى نفسه، ثم استعمال u_0∈I والتراجع لإثبات u_n∈I لكل n.",
+      "bac_priority": "high",
+      "frequency_level": "low",
+      "occurrence_count": 2,
+      "years": [
+        2016,
+        2017
+      ],
+      "last_seen_year": 2017,
+      "skill_refs": [],
+      "required_skills": [],
+      "prerequisites": [],
+      "external_prerequisites": [],
+      "difficulty_range": {
+        "min": 2,
+        "max": 3
+      },
+      "variants": [
+        {
+          "variant_code": "SEQ_BAC_62_V01",
+          "title": "استقرار مجال مغلق أو مفتوح",
+          "description": "إثبات f(I)⊂I ثم تمرير الانتماء بالتراجع.",
+          "years": [
+            2016,
+            2017
+          ],
+          "occurrence_count": 2,
+          "difficulty": 3,
+          "skill_idea_codes": [],
+          "required_skills": [],
+          "distinguishing_feature": "الحصر يثبت على مستوى الدالة أولا ثم ينقل إلى حدود المتتالية."
+        }
+      ],
+      "common_errors": [
+        {
+          "code": "SEQ_BAC_62_IMAGE_NOT_PROVED",
+          "description": "القول إن I ثابت دون إثبات f(I)⊂I.",
+          "severity": "high",
+          "related_skill_idea_codes": []
+        },
+        {
+          "code": "SEQ_BAC_62_INITIAL_NOT_IN_I",
+          "description": "نسيان التحقق من u_0∈I.",
+          "severity": "high",
+          "related_skill_idea_codes": []
+        }
+      ],
+      "bac_occurrences": [
+        {
+          "year": 2016,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_62: إثبات أن المجال ثابت بواسطة f(I)⊂I ثم استعمال التراجع.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2017,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_62: إثبات أن المجال ثابت بواسطة f(I)⊂I ثم استعمال التراجع.",
+          "skill_idea_codes": []
+        }
+      ],
+      "mastery_requirements": {
+        "must_cover_variants": [
+          "SEQ_BAC_62_V01"
+        ],
+        "minimum_successful_variants": 1,
+        "requires_bac_style_question": true,
+        "required_skill_idea_codes": [],
+        "notes": "فكرة ذكية لأنها تربط دراسة الدالة بالحصر التراجعي للمتتالية."
+      },
+      "generation_guidance": {
+        "allowed_structures": [
+          "إعطاء I ودالة f ثم طلب إثبات f(I)⊂I وبعدها u_n∈I.",
+          "استعمال جدول تغيرات أو دراسة f لإثبات استقرار المجال."
+        ],
+        "must_test": [
+          "u_0∈I",
+          "إثبات f(I)⊂I",
+          "التراجع على الانتماء"
+        ],
+        "may_vary": [
+          "I",
+          "شكل f"
+        ],
+        "must_not_change": [
+          "المجال يجب أن يكون ثابتا تحت تأثير f."
+        ],
+        "forbidden_concepts": [
+          "حصر عددي بلا استعمال f(I)⊂I"
+        ]
+      }
+    },
+    {
+      "idea_code": "SEQ_BAC_63",
+      "title": "استعمال الحصر لاختيار الجذر الصحيح لمعادلة النهاية",
+      "description": "بعد إثبات التقارب والحصول على معادلة L=f(L) ذات أكثر من حل، استعمال الحصر السابق على u_n لاستبعاد الحلول غير الممكنة وتحديد النهاية الصحيحة.",
+      "bac_priority": "critical",
+      "frequency_level": "high",
+      "occurrence_count": 7,
+      "years": [
+        2012,
+        2013,
+        2016,
+        2017,
+        2019,
+        2025,
+        2026
+      ],
+      "last_seen_year": 2026,
+      "skill_refs": [],
+      "required_skills": [],
+      "prerequisites": [],
+      "external_prerequisites": [],
+      "difficulty_range": {
+        "min": 2,
+        "max": 3
+      },
+      "variants": [
+        {
+          "variant_code": "SEQ_BAC_63_V01",
+          "title": "حلّان ونختار الموافق للمجال",
+          "description": "حل L=f(L) ثم اختيار الحل الذي ينتمي إلى المجال الذي ثبت أن u_n تنتمي إليه.",
+          "years": [
+            2012,
+            2013,
+            2016,
+            2017,
+            2019,
+            2025,
+            2026
+          ],
+          "occurrence_count": 7,
+          "difficulty": 3,
+          "skill_idea_codes": [],
+          "required_skills": [],
+          "distinguishing_feature": "الحصر السابق يصبح أداة اختيار للنهاية."
+        }
+      ],
+      "common_errors": [
+        {
+          "code": "SEQ_BAC_63_PICK_RANDOM_ROOT",
+          "description": "اختيار أحد جذري معادلة النهاية دون الرجوع للحصر.",
+          "severity": "high",
+          "related_skill_idea_codes": []
+        },
+        {
+          "code": "SEQ_BAC_63_LIMIT_OUTSIDE_BOUND",
+          "description": "قبول نهاية خارج المجال الذي يحتوي جميع الحدود.",
+          "severity": "high",
+          "related_skill_idea_codes": []
+        }
+      ],
+      "bac_occurrences": [
+        {
+          "year": 2012,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_63: استعمال الحصر لاختيار الجذر الصحيح لمعادلة النهاية.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2013,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_63: استعمال الحصر لاختيار الجذر الصحيح لمعادلة النهاية.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2016,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_63: استعمال الحصر لاختيار الجذر الصحيح لمعادلة النهاية.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2017,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_63: استعمال الحصر لاختيار الجذر الصحيح لمعادلة النهاية.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2019,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_63: استعمال الحصر لاختيار الجذر الصحيح لمعادلة النهاية.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2025,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_63: استعمال الحصر لاختيار الجذر الصحيح لمعادلة النهاية.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2026,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_63: استعمال الحصر لاختيار الجذر الصحيح لمعادلة النهاية.",
+          "skill_idea_codes": []
+        }
+      ],
+      "mastery_requirements": {
+        "must_cover_variants": [
+          "SEQ_BAC_63_V01"
+        ],
+        "minimum_successful_variants": 1,
+        "requires_bac_style_question": true,
+        "required_skill_idea_codes": [],
+        "notes": "هذه الفكرة تقع عند تقاطع المحور 8 والمحور 7، لكن الحصر هو الأداة الحاسمة فيها."
+      },
+      "generation_guidance": {
+        "allowed_structures": [
+          "إثبات u_n∈I، ثم بعد التقارب حل L=f(L) واختيار L∈I."
+        ],
+        "must_test": [
+          "حل معادلة النهاية",
+          "استحضار الحصر السابق",
+          "استبعاد الجذر غير الموافق"
+        ],
+        "may_vary": [
+          "عدد الجذور",
+          "المجال I"
+        ],
+        "must_not_change": [
+          "الحصر هو سبب اختيار الجذر الصحيح."
+        ],
+        "forbidden_concepts": [
+          "اختيار الجذر بالتخمين"
+        ]
+      }
+    },
+    {
+      "idea_code": "SEQ_BAC_64",
+      "title": "الحصر حول نقطة التثبيت ثم استعماله في الرتابة",
+      "description": "إثبات u_n<L أو u_n>L لجميع n، ثم استثمار هذا الحصر في إشارة u_{n+1}-u_n أو f(u_n)-u_n لاستنتاج اتجاه التغير.",
+      "bac_priority": "critical",
+      "frequency_level": "very_high",
+      "occurrence_count": 9,
+      "years": [
+        2008,
+        2010,
+        2012,
+        2013,
+        2016,
+        2017,
+        2019,
+        2023,
+        2026
+      ],
+      "last_seen_year": 2026,
+      "skill_refs": [],
+      "required_skills": [],
+      "prerequisites": [],
+      "external_prerequisites": [],
+      "difficulty_range": {
+        "min": 2,
+        "max": 3
+      },
+      "variants": [
+        {
+          "variant_code": "SEQ_BAC_64_V01",
+          "title": "كل الحدود تحت نقطة التثبيت",
+          "description": "إثبات u_n<L ثم استعماله لإثبات التزايد.",
+          "years": [
+            2008,
+            2010,
+            2012,
+            2013,
+            2016,
+            2017,
+            2019,
+            2026
+          ],
+          "occurrence_count": 8,
+          "difficulty": 2,
+          "skill_idea_codes": [],
+          "required_skills": [],
+          "distinguishing_feature": "الحصر يحدد جهة الحدود بالنسبة إلى L."
+        },
+        {
+          "variant_code": "SEQ_BAC_64_V02",
+          "title": "كل الحدود فوق نقطة التثبيت",
+          "description": "إثبات u_n>L ثم استعماله عادة لإثبات التناقص.",
+          "years": [
+            2023
+          ],
+          "occurrence_count": 1,
+          "difficulty": 2,
+          "skill_idea_codes": [],
+          "required_skills": [],
+          "distinguishing_feature": "الحصر يقع فوق نقطة التثبيت."
+        }
+      ],
+      "common_errors": [
+        {
+          "code": "SEQ_BAC_64_BOUND_NOT_USED",
+          "description": "إثبات u_n<L أو u_n>L ثم عدم استعماله في دراسة إشارة الفرق.",
+          "severity": "high",
+          "related_skill_idea_codes": []
+        },
+        {
+          "code": "SEQ_BAC_64_FIXED_POINT_SIDE",
+          "description": "الخلط في جهة الحصر بالنسبة إلى نقطة التثبيت.",
+          "severity": "high",
+          "related_skill_idea_codes": []
+        }
+      ],
+      "bac_occurrences": [
+        {
+          "year": 2008,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_64: الحصر حول نقطة التثبيت ثم استعماله في الرتابة.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2010,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_64: الحصر حول نقطة التثبيت ثم استعماله في الرتابة.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2012,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_64: الحصر حول نقطة التثبيت ثم استعماله في الرتابة.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2013,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_64: الحصر حول نقطة التثبيت ثم استعماله في الرتابة.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2016,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_64: الحصر حول نقطة التثبيت ثم استعماله في الرتابة.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2017,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_64: الحصر حول نقطة التثبيت ثم استعماله في الرتابة.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2019,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_64: الحصر حول نقطة التثبيت ثم استعماله في الرتابة.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2023,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_64: الحصر حول نقطة التثبيت ثم استعماله في الرتابة.",
+          "skill_idea_codes": []
+        },
+        {
+          "year": 2026,
+          "branch": "science",
+          "exercise": "",
+          "question": "",
+          "summary": "ظهور فكرة SEQ_BAC_64: الحصر حول نقطة التثبيت ثم استعماله في الرتابة.",
+          "skill_idea_codes": []
+        }
+      ],
+      "mastery_requirements": {
+        "must_cover_variants": [
+          "SEQ_BAC_64_V01"
+        ],
+        "minimum_successful_variants": 1,
+        "requires_bac_style_question": true,
+        "required_skill_idea_codes": [],
+        "notes": "من أكثر أنماط BAC ترابطا: حصر حول نقطة التثبيت ثم رتابة ثم تقارب."
+      },
+      "generation_guidance": {
+        "allowed_structures": [
+          "إثبات u_n<L ثم دراسة u_{n+1}-u_n.",
+          "إثبات u_n>L ثم استعمال f(u_n)-u_n."
+        ],
+        "must_test": [
+          "الحصر حول L",
+          "تحديد جهة الحدود",
+          "استعماله في الرتابة"
+        ],
+        "may_vary": [
+          "L",
+          "اتجاه الرتابة"
+        ],
+        "must_not_change": [
+          "الحصر حول نقطة التثبيت يجب أن يكون مدخلا لسؤال الرتابة."
+        ],
+        "forbidden_concepts": [
+          "حصر لا يستعمل لاحقا"
+        ]
+      }
+    }
+  ],
+  "coverage_summary": {
+    "total_skills": 0,
+    "total_skill_ideas": 0,
+    "total_bac_ideas": 7,
+    "total_variants": 12,
+    "critical_bac_ideas": [
+      "SEQ_BAC_58",
+      "SEQ_BAC_59",
+      "SEQ_BAC_61",
+      "SEQ_BAC_63",
+      "SEQ_BAC_64"
+    ],
+    "high_priority_bac_ideas": [
+      "SEQ_BAC_60",
+      "SEQ_BAC_62"
+    ],
+    "skills_covered_by_bac": [],
+    "skills_not_seen_in_bac": [],
+    "skill_ideas_not_seen_in_bac": [],
+    "years_covered": [
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "bac_statistics": {
+      "total_bac_ideas": 7,
+      "total_variants": 12,
+      "most_frequent_ideas": [
+        "SEQ_BAC_58",
+        "SEQ_BAC_64"
+      ],
+      "latest_bac_year": 2026,
+      "rare_ideas": [
+        "SEQ_BAC_62"
+      ],
+      "idea_occurrence_counts": {
+        "SEQ_BAC_58": 9,
+        "SEQ_BAC_59": 8,
+        "SEQ_BAC_60": 2,
+        "SEQ_BAC_61": 7,
+        "SEQ_BAC_62": 2,
+        "SEQ_BAC_63": 7,
+        "SEQ_BAC_64": 9
+      }
+    }
+  }
+}

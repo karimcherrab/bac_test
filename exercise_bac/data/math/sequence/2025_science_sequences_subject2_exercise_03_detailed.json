@@ -1,0 +1,336 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "session": "ordinary",
+  "year": 2025,
+  "chapter_code": "sequences",
+  "chapter_title": "المتتاليات العددية",
+  "branches": [
+    {
+      "code": "science",
+      "name": "شعبة علوم تجريبية"
+    }
+  ],
+  "source_pdf": "2025(3).pdf",
+  "comparison_source": "bac_sequence_scientifique(20260823-110309).pdf",
+  "source_verification": {
+    "statement_checked_against_original_bac": true,
+    "solution_checked_against_official_correction": true,
+    "solution_style": "حل مفصل ومبسط بخطوات صغيرة، مع إظهار الحسابات الوسيطة التي اختصرها التصحيح الرسمي.",
+    "statement_policy": "نص التمرين والأسئلة منقول من موضوع البكالوريا دون إضافة معطيات جديدة.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  },
+  "version": "4.2-2025-science-sequences-subject2-ex03",
+  "exercise_number": 3,
+  "subject_number": 2,
+  "points": 5,
+  "source_pages": [
+    3,
+    4
+  ],
+  "solution_source_pages": [
+    9
+  ],
+  "title": "التمرين الثالث — بكالوريا الجزائر 2025 — الموضوع الثاني — شعبة علوم تجريبية",
+  "statement": "1) ادرس اتجاه تغير الدالة \\(f\\) المعرفة على \\([0;+\\infty[\\) بـ: \\(f(x)=\\frac{5x}{2x+1}\\). 2) \\((u_n)\\) المتتالية العددية المعرفة بـ: \\(u_0=3\\)، ومن أجل كل عدد طبيعي \\(n\\): \\(u_{n+1}=f(u_n)\\). 3) \\((v_n)\\) المتتالية العددية المعرفة على \\(\\mathbb N\\) بـ: \\(v_n=3^n\\left(1-\\frac2{u_n}\\right)\\).",
+  "statement_graphs": [],
+  "questions": [
+    {
+      "id": "2025_s2_ex03_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) ادرس اتجاه تغير الدالة \\(f\\) المعرفة على \\([0;+\\infty[\\) بـ: \\(f(x)=\\frac{5x}{2x+1}\\).",
+      "axis_tags": [
+        "function_monotonicity"
+      ],
+      "solution": {
+        "strategy": "نحسب مشتقة الدالة ونحدد إشارتها على المجال.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب المشتقة",
+            "explanation": "\\[\nf'(x)=\\frac{5(2x+1)-10x}{(2x+1)^2}=\\frac5{(2x+1)^2}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "دراسة الإشارة",
+            "explanation": "لكل \\(x\\ge0\\):\n\\[\n(2x+1)^2>0,\n\\]\nومن ثم:\n\\[\nf'(x)>0.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الاستنتاج",
+            "explanation": "إذن \\(f\\) متزايدة تماما على \\([0,+\\infty[\\)."
+          }
+        ],
+        "final_answer": "\\(\\boxed{f\\text{ متزايدة تماما على }[0,+\\infty[}\\)."
+      }
+    },
+    {
+      "id": "2025_s2_ex03_q2a",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2) أ) احسب الحدين \\(u_1\\) و \\(u_2\\) ثم خمن اتجاه تغير المتتالية \\((u_n)\\).",
+      "axis_tags": [
+        "sequence_terms",
+        "sequence_conjecture"
+      ],
+      "solution": {
+        "strategy": "نعوض بالتتابع في العلاقة \\(u_{n+1}=f(u_n)\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب u_1",
+            "explanation": "\\[\nu_1=f(3)=\\frac{5\\times3}{2\\times3+1}=\\frac{15}{7}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب u_2",
+            "explanation": "\\[\nu_2=f\\left(\\frac{15}{7}\\right)\n=\\frac{5\\times\\frac{15}{7}}{2\\times\\frac{15}{7}+1}\n=\\frac{75/7}{37/7}\n=\\frac{75}{37}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "التخمين",
+            "explanation": "لدينا:\n\\[\n3>\\frac{15}{7}>\\frac{75}{37}.\n\\]\nإذن نتخمن أن المتتالية \\((u_n)\\) متناقصة تماما."
+          }
+        ],
+        "final_answer": "\\(\\boxed{u_1=\\frac{15}{7},\\quad u_2=\\frac{75}{37}}\\)، والتخمين: متناقصة تماما."
+      }
+    },
+    {
+      "id": "2025_s2_ex03_q2b",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "ب) برهن بالتراجع أنه: من أجل كل عدد طبيعي \\(n\\)، \\(2<u_n\\le3\\).",
+      "axis_tags": [
+        "induction",
+        "sequence_bounds"
+      ],
+      "solution": {
+        "strategy": "نبرهن الحصر بالتراجع، مستعملين تزايد الدالة \\(f\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التحقق عند n=0",
+            "explanation": "لدينا:\n\\[\nu_0=3,\n\\]\nإذن:\n\\[\n2<u_0\\le3.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "فرضية التراجع",
+            "explanation": "نفترض:\n\\[\n2<u_n\\le3.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "استعمال تزايد f",
+            "explanation": "بما أن \\(f\\) متزايدة تماما:\n\\[\nf(2)<f(u_n)\\le f(3).\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "حساب الطرفين",
+            "explanation": "\\[\nf(2)=\\frac{10}{5}=2,\n\\qquad\nf(3)=\\frac{15}{7}<3.\n\\]\nإذن:\n\\[\n2<u_{n+1}\\le\\frac{15}{7}<3.\n\\]\nوبالتالي:\n\\[\n2<u_{n+1}\\le3.\n\\]"
+          },
+          {
+            "step_number": 5,
+            "title": "الخلاصة",
+            "explanation": "بالتراجع:\n\\[\n\\boxed{2<u_n\\le3\\quad\\forall n\\in\\mathbb N}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{2<u_n\\le3}\\) لكل \\(n\\)."
+      }
+    },
+    {
+      "id": "2025_s2_ex03_q2c",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "جـ) ادرس اتجاه تغير المتتالية \\((u_n)\\).",
+      "axis_tags": [
+        "sequence_monotonicity"
+      ],
+      "solution": {
+        "strategy": "نحسب الفرق \\(u_{n+1}-u_n\\) ثم نستخدم الحصر السابق.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب الفرق",
+            "explanation": "\\[\nu_{n+1}-u_n=\\frac{5u_n}{2u_n+1}-u_n.\n\\]\nبتوحيد المقام:\n\\[\nu_{n+1}-u_n\n=\\frac{5u_n-u_n(2u_n+1)}{2u_n+1}\n=\\frac{4u_n-2u_n^2}{2u_n+1}.\n\\]\nإذن:\n\\[\n\\boxed{u_{n+1}-u_n=\\frac{2u_n(2-u_n)}{2u_n+1}}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "دراسة الإشارة",
+            "explanation": "من السؤال السابق:\n\\[\nu_n>2.\n\\]\nإذن:\n\\[\n2-u_n<0.\n\\]\nكما أن \\(u_n>0\\) و\\(2u_n+1>0\\)، ومن ثم:\n\\[\nu_{n+1}-u_n<0.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الاستنتاج",
+            "explanation": "إذن المتتالية \\((u_n)\\) متناقصة تماما."
+          }
+        ],
+        "final_answer": "\\(\\boxed{(u_n)\\text{ متناقصة تماما}}\\)."
+      }
+    },
+    {
+      "id": "2025_s2_ex03_q3a",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "3) أ) بين أن المتتالية \\((v_n)\\) هندسية أساسها \\(\\frac35\\) ثم اكتب \\(v_n\\) بدلالة \\(n\\).",
+      "axis_tags": [
+        "auxiliary_sequence",
+        "geometric_sequence"
+      ],
+      "solution": {
+        "strategy": "نحسب \\(v_{n+1}\\) انطلاقا من تعريف \\(v_n\\) وعلاقة الرجوع.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب 1-2/u_{n+1}",
+            "explanation": "لدينا:\n\\[\nu_{n+1}=\\frac{5u_n}{2u_n+1}.\n\\]\nإذن:\n\\[\n\\frac2{u_{n+1}}=\\frac{2(2u_n+1)}{5u_n}=\\frac45+\\frac{2}{5u_n}.\n\\]\nومن ثم:\n\\[\n1-\\frac2{u_{n+1}}=\\frac15-\\frac{2}{5u_n}=\\frac15\\left(1-\\frac2{u_n}\\right).\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب v_{n+1}",
+            "explanation": "\\[\nv_{n+1}=3^{n+1}\\left(1-\\frac2{u_{n+1}}\\right)\n=3^{n+1}\\times\\frac15\\left(1-\\frac2{u_n}\\right).\n\\]\nأي:\n\\[\nv_{n+1}=\\frac35\\,3^n\\left(1-\\frac2{u_n}\\right)=\\frac35v_n.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب v_0",
+            "explanation": "\\[\nv_0=1-\\frac23=\\frac13.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "الحد العام",
+            "explanation": "\\[\n\\boxed{v_n=\\frac13\\left(\\frac35\\right)^n}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{v_n=\\frac13(\\frac35)^n}\\)."
+      }
+    },
+    {
+      "id": "2025_s2_ex03_q3b",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "ب) استنتج بدلالة \\(n\\) حساب المجموع \\(S_n\\) حيث: \\(S_n=v_0+5v_1+5^2v_2+\\cdots+5^nv_n\\).",
+      "axis_tags": [
+        "sequence_sum",
+        "geometric_sum"
+      ],
+      "solution": {
+        "strategy": "نلاحظ أن \\(5^kv_k\\) يصبح متتالية هندسية بسيطة أساسها \\(3\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تبسيط 5^k v_k",
+            "explanation": "لدينا:\n\\[\nv_k=\\frac13\\left(\\frac35\\right)^k.\n\\]\nإذن:\n\\[\n5^kv_k=\\frac13\\,3^k.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "تحويل المجموع",
+            "explanation": "\\[\nS_n=\\frac13(1+3+3^2+\\cdots+3^n).\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب المجموع الهندسي",
+            "explanation": "\\[\n1+3+\\cdots+3^n=\\frac{3^{n+1}-1}{3-1}=\\frac{3^{n+1}-1}{2}.\n\\]\nإذن:\n\\[\n\\boxed{S_n=\\frac16(3^{n+1}-1)}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{S_n=\\frac16(3^{n+1}-1)}\\)."
+      }
+    },
+    {
+      "id": "2025_s2_ex03_q3c",
+      "display_order": 7,
+      "content_type": "question",
+      "text": "جـ) اكتب عبارة \\(u_n\\) بدلالة \\(n\\) ثم احسب \\(\\lim_{n\\to+\\infty}u_n\\).",
+      "axis_tags": [
+        "explicit_sequence_formula",
+        "sequence_limit"
+      ],
+      "solution": {
+        "strategy": "نساوي تعريف \\(v_n\\) بعبارته الصريحة ثم نستخرج \\(u_n\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "مساواة العبارتين",
+            "explanation": "\\[\n3^n\\left(1-\\frac2{u_n}\\right)=\\frac13\\left(\\frac35\\right)^n.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "القسمة على 3^n",
+            "explanation": "\\[\n1-\\frac2{u_n}=\\frac1{3\\cdot5^n}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "استخراج u_n",
+            "explanation": "\\[\n\\frac2{u_n}=1-\\frac1{3\\cdot5^n}\n=\\frac{3\\cdot5^n-1}{3\\cdot5^n}.\n\\]\nومن ثم:\n\\[\nu_n=\\frac{6\\cdot5^n}{3\\cdot5^n-1}\n=\\frac6{3-(\\frac15)^n}.\n\\]\nإذن:\n\\[\n\\boxed{u_n=\\frac6{3-(\\frac15)^n}}.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "حساب النهاية",
+            "explanation": "بما أن:\n\\[\n\\left(\\frac15\\right)^n\\to0,\n\\]\nفإن:\n\\[\n\\boxed{\\lim u_n=\\frac63=2}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{u_n=\\frac6{3-(\\frac15)^n}}\\)، و \\(\\boxed{\\lim u_n=2}\\)."
+      }
+    },
+    {
+      "id": "2025_s2_ex03_q4a",
+      "display_order": 8,
+      "content_type": "question",
+      "text": "4) أ) تحقق أنه: من أجل كل عدد طبيعي \\(n\\)، \\(\\frac6{u_n}=3-\\frac1{5^n}\\).",
+      "axis_tags": [
+        "algebraic_transformation"
+      ],
+      "solution": {
+        "strategy": "نعوض العبارة الصريحة لـ\\(u_n\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التعويض",
+            "explanation": "من:\n\\[\nu_n=\\frac6{3-(\\frac15)^n},\n\\]\nنحصل مباشرة على:\n\\[\n\\frac6{u_n}=3-\\left(\\frac15\\right)^n.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "إعادة الكتابة",
+            "explanation": "\\[\n\\boxed{\\frac6{u_n}=3-\\frac1{5^n}}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{\\frac6{u_n}=3-\\frac1{5^n}}\\)."
+      }
+    },
+    {
+      "id": "2025_s2_ex03_q4b",
+      "display_order": 9,
+      "content_type": "question",
+      "text": "ب) استنتج بدلالة \\(n\\) حساب المجموع \\(T_n\\) حيث: \\(T_n=\\frac6{u_0}+\\frac6{u_1}+\\cdots+\\frac6{u_n}\\).",
+      "axis_tags": [
+        "sequence_sum",
+        "geometric_sum"
+      ],
+      "solution": {
+        "strategy": "نعوض العلاقة السابقة داخل المجموع ثم نحسب مجموع القوى الهندسية.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تحويل المجموع",
+            "explanation": "\\[\nT_n=\\sum_{k=0}^{n}\\left(3-\\frac1{5^k}\\right)\n=3(n+1)-\\sum_{k=0}^{n}\\left(\\frac15\\right)^k.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب المجموع الهندسي",
+            "explanation": "\\[\n\\sum_{k=0}^{n}\\left(\\frac15\\right)^k\n=\\frac{1-(\\frac15)^{n+1}}{1-\\frac15}\n=\\frac54\\left[1-\\left(\\frac15\\right)^{n+1}\\right].\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "التبسيط",
+            "explanation": "\\[\nT_n=3(n+1)-\\frac54\\left[1-\\left(\\frac15\\right)^{n+1}\\right].\n\\]\nومن ثم:\n\\[\nT_n=3n+\\frac74+\\frac14\\left(\\frac15\\right)^n.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "النتيجة",
+            "explanation": "\\[\n\\boxed{T_n=3n+\\frac74+\\frac14\\left(\\frac15\\right)^n}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{T_n=3n+\\frac74+\\frac14(\\frac15)^n}\\)."
+      }
+    }
+  ]
+}

@@ -1,0 +1,182 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2018-math-space-subject1-ex02-detailed",
+  "session": "ordinary",
+  "year": 2018,
+  "chapter_code": "space_geometry",
+  "chapter_title": "الهندسة في الفضاء",
+  "axis_tags": [
+    "space_parametric_line_plane",
+    "space_cartesian_plane_normal_vector",
+    "space_point_loci",
+    "space_bisector_planes",
+    "space_relative_positions_intersections",
+    "space_circumscribed_circle"
+  ],
+  "branches": [
+    {
+      "code": "math",
+      "name": "شعبة رياضيات"
+    }
+  ],
+  "exercise_number": 2,
+  "subject_number": 1,
+  "source_page": 2,
+  "source_pages": [
+    2
+  ],
+  "solution_source_pages": [
+    7,
+    8
+  ],
+  "title": "التمرين الثاني — بكالوريا الجزائر 2018 — الموضوع الأول — شعبة رياضيات",
+  "statement": "الفضاء منسوب إلى المعلم المتعامد المتجانس \\((O;\\vec{i},\\vec{j},\\vec{k})\\)، نعتبر النقطتين \\(A(1;1;3)\\) و \\(B(1;0;2)\\).",
+  "questions": [
+    {
+      "id": "2018_s1_space_ex02_q1a",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) أ) بين أن النقط \\(O\\)، \\(A\\) و \\(B\\) ليست في استقامية.",
+      "axis_tags": [
+        "space_parametric_line_plane"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب الشعاعين \\(\\overrightarrow{OA}\\) و\\(\\overrightarrow{OB}\\) ثم نتحقق أنهما غير مرتبطين خطيا.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب الشعاعين",
+            "explanation": "\\[\n\\overrightarrow{OA}=(1,1,3),\n\\qquad\n\\overrightarrow{OB}=(1,0,2).\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "اختبار الارتباط الخطي",
+            "explanation": "لو كان الشعاعان مرتبطين خطيا لوجد عدد حقيقي \\(k\\) بحيث \\(\\overrightarrow{OA}=k\\overrightarrow{OB}\\). من الإحداثي الأول نجد \\(k=1\\)، لكن الإحداثي الثاني يعطي \\(1\\neq0\\). إذن الشعاعان غير مرتبطين خطيا."
+          }
+        ],
+        "final_answer": "النقط \\(O\\)، \\(A\\) و \\(B\\) ليست في استقامية."
+      }
+    },
+    {
+      "id": "2018_s1_space_ex02_q1b",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "ب) تحقق أن \\(\\vec n(2;1;-1)\\) شعاع ناظمي للمستوي \\((OAB)\\) ثم عين معادلة ديكارتية له.",
+      "axis_tags": [
+        "space_cartesian_plane_normal_vector",
+        "space_dot_product_orthogonality"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نثبت أن \\(\\vec n\\) عمودي على شعاعين غير متوازيين من المستوى، ثم نستعمل النقطة \\(O\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التعامد مع OA",
+            "explanation": "\\[\n\\vec n\\cdot\\overrightarrow{OA}=2(1)+1(1)-1(3)=0.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "التعامد مع OB",
+            "explanation": "\\[\n\\vec n\\cdot\\overrightarrow{OB}=2(1)+1(0)-1(2)=0.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "معادلة المستوى",
+            "explanation": "إذن \\(\\vec n=(2,1,-1)\\) شعاع ناظمي للمستوي \\((OAB)\\). معادلته من الشكل:\n\\[\n2x+y-z+d=0.\n\\]\nوبما أن \\(O(0,0,0)\\in(OAB)\\) فإن \\(d=0\\)."
+          }
+        ],
+        "final_answer": "\\[(OAB):2x+y-z=0.\\]"
+      }
+    },
+    {
+      "id": "2018_s1_space_ex02_q2",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "2) لتكن \\((\\Delta)\\) مجموعة النقط \\(M\\) من الفضاء التي إحداثياتها \\((x;y;z)\\) وتحقق المعادلة التالية:\n\\[\n(2x+2y+6z-11)^2+(2x+4z-5)^2=0.\n\\]\n- بين أن المجموعة \\((\\Delta)\\) هي تقاطع المستويين المحوريين للقطعتين \\([OA]\\) و \\([OB]\\)، ثم عين تمثيلا وسيطيا للمجموعة \\((\\Delta)\\).",
+      "axis_tags": [
+        "space_point_loci",
+        "space_bisector_planes",
+        "space_parametric_line_plane",
+        "space_relative_positions_intersections"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "مجموع مربعين يساوي صفرا إذا وفقط إذا كان كل مربع يساوي صفرا. ثم نبيّن أن كل معادلة تمثل مستوى محوريا لإحدى القطعتين، وبعدها نحل النظام.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تفكيك معادلة المجموعة",
+            "explanation": "لدينا:\n\\[\n(2x+2y+6z-11)^2+(2x+4z-5)^2=0\n\\]\nإذا وفقط إذا:\n\\[\n\\begin{cases}\n2x+2y+6z-11=0\\\\\n2x+4z-5=0\n\\end{cases}\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "المستوى المحوري للقطعة OA",
+            "explanation": "النقطة \\(M(x,y,z)\\) تنتمي إلى المستوى المحوري للقطعة \\([OA]\\) إذا وفقط إذا \\(MO=MA\\).\nوبتربيع المسافتين:\n\\[\nx^2+y^2+z^2=(x-1)^2+(y-1)^2+(z-3)^2.\n\\]\nوبالتبسيط:\n\\[\n2x+2y+6z-11=0.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "المستوى المحوري للقطعة OB",
+            "explanation": "وبالمثل، \\(M\\) تنتمي إلى المستوى المحوري للقطعة \\([OB]\\) إذا وفقط إذا \\(MO=MB\\):\n\\[\nx^2+y^2+z^2=(x-1)^2+y^2+(z-2)^2.\n\\]\nفنحصل على:\n\\[\n2x+4z-5=0.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "الاستنتاج الهندسي",
+            "explanation": "إذن \\((\\Delta)\\) هي تقاطع المستويين المحوريين:\n\\[\n(P_1):2x+2y+6z-11=0,\n\\qquad\n(P_2):2x+4z-5=0.\n\\]"
+          },
+          {
+            "step_number": 5,
+            "title": "التمثيل الوسيطي",
+            "explanation": "نضع \\(z=t\\). من المعادلة الثانية:\n\\[\n2x+4t-5=0\\Rightarrow x=\\frac52-2t.\n\\]\nثم من المعادلة الأولى:\n\\[\n2\\left(\\frac52-2t\\right)+2y+6t-11=0\n\\Rightarrow y=3-t.\n\\]\nإذن:\n\\[\n(\\Delta):\\begin{cases}\nx=\\frac52-2t\\\\\ny=3-t\\\\\nz=t\n\\end{cases}\n\\quad ;\\ t\\in\\mathbb R.\n\\]"
+          }
+        ],
+        "final_answer": "\\[(\\Delta)=(P_1)\\cap(P_2),\\]\nحيث \\((P_1)\\) و\\((P_2)\\) هما المستويان المحوريان للقطعتين \\([OA]\\) و\\([OB]\\)، و\n\\[(\\Delta):\\begin{cases}x=\\frac52-2t\\\\y=3-t\\\\z=t\\end{cases},\\quad t\\in\\mathbb R.\\]"
+      }
+    },
+    {
+      "id": "2018_s1_space_ex02_q3",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "3) لتكن \\(M\\) نقطة كيفية من الفضاء\n- برهن صحة التكافؤ التالي: \\((M\\in(\\Delta))\\) يكافئ \\((OM=AM=BM)\\) ثم استنتج إحداثيات النقطة \\(\\Omega\\) مركز الدائرة المحيطة بالمثلث \\(OAB\\).",
+      "axis_tags": [
+        "space_point_loci",
+        "space_bisector_planes",
+        "space_circumscribed_circle",
+        "space_relative_positions_intersections"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "الانتماء إلى \\((\\Delta)\\) يعني الانتماء في الوقت نفسه إلى المستويين المحوريين لـ\\([OA]\\) و\\([OB]\\)، أي التساوي في المسافات إلى رؤوس المثلث. أما مركز الدائرة المحيطة فينتمي أيضا إلى مستوى المثلث \\((OAB)\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "إثبات التكافؤ",
+            "explanation": "\\[\nM\\in(\\Delta)\n\\Longleftrightarrow M\\in(P_1)\\ \\text{و}\\ M\\in(P_2)\n\\]\n\\[\n\\Longleftrightarrow OM=AM\\ \\text{و}\\ OM=BM\n\\]\n\\[\n\\Longleftrightarrow OM=AM=BM.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "تحديد مركز الدائرة المحيطة",
+            "explanation": "مركز الدائرة المحيطة بالمثلث \\(OAB\\) يجب أن يكون متساوي البعد عن \\(O,A,B\\)، وبالتالي ينتمي إلى \\((\\Delta)\\)، كما أنه ينتمي إلى مستوى المثلث \\((OAB)\\). إذن:\n\\[\n\\Omega=(\\Delta)\\cap(OAB).\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب إحداثيات Ω",
+            "explanation": "على \\((\\Delta)\\):\n\\[\nx=\\frac52-2t,\\quad y=3-t,\\quad z=t.\n\\]\nوبما أن \\(\\Omega\\in(OAB)\\) ومعادلة المستوى هي:\n\\[\n2x+y-z=0,\n\\]\nفإن:\n\\[\n2\\left(\\frac52-2t\\right)+(3-t)-t=0\n\\Rightarrow 8-6t=0\n\\Rightarrow t=\\frac43.\n\\]\nإذن:\n\\[\nx=-\\frac16,\n\\qquad y=\\frac53,\n\\qquad z=\\frac43.\n\\]"
+          }
+        ],
+        "final_answer": "\\[M\\in(\\Delta)\\Longleftrightarrow OM=AM=BM,\\]\nو\n\\[\\Omega\\left(-\\frac16;\\frac53;\\frac43\\right).\\]"
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2018(20260826-124955).pdf",
+    "statement_figure_policy": "لا يوجد شكل هندسي إلزامي في نص التمرين.",
+    "solution_figure_policy": "الحل مستقل عن أي رسم.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  }
+}

@@ -1,0 +1,320 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2015-tech-math-space-subject1-ex02-detailed",
+  "session": "ordinary",
+  "year": 2015,
+  "chapter_code": "space_geometry",
+  "chapter_title": "الهندسة في الفضاء",
+  "axis_tags": [
+    "space_cartesian_plane_normal_vector",
+    "space_parametric_line_plane",
+    "space_relative_positions_intersections",
+    "space_barycenter",
+    "space_projections_distances",
+    "space_loci"
+  ],
+  "branches": [
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "exercise_number": 2,
+  "subject_number": 1,
+  "source_page": 1,
+  "source_pages": [
+    1,
+    2
+  ],
+  "solution_source_pages": [
+    5,
+    6
+  ],
+  "title": "التمرين الثاني — بكالوريا الجزائر 2015 — الموضوع الأول — شعبة تقني رياضي",
+  "statement": "الفضاء منسوب إلى المعلم المتعامد والمتجانس \\((O;\\vec{i},\\vec{j},\\vec{k})\\). نعتبر النقط \\(A(1;2;2)\\)، \\(B(2;0;2)\\)، \\(C(-2;3;7)\\) والمستوي \\((\\mathcal P)\\) المعرف بالتمثيل الوسيطي:\n\\[\n\\begin{cases}\nx=2+\\beta\\\\\ny=-1-3\\alpha-\\beta\\\\\nz=-\\alpha\n\\end{cases}\n\\]\nحيث \\(\\alpha\\) و\\(\\beta\\) وسيطان حقيقيان.",
+  "questions": [
+    {
+      "id": "2015_s1_space_ex02_q1a",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) أ) بين أن النقط \\(A\\) و\\(B\\) و\\(C\\) تعين مستويا.",
+      "axis_tags": [
+        "space_dot_product_orthogonality"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب شعاعين منطلقهما A، ثم نتحقق أنهما غير متوازيين. عندئذ تكون النقط A وB وC غير مستقيمية.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب الشعاعين AB وAC",
+            "explanation": "\\[\\overrightarrow{AB}=B-A=(1,-2,0).\\]\n\\[\\overrightarrow{AC}=C-A=(-3,1,5).\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "التحقق من عدم التوازي",
+            "explanation": "الشعاعان \\((1,-2,0)\\) و\\((-3,1,5)\\) ليس أحدهما مضاعفا للآخر؛ فمثلا المركبة الثالثة في الأول تساوي \\(0\\) وفي الثاني تساوي \\(5\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "الاستنتاج",
+            "explanation": "إذن النقط \\(A\\)، \\(B\\)، \\(C\\) غير مستقيمية، ومنه فهي تعين مستويا."
+          }
+        ],
+        "final_answer": "النقط \\(A\\)، \\(B\\)، \\(C\\) تعين المستوي \\((ABC)\\)."
+      }
+    },
+    {
+      "id": "2015_s1_space_ex02_q1b",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "ب) تحقق أن الشعاع \\(\\vec n(2;1;1)\\) ناظمي للمستوي \\((ABC)\\)، ثم اكتب معادلة ديكارتية له.",
+      "axis_tags": [
+        "space_cartesian_plane_normal_vector",
+        "space_dot_product_orthogonality"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نثبت أن n عمودي على شعاعين غير متوازيين من المستوي، ثم نستعمل النقطة A لكتابة معادلته.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التعامد مع AB",
+            "explanation": "\\[\\vec n\\cdot\\overrightarrow{AB}=2\\times1+1\\times(-2)+1\\times0=0.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "التعامد مع AC",
+            "explanation": "\\[\\vec n\\cdot\\overrightarrow{AC}=2(-3)+1(1)+1(5)=-6+1+5=0.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "كتابة معادلة المستوي",
+            "explanation": "بما أن \\(\\vec n=(2,1,1)\\)، فالمعادلة من الشكل:\n\\[2x+y+z+d=0.\\]\nوبما أن \\(A(1,2,2)\\in(ABC)\\):\n\\[2+2+2+d=0\\Rightarrow d=-6.\\]"
+          }
+        ],
+        "final_answer": "\\[(ABC):2x+y+z-6=0.\\]"
+      }
+    },
+    {
+      "id": "2015_s1_space_ex02_q2a",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "2) أ) عين معادلة ديكارتية للمستوي \\((\\mathcal P)\\)، ثم بين أن المستويين \\((\\mathcal P)\\) و\\((ABC)\\) متعامدان.",
+      "axis_tags": [
+        "space_cartesian_plane_normal_vector"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحذف الوسيطين α وβ من التمثيل الوسيطي للحصول على معادلة P، ثم نقارن شعاعيهما الناظمين.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حذف الوسيط β",
+            "explanation": "من \\(x=2+\\beta\\) نحصل على:\n\\[\\beta=x-2.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حذف الوسيط α",
+            "explanation": "من \\(z=-\\alpha\\) نحصل على:\n\\[\\alpha=-z.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "إيجاد معادلة P",
+            "explanation": "نعوض في:\n\\[y=-1-3\\alpha-\\beta\\]\nفنجد:\n\\[y=-1+3z-(x-2)=1+3z-x.\\]\nإذن:\n\\[\\mathcal P:x+y-3z-1=0.\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "إثبات التعامد",
+            "explanation": "شعاع ناظم لـ\\((ABC)\\) هو:\n\\[\\vec n=(2,1,1),\\]\nوشعاع ناظم لـ\\((\\mathcal P)\\) هو:\n\\[\\vec n'=(1,1,-3).\\]\nإذن:\n\\[\\vec n\\cdot\\vec n'=2+1-3=0.\\]"
+          }
+        ],
+        "final_answer": "\\[\\mathcal P:x+y-3z-1=0,\\qquad (\\mathcal P)\\perp(ABC).\\]"
+      }
+    },
+    {
+      "id": "2015_s1_space_ex02_q2b",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "ب) بين أن تقاطع \\((\\mathcal P)\\) و\\((ABC)\\) هو المستقيم \\((\\Delta)\\) ذو التمثيل الوسيطي:\n\\[\\begin{cases}x=5+4t\\\\y=-4-7t\\\\z=-t\\end{cases}\\qquad(t\\in\\mathbb R).\\]",
+      "axis_tags": [
+        "space_relative_positions_intersections",
+        "space_parametric_line_plane"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نثبت أن كل نقطة من Δ تنتمي في الوقت نفسه إلى المستويين، ثم نلاحظ أن اتجاه Δ يوافق اتجاه تقاطعهما.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التحقق في (ABC)",
+            "explanation": "نعوض \\(x=5+4t\\)، \\(y=-4-7t\\)، \\(z=-t\\) في:\n\\[2x+y+z-6=0.\\]\nفنجد:\n\\[2(5+4t)+(-4-7t)-t-6=0.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "التحقق في P",
+            "explanation": "نعوض في:\n\\[x+y-3z-1=0.\\]\nفنجد:\n\\[(5+4t)+(-4-7t)-3(-t)-1=0.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الاستنتاج",
+            "explanation": "إذن كل نقطة من \\(\\Delta\\) تنتمي إلى المستويين. وبما أن المستويين غير متوازيين، فتقاطعهما مستقيم، ومنه هذا المستقيم هو \\(\\Delta\\)."
+          }
+        ],
+        "final_answer": "\\[(\\mathcal P)\\cap(ABC)=\\Delta.\\]"
+      }
+    },
+    {
+      "id": "2015_s1_space_ex02_q3a",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "3) أ) عين إحداثيات النقطة \\(H\\) مرجح الجملة \\(\\{(A;1),(B;1),(C;-1)\\}\\).",
+      "axis_tags": [
+        "space_barycenter"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "مجموع المعاملات هو 1، لذلك نحسب إحداثيات H مباشرة بالمتوسط الموزون.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب الإحداثيات",
+            "explanation": "\\[H=\\frac{A+B-C}{1+1-1}=A+B-C.\\]\n\\[x_H=1+2-(-2)=5,\\]\n\\[y_H=2+0-3=-1,\\]\n\\[z_H=2+2-7=-3.\\]"
+          }
+        ],
+        "final_answer": "\\[H(5;-1;-3).\\]"
+      }
+    },
+    {
+      "id": "2015_s1_space_ex02_q3b",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "ب) احسب المسافة بين النقطة \\(H\\) والمستقيم \\((\\Delta)\\).",
+      "axis_tags": [
+        "space_projections_distances"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نأخذ نقطة من Δ وشعاع توجيه له، ثم نطبق صيغة المسافة من نقطة إلى مستقيم في الفضاء باستعمال الجداء الشعاعي.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "اختيار نقطة وشعاع توجيه",
+            "explanation": "عند \\(t=0\\) من \\(\\Delta\\) نحصل على النقطة:\n\\[M_0(5,-4,0).\\]\nوشعاع توجيه:\n\\[\\vec u=(4,-7,-1).\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب المتجهة M0H",
+            "explanation": "\\[\\overrightarrow{M_0H}=H-M_0=(0,3,-3).\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "تطبيق الصيغة",
+            "explanation": "\\[d(H,\\Delta)=\\frac{\\|\\overrightarrow{M_0H}\\times\\vec u\\|}{\\|\\vec u\\|}.\\]\nنحسب:\n\\[\\overrightarrow{M_0H}\\times\\vec u=(-24,-12,-12).\\]\nإذن:\n\\[\\|\\overrightarrow{M_0H}\\times\\vec u\\|=12\\sqrt6,\\qquad \\|\\vec u\\|=\\sqrt{66}.\\]\nومن ثم:\n\\[d(H,\\Delta)=\\frac{12\\sqrt6}{\\sqrt{66}}=\\frac{12}{\\sqrt{11}}=\\frac{12\\sqrt{11}}{11}.\\]"
+          }
+        ],
+        "final_answer": "\\[d(H,\\Delta)=\\frac{12\\sqrt{11}}{11}.\\]"
+      }
+    },
+    {
+      "id": "2015_s1_space_ex02_q4a",
+      "display_order": 7,
+      "content_type": "question",
+      "text": "4) لتكن \\((\\mathcal P')\\) مجموعة النقط \\(M\\) من الفضاء بحيث: \\((\\overrightarrow{MA}+\\overrightarrow{MB}-\\overrightarrow{MC})\\cdot\\vec u=0\\)، حيث \\(\\vec u\\) هو شعاع توجيه \\((\\Delta)\\). أ) بين أن المجموعة \\((\\mathcal P')\\) هي مستو يطلب تعيين عناصره المميزة، ثم استنتج معادلة ديكارتية له.",
+      "axis_tags": [
+        "space_loci",
+        "space_barycenter",
+        "space_cartesian_plane_normal_vector"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل خاصية المرجح H لتحويل المجموع الشعاعي إلى MH، فيصبح الشرط شرط تعامد مع u، أي معادلة مستو.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "استعمال خاصية المرجح",
+            "explanation": "بما أن \\(H\\) مرجح \\((A,1),(B,1),(C,-1)\\) ومجموع المعاملات يساوي \\(1\\)، فإن:\n\\[\\overrightarrow{MA}+\\overrightarrow{MB}-\\overrightarrow{MC}=\\overrightarrow{MH}.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "تفسير الشرط",
+            "explanation": "يصبح الشرط:\n\\[\\overrightarrow{MH}\\cdot\\vec u=0.\\]\nأي أن \\(MH\\) عمودي على \\(\\vec u\\). إذن \\((\\mathcal P')\\) مستو يمر بالنقطة \\(H\\) وشعاعه الناظم هو \\(\\vec u=(4,-7,-1)\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "كتابة المعادلة",
+            "explanation": "بما أن المستوي يمر بـ\\(H(5,-1,-3)\\):\n\\[4(x-5)-7(y+1)-(z+3)=0.\\]\nوبالتبسيط:\n\\[4x-7y-z-30=0.\\]"
+          }
+        ],
+        "final_answer": "\\[(\\mathcal P'):4x-7y-z-30=0.\\]"
+      }
+    },
+    {
+      "id": "2015_s1_space_ex02_q4b",
+      "display_order": 8,
+      "content_type": "question",
+      "text": "ب) بين أن المستويات الثلاثة \\((\\mathcal P)\\)، \\((ABC)\\) و\\((\\mathcal P')\\) تتقاطع في نقطة واحدة \\(E\\)، ثم عين إحداثيات \\(E\\).",
+      "axis_tags": [
+        "space_relative_positions_intersections"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "بما أن تقاطع P وABC هو Δ، يكفي إيجاد تقاطع Δ مع P'. نعوض التمثيل الوسيطي لـΔ في معادلة P'.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التعويض في P'",
+            "explanation": "نعوض:\n\\[x=5+4t,\\quad y=-4-7t,\\quad z=-t\\]\nفي:\n\\[4x-7y-z-30=0.\\]\nفنحصل على:\n\\[4(5+4t)-7(-4-7t)-(-t)-30=0.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "إيجاد الوسيط",
+            "explanation": "\\[18+66t=0\\Rightarrow t=-\\frac3{11}.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب إحداثيات E",
+            "explanation": "\\[x_E=5+4\\left(-\\frac3{11}\\right)=\\frac{43}{11},\\]\n\\[y_E=-4-7\\left(-\\frac3{11}\\right)=-\\frac{23}{11},\\]\n\\[z_E=-\\left(-\\frac3{11}\\right)=\\frac3{11}.\\]"
+          }
+        ],
+        "final_answer": "\\[E\\left(\\frac{43}{11};-\\frac{23}{11};\\frac3{11}\\right).\\]"
+      }
+    },
+    {
+      "id": "2015_s1_space_ex02_q4c",
+      "display_order": 9,
+      "content_type": "question",
+      "text": "ج) احسب بطريقة ثانية المسافة بين النقطة \\(H\\) والمستقيم \\((\\Delta)\\).",
+      "axis_tags": [
+        "space_projections_distances"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "المستوي P' يمر بـH وعمودي على Δ لأن شعاعه الناظم هو شعاع توجيه Δ. والنقطة E هي تقاطع P' مع Δ، لذلك E هو المسقط العمودي لـH على Δ.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تحديد المسقط",
+            "explanation": "لدينا \\(E\\in\\Delta\\) و\\(E\\in\\mathcal P'\\)، كما أن \\(\\mathcal P'\\perp\\Delta\\). إذن \\(E\\) هو المسقط العمودي لـ\\(H\\) على \\(\\Delta\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "حساب EH",
+            "explanation": "\\[\\overrightarrow{HE}=\\left(\\frac{43}{11}-5,-\\frac{23}{11}+1,\\frac3{11}+3\\right)=\\left(-\\frac{12}{11},-\\frac{12}{11},\\frac{36}{11}\\right).\\]\n\\[EH=\\frac1{11}\\sqrt{144+144+1296}=\\frac{12\\sqrt{11}}{11}.\\]"
+          }
+        ],
+        "final_answer": "\\[d(H,\\Delta)=EH=\\frac{12\\sqrt{11}}{11}.\\]"
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2015(2).pdf",
+    "statement_figure_policy": "لا يوجد شكل هندسي إلزامي في نص التمرين.",
+    "solution_figure_policy": "الحل مستقل عن أي رسم.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  }
+}

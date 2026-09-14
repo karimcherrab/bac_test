@@ -1,0 +1,409 @@
+{
+  "tag": "excitatory_inhibitory_synapses",
+  "title": "المشابك التنبيهية والمشابك التثبيطية",
+  "order": 5,
+  "is_active": true,
+  "branches": ["science"],
+  "content": {
+    "language": "ar",
+    "direction": "rtl",
+    "chapter_code": "neural_communication",
+    "chapter_title": "الاتصال العصبي",
+    "axis_tag": "excitatory_inhibitory_synapses",
+    "estimated_minutes": 45,
+    "difficulty": "medium",
+    "lesson_goal": "أن يميز التلميذ بين المشبك التنبيهي والمشبك التثبيطي انطلاقا من نوع القنوات المفتوحة واتجاه حركة الشوارد وتغير الكمون الغشائي.",
+    "prerequisites": [
+      "معرفة كمون الراحة وعتبة توليد كمون العمل.",
+      "معرفة المستقبلات القنوية والقنوات المرتبطة بالكيمياء.",
+      "معرفة أن PPSE كمون بعد مشبكي متدرج."
+    ],
+    "learning_outcomes": [
+      "يميز منحنى PPSE الصاعد نحو العتبة من منحنى PPSI المتجه بعيدا عنها.",
+      "يحدد طبيعة المشبك انطلاقا من تسجيل الكمون بعد المشبكي.",
+      "يفسر أن دخول Na⁺ في نموذج المشبك التنبيهي يسبب زوال الاستقطاب.",
+      "يفسر أن دخول Cl⁻ في نموذج المشبك التثبيطي يسبب فرط الاستقطاب.",
+      "يربط الأستيل كولين بالمستقبلات التنبيهية وGABA بالمستقبلات التثبيطية في وثائق الدرس.",
+      "يربط PPSE بتقريب الغشاء من العتبة وPPSI بإبعاده عنها.",
+      "يقارن المشبكين في جدول وظيفي كامل."
+    ],
+    "learning_path": [
+      {
+        "id": "step_1",
+        "type": "problem",
+        "component": "DiscoveryQuestion",
+        "title": "لماذا لا تعطي كل المشابك النتيجة نفسها؟",
+        "content": {
+          "question": "عند تنبيه نهاية عصبية يرتفع كمون الغشاء بعد المشبكي نحو العتبة، وعند تنبيه نهاية أخرى ينخفض تحت كمون الراحة. ما الذي اختلف بين المشبكين؟",
+          "teacher": "سنحدد نوع المبلغ والمستقبل والشاردة، ثم نربط اتجاه حركة الشاردة باتجاه منحنى الكمون وإمكان توليد كمون عمل.",
+          "action": {"label": "قارن التسجيلين", "next_step": "step_2"}
+        },
+        "display_order": 1
+      },
+      {
+        "id": "step_2",
+        "type": "real_evidence",
+        "component": "RealEvidenceGallery",
+        "title": "الدليل 1: تسجيلان يكشفان نوعي المشبك",
+        "content": {
+          "intro": "تصل نهايتان قبل مشبكيتان E وI إلى عصبون واحد. يسجل O1 كمون الجسم الخلوي ويسجل O2 النشاط على المحور.",
+          "figures": [{
+            "src": "/science/neural-communication/axis-05/ppse_ppsi_recordings.png",
+            "alt": "تركيب تجريبي وتسجيلات PPSE وPPSI عند تنبيه نهايتين وحقن الأستيل كولين أو GABA",
+            "caption": "تنبيه E أو حقن الأستيل كولين يسبب زوال الاستقطاب، وتنبيه I أو حقن GABA يسبب فرط الاستقطاب.",
+            "source_label": "الوثيقة 2 - الصفحة 2 من ملف آلية الإدماج العصبي"
+          }],
+          "guided_reading": [
+            {"label": "تنبيه E", "text": "يرتفع الكمون في O1 من قيمة الراحة نحو العتبة: يظهر PPSE، ويمكن أن يظهر كمون عمل في O2 إذا بلغت العتبة."},
+            {"label": "تنبيه I", "text": "ينخفض الكمون في O1 تحت قيمة الراحة: يظهر PPSI، ولا يسجل كمون عمل في O2 في الشرط المعروض."},
+            {"label": "حقن المبلغ", "text": "يكرر الأستيل كولين أثر E، بينما يكرر GABA أثر I؛ ما يربط نوع الاستجابة بالمبلغ ومستقبله."},
+            {"label": "التصنيف", "text": "المشبك الذي يولد PPSE تنبيهي، والذي يولد PPSI تثبيطي."
+            }
+          ],
+          "takeaway": "اتجاه تغير الكمون بعد المشبكي هو أول مفتاح لتحديد طبيعة المشبك."
+        },
+        "display_order": 2
+      },
+      {
+        "id": "step_3",
+        "type": "short_explanation",
+        "component": "ShortExplanation",
+        "title": "اقرأ المنحنى بالنسبة إلى العتبة",
+        "content": {
+          "blocks": [
+            {"title": "PPSE", "text": "زوال استقطاب متدرج: يصبح الداخل أقل سلبية فيقترب الكمون من العتبة."},
+            {"title": "PPSI", "text": "فرط استقطاب في نموذج الدرس: يصبح الداخل أكثر سلبية فيبتعد الكمون عن العتبة."},
+            {"title": "العتبة", "text": "حد يجب أن تبلغه المحصلة عند القطعة الابتدائية حتى يتولد كمون عمل."}
+          ],
+          "memory_tip": "PPSE يصعد نحو العتبة؛ PPSI يهبط بعيدا عنها.",
+          "attention": "لا تحكم على المشبك من اسم المبلغ وحده في تمرين مجهول؛ ابدأ بالتسجيل وحركة الشوارد والنتيجة الغشائية."
+        },
+        "display_order": 3
+      },
+      {
+        "id": "step_4",
+        "type": "key_rule",
+        "component": "KeyRuleCard",
+        "title": "المشبك التنبيهي",
+        "content": {
+          "rule": "تثبت المبلغ التنبيهي على مستقبلاته القنوية يفتح قنوات تسمح في نموذج الدرس بدخول Na⁺؛ فتدخل شحنات موجبة ويحدث زوال استقطاب يسمى PPSE، فيقترب الغشاء من العتبة.",
+          "simple_flow": "مبلغ تنبيهي → مستقبل قنوي → فتح قنوات Na⁺ → دخول Na⁺ → زوال الاستقطاب → PPSE → اقتراب من العتبة",
+          "do_not_confuse": [
+            "PPSE ليس كمون عمل؛ هو تغير محلي متدرج.",
+            "لا يتولد كمون عمل إلا إذا بلغ PPSE أو المحصلة العتبة.",
+            "دخول Na⁺ يزيد إيجابية الداخل ولا يسبب فرط الاستقطاب."
+          ],
+          "memory_tip": "موجب إلى الداخل = صعود نحو العتبة."
+        },
+        "display_order": 4
+      },
+      {
+        "id": "step_5",
+        "type": "real_evidence",
+        "component": "RealEvidenceGallery",
+        "title": "الدليل 2: ماذا يتغير في الشق التثبيطي؟",
+        "content": {
+          "intro": "تقارن الوثيقة تركيب الشق في الراحة وبعد تنبيه النهاية التثبيطية I.",
+          "figures": [{
+            "src": "/science/neural-communication/axis-05/gaba_chloride_analysis.png",
+            "alt": "جدول يبين GABA وتركيز شوارد الكلور في الراحة وبعد تنبيه النهاية التثبيطية",
+            "caption": "بعد التنبيه يظهر GABA في الشق وينخفض Cl⁻ فيه، ما يدل على تحرير GABA وانتقال Cl⁻ نحو الخلية بعد المشبكية.",
+            "source_label": "الوثيقة 3 - الصفحة 3"
+          }],
+          "guided_reading": [
+            {"label": "في الراحة", "text": "يغيب GABA من الشق ويكون Cl⁻ مرتفعا فيه حسب الترميز النوعي في الجدول."},
+            {"label": "بعد التنبيه", "text": "تزداد كمية GABA في الشق وتنخفض كمية Cl⁻ فيه."},
+            {"label": "التفسير", "text": "النهاية I حررت GABA، وفتح GABA قنوات سمحت بانتقال Cl⁻ من الشق إلى داخل الخلية بعد المشبكية."
+            }
+          ],
+          "takeaway": "يرتبط المشبك التثبيطي في الوثيقة بتحرير GABA ودخول Cl⁻ إلى الخلية بعد المشبكية."
+        },
+        "display_order": 5
+      },
+      {
+        "id": "step_6",
+        "type": "real_evidence",
+        "component": "RealEvidenceGallery",
+        "title": "الدليل 3: مستقبل GABA قناة للكلور",
+        "content": {
+          "intro": "يمثل الرسم جزءا من الغشاء بعد المشبكي في المشبك التثبيطي.",
+          "figures": [{
+            "src": "/science/neural-communication/axis-05/gaba_chloride_receptor.png",
+            "alt": "مستقبلات GABA القنوية تسمح بدخول شوارد الكلور عبر الغشاء بعد المشبكي",
+            "caption": "تثبت GABA على مستقبلاته البروتينية يفتح قنوات Cl⁻ المرتبطة بالكيمياء.",
+            "source_label": "الوثيقة 4 - الصفحة 3"
+          }],
+          "guided_reading": [
+            {"label": "المستقبل", "text": "بروتين غشائي نوعي يضم موقع تثبيت لـGABA وقناة أيونية."},
+            {"label": "الفتح", "text": "في غياب GABA تكون القناة مغلقة، ويؤدي تثبته إلى فتحها."},
+            {"label": "الحركة", "text": "يدخل Cl⁻ إلى الهيولى بعد المشبكية وفق تدرجه في نموذج الوثيقة."},
+            {"label": "الأثر", "text": "دخول الشحنات السالبة يجعل الداخل أكثر سلبية، فيظهر فرط استقطاب يسمى PPSI."
+            }
+          ],
+          "takeaway": "GABA لا يصنع PPSI مباشرة؛ يفتح مستقبلات قنوية، وحركة Cl⁻ هي التي تغير الكمون."
+        },
+        "display_order": 6
+      },
+      {
+        "id": "step_7",
+        "type": "key_rule",
+        "component": "KeyRuleCard",
+        "title": "المشبك التثبيطي",
+        "content": {
+          "rule": "في نموذج الدرس، يتثبت GABA على مستقبلاته القنوية فيفتح قنوات Cl⁻؛ يدخل Cl⁻ فيحدث فرط استقطاب يسمى PPSI، فيبتعد الغشاء عن العتبة وتنخفض إمكانية توليد كمون عمل.",
+          "simple_flow": "GABA → مستقبل GABA → فتح قناة Cl⁻ → دخول Cl⁻ → فرط الاستقطاب → PPSI → ابتعاد عن العتبة",
+          "do_not_confuse": [
+            "GABA مبلغ كيميائي وليس شاردة سالبة.",
+            "Cl⁻ هو الذي يعبر القناة، وليس GABA.",
+            "التثبيط يعني خفض احتمال بلوغ العتبة، لا إلغاء كل نشاط للخلية في جميع الظروف."
+          ],
+          "memory_tip": "سالب إلى الداخل = ابتعاد عن العتبة."
+        },
+        "display_order": 7
+      },
+      {
+        "id": "step_8",
+        "type": "comparison",
+        "component": "VisualComparison",
+        "title": "المقارنة التي تحتاجها في البكالوريا",
+        "content": {
+          "columns": [
+            {"title": "المشبك التنبيهي", "items": ["زوال الاستقطاب", "كمون PPSE", "فتح قنوات Na⁺ في نموذج الدرس", "دخول Na⁺", "تقريب الغشاء من العتبة", "رفع احتمال توليد كمون عمل"]},
+            {"title": "المشبك التثبيطي", "items": ["فرط الاستقطاب", "كمون PPSI", "فتح قنوات Cl⁻ في نموذج الدرس", "دخول Cl⁻", "إبعاد الغشاء عن العتبة", "خفض احتمال توليد كمون عمل"]}
+          ],
+          "attention": "نوع المشبك يحدده أثره في الغشاء بعد المشبكي، الناتج عن نوع المستقبل والقناة وحركة الشاردة.",
+          "memory_tip": "Na⁺/PPSE/نحو العتبة مقابل Cl⁻/PPSI/بعيدا عن العتبة."
+        },
+        "display_order": 8
+      },
+      {
+        "id": "step_9",
+        "type": "real_evidence",
+        "component": "RealEvidenceGallery",
+        "title": "المساران في مخططين متوازيين",
+        "content": {
+          "intro": "تتبع من كمون العمل القبلي حتى النتيجة النهائية في كل مشبك.",
+          "figures": [{
+            "src": "/science/neural-communication/axis-05/excitatory_inhibitory_flowcharts.png",
+            "alt": "مخططان يقارنان آلية المشبك التنبيهي والمشبك التثبيطي",
+            "caption": "يتشابه المساران قبل تحرير المبلغ، ثم يختلفان عند نوع المبلغ والمستقبل والشاردة والكمون الناتج.",
+            "source_label": "المخطط التفسيري - الصفحة 7"
+          }],
+          "guided_reading": [
+            {"label": "المشترك", "text": "كمون عمل قبلي → فتح قنوات Ca²⁺ → دخول Ca²⁺ → تحرير مبلغ عصبي."},
+            {"label": "الاختلاف التنبيهي", "text": "أستيل كولين في النموذج → قناة Na⁺ → دخول Na⁺ → PPSE."},
+            {"label": "الاختلاف التثبيطي", "text": "GABA → قناة Cl⁻ → دخول Cl⁻ → PPSI."},
+            {"label": "النتيجة", "text": "PPSE قد يقود إلى كمون عمل إذا بلغ العتبة، أما PPSI فيخفض احتمال ذلك."
+            }
+          ],
+          "takeaway": "المرحلة الحاسمة في تحديد وظيفة المشبك هي نوع المستقبل بعد المشبكي والنفاذية الأيونية التي يفتحها."
+        },
+        "display_order": 9
+      },
+      {
+        "id": "step_10",
+        "type": "real_evidence",
+        "component": "RealEvidenceGallery",
+        "title": "الصورة الجزيئية للمقارنة",
+        "content": {
+          "intro": "قارن اتجاه Na⁺ في المستقبل التنبيهي باتجاه Cl⁻ في المستقبل التثبيطي.",
+          "figures": [{
+            "src": "/science/neural-communication/axis-05/na_cl_synapse_comparison.png",
+            "alt": "مقارنة جزيئية بين قنوات الصوديوم في المشابك التنبيهية وقنوات الكلور في المشابك التثبيطية",
+            "caption": "اختلاف الشاردة الداخلة يفسر اختلاف اتجاه تغير الكمون الغشائي.",
+            "source_label": "الرسم التحصيلي - الصفحة 7"
+          }],
+          "guided_reading": [
+            {"label": "Na⁺", "text": "إدخال شحنات موجبة يقلل سلبية الداخل: زوال استقطاب وPPSE."},
+            {"label": "Cl⁻", "text": "إدخال شحنات سالبة يزيد سلبية الداخل في نموذج الدرس: فرط استقطاب وPPSI."},
+            {"label": "العتبة", "text": "الأثر التنبيهي يقرب المحصلة منها، والأثر التثبيطي يدفع المحصلة بعيدا عنها."
+            }
+          ],
+          "takeaway": "من الشاردة تستطيع تفسير المنحنى، ومن المنحنى تستطيع استنتاج وظيفة المشبك."
+        },
+        "display_order": 10
+      },
+      {
+        "id": "step_11",
+        "type": "quick_check",
+        "component": "QuickCheck",
+        "title": "حدد نوع المشبك بسرعة",
+        "content": {
+          "questions": [
+            {"id": "qc1", "question": "ارتفع الكمون من -70 إلى -55 mV دون بلوغ العتبة. ما التسجيل؟", "choices": ["PPSE", "PPSI", "كمون عمل"], "correct_answer": "PPSE", "explanation": "حدث زوال استقطاب لكنه بقي دون العتبة."},
+            {"id": "qc2", "question": "أي حركة شاردية تفسر PPSI في نموذج الدرس؟", "choices": ["دخول Cl⁻", "دخول Na⁺", "خروج Cl⁻"], "correct_answer": "دخول Cl⁻", "explanation": "دخول الشحنات السالبة يزيد سلبية الداخل."},
+            {"id": "qc3", "question": "ما الأثر الوظيفي للمشبك التثبيطي؟", "choices": ["خفض احتمال بلوغ العتبة", "رفع سعة كل كمون عمل", "فتح قنوات Na⁺ الفولطية مباشرة"], "correct_answer": "خفض احتمال بلوغ العتبة", "explanation": "PPSI يبعد الكمون عن العتبة أو يعاكس الأثر التنبيهي."
+            }
+          ]
+        },
+        "display_order": 11
+      },
+      {
+        "id": "step_12",
+        "type": "bac_method",
+        "component": "BacMethodCard",
+        "title": "منهجية تحديد طبيعة المشبك",
+        "content": {
+          "skill": "تحديد المشبك من التسجيل ثم تفسيره جزيئيا",
+          "method": [
+            {"label": "1. حدد اتجاه المنحنى", "text": "نحو العتبة = زوال استقطاب؛ تحت الراحة وبعيدا عن العتبة = فرط استقطاب في الوثيقة."},
+            {"label": "2. سم الكمون", "text": "زوال الاستقطاب يعطي PPSE، وفرط الاستقطاب يعطي PPSI."},
+            {"label": "3. سم المشبك", "text": "PPSE يدل على مشبك تنبيهي، وPPSI يدل على مشبك تثبيطي."},
+            {"label": "4. فسر بالشوارد", "text": "دخول Na⁺ يقرب من العتبة، ودخول Cl⁻ يبعد عنها في نموذج الدرس."},
+            {"label": "5. اختم بالنتيجة", "text": "حدد هل زاد احتمال توليد كمون العمل أم انخفض."
+            }
+          ],
+          "bac_sentence": "في المشبك التنبيهي يتثبت المبلغ على مستقبلاته القنوية فتفتح قنوات Na⁺ ويدخل Na⁺، فيحدث زوال استقطاب يسمى PPSE يقرب الغشاء من عتبة توليد كمون العمل. أما في المشبك التثبيطي فيتثبت GABA على مستقبلاته القنوية فتفتح قنوات Cl⁻ ويدخل Cl⁻، فيحدث فرط استقطاب يسمى PPSI يبعد الغشاء عن العتبة ويخفض احتمال توليد كمون العمل.",
+          "common_mistakes": [
+            "اعتبار كل تغير صاعد كمون عمل؛ قد يكون PPSE دون العتبة.",
+            "القول إن GABA يعبر قناة Cl⁻.",
+            "عكس اتجاه حركة Na⁺ وCl⁻ في وثائق الدرس.",
+            "القول إن المشبك التثبيطي يمنع كل نشاط مهما كانت الرسائل الأخرى.",
+            "الخلط بين فرط الاستقطاب بعد المشبكي وفرط الاستقطاب الذي يلي كمون العمل."
+          ]
+        },
+        "display_order": 12
+      },
+      {
+        "id": "step_13",
+        "type": "final_visual_map",
+        "component": "InteractiveSummaryMap",
+        "title": "خريطة القرار",
+        "content": {
+          "map": [
+            {"node": "فتح قناة Na⁺", "relation": "دخول شحنات موجبة", "target": "زوال الاستقطاب"},
+            {"node": "زوال الاستقطاب", "relation": "يسمى", "target": "PPSE"},
+            {"node": "PPSE", "relation": "يقرب من", "target": "عتبة كمون العمل"},
+            {"node": "فتح قناة Cl⁻", "relation": "دخول شحنات سالبة", "target": "فرط الاستقطاب"},
+            {"node": "فرط الاستقطاب", "relation": "يسمى", "target": "PPSI"},
+            {"node": "PPSI", "relation": "يبعد عن", "target": "عتبة كمون العمل"}
+          ],
+          "memory_tip": "PPSE يقرب؛ PPSI يبعد.",
+          "next_axis_bridge": {"question": "ماذا تكون النتيجة عندما تصل PPSE وPPSI متعددة إلى العصبون نفسه؟", "next_concept": "الإدماج العصبي والتجميع الزماني والفضائي"}
+        },
+        "display_order": 13
+      },
+      {
+        "id": "step_14",
+        "type": "quiz",
+        "component": "FinalQuiz",
+        "title": "اختبار نهاية المحور",
+        "content": {
+          "questions": [
+            {"id": "q1", "question": "أي وصف يطابق المشبك التنبيهي؟", "choices": ["دخول Na⁺ وظهور PPSE", "دخول Cl⁻ وظهور PPSI", "فرط استقطاب وابتعاد عن العتبة"], "correct_answer": "دخول Na⁺ وظهور PPSE", "explanation": "دخول الشحنات الموجبة يزيل الاستقطاب."},
+            {"id": "q2", "question": "ماذا يعني تسجيل PPSI؟", "choices": ["مشبك تثبيطي يخفض احتمال كمون العمل", "مشبك تنبيهي بلغ العتبة", "كمون عمل كامل"], "correct_answer": "مشبك تثبيطي يخفض احتمال كمون العمل", "explanation": "PPSI يبعد الكمون عن العتبة في نموذج الدرس."},
+            {"id": "q3", "question": "ما المبلغ المرتبط بالمشبك التثبيطي في الوثائق؟", "choices": ["GABA", "Na⁺", "Cl⁻"], "correct_answer": "GABA", "explanation": "Na⁺ وCl⁻ شوارد وليستا مبلغين عصبيين."},
+            {"id": "q4", "question": "ما الذي يعبر مستقبل GABA القنوي في الوثيقة؟", "choices": ["Cl⁻", "GABA", "Na⁺"], "correct_answer": "Cl⁻", "explanation": "GABA يثبت خارجيا ويفتح القناة، بينما تعبر شاردة الكلور."},
+            {"id": "q5", "question": "أي تغير يقرب الغشاء من العتبة؟", "choices": ["زوال الاستقطاب", "فرط الاستقطاب", "دخول Cl⁻"], "correct_answer": "زوال الاستقطاب", "explanation": "يصبح الكمون أقل سلبية ويتجه نحو قيمة العتبة."},
+            {"id": "q6", "question": "PPSE بقي دون العتبة. ما النتيجة المباشرة؟", "choices": ["لا يتولد كمون عمل بسبب هذا PPSE وحده", "يتولد نصف كمون عمل", "يتحول PPSE إلى PPSI"], "correct_answer": "لا يتولد كمون عمل بسبب هذا PPSE وحده", "explanation": "بلوغ العتبة شرط توليد كمون العمل."
+            }
+          ],
+          "mastery_threshold": 5
+        },
+        "display_order": 14
+      }
+    ],
+    "document_bank": [
+      {
+        "document_id": "nc_axis05_doc01_recordings",
+        "file_name": "ppse_ppsi_recordings.png",
+        "src": "/science/neural-communication/axis-05/ppse_ppsi_recordings.png",
+        "document_type": "stimulation_injection_recordings",
+        "source": {"kind": "lesson_pdf", "page": 2, "figure": "الوثيقة (2)"},
+        "skills": ["distinguish_ppse_ppsi", "identify_synapse_type", "link_transmitter_response"],
+        "scientific_entities": ["E", "I", "O1", "O2", "PPSE", "PPSI", "GABA", "أستيل كولين"],
+        "pedagogical_roles": ["lesson_evidence", "axis_exercise", "ai_axis_exercise", "bac_similar"],
+        "difficulty": 3,
+        "interpretation_scope": "تميز المشبك التنبيهي من التثبيطي انطلاقا من اتجاه الكمون ونتيجة حقن المبلغ.",
+        "safe_claims": ["تنبيه E يولد PPSE في الوثيقة.", "تنبيه I يولد PPSI.", "حقن GABA يكرر الأثر التثبيطي."],
+        "forbidden_inferences": ["اعتبار O1 وO2 مشبكين.", "القول إن PPSI كمون عمل سالب."],
+        "ai_generation": {"allowed": true, "allowed_question_types": ["compare", "identify", "infer", "justify"], "max_documents_with": 3}
+      },
+      {
+        "document_id": "nc_axis05_doc02_gaba_chloride",
+        "file_name": "gaba_chloride_analysis.png",
+        "src": "/science/neural-communication/axis-05/gaba_chloride_analysis.png",
+        "document_type": "chemical_analysis_table",
+        "source": {"kind": "lesson_pdf", "page": 3, "figure": "الوثيقة (3)"},
+        "skills": ["compare_rest_stimulation", "infer_transmitter_release", "infer_chloride_direction"],
+        "scientific_entities": ["GABA", "Cl⁻", "شق مشبكي", "تنبيه I"],
+        "pedagogical_roles": ["lesson_evidence", "axis_exercise", "ai_axis_exercise", "bac_similar"],
+        "difficulty": 3,
+        "interpretation_scope": "تدل على تحرير GABA وانتقال Cl⁻ من الشق بعد التنبيه.",
+        "safe_claims": ["يظهر GABA بعد التنبيه.", "ينخفض Cl⁻ في الشق بعد التنبيه."],
+        "forbidden_inferences": ["اعتبار إشارات + قيما عددية دقيقة.", "القول إن GABA يتحول إلى Cl⁻."],
+        "ai_generation": {"allowed": true, "allowed_question_types": ["compare_table", "infer", "explain"], "max_documents_with": 2}
+      },
+      {
+        "document_id": "nc_axis05_doc03_gaba_receptor",
+        "file_name": "gaba_chloride_receptor.png",
+        "src": "/science/neural-communication/axis-05/gaba_chloride_receptor.png",
+        "document_type": "ligand_gated_chloride_channel_model",
+        "source": {"kind": "lesson_pdf", "page": 3, "figure": "الوثيقة (4)"},
+        "skills": ["identify_receptor", "track_chloride", "explain_hyperpolarization"],
+        "scientific_entities": ["مستقبل GABA", "قناة Cl⁻", "غشاء بعد مشبكي"],
+        "pedagogical_roles": ["lesson_evidence", "axis_exercise", "ai_axis_exercise", "bac_similar"],
+        "difficulty": 3,
+        "interpretation_scope": "توضح فتح قناة Cl⁻ بتثبت GABA ودخول Cl⁻ في نموذج الدرس.",
+        "safe_claims": ["GABA يثبت على مستقبل بروتيني.", "Cl⁻ يعبر القناة نحو الداخل في الرسم."],
+        "forbidden_inferences": ["القول إن GABA يعبر القناة.", "القول إن المستقبل مرتبط بالفولطية."],
+        "ai_generation": {"allowed": true, "allowed_question_types": ["label", "explain", "order_events"], "preferred_pair": "nc_axis05_doc02_gaba_chloride"}
+      },
+      {
+        "document_id": "nc_axis05_doc04_flowcharts",
+        "file_name": "excitatory_inhibitory_flowcharts.png",
+        "src": "/science/neural-communication/axis-05/excitatory_inhibitory_flowcharts.png",
+        "document_type": "dual_functional_flowchart",
+        "source": {"kind": "lesson_pdf", "page": 7, "role": "مخطط تفسيري"},
+        "skills": ["compare_mechanisms", "complete_flowchart", "link_ion_to_potential"],
+        "scientific_entities": ["Ca²⁺", "أستيل كولين", "GABA", "Na⁺", "Cl⁻", "PPSE", "PPSI"],
+        "pedagogical_roles": ["lesson_summary", "lesson_evaluation", "axis_exercise", "ai_axis_exercise"],
+        "difficulty": 3,
+        "interpretation_scope": "تقارن السلسلة السببية الكاملة للمشبكين.",
+        "safe_claims": ["Na⁺ يرتبط بالمسار التنبيهي في النموذج.", "Cl⁻ يرتبط بالمسار التثبيطي."],
+        "forbidden_inferences": ["اعتبار Ca²⁺ العامل الذي يحدد مباشرة PPSE أو PPSI بعد مشبكيا.", "إهمال نوع المستقبل."],
+        "ai_generation": {"allowed": true, "allowed_question_types": ["compare", "complete", "order", "explain"], "max_documents_with": 2}
+      },
+      {
+        "document_id": "nc_axis05_doc05_ion_comparison",
+        "file_name": "na_cl_synapse_comparison.png",
+        "src": "/science/neural-communication/axis-05/na_cl_synapse_comparison.png",
+        "document_type": "molecular_synapse_comparison",
+        "source": {"kind": "lesson_pdf", "page": 7, "role": "رسم تحصيلي"},
+        "skills": ["compare_ion_flows", "infer_membrane_effect", "classify_synapse"],
+        "scientific_entities": ["قناة Na⁺", "قناة Cl⁻", "مستقبل قنوي", "عتبة"],
+        "pedagogical_roles": ["lesson_summary", "axis_exercise", "ai_axis_exercise"],
+        "difficulty": 2,
+        "interpretation_scope": "تربط نوع الشاردة الداخلة بالأثر التنبيهي أو التثبيطي.",
+        "safe_claims": ["دخول Na⁺ يزيل الاستقطاب.", "دخول Cl⁻ يسبب فرط الاستقطاب في نموذج الدرس."],
+        "forbidden_inferences": ["تعميم نوع الشاردة على كل مشبك في كل كائن دون وثيقة.", "اعتبار المستقبل مضخة نشطة."],
+        "ai_generation": {"allowed": true, "allowed_question_types": ["identify", "compare", "infer", "classify"], "max_documents_with": 2}
+      }
+    ],
+    "presentation": {
+      "hook": "لماذا يقرب مشبك الغشاء من العتبة بينما يبعده مشبك آخر؟",
+      "promise": "ستعرف نوع المشبك من المنحنى، ثم تفسره بنوع المبلغ والمستقبل والشاردة.",
+      "rhythm": ["اقرأ المنحنى", "سم الكمون", "حدد المشبك", "تتبع الشاردة", "اربط بالعتبة", "قارن", "لخص"],
+      "mode": "evidence_story_learning",
+      "student_first": true,
+      "reveal_teacher_after_think": true,
+      "max_text_lines_per_card": 6,
+      "avoid_repetition": true,
+      "show_progress_as_journey": true
+    },
+    "scientific_quality_control": {
+      "version": "1.0",
+      "rules": [
+        "PPSE زوال استقطاب متدرج يقرب من العتبة، وPPSI أثر تثبيطي يبعد المحصلة عنها في نموذج الدرس.",
+        "لا تساو بين PPSE وكمون العمل؛ توليد كمون العمل يتطلب بلوغ العتبة.",
+        "في وثائق الدرس يرتبط المسار التنبيهي بدخول Na⁺ والمسار التثبيطي بدخول Cl⁻.",
+        "GABA يفتح مستقبلات قنوية للكلور ولا يعبر القناة بنفسه.",
+        "نوع المستقبل والنفاذية الأيونية الناتجة هما المحددان المباشران لأثر المشبك.",
+        "لا تخلط بين PPSI وفرط الاستقطاب اللاحق لكمون العمل؛ يختلف السبب والسياق.",
+        "التثبيط يخفض احتمال بلوغ العتبة ولا يعني استحالة نشاط العصبون في جميع الظروف.",
+        "تؤجل تفاصيل جمع PPSE وPPSI إلى محور الإدماج العصبي."
+      ]
+    },
+    "curriculum_goal": "التمييز بين المشابك التنبيهية والتثبيطية انطلاقا من الكمونات بعد المشبكية والمبلغات والمستقبلات وحركة الشوارد."
+  }
+}

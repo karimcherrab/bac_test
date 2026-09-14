@@ -1,0 +1,160 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "session": "ordinary",
+  "year": 2025,
+  "chapter_code": "probability",
+  "chapter_title": "الاحتمالات",
+  "branches": [
+    {
+      "code": "science",
+      "name": "شعبة علوم تجريبية"
+    }
+  ],
+  "version": "4.2-2025-science-probability-subject1-ex01",
+  "axis_tags": [
+    "probability_tree_total_probability",
+    "probability_events_law",
+    "probability_counting",
+    "random_variable_probability_law_expectation",
+    "probability_draw_modeling"
+  ],
+  "exercise_number": 1,
+  "subject_number": 1,
+  "source_page": 1,
+  "source_pages": [
+    1
+  ],
+  "solution_source_pages": [
+    5
+  ],
+  "title": "التمرين الأول — بكالوريا الجزائر 2025 — الموضوع الأول — شعبة علوم تجريبية",
+  "statement": "يحتوي صندوق U₁ على 5 كريات منها: كريتان حمراوان وثلاث كريات خضراء، ويحتوي صندوق U₂ على 5 كريات منها: ثلاث كريات حمراء وكريتان خضراوان (جميع الكريات متماثلة ولا نفرق بينها باللمس).\nنسحب عشوائيا 3 كريات بالكيفية التالية: نقوم بسحب كرية واحدة من U₁ ونسجل لونها.\n- إذا كانت الكرية المسحوبة حمراء نعيدها إلى U₁ ثم نسحب منه عشوائيا كريتين في آن واحد.\n- وإذا كانت الكرية المسحوبة خضراء نضعها في U₂ ثم نسحب منه عشوائيا كريتين في آن واحد.\nنعتبر الحوادث R : « الحصول على كرية حمراء » ، V : « الحصول على كرية خضراء »\nA : « الحصول على 3 كريات من نفس اللون » ، B : « الحصول على كرية خضراء على الأقل »\n1) انقل وأكمل شجرة الاحتمالات المقابلة.\n2) احسب احتمالي الحادثتين A و B\n3) X المتغير العشوائي الذي يرفق بكل عملية سحب لثلاث كريات بالكيفية السابقة عدد الكريات الحمراء المسحوبة.\n- عين قانون احتمال المتغير العشوائي X ثم احسب أمله الرياضياتي.",
+  "questions": [
+    {
+      "id": "2025_s1_probability_ex01_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) انقل وأكمل شجرة الاحتمالات المقابلة.",
+      "axis_tags": [
+        "probability_tree_total_probability",
+        "probability_draw_modeling"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب أولا احتمال لون الكرية الأولى من U₁، ثم نحسب احتمالات سحب الكريتين حسب الصندوق الذي سنسحب منه.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "السحب الأول من U₁",
+            "explanation": "في \\(U_1\\) كريتان حمراوان و3 خضراء من أصل 5، لذلك:\n\\[P(R)=\\frac25,\\qquad P(V)=\\frac35\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "إذا كانت الأولى حمراء",
+            "explanation": "نعيد الكرية إلى \\(U_1\\)، فيبقى فيه 2 حمراء و3 خضراء. نسحب كريتين في آن واحد وعدد الأزواج هو \\(\\binom52=10\\):\n\\[P(RR\\mid R)=\\frac{\\binom22}{10}=\\frac1{10}\\]\n\\[P(RV\\mid R)=\\frac{\\binom21\\binom31}{10}=\\frac6{10}\\]\n\\[P(VV\\mid R)=\\frac{\\binom32}{10}=\\frac3{10}\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "إذا كانت الأولى خضراء",
+            "explanation": "ننقل الكرية الخضراء إلى \\(U_2\\). يصبح \\(U_2\\) مكونا من 3 حمراء و3 خضراء، أي 6 كريات. عدد الأزواج \\(\\binom62=15\\):\n\\[P(RR\\mid V)=\\frac{\\binom32}{15}=\\frac15\\]\n\\[P(RV\\mid V)=\\frac{\\binom31\\binom31}{15}=\\frac35\\]\n\\[P(VV\\mid V)=\\frac{\\binom32}{15}=\\frac15\\]"
+          }
+        ],
+        "final_answer": "فروع الشجرة: \\(P(R)=\\frac25\\)، \\(P(V)=\\frac35\\). بعد \\(R\\): \\(\\frac1{10},\\frac6{10},\\frac3{10}\\) للمسارات \\(RR,RV,VV\\). بعد \\(V\\): \\(\\frac15,\\frac35,\\frac15\\) للمسارات نفسها."
+      }
+    },
+    {
+      "id": "2025_s1_probability_ex01_q2",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2) احسب احتمالي الحادثتين \\(A\\) و \\(B\\).",
+      "axis_tags": [
+        "probability_events_law",
+        "probability_tree_total_probability"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "الحادثة A تتحقق عبر مسارين فقط: ثلاث حمراء أو ثلاث خضراء. أما B فنحسبها باستعمال الحادثة المضادة: عدم الحصول على أي كرية خضراء.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب P(A)",
+            "explanation": "للحصول على 3 كريات من نفس اللون لدينا المساران \\(R\\to RR\\) و\\(V\\to VV\\):\n\\[P(A)=\\frac25\\times\\frac1{10}+\\frac35\\times\\frac15\\]\n\\[P(A)=\\frac1{25}+\\frac3{25}=\\frac4{25}\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "الحادثة المضادة لـ B",
+            "explanation": "الحادثة \\(B\\) تعني الحصول على كرية خضراء على الأقل. الحادثة المضادة هي الحصول على 3 كريات حمراء، أي المسار \\(R\\to RR\\):\n\\[P(\\overline B)=\\frac25\\times\\frac1{10}=\\frac1{25}\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب P(B)",
+            "explanation": "\\[P(B)=1-P(\\overline B)=1-\\frac1{25}=\\frac{24}{25}\\]"
+          }
+        ],
+        "final_answer": "\\(\\displaystyle P(A)=\\frac4{25}\\)، و\\(\\displaystyle P(B)=\\frac{24}{25}\\)."
+      }
+    },
+    {
+      "id": "2025_s1_probability_ex01_q3",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "3) \\(X\\) المتغير العشوائي الذي يرفق بكل عملية سحب لثلاث كريات بالكيفية السابقة عدد الكريات الحمراء المسحوبة. - عين قانون احتمال المتغير العشوائي \\(X\\) ثم احسب أمله الرياضياتي.",
+      "axis_tags": [
+        "random_variable_probability_law_expectation",
+        "probability_tree_total_probability"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "قيم X هي عدد الكريات الحمراء ضمن 3 كريات، أي 0 أو 1 أو 2 أو 3. نجمع احتمالات مسارات الشجرة التي تعطي العدد نفسه.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "قيم المتغير X",
+            "explanation": "\\[X(\\Omega)=\\{0,1,2,3\\}\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب P(X=0)",
+            "explanation": "هذا يحدث في المسار \\(V\\to VV\\):\n\\[P(X=0)=\\frac35\\times\\frac15=\\frac3{25}\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب P(X=1)",
+            "explanation": "لدينا المساران \\(R\\to VV\\) و\\(V\\to RV\\):\n\\[P(X=1)=\\frac25\\times\\frac3{10}+\\frac35\\times\\frac35\\]\n\\[P(X=1)=\\frac3{25}+\\frac9{25}=\\frac{12}{25}\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "حساب P(X=2)",
+            "explanation": "لدينا المساران \\(R\\to RV\\) و\\(V\\to RR\\):\n\\[P(X=2)=\\frac25\\times\\frac6{10}+\\frac35\\times\\frac15\\]\n\\[P(X=2)=\\frac6{25}+\\frac3{25}=\\frac9{25}\\]"
+          },
+          {
+            "step_number": 5,
+            "title": "حساب P(X=3)",
+            "explanation": "هذا يحدث في المسار \\(R\\to RR\\):\n\\[P(X=3)=\\frac25\\times\\frac1{10}=\\frac1{25}\\]"
+          },
+          {
+            "step_number": 6,
+            "title": "قانون احتمال X",
+            "explanation": "\\[\\begin{array}{c|cccc}x_i&0&1&2&3\\\\\\hline P(X=x_i)&\\frac3{25}&\\frac{12}{25}&\\frac9{25}&\\frac1{25}\\end{array}\\]"
+          },
+          {
+            "step_number": 7,
+            "title": "حساب الأمل الرياضياتي",
+            "explanation": "\\[E(X)=0\\times\\frac3{25}+1\\times\\frac{12}{25}+2\\times\\frac9{25}+3\\times\\frac1{25}\\]\n\\[E(X)=\\frac{12+18+3}{25}=\\frac{33}{25}\\]"
+          }
+        ],
+        "final_answer": "قانون \\(X\\): \\(\\frac3{25},\\frac{12}{25},\\frac9{25},\\frac1{25}\\) للقيم \\(0,1,2,3\\) على الترتيب، و\\(\\displaystyle E(X)=\\frac{33}{25}\\)."
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2025(1).pdf",
+    "statement_figure_policy": "شجرة الاحتمالات الجزئية معطاة في نص التمرين ويطلب إكمالها.",
+    "solution_figure_policy": "تم تحويل معلومات الشجرة إلى فروع واحتمالات مفصلة داخل الحل.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  }
+}

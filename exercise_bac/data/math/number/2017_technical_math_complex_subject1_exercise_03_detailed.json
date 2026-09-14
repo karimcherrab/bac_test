@@ -1,0 +1,216 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "session": "ordinary",
+  "year": 2017,
+  "chapter_code": "complex_numbers",
+  "chapter_title": "الأعداد المركبة",
+  "branches": [
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "version": "4.2-2017-technical-math-complex-subject1-ex03",
+  "subject_number": 1,
+  "exercise_number": 3,
+  "source_page": 2,
+  "source_pages": [
+    2
+  ],
+  "solution_source_pages": [
+    6
+  ],
+  "title": "التمرين الثالث — بكالوريا الجزائر 2017 — الموضوع الأول — شعبة تقني رياضي",
+  "axis_tags": [
+    "complex_exponential_form",
+    "complex_direct_similarity",
+    "complex_symmetry",
+    "complex_geometry",
+    "complex_geometric_locus"
+  ],
+  "statement": "المستوى المركب منسوب إلى المعلم المتعامد والمتجانس \\((O;\\vec u,\\vec v)\\). نعتبر النقط \\(A\\)، \\(B\\) و \\(C\\) التي لواحقها: \\(z_A=-1\\)، \\(z_B=2+i\\) و \\(z_C=-i\\).",
+  "questions": [
+    {
+      "id": "2017_tm_s1_complex_ex03_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) اكتب العدد المركب \\(\\frac{z_A-z_C}{z_B-z_C}\\) على الشكل الأسي ثم استنتج طبيعة المثلث \\(ABC\\).",
+      "axis_tags": [
+        "complex_exponential_form",
+        "complex_geometry"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب النسبة جبريًا، ثم نستخرج طويلتها وعمدتها. العمدة تعطينا الزاوية بين \\(\\overrightarrow{CB}\\) و\\(\\overrightarrow{CA}\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب البسط والمقام",
+            "explanation": "لدينا:\n\\[\nz_A-z_C=-1-(-i)=-1+i,\n\\]\nو:\n\\[\nz_B-z_C=(2+i)-(-i)=2+2i=2(1+i).\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "تبسيط النسبة",
+            "explanation": "\\[\n\\frac{z_A-z_C}{z_B-z_C}\n=\\frac{-1+i}{2(1+i)}.\n\\]\nنضرب البسط والمقام في \\(1-i\\):\n\\[\n\\frac{(-1+i)(1-i)}{2(1+i)(1-i)}\n=\\frac{2i}{4}=\\frac{i}{2}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الكتابة الأسية",
+            "explanation": "طويلة \\(\\frac{i}{2}\\) هي \\(\\frac12\\)، وعمدة له \\(\\frac{\\pi}{2}\\). إذن:\n\\[\n\\frac{z_A-z_C}{z_B-z_C}=\\frac12e^{i\\pi/2}.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "استنتاج طبيعة المثلث",
+            "explanation": "لدينا:\n\\[\n\\arg\\left(\\frac{z_A-z_C}{z_B-z_C}\\right)\n=(\\overrightarrow{CB},\\overrightarrow{CA})\n=\\frac{\\pi}{2}.\n\\]\nإذن:\n\\[\nCB\\perp CA.\n\\]\nوعليه فالمثلث \\(ABC\\) قائم في \\(C\\)."
+          }
+        ],
+        "final_answer": "\\(\\frac{z_A-z_C}{z_B-z_C}=\\frac12e^{i\\pi/2}\\)، والمثلث \\(ABC\\) قائم في \\(C\\)."
+      }
+    },
+    {
+      "id": "2017_tm_s1_complex_ex03_q2",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2) عين العبارة المركبة للتشابه المباشر \\(S\\) الذي مركزه \\(C\\) ويحول \\(B\\) إلى \\(A\\).",
+      "axis_tags": [
+        "complex_direct_similarity"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل صيغة التشابه المباشر ذي المركز C: \\(z'-z_C=a(z-z_C)\\)، ثم نحسب المعامل \\(a\\) باستعمال صورة B وهي A.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب معامل التشابه",
+            "explanation": "بما أن \\(S(B)=A\\)، فإن:\n\\[\na=\\frac{z_A-z_C}{z_B-z_C}.\n\\]\nومن السؤال السابق:\n\\[\na=\\frac{i}{2}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "كتابة الصيغة حول المركز C",
+            "explanation": "إذن:\n\\[\nz'-z_C=\\frac{i}{2}(z-z_C).\n\\]\nوبما أن \\(z_C=-i\\):\n\\[\nz'+i=\\frac{i}{2}(z+i).\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "تبسيط العبارة",
+            "explanation": "نطور:\n\\[\nz'+i=\\frac{i}{2}z+\\frac{i^2}{2}\n=\\frac{i}{2}z-\\frac12.\n\\]\nومنها:\n\\[\nz'=\\frac{i}{2}z-\\frac12-i.\n\\]"
+          }
+        ],
+        "final_answer": "\\(S:\\ z'=\\frac{i}{2}z-\\frac12-i\\)."
+      }
+    },
+    {
+      "id": "2017_tm_s1_complex_ex03_q3a",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "3) نعتبر النقطة \\(D\\) نظيرة \\(B\\) بالنسبة إلى \\(C\\) والنقطة \\(E\\) صورة \\(D\\) بالتشابه \\(S\\).\nأ) عين \\(z_D\\) لاحقة \\(D\\) ثم تحقق أن: \\(z_E=1-2i\\) حيث \\(z_E\\) لاحقة \\(E\\).",
+      "axis_tags": [
+        "complex_symmetry",
+        "complex_direct_similarity"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "بما أن C منتصف [BD] نستعمل علاقة المنتصف لإيجاد zD، ثم نعوض zD في عبارة التشابه S لحساب zE.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب zD",
+            "explanation": "بما أن \\(D\\) نظيرة \\(B\\) بالنسبة إلى \\(C\\)، فإن \\(C\\) منتصف \\([BD]\\)، وبالتالي:\n\\[\nz_C=\\frac{z_B+z_D}{2}.\n\\]\nإذن:\n\\[\nz_D=2z_C-z_B.\n\\]\nنعوض:\n\\[\nz_D=2(-i)-(2+i)=-2-3i.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب zE",
+            "explanation": "عبارة التشابه هي:\n\\[\nz'=\\frac{i}{2}z-\\frac12-i.\n\\]\nإذن:\n\\[\nz_E=\\frac{i}{2}(-2-3i)-\\frac12-i.\n\\]\nنحسب:\n\\[\n\\frac{i}{2}(-2-3i)=-i+\\frac32.\n\\]\nومن ثم:\n\\[\nz_E=-i+\\frac32-\\frac12-i=1-2i.\n\\]"
+          }
+        ],
+        "final_answer": "\\(z_D=-2-3i\\)، و\\(z_E=1-2i\\)."
+      }
+    },
+    {
+      "id": "2017_tm_s1_complex_ex03_q3b",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "ب) حدد طبيعة الرباعي \\(ADEB\\).",
+      "axis_tags": [
+        "complex_geometry"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب لواحق أضلاع متتالية، ثم نثبت أن جميع الأضلاع متساوية؛ وهذا يكفي لإثبات أن الرباعي معين.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب طول AD",
+            "explanation": "\\[\nz_D-z_A=(-2-3i)-(-1)=-1-3i.\n\\]\nإذن:\n\\[\nAD=\\sqrt{1+9}=\\sqrt{10}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب طول DE",
+            "explanation": "\\[\nz_E-z_D=(1-2i)-(-2-3i)=3+i.\n\\]\nإذن:\n\\[\nDE=\\sqrt{9+1}=\\sqrt{10}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب طولي EB و BA",
+            "explanation": "\\[\nz_B-z_E=(2+i)-(1-2i)=1+3i,\n\\]\nومنها:\n\\[\nEB=\\sqrt{10}.\n\\]\nكما أن:\n\\[\nz_A-z_B=-1-(2+i)=-3-i,\n\\]\nومنها:\n\\[\nBA=\\sqrt{10}.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "الاستنتاج",
+            "explanation": "وجدنا:\n\\[\nAD=DE=EB=BA=\\sqrt{10}.\n\\]\nإذن الرباعي \\(ADEB\\) معين."
+          }
+        ],
+        "final_answer": "الرباعي \\(ADEB\\) معين."
+      }
+    },
+    {
+      "id": "2017_tm_s1_complex_ex03_q4",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "4) \\((\\Gamma)\\) مجموعة النقط \\(M\\) من المستوى ذات اللاحقة \\(z\\) (\\(M\\) تختلف عن \\(A\\) و \\(B\\)) حيث \\(k\\in\\mathbb Z\\):\n\\[\n\\arg(z-z_A)-\\arg(z-z_B)=\\frac{\\pi}{2}+2k\\pi.\n\\]\nتحقق أن النقطة \\(C\\) تنتمي إلى \\((\\Gamma)\\)، ثم حدد طبيعة المجموعة \\((\\Gamma)\\) وأنشئها.",
+      "axis_tags": [
+        "complex_geometric_locus",
+        "complex_argument_geometry"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحول فرق الحجتين إلى عمدة نسبة، ثم نفسرها كزاوية موجهة. شرط الزاوية القائمة يعطي دائرة قطرها AB، أما الإشارة الموجهة فتختار نصف الدائرة الذي يمر بالنقطة C.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التحقق من انتماء C",
+            "explanation": "نعوض \\(z=z_C\\):\n\\[\n\\arg\\left(\\frac{z_C-z_A}{z_C-z_B}\\right).\n\\]\nلدينا:\n\\[\nz_C-z_A=-i+1=1-i,\n\\]\nو:\n\\[\nz_C-z_B=-i-(2+i)=-2-2i.\n\\]\nوبالتبسيط نحصل على عدد عمدته \\(\\frac{\\pi}{2}\\) بترديد \\(2\\pi\\)، ومنه:\n\\[\nC\\in(\\Gamma).\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "تحويل الشرط",
+            "explanation": "لدينا:\n\\[\n\\arg(z-z_A)-\\arg(z-z_B)\n=\\arg\\left(\\frac{z-z_A}{z-z_B}\\right).\n\\]\nإذن:\n\\[\n\\arg\\left(\\frac{z-z_A}{z-z_B}\\right)=\\frac{\\pi}{2}+2k\\pi.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "التفسير الهندسي",
+            "explanation": "هذا يعني أن الزاوية الموجهة:\n\\[\n(\\overrightarrow{MB},\\overrightarrow{MA})=\\frac{\\pi}{2}+2k\\pi.\n\\]\nإذن:\n\\[\nMB\\perp MA.\n\\]\nومجموعة النقط التي ترى القطعة \\([AB]\\) تحت زاوية قائمة تقع على الدائرة ذات القطر \\([AB]\\)."
+          },
+          {
+            "step_number": 4,
+            "title": "تحديد النصف الصحيح",
+            "explanation": "لأن الشرط يفرض زاوية موجهة \\(+\\frac{\\pi}{2}\\) وليس فقط تعامدًا دون اتجاه، فإننا نأخذ نصف الدائرة الموافق لهذا الاتجاه. وبما أن \\(C\\in(\\Gamma)\\)، فهو نصف الدائرة الذي يمر بالنقطة \\(C\\). النقطتان \\(A\\) و\\(B\\) مستثناتان لأن الحجج غير معرفة عندهما."
+          },
+          {
+            "step_number": 5,
+            "title": "الإنشاء",
+            "explanation": "نرسم الدائرة التي قطرها \\([AB]\\)، ثم نحتفظ بنصف الدائرة المار بالنقطة \\(C\\)، مع حذف الطرفين \\(A\\) و\\(B\\)."
+          }
+        ],
+        "final_answer": "\\((\\Gamma)\\) هو نصف الدائرة المفتوحة التي قطرها \\([AB]\\) والمارة بالنقطة \\(C\\)، مع استثناء \\(A\\) و\\(B\\)."
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_official_correction": true,
+    "source_pdf": "2017(1).pdf",
+    "statement_page": 2,
+    "correction_page": 6
+  }
+}

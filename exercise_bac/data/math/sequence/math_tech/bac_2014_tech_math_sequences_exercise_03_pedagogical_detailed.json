@@ -1,0 +1,337 @@
+{
+  "schema_version": "4.5-bac-source",
+  "version": "4.2-2014-tech-math-sequences-ex03",
+  "language": "ar",
+  "direction": "rtl",
+  "year": 2014,
+  "session": " ordinary",
+  "chapter_code": "sequences",
+  "chapter_title": "sequences",
+  "exercise_number": 3,
+  "points": 4,
+  "source_pages": [
+    2
+  ],
+  "solution_source_pages": [
+    6
+  ],
+  "branches": [
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "title": "التمرين الثالث — بكالوريا الجزائر 2014 — دالة لوغاريتمية ومتتالية معرفة بالتراجع",
+  "axis_tags": [
+    "function_sign",
+    "function_variations",
+    "interval_invariance",
+    "recursive_sequence",
+    "mathematical_induction",
+    "sequence_monotonicity",
+    "bounded_sequence",
+    "sequence_convergence",
+    "sequence_limit"
+  ],
+  "statement": "التمرين الثالث: (04 نقاط)\n\nI) \\(f\\) هي الدالة المعرفة على المجال \\(]1;+\\infty[\\) بـ:\n\\[\nf(x)=x-\\ln(x-1).\n\\]\n\n1) حدد حسب قيم \\(x\\)، إشارة \\(f(x)-x\\).\n\n2) أ) عين اتجاه تغير \\(f\\).\n\nب) بين أنه إذا كان:\n\\[\nx\\in[2;e+1]\n\\]\nفإن:\n\\[\nf(x)\\in[2;e+1].\n\\]\n\nII) \\((u_n)\\) المتتالية المعرفة على \\(\\mathbb N\\) كما يلي:\n\\[\nu_0=e+1\n\\]\nومن أجل كل \\(n\\) من \\(\\mathbb N\\):\n\\[\nu_{n+1}=u_n-\\ln(u_n-1).\n\\]\n\n1) برهن بالتراجع أنه من أجل كل \\(n\\) من \\(\\mathbb N\\):\n\\[\nu_n\\in[2;e+1].\n\\]\n\n2) ادرس اتجاه تغير المتتالية \\((u_n)\\).\n\n3) برر تقارب المتتالية \\((u_n)\\)، ثم احسب نهايتها.",
+  "figures": [],
+  "questions": [
+    {
+      "id": "2014_tech_math_ex03_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "I-1) حدد حسب قيم \\(x\\)، إشارة \\(f(x)-x\\).",
+      "solution": {
+        "introduction": "نحسب الفرق \\(f(x)-x\\) ثم ندرس إشارة اللوغاريتم.",
+        "strategy": "نكتب الفرق على صورة بسيطة، ثم نستعمل إشارة \\(\\ln(x-1)\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب الفرق",
+            "explanation": "لدينا:\n\\[f(x)-x=x-\\ln(x-1)-x=-\\ln(x-1).\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "إشارة اللوغاريتم",
+            "explanation": "على مجال التعريف لدينا \\(x>1\\)، وبالتالي \\(x-1>0\\).\nنعلم أن:\n\\[\\ln(x-1)<0 \\iff 0<x-1<1 \\iff 1<x<2,\\]\nو:\n\\[\\ln(x-1)=0 \\iff x-1=1 \\iff x=2,\\]\nو:\n\\[\\ln(x-1)>0 \\iff x>2.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "إشارة f(x)-x",
+            "explanation": "بما أن \\(f(x)-x=-\\ln(x-1)\\)، فإن الإشارة تنعكس.",
+            "result": "\\(f(x)-x>0\\) على \\(]1,2[\\)، وتنعدم عند \\(x=2\\)، و\\(f(x)-x<0\\) على \\(]2,+\\infty[\\)."
+          }
+        ],
+        "final_answer": "\\(\\boxed{f(x)-x>0\\text{ إذا }1<x<2,\\quad =0\\text{ إذا }x=2,\\quad <0\\text{ إذا }x>2}\\).",
+        "verification": "تمت مراجعة الحل مع الإجابة النموذجية الرسمية لبكالوريا 2014، الموضوع الأول، التمرين الثالث.",
+        "common_mistakes": [
+          "نسيان الإشارة السالبة أمام \\(\\ln(x-1)\\)."
+        ],
+        "hints": [
+          "ادرس أولا إشارة \\(\\ln(x-1)\\)."
+        ],
+        "summary": "إشارة الفرق هي عكس إشارة \\(\\ln(x-1)\\).",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2014_tech_math_ex03_q2a",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "I-2-أ) عين اتجاه تغير \\(f\\).",
+      "solution": {
+        "introduction": "نحدد اتجاه التغير بواسطة إشارة المشتقة.",
+        "strategy": "نحسب \\(f'(x)\\) ثم ندرس إشارتها على \\(]1,+\\infty[\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب المشتقة",
+            "explanation": "لدينا:\n\\[f(x)=x-\\ln(x-1).\\]\nإذن:\n\\[f'(x)=1-\\frac1{x-1}=\\frac{x-2}{x-1}.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "إشارة المشتقة",
+            "explanation": "على المجال \\(]1,+\\infty[\\) لدينا \\(x-1>0\\)، لذلك إشارة \\(f'(x)\\) هي إشارة \\(x-2\\).",
+            "result": "\\(f'(x)<0\\) على \\(]1,2[\\)، و\\(f'(2)=0\\)، و\\(f'(x)>0\\) على \\(]2,+\\infty[\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "اتجاه التغير",
+            "explanation": "إذن \\(f\\) متناقصة تماما على \\(]1,2]\\)، ومتزايدة تماما على \\([2,+\\infty[\\). كما أن:\n\\[f(2)=2.\\]",
+            "result": "للدالة قيمة صغرى تساوي 2 عند \\(x=2\\)."
+          }
+        ],
+        "final_answer": "\\(\\boxed{f\\text{ متناقصة على } ]1,2] \\text{ ومتزايدة على } [2,+\\infty[}\\).",
+        "variation_table": {
+          "type": "variation_table",
+          "title": "جدول تغيرات الدالة f",
+          "function_name": "f",
+          "derivative_name": "f'(x)",
+          "domain": "]1,+∞[",
+          "x_values": [
+            "1^+",
+            "2",
+            "+\\infty"
+          ],
+          "derivative_signs": [
+            "-",
+            "0",
+            "+"
+          ],
+          "function_values": [
+            "+\\infty",
+            "2",
+            "+\\infty"
+          ],
+          "directions": [
+            "down",
+            "up"
+          ]
+        },
+        "verification": "تمت مراجعة الحل مع الإجابة النموذجية الرسمية لبكالوريا 2014، الموضوع الأول، التمرين الثالث.",
+        "common_mistakes": [
+          "الخطأ في مشتقة \\(\\ln(x-1)\\)."
+        ],
+        "hints": [
+          "اكتب \\(f'(x)=\\frac{x-2}{x-1}\\)."
+        ],
+        "summary": "إشارة المشتقة سالبة قبل 2 وموجبة بعدها.",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2014_tech_math_ex03_q2b",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "I-2-ب) بين أنه إذا كان \\(x\\in[2;e+1]\\) فإن \\(f(x)\\in[2;e+1]\\).",
+      "solution": {
+        "introduction": "نستعمل تزايد \\(f\\) على المجال \\([2,+\\infty[\\).",
+        "strategy": "نحسب صورتي طرفي المجال ثم نستنتج صورة المجال كله.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "استعمال التزايد",
+            "explanation": "بما أن \\(f\\) متزايدة على \\([2,+\\infty[\\)، فهي متزايدة خصوصا على \\([2,e+1]\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "حساب صورتي الطرفين",
+            "explanation": "لدينا:\n\\[f(2)=2-\\ln1=2,\\]\nو:\n\\[f(e+1)=e+1-\\ln e=e.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "صورة المجال",
+            "explanation": "إذن، لكل \\(x\\in[2,e+1]\\):\n\\[2=f(2)\\le f(x)\\le f(e+1)=e.\\]\nأي:\n\\[f(x)\\in[2,e].\\]\nوبما أن:\n\\[[2,e]\\subset[2,e+1],\\]",
+            "result": "\\(f(x)\\in[2,e+1]\\)."
+          }
+        ],
+        "final_answer": "\\(\\boxed{x\\in[2,e+1]\\Rightarrow f(x)\\in[2,e+1]}\\).",
+        "verification": "تمت مراجعة الحل مع الإجابة النموذجية الرسمية لبكالوريا 2014، الموضوع الأول، التمرين الثالث.",
+        "common_mistakes": [
+          "كتابة \\(f(e+1)=e+1\\) بدل \\(e\\)."
+        ],
+        "hints": [
+          "استعمل تزايد f واحسب f(2) وf(e+1)."
+        ],
+        "summary": "\\(f([2,e+1])=[2,e]\\subset[2,e+1]\\).",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2014_tech_math_ex03_q3",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "II-1) برهن بالتراجع أنه من أجل كل \\(n\\in\\mathbb N\\): \\(u_n\\in[2;e+1]\\).",
+      "solution": {
+        "introduction": "نثبت أن جميع حدود المتتالية تبقى داخل المجال \\([2,e+1]\\) باستعمال البرهان بالتراجع.",
+        "strategy": "نحقق الخاصية عند \\(n=0\\)، ثم نستعمل نتيجة السؤال I-2-ب للانتقال من \\(n\\) إلى \\(n+1\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التحقق عند n=0",
+            "explanation": "لدينا:\n\\[u_0=e+1.\\]\nومن الواضح أن:\n\\[u_0\\in[2,e+1].\\]",
+            "result": "الخاصية صحيحة عند \\(n=0\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "فرضية التراجع",
+            "explanation": "نفترض أنه من أجل عدد طبيعي \\(n\\):\n\\[u_n\\in[2,e+1].\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الانتقال إلى n+1",
+            "explanation": "لدينا:\n\\[u_{n+1}=u_n-\\ln(u_n-1)=f(u_n).\\]\nوبما أن \\(u_n\\in[2,e+1]\\)، فإن نتيجة السؤال I-2-ب تعطي:\n\\[f(u_n)\\in[2,e+1].\\]\nإذن:\n\\[u_{n+1}\\in[2,e+1].\\]",
+            "result": "الخاصية تنتقل من \\(n\\) إلى \\(n+1\\)."
+          },
+          {
+            "step_number": 4,
+            "title": "الخلاصة",
+            "explanation": "حسب مبدأ البرهان بالتراجع، الخاصية صحيحة لكل \\(n\\in\\mathbb N\\)."
+          }
+        ],
+        "final_answer": "\\(\\boxed{u_n\\in[2,e+1]\\text{ لكل }n\\in\\mathbb N}\\).",
+        "verification": "تمت مراجعة الحل مع الإجابة النموذجية الرسمية لبكالوريا 2014، الموضوع الأول، التمرين الثالث.",
+        "common_mistakes": [
+          "نسيان استعمال نتيجة استقرار المجال من الجزء الأول."
+        ],
+        "hints": [
+          "لاحظ أن \\(u_{n+1}=f(u_n)\\)."
+        ],
+        "summary": "المجال [2,e+1] مستقر بالدالة f، لذلك تبقى كل الحدود داخله.",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2014_tech_math_ex03_q4",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "II-2) ادرس اتجاه تغير المتتالية \\((u_n)\\).",
+      "solution": {
+        "introduction": "ندرس الفرق بين حدين متتاليين.",
+        "strategy": "نكتب \\(u_{n+1}-u_n\\) ونستعمل الحصر السابق.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب الفرق",
+            "explanation": "من العلاقة التراجعية:\n\\[u_{n+1}=u_n-\\ln(u_n-1).\\]\nإذن:\n\\[u_{n+1}-u_n=-\\ln(u_n-1).\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "إشارة الفرق",
+            "explanation": "من السؤال السابق:\n\\[u_n\\in[2,e+1].\\]\nإذن \\(u_n-1\\ge1\\)، وبالتالي:\n\\[\\ln(u_n-1)\\ge0.\\]\nومن ثم:\n\\[u_{n+1}-u_n\\le0.\\]",
+            "result": "\\((u_n)\\) متناقصة."
+          }
+        ],
+        "final_answer": "\\(\\boxed{(u_n)\\text{ متناقصة}}\\).",
+        "verification": "تمت مراجعة الحل مع الإجابة النموذجية الرسمية لبكالوريا 2014، الموضوع الأول، التمرين الثالث.",
+        "common_mistakes": [
+          "القول إن \\(\\ln(u_n-1)>0\\) دائما؛ عند \\(u_n=2\\) يساوي صفرًا."
+        ],
+        "hints": [
+          "استعمل \\(u_n\\ge2\\)."
+        ],
+        "summary": "بما أن الفرق \\(u_{n+1}-u_n\\le0\\)، فالمتتالية متناقصة.",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2014_tech_math_ex03_q5",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "II-3) برر تقارب المتتالية \\((u_n)\\)، ثم احسب نهايتها.",
+      "solution": {
+        "introduction": "بعد إثبات الرتابة والحصر يمكن استعمال مبرهنة تقارب المتتاليات الرتيبة.",
+        "strategy": "نثبت أولا التقارب، ثم نمر إلى النهاية في العلاقة \\(u_{n+1}=f(u_n)\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "إثبات التقارب",
+            "explanation": "المتتالية \\((u_n)\\) متناقصة، ومن السؤال II-1 لدينا:\n\\[u_n\\ge2.\\]\nإذن هي متناقصة ومحدودة من الأسفل، وبالتالي فهي متقاربة."
+          },
+          {
+            "step_number": 2,
+            "title": "تسمية النهاية",
+            "explanation": "نضع:\n\\[\\lim_{n\\to+\\infty}u_n=\\ell.\\]\nوبما أن \\(u_n\\in[2,e+1]\\)، فإن \\(\\ell\\in[2,e+1]\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "المرور إلى النهاية",
+            "explanation": "لدينا \\(u_{n+1}=f(u_n)\\)، والدالة \\(f\\) مستمرة على \\([2,e+1]\\). لذلك:\n\\[\\ell=f(\\ell)=\\ell-\\ln(\\ell-1).\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "حل معادلة النهاية",
+            "explanation": "من:\n\\[\\ell=\\ell-\\ln(\\ell-1)\\]\nنحصل على:\n\\[\\ln(\\ell-1)=0.\\]\nإذن:\n\\[\\ell-1=1\\Rightarrow \\ell=2.\\]",
+            "result": "\\(\\lim_{n\\to+\\infty}u_n=2\\)."
+          }
+        ],
+        "final_answer": "\\((u_n)\\) متقاربة و\\(\\boxed{\\lim_{n\\to+\\infty}u_n=2}\\).",
+        "verification": "تمت مراجعة الحل مع الإجابة النموذجية الرسمية لبكالوريا 2014، الموضوع الأول، التمرين الثالث.",
+        "common_mistakes": [
+          "المرور إلى النهاية قبل تبرير تقارب المتتالية.",
+          "حل \\(\\ln(\\ell-1)=0\\) بصورة خاطئة."
+        ],
+        "hints": [
+          "بعد إثبات التقارب، استعمل \\(\\ell=f(\\ell)\\)."
+        ],
+        "summary": "المتتالية متناقصة ومحدودة من الأسفل بـ2، ونقطة التثبيت الوحيدة في المجال هي 2.",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    }
+  ],
+  "source_reference": {
+    "file": "2014(5).pdf",
+    "statement_pages": [
+      2
+    ],
+    "solution_pages": [
+      6
+    ],
+    "source_faithful_statement": true,
+    "solution_reviewed_against_source": true
+  },
+  "display": {
+    "layout": "question_by_question",
+    "show_statement_first": true,
+    "show_statement_figures": true,
+    "show_solution_after_click": true,
+    "show_solution_figures": true
+  },
+  "review_status": {
+    "statement_compared_with_original_pdf": true,
+    "questions_compared_with_original_pdf": true,
+    "source_figures_checked": true,
+    "solution_checked_against_correction": true,
+    "latex_normalized_only": true,
+    "react_ready": true
+  },
+  "given_data": {
+    "f": "x-ln(x-1)",
+    "domain_f": "]1,+∞[",
+    "u0": "e+1",
+    "recurrence": "u_{n+1}=u_n-ln(u_n-1)",
+    "invariant_interval": "[2,e+1]",
+    "monotonicity": "decreasing",
+    "limit": "2"
+  }
+}

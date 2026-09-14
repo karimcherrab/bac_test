@@ -39,7 +39,7 @@ class AlternativeSolutionService:
         self,
         model_name: str | None = None,
     ):
-        api_key = os.getenv("API_KEY")
+        api_key = os.getenv("GROQ_API_KEY") or os.getenv("API_KEY")
 
         if not api_key:
             raise AlternativeSolutionGenerationError(

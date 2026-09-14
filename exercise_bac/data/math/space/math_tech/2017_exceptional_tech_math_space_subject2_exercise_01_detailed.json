@@ -1,0 +1,197 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2017-exceptional-tech-math-space-subject2-ex01-detailed",
+  "session": "exceptional",
+  "year": 2017,
+  "chapter_code": "space_geometry",
+  "chapter_title": "الهندسة في الفضاء",
+  "axis_tags": [
+    "space_parametric_line_plane",
+    "space_relative_positions_intersections",
+    "space_projections_distances",
+    "space_cartesian_plane_normal_vector",
+    "space_sphere_tangent_plane"
+  ],
+  "branches": [
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "exercise_number": 1,
+  "subject_number": 2,
+  "source_page": 3,
+  "source_pages": [
+    3
+  ],
+  "solution_source_pages": [
+    8
+  ],
+  "title": "التمرين الأول — بكالوريا الجزائر 2017 الاستثنائية — الموضوع الثاني — شعبة تقني رياضي",
+  "statement": "الفضاء منسوب إلى المعلم المتعامد المتجانس \\((O;\\vec{i},\\vec{j},\\vec{k})\\). نعتبر النقط \\(A(1;1;-1)\\)، \\(B(1;7;-3)\\) و \\(I(0;1;-2)\\)، والشعاع \\(\\vec v(2;0;2)\\)، والمستقيم \\((\\Delta_1)\\) الذي يشمل النقطة \\(A\\) و\\(\\vec v\\) شعاع توجيه له، و\\((\\Delta_2)\\) المستقيم المعرف بالتمثيل الوسيطي:\n\\[\n\\begin{cases}\nx=-1+2t\\\\\ny=2-t\\\\\nz=3-4t\n\\end{cases}\n\\qquad(t\\in\\mathbb R).\n\\]",
+  "questions": [
+    {
+      "id": "2017_exc_s2_space_ex01_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) بين أن \\(A\\) تنتمي إلى المستقيم \\((\\Delta_2)\\) وأن \\((\\Delta_1)\\) و\\((\\Delta_2)\\) غير متطابقين.",
+      "axis_tags": [
+        "space_parametric_line_plane",
+        "space_relative_positions_intersections"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نبحث عن قيمة للوسيط تعطي النقطة A على Δ2، ثم نقارن شعاعي توجيه المستقيمين.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "إثبات أن A تنتمي إلى Δ2",
+            "explanation": "نأخذ \\(t=1\\):\n\\[x=-1+2=1,\\qquad y=2-1=1,\\qquad z=3-4=-1.\\]\nإذن نحصل على \\(A(1,1,-1)\\)، ومنه \\(A\\in\\Delta_2\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "شعاعا التوجيه",
+            "explanation": "شعاع توجيه \\((\\Delta_1)\\) هو:\n\\[\\vec v_1=(2,0,2).\\]\nوشعاع توجيه \\((\\Delta_2)\\) هو:\n\\[\\vec v_2=(2,-1,-4).\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الاستنتاج",
+            "explanation": "الشعاعان \\((2,0,2)\\) و\\((2,-1,-4)\\) غير متوازيين، إذن المستقيمان ليسا متطابقين."
+          }
+        ],
+        "final_answer": "\\[A\\in\\Delta_2\\] والمستقيمان \\((\\Delta_1)\\) و\\((\\Delta_2)\\) غير متطابقين."
+      }
+    },
+    {
+      "id": "2017_exc_s2_space_ex01_q2",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2) ليكن \\((P)\\) المستوي المعين بالمستقيمين \\((\\Delta_1)\\) و\\((\\Delta_2)\\). بين أن الجملة:\n\\[\\begin{cases}x=1+2\\alpha+2\\beta\\\\y=1-\\alpha\\\\z=-1-4\\alpha+2\\beta\\end{cases}\\qquad(\\alpha\\in\\mathbb R,\\beta\\in\\mathbb R)\\]\nتمثيل وسيطي للمستوي \\((P)\\).",
+      "axis_tags": [
+        "space_parametric_line_plane"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "المستوي المولد بمستقيمين متقاطعين يكتب انطلاقا من نقطة التقاطع A وشعاعي توجيه المستقيمين.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "نقطة مشتركة واتجاهان",
+            "explanation": "النقطة \\(A(1,1,-1)\\) تنتمي إلى المستقيمين. ولدينا شعاعا التوجيه:\n\\[\\vec v_2=(2,-1,-4),\\qquad \\vec v_1=(2,0,2).\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "كتابة نقطة عامة من P",
+            "explanation": "لكل نقطة \\(M\\in(P)\\):\n\\[\\overrightarrow{AM}=\\alpha\\vec v_2+\\beta\\vec v_1.\\]\nإذن:\n\\[M=(1,1,-1)+\\alpha(2,-1,-4)+\\beta(2,0,2).\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "استخراج الإحداثيات",
+            "explanation": "\\[\\begin{cases}x=1+2\\alpha+2\\beta\\\\y=1-\\alpha\\\\z=-1-4\\alpha+2\\beta\\end{cases}.\\]"
+          }
+        ],
+        "final_answer": "الجملة المعطاة تمثيل وسيطي صحيح للمستوي \\((P)\\)."
+      }
+    },
+    {
+      "id": "2017_exc_s2_space_ex01_q3",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "3) أثبت أن \\(I\\) هي المسقط العمودي للنقطة \\(B\\) على المستوي \\((P)\\).",
+      "axis_tags": [
+        "space_projections_distances",
+        "space_cartesian_plane_normal_vector"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نثبت أن I تنتمي إلى P، ثم نثبت أن IB عمودي على شعاعي توجيه للمستوي P.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "إثبات أن I تنتمي إلى P",
+            "explanation": "نبحث عن \\(\\alpha,\\beta\\) بحيث نحصل على \\(I(0,1,-2)\\). من \\(y=1-\\alpha=1\\) نجد \\(\\alpha=0\\). ومن \\(x=1+2\\beta=0\\) نجد \\(\\beta=-\\frac12\\). وعندها:\n\\[z=-1+2\\left(-\\frac12\\right)=-2.\\]\nإذن \\(I\\in P\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "حساب IB",
+            "explanation": "\\[\\overrightarrow{IB}=B-I=(1,6,-1).\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "إثبات التعامد مع اتجاهي P",
+            "explanation": "\\[\\overrightarrow{IB}\\cdot(2,0,2)=2-2=0,\\]\n\\[\\overrightarrow{IB}\\cdot(2,-1,-4)=2-6+4=0.\\]\nإذن \\(IB\\) عمودي على شعاعين غير متوازيين من المستوي \\((P)\\)، وبالتالي \\((IB)\\perp(P)\\)."
+          }
+        ],
+        "final_answer": "بما أن \\(I\\in(P)\\) و\\((IB)\\perp(P)\\)، فإن \\(I\\) هي المسقط العمودي لـ\\(B\\) على \\((P)\\)."
+      }
+    },
+    {
+      "id": "2017_exc_s2_space_ex01_q4a",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "4) لتكن \\((S)\\) مجموعة النقط \\(M(x;y;z)\\) من الفضاء حيث:\n\\[x^2+y^2+z^2-2x-14y+6z+21=0.\\]\nأ) بين أن \\((S)\\) سطح كرة يطلب تحديد مركزها ونصف قطرها.",
+      "axis_tags": [
+        "space_sphere_tangent_plane"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحوّل معادلة المجموعة إلى الشكل المركزي للكرة بإكمال المربعات.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "إكمال المربعات",
+            "explanation": "\\[x^2-2x=(x-1)^2-1,\\]\n\\[y^2-14y=(y-7)^2-49,\\]\n\\[z^2+6z=(z+3)^2-9.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "الشكل المركزي",
+            "explanation": "نعوض في المعادلة:\n\\[(x-1)^2+(y-7)^2+(z+3)^2-1-49-9+21=0.\\]\nإذن:\n\\[(x-1)^2+(y-7)^2+(z+3)^2=38.\\]"
+          }
+        ],
+        "final_answer": "\\((S)\\) سطح كرة مركزها \\[B(1;7;-3)\\] ونصف قطرها \\[R=\\sqrt{38}.\\]"
+      }
+    },
+    {
+      "id": "2017_exc_s2_space_ex01_q4b",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "ب) تحقق أن المستوي \\((P)\\) يمس \\((S)\\) في نقطة يطلب تعيينها.",
+      "axis_tags": [
+        "space_sphere_tangent_plane",
+        "space_projections_distances"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "مركز الكرة هو B، وسبق أن أثبتنا أن I هو المسقط العمودي لـB على P. يكفي التحقق من أن BI يساوي نصف قطر الكرة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب BI",
+            "explanation": "\\[\\overrightarrow{BI}=I-B=(-1,-6,1).\\]\nإذن:\n\\[BI=\\sqrt{1+36+1}=\\sqrt{38}.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "المقارنة مع نصف القطر",
+            "explanation": "وجدنا في السؤال السابق أن نصف قطر الكرة هو:\n\\[R=\\sqrt{38}.\\]\nإذن:\n\\[d(B,P)=BI=R.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الاستنتاج",
+            "explanation": "إذا كانت المسافة بين مركز الكرة والمستوي تساوي نصف القطر، فالمستوي مماس للكرة. ونقطة التماس هي قدم العمود من المركز على المستوي، أي النقطة \\(I\\)."
+          }
+        ],
+        "final_answer": "المستوي \\((P)\\) يمس الكرة \\((S)\\) في النقطة \\[I(0;1;-2).\\]"
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2017_2(2).pdf",
+    "statement_figure_policy": "لا يوجد شكل هندسي إلزامي في نص التمرين.",
+    "solution_figure_policy": "الحل مستقل عن أي رسم.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  }
+}

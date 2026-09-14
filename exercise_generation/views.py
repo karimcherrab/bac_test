@@ -49,7 +49,7 @@ class ExerciseGenerateAPIView(GenericAPIView):
             return Response({
                 "success": True,
                 "axis_id": data["axis_id"],
-                "generation_mode": "bac_like_axis_only_subject_aware_with_visuals",
+                "generation_mode": "bac_like_axis_only_subject_aware_with_verified_documents",
                 "requested_count": data["count"],
                 "generated_count": len(exercises),
                 "exercises": GeneratedExerciseSerializer(exercises, many=True, context={"request": request}).data,

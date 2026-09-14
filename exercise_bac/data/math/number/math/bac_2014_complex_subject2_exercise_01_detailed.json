@@ -1,0 +1,317 @@
+{
+  "schema_version": "4.5-bac-source",
+  "version": "4.2-2014-complex-subject2-ex01",
+  "language": "ar",
+  "direction": "rtl",
+  "year": 2014,
+  "session": "ordinary",
+  "chapter_code": "complex_numbers",
+  "chapter_title": "complex_numbers",
+  "exercise_number": 1,
+  "source_pages": [
+    3
+  ],
+  "solution_source_pages": [
+    7
+  ],
+  "branches": [
+    {
+      "code": "math",
+      "name": "شعبة الرياضيات"
+    }
+  ],
+  "title": "التمرين الأول — بكالوريا الجزائر 2014 — الموضوع الثاني — الأعداد المركبة",
+  "axis_tags": [
+    "complex_exponential_form",
+    "direct_similarity",
+    "fixed_point",
+    "complex_plane_geometry",
+    "line_integer_points",
+    "orthogonality"
+  ],
+  "statement": "التمرين الأول: (05 نقاط)\n\nالمستوى منسوب إلى المعلم المتعامد المتجانس \\((O;\\vec{u},\\vec{v})\\).\n\n\\(A\\) و \\(B\\) النقطتان اللتان لاحقتاهما على الترتيب:\n\\[\na=-2+6i,\\qquad b=-1+2i.\n\\]\n\n1) اكتب العدد المركب \\(1+i\\) على شكل أسي.\n\n2) \\(S\\) التحويل النقطي الذي يرفق بكل نقطة \\(M\\) لاحقتها \\(z\\) النقطة \\(M'\\) لاحقتها \\(z'\\) حيث:\n\\[\nz'=\\sqrt2\\,e^{i\\pi/4}z+2.\n\\]\n\nأ) \\(D\\) النقطة ذات اللاحقة \\(d\\) حيث:\n\\[\nd=2i.\n\\]\nجد لاحقة النقطة \\(D'\\) صورة \\(D\\) بالتحويل \\(S\\). ماذا تستنتج؟\n\nب) بين أن:\n\\[\nz'-d=\\sqrt2\\,e^{i\\pi/4}(z-d)\n\\]\nواستنتج طبيعة وعناصر التحويل \\(S\\).\n\n3) \\((\\Delta)\\) المستقيم ذو المعادلة:\n\\[\n3x+5y=11.\n\\]\n\nأ) تحقق أن النقطة:\n\\[\nM_0(-3;4)\n\\]\nتنتمي إلى \\((\\Delta)\\)، ثم عين نقط \\((\\Delta)\\) التي إحداثياتها أعداد صحيحة.\n\nب) \\(M'_0\\) صورة \\(M_0\\) بالتحويل \\(S\\). بين أن المستقيمين \\((BM'_0)\\) و \\((BA)\\) متعامدان.\n\n4) \\(x\\) و \\(y\\) عددان صحيحان من المجال \\([-5;5]\\). عين مجموعة النقط \\(M(x;y)\\) من المستوى بحيث يكون المستقيمان \\((BM')\\) و \\((BA)\\) متعامدين، حيث \\(M'\\) هي صورة \\(M\\) بالتحويل \\(S\\).",
+  "figures": [],
+  "questions": [
+    {
+      "id": "2014_complex_s2_ex01_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) اكتب العدد المركب \\(1+i\\) على شكل أسي.",
+      "solution": {
+        "strategy": "نحسب المعيار والعمدة ثم نستعمل \\(z=re^{i\theta}\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب المعيار",
+            "explanation": "\\[\n|1+i|=\\sqrt{1^2+1^2}=\\sqrt2.\n\\]",
+            "result": "\\(|1+i|=\\sqrt2\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "تحديد العمدة",
+            "explanation": "الجزء الحقيقي والتخيلي موجبان ومتساويان، لذلك:\n\\[\n\\arg(1+i)=\\frac{\\pi}{4}.\n\\]",
+            "result": "\\(\\arg(1+i)=\\pi/4\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "الشكل الأسي",
+            "explanation": "\\[\n1+i=\\sqrt2\\,e^{i\\pi/4}.\n\\]",
+            "result": "\\(1+i=\\sqrt2e^{i\\pi/4}\\)."
+          }
+        ],
+        "final_answer": "\\[\\boxed{1+i=\\sqrt2\\,e^{i\\pi/4}}\\]",
+        "verification": "مطابق للتصحيح النموذجي في الصفحة 7.",
+        "common_mistakes": [
+          "كتابة المعيار \\(2\\) بدل \\(\\sqrt2\\)."
+        ],
+        "hints": [
+          "استعمل \\(r=\\sqrt{x^2+y^2}\\)."
+        ],
+        "introduction": "العدد \\(1+i\\) يقع في الربع الأول وزاويته \\(45^\\circ\\).",
+        "summary": "الشكل الأسي هو \\(\\sqrt2e^{i\\pi/4}\\).",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2014_complex_s2_ex01_q2",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2-أ) \\(D\\) النقطة ذات اللاحقة \\(d=2i\\). جد لاحقة النقطة \\(D'\\) صورة \\(D\\) بالتحويل \\(S\\). ماذا تستنتج؟",
+      "solution": {
+        "strategy": "نعوض \\(z=d=2i\\) في عبارة التحويل.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تبسيط معامل z",
+            "explanation": "من السؤال السابق:\n\\[\n\\sqrt2e^{i\\pi/4}=1+i.\n\\]\nإذن:\n\\[\nz'=(1+i)z+2.\n\\]",
+            "result": "أصبحت العبارة أبسط."
+          },
+          {
+            "step_number": 2,
+            "title": "صورة D",
+            "explanation": "نعوض:\n\\[\nz=2i.\n\\]\nفنجد:\n\\[\nz_{D'}=(1+i)(2i)+2\n=2i+2i^2+2\n=2i-2+2\n=2i.\n\\]\nإذن:\n\\[\nz_{D'}=d.\n\\]",
+            "result": "\\(z_{D'}=2i=d\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "الاستنتاج",
+            "explanation": "بما أن صورة \\(D\\) هي \\(D\\) نفسها، فإن \\(D\\) نقطة ثابتة للتحويل \\(S\\).",
+            "result": "النقطة \\(D\\) ثابتة."
+          }
+        ],
+        "final_answer": "\\[\\boxed{D'=D}\\qquad\\Longrightarrow\\qquad\\boxed{D\\text{ نقطة ثابتة لـ }S}\\]",
+        "verification": "مطابق للتصحيح النموذجي.",
+        "common_mistakes": [
+          "الخطأ في \\(i^2=-1\\)."
+        ],
+        "hints": [
+          "عوّض مباشرة \\(z=2i\\)."
+        ],
+        "introduction": "النقطة الثابتة ستكون مركز التشابه في السؤال التالي.",
+        "summary": "وجدنا أن \\(D\\) ثابتة بالتحويل.",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2014_complex_s2_ex01_q3",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "2-ب) بين أن:\n\\[\nz'-d=\\sqrt2\\,e^{i\\pi/4}(z-d)\n\\]\nواستنتج طبيعة وعناصر التحويل \\(S\\).",
+      "solution": {
+        "strategy": "نعيد كتابة التحويل حول النقطة الثابتة \\(D\\)، ثم نقرأ مباشرة عناصر التشابه.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "إعادة كتابة العبارة",
+            "explanation": "لدينا:\n\\[\nz'=\\sqrt2e^{i\\pi/4}z+2,\n\\qquad d=2i.\n\\]\nوبما أن:\n\\[\n\\sqrt2e^{i\\pi/4}=1+i,\n\\]\nفنحسب:\n\\[\nz'-d=(1+i)z+2-2i.\n\\]\nومن جهة أخرى:\n\\[\n(1+i)(z-2i)\n=(1+i)z-2i-2i^2\n=(1+i)z+2-2i.\n\\]\nإذن:\n\\[\nz'-d=\\sqrt2e^{i\\pi/4}(z-d).\n\\]",
+            "result": "تم إثبات الصيغة."
+          },
+          {
+            "step_number": 2,
+            "title": "تحديد طبيعة S",
+            "explanation": "الصيغة:\n\\[\nz'-d=ke^{i\\theta}(z-d)\n\\]\nتمثل تشابها مباشرا مركزه النقطة ذات اللاحقة \\(d\\).\n\nهنا:\n\\[\nk=\\sqrt2,\\qquad \\theta=\\frac{\\pi}{4}.\n\\]",
+            "result": "تشابه مباشر مركزه \\(D\\)."
+          }
+        ],
+        "final_answer": "\\[\n\\boxed{S\\text{ تشابه مباشر مركزه }D,\\ \\text{نسبته }\\sqrt2,\\ \\text{وزاويته }\\frac{\\pi}{4}}\n\\]",
+        "verification": "مطابق للتصحيح النموذجي.",
+        "common_mistakes": [
+          "اعتبار \\(D\\) مجرد نقطة ثابتة دون استنتاج أنها مركز التشابه."
+        ],
+        "hints": [
+          "قارن مع الصيغة القياسية \\(z'-\\omega=ke^{i\theta}(z-\\omega)\\)."
+        ],
+        "introduction": "بعد تحديد نقطة ثابتة، إعادة كتابة العبارة حولها تكشف عناصر التحويل.",
+        "summary": "التحويل تشابه مباشر مركزه \\(D\\)، نسبته \\(\\sqrt2\\)، وزاويته \\(\\pi/4\\).",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2014_complex_s2_ex01_q4",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "3-أ) تحقق أن النقطة \\(M_0(-3;4)\\) تنتمي إلى \\((\\Delta)\\)، ثم عين نقط \\((\\Delta)\\) التي إحداثياتها أعداد صحيحة.",
+      "solution": {
+        "strategy": "نتحقق بالتعويض، ثم نحل المعادلة الديوفانتية \\(3x+5y=11\\) في الأعداد الصحيحة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التحقق من انتماء M0",
+            "explanation": "نعوض:\n\\[\nx=-3,\\qquad y=4.\n\\]\nفنجد:\n\\[\n3(-3)+5(4)=-9+20=11.\n\\]\nإذن:\n\\[\nM_0(-3,4)\\in(\\Delta).\n\\]",
+            "result": "\\(M_0\\in(\\Delta)\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "حل المعادلة في الأعداد الصحيحة",
+            "explanation": "نريد:\n\\[\n3x+5y=11.\n\\]\nبترديد \\(5\\):\n\\[\n3x\\equiv1\\pmod5.\n\\]\nومعكوس \\(3\\) بترديد \\(5\\) هو \\(2\\)، لذلك:\n\\[\nx\\equiv2\\pmod5.\n\\]\nإذن:\n\\[\nx=5k+2,\\qquad k\\in\\mathbb Z.\n\\]\nبالتعويض:\n\\[\n3(5k+2)+5y=11\n\\]\nفنحصل على:\n\\[\n15k+6+5y=11\n\\]\nأي:\n\\[\ny=1-3k.\n\\]",
+            "result": "\\(x=5k+2,\\ y=1-3k\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "صيغة مكافئة تمر عبر M0",
+            "explanation": "إذا وضعنا \\(k'=k+1\\)، يمكن أيضا كتابة النقط على الشكل:\n\\[\nx=5k'-3,\\qquad y=-3k'+4,\n\\qquad k'\\in\\mathbb Z.\n\\]\nوهذه الصيغة تُظهر مباشرة النقطة \\(M_0(-3,4)\\) عند \\(k'=0\\).",
+            "result": "تم وصف جميع النقط الصحيحة."
+          }
+        ],
+        "final_answer": "\\[\n\\boxed{M_k(5k+2,\\ 1-3k),\\quad k\\in\\mathbb Z}\n\\]\nأو بصورة مكافئة:\n\\[\n\\boxed{M_k(5k-3,\\ -3k+4),\\quad k\\in\\mathbb Z}.\n\\]",
+        "verification": "مطابق للتصحيح النموذجي؛ الصيغتان متكافئتان بتغيير فهرس الوسيط.",
+        "common_mistakes": [
+          "إعطاء نقطة صحيحة واحدة فقط بدل جميع الحلول.",
+          "نسيان أن \\(k\\) عدد صحيح."
+        ],
+        "hints": [
+          "حل التوافق \\(3x\\equiv1[5]\\)."
+        ],
+        "introduction": "المطلوب ليس مجرد نقطة واحدة بل جميع نقاط المستقيم ذات الإحداثيات الصحيحة.",
+        "summary": "كل النقط الصحيحة تعطى بوسيط صحيح \\(k\\).",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2014_complex_s2_ex01_q5",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "3-ب) \\(M'_0\\) صورة \\(M_0\\) بالتحويل \\(S\\). بين أن المستقيمين \\((BM'_0)\\) و \\((BA)\\) متعامدان.",
+      "solution": {
+        "strategy": "نحسب لاحقة \\(M'_0\\)، ثم نحسب خارج لاحقتي المتجهتين \\(\\overrightarrow{BM'_0}\\) و\\(\\overrightarrow{BA}\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "لاحقة M0",
+            "explanation": "بما أن:\n\\[\nM_0(-3,4),\n\\]\nفإن:\n\\[\nz_{M_0}=-3+4i.\n\\]",
+            "result": "\\(z_{M_0}=-3+4i\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "حساب صورة M0",
+            "explanation": "لدينا:\n\\[\nz'=(1+i)z+2.\n\\]\nإذن:\n\\[\nz_{M'_0}=(1+i)(-3+4i)+2.\n\\]\nنوسع:\n\\[\n-3+4i-3i+4i^2+2\n=-3+i-4+2\n=-5+i.\n\\]\nإذن:\n\\[\nM'_0(-5,1).\n\\]",
+            "result": "\\(z_{M'_0}=-5+i\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "حساب الخارج",
+            "explanation": "لدينا:\n\\[\nz_B=-1+2i,\\qquad z_A=-2+6i.\n\\]\nإذن:\n\\[\nz_{M'_0}-z_B=(-5+i)-(-1+2i)=-4-i,\n\\]\nو:\n\\[\nz_A-z_B=(-2+6i)-(-1+2i)=-1+4i.\n\\]\nنحسب:\n\\[\n\\frac{z_{M'_0}-z_B}{z_A-z_B}\n=\\frac{-4-i}{-1+4i}.\n\\]\nوبالتبسيط:\n\\[\n\\frac{-4-i}{-1+4i}=i.\n\\]",
+            "result": "\\(\\frac{z_{M'_0}-z_B}{z_A-z_B}=i\\)."
+          },
+          {
+            "step_number": 4,
+            "title": "الاستنتاج",
+            "explanation": "بما أن:\n\\[\n\\arg(i)=\\frac{\\pi}{2},\n\\]\nفإن الزاوية بين \\(\\overrightarrow{BA}\\) و\\(\\overrightarrow{BM'_0}\\) قائمة.\nإذن:\n\\[\n(BM'_0)\\perp(BA).\n\\]",
+            "result": "\\((BM'_0)\\perp(BA)\\)."
+          }
+        ],
+        "final_answer": "\\[\\boxed{(BM'_0)\\perp(BA)}\\]",
+        "verification": "مطابق للتصحيح النموذجي.",
+        "common_mistakes": [
+          "قلب الخارج المركب دون الانتباه إلى اتجاه الزاوية."
+        ],
+        "hints": [
+          "إذا كان الخارج تخيليا صرفا غير معدوم فالمستقيمان متعامدان."
+        ],
+        "introduction": "نثبت التعامد باستعمال العمدة الناتجة من خارج فرق لاحقتين.",
+        "summary": "الخارج يساوي \\(i\\)، لذلك الزاوية \\(\\pi/2\\).",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2014_complex_s2_ex01_q6",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "4) \\(x\\) و \\(y\\) عددان صحيحان من المجال \\([-5;5]\\). عين مجموعة النقط \\(M(x;y)\\) من المستوى بحيث يكون المستقيمان \\((BM')\\) و \\((BA)\\) متعامدين، حيث \\(M'\\) هي صورة \\(M\\) بالتحويل \\(S\\).",
+      "solution": {
+        "strategy": "نحوّل شرط التعامد إلى معادلة على \\(x,y\\)، ثم نبحث عن الحلول الصحيحة داخل المجال المحدد.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "كتابة لاحقة M وصورتها",
+            "explanation": "لتكن:\n\\[\nz=x+iy.\n\\]\nوبما أن:\n\\[\nS:\\ z'=(1+i)z+2,\n\\]\nفإن:\n\\[\nz'=(1+i)(x+iy)+2\n=(x-y+2)+i(x+y).\n\\]",
+            "result": "\\(z'=(x-y+2)+i(x+y)\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "شرط التعامد",
+            "explanation": "حتى يكون:\n\\[\n(BM')\\perp(BA),\n\\]\nيجب أن يكون:\n\\[\n\\frac{z'-z_B}{z_A-z_B}\n\\]\nعددا تخيليا صرفا.\n\nلدينا:\n\\[\nz_B=-1+2i,\\qquad z_A-z_B=-1+4i.\n\\]\nومن ثم:\n\\[\nz'-z_B=(x-y+3)+i(x+y-2).\n\\]\n\nبفرض أن الجزء الحقيقي للخارج يساوي صفرا، نحصل بعد التبسيط على:\n\\[\n3x+5y=11.\n\\]",
+            "result": "\\(3x+5y=11\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "استعمال الحلول الصحيحة السابقة",
+            "explanation": "من السؤال السابق، الحلول الصحيحة للمستقيم هي:\n\\[\nx=5k+2,\\qquad y=1-3k,\\qquad k\\in\\mathbb Z.\n\\]\nنفرض:\n\\[\n-5\\le x\\le5,\\qquad -5\\le y\\le5.\n\\]\nنجرب القيم الممكنة لـ \\(k\\):\n- إذا \\(k=-1\\):\n\\[\n(x,y)=(-3,4).\n\\]\n- إذا \\(k=0\\):\n\\[\n(x,y)=(2,1).\n\\]\n- إذا \\(k=1\\):\n\\[\nx=7\n\\]\nوهو خارج المجال.\n- وإذا \\(k\\le-2\\)، تصبح إحدى الإحداثيتين خارج المجال أيضا.",
+            "result": "تبقى نقطتان فقط."
+          },
+          {
+            "step_number": 4,
+            "title": "النتيجة",
+            "explanation": "إذن النقط المطلوبة هي:\n\\[\nM_0(-3,4)\n\\]\nو:\n\\[\nM_1(2,1).\n\\]",
+            "result": "النقطتان المطلوبتان."
+          }
+        ],
+        "final_answer": "\\[\\boxed{M_0(-3,4)\\quad\\text{و}\\quad M_1(2,1)}\\]",
+        "verification": "مطابق للتصحيح النموذجي في الصفحة 7.",
+        "common_mistakes": [
+          "نسيان شرط \\(x,y\\in[-5,5]\\).",
+          "البحث عن حلول عشرية رغم أن \\(x,y\\) صحيحان."
+        ],
+        "hints": [
+          "بعد الوصول إلى \\(3x+5y=11\\)، استعمل parametrization السؤال السابق."
+        ],
+        "introduction": "المسألة تعود إلى نقاط المستقيم \\((\\Delta)\\) ذات الإحداثيات الصحيحة داخل مربع محدود.",
+        "summary": "لا توجد إلا نقطتان: \\((-3,4)\\) و\\((2,1)\\).",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    }
+  ],
+  "source_reference": {
+    "file": "2014(6).pdf",
+    "statement_pages": [
+      3
+    ],
+    "solution_pages": [
+      7
+    ],
+    "source_faithful_statement": true,
+    "solution_reviewed_against_source": true
+  },
+  "display": {
+    "layout": "question_by_question",
+    "show_statement_first": true,
+    "show_statement_figures": true,
+    "show_solution_after_click": true,
+    "show_solution_figures": true
+  },
+  "review_status": {
+    "statement_compared_with_original_pdf": true,
+    "questions_compared_with_original_pdf": true,
+    "source_figures_checked": true,
+    "solution_checked_against_correction": true,
+    "latex_normalized_only": true,
+    "react_ready": true
+  },
+  "given_data": {
+    "A": "-2+6i",
+    "B": "-1+2i",
+    "S": "z'=√2 e^(iπ/4) z + 2",
+    "D": "2i",
+    "Delta": "3x+5y=11"
+  }
+}

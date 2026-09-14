@@ -1,0 +1,317 @@
+{
+  "schema_version": "4.5-bac-source",
+  "version": "4.2-2019-complex-subject1-ex03",
+  "language": "ar",
+  "direction": "rtl",
+  "year": 2019,
+  "session": "ordinary",
+  "chapter_code": "complex_numbers",
+  "chapter_title": "complex_numbers",
+  "exercise_number": 3,
+  "source_pages": [
+    2
+  ],
+  "solution_source_pages": [
+    7,
+    8
+  ],
+  "branches": [
+    {
+      "code": "math",
+      "name": "شعبة الرياضيات"
+    }
+  ],
+  "title": "التمرين الثالث — بكالوريا الجزائر 2019 — الموضوع الأول — الأعداد المركبة",
+  "axis_tags": [
+    "complex_equations",
+    "complex_conjugate",
+    "circle_complex_plane",
+    "rotation",
+    "triangle_geometry",
+    "trapezoid",
+    "orthogonality_complex_vectors",
+    "locus_circle_diameter"
+  ],
+  "statement": "التمرين الثالث: (05 نقاط)\n\nفي المستوى المركب المنسوب إلى المعلم المتعامد والمتجانس \\((O;\\vec{u},\\vec{v})\\)، نعتبر النقط \\(A\\)، \\(B\\)، \\(C\\) و \\(D\\) حيث:\n\\[\nz_A=1+i\\sqrt2,\\qquad z_B=i,\\qquad z_C=\\overline{z_A},\\qquad z_D=\\overline{z_B},\\qquad z_E=1.\n\\]\n\n1) حل في المجموعة \\(\\mathbb C\\) المعادلة ذات المجهول \\(z\\):\n\\[\n(z^2+1)(z^2-2z+3)=0.\n\\]\n\n2) أ) احسب كلا من:\n\\[\n|z_A-1|,\\qquad |z_B-1|,\\qquad |z_C-z_E|\n\\]\nثم تحقق أن النقط الأربعة \\(A\\)، \\(B\\)، \\(C\\) و \\(D\\) تنتمي إلى نفس الدائرة التي يطلب تعيين مركزها وطول نصف قطرها.\n\nب) بين أن:\n\\[\nz_B-z_E=\\frac{\\sqrt2}{2}(1+i)(z_A-z_E)\n\\]\nثم استنتج أن \\(B\\) هي صورة \\(A\\) بتحويل نقطي يطلب تعيين عناصره المميزة.\n\n- ما طبيعة المثلث \\(ABE\\)؟\n\n3) عين لاحقتي الشعاعين \\(\\overrightarrow{BD}\\) و \\(\\overrightarrow{AE}\\) محددا طبيعة الرباعي \\(ABDE\\).\n\n4) \\(\\overrightarrow{w_1}\\) و \\(\\overrightarrow{w_2}\\) شعاعان من المستوى لاحقتاهما على الترتيب \\(z_1\\) و \\(z_2\\).\n\nأ) برهن أن:\n\\[\n\\overrightarrow{w_1}\\perp\\overrightarrow{w_2}\n\\]\nيكافئ:\n\\[\nz_1\\overline{z_2}+\\overline{z_1}z_2=0.\n\\]\n\nب) عين مجموعة النقط \\(M\\) من المستوى ذات اللاحقة \\(z\\) حيث:\n\\[\n(z-z_A)(\\overline z-z_D)+(z-z_B)(\\overline z-z_C)=0.\n\\]",
+  "figures": [],
+  "questions": [
+    {
+      "id": "2019_complex_s1_ex03_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) حل في \\(\\mathbb C\\):\n\\[\n(z^2+1)(z^2-2z+3)=0.\n\\]",
+      "solution": {
+        "strategy": "نستعمل خاصية الجداء المعدوم ثم نحل المعادلتين الناتجتين.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حل z²+1=0",
+            "explanation": "لدينا:\n\\[\nz^2+1=0\\Longleftrightarrow z^2=-1.\n\\]\nإذن:\n\\[\nz=i\\quad\\text{أو}\\quad z=-i.\n\\]",
+            "result": ""
+          },
+          {
+            "step_number": 2,
+            "title": "حل z²-2z+3=0",
+            "explanation": "نحسب المميز:\n\\[\n\\Delta=(-2)^2-4\\times1\\times3=4-12=-8.\n\\]\nومن ثم:\n\\[\n\\sqrt\\Delta=2i\\sqrt2.\n\\]\nإذن:\n\\[\nz=\\frac{2\\pm2i\\sqrt2}{2}=1\\pm i\\sqrt2.\n\\]",
+            "result": ""
+          }
+        ],
+        "final_answer": "\\[\n\\boxed{S=\\{i,-i,1+i\\sqrt2,1-i\\sqrt2\\}}\n\\]",
+        "verification": "مطابق للإجابة النموذجية لبكالوريا 2019 — الموضوع الأول.",
+        "common_mistakes": [
+          "نسيان خاصية الجداء المعدوم.",
+          "الخطأ في \\(\\sqrt{-8}=2i\\sqrt2\\)."
+        ],
+        "hints": [
+          "حل كل عامل على حدة."
+        ],
+        "introduction": "",
+        "summary": "\\[\n\\boxed{S=\\{i,-i,1+i\\sqrt2,1-i\\sqrt2\\}}\n\\]",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2019_complex_s1_ex03_q2a",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2-أ) احسب المقادير المطلوبة ثم عين الدائرة التي تنتمي إليها النقط A وB وC وD.",
+      "solution": {
+        "strategy": "نحسب المسافات إلى النقطة \\(E\\) ذات اللاحقة \\(1\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب |z_A-1|",
+            "explanation": "لدينا:\n\\[\nz_A-1=i\\sqrt2.\n\\]\nإذن:\n\\[\n|z_A-1|=\\sqrt2.\n\\]",
+            "result": ""
+          },
+          {
+            "step_number": 2,
+            "title": "حساب |z_B-1|",
+            "explanation": "لدينا:\n\\[\nz_B-1=i-1=-1+i.\n\\]\nإذن:\n\\[\n|z_B-1|=\\sqrt{(-1)^2+1^2}=\\sqrt2.\n\\]",
+            "result": ""
+          },
+          {
+            "step_number": 3,
+            "title": "حساب |z_C-z_E|",
+            "explanation": "بما أن:\n\\[\nz_C=1-i\\sqrt2,\\qquad z_E=1,\n\\]\nفإن:\n\\[\nz_C-z_E=-i\\sqrt2,\n\\]\nومن ثم:\n\\[\n|z_C-z_E|=\\sqrt2.\n\\]",
+            "result": ""
+          },
+          {
+            "step_number": 4,
+            "title": "إضافة النقطة D",
+            "explanation": "لدينا:\n\\[\nz_D=\\overline{i}=-i.\n\\]\nإذن:\n\\[\n|z_D-z_E|=|-i-1|=|-1-i|=\\sqrt2.\n\\]",
+            "result": ""
+          },
+          {
+            "step_number": 5,
+            "title": "الاستنتاج",
+            "explanation": "وجدنا:\n\\[\nEA=EB=EC=ED=\\sqrt2.\n\\]\nإذن النقط الأربع تنتمي إلى دائرة مركزها \\(E\\) ونصف قطرها \\(\\sqrt2\\).",
+            "result": ""
+          }
+        ],
+        "final_answer": "\\[\n\\boxed{(\\mathcal C)\\text{ دائرة مركزها }E\\text{ ونصف قطرها }\\sqrt2}\n\\]",
+        "verification": "مطابق للتصحيح النموذجي؛ حيث يعطي \\(AE=BE=CE=DE=\\sqrt2\\).",
+        "common_mistakes": [],
+        "hints": [],
+        "introduction": "",
+        "summary": "\\[\n\\boxed{(\\mathcal C)\\text{ دائرة مركزها }E\\text{ ونصف قطرها }\\sqrt2}\n\\]",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2019_complex_s1_ex03_q2b",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "2-ب) أثبت العلاقة، ثم عين التحويل الذي يحول A إلى B واستنتج طبيعة المثلث ABE.",
+      "solution": {
+        "strategy": "نبسط طرفي العلاقة ثم نكتب معامل التحويل على الشكل الأسي.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب z_A-z_E",
+            "explanation": "لدينا:\n\\[\nz_A-z_E=(1+i\\sqrt2)-1=i\\sqrt2.\n\\]",
+            "result": ""
+          },
+          {
+            "step_number": 2,
+            "title": "التحقق من العلاقة",
+            "explanation": "نحسب:\n\\[\n\\frac{\\sqrt2}{2}(1+i)(z_A-z_E)\n=\\frac{\\sqrt2}{2}(1+i)(i\\sqrt2).\n\\]\nوبالتبسيط:\n\\[\n=(1+i)i=i-1=-1+i.\n\\]\nومن جهة أخرى:\n\\[\nz_B-z_E=i-1=-1+i.\n\\]\nإذن العلاقة صحيحة.",
+            "result": ""
+          },
+          {
+            "step_number": 3,
+            "title": "تحديد التحويل",
+            "explanation": "لدينا:\n\\[\n\\frac{\\sqrt2}{2}(1+i)\n=\\frac{\\sqrt2}{2}+i\\frac{\\sqrt2}{2}\n=e^{i\\pi/4}.\n\\]\nإذن:\n\\[\nz_B-z_E=e^{i\\pi/4}(z_A-z_E).\n\\]\nوهذه صيغة دوران مركزه \\(E\\) وزاويته:\n\\[\n\\frac\\pi4.\n\\]\nونسبته \\(1\\).",
+            "result": ""
+          },
+          {
+            "step_number": 4,
+            "title": "طبيعة المثلث ABE",
+            "explanation": "بما أن الدوران يحافظ على الأطوال:\n\\[\nEA=EB.\n\\]\nكما أن:\n\\[\n(\\overrightarrow{EA},\\overrightarrow{EB})=\\frac\\pi4.\n\\]\nإذن المثلث \\(ABE\\) متساوي الساقين رأسه \\(E\\).",
+            "result": ""
+          }
+        ],
+        "final_answer": "\\[\n\\boxed{B\\text{ صورة }A\\text{ بدوران مركزه }E\\text{ وزاويته }\\frac\\pi4}\n\\]\nو:\n\\[\n\\boxed{ABE\\text{ مثلث متساوي الساقين رأسه }E}.\n\\]",
+        "verification": "مطابق للتصحيح النموذجي.",
+        "common_mistakes": [],
+        "hints": [],
+        "introduction": "",
+        "summary": "\\[\n\\boxed{B\\text{ صورة }A\\text{ بدوران مركزه }E\\text{ وزاويته }\\frac\\pi4}\n\\]\nو:\n\\[\n\\boxed{ABE\\text{ مثلث متساوي الساقين رأسه }E}.\n\\]",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2019_complex_s1_ex03_q3",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "3) عين لاحقتي الشعاعين BD وAE ثم حدد طبيعة الرباعي ABDE.",
+      "solution": {
+        "strategy": "نحسب لاحقتي الشعاعين ثم نتحقق من التوازي وعدم تساوي الطولين.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "لاحقة BD",
+            "explanation": "لدينا:\n\\[\nz_{\\overrightarrow{BD}}=z_D-z_B=-i-i=-2i.\n\\]",
+            "result": "\\(z_{BD}=-2i\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "لاحقة AE",
+            "explanation": "لدينا:\n\\[\nz_{\\overrightarrow{AE}}=z_E-z_A=1-(1+i\\sqrt2)=-i\\sqrt2.\n\\]",
+            "result": "\\(z_{AE}=-i\\sqrt2\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "إثبات التوازي",
+            "explanation": "نحسب:\n\\[\n\\frac{z_{AE}}{z_{BD}}\n=\\frac{-i\\sqrt2}{-2i}\n=\\frac{\\sqrt2}{2}\\in\\mathbb R_+.\n\\]\nإذن:\n\\[\n(AE)\\parallel(BD).\n\\]",
+            "result": ""
+          },
+          {
+            "step_number": 4,
+            "title": "تحديد الرباعي",
+            "explanation": "لدينا:\n\\[\nAE=\\sqrt2,\\qquad BD=2.\n\\]\nإذن الضلعان المتقابلان \\(AE\\) و\\(BD\\) متوازيان وغير متساويين، ومن ثم الرباعي \\(ABDE\\) شبه منحرف.",
+            "result": ""
+          }
+        ],
+        "final_answer": "\\[\n\\boxed{z_{BD}=-2i,\\qquad z_{AE}=-i\\sqrt2}\n\\]\nو:\n\\[\n\\boxed{ABDE\\text{ شبه منحرف}}.\n\\]",
+        "verification": "مطابق للتصحيح النموذجي في الصفحة 8.",
+        "common_mistakes": [],
+        "hints": [],
+        "introduction": "",
+        "summary": "\\[\n\\boxed{z_{BD}=-2i,\\qquad z_{AE}=-i\\sqrt2}\n\\]\nو:\n\\[\n\\boxed{ABDE\\text{ شبه منحرف}}.\n\\]",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2019_complex_s1_ex03_q4a",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "4-أ) برهن أن:\n\\[\n\\overrightarrow{w_1}\\perp\\overrightarrow{w_2}\n\\Longleftrightarrow\nz_1\\overline{z_2}+\\overline{z_1}z_2=0.\n\\]",
+      "solution": {
+        "strategy": "نربط الجداء السلمي بالجزء الحقيقي للعدد \\(z_1\\overline{z_2}\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "كتابة اللواحق",
+            "explanation": "نكتب:\n\\[\nz_1=x_1+iy_1,\\qquad z_2=x_2+iy_2.\n\\]\nلدينا:\n\\[\nz_1\\overline{z_2}\n=(x_1+iy_1)(x_2-iy_2).\n\\]\nجزؤه الحقيقي هو:\n\\[\n\\operatorname{Re}(z_1\\overline{z_2})=x_1x_2+y_1y_2.\n\\]",
+            "result": ""
+          },
+          {
+            "step_number": 2,
+            "title": "ربط ذلك بالجداء السلمي",
+            "explanation": "لكن:\n\\[\n\\overrightarrow{w_1}\\cdot\\overrightarrow{w_2}=x_1x_2+y_1y_2.\n\\]\nكما أن:\n\\[\nz_1\\overline{z_2}+\\overline{z_1}z_2\n=2\\operatorname{Re}(z_1\\overline{z_2}).\n\\]\nإذن:\n\\[\nz_1\\overline{z_2}+\\overline{z_1}z_2\n=2(\\overrightarrow{w_1}\\cdot\\overrightarrow{w_2}).\n\\]",
+            "result": ""
+          },
+          {
+            "step_number": 3,
+            "title": "الاستنتاج",
+            "explanation": "ومن ثم:\n\\[\n\\overrightarrow{w_1}\\cdot\\overrightarrow{w_2}=0\n\\Longleftrightarrow\nz_1\\overline{z_2}+\\overline{z_1}z_2=0.\n\\]\nوهذا يكافئ تعامد الشعاعين.",
+            "result": ""
+          }
+        ],
+        "final_answer": "\\[\n\\boxed{\\overrightarrow{w_1}\\perp\\overrightarrow{w_2}\n\\Longleftrightarrow\nz_1\\overline{z_2}+\\overline{z_1}z_2=0}\n\\]",
+        "verification": "مطابق للتصحيح النموذجي.",
+        "common_mistakes": [],
+        "hints": [],
+        "introduction": "",
+        "summary": "\\[\n\\boxed{\\overrightarrow{w_1}\\perp\\overrightarrow{w_2}\n\\Longleftrightarrow\nz_1\\overline{z_2}+\\overline{z_1}z_2=0}\n\\]",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2019_complex_s1_ex03_q4b",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "4-ب) عين مجموعة النقط \\(M(z)\\) حيث:\n\\[\n(z-z_A)(\\overline z-z_D)+(z-z_B)(\\overline z-z_C)=0.\n\\]",
+      "solution": {
+        "strategy": "نستعمل علاقات المرافق ثم نحول المعادلة إلى شرط تعامد بين \\(\\overrightarrow{AM}\\) و\\(\\overrightarrow{BM}\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "استعمال z_D وz_C",
+            "explanation": "لدينا:\n\\[\nz_D=\\overline{z_B}\\Longrightarrow \\overline{z_D}=z_B,\n\\]\nو:\n\\[\nz_C=\\overline{z_A}\\Longrightarrow \\overline{z_C}=z_A.\n\\]\nكما أن:\n\\[\n\\overline{z-z_B}=\\overline z-z_D,\n\\qquad\n\\overline{z-z_A}=\\overline z-z_C.\n\\]",
+            "result": ""
+          },
+          {
+            "step_number": 2,
+            "title": "إعادة كتابة المعادلة",
+            "explanation": "تصبح المعادلة:\n\\[\n(z-z_A)\\overline{(z-z_B)}+(z-z_B)\\overline{(z-z_A)}=0.\n\\]\nوبحسب السؤال السابق فهذا يكافئ:\n\\[\n\\overrightarrow{AM}\\perp\\overrightarrow{BM}.\n\\]",
+            "result": ""
+          },
+          {
+            "step_number": 3,
+            "title": "التفسير الهندسي",
+            "explanation": "شرط:\n\\[\n\\angle AMB=\\frac\\pi2\n\\]\nيعني أن \\(M\\) تنتمي إلى الدائرة التي قطرها \\([AB]\\)، حسب مبرهنة طاليس.",
+            "result": ""
+          },
+          {
+            "step_number": 4,
+            "title": "عناصر الدائرة عند الحاجة",
+            "explanation": "مركزها هو منتصف \\([AB]\\). إذا رمزنا له بـ \\(K\\)، فإن:\n\\[\nz_K=\\frac{z_A+z_B}{2}\n=\\frac12+i\\frac{\\sqrt2+1}{2}.\n\\]\nونصف قطرها:\n\\[\nr=\\frac{AB}{2}\n=\\frac12\\sqrt{4-2\\sqrt2}.\n\\]",
+            "result": ""
+          }
+        ],
+        "final_answer": "\\[\n\\boxed{\\text{مجموعة النقط }M\\text{ هي الدائرة ذات القطر }[AB]}\n\\]",
+        "verification": "مطابق للتصحيح النموذجي في الصفحة 8.",
+        "common_mistakes": [],
+        "hints": [],
+        "introduction": "",
+        "summary": "\\[\n\\boxed{\\text{مجموعة النقط }M\\text{ هي الدائرة ذات القطر }[AB]}\n\\]",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    }
+  ],
+  "source_reference": {
+    "file": "2019(5).pdf",
+    "statement_pages": [
+      2
+    ],
+    "solution_pages": [
+      7,
+      8
+    ],
+    "source_faithful_statement": true,
+    "solution_reviewed_against_source": true
+  },
+  "display": {
+    "layout": "question_by_question",
+    "show_statement_first": true,
+    "show_statement_figures": true,
+    "show_solution_after_click": true,
+    "show_solution_figures": true
+  },
+  "review_status": {
+    "statement_compared_with_original_pdf": true,
+    "questions_compared_with_original_pdf": true,
+    "solution_checked_against_correction": true,
+    "latex_normalized_only": true,
+    "react_ready": true
+  },
+  "given_data": {
+    "z_A": "1+i√2",
+    "z_B": "i",
+    "z_C": "conjugate(z_A)",
+    "z_D": "conjugate(z_B)",
+    "z_E": "1"
+  }
+}

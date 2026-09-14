@@ -8,3 +8,10 @@ class NoReferenceExercisesError(BacGenerationError):
 
 class AIResponseError(BacGenerationError):
     """استجابة الذكاء الاصطناعي غير صالحة."""
+
+
+class AIRateLimitError(AIResponseError):
+    status_code = 429
+    def __init__(self, message, retry_after=30):
+        super().__init__(message)
+        self.retry_after = retry_after

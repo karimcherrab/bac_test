@@ -1,0 +1,237 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2013-science-complex-subject1-ex03-detailed",
+  "session": "ordinary",
+  "year": 2013,
+  "chapter_code": "complex_numbers",
+  "chapter_title": "الأعداد المركبة",
+  "axis_tags": [
+    "complex_roots_equations",
+    "complex_argument_trigonometric_form",
+    "complex_exponential_demoivre",
+    "complex_algebraic_geometric_form",
+    "complex_modulus_geometric_interpretation",
+    "complex_point_transformations",
+    "complex_barycenter",
+    "complex_geometric_applications_loci"
+  ],
+  "branches": [
+    {
+      "code": "science",
+      "name": "شعبة علوم تجريبية"
+    }
+  ],
+  "exercise_number": 3,
+  "subject_number": 1,
+  "source_page": 2,
+  "source_pages": [
+    2
+  ],
+  "solution_source_pages": [
+    6
+  ],
+  "title": "التمرين الثالث — بكالوريا الجزائر 2013 — الموضوع الأول — شعبة علوم تجريبية",
+  "statement": "نعتبر المعادلة \\(z^2-(4\\cos\\alpha)z+4=0\\) حيث \\(\\alpha\\) وسيط حقيقي. ثم نأخذ \\(\\alpha=\\frac{\\pi}{3}\\) ونرمز إلى حلي المعادلة بـ \\(z_1\\) و\\(z_2\\). وفي المستوى المركب نعتبر النقط \\(A,B,C\\) ذات اللواحق \\(z_A=1+i\\sqrt3\\)، \\(z_B=1-i\\sqrt3\\)، \\(z_C=4+i\\sqrt3\\). كما نعتبر مرجح الجملة \\(\\{(A;1),(B;-1),(C;2)\\}\\).",
+  "questions": [
+    {
+      "id": "2013_s1_complex_ex03_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) حل في \\(C\\) المعادلة: \\(z^2-(4\\cos\\alpha)z+4=0\\)، حيث \\(\\alpha\\) وسيط حقيقي.",
+      "axis_tags": [
+        "complex_roots_equations",
+        "complex_argument_trigonometric_form"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب المميز ثم نكتب جذره بدلالة \\(\\sin\\alpha\\)، وبعدها نستخرج الحلين في شكل مثلثي بسيط.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب المميز",
+            "explanation": "\\[\\Delta=(4\\cos\\alpha)^2-16=16(\\cos^2\\alpha-1).\\]\nوباستعمال \\(1-\\cos^2\\alpha=\\sin^2\\alpha\\):\n\\[\\Delta=-16\\sin^2\\alpha=(4i\\sin\\alpha)^2.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "استخراج الحلين",
+            "explanation": "\\[z=\\frac{4\\cos\\alpha\\pm4i\\sin\\alpha}{2}.\\]\nإذن:\n\\[z_1=2(\\cos\\alpha+i\\sin\\alpha),\\qquadz_2=2(\\cos\\alpha-i\\sin\\alpha).\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الكتابة الأسية",
+            "explanation": "يمكن أيضًا كتابة:\n\\[z_1=2e^{i\\alpha},\\qquad z_2=2e^{-i\\alpha}.\\]"
+          }
+        ],
+        "final_answer": "\\(z_1=2(\\cos\\alpha+i\\sin\\alpha)\\) و\\(z_2=2(\\cos\\alpha-i\\sin\\alpha)\\)."
+      }
+    },
+    {
+      "id": "2013_s1_complex_ex03_q2",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2) من أجل \\(\\alpha=\\frac{\\pi}{3}\\)، نرمز إلى حلي المعادلة بـ \\(z_1\\) و\\(z_2\\). بين أن \\(\\left(\\frac{z_1}{z_2}\\right)^{2013}=1\\).",
+      "axis_tags": [
+        "complex_exponential_demoivre"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نعوض قيمة \\(\\alpha\\)، ثم نحسب خارج القسمة على الشكل الأسي ونرفع للقوة 2013.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تعيين الحلين",
+            "explanation": "عند \\(\\alpha=\\frac{\\pi}{3}\\):\n\\[z_1=2e^{i\\pi/3}=1+i\\sqrt3,\\qquadz_2=2e^{-i\\pi/3}=1-i\\sqrt3.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب النسبة",
+            "explanation": "\\[\\frac{z_1}{z_2}=e^{i\\pi/3-(-i\\pi/3)}=e^{i2\\pi/3}.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "رفع إلى القوة 2013",
+            "explanation": "\\[\\left(\\frac{z_1}{z_2}\\right)^{2013}=e^{i\\frac{2\\pi}{3}\\times2013}.\\]\nوبما أن \\(2013=3\\times671\\):\n\\[e^{i\\frac{2\\pi}{3}\\times2013}=e^{i2\\pi\\times671}=1.\\]"
+          }
+        ],
+        "final_answer": "\\(\\left(\\frac{z_1}{z_2}\\right)^{2013}=1\\)."
+      }
+    },
+    {
+      "id": "2013_s1_complex_ex03_q3a",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "3) في المستوى المركب، لواحق النقط \\(A,B,C\\) هي: \\(z_A=1+i\\sqrt3\\)، \\(z_B=1-i\\sqrt3\\)، \\(z_C=4+i\\sqrt3\\). أ) أنشئ النقط \\(A\\)، \\(B\\)، \\(C\\).",
+      "axis_tags": [
+        "complex_algebraic_geometric_form"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نقرأ الإحداثيات من الشكل الجبري \\(z=x+iy\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "إحداثيات A",
+            "explanation": "\\(z_A=1+i\\sqrt3\\Rightarrow A(1,\\sqrt3)\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "إحداثيات B",
+            "explanation": "\\(z_B=1-i\\sqrt3\\Rightarrow B(1,-\\sqrt3)\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "إحداثيات C",
+            "explanation": "\\(z_C=4+i\\sqrt3\\Rightarrow C(4,\\sqrt3)\\)."
+          }
+        ],
+        "final_answer": "\\(A(1,\\sqrt3)\\)، \\(B(1,-\\sqrt3)\\)، \\(C(4,\\sqrt3)\\)."
+      }
+    },
+    {
+      "id": "2013_s1_complex_ex03_q3b",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "ب) اكتب على الشكل الجبري العدد \\(\\frac{z_C-z_A}{z_B-z_A}\\)، ثم استنتج أن \\(C\\) هي صورة \\(B\\) بالتشابه المباشر \\(S\\) الذي مركزه \\(A\\)، ويطلب تعيين نسبته وزاويته.",
+      "axis_tags": [
+        "complex_algebraic_geometric_form",
+        "complex_point_transformations",
+        "complex_argument_trigonometric_form"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب النسبة المركبة ثم نستخرج منها الطويلة والحجة، وبعدها نفسرها كتشابه مباشر مركزه A.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب البسط والمقام",
+            "explanation": "\\[z_C-z_A=(4+i\\sqrt3)-(1+i\\sqrt3)=3,\\]\n\\[z_B-z_A=(1-i\\sqrt3)-(1+i\\sqrt3)=-2i\\sqrt3.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب النسبة",
+            "explanation": "\\[\\frac{z_C-z_A}{z_B-z_A}=\\frac{3}{-2i\\sqrt3}.\\]\nوبما أن \\(\\frac1i=-i\\):\n\\[\\frac{z_C-z_A}{z_B-z_A}=i\\frac{\\sqrt3}{2}.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "استخراج عناصر التشابه",
+            "explanation": "لدينا:\n\\[\\left|i\\frac{\\sqrt3}{2}\\right|=\\frac{\\sqrt3}{2},\\qquad\\arg\\left(i\\frac{\\sqrt3}{2}\\right)=\\frac{\\pi}{2}.\\]\nإذن:\n\\[z_C-z_A=\\frac{\\sqrt3}{2}e^{i\\pi/2}(z_B-z_A).\\]"
+          }
+        ],
+        "final_answer": "التشابه مركزه \\(A\\)، نسبته \\(\\frac{\\sqrt3}{2}\\)، وزاويته \\(\\frac{\\pi}{2}\\)."
+      }
+    },
+    {
+      "id": "2013_s1_complex_ex03_q3c",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "ج) عين لاحقة النقطة \\(G\\) مرجح الجملة \\(\\{(A;1),(B;-1),(C;2)\\}\\)، ثم أنشئ \\(G\\).",
+      "axis_tags": [
+        "complex_barycenter"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نطبق صيغة لاحقة المرجح ثم نبسط.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "مجموع المعاملات",
+            "explanation": "\\[1+(-1)+2=2\\neq0.\\]\nإذن المرجح موجود."
+          },
+          {
+            "step_number": 2,
+            "title": "حساب اللاحقة",
+            "explanation": "\\[z_G=\\frac{z_A-z_B+2z_C}{2}.\\]\nنعوض:\n\\[z_G=\\frac{(1+i\\sqrt3)-(1-i\\sqrt3)+2(4+i\\sqrt3)}{2}.\\]\n\\[z_G=\\frac{2i\\sqrt3+8+2i\\sqrt3}{2}=4+2i\\sqrt3.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الإنشاء",
+            "explanation": "إذن \\(G(4,2\\sqrt3)\\)."
+          }
+        ],
+        "final_answer": "\\(z_G=4+2i\\sqrt3\\)."
+      }
+    },
+    {
+      "id": "2013_s1_complex_ex03_q3d",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "د) احسب \\(z_D\\) لاحقة النقطة \\(D\\) بحيث يكون الرباعي \\(ABDG\\) متوازي أضلاع.",
+      "axis_tags": [
+        "complex_algebraic_geometric_form",
+        "complex_geometric_applications_loci"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "في متوازي الأضلاع \\(ABDG\\)، قطراه \\([AD]\\) و\\([BG]\\) لهما نفس المنتصف، ومنه \\(z_A+z_D=z_B+z_G\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "كتابة علاقة متوازي الأضلاع",
+            "explanation": "\\[z_A+z_D=z_B+z_G.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "استخراج z_D",
+            "explanation": "\\[z_D=z_B+z_G-z_A.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "التعويض",
+            "explanation": "\\[z_D=(1-i\\sqrt3)+(4+2i\\sqrt3)-(1+i\\sqrt3)=4.\\]"
+          }
+        ],
+        "final_answer": "\\(z_D=4\\)."
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2013.pdf",
+    "statement_figure_policy": "يمكن إنشاء النقط A وB وC وG في تمثيل هندسي اختياري، لكن نص السؤال مستقل عنه.",
+    "solution_figure_policy": "لا يحتاج الحل إلى رسم إلزامي.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  }
+}

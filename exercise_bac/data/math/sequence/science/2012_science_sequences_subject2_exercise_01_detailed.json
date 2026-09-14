@@ -1,0 +1,263 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2012-science-sequences-subject2-ex01",
+  "session": "ordinary",
+  "year": 2012,
+  "chapter_code": "sequences",
+  "chapter_title": "المتتاليات العددية",
+  "axis_tags": [
+    "recursive_sequence",
+    "induction_bounds",
+    "sequence_monotonicity",
+    "sequence_convergence",
+    "logarithmic_auxiliary_sequence",
+    "geometric_sequence",
+    "sequence_product"
+  ],
+  "branches": [
+    {
+      "code": "science",
+      "name": "شعبة علوم تجريبية"
+    }
+  ],
+  "exercise_number": 1,
+  "subject_number": 2,
+  "source_page": 3,
+  "source_pages": [
+    3
+  ],
+  "solution_source_pages": [
+    6,
+    7
+  ],
+  "title": "التمرين الأول — بكالوريا الجزائر 2012 — الموضوع الثاني — شعبة علوم تجريبية",
+  "statement": "المتتالية العددية \\((u_n)\\) المعرفة بحدها الأول \\(u_0=\\frac{13}{4}\\) و من أجل كل عدد طبيعي \\(n\\): \\(u_{n+1}=3+\\sqrt{u_n-3}\\).",
+  "statement_graphs": [],
+  "questions": [
+    {
+      "id": "2012_s2_sequences_ex01_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) برهن بالتراجع أنه من أجل كل عدد طبيعي \\(n\\): \\(3<u_n<4\\).",
+      "axis_tags": [
+        "induction_bounds"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نبرهن الخاصية \\(3<u_n<4\\) بالتراجع.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التحقق عند n=0",
+            "explanation": "\\[\nu_0=\\frac{13}{4}=3.25,\n\\]\nإذن:\n\\[\n3<\\frac{13}{4}<4.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "فرضية التراجع",
+            "explanation": "نفترض أن:\n\\[\n3<u_n<4.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حصر u_n-3",
+            "explanation": "بطرح \\(3\\):\n\\[\n0<u_n-3<1.\n\\]\nوبأخذ الجذر:\n\\[\n0<\\sqrt{u_n-3}<1.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "إضافة 3",
+            "explanation": "\\[\n3<3+\\sqrt{u_n-3}<4.\n\\]\nلكن:\n\\[\nu_{n+1}=3+\\sqrt{u_n-3}.\n\\]\nإذن:\n\\[\n3<u_{n+1}<4.\n\\]"
+          },
+          {
+            "step_number": 5,
+            "title": "الخلاصة",
+            "explanation": "بالتراجع:\n\\[\n\\boxed{3<u_n<4\\quad\\forall n\\in\\mathbb N}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(3<u_n<4\\) من أجل كل \\(n\\in\\mathbb N\\)."
+      }
+    },
+    {
+      "id": "2012_s2_sequences_ex01_q2",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2) بين أنه من أجل كل عدد طبيعي \\(n\\): \\(u_{n+1}-u_n=\\frac{-u_n^2+7u_n-12}{\\sqrt{u_n-3}+u_n-3}\\). استنتج أن \\((u_n)\\) متزايدة تماما.",
+      "axis_tags": [
+        "sequence_monotonicity"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نبدأ من \\(u_{n+1}-u_n\\)، ثم نضع \\(x=u_n-3\\) أو نستعمل المرافق للوصول إلى العبارة المطلوبة، وبعدها ندرس إشارتها باستعمال \\(3<u_n<4\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "كتابة الفرق",
+            "explanation": "\\[\nu_{n+1}-u_n=3+\\sqrt{u_n-3}-u_n\n=\\sqrt{u_n-3}-(u_n-3).\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "استعمال المرافق",
+            "explanation": "نضرب ونقسم على:\n\\[\n\\sqrt{u_n-3}+u_n-3.\n\\]\nفنحصل على:\n\\[\nu_{n+1}-u_n\n=\\frac{(u_n-3)-(u_n-3)^2}{\\sqrt{u_n-3}+u_n-3}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "نشر البسط",
+            "explanation": "\\[\n(u_n-3)-(u_n-3)^2\n=u_n-3-(u_n^2-6u_n+9)\n=-u_n^2+7u_n-12.\n\\]\nإذن:\n\\[\n\\boxed{u_{n+1}-u_n=\\frac{-u_n^2+7u_n-12}{\\sqrt{u_n-3}+u_n-3}}.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "تحليل البسط",
+            "explanation": "\\[\n-u_n^2+7u_n-12\n=-(u_n-3)(u_n-4)\n=(u_n-3)(4-u_n).\n\\]"
+          },
+          {
+            "step_number": 5,
+            "title": "دراسة الإشارة",
+            "explanation": "بما أن \\(3<u_n<4\\)، فإن:\n\\[\nu_n-3>0,\\qquad4-u_n>0.\n\\]\nإذن البسط موجب، والمقام موجب كذلك. لذلك:\n\\[\nu_{n+1}-u_n>0.\n\\]"
+          }
+        ],
+        "final_answer": "\\((u_n)\\) متزايدة تماما."
+      }
+    },
+    {
+      "id": "2012_s2_sequences_ex01_q3",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "3) برر لماذا \\((u_n)\\) متقاربة.",
+      "axis_tags": [
+        "sequence_convergence"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل مبرهنة تقارب المتتالية الرتيبة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الرتابة",
+            "explanation": "من السؤال السابق، \\((u_n)\\) متزايدة تماما."
+          },
+          {
+            "step_number": 2,
+            "title": "المحدودية",
+            "explanation": "ومن السؤال الأول:\n\\[\nu_n<4\n\\]\nلكل \\(n\\)، أي أنها محدودة من الأعلى بالعدد \\(4\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "الاستنتاج",
+            "explanation": "كل متتالية متزايدة ومحدودة من الأعلى متقاربة."
+          }
+        ],
+        "final_answer": "\\((u_n)\\) متقاربة لأنها متزايدة ومحدودة من الأعلى بالعدد \\(4\\)."
+      }
+    },
+    {
+      "id": "2012_s2_sequences_ex01_q4a",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "4) المتتالية \\((v_n)\\) المعرفة على \\(\\mathbb N\\) بـ: \\(v_n=\\ln(u_n-3)\\). أ) برهن أن \\((v_n)\\) متتالية هندسية أساسها \\(\\frac12\\)، ثم احسب حدها الأول.",
+      "axis_tags": [
+        "logarithmic_auxiliary_sequence",
+        "geometric_sequence"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل علاقة الرجوع لـ \\(u_n\\)، ثم خواص اللوغاريتم.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب v_{n+1}",
+            "explanation": "\\[\nv_{n+1}=\\ln(u_{n+1}-3).\n\\]\nومن علاقة الرجوع:\n\\[\nu_{n+1}-3=\\sqrt{u_n-3}.\n\\]\nإذن:\n\\[\nv_{n+1}=\\ln\\sqrt{u_n-3}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "استعمال خاصية اللوغاريتم",
+            "explanation": "\\[\n\\ln\\sqrt{u_n-3}=\\ln\\left((u_n-3)^{1/2}\\right)\n=\\frac12\\ln(u_n-3)=\\frac12v_n.\n\\]\nإذن \\((v_n)\\) هندسية أساسها \\(\\frac12\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "حساب الحد الأول",
+            "explanation": "\\[\nv_0=\\ln(u_0-3)\n=\\ln\\left(\\frac{13}{4}-3\\right)\n=\\ln\\left(\\frac14\\right).\n\\]"
+          }
+        ],
+        "final_answer": "\\((v_n)\\) هندسية أساسها \\(\\frac12\\)، وحدها الأول \\(\\boxed{v_0=\\ln\\frac14}\\)."
+      }
+    },
+    {
+      "id": "2012_s2_sequences_ex01_q4b",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "ب) اكتب كلا من \\(v_n\\) و \\(u_n\\) بدلالة \\(n\\)، ثم احسب \\(\\lim_{n\\to+\\infty}u_n\\).",
+      "axis_tags": [
+        "geometric_sequence_general_term",
+        "sequence_limit"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نكتب الحد العام للمتتالية الهندسية \\((v_n)\\)، ثم نستعمل \\(v_n=\\ln(u_n-3)\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "كتابة v_n",
+            "explanation": "بما أن \\((v_n)\\) هندسية أساسها \\(\\frac12\\) وحدها الأول \\(\\ln\\frac14\\)، فإن:\n\\[\n\\boxed{v_n=\\left(\\frac12\\right)^n\\ln\\frac14}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "استخراج u_n",
+            "explanation": "لدينا:\n\\[\n\\ln(u_n-3)=v_n.\n\\]\nإذن:\n\\[\nu_n-3=e^{v_n}\n\\]\nومن ثم:\n\\[\n\\boxed{u_n=3+e^{\\left(\\frac12\\right)^n\\ln\\frac14}}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب النهاية",
+            "explanation": "عندما \\(n\\to+\\infty\\):\n\\[\n\\left(\\frac12\\right)^n\\to0,\n\\]\nومن ثم:\n\\[\ne^{\\left(\\frac12\\right)^n\\ln\\frac14}\\to e^0=1.\n\\]\nإذن:\n\\[\n\\lim_{n\\to+\\infty}u_n=3+1=4.\n\\]"
+          }
+        ],
+        "final_answer": "\\(v_n=\\left(\\frac12\\right)^n\\ln\\frac14\\)، \\(u_n=3+e^{\\left(\\frac12\\right)^n\\ln\\frac14}\\)، و \\(\\boxed{\\lim u_n=4}\\)."
+      }
+    },
+    {
+      "id": "2012_s2_sequences_ex01_q4c",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "ج) نضع من أجل كل عدد طبيعي \\(n\\): \\(P_n=(u_0-3)(u_1-3)(u_2-3)\\times\\ldots\\times(u_n-3)\\). اكتب \\(P_n\\) بدلالة \\(n\\)، ثم بين أن \\(\\lim_{n\\to+\\infty}P_n=\\frac1{16}\\).",
+      "axis_tags": [
+        "sequence_product",
+        "geometric_sum"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "بما أن \\(v_k=\\ln(u_k-3)\\)، فإن \\(u_k-3=e^{v_k}\\). يتحول الجداء إلى أس لمجموع حدود المتتالية الهندسية \\((v_n)\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تحويل عوامل الجداء",
+            "explanation": "من:\n\\[\nv_k=\\ln(u_k-3)\n\\]\nنحصل على:\n\\[\nu_k-3=e^{v_k}.\n\\]\nإذن:\n\\[\nP_n=e^{v_0}e^{v_1}\\cdots e^{v_n}\n=e^{v_0+v_1+\\cdots+v_n}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب مجموع v_k",
+            "explanation": "بما أن:\n\\[\nv_k=\\left(\\frac12\\right)^k\\ln\\frac14,\n\\]\nفإن:\n\\[\n\\sum_{k=0}^{n}v_k\n=\\ln\\frac14\\sum_{k=0}^{n}\\left(\\frac12\\right)^k.\n\\]\nومجموع المتتالية الهندسية هو:\n\\[\n\\sum_{k=0}^{n}\\left(\\frac12\\right)^k\n=\\frac{1-\\left(\\frac12\\right)^{n+1}}{1-\\frac12}\n=2\\left[1-\\left(\\frac12\\right)^{n+1}\\right].\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "عبارة P_n",
+            "explanation": "إذن:\n\\[\n\\boxed{P_n=e^{2\\ln\\left(\\frac14\\right)\\left[1-\\left(\\frac12\\right)^{n+1}\\right]}}.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "حساب النهاية",
+            "explanation": "عندما \\(n\\to+\\infty\\):\n\\[\n\\left(\\frac12\\right)^{n+1}\\to0.\n\\]\nإذن:\n\\[\nP_n\\to e^{2\\ln(1/4)}.\n\\]\nوباستعمال \\(e^{\\ln a}=a\\):\n\\[\ne^{2\\ln(1/4)}=\\left(\\frac14\\right)^2=\\frac1{16}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{P_n=e^{2\\ln\\left(\\frac14\\right)\\left[1-\\left(\\frac12\\right)^{n+1}\\right]}}\\)، ومنه \\(\\boxed{\\lim_{n\\to+\\infty}P_n=\\frac1{16}}\\)."
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2012(4).pdf",
+    "comparison_source": "bac_sequence_scientifique(6).pdf",
+    "statement_figure_policy": "الشكل الموجود في نص البكالوريا أدرج ضمن statement_graphs، ولا تضاف إلى نص السؤال معطيات غير موجودة في الأصل.",
+    "solution_figure_policy": "الإنشاءات أو التوضيحات الإضافية توضع في الحل فقط.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  }
+}

@@ -1,0 +1,279 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2014-math-space-subject2-ex03-detailed",
+  "session": "ordinary",
+  "year": 2014,
+  "chapter_code": "space_geometry",
+  "chapter_title": "الهندسة في الفضاء",
+  "axis_tags": [
+    "space_parametric_line_plane",
+    "space_relative_positions_intersections",
+    "space_cartesian_plane_normal_vector",
+    "space_distances_projections"
+  ],
+  "branches": [
+    {
+      "code": "math",
+      "name": "شعبة رياضيات"
+    }
+  ],
+  "exercise_number": 3,
+  "subject_number": 2,
+  "source_page": 4,
+  "source_pages": [
+    4
+  ],
+  "solution_source_pages": [
+    8
+  ],
+  "title": "التمرين الثالث — بكالوريا الجزائر 2014 — الموضوع الثاني — شعبة رياضيات",
+  "statement": "الفضاء منسوب إلى المعلم المتعامد المتجانس \\((O;\\vec{i},\\vec{j},\\vec{k})\\). \\((\\Delta)\\) المستقيم الذي يشمل النقطة \\(A(1;1;3)\\) و \\(\\vec u(1;2;-2)\\) شعاع توجيه له. \\((\\Delta')\\) المستقيم المعرف بجملة المعادلتين:\n\\[\n\\begin{cases}\nx+z=0\\\\\ny=3\n\\end{cases}\n\\]",
+  "questions": [
+    {
+      "id": "2014_s2_space_ex03_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) جد تمثيلا وسيطيا لكل من المستقيمين \\((\\Delta)\\) و \\((\\Delta')\\).",
+      "axis_tags": [
+        "space_parametric_line_plane"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل نقطة وشعاع توجيه لكل مستقيم.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تمثيل Δ",
+            "explanation": "\\[\n(\\Delta):\\begin{cases}\nx=1+t\\\\\ny=1+2t\\\\\nz=3-2t\n\\end{cases}\n\\quad ;\\ t\\in\\mathbb{R}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "تمثيل Δ′",
+            "explanation": "من \\(x+z=0\\) و\\(y=3\\)، نضع \\(z=t'\\)، فنحصل على:\n\\[\n(\\Delta'):\\begin{cases}\nx=-t'\\\\\ny=3\\\\\nz=t'\n\\end{cases}\n\\quad ;\\ t'\\in\\mathbb{R}.\n\\]"
+          }
+        ],
+        "final_answer": "\\[(\\Delta):\\begin{cases}x=1+t\\\\y=1+2t\\\\z=3-2t\\end{cases},\\quad t\\in\\mathbb R,\\]\n\\[(\\Delta'):\\begin{cases}x=-t'\\\\y=3\\\\z=t'\\end{cases},\\quad t'\\in\\mathbb R.\\]"
+      }
+    },
+    {
+      "id": "2014_s2_space_ex03_q2",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2) بين أن \\((\\Delta)\\) و \\((\\Delta')\\) ليسا من نفس المستوي.",
+      "axis_tags": [
+        "space_relative_positions_intersections"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نبين أنهما غير متوازيين ولا متقاطعين.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "عدم التوازي",
+            "explanation": "شعاع توجيه \\((\\Delta)\\) هو \\((1,2,-2)\\)، وشعاع توجيه \\((\\Delta')\\) هو \\((-1,0,1)\\)، وهما غير متناسبين."
+          },
+          {
+            "step_number": 2,
+            "title": "عدم التقاطع",
+            "explanation": "إذا تقاطعا، فمن \\(y=3\\) على \\((\\Delta)\\):\n\\[1+2t=3\\Rightarrow t=1.\\]\nفنحصل على النقطة \\((2,3,1)\\)، لكنها لا تحقق \\(x+z=0\\) لأن \\(2+1\\neq0\\)."
+          }
+        ],
+        "final_answer": "المستقيمان \\((\\Delta)\\) و\\((\\Delta')\\) متخالفان، وبالتالي ليسا من نفس المستوي."
+      }
+    },
+    {
+      "id": "2014_s2_space_ex03_q3",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "3) \\((P)\\) المستوي الذي يشمل \\((\\Delta')\\) ويوازي \\((\\Delta)\\). بين أن معادلة المستوي \\((P)\\) هي: \\(2x+y+2z-3=0\\).",
+      "axis_tags": [
+        "space_cartesian_plane_normal_vector",
+        "space_parametric_line_plane"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نأخذ شعاعي توجيه للمستوى: اتجاه Δ واتجاه Δ′، ثم نحدد شعاعا ناظما ونستعمل نقطة من Δ′.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "شعاعا توجيه المستوى",
+            "explanation": "\\[\\vec u=(1,2,-2),\\qquad \\vec v=(-1,0,1).\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "تحديد شعاع ناظم",
+            "explanation": "يمكن أخذ:\n\\[\n\\vec n=(2,1,2),\n\\]\nإذ \\(\\vec n\\cdot\\vec u=0\\) و\\(\\vec n\\cdot\\vec v=0\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "كتابة المعادلة",
+            "explanation": "النقطة \\((0,3,0)\\) تنتمي إلى \\((\\Delta')\\)، إذن:\n\\[\n2x+y+2z+d=0.\n\\]\nوبالتعويض:\n\\[3+d=0\\Rightarrow d=-3.\\]"
+          }
+        ],
+        "final_answer": "\\[(P):2x+y+2z-3=0.\\]"
+      }
+    },
+    {
+      "id": "2014_s2_space_ex03_q4",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "4) \\(M(1+t;1+2t;3-2t)\\) نقطة كيفية من المستقيم \\((\\Delta)\\)، حيث \\(t\\in\\mathbb{R}\\). احسب \\(d\\) المسافة بين \\(M\\) والمستوي \\((P)\\).",
+      "axis_tags": [
+        "space_distances_projections"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نعوض إحداثيات M في صيغة المسافة من نقطة إلى مستوى.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الحساب",
+            "explanation": "\\[\nd(M,(P))=\\frac{|2(1+t)+(1+2t)+2(3-2t)-3|}{\\sqrt{2^2+1^2+2^2}}.\n\\]\nالبسط يساوي \\(6\\)، والمقام يساوي \\(3\\)، إذن:\n\\[\nd=2.\n\\]"
+          }
+        ],
+        "final_answer": "\\[d=2.\\]"
+      }
+    },
+    {
+      "id": "2014_s2_space_ex03_q5a",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "5) أ- عين إحداثيات النقطة \\(A'\\) المسقط العمودي للنقطة \\(A\\) على المستوي \\((P)\\)، ثم عين تمثيلا وسيطيا للمستقيم \\((\\Delta'')\\) الذي يشمل \\(A'\\) ويوازي \\((\\Delta)\\).",
+      "axis_tags": [
+        "space_distances_projections",
+        "space_parametric_line_plane"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نسقط A على P في اتجاه شعاع ناظم للمستوى، ثم نستعمل اتجاه Δ لكتابة Δ′′.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "معادلة المستقيم العمودي على P المار بـA",
+            "explanation": "شعاع ناظم \\((P)\\) هو \\((2,1,2)\\)، إذن المستقيم العمودي على \\((P)\\) والمار بـ\\(A(1,1,3)\\) هو:\n\\[\n\\begin{cases}\nx=1+2s\\\\\ny=1+s\\\\\nz=3+2s\n\\end{cases}\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "تحديد A′",
+            "explanation": "نعوض في معادلة \\((P)\\):\n\\[\n2(1+2s)+(1+s)+2(3+2s)-3=0\n\\Rightarrow 6+9s=0\n\\Rightarrow s=-\\frac23.\n\\]\nإذن:\n\\[\nA'\\left(-\\frac13,\\frac13,\\frac53\\right).\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "التمثيل الوسيطي لـ Δ′′",
+            "explanation": "بما أن \\((\\Delta'')\\parallel(\\Delta)\\)، نأخذ شعاع التوجيه \\((1,2,-2)\\):\n\\[\n(\\Delta''):\\begin{cases}\nx=-\\frac13+\\lambda\\\\\ny=\\frac13+2\\lambda\\\\\nz=\\frac53-2\\lambda\n\\end{cases}\n\\quad ;\\ \\lambda\\in\\mathbb{R}.\n\\]"
+          }
+        ],
+        "final_answer": "\\[A'\\left(-\\frac13;\\frac13;\\frac53\\right),\\]\n\\[(\\Delta''):\\begin{cases}x=-\\frac13+\\lambda\\\\y=\\frac13+2\\lambda\\\\z=\\frac53-2\\lambda\\end{cases},\\quad \\lambda\\in\\mathbb R.\\]"
+      }
+    },
+    {
+      "id": "2014_s2_space_ex03_q5b",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "ب- بين أن \\((\\Delta')\\) و \\((\\Delta'')\\) يتقاطعان في النقطة \\(B(1;3;-1)\\).",
+      "axis_tags": [
+        "space_relative_positions_intersections"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نتحقق أن B تنتمي إلى كل من Δ′ وΔ′′.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الانتماء إلى Δ′",
+            "explanation": "لدينا \\(1+(-1)=0\\) و\\(y=3\\)، إذن \\(B\\in(\\Delta')\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "الانتماء إلى Δ′′",
+            "explanation": "في تمثيل \\((\\Delta'')\\)، نأخذ \\(\\lambda=\\frac43\\):\n\\[\nx=1,\\quad y=3,\\quad z=-1.\n\\]\nإذن \\(B\\in(\\Delta'')\\)."
+          }
+        ],
+        "final_answer": "\\[(\\Delta')\\cap(\\Delta'')=\\{B(1;3;-1)\\}.\\]"
+      }
+    },
+    {
+      "id": "2014_s2_space_ex03_q6a",
+      "display_order": 7,
+      "content_type": "question",
+      "text": "6) الدالة العددية \\(f\\) المعرفة على \\(\\mathbb{R}\\) كما يلي: \\(f(t)=BM^2\\).\nأ) بين أن: \\(f(t)=9t^2-24t+20\\).",
+      "axis_tags": [
+        "space_distances_projections"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب مركبات الشعاع BM ثم مربعه.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب BM",
+            "explanation": "لدينا \\(B(1,3,-1)\\) و\\(M(1+t,1+2t,3-2t)\\)، إذن:\n\\[\n\\overrightarrow{BM}=(t,2t-2,4-2t).\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب BM²",
+            "explanation": "\\[\nBM^2=t^2+(2t-2)^2+(4-2t)^2\n=9t^2-24t+20.\n\\]"
+          }
+        ],
+        "final_answer": "\\[f(t)=9t^2-24t+20.\\]"
+      }
+    },
+    {
+      "id": "2014_s2_space_ex03_q6b",
+      "display_order": 8,
+      "content_type": "question",
+      "text": "ب) بين أن \\(f\\) تقبل قيمة حدية صغرى \\(f(t_0)\\)، يطلب تعيين \\(t_0\\) و \\(f(t_0)\\).",
+      "axis_tags": [
+        "space_distances_projections"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "الدالة تربيعية بمعامل رئيسي موجب، لذلك تبلغ قيمتها الصغرى عند رأس القطع المكافئ.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تحديد t0",
+            "explanation": "\\[\nf'(t)=18t-24.\n\\]\nومن \\(f'(t)=0\\):\n\\[\nt_0=\\frac{24}{18}=\\frac43.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "القيمة الصغرى",
+            "explanation": "\\[\nf\\left(\\frac43\\right)=9\\left(\\frac{16}{9}\\right)-24\\left(\\frac43\\right)+20=4.\n\\]"
+          }
+        ],
+        "final_answer": "\\[t_0=\\frac43,\\qquad f(t_0)=4.\\]"
+      }
+    },
+    {
+      "id": "2014_s2_space_ex03_q6c",
+      "display_order": 9,
+      "content_type": "question",
+      "text": "ج) تحقق أن \\(d=\\sqrt{f(t_0)}\\).",
+      "axis_tags": [
+        "space_distances_projections"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نعوض القيمة الصغرى المحسوبة ونقارنها بالمسافة d المحسوبة سابقا.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الحساب",
+            "explanation": "\\[\n\\sqrt{f(t_0)}=\\sqrt4=2.\n\\]\nومن السؤال 4 وجدنا \\(d=2\\)."
+          }
+        ],
+        "final_answer": "\\[d=2=\\sqrt{f(t_0)}.\\]"
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2014(20260826-123153).pdf",
+    "statement_figure_policy": "لا يوجد شكل هندسي إلزامي في نص التمرين.",
+    "solution_figure_policy": "الحل مستقل عن أي رسم.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  }
+}

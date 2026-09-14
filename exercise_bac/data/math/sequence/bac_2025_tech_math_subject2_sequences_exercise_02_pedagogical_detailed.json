@@ -1,0 +1,344 @@
+{
+  "schema_version": "4.5-bac-source",
+  "language": "ar",
+  "direction": "rtl",
+  "year": 2025,
+  "chapter_code": "sequences",
+  "chapter_title": "sequences",
+  "branches": [
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "figures": [],
+  "display": {
+    "layout": "question_by_question",
+    "show_statement_first": true,
+    "show_statement_figures": true,
+    "show_solution_after_click": true,
+    "show_solution_figures": true
+  },
+  "review_status": {
+    "statement_compared_with_original_pdf": true,
+    "questions_compared_with_original_pdf": true,
+    "source_figures_checked": true,
+    "solution_checked_against_correction": true,
+    "latex_normalized_only": true,
+    "react_ready": true
+  },
+  "version": "4.2-2025-tech-math-subject2-sequences-ex02",
+  "session": "ordinary",
+  "exercise_number": 2,
+  "points": 4,
+  "source_pages": [
+    3
+  ],
+  "solution_source_pages": [
+    8
+  ],
+  "title": "التمرين الثاني — بكالوريا الجزائر 2025 — متتالية كسرية ومتتالية هندسية ومجموع",
+  "axis_tags": [
+    "recursive_sequence",
+    "mathematical_induction",
+    "bounded_sequence",
+    "sequence_monotonicity",
+    "geometric_sequence",
+    "explicit_formula",
+    "sequence_limit",
+    "geometric_sum"
+  ],
+  "statement": "التمرين الثاني: (04 نقاط)\n\n1) \\((u_n)\\) المتتالية العددية المعرفة بـ:\n\\[\nu_0=0\n\\]\nومن أجل كل عدد طبيعي \\(n\\):\n\\[\nu_{n+1}=\\frac{3+5u_n}{3+u_n}.\n\\]\n\nأ) تحقق أنه من أجل كل عدد طبيعي \\(n\\):\n\\[\nu_{n+1}=5-\\frac{12}{3+u_n}.\n\\]\n\nب) برهن بالتراجع أنه من أجل كل عدد طبيعي \\(n\\):\n\\[\n0\\le u_n<3.\n\\]\n\nج) ادرس اتجاه تغير المتتالية \\((u_n)\\).\n\n2) \\((v_n)\\) المتتالية العددية المعرفة على \\(\\mathbb N\\) بـ:\n\\[\nv_n=\\frac{-3+u_n}{1+u_n}.\n\\]\n\nأ) بين أن المتتالية \\((v_n)\\) هندسية أساسها:\n\\[\n\\frac13\n\\]\nثم اكتب \\(v_n\\) بدلالة \\(n\\).\n\nب) استنتج عبارة \\(u_n\\) بدلالة \\(n\\) ثم احسب:\n\\[\n\\lim_{n\\to+\\infty}u_n.\n\\]\n\n3) أ) بين أنه من أجل كل عدد طبيعي \\(n\\):\n\\[\n\\frac4{1+u_n}=1-v_n.\n\\]\n\nب) استنتج بدلالة \\(n\\) حساب المجموع \\(S_n\\) حيث:\n\\[\nS_n=\\frac4{1+u_0}+\\frac4{1+u_1}+\\cdots+\\frac4{1+u_n}.\n\\]",
+  "questions": [
+    {
+      "id": "2025_tech_math_s2_ex02_q1a",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1-أ) تحقق أنه من أجل كل عدد طبيعي \\(n\\): \\(u_{n+1}=5-\\frac{12}{3+u_n}\\).",
+      "solution": {
+        "introduction": "نعيد كتابة بسط العلاقة التراجعية بطريقة تظهر العدد 5.",
+        "strategy": "نكتب 3+5u_n على شكل 5(3+u_n)-12.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "إعادة كتابة البسط",
+            "explanation": "\\[3+5u_n=5(3+u_n)-12.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "التعويض",
+            "explanation": "\\[u_{n+1}=\\frac{5(3+u_n)-12}{3+u_n}\n=5-\\frac{12}{3+u_n}.\\]",
+            "result": "تم التحقق من العلاقة المطلوبة."
+          }
+        ],
+        "final_answer": "\\(\\boxed{u_{n+1}=5-\\frac{12}{3+u_n}}\\).",
+        "verification": "تمت مراجعة الحل مع الإجابة النموذجية الرسمية لبكالوريا 2025، الموضوع الثاني، التمرين الثاني.",
+        "common_mistakes": [],
+        "hints": [
+          "حاول إظهار 5(3+u_n) في البسط."
+        ],
+        "summary": "الصيغة المكافئة مفيدة في دراسة المتتالية.",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2025_tech_math_s2_ex02_q1b",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "1-ب) برهن بالتراجع أنه من أجل كل عدد طبيعي \\(n\\): \\(0\\le u_n<3\\).",
+      "solution": {
+        "introduction": "نثبت أن جميع الحدود تبقى داخل المجال \\([0,3[\\).",
+        "strategy": "نستعمل البرهان بالتراجع.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التحقق عند n=0",
+            "explanation": "\\[u_0=0\\Rightarrow0\\le u_0<3.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "فرضية التراجع",
+            "explanation": "نفترض:\n\\[0\\le u_n<3.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "إثبات uₙ₊₁≥0",
+            "explanation": "من العلاقة الأصلية:\n\\[u_{n+1}=\\frac{3+5u_n}{3+u_n}.\\]\nالبسط والمقام موجبان، إذن:\n\\[u_{n+1}\\ge0.\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "إثبات uₙ₊₁<3",
+            "explanation": "بما أن \\(3+u_n>0\\):\n\\[u_{n+1}<3\\iff3+5u_n<3(3+u_n).\\]\nأي:\n\\[3+5u_n<9+3u_n\\iff2u_n<6\\iff u_n<3.\\]\nوهذا صحيح بفرضية التراجع.",
+            "result": "\\[0\\le u_{n+1}<3.\\]"
+          },
+          {
+            "step_number": 5,
+            "title": "الخلاصة",
+            "explanation": "حسب مبدأ التراجع:\n\\[0\\le u_n<3\\]\nلكل \\(n\\in\\mathbb N\\)."
+          }
+        ],
+        "final_answer": "\\(\\boxed{0\\le u_n<3\\text{ لكل }n\\in\\mathbb N}\\).",
+        "verification": "تمت مراجعة الحل مع الإجابة النموذجية الرسمية لبكالوريا 2025، الموضوع الثاني، التمرين الثاني.",
+        "common_mistakes": [
+          "المقارنة مع 3 دون التأكد من موجبّية المقام."
+        ],
+        "hints": [
+          "استعمل u_n<3 في نهاية الانتقال."
+        ],
+        "summary": "المجال [0,3[ مستقر بالعلاقة التراجعية.",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2025_tech_math_s2_ex02_q1c",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "1-ج) ادرس اتجاه تغير المتتالية \\((u_n)\\).",
+      "solution": {
+        "introduction": "ندرس الفرق بين حدين متتاليين.",
+        "strategy": "نوحد المقام ثم نفكك البسط.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب الفرق",
+            "explanation": "\\[u_{n+1}-u_n=\\frac{3+5u_n}{3+u_n}-u_n.\\]\nإذن:\n\\[u_{n+1}-u_n=\\frac{-u_n^2+2u_n+3}{3+u_n}.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "تفكيك البسط",
+            "explanation": "\\[-u_n^2+2u_n+3=(3-u_n)(1+u_n).\\]\nإذن:\n\\[u_{n+1}-u_n=\\frac{(3-u_n)(1+u_n)}{3+u_n}.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "إشارة الفرق",
+            "explanation": "من \\(0\\le u_n<3\\):\n\\[3-u_n>0,\\quad1+u_n>0,\\quad3+u_n>0.\\]\nإذن:",
+            "result": "\\[u_{n+1}-u_n>0.\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{(u_n)\\text{ متزايدة تماما}}\\).",
+        "verification": "تمت مراجعة الحل مع الإجابة النموذجية الرسمية لبكالوريا 2025، الموضوع الثاني، التمرين الثاني.",
+        "common_mistakes": [
+          "الخطأ في تفكيك -u_n²+2u_n+3."
+        ],
+        "hints": [
+          "حاول الحصول على العامل 3-u_n."
+        ],
+        "summary": "الفرق موجب لكل n، لذا المتتالية متزايدة تماما.",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2025_tech_math_s2_ex02_q2a",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "2-أ) بين أن المتتالية \\((v_n)\\) هندسية أساسها \\(\\frac13\\) ثم اكتب \\(v_n\\) بدلالة \\(n\\).",
+      "solution": {
+        "introduction": "نحسب v_{n+1} باستعمال العلاقة التراجعية.",
+        "strategy": "نحسب u_{n+1}-3 وu_{n+1}+1 ثم نقسم.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب uₙ₊₁-3",
+            "explanation": "\\[u_{n+1}-3=\\frac{3+5u_n}{3+u_n}-3\n=\\frac{2u_n-6}{3+u_n}=\\frac{2(u_n-3)}{3+u_n}.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب uₙ₊₁+1",
+            "explanation": "\\[u_{n+1}+1=\\frac{3+5u_n}{3+u_n}+1\n=\\frac{6+6u_n}{3+u_n}=\\frac{6(1+u_n)}{3+u_n}.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب vₙ₊₁",
+            "explanation": "\\[v_{n+1}=\\frac{u_{n+1}-3}{u_{n+1}+1}\n=\\frac{2(u_n-3)}{6(1+u_n)}=\\frac13v_n.\\]",
+            "result": "\\((v_n)\\) هندسية أساسها 1/3."
+          },
+          {
+            "step_number": 4,
+            "title": "حساب v₀ والحد العام",
+            "explanation": "\\[v_0=\\frac{0-3}{1+0}=-3.\\]\nإذن:\n\\[v_n=v_0\\left(\\frac13\\right)^n=-3\\left(\\frac13\\right)^n.\\]",
+            "result": "\\(v_n=-3(1/3)^n\\)."
+          }
+        ],
+        "final_answer": "\\(\\boxed{v_n=-3(\\frac13)^n}\\).",
+        "verification": "تمت مراجعة الحل مع الإجابة النموذجية الرسمية لبكالوريا 2025، الموضوع الثاني، التمرين الثاني.",
+        "common_mistakes": [
+          "نسيان أن v₀=-3."
+        ],
+        "hints": [
+          "احسب u_{n+1}-3 وu_{n+1}+1 على حدة."
+        ],
+        "summary": "النسبة ثابتة وتساوي 1/3.",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2025_tech_math_s2_ex02_q2b",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "2-ب) استنتج عبارة \\(u_n\\) بدلالة \\(n\\) ثم احسب \\(\\lim_{n\\to+\\infty}u_n\\).",
+      "solution": {
+        "introduction": "نستخرج u_n من تعريف v_n ثم نعوض بالحد العام لـv_n.",
+        "strategy": "نحل المعادلة v_n=(u_n-3)/(u_n+1).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "عزل uₙ",
+            "explanation": "من:\n\\[v_n=\\frac{u_n-3}{u_n+1}\\]\nنحصل على:\n\\[v_n(u_n+1)=u_n-3.\\]\nإذن:\n\\[(1-v_n)u_n=v_n+3.\\]\nومن ثم:\n\\[u_n=\\frac{v_n+3}{1-v_n}.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "التعويض بعبارة vₙ",
+            "explanation": "بما أن:\n\\[v_n=-3\\left(\\frac13\\right)^n,\\]\nفإن:\n\\[u_n=\\frac{3-3(1/3)^n}{1+3(1/3)^n}.\\]\nويمكن أيضا كتابتها:\n\\[u_n=-1+\\frac6{1+3(1/3)^n}.\\]",
+            "result": "العبارة الصريحة لـu_n."
+          },
+          {
+            "step_number": 3,
+            "title": "حساب النهاية",
+            "explanation": "بما أن:\n\\[\\left(\\frac13\\right)^n\\to0,\\]\nفإن:",
+            "result": "\\[\\lim_{n\\to+\\infty}u_n=3.\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{u_n=\\frac{3-3(1/3)^n}{1+3(1/3)^n}}\\) و\\(\\boxed{\\lim_{n\\to+\\infty}u_n=3}\\).",
+        "verification": "تمت مراجعة الحل مع الإجابة النموذجية الرسمية لبكالوريا 2025، الموضوع الثاني، التمرين الثاني.",
+        "common_mistakes": [
+          "الخطأ في عزل u_n من تعريف v_n."
+        ],
+        "hints": [
+          "اجمع حدود u_n في طرف واحد."
+        ],
+        "summary": "الصيغة الصريحة تجعل النهاية مباشرة.",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2025_tech_math_s2_ex02_q3a",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "3-أ) بين أنه من أجل كل عدد طبيعي \\(n\\): \\(\\frac4{1+u_n}=1-v_n\\).",
+      "solution": {
+        "introduction": "العلاقة تنتج مباشرة من تعريف v_n.",
+        "strategy": "نحسب 1-v_n على مقام مشترك.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الحساب",
+            "explanation": "\\[1-v_n=1-\\frac{u_n-3}{u_n+1}.\\]\nإذن:\n\\[1-v_n=\\frac{u_n+1-u_n+3}{u_n+1}=\\frac4{u_n+1}.\\]",
+            "result": "العلاقة المطلوبة."
+          }
+        ],
+        "final_answer": "\\(\\boxed{\\frac4{1+u_n}=1-v_n}\\).",
+        "verification": "تمت مراجعة الحل مع الإجابة النموذجية الرسمية لبكالوريا 2025، الموضوع الثاني، التمرين الثاني.",
+        "common_mistakes": [],
+        "hints": [
+          "وحد المقام مباشرة."
+        ],
+        "summary": "العلاقة بسيطة وتربط حدود المجموع بالمتتالية الهندسية v.",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2025_tech_math_s2_ex02_q3b",
+      "display_order": 7,
+      "content_type": "question",
+      "text": "3-ب) استنتج بدلالة \\(n\\) حساب المجموع \\(S_n=\\frac4{1+u_0}+\\frac4{1+u_1}+\\cdots+\\frac4{1+u_n}\\).",
+      "solution": {
+        "introduction": "نستعمل العلاقة السابقة لتحويل المجموع إلى مجموع 1-v_k.",
+        "strategy": "نحسب مجموع v_k الهندسي.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تحويل المجموع",
+            "explanation": "\\[S_n=\\sum_{k=0}^{n}(1-v_k)=(n+1)-\\sum_{k=0}^{n}v_k.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب مجموع vₖ",
+            "explanation": "لدينا:\n\\[v_k=-3\\left(\\frac13\\right)^k.\\]\nإذن:\n\\[\\sum_{k=0}^{n}v_k=-3\\frac{1-(1/3)^{n+1}}{1-1/3}\n=-\\frac92\\left(1-\\left(\\frac13\\right)^{n+1}\\right).\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "التعويض والتبسيط",
+            "explanation": "\\[S_n=n+1+\\frac92\\left(1-\\left(\\frac13\\right)^{n+1}\\right).\\]\nإذن:\n\\[S_n=n+\\frac{11}{2}-\\frac32\\left(\\frac13\\right)^n.\\]",
+            "result": "النتيجة المطلوبة."
+          }
+        ],
+        "final_answer": "\\(\\boxed{S_n=n+1+\\frac92(1-(\\frac13)^{n+1})=n+\\frac{11}{2}-\\frac32(\\frac13)^n}\\).",
+        "verification": "تمت مراجعة الحل مع الإجابة النموذجية الرسمية لبكالوريا 2025، الموضوع الثاني، التمرين الثاني.",
+        "common_mistakes": [
+          "نسيان أن مجموع 1 من k=0 إلى n يساوي n+1."
+        ],
+        "hints": [
+          "استعمل S_n=(n+1)-Σv_k."
+        ],
+        "summary": "المجموع يتحول إلى مجموع ثابت ناقص مجموع هندسي.",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    }
+  ],
+  "source_reference": {
+    "file": "2025(4).pdf",
+    "statement_pages": [
+      3
+    ],
+    "solution_pages": [
+      8
+    ],
+    "source_faithful_statement": true,
+    "solution_reviewed_against_source": true
+  },
+  "given_data": {
+    "u0": "0",
+    "recurrence": "u_{n+1}=(3+5u_n)/(3+u_n)",
+    "equivalent_recurrence": "u_{n+1}=5-12/(3+u_n)",
+    "bound": "0<=u_n<3",
+    "monotonicity": "strictly_increasing",
+    "v_n": "(u_n-3)/(u_n+1)",
+    "v0": "-3",
+    "ratio_v": "1/3",
+    "explicit_v": "-3*(1/3)^n",
+    "explicit_u": "(3-3*(1/3)^n)/(1+3*(1/3)^n)",
+    "limit_u": "3",
+    "identity": "4/(1+u_n)=1-v_n",
+    "S_n": "n+11/2-(3/2)*(1/3)^n"
+  }
+}

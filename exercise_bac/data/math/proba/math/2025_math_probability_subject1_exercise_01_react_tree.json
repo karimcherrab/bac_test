@@ -1,0 +1,511 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "graph_schema_version": "1.0-react-json",
+  "version": "4.2-2025-math-probability-subject1-ex01-react-tree",
+  "session": "ordinary",
+  "year": 2025,
+  "chapter_code": "probability",
+  "chapter_title": "الاحتمالات",
+  "axis_tags": [
+    "probability_tree_total_probability",
+    "conditional_probability",
+    "probability_language_probability_law",
+    "counting_combinations",
+    "random_variable_probability_distribution_expectation"
+  ],
+  "branches": [
+    {
+      "code": "math",
+      "name": "شعبة رياضيات"
+    }
+  ],
+  "exercise_number": 1,
+  "subject_number": 1,
+  "source_page": 1,
+  "source_pages": [
+    1
+  ],
+  "solution_source_pages": [
+    6
+  ],
+  "title": "التمرين الأول — بكالوريا الجزائر 2025 — الموضوع الأول — شعبة رياضيات — الاحتمالات",
+  "statement": "يحتوي صندوق \\(U_1\\) على 12 كرية منها: 3 كريات حمراء ، 4 كريات بيضاء و 5 كريات خضراء.\nويحتوي صندوق \\(U_2\\) على 7 كريات منها: 4 كريات حمراء و 3 كريات بيضاء.\n(جميع الكريات متماثلة ولا نفرق بينها باللمس).\nنرمي نردا غير مزيف ذا 6 أوجه مرقمة بـ: 1 ، 1 ، 1 ، 1 ، 2 ، 2\n– إذا ظهر الرقم 1 ، نسحب عشوائيا 3 كريات في آن واحد من \\(U_1\\)\n– وإذا ظهر الرقم 2 ، نسحب عشوائيا 3 كريات على التوالي من \\(U_2\\) دون إرجاع.\nنعتبر الحوادث:\n\\(A\\): « ظهور الرقم 1 »\n\\(B\\): « الحصول على 3 كريات من نفس اللون »\n\\(C\\): « الحصول على 3 كريات مختلفة الألوان مثنى مثنى »\n\\(D\\): « الحصول على كريتين بالضبط من نفس اللون »",
+  "questions": [
+    {
+      "id": "2025_s1_probability_ex01_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) انقل وأملأ شجرة الاحتمالات المقابلة.",
+      "axis_tags": [
+        "probability_tree_total_probability",
+        "counting_combinations"
+      ],
+      "statement_graphs": [
+        {
+          "id": "2025_s1_probability_ex01_tree_statement",
+          "type": "probability_tree",
+          "render_mode": "json",
+          "capture": false,
+          "title": "شجرة الاحتمالات",
+          "direction": "ltr",
+          "canvas": {
+            "width": 860,
+            "height": 580,
+            "padding": 24
+          },
+          "style": {
+            "node_radius": 5,
+            "edge_width": 2,
+            "label_font_size": 18,
+            "probability_font_size": 17,
+            "show_arrow_heads": false
+          },
+          "nodes": [
+            {
+              "id": "root",
+              "kind": "root",
+              "x": 70,
+              "y": 300,
+              "label": ""
+            },
+            {
+              "id": "a",
+              "kind": "branch",
+              "x": 315,
+              "y": 155,
+              "label": "A"
+            },
+            {
+              "id": "not_a",
+              "kind": "branch",
+              "x": 315,
+              "y": 445,
+              "label": "Ā"
+            },
+            {
+              "id": "a_b",
+              "kind": "event",
+              "x": 720,
+              "y": 75,
+              "label": "B"
+            },
+            {
+              "id": "a_c",
+              "kind": "event",
+              "x": 720,
+              "y": 155,
+              "label": "C"
+            },
+            {
+              "id": "a_d",
+              "kind": "event",
+              "x": 720,
+              "y": 235,
+              "label": "D"
+            },
+            {
+              "id": "not_a_b",
+              "kind": "event",
+              "x": 720,
+              "y": 390,
+              "label": "B"
+            },
+            {
+              "id": "not_a_d",
+              "kind": "event",
+              "x": 720,
+              "y": 500,
+              "label": "D"
+            }
+          ],
+          "edges": [
+            {
+              "id": "e_root_a",
+              "from": "root",
+              "to": "a",
+              "probability": null,
+              "latex_probability": null,
+              "display_if_missing": "",
+              "is_given_in_statement": false
+            },
+            {
+              "id": "e_root_not_a",
+              "from": "root",
+              "to": "not_a",
+              "probability": null,
+              "latex_probability": null,
+              "display_if_missing": "",
+              "is_given_in_statement": false
+            },
+            {
+              "id": "e_a_b",
+              "from": "a",
+              "to": "a_b",
+              "probability": null,
+              "latex_probability": null,
+              "display_if_missing": "",
+              "is_given_in_statement": false
+            },
+            {
+              "id": "e_a_c",
+              "from": "a",
+              "to": "a_c",
+              "probability": null,
+              "latex_probability": null,
+              "display_if_missing": "",
+              "is_given_in_statement": false
+            },
+            {
+              "id": "e_a_d",
+              "from": "a",
+              "to": "a_d",
+              "probability": null,
+              "latex_probability": null,
+              "display_if_missing": "",
+              "is_given_in_statement": false
+            },
+            {
+              "id": "e_not_a_b",
+              "from": "not_a",
+              "to": "not_a_b",
+              "probability": null,
+              "latex_probability": null,
+              "display_if_missing": "",
+              "is_given_in_statement": false
+            },
+            {
+              "id": "e_not_a_d",
+              "from": "not_a",
+              "to": "not_a_d",
+              "probability": null,
+              "latex_probability": null,
+              "display_if_missing": "",
+              "is_given_in_statement": false
+            }
+          ],
+          "react_renderer": {
+            "component": "ProbabilityTreeRenderer",
+            "source": "nodes_edges",
+            "probability_field": "latex_probability",
+            "fallback_probability_field": "probability",
+            "missing_probability_field": "display_if_missing"
+          }
+        }
+      ],
+      "solution": {
+        "strategy": "نحسب أولا احتمال ظهور 1 أو 2 على النرد، ثم نحسب احتمالات B وC وD حسب الصندوق الذي تم السحب منه.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "احتمال A ومتممه",
+            "explanation": "أربعة أوجه تحمل الرقم 1 ووجهان يحملان الرقم 2، إذن:\n\\[\nP(A)=\\frac46=\\frac23,\n\\qquad\nP(\\overline A)=\\frac26=\\frac13.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "فروع A — السحب من U₁",
+            "explanation": "عند تحقق \\(A\\) نسحب 3 كريات في آن واحد من \\(U_1\\)، وعدد السحبات الممكنة هو:\n\\[\n\\binom{12}{3}=220.\n\\]\nللحصول على 3 كريات من نفس اللون:\n\\[\nP(B|A)=\\frac{\\binom33+\\binom43+\\binom53}{\\binom{12}{3}}=\\frac{15}{220}=\\frac3{44}.\n\\]\nللحصول على 3 كريات مختلفة الألوان مثنى مثنى:\n\\[\nP(C|A)=\\frac{3\\times4\\times5}{220}=\\frac{60}{220}=\\frac{12}{44}.\n\\]\nومن ثم:\n\\[\nP(D|A)=1-\\frac3{44}-\\frac{12}{44}=\\frac{29}{44}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "فروع Ā — السحب من U₂",
+            "explanation": "عند تحقق \\(\\overline A\\) نسحب 3 كريات دون إرجاع من \\(U_2\\) الذي يحتوي 4 حمراء و3 بيضاء.\nالحصول على 3 من نفس اللون يعني 3 حمراء أو 3 بيضاء:\n\\[\nP(B|\\overline A)=\\frac{\\binom43+\\binom33}{\\binom73}=\\frac5{35}=\\frac17.\n\\]\nوبما أن الصندوق يحتوي لونين فقط، فإن الحدث \\(C\\) مستحيل، والحالة الأخرى هي \\(D\\):\n\\[\nP(D|\\overline A)=1-\\frac17=\\frac67.\n\\]"
+          }
+        ],
+        "solution_graphs": [
+          {
+            "id": "2025_s1_probability_ex01_tree_solution",
+            "type": "probability_tree",
+            "render_mode": "json",
+            "capture": false,
+            "title": "شجرة الاحتمالات المكتملة",
+            "direction": "ltr",
+            "canvas": {
+              "width": 860,
+              "height": 580,
+              "padding": 24
+            },
+            "style": {
+              "node_radius": 5,
+              "edge_width": 2,
+              "label_font_size": 18,
+              "probability_font_size": 17,
+              "show_arrow_heads": false
+            },
+            "nodes": [
+              {
+                "id": "root",
+                "kind": "root",
+                "x": 70,
+                "y": 300,
+                "label": ""
+              },
+              {
+                "id": "a",
+                "kind": "branch",
+                "x": 315,
+                "y": 155,
+                "label": "A"
+              },
+              {
+                "id": "not_a",
+                "kind": "branch",
+                "x": 315,
+                "y": 445,
+                "label": "Ā"
+              },
+              {
+                "id": "a_b",
+                "kind": "event",
+                "x": 720,
+                "y": 75,
+                "label": "B"
+              },
+              {
+                "id": "a_c",
+                "kind": "event",
+                "x": 720,
+                "y": 155,
+                "label": "C"
+              },
+              {
+                "id": "a_d",
+                "kind": "event",
+                "x": 720,
+                "y": 235,
+                "label": "D"
+              },
+              {
+                "id": "not_a_b",
+                "kind": "event",
+                "x": 720,
+                "y": 390,
+                "label": "B"
+              },
+              {
+                "id": "not_a_d",
+                "kind": "event",
+                "x": 720,
+                "y": 500,
+                "label": "D"
+              }
+            ],
+            "edges": [
+              {
+                "id": "e_root_a",
+                "from": "root",
+                "to": "a",
+                "probability": "2/3",
+                "latex_probability": "\\frac{2}{3}",
+                "display_if_missing": "",
+                "is_given_in_statement": false
+              },
+              {
+                "id": "e_root_not_a",
+                "from": "root",
+                "to": "not_a",
+                "probability": "1/3",
+                "latex_probability": "\\frac{1}{3}",
+                "display_if_missing": "",
+                "is_given_in_statement": false
+              },
+              {
+                "id": "e_a_b",
+                "from": "a",
+                "to": "a_b",
+                "probability": "3/44",
+                "latex_probability": "\\frac{3}{44}",
+                "display_if_missing": "",
+                "is_given_in_statement": false
+              },
+              {
+                "id": "e_a_c",
+                "from": "a",
+                "to": "a_c",
+                "probability": "12/44",
+                "latex_probability": "\\frac{12}{44}",
+                "display_if_missing": "",
+                "is_given_in_statement": false
+              },
+              {
+                "id": "e_a_d",
+                "from": "a",
+                "to": "a_d",
+                "probability": "29/44",
+                "latex_probability": "\\frac{29}{44}",
+                "display_if_missing": "",
+                "is_given_in_statement": false
+              },
+              {
+                "id": "e_not_a_b",
+                "from": "not_a",
+                "to": "not_a_b",
+                "probability": "1/7",
+                "latex_probability": "\\frac{1}{7}",
+                "display_if_missing": "",
+                "is_given_in_statement": false
+              },
+              {
+                "id": "e_not_a_d",
+                "from": "not_a",
+                "to": "not_a_d",
+                "probability": "6/7",
+                "latex_probability": "\\frac{6}{7}",
+                "display_if_missing": "",
+                "is_given_in_statement": false
+              }
+            ],
+            "react_renderer": {
+              "component": "ProbabilityTreeRenderer",
+              "source": "nodes_edges",
+              "probability_field": "latex_probability",
+              "fallback_probability_field": "probability",
+              "missing_probability_field": "display_if_missing"
+            }
+          }
+        ],
+        "final_answer": "\\[P(A)=\\frac23,\\quad P(\\overline A)=\\frac13.\\]\n\\[P(B|A)=\\frac3{44},\\quad P(C|A)=\\frac{12}{44},\\quad P(D|A)=\\frac{29}{44}.\\]\n\\[P(B|\\overline A)=\\frac17,\\quad P(D|\\overline A)=\\frac67.\\]"
+      }
+    },
+    {
+      "id": "2025_s1_probability_ex01_q2a",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2) أ) احسب \\(P(B)\\)، \\(P(C)\\)، \\(P(D)\\)، \\(P(B\\cup C)\\) احتمالات الحوادث \\(B\\)، \\(C\\)، \\(D\\)، \\(B\\cup C\\) على الترتيب.",
+      "axis_tags": [
+        "probability_tree_total_probability",
+        "probability_language_probability_law"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل قانون الاحتمالات الكلية على الحدثين A وĀ.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب P(B)",
+            "explanation": "\\[\nP(B)=P(A)P(B|A)+P(\\overline A)P(B|\\overline A)\n=\\frac23\\times\\frac3{44}+\\frac13\\times\\frac17=\\frac{43}{462}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب P(C)",
+            "explanation": "الحدث \\(C\\) لا يمكن أن يتحقق عند السحب من \\(U_2\\)، لذلك:\n\\[\nP(C)=\\frac23\\times\\frac{12}{44}=\\frac2{11}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب P(D)",
+            "explanation": "\\[\nP(D)=\\frac23\\times\\frac{29}{44}+\\frac13\\times\\frac67=\\frac{335}{462}.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "حساب P(B∪C)",
+            "explanation": "الحادثتان \\(B\\) و\\(C\\) متنافيتان، لذلك:\n\\[\nP(B\\cup C)=P(B)+P(C)=\\frac{43}{462}+\\frac{84}{462}=\\frac{127}{462}.\n\\]"
+          }
+        ],
+        "final_answer": "\\[P(B)=\\frac{43}{462},\\qquad P(C)=\\frac2{11},\\qquad P(D)=\\frac{335}{462},\\qquad P(B\\cup C)=\\frac{127}{462}.\\]"
+      }
+    },
+    {
+      "id": "2025_s1_probability_ex01_q2b",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "ب) بين أن: \\(P(A\\cap\\overline B)=\\frac{41}{66}\\).",
+      "axis_tags": [
+        "conditional_probability",
+        "probability_tree_total_probability"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل \\(P(A\\cap\\overline B)=P(A)P(\\overline B|A)\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "احتمال B̄ بشرط A",
+            "explanation": "\\[\nP(\\overline B|A)=1-P(B|A)=1-\\frac3{44}=\\frac{41}{44}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "الحساب",
+            "explanation": "\\[\nP(A\\cap\\overline B)=\\frac23\\times\\frac{41}{44}=\\frac{41}{66}.\n\\]"
+          }
+        ],
+        "final_answer": "\\[P(A\\cap\\overline B)=\\frac{41}{66}.\\]"
+      }
+    },
+    {
+      "id": "2025_s1_probability_ex01_q2c",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "ج) احسب \\(P_{\\overline B}(A)\\) احتمال سحب 3 كريات من \\(U_1\\) علما أنها ليست من نفس اللون.",
+      "axis_tags": [
+        "conditional_probability"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "المطلوب هو \\(P(A|\\overline B)\\). نحسب أولا \\(P(\\overline B)\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب P(B̄)",
+            "explanation": "\\[\nP(\\overline B)=1-P(B)=1-\\frac{43}{462}=\\frac{419}{462}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "الاحتمال الشرطي",
+            "explanation": "ولدينا:\n\\[\nP(A\\cap\\overline B)=\\frac{41}{66}=\\frac{287}{462}.\n\\]\nإذن:\n\\[\nP_{\\overline B}(A)=\\frac{P(A\\cap\\overline B)}{P(\\overline B)}=\\frac{287}{419}.\n\\]"
+          }
+        ],
+        "final_answer": "\\[P_{\\overline B}(A)=\\frac{287}{419}.\\]"
+      }
+    },
+    {
+      "id": "2025_s1_probability_ex01_q3",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "3) \\(X\\) المتغير العشوائي الذي يرفق بكل عملية سحب لـ 3 كريات كما سبق، عدد الألوان التي تحملها الكريات المسحوبة.\n– عين قانون احتمال المتغير العشوائي \\(X\\) ثم احسب أمله الرياضياتي.",
+      "axis_tags": [
+        "random_variable_probability_distribution_expectation"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "القيمة 1 تعني الحصول على لون واحد أي الحدث B، والقيمة 2 تعني لونين أي الحدث D، والقيمة 3 تعني ثلاثة ألوان أي الحدث C.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "قيم X",
+            "explanation": "\\[X\\in\\{1,2,3\\}.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "قانون الاحتمال",
+            "explanation": "\\[\nP(X=1)=P(B)=\\frac{43}{462},\n\\]\n\\[\nP(X=2)=P(D)=\\frac{335}{462},\n\\]\n\\[\nP(X=3)=P(C)=\\frac{84}{462}.\n\\]\n\\[\n\\begin{array}{c|ccc}\nx_i&1&2&3\\\\\\hline\nP(X=x_i)&\\frac{43}{462}&\\frac{335}{462}&\\frac{84}{462}\n\\end{array}\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب الأمل الرياضياتي",
+            "explanation": "\\[\nE(X)=1\\times\\frac{43}{462}+2\\times\\frac{335}{462}+3\\times\\frac{84}{462}\n=\\frac{965}{462}.\n\\]"
+          }
+        ],
+        "final_answer": "\\[\n\\begin{array}{c|ccc}\nx_i&1&2&3\\\\\\hline\nP(X=x_i)&\\frac{43}{462}&\\frac{335}{462}&\\frac{84}{462}\n\\end{array}\n\\]\n\\[E(X)=\\frac{965}{462}.\\]"
+      }
+    }
+  ],
+  "rendering_contract": {
+    "no_capture": true,
+    "external_image_required": false,
+    "external_svg_required": false,
+    "graph_source": "inline_json",
+    "supported_graph_types": [
+      "probability_tree"
+    ],
+    "react_note": "شجرة الاحتمالات موجودة بالكامل داخل JSON. ارسم كل edge بين node[from] و node[to] باستعمال إحداثيات x و y. في نص السؤال تكون الاحتمالات فارغة، وفي solution_graphs تظهر الاحتمالات المكتملة. لا يوجد أي path لصورة أو SVG."
+  },
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2025(6).pdf",
+    "statement_figure_policy": "لا Capture. شجرة الاحتمالات معاد بناؤها كبيانات JSON قابلة للرسم في React.",
+    "solution_figure_policy": "الشجرة المكتملة موجودة داخل solution_graphs.",
+    "renderer": "ProbabilityTreeRenderer(nodes + edges)"
+  }
+}

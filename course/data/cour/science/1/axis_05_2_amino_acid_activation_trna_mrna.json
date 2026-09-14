@@ -1,0 +1,666 @@
+{
+  "tag": "amino_acid_activation_trna_mrna_complementarity",
+  "title": "تنشيط الأحماض الأمينية والتكامل بين ARNt وARNm",
+  "order": 6,
+  "is_active": true,
+  "branches": [
+    "math",
+    "science"
+  ],
+  "content": {
+    "language": "ar",
+    "direction": "rtl",
+    "chapter_code": "protein_synthesis",
+    "chapter_title": "آلية تركيب البروتين",
+    "axis_tag": "amino_acid_activation_trna_mrna_complementarity",
+    "estimated_minutes": 38,
+    "difficulty": "easy",
+    "lesson_goal": "أن يفهم التلميذ كيف يُجهَّز الحمض الأميني قبل استعماله في الترجمة، فيتعرف على دور ARNt النوعي وإنزيم التنشيط النوعي وATP في تكوين معقد حمض أميني–ARNt، ثم يفهم كيف يضمن التكامل والتعاكس في الاتجاه بين رامزة ARNm والرامزة المضادة لـARNt وصول الحمض الأميني الموافق، دون الدخول في مراحل الانطلاق والاستطالة والنهاية.",
+    "prerequisites": [
+      "معرفة أن ARNm يحمل رامزات ثلاثية تحدد ترتيب الأحماض الأمينية.",
+      "معرفة أن ARNt ناقل يملك موقع تثبيت للحمض الأميني ورامزة مضادة.",
+      "معرفة أن الريبوزوم هو مقر الترجمة."
+    ],
+    "learning_outcomes": [
+      "يعرف تنشيط الحمض الأميني بأنه ربط حمض أميني بـARNt الموافق قبل مشاركته في الترجمة.",
+      "يستخرج من الوثيقة العناصر الضرورية للتنشيط: حمض أميني، ARNt نوعي، إنزيم نوعي وATP.",
+      "يفهم أن ATP يزوّد العملية بالطاقة وأن الوثيقة تبين تحوله إلى AMP.",
+      "يعرف أن الناتج الوظيفي هو معقد حمض أميني–ARNt (ARNt مشحون).",
+      "يربط نوعية إنزيم Aminoacyl-ARNt synthetase بدقة اختيار الحمض الأميني وARNt الموافق.",
+      "يميز بدقة بين الرامزة الموجودة على ARNm والرامزة المضادة الموجودة على ARNt.",
+      "يطبق تكامل القواعد A↔U وC↔G لتحديد الرامزة المضادة.",
+      "يحترم التعاكس في الاتجاه بين الرامزة والرامزة المضادة.",
+      "يفسر المثال AUG ↔ UAC ويربط ARNt-ميثيونين برامزة AUG.",
+      "يفسر كيف يربط ARNt بين لغة الرامزات ولغة الأحماض الأمينية.",
+      "يتوقف عند تجهيز ARNt والتعرف على الرامزة دون شرح حركة الريبوزوم أو تكوين الروابط الببتيدية."
+    ],
+    "learning_path": [
+      {
+        "id": "step_1",
+        "type": "problem",
+        "component": "DiscoveryQuestion",
+        "title": "المشكلة: كيف يحمل ARNt الحمض الأميني الصحيح؟",
+        "content": {
+          "question": "توجد في الهيولى أنواع عديدة من الأحماض الأمينية وأنواع مختلفة من ARNt. كيف يُربط كل حمض أميني بالـARNt الموافق له، ثم كيف يعرف هذا ARNt المكان الصحيح على ARNm؟",
+          "teacher": "سنحل المشكلة على مرحلتين: تجهيز ARNt بحمضه الأميني، ثم مطابقة الرامزة بالرامزة المضادة.",
+          "action": {
+            "label": "ابدأ بوثيقة التنشيط",
+            "next_step": "step_2"
+          }
+        },
+        "display_order": 1
+      },
+      {
+        "id": "step_2",
+        "type": "real_evidence",
+        "component": "RealEvidenceGallery",
+        "title": "الوثيقة 1: كيف يتم تنشيط الحمض الأميني؟",
+        "content": {
+          "intro": "تعرض الوثيقة (5) من الدرس العناصر الداخلة في عملية تنشيط الحمض الأميني والناتج. اقرأها من اليمين إلى اليسار حسب تسلسل المراحل.",
+          "figures": [
+            {
+              "src": "/science/protein-synthesis/axis-05-2/amino_acid_activation_doc5.png",
+              "alt": "وثيقة تنشيط الأحماض الأمينية بواسطة إنزيم نوعي وATP وARNt",
+              "caption": "الوثيقة 1: حمض أميني + ARNt + إنزيم تنشيط نوعي + ATP تؤدي إلى تكوين ARNt محمّل بالحمض الأميني.",
+              "source_label": "الوثيقة (5) — الصفحة 3 من ملف آلية الترجمة"
+            }
+          ],
+          "guided_reading": [
+            {
+              "question": "ما العناصر الموجودة في بداية العملية؟",
+              "answer": "حمض أميني، ARNt الموافق، إنزيم تنشيط نوعي وATP."
+            },
+            {
+              "question": "ماذا يحدث في مرحلة تشكل المعقد؟",
+              "answer": "يرتبط الحمض الأميني وARNt بمواقع نوعية على الإنزيم، وتُستعمل طاقة ATP."
+            },
+            {
+              "question": "ماذا تبين الوثيقة بالنسبة لـATP؟",
+              "answer": "تبين تحول ATP إلى AMP أثناء العملية، ما يدل على استعمال الطاقة."
+            },
+            {
+              "question": "ما الناتج بعد تحرر الإنزيم؟",
+              "answer": "معقد حمض أميني–ARNt؛ أي ARNt محمّل بحمضه الأميني."
+            },
+            {
+              "question": "ما الاستنتاج؟",
+              "answer": "تنشيط الحمض الأميني عملية تجهيز تسبق استعماله في الترجمة، وتسمح بربطه بالـARNt الموافق في وجود إنزيم نوعي وطاقة."
+            }
+          ],
+          "takeaway": "تنشيط الحمض الأميني = ربطه بـARNt الموافق بوساطة إنزيم نوعي مع استهلاك طاقة من ATP."
+        },
+        "display_order": 2
+      },
+      {
+        "id": "step_3",
+        "type": "key_rule",
+        "component": "KeyRuleCard",
+        "title": "المعادلة التي تحتاجها فقط",
+        "content": {
+          "rule": "حمض أميني + ARNt نوعي + ATP — بوجود إنزيم نوعي → حمض أميني–ARNt + نواتج طاقوية.",
+          "simple_flow": "حمض أميني حر → تعرف نوعي → ارتباط بـARNt → ARNt مشحون",
+          "do_not_confuse": [
+            "ATP لا يحدد نوع الحمض الأميني؛ دوره طاقوي.",
+            "ARNt لا يتحول إلى حمض أميني؛ بل يحمل الحمض الأميني.",
+            "الإنزيم لا يصبح جزءا من معقد حمض أميني–ARNt؛ يتحرر بعد التفاعل."
+          ],
+          "memory_tip": "الناقل الصحيح + الإنزيم الصحيح + طاقة = ARNt مشحون."
+        },
+        "display_order": 3
+      },
+      {
+        "id": "step_4",
+        "type": "short_explanation",
+        "component": "ShortExplanation",
+        "title": "لماذا نقول إن العملية نوعية؟",
+        "content": {
+          "blocks": [
+            {
+              "title": "نوعية الإنزيم",
+              "text": "إنزيم Aminoacyl-ARNt synthetase يتعرف على حمض أميني معين وعلى ARNt الموافق له."
+            },
+            {
+              "title": "نوعية ARNt",
+              "text": "كل ARNt مهيأ لحمل حمض أميني محدد أو نوع محدد من الأحماض الأمينية وفق تخصصه."
+            },
+            {
+              "title": "النتيجة",
+              "text": "لا يكفي أن يرتبط أي حمض أميني بأي ARNt؛ يجب أن تكون المطابقة صحيحة قبل الوصول إلى الريبوزوم."
+            }
+          ],
+          "memory_tip": "الدقة تبدأ قبل قراءة الرامزة: الحمض الأميني يُحمّل على الناقل الموافق."
+        },
+        "display_order": 4
+      },
+      {
+        "id": "step_5",
+        "type": "real_evidence",
+        "component": "RealEvidenceGallery",
+        "title": "الوثيقة 2: مثال رامزة AUG والرامزة المضادة UAC",
+        "content": {
+          "intro": "هذا المثال يوضح العلاقة بين رامزة ARNm والرامزة المضادة على ARNt الحامل للميثيونين.",
+          "figures": [
+            {
+              "src": "/science/protein-synthesis/axis-05-2/codon_anticodon_met_example.png",
+              "alt": "ARNt محمل بالميثيونين يحمل الرامزة المضادة UAC أمام رامزة AUG على ARNm",
+              "caption": "الوثيقة 2: رامزة ARNm هي AUG، والرامزة المضادة المكملة عليها في ARNt هي UAC.",
+              "source_label": "مثال — الصفحة 5 من ملف آلية الترجمة"
+            }
+          ],
+          "guided_reading": [
+            {
+              "question": "أين توجد AUG؟",
+              "answer": "على ARNm؛ وهي رامزة."
+            },
+            {
+              "question": "أين توجد UAC؟",
+              "answer": "على ARNt؛ وهي رامزة مضادة."
+            },
+            {
+              "question": "ما العلاقة بين القواعد؟",
+              "answer": "A تقابل U، وU تقابل A، وG تقابل C."
+            },
+            {
+              "question": "ما الحمض الأميني المحمول في المثال؟",
+              "answer": "الميثيونين Met."
+            },
+            {
+              "question": "ما الذي يضمن تموضع ARNt أمام الرامزة الموافقة؟",
+              "answer": "تكامل الرامزة المضادة مع رامزة ARNm مع تعاكس اتجاه السلسلتين."
+            }
+          ],
+          "takeaway": "ARNm يحمل الرامزة، وARNt يحمل الرامزة المضادة المكملة لها ويقدم الحمض الأميني الموافق."
+        },
+        "display_order": 5
+      },
+      {
+        "id": "step_6",
+        "type": "comparison",
+        "component": "VisualComparison",
+        "title": "رامزة أم رامزة مضادة؟",
+        "content": {
+          "columns": [
+            {
+              "title": "الرامزة Codon",
+              "items": [
+                "توجد على ARNm.",
+                "تتكون من 3 قواعد.",
+                "تحدد معنى في الشفرة الوراثية.",
+                "تُكتب عادة في اتجاه 5′→3′."
+              ]
+            },
+            {
+              "title": "الرامزة المضادة Anticodon",
+              "items": [
+                "توجد على ARNt.",
+                "تتكون من 3 قواعد.",
+                "تتكامل مع الرامزة الموافقة.",
+                "تكون مضادة التوازي مع الرامزة."
+              ]
+            }
+          ],
+          "memory_tip": "رامزة = على الرسالة، رامزة مضادة = على الناقل.",
+          "attention": "لا تكتب الرامزة المضادة في الاتجاه نفسه دون الانتباه إلى 5′ و3′."
+        },
+        "display_order": 6
+      },
+      {
+        "id": "step_7",
+        "type": "key_rule",
+        "component": "KeyRuleCard",
+        "title": "قاعدة التكامل والاتجاه",
+        "content": {
+          "rule": "A ↔ U وC ↔ G، مع تعاكس اتجاه رامزة ARNm والرامزة المضادة لـARNt.",
+          "simple_flow": "ARNm: 5′-AUG-3′ ↔ ARNt: 3′-UAC-5′",
+          "do_not_confuse": [
+            "UAC هنا رامزة مضادة وليست رامزة على ARNm.",
+            "إذا كتبت الرامزة المضادة 5′→3′ لنفس المثال تصبح 5′-CAU-3′؛ لذلك يجب الانتباه إلى الاتجاه المطلوب في السؤال."
+          ],
+          "memory_tip": "تكامل + تعاكس اتجاه."
+        },
+        "display_order": 7
+      },
+      {
+        "id": "step_8",
+        "type": "genetic_code_exercise",
+        "component": "GeneticCodeExercise",
+        "title": "طبّق: استخرج الرامزة المضادة",
+        "content": {
+          "instruction": "لدينا رامزة على ARNm: 5′-GCU-3′. استخرج الرامزة المضادة المكملة على ARNt واكتبها في الاتجاه المقابل.",
+          "mrna": "5′-GCU-3′",
+          "student_steps": [
+            {
+              "label": "G تقابل",
+              "expected": "C",
+              "hint": "G ↔ C."
+            },
+            {
+              "label": "C تقابل",
+              "expected": "G",
+              "hint": "C ↔ G."
+            },
+            {
+              "label": "U تقابل",
+              "expected": "A",
+              "hint": "U ↔ A."
+            },
+            {
+              "label": "اكتب التعاكس في الاتجاه",
+              "expected": "3′-CGA-5′"
+            }
+          ],
+          "final_answer": "ARNm: 5′-GCU-3′ ↔ ARNt: 3′-CGA-5′",
+          "explanation": "الرامزة المضادة مكملة ومضادة التوازي لرامزة ARNm.",
+          "takeaway": "لا تحفظ الرامزة المضادة؛ استخرجها دائما بالتكامل والاتجاه."
+        },
+        "display_order": 8
+      },
+      {
+        "id": "step_9",
+        "type": "short_explanation",
+        "component": "ShortExplanation",
+        "title": "كيف تتحقق دقة وصول الحمض الأميني؟",
+        "content": {
+          "blocks": [
+            {
+              "title": "التحقق الأول: أثناء التنشيط",
+              "text": "الإنزيم النوعي يربط الحمض الأميني بالـARNt الموافق."
+            },
+            {
+              "title": "التحقق الثاني: عند ARNm",
+              "text": "الرامزة المضادة لـARNt تتكامل مع رامزة ARNm الموافقة."
+            },
+            {
+              "title": "النتيجة",
+              "text": "ARNt يربط بين المعلومة الموجودة في الرامزة والحمض الأميني الذي يحمله."
+            }
+          ],
+          "memory_tip": "مطابقة الحمض الأميني بالناقل + مطابقة الناقل بالرامزة = دقة في ترتيب الأحماض الأمينية.",
+          "attention": "لا نشرح هنا تكوين الرابطة الببتيدية أو انتقال الريبوزوم؛ هذه مراحل الترجمة في المحور التالي."
+        },
+        "display_order": 9
+      },
+      {
+        "id": "step_10",
+        "type": "quick_check",
+        "component": "QuickCheck",
+        "title": "تحقق من فهم نظام المطابقة",
+        "content": {
+          "questions": [
+            {
+              "id": "qc1",
+              "question": "ما ناتج تنشيط الحمض الأميني؟",
+              "choices": [
+                "معقد حمض أميني–ARNt",
+                "ARNm جديد",
+                "ريبوزوم جديد"
+              ],
+              "correct_answer": "معقد حمض أميني–ARNt",
+              "explanation": "أي ARNt محمل بحمضه الأميني."
+            },
+            {
+              "id": "qc2",
+              "question": "ما دور ATP في الوثيقة؟",
+              "choices": [
+                "توفير الطاقة",
+                "تحديد نوع الرامزة",
+                "حمل الحمض الأميني"
+              ],
+              "correct_answer": "توفير الطاقة",
+              "explanation": "الوثيقة تبين استعمال ATP أثناء التنشيط."
+            },
+            {
+              "id": "qc3",
+              "question": "أين توجد الرامزة المضادة؟",
+              "choices": [
+                "على ARNt",
+                "على ARNm",
+                "على ARNr"
+              ],
+              "correct_answer": "على ARNt",
+              "explanation": "وهي تتكامل مع رامزة ARNm."
+            },
+            {
+              "id": "qc4",
+              "question": "إذا كانت رامزة ARNm هي 5′-AUG-3′ فما الرامزة المضادة المقابلة؟",
+              "choices": [
+                "3′-UAC-5′",
+                "5′-AUG-3′",
+                "3′-TAC-5′"
+              ],
+              "correct_answer": "3′-UAC-5′",
+              "explanation": "A↔U، U↔A، G↔C مع تعاكس الاتجاه."
+            }
+          ]
+        },
+        "display_order": 10
+      },
+      {
+        "id": "step_11",
+        "type": "bac_method",
+        "component": "BacMethodCard",
+        "title": "كيف تشرح دور ARNt في البكالوريا؟",
+        "content": {
+          "skill": "تفسير دقة اختيار ونقل الحمض الأميني الموافق",
+          "method": [
+            {
+              "label": "1. التنشيط",
+              "text": "حدد أن الحمض الأميني يرتبط بـARNt الموافق في وجود إنزيم نوعي وATP."
+            },
+            {
+              "label": "2. الناتج",
+              "text": "استنتج تشكل معقد حمض أميني–ARNt جاهز للنقل."
+            },
+            {
+              "label": "3. التعرف على الرامزة",
+              "text": "بيّن أن الرامزة المضادة لـARNt تتكامل مع رامزة ARNm."
+            },
+            {
+              "label": "4. الاستنتاج",
+              "text": "يصل الحمض الأميني المحمول إلى الموضع الذي تحدده المعلومة الموجودة على ARNm."
+            }
+          ],
+          "bac_sentence": "يُجهَّز الحمض الأميني بارتباطه بـARNt الموافق في وجود إنزيم نوعي وطاقة ATP، فيتشكل معقد حمض أميني–ARNt. ثم تتكامل الرامزة المضادة للـARNt مع رامزة ARNm الموافقة، مما يسمح بوصول الحمض الأميني المناسب حسب الرسالة الوراثية.",
+          "common_mistakes": [
+            "القول إن ATP يحدد نوع الحمض الأميني.",
+            "الخلط بين الرامزة والرامزة المضادة.",
+            "نسيان نوعية إنزيم التنشيط.",
+            "كتابة الرامزة المضادة دون احترام التكامل.",
+            "إهمال اتجاه 5′ و3′.",
+            "الدخول في حركة الريبوزوم أو مراحل الاستطالة والنهاية."
+          ]
+        },
+        "display_order": 11
+      },
+      {
+        "id": "step_12",
+        "type": "final_visual_map",
+        "component": "InteractiveSummaryMap",
+        "title": "الخلاصة: من الحمض الأميني الحر إلى الرامزة الموافقة",
+        "content": {
+          "map": [
+            {
+              "node": "حمض أميني",
+              "relation": "يتعرف عليه",
+              "target": "إنزيم نوعي"
+            },
+            {
+              "node": "ARNt الموافق",
+              "relation": "يتعرف عليه أيضا",
+              "target": "الإنزيم النوعي"
+            },
+            {
+              "node": "ATP",
+              "relation": "يوفر",
+              "target": "الطاقة"
+            },
+            {
+              "node": "عملية التنشيط",
+              "relation": "تعطي",
+              "target": "معقد حمض أميني–ARNt"
+            },
+            {
+              "node": "ARNm",
+              "relation": "يحمل",
+              "target": "رامزة"
+            },
+            {
+              "node": "ARNt",
+              "relation": "يحمل",
+              "target": "رامزة مضادة"
+            },
+            {
+              "node": "الرامزة المضادة",
+              "relation": "تتكامل مع",
+              "target": "رامزة ARNm"
+            },
+            {
+              "node": "ARNt المشحون",
+              "relation": "يقدم",
+              "target": "الحمض الأميني الموافق"
+            }
+          ],
+          "memory_tip": "اشحن ARNt الصحيح أولا، ثم طابق الرامزة بالرامزة المضادة.",
+          "next_axis_bridge": {
+            "question": "أصبح لدينا ARNm وريبوزوم وARNt مشحون. كيف تبدأ الترجمة فعليا، وكيف تطول السلسلة ثم تتوقف؟",
+            "next_concept": "المحور التالي: مراحل الترجمة — الانطلاق والاستطالة والنهاية."
+          }
+        },
+        "display_order": 12
+      },
+      {
+        "id": "step_13",
+        "type": "quiz",
+        "component": "FinalQuiz",
+        "title": "اختبار نهاية المحور",
+        "content": {
+          "questions": [
+            {
+              "id": "q1",
+              "question": "أي مجموعة تمثل متطلبات تنشيط الحمض الأميني؟",
+              "choices": [
+                "حمض أميني + ARNt نوعي + إنزيم نوعي + ATP",
+                "ARNm + ADN فقط",
+                "ARNr + رامزة توقف"
+              ],
+              "correct_answer": "حمض أميني + ARNt نوعي + إنزيم نوعي + ATP",
+              "explanation": "هذه العناصر مبينة في وثيقة التنشيط."
+            },
+            {
+              "id": "q2",
+              "question": "ما وظيفة الرامزة المضادة؟",
+              "choices": [
+                "التعرف بالتكامل على رامزة ARNm",
+                "توفير الطاقة",
+                "تكوين الريبوزوم"
+              ],
+              "correct_answer": "التعرف بالتكامل على رامزة ARNm",
+              "explanation": "توجد على ARNt."
+            },
+            {
+              "id": "q3",
+              "question": "إذا كانت رامزة ARNm هي 5′-GCU-3′ فما الرامزة المضادة؟",
+              "choices": [
+                "3′-CGA-5′",
+                "3′-GCU-5′",
+                "5′-CGA-3′"
+              ],
+              "correct_answer": "3′-CGA-5′",
+              "explanation": "مع احترام التكامل والتعاكس في الاتجاه."
+            },
+            {
+              "id": "q4",
+              "question": "لماذا يمثل ARNt حلقة وصل بين الشفرة والبروتين؟",
+              "choices": [
+                "لأنه يحمل حمضا أمينيا ويتعرف على رامزة ARNm بواسطة الرامزة المضادة",
+                "لأنه يخزن ADN",
+                "لأنه يصنع ATP"
+              ],
+              "correct_answer": "لأنه يحمل حمضا أمينيا ويتعرف على رامزة ARNm بواسطة الرامزة المضادة",
+              "explanation": "هذه وظيفته الأساسية في المطابقة."
+            },
+            {
+              "id": "q5",
+              "question": "أي موضوع لا ينتمي إلى هذا المحور؟",
+              "choices": [
+                "حركة الريبوزوم خلال الاستطالة",
+                "تنشيط الحمض الأميني",
+                "الرامزة المضادة"
+              ],
+              "correct_answer": "حركة الريبوزوم خلال الاستطالة",
+              "explanation": "تدرس في محور مراحل الترجمة."
+            }
+          ],
+          "mastery_threshold": 4
+        },
+        "display_order": 13
+      }
+    ],
+    "presentation": {
+      "hook": "كيف تختار الخلية الحمض الأميني الصحيح، ثم كيف توصله إلى الرامزة الصحيحة؟",
+      "promise": "ستفهم نظام المطابقة في خطوتين: شحن ARNt الصحيح ثم مطابقة الرامزة بالرامزة المضادة.",
+      "rhythm": [
+        "مشكلة",
+        "وثيقة التنشيط",
+        "نوعية الاختيار",
+        "وثيقة AUG/UAC",
+        "قارن",
+        "طبق التكامل",
+        "فسر الدقة",
+        "تحقق",
+        "منهجية",
+        "خلاصة"
+      ],
+      "mode": "document_first_learning",
+      "student_first": true,
+      "reveal_teacher_after_think": true,
+      "max_text_lines_per_card": 6,
+      "avoid_repetition": true,
+      "show_progress_as_journey": true
+    },
+    "curriculum_goal": "فهم تنشيط الأحماض الأمينية وتكوين معقد حمض أميني–ARNt، وإبراز دور النوعية والتكامل بين رامزة ARNm والرامزة المضادة لـARNt في وصول الحمض الأميني الموافق.",
+    "document_bank": [
+      {
+        "document_id": "ps_axis06_doc01_activation",
+        "file_name": "amino_acid_activation_doc5.png",
+        "src": "/science/protein-synthesis/axis-05-2/amino_acid_activation_doc5.png",
+        "document_type": "activation_mechanism_scheme",
+        "source": {
+          "kind": "lesson_pdf",
+          "page": 3,
+          "figure": "الوثيقة (5)"
+        },
+        "skills": [
+          "identify_activation_requirements",
+          "interpret_energy_use",
+          "infer_product",
+          "explain_specificity"
+        ],
+        "scientific_entities": [
+          "حمض أميني",
+          "ARNt",
+          "ATP",
+          "AMP",
+          "Aminoacyl-ARNt synthetase"
+        ],
+        "pedagogical_roles": [
+          "lesson_evidence",
+          "axis_exercise",
+          "ai_axis_exercise",
+          "bac_similar"
+        ],
+        "difficulty": 3,
+        "interpretation_scope": "تفسير متطلبات التنشيط ونتيجته العامة، ودور الإنزيم النوعي والطاقة.",
+        "safe_claims": [
+          "التنشيط يتطلب حمضا أمينيا وARNt وإنزيما نوعيا وATP.",
+          "الوثيقة تبين ATP ثم AMP أثناء العملية.",
+          "الناتج هو حمض أميني مرتبط بـARNt."
+        ],
+        "forbidden_inferences": [
+          "القول إن ATP يحدد نوع الحمض الأميني.",
+          "اعتبار الإنزيم جزءا دائما من المعقد النهائي.",
+          "الدخول في مراحل الترجمة الريبوزومية."
+        ],
+        "ai_generation": {
+          "allowed": true,
+          "allowed_question_types": [
+            "observe",
+            "identify_requirements",
+            "infer_product",
+            "explain_specificity",
+            "energy_role"
+          ],
+          "max_documents_with": 2
+        },
+        "lesson_step": "step_2"
+      },
+      {
+        "document_id": "ps_axis06_doc02_codon_anticodon",
+        "file_name": "codon_anticodon_met_example.png",
+        "src": "/science/protein-synthesis/axis-05-2/codon_anticodon_met_example.png",
+        "document_type": "codon_anticodon_example",
+        "source": {
+          "kind": "lesson_pdf",
+          "page": 5,
+          "role": "مثال"
+        },
+        "skills": [
+          "distinguish_codon_anticodon",
+          "apply_complementarity",
+          "respect_antiparallel_orientation"
+        ],
+        "scientific_entities": [
+          "ARNm",
+          "ARNt",
+          "AUG",
+          "UAC",
+          "Met"
+        ],
+        "pedagogical_roles": [
+          "lesson_evidence",
+          "axis_exercise",
+          "ai_axis_exercise"
+        ],
+        "difficulty": 2,
+        "interpretation_scope": "تثبيت الفرق بين الرامزة والرامزة المضادة ومبدأ التكامل في مثال AUG/UAC.",
+        "safe_claims": [
+          "AUG توجد على ARNm.",
+          "UAC توجد على ARNt في الاتجاه المقابل.",
+          "ARNt في المثال يحمل الميثيونين."
+        ],
+        "forbidden_inferences": [
+          "القول إن UAC رامزة على ARNm.",
+          "إهمال تعاكس الاتجاه عند كتابة السلسلتين.",
+          "شرح مرحلة الانطلاق بالكامل اعتمادا على المثال."
+        ],
+        "ai_generation": {
+          "allowed": true,
+          "allowed_question_types": [
+            "identify",
+            "complementarity",
+            "directionality",
+            "error_detection"
+          ],
+          "max_documents_with": 2
+        },
+        "lesson_step": "step_5"
+      }
+    ],
+    "scientific_quality_control": {
+      "version": "2.0",
+      "axis_boundary": {
+        "axis_starts_at": "تنشيط الحمض الأميني وربطه بـARNt",
+        "axis_ends_at": "مطابقة الرامزة والرامزة المضادة وتفسير دقة وصول الحمض الأميني",
+        "allowed": [
+          "حمض أميني",
+          "ARNt",
+          "إنزيم نوعي",
+          "ATP",
+          "AMP",
+          "معقد حمض أميني–ARNt",
+          "رامزة",
+          "رامزة مضادة",
+          "تكامل",
+          "تعاكس الاتجاه"
+        ],
+        "next_axis_only": [
+          "انطلاق الترجمة",
+          "الموقع A",
+          "الموقع P أثناء الحركة",
+          "تكوين الرابطة الببتيدية بالتفصيل",
+          "انتقال الريبوزوم",
+          "النهاية"
+        ]
+      },
+      "rules": [
+        "الرامزة توجد على ARNm والرامزة المضادة توجد على ARNt.",
+        "الرامزة والرامزة المضادة متكاملتان ومضادتا التوازي.",
+        "ARNm 5′-AUG-3′ يقابله ARNt 3′-UAC-5′ في المثال.",
+        "إذا طلب كتابة الرامزة المضادة في اتجاه 5′→3′ فيجب قلب ترتيبها بعد استخراج المكمل.",
+        "ATP دوره طاقوي، بينما النوعية مرتبطة بالإنزيم وARNt الموافق.",
+        "الناتج الوظيفي من التنشيط هو ARNt محمل بالحمض الأميني.",
+        "لا تدخل في مراحل الترجمة داخل هذا المحور."
+      ]
+    }
+  }
+}

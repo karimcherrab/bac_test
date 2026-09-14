@@ -1,0 +1,960 @@
+{
+  "tag": "genetic_code_and_code_table",
+  "title": "الشفرة الوراثية: من رامزات ARNm إلى متتالية الأحماض الأمينية",
+  "order": 4,
+  "is_active": true,
+  "branches": [
+    "math",
+    "science"
+  ],
+  "content": {
+    "language": "ar",
+    "direction": "rtl",
+    "chapter_code": "protein_synthesis",
+    "chapter_title": "آلية تركيب البروتين",
+    "axis_tag": "genetic_code_and_code_table",
+    "estimated_minutes": 40,
+    "difficulty": "easy",
+    "lesson_goal": "أن يفهم التلميذ كيف تُقرأ المعلومة المحمولة على ARNm على شكل رامزات ثلاثية، وأن يستدل من وثيقة Anagène على العلاقة بين عدد النيكليوتيدات وعدد الأحماض الأمينية، ثم يتعلم استعمال جدول الشفرة الوراثية لتحديد الحمض الأميني الموافق لكل رامزة، ويستخرج أهم خصائص الشفرة الوراثية دون الدخول في آلية الترجمة التفصيلية.",
+    "prerequisites": [
+      "معرفة أن ARNm يحمل نسخة من المعلومة الوراثية.",
+      "معرفة أن ARNm يتكون من القواعد A وU وC وG.",
+      "معرفة أن البروتين يتكون من تتابع أحماض أمينية.",
+      "معرفة أن المحور السابق ينتهي بالحصول على ARNm؛ لن نعيد هنا شرح آلية الاستنساخ."
+    ],
+    "learning_outcomes": [
+      "يميز بين اللغة النووية الممثلة بتتابع نيكليوتيدات ARNm واللغة البروتينية الممثلة بتتابع الأحماض الأمينية.",
+      "يناقش لماذا لا تكفي كلمة من قاعدة واحدة أو قاعدتين، ولماذا تكفي كلمة من ثلاث قواعد.",
+      "يستدل من وثيقة Anagène على أن كل 3 نيكليوتيدات من ARNm تقابل حمضا أمينيا واحدا في السلسلة المدروسة.",
+      "يعرف الرامزة بأنها ثلاث نيكليوتيدات متتالية على ARNm.",
+      "يعرف الشفرة الوراثية باعتبارها نظام التوافق بين رامزات ARNm والأحماض الأمينية.",
+      "يقرأ جدول الشفرة الوراثية بالترتيب الصحيح للقواعد.",
+      "يستعمل الجدول الدائري من المركز إلى الخارج في اتجاه 5′→3′.",
+      "يعرف خاصية التثليث والترادف وشبه الشمولية.",
+      "يتعرف على AUG كرامزة انطلاق تشفر للميثيونين في سياق بدء القراءة.",
+      "يتعرف على UAA وUAG وUGA كرامزات توقف لا تشفر لأي حمض أميني.",
+      "يترجم تتابع ARNm بسيطا إلى متتالية أحماض أمينية مع التوقف عند رامزة التوقف.",
+      "يستعمل تتابع ADN فقط في تطبيق إدماجي نهائي بعد استدعاء مهارة المحور السابق، دون إعادة تدريس الاستنساخ."
+    ],
+    "learning_path": [
+      {
+        "id": "step_1",
+        "type": "problem",
+        "component": "DiscoveryQuestion",
+        "title": "المشكلة: كيف تُفهم رسالة ARNm؟",
+        "content": {
+          "question": "ARNm مكتوب بأربعة أنواع من القواعد فقط: A وU وC وG، بينما البروتين يتكون من أنواع كثيرة من الأحماض الأمينية. كيف يمكن ربط اللغة النووية باللّغة البروتينية؟",
+          "teacher": "سنبحث أولا عن طول «الكلمة» النووية، ثم نصادق عليها بوثيقة Anagène، وبعد ذلك نتعلم استعمال قاموس الشفرة الوراثية.",
+          "action": {
+            "label": "ابدأ بالمقارنة",
+            "next_step": "step_2"
+          }
+        },
+        "display_order": 1
+      },
+      {
+        "id": "step_2",
+        "type": "short_explanation",
+        "component": "ShortExplanation",
+        "title": "لغتان مختلفتان تحتاجان إلى قاموس",
+        "content": {
+          "blocks": [
+            {
+              "title": "اللغة النووية",
+              "text": "المعلومة على ARNm مكتوبة بتتابع من أربع قواعد: A وU وC وG."
+            },
+            {
+              "title": "اللغة البروتينية",
+              "text": "الناتج الذي نريد تحديده هو تتابع الأحماض الأمينية."
+            },
+            {
+              "title": "الفكرة",
+              "text": "يجب أن توجد وحدة قراءة على ARNm تقابل حمضا أمينيا معينا."
+            }
+          ],
+          "memory_tip": "ARNm = كلمات نووية، والبروتين = معاني هذه الكلمات على شكل أحماض أمينية.",
+          "attention": "نبدأ من ARNm الجاهز؛ كيفية تشكله من ADN دُرست في المحور السابق."
+        },
+        "display_order": 2
+      },
+      {
+        "id": "step_3",
+        "type": "interactive_diagram",
+        "component": "InteractiveDiagram",
+        "title": "لماذا تكون الكلمة النووية ثلاثية؟",
+        "content": {
+          "instruction": "لدينا 4 قواعد. قارن عدد الكلمات الممكنة إذا كانت الكلمة من قاعدة واحدة، قاعدتين أو ثلاث قواعد.",
+          "diagram": {
+            "scene": "codon_probability_simple",
+            "cards": [
+              {
+                "label": "قاعدة واحدة",
+                "formula": "4¹ = 4",
+                "result": "4 كلمات فقط",
+                "explanation": "لا تكفي لتمثيل 20 نوعا من الأحماض الأمينية."
+              },
+              {
+                "label": "قاعدتان",
+                "formula": "4² = 16",
+                "result": "16 كلمة",
+                "explanation": "ما تزال غير كافية لتمثيل 20 نوعا."
+              },
+              {
+                "label": "ثلاث قواعد",
+                "formula": "4³ = 64",
+                "result": "64 كلمة",
+                "explanation": "عدد كاف لتمثيل الأحماض الأمينية، مع وجود رامزات مترادفة ورامزات توقف."
+              }
+            ]
+          },
+          "takeaway": "الاحتمال الموافق لكلمة من ثلاث قواعد هو الاحتمال المناسب: 4³ = 64.",
+          "memory_tip": "4 قواعد × ثلاث مواضع → 64 رامزة ممكنة."
+        },
+        "display_order": 3
+      },
+      {
+        "id": "step_4",
+        "type": "real_evidence",
+        "component": "RealEvidenceGallery",
+        "title": "الوثيقة 1: دليل Anagène على الشفرة الثلاثية",
+        "content": {
+          "intro": "تقارن الوثيقة بين تتابع ARNm وتتابع الأحماض الأمينية الموافق له. استعمل الأعداد للمصادقة على الفرضية الثلاثية.",
+          "figures": [
+            {
+              "src": "/science/protein-synthesis/axis-04/anagene_triplet_evidence.png",
+              "alt": "لقطة من برنامج Anagène تقارن بين ARNm والسلسلة الببتيدية",
+              "caption": "الوثيقة (1): تتابع ARNm وأسفله متتالية الأحماض الأمينية الموافقة.",
+              "source_label": "الوثيقة (1) — الصفحة 1"
+            }
+          ],
+          "guided_reading": [
+            {
+              "question": "كم نيكليوتيدة تظهر في جزء ARNm المستغل في الوثيقة؟",
+              "answer": "27 نيكليوتيدة."
+            },
+            {
+              "question": "كم حمضا أمينيا تقابلها في السلسلة المعروضة؟",
+              "answer": "9 أحماض أمينية."
+            },
+            {
+              "question": "ما العلاقة العددية؟",
+              "answer": "27 ÷ 9 = 3."
+            },
+            {
+              "question": "ماذا نستنتج؟",
+              "answer": "كل ثلاث نيكليوتيدات متتالية على ARNm تمثل وحدة قراءة تقابل حمضا أمينيا واحدا في هذا الجزء المدروس."
+            }
+          ],
+          "takeaway": "المعطيات تصادق على أن وحدة القراءة في ARNm ثلاثية النيكليوتيدات."
+        },
+        "display_order": 4
+      },
+      {
+        "id": "step_5",
+        "type": "key_rule",
+        "component": "KeyRuleCard",
+        "title": "ما الرامزة؟ وما الشفرة الوراثية؟",
+        "content": {
+          "rule": "الرامزة (Codon) هي ثلاث نيكليوتيدات متتالية على ARNm. أما الشفرة الوراثية فهي نظام التوافق بين رامزات ARNm والأحماض الأمينية التي تدل عليها.",
+          "simple_flow": "ARNm → رامزات ثلاثية → استعمال جدول الشفرة → أحماض أمينية",
+          "examples": [
+            {
+              "codon": "AUG",
+              "meaning": "Met — ميثيونين"
+            },
+            {
+              "codon": "UGG",
+              "meaning": "Trp — تريبتوفان"
+            },
+            {
+              "codon": "UAA",
+              "meaning": "Stop — توقف"
+            }
+          ],
+          "memory_tip": "3 قواعد على ARNm = رامزة واحدة.",
+          "attention": "الرامزات تُكتب بقواعد ARN، لذلك نستعمل U وليس T."
+        },
+        "display_order": 5
+      },
+      {
+        "id": "step_6",
+        "type": "real_evidence",
+        "component": "RealEvidenceGallery",
+        "title": "الوثيقة 2: جدول الشفرة الوراثية",
+        "content": {
+          "intro": "جدول الشفرة الوراثية هو القاموس الذي يربط رامزات ARNm بالأحماض الأمينية الموافقة. لا تحفظ الجدول؛ تعلّم فقط كيف تحدد القاعدة الأولى ثم الثانية ثم الثالثة.",
+          "figures": [
+            {
+              "src": "/science/protein-synthesis/axis-04/genetic_code_table.png",
+              "alt": "جدول الشفرة الوراثية",
+              "caption": "الوثيقة (2): جدول يربط رامزات ARNm بالأحماض الأمينية، ويُظهر AUG ورامزات التوقف.",
+              "source_label": "الوثيقة (2) — الصفحة 2"
+            }
+          ],
+          "guided_reading": [
+            {
+              "question": "بأي جزيئة نستعمل جدول الشفرة؟",
+              "answer": "نستعمل رامزات ARNm، وليس ADN مباشرة."
+            },
+            {
+              "question": "كيف أقرأ الجدول المستطيل؟",
+              "answer": "أحدد القاعدة الأولى من العمود الجانبي الأيسر، ثم القاعدة الثانية من الصف العلوي، ثم القاعدة الثالثة من العمود الجانبي الأيمن؛ عند نقطة التقاطع أجد الحمض الأميني الموافق."
+            },
+            {
+              "question": "مثال: ماذا تعطي الرامزة AUG؟",
+              "answer": "AUG تشفر للميثيونين Met، وتعمل رامزة انطلاق عندما تكون في موضع بدء القراءة."
+            },
+            {
+              "question": "ما رامزات التوقف؟",
+              "answer": "UAA وUAG وUGA؛ وهي لا تشفر لأي حمض أميني."
+            }
+          ],
+          "takeaway": "في الجدول المستطيل: القاعدة الأولى من الجانب الأيسر → الثانية من الأعلى → الثالثة من الجانب الأيمن → الحمض الأميني."
+        },
+        "display_order": 6
+      },
+      {
+        "id": "step_7",
+        "type": "real_evidence",
+        "component": "RealEvidenceGallery",
+        "title": "الجدول الدائري: طريقة ثانية لقراءة الشفرة",
+        "content": {
+          "intro": "هذه طريقة ثانية لعرض الشفرة نفسها. في الجدول الدائري نقرأ الرامزة من المركز إلى الخارج، مع الحفاظ على ترتيب قواعدها كما تظهر على ARNm من 5′ إلى 3′.",
+          "figures": [
+            {
+              "src": "/science/protein-synthesis/axis-04/genetic_code_wheel.png",
+              "alt": "الجدول الدائري للشفرة الوراثية",
+              "caption": "يُقرأ من المركز إلى الخارج حسب القاعدة الأولى ثم الثانية ثم الثالثة، في اتجاه 5′→3′.",
+              "source_label": "نموذج آخر لجدول الشفرة — الصفحة 4"
+            }
+          ],
+          "guided_reading": [
+            {
+              "question": "كيف أقرأ الجدول الدائري؟",
+              "answer": "أبدأ بالقاعدة الأولى من المركز، ثم الثانية في الحلقة التالية، ثم الثالثة في الحلقة الخارجية."
+            },
+            {
+              "question": "كيف أقرأ AUG؟",
+              "answer": "A من المركز → U في الحلقة الثانية → G في الحلقة الثالثة، فنصل إلى Met."
+            },
+            {
+              "question": "هل يختلف معنى الرامزة عن الجدول المستطيل؟",
+              "answer": "لا. يختلف شكل العرض فقط، والنتيجة العلمية نفسها."
+            }
+          ],
+          "takeaway": "الدائرة تُقرأ من المركز إلى الخارج؛ وهذا خاص بطريقة عرض الجدول الدائري."
+        },
+        "display_order": 7
+      },
+      {
+        "id": "step_9",
+        "type": "short_explanation",
+        "component": "ShortExplanation",
+        "title": "خصائص الشفرة الوراثية",
+        "content": {
+          "blocks": [
+            {
+              "title": "التثليث",
+              "text": "وحدة الشفرة هي رامزة من ثلاث قواعد، وعدد الرامزات الممكنة 64."
+            },
+            {
+              "title": "الترادف",
+              "text": "يمكن لعدة رامزات أن تشفر لنفس الحمض الأميني. مثال الفالين: GUU وGUC وGUA وGUG."
+            },
+            {
+              "title": "رامزة الانطلاق",
+              "text": "AUG تشفر للميثيونين وتحدد عادة بداية إطار القراءة عند انطلاق الترجمة."
+            },
+            {
+              "title": "رامزات التوقف",
+              "text": "UAA وUAG وUGA لا تشفر لأي حمض أميني؛ بل تمثل إشارات توقف."
+            },
+            {
+              "title": "شبه الشمولية",
+              "text": "الشفرة الوراثية متشابهة عند أغلب الكائنات الحية مع وجود بعض الاستثناءات."
+            }
+          ],
+          "memory_tip": "ثلاثية — مترادفة — AUG بداية — UAA/UAG/UGA توقف.",
+          "attention": "Stop ليست حمضا أمينيا، ولا تُكتب ضمن متتالية الأحماض الأمينية."
+        },
+        "display_order": 8
+      },
+      {
+        "id": "step_10",
+        "type": "genetic_code_exercise",
+        "component": "GeneticCodeExercise",
+        "title": "طبّق: حوّل رامزات ARNm إلى أحماض أمينية",
+        "content": {
+          "instruction": "لدينا ARNm جاهز: 5′-AUGCCAUUCUAA-3′. قسّمه إلى رامزات ثلاثية ثم استعمل جدول الشفرة لتحديد متتالية الأحماض الأمينية.",
+          "mrna": "5′-AUGCCAUUCUAA-3′",
+          "student_steps": [
+            {
+              "label": "1. قسم إلى رامزات",
+              "expected": "AUG | CCA | UUC | UAA",
+              "hint": "ثلاث قواعد في كل مرة."
+            },
+            {
+              "label": "2. استعمل الجدول",
+              "expected": "AUG→Met، CCA→Pro، UUC→Phe، UAA→Stop"
+            },
+            {
+              "label": "3. اكتب المتتالية",
+              "expected": "Met – Pro – Phe"
+            }
+          ],
+          "final_answer": "Met – Pro – Phe",
+          "explanation": "نتوقف عند UAA ولا نضيف كلمة Stop إلى السلسلة لأنها ليست حمضا أمينيا.",
+          "takeaway": "قسّم ARNm إلى رامزات → استعمل الجدول → توقف عند رامزة التوقف."
+        },
+        "display_order": 9
+      },
+      {
+        "id": "step_11",
+        "type": "real_evidence",
+        "component": "RealEvidenceGallery",
+        "title": "برنامج Anagène: ماذا يعرض لنا؟",
+        "content": {
+          "intro": "تعرض هذه اللقطة نافذة أوسع من برنامج Anagène، ويمكن من خلالها مقارنة تتابعات ADN وARNm والسلسلة البروتينية الناتجة. نستعملها هنا كوثيقة قراءة ومقارنة، لا كجزء من آلية الاستنساخ.",
+          "figures": [
+            {
+              "src": "/science/protein-synthesis/axis-04/anagene_full_view.png",
+              "alt": "نافذة برنامج Anagène تعرض ADN وARNm وسلسلة بروتينية",
+              "caption": "لقطة كاملة من Anagène: تتابع نوكليوتيدي، ARNm، ومتتالية أحماض أمينية.",
+              "source_label": "الصفحة 4 — برنامج Anagène"
+            }
+          ],
+          "guided_reading": [
+            {
+              "question": "ما السطر الذي نحتاجه مباشرة لاستعمال جدول الشفرة؟",
+              "answer": "سطر ARNm لأنه يحتوي الرامزات."
+            },
+            {
+              "question": "ماذا يسمح البرنامج بمقارنته؟",
+              "answer": "تتابعات ADN وARNm وتتابع الأحماض الأمينية الموافق."
+            }
+          ],
+          "takeaway": "في محور الشفرة نهتم أساسا بالعلاقة ARNm ↔ متتالية الأحماض الأمينية."
+        },
+        "display_order": 10
+      },
+      {
+        "id": "step_12",
+        "type": "evaluation",
+        "component": "DocumentEvaluation",
+        "title": "تقويم المحور: استعمل الشفرة الوراثية",
+        "content": {
+          "intro": "المعطيات مكتوبة كاملة أمامك ولا تحتاج إلى أي صورة. أجب عن السؤالين أولا، ثم افتح التصحيح المفصل.",
+          "given": {
+            "title": "المعطى",
+            "text": "إليك جزءا من السلسلة غير المستنسخة لـ ADN:",
+            "sequence": "5′-ATGCCCTGTGCCATCAAGTAA-3′"
+          },
+          "instructions": [
+            {
+              "id": "evaluation_q1",
+              "question": "أعط متتالية الأحماض الأمينية المطابقة للبروتين الذي تتحكم في تركيبه هذه المورثة."
+            },
+            {
+              "id": "evaluation_q2",
+              "question": "حدد نتيجة استبدال القاعدة الآزوتية C رقم 10 من السلسلة المستنسخة بالقاعدة الآزوتية A."
+            }
+          ],
+          "correction": {
+            "reveal_label": "إظهار حل التقويم",
+            "answers": [
+              {
+                "id": "evaluation_a1",
+                "question_ref": "evaluation_q1",
+                "title": "1. تحديد متتالية الأحماض الأمينية",
+                "steps": [
+                  {
+                    "label": "السلسلة غير المستنسخة لـ ADN",
+                    "value": "5′-ATGCCCTGTGCCATCAAGTAA-3′"
+                  },
+                  {
+                    "label": "السلسلة المستنسخة لـ ADN",
+                    "value": "3′-TACGGGACACGGTAGTTCATT-5′"
+                  },
+                  {
+                    "label": "ARNm",
+                    "value": "5′-AUGCCCUGUGCCAUCAAGUAA-3′"
+                  },
+                  {
+                    "label": "تقسيم ARNm إلى رامزات",
+                    "value": "AUG | CCC | UGU | GCC | AUC | AAG | UAA"
+                  },
+                  {
+                    "label": "الترجمة باستعمال جدول الشفرة",
+                    "value": "Met | Pro | Cys | Ala | Ile | Lys | Stop"
+                  }
+                ],
+                "final_answer": "Met – Pro – Cys – Ala – Ile – Lys",
+                "explanation": "نتوقف عند UAA لأنها رامزة توقف، ولا نكتب Stop ضمن متتالية الأحماض الأمينية."
+              },
+              {
+                "id": "evaluation_a2",
+                "question_ref": "evaluation_q2",
+                "title": "2. أثر استبدال القاعدة C رقم 10 من السلسلة المستنسخة بـ A",
+                "steps": [
+                  {
+                    "label": "الثلاثية الأصلية في السلسلة المستنسخة",
+                    "value": "CGG"
+                  },
+                  {
+                    "label": "الثلاثية بعد الاستبدال",
+                    "value": "AGG"
+                  },
+                  {
+                    "label": "الرامزة الأصلية في ARNm",
+                    "value": "GCC"
+                  },
+                  {
+                    "label": "الرامزة الجديدة في ARNm",
+                    "value": "UCC"
+                  },
+                  {
+                    "label": "الحمض الأميني قبل التغير",
+                    "value": "Ala — ألانين"
+                  },
+                  {
+                    "label": "الحمض الأميني بعد التغير",
+                    "value": "Ser — سيرين"
+                  }
+                ],
+                "final_answer": "يُستبدل الحمض الأميني Ala بالحمض الأميني Ser.",
+                "explanation": "القاعدة C رقم 10 هي أول قاعدة في الثلاثية CGG من السلسلة المستنسخة. بعد استبدالها بـ A تصبح الثلاثية AGG، فتتغير رامزة ARNm المقابلة من GCC إلى UCC؛ وبحسب جدول الشفرة تتغير Ala إلى Ser."
+              }
+            ],
+            "method_tip": "في هذا النوع من الأسئلة: إذا أُعطي ADN، استخرج ARNm أولا باستدعاء مهارة المحور السابق، ثم قسم ARNm إلى رامزات واستعمل جدول الشفرة. عند دراسة طفرة، حدد الثلاثية المتأثرة فقط ثم قارن الرامزة والحمض الأميني قبل التغير وبعده."
+          },
+          "takeaway": "في محور الشفرة الوراثية يكون التركيز على ARNm والرامزات ومعناها. الانتقال من ADN إلى ARNm هنا مجرد استدعاء لمهارة سابقة داخل تقويم إدماجي.",
+          "title": "حل التقويم اعتمادا على المعطيات المكتوبة"
+        },
+        "display_order": 11
+      },
+      {
+        "id": "step_13",
+        "type": "bac_method",
+        "component": "BacMethodCard",
+        "title": "كيف تتعامل مع سؤال تغير رامزة؟",
+        "content": {
+          "skill": "تحديد أثر تغير قاعدة على معنى الرامزة",
+          "method": [
+            {
+              "label": "1. حدد الرامزة قبل التغير",
+              "text": "استخرج رامزة ARNm التي تتأثر بالتغير."
+            },
+            {
+              "label": "2. طبق التغير",
+              "text": "اكتب الرامزة الجديدة بعد تغيير القاعدة المطلوبة."
+            },
+            {
+              "label": "3. استعمل جدول الشفرة",
+              "text": "حدد الحمض الأميني قبل التغير وبعده."
+            },
+            {
+              "label": "4. قارن",
+              "text": "استنتج هل تغير الحمض الأميني أم بقي نفسه بسبب ترادف الشفرة."
+            }
+          ],
+          "bac_sentence": "نحدد الرامزة المتأثرة، نكتبها قبل وبعد التغير، ثم نستعمل جدول الشفرة لمقارنة الحمضين الأمينيين الموافقين.",
+          "common_mistakes": [
+            "تطبيق التغير على ADN ثم استعماله مباشرة في جدول الشفرة.",
+            "نسيان أن الجدول يقرأ برامزات ARNm.",
+            "الخلط بين T وU.",
+            "إهمال إطار القراءة.",
+            "اعتبار كل تغير في قاعدة يؤدي بالضرورة إلى تغير الحمض الأميني، رغم وجود الترادف."
+          ]
+        },
+        "display_order": 12
+      },
+      {
+        "id": "step_14",
+        "type": "quick_check",
+        "component": "QuickCheck",
+        "title": "تحقق سريع",
+        "content": {
+          "questions": [
+            {
+              "id": "qc1",
+              "question": "ما الرامزة؟",
+              "choices": [
+                "ثلاث قواعد متتالية على ARNm",
+                "ثلاث قواعد على البروتين",
+                "حمض أميني واحد"
+              ],
+              "correct_answer": "ثلاث قواعد متتالية على ARNm",
+              "explanation": "الرامزة هي وحدة الشفرة الوراثية."
+            },
+            {
+              "id": "qc2",
+              "question": "أي جزيئة نستعملها مباشرة مع جدول الشفرة؟",
+              "choices": [
+                "ARNm",
+                "ADN مباشرة",
+                "ARN بوليميراز"
+              ],
+              "correct_answer": "ARNm",
+              "explanation": "الجدول يربط رامزات ARNm بالأحماض الأمينية."
+            },
+            {
+              "id": "qc3",
+              "question": "ما معنى UGA؟",
+              "choices": [
+                "توقف",
+                "Met",
+                "Ala"
+              ],
+              "correct_answer": "توقف",
+              "explanation": "UGA إحدى رامزات التوقف الثلاث."
+            }
+          ]
+        },
+        "display_order": 13
+      },
+      {
+        "id": "step_15",
+        "type": "final_visual_map",
+        "component": "InteractiveSummaryMap",
+        "title": "الخلاصة في خريطة واحدة",
+        "content": {
+          "map": [
+            {
+              "node": "ARNm",
+              "relation": "يتكون من",
+              "target": "A / U / C / G"
+            },
+            {
+              "node": "ARNm",
+              "relation": "يُقرأ على شكل",
+              "target": "رامزات ثلاثية"
+            },
+            {
+              "node": "الرامزة",
+              "relation": "تتكون من",
+              "target": "3 نيكليوتيدات"
+            },
+            {
+              "node": "الرامزة",
+              "relation": "نبحث عنها في",
+              "target": "جدول الشفرة"
+            },
+            {
+              "node": "جدول الشفرة",
+              "relation": "يعطي",
+              "target": "حمضا أمينيا أو إشارة توقف"
+            },
+            {
+              "node": "AUG",
+              "relation": "تشفر لـ",
+              "target": "Met وتحدد الانطلاق في موضع البدء"
+            },
+            {
+              "node": "UAA / UAG / UGA",
+              "relation": "تعني",
+              "target": "توقف"
+            }
+          ],
+          "memory_tip": "ARNm → رامزات ثلاثية → جدول الشفرة → أحماض أمينية.",
+          "next_axis_bridge": {
+            "question": "عرفنا معنى كل رامزة، لكن كيف تصل الأحماض الأمينية المناسبة فعليا إلى مكان تركيب البروتين؟",
+            "next_concept": "يُدرس ذلك في المحاور اللاحقة الخاصة بمتطلبات وآلية الترجمة."
+          }
+        },
+        "display_order": 14
+      },
+      {
+        "id": "step_16",
+        "type": "quiz",
+        "component": "FinalQuiz",
+        "title": "اختبار نهاية المحور",
+        "content": {
+          "questions": [
+            {
+              "id": "q1",
+              "question": "لماذا تكون الرامزة ثلاثية؟",
+              "choices": [
+                "لأن 4³ = 64 احتمالا وهي كافية لتمثيل الأحماض الأمينية",
+                "لأن ARN يحتوي ثلاث قواعد فقط",
+                "لأن البروتين يحتوي ثلاثة أحماض أمينية"
+              ],
+              "correct_answer": "لأن 4³ = 64 احتمالا وهي كافية لتمثيل الأحماض الأمينية",
+              "explanation": "4 و16 لا تكفيان، بينما 64 رامزة ممكنة تكفي."
+            },
+            {
+              "id": "q2",
+              "question": "أي مثال يمثل الترادف؟",
+              "choices": [
+                "GUU وGUC وGUA وGUG تشفر كلها للفالين",
+                "AUG وUAA لهما المعنى نفسه",
+                "كل رامزة تشفر لعدة أحماض أمينية"
+              ],
+              "correct_answer": "GUU وGUC وGUA وGUG تشفر كلها للفالين",
+              "explanation": "الترادف يعني وجود عدة رامزات للحمض الأميني نفسه."
+            },
+            {
+              "id": "q3",
+              "question": "ما رامزات التوقف؟",
+              "choices": [
+                "UAA، UAG، UGA",
+                "AUG، UGG، GCU",
+                "AAA، CCC، GGG"
+              ],
+              "correct_answer": "UAA، UAG، UGA",
+              "explanation": "هذه الرامزات لا تشفر لأي حمض أميني."
+            },
+            {
+              "id": "q4",
+              "question": "ARNm = 5′-AUG GCU UGA-3′. ما المتتالية؟",
+              "choices": [
+                "Met – Ala",
+                "Met – Ala – Stop",
+                "AUG – GCU"
+              ],
+              "correct_answer": "Met – Ala",
+              "explanation": "UGA إشارة توقف وليست حمضا أمينيا."
+            },
+            {
+              "id": "q5",
+              "question": "أي عبارة صحيحة عن AUG؟",
+              "choices": [
+                "تشفر للميثيونين ويمكن أن تحدد بداية القراءة عند الانطلاق",
+                "رامزة توقف دائما",
+                "لا تشفر لأي حمض أميني"
+              ],
+              "correct_answer": "تشفر للميثيونين ويمكن أن تحدد بداية القراءة عند الانطلاق",
+              "explanation": "AUG ترمز لـ Met وتعمل كرامزة بدء عندما تكون في موضع بدء الترجمة."
+            }
+          ],
+          "mastery_threshold": 4
+        },
+        "display_order": 15
+      }
+    ],
+    "presentation": {
+      "hook": "كيف تستطيع أربعة أحرف فقط أن تحدد ترتيب أحماض أمينية كثيرة؟",
+      "promise": "ستثبت أولا أن الكلمة النووية ثلاثية، ثم ستقرأ جدول الشفرة بنفسك دون حفظه.",
+      "rhythm": [
+        "افهم المشكلة",
+        "ناقش الاحتمالات",
+        "صادق بوثيقة Anagène",
+        "عرّف الرامزة",
+        "اقرأ الجدول المستطيل",
+        "اقرأ الجدول الدائري",
+        "استخرج خصائص الشفرة",
+        "طبّق على ARNm",
+        "حل التقويم",
+        "لخّص"
+      ],
+      "mode": "document_first_learning",
+      "student_first": true,
+      "reveal_teacher_after_think": true,
+      "max_text_lines_per_card": 6,
+      "avoid_repetition": true,
+      "show_progress_as_journey": true
+    },
+    "curriculum_goal": "تحديد الشفرة الوراثية، إثبات أن وحدتها رامزة ثلاثية، استخراج خصائصها، واستعمال جدول الشفرة لربط رامزات ARNm بمتتالية الأحماض الأمينية.",
+    "document_bank": [
+      {
+        "document_id": "ps_axis04_doc01_anagene_triplet",
+        "file_name": "anagene_triplet_evidence.png",
+        "src": "/science/protein-synthesis/axis-04/anagene_triplet_evidence.png",
+        "document_type": "software_sequence_comparison",
+        "source": {
+          "kind": "lesson_pdf",
+          "page": 1,
+          "figure": "الوثيقة (1)"
+        },
+        "skills": [
+          "compare_mrna_and_peptide_lengths",
+          "calculate_ratio",
+          "validate_triplet_code"
+        ],
+        "scientific_entities": [
+          "ARNm",
+          "نيكليوتيدات",
+          "أحماض أمينية",
+          "Anagène"
+        ],
+        "pedagogical_roles": [
+          "lesson_evidence",
+          "axis_exercise",
+          "ai_axis_exercise",
+          "bac_similar"
+        ],
+        "difficulty": 2,
+        "interpretation_scope": "تسمح بالمصادقة على أن كل ثلاث نيكليوتيدات في الجزء المعروض تقابل حمضا أمينيا واحدا.",
+        "safe_claims": [
+          "27 نيكليوتيدة تقابل 9 أحماض أمينية في الجزء المعروض.",
+          "النسبة 27/9 تساوي 3.",
+          "الوثيقة تدعم الشفرة الثلاثية."
+        ],
+        "forbidden_inferences": [
+          "القول إن كل ثلاث نيكليوتيدات في أي موضع من أي ARNm تُترجم بالضرورة دون تحديد إطار القراءة.",
+          "استخراج آلية عمل الريبوزوم من الوثيقة."
+        ],
+        "ai_generation": {
+          "allowed": true,
+          "allowed_question_types": [
+            "observe",
+            "count",
+            "calculate",
+            "validate_hypothesis",
+            "infer"
+          ],
+          "max_documents_with": 2
+        },
+        "lesson_step": "step_4"
+      },
+      {
+        "document_id": "ps_axis04_doc02_genetic_code_table",
+        "file_name": "genetic_code_table.png",
+        "src": "/science/protein-synthesis/axis-04/genetic_code_table.png",
+        "document_type": "genetic_code_table",
+        "source": {
+          "kind": "lesson_pdf",
+          "page": 2,
+          "figure": "الوثيقة (2)"
+        },
+        "skills": [
+          "read_genetic_code_table",
+          "map_codon_to_amino_acid",
+          "identify_start_stop_codons",
+          "identify_degeneracy"
+        ],
+        "scientific_entities": [
+          "رامزة",
+          "AUG",
+          "UAA",
+          "UAG",
+          "UGA",
+          "أحماض أمينية"
+        ],
+        "pedagogical_roles": [
+          "lesson_reference",
+          "axis_exercise",
+          "ai_axis_exercise",
+          "bac_similar"
+        ],
+        "difficulty": 2,
+        "interpretation_scope": "قاموس لربط رامزات ARNm بالأحماض الأمينية أو إشارات التوقف.",
+        "safe_claims": [
+          "AUG تشفر للميثيونين.",
+          "UAA وUAG وUGA رامزات توقف.",
+          "عدة رامزات قد تشفر للحمض الأميني نفسه."
+        ],
+        "forbidden_inferences": [
+          "قراءة تتابع ADN مباشرة في الجدول.",
+          "اعتبار Stop حمضا أمينيا.",
+          "إهمال ترتيب قواعد الرامزة."
+        ],
+        "ai_generation": {
+          "allowed": true,
+          "allowed_question_types": [
+            "lookup",
+            "translate_mrna",
+            "identify_start_stop",
+            "compare_codons"
+          ],
+          "max_documents_with": 3
+        },
+        "lesson_step": "step_6"
+      },
+      {
+        "document_id": "ps_axis04_doc03_genetic_code_wheel",
+        "file_name": "genetic_code_wheel.png",
+        "src": "/science/protein-synthesis/axis-04/genetic_code_wheel.png",
+        "document_type": "circular_genetic_code",
+        "source": {
+          "kind": "lesson_pdf",
+          "page": 4,
+          "figure": "نموذج آخر لجدول الشفرة"
+        },
+        "skills": [
+          "read_codon_wheel",
+          "map_codon_to_amino_acid"
+        ],
+        "scientific_entities": [
+          "رامزات",
+          "5′",
+          "3′",
+          "أحماض أمينية"
+        ],
+        "pedagogical_roles": [
+          "lesson_reference",
+          "axis_exercise",
+          "ai_axis_exercise"
+        ],
+        "difficulty": 2,
+        "interpretation_scope": "طريقة بديلة لقراءة نفس الشفرة الوراثية من المركز إلى الخارج.",
+        "safe_claims": [
+          "يقرأ من المركز إلى الخارج.",
+          "يعطي نفس نتائج جدول الشفرة المستطيل."
+        ],
+        "forbidden_inferences": [
+          "قراءته من الخارج إلى المركز.",
+          "تغيير ترتيب قواعد الرامزة."
+        ],
+        "ai_generation": {
+          "allowed": true,
+          "allowed_question_types": [
+            "lookup",
+            "compare_representation",
+            "translate_mrna"
+          ],
+          "max_documents_with": 2
+        },
+        "lesson_step": "step_7"
+      },
+      {
+        "document_id": "ps_axis04_doc04_anagene_full",
+        "file_name": "anagene_full_view.png",
+        "src": "/science/protein-synthesis/axis-04/anagene_full_view.png",
+        "document_type": "software_full_view",
+        "source": {
+          "kind": "lesson_pdf",
+          "page": 4,
+          "figure": "نافذة برنامج Anagène"
+        },
+        "skills": [
+          "identify_sequence_types",
+          "compare_dna_mrna_protein"
+        ],
+        "scientific_entities": [
+          "ADN",
+          "ARNm",
+          "سلسلة بروتينية",
+          "Anagène"
+        ],
+        "pedagogical_roles": [
+          "lesson_context",
+          "axis_exercise",
+          "ai_axis_exercise"
+        ],
+        "difficulty": 2,
+        "interpretation_scope": "توضح قدرة البرنامج على عرض ومقارنة تتابعات ADN وARNm ومتتالية الأحماض الأمينية.",
+        "safe_claims": [
+          "يمكن مقارنة ARNm بالسلسلة البروتينية الموافقة.",
+          "السطر الذي نقرأ رامزاته في جدول الشفرة هو ARNm."
+        ],
+        "forbidden_inferences": [
+          "اعتبار واجهة البرنامج دليلا على آلية الترجمة الجزيئية.",
+          "القول إن البرنامج نفسه يمثل الريبوزوم."
+        ],
+        "ai_generation": {
+          "allowed": true,
+          "allowed_question_types": [
+            "identify",
+            "compare",
+            "select_relevant_sequence"
+          ],
+          "max_documents_with": 2
+        },
+        "lesson_step": "step_11"
+      },
+      {
+        "document_id": "ps_axis04_doc05_bac_application",
+        "file_name": "bac_sequence_application.png",
+        "src": "/science/protein-synthesis/axis-04/bac_sequence_application.png",
+        "document_type": "lesson_evaluation_solution",
+        "source": {
+          "kind": "lesson_pdf",
+          "page": 3,
+          "role": "التقويم والحل"
+        },
+        "skills": [
+          "retrieve_mrna_from_prior_axis",
+          "split_into_codons",
+          "use_genetic_code",
+          "write_amino_acid_sequence",
+          "reason_about_base_substitution"
+        ],
+        "scientific_entities": [
+          "ADN",
+          "ARNm",
+          "رامزات",
+          "أحماض أمينية"
+        ],
+        "pedagogical_roles": [
+          "source_reference",
+          "bac_similar",
+          "ai_bac_similar"
+        ],
+        "difficulty": 3,
+        "interpretation_scope": "تطبيق إدماجي يجمع استدعاء مهارة المحور السابق مع استعمال الشفرة الوراثية.",
+        "safe_claims": [
+          "ARNm في التصحيح هو AUGCCCUGUGCCAUCAAGUAA.",
+          "المتتالية الناتجة هي Met–Pro–Cys–Ala–Ile–Lys.",
+          "UAA توقف ولا تدخل في السلسلة."
+        ],
+        "forbidden_inferences": [
+          "إعادة تدريس آلية الاستنساخ داخل هذا المحور.",
+          "استعمال ADN مباشرة في جدول الشفرة.",
+          "إظهار حل التقويم قبل محاولة التلميذ إذا استعمل كتقويم."
+        ],
+        "ai_generation": {
+          "allowed": true,
+          "allowed_question_types": [
+            "integrated_sequence",
+            "mutation_effect",
+            "bac_similar"
+          ],
+          "answer_visibility": "hidden_until_reveal",
+          "requires_prior_skill": "axis_03_transcription"
+        },
+        "lesson_step": null,
+        "used_in_lesson": false,
+        "display_policy": "do_not_render_in_lesson_evaluation",
+        "note": "التقويم النهائي في الدرس يعرض نص السؤال والمعطيات مباشرة دون استدعاء هذه الصورة. تُحتفظ الصورة كمصدر مرجعي فقط."
+      }
+    ],
+    "scientific_quality_control": {
+      "version": "2.0",
+      "axis_boundary": {
+        "axis_starts_at": "ARNm جاهز للقراءة",
+        "axis_ends_at": "استخراج معنى الرامزات ومتتالية الأحماض الأمينية",
+        "allowed": [
+          "ARNm",
+          "رامزة",
+          "شفرة وراثية",
+          "جدول الشفرة",
+          "التثليث",
+          "الترادف",
+          "شبه الشمولية",
+          "AUG",
+          "UAA",
+          "UAG",
+          "UGA",
+          "تحديد حمض أميني من رامزة",
+          "تحديد أثر تغير رامزة"
+        ],
+        "prior_axis_only_as_integration": [
+          "ADN → ARNm"
+        ],
+        "forbidden_detailed_topics": [
+          "مراحل الاستنساخ",
+          "دور ARN بوليميراز",
+          "متطلبات الترجمة التفصيلية",
+          "ARNt",
+          "تنشيط الأحماض الأمينية",
+          "الريبوزوم",
+          "مراحل بدء واستطالة وإنهاء الترجمة"
+        ]
+      },
+      "rules": [
+        "جدول الشفرة يُقرأ باستعمال رامزات ARNm، لا ADN.",
+        "الرامزة ثلاث قواعد متتالية على ARNm.",
+        "يجب احترام ترتيب القواعد واتجاه القراءة 5′→3′.",
+        "AUG تشفر للميثيونين وتعمل رامزة انطلاق عندما تقع في موضع البدء.",
+        "UAA وUAG وUGA رامزات توقف ولا تشفر لأي حمض أميني.",
+        "الترادف يعني أن عدة رامزات مختلفة قد تشفر للحمض الأميني نفسه.",
+        "لا تعني خاصية الترادف أن الرامزة الواحدة تشفر لعدة أحماض أمينية.",
+        "مثال الفالين الصحيح: GUU وGUC وGUA وGUG.",
+        "الشفرة شبه شمولية: متشابهة عند أغلب الكائنات الحية مع استثناءات.",
+        "أي تمرين يبدأ من ADN يوضع كتطبيق إدماجي ويستدعي مهارة المحور 3 فقط، دون إعادة شرحها.",
+        "تقويم المحور 4 يُعرض نصيا دون صورة: المعطى هو السلسلة غير المستنسخة 5′-ATGCCCTGTGCCATCAAGTAA-3′، والحل الصحيح يعطي ARNm 5′-AUGCCCUGUGCCAUCAAGUAA-3′ والمتتالية Met–Pro–Cys–Ala–Ile–Lys.",
+        "في سؤال الاستبدال C رقم 10 من السلسلة المستنسخة إلى A: CGG تصبح AGG، ورامزة ARNm المقابلة GCC تصبح UCC، فيتغير Ala إلى Ser."
+      ]
+    }
+  }
+}

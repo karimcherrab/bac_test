@@ -1,0 +1,202 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "session": "ordinary",
+  "year": 2014,
+  "chapter_code": "sequences",
+  "chapter_title": "المتتاليات العددية",
+  "branches": [
+    {
+      "code": "science",
+      "name": "شعبة علوم تجريبية"
+    }
+  ],
+  "source_pdf": "2014(4).pdf",
+  "comparison_source": "bac_sequence_scientifique(8).pdf",
+  "version": "4.2-2014-science-sequences-subject2-ex01",
+  "exercise_number": 1,
+  "subject_number": 2,
+  "source_page": 3,
+  "solution_source_pages": [
+    8
+  ],
+  "title": "التمرين الأول — بكالوريا الجزائر 2014 — الموضوع الثاني — شعبة علوم تجريبية",
+  "statement": "I) نعتبر المتتالية العددية \\((u_n)\\) المعرفة على مجموعة الأعداد الطبيعية \\(\\mathbb N\\) بحدها العام: \\(u_n=e^{\\frac12-n}\\). (\\(e\\) هو أساس اللوغاريتم النيبيري).",
+  "statement_graphs": [],
+  "questions": [
+    {
+      "id": "2014_s2_sequences_ex01_I1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) بين أن \\((u_n)\\) متتالية هندسية، يطلب تعيين أساسها و حدها الأول.",
+      "axis_tags": [
+        "geometric_sequence"
+      ],
+      "solution": {
+        "strategy": "نكتب \\(u_n=e^{1/2}e^{-n}\\) على شكل \\(u_0q^n\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "إعادة كتابة الحد العام",
+            "explanation": "\\[\nu_n=e^{\\frac12-n}=e^{\\frac12}(e^{-1})^n.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "تحديد الأساس",
+            "explanation": "إذن \\((u_n)\\) هندسية أساسها:\n\\[\nq=e^{-1}=\\frac1e.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "تحديد الحد الأول",
+            "explanation": "\\[\nu_0=e^{\\frac12}=\\sqrt e.\n\\]"
+          }
+        ],
+        "final_answer": "\\((u_n)\\) هندسية أساسها \\(\\boxed{e^{-1}}\\) وحدها الأول \\(\\boxed{u_0=\\sqrt e}\\)."
+      }
+    },
+    {
+      "id": "2014_s2_sequences_ex01_I2",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2) احسب \\(\\lim_{n\\to+\\infty}u_n\\)، ماذا تستنتج؟",
+      "axis_tags": [
+        "geometric_sequence_limit",
+        "sequence_convergence"
+      ],
+      "solution": {
+        "strategy": "أساس المتتالية الهندسية \\(e^{-1}\\) محصور بين 0 و1.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "مقارنة الأساس بـ1",
+            "explanation": "لدينا:\n\\[\n0<e^{-1}<1.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب النهاية",
+            "explanation": "إذن:\n\\[\n(e^{-1})^n\\to0,\n\\]\nومن ثم:\n\\[\nu_n=\\sqrt e\\,(e^{-1})^n\\to0.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الاستنتاج",
+            "explanation": "بما أن للمتتالية نهاية حقيقية، فإنها متقاربة."
+          }
+        ],
+        "final_answer": "\\(\\boxed{\\lim u_n=0}\\)، وبالتالي \\(\\boxed{(u_n)\\text{ متقاربة}}\\)."
+      }
+    },
+    {
+      "id": "2014_s2_sequences_ex01_I3",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "3) احسب بدلالة \\(n\\) المجموع \\(S_n\\) حيث: \\(S_n=u_0+u_1+u_2+\\cdots+u_n\\).",
+      "axis_tags": [
+        "geometric_sum"
+      ],
+      "solution": {
+        "strategy": "نطبق صيغة مجموع الحدود من \\(u_0\\) إلى \\(u_n\\) لمتتالية هندسية.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "صيغة المجموع",
+            "explanation": "\\[\nS_n=u_0\\frac{1-q^{n+1}}{1-q}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "التعويض",
+            "explanation": "مع \\(u_0=\\sqrt e\\) و\\(q=e^{-1}\\):\n\\[\nS_n=\\sqrt e\\,\\frac{1-e^{-(n+1)}}{1-e^{-1}}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{S_n=\\sqrt e\\,\\frac{1-e^{-(n+1)}}{1-e^{-1}}}\\)."
+      }
+    },
+    {
+      "id": "2014_s2_sequences_ex01_II1",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "II) نضع، من أجل كل عدد طبيعي \\(n\\)، \\(v_n=\\ln(u_n)\\). (\\(\\ln\\) يرمز إلى اللوغاريتم النيبيري). 1) عبر عن \\(v_n\\) بدلالة \\(n\\) ثم استنتج نوع المتتالية \\((v_n)\\).",
+      "axis_tags": [
+        "log_sequence",
+        "arithmetic_sequence"
+      ],
+      "solution": {
+        "strategy": "نعوض عبارة \\(u_n\\) ثم نستعمل \\(\\ln(e^x)=x\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب v_n",
+            "explanation": "\\[\nv_n=\\ln(u_n)=\\ln\\left(e^{\\frac12-n}\\right)=\\frac12-n.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "تحديد النوع",
+            "explanation": "نحسب:\n\\[\nv_{n+1}-v_n=\\left(\\frac12-(n+1)\\right)-\\left(\\frac12-n\\right)=-1.\n\\]\nإذن \\((v_n)\\) حسابية أساسها \\(-1\\)، وحدها الأول \\(v_0=\\frac12\\)."
+          }
+        ],
+        "final_answer": "\\(\\boxed{v_n=\\frac12-n}\\)، و\\((v_n)\\) حسابية أساسها \\(\\boxed{-1}\\)."
+      }
+    },
+    {
+      "id": "2014_s2_sequences_ex01_II2a",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "2) أ) احسب بدلالة \\(n\\) العدد \\(P_n\\) حيث: \\(P_n=\\ln(u_0\\times u_1\\times u_2\\times\\cdots\\times u_n)\\).",
+      "axis_tags": [
+        "logarithm_product",
+        "arithmetic_sum"
+      ],
+      "solution": {
+        "strategy": "نستعمل خاصية لوغاريتم الجداء، فيتحول \\(P_n\\) إلى مجموع حدود \\((v_n)\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تحويل لوغاريتم الجداء",
+            "explanation": "\\[\nP_n=\\ln u_0+\\ln u_1+\\cdots+\\ln u_n\n=v_0+v_1+\\cdots+v_n.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "تعويض v_k",
+            "explanation": "\\[\nP_n=\\sum_{k=0}^{n}\\left(\\frac12-k\\right)\n=\\frac{n+1}{2}-\\sum_{k=0}^{n}k.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب المجموع",
+            "explanation": "\\[\n\\sum_{k=0}^{n}k=\\frac{n(n+1)}2.\n\\]\nإذن:\n\\[\nP_n=\\frac{n+1}{2}-\\frac{n(n+1)}2\n=\\frac{(n+1)(1-n)}2\n=\\frac{1-n^2}{2}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{P_n=\\frac{1-n^2}{2}}\\)."
+      }
+    },
+    {
+      "id": "2014_s2_sequences_ex01_II2b",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "ب) عين مجموعة قيم العدد الطبيعي \\(n\\) بحيث: \\(P_n+4n>0\\).",
+      "axis_tags": [
+        "sequence_inequality"
+      ],
+      "solution": {
+        "strategy": "نعوض عبارة \\(P_n\\) ثم نحل المتراجحة في \\(n\\in\\mathbb N\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التعويض",
+            "explanation": "\\[\n\\frac{1-n^2}{2}+4n>0.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "إزالة المقام",
+            "explanation": "بضرب الطرفين في \\(2>0\\):\n\\[\n1-n^2+8n>0.\n\\]\nأي:\n\\[\nn^2-8n-1<0.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "تحديد القيم الطبيعية",
+            "explanation": "جذرا \\(n^2-8n-1\\) هما:\n\\[\n4-\\sqrt{17}\\quad\\text{و}\\quad4+\\sqrt{17}.\n\\]\nفتتحقق المتراجحة بين الجذرين. وبما أن \\(n\\in\\mathbb N\\):\n\\[\nn\\in\\{0,1,2,3,4,5,6,7,8\\}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{n\\in\\{0,1,2,3,4,5,6,7,8\\}}\\)."
+      }
+    }
+  ]
+}

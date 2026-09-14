@@ -1,0 +1,4030 @@
+{
+  "version": 6,
+  "language": "ar",
+  "direction": "rtl",
+  "subject_code": "math",
+  "chapter_code": "probability",
+  "tag": "probability_tree_total_probability",
+  "axis_tag": "probability_tree_total_probability",
+  "title": "سلسلة تدريبية شاملة: شجرة الاحتمالات ودستور الاحتمالات الكلية",
+  "question_count": 13,
+  "max_questions": 13,
+  "selection_summary": {
+    "rule": "تمارين خاصة بالمحور السابع فقط، متدرجة من إكمال غصن وقراءة الشجرة إلى حساب المسارات وجمعها، ثم التجزئة ودستور الاحتمالات الكلية ومسائل اختيار وعاء ثم سحب عنصر. لا يعاد تأسيس الاحتمال الشرطي ولا تقنيات العد لأنها متطلبات سابقة.",
+    "branches": [
+      "math",
+      "science"
+    ],
+    "source_axis": "شجرة الاحتمالات ودستور الاحتمالات الكلية",
+    "full_exercise_text": true,
+    "detailed_solution": true,
+    "pedagogical_progression": true,
+    "solution_access": "direct",
+    "attempt_before_solution": false,
+    "one_step_at_a_time": true,
+    "animate_solution_steps": true,
+    "bac_writing": true,
+    "understanding_check": true,
+    "supports_probability_tree": true,
+    "supports_graph_data": true,
+    "react_component": "UniversalMathExerciseRenderer"
+  },
+  "questions": [
+    {
+      "id": "probability_tree_practice_01",
+      "year": null,
+      "source_file": null,
+      "source_page": null,
+      "exercise": "تمرين تدريبي 1",
+      "number": "1",
+      "title": "إكمال غصن ناقص",
+      "text": "من عقدة في شجرة احتمال يخرج غصنان فقط: «نجاح» باحتمال \\(0.72\\)، و«فشل» باحتمال \\(x\\). أوجد \\(x\\).",
+      "standalone_text": "من عقدة في شجرة احتمال يخرج غصنان فقط: «نجاح» باحتمال \\(0.72\\)، و«فشل» باحتمال \\(x\\). أوجد \\(x\\).",
+      "context": "تمرين تدريبي خاص بالمحور السابع: شجرة الاحتمالات ودستور الاحتمالات الكلية.",
+      "tag": "probability_tree_total_probability",
+      "axis": "شجرة الاحتمالات ودستور الاحتمالات الكلية",
+      "secondary_tags": [],
+      "skill": "إكمال وزن غصن باستعمال أن مجموع الأغصان الخارجة من العقدة يساوي 1.",
+      "difficulty": "easy",
+      "question_type": "axis_practice",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "tables": [],
+      "variation_tables": [],
+      "sign_tables": [],
+      "graph_data": {
+        "type": "probability_tree",
+        "direction": "ltr",
+        "nodes": [
+          {
+            "id": "O",
+            "label": "البداية"
+          },
+          {
+            "id": "S",
+            "label": "نجاح"
+          },
+          {
+            "id": "F",
+            "label": "فشل"
+          }
+        ],
+        "edges": [
+          {
+            "from": "O",
+            "to": "S",
+            "label": "0.72"
+          },
+          {
+            "from": "O",
+            "to": "F",
+            "label": "x"
+          }
+        ]
+      },
+      "solution": {
+        "title": "الحل المفصل: إكمال غصن ناقص",
+        "main_idea": "إكمال وزن غصن باستعمال أن مجموع الأغصان الخارجة من العقدة يساوي 1.",
+        "strategy": "نستعمل قاعدة مجموع الأغصان قبل أي شيء.",
+        "detailed_explanation": "نقرأ التجربة حسب ترتيب مراحلها. من الجذر نضع الاحتمالات البسيطة، وبعد كل عقدة نضع الاحتمالات الشرطية. مجموع الأغصان الخارجة من العقدة يساوي 1، داخل المسار نضرب، وبين المسارات المؤدية إلى الحدث نفسه نجمع.",
+        "uses_graph": true,
+        "uses_images": false,
+        "uses_tables": false,
+        "uses_variation_table": false,
+        "uses_sign_table": false,
+        "steps": [
+          {
+            "number": "1",
+            "order": 1,
+            "title": "قاعدة العقدة",
+            "explanation": "النجاح والفشل يغطيان جميع الإمكانيات الخارجة من العقدة.",
+            "construction": [],
+            "calculation": "\\(0.72+x=1\\)",
+            "result": "",
+            "conclusion": "",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "النجاح والفشل يغطيان جميع الإمكانيات الخارجة من العقدة.",
+            "rule_used": "مجموع الأغصان",
+            "why": "مجموع الاحتمالات الخارجة من نفس العقدة يساوي 1.",
+            "calculation_breakdown": [],
+            "student_action": "أعد هذه الخطوة وحدك ثم قارن إجابتك بالحل."
+          },
+          {
+            "number": "2",
+            "order": 2,
+            "title": "الحساب",
+            "explanation": "نطرح 0.72 من 1.",
+            "construction": [],
+            "calculation": "\\(x=1-0.72=0.28\\)",
+            "result": "0.28",
+            "conclusion": "0.28",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "نطرح 0.72 من 1.",
+            "rule_used": "المكمل",
+            "why": "الفشل هو مكمل النجاح.",
+            "calculation_breakdown": [],
+            "student_action": "أعد هذه الخطوة وحدك ثم قارن إجابتك بالحل."
+          }
+        ],
+        "final_answer": "\\(\\boxed{x=0.28}\\).",
+        "verification": "نتحقق أن مجموع الأغصان الخارجة من كل عقدة يساوي 1، وأن كل احتمال نهائي بين 0 و1.",
+        "common_mistakes": [
+          {
+            "mistake": "كتابة x=0.72.",
+            "correction": "الاحتمالان متكاملان ومجموعهما 1."
+          }
+        ],
+        "hints": [
+          {
+            "level": 1,
+            "hint": "ماذا يساوي مجموع الغصنين؟"
+          }
+        ],
+        "alternative_method": "",
+        "images": [],
+        "tables": [],
+        "variation_tables": [],
+        "sign_tables": [],
+        "graph_data": {
+          "type": "probability_tree",
+          "direction": "ltr",
+          "nodes": [
+            {
+              "id": "O",
+              "label": "البداية"
+            },
+            {
+              "id": "S",
+              "label": "نجاح"
+            },
+            {
+              "id": "F",
+              "label": "فشل"
+            }
+          ],
+          "edges": [
+            {
+              "from": "O",
+              "to": "S",
+              "label": "0.72"
+            },
+            {
+              "from": "O",
+              "to": "F",
+              "label": "x"
+            }
+          ]
+        },
+        "presentation": {
+          "show_graph_first": true,
+          "show_one_step_at_a_time": true,
+          "react_component": "UniversalMathExerciseRenderer",
+          "graph_mode": "cartesian",
+          "use_field": "graph_data.react_data",
+          "rtl": true,
+          "show_graph_in_question": true,
+          "show_graph_in_solution": true,
+          "show_images_in_question": false,
+          "show_images_in_solution": false,
+          "show_tables_in_question": false,
+          "show_tables_in_solution": false,
+          "show_variation_tables": false,
+          "show_sign_tables": false,
+          "animate_steps": true,
+          "solution_open_mode": "on_button_click",
+          "solution_access": "direct",
+          "attempt_required": false,
+          "show_final_answer_after_last_step": true,
+          "show_verification_after_final_answer": true,
+          "show_bac_writing": true,
+          "show_understanding_check": true,
+          "math_direction": "ltr"
+        },
+        "is_complete": true,
+        "solution_access": "direct",
+        "attempt_required": false,
+        "bac_writing": [
+          "نحدد مراحل التجربة ونبني الشجرة بالترتيب.",
+          "داخل المسار نضرب أوزان الأغصان.",
+          "إذا تحقق الحدث النهائي عبر عدة مسارات منفصلة نجمع احتمالاتها."
+        ],
+        "understanding_check": {
+          "question": "إذا كان أحد الغصنين 0.35 فما الآخر؟",
+          "answer": "0.65."
+        },
+        "takeaway": "من كل عقدة: مجموع الأغصان = 1."
+      },
+      "display_order": 1,
+      "learning_stage": "axis_practice",
+      "learning_stage_label": "تمرين تطبيقي",
+      "pedagogical_objective": "إكمال وزن غصن باستعمال أن مجموع الأغصان الخارجة من العقدة يساوي 1.",
+      "solution_access": "direct",
+      "attempt_required": false
+    },
+    {
+      "id": "probability_tree_practice_02",
+      "year": null,
+      "source_file": null,
+      "source_page": null,
+      "exercise": "تمرين تدريبي 2",
+      "number": "2",
+      "title": "قراءة أوزان شجرة",
+      "text": "في تجربة نختار أولًا الفئة \\(A\\) باحتمال \\(0.6\\) أو الفئة \\(B\\) باحتمال \\(0.4\\). بعد اختيار \\(A\\) يكون احتمال النجاح \\(0.7\\)، وبعد اختيار \\(B\\) يكون احتمال النجاح \\(0.25\\). أكمل احتمالي الفشل بعد \\(A\\) وبعد \\(B\\)، ثم اكتب بالرموز معنى الوزن \\(0.7\\).",
+      "standalone_text": "في تجربة نختار أولًا الفئة \\(A\\) باحتمال \\(0.6\\) أو الفئة \\(B\\) باحتمال \\(0.4\\). بعد اختيار \\(A\\) يكون احتمال النجاح \\(0.7\\)، وبعد اختيار \\(B\\) يكون احتمال النجاح \\(0.25\\). أكمل احتمالي الفشل بعد \\(A\\) وبعد \\(B\\)، ثم اكتب بالرموز معنى الوزن \\(0.7\\).",
+      "context": "تمرين تدريبي خاص بالمحور السابع: شجرة الاحتمالات ودستور الاحتمالات الكلية.",
+      "tag": "probability_tree_total_probability",
+      "axis": "شجرة الاحتمالات ودستور الاحتمالات الكلية",
+      "secondary_tags": [],
+      "skill": "تمييز الاحتمال البسيط والشرطي وإكمال الشجرة.",
+      "difficulty": "easy",
+      "question_type": "axis_practice",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "tables": [],
+      "variation_tables": [],
+      "sign_tables": [],
+      "graph_data": {
+        "type": "probability_tree",
+        "direction": "ltr",
+        "nodes": [
+          {
+            "id": "O",
+            "label": "البداية"
+          },
+          {
+            "id": "A",
+            "label": "A"
+          },
+          {
+            "id": "B",
+            "label": "B"
+          },
+          {
+            "id": "AS",
+            "label": "نجاح"
+          },
+          {
+            "id": "AF",
+            "label": "فشل"
+          },
+          {
+            "id": "BS",
+            "label": "نجاح"
+          },
+          {
+            "id": "BF",
+            "label": "فشل"
+          }
+        ],
+        "edges": [
+          {
+            "from": "O",
+            "to": "A",
+            "label": "0.6"
+          },
+          {
+            "from": "O",
+            "to": "B",
+            "label": "0.4"
+          },
+          {
+            "from": "A",
+            "to": "AS",
+            "label": "0.7"
+          },
+          {
+            "from": "A",
+            "to": "AF",
+            "label": "0.3"
+          },
+          {
+            "from": "B",
+            "to": "BS",
+            "label": "0.25"
+          },
+          {
+            "from": "B",
+            "to": "BF",
+            "label": "0.75"
+          }
+        ]
+      },
+      "solution": {
+        "title": "الحل المفصل: قراءة أوزان شجرة",
+        "main_idea": "تمييز الاحتمال البسيط والشرطي وإكمال الشجرة.",
+        "strategy": "نقرأ موقع الغصن قبل قراءة عدده.",
+        "detailed_explanation": "نقرأ التجربة حسب ترتيب مراحلها. من الجذر نضع الاحتمالات البسيطة، وبعد كل عقدة نضع الاحتمالات الشرطية. مجموع الأغصان الخارجة من العقدة يساوي 1، داخل المسار نضرب، وبين المسارات المؤدية إلى الحدث نفسه نجمع.",
+        "uses_graph": true,
+        "uses_images": false,
+        "uses_tables": false,
+        "uses_variation_table": false,
+        "uses_sign_table": false,
+        "steps": [
+          {
+            "number": "1",
+            "order": 1,
+            "title": "بعد A",
+            "explanation": "بعد A يوجد نجاح أو فشل فقط.",
+            "construction": [],
+            "calculation": "\\(P(\\overline S\\mid A)=1-0.7=0.3\\)",
+            "result": "0.3",
+            "conclusion": "0.3",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "بعد A يوجد نجاح أو فشل فقط.",
+            "rule_used": "مجموع الأغصان",
+            "why": "نحن داخل A.",
+            "calculation_breakdown": [],
+            "student_action": "أعد هذه الخطوة وحدك ثم قارن إجابتك بالحل."
+          },
+          {
+            "number": "2",
+            "order": 2,
+            "title": "بعد B",
+            "explanation": "نفس الفكرة.",
+            "construction": [],
+            "calculation": "\\(P(\\overline S\\mid B)=1-0.25=0.75\\)",
+            "result": "0.75",
+            "conclusion": "0.75",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "نفس الفكرة.",
+            "rule_used": "مجموع الأغصان",
+            "why": "نحن داخل B.",
+            "calculation_breakdown": [],
+            "student_action": "أعد هذه الخطوة وحدك ثم قارن إجابتك بالحل."
+          },
+          {
+            "number": "3",
+            "order": 3,
+            "title": "معنى 0.7",
+            "explanation": "لأن الغصن يبدأ من العقدة A وينتهي عند النجاح، فهو احتمال شرطي.",
+            "construction": [],
+            "calculation": "\\(P(S\\mid A)=0.7\\)",
+            "result": "\\(P(S\\mid A)=0.7\\)",
+            "conclusion": "\\(P(S\\mid A)=0.7\\)",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "لأن الغصن يبدأ من العقدة A وينتهي عند النجاح، فهو احتمال شرطي.",
+            "rule_used": "قراءة الشجرة",
+            "why": "ما بعد عقدة A يكون داخل A.",
+            "calculation_breakdown": [],
+            "student_action": "أعد هذه الخطوة وحدك ثم قارن إجابتك بالحل."
+          }
+        ],
+        "final_answer": "\\(\\boxed{P(\\overline S|A)=0.3,\\;P(\\overline S|B)=0.75,\\;P(S|A)=0.7}\\).",
+        "verification": "نتحقق أن مجموع الأغصان الخارجة من كل عقدة يساوي 1، وأن كل احتمال نهائي بين 0 و1.",
+        "common_mistakes": [
+          {
+            "mistake": "اعتبار 0.7=P(S).",
+            "correction": "0.7 موضوع بعد A، لذلك هو P(S|A)."
+          }
+        ],
+        "hints": [
+          {
+            "level": 1,
+            "hint": "الغصن بعد A يمثل احتمالًا داخل A."
+          }
+        ],
+        "alternative_method": "",
+        "images": [],
+        "tables": [],
+        "variation_tables": [],
+        "sign_tables": [],
+        "graph_data": {
+          "type": "probability_tree",
+          "direction": "ltr",
+          "nodes": [
+            {
+              "id": "O",
+              "label": "البداية"
+            },
+            {
+              "id": "A",
+              "label": "A"
+            },
+            {
+              "id": "B",
+              "label": "B"
+            },
+            {
+              "id": "AS",
+              "label": "نجاح"
+            },
+            {
+              "id": "AF",
+              "label": "فشل"
+            },
+            {
+              "id": "BS",
+              "label": "نجاح"
+            },
+            {
+              "id": "BF",
+              "label": "فشل"
+            }
+          ],
+          "edges": [
+            {
+              "from": "O",
+              "to": "A",
+              "label": "0.6"
+            },
+            {
+              "from": "O",
+              "to": "B",
+              "label": "0.4"
+            },
+            {
+              "from": "A",
+              "to": "AS",
+              "label": "0.7"
+            },
+            {
+              "from": "A",
+              "to": "AF",
+              "label": "0.3"
+            },
+            {
+              "from": "B",
+              "to": "BS",
+              "label": "0.25"
+            },
+            {
+              "from": "B",
+              "to": "BF",
+              "label": "0.75"
+            }
+          ]
+        },
+        "presentation": {
+          "show_graph_first": true,
+          "show_one_step_at_a_time": true,
+          "react_component": "UniversalMathExerciseRenderer",
+          "graph_mode": "cartesian",
+          "use_field": "graph_data.react_data",
+          "rtl": true,
+          "show_graph_in_question": true,
+          "show_graph_in_solution": true,
+          "show_images_in_question": false,
+          "show_images_in_solution": false,
+          "show_tables_in_question": false,
+          "show_tables_in_solution": false,
+          "show_variation_tables": false,
+          "show_sign_tables": false,
+          "animate_steps": true,
+          "solution_open_mode": "on_button_click",
+          "solution_access": "direct",
+          "attempt_required": false,
+          "show_final_answer_after_last_step": true,
+          "show_verification_after_final_answer": true,
+          "show_bac_writing": true,
+          "show_understanding_check": true,
+          "math_direction": "ltr"
+        },
+        "is_complete": true,
+        "solution_access": "direct",
+        "attempt_required": false,
+        "bac_writing": [
+          "نحدد مراحل التجربة ونبني الشجرة بالترتيب.",
+          "داخل المسار نضرب أوزان الأغصان.",
+          "إذا تحقق الحدث النهائي عبر عدة مسارات منفصلة نجمع احتمالاتها."
+        ],
+        "understanding_check": {
+          "question": "ما نوع الاحتمال المكتوب من الجذر إلى A؟",
+          "answer": "احتمال بسيط P(A)."
+        },
+        "takeaway": "من الجذر احتمال بسيط، وبعد عقدة احتمال شرطي."
+      },
+      "display_order": 2,
+      "learning_stage": "axis_practice",
+      "learning_stage_label": "تمرين تطبيقي",
+      "pedagogical_objective": "تمييز الاحتمال البسيط والشرطي وإكمال الشجرة.",
+      "solution_access": "direct",
+      "attempt_required": false
+    },
+    {
+      "id": "probability_tree_practice_03",
+      "year": null,
+      "source_file": null,
+      "source_page": null,
+      "exercise": "تمرين تدريبي 3",
+      "number": "3",
+      "title": "احتمال مسار واحد",
+      "text": "باستعمال الشجرة السابقة، احسب احتمال الحادثة: «الشخص من الفئة \\(A\\) وينجح».",
+      "standalone_text": "باستعمال الشجرة السابقة، احسب احتمال الحادثة: «الشخص من الفئة \\(A\\) وينجح».",
+      "context": "تمرين تدريبي خاص بالمحور السابع: شجرة الاحتمالات ودستور الاحتمالات الكلية.",
+      "tag": "probability_tree_total_probability",
+      "axis": "شجرة الاحتمالات ودستور الاحتمالات الكلية",
+      "secondary_tags": [],
+      "skill": "ربط المسار بالتقاطع وحساب احتماله بالضرب.",
+      "difficulty": "easy",
+      "question_type": "axis_practice",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "tables": [],
+      "variation_tables": [],
+      "sign_tables": [],
+      "graph_data": {
+        "type": "probability_tree",
+        "direction": "ltr",
+        "nodes": [
+          {
+            "id": "O",
+            "label": "البداية"
+          },
+          {
+            "id": "A",
+            "label": "A"
+          },
+          {
+            "id": "B",
+            "label": "B"
+          },
+          {
+            "id": "AS",
+            "label": "نجاح"
+          },
+          {
+            "id": "AF",
+            "label": "فشل"
+          },
+          {
+            "id": "BS",
+            "label": "نجاح"
+          },
+          {
+            "id": "BF",
+            "label": "فشل"
+          }
+        ],
+        "edges": [
+          {
+            "from": "O",
+            "to": "A",
+            "label": "0.6"
+          },
+          {
+            "from": "O",
+            "to": "B",
+            "label": "0.4"
+          },
+          {
+            "from": "A",
+            "to": "AS",
+            "label": "0.7"
+          },
+          {
+            "from": "A",
+            "to": "AF",
+            "label": "0.3"
+          },
+          {
+            "from": "B",
+            "to": "BS",
+            "label": "0.25"
+          },
+          {
+            "from": "B",
+            "to": "BF",
+            "label": "0.75"
+          }
+        ]
+      },
+      "solution": {
+        "title": "الحل المفصل: احتمال مسار واحد",
+        "main_idea": "ربط المسار بالتقاطع وحساب احتماله بالضرب.",
+        "strategy": "نتبع الطريق المطلوب ونضرب أوزانه.",
+        "detailed_explanation": "نقرأ التجربة حسب ترتيب مراحلها. من الجذر نضع الاحتمالات البسيطة، وبعد كل عقدة نضع الاحتمالات الشرطية. مجموع الأغصان الخارجة من العقدة يساوي 1، داخل المسار نضرب، وبين المسارات المؤدية إلى الحدث نفسه نجمع.",
+        "uses_graph": true,
+        "uses_images": false,
+        "uses_tables": false,
+        "uses_variation_table": false,
+        "uses_sign_table": false,
+        "steps": [
+          {
+            "number": "1",
+            "order": 1,
+            "title": "تحديد المسار",
+            "explanation": "الحادثة المطلوبة هي المسار A ثم نجاح.",
+            "construction": [],
+            "calculation": "",
+            "result": "\\(A\\cap S\\).",
+            "conclusion": "\\(A\\cap S\\).",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "الحادثة المطلوبة هي المسار A ثم نجاح.",
+            "rule_used": "المسار = تقاطع",
+            "why": "حدثت A وS معًا.",
+            "calculation_breakdown": [],
+            "student_action": "أعد هذه الخطوة وحدك ثم قارن إجابتك بالحل."
+          },
+          {
+            "number": "2",
+            "order": 2,
+            "title": "الضرب داخل المسار",
+            "explanation": "نضرب وزن الوصول إلى A في وزن النجاح بعد A.",
+            "construction": [],
+            "calculation": "\\(P(A\\cap S)=0.6\\times0.7=0.42\\)",
+            "result": "0.42",
+            "conclusion": "0.42",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "نضرب وزن الوصول إلى A في وزن النجاح بعد A.",
+            "rule_used": "قاعدة المسار",
+            "why": "داخل المسار نضرب.",
+            "calculation_breakdown": [],
+            "student_action": "أعد هذه الخطوة وحدك ثم قارن إجابتك بالحل."
+          }
+        ],
+        "final_answer": "\\(\\boxed{P(A\\cap S)=0.42}\\).",
+        "verification": "نتحقق أن مجموع الأغصان الخارجة من كل عقدة يساوي 1، وأن كل احتمال نهائي بين 0 و1.",
+        "common_mistakes": [
+          {
+            "mistake": "حساب 0.6+0.7.",
+            "correction": "داخل المسار نضرب ولا نجمع."
+          }
+        ],
+        "hints": [
+          {
+            "level": 1,
+            "hint": "ما الوزنان الموجودان على الطريق A ثم نجاح؟"
+          }
+        ],
+        "alternative_method": "",
+        "images": [],
+        "tables": [],
+        "variation_tables": [],
+        "sign_tables": [],
+        "graph_data": {
+          "type": "probability_tree",
+          "direction": "ltr",
+          "nodes": [
+            {
+              "id": "O",
+              "label": "البداية"
+            },
+            {
+              "id": "A",
+              "label": "A"
+            },
+            {
+              "id": "B",
+              "label": "B"
+            },
+            {
+              "id": "AS",
+              "label": "نجاح"
+            },
+            {
+              "id": "AF",
+              "label": "فشل"
+            },
+            {
+              "id": "BS",
+              "label": "نجاح"
+            },
+            {
+              "id": "BF",
+              "label": "فشل"
+            }
+          ],
+          "edges": [
+            {
+              "from": "O",
+              "to": "A",
+              "label": "0.6"
+            },
+            {
+              "from": "O",
+              "to": "B",
+              "label": "0.4"
+            },
+            {
+              "from": "A",
+              "to": "AS",
+              "label": "0.7"
+            },
+            {
+              "from": "A",
+              "to": "AF",
+              "label": "0.3"
+            },
+            {
+              "from": "B",
+              "to": "BS",
+              "label": "0.25"
+            },
+            {
+              "from": "B",
+              "to": "BF",
+              "label": "0.75"
+            }
+          ]
+        },
+        "presentation": {
+          "show_graph_first": true,
+          "show_one_step_at_a_time": true,
+          "react_component": "UniversalMathExerciseRenderer",
+          "graph_mode": "cartesian",
+          "use_field": "graph_data.react_data",
+          "rtl": true,
+          "show_graph_in_question": true,
+          "show_graph_in_solution": true,
+          "show_images_in_question": false,
+          "show_images_in_solution": false,
+          "show_tables_in_question": false,
+          "show_tables_in_solution": false,
+          "show_variation_tables": false,
+          "show_sign_tables": false,
+          "animate_steps": true,
+          "solution_open_mode": "on_button_click",
+          "solution_access": "direct",
+          "attempt_required": false,
+          "show_final_answer_after_last_step": true,
+          "show_verification_after_final_answer": true,
+          "show_bac_writing": true,
+          "show_understanding_check": true,
+          "math_direction": "ltr"
+        },
+        "is_complete": true,
+        "solution_access": "direct",
+        "attempt_required": false,
+        "bac_writing": [
+          "نحدد مراحل التجربة ونبني الشجرة بالترتيب.",
+          "داخل المسار نضرب أوزان الأغصان.",
+          "إذا تحقق الحدث النهائي عبر عدة مسارات منفصلة نجمع احتمالاتها."
+        ],
+        "understanding_check": {
+          "question": "ماذا يمثل المسار A ثم S بالرموز؟",
+          "answer": "\\(A\\cap S\\)."
+        },
+        "takeaway": "مسار واحد = تقاطع = جداء أوزان."
+      },
+      "display_order": 3,
+      "learning_stage": "axis_practice",
+      "learning_stage_label": "تمرين تطبيقي",
+      "pedagogical_objective": "ربط المسار بالتقاطع وحساب احتماله بالضرب.",
+      "solution_access": "direct",
+      "attempt_required": false
+    },
+    {
+      "id": "probability_tree_practice_04",
+      "year": null,
+      "source_file": null,
+      "source_page": null,
+      "exercise": "تمرين تدريبي 4",
+      "number": "4",
+      "title": "حادثة لها مساران",
+      "text": "باستعمال الشجرة نفسها، احسب احتمال النجاح \\(P(S)\\).",
+      "standalone_text": "باستعمال الشجرة نفسها، احسب احتمال النجاح \\(P(S)\\).",
+      "context": "تمرين تدريبي خاص بالمحور السابع: شجرة الاحتمالات ودستور الاحتمالات الكلية.",
+      "tag": "probability_tree_total_probability",
+      "axis": "شجرة الاحتمالات ودستور الاحتمالات الكلية",
+      "secondary_tags": [],
+      "skill": "جمع احتمالات المسارات المؤدية إلى الحدث نفسه.",
+      "difficulty": "easy",
+      "question_type": "axis_practice",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "tables": [],
+      "variation_tables": [],
+      "sign_tables": [],
+      "graph_data": {
+        "type": "probability_tree",
+        "direction": "ltr",
+        "nodes": [
+          {
+            "id": "O",
+            "label": "البداية"
+          },
+          {
+            "id": "A",
+            "label": "A"
+          },
+          {
+            "id": "B",
+            "label": "B"
+          },
+          {
+            "id": "AS",
+            "label": "نجاح"
+          },
+          {
+            "id": "AF",
+            "label": "فشل"
+          },
+          {
+            "id": "BS",
+            "label": "نجاح"
+          },
+          {
+            "id": "BF",
+            "label": "فشل"
+          }
+        ],
+        "edges": [
+          {
+            "from": "O",
+            "to": "A",
+            "label": "0.6"
+          },
+          {
+            "from": "O",
+            "to": "B",
+            "label": "0.4"
+          },
+          {
+            "from": "A",
+            "to": "AS",
+            "label": "0.7"
+          },
+          {
+            "from": "A",
+            "to": "AF",
+            "label": "0.3"
+          },
+          {
+            "from": "B",
+            "to": "BS",
+            "label": "0.25"
+          },
+          {
+            "from": "B",
+            "to": "BF",
+            "label": "0.75"
+          }
+        ]
+      },
+      "solution": {
+        "title": "الحل المفصل: حادثة لها مساران",
+        "main_idea": "جمع احتمالات المسارات المؤدية إلى الحدث نفسه.",
+        "strategy": "اضرب داخل كل مسار ثم اجمع المسارات.",
+        "detailed_explanation": "نقرأ التجربة حسب ترتيب مراحلها. من الجذر نضع الاحتمالات البسيطة، وبعد كل عقدة نضع الاحتمالات الشرطية. مجموع الأغصان الخارجة من العقدة يساوي 1، داخل المسار نضرب، وبين المسارات المؤدية إلى الحدث نفسه نجمع.",
+        "uses_graph": true,
+        "uses_images": false,
+        "uses_tables": false,
+        "uses_variation_table": false,
+        "uses_sign_table": false,
+        "steps": [
+          {
+            "number": "1",
+            "order": 1,
+            "title": "المسار الأول",
+            "explanation": "يمكن النجاح عبر A.",
+            "construction": [],
+            "calculation": "\\(P(A\\cap S)=0.6\\times0.7=0.42\\)",
+            "result": "0.42",
+            "conclusion": "0.42",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "يمكن النجاح عبر A.",
+            "rule_used": "قاعدة المسار",
+            "why": "نضرب داخل الطريق.",
+            "calculation_breakdown": [],
+            "student_action": "أعد هذه الخطوة وحدك ثم قارن إجابتك بالحل."
+          },
+          {
+            "number": "2",
+            "order": 2,
+            "title": "المسار الثاني",
+            "explanation": "ويمكن النجاح عبر B.",
+            "construction": [],
+            "calculation": "\\(P(B\\cap S)=0.4\\times0.25=0.10\\)",
+            "result": "0.10",
+            "conclusion": "0.10",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "ويمكن النجاح عبر B.",
+            "rule_used": "قاعدة المسار",
+            "why": "طريق ثان مستقل عن الأول.",
+            "calculation_breakdown": [],
+            "student_action": "أعد هذه الخطوة وحدك ثم قارن إجابتك بالحل."
+          },
+          {
+            "number": "3",
+            "order": 3,
+            "title": "الجمع بين المسارين",
+            "explanation": "النجاح يتحقق بأحد الطريقين المنفصلين.",
+            "construction": [],
+            "calculation": "\\(P(S)=0.42+0.10=0.52\\)",
+            "result": "0.52",
+            "conclusion": "0.52",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "النجاح يتحقق بأحد الطريقين المنفصلين.",
+            "rule_used": "جمع المسارات",
+            "why": "بين المسارات المؤدية لنفس الحدث نجمع.",
+            "calculation_breakdown": [],
+            "student_action": "أعد هذه الخطوة وحدك ثم قارن إجابتك بالحل."
+          }
+        ],
+        "final_answer": "\\(\\boxed{P(S)=0.52}\\).",
+        "verification": "نتحقق أن مجموع الأغصان الخارجة من كل عقدة يساوي 1، وأن كل احتمال نهائي بين 0 و1.",
+        "common_mistakes": [
+          {
+            "mistake": "ضرب 0.42 في 0.10.",
+            "correction": "هذان مساران مختلفان لنفس الحدث، لذلك نجمع."
+          }
+        ],
+        "hints": [
+          {
+            "level": 1,
+            "hint": "اكتب كل طريق يصل إلى S."
+          }
+        ],
+        "alternative_method": "",
+        "images": [],
+        "tables": [],
+        "variation_tables": [],
+        "sign_tables": [],
+        "graph_data": {
+          "type": "probability_tree",
+          "direction": "ltr",
+          "nodes": [
+            {
+              "id": "O",
+              "label": "البداية"
+            },
+            {
+              "id": "A",
+              "label": "A"
+            },
+            {
+              "id": "B",
+              "label": "B"
+            },
+            {
+              "id": "AS",
+              "label": "نجاح"
+            },
+            {
+              "id": "AF",
+              "label": "فشل"
+            },
+            {
+              "id": "BS",
+              "label": "نجاح"
+            },
+            {
+              "id": "BF",
+              "label": "فشل"
+            }
+          ],
+          "edges": [
+            {
+              "from": "O",
+              "to": "A",
+              "label": "0.6"
+            },
+            {
+              "from": "O",
+              "to": "B",
+              "label": "0.4"
+            },
+            {
+              "from": "A",
+              "to": "AS",
+              "label": "0.7"
+            },
+            {
+              "from": "A",
+              "to": "AF",
+              "label": "0.3"
+            },
+            {
+              "from": "B",
+              "to": "BS",
+              "label": "0.25"
+            },
+            {
+              "from": "B",
+              "to": "BF",
+              "label": "0.75"
+            }
+          ]
+        },
+        "presentation": {
+          "show_graph_first": true,
+          "show_one_step_at_a_time": true,
+          "react_component": "UniversalMathExerciseRenderer",
+          "graph_mode": "cartesian",
+          "use_field": "graph_data.react_data",
+          "rtl": true,
+          "show_graph_in_question": true,
+          "show_graph_in_solution": true,
+          "show_images_in_question": false,
+          "show_images_in_solution": false,
+          "show_tables_in_question": false,
+          "show_tables_in_solution": false,
+          "show_variation_tables": false,
+          "show_sign_tables": false,
+          "animate_steps": true,
+          "solution_open_mode": "on_button_click",
+          "solution_access": "direct",
+          "attempt_required": false,
+          "show_final_answer_after_last_step": true,
+          "show_verification_after_final_answer": true,
+          "show_bac_writing": true,
+          "show_understanding_check": true,
+          "math_direction": "ltr"
+        },
+        "is_complete": true,
+        "solution_access": "direct",
+        "attempt_required": false,
+        "bac_writing": [
+          "نحدد مراحل التجربة ونبني الشجرة بالترتيب.",
+          "داخل المسار نضرب أوزان الأغصان.",
+          "إذا تحقق الحدث النهائي عبر عدة مسارات منفصلة نجمع احتمالاتها."
+        ],
+        "understanding_check": {
+          "question": "ما العبارة المختصرة التي تلخص الطريقة؟",
+          "answer": "داخل المسار نضرب، وبين المسارات نجمع."
+        },
+        "takeaway": "الضرب داخل الطريق والجمع بين الطرق."
+      },
+      "display_order": 4,
+      "learning_stage": "axis_practice",
+      "learning_stage_label": "تمرين تطبيقي",
+      "pedagogical_objective": "جمع احتمالات المسارات المؤدية إلى الحدث نفسه.",
+      "solution_access": "direct",
+      "attempt_required": false
+    },
+    {
+      "id": "probability_tree_practice_05",
+      "year": null,
+      "source_file": null,
+      "source_page": null,
+      "exercise": "تمرين تدريبي 5",
+      "number": "5",
+      "title": "دستور الاحتمالات الكلية بثلاث فئات",
+      "text": "تشكل الحوادث \\(A,B,C\\) تجزئة للمجموعة الشاملة، حيث \\(P(A)=0.2\\)، \\(P(B)=0.5\\)، \\(P(C)=0.3\\). كما أن \\(P(S|A)=0.9\\)، \\(P(S|B)=0.6\\)، \\(P(S|C)=0.4\\). احسب \\(P(S)\\).",
+      "standalone_text": "تشكل الحوادث \\(A,B,C\\) تجزئة للمجموعة الشاملة، حيث \\(P(A)=0.2\\)، \\(P(B)=0.5\\)، \\(P(C)=0.3\\). كما أن \\(P(S|A)=0.9\\)، \\(P(S|B)=0.6\\)، \\(P(S|C)=0.4\\). احسب \\(P(S)\\).",
+      "context": "تمرين تدريبي خاص بالمحور السابع: شجرة الاحتمالات ودستور الاحتمالات الكلية.",
+      "tag": "probability_tree_total_probability",
+      "axis": "شجرة الاحتمالات ودستور الاحتمالات الكلية",
+      "secondary_tags": [],
+      "skill": "استعمال دستور الاحتمالات الكلية على تجزئة من ثلاث حوادث.",
+      "difficulty": "medium",
+      "question_type": "axis_practice",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "tables": [],
+      "variation_tables": [],
+      "sign_tables": [],
+      "graph_data": {
+        "type": "probability_tree",
+        "direction": "ltr",
+        "nodes": [
+          {
+            "id": "O",
+            "label": "البداية"
+          },
+          {
+            "id": "A",
+            "label": "A"
+          },
+          {
+            "id": "B",
+            "label": "B"
+          },
+          {
+            "id": "C",
+            "label": "C"
+          },
+          {
+            "id": "AS",
+            "label": "S"
+          },
+          {
+            "id": "BS",
+            "label": "S"
+          },
+          {
+            "id": "CS",
+            "label": "S"
+          }
+        ],
+        "edges": [
+          {
+            "from": "O",
+            "to": "A",
+            "label": "0.2"
+          },
+          {
+            "from": "O",
+            "to": "B",
+            "label": "0.5"
+          },
+          {
+            "from": "O",
+            "to": "C",
+            "label": "0.3"
+          },
+          {
+            "from": "A",
+            "to": "AS",
+            "label": "0.9"
+          },
+          {
+            "from": "B",
+            "to": "BS",
+            "label": "0.6"
+          },
+          {
+            "from": "C",
+            "to": "CS",
+            "label": "0.4"
+          }
+        ]
+      },
+      "solution": {
+        "title": "الحل المفصل: دستور الاحتمالات الكلية بثلاث فئات",
+        "main_idea": "استعمال دستور الاحتمالات الكلية على تجزئة من ثلاث حوادث.",
+        "strategy": "لكل فئة: احتمالها × احتمال S داخلها، ثم نجمع.",
+        "detailed_explanation": "نقرأ التجربة حسب ترتيب مراحلها. من الجذر نضع الاحتمالات البسيطة، وبعد كل عقدة نضع الاحتمالات الشرطية. مجموع الأغصان الخارجة من العقدة يساوي 1، داخل المسار نضرب، وبين المسارات المؤدية إلى الحدث نفسه نجمع.",
+        "uses_graph": true,
+        "uses_images": false,
+        "uses_tables": false,
+        "uses_variation_table": false,
+        "uses_sign_table": false,
+        "steps": [
+          {
+            "number": "1",
+            "order": 1,
+            "title": "التحقق من المستوى الأول",
+            "explanation": "نجمع احتمالات الفئات.",
+            "construction": [],
+            "calculation": "\\(0.2+0.5+0.3=1\\)",
+            "result": "تشكل الفئات تغطية كاملة.",
+            "conclusion": "تشكل الفئات تغطية كاملة.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "نجمع احتمالات الفئات.",
+            "rule_used": "التجزئة",
+            "why": "الفئات منفصلة وتغطي التجربة.",
+            "calculation_breakdown": [],
+            "student_action": "أعد هذه الخطوة وحدك ثم قارن إجابتك بالحل."
+          },
+          {
+            "number": "2",
+            "order": 2,
+            "title": "مسار A",
+            "explanation": "نحسب طريق A إلى S.",
+            "construction": [],
+            "calculation": "\\(0.2\\times0.9=0.18\\)",
+            "result": "0.18",
+            "conclusion": "0.18",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "نحسب طريق A إلى S.",
+            "rule_used": "قاعدة المسار",
+            "why": "ضرب.",
+            "calculation_breakdown": [],
+            "student_action": "أعد هذه الخطوة وحدك ثم قارن إجابتك بالحل."
+          },
+          {
+            "number": "3",
+            "order": 3,
+            "title": "مسار B",
+            "explanation": "نحسب الطريق الثاني.",
+            "construction": [],
+            "calculation": "\\(0.5\\times0.6=0.30\\)",
+            "result": "0.30",
+            "conclusion": "0.30",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "نحسب الطريق الثاني.",
+            "rule_used": "قاعدة المسار",
+            "why": "ضرب.",
+            "calculation_breakdown": [],
+            "student_action": "أعد هذه الخطوة وحدك ثم قارن إجابتك بالحل."
+          },
+          {
+            "number": "4",
+            "order": 4,
+            "title": "مسار C",
+            "explanation": "نحسب الطريق الثالث.",
+            "construction": [],
+            "calculation": "\\(0.3\\times0.4=0.12\\)",
+            "result": "0.12",
+            "conclusion": "0.12",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "نحسب الطريق الثالث.",
+            "rule_used": "قاعدة المسار",
+            "why": "ضرب.",
+            "calculation_breakdown": [],
+            "student_action": "أعد هذه الخطوة وحدك ثم قارن إجابتك بالحل."
+          },
+          {
+            "number": "5",
+            "order": 5,
+            "title": "الاحتمال الكلي",
+            "explanation": "نجمع الطرق الثلاث.",
+            "construction": [],
+            "calculation": "\\(P(S)=0.18+0.30+0.12=0.60\\)",
+            "result": "0.60",
+            "conclusion": "0.60",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "نجمع الطرق الثلاث.",
+            "rule_used": "الاحتمالات الكلية",
+            "why": "كل الطرق المؤدية إلى S.",
+            "calculation_breakdown": [],
+            "student_action": "أعد هذه الخطوة وحدك ثم قارن إجابتك بالحل."
+          }
+        ],
+        "final_answer": "\\(\\boxed{P(S)=0.60}\\).",
+        "verification": "نتحقق أن مجموع الأغصان الخارجة من كل عقدة يساوي 1، وأن كل احتمال نهائي بين 0 و1.",
+        "common_mistakes": [
+          {
+            "mistake": "جمع 0.9+0.6+0.4.",
+            "correction": "هذه احتمالات شرطية؛ يجب وزن كل منها باحتمال فئتها."
+          }
+        ],
+        "hints": [
+          {
+            "level": 1,
+            "hint": "هناك ثلاثة طرق تصل إلى S."
+          }
+        ],
+        "alternative_method": "",
+        "images": [],
+        "tables": [],
+        "variation_tables": [],
+        "sign_tables": [],
+        "graph_data": {
+          "type": "probability_tree",
+          "direction": "ltr",
+          "nodes": [
+            {
+              "id": "O",
+              "label": "البداية"
+            },
+            {
+              "id": "A",
+              "label": "A"
+            },
+            {
+              "id": "B",
+              "label": "B"
+            },
+            {
+              "id": "C",
+              "label": "C"
+            },
+            {
+              "id": "AS",
+              "label": "S"
+            },
+            {
+              "id": "BS",
+              "label": "S"
+            },
+            {
+              "id": "CS",
+              "label": "S"
+            }
+          ],
+          "edges": [
+            {
+              "from": "O",
+              "to": "A",
+              "label": "0.2"
+            },
+            {
+              "from": "O",
+              "to": "B",
+              "label": "0.5"
+            },
+            {
+              "from": "O",
+              "to": "C",
+              "label": "0.3"
+            },
+            {
+              "from": "A",
+              "to": "AS",
+              "label": "0.9"
+            },
+            {
+              "from": "B",
+              "to": "BS",
+              "label": "0.6"
+            },
+            {
+              "from": "C",
+              "to": "CS",
+              "label": "0.4"
+            }
+          ]
+        },
+        "presentation": {
+          "show_graph_first": true,
+          "show_one_step_at_a_time": true,
+          "react_component": "UniversalMathExerciseRenderer",
+          "graph_mode": "cartesian",
+          "use_field": "graph_data.react_data",
+          "rtl": true,
+          "show_graph_in_question": true,
+          "show_graph_in_solution": true,
+          "show_images_in_question": false,
+          "show_images_in_solution": false,
+          "show_tables_in_question": false,
+          "show_tables_in_solution": false,
+          "show_variation_tables": false,
+          "show_sign_tables": false,
+          "animate_steps": true,
+          "solution_open_mode": "on_button_click",
+          "solution_access": "direct",
+          "attempt_required": false,
+          "show_final_answer_after_last_step": true,
+          "show_verification_after_final_answer": true,
+          "show_bac_writing": true,
+          "show_understanding_check": true,
+          "math_direction": "ltr"
+        },
+        "is_complete": true,
+        "solution_access": "direct",
+        "attempt_required": false,
+        "bac_writing": [
+          "نحدد مراحل التجربة ونبني الشجرة بالترتيب.",
+          "داخل المسار نضرب أوزان الأغصان.",
+          "إذا تحقق الحدث النهائي عبر عدة مسارات منفصلة نجمع احتمالاتها."
+        ],
+        "understanding_check": {
+          "question": "ما صيغة الاحتمالات الكلية؟",
+          "answer": "\\(P(S)=\\sum_iP(A_i)P(S|A_i)\\)."
+        },
+        "takeaway": "الاحتمالات الكلية هي جمع أوزان كل المسارات."
+      },
+      "display_order": 5,
+      "learning_stage": "axis_practice",
+      "learning_stage_label": "تمرين تطبيقي",
+      "pedagogical_objective": "استعمال دستور الاحتمالات الكلية على تجزئة من ثلاث حوادث.",
+      "solution_access": "direct",
+      "attempt_required": false
+    },
+    {
+      "id": "probability_tree_practice_06",
+      "year": null,
+      "source_file": null,
+      "source_page": null,
+      "exercise": "تمرين تدريبي 6",
+      "number": "6",
+      "title": "بناء شجرة من نص صناعي",
+      "text": "مصنع يستعمل آلتين: تنتج \\(M_1\\) نسبة 65% من القطع و\\(M_2\\) نسبة 35%. نسبة القطع المعيبة بين إنتاج \\(M_1\\) هي 4%، وبين إنتاج \\(M_2\\) هي 8%. 1) مثّل الوضعية بشجرة احتمال وأكمل أوزان الأغصان. 2) احسب احتمال أن تكون القطعة من \\(M_2\\) ومعيبة.",
+      "standalone_text": "مصنع يستعمل آلتين: تنتج \\(M_1\\) نسبة 65% من القطع و\\(M_2\\) نسبة 35%. نسبة القطع المعيبة بين إنتاج \\(M_1\\) هي 4%، وبين إنتاج \\(M_2\\) هي 8%. 1) مثّل الوضعية بشجرة احتمال وأكمل أوزان الأغصان. 2) احسب احتمال أن تكون القطعة من \\(M_2\\) ومعيبة.",
+      "context": "تمرين تدريبي خاص بالمحور السابع: شجرة الاحتمالات ودستور الاحتمالات الكلية.",
+      "tag": "probability_tree_total_probability",
+      "axis": "شجرة الاحتمالات ودستور الاحتمالات الكلية",
+      "secondary_tags": [],
+      "skill": "تحويل نص إلى شجرة ووضع الاحتمالات الشرطية في أماكنها.",
+      "difficulty": "medium",
+      "question_type": "axis_practice",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "tables": [],
+      "variation_tables": [],
+      "sign_tables": [],
+      "graph_data": {
+        "type": "probability_tree",
+        "direction": "ltr",
+        "nodes": [
+          {
+            "id": "O",
+            "label": "البداية"
+          },
+          {
+            "id": "M1",
+            "label": "آلة M1"
+          },
+          {
+            "id": "M2",
+            "label": "آلة M2"
+          },
+          {
+            "id": "D1",
+            "label": "معيبة"
+          },
+          {
+            "id": "N1",
+            "label": "سليمة"
+          },
+          {
+            "id": "D2",
+            "label": "معيبة"
+          },
+          {
+            "id": "N2",
+            "label": "سليمة"
+          }
+        ],
+        "edges": [
+          {
+            "from": "O",
+            "to": "M1",
+            "label": "0.65"
+          },
+          {
+            "from": "O",
+            "to": "M2",
+            "label": "0.35"
+          },
+          {
+            "from": "M1",
+            "to": "D1",
+            "label": "0.04"
+          },
+          {
+            "from": "M1",
+            "to": "N1",
+            "label": "?"
+          },
+          {
+            "from": "M2",
+            "to": "D2",
+            "label": "0.08"
+          },
+          {
+            "from": "M2",
+            "to": "N2",
+            "label": "?"
+          }
+        ]
+      },
+      "solution": {
+        "title": "الحل المفصل: بناء شجرة من نص صناعي",
+        "main_idea": "تحويل نص إلى شجرة ووضع الاحتمالات الشرطية في أماكنها.",
+        "strategy": "نحول ترتيب الجملة إلى مستويين: آلة ثم حالة القطعة.",
+        "detailed_explanation": "نقرأ التجربة حسب ترتيب مراحلها. من الجذر نضع الاحتمالات البسيطة، وبعد كل عقدة نضع الاحتمالات الشرطية. مجموع الأغصان الخارجة من العقدة يساوي 1، داخل المسار نضرب، وبين المسارات المؤدية إلى الحدث نفسه نجمع.",
+        "uses_graph": true,
+        "uses_images": false,
+        "uses_tables": false,
+        "uses_variation_table": false,
+        "uses_sign_table": false,
+        "steps": [
+          {
+            "number": "1",
+            "order": 1,
+            "title": "المستوى الأول",
+            "explanation": "المرحلة الأولى هي تحديد الآلة.",
+            "construction": [],
+            "calculation": "\\(P(M_1)=0.65,\\;P(M_2)=0.35\\)",
+            "result": "",
+            "conclusion": "",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "المرحلة الأولى هي تحديد الآلة.",
+            "rule_used": "بناء الشجرة",
+            "why": "احتمالات بسيطة من الجذر.",
+            "calculation_breakdown": [],
+            "student_action": "أعد هذه الخطوة وحدك ثم قارن إجابتك بالحل."
+          },
+          {
+            "number": "2",
+            "order": 2,
+            "title": "بعد M1",
+            "explanation": "المعيبة 0.04، إذن السليمة مكملها.",
+            "construction": [],
+            "calculation": "\\(P(\\overline D|M_1)=1-0.04=0.96\\)",
+            "result": "0.96",
+            "conclusion": "0.96",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "المعيبة 0.04، إذن السليمة مكملها.",
+            "rule_used": "إكمال غصن",
+            "why": "مجموع العقدة 1.",
+            "calculation_breakdown": [],
+            "student_action": "أعد هذه الخطوة وحدك ثم قارن إجابتك بالحل."
+          },
+          {
+            "number": "3",
+            "order": 3,
+            "title": "بعد M2",
+            "explanation": "المعيبة 0.08.",
+            "construction": [],
+            "calculation": "\\(P(\\overline D|M_2)=1-0.08=0.92\\)",
+            "result": "0.92",
+            "conclusion": "0.92",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "المعيبة 0.08.",
+            "rule_used": "إكمال غصن",
+            "why": "مجموع العقدة 1.",
+            "calculation_breakdown": [],
+            "student_action": "أعد هذه الخطوة وحدك ثم قارن إجابتك بالحل."
+          },
+          {
+            "number": "4",
+            "order": 4,
+            "title": "المسار المطلوب",
+            "explanation": "M2 ثم معيبة.",
+            "construction": [],
+            "calculation": "\\(P(M_2\\cap D)=0.35\\times0.08=0.028\\)",
+            "result": "0.028",
+            "conclusion": "0.028",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "M2 ثم معيبة.",
+            "rule_used": "قاعدة المسار",
+            "why": "داخل الطريق نضرب.",
+            "calculation_breakdown": [],
+            "student_action": "أعد هذه الخطوة وحدك ثم قارن إجابتك بالحل."
+          }
+        ],
+        "final_answer": "\\(\\boxed{P(M_2\\cap D)=0.028}\\)، وأوزان السليمة هي \\(0.96\\) و\\(0.92\\).",
+        "verification": "نتحقق أن مجموع الأغصان الخارجة من كل عقدة يساوي 1، وأن كل احتمال نهائي بين 0 و1.",
+        "common_mistakes": [
+          {
+            "mistake": "وضع 0.04 من الجذر.",
+            "correction": "4% هي نسبة العيوب داخل إنتاج M1، أي P(D|M1)."
+          }
+        ],
+        "hints": [
+          {
+            "level": 1,
+            "hint": "ابدأ بالآلة، ثم ضع حالة القطعة بعد كل آلة."
+          }
+        ],
+        "alternative_method": "",
+        "images": [],
+        "tables": [],
+        "variation_tables": [],
+        "sign_tables": [],
+        "graph_data": {
+          "type": "probability_tree",
+          "direction": "ltr",
+          "nodes": [
+            {
+              "id": "O",
+              "label": "البداية"
+            },
+            {
+              "id": "M1",
+              "label": "آلة M1"
+            },
+            {
+              "id": "M2",
+              "label": "آلة M2"
+            },
+            {
+              "id": "D1",
+              "label": "معيبة"
+            },
+            {
+              "id": "N1",
+              "label": "سليمة"
+            },
+            {
+              "id": "D2",
+              "label": "معيبة"
+            },
+            {
+              "id": "N2",
+              "label": "سليمة"
+            }
+          ],
+          "edges": [
+            {
+              "from": "O",
+              "to": "M1",
+              "label": "0.65"
+            },
+            {
+              "from": "O",
+              "to": "M2",
+              "label": "0.35"
+            },
+            {
+              "from": "M1",
+              "to": "D1",
+              "label": "0.04"
+            },
+            {
+              "from": "M1",
+              "to": "N1",
+              "label": "?"
+            },
+            {
+              "from": "M2",
+              "to": "D2",
+              "label": "0.08"
+            },
+            {
+              "from": "M2",
+              "to": "N2",
+              "label": "?"
+            }
+          ]
+        },
+        "presentation": {
+          "show_graph_first": true,
+          "show_one_step_at_a_time": true,
+          "react_component": "UniversalMathExerciseRenderer",
+          "graph_mode": "cartesian",
+          "use_field": "graph_data.react_data",
+          "rtl": true,
+          "show_graph_in_question": true,
+          "show_graph_in_solution": true,
+          "show_images_in_question": false,
+          "show_images_in_solution": false,
+          "show_tables_in_question": false,
+          "show_tables_in_solution": false,
+          "show_variation_tables": false,
+          "show_sign_tables": false,
+          "animate_steps": true,
+          "solution_open_mode": "on_button_click",
+          "solution_access": "direct",
+          "attempt_required": false,
+          "show_final_answer_after_last_step": true,
+          "show_verification_after_final_answer": true,
+          "show_bac_writing": true,
+          "show_understanding_check": true,
+          "math_direction": "ltr"
+        },
+        "is_complete": true,
+        "solution_access": "direct",
+        "attempt_required": false,
+        "bac_writing": [
+          "نحدد مراحل التجربة ونبني الشجرة بالترتيب.",
+          "داخل المسار نضرب أوزان الأغصان.",
+          "إذا تحقق الحدث النهائي عبر عدة مسارات منفصلة نجمع احتمالاتها."
+        ],
+        "understanding_check": {
+          "question": "ماذا يمثل الوزن 0.08؟",
+          "answer": "\\(P(D|M_2)\\)."
+        },
+        "takeaway": "عبارة «من إنتاج آلة» تعني احتمالًا شرطيًا."
+      },
+      "display_order": 6,
+      "learning_stage": "axis_practice",
+      "learning_stage_label": "تمرين تطبيقي",
+      "pedagogical_objective": "تحويل نص إلى شجرة ووضع الاحتمالات الشرطية في أماكنها.",
+      "solution_access": "direct",
+      "attempt_required": false
+    },
+    {
+      "id": "probability_tree_practice_07",
+      "year": null,
+      "source_file": null,
+      "source_page": null,
+      "exercise": "تمرين تدريبي 7",
+      "number": "7",
+      "title": "احتمال القطعة المعيبة",
+      "text": "في وضعية الآلتين السابقة، احسب احتمال أن تكون قطعة مختارة عشوائيًا معيبة.",
+      "standalone_text": "في وضعية الآلتين السابقة، احسب احتمال أن تكون قطعة مختارة عشوائيًا معيبة.",
+      "context": "تمرين تدريبي خاص بالمحور السابع: شجرة الاحتمالات ودستور الاحتمالات الكلية.",
+      "tag": "probability_tree_total_probability",
+      "axis": "شجرة الاحتمالات ودستور الاحتمالات الكلية",
+      "secondary_tags": [],
+      "skill": "تطبيق الاحتمالات الكلية على مسارين.",
+      "difficulty": "medium",
+      "question_type": "axis_practice",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "tables": [],
+      "variation_tables": [],
+      "sign_tables": [],
+      "graph_data": {
+        "type": "probability_tree",
+        "direction": "ltr",
+        "nodes": [
+          {
+            "id": "O",
+            "label": "البداية"
+          },
+          {
+            "id": "M1",
+            "label": "آلة M1"
+          },
+          {
+            "id": "M2",
+            "label": "آلة M2"
+          },
+          {
+            "id": "D1",
+            "label": "معيبة"
+          },
+          {
+            "id": "N1",
+            "label": "سليمة"
+          },
+          {
+            "id": "D2",
+            "label": "معيبة"
+          },
+          {
+            "id": "N2",
+            "label": "سليمة"
+          }
+        ],
+        "edges": [
+          {
+            "from": "O",
+            "to": "M1",
+            "label": "0.65"
+          },
+          {
+            "from": "O",
+            "to": "M2",
+            "label": "0.35"
+          },
+          {
+            "from": "M1",
+            "to": "D1",
+            "label": "0.04"
+          },
+          {
+            "from": "M1",
+            "to": "N1",
+            "label": "?"
+          },
+          {
+            "from": "M2",
+            "to": "D2",
+            "label": "0.08"
+          },
+          {
+            "from": "M2",
+            "to": "N2",
+            "label": "?"
+          }
+        ]
+      },
+      "solution": {
+        "title": "الحل المفصل: احتمال القطعة المعيبة",
+        "main_idea": "تطبيق الاحتمالات الكلية على مسارين.",
+        "strategy": "نحسب كل مصدر للعيب ثم نجمع.",
+        "detailed_explanation": "نقرأ التجربة حسب ترتيب مراحلها. من الجذر نضع الاحتمالات البسيطة، وبعد كل عقدة نضع الاحتمالات الشرطية. مجموع الأغصان الخارجة من العقدة يساوي 1، داخل المسار نضرب، وبين المسارات المؤدية إلى الحدث نفسه نجمع.",
+        "uses_graph": true,
+        "uses_images": false,
+        "uses_tables": false,
+        "uses_variation_table": false,
+        "uses_sign_table": false,
+        "steps": [
+          {
+            "number": "1",
+            "order": 1,
+            "title": "عيب من M1",
+            "explanation": "المسار الأول.",
+            "construction": [],
+            "calculation": "\\(0.65\\times0.04=0.026\\)",
+            "result": "0.026",
+            "conclusion": "0.026",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "المسار الأول.",
+            "rule_used": "قاعدة المسار",
+            "why": "M1 ثم عيب.",
+            "calculation_breakdown": [],
+            "student_action": "أعد هذه الخطوة وحدك ثم قارن إجابتك بالحل."
+          },
+          {
+            "number": "2",
+            "order": 2,
+            "title": "عيب من M2",
+            "explanation": "المسار الثاني.",
+            "construction": [],
+            "calculation": "\\(0.35\\times0.08=0.028\\)",
+            "result": "0.028",
+            "conclusion": "0.028",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "المسار الثاني.",
+            "rule_used": "قاعدة المسار",
+            "why": "M2 ثم عيب.",
+            "calculation_breakdown": [],
+            "student_action": "أعد هذه الخطوة وحدك ثم قارن إجابتك بالحل."
+          },
+          {
+            "number": "3",
+            "order": 3,
+            "title": "الجمع",
+            "explanation": "القطعة المعيبة يمكن أن تأتي من أي آلة.",
+            "construction": [],
+            "calculation": "\\(P(D)=0.026+0.028=0.054\\)",
+            "result": "0.054",
+            "conclusion": "0.054",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "القطعة المعيبة يمكن أن تأتي من أي آلة.",
+            "rule_used": "الاحتمالات الكلية",
+            "why": "نجمع الطريقين.",
+            "calculation_breakdown": [],
+            "student_action": "أعد هذه الخطوة وحدك ثم قارن إجابتك بالحل."
+          }
+        ],
+        "final_answer": "\\(\\boxed{P(D)=0.054=5.4\\%}\\).",
+        "verification": "نتحقق أن مجموع الأغصان الخارجة من كل عقدة يساوي 1، وأن كل احتمال نهائي بين 0 و1.",
+        "common_mistakes": [
+          {
+            "mistake": "حساب 0.04+0.08.",
+            "correction": "يجب أخذ نسب إنتاج الآلتين بعين الاعتبار."
+          }
+        ],
+        "hints": [
+          {
+            "level": 1,
+            "hint": "العيب يمكن أن يأتي من كم آلة؟"
+          }
+        ],
+        "alternative_method": "",
+        "images": [],
+        "tables": [],
+        "variation_tables": [],
+        "sign_tables": [],
+        "graph_data": {
+          "type": "probability_tree",
+          "direction": "ltr",
+          "nodes": [
+            {
+              "id": "O",
+              "label": "البداية"
+            },
+            {
+              "id": "M1",
+              "label": "آلة M1"
+            },
+            {
+              "id": "M2",
+              "label": "آلة M2"
+            },
+            {
+              "id": "D1",
+              "label": "معيبة"
+            },
+            {
+              "id": "N1",
+              "label": "سليمة"
+            },
+            {
+              "id": "D2",
+              "label": "معيبة"
+            },
+            {
+              "id": "N2",
+              "label": "سليمة"
+            }
+          ],
+          "edges": [
+            {
+              "from": "O",
+              "to": "M1",
+              "label": "0.65"
+            },
+            {
+              "from": "O",
+              "to": "M2",
+              "label": "0.35"
+            },
+            {
+              "from": "M1",
+              "to": "D1",
+              "label": "0.04"
+            },
+            {
+              "from": "M1",
+              "to": "N1",
+              "label": "?"
+            },
+            {
+              "from": "M2",
+              "to": "D2",
+              "label": "0.08"
+            },
+            {
+              "from": "M2",
+              "to": "N2",
+              "label": "?"
+            }
+          ]
+        },
+        "presentation": {
+          "show_graph_first": true,
+          "show_one_step_at_a_time": true,
+          "react_component": "UniversalMathExerciseRenderer",
+          "graph_mode": "cartesian",
+          "use_field": "graph_data.react_data",
+          "rtl": true,
+          "show_graph_in_question": true,
+          "show_graph_in_solution": true,
+          "show_images_in_question": false,
+          "show_images_in_solution": false,
+          "show_tables_in_question": false,
+          "show_tables_in_solution": false,
+          "show_variation_tables": false,
+          "show_sign_tables": false,
+          "animate_steps": true,
+          "solution_open_mode": "on_button_click",
+          "solution_access": "direct",
+          "attempt_required": false,
+          "show_final_answer_after_last_step": true,
+          "show_verification_after_final_answer": true,
+          "show_bac_writing": true,
+          "show_understanding_check": true,
+          "math_direction": "ltr"
+        },
+        "is_complete": true,
+        "solution_access": "direct",
+        "attempt_required": false,
+        "bac_writing": [
+          "نحدد مراحل التجربة ونبني الشجرة بالترتيب.",
+          "داخل المسار نضرب أوزان الأغصان.",
+          "إذا تحقق الحدث النهائي عبر عدة مسارات منفصلة نجمع احتمالاتها."
+        ],
+        "understanding_check": {
+          "question": "لماذا نضرب 0.65 في 0.04؟",
+          "answer": "لأنه احتمال المسار M1 ثم عيب."
+        },
+        "takeaway": "الاحتمال النهائي يزن كل احتمال شرطي باحتمال الوصول إلى فئته."
+      },
+      "display_order": 7,
+      "learning_stage": "axis_practice",
+      "learning_stage_label": "تمرين تطبيقي",
+      "pedagogical_objective": "تطبيق الاحتمالات الكلية على مسارين.",
+      "solution_access": "direct",
+      "attempt_required": false
+    },
+    {
+      "id": "probability_tree_practice_08",
+      "year": null,
+      "source_file": null,
+      "source_page": null,
+      "exercise": "تمرين تدريبي 8",
+      "number": "8",
+      "title": "اختيار وعاء ثم سحب كرة",
+      "text": "نختار الوعاء \\(U_1\\) باحتمال \\(0.4\\) أو الوعاء \\(U_2\\) باحتمال \\(0.6\\). يحتوي \\(U_1\\) على 3 كريات حمراء و2 زرقاء، ويحتوي \\(U_2\\) على كرية حمراء و3 زرقاء. بعد اختيار الوعاء نسحب كرية واحدة. 1) أكمل شجرة الاحتمال. 2) احسب احتمال سحب كرية حمراء.",
+      "standalone_text": "نختار الوعاء \\(U_1\\) باحتمال \\(0.4\\) أو الوعاء \\(U_2\\) باحتمال \\(0.6\\). يحتوي \\(U_1\\) على 3 كريات حمراء و2 زرقاء، ويحتوي \\(U_2\\) على كرية حمراء و3 زرقاء. بعد اختيار الوعاء نسحب كرية واحدة. 1) أكمل شجرة الاحتمال. 2) احسب احتمال سحب كرية حمراء.",
+      "context": "تمرين تدريبي خاص بالمحور السابع: شجرة الاحتمالات ودستور الاحتمالات الكلية.",
+      "tag": "probability_tree_total_probability",
+      "axis": "شجرة الاحتمالات ودستور الاحتمالات الكلية",
+      "secondary_tags": [],
+      "skill": "حل وضعية اختيار وعاء ثم سحب عنصر باستعمال الشجرة.",
+      "difficulty": "medium",
+      "question_type": "axis_practice",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "tables": [],
+      "variation_tables": [],
+      "sign_tables": [],
+      "graph_data": {
+        "type": "probability_tree",
+        "direction": "ltr",
+        "nodes": [
+          {
+            "id": "O",
+            "label": "اختيار الوعاء"
+          },
+          {
+            "id": "U1",
+            "label": "U1"
+          },
+          {
+            "id": "U2",
+            "label": "U2"
+          },
+          {
+            "id": "R1",
+            "label": "حمراء"
+          },
+          {
+            "id": "B1",
+            "label": "زرقاء"
+          },
+          {
+            "id": "R2",
+            "label": "حمراء"
+          },
+          {
+            "id": "B2",
+            "label": "زرقاء"
+          }
+        ],
+        "edges": [
+          {
+            "from": "O",
+            "to": "U1",
+            "label": "0.4"
+          },
+          {
+            "from": "O",
+            "to": "U2",
+            "label": "0.6"
+          },
+          {
+            "from": "U1",
+            "to": "R1",
+            "label": "3/5"
+          },
+          {
+            "from": "U1",
+            "to": "B1",
+            "label": "2/5"
+          },
+          {
+            "from": "U2",
+            "to": "R2",
+            "label": "1/4"
+          },
+          {
+            "from": "U2",
+            "to": "B2",
+            "label": "3/4"
+          }
+        ]
+      },
+      "solution": {
+        "title": "الحل المفصل: اختيار وعاء ثم سحب كرة",
+        "main_idea": "حل وضعية اختيار وعاء ثم سحب عنصر باستعمال الشجرة.",
+        "strategy": "المستوى الأول وعاء، والمستوى الثاني لون.",
+        "detailed_explanation": "نقرأ التجربة حسب ترتيب مراحلها. من الجذر نضع الاحتمالات البسيطة، وبعد كل عقدة نضع الاحتمالات الشرطية. مجموع الأغصان الخارجة من العقدة يساوي 1، داخل المسار نضرب، وبين المسارات المؤدية إلى الحدث نفسه نجمع.",
+        "uses_graph": true,
+        "uses_images": false,
+        "uses_tables": false,
+        "uses_variation_table": false,
+        "uses_sign_table": false,
+        "steps": [
+          {
+            "number": "1",
+            "order": 1,
+            "title": "أوزان U1",
+            "explanation": "داخل U1 توجد 5 كريات.",
+            "construction": [],
+            "calculation": "\\(P(R|U_1)=\\frac35,\\;P(B|U_1)=\\frac25\\)",
+            "result": "",
+            "conclusion": "",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "داخل U1 توجد 5 كريات.",
+            "rule_used": "احتمال شرطي",
+            "why": "نحسب اللون داخل الوعاء المختار.",
+            "calculation_breakdown": [],
+            "student_action": "أعد هذه الخطوة وحدك ثم قارن إجابتك بالحل."
+          },
+          {
+            "number": "2",
+            "order": 2,
+            "title": "أوزان U2",
+            "explanation": "داخل U2 توجد 4 كريات.",
+            "construction": [],
+            "calculation": "\\(P(R|U_2)=\\frac14,\\;P(B|U_2)=\\frac34\\)",
+            "result": "",
+            "conclusion": "",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "داخل U2 توجد 4 كريات.",
+            "rule_used": "احتمال شرطي",
+            "why": "نفس الفكرة.",
+            "calculation_breakdown": [],
+            "student_action": "أعد هذه الخطوة وحدك ثم قارن إجابتك بالحل."
+          },
+          {
+            "number": "3",
+            "order": 3,
+            "title": "المسار الأول للحمراء",
+            "explanation": "U1 ثم حمراء.",
+            "construction": [],
+            "calculation": "\\(0.4\\times\\frac35=0.24\\)",
+            "result": "0.24",
+            "conclusion": "0.24",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "U1 ثم حمراء.",
+            "rule_used": "قاعدة المسار",
+            "why": "ضرب.",
+            "calculation_breakdown": [],
+            "student_action": "أعد هذه الخطوة وحدك ثم قارن إجابتك بالحل."
+          },
+          {
+            "number": "4",
+            "order": 4,
+            "title": "المسار الثاني للحمراء",
+            "explanation": "U2 ثم حمراء.",
+            "construction": [],
+            "calculation": "\\(0.6\\times\\frac14=0.15\\)",
+            "result": "0.15",
+            "conclusion": "0.15",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "U2 ثم حمراء.",
+            "rule_used": "قاعدة المسار",
+            "why": "ضرب.",
+            "calculation_breakdown": [],
+            "student_action": "أعد هذه الخطوة وحدك ثم قارن إجابتك بالحل."
+          },
+          {
+            "number": "5",
+            "order": 5,
+            "title": "الجمع",
+            "explanation": "الحمراء تأتي من U1 أو U2.",
+            "construction": [],
+            "calculation": "\\(P(R)=0.24+0.15=0.39\\)",
+            "result": "0.39",
+            "conclusion": "0.39",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "الحمراء تأتي من U1 أو U2.",
+            "rule_used": "الاحتمالات الكلية",
+            "why": "نجمع المسارين.",
+            "calculation_breakdown": [],
+            "student_action": "أعد هذه الخطوة وحدك ثم قارن إجابتك بالحل."
+          }
+        ],
+        "final_answer": "\\(\\boxed{P(R)=0.39}\\).",
+        "verification": "نتحقق أن مجموع الأغصان الخارجة من كل عقدة يساوي 1، وأن كل احتمال نهائي بين 0 و1.",
+        "common_mistakes": [
+          {
+            "mistake": "جمع 3/5 و1/4.",
+            "correction": "يجب ضرب كل نسبة في احتمال اختيار وعائها."
+          }
+        ],
+        "hints": [
+          {
+            "level": 1,
+            "hint": "احسب نسبة الحمراء داخل كل وعاء أولًا."
+          }
+        ],
+        "alternative_method": "",
+        "images": [],
+        "tables": [],
+        "variation_tables": [],
+        "sign_tables": [],
+        "graph_data": {
+          "type": "probability_tree",
+          "direction": "ltr",
+          "nodes": [
+            {
+              "id": "O",
+              "label": "اختيار الوعاء"
+            },
+            {
+              "id": "U1",
+              "label": "U1"
+            },
+            {
+              "id": "U2",
+              "label": "U2"
+            },
+            {
+              "id": "R1",
+              "label": "حمراء"
+            },
+            {
+              "id": "B1",
+              "label": "زرقاء"
+            },
+            {
+              "id": "R2",
+              "label": "حمراء"
+            },
+            {
+              "id": "B2",
+              "label": "زرقاء"
+            }
+          ],
+          "edges": [
+            {
+              "from": "O",
+              "to": "U1",
+              "label": "0.4"
+            },
+            {
+              "from": "O",
+              "to": "U2",
+              "label": "0.6"
+            },
+            {
+              "from": "U1",
+              "to": "R1",
+              "label": "3/5"
+            },
+            {
+              "from": "U1",
+              "to": "B1",
+              "label": "2/5"
+            },
+            {
+              "from": "U2",
+              "to": "R2",
+              "label": "1/4"
+            },
+            {
+              "from": "U2",
+              "to": "B2",
+              "label": "3/4"
+            }
+          ]
+        },
+        "presentation": {
+          "show_graph_first": true,
+          "show_one_step_at_a_time": true,
+          "react_component": "UniversalMathExerciseRenderer",
+          "graph_mode": "cartesian",
+          "use_field": "graph_data.react_data",
+          "rtl": true,
+          "show_graph_in_question": true,
+          "show_graph_in_solution": true,
+          "show_images_in_question": false,
+          "show_images_in_solution": false,
+          "show_tables_in_question": false,
+          "show_tables_in_solution": false,
+          "show_variation_tables": false,
+          "show_sign_tables": false,
+          "animate_steps": true,
+          "solution_open_mode": "on_button_click",
+          "solution_access": "direct",
+          "attempt_required": false,
+          "show_final_answer_after_last_step": true,
+          "show_verification_after_final_answer": true,
+          "show_bac_writing": true,
+          "show_understanding_check": true,
+          "math_direction": "ltr"
+        },
+        "is_complete": true,
+        "solution_access": "direct",
+        "attempt_required": false,
+        "bac_writing": [
+          "نحدد مراحل التجربة ونبني الشجرة بالترتيب.",
+          "داخل المسار نضرب أوزان الأغصان.",
+          "إذا تحقق الحدث النهائي عبر عدة مسارات منفصلة نجمع احتمالاتها."
+        ],
+        "understanding_check": {
+          "question": "ما احتمال الحمراء بعد اختيار U2؟",
+          "answer": "\\(1/4\\)."
+        },
+        "takeaway": "وعاء ثم كرة = نموذج طبيعي لشجرة من مستويين."
+      },
+      "display_order": 8,
+      "learning_stage": "axis_practice",
+      "learning_stage_label": "تمرين تطبيقي",
+      "pedagogical_objective": "حل وضعية اختيار وعاء ثم سحب عنصر باستعمال الشجرة.",
+      "solution_access": "direct",
+      "attempt_required": false
+    },
+    {
+      "id": "probability_tree_practice_09",
+      "year": null,
+      "source_file": null,
+      "source_page": null,
+      "exercise": "تمرين تدريبي 9",
+      "number": "9",
+      "title": "إيجاد احتمال مجهول من الاحتمال الكلي",
+      "text": "تشكل \\(A\\) و\\(B\\) تجزئة، ولتكن \\(P(A)=x\\) ومنه \\(P(B)=1-x\\). كما أن \\(P(S|A)=0.8\\) و\\(P(S|B)=0.3\\). إذا كان \\(P(S)=0.5\\)، أوجد \\(x\\).",
+      "standalone_text": "تشكل \\(A\\) و\\(B\\) تجزئة، ولتكن \\(P(A)=x\\) ومنه \\(P(B)=1-x\\). كما أن \\(P(S|A)=0.8\\) و\\(P(S|B)=0.3\\). إذا كان \\(P(S)=0.5\\)، أوجد \\(x\\).",
+      "context": "تمرين تدريبي خاص بالمحور السابع: شجرة الاحتمالات ودستور الاحتمالات الكلية.",
+      "tag": "probability_tree_total_probability",
+      "axis": "شجرة الاحتمالات ودستور الاحتمالات الكلية",
+      "secondary_tags": [],
+      "skill": "استعمال دستور الاحتمالات الكلية لتحديد وزن مجهول.",
+      "difficulty": "hard",
+      "question_type": "axis_practice",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "tables": [],
+      "variation_tables": [],
+      "sign_tables": [],
+      "graph_data": {
+        "type": "probability_tree",
+        "direction": "ltr",
+        "nodes": [
+          {
+            "id": "O",
+            "label": "البداية"
+          },
+          {
+            "id": "A",
+            "label": "A"
+          },
+          {
+            "id": "B",
+            "label": "B"
+          },
+          {
+            "id": "S1",
+            "label": "S"
+          },
+          {
+            "id": "F1",
+            "label": "¬S"
+          },
+          {
+            "id": "S2",
+            "label": "S"
+          },
+          {
+            "id": "F2",
+            "label": "¬S"
+          }
+        ],
+        "edges": [
+          {
+            "from": "O",
+            "to": "A",
+            "label": "x"
+          },
+          {
+            "from": "O",
+            "to": "B",
+            "label": "?"
+          },
+          {
+            "from": "A",
+            "to": "S1",
+            "label": "0.8"
+          },
+          {
+            "from": "A",
+            "to": "F1",
+            "label": "0.2"
+          },
+          {
+            "from": "B",
+            "to": "S2",
+            "label": "0.3"
+          },
+          {
+            "from": "B",
+            "to": "F2",
+            "label": "0.7"
+          }
+        ]
+      },
+      "solution": {
+        "title": "الحل المفصل: إيجاد احتمال مجهول من الاحتمال الكلي",
+        "main_idea": "استعمال دستور الاحتمالات الكلية لتحديد وزن مجهول.",
+        "strategy": "نحوّل الشجرة إلى معادلة احتمالات كلية.",
+        "detailed_explanation": "نقرأ التجربة حسب ترتيب مراحلها. من الجذر نضع الاحتمالات البسيطة، وبعد كل عقدة نضع الاحتمالات الشرطية. مجموع الأغصان الخارجة من العقدة يساوي 1، داخل المسار نضرب، وبين المسارات المؤدية إلى الحدث نفسه نجمع.",
+        "uses_graph": true,
+        "uses_images": false,
+        "uses_tables": false,
+        "uses_variation_table": false,
+        "uses_sign_table": false,
+        "steps": [
+          {
+            "number": "1",
+            "order": 1,
+            "title": "كتابة الاحتمال الكلي",
+            "explanation": "نكتب مجموع مساري النجاح.",
+            "construction": [],
+            "calculation": "\\(P(S)=x(0.8)+(1-x)(0.3)\\)",
+            "result": "",
+            "conclusion": "",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "نكتب مجموع مساري النجاح.",
+            "rule_used": "الاحتمالات الكلية",
+            "why": "A وB تجزئة.",
+            "calculation_breakdown": [],
+            "student_action": "أعد هذه الخطوة وحدك ثم قارن إجابتك بالحل."
+          },
+          {
+            "number": "2",
+            "order": 2,
+            "title": "التعويض",
+            "explanation": "نعوض P(S)=0.5.",
+            "construction": [],
+            "calculation": "\\(0.8x+0.3-0.3x=0.5\\)",
+            "result": "",
+            "conclusion": "",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "نعوض P(S)=0.5.",
+            "rule_used": "معادلة",
+            "why": "نبسط.",
+            "calculation_breakdown": [],
+            "student_action": "أعد هذه الخطوة وحدك ثم قارن إجابتك بالحل."
+          },
+          {
+            "number": "3",
+            "order": 3,
+            "title": "حل المعادلة",
+            "explanation": "نجمع حدود x.",
+            "construction": [],
+            "calculation": "\\(0.5x=0.2\\Rightarrow x=0.4\\)",
+            "result": "0.4",
+            "conclusion": "0.4",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "نجمع حدود x.",
+            "rule_used": "حل جبري",
+            "why": "قيمة احتمال صحيحة.",
+            "calculation_breakdown": [],
+            "student_action": "أعد هذه الخطوة وحدك ثم قارن إجابتك بالحل."
+          },
+          {
+            "number": "4",
+            "order": 4,
+            "title": "إكمال المستوى الأول",
+            "explanation": "بما أن B مكمل A داخل التجزئة.",
+            "construction": [],
+            "calculation": "\\(P(B)=1-0.4=0.6\\)",
+            "result": "0.6",
+            "conclusion": "0.6",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "بما أن B مكمل A داخل التجزئة.",
+            "rule_used": "مجموع الأغصان",
+            "why": "التحقق 0.4+0.6=1.",
+            "calculation_breakdown": [],
+            "student_action": "أعد هذه الخطوة وحدك ثم قارن إجابتك بالحل."
+          }
+        ],
+        "final_answer": "\\(\\boxed{P(A)=0.4,\\;P(B)=0.6}\\).",
+        "verification": "نتحقق أن مجموع الأغصان الخارجة من كل عقدة يساوي 1، وأن كل احتمال نهائي بين 0 و1.",
+        "common_mistakes": [
+          {
+            "mistake": "كتابة 0.8x+0.3x.",
+            "correction": "احتمال B هو 1-x وليس x."
+          }
+        ],
+        "hints": [
+          {
+            "level": 1,
+            "hint": "اكتب P(S) كمجموع طريقين ثم عوض 0.5."
+          }
+        ],
+        "alternative_method": "",
+        "images": [],
+        "tables": [],
+        "variation_tables": [],
+        "sign_tables": [],
+        "graph_data": {
+          "type": "probability_tree",
+          "direction": "ltr",
+          "nodes": [
+            {
+              "id": "O",
+              "label": "البداية"
+            },
+            {
+              "id": "A",
+              "label": "A"
+            },
+            {
+              "id": "B",
+              "label": "B"
+            },
+            {
+              "id": "S1",
+              "label": "S"
+            },
+            {
+              "id": "F1",
+              "label": "¬S"
+            },
+            {
+              "id": "S2",
+              "label": "S"
+            },
+            {
+              "id": "F2",
+              "label": "¬S"
+            }
+          ],
+          "edges": [
+            {
+              "from": "O",
+              "to": "A",
+              "label": "x"
+            },
+            {
+              "from": "O",
+              "to": "B",
+              "label": "?"
+            },
+            {
+              "from": "A",
+              "to": "S1",
+              "label": "0.8"
+            },
+            {
+              "from": "A",
+              "to": "F1",
+              "label": "0.2"
+            },
+            {
+              "from": "B",
+              "to": "S2",
+              "label": "0.3"
+            },
+            {
+              "from": "B",
+              "to": "F2",
+              "label": "0.7"
+            }
+          ]
+        },
+        "presentation": {
+          "show_graph_first": true,
+          "show_one_step_at_a_time": true,
+          "react_component": "UniversalMathExerciseRenderer",
+          "graph_mode": "cartesian",
+          "use_field": "graph_data.react_data",
+          "rtl": true,
+          "show_graph_in_question": true,
+          "show_graph_in_solution": true,
+          "show_images_in_question": false,
+          "show_images_in_solution": false,
+          "show_tables_in_question": false,
+          "show_tables_in_solution": false,
+          "show_variation_tables": false,
+          "show_sign_tables": false,
+          "animate_steps": true,
+          "solution_open_mode": "on_button_click",
+          "solution_access": "direct",
+          "attempt_required": false,
+          "show_final_answer_after_last_step": true,
+          "show_verification_after_final_answer": true,
+          "show_bac_writing": true,
+          "show_understanding_check": true,
+          "math_direction": "ltr"
+        },
+        "is_complete": true,
+        "solution_access": "direct",
+        "attempt_required": false,
+        "bac_writing": [
+          "نحدد مراحل التجربة ونبني الشجرة بالترتيب.",
+          "داخل المسار نضرب أوزان الأغصان.",
+          "إذا تحقق الحدث النهائي عبر عدة مسارات منفصلة نجمع احتمالاتها."
+        ],
+        "understanding_check": {
+          "question": "إذا كان P(A)=x في تجزئة من A وB، فما P(B)؟",
+          "answer": "1-x."
+        },
+        "takeaway": "يمكن استعمال الاحتمالات الكلية ليس للحساب فقط بل لإيجاد وزن مجهول."
+      },
+      "display_order": 9,
+      "learning_stage": "axis_practice",
+      "learning_stage_label": "تمرين تطبيقي",
+      "pedagogical_objective": "استعمال دستور الاحتمالات الكلية لتحديد وزن مجهول.",
+      "solution_access": "direct",
+      "attempt_required": false
+    },
+    {
+      "id": "probability_tree_practice_10",
+      "year": null,
+      "source_file": null,
+      "source_page": null,
+      "exercise": "تمرين تدريبي 10",
+      "number": "10",
+      "title": "شجرة بثلاثة أغصان أولية",
+      "text": "تبدأ تجربة باختيار إحدى الفئات \\(A,B,C\\). لدينا \\(P(A)=0.25\\)، \\(P(B)=0.45\\). كما أن \\(P(E|A)=0.2\\)، \\(P(E|B)=0.5\\)، \\(P(E|C)=0.7\\). 1) أوجد \\(P(C)\\). 2) احسب \\(P(E)\\).",
+      "standalone_text": "تبدأ تجربة باختيار إحدى الفئات \\(A,B,C\\). لدينا \\(P(A)=0.25\\)، \\(P(B)=0.45\\). كما أن \\(P(E|A)=0.2\\)، \\(P(E|B)=0.5\\)، \\(P(E|C)=0.7\\). 1) أوجد \\(P(C)\\). 2) احسب \\(P(E)\\).",
+      "context": "تمرين تدريبي خاص بالمحور السابع: شجرة الاحتمالات ودستور الاحتمالات الكلية.",
+      "tag": "probability_tree_total_probability",
+      "axis": "شجرة الاحتمالات ودستور الاحتمالات الكلية",
+      "secondary_tags": [],
+      "skill": "إكمال تجزئة بثلاث فئات ثم تطبيق الاحتمالات الكلية.",
+      "difficulty": "hard",
+      "question_type": "axis_practice",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "tables": [],
+      "variation_tables": [],
+      "sign_tables": [],
+      "graph_data": {
+        "type": "probability_tree",
+        "direction": "ltr",
+        "nodes": [
+          {
+            "id": "O",
+            "label": "البداية"
+          },
+          {
+            "id": "A",
+            "label": "A"
+          },
+          {
+            "id": "B",
+            "label": "B"
+          },
+          {
+            "id": "C",
+            "label": "C"
+          },
+          {
+            "id": "E1",
+            "label": "E"
+          },
+          {
+            "id": "E2",
+            "label": "E"
+          },
+          {
+            "id": "E3",
+            "label": "E"
+          }
+        ],
+        "edges": [
+          {
+            "from": "O",
+            "to": "A",
+            "label": "0.25"
+          },
+          {
+            "from": "O",
+            "to": "B",
+            "label": "0.45"
+          },
+          {
+            "from": "O",
+            "to": "C",
+            "label": "?"
+          },
+          {
+            "from": "A",
+            "to": "E1",
+            "label": "0.2"
+          },
+          {
+            "from": "B",
+            "to": "E2",
+            "label": "0.5"
+          },
+          {
+            "from": "C",
+            "to": "E3",
+            "label": "0.7"
+          }
+        ]
+      },
+      "solution": {
+        "title": "الحل المفصل: شجرة بثلاثة أغصان أولية",
+        "main_idea": "إكمال تجزئة بثلاث فئات ثم تطبيق الاحتمالات الكلية.",
+        "strategy": "أكمل المستوى الأول ثم اضرب داخل كل طريق واجمع.",
+        "detailed_explanation": "نقرأ التجربة حسب ترتيب مراحلها. من الجذر نضع الاحتمالات البسيطة، وبعد كل عقدة نضع الاحتمالات الشرطية. مجموع الأغصان الخارجة من العقدة يساوي 1، داخل المسار نضرب، وبين المسارات المؤدية إلى الحدث نفسه نجمع.",
+        "uses_graph": true,
+        "uses_images": false,
+        "uses_tables": false,
+        "uses_variation_table": false,
+        "uses_sign_table": false,
+        "steps": [
+          {
+            "number": "1",
+            "order": 1,
+            "title": "إكمال الفئة C",
+            "explanation": "الفئات الثلاث تغطي كل الحالات.",
+            "construction": [],
+            "calculation": "\\(P(C)=1-0.25-0.45=0.30\\)",
+            "result": "0.30",
+            "conclusion": "0.30",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "الفئات الثلاث تغطي كل الحالات.",
+            "rule_used": "التجزئة",
+            "why": "مجموع المستوى الأول 1.",
+            "calculation_breakdown": [],
+            "student_action": "أعد هذه الخطوة وحدك ثم قارن إجابتك بالحل."
+          },
+          {
+            "number": "2",
+            "order": 2,
+            "title": "مسار A إلى E",
+            "explanation": "نضرب.",
+            "construction": [],
+            "calculation": "\\(0.25\\times0.2=0.05\\)",
+            "result": "0.05",
+            "conclusion": "0.05",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "نضرب.",
+            "rule_used": "قاعدة المسار",
+            "why": "المسار الأول.",
+            "calculation_breakdown": [],
+            "student_action": "أعد هذه الخطوة وحدك ثم قارن إجابتك بالحل."
+          },
+          {
+            "number": "3",
+            "order": 3,
+            "title": "مسار B إلى E",
+            "explanation": "نضرب.",
+            "construction": [],
+            "calculation": "\\(0.45\\times0.5=0.225\\)",
+            "result": "0.225",
+            "conclusion": "0.225",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "نضرب.",
+            "rule_used": "قاعدة المسار",
+            "why": "المسار الثاني.",
+            "calculation_breakdown": [],
+            "student_action": "أعد هذه الخطوة وحدك ثم قارن إجابتك بالحل."
+          },
+          {
+            "number": "4",
+            "order": 4,
+            "title": "مسار C إلى E",
+            "explanation": "نضرب.",
+            "construction": [],
+            "calculation": "\\(0.30\\times0.7=0.21\\)",
+            "result": "0.21",
+            "conclusion": "0.21",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "نضرب.",
+            "rule_used": "قاعدة المسار",
+            "why": "المسار الثالث.",
+            "calculation_breakdown": [],
+            "student_action": "أعد هذه الخطوة وحدك ثم قارن إجابتك بالحل."
+          },
+          {
+            "number": "5",
+            "order": 5,
+            "title": "الجمع",
+            "explanation": "نجمع كل الطرق المؤدية إلى E.",
+            "construction": [],
+            "calculation": "\\(P(E)=0.05+0.225+0.21=0.485\\)",
+            "result": "0.485",
+            "conclusion": "0.485",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "نجمع كل الطرق المؤدية إلى E.",
+            "rule_used": "الاحتمالات الكلية",
+            "why": "ثلاثة مسارات.",
+            "calculation_breakdown": [],
+            "student_action": "أعد هذه الخطوة وحدك ثم قارن إجابتك بالحل."
+          }
+        ],
+        "final_answer": "\\(\\boxed{P(C)=0.30,\\quad P(E)=0.485}\\).",
+        "verification": "نتحقق أن مجموع الأغصان الخارجة من كل عقدة يساوي 1، وأن كل احتمال نهائي بين 0 و1.",
+        "common_mistakes": [
+          {
+            "mistake": "نسيان إكمال P(C).",
+            "correction": "لا يمكن وزن المسار الثالث دون احتمال الوصول إلى C."
+          }
+        ],
+        "hints": [
+          {
+            "level": 1,
+            "hint": "أولًا يجب أن يكون مجموع A وB وC مساويًا لـ1."
+          }
+        ],
+        "alternative_method": "",
+        "images": [],
+        "tables": [],
+        "variation_tables": [],
+        "sign_tables": [],
+        "graph_data": {
+          "type": "probability_tree",
+          "direction": "ltr",
+          "nodes": [
+            {
+              "id": "O",
+              "label": "البداية"
+            },
+            {
+              "id": "A",
+              "label": "A"
+            },
+            {
+              "id": "B",
+              "label": "B"
+            },
+            {
+              "id": "C",
+              "label": "C"
+            },
+            {
+              "id": "E1",
+              "label": "E"
+            },
+            {
+              "id": "E2",
+              "label": "E"
+            },
+            {
+              "id": "E3",
+              "label": "E"
+            }
+          ],
+          "edges": [
+            {
+              "from": "O",
+              "to": "A",
+              "label": "0.25"
+            },
+            {
+              "from": "O",
+              "to": "B",
+              "label": "0.45"
+            },
+            {
+              "from": "O",
+              "to": "C",
+              "label": "?"
+            },
+            {
+              "from": "A",
+              "to": "E1",
+              "label": "0.2"
+            },
+            {
+              "from": "B",
+              "to": "E2",
+              "label": "0.5"
+            },
+            {
+              "from": "C",
+              "to": "E3",
+              "label": "0.7"
+            }
+          ]
+        },
+        "presentation": {
+          "show_graph_first": true,
+          "show_one_step_at_a_time": true,
+          "react_component": "UniversalMathExerciseRenderer",
+          "graph_mode": "cartesian",
+          "use_field": "graph_data.react_data",
+          "rtl": true,
+          "show_graph_in_question": true,
+          "show_graph_in_solution": true,
+          "show_images_in_question": false,
+          "show_images_in_solution": false,
+          "show_tables_in_question": false,
+          "show_tables_in_solution": false,
+          "show_variation_tables": false,
+          "show_sign_tables": false,
+          "animate_steps": true,
+          "solution_open_mode": "on_button_click",
+          "solution_access": "direct",
+          "attempt_required": false,
+          "show_final_answer_after_last_step": true,
+          "show_verification_after_final_answer": true,
+          "show_bac_writing": true,
+          "show_understanding_check": true,
+          "math_direction": "ltr"
+        },
+        "is_complete": true,
+        "solution_access": "direct",
+        "attempt_required": false,
+        "bac_writing": [
+          "نحدد مراحل التجربة ونبني الشجرة بالترتيب.",
+          "داخل المسار نضرب أوزان الأغصان.",
+          "إذا تحقق الحدث النهائي عبر عدة مسارات منفصلة نجمع احتمالاتها."
+        ],
+        "understanding_check": {
+          "question": "كم مسارًا يؤدي إلى E؟",
+          "answer": "ثلاثة."
+        },
+        "takeaway": "في تجزئة من ثلاث فئات، الحدث النهائي قد يجمع ثلاثة مسارات."
+      },
+      "display_order": 10,
+      "learning_stage": "axis_practice",
+      "learning_stage_label": "تمرين تطبيقي",
+      "pedagogical_objective": "إكمال تجزئة بثلاث فئات ثم تطبيق الاحتمالات الكلية.",
+      "solution_access": "direct",
+      "attempt_required": false
+    },
+    {
+      "id": "probability_tree_practice_11",
+      "year": null,
+      "source_file": null,
+      "source_page": null,
+      "exercise": "تمرين تدريبي 11",
+      "number": "11",
+      "title": "من النص إلى شجرة كاملة",
+      "text": "في مجموعة تلاميذ، 70% راجعوا للامتحان. من بين الذين راجعوا نجح 85%، ومن بين الذين لم يراجعوا نجح 40%. 1) ابن شجرة الاحتمالات وأكملها. 2) احسب احتمال الرسوب. 3) احسب احتمال «راجع ورسب».",
+      "standalone_text": "في مجموعة تلاميذ، 70% راجعوا للامتحان. من بين الذين راجعوا نجح 85%، ومن بين الذين لم يراجعوا نجح 40%. 1) ابن شجرة الاحتمالات وأكملها. 2) احسب احتمال الرسوب. 3) احسب احتمال «راجع ورسب».",
+      "context": "تمرين تدريبي خاص بالمحور السابع: شجرة الاحتمالات ودستور الاحتمالات الكلية.",
+      "tag": "probability_tree_total_probability",
+      "axis": "شجرة الاحتمالات ودستور الاحتمالات الكلية",
+      "secondary_tags": [],
+      "skill": "بناء شجرة كاملة وحساب حدث نهائي ومقطع مسار.",
+      "difficulty": "hard",
+      "question_type": "axis_practice",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "tables": [],
+      "variation_tables": [],
+      "sign_tables": [],
+      "graph_data": {
+        "type": "probability_tree",
+        "direction": "ltr",
+        "nodes": [
+          {
+            "id": "O",
+            "label": "البداية"
+          },
+          {
+            "id": "R",
+            "label": "راجع"
+          },
+          {
+            "id": "N",
+            "label": "لم يراجع"
+          },
+          {
+            "id": "S1",
+            "label": "نجح"
+          },
+          {
+            "id": "F1",
+            "label": "رسب"
+          },
+          {
+            "id": "S2",
+            "label": "نجح"
+          },
+          {
+            "id": "F2",
+            "label": "رسب"
+          }
+        ],
+        "edges": [
+          {
+            "from": "O",
+            "to": "R",
+            "label": "0.7"
+          },
+          {
+            "from": "O",
+            "to": "N",
+            "label": "0.3"
+          },
+          {
+            "from": "R",
+            "to": "S1",
+            "label": "0.85"
+          },
+          {
+            "from": "R",
+            "to": "F1",
+            "label": "?"
+          },
+          {
+            "from": "N",
+            "to": "S2",
+            "label": "0.4"
+          },
+          {
+            "from": "N",
+            "to": "F2",
+            "label": "?"
+          }
+        ]
+      },
+      "solution": {
+        "title": "الحل المفصل: من النص إلى شجرة كاملة",
+        "main_idea": "بناء شجرة كاملة وحساب حدث نهائي ومقطع مسار.",
+        "strategy": "نرسم بحسب ترتيب النص: مراجعة ثم نتيجة الامتحان.",
+        "detailed_explanation": "نقرأ التجربة حسب ترتيب مراحلها. من الجذر نضع الاحتمالات البسيطة، وبعد كل عقدة نضع الاحتمالات الشرطية. مجموع الأغصان الخارجة من العقدة يساوي 1، داخل المسار نضرب، وبين المسارات المؤدية إلى الحدث نفسه نجمع.",
+        "uses_graph": true,
+        "uses_images": false,
+        "uses_tables": false,
+        "uses_variation_table": false,
+        "uses_sign_table": false,
+        "steps": [
+          {
+            "number": "1",
+            "order": 1,
+            "title": "المستوى الأول",
+            "explanation": "راجع أو لم يراجع.",
+            "construction": [],
+            "calculation": "\\(P(R)=0.7,\\;P(\\overline R)=0.3\\)",
+            "result": "",
+            "conclusion": "",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "راجع أو لم يراجع.",
+            "rule_used": "بناء الشجرة",
+            "why": "احتمالات بسيطة.",
+            "calculation_breakdown": [],
+            "student_action": "أعد هذه الخطوة وحدك ثم قارن إجابتك بالحل."
+          },
+          {
+            "number": "2",
+            "order": 2,
+            "title": "إكمال الفروع الثانوية",
+            "explanation": "نكمل النجاح/الرسوب في كل عقدة.",
+            "construction": [],
+            "calculation": "\\(P(F|R)=0.15,\\;P(F|\\overline R)=0.60\\)",
+            "result": "",
+            "conclusion": "",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "نكمل النجاح/الرسوب في كل عقدة.",
+            "rule_used": "المكمل",
+            "why": "1-0.85 و1-0.40.",
+            "calculation_breakdown": [],
+            "student_action": "أعد هذه الخطوة وحدك ثم قارن إجابتك بالحل."
+          },
+          {
+            "number": "3",
+            "order": 3,
+            "title": "راجع ورسب",
+            "explanation": "مسار واحد.",
+            "construction": [],
+            "calculation": "\\(P(R\\cap F)=0.7\\times0.15=0.105\\)",
+            "result": "0.105",
+            "conclusion": "0.105",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "مسار واحد.",
+            "rule_used": "قاعدة المسار",
+            "why": "ضرب.",
+            "calculation_breakdown": [],
+            "student_action": "أعد هذه الخطوة وحدك ثم قارن إجابتك بالحل."
+          },
+          {
+            "number": "4",
+            "order": 4,
+            "title": "لم يراجع ورسب",
+            "explanation": "المسار الثاني للرسوب.",
+            "construction": [],
+            "calculation": "\\(0.3\\times0.60=0.18\\)",
+            "result": "0.18",
+            "conclusion": "0.18",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "المسار الثاني للرسوب.",
+            "rule_used": "قاعدة المسار",
+            "why": "ضرب.",
+            "calculation_breakdown": [],
+            "student_action": "أعد هذه الخطوة وحدك ثم قارن إجابتك بالحل."
+          },
+          {
+            "number": "5",
+            "order": 5,
+            "title": "احتمال الرسوب",
+            "explanation": "نجمع طريقي الرسوب.",
+            "construction": [],
+            "calculation": "\\(P(F)=0.105+0.18=0.285\\)",
+            "result": "0.285",
+            "conclusion": "0.285",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "نجمع طريقي الرسوب.",
+            "rule_used": "الاحتمالات الكلية",
+            "why": "الرسوب له مساران.",
+            "calculation_breakdown": [],
+            "student_action": "أعد هذه الخطوة وحدك ثم قارن إجابتك بالحل."
+          }
+        ],
+        "final_answer": "\\(\\boxed{P(F)=0.285}\\)، و\\(\\boxed{P(R\\cap F)=0.105}\\).",
+        "verification": "نتحقق أن مجموع الأغصان الخارجة من كل عقدة يساوي 1، وأن كل احتمال نهائي بين 0 و1.",
+        "common_mistakes": [
+          {
+            "mistake": "اعتبار 0.85 احتمال النجاح في المجموعة كلها.",
+            "correction": "هو P(S|R)، أي نجاح داخل من راجعوا."
+          }
+        ],
+        "hints": [
+          {
+            "level": 1,
+            "hint": "أكمل احتمال الرسوب داخل كل فئة باستعمال 1."
+          }
+        ],
+        "alternative_method": "",
+        "images": [],
+        "tables": [],
+        "variation_tables": [],
+        "sign_tables": [],
+        "graph_data": {
+          "type": "probability_tree",
+          "direction": "ltr",
+          "nodes": [
+            {
+              "id": "O",
+              "label": "البداية"
+            },
+            {
+              "id": "R",
+              "label": "راجع"
+            },
+            {
+              "id": "N",
+              "label": "لم يراجع"
+            },
+            {
+              "id": "S1",
+              "label": "نجح"
+            },
+            {
+              "id": "F1",
+              "label": "رسب"
+            },
+            {
+              "id": "S2",
+              "label": "نجح"
+            },
+            {
+              "id": "F2",
+              "label": "رسب"
+            }
+          ],
+          "edges": [
+            {
+              "from": "O",
+              "to": "R",
+              "label": "0.7"
+            },
+            {
+              "from": "O",
+              "to": "N",
+              "label": "0.3"
+            },
+            {
+              "from": "R",
+              "to": "S1",
+              "label": "0.85"
+            },
+            {
+              "from": "R",
+              "to": "F1",
+              "label": "?"
+            },
+            {
+              "from": "N",
+              "to": "S2",
+              "label": "0.4"
+            },
+            {
+              "from": "N",
+              "to": "F2",
+              "label": "?"
+            }
+          ]
+        },
+        "presentation": {
+          "show_graph_first": true,
+          "show_one_step_at_a_time": true,
+          "react_component": "UniversalMathExerciseRenderer",
+          "graph_mode": "cartesian",
+          "use_field": "graph_data.react_data",
+          "rtl": true,
+          "show_graph_in_question": true,
+          "show_graph_in_solution": true,
+          "show_images_in_question": false,
+          "show_images_in_solution": false,
+          "show_tables_in_question": false,
+          "show_tables_in_solution": false,
+          "show_variation_tables": false,
+          "show_sign_tables": false,
+          "animate_steps": true,
+          "solution_open_mode": "on_button_click",
+          "solution_access": "direct",
+          "attempt_required": false,
+          "show_final_answer_after_last_step": true,
+          "show_verification_after_final_answer": true,
+          "show_bac_writing": true,
+          "show_understanding_check": true,
+          "math_direction": "ltr"
+        },
+        "is_complete": true,
+        "solution_access": "direct",
+        "attempt_required": false,
+        "bac_writing": [
+          "نحدد مراحل التجربة ونبني الشجرة بالترتيب.",
+          "داخل المسار نضرب أوزان الأغصان.",
+          "إذا تحقق الحدث النهائي عبر عدة مسارات منفصلة نجمع احتمالاتها."
+        ],
+        "understanding_check": {
+          "question": "ما احتمال الرسوب داخل من لم يراجعوا؟",
+          "answer": "0.60."
+        },
+        "takeaway": "حوّل العبارات «من بين...» إلى أوزان شرطية بعد العقدة المناسبة."
+      },
+      "display_order": 11,
+      "learning_stage": "axis_practice",
+      "learning_stage_label": "تمرين تطبيقي",
+      "pedagogical_objective": "بناء شجرة كاملة وحساب حدث نهائي ومقطع مسار.",
+      "solution_access": "direct",
+      "attempt_required": false
+    },
+    {
+      "id": "probability_tree_practice_12",
+      "year": null,
+      "source_file": null,
+      "source_page": null,
+      "exercise": "تمرين تدريبي 12",
+      "number": "12",
+      "title": "ثلاثة أوعية واحتمال كلي",
+      "text": "نختار صندوقًا من ثلاثة صناديق: \\(U_1\\) باحتمال \\(\\frac12\\)، و\\(U_2\\) باحتمال \\(\\frac13\\)، و\\(U_3\\) باحتمال \\(\\frac16\\). احتمال سحب كرية بيضاء من الصناديق على الترتيب هو \\(\\frac25\\)، \\(\\frac34\\)، \\(\\frac12\\). احسب احتمال سحب كرية بيضاء.",
+      "standalone_text": "نختار صندوقًا من ثلاثة صناديق: \\(U_1\\) باحتمال \\(\\frac12\\)، و\\(U_2\\) باحتمال \\(\\frac13\\)، و\\(U_3\\) باحتمال \\(\\frac16\\). احتمال سحب كرية بيضاء من الصناديق على الترتيب هو \\(\\frac25\\)، \\(\\frac34\\)، \\(\\frac12\\). احسب احتمال سحب كرية بيضاء.",
+      "context": "تمرين تدريبي خاص بالمحور السابع: شجرة الاحتمالات ودستور الاحتمالات الكلية.",
+      "tag": "probability_tree_total_probability",
+      "axis": "شجرة الاحتمالات ودستور الاحتمالات الكلية",
+      "secondary_tags": [],
+      "skill": "حل مسألة متعددة الأوعية بكسور باستعمال الاحتمالات الكلية.",
+      "difficulty": "hard",
+      "question_type": "axis_practice",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "tables": [],
+      "variation_tables": [],
+      "sign_tables": [],
+      "graph_data": {
+        "type": "probability_tree",
+        "direction": "ltr",
+        "nodes": [
+          {
+            "id": "O",
+            "label": "اختيار الصندوق"
+          },
+          {
+            "id": "U1",
+            "label": "U1"
+          },
+          {
+            "id": "U2",
+            "label": "U2"
+          },
+          {
+            "id": "U3",
+            "label": "U3"
+          },
+          {
+            "id": "W1",
+            "label": "بيضاء"
+          },
+          {
+            "id": "W2",
+            "label": "بيضاء"
+          },
+          {
+            "id": "W3",
+            "label": "بيضاء"
+          }
+        ],
+        "edges": [
+          {
+            "from": "O",
+            "to": "U1",
+            "label": "1/2"
+          },
+          {
+            "from": "O",
+            "to": "U2",
+            "label": "1/3"
+          },
+          {
+            "from": "O",
+            "to": "U3",
+            "label": "1/6"
+          },
+          {
+            "from": "U1",
+            "to": "W1",
+            "label": "2/5"
+          },
+          {
+            "from": "U2",
+            "to": "W2",
+            "label": "3/4"
+          },
+          {
+            "from": "U3",
+            "to": "W3",
+            "label": "1/2"
+          }
+        ]
+      },
+      "solution": {
+        "title": "الحل المفصل: ثلاثة أوعية واحتمال كلي",
+        "main_idea": "حل مسألة متعددة الأوعية بكسور باستعمال الاحتمالات الكلية.",
+        "strategy": "نحافظ على الكسور ونوحد المقامات في النهاية.",
+        "detailed_explanation": "نقرأ التجربة حسب ترتيب مراحلها. من الجذر نضع الاحتمالات البسيطة، وبعد كل عقدة نضع الاحتمالات الشرطية. مجموع الأغصان الخارجة من العقدة يساوي 1، داخل المسار نضرب، وبين المسارات المؤدية إلى الحدث نفسه نجمع.",
+        "uses_graph": true,
+        "uses_images": false,
+        "uses_tables": false,
+        "uses_variation_table": false,
+        "uses_sign_table": false,
+        "steps": [
+          {
+            "number": "1",
+            "order": 1,
+            "title": "التحقق من التجزئة",
+            "explanation": "نجمع احتمالات اختيار الصناديق.",
+            "construction": [],
+            "calculation": "\\(\\frac12+\\frac13+\\frac16=1\\)",
+            "result": "تجزئة صحيحة.",
+            "conclusion": "تجزئة صحيحة.",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "نجمع احتمالات اختيار الصناديق.",
+            "rule_used": "التجزئة",
+            "why": "لا بد من اختيار صندوق واحد.",
+            "calculation_breakdown": [],
+            "student_action": "أعد هذه الخطوة وحدك ثم قارن إجابتك بالحل."
+          },
+          {
+            "number": "2",
+            "order": 2,
+            "title": "المسار الأول",
+            "explanation": "U1 ثم بيضاء.",
+            "construction": [],
+            "calculation": "\\(\\frac12\\times\\frac25=\\frac15\\)",
+            "result": "\\(\\frac15\\).",
+            "conclusion": "\\(\\frac15\\).",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "U1 ثم بيضاء.",
+            "rule_used": "قاعدة المسار",
+            "why": "ضرب.",
+            "calculation_breakdown": [],
+            "student_action": "أعد هذه الخطوة وحدك ثم قارن إجابتك بالحل."
+          },
+          {
+            "number": "3",
+            "order": 3,
+            "title": "المسار الثاني",
+            "explanation": "U2 ثم بيضاء.",
+            "construction": [],
+            "calculation": "\\(\\frac13\\times\\frac34=\\frac14\\)",
+            "result": "\\(\\frac14\\).",
+            "conclusion": "\\(\\frac14\\).",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "U2 ثم بيضاء.",
+            "rule_used": "قاعدة المسار",
+            "why": "ضرب.",
+            "calculation_breakdown": [],
+            "student_action": "أعد هذه الخطوة وحدك ثم قارن إجابتك بالحل."
+          },
+          {
+            "number": "4",
+            "order": 4,
+            "title": "المسار الثالث",
+            "explanation": "U3 ثم بيضاء.",
+            "construction": [],
+            "calculation": "\\(\\frac16\\times\\frac12=\\frac1{12}\\)",
+            "result": "\\(\\frac1{12}\\).",
+            "conclusion": "\\(\\frac1{12}\\).",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "U3 ثم بيضاء.",
+            "rule_used": "قاعدة المسار",
+            "why": "ضرب.",
+            "calculation_breakdown": [],
+            "student_action": "أعد هذه الخطوة وحدك ثم قارن إجابتك بالحل."
+          },
+          {
+            "number": "5",
+            "order": 5,
+            "title": "الجمع",
+            "explanation": "نجمع المسارات الثلاثة.",
+            "construction": [],
+            "calculation": "\\(P(W)=\\frac15+\\frac14+\\frac1{12}=\\frac{12+15+5}{60}=\\frac{32}{60}=\\frac8{15}\\)",
+            "result": "\\(\\frac8{15}\\).",
+            "conclusion": "\\(\\frac8{15}\\).",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "نجمع المسارات الثلاثة.",
+            "rule_used": "الاحتمالات الكلية",
+            "why": "البيضاء تأتي من أي صندوق.",
+            "calculation_breakdown": [],
+            "student_action": "أعد هذه الخطوة وحدك ثم قارن إجابتك بالحل."
+          }
+        ],
+        "final_answer": "\\(\\boxed{P(W)=\\frac8{15}}\\).",
+        "verification": "نتحقق أن مجموع الأغصان الخارجة من كل عقدة يساوي 1، وأن كل احتمال نهائي بين 0 و1.",
+        "common_mistakes": [
+          {
+            "mistake": "جمع نسب البيضاء فقط.",
+            "correction": "كل نسبة بيضاء مشروطة بالصندوق الذي تم اختياره."
+          }
+        ],
+        "hints": [
+          {
+            "level": 1,
+            "hint": "احسب احتمال كل طريق على حدة."
+          }
+        ],
+        "alternative_method": "",
+        "images": [],
+        "tables": [],
+        "variation_tables": [],
+        "sign_tables": [],
+        "graph_data": {
+          "type": "probability_tree",
+          "direction": "ltr",
+          "nodes": [
+            {
+              "id": "O",
+              "label": "اختيار الصندوق"
+            },
+            {
+              "id": "U1",
+              "label": "U1"
+            },
+            {
+              "id": "U2",
+              "label": "U2"
+            },
+            {
+              "id": "U3",
+              "label": "U3"
+            },
+            {
+              "id": "W1",
+              "label": "بيضاء"
+            },
+            {
+              "id": "W2",
+              "label": "بيضاء"
+            },
+            {
+              "id": "W3",
+              "label": "بيضاء"
+            }
+          ],
+          "edges": [
+            {
+              "from": "O",
+              "to": "U1",
+              "label": "1/2"
+            },
+            {
+              "from": "O",
+              "to": "U2",
+              "label": "1/3"
+            },
+            {
+              "from": "O",
+              "to": "U3",
+              "label": "1/6"
+            },
+            {
+              "from": "U1",
+              "to": "W1",
+              "label": "2/5"
+            },
+            {
+              "from": "U2",
+              "to": "W2",
+              "label": "3/4"
+            },
+            {
+              "from": "U3",
+              "to": "W3",
+              "label": "1/2"
+            }
+          ]
+        },
+        "presentation": {
+          "show_graph_first": true,
+          "show_one_step_at_a_time": true,
+          "react_component": "UniversalMathExerciseRenderer",
+          "graph_mode": "cartesian",
+          "use_field": "graph_data.react_data",
+          "rtl": true,
+          "show_graph_in_question": true,
+          "show_graph_in_solution": true,
+          "show_images_in_question": false,
+          "show_images_in_solution": false,
+          "show_tables_in_question": false,
+          "show_tables_in_solution": false,
+          "show_variation_tables": false,
+          "show_sign_tables": false,
+          "animate_steps": true,
+          "solution_open_mode": "on_button_click",
+          "solution_access": "direct",
+          "attempt_required": false,
+          "show_final_answer_after_last_step": true,
+          "show_verification_after_final_answer": true,
+          "show_bac_writing": true,
+          "show_understanding_check": true,
+          "math_direction": "ltr"
+        },
+        "is_complete": true,
+        "solution_access": "direct",
+        "attempt_required": false,
+        "bac_writing": [
+          "نحدد مراحل التجربة ونبني الشجرة بالترتيب.",
+          "داخل المسار نضرب أوزان الأغصان.",
+          "إذا تحقق الحدث النهائي عبر عدة مسارات منفصلة نجمع احتمالاتها."
+        ],
+        "understanding_check": {
+          "question": "لماذا نتحقق أن 1/2+1/3+1/6=1؟",
+          "answer": "لأن الصناديق الثلاثة يجب أن تشكل تجزئة للمرحلة الأولى."
+        },
+        "takeaway": "في مسائل الأوعية: اختيار الوعاء أولًا، ثم اللون، ثم جمع المسارات."
+      },
+      "display_order": 12,
+      "learning_stage": "axis_practice",
+      "learning_stage_label": "تمرين تطبيقي",
+      "pedagogical_objective": "حل مسألة متعددة الأوعية بكسور باستعمال الاحتمالات الكلية.",
+      "solution_access": "direct",
+      "attempt_required": false
+    },
+    {
+      "id": "probability_tree_practice_13",
+      "year": null,
+      "source_file": null,
+      "source_page": null,
+      "exercise": "تمرين تدريبي 13",
+      "number": "13",
+      "title": "تمرين شامل على الشجرة والاحتمالات الكلية",
+      "text": "تتكون مجموعة من فئتين \\(A\\) و\\(B\\): \\(P(A)=0.55\\) و\\(P(B)=0.45\\). داخل \\(A\\) يتحقق الحدث \\(S\\) باحتمال \\(0.8\\)، وداخل \\(B\\) يتحقق باحتمال \\(0.35\\). 1) ابن الشجرة وأكمل أوزانها. 2) احسب \\(P(A\\cap S)\\) و\\(P(B\\cap S)\\). 3) استنتج \\(P(S)\\). 4) احسب احتمال عدم تحقق \\(S\\) بطريقتين للتحقق من النتيجة.",
+      "standalone_text": "تتكون مجموعة من فئتين \\(A\\) و\\(B\\): \\(P(A)=0.55\\) و\\(P(B)=0.45\\). داخل \\(A\\) يتحقق الحدث \\(S\\) باحتمال \\(0.8\\)، وداخل \\(B\\) يتحقق باحتمال \\(0.35\\). 1) ابن الشجرة وأكمل أوزانها. 2) احسب \\(P(A\\cap S)\\) و\\(P(B\\cap S)\\). 3) استنتج \\(P(S)\\). 4) احسب احتمال عدم تحقق \\(S\\) بطريقتين للتحقق من النتيجة.",
+      "context": "تمرين تدريبي خاص بالمحور السابع: شجرة الاحتمالات ودستور الاحتمالات الكلية.",
+      "tag": "probability_tree_total_probability",
+      "axis": "شجرة الاحتمالات ودستور الاحتمالات الكلية",
+      "secondary_tags": [],
+      "skill": "حل وضعية شاملة: بناء الشجرة، المسارات، الاحتمال الكلي والتحقق بالمكمل.",
+      "difficulty": "hard",
+      "question_type": "axis_practice",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "tables": [],
+      "variation_tables": [],
+      "sign_tables": [],
+      "graph_data": {
+        "type": "probability_tree",
+        "direction": "ltr",
+        "nodes": [
+          {
+            "id": "O",
+            "label": "البداية"
+          },
+          {
+            "id": "A",
+            "label": "A"
+          },
+          {
+            "id": "B",
+            "label": "B"
+          },
+          {
+            "id": "S1",
+            "label": "S"
+          },
+          {
+            "id": "F1",
+            "label": "¬S"
+          },
+          {
+            "id": "S2",
+            "label": "S"
+          },
+          {
+            "id": "F2",
+            "label": "¬S"
+          }
+        ],
+        "edges": [
+          {
+            "from": "O",
+            "to": "A",
+            "label": "0.55"
+          },
+          {
+            "from": "O",
+            "to": "B",
+            "label": "0.45"
+          },
+          {
+            "from": "A",
+            "to": "S1",
+            "label": "0.8"
+          },
+          {
+            "from": "A",
+            "to": "F1",
+            "label": "0.2"
+          },
+          {
+            "from": "B",
+            "to": "S2",
+            "label": "0.35"
+          },
+          {
+            "from": "B",
+            "to": "F2",
+            "label": "0.65"
+          }
+        ]
+      },
+      "solution": {
+        "title": "الحل المفصل: تمرين شامل على الشجرة والاحتمالات الكلية",
+        "main_idea": "حل وضعية شاملة: بناء الشجرة، المسارات، الاحتمال الكلي والتحقق بالمكمل.",
+        "strategy": "نطبق الخطة الكاملة: ارسم، أكمل، اضرب داخل المسار، اجمع بين المسارات، ثم تحقق بالمكمل.",
+        "detailed_explanation": "نقرأ التجربة حسب ترتيب مراحلها. من الجذر نضع الاحتمالات البسيطة، وبعد كل عقدة نضع الاحتمالات الشرطية. مجموع الأغصان الخارجة من العقدة يساوي 1، داخل المسار نضرب، وبين المسارات المؤدية إلى الحدث نفسه نجمع.",
+        "uses_graph": true,
+        "uses_images": false,
+        "uses_tables": false,
+        "uses_variation_table": false,
+        "uses_sign_table": false,
+        "steps": [
+          {
+            "number": "1",
+            "order": 1,
+            "title": "إكمال الشجرة",
+            "explanation": "نكمل احتمالي عدم تحقق S.",
+            "construction": [],
+            "calculation": "\\(P(\\overline S|A)=0.2,\\;P(\\overline S|B)=0.65\\)",
+            "result": "",
+            "conclusion": "",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "نكمل احتمالي عدم تحقق S.",
+            "rule_used": "مجموع الأغصان",
+            "why": "كل عقدة مجموعها 1.",
+            "calculation_breakdown": [],
+            "student_action": "أعد هذه الخطوة وحدك ثم قارن إجابتك بالحل."
+          },
+          {
+            "number": "2",
+            "order": 2,
+            "title": "المسار A ثم S",
+            "explanation": "نضرب.",
+            "construction": [],
+            "calculation": "\\(P(A\\cap S)=0.55\\times0.8=0.44\\)",
+            "result": "0.44",
+            "conclusion": "0.44",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "نضرب.",
+            "rule_used": "قاعدة المسار",
+            "why": "ضرب.",
+            "calculation_breakdown": [],
+            "student_action": "أعد هذه الخطوة وحدك ثم قارن إجابتك بالحل."
+          },
+          {
+            "number": "3",
+            "order": 3,
+            "title": "المسار B ثم S",
+            "explanation": "نضرب.",
+            "construction": [],
+            "calculation": "\\(P(B\\cap S)=0.45\\times0.35=0.1575\\)",
+            "result": "0.1575",
+            "conclusion": "0.1575",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "نضرب.",
+            "rule_used": "قاعدة المسار",
+            "why": "ضرب.",
+            "calculation_breakdown": [],
+            "student_action": "أعد هذه الخطوة وحدك ثم قارن إجابتك بالحل."
+          },
+          {
+            "number": "4",
+            "order": 4,
+            "title": "احتمال S",
+            "explanation": "نجمع المسارين.",
+            "construction": [],
+            "calculation": "\\(P(S)=0.44+0.1575=0.5975\\)",
+            "result": "0.5975",
+            "conclusion": "0.5975",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "نجمع المسارين.",
+            "rule_used": "الاحتمالات الكلية",
+            "why": "جمع.",
+            "calculation_breakdown": [],
+            "student_action": "أعد هذه الخطوة وحدك ثم قارن إجابتك بالحل."
+          },
+          {
+            "number": "5",
+            "order": 5,
+            "title": "الطريقة الأولى لعدم S",
+            "explanation": "نستعمل المكمل.",
+            "construction": [],
+            "calculation": "\\(P(\\overline S)=1-0.5975=0.4025\\)",
+            "result": "0.4025",
+            "conclusion": "0.4025",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "نستعمل المكمل.",
+            "rule_used": "المكمل",
+            "why": "S وعدم S يغطيان Ω.",
+            "calculation_breakdown": [],
+            "student_action": "أعد هذه الخطوة وحدك ثم قارن إجابتك بالحل."
+          },
+          {
+            "number": "6",
+            "order": 6,
+            "title": "الطريقة الثانية للتحقق",
+            "explanation": "نجمع مساري عدم S.",
+            "construction": [],
+            "calculation": "\\(0.55\\times0.2+0.45\\times0.65=0.11+0.2925=0.4025\\)",
+            "result": "0.4025",
+            "conclusion": "0.4025",
+            "images": [],
+            "tables": [],
+            "variation_tables": [],
+            "sign_tables": [],
+            "graph_data": null,
+            "simple_explanation": "نجمع مساري عدم S.",
+            "rule_used": "الاحتمالات الكلية",
+            "why": "تطابقت النتيجتان.",
+            "calculation_breakdown": [],
+            "student_action": "أعد هذه الخطوة وحدك ثم قارن إجابتك بالحل."
+          }
+        ],
+        "final_answer": "\\(\\boxed{P(S)=0.5975}\\)، و\\(\\boxed{P(\\overline S)=0.4025}\\).",
+        "verification": "نتحقق أن مجموع الأغصان الخارجة من كل عقدة يساوي 1، وأن كل احتمال نهائي بين 0 و1.",
+        "common_mistakes": [
+          {
+            "mistake": "جمع 0.8 و0.35 مباشرة.",
+            "correction": "هما احتمالان شرطيان ويجب وزن كل منهما باحتمال فئته."
+          },
+          {
+            "mistake": "جمع الأوزان داخل المسار.",
+            "correction": "داخل المسار نضرب."
+          }
+        ],
+        "hints": [
+          {
+            "level": 1,
+            "hint": "ابدأ بإكمال فرعي عدم S."
+          },
+          {
+            "level": 2,
+            "hint": "احسب طريقي S منفصلين."
+          },
+          {
+            "level": 3,
+            "hint": "تحقق أن P(S)+P(¬S)=1."
+          }
+        ],
+        "alternative_method": "",
+        "images": [],
+        "tables": [],
+        "variation_tables": [],
+        "sign_tables": [],
+        "graph_data": {
+          "type": "probability_tree",
+          "direction": "ltr",
+          "nodes": [
+            {
+              "id": "O",
+              "label": "البداية"
+            },
+            {
+              "id": "A",
+              "label": "A"
+            },
+            {
+              "id": "B",
+              "label": "B"
+            },
+            {
+              "id": "S1",
+              "label": "S"
+            },
+            {
+              "id": "F1",
+              "label": "¬S"
+            },
+            {
+              "id": "S2",
+              "label": "S"
+            },
+            {
+              "id": "F2",
+              "label": "¬S"
+            }
+          ],
+          "edges": [
+            {
+              "from": "O",
+              "to": "A",
+              "label": "0.55"
+            },
+            {
+              "from": "O",
+              "to": "B",
+              "label": "0.45"
+            },
+            {
+              "from": "A",
+              "to": "S1",
+              "label": "0.8"
+            },
+            {
+              "from": "A",
+              "to": "F1",
+              "label": "0.2"
+            },
+            {
+              "from": "B",
+              "to": "S2",
+              "label": "0.35"
+            },
+            {
+              "from": "B",
+              "to": "F2",
+              "label": "0.65"
+            }
+          ]
+        },
+        "presentation": {
+          "show_graph_first": true,
+          "show_one_step_at_a_time": true,
+          "react_component": "UniversalMathExerciseRenderer",
+          "graph_mode": "cartesian",
+          "use_field": "graph_data.react_data",
+          "rtl": true,
+          "show_graph_in_question": true,
+          "show_graph_in_solution": true,
+          "show_images_in_question": false,
+          "show_images_in_solution": false,
+          "show_tables_in_question": false,
+          "show_tables_in_solution": false,
+          "show_variation_tables": false,
+          "show_sign_tables": false,
+          "animate_steps": true,
+          "solution_open_mode": "on_button_click",
+          "solution_access": "direct",
+          "attempt_required": false,
+          "show_final_answer_after_last_step": true,
+          "show_verification_after_final_answer": true,
+          "show_bac_writing": true,
+          "show_understanding_check": true,
+          "math_direction": "ltr"
+        },
+        "is_complete": true,
+        "solution_access": "direct",
+        "attempt_required": false,
+        "bac_writing": [
+          "نحدد مراحل التجربة ونبني الشجرة بالترتيب.",
+          "داخل المسار نضرب أوزان الأغصان.",
+          "إذا تحقق الحدث النهائي عبر عدة مسارات منفصلة نجمع احتمالاتها."
+        ],
+        "understanding_check": {
+          "question": "كيف تتحقق بسرعة من P(¬S) بعد معرفة P(S)؟",
+          "answer": "\\(P(¬S)=1-P(S)\\)."
+        },
+        "takeaway": "الخطة الذهبية: ارسم → أكمل → اضرب داخل المسار → اجمع بين المسارات → تحقق."
+      },
+      "display_order": 13,
+      "learning_stage": "axis_practice",
+      "learning_stage_label": "تمرين تطبيقي",
+      "pedagogical_objective": "حل وضعية شاملة: بناء الشجرة، المسارات، الاحتمال الكلي والتحقق بالمكمل.",
+      "solution_access": "direct",
+      "attempt_required": false
+    }
+  ]
+}

@@ -43,9 +43,7 @@ class ExerciseAIGenerator:
         model: str | None = None,
     ):
 
-        api_key = os.getenv(
-            "API_KEY"
-        )
+        api_key = os.getenv("GROQ_API_KEY") or os.getenv("API_KEY")
         if not api_key:
             raise ExerciseGenerationError(
                 "GROQ_API_KEY غير موجود في متغيرات البيئة."
@@ -271,7 +269,12 @@ class ExerciseAIGenerator:
 
     @staticmethod
     def _system_prompt(subject_kind: str = "math") -> str:
-        role = "أستاذ فيزياء جزائري متخصص في البكالوريا" if subject_kind == "physics" else "أستاذ رياضيات جزائري متخصص في البكالوريا"
+        roles = {
+            "natural_sciences": "أستاذ علوم الطبيعة والحياة الجزائري ومصحح بكالوريا متخصص في تحليل الوثائق",
+            "physics": "أستاذ فيزياء جزائري متخصص في البكالوريا",
+            "math": "أستاذ رياضيات جزائري متخصص في البكالوريا",
+        }
+        role = roles.get(subject_kind, roles["math"])
         return f"""
 أنت {role}.
 
@@ -280,11 +283,14 @@ class ExerciseAIGenerator:
 القواعد:
 - لا تدخل أي مفهوم من محور آخر.
 - اجعل التمرين قريبًا من أسلوب البكالوريا.
+- في علوم الطبيعة استعمل فقط مسارات الوثائق المسموحة في user prompt، ولا تخترع صورة أو قيمة أو جدولًا.
+- لا تستعمل صورة مخصصة للحل، ولا تعدل الوثيقة الأصلية، واحترم answer_invariants وforbidden_changes.
 - اجعل الحسابات بسيطة وغير معقدة.
 - حل جميع المطالب.
 - اشرح كل انتقال مهم.
 - لا تكرر نفس الشرح.
 - استعمل $...$ لكل الصيغ الرياضية والفيزيائية.
+- إذا كانت المادة علومًا، ضع الصور الجاهزة في document_references، ولا تضعها في visuals.
 - إذا كانت المادة فيزياء واحتاج السؤال جدولًا أو دارة أو مخططًا، أعده كبنية JSON في visuals كما يطلب user prompt.
 - لا ترسل SVG أو HTML أو صورًا؛ أرسل بيانات الرسم فقط.
 - لا تستعمل Markdown.

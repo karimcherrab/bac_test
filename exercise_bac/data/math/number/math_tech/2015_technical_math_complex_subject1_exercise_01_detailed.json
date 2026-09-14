@@ -1,0 +1,233 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "session": "ordinary",
+  "year": 2015,
+  "chapter_code": "complex_numbers",
+  "chapter_title": "الأعداد المركبة",
+  "branches": [
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "version": "4.2-2015-technical-math-complex-subject1-ex01",
+  "subject_number": 1,
+  "exercise_number": 1,
+  "source_page": 1,
+  "source_pages": [
+    1
+  ],
+  "solution_source_pages": [
+    5
+  ],
+  "title": "التمرين الأول — بكالوريا الجزائر 2015 — الموضوع الأول — شعبة تقني رياضي",
+  "axis_tags": [
+    "complex_exponential_form",
+    "complex_powers",
+    "complex_trigonometric_exact_values",
+    "complex_rotation",
+    "complex_barycenter",
+    "complex_geometry"
+  ],
+  "statement": "نعتبر في المستوى المنسوب إلى المعلم المتعامد والمتجانس \\((O;\\vec u,\\vec v)\\)، النقطتين \\(A\\) و \\(B\\) اللتين لاحقتاهما على الترتيب \\(z_A\\) و \\(z_B\\) حيث: \\(z_A=1-i\\) و \\(z_B=3+3i\\).",
+  "questions": [
+    {
+      "id": "2015_tm_s1_complex_ex01_q1a",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) أ) اكتب \\(z_A\\)، \\(z_B\\) على الشكل الأسي.",
+      "axis_tags": [
+        "complex_exponential_form"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب طويلة كل عدد ثم نحدد عمدة له.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "العدد zA",
+            "explanation": "\\[\n|z_A|=\\sqrt{1^2+(-1)^2}=\\sqrt2.\n\\]\nولأن \\(z_A=1-i\\) يقع في الربع الرابع، يمكن أخذ:\n\\[\n\\arg(z_A)=-\\frac{\\pi}{4}.\n\\]\nإذن:\n\\[\nz_A=\\sqrt2e^{-i\\pi/4}=\\sqrt2e^{i7\\pi/4}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "العدد zB",
+            "explanation": "\\[\n|z_B|=\\sqrt{3^2+3^2}=3\\sqrt2.\n\\]\nولأن \\(z_B=3+3i\\)، فعمدة له:\n\\[\n\\frac{\\pi}{4}.\n\\]\nإذن:\n\\[\nz_B=3\\sqrt2e^{i\\pi/4}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(z_A=\\sqrt2e^{-i\\pi/4}\\)، و\\(z_B=3\\sqrt2e^{i\\pi/4}\\)."
+      }
+    },
+    {
+      "id": "2015_tm_s1_complex_ex01_q1b",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "ب) \\(n\\) عدد طبيعي، عين قيم \\(n\\) بحيث يكون العدد \\(\\left(\\frac{z_A}{\\sqrt2}\\right)^n\\) حقيقيا.",
+      "axis_tags": [
+        "complex_powers"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نكتب العدد داخل القوة على الشكل الأسي، ثم نفرض أن عمدة القوة تساوي مضاعفًا لـ\\(\\pi\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تبسيط العدد",
+            "explanation": "لدينا:\n\\[\n\\frac{z_A}{\\sqrt2}=e^{-i\\pi/4}=e^{i7\\pi/4}.\n\\]\nإذن:\n\\[\n\\left(\\frac{z_A}{\\sqrt2}\\right)^n=e^{i7n\\pi/4}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "شرط أن يكون حقيقيًا",
+            "explanation": "لكي يكون العدد حقيقيا، يجب أن تكون عمدته من الشكل \\(k\\pi\\)، أي:\n\\[\n\\frac{7n\\pi}{4}=k\\pi.\n\\]\nإذن:\n\\[\n7n=4k.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "استخراج قيم n",
+            "explanation": "بما أن \\(7\\) و\\(4\\) أوليان فيما بينهما، يجب أن يكون:\n\\[\nn=4m,\n\\]\nحيث \\(m\\in\\mathbb N\\)."
+          }
+        ],
+        "final_answer": "\\(n=4m\\) حيث \\(m\\in\\mathbb N\\)."
+      }
+    },
+    {
+      "id": "2015_tm_s1_complex_ex01_q1c",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "ج) \\(z\\) عدد مركب حيث: \\(\\frac{z}{z_A}=4e^{i\\frac{\\pi}{12}}\\). احسب طويلة العدد \\(z\\) وعمدة له، ثم اكتب \\(\\frac{z}{z_A}\\) على الشكل الجبري.",
+      "axis_tags": [
+        "complex_exponential_form",
+        "complex_modulus_argument"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل خصائص الطويلة والعمدة في حاصل الضرب لأن \\(z=z_A\\times4e^{i\\pi/12}\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "كتابة z",
+            "explanation": "\\[\nz=z_A\\cdot4e^{i\\pi/12}.\n\\]\nوبما أن:\n\\[\nz_A=\\sqrt2e^{-i\\pi/4},\n\\]\nفإن:\n\\[\nz=4\\sqrt2e^{i(\\pi/12-\\pi/4)}=4\\sqrt2e^{-i\\pi/6}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "الطويلة والعمدة",
+            "explanation": "إذن:\n\\[\n|z|=4\\sqrt2,\n\\]\nوعمدة له:\n\\[\n-\\frac{\\pi}{6}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "كتابة z/zA جبريًا",
+            "explanation": "\\[\n\\frac{z}{z_A}=4\\left(\\cos\\frac{\\pi}{12}+i\\sin\\frac{\\pi}{12}\\right).\n\\]\nوبعد استنتاج القيم الدقيقة في السؤال التالي نحصل على:\n\\[\n\\frac{z}{z_A}=(\\sqrt6+\\sqrt2)+i(\\sqrt6-\\sqrt2).\n\\]"
+          }
+        ],
+        "final_answer": "\\(|z|=4\\sqrt2\\)، وعمدة لـ\\(z\\) هي \\(-\\pi/6\\)، و\\(\\frac{z}{z_A}=(\\sqrt6+\\sqrt2)+i(\\sqrt6-\\sqrt2)\\)."
+      }
+    },
+    {
+      "id": "2015_tm_s1_complex_ex01_q1d",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "د) استنتج \\(\\cos\\frac{\\pi}{12}\\) و \\(\\sin\\frac{\\pi}{12}\\).",
+      "axis_tags": [
+        "complex_trigonometric_exact_values"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نقارن الشكل الجبري لـ\\(\\frac{z}{z_A}\\) مع شكله المثلثي.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "المقارنة",
+            "explanation": "لدينا:\n\\[\n4\\left(\\cos\\frac{\\pi}{12}+i\\sin\\frac{\\pi}{12}\\right)\n=(\\sqrt6+\\sqrt2)+i(\\sqrt6-\\sqrt2).\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "الجزء الحقيقي",
+            "explanation": "\\[\n4\\cos\\frac{\\pi}{12}=\\sqrt6+\\sqrt2.\n\\]\nإذن:\n\\[\n\\cos\\frac{\\pi}{12}=\\frac{\\sqrt6+\\sqrt2}{4}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الجزء التخيلي",
+            "explanation": "\\[\n4\\sin\\frac{\\pi}{12}=\\sqrt6-\\sqrt2.\n\\]\nإذن:\n\\[\n\\sin\\frac{\\pi}{12}=\\frac{\\sqrt6-\\sqrt2}{4}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\cos\\frac{\\pi}{12}=\\frac{\\sqrt6+\\sqrt2}{4}\\)، و\\(\\sin\\frac{\\pi}{12}=\\frac{\\sqrt6-\\sqrt2}{4}\\)."
+      }
+    },
+    {
+      "id": "2015_tm_s1_complex_ex01_q2a",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "2) أ) احسب اللاحقة \\(z_C\\) للنقطة \\(C\\) صورة النقطة \\(B\\) بالدوران الذي مركزه \\(A\\) وزاويته \\(\\frac{\\pi}{2}\\)، واستنتج طبيعة المثلث \\(ABC\\).",
+      "axis_tags": [
+        "complex_rotation",
+        "complex_geometry"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نطبق صيغة الدوران \\(z_C-z_A=e^{i\\pi/2}(z_B-z_A)=i(z_B-z_A)\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب zB-zA",
+            "explanation": "\\[\nz_B-z_A=(3+3i)-(1-i)=2+4i.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "تطبيق الدوران",
+            "explanation": "\\[\nz_C-z_A=i(2+4i)=2i+4i^2=-4+2i.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب zC",
+            "explanation": "\\[\nz_C=z_A-4+2i=(1-i)-4+2i=-3+i.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "طبيعة المثلث",
+            "explanation": "الدوران يحافظ على الأطوال، إذن:\n\\[\nAB=AC.\n\\]\nوزاوية الدوران هي \\(\\frac{\\pi}{2}\\)، وبالتالي:\n\\[\nAB\\perp AC.\n\\]\nإذن المثلث \\(ABC\\) قائم ومتساوي الساقين في \\(A\\)."
+          }
+        ],
+        "final_answer": "\\(z_C=-3+i\\)، والمثلث \\(ABC\\) قائم ومتساوي الساقين في \\(A\\)."
+      }
+    },
+    {
+      "id": "2015_tm_s1_complex_ex01_q2b",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "ب) احسب \\(z_D\\) لاحقة النقطة \\(D\\) مرجح الجملة \\(\\{(A;-1),(B;1),(C;1)\\}\\)، ثم بين أن \\(ABDC\\) مربع.",
+      "axis_tags": [
+        "complex_barycenter",
+        "complex_geometry"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب لاحقة المرجح ثم نثبت أن الرباعي متوازي أضلاع، وبعد ذلك نستعمل نتيجة أن ABC قائم ومتساوي الساقين.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب zD",
+            "explanation": "مجموع المعاملات:\n\\[\n-1+1+1=1.\n\\]\nإذن:\n\\[\nz_D=-z_A+z_B+z_C.\n\\]\nنعوض:\n\\[\nz_D=-(1-i)+(3+3i)+(-3+i)=-1+5i.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "إثبات أنه متوازي أضلاع",
+            "explanation": "نحسب:\n\\[\nz_D-z_C=(-1+5i)-(-3+i)=2+4i.\n\\]\nومن جهة أخرى:\n\\[\nz_B-z_A=(3+3i)-(1-i)=2+4i.\n\\]\nإذن:\n\\[\n\\overrightarrow{CD}=\\overrightarrow{AB}.\n\\]\nوعليه الرباعي \\(ABDC\\) متوازي أضلاع."
+          },
+          {
+            "step_number": 3,
+            "title": "الاستنتاج النهائي",
+            "explanation": "من السؤال السابق، المثلث \\(ABC\\) قائم ومتساوي الساقين في \\(A\\)، أي:\n\\[\nAB=AC\\quad\\text{و}\\quad AB\\perp AC.\n\\]\nومتوازي الأضلاع \\(ABDC\\) له ضلعان متجاوران متساويان ومتعامدان، إذن هو مربع."
+          }
+        ],
+        "final_answer": "\\(z_D=-1+5i\\)، والرباعي \\(ABDC\\) مربع."
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2015(1).pdf",
+    "statement_page": 1,
+    "correction_page": 5
+  }
+}

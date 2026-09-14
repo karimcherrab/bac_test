@@ -1,0 +1,522 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "graph_schema_version": "1.0-react-json",
+  "version": "4.2-2019-math-probability-subject2-ex01-react-tree",
+  "session": "ordinary",
+  "year": 2019,
+  "chapter_code": "probability",
+  "chapter_title": "الاحتمالات",
+  "axis_tags": [
+    "probability_tree_total_probability",
+    "probability_language_probability_law",
+    "random_variable_probability_distribution_expectation",
+    "counting_combinations"
+  ],
+  "branches": [
+    {
+      "code": "math",
+      "name": "شعبة رياضيات"
+    }
+  ],
+  "exercise_number": 1,
+  "subject_number": 2,
+  "source_page": 4,
+  "source_pages": [
+    4
+  ],
+  "solution_source_pages": [
+    11
+  ],
+  "title": "التمرين الأول — بكالوريا الجزائر 2019 — الموضوع الثاني — شعبة رياضيات — الاحتمالات",
+  "statement": "صندوقان غير شفافين \\(U_1\\) و \\(U_2\\)، يحتوي الصندوق \\(U_1\\) على 4 كريات حمراء و 3 كريات سوداء ويحتوي الصندوق \\(U_2\\) على 3 كريات حمراء و كريتين سوداوين (الكريات كلها متشابهة لا نفرق بينها عند اللمس).\nنرمي نردا غير مزيف ذا ستة أوجه مرقمة من 1 إلى 6.\nإذا ظهر الرقمان 2 أو 4 نسحب عشوائيا كريتين في آن واحد من الصندوق \\(U_1\\) وفي باقي الحالات نسحب عشوائيا كريتين في آن واحد من الصندوق \\(U_2\\).\nنعتبر الأحداث \\(A\\)، \\(B\\) و \\(C\\) المعرفة بـ:\n\\(A\\): \"سحب كريتين حمراوين\".\n\\(B\\): \"سحب كريتين سوداوين\" و \\(C\\): \"سحب كريتين من لونين مختلفين\".",
+  "questions": [
+    {
+      "id": "2019_s2_probability_ex01_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) أنقل، وأكمل شجرة الاحتمالات.",
+      "axis_tags": [
+        "probability_tree_total_probability"
+      ],
+      "statement_graphs": [
+        {
+          "id": "2019_s2_probability_ex01_tree_statement",
+          "type": "probability_tree",
+          "render_mode": "json",
+          "capture": false,
+          "title": "شجرة الاحتمالات كما وردت في نص التمرين",
+          "direction": "ltr",
+          "canvas": {
+            "width": 920,
+            "height": 520,
+            "padding": 24
+          },
+          "style": {
+            "node_radius": 5,
+            "edge_width": 2,
+            "label_font_size": 18,
+            "probability_font_size": 17,
+            "show_arrow_heads": false
+          },
+          "nodes": [
+            {
+              "id": "root",
+              "kind": "root",
+              "x": 70,
+              "y": 260,
+              "label": ""
+            },
+            {
+              "id": "u1",
+              "kind": "branch",
+              "x": 300,
+              "y": 140,
+              "label": "U₁"
+            },
+            {
+              "id": "u2",
+              "kind": "branch",
+              "x": 300,
+              "y": 390,
+              "label": "U₂"
+            },
+            {
+              "id": "u1_a",
+              "kind": "event",
+              "x": 690,
+              "y": 70,
+              "label": "A"
+            },
+            {
+              "id": "u1_b",
+              "kind": "event",
+              "x": 690,
+              "y": 140,
+              "label": "B"
+            },
+            {
+              "id": "u1_c",
+              "kind": "event",
+              "x": 690,
+              "y": 210,
+              "label": "C"
+            },
+            {
+              "id": "u2_a",
+              "kind": "event",
+              "x": 690,
+              "y": 320,
+              "label": "A"
+            },
+            {
+              "id": "u2_b",
+              "kind": "event",
+              "x": 690,
+              "y": 390,
+              "label": "B"
+            },
+            {
+              "id": "u2_c",
+              "kind": "event",
+              "x": 690,
+              "y": 460,
+              "label": "C"
+            }
+          ],
+          "edges": [
+            {
+              "id": "e_root_u1",
+              "from": "root",
+              "to": "u1",
+              "probability": "1/3",
+              "latex_probability": "\\frac{1}{3}",
+              "is_given_in_statement": true
+            },
+            {
+              "id": "e_root_u2",
+              "from": "root",
+              "to": "u2",
+              "probability": null,
+              "latex_probability": null,
+              "display_if_missing": "...",
+              "is_given_in_statement": false
+            },
+            {
+              "id": "e_u1_a",
+              "from": "u1",
+              "to": "u1_a",
+              "probability": "2/7",
+              "latex_probability": "\\frac{2}{7}",
+              "is_given_in_statement": true
+            },
+            {
+              "id": "e_u1_b",
+              "from": "u1",
+              "to": "u1_b",
+              "probability": "1/7",
+              "latex_probability": "\\frac{1}{7}",
+              "is_given_in_statement": true
+            },
+            {
+              "id": "e_u1_c",
+              "from": "u1",
+              "to": "u1_c",
+              "probability": null,
+              "latex_probability": null,
+              "display_if_missing": "...",
+              "is_given_in_statement": false
+            },
+            {
+              "id": "e_u2_a",
+              "from": "u2",
+              "to": "u2_a",
+              "probability": "3/10",
+              "latex_probability": "\\frac{3}{10}",
+              "is_given_in_statement": true
+            },
+            {
+              "id": "e_u2_b",
+              "from": "u2",
+              "to": "u2_b",
+              "probability": null,
+              "latex_probability": null,
+              "display_if_missing": "...",
+              "is_given_in_statement": false
+            },
+            {
+              "id": "e_u2_c",
+              "from": "u2",
+              "to": "u2_c",
+              "probability": null,
+              "latex_probability": null,
+              "display_if_missing": "...",
+              "is_given_in_statement": false
+            }
+          ],
+          "react_renderer": {
+            "component": "ProbabilityTreeRenderer",
+            "source": "nodes_edges",
+            "probability_field": "latex_probability",
+            "fallback_probability_field": "probability",
+            "missing_probability_field": "display_if_missing"
+          }
+        }
+      ],
+      "solution": {
+        "strategy": "نحسب احتمال اختيار كل صندوق ثم نحسب احتمالات الأحداث A وB وC داخل كل صندوق.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "احتمال اختيار الصندوقين",
+            "explanation": "يُختار \\(U_1\\) عند ظهور 2 أو 4:\n\\[P(U_1)=\\frac{2}{6}=\\frac13.\\]\nإذن:\n\\[P(U_2)=1-\\frac13=\\frac23.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "فروع الصندوق U₁",
+            "explanation": "في \\(U_1\\) لدينا 4 حمراء و3 سوداء، وعدد سحب كريتين هو \\(\\binom72=21\\):\n\\[P(A|U_1)=\\frac{\\binom42}{\\binom72}=\\frac27.\\]\n\\[P(B|U_1)=\\frac{\\binom32}{\\binom72}=\\frac17.\\]\n\\[P(C|U_1)=\\frac{4\\times3}{\\binom72}=\\frac47.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "فروع الصندوق U₂",
+            "explanation": "في \\(U_2\\) لدينا 3 حمراء وكريتان سوداوان، وعدد سحب كريتين هو \\(\\binom52=10\\):\n\\[P(A|U_2)=\\frac{\\binom32}{\\binom52}=\\frac3{10}.\\]\n\\[P(B|U_2)=\\frac{\\binom22}{\\binom52}=\\frac1{10}.\\]\n\\[P(C|U_2)=\\frac{3\\times2}{\\binom52}=\\frac35.\\]"
+          }
+        ],
+        "solution_graphs": [
+          {
+            "id": "2019_s2_probability_ex01_tree_completed",
+            "type": "probability_tree",
+            "render_mode": "json",
+            "capture": false,
+            "title": "شجرة الاحتمالات المكتملة",
+            "direction": "ltr",
+            "canvas": {
+              "width": 920,
+              "height": 520,
+              "padding": 24
+            },
+            "style": {
+              "node_radius": 5,
+              "edge_width": 2,
+              "label_font_size": 18,
+              "probability_font_size": 17,
+              "show_arrow_heads": false
+            },
+            "nodes": [
+              {
+                "id": "root",
+                "kind": "root",
+                "x": 70,
+                "y": 260,
+                "label": ""
+              },
+              {
+                "id": "u1",
+                "kind": "branch",
+                "x": 300,
+                "y": 140,
+                "label": "U₁"
+              },
+              {
+                "id": "u2",
+                "kind": "branch",
+                "x": 300,
+                "y": 390,
+                "label": "U₂"
+              },
+              {
+                "id": "u1_a",
+                "kind": "event",
+                "x": 690,
+                "y": 70,
+                "label": "A"
+              },
+              {
+                "id": "u1_b",
+                "kind": "event",
+                "x": 690,
+                "y": 140,
+                "label": "B"
+              },
+              {
+                "id": "u1_c",
+                "kind": "event",
+                "x": 690,
+                "y": 210,
+                "label": "C"
+              },
+              {
+                "id": "u2_a",
+                "kind": "event",
+                "x": 690,
+                "y": 320,
+                "label": "A"
+              },
+              {
+                "id": "u2_b",
+                "kind": "event",
+                "x": 690,
+                "y": 390,
+                "label": "B"
+              },
+              {
+                "id": "u2_c",
+                "kind": "event",
+                "x": 690,
+                "y": 460,
+                "label": "C"
+              }
+            ],
+            "edges": [
+              {
+                "id": "e_root_u1",
+                "from": "root",
+                "to": "u1",
+                "probability": "1/3",
+                "latex_probability": "\\frac{1}{3}",
+                "is_given_in_statement": true
+              },
+              {
+                "id": "e_root_u2",
+                "from": "root",
+                "to": "u2",
+                "probability": "2/3",
+                "latex_probability": "\\frac{2}{3}",
+                "display_if_missing": "...",
+                "is_given_in_statement": false
+              },
+              {
+                "id": "e_u1_a",
+                "from": "u1",
+                "to": "u1_a",
+                "probability": "2/7",
+                "latex_probability": "\\frac{2}{7}",
+                "is_given_in_statement": true
+              },
+              {
+                "id": "e_u1_b",
+                "from": "u1",
+                "to": "u1_b",
+                "probability": "1/7",
+                "latex_probability": "\\frac{1}{7}",
+                "is_given_in_statement": true
+              },
+              {
+                "id": "e_u1_c",
+                "from": "u1",
+                "to": "u1_c",
+                "probability": "4/7",
+                "latex_probability": "\\frac{4}{7}",
+                "display_if_missing": "...",
+                "is_given_in_statement": false
+              },
+              {
+                "id": "e_u2_a",
+                "from": "u2",
+                "to": "u2_a",
+                "probability": "3/10",
+                "latex_probability": "\\frac{3}{10}",
+                "is_given_in_statement": true
+              },
+              {
+                "id": "e_u2_b",
+                "from": "u2",
+                "to": "u2_b",
+                "probability": "1/10",
+                "latex_probability": "\\frac{1}{10}",
+                "display_if_missing": "...",
+                "is_given_in_statement": false
+              },
+              {
+                "id": "e_u2_c",
+                "from": "u2",
+                "to": "u2_c",
+                "probability": "3/5",
+                "latex_probability": "\\frac{3}{5}",
+                "display_if_missing": "...",
+                "is_given_in_statement": false
+              }
+            ],
+            "react_renderer": {
+              "component": "ProbabilityTreeRenderer",
+              "source": "nodes_edges",
+              "probability_field": "latex_probability",
+              "fallback_probability_field": "probability",
+              "missing_probability_field": "display_if_missing"
+            }
+          }
+        ],
+        "final_answer": "\\[P(U_1)=\\frac13,\\quad P(U_2)=\\frac23.\\]\n\\[P(A|U_1)=\\frac27,\\ P(B|U_1)=\\frac17,\\ P(C|U_1)=\\frac47.\\]\n\\[P(A|U_2)=\\frac3{10},\\ P(B|U_2)=\\frac1{10},\\ P(C|U_2)=\\frac35.\\]"
+      }
+    },
+    {
+      "id": "2019_s2_probability_ex01_q2",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2) احسب احتمالات الأحداث \\(A\\)، \\(B\\) و \\(C\\).",
+      "axis_tags": [
+        "probability_tree_total_probability",
+        "probability_language_probability_law"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نطبق قانون الاحتمالات الكلية اعتمادا على الصندوقين \\(U_1\\) و\\(U_2\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب P(A)",
+            "explanation": "\\[\nP(A)=\\frac13\\times\\frac27+\\frac23\\times\\frac3{10}=\\frac{31}{105}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب P(B)",
+            "explanation": "\\[\nP(B)=\\frac13\\times\\frac17+\\frac23\\times\\frac1{10}=\\frac{12}{105}=\\frac4{35}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب P(C)",
+            "explanation": "\\[\nP(C)=\\frac13\\times\\frac47+\\frac23\\times\\frac35=\\frac{62}{105}.\n\\]"
+          }
+        ],
+        "final_answer": "\\[P(A)=\\frac{31}{105},\\qquad P(B)=\\frac{12}{105},\\qquad P(C)=\\frac{62}{105}.\\]"
+      }
+    },
+    {
+      "id": "2019_s2_probability_ex01_q3a",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "نعتبر \\(X\\) المتغير العشوائي الذي يرفق بكل سحب عدد الكريات الحمراء المسحوبة.\n3) أ) عين قيم المتغير العشوائي \\(X\\).",
+      "axis_tags": [
+        "random_variable_probability_distribution_expectation"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نسحب كريتين، لذلك عدد الكريات الحمراء الممكن سحبها هو 0 أو 1 أو 2.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "قيم X",
+            "explanation": "\\[X\\in\\{0,1,2\\}.\\]"
+          }
+        ],
+        "final_answer": "\\[X\\in\\{0,1,2\\}.\\]"
+      }
+    },
+    {
+      "id": "2019_s2_probability_ex01_q3b",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "ب) عين قانون الاحتمال للمتغير العشوائي \\(X\\).",
+      "axis_tags": [
+        "random_variable_probability_distribution_expectation"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "\\(X=0\\) يعني سحب كريتين سوداوين، و\\(X=1\\) يعني لونين مختلفين، و\\(X=2\\) يعني كريتين حمراوين.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "P(X=0)",
+            "explanation": "\\[P(X=0)=P(B)=\\frac{12}{105}.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "P(X=1)",
+            "explanation": "\\[P(X=1)=P(C)=\\frac{62}{105}.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "P(X=2)",
+            "explanation": "\\[P(X=2)=P(A)=\\frac{31}{105}.\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "قانون الاحتمال",
+            "explanation": "\\[\n\\begin{array}{c|ccc}\nx_i&0&1&2\\\\\\hline\nP(X=x_i)&\\frac{12}{105}&\\frac{62}{105}&\\frac{31}{105}\n\\end{array}\n\\]"
+          }
+        ],
+        "final_answer": "\\[\n\\begin{array}{c|ccc}\nx_i&0&1&2\\\\\\hline\nP(X=x_i)&\\frac{12}{105}&\\frac{62}{105}&\\frac{31}{105}\n\\end{array}\n\\]"
+      }
+    },
+    {
+      "id": "2019_s2_probability_ex01_q4",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "4) احسب الأمل الرياضياتي \\(E(X)\\).",
+      "axis_tags": [
+        "random_variable_probability_distribution_expectation"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نطبق تعريف الأمل الرياضياتي باستعمال قانون احتمال \\(X\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الحساب",
+            "explanation": "\\[\nE(X)=0\\times\\frac{12}{105}+1\\times\\frac{62}{105}+2\\times\\frac{31}{105}=\\frac{124}{105}.\n\\]"
+          }
+        ],
+        "final_answer": "\\[E(X)=\\frac{124}{105}.\\]"
+      }
+    }
+  ],
+  "rendering_contract": {
+    "no_capture": true,
+    "external_image_required": false,
+    "external_svg_required": false,
+    "graph_source": "inline_json",
+    "supported_graph_types": [
+      "probability_tree"
+    ],
+    "react_note": "لرسم الشجرة في React اقرأ statement_graphs/solution.solution_graphs، ثم ارسم كل edge من إحداثيات node[from] إلى node[to]. اعرض latex_probability فوق الفرع، وإذا كانت null اعرض display_if_missing."
+  },
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2019(20260826-131946).pdf",
+    "statement_figure_policy": "لا يوجد capture. شجرة الاحتمالات معاد رسمها كبيانات JSON قابلة للرسم مباشرة في React.",
+    "solution_figure_policy": "الشجرة المكتملة موجودة أيضا كبيانات JSON داخل solution_graphs.",
+    "renderer": "ProbabilityTreeRenderer(nodes + edges)"
+  }
+}

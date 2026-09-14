@@ -1,0 +1,317 @@
+{
+  "schema_version": "4.5-bac-source",
+  "language": "ar",
+  "direction": "rtl",
+  "year": 2026,
+  "chapter_code": "sequences",
+  "chapter_title": "sequences",
+  "branches": [
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "figures": [],
+  "display": {
+    "layout": "question_by_question",
+    "show_statement_first": true,
+    "show_statement_figures": true,
+    "show_solution_after_click": true,
+    "show_solution_figures": true
+  },
+  "version": "4.2-2026-tech-math-subject1-sequences-ex01",
+  "session": "ordinary",
+  "exercise_number": 1,
+  "points": 4,
+  "source_pages": [
+    1
+  ],
+  "solution_source_pages": [],
+  "title": "التمرين الأول — بكالوريا الجزائر 2026 — متتالية تراجعية ومتتالية حسابية لوغاريتمية ومجاميع",
+  "axis_tags": [
+    "recursive_sequence",
+    "mathematical_induction",
+    "sequence_monotonicity",
+    "sequence_limit",
+    "arithmetic_sequence",
+    "logarithmic_sequence",
+    "explicit_formula",
+    "sequence_sum"
+  ],
+  "statement": "التمرين الأول: (04 نقاط)\n\n1) \\((u_n)\\) المتتالية العددية المعرفة على \\(\\mathbb N\\) بـ:\n\\[\nu_0=1\n\\]\nومن أجل كل عدد طبيعي \\(n\\):\n\\[\nu_{n+1}=2u_n+3n+4.\n\\]\n\nأ) احسب \\(u_1\\) و \\(u_2\\).\n\nب) برهن بالتراجع أنه من أجل كل عدد طبيعي \\(n\\):\n\\[\nu_n\\ge3n+1\n\\]\nثم استنتج نهاية المتتالية \\((u_n)\\).\n\nج) حدد اتجاه تغير المتتالية \\((u_n)\\).\n\n2) \\((v_n)\\) المتتالية العددية المعرفة على \\(\\mathbb N\\) بـ:\n\\[\nv_n=\\ln(u_n+3n+7).\n\\]\n\nأ) أثبت أن المتتالية \\((v_n)\\) حسابية أساسها \\(\\ln2\\)، يطلب حساب حدها الأول.\n\nب) اكتب \\(v_n\\) بدلالة \\(n\\) ثم استنتج أن:\n\\[\nu_n=8\\times2^n-3n-7.\n\\]\n\n3) نضع من أجل كل \\(n\\in\\mathbb N\\):\n\\[\nS_n=v_0+v_1+\\cdots+v_n\n\\]\nو:\n\\[\nT_n=u_0+u_1+\\cdots+u_n.\n\\]\n\n- احسب \\(S_n\\) بدلالة \\(n\\) ثم بين أن:\n\\[\nT_n=2^{n+4}-\\frac32n^2-\\frac{17}{2}n-15.\n\\]",
+  "questions": [
+    {
+      "id": "2026_tech_math_s1_ex01_q1a",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1-أ) احسب \\(u_1\\) و \\(u_2\\).",
+      "solution": {
+        "introduction": "نحسب الحدين الأولين بالتعويض المباشر في العلاقة التراجعية.",
+        "strategy": "نستعمل n=0 لحساب u₁ ثم n=1 لحساب u₂.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب u₁",
+            "explanation": "عند \\(n=0\\):\n\\[u_1=2u_0+3\\times0+4.\\]\nوبما أن \\(u_0=1\\):\n\\[u_1=2+4=6.\\]",
+            "result": "\\(u_1=6\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "حساب u₂",
+            "explanation": "عند \\(n=1\\):\n\\[u_2=2u_1+3\\times1+4=2\\times6+3+4=19.\\]",
+            "result": "\\(u_2=19\\)."
+          }
+        ],
+        "final_answer": "\\(\\boxed{u_1=6,\\quad u_2=19}\\).",
+        "verification": "تمت مراجعة الحل حسابيا خطوة بخطوة انطلاقا من نص الموضوع المرفق لسنة 2026. ملف الموضوع المرفق لا يحتوي على تصحيح نموذجي.",
+        "common_mistakes": [
+          "نسيان تغيير n عند الانتقال من u₁ إلى u₂."
+        ],
+        "hints": [
+          "ابدأ بـ n=0 ثم n=1."
+        ],
+        "summary": "بالتعويض المباشر نجد u₁=6 وu₂=19.",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2026_tech_math_s1_ex01_q1b",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "1-ب) برهن بالتراجع أنه من أجل كل عدد طبيعي \\(n\\): \\(u_n\\ge3n+1\\)، ثم استنتج نهاية المتتالية \\((u_n)\\).",
+      "solution": {
+        "introduction": "نثبت الحصر السفلي بالتراجع، ثم نستعمله لاستخراج النهاية.",
+        "strategy": "نتحقق عند n=0 ثم نثبت انتقال الخاصية إلى n+1.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التحقق عند n=0",
+            "explanation": "\\[u_0=1=3\\times0+1.\\]\nإذن:\n\\[u_0\\ge3\\times0+1.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "فرضية التراجع",
+            "explanation": "نفترض أنه من أجل عدد طبيعي \\(n\\):\n\\[u_n\\ge3n+1.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الانتقال إلى n+1",
+            "explanation": "حسب العلاقة التراجعية:\n\\[u_{n+1}=2u_n+3n+4.\\]\nوباستخدام فرضية التراجع:\n\\[u_{n+1}\\ge2(3n+1)+3n+4=9n+6.\\]\nومن جهة أخرى:\n\\[3(n+1)+1=3n+4.\\]\nولأن \\(9n+6\\ge3n+4\\) لكل \\(n\\ge0\\)، فإن:",
+            "result": "\\[u_{n+1}\\ge3(n+1)+1.\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "الخلاصة بالتراجع",
+            "explanation": "إذن:\n\\[u_n\\ge3n+1\\]\nلكل \\(n\\in\\mathbb N\\)."
+          },
+          {
+            "step_number": 5,
+            "title": "استنتاج النهاية",
+            "explanation": "عندما \\(n\\to+\\infty\\):\n\\[3n+1\\to+\\infty.\\]\nوبما أن:\n\\[u_n\\ge3n+1,\\]\nفإن:",
+            "result": "\\[\\lim_{n\\to+\\infty}u_n=+\\infty.\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{u_n\\ge3n+1}\\) لكل \\(n\\)، ومنه \\(\\boxed{\\lim_{n\\to+\\infty}u_n=+\\infty}\\).",
+        "verification": "تمت مراجعة الحل حسابيا خطوة بخطوة انطلاقا من نص الموضوع المرفق لسنة 2026. ملف الموضوع المرفق لا يحتوي على تصحيح نموذجي.",
+        "common_mistakes": [
+          "إثبات الحصر دون استعماله في استنتاج النهاية."
+        ],
+        "hints": [
+          "بعد التراجع، قارن u_n بالمتتالية 3n+1."
+        ],
+        "summary": "الحصر السفلي يزداد دون حد، لذلك u_n تؤول إلى +∞.",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2026_tech_math_s1_ex01_q1c",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "1-ج) حدد اتجاه تغير المتتالية \\((u_n)\\).",
+      "solution": {
+        "introduction": "ندرس إشارة الفرق بين حدين متتاليين.",
+        "strategy": "نحسب u_{n+1}-u_n ونستعمل الحصر السابق.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب الفرق",
+            "explanation": "\\[u_{n+1}-u_n=(2u_n+3n+4)-u_n=u_n+3n+4.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "إشارة الفرق",
+            "explanation": "من السؤال السابق:\n\\[u_n\\ge3n+1.\\]\nإذن:\n\\[u_{n+1}-u_n\\ge(3n+1)+3n+4=6n+5>0.\\]",
+            "result": "\\[u_{n+1}>u_n.\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{(u_n)\\text{ متزايدة تماما}}\\).",
+        "verification": "تمت مراجعة الحل حسابيا خطوة بخطوة انطلاقا من نص الموضوع المرفق لسنة 2026. ملف الموضوع المرفق لا يحتوي على تصحيح نموذجي.",
+        "common_mistakes": [
+          "نسيان أن n عدد طبيعي وبالتالي 6n+5>0."
+        ],
+        "hints": [
+          "احسب الفرق u_{n+1}-u_n."
+        ],
+        "summary": "الفرق موجب دائما، إذن المتتالية متزايدة تماما.",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2026_tech_math_s1_ex01_q2a",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "2-أ) أثبت أن المتتالية \\((v_n)\\) حسابية أساسها \\(\\ln2\\)، يطلب حساب حدها الأول.",
+      "solution": {
+        "introduction": "نحسب v_{n+1} ونحاول كتابته على شكل v_n زائد ثابت.",
+        "strategy": "نستعمل العلاقة التراجعية لـu_n داخل اللوغاريتم.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب الكمية داخل اللوغاريتم",
+            "explanation": "\\[u_{n+1}+3(n+1)+7\\]\n\\[=2u_n+3n+4+3n+3+7\\]\n\\[=2u_n+6n+14\\]\n\\[=2(u_n+3n+7).\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب vₙ₊₁",
+            "explanation": "\\[v_{n+1}=\\ln(u_{n+1}+3(n+1)+7)\\]\n\\[=\\ln(2(u_n+3n+7))\\]\n\\[=\\ln2+\\ln(u_n+3n+7)=v_n+\\ln2.\\]",
+            "result": "\\((v_n)\\) حسابية أساسها \\(\\ln2\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "حساب v₀",
+            "explanation": "\\[v_0=\\ln(u_0+7)=\\ln8=3\\ln2.\\]",
+            "result": "\\(v_0=3\\ln2\\)."
+          }
+        ],
+        "final_answer": "\\(\\boxed{v_{n+1}=v_n+\\ln2}\\) و\\(\\boxed{v_0=3\\ln2}\\).",
+        "verification": "تمت مراجعة الحل حسابيا خطوة بخطوة انطلاقا من نص الموضوع المرفق لسنة 2026. ملف الموضوع المرفق لا يحتوي على تصحيح نموذجي.",
+        "common_mistakes": [
+          "الخطأ في حساب 3(n+1)+7."
+        ],
+        "hints": [
+          "حاول إظهار العامل 2 داخل اللوغاريتم."
+        ],
+        "summary": "العلاقة التراجعية تحول داخل اللوغاريتم إلى ضعف الحد السابق، فتظهر متتالية حسابية.",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2026_tech_math_s1_ex01_q2b",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "2-ب) اكتب \\(v_n\\) بدلالة \\(n\\) ثم استنتج أن \\(u_n=8\\times2^n-3n-7\\).",
+      "solution": {
+        "introduction": "نستعمل صيغة الحد العام لمتتالية حسابية، ثم نطبق الدالة الأسية.",
+        "strategy": "نكتب v_n=v_0+n ln2 ثم نستخرج u_n.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "عبارة vₙ",
+            "explanation": "\\[v_n=v_0+n\\ln2=3\\ln2+n\\ln2=(n+3)\\ln2.\\]",
+            "result": "\\(v_n=(n+3)\\ln2\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "الرجوع إلى uₙ",
+            "explanation": "من تعريف v_n:\n\\[\\ln(u_n+3n+7)=(n+3)\\ln2.\\]\nإذن:\n\\[u_n+3n+7=e^{(n+3)\\ln2}=2^{n+3}=8\\times2^n.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "عزل uₙ",
+            "explanation": "\\[u_n=8\\times2^n-3n-7.\\]",
+            "result": "العبارة المطلوبة."
+          }
+        ],
+        "final_answer": "\\(\\boxed{v_n=(n+3)\\ln2}\\) و\\(\\boxed{u_n=8\\times2^n-3n-7}\\).",
+        "verification": "تمت مراجعة الحل حسابيا خطوة بخطوة انطلاقا من نص الموضوع المرفق لسنة 2026. ملف الموضوع المرفق لا يحتوي على تصحيح نموذجي.",
+        "common_mistakes": [
+          "نسيان أن e^{(n+3)ln2}=2^{n+3}."
+        ],
+        "hints": [
+          "استعمل e^{a ln2}=2^a."
+        ],
+        "summary": "الحد العام لـv_n يعطي الصيغة الصريحة لـu_n مباشرة.",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2026_tech_math_s1_ex01_q3",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "3) احسب \\(S_n=v_0+\\cdots+v_n\\) بدلالة \\(n\\) ثم بين أن \\(T_n=u_0+\\cdots+u_n=2^{n+4}-\\frac32n^2-\\frac{17}{2}n-15\\).",
+      "solution": {
+        "introduction": "نحسب أولا مجموع المتتالية الحسابية v، ثم نستعمل الصيغة الصريحة لـu_k لحساب T_n.",
+        "strategy": "نفصل T_n إلى مجموع هندسي ومجموع حدود خطية.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب Sₙ",
+            "explanation": "لدينا:\n\\[v_k=(k+3)\\ln2.\\]\nإذن:\n\\[S_n=\\ln2\\sum_{k=0}^{n}(k+3).\\]\nوبما أن:\n\\[\\sum_{k=0}^{n}k=\\frac{n(n+1)}2,\\]\nفنجد:\n\\[S_n=\\left(\\frac{n(n+1)}2+3(n+1)\\right)\\ln2.\\]\nإذن:\n\\[S_n=\\frac{(n+1)(n+6)}2\\ln2.\\]",
+            "result": "\\(S_n=\\frac{(n+1)(n+6)}2\\ln2\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "كتابة Tₙ باستعمال u_k",
+            "explanation": "\\[T_n=\\sum_{k=0}^{n}(8\\times2^k-3k-7).\\]\nإذن:\n\\[T_n=8\\sum_{k=0}^{n}2^k-3\\sum_{k=0}^{n}k-7(n+1).\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب المجاميع",
+            "explanation": "\\[\\sum_{k=0}^{n}2^k=2^{n+1}-1\\]\nو:\n\\[\\sum_{k=0}^{n}k=\\frac{n(n+1)}2.\\]\nإذن:\n\\[T_n=8(2^{n+1}-1)-\\frac32n(n+1)-7(n+1).\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "التبسيط",
+            "explanation": "\\[T_n=2^{n+4}-8-\\frac32n^2-\\frac32n-7n-7.\\]\nومن ثم:\n\\[T_n=2^{n+4}-\\frac32n^2-\\frac{17}{2}n-15.\\]",
+            "result": "العبارة المطلوبة."
+          }
+        ],
+        "final_answer": "\\(\\boxed{S_n=\\frac{(n+1)(n+6)}2\\ln2}\\), \\(\\boxed{T_n=2^{n+4}-\\frac32n^2-\\frac{17}{2}n-15}\\).",
+        "verification": "تمت مراجعة الحل حسابيا خطوة بخطوة انطلاقا من نص الموضوع المرفق لسنة 2026. ملف الموضوع المرفق لا يحتوي على تصحيح نموذجي.",
+        "common_mistakes": [
+          "نسيان أن مجموع 2^k من 0 إلى n يساوي 2^{n+1}-1.",
+          "الخطأ في جمع -3n/2 و-7n."
+        ],
+        "hints": [
+          "افصل T_n إلى ثلاثة مجاميع."
+        ],
+        "summary": "باستعمال الصيغ المعروفة للمجاميع نحصل على T_n كما هو مطلوب.",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    }
+  ],
+  "source_reference": {
+    "file": "2026(4).pdf",
+    "statement_pages": [
+      1
+    ],
+    "solution_pages": [],
+    "source_faithful_statement": true,
+    "solution_reviewed_against_source": false
+  },
+  "review_status": {
+    "statement_compared_with_original_pdf": true,
+    "questions_compared_with_original_pdf": true,
+    "source_figures_checked": true,
+    "solution_checked_against_correction": false,
+    "solution_algebraically_verified": true,
+    "latex_normalized_only": true,
+    "react_ready": true
+  },
+  "given_data": {
+    "u0": "1",
+    "recurrence": "u_{n+1}=2u_n+3n+4",
+    "u1": "6",
+    "u2": "19",
+    "lower_bound": "u_n>=3n+1",
+    "limit_u": "+∞",
+    "monotonicity": "strictly_increasing",
+    "v_n": "ln(u_n+3n+7)",
+    "v0": "3ln2",
+    "difference_v": "ln2",
+    "explicit_v": "(n+3)ln2",
+    "explicit_u": "8*2^n-3n-7",
+    "S_n": "((n+1)(n+6)/2)ln2",
+    "T_n": "2^(n+4)-(3/2)n^2-(17/2)n-15"
+  }
+}

@@ -1,4 +1,7 @@
 from django.shortcuts import get_object_or_404
+from django.http import Http404
+import logging
+logger = logging.getLogger(__name__)
 
 from rest_framework import status
 from rest_framework.permissions import IsAuthenticated
@@ -83,15 +86,19 @@ class GenerateBacExerciseAPIView(APIView):
             return Response(
                 {
                     "detail": str(exc),
+                    "retry_after": getattr(exc, "retry_after", None),
                     "code": (
                         "bac_exercise_generation_failed"
                     ),
                 },
                 status=(
-                    status.HTTP_422_UNPROCESSABLE_ENTITY
+                    getattr(exc, "status_code", status.HTTP_422_UNPROCESSABLE_ENTITY)
                 ),
             )
+        except Http404:
+            raise
         except Exception:
+            logger.exception("Bac API failure")
             return Response(
                 {
                     "detail": (
@@ -165,15 +172,19 @@ class GenerateBacSolutionAPIView(APIView):
             return Response(
                 {
                     "detail": str(exc),
+                    "retry_after": getattr(exc, "retry_after", None),
                     "code": (
                         "bac_solution_generation_failed"
                     ),
                 },
                 status=(
-                    status.HTTP_422_UNPROCESSABLE_ENTITY
+                    getattr(exc, "status_code", status.HTTP_422_UNPROCESSABLE_ENTITY)
                 ),
             )
+        except Http404:
+            raise
         except Exception:
+            logger.exception("Bac API failure")
             return Response(
                 {
                     "detail": (
@@ -240,25 +251,30 @@ class ReExplainBacQuestionSolutionAPIView(APIView):
             return Response(
                 {
                     "detail": str(exc),
+                    "retry_after": getattr(exc, "retry_after", None),
                     "code": (
                         "bac_solution_re_explanation_failed"
                     ),
                 },
                 status=(
-                    status.HTTP_422_UNPROCESSABLE_ENTITY
+                    getattr(exc, "status_code", status.HTTP_422_UNPROCESSABLE_ENTITY)
                 ),
             )
         except ValueError as exc:
             return Response(
                 {
                     "detail": str(exc),
+                    "retry_after": getattr(exc, "retry_after", None),
                     "code": "invalid_question_solution",
                 },
                 status=(
-                    status.HTTP_422_UNPROCESSABLE_ENTITY
+                    getattr(exc, "status_code", status.HTTP_422_UNPROCESSABLE_ENTITY)
                 ),
             )
+        except Http404:
+            raise
         except Exception:
+            logger.exception("Bac API failure")
             return Response(
                 {
                     "detail": (
@@ -297,7 +313,7 @@ class GeneratedBacExerciseDetailAPIView(APIView):
             return Response(
                 {"detail": str(exc)},
                 status=(
-                    status.HTTP_422_UNPROCESSABLE_ENTITY
+                    getattr(exc, "status_code", status.HTTP_422_UNPROCESSABLE_ENTITY)
                 ),
             )
 
@@ -327,7 +343,7 @@ class MyGeneratedBacExercisesAPIView(APIView):
             return Response(
                 {"detail": str(exc)},
                 status=(
-                    status.HTTP_422_UNPROCESSABLE_ENTITY
+                    getattr(exc, "status_code", status.HTTP_422_UNPROCESSABLE_ENTITY)
                 ),
             )
 
@@ -341,6 +357,9 @@ class MyGeneratedBacExercisesAPIView(APIView):
         branch_code = request.query_params.get(
             "branch_code",
         )
+
+        if chapter_id and (not chapter_id.isdigit() or int(chapter_id) < 1):
+            return Response({"detail": "معرف الوحدة غير صالح."}, status=400)
 
         if chapter_id:
             queryset = queryset.filter(

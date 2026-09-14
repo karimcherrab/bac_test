@@ -1,0 +1,1080 @@
+{
+  "schema_version": "2.0",
+  "subject": {
+    "code": "math",
+    "title": "الرياضيات"
+  },
+  "branch": {
+    "code": "science",
+    "title": "علوم تجريبية"
+  },
+  "chapter": {
+    "code": "limits_continuity",
+    "title": "النهايات و الاستمرارية"
+  },
+  "axis": {
+    "tag": "reference_limits",
+    "title": "المرجعيات الأساسية في النهايات"
+  },
+  "source_summary": {
+    "lesson_files_count": 1,
+    "bac_files_count": 3,
+    "years_covered": [
+      2008,
+      2009,
+      2014
+    ],
+    "notes": [
+      "بُني الملف لشعبة علوم تجريبية فقط.",
+      "تم الاعتماد على درس محور المرجعيات الأساسية في النهايات وعلى ملفات بكالوريا علوم تجريبية 2008 و2009 و2014 المرسلة.",
+      "تم إبقاء الأفكار سطحية ومباشرة ومناسبة لتوليد اختبار المحور، دون التوسع في تقنيات حالات عدم التعيين أو المقاربات كموضوع مستقل.",
+      "ملف تقني رياضي 2008 لم يُدخل في إحصاءات أو BAC Ideas لأنه خارج الشعبة المطلوبة."
+    ]
+  },
+  "lesson_scope": {
+    "learning_outcomes": [
+      "يفهم أن النهاية تصف سلوك قيم الدالة ولا تمثل دائمًا قيمة الدالة في النقطة.",
+      "يقرأ الرمز \\(\\lim_{x\\to a}f(x)=L\\) ويشرح معنى كل رمز فيه.",
+      "يميز بين النهاية عند عدد حقيقي والنهاية عند \\(+\\infty\\) أو \\(-\\infty\\).",
+      "يميز بين الاقتراب من اليمين والاقتراب من اليسار.",
+      "يتعرف على النهايات المرجعية للدوال \\(x\\)، \\(x^2\\)، \\(x^3\\)، \\(|x|\\)، \\(\\sqrt{x}\\) و\\(\\frac{1}{x}\\).",
+      "يحدد إشارة \\(\\frac{1}{x}\\) قرب الصفر وعند المالانهاية.",
+      "يختار المرجعية المناسبة ويكتب النتيجة بصورة صحيحة."
+    ],
+    "concepts": [
+      "معنى النهاية ورمزها.",
+      "النهاية عند عدد حقيقي وعند +∞ و-∞.",
+      "النهاية اليمنى واليسرى.",
+      "النهايات المرجعية لـ x وx² وx³ و|x| و√x و1/x.",
+      "إشارة 1/x قرب الصفر وعند المالانهاية.",
+      "اختيار المرجعية المناسبة.",
+      "التعرف البسيط على حالة ∞-∞ عندما تظهر في تطبيق مباشر."
+    ],
+    "methods": [
+      "قراءة موضع وجهة الاقتراب.",
+      "تحديد نهاية كل جزء من عبارة بسيطة.",
+      "استعمال المرجعيات الأساسية.",
+      "تحديد 0⁺ أو 0⁻ قبل استنتاج نهاية كسر قرب قيمة ممنوعة.",
+      "استعمال أعلى قوة في كثيرة الحدود عند المالانهاية.",
+      "التصريح بحالة ∞-∞ ورفعها بإخراج أعلى قوة عندما يكون ذلك مباشرًا."
+    ],
+    "prerequisites": [
+      "معرفة مجموعة تعريف دالة بسيطة.",
+      "معرفة معنى القيمة المطلقة والجذر التربيعي.",
+      "التمييز بين عدد موجب وعدد سالب.",
+      "قراءة تمثيل بياني بسيط لدالة."
+    ],
+    "excluded_topics": [
+      "الاشتقاق ودراسة اتجاه التغير.",
+      "الاستمرارية كمهارة مستقلة.",
+      "إنشاء جدول التغيرات.",
+      "حساب أو إثبات المقارب الأفقي أو المائل كهدف مستقل.",
+      "حالات عدم التعيين المعقدة وتقنيات رفعها.",
+      "قاعدة لوبيتال.",
+      "التطويرات المحدودة."
+    ]
+  },
+  "skills": [
+    {
+      "skill_code": "LIM_REFERENCE_READING",
+      "title": "قراءة النهاية وتحديد موضع الاقتراب",
+      "description": "يفهم رمز النهاية ويحدد هل الاقتراب عند عدد حقيقي أم عند ±∞، وهل يلزم الاقتراب من اليمين أو اليسار.",
+      "order": 1,
+      "importance": "core",
+      "prerequisites": [
+        "معرفة مجموعة تعريف دالة بسيطة.",
+        "معرفة معنى القيمة المطلقة والجذر التربيعي.",
+        "التمييز بين عدد موجب وعدد سالب.",
+        "قراءة تمثيل بياني بسيط لدالة."
+      ],
+      "ideas": [
+        {
+          "idea_code": "LIM_READ_TARGET",
+          "title": "تمييز النهاية عند عدد وعند المالانهاية",
+          "description": "يحدد موضع الاقتراب وقيمة النهاية المطلوبة من الترميز.",
+          "difficulty": "easy",
+          "generation_guidance": {
+            "must_test": [
+              "قراءة x→a وx→+∞ وx→-∞ بصورة صحيحة."
+            ],
+            "may_vary": [
+              "الدالة",
+              "قيمة a",
+              "جهة المالانهاية"
+            ],
+            "must_not_change": [
+              "عدم تحويل ±∞ إلى عدد حقيقي."
+            ],
+            "forbidden_concepts": [
+              "الاشتقاق ودراسة اتجاه التغير كهدف مستقل",
+              "الاستمرارية كهدف مستقل",
+              "حساب معادلات المقاربات كهدف مستقل"
+            ]
+          }
+        },
+        {
+          "idea_code": "LIM_ONE_SIDED",
+          "title": "تحديد النهاية اليمنى واليسرى",
+          "description": "يميّز بين x→a⁺ وx→a⁻ ويربط الجهة بإشارة العوامل القريبة من الصفر.",
+          "difficulty": "easy",
+          "generation_guidance": {
+            "must_test": [
+              "تمييز a⁺ عن a⁻ وتحديد إشارة x-a."
+            ],
+            "may_vary": [
+              "قيمة a",
+              "شكل العامل الخطي"
+            ],
+            "must_not_change": [
+              "الجهة هي التي تحدد إشارة العامل القريب من الصفر."
+            ],
+            "forbidden_concepts": [
+              "الاشتقاق ودراسة اتجاه التغير كهدف مستقل",
+              "الاستمرارية كهدف مستقل",
+              "حساب معادلات المقاربات كهدف مستقل"
+            ]
+          }
+        }
+      ],
+      "common_errors": [
+        {
+          "code": "LIM_ERR_SIDE",
+          "description": "عدم التمييز بين الاقتراب من اليمين واليسار قرب قيمة ممنوعة.",
+          "severity": "high",
+          "related_skill_idea_codes": [
+            "LIM_ONE_SIDED"
+          ]
+        },
+        {
+          "code": "LIM_ERR_INFINITY_POINT",
+          "description": "التعامل مع +∞ أو -∞ كأنهما عددان حقيقيان نعوض بهما.",
+          "severity": "medium",
+          "related_skill_idea_codes": [
+            "LIM_READ_TARGET"
+          ]
+        }
+      ],
+      "mastery_requirements": {
+        "required_idea_codes": [
+          "LIM_READ_TARGET",
+          "LIM_ONE_SIDED"
+        ],
+        "minimum_successful_ideas": 2,
+        "notes": "هذه المهارة أساسية لاختيار المرجعية والإشارة الصحيحة."
+      }
+    },
+    {
+      "skill_code": "LIM_REFERENCE_BASIC",
+      "title": "استعمال النهايات المرجعية الأساسية",
+      "description": "يستعمل نهايات x وقواه والقيمة المطلقة والجذر والمقلوب للوصول إلى نهاية مباشرة.",
+      "order": 2,
+      "importance": "core",
+      "prerequisites": [
+        "LIM_REFERENCE_READING"
+      ],
+      "ideas": [
+        {
+          "idea_code": "LIM_POLY_POWER_REFERENCE",
+          "title": "مرجعية القوى وكثيرات الحدود البسيطة",
+          "description": "يحدد سلوك x وx² وx³ والقوى البسيطة عند ±∞ ويستعمل الحد الأعلى درجة عند الحاجة.",
+          "difficulty": "easy",
+          "generation_guidance": {
+            "must_test": [
+              "تحديد إشارة وسلوك قوة x عند جهة المالانهاية المطلوبة."
+            ],
+            "may_vary": [
+              "الدرجة",
+              "المعاملات",
+              "جهة المالانهاية"
+            ],
+            "must_not_change": [
+              "مراعاة زوجية أو فردية القوة وإشارة المعامل."
+            ],
+            "forbidden_concepts": [
+              "الاشتقاق ودراسة اتجاه التغير كهدف مستقل",
+              "الاستمرارية كهدف مستقل",
+              "حساب معادلات المقاربات كهدف مستقل"
+            ]
+          }
+        },
+        {
+          "idea_code": "LIM_RECIPROCAL_REFERENCE",
+          "title": "مرجعية 1/x وما يشبهها",
+          "description": "يستعمل أن ثابتًا على مقدار يتجه إلى ±∞ يقترب من الصفر، وأن المقلوب قرب الصفر يعتمد على الجهة والإشارة.",
+          "difficulty": "easy",
+          "generation_guidance": {
+            "must_test": [
+              "استعمال مرجعية 1/x مع الإشارة والجهة."
+            ],
+            "may_vary": [
+              "الثابت في البسط",
+              "الإزاحة x-a"
+            ],
+            "must_not_change": [
+              "تحديد 0⁺ أو 0⁻ قبل استنتاج ±∞ قرب الصفر."
+            ],
+            "forbidden_concepts": [
+              "الاشتقاق ودراسة اتجاه التغير كهدف مستقل",
+              "الاستمرارية كهدف مستقل",
+              "حساب معادلات المقاربات كهدف مستقل"
+            ]
+          }
+        }
+      ],
+      "common_errors": [
+        {
+          "code": "LIM_ERR_ODD_EVEN",
+          "description": "الخطأ في إشارة قوة x عند -∞، خصوصًا القوى الفردية.",
+          "severity": "high",
+          "related_skill_idea_codes": [
+            "LIM_POLY_POWER_REFERENCE"
+          ]
+        },
+        {
+          "code": "LIM_ERR_RECIP_SIGN",
+          "description": "إهمال إشارة المقام القريب من الصفر عند استعمال مرجعية المقلوب.",
+          "severity": "high",
+          "related_skill_idea_codes": [
+            "LIM_RECIPROCAL_REFERENCE"
+          ]
+        }
+      ],
+      "mastery_requirements": {
+        "required_idea_codes": [
+          "LIM_POLY_POWER_REFERENCE",
+          "LIM_RECIPROCAL_REFERENCE"
+        ],
+        "minimum_successful_ideas": 2,
+        "notes": "يكفي في هذا المحور قياس المرجعيات نفسها دون تعقيد جبري كبير."
+      }
+    },
+    {
+      "skill_code": "LIM_DIRECT_COMBINATION",
+      "title": "حساب نهاية مباشرة من نهايات أجزاء العبارة",
+      "description": "يفكك عبارة بسيطة إلى حدود معروفة، يحسب نهاية كل جزء، ثم يجمع النتائج عندما لا تظهر حالة عدم تعيين.",
+      "order": 3,
+      "importance": "core",
+      "prerequisites": [
+        "LIM_REFERENCE_BASIC"
+      ],
+      "ideas": [
+        {
+          "idea_code": "LIM_DIRECT_SUM",
+          "title": "جمع نهايات واضحة دون حالة عدم تعيين",
+          "description": "يحسب نهاية مجموع أو فرق حدود عندما تكون العملية محددة مثل +∞+0 أو عدد+∞.",
+          "difficulty": "easy",
+          "generation_guidance": {
+            "must_test": [
+              "حساب نهاية كل جزء ثم التحقق أن الشكل محدد."
+            ],
+            "may_vary": [
+              "المعاملات",
+              "عدد الحدود",
+              "جهة الاقتراب"
+            ],
+            "must_not_change": [
+              "عدم اختراع حالة عدم تعيين عندما يكون الشكل محددًا."
+            ],
+            "forbidden_concepts": [
+              "الاشتقاق ودراسة اتجاه التغير كهدف مستقل",
+              "الاستمرارية كهدف مستقل",
+              "حساب معادلات المقاربات كهدف مستقل"
+            ]
+          }
+        },
+        {
+          "idea_code": "LIM_DIRECT_POLY",
+          "title": "نهاية كثيرة حدود بالمرجعية المناسبة",
+          "description": "يستعمل سلوك أعلى قوة أو تفكيكًا بسيطًا لتحديد نهاية كثيرة حدود عند ±∞.",
+          "difficulty": "easy",
+          "generation_guidance": {
+            "must_test": [
+              "تحديد الحد المؤثر في سلوك كثيرة الحدود عند المالانهاية."
+            ],
+            "may_vary": [
+              "درجة كثيرة الحدود",
+              "المعامل الرئيسي"
+            ],
+            "must_not_change": [
+              "النتيجة يجب أن تراعي إشارة المعامل وأعلى قوة."
+            ],
+            "forbidden_concepts": [
+              "الاشتقاق ودراسة اتجاه التغير كهدف مستقل",
+              "الاستمرارية كهدف مستقل",
+              "حساب معادلات المقاربات كهدف مستقل"
+            ]
+          }
+        }
+      ],
+      "common_errors": [
+        {
+          "code": "LIM_ERR_FALSE_INDETERMINATE",
+          "description": "اعتبار عدد حقيقي مع ±∞ أو ±∞ مع 0 حالة عدم تعيين.",
+          "severity": "medium",
+          "related_skill_idea_codes": [
+            "LIM_DIRECT_SUM"
+          ]
+        },
+        {
+          "code": "LIM_ERR_POLY_SIGN",
+          "description": "استخراج نهاية كثيرة الحدود دون مراعاة إشارة الحد الأعلى درجة.",
+          "severity": "high",
+          "related_skill_idea_codes": [
+            "LIM_DIRECT_POLY"
+          ]
+        }
+      ],
+      "mastery_requirements": {
+        "required_idea_codes": [
+          "LIM_DIRECT_SUM",
+          "LIM_DIRECT_POLY"
+        ],
+        "minimum_successful_ideas": 2,
+        "notes": "الاختبار يبقى قريبًا من المرجعيات ولا يتحول إلى محور تقنيات رفع حالات عدم التعيين."
+      }
+    },
+    {
+      "skill_code": "LIM_ZERO_DENOMINATOR_SIGN",
+      "title": "تحديد نهاية كسر عندما يقترب المقام من الصفر",
+      "description": "يحدد إشارة البسط والمقام والجهة ثم يستنتج ±∞ عندما يكون البسط غير منعدم.",
+      "order": 4,
+      "importance": "core",
+      "prerequisites": [
+        "LIM_REFERENCE_READING",
+        "LIM_REFERENCE_BASIC"
+      ],
+      "ideas": [
+        {
+          "idea_code": "LIM_DENOM_ZERO_SIDE",
+          "title": "تحديد 0⁺ أو 0⁻ للمقام",
+          "description": "يستنتج إشارة عامل مثل x-a عند الاقتراب من a من جهة محددة.",
+          "difficulty": "medium",
+          "generation_guidance": {
+            "must_test": [
+              "تحديد إشارة المقام قرب القيمة الممنوعة."
+            ],
+            "may_vary": [
+              "a",
+              "معامل العامل",
+              "جهة الاقتراب"
+            ],
+            "must_not_change": [
+              "كتابة 0⁺ أو 0⁻ قبل استنتاج إشارة اللانهاية."
+            ],
+            "forbidden_concepts": [
+              "الاشتقاق ودراسة اتجاه التغير كهدف مستقل",
+              "الاستمرارية كهدف مستقل",
+              "حساب معادلات المقاربات كهدف مستقل"
+            ]
+          }
+        },
+        {
+          "idea_code": "LIM_NONZERO_OVER_ZERO",
+          "title": "عدد غير منعدم على صفر موجّه",
+          "description": "يميّز أن L/0⁺ أو L/0⁻ مع L≠0 ليست حالة عدم تعيين ويستنتج الإشارة.",
+          "difficulty": "medium",
+          "generation_guidance": {
+            "must_test": [
+              "التمييز بين L/0 و0/0، ثم تحديد ±∞."
+            ],
+            "may_vary": [
+              "إشارة L",
+              "جهة الصفر"
+            ],
+            "must_not_change": [
+              "لا تُسمّى الحالة غير معينة إذا كان البسط يتجه إلى عدد غير منعدم."
+            ],
+            "forbidden_concepts": [
+              "الاشتقاق ودراسة اتجاه التغير كهدف مستقل",
+              "الاستمرارية كهدف مستقل",
+              "حساب معادلات المقاربات كهدف مستقل"
+            ]
+          }
+        }
+      ],
+      "common_errors": [
+        {
+          "code": "LIM_ERR_ANY_ZERO_DENOM",
+          "description": "اعتبار كل مقام يتجه إلى الصفر حالة عدم تعيين.",
+          "severity": "high",
+          "related_skill_idea_codes": [
+            "LIM_NONZERO_OVER_ZERO"
+          ]
+        },
+        {
+          "code": "LIM_ERR_DOMAIN_SIDE",
+          "description": "إهمال أن مجال التعريف قد يفرض جهة اقتراب واحدة.",
+          "severity": "high",
+          "related_skill_idea_codes": [
+            "LIM_DENOM_ZERO_SIDE"
+          ]
+        }
+      ],
+      "mastery_requirements": {
+        "required_idea_codes": [
+          "LIM_DENOM_ZERO_SIDE",
+          "LIM_NONZERO_OVER_ZERO"
+        ],
+        "minimum_successful_ideas": 2,
+        "notes": "هذه من أهم الأفكار التي ظهرت مباشرة في بكالوريا 2008 و2009 المرسلة."
+      }
+    },
+    {
+      "skill_code": "LIM_INDETERMINATE_RECOGNITION",
+      "title": "التعرف على حالة عدم التعيين دون التعمق في تقنيات رفعها",
+      "description": "يفحص الشكل الناتج ويعرف أن ∞-∞ أو ∞/∞ حالة عدم تعيين، ويعرف متى يلزم تبسيط بسيط قبل متابعة الحساب.",
+      "order": 5,
+      "importance": "important",
+      "prerequisites": [
+        "LIM_DIRECT_COMBINATION"
+      ],
+      "ideas": [
+        {
+          "idea_code": "LIM_IDENTIFY_INF_MINUS_INF",
+          "title": "التعرف على ∞-∞",
+          "description": "لا يعطي نتيجة مباشرة للفرق بين كميتين غير محدودتين بل يصرح بحالة عدم التعيين.",
+          "difficulty": "medium",
+          "generation_guidance": {
+            "must_test": [
+              "تمييز الشكل ∞-∞ كحالة عدم تعيين."
+            ],
+            "may_vary": [
+              "شكل العبارة",
+              "المعاملات"
+            ],
+            "must_not_change": [
+              "عدم اعتبار ∞-∞ مساويًا للصفر."
+            ],
+            "forbidden_concepts": [
+              "تقنيات متقدمة لرفع حالات عدم التعيين",
+              "قاعدة لوبيتال"
+            ]
+          }
+        },
+        {
+          "idea_code": "LIM_SIMPLE_FACTOR_HIGHEST_POWER",
+          "title": "إخراج أعلى قوة في كثيرة حدود عند الحاجة",
+          "description": "عندما يظهر ∞-∞ داخل كثيرة حدود، يخرج أعلى قوة عاملًا مشتركًا لإظهار السلوك المرجعي.",
+          "difficulty": "medium",
+          "generation_guidance": {
+            "must_test": [
+              "إخراج أعلى قوة فقط كخطوة بسيطة لإظهار المرجعية."
+            ],
+            "may_vary": [
+              "درجة كثيرة الحدود",
+              "المعاملات"
+            ],
+            "must_not_change": [
+              "بقاء السؤال في مستوى مرجعيات النهايات لا تقنيات التحليل المعقدة."
+            ],
+            "forbidden_concepts": [
+              "قاعدة لوبيتال",
+              "تطويرات محدودة",
+              "تقنيات جبرية معقدة"
+            ]
+          }
+        }
+      ],
+      "common_errors": [
+        {
+          "code": "LIM_ERR_INF_MINUS_INF_ZERO",
+          "description": "كتابة ∞-∞=0.",
+          "severity": "high",
+          "related_skill_idea_codes": [
+            "LIM_IDENTIFY_INF_MINUS_INF"
+          ]
+        },
+        {
+          "code": "LIM_ERR_STOP_AT_FORM",
+          "description": "التوقف عند عبارة حالة عدم تعيين دون إجراء التبسيط البسيط المطلوب عندما يكون داخل حدود المحور.",
+          "severity": "medium",
+          "related_skill_idea_codes": [
+            "LIM_SIMPLE_FACTOR_HIGHEST_POWER"
+          ]
+        }
+      ],
+      "mastery_requirements": {
+        "required_idea_codes": [
+          "LIM_IDENTIFY_INF_MINUS_INF",
+          "LIM_SIMPLE_FACTOR_HIGHEST_POWER"
+        ],
+        "minimum_successful_ideas": 2,
+        "notes": "أُدرجت بقدر ما تدعم فهم المرجعيات وظهورها في 2014، دون تحويل المحور إلى محور كامل لحالات عدم التعيين."
+      }
+    }
+  ],
+  "bac_ideas": [
+    {
+      "idea_code": "LIM_BAC_01",
+      "title": "نهاية كثيرة حدود عند عدد حقيقي أو عند ±∞",
+      "description": "حساب نهاية كثيرة حدود بالتعويض عند عدد حقيقي أو بالاعتماد على أعلى قوة عند المالانهاية.",
+      "bac_priority": "critical",
+      "frequency_level": "high",
+      "occurrence_count": 3,
+      "years": [
+        2008,
+        2014
+      ],
+      "last_seen_year": 2014,
+      "skill_refs": [
+        {
+          "skill_code": "LIM_DIRECT_COMBINATION",
+          "skill_idea_codes": [
+            "LIM_DIRECT_POLY"
+          ],
+          "role": "primary"
+        },
+        {
+          "skill_code": "LIM_REFERENCE_BASIC",
+          "skill_idea_codes": [
+            "LIM_POLY_POWER_REFERENCE"
+          ],
+          "role": "supporting"
+        }
+      ],
+      "prerequisites": [
+        "LIM_REFERENCE_BASIC"
+      ],
+      "external_prerequisites": [],
+      "difficulty_range": {
+        "min": 1,
+        "max": 2
+      },
+      "variants": [
+        {
+          "variant_code": "LIM_BAC_01_V01",
+          "title": "التعويض عند عدد حقيقي",
+          "description": "كثيرة حدود عند قيمة حقيقية؛ النهاية تحسب مباشرة.",
+          "years": [
+            2008
+          ],
+          "occurrence_count": 1,
+          "difficulty": 1,
+          "skill_idea_codes": [
+            "LIM_DIRECT_POLY"
+          ],
+          "distinguishing_feature": "لا توجد حالة عدم تعيين ويكفي التعويض."
+        },
+        {
+          "variant_code": "LIM_BAC_01_V02",
+          "title": "كثيرة حدود عند المالانهاية",
+          "description": "تحديد النهاية من سلوك الحد الأعلى درجة، مع إمكانية إخراج أعلى قوة إذا ظهر الشكل ∞-∞.",
+          "years": [
+            2008,
+            2014
+          ],
+          "occurrence_count": 2,
+          "difficulty": 2,
+          "skill_idea_codes": [
+            "LIM_POLY_POWER_REFERENCE",
+            "LIM_DIRECT_POLY",
+            "LIM_SIMPLE_FACTOR_HIGHEST_POWER"
+          ],
+          "distinguishing_feature": "الحد الأعلى درجة يحدد السلوك النهائي."
+        }
+      ],
+      "common_errors": [
+        {
+          "code": "LIM_BAC_POLY_SIGN",
+          "description": "الخطأ في إشارة أعلى قوة عند -∞.",
+          "severity": "high",
+          "related_skill_idea_codes": [
+            "LIM_POLY_POWER_REFERENCE"
+          ]
+        }
+      ],
+      "bac_occurrences": [
+        {
+          "year": 2008,
+          "branch": "science",
+          "exercise": "4",
+          "question": "g",
+          "variant_code": "LIM_BAC_01_V01",
+          "summary": "حساب نهاية g عند -1 بالتعويض المباشر.",
+          "skill_idea_codes": [
+            "LIM_DIRECT_POLY"
+          ]
+        },
+        {
+          "year": 2008,
+          "branch": "science",
+          "exercise": "4",
+          "question": "g",
+          "variant_code": "LIM_BAC_01_V02",
+          "summary": "حساب نهاية g عند +∞ باستعمال سلوك كثيرة الحدود.",
+          "skill_idea_codes": [
+            "LIM_POLY_POWER_REFERENCE",
+            "LIM_DIRECT_POLY"
+          ]
+        },
+        {
+          "year": 2014,
+          "branch": "science",
+          "exercise": "4",
+          "question": "g",
+          "variant_code": "LIM_BAC_01_V02",
+          "summary": "حساب نهايتي كثيرة حدود عند -∞ و+∞ مع الانتباه إلى الشكل ∞-∞ وإخراج أعلى قوة.",
+          "skill_idea_codes": [
+            "LIM_POLY_POWER_REFERENCE",
+            "LIM_SIMPLE_FACTOR_HIGHEST_POWER"
+          ]
+        }
+      ],
+      "mastery_requirements": {
+        "must_cover_variants": [
+          "LIM_BAC_01_V01",
+          "LIM_BAC_01_V02"
+        ],
+        "minimum_successful_variants": 2,
+        "requires_bac_style_question": true,
+        "required_skill_idea_codes": [
+          "LIM_POLY_POWER_REFERENCE",
+          "LIM_DIRECT_POLY"
+        ],
+        "notes": "فكرة أساسية ومتكررة؛ لا تحتاج تعقيدًا أكبر من أمثلة المصادر."
+      },
+      "generation_guidance": {
+        "allowed_structures": [
+          "كثيرة حدود بسيطة عند عدد حقيقي.",
+          "كثيرة حدود عند +∞ أو -∞."
+        ],
+        "must_test": [
+          "اختيار المرجعية المناسبة.",
+          "الإشارة الصحيحة عند المالانهاية."
+        ],
+        "may_vary": [
+          "درجة كثيرة الحدود",
+          "المعاملات",
+          "جهة المالانهاية"
+        ],
+        "must_not_change": [
+          "بقاء الحساب في إطار نهاية كثيرة حدود."
+        ],
+        "forbidden_concepts": [
+          "الاشتقاق",
+          "دراسة التغيرات",
+          "تحليل جبري معقد"
+        ]
+      }
+    },
+    {
+      "idea_code": "LIM_BAC_02",
+      "title": "نهاية كسر قرب قيمة ممنوعة مع تحديد الجهة والإشارة",
+      "description": "حساب نهاية كسر عندما يتجه المقام إلى صفر موجّه والبسط إلى عدد غير منعدم؛ التركيز على 0⁺ و0⁻ وعدم اعتبار الحالة غير معينة.",
+      "bac_priority": "critical",
+      "frequency_level": "high",
+      "occurrence_count": 3,
+      "years": [
+        2008,
+        2009
+      ],
+      "last_seen_year": 2009,
+      "skill_refs": [
+        {
+          "skill_code": "LIM_ZERO_DENOMINATOR_SIGN",
+          "skill_idea_codes": [
+            "LIM_DENOM_ZERO_SIDE",
+            "LIM_NONZERO_OVER_ZERO"
+          ],
+          "role": "primary"
+        },
+        {
+          "skill_code": "LIM_REFERENCE_READING",
+          "skill_idea_codes": [
+            "LIM_ONE_SIDED"
+          ],
+          "role": "supporting"
+        }
+      ],
+      "prerequisites": [
+        "LIM_REFERENCE_BASIC"
+      ],
+      "external_prerequisites": [],
+      "difficulty_range": {
+        "min": 1,
+        "max": 2
+      },
+      "variants": [
+        {
+          "variant_code": "LIM_BAC_02_V01",
+          "title": "المقام مربع أو موجب قرب الصفر",
+          "description": "المقام يتجه إلى 0⁺ بسبب مربع، فتحدد إشارة البسط النهاية.",
+          "years": [
+            2008
+          ],
+          "occurrence_count": 1,
+          "difficulty": 1,
+          "skill_idea_codes": [
+            "LIM_NONZERO_OVER_ZERO"
+          ],
+          "distinguishing_feature": "المقام موجب من الجهة المسموحة."
+        },
+        {
+          "variant_code": "LIM_BAC_02_V02",
+          "title": "عامل خطي من اليمين واليسار",
+          "description": "المقام من شكل x-a ويختلف سلوكه بين 0⁻ و0⁺.",
+          "years": [
+            2009
+          ],
+          "occurrence_count": 2,
+          "difficulty": 2,
+          "skill_idea_codes": [
+            "LIM_ONE_SIDED",
+            "LIM_DENOM_ZERO_SIDE",
+            "LIM_NONZERO_OVER_ZERO"
+          ],
+          "distinguishing_feature": "اختلاف إشارة النهاية حسب جهة الاقتراب."
+        }
+      ],
+      "common_errors": [
+        {
+          "code": "LIM_BAC_ZERO_IS_INDET",
+          "description": "اعتبار عدد غير منعدم على 0 حالة عدم تعيين.",
+          "severity": "high",
+          "related_skill_idea_codes": [
+            "LIM_NONZERO_OVER_ZERO"
+          ]
+        },
+        {
+          "code": "LIM_BAC_SIDE_SIGN",
+          "description": "عكس إشارة المقام بين اليمين واليسار.",
+          "severity": "high",
+          "related_skill_idea_codes": [
+            "LIM_DENOM_ZERO_SIDE"
+          ]
+        }
+      ],
+      "bac_occurrences": [
+        {
+          "year": 2008,
+          "branch": "science",
+          "exercise": "4",
+          "question": "f عند -1",
+          "variant_code": "LIM_BAC_02_V01",
+          "summary": "البسط يتجه إلى 1 والمقام (x+1)^2 إلى 0⁺، فتكون النهاية +∞.",
+          "skill_idea_codes": [
+            "LIM_NONZERO_OVER_ZERO"
+          ]
+        },
+        {
+          "year": 2009,
+          "branch": "science",
+          "exercise": "4",
+          "question": "f عند -1-",
+          "variant_code": "LIM_BAC_02_V02",
+          "summary": "x+1→0⁻ ومنه 4/(x+1)→-∞.",
+          "skill_idea_codes": [
+            "LIM_ONE_SIDED",
+            "LIM_DENOM_ZERO_SIDE",
+            "LIM_NONZERO_OVER_ZERO"
+          ]
+        },
+        {
+          "year": 2009,
+          "branch": "science",
+          "exercise": "4",
+          "question": "f عند -1+",
+          "variant_code": "LIM_BAC_02_V02",
+          "summary": "x+1→0⁺ ومنه 4/(x+1)→+∞.",
+          "skill_idea_codes": [
+            "LIM_ONE_SIDED",
+            "LIM_DENOM_ZERO_SIDE",
+            "LIM_NONZERO_OVER_ZERO"
+          ]
+        }
+      ],
+      "mastery_requirements": {
+        "must_cover_variants": [
+          "LIM_BAC_02_V01",
+          "LIM_BAC_02_V02"
+        ],
+        "minimum_successful_variants": 2,
+        "requires_bac_style_question": true,
+        "required_skill_idea_codes": [
+          "LIM_DENOM_ZERO_SIDE",
+          "LIM_NONZERO_OVER_ZERO"
+        ],
+        "notes": "فكرة مركزية لقياس فهم الجهة والإشارة والمرجعية 1/x."
+      },
+      "generation_guidance": {
+        "allowed_structures": [
+          "كسر ببسط يتجه إلى عدد غير منعدم ومقام مربع يتجه إلى الصفر.",
+          "كسر يحتوي عاملًا خطيًا x-a مع طلب نهاية من جهة واحدة أو الجهتين."
+        ],
+        "must_test": [
+          "تحديد 0⁺ أو 0⁻.",
+          "استنتاج إشارة ±∞.",
+          "تمييز الحالة عن 0/0."
+        ],
+        "may_vary": [
+          "a",
+          "إشارة البسط",
+          "معامل العامل الخطي"
+        ],
+        "must_not_change": [
+          "البسط يجب أن يبقى غير منعدم في القيمة المدروسة إذا كان الهدف L/0."
+        ],
+        "forbidden_concepts": [
+          "0/0 كهدف رئيسي",
+          "قاعدة لوبيتال",
+          "تحليل معقد"
+        ]
+      }
+    },
+    {
+      "idea_code": "LIM_BAC_03",
+      "title": "نهاية مجموع حد غير محدود وحد كسري يتجه إلى الصفر",
+      "description": "تفكيك دالة من شكل حد خطي أو بسيط زائد كسر ثابت على مقدار يتجه إلى المالانهاية، ثم جمع النهايتين.",
+      "bac_priority": "high",
+      "frequency_level": "medium",
+      "occurrence_count": 2,
+      "years": [
+        2009
+      ],
+      "last_seen_year": 2009,
+      "skill_refs": [
+        {
+          "skill_code": "LIM_DIRECT_COMBINATION",
+          "skill_idea_codes": [
+            "LIM_DIRECT_SUM"
+          ],
+          "role": "primary"
+        },
+        {
+          "skill_code": "LIM_REFERENCE_BASIC",
+          "skill_idea_codes": [
+            "LIM_RECIPROCAL_REFERENCE"
+          ],
+          "role": "supporting"
+        }
+      ],
+      "prerequisites": [
+        "LIM_REFERENCE_BASIC"
+      ],
+      "external_prerequisites": [],
+      "difficulty_range": {
+        "min": 1,
+        "max": 1
+      },
+      "variants": [
+        {
+          "variant_code": "LIM_BAC_03_V01",
+          "title": "حد خطي + كسر يتجه إلى صفر",
+          "description": "حساب نهاية كل جزء ثم الجمع مباشرة.",
+          "years": [
+            2009
+          ],
+          "occurrence_count": 2,
+          "difficulty": 1,
+          "skill_idea_codes": [
+            "LIM_DIRECT_SUM",
+            "LIM_RECIPROCAL_REFERENCE"
+          ],
+          "distinguishing_feature": "لا توجد حالة عدم تعيين."
+        }
+      ],
+      "common_errors": [
+        {
+          "code": "LIM_BAC_DIRECT_OVERWORK",
+          "description": "البحث عن تحويلات غير لازمة رغم أن كل نهاية جزئية مباشرة.",
+          "severity": "medium",
+          "related_skill_idea_codes": [
+            "LIM_DIRECT_SUM"
+          ]
+        }
+      ],
+      "bac_occurrences": [
+        {
+          "year": 2009,
+          "branch": "science",
+          "exercise": "4",
+          "question": "f عند -∞",
+          "variant_code": "LIM_BAC_03_V01",
+          "summary": "-x→+∞ و4/(x+1)→0، ومنه f→+∞.",
+          "skill_idea_codes": [
+            "LIM_DIRECT_SUM",
+            "LIM_RECIPROCAL_REFERENCE"
+          ]
+        },
+        {
+          "year": 2009,
+          "branch": "science",
+          "exercise": "4",
+          "question": "g عند +∞",
+          "variant_code": "LIM_BAC_03_V01",
+          "summary": "x→+∞ و4/(x+1)→0، ومنه g→+∞.",
+          "skill_idea_codes": [
+            "LIM_DIRECT_SUM",
+            "LIM_RECIPROCAL_REFERENCE"
+          ]
+        }
+      ],
+      "mastery_requirements": {
+        "must_cover_variants": [
+          "LIM_BAC_03_V01"
+        ],
+        "minimum_successful_variants": 1,
+        "requires_bac_style_question": true,
+        "required_skill_idea_codes": [
+          "LIM_DIRECT_SUM",
+          "LIM_RECIPROCAL_REFERENCE"
+        ],
+        "notes": "فكرة سطحية لكن مهمة لأنها تقيس استعمال المرجعية مباشرة دون تعقيد."
+      },
+      "generation_guidance": {
+        "allowed_structures": [
+          "±x + k/(x+a) عند ±∞."
+        ],
+        "must_test": [
+          "نهاية الحد الخطي.",
+          "نهاية الكسر إلى صفر.",
+          "الجمع الصحيح."
+        ],
+        "may_vary": [
+          "الإشارات",
+          "الثابت k",
+          "الإزاحة a"
+        ],
+        "must_not_change": [
+          "عدم إدخال حالة عدم تعيين مصطنعة."
+        ],
+        "forbidden_concepts": [
+          "تبسيط جبري طويل",
+          "المقاربات كهدف"
+        ]
+      }
+    },
+    {
+      "idea_code": "LIM_BAC_04",
+      "title": "التعرف على ∞-∞ ورفعها بتبسيط بسيط",
+      "description": "عندما يؤدي الحساب المباشر إلى ∞-∞، يصرح بأنها حالة عدم تعيين ثم يستعمل تبسيطًا بسيطًا مناسبًا مثل إخراج أعلى قوة.",
+      "bac_priority": "high",
+      "frequency_level": "low",
+      "occurrence_count": 1,
+      "years": [
+        2014
+      ],
+      "last_seen_year": 2014,
+      "skill_refs": [
+        {
+          "skill_code": "LIM_INDETERMINATE_RECOGNITION",
+          "skill_idea_codes": [
+            "LIM_IDENTIFY_INF_MINUS_INF",
+            "LIM_SIMPLE_FACTOR_HIGHEST_POWER"
+          ],
+          "role": "primary"
+        }
+      ],
+      "prerequisites": [
+        "LIM_REFERENCE_BASIC"
+      ],
+      "external_prerequisites": [],
+      "difficulty_range": {
+        "min": 2,
+        "max": 2
+      },
+      "variants": [
+        {
+          "variant_code": "LIM_BAC_04_V01",
+          "title": "∞-∞ داخل كثيرة حدود",
+          "description": "إخراج أعلى قوة عاملًا مشتركًا ثم استعمال المرجعيات 1/x^n.",
+          "years": [
+            2014
+          ],
+          "occurrence_count": 1,
+          "difficulty": 2,
+          "skill_idea_codes": [
+            "LIM_IDENTIFY_INF_MINUS_INF",
+            "LIM_SIMPLE_FACTOR_HIGHEST_POWER"
+          ],
+          "distinguishing_feature": "التبسيط يقتصر على إخراج أعلى قوة."
+        }
+      ],
+      "common_errors": [
+        {
+          "code": "LIM_BAC_INF_SUB_ZERO",
+          "description": "اعتبار ∞-∞=0.",
+          "severity": "high",
+          "related_skill_idea_codes": [
+            "LIM_IDENTIFY_INF_MINUS_INF"
+          ]
+        }
+      ],
+      "bac_occurrences": [
+        {
+          "year": 2014,
+          "branch": "science",
+          "exercise": "4",
+          "question": "g عند +∞",
+          "variant_code": "LIM_BAC_04_V01",
+          "summary": "ظهر +∞-∞؛ أُخرج x^3 عاملًا مشتركًا ثم استعملت نهايات 1/x و1/x² و1/x³.",
+          "skill_idea_codes": [
+            "LIM_IDENTIFY_INF_MINUS_INF",
+            "LIM_SIMPLE_FACTOR_HIGHEST_POWER"
+          ]
+        }
+      ],
+      "mastery_requirements": {
+        "must_cover_variants": [
+          "LIM_BAC_04_V01"
+        ],
+        "minimum_successful_variants": 1,
+        "requires_bac_style_question": true,
+        "required_skill_idea_codes": [
+          "LIM_IDENTIFY_INF_MINUS_INF"
+        ],
+        "notes": "يبقى السؤال بسيطًا لأن الهدف في هذا المحور هو التعرف على الشكل وربطه بالمرجعيات."
+      },
+      "generation_guidance": {
+        "allowed_structures": [
+          "كثيرة حدود قصيرة يظهر فيها ∞-∞ عند قراءة الحدود منفصلة."
+        ],
+        "must_test": [
+          "التصريح بحالة عدم التعيين.",
+          "إخراج أعلى قوة.",
+          "استعمال 1/x^n→0."
+        ],
+        "may_vary": [
+          "الدرجة",
+          "المعاملات"
+        ],
+        "must_not_change": [
+          "عدم تجاوز التبسيط البسيط."
+        ],
+        "forbidden_concepts": [
+          "لوبيتال",
+          "تحليل كسور معقد",
+          "تطويرات محدودة"
+        ]
+      }
+    }
+  ],
+  "coverage_summary": {
+    "total_skills": 5,
+    "total_skill_ideas": 10,
+    "total_bac_ideas": 4,
+    "total_variants": 6,
+    "critical_bac_ideas": [
+      "LIM_BAC_01",
+      "LIM_BAC_02"
+    ],
+    "high_priority_bac_ideas": [
+      "LIM_BAC_03",
+      "LIM_BAC_04"
+    ],
+    "skills_covered_by_bac": [
+      "LIM_REFERENCE_READING",
+      "LIM_REFERENCE_BASIC",
+      "LIM_DIRECT_COMBINATION",
+      "LIM_ZERO_DENOMINATOR_SIGN",
+      "LIM_INDETERMINATE_RECOGNITION"
+    ],
+    "skills_not_seen_in_bac": [],
+    "skill_ideas_not_seen_in_bac": [],
+    "years_covered": [
+      2008,
+      2009,
+      2014
+    ]
+  }
+}

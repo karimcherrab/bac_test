@@ -1,0 +1,433 @@
+{
+  "schema_version": "3.0-bac-pedagogical-verified",
+  "language": "ar",
+  "direction": "rtl",
+  "branch": {
+    "code": "math_tech",
+    "name": "شعبة تقني رياضي"
+  },
+  "branch_code": "math_tech",
+  "branches": [
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "chapter_code": "limits_continuity",
+  "year": 2010,
+  "exercise_number": 4,
+  "source_page": 2,
+  "source_reference": "بكالوريا 2010 — شعبة تقني رياضي — التمرين الرابع، من ملف fonctions_math_tech.pdf.",
+  "title": "بكالوريا 2010 — تقني رياضي — التمرين الرابع — النهايات",
+  "axis_tags": [
+    "limits_continuity"
+  ],
+  "statement": "الدالة العددية \\(f\\) المعرفة على \\(\\mathbb{R}\\) كما يلي:\n\\[\nf(x)=x\\left(1+\\frac{1}{\\sqrt{x^2+1}}\\right).\n\\]",
+  "statement_graph_data": null,
+  "questions": [
+    {
+      "id": "2010_tech_limits_variation",
+      "text": "لحساب القيم اللازمة عند دراسة تغيرات الدالة \\(f\\)، احسب:\n\\[\n\\lim_{x\\to-\\infty}f(x)\n\\qquad\\text{و}\\qquad\n\\lim_{x\\to+\\infty}f(x).\n\\]",
+      "axis_tags": [
+        "limits_continuity"
+      ],
+      "solution": {
+        "strategy": "نكتب \\(f(x)=x+\\dfrac{x}{\\sqrt{x^2+1}}\\). الجزء \\(\\dfrac{x}{\\sqrt{x^2+1}}\\) يعطي شكلاً من نوع \\(\\infty/\\infty\\)، وهو حالة عدم تعيين، لذلك نبسطه حسب جهة اللانهاية.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "نكتب الدالة في شكل أبسط",
+            "explanation": "نوزع x على القوس.",
+            "latex": "f(x)=x+\\frac{x}{\\sqrt{x^2+1}}",
+            "why": "هذا الشكل يفصل الحد الخطي عن الكسر الذي يحتاج إلى دراسة.",
+            "student_tip": "قبل حساب النهاية، حاول كتابة الدالة في شكل يسهل قراءة كل حد."
+          },
+          {
+            "step_number": 2,
+            "title": "عند +∞: نحدد حالة عدم التعيين في الكسر",
+            "explanation": "عند \\(+\\infty\\)، البسط x والمقام \\(\\sqrt{x^2+1}\\) يتجهان إلى +∞.",
+            "latex": "\\frac{x}{\\sqrt{x^2+1}}\\longrightarrow\\frac{+\\infty}{+\\infty}",
+            "why": "هذا شكل غير معين من النوع \\(\\infty/\\infty\\).",
+            "student_tip": "اذكر حالة عدم التعيين صراحة قبل التبسيط."
+          },
+          {
+            "step_number": 3,
+            "title": "نرفع حالة عدم التعيين عند +∞",
+            "explanation": "عند \\(+\\infty\\)، يكون x موجبًا، لذلك \\(\\sqrt{x^2}=x\\).",
+            "latex": "\\frac{x}{\\sqrt{x^2+1}}=\\frac{x}{x\\sqrt{1+\\frac1{x^2}}}=\\frac{1}{\\sqrt{1+\\frac1{x^2}}}",
+            "why": "قسمنا داخل الجذر على \\(x^2\\).",
+            "student_tip": "عند +∞: \\(\\sqrt{x^2}=x\\)."
+          },
+          {
+            "step_number": 4,
+            "title": "نحسب نهاية الكسر عند +∞",
+            "explanation": "بما أن \\(1/x^2\\to0\\)، فإن المقام يتجه إلى 1.",
+            "latex": "\\lim_{x\\to+\\infty}\\frac{x}{\\sqrt{x^2+1}}=1",
+            "why": "أصبح الشكل محددًا بعد رفع حالة عدم التعيين.",
+            "student_tip": "بعد التبسيط تصبح النهاية مباشرة."
+          },
+          {
+            "step_number": 5,
+            "title": "نستنتج نهاية f عند +∞",
+            "explanation": "لدينا \\(x\\to+\\infty\\) والكسر يتجه إلى 1.",
+            "latex": "\\boxed{\\lim_{x\\to+\\infty}f(x)=+\\infty}",
+            "why": "\\(+\\infty+1=+\\infty\\).",
+            "student_tip": "الحد x هو الذي يحدد النهاية النهائية."
+          },
+          {
+            "step_number": 6,
+            "title": "عند -∞: ننتبه إلى إشارة x",
+            "explanation": "عند \\(-\\infty\\)، يكون x سالبًا، ومنه \\(\\sqrt{x^2}=|x|=-x\\).",
+            "latex": "\\frac{x}{\\sqrt{x^2+1}}=\\frac{x}{(-x)\\sqrt{1+\\frac1{x^2}}}=-\\frac{1}{\\sqrt{1+\\frac1{x^2}}}",
+            "why": "هذه الخطوة تمنع الخطأ الشائع \\(\\sqrt{x^2}=x\\) عند x السالب.",
+            "student_tip": "القاعدة الصحيحة دائمًا هي \\(\\sqrt{x^2}=|x|\\)."
+          },
+          {
+            "step_number": 7,
+            "title": "نحسب نهاية الكسر عند -∞",
+            "explanation": "بما أن \\(1/x^2\\to0\\)، نحصل على:",
+            "latex": "\\lim_{x\\to-\\infty}\\frac{x}{\\sqrt{x^2+1}}=-1",
+            "why": "المقام يتجه إلى 1 مع وجود الإشارة السالبة.",
+            "student_tip": "الإشارة هنا هي الفرق الأساسي بين +∞ و-∞."
+          },
+          {
+            "step_number": 8,
+            "title": "نستنتج نهاية f عند -∞",
+            "explanation": "لدينا \\(x\\to-\\infty\\) والكسر يتجه إلى -1.",
+            "latex": "\\boxed{\\lim_{x\\to-\\infty}f(x)=-\\infty}",
+            "why": "\\(-\\infty-1=-\\infty\\).",
+            "student_tip": "يمكن الآن وضع هاتين القيمتين في جدول التغيرات."
+          }
+        ],
+        "final_answer": "\\[\n\\boxed{\\lim_{x\\to-\\infty}f(x)=-\\infty}\n\\qquad\\text{و}\\qquad\n\\boxed{\\lim_{x\\to+\\infty}f(x)=+\\infty}.\n\\]",
+        "verification": "النهايتان منسجمتان مع كون الدالة فردية ومع سلوك الحد الخطي x.",
+        "common_mistakes": [
+          "الكتابة الخاطئة \\(\\sqrt{x^2}=x\\) عند \\(x\\to-\\infty\\).",
+          "عدم ذكر أن \\(\\infty/\\infty\\) حالة عدم تعيين.",
+          "نسيان أن \\(x/\\sqrt{x^2+1}\\to-1\\) عند -∞."
+        ],
+        "hints": [
+          "اكتب f(x)=x+x/√(x²+1).",
+          "استعمل \\(\\sqrt{x^2}=|x|\\).",
+          "افصل بين حالة +∞ وحالة -∞."
+        ],
+        "graph_data": null,
+        "table_data": null,
+        "solution_style": "حل مفصل ومبسط جدًا مع التصريح بحالة عدم التعيين ورفعها.",
+        "methodology": {
+          "goal": "حساب نهايتي f عند ±∞ اللازمتين لجدول التغيرات.",
+          "method": "تبسيط x/√(x²+1) مع مراعاة |x|.",
+          "why_this_method": "لأن الكسر يعطي حالة ∞/∞ ويختلف تبسيطه حسب جهة اللانهاية.",
+          "used_theorem": "قواعد النهايات و\\(\\sqrt{x^2}=|x|\\).",
+          "bac_template": [
+            "نكتب الدالة في شكل مناسب.",
+            "نحدد حالة عدم التعيين.",
+            "نرفعها مع مراعاة جهة اللانهاية.",
+            "نستنتج."
+          ],
+          "formal_writing": [
+            "نكتب النهاية.",
+            "نبسط الكسر.",
+            "نحسب النهاية الجزئية.",
+            "نستنتج نهاية f."
+          ]
+        },
+        "formal_writing": [
+          "نحدد الشكل.",
+          "نرفع حالة عدم التعيين.",
+          "نحسب النهاية.",
+          "نكتب النتيجة النهائية."
+        ],
+        "react_display": {
+          "show_strategy": true,
+          "show_steps": true,
+          "show_final_answer": true,
+          "show_graph": false,
+          "show_table": false,
+          "graph_key": "graph_data",
+          "table_key": "table_data",
+          "math_renderer": "better-react-mathjax"
+        },
+        "pedagogical_detail": {
+          "level": "مبسط جدًا",
+          "show_intermediate_calculations": true,
+          "explain_rule_before_use": true,
+          "state_final_conclusion": true
+        },
+        "display_order": [
+          "strategy",
+          "steps",
+          "final_answer",
+          "verification"
+        ],
+        "validation": {
+          "final_answer_checked": true,
+          "mathematical_consistency_checked": true
+        },
+        "main_idea": "الكسر x/√(x²+1) يعطي ∞/∞؛ نرفعه باستعمال √(x²)=|x|.",
+        "detailed_explanation": "أُدرجت هاتان النهايتان لأن دراسة تغيرات الدالة على R تحتاج إلى سلوكها عند ±∞.",
+        "answer_style": "idea_then_steps_then_conclusion"
+      },
+      "display_order": 1,
+      "content_type": "question"
+    },
+    {
+      "id": "2010_tech_limit_asymptote_plus",
+      "text": "لإثبات أن المستقيم \\((d)\\) ذو المعادلة \\(y=x+1\\) مقارب للمنحنى \\((C_f)\\) بجوار \\(+\\infty\\)، احسب:\n\\[\n\\lim_{x\\to+\\infty}\\left[f(x)-(x+1)\\right].\n\\]",
+      "axis_tags": [
+        "limits_continuity"
+      ],
+      "solution": {
+        "strategy": "نبسط الفرق أولًا. بعد التعويض تظهر نسبة من الشكل \\(\\infty/\\infty\\)، وهي حالة عدم تعيين، فنرفعها باستعمال \\(\\sqrt{x^2}=x\\) عند \\(+\\infty\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "نكتب الفرق",
+            "explanation": "نعوض عبارة f كما هي.",
+            "latex": "f(x)-(x+1)=x\\left(1+\\frac1{\\sqrt{x^2+1}}\\right)-(x+1)",
+            "why": "هذه هي العبارة التي يجب دراسة نهايتها لإثبات المقارب.",
+            "student_tip": "ابدأ دائمًا من الفرق بين الدالة ومعادلة المستقيم."
+          },
+          {
+            "step_number": 2,
+            "title": "نبسط",
+            "explanation": "نوزع x ثم نحذف الحد x.",
+            "latex": "f(x)-(x+1)=x+\\frac{x}{\\sqrt{x^2+1}}-x-1=\\frac{x}{\\sqrt{x^2+1}}-1",
+            "why": "اختفى الجزء الذي يتجه إلى +∞ وبقيت عبارة قابلة للدراسة.",
+            "student_tip": "التبسيط قبل حساب النهاية مهم جدًا."
+          },
+          {
+            "step_number": 3,
+            "title": "نحدد حالة عدم التعيين في الكسر",
+            "explanation": "عند +∞ لدينا x→+∞ و√(x²+1)→+∞.",
+            "latex": "\\frac{x}{\\sqrt{x^2+1}}\\longrightarrow\\frac{+\\infty}{+\\infty}",
+            "why": "هذه حالة عدم تعيين ∞/∞.",
+            "student_tip": "لا تعوض مباشرة في الكسر."
+          },
+          {
+            "step_number": 4,
+            "title": "نرفع حالة عدم التعيين",
+            "explanation": "عند +∞ يكون x موجبًا.",
+            "latex": "\\frac{x}{\\sqrt{x^2+1}}=\\frac1{\\sqrt{1+\\frac1{x^2}}}",
+            "why": "استعملنا \\(\\sqrt{x^2}=x\\) عند +∞.",
+            "student_tip": "هذه الكتابة تجعل النهاية مباشرة."
+          },
+          {
+            "step_number": 5,
+            "title": "نحسب النهاية",
+            "explanation": "بما أن 1/x²→0، فإن الكسر يتجه إلى 1.",
+            "latex": "\\lim_{x\\to+\\infty}\\left[f(x)-(x+1)\\right]=1-1=0",
+            "why": "تم رفع حالة عدم التعيين.",
+            "student_tip": "النهاية 0 هي الشرط المطلوب للمقارب."
+          },
+          {
+            "step_number": 6,
+            "title": "النتيجة النهائية",
+            "explanation": "إذن:",
+            "latex": "\\boxed{\\lim_{x\\to+\\infty}\\left[f(x)-(x+1)\\right]=0}",
+            "why": "وعليه يكون y=x+1 مقاربًا مائلًا عند +∞.",
+            "student_tip": "إذا كان فرق الدالة والمستقيم يتجه إلى 0، فالمستقيم مقارب."
+          }
+        ],
+        "final_answer": "\\[\n\\boxed{\\lim_{x\\to+\\infty}\\left[f(x)-(x+1)\\right]=0}.\n\\]",
+        "verification": "الفرق يساوي x/√(x²+1)-1، ونهاية الكسر عند +∞ هي 1.",
+        "common_mistakes": [
+          "نسيان تبسيط الفرق قبل حساب النهاية.",
+          "عدم ذكر أن ∞/∞ حالة عدم تعيين.",
+          "الخطأ في التعامل مع الجذر."
+        ],
+        "hints": [
+          "وزع x أولًا.",
+          "احذف x مع -x.",
+          "بسّط x/√(x²+1)."
+        ],
+        "graph_data": null,
+        "table_data": null,
+        "solution_style": "حل مفصل ومبسط جدًا مع التصريح بحالة عدم التعيين ورفعها.",
+        "methodology": {
+          "goal": "إثبات المقارب y=x+1 عند +∞ بواسطة نهاية الفرق.",
+          "method": "تبسيط الفرق ثم رفع ∞/∞.",
+          "why_this_method": "لأن معيار المقارب يعتمد على نهاية f(x)-(x+1).",
+          "used_theorem": "معيار المقارب المائل.",
+          "bac_template": [
+            "نكتب الفرق.",
+            "نبسط.",
+            "نرفع حالة عدم التعيين.",
+            "نحسب النهاية."
+          ],
+          "formal_writing": [
+            "نكتب الفرق.",
+            "نبسطه.",
+            "نحسب النهاية.",
+            "نستنتج المقارب."
+          ]
+        },
+        "formal_writing": [
+          "نكتب حالة عدم التعيين إن ظهرت.",
+          "نرفعها.",
+          "نكتب النهاية النهائية."
+        ],
+        "react_display": {
+          "show_strategy": true,
+          "show_steps": true,
+          "show_final_answer": true,
+          "show_graph": false,
+          "show_table": false,
+          "graph_key": "graph_data",
+          "table_key": "table_data",
+          "math_renderer": "better-react-mathjax"
+        },
+        "pedagogical_detail": {
+          "level": "مبسط جدًا",
+          "show_intermediate_calculations": true,
+          "explain_rule_before_use": true,
+          "state_final_conclusion": true
+        },
+        "display_order": [
+          "strategy",
+          "steps",
+          "final_answer",
+          "verification"
+        ],
+        "validation": {
+          "final_answer_checked": true,
+          "mathematical_consistency_checked": true
+        },
+        "main_idea": "نبسط الفرق إلى x/√(x²+1)-1، ثم نرفع ∞/∞.",
+        "detailed_explanation": "هذه النهاية مرتبطة مباشرة بسؤال إثبات المقارب y=x+1 بجوار +∞.",
+        "answer_style": "idea_then_steps_then_conclusion"
+      },
+      "display_order": 2,
+      "content_type": "question"
+    },
+    {
+      "id": "2010_tech_limit_asymptote_minus",
+      "text": "لاستنتاج المستقيم المقارب الآخر عند \\(-\\infty\\)، احسب:\n\\[\n\\lim_{x\\to-\\infty}\\left[f(x)-(x-1)\\right].\n\\]",
+      "axis_tags": [
+        "limits_continuity"
+      ],
+      "solution": {
+        "strategy": "نبسط الفرق كما في الحالة السابقة، لكن عند \\(-\\infty\\) يجب استعمال \\(\\sqrt{x^2}=|x|=-x\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "نكتب الفرق",
+            "explanation": "نعوض عبارة الدالة.",
+            "latex": "f(x)-(x-1)=x\\left(1+\\frac1{\\sqrt{x^2+1}}\\right)-(x-1)",
+            "why": "نريد اختبار المستقيم y=x-1.",
+            "student_tip": "المقارب الآخر يكون مناسبًا لسلوك الدالة عند -∞."
+          },
+          {
+            "step_number": 2,
+            "title": "نبسط",
+            "explanation": "نوزع x ونختزل.",
+            "latex": "f(x)-(x-1)=x+\\frac{x}{\\sqrt{x^2+1}}-x+1=\\frac{x}{\\sqrt{x^2+1}}+1",
+            "why": "أصبح المطلوب دراسة نهاية الكسر فقط.",
+            "student_tip": "التبسيط يقلل احتمال الخطأ."
+          },
+          {
+            "step_number": 3,
+            "title": "نحدد حالة عدم التعيين",
+            "explanation": "عند -∞، البسط والمقام يتجهان في القيمة المطلقة إلى ∞.",
+            "latex": "\\frac{x}{\\sqrt{x^2+1}}\\longrightarrow\\frac{-\\infty}{+\\infty}",
+            "why": "نسبة مقادير غير محدودة تحتاج إلى تبسيط قبل الحكم.",
+            "student_tip": "المهم هنا هو الإشارة السالبة للبسط."
+          },
+          {
+            "step_number": 4,
+            "title": "نبسط باستعمال |x|",
+            "explanation": "عند -∞ يكون x سالبًا، لذلك |x|=-x.",
+            "latex": "\\frac{x}{\\sqrt{x^2+1}}=-\\frac1{\\sqrt{1+\\frac1{x^2}}}",
+            "why": "استعملنا \\(\\sqrt{x^2}=|x|=-x\\).",
+            "student_tip": "هذه أهم نقطة في النهاية عند -∞."
+          },
+          {
+            "step_number": 5,
+            "title": "نحسب النهاية",
+            "explanation": "بما أن 1/x²→0، فإن الكسر يتجه إلى -1.",
+            "latex": "\\lim_{x\\to-\\infty}\\left[f(x)-(x-1)\\right]=-1+1=0",
+            "why": "أصبحت النهاية محددة.",
+            "student_tip": "لاحظ أن +1 يلغي النهاية -1."
+          },
+          {
+            "step_number": 6,
+            "title": "النتيجة النهائية",
+            "explanation": "إذن:",
+            "latex": "\\boxed{\\lim_{x\\to-\\infty}\\left[f(x)-(x-1)\\right]=0}",
+            "why": "وعليه يكون y=x-1 مقاربًا مائلًا عند -∞.",
+            "student_tip": "هذا هو المقارب الآخر المطلوب استنتاجه."
+          }
+        ],
+        "final_answer": "\\[\n\\boxed{\\lim_{x\\to-\\infty}\\left[f(x)-(x-1)\\right]=0}.\n\\]",
+        "verification": "عند -∞ لدينا x/√(x²+1)→-1، لذلك الفرق يتجه إلى 0.",
+        "common_mistakes": [
+          "استعمال \\(\\sqrt{x^2}=x\\) عند -∞.",
+          "نسيان أن \\(\\sqrt{x^2}=|x|\\).",
+          "اختيار y=x+1 بدل y=x-1 للمقارب الآخر."
+        ],
+        "hints": [
+          "اكتب الفرق f(x)-(x-1).",
+          "استعمل |x|=-x عند -∞.",
+          "أثبت أن x/√(x²+1)→-1."
+        ],
+        "graph_data": null,
+        "table_data": null,
+        "solution_style": "حل مفصل ومبسط جدًا مع التركيز على إشارة x عند -∞.",
+        "methodology": {
+          "goal": "إثبات المقارب الآخر y=x-1 عند -∞.",
+          "method": "تبسيط الفرق واستعمال √(x²)=|x|.",
+          "why_this_method": "لأن سلوك الكسر يختلف عند -∞ بسبب إشارة x.",
+          "used_theorem": "معيار المقارب المائل.",
+          "bac_template": [
+            "نكتب الفرق.",
+            "نبسط.",
+            "نستعمل |x|=-x.",
+            "نحسب النهاية."
+          ],
+          "formal_writing": [
+            "نكتب الفرق.",
+            "نبسطه.",
+            "نحسب النهاية عند -∞.",
+            "نستنتج المقارب."
+          ]
+        },
+        "formal_writing": [
+          "نراعي جهة اللانهاية.",
+          "نرفع الشكل غير المباشر.",
+          "نكتب النتيجة النهائية."
+        ],
+        "react_display": {
+          "show_strategy": true,
+          "show_steps": true,
+          "show_final_answer": true,
+          "show_graph": false,
+          "show_table": false,
+          "graph_key": "graph_data",
+          "table_key": "table_data",
+          "math_renderer": "better-react-mathjax"
+        },
+        "pedagogical_detail": {
+          "level": "مبسط جدًا",
+          "show_intermediate_calculations": true,
+          "explain_rule_before_use": true,
+          "state_final_conclusion": true
+        },
+        "display_order": [
+          "strategy",
+          "steps",
+          "final_answer",
+          "verification"
+        ],
+        "validation": {
+          "final_answer_checked": true,
+          "mathematical_consistency_checked": true
+        },
+        "main_idea": "عند -∞ نستعمل √(x²)=|x|=-x، فنجد أن الفرق عن x-1 يتجه إلى 0.",
+        "detailed_explanation": "أُدرجت هذه النهاية لأنها تحقق المقارب الآخر الذي يطلب الموضوع استنتاجه.",
+        "answer_style": "idea_then_steps_then_conclusion"
+      },
+      "display_order": 3,
+      "content_type": "question"
+    }
+  ]
+}

@@ -1,0 +1,227 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2016-science-space-subject1-ex02-detailed",
+  "session": "ordinary",
+  "year": 2016,
+  "chapter_code": "space_geometry",
+  "chapter_title": "الهندسة في الفضاء",
+  "axis_tags": [
+    "space_parametric_line",
+    "space_relative_positions_intersections",
+    "space_orthogonal_projection",
+    "space_distances",
+    "space_optimization_distance"
+  ],
+  "branches": [
+    {
+      "code": "science",
+      "name": "شعبة علوم تجريبية"
+    }
+  ],
+  "exercise_number": 2,
+  "subject_number": 1,
+  "source_page": 1,
+  "source_pages": [
+    1
+  ],
+  "solution_source_pages": [
+    5
+  ],
+  "title": "التمرين الثاني — بكالوريا الجزائر 2016 — الموضوع الأول — شعبة علوم تجريبية",
+  "statement": "الفضاء منسوب إلى المعلم المتعامد والمتجانس \\((O;\\vec{i},\\vec{j},\\vec{k})\\)، \\((\\Delta)\\) المستقيم الذي يشمل النقطة \\(A(1;0;2)\\) وشعاع توجيه له \\(\\vec u(2;1;-1)\\) وليكن المستقيم \\((\\Delta')\\) المعرف بالتمثيل الوسيطي التالي:\n\\[\\begin{cases}x=\\lambda\\\\y=4+\\lambda\\\\z=2+\\lambda\\end{cases}\\quad(\\lambda\\in\\mathbb R).\\]",
+  "questions": [
+    {
+      "id": "2016_s1_space_ex02_q1a",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1- أ) اكتب تمثيلا وسيطيا للمستقيم \\((\\Delta)\\).",
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "المستقيم يمر بالنقطة A وله شعاع التوجيه المعطى.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "استعمال النقطة وشعاع التوجيه",
+            "explanation": "بما أن \\(A(1,0,2)\\) تنتمي إلى \\((\\Delta)\\) و\\(\\vec u=(2,1,-1)\\) شعاع توجيه له، نكتب إحداثيات نقطة عامة منه."
+          },
+          {
+            "step_number": 2,
+            "title": "التمثيل الوسيطي",
+            "explanation": "\\[\\begin{cases}x=1+2t\\\\y=t\\\\z=2-t\\end{cases}\\qquad(t\\in\\mathbb R).\\]"
+          }
+        ],
+        "final_answer": "\\[(\\Delta):\\begin{cases}x=1+2t\\\\y=t\\\\z=2-t\\end{cases},\\quad t\\in\\mathbb R.\\]"
+      }
+    },
+    {
+      "id": "2016_s1_space_ex02_q1b",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "ب) بين أن المستقيمين \\((\\Delta)\\) و \\((\\Delta')\\) ليسا من نفس المستوي.",
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نثبت أولا أنهما غير متوازيين، ثم نفترض وجود نقطة تقاطع ونبين أن نظام التقاطع غير ممكن؛ فيكونان متخالفين، أي ليسا من نفس المستوى.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "مقارنة شعاعي التوجيه",
+            "explanation": "شعاع توجيه \\((\\Delta)\\) هو \\((2,1,-1)\\)، وشعاع توجيه \\((\\Delta')\\) هو \\((1,1,1)\\). وهما غير مرتبطين خطيا، إذن المستقيمان غير متوازيين."
+          },
+          {
+            "step_number": 2,
+            "title": "البحث عن تقاطع",
+            "explanation": "لو تقاطعا لوجد \\(t,\\lambda\\) بحيث:\n\\[\\begin{cases}1+2t=\\lambda\\\\t=4+\\lambda\\\\2-t=2+\\lambda\\end{cases}.\\]\nمن المعادلة الثالثة \\(\\lambda=-t\\)، ومن الثانية \\(t=4-t\\Rightarrow t=2\\)، ومنه \\(\\lambda=-2\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "ظهور التناقض",
+            "explanation": "بالتعويض في المعادلة الأولى نجد:\n\\[1+2(2)=5\\neq-2=\\lambda.\\]\nإذن لا توجد نقطة تقاطع."
+          }
+        ],
+        "final_answer": "المستقيمان غير متوازيين ولا متقاطعين، وبالتالي هما متخالفان وليسا من نفس المستوى."
+      }
+    },
+    {
+      "id": "2016_s1_space_ex02_q2a",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "2- أ) بين أن النقطة \\(B(-1;3;1)\\) هي المسقط العمودي للنقطة \\(A\\) على المستقيم \\((\\Delta')\\).",
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "حتى تكون B مسقط A على Δ' يجب أن تنتمي B إلى Δ' وأن يكون AB عموديا على Δ'.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "إثبات انتماء B إلى Δ'",
+            "explanation": "عند \\(\\lambda=-1\\):\n\\[(x,y,z)=(-1,3,1)=B.\\]\nإذن \\(B\\in(\\Delta')\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "حساب شعاع AB",
+            "explanation": "\\[\\overrightarrow{AB}=B-A=(-2,3,-1).\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "إثبات العمودية",
+            "explanation": "شعاع توجيه \\((\\Delta')\\) هو \\(\\vec v=(1,1,1)\\). إذن:\n\\[\\overrightarrow{AB}\\cdot\\vec v=-2+3-1=0.\\]\nومن ثم \\((AB)\\perp(\\Delta')\\)."
+          }
+        ],
+        "final_answer": "بما أن \\(B\\in(\\Delta')\\) و\\((AB)\\perp(\\Delta')\\)، فإن \\(B\\) هو المسقط العمودي لـ\\(A\\) على \\((\\Delta')\\)."
+      }
+    },
+    {
+      "id": "2016_s1_space_ex02_q2b",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "ب) تحقق أن المستقيم \\((AB)\\) عمودي على كل من المستقيمين \\((\\Delta)\\) و \\((\\Delta')\\).",
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب الجداء السلمي لشعاع AB مع شعاع توجيه كل مستقيم.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "مع المستقيم Δ",
+            "explanation": "\\[\\overrightarrow{AB}\\cdot\\vec u=(-2,3,-1)\\cdot(2,1,-1)=-4+3+1=0.\\]\nإذن \\((AB)\\perp(\\Delta)\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "مع المستقيم Δ'",
+            "explanation": "\\[\\overrightarrow{AB}\\cdot(1,1,1)=-2+3-1=0.\\]\nإذن \\((AB)\\perp(\\Delta')\\)."
+          }
+        ],
+        "final_answer": "\\[(AB)\\perp(\\Delta)\\quad\\text{و}\\quad(AB)\\perp(\\Delta').\\]"
+      }
+    },
+    {
+      "id": "2016_s1_space_ex02_q2c",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "ج) استنتج المسافة بين المستقيمين \\((\\Delta)\\) و \\((\\Delta')\\).",
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "القطعة AB تصل نقطة من Δ بنقطة من Δ' وهي عمودية على المستقيمين، لذا طولها هو المسافة بينهما.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب AB",
+            "explanation": "\\[AB=\\sqrt{(-2)^2+3^2+(-1)^2}=\\sqrt{14}.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "الاستنتاج",
+            "explanation": "بما أن \\(A\\in(\\Delta)\\)، و\\(B\\in(\\Delta')\\)، و\\((AB)\\) عمودي على المستقيمين، فإن \\([AB]\\) هي العمود المشترك بينهما."
+          }
+        ],
+        "final_answer": "\\[d((\\Delta),(\\Delta'))=AB=\\sqrt{14}.\\]"
+      }
+    },
+    {
+      "id": "2016_s1_space_ex02_q3a",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "3- لتكن \\(N\\) نقطة إحداثياتها \\((-2+t;2+t;t)\\) حيث \\((t\\in\\mathbb R)\\) ولتكن الدالة \\(h\\) المعرفة على \\(\\mathbb R\\) بـ: \\(h(t)=AN^2\\). أ) بين أن النقطة \\(N\\) تنتمي إلى المستقيم \\((\\Delta')\\)، ثم اكتب عبارة \\(h(t)\\) بدلالة \\(t\\).",
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نربط إحداثيات N بوسيط Δ'، ثم نحسب مربع المسافة AN مباشرة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "إثبات N∈Δ'",
+            "explanation": "نضع \\(\\lambda=t-2\\). عندئذ:\n\\[x=\\lambda=t-2,\\quad y=4+\\lambda=t+2,\\quad z=2+\\lambda=t.\\]\nوهذه هي إحداثيات \\(N\\)، إذن \\(N\\in(\\Delta')\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "حساب AN²",
+            "explanation": "\\[\\overrightarrow{AN}=(-2+t-1,\\ 2+t-0,\\ t-2)=(t-3,t+2,t-2).\\]\nإذن:\n\\[h(t)=AN^2=(t-3)^2+(t+2)^2+(t-2)^2.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "النشر والتبسيط",
+            "explanation": "\\[h(t)=t^2-6t+9+t^2+4t+4+t^2-4t+4=3t^2-6t+17.\\]"
+          }
+        ],
+        "final_answer": "\\[N\\in(\\Delta'),\\qquad h(t)=3t^2-6t+17.\\]"
+      }
+    },
+    {
+      "id": "2016_s1_space_ex02_q3b",
+      "display_order": 7,
+      "content_type": "question",
+      "text": "ب) استنتج قيمة العدد الحقيقي \\(t\\) التي تكون من أجلها المسافة \\(AN\\) أصغر ما يمكن. ثم قارن بين القيمة الصغرى للدالة \\(h\\) والمسافة \\(AB\\).",
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "بما أن تصغير AN يكافئ تصغير AN²=h(t)، نحدد أصغر قيمة للثلاثي التربيعي.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تحديد موضع القيمة الصغرى",
+            "explanation": "\\[h(t)=3t^2-6t+17=3(t-1)^2+14.\\]\nوبما أن \\((t-1)^2\\ge0\\)، فإن أصغر قيمة تتحقق عند \\(t=1\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "القيمة الصغرى لـ h",
+            "explanation": "\\[h(1)=14.\\]\nإذن أصغر مسافة هي:\n\\[AN_{\\min}=\\sqrt{h(1)}=\\sqrt{14}.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "المقارنة مع AB",
+            "explanation": "سبق أن وجدنا \\(AB=\\sqrt{14}\\)، ومنه:\n\\[AN_{\\min}=AB.\\]\nأما القيمة الصغرى للدالة نفسها فهي \\(h_{\\min}=14=AB^2\\)."
+          }
+        ],
+        "final_answer": "\\[t=1,\\qquad h_{\\min}=14,\\qquad AN_{\\min}=\\sqrt{14}=AB.\\]"
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2016_2(1).pdf",
+    "statement_page": 1,
+    "correction_page": 5,
+    "statement_figure_policy": "لا يوجد شكل لازم.",
+    "solution_figure_policy": "لا يحتاج الحل إلى رسم.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  }
+}

@@ -1,0 +1,1865 @@
+{
+  "schema_version": "4.5-bac-source",
+  "version": "4.5-2010-subject2-derivatives-ex04-pedagogical-detailed",
+  "language": "ar",
+  "direction": "rtl",
+  "year": 2010,
+  "session": "ordinary",
+  "subject_variant": "second_subject",
+  "chapter_code": "derivatives",
+  "chapter_title": "الاشتقاقية ودراسة الدوال",
+  "exercise_number": 4,
+  "points": 7,
+  "source_pages": [
+    4
+  ],
+  "solution_source_pages": [
+    8
+  ],
+  "branches": [
+    {
+      "code": "math",
+      "name": "شعبة الرياضيات"
+    }
+  ],
+  "title": "التمرين الرابع — بكالوريا الجزائر 2010 — الموضوع الثاني",
+  "axis_tags": [
+    "logarithmic_function",
+    "limits",
+    "vertical_asymptote",
+    "derivative_variations",
+    "equation_roots",
+    "function_sign",
+    "composite_function_sign",
+    "right_derivative",
+    "tangent_equation",
+    "curve_construction"
+  ],
+  "statement": "التمرين الرابع: (07 نقاط)\n\\(g\\) الدالة المعرفة على المجال \\(]0;+\\infty[\\) كما يلي: \\(g(x)=x-1-2\\ln x\\) و \\((C_g)\\) تمثيلها البياني في المستوى المنسوب إلى المعلم المتعامد والمتجانس \\((O;\\vec{i},\\vec{j})\\) وحدة الطول هي \\(4cm\\).",
+  "figures": [],
+  "questions": [
+    {
+      "id": "2010_s2_ex04_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1- احسب \\(\\lim_{x\\to0}g(x)\\) ثم فسر النتيجة هندسيا.",
+      "solution": {
+        "strategy": "نحسب النهاية عند الصفر من اليمين لأن مجال الدالة موجب.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "نهاية اللوغاريتم",
+            "explanation": "عندما \\(x\\to0^+\\)، فإن \\(\\ln x\\to-\\infty\\)، ومنه \\(-2\\ln x\\to+\\infty\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "نهاية المجموع",
+            "explanation": "لدينا \\(x-1\\to-1\\)، لذلك \\[\\lim_{x\\to0^+}(x-1-2\\ln x)=+\\infty.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "التفسير الهندسي",
+            "explanation": "المستقيم ذو المعادلة \\(x=0\\)، أي محور التراتيب، مقارب عمودي للمنحنى \\((C_g)\\)."
+          }
+        ],
+        "final_answer": "\\[\\boxed{\\lim_{x\\to0^+}g(x)=+\\infty}\\] والمستقيم \\(x=0\\) مقارب عمودي لـ\\((C_g)\\).",
+        "verification": "تم التحقق بالحساب ومقارنة النتيجة بعناصر الإجابة في الصفحة 8 من PDF المرفق.",
+        "common_mistakes": [
+          "عدم الانتباه إلى أن الاقتراب من الصفر يكون من اليمين."
+        ],
+        "hints": [
+          "استعمل نهاية اللوغاريتم عند الصفر."
+        ],
+        "introduction": "نحسب النهاية عند الصفر من اليمين لأن مجال الدالة موجب.",
+        "summary": "\\[\\boxed{\\lim_{x\\to0^+}g(x)=+\\infty}\\] والمستقيم \\(x=0\\) مقارب عمودي لـ\\((C_g)\\).",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2010_s2_ex04_q2a",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2- أ- بين أن \\(\\lim_{x\\to+\\infty}g(x)=+\\infty\\).",
+      "solution": {
+        "strategy": "نزيل عدم التعيين بإخراج x عاملا مشتركا.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "إعادة الكتابة",
+            "explanation": "\\[g(x)=x\\left(1-\\frac1x-2\\frac{\\ln x}{x}\\right).\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب نهاية العامل",
+            "explanation": "\\[\\lim_{x\\to+\\infty}\\frac1x=0,\\qquad\\lim_{x\\to+\\infty}\\frac{\\ln x}{x}=0.\\] إذن العامل بين القوسين يتجه إلى \\(1\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "الاستنتاج",
+            "explanation": "حاصل ضرب كمية تتجه إلى \\(+\\infty\\) في كمية تتجه إلى \\(1>0\\) يتجه إلى \\(+\\infty\\)."
+          }
+        ],
+        "final_answer": "\\[\\boxed{\\lim_{x\\to+\\infty}g(x)=+\\infty}\\]",
+        "verification": "تم التحقق بالحساب ومقارنة النتيجة بعناصر الإجابة في الصفحة 8 من PDF المرفق.",
+        "common_mistakes": [
+          "إجراء طرح مباشر بين نهايتين لا نهائيتين."
+        ],
+        "hints": [
+          "استعمل النهاية المعروفة ln(x)/x."
+        ],
+        "introduction": "نزيل عدم التعيين بإخراج x عاملا مشتركا.",
+        "summary": "\\[\\boxed{\\lim_{x\\to+\\infty}g(x)=+\\infty}\\]",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2010_s2_ex04_q2b",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "ب- ادرس تغيرات الدالة \\(g\\).",
+      "solution": {
+        "strategy": "نحسب المشتقة ونحدد إشارتها من إشارة البسط.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب المشتقة",
+            "explanation": "\\[g\\prime(x)=1-\\frac2x=\\frac{x-2}{x},\\qquad x>0.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "إشارة المشتقة",
+            "explanation": "المقام موجب، لذلك \\(g\\prime(x)<0\\) على \\(]0;2[\\)، و\\(g\\prime(2)=0\\)، و\\(g\\prime(x)>0\\) على \\(]2;+\\infty[\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "التغيرات والقيمة الدنيا",
+            "explanation": "الدالة \\(g\\) متناقصة تماما على \\(]0;2]\\) ومتزايدة تماما على \\([2;+\\infty[\\). قيمتها الدنيا هي \\[g(2)=1-2\\ln2\\approx-0.386294.\\]"
+          }
+        ],
+        "final_answer": "\\(g\\) تتناقص من \\(+\\infty\\) إلى \\(1-2\\ln2\\)، ثم تتزايد إلى \\(+\\infty\\).",
+        "verification": "تم التحقق بالحساب ومقارنة النتيجة بعناصر الإجابة في الصفحة 8 من PDF المرفق.",
+        "common_mistakes": [
+          "اعتبار مقام المشتقة سالبا رغم أن x موجب."
+        ],
+        "hints": [
+          "إشارة المشتقة هي إشارة x−2."
+        ],
+        "introduction": "نحسب المشتقة ونحدد إشارتها من إشارة البسط.",
+        "summary": "\\(g\\) تتناقص من \\(+\\infty\\) إلى \\(1-2\\ln2\\)، ثم تتزايد إلى \\(+\\infty\\).",
+        "answer_style": "explain_then_calculate_then_conclude",
+        "variation_table": {
+          "type": "variation_table",
+          "title": "جدول تغيرات الدالة g",
+          "function_name": "g(x)",
+          "derivative_name": "g'(x)",
+          "domain": "]0,+\\infty[",
+          "x_values": [
+            "0^+",
+            "2",
+            "+\\infty"
+          ],
+          "derivative_signs": [
+            "-",
+            "+"
+          ],
+          "critical_points": [
+            {
+              "x": "2",
+              "derivative_value": "0",
+              "function_value": "1-2\\ln2"
+            }
+          ],
+          "function": {
+            "branches": [
+              {
+                "id": "g0",
+                "start_x": "0^+",
+                "end_x": "2",
+                "start_value": "+\\infty",
+                "end_value": "1-2\\ln2",
+                "direction": "down"
+              },
+              {
+                "id": "g1",
+                "start_x": "2",
+                "end_x": "+\\infty",
+                "start_value": "1-2\\ln2",
+                "end_value": "+\\infty",
+                "direction": "up"
+              }
+            ]
+          },
+          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 960 290\"><rect width=\"960\" height=\"290\" fill=\"white\"/><line x1=\"20\" y1=\"20\" x2=\"940\" y2=\"20\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"20\" y1=\"80\" x2=\"940\" y2=\"80\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"20\" y1=\"140\" x2=\"940\" y2=\"140\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"20\" y1=\"270\" x2=\"940\" y2=\"270\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"20\" y1=\"20\" x2=\"20\" y2=\"270\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"120\" y1=\"20\" x2=\"120\" y2=\"270\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"940\" y1=\"20\" x2=\"940\" y2=\"270\" stroke=\"#64748b\" stroke-width=\"1.5\"/><text x=\"65\" y=\"59\" text-anchor=\"middle\" font-family=\"DejaVu Sans,Arial\" font-size=\"22\" fill=\"#172033\">x</text><text x=\"65\" y=\"118\" text-anchor=\"middle\" font-family=\"DejaVu Sans,Arial\" font-size=\"19\" fill=\"#172033\">g′(x)</text><text x=\"65\" y=\"218\" text-anchor=\"middle\" font-family=\"DejaVu Sans,Arial\" font-size=\"19\" fill=\"#172033\">g(x)</text><text x=\"175.0\" y=\"58\" text-anchor=\"middle\" font-family=\"DejaVu Sans,Arial\" font-size=\"22\" fill=\"#172033\">0⁺</text><text x=\"175.0\" y=\"175\" text-anchor=\"middle\" font-family=\"DejaVu Sans,Arial\" font-size=\"18\" fill=\"#172033\">+∞</text><text x=\"535.0\" y=\"58\" text-anchor=\"middle\" font-family=\"DejaVu Sans,Arial\" font-size=\"22\" fill=\"#172033\">2</text><text x=\"535.0\" y=\"246\" text-anchor=\"middle\" font-family=\"DejaVu Sans,Arial\" font-size=\"18\" fill=\"#172033\">1 − 2 ln 2</text><line x1=\"535.0\" y1=\"80\" x2=\"535.0\" y2=\"270\" stroke=\"#64748b\" stroke-width=\"1.5\" stroke-dasharray=\"6 6\"/><text x=\"535.0\" y=\"117\" text-anchor=\"middle\" font-family=\"DejaVu Sans,Arial\" font-size=\"22\" fill=\"#172033\">0</text><text x=\"895.0\" y=\"58\" text-anchor=\"middle\" font-family=\"DejaVu Sans,Arial\" font-size=\"22\" fill=\"#172033\">+∞</text><text x=\"895.0\" y=\"175\" text-anchor=\"middle\" font-family=\"DejaVu Sans,Arial\" font-size=\"18\" fill=\"#172033\">+∞</text><text x=\"355.0\" y=\"118\" text-anchor=\"middle\" font-family=\"DejaVu Sans,Arial\" font-size=\"22\" fill=\"#172033\">−</text><line x1=\"220.0\" y1=\"169\" x2=\"490.0\" y2=\"240\" stroke=\"#64748b\" stroke-width=\"1.5\"/><polygon points=\"490.0,240 478.1222433648636,241.70847807023486 480.4991001104564,232.66972706586782\" fill=\"#64748b\"/><text x=\"715.0\" y=\"118\" text-anchor=\"middle\" font-family=\"DejaVu Sans,Arial\" font-size=\"22\" fill=\"#172033\">+</text><line x1=\"580.0\" y1=\"240\" x2=\"850.0\" y2=\"169\" stroke=\"#64748b\" stroke-width=\"1.5\"/><polygon points=\"850.0,169 840.4991001104564,176.33027293413218 838.1222433648636,167.29152192976514\" fill=\"#64748b\"/></svg>"
+        }
+      }
+    },
+    {
+      "id": "2010_s2_ex04_q2c",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "ج- احسب \\(g(1)\\).",
+      "solution": {
+        "strategy": "نعوض x بالعدد 1.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التعويض",
+            "explanation": "\\[g(1)=1-1-2\\ln1.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "استعمال قيمة اللوغاريتم",
+            "explanation": "بما أن \\(\\ln1=0\\)، نحصل على \\(g(1)=0\\)."
+          }
+        ],
+        "final_answer": "\\[\\boxed{g(1)=0}\\]",
+        "verification": "تم التحقق بالحساب ومقارنة النتيجة بعناصر الإجابة في الصفحة 8 من PDF المرفق.",
+        "common_mistakes": [
+          "الخلط بين ln(1)=0 وln(e)=1."
+        ],
+        "hints": [
+          "تذكر أن ln(1)=0."
+        ],
+        "introduction": "نعوض x بالعدد 1.",
+        "summary": "\\[\\boxed{g(1)=0}\\]",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2010_s2_ex04_q2d",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "د- برهن أن المعادلة \\(g(x)=0\\) تقبل حلين مختلفين أحدهما \\(\\alpha\\) حيث: \\(3,5<\\alpha<3,6\\).",
+      "solution": {
+        "strategy": "ندرس وجود الجذور ووحدانيتها على مجالي الرتابة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الجذر الأول",
+            "explanation": "وجدنا \\(g(1)=0\\). وبما أن \\(g\\) متناقصة تماما على \\(]0;2]\\)، فإن \\(1\\) هو الجذر الوحيد في هذا المجال."
+          },
+          {
+            "step_number": 2,
+            "title": "وجود الجذر الثاني ووحدانيته",
+            "explanation": "الدالة \\(g\\) مستمرة ومتزايدة تماما على \\([2;+\\infty[\\)، و\\(g(2)<0\\)، ونهايتها عند \\(+\\infty\\) موجبة لا نهائية. بمبرهنة القيم المتوسطة يوجد حل وحيد \\(\\alpha>2\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "حصر الجذر الثاني",
+            "explanation": "\\[g(3.5)=2.5-2\\ln3.5\\approx-0.005526<0,\\]\\[g(3.6)=2.6-2\\ln3.6\\approx0.038132>0.\\] بالاستمرارية والرتابة نحصل على \\(3.5<\\alpha<3.6\\)."
+          }
+        ],
+        "final_answer": "حلّا المعادلة هما \\(1\\) و\\(\\alpha\\)، حيث \\(3.5<\\alpha<3.6\\).",
+        "verification": "تم التحقق بالحساب ومقارنة النتيجة بعناصر الإجابة في الصفحة 8 من PDF المرفق.",
+        "common_mistakes": [
+          "الاكتفاء بوجود جذرين دون إثبات عدم وجود جذور أخرى."
+        ],
+        "hints": [
+          "استعمل التناقص قبل 2 والتزايد بعده."
+        ],
+        "introduction": "ندرس وجود الجذور ووحدانيتها على مجالي الرتابة.",
+        "summary": "حلّا المعادلة هما \\(1\\) و\\(\\alpha\\)، حيث \\(3.5<\\alpha<3.6\\).",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2010_s2_ex04_q2e",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "هـ- استنتج إشارة \\(g(x)\\) ثم إشارة \\(g\\left(\\frac1x\\right)\\).",
+      "solution": {
+        "strategy": "نستعمل الجذرين والرتابة ثم نعكس المتراجحات عند أخذ المقلوب.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "إشارة g",
+            "explanation": "\\[\\begin{cases}g(x)>0&x\\in]0;1[\\cup]\\alpha;+\\infty[,\\\\g(x)=0&x\\in\\{1,\\alpha\\},\\\\g(x)<0&x\\in]1;\\alpha[.\\end{cases}\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "ترتيب القيم المقلوبة",
+            "explanation": "لأن \\(\\alpha>1\\)، فإن \\(0<1/\\alpha<1\\). إذا \\(0<x<1/\\alpha\\)، فإن \\(1/x>\\alpha\\). وإذا \\(1/\\alpha<x<1\\)، فإن \\(1<1/x<\\alpha\\). وإذا \\(x>1\\)، فإن \\(0<1/x<1\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "إشارة الدالة المركبة",
+            "explanation": "\\[\\begin{cases}g(1/x)>0&x\\in]0;1/\\alpha[\\cup]1;+\\infty[,\\\\g(1/x)=0&x\\in\\{1/\\alpha,1\\},\\\\g(1/x)<0&x\\in]1/\\alpha;1[.\\end{cases}\\]"
+          }
+        ],
+        "final_answer": "إشارة \\(g(x)\\): \\(+\\)، ثم \\(-\\)، ثم \\(+\\)، وتنعدم عند \\(1,\\alpha\\). إشارة \\(g(1/x)\\): \\(+\\)، ثم \\(-\\)، ثم \\(+\\)، وتنعدم عند \\(1/\\alpha,1\\).",
+        "verification": "تم التحقق بالحساب ومقارنة النتيجة بعناصر الإجابة في الصفحة 8 من PDF المرفق.",
+        "common_mistakes": [
+          "عدم عكس ترتيب الحدود عند أخذ المقلوب."
+        ],
+        "hints": [
+          "الانتقال من x إلى 1/x يعكس المتراجحات على الأعداد الموجبة."
+        ],
+        "introduction": "نستعمل الجذرين والرتابة ثم نعكس المتراجحات عند أخذ المقلوب.",
+        "summary": "إشارة \\(g(x)\\): \\(+\\)، ثم \\(-\\)، ثم \\(+\\)، وتنعدم عند \\(1,\\alpha\\). إشارة \\(g(1/x)\\): \\(+\\)، ثم \\(-\\)، ثم \\(+\\)، وتنعدم عند \\(1/\\alpha,1\\).",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2010_s2_ex04_q3a",
+      "display_order": 7,
+      "content_type": "question",
+      "text": "3) \\(f\\) الدالة العددية المعرفة على \\([0;+\\infty[\\) كما يلي:\n\\[\\begin{cases}f(x)=-x^2+x+x^2\\ln x\\ ;\\quad x>0\\\\f(0)=0\\end{cases}\\]\nأ- احسب \\(\\lim_{x\\to0}\\frac{f(x)}x\\) وفسر النتيجة هندسيا.",
+      "solution": {
+        "strategy": "نختزل بـ x ثم نتعرف على مشتقة f من اليمين عند الصفر.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تبسيط النسبة",
+            "explanation": "من أجل \\(x>0\\): \\[\\frac{f(x)}x=-x+1+x\\ln x.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب النهاية",
+            "explanation": "نستعمل \\(\\lim_{x\\to0^+}x\\ln x=0\\) و\\(\\lim_{x\\to0^+}x=0\\)، فنجد \\[\\lim_{x\\to0^+}\\frac{f(x)}x=1.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "التفسير الهندسي",
+            "explanation": "بما أن \\(f(0)=0\\)، فإن هذه النهاية هي \\[f\\prime_+(0)=\\lim_{x\\to0^+}\\frac{f(x)-f(0)}{x-0}=1.\\] إذن يقبل \\((C_f)\\) نصف مماس عند الأصل، من جهة اليمين، معادلته \\(y=x\\). كما أن \\(f(x)=x\\,[f(x)/x]\\to0=f(0)\\)، فتكون \\(f\\) مستمرة عند الصفر."
+          }
+        ],
+        "final_answer": "\\[\\boxed{\\lim_{x\\to0^+}\\frac{f(x)}x=1}\\] نصف المماس عند \\(O(0;0)\\) معادلته \\(y=x\\).",
+        "verification": "تم التحقق بالحساب ومقارنة النتيجة بعناصر الإجابة في الصفحة 8 من PDF المرفق.",
+        "common_mistakes": [
+          "اعتبار النتيجة مقاربا؛ إنها مشتقة من اليمين عند نقطة من المنحنى."
+        ],
+        "hints": [
+          "استعمل f(0)=0 لتتعرف على معدل التغير."
+        ],
+        "introduction": "نختزل بـ x ثم نتعرف على مشتقة f من اليمين عند الصفر.",
+        "summary": "\\[\\boxed{\\lim_{x\\to0^+}\\frac{f(x)}x=1}\\] نصف المماس عند \\(O(0;0)\\) معادلته \\(y=x\\).",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2010_s2_ex04_q3b",
+      "display_order": 8,
+      "content_type": "question",
+      "text": "ب- احسب نهاية الدالة \\(f\\) عند \\(+\\infty\\).",
+      "solution": {
+        "strategy": "نخرج x² عاملا مشتركا.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "إعادة الكتابة",
+            "explanation": "\\[f(x)=x^2\\left(\\ln x-1+\\frac1x\\right).\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "نهايتا العاملين",
+            "explanation": "عندما \\(x\\to+\\infty\\)، فإن \\(x^2\\to+\\infty\\)، و\\(\\ln x-1+1/x\\to+\\infty\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "النتيجة",
+            "explanation": "إذن حاصل الضرب يتجه إلى \\(+\\infty\\)."
+          }
+        ],
+        "final_answer": "\\[\\boxed{\\lim_{x\\to+\\infty}f(x)=+\\infty}\\]",
+        "verification": "تم التحقق بالحساب ومقارنة النتيجة بعناصر الإجابة في الصفحة 8 من PDF المرفق.",
+        "common_mistakes": [
+          "التعامل مع −x²+x²ln(x) دون إزالة عدم التعيين."
+        ],
+        "hints": [
+          "اكتب f(x)=x²(ln(x)−1+1/x)."
+        ],
+        "introduction": "نخرج x² عاملا مشتركا.",
+        "summary": "\\[\\boxed{\\lim_{x\\to+\\infty}f(x)=+\\infty}\\]",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2010_s2_ex04_q3c",
+      "display_order": 9,
+      "content_type": "question",
+      "text": "ج- بين أنه من أجل كل \\(x\\) من \\(]0;+\\infty[\\) فإن: \\(f\\prime(x)=xg\\left(\\frac1x\\right)\\)، واستنتج اتجاه تغير الدالة \\(f\\).",
+      "solution": {
+        "strategy": "نشتق جداء x²ln(x) ونقارن النتيجة بـ xg(1/x).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "اشتقاق f",
+            "explanation": "\\[(x^2\\ln x)\\prime=2x\\ln x+x.\\] ومنه \\[f\\prime(x)=-2x+1+2x\\ln x+x=1-x+2x\\ln x.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب xg(1/x)",
+            "explanation": "\\[xg\\left(\\frac1x\\right)=x\\left(\\frac1x-1-2\\ln\\frac1x\\right)=1-x+2x\\ln x=f\\prime(x).\\] استعملنا \\(\\ln(1/x)=-\\ln x\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "استنتاج الاتجاه",
+            "explanation": "لأن \\(x>0\\)، فإشارة \\(f\\prime(x)\\) هي إشارة \\(g(1/x)\\). إذن \\(f\\) متزايدة تماما على \\([0;1/\\alpha]\\)، متناقصة تماما على \\([1/\\alpha;1]\\)، ومتزايدة تماما على \\([1;+\\infty[\\). شمول الصفر مبرر باستمرارية \\(f\\) فيه."
+          }
+        ],
+        "final_answer": "\\[\\boxed{f\\prime(x)=xg(1/x)}\\] وتغيرات \\(f\\): تزايد ثم تناقص ثم تزايد، عند الفواصل \\(0,1/\\alpha,1,+\\infty\\).",
+        "verification": "تم التحقق بالحساب ومقارنة النتيجة بعناصر الإجابة في الصفحة 8 من PDF المرفق.",
+        "common_mistakes": [
+          "نسيان مشتقة ln(x) عند تطبيق مشتقة الجداء."
+        ],
+        "hints": [
+          "عامل x موجب؛ استعمل إشارة g(1/x)."
+        ],
+        "introduction": "نشتق جداء x²ln(x) ونقارن النتيجة بـ xg(1/x).",
+        "summary": "\\[\\boxed{f\\prime(x)=xg(1/x)}\\] وتغيرات \\(f\\): تزايد ثم تناقص ثم تزايد، عند الفواصل \\(0,1/\\alpha,1,+\\infty\\).",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2010_s2_ex04_q3d",
+      "display_order": 10,
+      "content_type": "question",
+      "text": "د- شكل جدول تغيرات الدالة \\(f\\)، بين أن: \\(f\\left(\\frac1\\alpha\\right)=\\frac{\\alpha-1}{2\\alpha^2}\\) واستنتج حصرا للعدد \\(f\\left(\\frac1\\alpha\\right)\\).",
+      "solution": {
+        "strategy": "نحسب القيم المميزة ونستعمل g(α)=0 لإزالة اللوغاريتم.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "القيم اللازمة للجدول",
+            "explanation": "لدينا \\(f(0)=0\\)، و\\(f(1)=-1+1+\\ln1=0\\)، و\\(\\lim_{x\\to+\\infty}f(x)=+\\infty\\). تنعدم المشتقة عند \\(1/\\alpha\\) و\\(1\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "علاقة بين α واللوغاريتم",
+            "explanation": "\\[g(\\alpha)=0\\iff\\alpha-1-2\\ln\\alpha=0\\iff\\ln\\alpha=\\frac{\\alpha-1}{2}.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب القيمة العظمى المحلية",
+            "explanation": "\\[f\\left(\\frac1\\alpha\\right)=-\\frac1{\\alpha^2}+\\frac1\\alpha-\\frac{\\ln\\alpha}{\\alpha^2}=\\frac{\\alpha-1-\\ln\\alpha}{\\alpha^2}=\\frac{\\alpha-1}{2\\alpha^2}.\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "حصر البسط والمقام",
+            "explanation": "من \\(3.5<\\alpha<3.6\\) نستنتج \\(2.5<\\alpha-1<2.6\\) و\\(24.5<2\\alpha^2<25.92\\). جميع هذه الكميات موجبة، لذا \\[\\frac{2.5}{25.92}<f\\left(\\frac1\\alpha\\right)<\\frac{2.6}{24.5}.\\]"
+          },
+          {
+            "step_number": 5,
+            "title": "حصر عشري صحيح",
+            "explanation": "الحدان السابقان يقاربان \\(0.0964506\\) و\\(0.1061224\\). وللحصول على حصر أدق، نضع \\(h(t)=(t-1)/(2t^2)\\). لدينا \\[h\\prime(t)=\\frac{2-t}{2t^3}<0\\quad(t\\in[3.5;3.6]).\\] إذن \\[\\frac{65}{648}=h(3.6)<f(1/\\alpha)<h(3.5)=\\frac5{49}.\\] وبالتالي \\[0.1003<f(1/\\alpha)<0.1021.\\] وهو يحقق أيضا الحصر الوارد في التصحيح: \\(0.096<f(1/\\alpha)<0.106\\)."
+          }
+        ],
+        "final_answer": "\\[\\boxed{f(1/\\alpha)=\\frac{\\alpha-1}{2\\alpha^2}}\\qquad\\boxed{0.1003<f(1/\\alpha)<0.1021}\\] تتزايد \\(f\\) من \\(0\\) إلى هذه القيمة، ثم تتناقص إلى \\(0\\)، ثم تتزايد إلى \\(+\\infty\\).",
+        "verification": "تم التحقق بالحساب ومقارنة النتيجة بعناصر الإجابة في الصفحة 8 من PDF المرفق.",
+        "common_mistakes": [
+          "تقريب الحد الأعلى 0.1061224 نزولا إلى 0.106 لا يبرهن الحصر؛ نستعمل تناقص h لتبريره."
+        ],
+        "hints": [
+          "عوض ln(α)=(α−1)/2، وانتبه لاتجاه المتراجحات."
+        ],
+        "introduction": "نحسب القيم المميزة ونستعمل g(α)=0 لإزالة اللوغاريتم.",
+        "summary": "\\[\\boxed{f(1/\\alpha)=\\frac{\\alpha-1}{2\\alpha^2}}\\qquad\\boxed{0.1003<f(1/\\alpha)<0.1021}\\] تتزايد \\(f\\) من \\(0\\) إلى هذه القيمة، ثم تتناقص إلى \\(0\\)، ثم تتزايد إلى \\(+\\infty\\).",
+        "answer_style": "explain_then_calculate_then_conclude",
+        "variation_table": {
+          "type": "variation_table",
+          "title": "جدول تغيرات الدالة f",
+          "function_name": "f(x)",
+          "derivative_name": "f'(x)",
+          "domain": "[0,+\\infty[",
+          "x_values": [
+            "0",
+            "1/\\alpha",
+            "1",
+            "+\\infty"
+          ],
+          "derivative_signs": [
+            "+",
+            "-",
+            "+"
+          ],
+          "critical_points": [
+            {
+              "x": "1/\\alpha",
+              "derivative_value": "0",
+              "function_value": "(\\alpha-1)/(2\\alpha^2)"
+            },
+            {
+              "x": "1",
+              "derivative_value": "0",
+              "function_value": "0"
+            }
+          ],
+          "function": {
+            "branches": [
+              {
+                "id": "f0",
+                "start_x": "0",
+                "end_x": "1/\\alpha",
+                "start_value": "0",
+                "end_value": "(\\alpha-1)/(2\\alpha^2)",
+                "direction": "up"
+              },
+              {
+                "id": "f1",
+                "start_x": "1/\\alpha",
+                "end_x": "1",
+                "start_value": "(\\alpha-1)/(2\\alpha^2)",
+                "end_value": "0",
+                "direction": "down"
+              },
+              {
+                "id": "f2",
+                "start_x": "1",
+                "end_x": "+\\infty",
+                "start_value": "0",
+                "end_value": "+\\infty",
+                "direction": "up"
+              }
+            ]
+          },
+          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 960 290\"><rect width=\"960\" height=\"290\" fill=\"white\"/><line x1=\"20\" y1=\"20\" x2=\"940\" y2=\"20\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"20\" y1=\"80\" x2=\"940\" y2=\"80\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"20\" y1=\"140\" x2=\"940\" y2=\"140\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"20\" y1=\"270\" x2=\"940\" y2=\"270\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"20\" y1=\"20\" x2=\"20\" y2=\"270\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"120\" y1=\"20\" x2=\"120\" y2=\"270\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"940\" y1=\"20\" x2=\"940\" y2=\"270\" stroke=\"#64748b\" stroke-width=\"1.5\"/><text x=\"65\" y=\"59\" text-anchor=\"middle\" font-family=\"DejaVu Sans,Arial\" font-size=\"22\" fill=\"#172033\">x</text><text x=\"65\" y=\"118\" text-anchor=\"middle\" font-family=\"DejaVu Sans,Arial\" font-size=\"19\" fill=\"#172033\">f′(x)</text><text x=\"65\" y=\"218\" text-anchor=\"middle\" font-family=\"DejaVu Sans,Arial\" font-size=\"19\" fill=\"#172033\">f(x)</text><text x=\"175.0\" y=\"58\" text-anchor=\"middle\" font-family=\"DejaVu Sans,Arial\" font-size=\"22\" fill=\"#172033\">0</text><text x=\"175.0\" y=\"246\" text-anchor=\"middle\" font-family=\"DejaVu Sans,Arial\" font-size=\"18\" fill=\"#172033\">0</text><text x=\"415.0\" y=\"58\" text-anchor=\"middle\" font-family=\"DejaVu Sans,Arial\" font-size=\"22\" fill=\"#172033\">1/α</text><text x=\"415.0\" y=\"175\" text-anchor=\"middle\" font-family=\"DejaVu Sans,Arial\" font-size=\"18\" fill=\"#172033\">(α−1)/(2α²)</text><line x1=\"415.0\" y1=\"80\" x2=\"415.0\" y2=\"270\" stroke=\"#64748b\" stroke-width=\"1.5\" stroke-dasharray=\"6 6\"/><text x=\"415.0\" y=\"117\" text-anchor=\"middle\" font-family=\"DejaVu Sans,Arial\" font-size=\"22\" fill=\"#172033\">0</text><text x=\"655.0\" y=\"58\" text-anchor=\"middle\" font-family=\"DejaVu Sans,Arial\" font-size=\"22\" fill=\"#172033\">1</text><text x=\"655.0\" y=\"246\" text-anchor=\"middle\" font-family=\"DejaVu Sans,Arial\" font-size=\"18\" fill=\"#172033\">0</text><line x1=\"655.0\" y1=\"80\" x2=\"655.0\" y2=\"270\" stroke=\"#64748b\" stroke-width=\"1.5\" stroke-dasharray=\"6 6\"/><text x=\"655.0\" y=\"117\" text-anchor=\"middle\" font-family=\"DejaVu Sans,Arial\" font-size=\"22\" fill=\"#172033\">0</text><text x=\"895.0\" y=\"58\" text-anchor=\"middle\" font-family=\"DejaVu Sans,Arial\" font-size=\"22\" fill=\"#172033\">+∞</text><text x=\"895.0\" y=\"175\" text-anchor=\"middle\" font-family=\"DejaVu Sans,Arial\" font-size=\"18\" fill=\"#172033\">+∞</text><text x=\"295.0\" y=\"118\" text-anchor=\"middle\" font-family=\"DejaVu Sans,Arial\" font-size=\"22\" fill=\"#172033\">+</text><line x1=\"220.0\" y1=\"240\" x2=\"370.0\" y2=\"169\" stroke=\"#64748b\" stroke-width=\"1.5\"/><polygon points=\"370.0,169 362.0091178039904,177.95241876419422 358.0106266316594,169.50490220293153\" fill=\"#64748b\"/><text x=\"535.0\" y=\"118\" text-anchor=\"middle\" font-family=\"DejaVu Sans,Arial\" font-size=\"22\" fill=\"#172033\">−</text><line x1=\"460.0\" y1=\"169\" x2=\"610.0\" y2=\"240\" stroke=\"#64748b\" stroke-width=\"1.5\"/><polygon points=\"610.0,240 598.0106266316594,239.49509779706847 602.0091178039904,231.04758123580578\" fill=\"#64748b\"/><text x=\"775.0\" y=\"118\" text-anchor=\"middle\" font-family=\"DejaVu Sans,Arial\" font-size=\"22\" fill=\"#172033\">+</text><line x1=\"700.0\" y1=\"240\" x2=\"850.0\" y2=\"169\" stroke=\"#64748b\" stroke-width=\"1.5\"/><polygon points=\"850.0,169 842.0091178039904,177.95241876419422 838.0106266316594,169.50490220293153\" fill=\"#64748b\"/></svg>"
+        }
+      }
+    },
+    {
+      "id": "2010_s2_ex04_q4",
+      "display_order": 11,
+      "content_type": "question",
+      "text": "4- ارسم المنحنى \\((C_f)\\) الممثل للدالة \\(f\\) على المجال \\([0;3]\\).",
+      "solution": {
+        "strategy": "نرسم المنحنى انطلاقا من جدول التغيرات والنقاط المميزة في معلم متعامد متجانس.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "النقاط المميزة",
+            "explanation": "يمر المنحنى بـ\\(O(0;0)\\) و\\(A(1;0)\\). وله قيمة عظمى محلية عند \\[M\\left(\\frac1\\alpha;\\frac{\\alpha-1}{2\\alpha^2}\\right)\\approx(0.284668;0.101816).\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "المماسات واتجاه الحركة",
+            "explanation": "نصف المماس في \\(O\\) معادلته \\(y=x\\). المماس عند \\(M\\) أفقي، وكذلك عند \\(A\\) لأن المشتقة تنعدم في النقطتين. يرتفع المنحنى من \\(O\\) إلى \\(M\\)، ثم ينخفض إلى \\(A\\)، ثم يرتفع حتى الفاصلة \\(3\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "قيم مساعدة للرسم",
+            "explanation": "\\[f(0.5)\\approx0.076713,\\quad f(1.5)\\approx0.162296,\\]\\[f(2)\\approx0.772589,\\quad f(2.5)\\approx1.976817,\\quad f(3)=9\\ln3-6\\approx3.887511.\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "الرسم",
+            "explanation": "الرسم المرفق يمثل \\((C_f)\\) على \\([0;3]\\) بمقياس متساو على المحورين. وحدة الطول في المعلم الأصلي هي \\(4cm\\). أضيفت خطوط إرشاد متقطعة لتحديد موضع \\(M\\)، ونصف المماس \\(y=x\\) قرب الأصل."
+          }
+        ],
+        "final_answer": "المنحنى \\((C_f)\\) مرسوم بصيغة SVG داخل JSON على كامل المجال \\([0;3]\\).",
+        "verification": "تم التحقق بالحساب ومقارنة النتيجة بعناصر الإجابة في الصفحة 8 من PDF المرفق.",
+        "common_mistakes": [
+          "استعمال مقياسين مختلفين للمحورين أو إغفال القيمة العظمى الصغيرة قرب الأصل."
+        ],
+        "hints": [
+          "ثبت O وM وA والنقطة ذات الفاصلة 3 قبل وصل المنحنى."
+        ],
+        "introduction": "نرسم المنحنى انطلاقا من جدول التغيرات والنقاط المميزة في معلم متعامد متجانس.",
+        "summary": "المنحنى \\((C_f)\\) مرسوم بصيغة SVG داخل JSON على كامل المجال \\([0;3]\\).",
+        "answer_style": "explain_then_calculate_then_conclude",
+        "graph_data": {
+          "id": "2010_s2_ex04_curve_f",
+          "usage": "solution",
+          "type": "coordinate_graph",
+          "title": "المنحنى \\((C_f)\\) على \\([0;3]\\)",
+          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 650 840\" width=\"16.25cm\" height=\"21cm\"><rect width=\"650\" height=\"840\" fill=\"white\"/><line x1=\"85.0\" y1=\"777.0\" x2=\"85.0\" y2=\"73.0\" stroke=\"#64748b\" stroke-width=\"1.5\" stroke-dasharray=\"6 6\"/><line x1=\"117.0\" y1=\"777.0\" x2=\"117.0\" y2=\"73.0\" stroke=\"#64748b\" stroke-width=\"1.5\" stroke-dasharray=\"6 6\"/><line x1=\"149.0\" y1=\"777.0\" x2=\"149.0\" y2=\"73.0\" stroke=\"#64748b\" stroke-width=\"1.5\" stroke-dasharray=\"6 6\"/><line x1=\"181.0\" y1=\"777.0\" x2=\"181.0\" y2=\"73.0\" stroke=\"#64748b\" stroke-width=\"1.5\" stroke-dasharray=\"6 6\"/><line x1=\"213.0\" y1=\"777.0\" x2=\"213.0\" y2=\"73.0\" stroke=\"#64748b\" stroke-width=\"1.5\" stroke-dasharray=\"6 6\"/><line x1=\"245.0\" y1=\"777.0\" x2=\"245.0\" y2=\"73.0\" stroke=\"#64748b\" stroke-width=\"1.5\" stroke-dasharray=\"6 6\"/><line x1=\"277.0\" y1=\"777.0\" x2=\"277.0\" y2=\"73.0\" stroke=\"#64748b\" stroke-width=\"1.5\" stroke-dasharray=\"6 6\"/><line x1=\"309.0\" y1=\"777.0\" x2=\"309.0\" y2=\"73.0\" stroke=\"#64748b\" stroke-width=\"1.5\" stroke-dasharray=\"6 6\"/><line x1=\"341.0\" y1=\"777.0\" x2=\"341.0\" y2=\"73.0\" stroke=\"#64748b\" stroke-width=\"1.5\" stroke-dasharray=\"6 6\"/><line x1=\"373.0\" y1=\"777.0\" x2=\"373.0\" y2=\"73.0\" stroke=\"#64748b\" stroke-width=\"1.5\" stroke-dasharray=\"6 6\"/><line x1=\"405.0\" y1=\"777.0\" x2=\"405.0\" y2=\"73.0\" stroke=\"#64748b\" stroke-width=\"1.5\" stroke-dasharray=\"6 6\"/><line x1=\"437.0\" y1=\"777.0\" x2=\"437.0\" y2=\"73.0\" stroke=\"#64748b\" stroke-width=\"1.5\" stroke-dasharray=\"6 6\"/><line x1=\"469.0\" y1=\"777.0\" x2=\"469.0\" y2=\"73.0\" stroke=\"#64748b\" stroke-width=\"1.5\" stroke-dasharray=\"6 6\"/><line x1=\"501.0\" y1=\"777.0\" x2=\"501.0\" y2=\"73.0\" stroke=\"#64748b\" stroke-width=\"1.5\" stroke-dasharray=\"6 6\"/><line x1=\"533.0\" y1=\"777.0\" x2=\"533.0\" y2=\"73.0\" stroke=\"#64748b\" stroke-width=\"1.5\" stroke-dasharray=\"6 6\"/><line x1=\"565.0\" y1=\"777.0\" x2=\"565.0\" y2=\"73.0\" stroke=\"#64748b\" stroke-width=\"1.5\" stroke-dasharray=\"6 6\"/><line x1=\"85\" y1=\"777.0\" x2=\"589.0\" y2=\"777.0\" stroke=\"#64748b\" stroke-width=\"1.5\" stroke-dasharray=\"6 6\"/><line x1=\"85\" y1=\"745.0\" x2=\"589.0\" y2=\"745.0\" stroke=\"#64748b\" stroke-width=\"1.5\" stroke-dasharray=\"6 6\"/><line x1=\"85\" y1=\"713.0\" x2=\"589.0\" y2=\"713.0\" stroke=\"#64748b\" stroke-width=\"1.5\" stroke-dasharray=\"6 6\"/><line x1=\"85\" y1=\"681.0\" x2=\"589.0\" y2=\"681.0\" stroke=\"#64748b\" stroke-width=\"1.5\" stroke-dasharray=\"6 6\"/><line x1=\"85\" y1=\"649.0\" x2=\"589.0\" y2=\"649.0\" stroke=\"#64748b\" stroke-width=\"1.5\" stroke-dasharray=\"6 6\"/><line x1=\"85\" y1=\"617.0\" x2=\"589.0\" y2=\"617.0\" stroke=\"#64748b\" stroke-width=\"1.5\" stroke-dasharray=\"6 6\"/><line x1=\"85\" y1=\"585.0\" x2=\"589.0\" y2=\"585.0\" stroke=\"#64748b\" stroke-width=\"1.5\" stroke-dasharray=\"6 6\"/><line x1=\"85\" y1=\"553.0\" x2=\"589.0\" y2=\"553.0\" stroke=\"#64748b\" stroke-width=\"1.5\" stroke-dasharray=\"6 6\"/><line x1=\"85\" y1=\"521.0\" x2=\"589.0\" y2=\"521.0\" stroke=\"#64748b\" stroke-width=\"1.5\" stroke-dasharray=\"6 6\"/><line x1=\"85\" y1=\"489.0\" x2=\"589.0\" y2=\"489.0\" stroke=\"#64748b\" stroke-width=\"1.5\" stroke-dasharray=\"6 6\"/><line x1=\"85\" y1=\"457.0\" x2=\"589.0\" y2=\"457.0\" stroke=\"#64748b\" stroke-width=\"1.5\" stroke-dasharray=\"6 6\"/><line x1=\"85\" y1=\"425.0\" x2=\"589.0\" y2=\"425.0\" stroke=\"#64748b\" stroke-width=\"1.5\" stroke-dasharray=\"6 6\"/><line x1=\"85\" y1=\"393.0\" x2=\"589.0\" y2=\"393.0\" stroke=\"#64748b\" stroke-width=\"1.5\" stroke-dasharray=\"6 6\"/><line x1=\"85\" y1=\"361.0\" x2=\"589.0\" y2=\"361.0\" stroke=\"#64748b\" stroke-width=\"1.5\" stroke-dasharray=\"6 6\"/><line x1=\"85\" y1=\"329.0\" x2=\"589.0\" y2=\"329.0\" stroke=\"#64748b\" stroke-width=\"1.5\" stroke-dasharray=\"6 6\"/><line x1=\"85\" y1=\"297.0\" x2=\"589.0\" y2=\"297.0\" stroke=\"#64748b\" stroke-width=\"1.5\" stroke-dasharray=\"6 6\"/><line x1=\"85\" y1=\"265.0\" x2=\"589.0\" y2=\"265.0\" stroke=\"#64748b\" stroke-width=\"1.5\" stroke-dasharray=\"6 6\"/><line x1=\"85\" y1=\"233.0\" x2=\"589.0\" y2=\"233.0\" stroke=\"#64748b\" stroke-width=\"1.5\" stroke-dasharray=\"6 6\"/><line x1=\"85\" y1=\"201.0\" x2=\"589.0\" y2=\"201.0\" stroke=\"#64748b\" stroke-width=\"1.5\" stroke-dasharray=\"6 6\"/><line x1=\"85\" y1=\"169.0\" x2=\"589.0\" y2=\"169.0\" stroke=\"#64748b\" stroke-width=\"1.5\" stroke-dasharray=\"6 6\"/><line x1=\"85\" y1=\"137.0\" x2=\"589.0\" y2=\"137.0\" stroke=\"#64748b\" stroke-width=\"1.5\" stroke-dasharray=\"6 6\"/><line x1=\"85\" y1=\"105.0\" x2=\"589.0\" y2=\"105.0\" stroke=\"#64748b\" stroke-width=\"1.5\" stroke-dasharray=\"6 6\"/><line x1=\"85\" y1=\"73.0\" x2=\"589.0\" y2=\"73.0\" stroke=\"#64748b\" stroke-width=\"1.5\" stroke-dasharray=\"6 6\"/><line x1=\"61.0\" y1=\"745\" x2=\"605.0\" y2=\"745\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"85\" y1=\"785.0\" x2=\"85\" y2=\"49.0\" stroke=\"#64748b\" stroke-width=\"1.5\"/><text x=\"613.0\" y=\"753\" text-anchor=\"middle\" font-family=\"DejaVu Sans,Arial\" font-size=\"22\" fill=\"#172033\">x</text><text x=\"65\" y=\"57.0\" text-anchor=\"middle\" font-family=\"DejaVu Sans,Arial\" font-size=\"22\" fill=\"#172033\">y</text><text x=\"69\" y=\"769\" text-anchor=\"middle\" font-family=\"DejaVu Sans,Arial\" font-size=\"18\" fill=\"#172033\">O</text><text x=\"245\" y=\"771\" text-anchor=\"middle\" font-family=\"DejaVu Sans,Arial\" font-size=\"18\" fill=\"#172033\">1</text><text x=\"405\" y=\"771\" text-anchor=\"middle\" font-family=\"DejaVu Sans,Arial\" font-size=\"18\" fill=\"#172033\">2</text><text x=\"565\" y=\"771\" text-anchor=\"middle\" font-family=\"DejaVu Sans,Arial\" font-size=\"18\" fill=\"#172033\">3</text><text x=\"61\" y=\"591\" text-anchor=\"middle\" font-family=\"DejaVu Sans,Arial\" font-size=\"18\" fill=\"#172033\">1</text><text x=\"61\" y=\"431\" text-anchor=\"middle\" font-family=\"DejaVu Sans,Arial\" font-size=\"18\" fill=\"#172033\">2</text><text x=\"61\" y=\"271\" text-anchor=\"middle\" font-family=\"DejaVu Sans,Arial\" font-size=\"18\" fill=\"#172033\">3</text><text x=\"61\" y=\"111\" text-anchor=\"middle\" font-family=\"DejaVu Sans,Arial\" font-size=\"18\" fill=\"#172033\">4</text><path d=\"M85.000,745.000 L85.320,744.685 L85.640,744.377 L85.960,744.075 L86.280,743.780 L86.600,743.490 L86.920,743.205 L87.240,742.925 L87.560,742.650 L87.880,742.380 L88.200,742.114 L88.520,741.853 L88.840,741.596 L89.160,741.343 L89.480,741.094 L89.800,740.849 L90.120,740.608 L90.440,740.370 L90.760,740.137 L91.080,739.907 L91.400,739.680 L91.720,739.457 L92.040,739.237 L92.360,739.021 L92.680,738.808 L93.000,738.598 L93.320,738.392 L93.640,738.188 L93.960,737.988 L94.280,737.791 L94.600,737.597 L94.920,737.405 L95.240,737.217 L95.560,737.031 L95.880,736.849 L96.200,736.669 L96.520,736.492 L96.840,736.317 L97.160,736.146 L97.480,735.977 L97.800,735.810 L98.120,735.647 L98.440,735.485 L98.760,735.327 L99.080,735.170 L99.400,735.017 L99.720,734.865 L100.040,734.717 L100.360,734.570 L100.680,734.426 L101.000,734.284 L101.320,734.145 L101.640,734.007 L101.960,733.873 L102.280,733.740 L102.600,733.609 L102.920,733.481 L103.240,733.355 L103.560,733.231 L103.880,733.109 L104.200,732.989 L104.520,732.871 L104.840,732.756 L105.160,732.642 L105.480,732.530 L105.800,732.421 L106.120,732.313 L106.440,732.207 L106.760,732.104 L107.080,732.002 L107.400,731.902 L107.720,731.804 L108.040,731.707 L108.360,731.613 L108.680,731.520 L109.000,731.430 L109.320,731.341 L109.640,731.253 L109.960,731.168 L110.280,731.084 L110.600,731.002 L110.920,730.922 L111.240,730.843 L111.560,730.766 L111.880,730.691 L112.200,730.618 L112.520,730.546 L112.840,730.475 L113.160,730.406 L113.480,730.339 L113.800,730.274 L114.120,730.209 L114.440,730.147 L114.760,730.086 L115.080,730.026 L115.400,729.968 L115.720,729.912 L116.040,729.857 L116.360,729.803 L116.680,729.751 L117.000,729.700 L117.320,729.651 L117.640,729.603 L117.960,729.557 L118.280,729.512 L118.600,729.468 L118.920,729.426 L119.240,729.385 L119.560,729.345 L119.880,729.306 L120.200,729.269 L120.520,729.234 L120.840,729.199 L121.160,729.166 L121.480,729.134 L121.800,729.103 L122.120,729.074 L122.440,729.046 L122.760,729.019 L123.080,728.993 L123.400,728.968 L123.720,728.945 L124.040,728.923 L124.360,728.902 L124.680,728.882 L125.000,728.863 L125.320,728.845 L125.640,728.829 L125.960,728.813 L126.280,728.799 L126.600,728.786 L126.920,728.774 L127.240,728.763 L127.560,728.753 L127.880,728.744 L128.200,728.736 L128.520,728.729 L128.840,728.723 L129.160,728.719 L129.480,728.715 L129.800,728.712 L130.120,728.710 L130.440,728.709 L130.760,728.710 L131.080,728.711 L131.400,728.713 L131.720,728.716 L132.040,728.720 L132.360,728.725 L132.680,728.730 L133.000,728.737 L133.320,728.745 L133.640,728.753 L133.960,728.763 L134.280,728.773 L134.600,728.784 L134.920,728.796 L135.240,728.809 L135.560,728.823 L135.880,728.837 L136.200,728.852 L136.520,728.869 L136.840,728.886 L137.160,728.903 L137.480,728.922 L137.800,728.941 L138.120,728.961 L138.440,728.982 L138.760,729.004 L139.080,729.026 L139.400,729.050 L139.720,729.074 L140.040,729.098 L140.360,729.124 L140.680,729.150 L141.000,729.177 L141.320,729.204 L141.640,729.232 L141.960,729.261 L142.280,729.291 L142.600,729.321 L142.920,729.352 L143.240,729.383 L143.560,729.416 L143.880,729.449 L144.200,729.482 L144.520,729.516 L144.840,729.551 L145.160,729.586 L145.480,729.622 L145.800,729.659 L146.120,729.696 L146.440,729.734 L146.760,729.772 L147.080,729.811 L147.400,729.851 L147.720,729.891 L148.040,729.932 L148.360,729.973 L148.680,730.015 L149.000,730.057 L149.320,730.100 L149.640,730.143 L149.960,730.187 L150.280,730.232 L150.600,730.276 L150.920,730.322 L151.240,730.368 L151.560,730.414 L151.880,730.461 L152.200,730.508 L152.520,730.556 L152.840,730.604 L153.160,730.653 L153.480,730.702 L153.800,730.752 L154.120,730.802 L154.440,730.853 L154.760,730.904 L155.080,730.955 L155.400,731.007 L155.720,731.059 L156.040,731.111 L156.360,731.164 L156.680,731.218 L157.000,731.272 L157.320,731.326 L157.640,731.380 L157.960,731.435 L158.280,731.491 L158.600,731.546 L158.920,731.602 L159.240,731.658 L159.560,731.715 L159.880,731.772 L160.200,731.830 L160.520,731.887 L160.840,731.945 L161.160,732.003 L161.480,732.062 L161.800,732.121 L162.120,732.180 L162.440,732.240 L162.760,732.300 L163.080,732.360 L163.400,732.420 L163.720,732.481 L164.040,732.542 L164.360,732.603 L164.680,732.664 L165.000,732.726 L165.320,732.788 L165.640,732.850 L165.960,732.912 L166.280,732.975 L166.600,733.038 L166.920,733.101 L167.240,733.164 L167.560,733.228 L167.880,733.292 L168.200,733.355 L168.520,733.420 L168.840,733.484 L169.160,733.548 L169.480,733.613 L169.800,733.678 L170.120,733.743 L170.440,733.808 L170.760,733.874 L171.080,733.939 L171.400,734.005 L171.720,734.071 L172.040,734.137 L172.360,734.203 L172.680,734.269 L173.000,734.335 L173.320,734.402 L173.640,734.468 L173.960,734.535 L174.280,734.602 L174.600,734.669 L174.920,734.736 L175.240,734.803 L175.560,734.870 L175.880,734.938 L176.200,735.005 L176.520,735.073 L176.840,735.140 L177.160,735.208 L177.480,735.276 L177.800,735.343 L178.120,735.411 L178.440,735.479 L178.760,735.547 L179.080,735.615 L179.400,735.683 L179.720,735.751 L180.040,735.819 L180.360,735.887 L180.680,735.955 L181.000,736.024 L181.320,736.092 L181.640,736.160 L181.960,736.228 L182.280,736.296 L182.600,736.364 L182.920,736.433 L183.240,736.501 L183.560,736.569 L183.880,736.637 L184.200,736.705 L184.520,736.773 L184.840,736.841 L185.160,736.909 L185.480,736.977 L185.800,737.045 L186.120,737.113 L186.440,737.181 L186.760,737.249 L187.080,737.316 L187.400,737.384 L187.720,737.451 L188.040,737.519 L188.360,737.586 L188.680,737.654 L189.000,737.721 L189.320,737.788 L189.640,737.855 L189.960,737.922 L190.280,737.989 L190.600,738.056 L190.920,738.122 L191.240,738.189 L191.560,738.255 L191.880,738.322 L192.200,738.388 L192.520,738.454 L192.840,738.520 L193.160,738.586 L193.480,738.651 L193.800,738.717 L194.120,738.782 L194.440,738.847 L194.760,738.912 L195.080,738.977 L195.400,739.042 L195.720,739.107 L196.040,739.171 L196.360,739.235 L196.680,739.299 L197.000,739.363 L197.320,739.427 L197.640,739.491 L197.960,739.554 L198.280,739.617 L198.600,739.680 L198.920,739.743 L199.240,739.805 L199.560,739.867 L199.880,739.930 L200.200,739.991 L200.520,740.053 L200.840,740.115 L201.160,740.176 L201.480,740.237 L201.800,740.297 L202.120,740.358 L202.440,740.418 L202.760,740.478 L203.080,740.538 L203.400,740.598 L203.720,740.657 L204.040,740.716 L204.360,740.775 L204.680,740.833 L205.000,740.891 L205.320,740.949 L205.640,741.007 L205.960,741.064 L206.280,741.122 L206.600,741.178 L206.920,741.235 L207.240,741.291 L207.560,741.347 L207.880,741.403 L208.200,741.458 L208.520,741.513 L208.840,741.568 L209.160,741.622 L209.480,741.676 L209.800,741.730 L210.120,741.784 L210.440,741.837 L210.760,741.890 L211.080,741.942 L211.400,741.994 L211.720,742.046 L212.040,742.098 L212.360,742.149 L212.680,742.199 L213.000,742.250 L213.320,742.300 L213.640,742.350 L213.960,742.399 L214.280,742.448 L214.600,742.497 L214.920,742.545 L215.240,742.593 L215.560,742.640 L215.880,742.687 L216.200,742.734 L216.520,742.780 L216.840,742.826 L217.160,742.872 L217.480,742.917 L217.800,742.962 L218.120,743.006 L218.440,743.050 L218.760,743.094 L219.080,743.137 L219.400,743.180 L219.720,743.222 L220.040,743.264 L220.360,743.306 L220.680,743.347 L221.000,743.387 L221.320,743.427 L221.640,743.467 L221.960,743.506 L222.280,743.545 L222.600,743.584 L222.920,743.622 L223.240,743.659 L223.560,743.696 L223.880,743.733 L224.200,743.769 L224.520,743.805 L224.840,743.840 L225.160,743.875 L225.480,743.909 L225.800,743.943 L226.120,743.976 L226.440,744.009 L226.760,744.042 L227.080,744.074 L227.400,744.105 L227.720,744.136 L228.040,744.166 L228.360,744.196 L228.680,744.226 L229.000,744.255 L229.320,744.283 L229.640,744.311 L229.960,744.338 L230.280,744.365 L230.600,744.392 L230.920,744.418 L231.240,744.443 L231.560,744.468 L231.880,744.492 L232.200,744.516 L232.520,744.539 L232.840,744.562 L233.160,744.584 L233.480,744.606 L233.800,744.627 L234.120,744.647 L234.440,744.667 L234.760,744.687 L235.080,744.705 L235.400,744.724 L235.720,744.741 L236.040,744.759 L236.360,744.775 L236.680,744.791 L237.000,744.807 L237.320,744.822 L237.640,744.836 L237.960,744.850 L238.280,744.863 L238.600,744.875 L238.920,744.887 L239.240,744.899 L239.560,744.910 L239.880,744.920 L240.200,744.929 L240.520,744.938 L240.840,744.947 L241.160,744.955 L241.480,744.962 L241.800,744.968 L242.120,744.974 L242.440,744.980 L242.760,744.984 L243.080,744.989 L243.400,744.992 L243.720,744.995 L244.040,744.997 L244.360,744.999 L244.680,745.000 L245.000,745.000 L245.320,745.000 L245.640,744.999 L245.960,744.997 L246.280,744.995 L246.600,744.992 L246.920,744.988 L247.240,744.984 L247.560,744.979 L247.880,744.974 L248.200,744.968 L248.520,744.961 L248.840,744.953 L249.160,744.945 L249.480,744.936 L249.800,744.927 L250.120,744.916 L250.440,744.905 L250.760,744.894 L251.080,744.882 L251.400,744.869 L251.720,744.855 L252.040,744.841 L252.360,744.826 L252.680,744.810 L253.000,744.793 L253.320,744.776 L253.640,744.758 L253.960,744.740 L254.280,744.721 L254.600,744.701 L254.920,744.680 L255.240,744.659 L255.560,744.636 L255.880,744.614 L256.200,744.590 L256.520,744.566 L256.840,744.541 L257.160,744.515 L257.480,744.488 L257.800,744.461 L258.120,744.433 L258.440,744.405 L258.760,744.375 L259.080,744.345 L259.400,744.314 L259.720,744.282 L260.040,744.250 L260.360,744.217 L260.680,744.183 L261.000,744.148 L261.320,744.112 L261.640,744.076 L261.960,744.039 L262.280,744.001 L262.600,743.963 L262.920,743.924 L263.240,743.883 L263.560,743.843 L263.880,743.801 L264.200,743.758 L264.520,743.715 L264.840,743.671 L265.160,743.626 L265.480,743.581 L265.800,743.534 L266.120,743.487 L266.440,743.439 L266.760,743.390 L267.080,743.341 L267.400,743.291 L267.720,743.239 L268.040,743.187 L268.360,743.134 L268.680,743.081 L269.000,743.026 L269.320,742.971 L269.640,742.915 L269.960,742.858 L270.280,742.800 L270.600,742.742 L270.920,742.682 L271.240,742.622 L271.560,742.561 L271.880,742.499 L272.200,742.436 L272.520,742.373 L272.840,742.308 L273.160,742.243 L273.480,742.177 L273.800,742.110 L274.120,742.042 L274.440,741.974 L274.760,741.904 L275.080,741.834 L275.400,741.762 L275.720,741.690 L276.040,741.617 L276.360,741.543 L276.680,741.469 L277.000,741.393 L277.320,741.317 L277.640,741.239 L277.960,741.161 L278.280,741.082 L278.600,741.002 L278.920,740.921 L279.240,740.839 L279.560,740.757 L279.880,740.673 L280.200,740.589 L280.520,740.504 L280.840,740.417 L281.160,740.330 L281.480,740.242 L281.800,740.153 L282.120,740.064 L282.440,739.973 L282.760,739.881 L283.080,739.789 L283.400,739.695 L283.720,739.601 L284.040,739.506 L284.360,739.409 L284.680,739.312 L285.000,739.214 L285.320,739.115 L285.640,739.015 L285.960,738.914 L286.280,738.813 L286.600,738.710 L286.920,738.606 L287.240,738.502 L287.560,738.396 L287.880,738.290 L288.200,738.182 L288.520,738.074 L288.840,737.965 L289.160,737.854 L289.480,737.743 L289.800,737.631 L290.120,737.518 L290.440,737.404 L290.760,737.289 L291.080,737.173 L291.400,737.056 L291.720,736.938 L292.040,736.819 L292.360,736.699 L292.680,736.579 L293.000,736.457 L293.320,736.334 L293.640,736.210 L293.960,736.085 L294.280,735.960 L294.600,735.833 L294.920,735.705 L295.240,735.577 L295.560,735.447 L295.880,735.316 L296.200,735.185 L296.520,735.052 L296.840,734.918 L297.160,734.784 L297.480,734.648 L297.800,734.512 L298.120,734.374 L298.440,734.235 L298.760,734.096 L299.080,733.955 L299.400,733.813 L299.720,733.670 L300.040,733.527 L300.360,733.382 L300.680,733.236 L301.000,733.090 L301.320,732.942 L301.640,732.793 L301.960,732.643 L302.280,732.492 L302.600,732.340 L302.920,732.187 L303.240,732.033 L303.560,731.878 L303.880,731.722 L304.200,731.565 L304.520,731.407 L304.840,731.248 L305.160,731.087 L305.480,730.926 L305.800,730.764 L306.120,730.600 L306.440,730.436 L306.760,730.271 L307.080,730.104 L307.400,729.936 L307.720,729.768 L308.040,729.598 L308.360,729.427 L308.680,729.255 L309.000,729.082 L309.320,728.908 L309.640,728.733 L309.960,728.557 L310.280,728.380 L310.600,728.201 L310.920,728.022 L311.240,727.842 L311.560,727.660 L311.880,727.477 L312.200,727.294 L312.520,727.109 L312.840,726.923 L313.160,726.736 L313.480,726.548 L313.800,726.359 L314.120,726.168 L314.440,725.977 L314.760,725.784 L315.080,725.591 L315.400,725.396 L315.720,725.200 L316.040,725.003 L316.360,724.805 L316.680,724.606 L317.000,724.406 L317.320,724.205 L317.640,724.002 L317.960,723.799 L318.280,723.594 L318.600,723.388 L318.920,723.181 L319.240,722.973 L319.560,722.764 L319.880,722.553 L320.200,722.342 L320.520,722.129 L320.840,721.915 L321.160,721.701 L321.480,721.485 L321.800,721.267 L322.120,721.049 L322.440,720.830 L322.760,720.609 L323.080,720.387 L323.400,720.164 L323.720,719.940 L324.040,719.715 L324.360,719.489 L324.680,719.261 L325.000,719.033 L325.320,718.803 L325.640,718.572 L325.960,718.340 L326.280,718.106 L326.600,717.872 L326.920,717.636 L327.240,717.399 L327.560,717.161 L327.880,716.922 L328.200,716.682 L328.520,716.440 L328.840,716.198 L329.160,715.954 L329.480,715.709 L329.800,715.463 L330.120,715.215 L330.440,714.967 L330.760,714.717 L331.080,714.466 L331.400,714.214 L331.720,713.960 L332.040,713.706 L332.360,713.450 L332.680,713.193 L333.000,712.935 L333.320,712.675 L333.640,712.415 L333.960,712.153 L334.280,711.890 L334.600,711.626 L334.920,711.361 L335.240,711.094 L335.560,710.826 L335.880,710.557 L336.200,710.287 L336.520,710.016 L336.840,709.743 L337.160,709.469 L337.480,709.194 L337.800,708.918 L338.120,708.640 L338.440,708.361 L338.760,708.081 L339.080,707.800 L339.400,707.517 L339.720,707.234 L340.040,706.949 L340.360,706.663 L340.680,706.375 L341.000,706.087 L341.320,705.797 L341.640,705.505 L341.960,705.213 L342.280,704.919 L342.600,704.625 L342.920,704.328 L343.240,704.031 L343.560,703.732 L343.880,703.432 L344.200,703.131 L344.520,702.829 L344.840,702.525 L345.160,702.220 L345.480,701.914 L345.800,701.607 L346.120,701.298 L346.440,700.988 L346.760,700.677 L347.080,700.364 L347.400,700.050 L347.720,699.735 L348.040,699.419 L348.360,699.101 L348.680,698.782 L349.000,698.462 L349.320,698.141 L349.640,697.818 L349.960,697.494 L350.280,697.169 L350.600,696.842 L350.920,696.514 L351.240,696.185 L351.560,695.855 L351.880,695.523 L352.200,695.190 L352.520,694.855 L352.840,694.520 L353.160,694.183 L353.480,693.845 L353.800,693.505 L354.120,693.164 L354.440,692.822 L354.760,692.479 L355.080,692.134 L355.400,691.788 L355.720,691.440 L356.040,691.092 L356.360,690.742 L356.680,690.390 L357.000,690.037 L357.320,689.684 L357.640,689.328 L357.960,688.972 L358.280,688.614 L358.600,688.254 L358.920,687.894 L359.240,687.532 L359.560,687.169 L359.880,686.804 L360.200,686.438 L360.520,686.071 L360.840,685.702 L361.160,685.332 L361.480,684.961 L361.800,684.588 L362.120,684.214 L362.440,683.839 L362.760,683.463 L363.080,683.085 L363.400,682.705 L363.720,682.325 L364.040,681.942 L364.360,681.559 L364.680,681.174 L365.000,680.788 L365.320,680.401 L365.640,680.012 L365.960,679.622 L366.280,679.230 L366.600,678.837 L366.920,678.443 L367.240,678.048 L367.560,677.651 L367.880,677.252 L368.200,676.853 L368.520,676.451 L368.840,676.049 L369.160,675.645 L369.480,675.240 L369.800,674.833 L370.120,674.425 L370.440,674.016 L370.760,673.605 L371.080,673.193 L371.400,672.780 L371.720,672.365 L372.040,671.949 L372.360,671.531 L372.680,671.112 L373.000,670.691 L373.320,670.270 L373.640,669.846 L373.960,669.422 L374.280,668.996 L374.600,668.568 L374.920,668.139 L375.240,667.709 L375.560,667.278 L375.880,666.845 L376.200,666.410 L376.520,665.974 L376.840,665.537 L377.160,665.099 L377.480,664.658 L377.800,664.217 L378.120,663.774 L378.440,663.330 L378.760,662.884 L379.080,662.437 L379.400,661.988 L379.720,661.538 L380.040,661.087 L380.360,660.634 L380.680,660.180 L381.000,659.724 L381.320,659.267 L381.640,658.809 L381.960,658.349 L382.280,657.887 L382.600,657.425 L382.920,656.960 L383.240,656.495 L383.560,656.028 L383.880,655.559 L384.200,655.089 L384.520,654.618 L384.840,654.145 L385.160,653.670 L385.480,653.195 L385.800,652.717 L386.120,652.239 L386.440,651.758 L386.760,651.277 L387.080,650.794 L387.400,650.309 L387.720,649.823 L388.040,649.336 L388.360,648.847 L388.680,648.357 L389.000,647.865 L389.320,647.372 L389.640,646.877 L389.960,646.381 L390.280,645.884 L390.600,645.384 L390.920,644.884 L391.240,644.382 L391.560,643.878 L391.880,643.373 L392.200,642.867 L392.520,642.359 L392.840,641.850 L393.160,641.339 L393.480,640.826 L393.800,640.313 L394.120,639.797 L394.440,639.280 L394.760,638.762 L395.080,638.242 L395.400,637.721 L395.720,637.198 L396.040,636.674 L396.360,636.149 L396.680,635.621 L397.000,635.093 L397.320,634.562 L397.640,634.031 L397.960,633.498 L398.280,632.963 L398.600,632.427 L398.920,631.889 L399.240,631.350 L399.560,630.809 L399.880,630.267 L400.200,629.723 L400.520,629.178 L400.840,628.631 L401.160,628.083 L401.480,627.533 L401.800,626.982 L402.120,626.429 L402.440,625.875 L402.760,625.319 L403.080,624.762 L403.400,624.203 L403.720,623.643 L404.040,623.081 L404.360,622.517 L404.680,621.952 L405.000,621.386 L405.320,620.818 L405.640,620.248 L405.960,619.677 L406.280,619.105 L406.600,618.531 L406.920,617.955 L407.240,617.378 L407.560,616.799 L407.880,616.219 L408.200,615.637 L408.520,615.054 L408.840,614.469 L409.160,613.882 L409.480,613.294 L409.800,612.705 L410.120,612.114 L410.440,611.521 L410.760,610.927 L411.080,610.331 L411.400,609.734 L411.720,609.135 L412.040,608.535 L412.360,607.933 L412.680,607.330 L413.000,606.725 L413.320,606.118 L413.640,605.510 L413.960,604.900 L414.280,604.289 L414.600,603.676 L414.920,603.062 L415.240,602.446 L415.560,601.828 L415.880,601.209 L416.200,600.588 L416.520,599.966 L416.840,599.342 L417.160,598.717 L417.480,598.090 L417.800,597.461 L418.120,596.831 L418.440,596.200 L418.760,595.566 L419.080,594.931 L419.400,594.295 L419.720,593.657 L420.040,593.017 L420.360,592.376 L420.680,591.733 L421.000,591.089 L421.320,590.443 L421.640,589.796 L421.960,589.146 L422.280,588.496 L422.600,587.843 L422.920,587.189 L423.240,586.534 L423.560,585.877 L423.880,585.218 L424.200,584.558 L424.520,583.896 L424.840,583.232 L425.160,582.567 L425.480,581.900 L425.800,581.232 L426.120,580.562 L426.440,579.891 L426.760,579.217 L427.080,578.543 L427.400,577.866 L427.720,577.188 L428.040,576.509 L428.360,575.827 L428.680,575.144 L429.000,574.460 L429.320,573.774 L429.640,573.086 L429.960,572.397 L430.280,571.706 L430.600,571.013 L430.920,570.319 L431.240,569.623 L431.560,568.926 L431.880,568.227 L432.200,567.526 L432.520,566.824 L432.840,566.120 L433.160,565.414 L433.480,564.707 L433.800,563.998 L434.120,563.287 L434.440,562.575 L434.760,561.861 L435.080,561.146 L435.400,560.429 L435.720,559.710 L436.040,558.990 L436.360,558.268 L436.680,557.544 L437.000,556.819 L437.320,556.092 L437.640,555.363 L437.960,554.633 L438.280,553.901 L438.600,553.167 L438.920,552.432 L439.240,551.695 L439.560,550.957 L439.880,550.216 L440.200,549.474 L440.520,548.731 L440.840,547.986 L441.160,547.239 L441.480,546.490 L441.800,545.740 L442.120,544.988 L442.440,544.235 L442.760,543.480 L443.080,542.723 L443.400,541.964 L443.720,541.204 L444.040,540.442 L444.360,539.679 L444.680,538.913 L445.000,538.147 L445.320,537.378 L445.640,536.608 L445.960,535.836 L446.280,535.062 L446.600,534.287 L446.920,533.510 L447.240,532.731 L447.560,531.951 L447.880,531.169 L448.200,530.385 L448.520,529.600 L448.840,528.813 L449.160,528.024 L449.480,527.233 L449.800,526.441 L450.120,525.647 L450.440,524.852 L450.760,524.054 L451.080,523.255 L451.400,522.455 L451.720,521.652 L452.040,520.848 L452.360,520.042 L452.680,519.235 L453.000,518.426 L453.320,517.615 L453.640,516.802 L453.960,515.988 L454.280,515.172 L454.600,514.354 L454.920,513.535 L455.240,512.714 L455.560,511.891 L455.880,511.066 L456.200,510.240 L456.520,509.412 L456.840,508.582 L457.160,507.751 L457.480,506.917 L457.800,506.083 L458.120,505.246 L458.440,504.408 L458.760,503.567 L459.080,502.726 L459.400,501.882 L459.720,501.037 L460.040,500.190 L460.360,499.341 L460.680,498.491 L461.000,497.639 L461.320,496.785 L461.640,495.929 L461.960,495.072 L462.280,494.213 L462.600,493.352 L462.920,492.489 L463.240,491.625 L463.560,490.759 L463.880,489.891 L464.200,489.021 L464.520,488.150 L464.840,487.277 L465.160,486.402 L465.480,485.526 L465.800,484.647 L466.120,483.767 L466.440,482.886 L466.760,482.002 L467.080,481.117 L467.400,480.230 L467.720,479.341 L468.040,478.450 L468.360,477.558 L468.680,476.664 L469.000,475.768 L469.320,474.870 L469.640,473.971 L469.960,473.070 L470.280,472.167 L470.600,471.262 L470.920,470.356 L471.240,469.448 L471.560,468.538 L471.880,467.626 L472.200,466.713 L472.520,465.797 L472.840,464.880 L473.160,463.961 L473.480,463.041 L473.800,462.119 L474.120,461.194 L474.440,460.268 L474.760,459.341 L475.080,458.411 L475.400,457.480 L475.720,456.547 L476.040,455.612 L476.360,454.676 L476.680,453.737 L477.000,452.797 L477.320,451.855 L477.640,450.911 L477.960,449.966 L478.280,449.018 L478.600,448.069 L478.920,447.118 L479.240,446.166 L479.560,445.211 L479.880,444.255 L480.200,443.297 L480.520,442.337 L480.840,441.375 L481.160,440.412 L481.480,439.447 L481.800,438.479 L482.120,437.511 L482.440,436.540 L482.760,435.567 L483.080,434.593 L483.400,433.617 L483.720,432.639 L484.040,431.659 L484.360,430.678 L484.680,429.694 L485.000,428.709 L485.320,427.722 L485.640,426.734 L485.960,425.743 L486.280,424.750 L486.600,423.756 L486.920,422.760 L487.240,421.762 L487.560,420.763 L487.880,419.761 L488.200,418.758 L488.520,417.753 L488.840,416.746 L489.160,415.737 L489.480,414.726 L489.800,413.714 L490.120,412.699 L490.440,411.683 L490.760,410.665 L491.080,409.646 L491.400,408.624 L491.720,407.601 L492.040,406.575 L492.360,405.548 L492.680,404.519 L493.000,403.488 L493.320,402.456 L493.640,401.421 L493.960,400.385 L494.280,399.347 L494.600,398.307 L494.920,397.265 L495.240,396.221 L495.560,395.176 L495.880,394.129 L496.200,393.079 L496.520,392.028 L496.840,390.975 L497.160,389.921 L497.480,388.864 L497.800,387.806 L498.120,386.745 L498.440,385.683 L498.760,384.619 L499.080,383.553 L499.400,382.485 L499.720,381.416 L500.040,380.344 L500.360,379.271 L500.680,378.196 L501.000,377.119 L501.320,376.040 L501.640,374.959 L501.960,373.877 L502.280,372.792 L502.600,371.706 L502.920,370.617 L503.240,369.527 L503.560,368.435 L503.880,367.342 L504.200,366.246 L504.520,365.148 L504.840,364.049 L505.160,362.947 L505.480,361.844 L505.800,360.739 L506.120,359.632 L506.440,358.523 L506.760,357.413 L507.080,356.300 L507.400,355.185 L507.720,354.069 L508.040,352.951 L508.360,351.831 L508.680,350.709 L509.000,349.585 L509.320,348.459 L509.640,347.331 L509.960,346.202 L510.280,345.070 L510.600,343.937 L510.920,342.802 L511.240,341.665 L511.560,340.525 L511.880,339.385 L512.200,338.242 L512.520,337.097 L512.840,335.950 L513.160,334.802 L513.480,333.651 L513.800,332.499 L514.120,331.345 L514.440,330.189 L514.760,329.031 L515.080,327.871 L515.400,326.709 L515.720,325.545 L516.040,324.380 L516.360,323.212 L516.680,322.043 L517.000,320.871 L517.320,319.698 L517.640,318.523 L517.960,317.346 L518.280,316.166 L518.600,314.986 L518.920,313.803 L519.240,312.618 L519.560,311.431 L519.880,310.243 L520.200,309.052 L520.520,307.860 L520.840,306.665 L521.160,305.469 L521.480,304.271 L521.800,303.070 L522.120,301.868 L522.440,300.664 L522.760,299.458 L523.080,298.251 L523.400,297.041 L523.720,295.829 L524.040,294.615 L524.360,293.400 L524.680,292.182 L525.000,290.963 L525.320,289.742 L525.640,288.518 L525.960,287.293 L526.280,286.066 L526.600,284.837 L526.920,283.606 L527.240,282.373 L527.560,281.138 L527.880,279.901 L528.200,278.662 L528.520,277.421 L528.840,276.178 L529.160,274.934 L529.480,273.687 L529.800,272.438 L530.120,271.188 L530.440,269.935 L530.760,268.681 L531.080,267.425 L531.400,266.166 L531.720,264.906 L532.040,263.644 L532.360,262.380 L532.680,261.114 L533.000,259.845 L533.320,258.575 L533.640,257.303 L533.960,256.029 L534.280,254.753 L534.600,253.476 L534.920,252.196 L535.240,250.914 L535.560,249.630 L535.880,248.344 L536.200,247.057 L536.520,245.767 L536.840,244.475 L537.160,243.182 L537.480,241.886 L537.800,240.588 L538.120,239.289 L538.440,237.987 L538.760,236.684 L539.080,235.378 L539.400,234.071 L539.720,232.762 L540.040,231.450 L540.360,230.137 L540.680,228.822 L541.000,227.504 L541.320,226.185 L541.640,224.864 L541.960,223.540 L542.280,222.215 L542.600,220.888 L542.920,219.559 L543.240,218.227 L543.560,216.894 L543.880,215.559 L544.200,214.222 L544.520,212.883 L544.840,211.542 L545.160,210.199 L545.480,208.853 L545.800,207.506 L546.120,206.157 L546.440,204.806 L546.760,203.453 L547.080,202.098 L547.400,200.741 L547.720,199.382 L548.040,198.021 L548.360,196.657 L548.680,195.292 L549.000,193.925 L549.320,192.556 L549.640,191.185 L549.960,189.812 L550.280,188.437 L550.600,187.060 L550.920,185.681 L551.240,184.299 L551.560,182.916 L551.880,181.531 L552.200,180.144 L552.520,178.755 L552.840,177.364 L553.160,175.970 L553.480,174.575 L553.800,173.178 L554.120,171.779 L554.440,170.377 L554.760,168.974 L555.080,167.569 L555.400,166.161 L555.720,164.752 L556.040,163.341 L556.360,161.927 L556.680,160.512 L557.000,159.094 L557.320,157.675 L557.640,156.254 L557.960,154.830 L558.280,153.404 L558.600,151.977 L558.920,150.547 L559.240,149.116 L559.560,147.682 L559.880,146.246 L560.200,144.809 L560.520,143.369 L560.840,141.927 L561.160,140.483 L561.480,139.037 L561.800,137.589 L562.120,136.140 L562.440,134.688 L562.760,133.234 L563.080,131.778 L563.400,130.319 L563.720,128.859 L564.040,127.397 L564.360,125.933 L564.680,124.467 L565.000,122.998\" fill=\"none\" stroke=\"#155eab\" stroke-width=\"3\"/><path d=\"M 85,745 L 189.0,641.0\" stroke=\"#c47d17\" stroke-width=\"2\" stroke-dasharray=\"6 5\" fill=\"none\"/><line x1=\"130.546901926533\" y1=\"745\" x2=\"130.546901926533\" y2=\"728.7094248964371\" stroke=\"#64748b\" stroke-width=\"1.5\" stroke-dasharray=\"6 6\"/><text x=\"177.8\" y=\"634.6\" text-anchor=\"middle\" font-family=\"DejaVu Sans,Arial\" font-size=\"17\" fill=\"#172033\">y = x</text><text x=\"505.79999999999995\" y=\"337.0\" text-anchor=\"middle\" font-family=\"DejaVu Sans,Arial\" font-size=\"24\" fill=\"#172033\">C_f</text><text x=\"325\" y=\"32\" text-anchor=\"middle\" font-family=\"DejaVu Sans,Arial\" font-size=\"21\" fill=\"#172033\">f(x) = −x² + x + x² ln x</text><circle cx=\"85\" cy=\"745\" r=\"4\" fill=\"#155eab\"/><circle cx=\"130.546901926533\" cy=\"728.7094248964371\" r=\"4\" fill=\"#155eab\"/><circle cx=\"245\" cy=\"745\" r=\"4\" fill=\"#155eab\"/><circle cx=\"565\" cy=\"122.99830431792202\" r=\"4\" fill=\"#155eab\"/><text x=\"126.546901926533\" y=\"710.7094248964371\" text-anchor=\"middle\" font-family=\"DejaVu Sans,Arial\" font-size=\"17\" fill=\"#172033\">M</text><text x=\"245\" y=\"731\" text-anchor=\"middle\" font-family=\"DejaVu Sans,Arial\" font-size=\"17\" fill=\"#172033\">A</text><text x=\"325\" y=\"816\" text-anchor=\"middle\" font-family=\"DejaVu Sans,Arial\" font-size=\"18\" fill=\"#172033\">1 unit = 4 cm • x ∈ [0, 3]</text></svg>",
+          "x_domain": [
+            0,
+            3
+          ],
+          "y_domain": [
+            -0.2,
+            4.2
+          ],
+          "series": [
+            {
+              "id": "cf",
+              "label": "(C_f)",
+              "type": "curve",
+              "data": [
+                {
+                  "x": 0.0,
+                  "y": 0
+                },
+                {
+                  "x": 0.01,
+                  "y": 0.009439483
+                },
+                {
+                  "x": 0.02,
+                  "y": 0.018035191
+                },
+                {
+                  "x": 0.03,
+                  "y": 0.025944098
+                },
+                {
+                  "x": 0.04,
+                  "y": 0.033249799
+                },
+                {
+                  "x": 0.05,
+                  "y": 0.040010669
+                },
+                {
+                  "x": 0.06,
+                  "y": 0.046271721
+                },
+                {
+                  "x": 0.07,
+                  "y": 0.052069626
+                },
+                {
+                  "x": 0.08,
+                  "y": 0.057435337
+                },
+                {
+                  "x": 0.09,
+                  "y": 0.062395641
+                },
+                {
+                  "x": 0.1,
+                  "y": 0.066974149
+                },
+                {
+                  "x": 0.11,
+                  "y": 0.071191974
+                },
+                {
+                  "x": 0.12,
+                  "y": 0.075068205
+                },
+                {
+                  "x": 0.13,
+                  "y": 0.078620268
+                },
+                {
+                  "x": 0.14,
+                  "y": 0.081864188
+                },
+                {
+                  "x": 0.15,
+                  "y": 0.0848148
+                },
+                {
+                  "x": 0.16,
+                  "y": 0.087485915
+                },
+                {
+                  "x": 0.17,
+                  "y": 0.089890447
+                },
+                {
+                  "x": 0.18,
+                  "y": 0.092040531
+                },
+                {
+                  "x": 0.19,
+                  "y": 0.093947603
+                },
+                {
+                  "x": 0.2,
+                  "y": 0.095622484
+                },
+                {
+                  "x": 0.21,
+                  "y": 0.097075434
+                },
+                {
+                  "x": 0.22,
+                  "y": 0.098316218
+                },
+                {
+                  "x": 0.23,
+                  "y": 0.099354141
+                },
+                {
+                  "x": 0.24,
+                  "y": 0.100198098
+                },
+                {
+                  "x": 0.25,
+                  "y": 0.100856602
+                },
+                {
+                  "x": 0.26,
+                  "y": 0.101337821
+                },
+                {
+                  "x": 0.27,
+                  "y": 0.101649601
+                },
+                {
+                  "x": 0.28,
+                  "y": 0.101799491
+                },
+                {
+                  "x": 0.29,
+                  "y": 0.101794767
+                },
+                {
+                  "x": 0.3,
+                  "y": 0.101642448
+                },
+                {
+                  "x": 0.31,
+                  "y": 0.101349315
+                },
+                {
+                  "x": 0.32,
+                  "y": 0.100921929
+                },
+                {
+                  "x": 0.33,
+                  "y": 0.10036664
+                },
+                {
+                  "x": 0.34,
+                  "y": 0.099689603
+                },
+                {
+                  "x": 0.35,
+                  "y": 0.09889679
+                },
+                {
+                  "x": 0.36,
+                  "y": 0.097993998
+                },
+                {
+                  "x": 0.37,
+                  "y": 0.096986864
+                },
+                {
+                  "x": 0.38,
+                  "y": 0.095880867
+                },
+                {
+                  "x": 0.39,
+                  "y": 0.094681341
+                },
+                {
+                  "x": 0.4,
+                  "y": 0.093393483
+                },
+                {
+                  "x": 0.41,
+                  "y": 0.092022356
+                },
+                {
+                  "x": 0.42,
+                  "y": 0.0905729
+                },
+                {
+                  "x": 0.43,
+                  "y": 0.089049934
+                },
+                {
+                  "x": 0.44,
+                  "y": 0.087458165
+                },
+                {
+                  "x": 0.45,
+                  "y": 0.085802192
+                },
+                {
+                  "x": 0.46,
+                  "y": 0.084086508
+                },
+                {
+                  "x": 0.47,
+                  "y": 0.082315511
+                },
+                {
+                  "x": 0.48,
+                  "y": 0.080493502
+                },
+                {
+                  "x": 0.49,
+                  "y": 0.078624692
+                },
+                {
+                  "x": 0.5,
+                  "y": 0.076713205
+                },
+                {
+                  "x": 0.51,
+                  "y": 0.074763082
+                },
+                {
+                  "x": 0.52,
+                  "y": 0.072778283
+                },
+                {
+                  "x": 0.53,
+                  "y": 0.070762693
+                },
+                {
+                  "x": 0.54,
+                  "y": 0.068720122
+                },
+                {
+                  "x": 0.55,
+                  "y": 0.066654307
+                },
+                {
+                  "x": 0.56,
+                  "y": 0.06456892
+                },
+                {
+                  "x": 0.57,
+                  "y": 0.062467563
+                },
+                {
+                  "x": 0.58,
+                  "y": 0.060353778
+                },
+                {
+                  "x": 0.59,
+                  "y": 0.058231042
+                },
+                {
+                  "x": 0.6,
+                  "y": 0.056102775
+                },
+                {
+                  "x": 0.61,
+                  "y": 0.053972339
+                },
+                {
+                  "x": 0.62,
+                  "y": 0.051843038
+                },
+                {
+                  "x": 0.63,
+                  "y": 0.049718126
+                },
+                {
+                  "x": 0.64,
+                  "y": 0.047600803
+                },
+                {
+                  "x": 0.65,
+                  "y": 0.045494218
+                },
+                {
+                  "x": 0.66,
+                  "y": 0.043401473
+                },
+                {
+                  "x": 0.67,
+                  "y": 0.04132562
+                },
+                {
+                  "x": 0.68,
+                  "y": 0.039269669
+                },
+                {
+                  "x": 0.69,
+                  "y": 0.037236581
+                },
+                {
+                  "x": 0.7,
+                  "y": 0.035229277
+                },
+                {
+                  "x": 0.71,
+                  "y": 0.033250635
+                },
+                {
+                  "x": 0.72,
+                  "y": 0.031303492
+                },
+                {
+                  "x": 0.73,
+                  "y": 0.029390644
+                },
+                {
+                  "x": 0.74,
+                  "y": 0.027514851
+                },
+                {
+                  "x": 0.75,
+                  "y": 0.025678834
+                },
+                {
+                  "x": 0.76,
+                  "y": 0.023885278
+                },
+                {
+                  "x": 0.77,
+                  "y": 0.022136831
+                },
+                {
+                  "x": 0.78,
+                  "y": 0.020436109
+                },
+                {
+                  "x": 0.79,
+                  "y": 0.018785692
+                },
+                {
+                  "x": 0.8,
+                  "y": 0.017188127
+                },
+                {
+                  "x": 0.81,
+                  "y": 0.015645931
+                },
+                {
+                  "x": 0.82,
+                  "y": 0.014161589
+                },
+                {
+                  "x": 0.83,
+                  "y": 0.012737554
+                },
+                {
+                  "x": 0.84,
+                  "y": 0.01137625
+                },
+                {
+                  "x": 0.85,
+                  "y": 0.010080073
+                },
+                {
+                  "x": 0.86,
+                  "y": 0.008851391
+                },
+                {
+                  "x": 0.87,
+                  "y": 0.007692541
+                },
+                {
+                  "x": 0.88,
+                  "y": 0.006605837
+                },
+                {
+                  "x": 0.89,
+                  "y": 0.005593564
+                },
+                {
+                  "x": 0.9,
+                  "y": 0.004657982
+                },
+                {
+                  "x": 0.91,
+                  "y": 0.003801326
+                },
+                {
+                  "x": 0.92,
+                  "y": 0.003025806
+                },
+                {
+                  "x": 0.93,
+                  "y": 0.002333608
+                },
+                {
+                  "x": 0.94,
+                  "y": 0.001726893
+                },
+                {
+                  "x": 0.95,
+                  "y": 0.001207802
+                },
+                {
+                  "x": 0.96,
+                  "y": 0.00077845
+                },
+                {
+                  "x": 0.97,
+                  "y": 0.000440932
+                },
+                {
+                  "x": 0.98,
+                  "y": 0.00019732
+                },
+                {
+                  "x": 0.99,
+                  "y": 4.9666e-05
+                },
+                {
+                  "x": 1.0,
+                  "y": 0.0
+                },
+                {
+                  "x": 1.01,
+                  "y": 5.0333e-05
+                },
+                {
+                  "x": 1.02,
+                  "y": 0.000202653
+                },
+                {
+                  "x": 1.03,
+                  "y": 0.000458933
+                },
+                {
+                  "x": 1.04,
+                  "y": 0.000821123
+                },
+                {
+                  "x": 1.05,
+                  "y": 0.001291156
+                },
+                {
+                  "x": 1.06,
+                  "y": 0.001870945
+                },
+                {
+                  "x": 1.07,
+                  "y": 0.002562387
+                },
+                {
+                  "x": 1.08,
+                  "y": 0.003367358
+                },
+                {
+                  "x": 1.09,
+                  "y": 0.004287721
+                },
+                {
+                  "x": 1.1,
+                  "y": 0.005325318
+                },
+                {
+                  "x": 1.11,
+                  "y": 0.006481975
+                },
+                {
+                  "x": 1.12,
+                  "y": 0.007759503
+                },
+                {
+                  "x": 1.13,
+                  "y": 0.009159695
+                },
+                {
+                  "x": 1.14,
+                  "y": 0.01068433
+                },
+                {
+                  "x": 1.15,
+                  "y": 0.012335169
+                },
+                {
+                  "x": 1.16,
+                  "y": 0.014113959
+                },
+                {
+                  "x": 1.17,
+                  "y": 0.016022432
+                },
+                {
+                  "x": 1.18,
+                  "y": 0.018062304
+                },
+                {
+                  "x": 1.19,
+                  "y": 0.020235278
+                },
+                {
+                  "x": 1.2,
+                  "y": 0.022543042
+                },
+                {
+                  "x": 1.21,
+                  "y": 0.024987269
+                },
+                {
+                  "x": 1.22,
+                  "y": 0.027569618
+                },
+                {
+                  "x": 1.23,
+                  "y": 0.030291737
+                },
+                {
+                  "x": 1.24,
+                  "y": 0.033155257
+                },
+                {
+                  "x": 1.25,
+                  "y": 0.036161799
+                },
+                {
+                  "x": 1.26,
+                  "y": 0.039312968
+                },
+                {
+                  "x": 1.27,
+                  "y": 0.042610359
+                },
+                {
+                  "x": 1.28,
+                  "y": 0.046055552
+                },
+                {
+                  "x": 1.29,
+                  "y": 0.049650116
+                },
+                {
+                  "x": 1.3,
+                  "y": 0.053395607
+                },
+                {
+                  "x": 1.31,
+                  "y": 0.05729357
+                },
+                {
+                  "x": 1.32,
+                  "y": 0.061345538
+                },
+                {
+                  "x": 1.33,
+                  "y": 0.065553031
+                },
+                {
+                  "x": 1.34,
+                  "y": 0.069917559
+                },
+                {
+                  "x": 1.35,
+                  "y": 0.07444062
+                },
+                {
+                  "x": 1.36,
+                  "y": 0.079123701
+                },
+                {
+                  "x": 1.37,
+                  "y": 0.083968278
+                },
+                {
+                  "x": 1.38,
+                  "y": 0.088975816
+                },
+                {
+                  "x": 1.39,
+                  "y": 0.09414777
+                },
+                {
+                  "x": 1.4,
+                  "y": 0.099485584
+                },
+                {
+                  "x": 1.41,
+                  "y": 0.104990691
+                },
+                {
+                  "x": 1.42,
+                  "y": 0.110664516
+                },
+                {
+                  "x": 1.43,
+                  "y": 0.116508471
+                },
+                {
+                  "x": 1.44,
+                  "y": 0.12252396
+                },
+                {
+                  "x": 1.45,
+                  "y": 0.128712377
+                },
+                {
+                  "x": 1.46,
+                  "y": 0.135075106
+                },
+                {
+                  "x": 1.47,
+                  "y": 0.141613522
+                },
+                {
+                  "x": 1.48,
+                  "y": 0.148328989
+                },
+                {
+                  "x": 1.49,
+                  "y": 0.155222864
+                },
+                {
+                  "x": 1.5,
+                  "y": 0.162296493
+                },
+                {
+                  "x": 1.51,
+                  "y": 0.169551215
+                },
+                {
+                  "x": 1.52,
+                  "y": 0.176988358
+                },
+                {
+                  "x": 1.53,
+                  "y": 0.184609242
+                },
+                {
+                  "x": 1.54,
+                  "y": 0.192415179
+                },
+                {
+                  "x": 1.55,
+                  "y": 0.200407472
+                },
+                {
+                  "x": 1.56,
+                  "y": 0.208587415
+                },
+                {
+                  "x": 1.57,
+                  "y": 0.216956294
+                },
+                {
+                  "x": 1.58,
+                  "y": 0.225515388
+                },
+                {
+                  "x": 1.59,
+                  "y": 0.234265966
+                },
+                {
+                  "x": 1.6,
+                  "y": 0.243209291
+                },
+                {
+                  "x": 1.61,
+                  "y": 0.252346615
+                },
+                {
+                  "x": 1.62,
+                  "y": 0.261679186
+                },
+                {
+                  "x": 1.63,
+                  "y": 0.271208241
+                },
+                {
+                  "x": 1.64,
+                  "y": 0.280935012
+                },
+                {
+                  "x": 1.65,
+                  "y": 0.290860721
+                },
+                {
+                  "x": 1.66,
+                  "y": 0.300986585
+                },
+                {
+                  "x": 1.67,
+                  "y": 0.311313812
+                },
+                {
+                  "x": 1.68,
+                  "y": 0.321843603
+                },
+                {
+                  "x": 1.69,
+                  "y": 0.332577151
+                },
+                {
+                  "x": 1.7,
+                  "y": 0.343515646
+                },
+                {
+                  "x": 1.71,
+                  "y": 0.354660265
+                },
+                {
+                  "x": 1.72,
+                  "y": 0.366012182
+                },
+                {
+                  "x": 1.73,
+                  "y": 0.377572564
+                },
+                {
+                  "x": 1.74,
+                  "y": 0.389342569
+                },
+                {
+                  "x": 1.75,
+                  "y": 0.401323351
+                },
+                {
+                  "x": 1.76,
+                  "y": 0.413516055
+                },
+                {
+                  "x": 1.77,
+                  "y": 0.425921821
+                },
+                {
+                  "x": 1.78,
+                  "y": 0.438541783
+                },
+                {
+                  "x": 1.79,
+                  "y": 0.451377068
+                },
+                {
+                  "x": 1.8,
+                  "y": 0.464428794
+                },
+                {
+                  "x": 1.81,
+                  "y": 0.477698078
+                },
+                {
+                  "x": 1.82,
+                  "y": 0.491186026
+                },
+                {
+                  "x": 1.83,
+                  "y": 0.504893741
+                },
+                {
+                  "x": 1.84,
+                  "y": 0.518822319
+                },
+                {
+                  "x": 1.85,
+                  "y": 0.53297285
+                },
+                {
+                  "x": 1.86,
+                  "y": 0.547346417
+                },
+                {
+                  "x": 1.87,
+                  "y": 0.561944099
+                },
+                {
+                  "x": 1.88,
+                  "y": 0.576766968
+                },
+                {
+                  "x": 1.89,
+                  "y": 0.591816091
+                },
+                {
+                  "x": 1.9,
+                  "y": 0.607092529
+                },
+                {
+                  "x": 1.91,
+                  "y": 0.622597337
+                },
+                {
+                  "x": 1.92,
+                  "y": 0.638331566
+                },
+                {
+                  "x": 1.93,
+                  "y": 0.654296259
+                },
+                {
+                  "x": 1.94,
+                  "y": 0.670492455
+                },
+                {
+                  "x": 1.95,
+                  "y": 0.686921189
+                },
+                {
+                  "x": 1.96,
+                  "y": 0.703583488
+                },
+                {
+                  "x": 1.97,
+                  "y": 0.720480376
+                },
+                {
+                  "x": 1.98,
+                  "y": 0.73761287
+                },
+                {
+                  "x": 1.99,
+                  "y": 0.754981983
+                },
+                {
+                  "x": 2.0,
+                  "y": 0.772588722
+                },
+                {
+                  "x": 2.01,
+                  "y": 0.790434091
+                },
+                {
+                  "x": 2.02,
+                  "y": 0.808519086
+                },
+                {
+                  "x": 2.03,
+                  "y": 0.8268447
+                },
+                {
+                  "x": 2.04,
+                  "y": 0.84541192
+                },
+                {
+                  "x": 2.05,
+                  "y": 0.864221731
+                },
+                {
+                  "x": 2.06,
+                  "y": 0.883275109
+                },
+                {
+                  "x": 2.07,
+                  "y": 0.902573027
+                },
+                {
+                  "x": 2.08,
+                  "y": 0.922116455
+                },
+                {
+                  "x": 2.09,
+                  "y": 0.941906357
+                },
+                {
+                  "x": 2.1,
+                  "y": 0.96194369
+                },
+                {
+                  "x": 2.11,
+                  "y": 0.982229411
+                },
+                {
+                  "x": 2.12,
+                  "y": 1.002764469
+                },
+                {
+                  "x": 2.13,
+                  "y": 1.02354981
+                },
+                {
+                  "x": 2.14,
+                  "y": 1.044586375
+                },
+                {
+                  "x": 2.15,
+                  "y": 1.0658751
+                },
+                {
+                  "x": 2.16,
+                  "y": 1.087416919
+                },
+                {
+                  "x": 2.17,
+                  "y": 1.109212759
+                },
+                {
+                  "x": 2.18,
+                  "y": 1.131263545
+                },
+                {
+                  "x": 2.19,
+                  "y": 1.153570194
+                },
+                {
+                  "x": 2.2,
+                  "y": 1.176133624
+                },
+                {
+                  "x": 2.21,
+                  "y": 1.198954745
+                },
+                {
+                  "x": 2.22,
+                  "y": 1.222034464
+                },
+                {
+                  "x": 2.23,
+                  "y": 1.245373684
+                },
+                {
+                  "x": 2.24,
+                  "y": 1.268973305
+                },
+                {
+                  "x": 2.25,
+                  "y": 1.29283422
+                },
+                {
+                  "x": 2.26,
+                  "y": 1.31695732
+                },
+                {
+                  "x": 2.27,
+                  "y": 1.341343494
+                },
+                {
+                  "x": 2.28,
+                  "y": 1.365993623
+                },
+                {
+                  "x": 2.29,
+                  "y": 1.390908586
+                },
+                {
+                  "x": 2.3,
+                  "y": 1.41608926
+                },
+                {
+                  "x": 2.31,
+                  "y": 1.441536516
+                },
+                {
+                  "x": 2.32,
+                  "y": 1.46725122
+                },
+                {
+                  "x": 2.33,
+                  "y": 1.493234238
+                },
+                {
+                  "x": 2.34,
+                  "y": 1.519486429
+                },
+                {
+                  "x": 2.35,
+                  "y": 1.54600865
+                },
+                {
+                  "x": 2.36,
+                  "y": 1.572801753
+                },
+                {
+                  "x": 2.37,
+                  "y": 1.599866589
+                },
+                {
+                  "x": 2.38,
+                  "y": 1.627204002
+                },
+                {
+                  "x": 2.39,
+                  "y": 1.654814836
+                },
+                {
+                  "x": 2.4,
+                  "y": 1.682699927
+                },
+                {
+                  "x": 2.41,
+                  "y": 1.710860112
+                },
+                {
+                  "x": 2.42,
+                  "y": 1.739296222
+                },
+                {
+                  "x": 2.43,
+                  "y": 1.768009086
+                },
+                {
+                  "x": 2.44,
+                  "y": 1.796999527
+                },
+                {
+                  "x": 2.45,
+                  "y": 1.826268367
+                },
+                {
+                  "x": 2.46,
+                  "y": 1.855816425
+                },
+                {
+                  "x": 2.47,
+                  "y": 1.885644515
+                },
+                {
+                  "x": 2.48,
+                  "y": 1.915753449
+                },
+                {
+                  "x": 2.49,
+                  "y": 1.946144033
+                },
+                {
+                  "x": 2.5,
+                  "y": 1.976817074
+                },
+                {
+                  "x": 2.51,
+                  "y": 2.007773373
+                },
+                {
+                  "x": 2.52,
+                  "y": 2.039013728
+                },
+                {
+                  "x": 2.53,
+                  "y": 2.070538935
+                },
+                {
+                  "x": 2.54,
+                  "y": 2.102349785
+                },
+                {
+                  "x": 2.55,
+                  "y": 2.134447068
+                },
+                {
+                  "x": 2.56,
+                  "y": 2.166831569
+                },
+                {
+                  "x": 2.57,
+                  "y": 2.199504072
+                },
+                {
+                  "x": 2.58,
+                  "y": 2.232465355
+                },
+                {
+                  "x": 2.59,
+                  "y": 2.265716196
+                },
+                {
+                  "x": 2.6,
+                  "y": 2.299257368
+                },
+                {
+                  "x": 2.61,
+                  "y": 2.333089643
+                },
+                {
+                  "x": 2.62,
+                  "y": 2.367213787
+                },
+                {
+                  "x": 2.63,
+                  "y": 2.401630566
+                },
+                {
+                  "x": 2.64,
+                  "y": 2.436340741
+                },
+                {
+                  "x": 2.65,
+                  "y": 2.471345072
+                },
+                {
+                  "x": 2.66,
+                  "y": 2.506644314
+                },
+                {
+                  "x": 2.67,
+                  "y": 2.542239222
+                },
+                {
+                  "x": 2.68,
+                  "y": 2.578130545
+                },
+                {
+                  "x": 2.69,
+                  "y": 2.614319031
+                },
+                {
+                  "x": 2.7,
+                  "y": 2.650805425
+                },
+                {
+                  "x": 2.71,
+                  "y": 2.68759047
+                },
+                {
+                  "x": 2.72,
+                  "y": 2.724674903
+                },
+                {
+                  "x": 2.73,
+                  "y": 2.762059463
+                },
+                {
+                  "x": 2.74,
+                  "y": 2.799744883
+                },
+                {
+                  "x": 2.75,
+                  "y": 2.837731895
+                },
+                {
+                  "x": 2.76,
+                  "y": 2.876021226
+                },
+                {
+                  "x": 2.77,
+                  "y": 2.914613603
+                },
+                {
+                  "x": 2.78,
+                  "y": 2.95350975
+                },
+                {
+                  "x": 2.79,
+                  "y": 2.992710386
+                },
+                {
+                  "x": 2.8,
+                  "y": 3.032216231
+                },
+                {
+                  "x": 2.81,
+                  "y": 3.072027999
+                },
+                {
+                  "x": 2.82,
+                  "y": 3.112146404
+                },
+                {
+                  "x": 2.83,
+                  "y": 3.152572156
+                },
+                {
+                  "x": 2.84,
+                  "y": 3.193305963
+                },
+                {
+                  "x": 2.85,
+                  "y": 3.234348531
+                },
+                {
+                  "x": 2.86,
+                  "y": 3.275700562
+                },
+                {
+                  "x": 2.87,
+                  "y": 3.317362758
+                },
+                {
+                  "x": 2.88,
+                  "y": 3.359335816
+                },
+                {
+                  "x": 2.89,
+                  "y": 3.401620431
+                },
+                {
+                  "x": 2.9,
+                  "y": 3.444217298
+                },
+                {
+                  "x": 2.91,
+                  "y": 3.487127107
+                },
+                {
+                  "x": 2.92,
+                  "y": 3.530350546
+                },
+                {
+                  "x": 2.93,
+                  "y": 3.573888301
+                },
+                {
+                  "x": 2.94,
+                  "y": 3.617741057
+                },
+                {
+                  "x": 2.95,
+                  "y": 3.661909495
+                },
+                {
+                  "x": 2.96,
+                  "y": 3.706394293
+                },
+                {
+                  "x": 2.97,
+                  "y": 3.75119613
+                },
+                {
+                  "x": 2.98,
+                  "y": 3.796315678
+                },
+                {
+                  "x": 2.99,
+                  "y": 3.841753611
+                },
+                {
+                  "x": 3.0,
+                  "y": 3.887510598
+                }
+              ]
+            }
+          ],
+          "scale": {
+            "equal_units": true,
+            "unit_length_cm": 4
+          },
+          "points": [
+            {
+              "x": 0,
+              "y": 0,
+              "label": "O"
+            },
+            {
+              "x": 0.28466813704083116,
+              "y": 0.10181609439726845,
+              "label": "M"
+            },
+            {
+              "x": 1,
+              "y": 0,
+              "label": "A"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "source_reference": {
+    "file": "2010(20260908-172410).pdf",
+    "statement_pages": [
+      4
+    ],
+    "solution_pages": [
+      8
+    ],
+    "source_faithful_statement": true,
+    "statement_transcription": "نقل نص الصورة مع الحفاظ على الأسئلة والترقيم وتحويل الصيغ إلى LaTeX؛ تعريف f وارد في بداية السؤال 3-أ للحفاظ على ترتيب النص.",
+    "solution_reviewed_against_source": true
+  },
+  "display": {
+    "layout": "question_by_question",
+    "show_statement_first": true,
+    "show_statement_figures": true,
+    "show_solution_after_click": true,
+    "show_solution_figures": true
+  },
+  "review_status": {
+    "statement_compared_with_original_pdf": true,
+    "questions_compared_with_original_pdf": true,
+    "solution_checked_against_correction": true,
+    "latex_normalized_only": true,
+    "react_ready": true
+  },
+  "given_data": {
+    "g": "x-1-2*ln(x)",
+    "g_domain": "]0,+infinity[",
+    "f": "-x^2+x+x^2*ln(x), x>0; f(0)=0",
+    "domain": "[0,+infinity[",
+    "alpha_interval": "3.5<alpha<3.6",
+    "alpha_approx": 3.512862417252429,
+    "critical_x": 0.28466813704083116,
+    "critical_value": 0.10181609439726845,
+    "vertical_asymptote_g": "x=0",
+    "right_tangent_at_origin": "y=x",
+    "plot_domain": [
+      0,
+      3
+    ],
+    "unit_length_cm": 4
+  },
+  "solution_pedagogy": {
+    "style": "guided_step_by_step",
+    "audience": "3AS_bac_student",
+    "principles": [
+      "الحل مقسم إلى خطوات بسيطة ومبررة.",
+      "النتيجة النهائية سلسلة نصية في كل سؤال.",
+      "الرسوم مدمجة بصيغة SVG داخل JSON.",
+      "نص الأسئلة محفوظ دون إضافة أسئلة."
+    ]
+  },
+  "subject_number": 2
+}

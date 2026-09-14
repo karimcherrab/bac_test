@@ -38,12 +38,13 @@ class GeneratedExerciseSerializer(serializers.ModelSerializer):
     alternative_method = serializers.SerializerMethodField()
     reference_question_ids = serializers.SerializerMethodField()
     visuals = serializers.SerializerMethodField()
+    document_references = serializers.SerializerMethodField()
 
     class Meta:
         model = GeneratedExercise
         fields = [
             "id", "axis_id", "axis_title", "axis_tag", "title", "question",
-            "difficulty", "exercise_type", "skill", "hints", "visuals",
+            "difficulty", "exercise_type", "skill", "hints", "visuals", "document_references",
             "solution_strategy", "solution_explanation", "solution_steps",
             "final_answer", "verification", "common_mistake", "common_mistakes",
             "alternative_method", "requires_graph", "graph_data",
@@ -75,6 +76,11 @@ class GeneratedExerciseSerializer(serializers.ModelSerializer):
 
     def get_visuals(self, obj) -> list:
         value = self._normalized(obj).get("visuals", [])
+        return value if isinstance(value, list) else []
+
+    def get_document_references(self, obj) -> list:
+        """Images scientifiques déjà présentes dans la banque documentaire."""
+        value = self._normalized(obj).get("document_references", [])
         return value if isinstance(value, list) else []
 
     def get_reference_question_ids(self, obj) -> list[int]:

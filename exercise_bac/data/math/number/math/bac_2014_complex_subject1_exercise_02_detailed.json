@@ -1,0 +1,324 @@
+{
+  "schema_version": "4.5-bac-source",
+  "version": "4.2-2014-complex-subject1-ex02",
+  "language": "ar",
+  "direction": "rtl",
+  "year": 2014,
+  "session": "ordinary",
+  "chapter_code": "complex_numbers",
+  "chapter_title": "complex_numbers",
+  "exercise_number": 2,
+  "source_pages": [
+    1
+  ],
+  "solution_source_pages": [
+    5
+  ],
+  "branches": [
+    {
+      "code": "math",
+      "name": "شعبة الرياضيات"
+    }
+  ],
+  "title": "التمرين الثاني — بكالوريا الجزائر 2014 — الموضوع الأول — الأعداد المركبة",
+  "axis_tags": [
+    "complex_equation",
+    "complex_plane_geometry",
+    "trapezoid",
+    "direct_similarity",
+    "right_triangle",
+    "circumcircle",
+    "geometric_construction"
+  ],
+  "statement": "التمرين الثاني: (05 نقاط)\n\n1) حل في مجموعة الأعداد المركبة \\(\\mathbb{C}\\) المعادلة التالية:\n\\[\n(z-1-2i)\\left(z^2-2(1+\\sqrt3)z+5+2\\sqrt3\\right)=0.\n\\]\n\n2) \\(A\\)، \\(B\\)، \\(C\\) و \\(D\\) نقط من المستوى المنسوب إلى المعلم المتعامد المتجانس \\((O;\\vec{u},\\vec{v})\\) لاحقاتها على الترتيب:\n\\[\nz_A=1+2i,\\qquad\nz_B=1+\\sqrt3+i,\\qquad\nz_C=1+\\sqrt3-i,\\qquad\nz_D=1-2i.\n\\]\n\nأ) بين أن:\n\\[\nAB=CD\n\\]\nو \\((AD)\\) يوازي \\((BC)\\).\n\nب) تحقق أن:\n\\[\n\\frac{z_B+z_D}{2}\\ne\\frac{z_A+z_C}{2}\n\\]\nثم استنتج طبيعة الرباعي \\(ABCD\\).\n\n3) أ) بين أن:\n\\[\n\\frac{z_D-z_B}{z_A-z_B}\n=\\sqrt3\\,e^{i\\pi/2}.\n\\]\nاستنتج أن \\(D\\) هي صورة \\(A\\) بتشابه مباشر مركزه \\(B\\) يطلب تعيين نسبته وزاويته.\n\nب) بين أن المثلث \\(ADB\\) قائم وأن النقط \\(A\\)، \\(B\\)، \\(C\\) و \\(D\\) تنتمي إلى دائرة يطلب تحديد مركزها ونصف قطرها.\n\nج) استنتج إنشاء للرباعي \\(ABCD\\).",
+  "figures": [],
+  "questions": [
+    {
+      "id": "2014_complex_s1_ex02_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) حل في مجموعة الأعداد المركبة \\(\\mathbb{C}\\) المعادلة:\n\\[\n(z-1-2i)\\left(z^2-2(1+\\sqrt3)z+5+2\\sqrt3\\right)=0.\n\\]",
+      "solution": {
+        "strategy": "نستعمل خاصية الجداء المعدوم، ثم نحل العامل التربيعي بحساب المميز.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حل العامل الأول",
+            "explanation": "لدينا:\n\\[\nz-1-2i=0\n\\]\nومنها مباشرة:\n\\[\nz=1+2i.\n\\]",
+            "result": "\\(z_1=1+2i\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "حل العامل التربيعي",
+            "explanation": "نحل:\n\\[\nz^2-2(1+\\sqrt3)z+5+2\\sqrt3=0.\n\\]\nالمميز هو:\n\\[\n\\Delta=\\left[-2(1+\\sqrt3)\\right]^2-4(5+2\\sqrt3).\n\\]\nنحسب:\n\\[\n\\left[-2(1+\\sqrt3)\\right]^2\n=4(1+2\\sqrt3+3)\n=16+8\\sqrt3.\n\\]\nوكذلك:\n\\[\n4(5+2\\sqrt3)=20+8\\sqrt3.\n\\]\nإذن:\n\\[\n\\Delta=-4=(2i)^2.\n\\]",
+            "result": "\\(\\Delta=-4\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "استخراج الجذرين",
+            "explanation": "إذن:\n\\[\nz=\\frac{2(1+\\sqrt3)\\pm2i}{2}\n=1+\\sqrt3\\pm i.\n\\]\nأي:\n\\[\nz_2=1+\\sqrt3+i,\\qquad\nz_3=1+\\sqrt3-i.\n\\]",
+            "result": "\\(z_2=1+\\sqrt3+i\\)، \\(z_3=1+\\sqrt3-i\\)."
+          }
+        ],
+        "final_answer": "\\[\n\\boxed{S=\\{1+2i,\\ 1+\\sqrt3+i,\\ 1+\\sqrt3-i\\}}\n\\]",
+        "verification": "مطابق للتصحيح النموذجي في الصفحة 5 من ملف 2014.",
+        "common_mistakes": [
+          "نسيان استعمال خاصية الجداء المعدوم.",
+          "الخطأ في تبسيط المميز."
+        ],
+        "hints": [
+          "حل العامل الخطي أولا، ثم العامل من الدرجة الثانية."
+        ],
+        "introduction": "المعادلة جداء عامل خطي وعامل تربيعي، لذلك نقسم الحل إلى حالتين.",
+        "summary": "الحلول الثلاثة هي \\(1+2i\\)، \\(1+\\sqrt3+i\\)، \\(1+\\sqrt3-i\\).",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2014_complex_s1_ex02_q2",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2-أ) بين أن \\(AB=CD\\) و \\((AD)\\) يوازي \\((BC)\\).",
+      "solution": {
+        "strategy": "نستعمل فروق اللواحق لحساب الأطوال، ثم نقارن اتجاهي المتجهتين \\(\\overrightarrow{AD}\\) و\\(\\overrightarrow{BC}\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب AB",
+            "explanation": "لدينا:\n\\[\nz_B-z_A=(1+\\sqrt3+i)-(1+2i)=\\sqrt3-i.\n\\]\nإذن:\n\\[\nAB=|z_B-z_A|\n=\\sqrt{(\\sqrt3)^2+(-1)^2}\n=2.\n\\]",
+            "result": "\\(AB=2\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "حساب CD",
+            "explanation": "لدينا:\n\\[\nz_D-z_C=(1-2i)-(1+\\sqrt3-i)\n=-\\sqrt3-i.\n\\]\nإذن:\n\\[\nCD=|z_D-z_C|\n=\\sqrt3+1 \\text{ تحت الجذر}\n=\\sqrt{3+1}=2.\n\\]",
+            "result": "\\(CD=2\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "إثبات التوازي",
+            "explanation": "نحسب:\n\\[\nz_D-z_A=(1-2i)-(1+2i)=-4i,\n\\]\nو:\n\\[\nz_C-z_B=(1+\\sqrt3-i)-(1+\\sqrt3+i)=-2i.\n\\]\nومن ثم:\n\\[\nz_D-z_A=2(z_C-z_B).\n\\]\nإذن المتجهتان \\(\\overrightarrow{AD}\\) و\\(\\overrightarrow{BC}\\) متوازيتان، وبالتالي:\n\\[\n(AD)\\parallel(BC).\n\\]",
+            "result": "\\((AD)\\parallel(BC)\\)."
+          }
+        ],
+        "final_answer": "\\[\\boxed{AB=CD=2}\\qquad\\text{و}\\qquad\\boxed{(AD)\\parallel(BC)}\\]",
+        "verification": "مطابق لعناصر التصحيح النموذجي.",
+        "common_mistakes": [
+          "الخلط بين \\(z_D-z_C\\) و\\(z_C-z_D\\) عند حساب الطول؛ المعيار لا يتأثر بالإشارة."
+        ],
+        "hints": [
+          "استعمل \\(MN=|z_N-z_M|\\).",
+          "لإثبات التوازي، ابحث عن نسبة حقيقية بين لاحقتي المتجهتين."
+        ],
+        "introduction": "نحسب الطولين ثم نستعمل العلاقة بين لاحقتي المتجهتين.",
+        "summary": "وجدنا \\(AB=CD=2\\) و\\((AD)\\parallel(BC)\\).",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2014_complex_s1_ex02_q3",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "2-ب) تحقق أن:\n\\[\n\\frac{z_B+z_D}{2}\\ne\\frac{z_A+z_C}{2}\n\\]\nثم استنتج طبيعة الرباعي \\(ABCD\\).",
+      "solution": {
+        "strategy": "نحسب منتصفي القطرين \\(AC\\) و\\(BD\\). عدم تطابقهما يعني أن الرباعي ليس متوازي أضلاع. وبالاستفادة من السؤال السابق نحدد نوعه.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب منتصف BD",
+            "explanation": "لاحقة منتصف \\([BD]\\) هي:\n\\[\n\\frac{z_B+z_D}{2}\n=\\frac{(1+\\sqrt3+i)+(1-2i)}{2}\n=\\frac{2+\\sqrt3-i}{2}.\n\\]",
+            "result": "\\(\\frac{z_B+z_D}{2}=\\frac{2+\\sqrt3-i}{2}\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "حساب منتصف AC",
+            "explanation": "لاحقة منتصف \\([AC]\\) هي:\n\\[\n\\frac{z_A+z_C}{2}\n=\\frac{(1+2i)+(1+\\sqrt3-i)}{2}\n=\\frac{2+\\sqrt3+i}{2}.\n\\]\nومن الواضح أن:\n\\[\n\\frac{2+\\sqrt3-i}{2}\\ne\n\\frac{2+\\sqrt3+i}{2}.\n\\]",
+            "result": "\\(\\frac{z_B+z_D}{2}\\ne\\frac{z_A+z_C}{2}\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "الاستنتاج",
+            "explanation": "إذن قطرا الرباعي لا يتنصفان، فالرباعي ليس متوازي أضلاع.\nومن السؤال السابق:\n\\[\n(AD)\\parallel(BC)\n\\]\nأي أن له ضلعين متقابلين متوازيين، كما أن:\n\\[\nAB=CD.\n\\]\nإذن الرباعي:\n\\[\nABCD\n\\]\nشبه منحرف متساوي الساقين.",
+            "result": "\\(ABCD\\) شبه منحرف متساوي الساقين."
+          }
+        ],
+        "final_answer": "\\[\\boxed{ABCD\\text{ شبه منحرف متساوي الساقين}}\\]",
+        "verification": "مطابق للتصحيح النموذجي.",
+        "common_mistakes": [
+          "القول إنه متوازي أضلاع لمجرد وجود ضلعين متوازيين.",
+          "نسيان دور الشرط \\(AB=CD\\)."
+        ],
+        "hints": [
+          "إذا تساوى منتصَفا القطرين كان الرباعي متوازي أضلاع؛ هنا هما مختلفان."
+        ],
+        "introduction": "السؤال السابق أعطانا ضلعين متوازيين وساقين متساويتين، وهذا يحدد شبه المنحرف المتساوي الساقين.",
+        "summary": "الرباعي \\(ABCD\\) شبه منحرف متساوي الساقين.",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2014_complex_s1_ex02_q4",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "3-أ) بين أن:\n\\[\n\\frac{z_D-z_B}{z_A-z_B}\n=\\sqrt3\\,e^{i\\pi/2}.\n\\]\nاستنتج أن \\(D\\) هي صورة \\(A\\) بتشابه مباشر مركزه \\(B\\) يطلب تعيين نسبته وزاويته.",
+      "solution": {
+        "strategy": "نحسب الخارج المركب ونكتبه بالشكل الأسي، ثم نفسره بصيغة التشابه المباشر ذي المركز \\(B\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب البسط والمقام",
+            "explanation": "لدينا:\n\\[\nz_D-z_B=(1-2i)-(1+\\sqrt3+i)\n=-\\sqrt3-3i,\n\\]\nو:\n\\[\nz_A-z_B=(1+2i)-(1+\\sqrt3+i)\n=-\\sqrt3+i.\n\\]",
+            "result": "تم حساب الفرقين."
+          },
+          {
+            "step_number": 2,
+            "title": "حساب الخارج",
+            "explanation": "نحسب:\n\\[\n\\frac{-\\sqrt3-3i}{-\\sqrt3+i}.\n\\]\nنضرب في مرافق المقام:\n\\[\n\\frac{(-\\sqrt3-3i)(-\\sqrt3-i)}\n{(-\\sqrt3+i)(-\\sqrt3-i)}.\n\\]\nالمقام:\n\\[\n3+1=4.\n\\]\nوالبسط:\n\\[\n3+\\sqrt3 i+3\\sqrt3 i-3\n=4\\sqrt3 i.\n\\]\nإذن:\n\\[\n\\frac{z_D-z_B}{z_A-z_B}\n=\\sqrt3\\,i\n=\\sqrt3\\,e^{i\\pi/2}.\n\\]",
+            "result": "\\(\\frac{z_D-z_B}{z_A-z_B}=\\sqrt3e^{i\\pi/2}\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "التفسير الهندسي",
+            "explanation": "العلاقة:\n\\[\nz_D-z_B\n=\\sqrt3e^{i\\pi/2}(z_A-z_B)\n\\]\nهي صيغة تشابه مباشر مركزه \\(B\\)، يرسل \\(A\\) إلى \\(D\\).\n\nنسبته:\n\\[\nk=\\sqrt3\n\\]\nوزاويته:\n\\[\n\\theta=\\frac{\\pi}{2}.\n\\]",
+            "result": "\\(k=\\sqrt3,\\ \\theta=\\pi/2\\)."
+          }
+        ],
+        "final_answer": "\\[\n\\boxed{D=S(A)}\n\\]\nحيث \\(S\\) تشابه مباشر مركزه \\(B\\)، نسبته \\(\\boxed{\\sqrt3}\\)، وزاويته \\(\\boxed{\\frac{\\pi}{2}}\\).",
+        "verification": "مطابق للتصحيح النموذجي.",
+        "common_mistakes": [
+          "قلب الكسر فيتغير التفسير الهندسي.",
+          "نسيان أن \\(i=e^{i\\pi/2}\\)."
+        ],
+        "hints": [
+          "قارن مع \\(z'-z_B=ke^{i\theta}(z-z_B)\\)."
+        ],
+        "introduction": "الخارج المركب يعطي في الوقت نفسه نسبة الطولين والزاوية الموجهة.",
+        "summary": "التشابه مركزه \\(B\\)، نسبته \\(\\sqrt3\\)، وزاويته \\(\\pi/2\\).",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2014_complex_s1_ex02_q5",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "3-ب) بين أن المثلث \\(ADB\\) قائم وأن النقط \\(A\\)، \\(B\\)، \\(C\\) و \\(D\\) تنتمي إلى دائرة يطلب تحديد مركزها ونصف قطرها.",
+      "solution": {
+        "strategy": "من التشابه السابق نحصل مباشرة على زاوية قائمة عند \\(B\\). ثم نستعمل خاصية الدائرة ذات القطر \\(AD\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "إثبات أن ADB قائم",
+            "explanation": "من السؤال السابق:\n\\[\n\\arg\\left(\\frac{z_D-z_B}{z_A-z_B}\\right)\n=\\frac{\\pi}{2}.\n\\]\nإذن:\n\\[\n(\\overrightarrow{BA},\\overrightarrow{BD})\n=\\frac{\\pi}{2}.\n\\]\nوعليه:\n\\[\nBA\\perp BD.\n\\]\nإذن المثلث \\(ADB\\) قائم في \\(B\\).",
+            "result": "المثلث \\(ADB\\) قائم في \\(B\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "تحديد دائرة A وB وD",
+            "explanation": "بما أن المثلث \\(ADB\\) قائم في \\(B\\)، فإن \\(B\\) تنتمي إلى الدائرة ذات القطر \\([AD]\\).\n\nلدينا:\n\\[\nA(1,2),\\qquad D(1,-2).\n\\]\nمنتصف \\([AD]\\) هو:\n\\[\n\\Omega(1,0).\n\\]\nوطول:\n\\[\nAD=4.\n\\]\nإذن نصف القطر:\n\\[\nr=\\frac{AD}{2}=2.\n\\]",
+            "result": "\\(\\Omega(1,0)\\)، \\(r=2\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "التحقق من انتماء C",
+            "explanation": "لدينا:\n\\[\nC(1+\\sqrt3,-1).\n\\]\nنحسب:\n\\[\n\\Omega C\n=\\sqrt{(\\sqrt3)^2+(-1)^2}\n=\\sqrt4=2.\n\\]\nإذن:\n\\[\nC\\in(\\gamma).\n\\]\nوبالتالي النقط الأربع \\(A,B,C,D\\) تنتمي إلى الدائرة نفسها.",
+            "result": "النقط الأربع على الدائرة نفسها."
+          }
+        ],
+        "final_answer": "\\[\n\\boxed{ADB\\text{ قائم في }B}\n\\]\nوالنقط \\(A,B,C,D\\) تنتمي إلى الدائرة:\n\\[\n\\boxed{(\\gamma)\\text{ مركزها }\\Omega(1,0)\\text{ ونصف قطرها }2}.\n\\]",
+        "verification": "مطابق للتصحيح النموذجي.",
+        "common_mistakes": [
+          "القول إن القطر هو \\(AB\\) بدل \\(AD\\).",
+          "نسيان التحقق من انتماء \\(C\\)."
+        ],
+        "hints": [
+          "المثلث القائم يحدد دائرة قطرها الوتر.",
+          "منتصف \\(A(1,2)\\) و\\(D(1,-2)\\) هو \\((1,0)\\)."
+        ],
+        "introduction": "بعد إثبات الزاوية القائمة تصبح الدائرة المحيطة واضحة لأن وتر المثلث هو \\(AD\\).",
+        "summary": "الدائرة مركزها \\(\\Omega(1,0)\\) ونصف قطرها \\(2\\).",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2014_complex_s1_ex02_q6",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "3-ج) استنتج إنشاء للرباعي \\(ABCD\\).",
+      "solution": {
+        "strategy": "نستعمل الدائرة المحيطة وخصائص إحداثيات النقط لاختيار نقاط التقاطع المناسبة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "إنشاء الدائرة",
+            "explanation": "نرسم الدائرة:\n\\[\n(\\gamma)\n\\]\nمركزها:\n\\[\n\\Omega(1,0)\n\\]\nونصف قطرها:\n\\[\n2.\n\\]",
+            "result": "تم إنشاء الدائرة."
+          },
+          {
+            "step_number": 2,
+            "title": "إنشاء A وD",
+            "explanation": "النقطتان:\n\\[\nA(1,2),\\qquad D(1,-2)\n\\]\nهما نقطتا تقاطع الدائرة مع المستقيم الرأسي:\n\\[\nx=1.\n\\]",
+            "result": "تحديد \\(A\\) و\\(D\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "إنشاء B وC",
+            "explanation": "النقطتان:\n\\[\nB(1+\\sqrt3,1),\\qquad C(1+\\sqrt3,-1)\n\\]\nتقعان على الدائرة، وهما متناظرتان بالنسبة إلى محور الفواصل.\n\nيمكن تحديد \\(B\\) كإحدى نقطتي تقاطع الدائرة مع المستقيم:\n\\[\ny=1\n\\]\nثم اختيار النقطة ذات الفاصلة الموجبة الأكبر من \\(1\\)، وبعدها تكون \\(C\\) نظيرة \\(B\\) بالنسبة إلى محور الفواصل.",
+            "result": "تحديد \\(B\\) ثم \\(C\\)."
+          },
+          {
+            "step_number": 4,
+            "title": "إكمال الرباعي",
+            "explanation": "نصل النقاط بالترتيب \\(A\to B\to C\to D\to A\\).",
+            "result": "تم إنشاء \\(ABCD\\)."
+          }
+        ],
+        "final_answer": "\\[\\boxed{\\text{ينشأ }ABCD\\text{ انطلاقا من الدائرة }(\\gamma)\\text{ ثم تحديد }A,D,B,C\\text{ كما سبق.}}\\]",
+        "verification": "يتفق مع معطيات التصحيح النموذجي الهندسية.",
+        "common_mistakes": [
+          "الخلط بين المستقيمين \\(x=1\\) و\\(y=1\\) عند تحديد \\(A,D\\)."
+        ],
+        "hints": [
+          "راجع إحداثيات كل نقطة قبل اختيار مستقيم الإنشاء."
+        ],
+        "introduction": "نستعمل الدائرة التي تجمع الرؤوس الأربعة، ثم نحدد الرؤوس بخواصها البسيطة.",
+        "summary": "الإنشاء يعتمد على الدائرة مركزها \\((1,0)\\) ونصف قطرها \\(2\\).",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    }
+  ],
+  "source_reference": {
+    "file": "2014(6).pdf",
+    "statement_pages": [
+      1
+    ],
+    "solution_pages": [
+      5
+    ],
+    "source_faithful_statement": true,
+    "solution_reviewed_against_source": true
+  },
+  "display": {
+    "layout": "question_by_question",
+    "show_statement_first": true,
+    "show_statement_figures": true,
+    "show_solution_after_click": true,
+    "show_solution_figures": true
+  },
+  "review_status": {
+    "statement_compared_with_original_pdf": true,
+    "questions_compared_with_original_pdf": true,
+    "source_figures_checked": true,
+    "solution_checked_against_correction": true,
+    "latex_normalized_only": true,
+    "react_ready": true
+  },
+  "given_data": {
+    "equation": "(z-1-2i)(z^2-2(1+√3)z+5+2√3)=0",
+    "points_affixes": {
+      "A": "1+2i",
+      "B": "1+√3+i",
+      "C": "1+√3-i",
+      "D": "1-2i"
+    }
+  }
+}

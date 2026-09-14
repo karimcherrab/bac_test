@@ -1,0 +1,223 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2010-tech-math-space-subject1-ex02-detailed",
+  "session": "ordinary",
+  "year": 2010,
+  "chapter_code": "space_geometry",
+  "chapter_title": "الهندسة في الفضاء",
+  "axis_tags": [
+    "space_barycenter",
+    "space_sphere_locus",
+    "space_parametric_line_plane",
+    "space_projections_distances",
+    "space_relative_positions_intersections"
+  ],
+  "branches": [
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "exercise_number": 2,
+  "subject_number": 1,
+  "source_page": 1,
+  "source_pages": [
+    1
+  ],
+  "solution_source_pages": [
+    5
+  ],
+  "title": "التمرين الثاني — بكالوريا الجزائر 2010 — الموضوع الأول — شعبة تقني رياضي",
+  "statement": "الفضاء مزود بالمعلم المتعامد والمتجانس \\((O;\\vec{i},\\vec{j},\\vec{k})\\).\nنعتبر النقطتين \\(A(3,-1,2)\\) و\\(B(1,2,1)\\) والمستوي \\((P)\\) الذي معادلته:\n\\[x-2y+3z-7=0.\\]",
+  "questions": [
+    {
+      "id": "2010_s1_space_ex02_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1/ عين إحداثيات النقطة \\(G\\) مرجح النقطتين \\(A\\) و\\(B\\) المرفقتين بالمعاملين \\(3\\) و\\(1\\) على الترتيب.",
+      "axis_tags": [
+        "space_barycenter"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل صيغة إحداثيات مرجح نقطتين: إحداثيات G هي المتوسط الموزون لإحداثيات A وB بالمعاملين 3 و1.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "كتابة علاقة المرجح",
+            "explanation": "بما أن \\(G\\) مرجح \\((A,3)\\) و\\((B,1)\\)، فإن:\n\\[\\overrightarrow{OG}=\\frac{3\\overrightarrow{OA}+\\overrightarrow{OB}}{3+1}.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب الإحداثيات",
+            "explanation": "\\[x_G=\\frac{3\\times3+1}{4}=\\frac{10}{4}=\\frac52,\\]\n\\[y_G=\\frac{3(-1)+2}{4}=-\\frac14,\\]\n\\[z_G=\\frac{3\\times2+1}{4}=\\frac74.\\]"
+          }
+        ],
+        "final_answer": "\\[G\\left(\\frac{10}{4},-\\frac14,\\frac74\\right)=G\\left(\\frac52,-\\frac14,\\frac74\\right).\\]"
+      }
+    },
+    {
+      "id": "2010_s1_space_ex02_q2",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2/ عين طبيعة وعناصر \\((\\Gamma)\\) مجموعة النقط \\(M\\) من الفضاء التي تحقق: \\(\\left\\|3\\overrightarrow{MA}+\\overrightarrow{MB}\\right\\|=4\\).",
+      "axis_tags": [
+        "space_barycenter",
+        "space_sphere_locus"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل خاصية المرجح لتحويل المجموع الشعاعي إلى متجهة واحدة مرتبطة بـG، ثم نحول الشرط إلى شرط مسافة ثابتة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "استعمال خاصية المرجح",
+            "explanation": "بما أن \\(G\\) مرجح \\((A,3)\\) و\\((B,1)\\)، فلكل نقطة \\(M\\):\n\\[3\\overrightarrow{MA}+\\overrightarrow{MB}=(3+1)\\overrightarrow{MG}=4\\overrightarrow{MG}.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "تحويل شرط الأطوال",
+            "explanation": "الشرط المعطى يصبح:\n\\[\\|4\\overrightarrow{MG}\\|=4.\\]\nأي:\n\\[4MG=4\\Rightarrow MG=1.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "تحديد المجموعة",
+            "explanation": "مجموعة النقط التي تبعد مسافة ثابتة تساوي 1 عن النقطة G هي سطح كرة."
+          }
+        ],
+        "final_answer": "\\((\\Gamma)\\) سطح كرة مركزها \\(G\\left(\\frac52,-\\frac14,\\frac74\\right)\\) ونصف قطرها \\(1\\)."
+      }
+    },
+    {
+      "id": "2010_s1_space_ex02_q3a",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "3/ أ- اكتب تمثيلا وسيطيا للمستقيم \\((\\Delta)\\) الذي يشمل النقطة \\(G\\) ويعامد المستوي \\((P)\\).",
+      "axis_tags": [
+        "space_parametric_line_plane",
+        "space_cartesian_plane_normal_vector"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "المستقيم العمودي على مستو يكون شعاع توجيهه موازيا لشعاع ناظم لذلك المستوي.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "استخراج شعاع ناظم لـP",
+            "explanation": "من \\(P:x-2y+3z-7=0\\) شعاع ناظم هو:\n\\[\\vec n=(1,-2,3).\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "اختيار شعاع توجيه Δ",
+            "explanation": "بما أن \\((\\Delta)\\perp(P)\\)، نأخذ \\(\\vec n=(1,-2,3)\\) شعاع توجيه للمستقيم."
+          },
+          {
+            "step_number": 3,
+            "title": "كتابة التمثيل الوسيطي",
+            "explanation": "يمر \\((\\Delta)\\) بالنقطة \\(G\\left(\\frac{10}{4},-\\frac14,\\frac74\\right)\\)، لذلك:\n\\[\\begin{cases}x=\\frac{10}{4}+u\\\\y=-\\frac14-2u\\\\z=\\frac74+3u\\end{cases}\\qquad u\\in\\mathbb R.\\]"
+          }
+        ],
+        "final_answer": "\\[\\Delta:\\begin{cases}x=\\frac{10}{4}+u\\\\y=-\\frac14-2u\\\\z=\\frac74+3u\\end{cases},\\quad u\\in\\mathbb R.\\]"
+      }
+    },
+    {
+      "id": "2010_s1_space_ex02_q3b",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "ب- عين إحداثيات \\(H\\) نقطة تقاطع \\((P)\\) و\\((\\Delta)\\).",
+      "axis_tags": [
+        "space_relative_positions_intersections"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نعوض إحداثيات نقطة عامة من Δ في معادلة P، فنحدد قيمة الوسيط ثم إحداثيات H.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التعويض في معادلة P",
+            "explanation": "نعوض:\n\\[x=\\frac52+u,\\quad y=-\\frac14-2u,\\quad z=\\frac74+3u\\]\nفي \\(x-2y+3z-7=0\\):\n\\[\\frac52+u-2\\left(-\\frac14-2u\\right)+3\\left(\\frac74+3u\\right)-7=0.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "إيجاد الوسيط",
+            "explanation": "بالتبسيط:\n\\[\\frac54+14u=0\\Rightarrow u=-\\frac5{56}.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب إحداثيات H",
+            "explanation": "\\[x_H=\\frac52-\\frac5{56}=\\frac{135}{56},\\]\n\\[y_H=-\\frac14+\\frac{10}{56}=-\\frac4{56},\\]\n\\[z_H=\\frac74-\\frac{15}{56}=\\frac{83}{56}.\\]"
+          }
+        ],
+        "final_answer": "\\[H\\left(\\frac{135}{56},-\\frac4{56},\\frac{83}{56}\\right).\\]"
+      }
+    },
+    {
+      "id": "2010_s1_space_ex02_q3c",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "ج- احسب المسافة بين \\(G\\) والمستوي \\((P)\\).",
+      "axis_tags": [
+        "space_projections_distances"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نطبق مباشرة صيغة المسافة من نقطة إلى مستو.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "صيغة المسافة",
+            "explanation": "إذا كان \\(P:ax+by+cz+d=0\\)، فإن:\n\\[d(G,P)=\\frac{|ax_G+by_G+cz_G+d|}{\\sqrt{a^2+b^2+c^2}}.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "التعويض",
+            "explanation": "\\[d(G,P)=\\frac{\\left|\\frac52-2\\left(-\\frac14\\right)+3\\left(\\frac74\\right)-7\\right|}{\\sqrt{1^2+(-2)^2+3^2}}.\\]\nالبسط يساوي:\n\\[\\left|\\frac54\\right|=\\frac54,\\]\nوالمقام:\n\\[\\sqrt{14}.\\]"
+          }
+        ],
+        "final_answer": "\\[d(G,P)=\\frac5{4\\sqrt{14}}.\\]"
+      }
+    },
+    {
+      "id": "2010_s1_space_ex02_q4",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "4/ نعرف المستوي \\((P')\\) بتمثيله الوسيطي:\n\\[\\begin{cases}x=1+t\\\\y=t+2\\lambda\\\\z=2-t+2\\lambda\\end{cases}\\]\nحيث \\(t\\) و\\(\\lambda\\) عددان حقيقيان. أثبت أن \\((P)\\) و\\((P')\\) متقاطعان واكتب تمثيلا وسيطيا لمستقيم تقاطعهما.",
+      "axis_tags": [
+        "space_relative_positions_intersections",
+        "space_parametric_line_plane"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نعوض التمثيل الوسيطي لـP' في معادلة P. العلاقة الناتجة بين t وλ تصف نقاط التقاطع، ثم نعوضها للحصول على تمثيل وسيطي للمستقيم.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "فرض انتماء نقطة من P' إلى P",
+            "explanation": "نعوض في \\(P:x-2y+3z-7=0\\):\n\\[(1+t)-2(t+2\\lambda)+3(2-t+2\\lambda)-7=0.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "تبسيط العلاقة",
+            "explanation": "\\[1+t-2t-4\\lambda+6-3t+6\\lambda-7=0\\]\n\\[-4t+2\\lambda=0\\Rightarrow \\lambda=2t.\\]\nإذن توجد نقاط مشتركة بين المستويين، بل مجموعة مشتركة تعتمد على وسيط حقيقي."
+          },
+          {
+            "step_number": 3,
+            "title": "إيجاد مستقيم التقاطع",
+            "explanation": "نعوض \\(\\lambda=2t\\) في تمثيل \\(P'\\):\n\\[x=1+t,\\]\n\\[y=t+4t=5t,\\]\n\\[z=2-t+4t=2+3t.\\]"
+          }
+        ],
+        "final_answer": "\\[(P)\\cap(P'):\\begin{cases}x=1+t\\\\y=5t\\\\z=2+3t\\end{cases},\\quad t\\in\\mathbb R.\\]"
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2010(2).pdf",
+    "statement_figure_policy": "لا يوجد شكل هندسي إلزامي في نص التمرين.",
+    "solution_figure_policy": "الحل مستقل عن أي رسم.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  }
+}

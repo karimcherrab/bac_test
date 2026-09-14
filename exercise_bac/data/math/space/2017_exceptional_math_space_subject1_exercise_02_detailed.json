@@ -1,0 +1,234 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2017-exceptional-math-space-subject1-ex02-detailed",
+  "session": "exceptional",
+  "year": 2017,
+  "chapter_code": "space_geometry",
+  "chapter_title": "الهندسة في الفضاء",
+  "axis_tags": [
+    "space_parametric_line_plane",
+    "space_cartesian_plane_normal_vector",
+    "space_dot_product_orthogonality",
+    "space_relative_positions_intersections",
+    "space_distances_projections",
+    "space_areas_volumes"
+  ],
+  "branches": [
+    {
+      "code": "math",
+      "name": "شعبة رياضيات"
+    }
+  ],
+  "exercise_number": 2,
+  "subject_number": 1,
+  "source_page": 1,
+  "source_pages": [
+    1,
+    2
+  ],
+  "solution_source_pages": [
+    6,
+    7
+  ],
+  "title": "التمرين الثاني — بكالوريا الجزائر 2017 استثنائية — الموضوع الأول — شعبة رياضيات",
+  "statement": "الفضاء منسوب إلى المعلم المتعامد المتجانس \\((O;\\vec{i},\\vec{j},\\vec{k})\\) حيث \\(\\|\\vec{i}\\|=1cm\\).\nنعتبر النقطة \\(A\\left(-\\frac{2}{3};2;0\\right)\\) والمستقيم \\((\\Delta)\\) المعرف بالتمثيل الوسيطي الآتي\n\\[\n\\begin{cases}\nx=3t\\\\\ny=t+1\\\\\nz=-t+1\n\\end{cases}\n\\quad ;\\ (t\\in\\mathbb{R}).\n\\]",
+  "questions": [
+    {
+      "id": "2017_exceptional_s1_space_ex02_q1a",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) أ) تحقق أن النقطة \\(A\\) لا تنتمي إلى \\((\\Delta)\\) ثم اكتب تمثيلا وسيطيا للمستوي \\((P)\\) الذي يشمل \\(A\\) ويحوي \\((\\Delta)\\).",
+      "axis_tags": [
+        "space_parametric_line_plane",
+        "space_relative_positions_intersections"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نختبر أولا انتماء A إلى المستقيم. بعد ذلك نأخذ شعاع توجيه للمستقيم وشعاعا يصل A بنقطة من المستقيم لكتابة تمثيل وسيطي للمستوى.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التحقق من أن A لا تنتمي إلى Δ",
+            "explanation": "إذا كانت \\(A\\in(\\Delta)\\)، فمن \\(x=3t=-\\frac23\\) نحصل على:\n\\[\n t=-\\frac29.\n\\]\nلكن عند هذه القيمة:\n\\[\n y=t+1=\\frac79\\neq2.\n\\]\nإذن \\(A\\notin(\\Delta)\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "اختيار شعاعين موجّهين للمستوى",
+            "explanation": "شعاع توجيه المستقيم \\((\\Delta)\\) هو:\n\\[\n\\vec u=(3,1,-1).\n\\]\nوعند \\(t=0\\) نحصل على النقطة \\(I(0,1,1)\\in(\\Delta)\\).\nنأخذ:\n\\[\n\\overrightarrow{IA}=\\left(-\\frac23,1,-1\\right).\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "التمثيل الوسيطي للمستوى P",
+            "explanation": "باستعمال النقطة \\(A\\)، والشعاعين \\((3,1,-1)\\) و \\(\\left(-\\frac23,1,-1\\right)\\):\n\\[\n(P):\\begin{cases}\nx=-\\frac23+3\\alpha-\\frac23\\beta\\\\\ny=2+\\alpha+\\beta\\\\\nz=-\\alpha-\\beta\n\\end{cases}\n\\quad ;\\ (\\alpha,\\beta)\\in\\mathbb R^2.\n\\]"
+          }
+        ],
+        "final_answer": "\\[A\\notin(\\Delta),\\]\n\\[(P):\\begin{cases}x=-\\frac23+3\\alpha-\\frac23\\beta\\\\y=2+\\alpha+\\beta\\\\z=-\\alpha-\\beta\\end{cases},\\quad (\\alpha,\\beta)\\in\\mathbb R^2.\\]"
+      }
+    },
+    {
+      "id": "2017_exceptional_s1_space_ex02_q1b",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "ب) بين أن \\(3x+y-z=0\\) هي معادلة ديكارتية للمستوي \\((Q)\\) الذي يشمل \\(A\\) ويعامد \\((\\Delta)\\).",
+      "axis_tags": [
+        "space_cartesian_plane_normal_vector",
+        "space_dot_product_orthogonality"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "شعاع توجيه المستقيم Δ هو \\((3,1,-1)\\). إذا كان هذا الشعاع ناظما للمستوى Q وكانت A تحقق معادلته، فإن Q يمر بـA ويعامد Δ.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "شعاع ناظم للمستوى",
+            "explanation": "المعادلة \\(3x+y-z=0\\) لها شعاع ناظم:\n\\[\n\\vec n_Q=(3,1,-1).\n\\]\nوهو نفسه شعاع توجيه \\((\\Delta)\\)، إذن \\((Q)\\perp(\\Delta)\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "التحقق من مرور Q بالنقطة A",
+            "explanation": "\\[\n3\\left(-\\frac23\\right)+2-0=0.\n\\]\nإذن \\(A\\in(Q)\\)."
+          }
+        ],
+        "final_answer": "\\[(Q):3x+y-z=0.\\]"
+      }
+    },
+    {
+      "id": "2017_exceptional_s1_space_ex02_q2",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "2) لتكن \\((P_m)\\) مجموعة النقط \\(M(x;y;z)\\) من الفضاء حيث\n\\[\nmx-(m-2)y+2(m+1)z-m-4=0\n\\]\nو \\(m\\) وسيط حقيقي.\nبرهن أن: من أجل كل عدد حقيقي \\(m\\)، \\((P_m)\\) مستو، ثم بين أن كل المستويات \\((P_m)\\) تتقاطع وفق \\((\\Delta)\\).",
+      "axis_tags": [
+        "space_cartesian_plane_normal_vector",
+        "space_relative_positions_intersections"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نثبت أولا أن معاملات x وy وz لا تنعدم كلها في آن واحد. ثم نعيد كتابة المعادلة على شكل تركيب خطي لمعادلتين ثابتتين، ونبين أن تقاطعهما هو Δ.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "إثبات أن Pm مستو",
+            "explanation": "شعاع ناظم لـ\\((P_m)\\) هو:\n\\[\n\\vec n_m=(m,2-m,2m+2).\n\\]\nلا توجد قيمة حقيقية لـ\\(m\\) تجعل المركبات الثلاث كلها صفرا؛ إذن \\((P_m)\\) مستو من أجل كل \\(m\\in\\mathbb R\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "إعادة كتابة معادلة Pm",
+            "explanation": "نكتب:\n\\[\nmx-(m-2)y+2(m+1)z-m-4\n=m(x-y+2z-1)+2(y+z-2).\n\\]\nإذن كل نقطة تحقق:\n\\[\n\\begin{cases}\nx-y+2z-1=0\\\\\ny+z-2=0\n\\end{cases}\n\\]\nتنتمي إلى جميع المستويات \\((P_m)\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "إثبات أن المستقيم المشترك هو Δ",
+            "explanation": "على \\((\\Delta)\\):\n\\[\nx=3t,\\quad y=t+1,\\quad z=1-t.\n\\]\nفنجد:\n\\[\nx-y+2z-1=0,\n\\qquad\ny+z-2=0.\n\\]\nإذن جميع المستويات \\((P_m)\\) تتقاطع وفق المستقيم \\((\\Delta)\\)."
+          }
+        ],
+        "final_answer": "لكل \\(m\\in\\mathbb R\\)، \\((P_m)\\) مستو، وجميع المستويات \\((P_m)\\) تتقاطع وفق \\((\\Delta)\\)."
+      }
+    },
+    {
+      "id": "2017_exceptional_s1_space_ex02_q3a",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "3) أ) تحقق أن المستوي \\((P)\\) هو المستوي \\((P_0)\\) ثم عين قيمة الوسيط الحقيقي \\(m\\) التي يكون من أجلها \\((P_m)\\) و \\((P_0)\\) متعامدين.",
+      "axis_tags": [
+        "space_cartesian_plane_normal_vector",
+        "space_dot_product_orthogonality"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نضع m=0 ثم نقارن مع المستوى P، وبعدها نستعمل تعامد شعاعي الناظم.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تحديد P0",
+            "explanation": "عند \\(m=0\\):\n\\[\n2y+2z-4=0\\Longleftrightarrow y+z-2=0.\n\\]\nومن التمثيل الوسيطي لـ\\((P)\\) نجد أن كل نقطة منه تحقق \\(y+z=2\\)، إذن \\((P)=(P_0)\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "شرط التعامد",
+            "explanation": "شعاع ناظم لـ\\((P_0)\\) هو:\n\\[\n\\vec n_0=(0,1,1).\n\\]\nوشعاع ناظم لـ\\((P_m)\\) هو:\n\\[\n\\vec n_m=(m,2-m,2m+2).\n\\]\nشرط التعامد:\n\\[\n\\vec n_0\\cdot\\vec n_m=(2-m)+(2m+2)=m+4=0.\n\\]\nإذن:\n\\[\nm=-4.\n\\]"
+          }
+        ],
+        "final_answer": "\\[(P)=(P_0),\\qquad m=-4.\\]"
+      }
+    },
+    {
+      "id": "2017_exceptional_s1_space_ex02_q3b",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "ب) استنتج إحداثيات \\(H\\) نقطة تقاطع المستويات الثلاث \\((P_0)\\)، \\((P_{-4})\\) و \\((Q)\\).",
+      "axis_tags": [
+        "space_relative_positions_intersections"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحل معادلات المستويات الثلاثة معا.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "كتابة المعادلات",
+            "explanation": "\\[\n(P_0):y+z-2=0,\n\\]\n\\[\n(P_{-4}):-4x+6y-6z=0,\n\\]\n\\[\n(Q):3x+y-z=0.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حل النظام",
+            "explanation": "بحل النظام نحصل على:\n\\[\nx=0,\\qquad y=1,\\qquad z=1.\n\\]"
+          }
+        ],
+        "final_answer": "\\[H(0;1;1).\\]"
+      }
+    },
+    {
+      "id": "2017_exceptional_s1_space_ex02_q4",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "4) بين أن المثلث \\(AOH\\) قائم ثم جد إحداثيات النقط \\(M\\) من المستقيم \\((\\Delta)\\) حتى يكون حجم رباعي الوجوه \\(MAOH\\) يساوي \\(\\frac{11}{9}cm^3\\).",
+      "axis_tags": [
+        "space_dot_product_orthogonality",
+        "space_areas_volumes",
+        "space_distances_projections"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نبين أن زاوية H قائمة باستعمال الجداء السلمي. بعد ذلك نحسب مساحة AOH، ثم نستعمل صيغة حجم رباعي الوجوه، مع ملاحظة أن المستقيم Δ عمودي على مستوى AOH.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "إثبات أن AOH قائم",
+            "explanation": "\\[\n\\overrightarrow{HA}=\\left(-\\frac23,1,-1\\right),\n\\qquad\n\\overrightarrow{HO}=(0,-1,-1).\n\\]\n\\[\n\\overrightarrow{HA}\\cdot\\overrightarrow{HO}=0-1+1=0.\n\\]\nإذن المثلث \\(AOH\\) قائم في \\(H\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "حساب مساحة المثلث AOH",
+            "explanation": "\\[\nHA=\\frac{\\sqrt{22}}3,\n\\qquad\nHO=\\sqrt2.\n\\]\nإذن:\n\\[\nS_{AOH}=\\frac12\\times HA\\times HO=\\frac{\\sqrt{11}}3\\ cm^2.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "المسافة من M إلى المستوى AOH",
+            "explanation": "المستوى \\((AOH)\\) هو \\((Q):3x+y-z=0\\)، والمستقيم \\((\\Delta)\\) عمودي عليه ويمر بالنقطة \\(H\\).\nإذا كانت:\n\\[\nM(3t,t+1,1-t),\n\\]\nفإن:\n\\[\nMH=|t|\\sqrt{3^2+1^2+(-1)^2}=|t|\\sqrt{11}.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "حساب الحجم",
+            "explanation": "\\[\nV=\\frac13 S_{AOH}\\times MH\n=\\frac13\\times\\frac{\\sqrt{11}}3\\times|t|\\sqrt{11}\n=\\frac{11}{9}|t|.\n\\]\nنريد:\n\\[\n\\frac{11}{9}|t|=\\frac{11}{9}\n\\Longleftrightarrow |t|=1.\n\\]\nإذن \\(t=1\\) أو \\(t=-1\\)."
+          },
+          {
+            "step_number": 5,
+            "title": "إحداثيات النقطتين",
+            "explanation": "عند \\(t=1\\):\n\\[\nM_1(3,2,0).\n\\]\nوعند \\(t=-1\\):\n\\[\nM_2(-3,0,2).\n\\]"
+          }
+        ],
+        "final_answer": "المثلث \\(AOH\\) قائم في \\(H\\)، و\\[M_1(3;2;0),\\qquad M_2(-3;0;2).\\]"
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2017_2(8).pdf",
+    "statement_figure_policy": "لا يوجد شكل هندسي إلزامي في نص التمرين.",
+    "solution_figure_policy": "الحل مستقل عن أي رسم.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  }
+}

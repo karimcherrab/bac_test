@@ -1,0 +1,257 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "graph_schema_version": "1.0-react-json",
+  "version": "4.2-2020-math-sequences-subject1-ex01-react-ready",
+  "session": "ordinary",
+  "year": 2020,
+  "chapter_code": "sequences",
+  "chapter_title": "المتتاليات العددية",
+  "axis_tags": [
+    "sequence_definition_notation_methods",
+    "mathematical_induction",
+    "sequence_monotonicity",
+    "bounded_sequence",
+    "geometric_sequences",
+    "limits_convergence_divergence",
+    "sequence_sums"
+  ],
+  "branches": [
+    {
+      "code": "math",
+      "name": "شعبة رياضيات"
+    }
+  ],
+  "exercise_number": 1,
+  "subject_number": 1,
+  "source_page": 1,
+  "source_pages": [
+    1
+  ],
+  "solution_source_pages": [
+    5
+  ],
+  "title": "التمرين الأول — بكالوريا الجزائر 2020 — الموضوع الأول — شعبة رياضيات — المتتاليات",
+  "statement": "الدالة العددية \\(f\\) معرفة على المجال \\([1;4]\\) بـ:\n\\[\nf(x)=\\frac{4x+4}{9-x}.\n\\]",
+  "questions": [
+    {
+      "id": "2020_s1_sequences_ex01_q1a",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) أ. ادرس اتجاه تغير الدالة \\(f\\) على المجال \\([1;4]\\).",
+      "axis_tags": [
+        "sequence_definition_notation_methods"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب المشتقة ثم ندرس إشارتها على المجال.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب المشتقة",
+            "explanation": "\\[\nf'(x)=\\frac{4(9-x)+(4x+4)}{(9-x)^2}=\\frac{40}{(9-x)^2}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "إشارة المشتقة",
+            "explanation": "من أجل كل \\(x\\in[1;4]\\) لدينا \\((9-x)^2>0\\)، ومنه:\n\\[\nf'(x)>0.\n\\]"
+          }
+        ],
+        "final_answer": "إذن الدالة \\(f\\) متزايدة تماما على المجال \\([1;4]\\)."
+      }
+    },
+    {
+      "id": "2020_s1_sequences_ex01_q1b",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "ب. أثبت أنه من أجل كل عدد حقيقي \\(x\\) من المجال \\([1;4]\\) فإن:\n\\[\nf(x)\\in[1;4].\n\\]",
+      "axis_tags": [
+        "bounded_sequence"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "بما أن f متزايدة، نحصر قيمها بين f(1) وf(4).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب قيمتي الطرفين",
+            "explanation": "\\[\nf(1)=\\frac{8}{8}=1,\n\\qquad\nf(4)=\\frac{20}{5}=4.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "الحصر",
+            "explanation": "بما أن \\(f\\) متزايدة و\\(1\\le x\\le4\\)، فإن:\n\\[\nf(1)\\le f(x)\\le f(4).\n\\]\nأي:\n\\[\n1\\le f(x)\\le4.\n\\]"
+          }
+        ],
+        "final_answer": "\\[f(x)\\in[1;4].\\]"
+      }
+    },
+    {
+      "id": "2020_s1_sequences_ex01_q2a",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "2) المتتالية العددية \\((u_n)\\) معرفة بحدها الأول \\(u_0\\) حيث: \\(u_0=2\\) و من أجل كل عدد طبيعي \\(n\\): \\(u_{n+1}=f(u_n)\\).\nأ. برهن بالتراجع أنه من أجل كل عدد طبيعي \\(n\\):\n\\[\n1<u_n<4.\n\\]",
+      "axis_tags": [
+        "mathematical_induction",
+        "bounded_sequence"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نبرهن الخاصية بالتراجع باستعمال أن f متزايدة وأن f(1)=1 وf(4)=4.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التحقق عند n=0",
+            "explanation": "\\[\nu_0=2,\n\\]\nومن ثم:\n\\[\n1<u_0<4.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "فرضية التراجع",
+            "explanation": "نفترض أنه من أجل عدد طبيعي \\(n\\): \\(1<u_n<4\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "الانتقال إلى n+1",
+            "explanation": "بما أن \\(f\\) متزايدة تماما:\n\\[\nf(1)<f(u_n)<f(4).\n\\]\nوبما أن \\(f(1)=1\\) و\\(f(4)=4\\)، نحصل على:\n\\[\n1<u_{n+1}<4.\n\\]"
+          }
+        ],
+        "final_answer": "\\[1<u_n<4\\quad\\forall n\\in\\mathbb N.\\]"
+      }
+    },
+    {
+      "id": "2020_s1_sequences_ex01_q2b",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "ب. ادرس اتجاه تغير المتتالية \\((u_n)\\) و استنتج أنها متقاربة.",
+      "axis_tags": [
+        "sequence_monotonicity",
+        "bounded_sequence",
+        "limits_convergence_divergence"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب الفرق uₙ₊₁−uₙ ثم نستعمل الحصر السابق.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب الفرق",
+            "explanation": "\\[\nu_{n+1}-u_n=\\frac{4u_n+4}{9-u_n}-u_n\n=\\frac{u_n^2-5u_n+4}{9-u_n}\n=\\frac{(u_n-1)(u_n-4)}{9-u_n}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "الإشارة",
+            "explanation": "لدينا \\(1<u_n<4\\)، لذلك:\n\\[\nu_n-1>0,\\qquad u_n-4<0,\\qquad 9-u_n>0.\n\\]\nإذن:\n\\[\nu_{n+1}-u_n<0.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "التقارب",
+            "explanation": "المتتالية \\((u_n)\\) متناقصة تماما ومحدودة من الأسفل بالعدد \\(1\\)، إذن فهي متقاربة."
+          }
+        ],
+        "final_answer": "المتتالية \\((u_n)\\) متناقصة تماما ومحدودة من الأسفل، وبالتالي فهي متقاربة."
+      }
+    },
+    {
+      "id": "2020_s1_sequences_ex01_q3a",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "3) المتتالية العددية \\((v_n)\\) معرفة من أجل كل عدد طبيعي \\(n\\)، كما يلي:\n\\[\nv_n=\\frac{u_n-1}{u_n-4}.\n\\]\nأ. برهن أن المتتالية \\((v_n)\\) هندسية يطلب تعيين أساسها وحدها الأول \\(v_0\\).",
+      "axis_tags": [
+        "geometric_sequences"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نعوض uₙ₊₁ في تعريف vₙ₊₁ ثم نبسط.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب vₙ₊₁",
+            "explanation": "\\[\nv_{n+1}=\\frac{u_{n+1}-1}{u_{n+1}-4}.\n\\]\nوبالتعويض بـ:\n\\[\nu_{n+1}=\\frac{4u_n+4}{9-u_n},\n\\]\nنجد بعد التبسيط:\n\\[\nv_{n+1}=\\frac58v_n.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "الحد الأول",
+            "explanation": "\\[\nv_0=\\frac{u_0-1}{u_0-4}=\\frac{2-1}{2-4}=-\\frac12.\n\\]"
+          }
+        ],
+        "final_answer": "\\[(v_n)\\text{ هندسية أساسها }q=\\frac58\\text{ وحدها الأول }v_0=-\\frac12.\\]"
+      }
+    },
+    {
+      "id": "2020_s1_sequences_ex01_q3b",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "ب. عبر عن الحد العام \\(v_n\\) بدلالة \\(n\\)، ثم استنتج الحد العام \\(u_n\\) بدلالة \\(n\\) واحسب \\(\\displaystyle\\lim_{n\\to+\\infty}u_n\\).",
+      "axis_tags": [
+        "geometric_sequences",
+        "limits_convergence_divergence"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نكتب الحد العام للمتتالية الهندسية ثم نحل العلاقة التي تربط vₙ وuₙ.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "عبارة vₙ",
+            "explanation": "\\[\nv_n=v_0\\left(\\frac58\\right)^n=-\\frac12\\left(\\frac58\\right)^n.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "استخراج uₙ",
+            "explanation": "من:\n\\[\nv_n=\\frac{u_n-1}{u_n-4},\n\\]\nنجد:\n\\[\nu_n=\\frac{4v_n-1}{v_n-1}.\n\\]\nوبتعويض عبارة \\(v_n\\):\n\\[\nu_n=\\frac{4\\left(\\frac58\\right)^n+2}{\\left(\\frac58\\right)^n+2}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "النهاية",
+            "explanation": "بما أن:\n\\[\n\\left(\\frac58\\right)^n\\to0,\n\\]\nفإن:\n\\[\nu_n\\to\\frac22=1.\n\\]"
+          }
+        ],
+        "final_answer": "\\[v_n=-\\frac12\\left(\\frac58\\right)^n,\\]\n\\[u_n=\\frac{4\\left(\\frac58\\right)^n+2}{\\left(\\frac58\\right)^n+2},\\]\n\\[\\boxed{\\lim_{n\\to+\\infty}u_n=1}.\\]"
+      }
+    },
+    {
+      "id": "2020_s1_sequences_ex01_q4",
+      "display_order": 7,
+      "content_type": "question",
+      "text": "4) المجموع \\(S_n\\) معرف بـ:\n\\[\nS_n=v_0+8v_1+8^2v_2+\\cdots+8^nv_n.\n\\]\nاحسب \\(S_n\\) بدلالة \\(n\\).",
+      "axis_tags": [
+        "sequence_sums",
+        "geometric_sequences"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نعوض عبارة vₖ، فنحصل على مجموع هندسي أساسه 5.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الحد العام داخل المجموع",
+            "explanation": "\\[\n8^kv_k=8^k\\left[-\\frac12\\left(\\frac58\\right)^k\\right]=-\\frac12\\,5^k.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب المجموع",
+            "explanation": "\\[\nS_n=-\\frac12(1+5+5^2+\\cdots+5^n).\n\\]\n\\[\nS_n=-\\frac12\\times\\frac{5^{n+1}-1}{5-1}=-\\frac18(5^{n+1}-1).\n\\]"
+          }
+        ],
+        "final_answer": "\\[\\boxed{S_n=-\\frac18(5^{n+1}-1)}.\\]"
+      }
+    }
+  ],
+  "rendering_contract": {
+    "no_capture": true,
+    "external_image_required": false,
+    "external_svg_required": false,
+    "graph_source": "inline_json",
+    "supported_graph_types": [],
+    "react_note": "هذا التمرين لا يحتاج رسما. جميع الصيغ تعرض مباشرة بـ MathJax أو KaTeX."
+  },
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2020(8).pdf",
+    "statement_figure_policy": "لا يوجد رسم في هذا التمرين.",
+    "solution_figure_policy": "لا Capture ولا صورة خارجية.",
+    "renderer": "MathJax/KaTeX + standard content renderer"
+  }
+}

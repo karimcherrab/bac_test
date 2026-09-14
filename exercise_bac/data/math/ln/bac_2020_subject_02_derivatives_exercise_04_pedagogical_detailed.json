@@ -1,0 +1,822 @@
+{
+  "schema_version": "4.5-bac-source",
+  "version": "4.5-2020-subject02-derivatives-ex04-pedagogical-detailed",
+  "language": "ar",
+  "direction": "rtl",
+  "year": 2020,
+  "session": "ordinary",
+  "subject_variant": "second_subject",
+  "chapter_code": "derivatives",
+  "chapter_title": "الاشتقاقية ودراسة الدوال",
+  "exercise_number": 4,
+  "points": 7,
+  "source_pages": [
+    4
+  ],
+  "solution_source_pages": [
+    9,
+    10
+  ],
+  "branches": [
+    {
+      "code": "math",
+      "name": "شعبة رياضيات"
+    }
+  ],
+  "title": "التمرين الرابع — بكالوريا 2020 — الموضوع الثاني — دراسة دالة لوغاريتمية",
+  "axis_tags": [
+    "logarithmic_function",
+    "limits",
+    "derivative_variations",
+    "variation_table",
+    "auxiliary_function",
+    "root_isolation",
+    "sign_study",
+    "relative_position",
+    "translation",
+    "asymptotic_curve",
+    "odd_function",
+    "curve_plot"
+  ],
+  "statement": "التمرين الرابع: (07 نقاط)\nالدالة العددية \\(f\\) معرفة على \\(\\mathbb{R}\\) بـ: \\[f(x)=\\ln\\left(\\sqrt{9x^2+1}+3x\\right).\\]\nليكن \\((C_f)\\) المنحنى البياني للدالة \\(f\\) في المستوي المنسوب إلى المعلم المتعامد المتجانس \\((O;\\vec{i},\\vec{j})\\).",
+  "figures": [],
+  "questions": [
+    {
+      "id": "2020_s02_der_ex04_q1a",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) أ. احسب \\(\\displaystyle\\lim_{x\\to+\\infty}f(x)\\)، ثم بيّن أن: \\(\\displaystyle\\lim_{x\\to-\\infty}f(x)=-\\infty\\).",
+      "solution": {
+        "strategy": "نحوّل العبارة داخل اللوغاريتم إلى شكل مناسب عند +∞ وعند -∞.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "النهاية عند +∞",
+            "explanation": "عندما \\(x>0\\)، نكتب \\(\\sqrt{9x^2+1}=x\\sqrt{9+1/x^2}\\).",
+            "result": "\\[f(x)=\\ln x+\\ln\\left(\\sqrt{9+\\frac1{x^2}}+3\\right)\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "استخراج النهاية",
+            "explanation": "الحد الثاني يقترب من \\(\\ln6\\)، بينما \\(\\ln x\\to+\\infty\\).",
+            "result": "\\[\\boxed{\\lim_{x\\to+\\infty}f(x)=+\\infty}\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "تحويل العبارة عند -∞",
+            "explanation": "نستعمل الهوية \\((\\sqrt{9x^2+1}+3x)(\\sqrt{9x^2+1}-3x)=1\\).",
+            "result": "\\[f(x)=-\\ln\\left(\\sqrt{9x^2+1}-3x\\right)\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "النهاية عند -∞",
+            "explanation": "عندما \\(x\\to-\\infty\\)، فإن \\(\\sqrt{9x^2+1}-3x\\to+\\infty\\).",
+            "result": "\\[\\boxed{\\lim_{x\\to-\\infty}f(x)=-\\infty}\\]"
+          }
+        ],
+        "final_answer": "\\[\\boxed{\\lim_{x\\to+\\infty}f(x)=+\\infty,\\qquad \\lim_{x\\to-\\infty}f(x)=-\\infty}\\]",
+        "verification": "مطابق لعناصر الإجابة النموذجية.",
+        "common_mistakes": [
+          "استخراج x من الجذر عند x<0 دون الانتباه إلى |x|."
+        ],
+        "hints": [
+          "عند -∞ استعمل جداء المقدارين المترافقين."
+        ],
+        "introduction": "نحوّل العبارة داخل اللوغاريتم إلى شكل مناسب عند +∞ وعند -∞.",
+        "summary": "\\[\\boxed{\\lim_{x\\to+\\infty}f(x)=+\\infty,\\qquad \\lim_{x\\to-\\infty}f(x)=-\\infty}\\]",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2020_s02_der_ex04_q1b",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "ب. بيّن أنه من أجل كل عدد حقيقي \\(x\\) لدينا: \\[f'(x)=\\frac{3}{\\sqrt{9x^2+1}}.\\]",
+      "solution": {
+        "strategy": "نشتق اللوغاريتم ثم نبسط باستعمال العبارة نفسها الموجودة داخل اللوغاريتم.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "اشتقاق الدالة الداخلية",
+            "explanation": "نضع \\(u(x)=\\sqrt{9x^2+1}+3x\\).",
+            "result": "\\[u'(x)=\\frac{9x}{\\sqrt{9x^2+1}}+3\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "اشتقاق اللوغاريتم",
+            "explanation": "بما أن \\(f(x)=\\ln u(x)\\).",
+            "result": "\\[f'(x)=\\frac{\\frac{9x}{\\sqrt{9x^2+1}}+3}{\\sqrt{9x^2+1}+3x}\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "التبسيط",
+            "explanation": "نستخرج \\(3\\) من البسط ثم نلاحظ أن البسط يحتوي نفس العامل الموجود في المقام.",
+            "result": "\\[f'(x)=\\frac{3(3x+\\sqrt{9x^2+1})}{\\sqrt{9x^2+1}(\\sqrt{9x^2+1}+3x)}\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "النتيجة",
+            "explanation": "يختزل العامل المشترك.",
+            "result": "\\[\\boxed{f'(x)=\\frac3{\\sqrt{9x^2+1}}}\\]"
+          }
+        ],
+        "final_answer": "\\[\\boxed{f'(x)=\\frac3{\\sqrt{9x^2+1}}}\\]",
+        "verification": "مطابق للتصحيح النموذجي.",
+        "common_mistakes": [
+          "نسيان مشتقة الجذر أو مشتقة 3x."
+        ],
+        "hints": [
+          "اكتب البسط بعد توحيد مقامه لتظهر نفس العبارة الموجودة في المقام."
+        ],
+        "introduction": "نشتق اللوغاريتم ثم نبسط باستعمال العبارة نفسها الموجودة داخل اللوغاريتم.",
+        "summary": "\\[\\boxed{f'(x)=\\frac3{\\sqrt{9x^2+1}}}\\]",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2020_s02_der_ex04_q1c",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "جـ. استنتج اتجاه تغير الدالة \\(f\\) ثم شكل جدول تغيراتها.",
+      "solution": {
+        "strategy": "نستعمل إشارة المشتقة والنهايتين المحسوبتين.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "إشارة المشتقة",
+            "explanation": "لدينا \\(\\sqrt{9x^2+1}>0\\) لكل x.",
+            "result": "\\[f'(x)=\\frac3{\\sqrt{9x^2+1}}>0\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "اتجاه التغير",
+            "explanation": "إذن الدالة متزايدة تماما على \\(\\mathbb{R}\\).",
+            "result": "\\[\\boxed{f\\text{ متزايدة تماما على }\\mathbb{R}}\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "إكمال الجدول",
+            "explanation": "لدينا \\(f(0)=\\ln1=0\\)، والنهايتان هما -∞ و+∞.",
+            "result": "جدول التغيرات مضمّن في الحل."
+          }
+        ],
+        "final_answer": "\\[\\boxed{f\\text{ متزايدة تماما على }\\mathbb{R}}\\]",
+        "verification": "مطابق للتصحيح النموذجي.",
+        "common_mistakes": [],
+        "hints": [
+          "المقام موجب تماما، لذلك لا تتغير إشارة المشتقة."
+        ],
+        "introduction": "نستعمل إشارة المشتقة والنهايتين المحسوبتين.",
+        "summary": "\\[\\boxed{f\\text{ متزايدة تماما على }\\mathbb{R}}\\]",
+        "answer_style": "explain_then_calculate_then_conclude",
+        "variation_table": {
+          "type": "variation_table",
+          "title": "جدول تغيرات الدالة f",
+          "function_name": "f(x)",
+          "derivative_name": "f'(x)",
+          "domain": "\\mathbb{R}",
+          "x_values": [
+            "-\\infty",
+            "0",
+            "+\\infty"
+          ],
+          "derivative_signs": [
+            "+",
+            "+",
+            "+"
+          ],
+          "function": {
+            "branches": [
+              {
+                "id": "f_all",
+                "start_x": "-\\infty",
+                "end_x": "+\\infty",
+                "start_value": "-\\infty",
+                "end_value": "+\\infty",
+                "direction": "up"
+              }
+            ]
+          },
+          "special_points": [
+            {
+              "x": "0",
+              "value": "0",
+              "type": "point"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "2020_s02_der_ex04_q2a",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "2) نعتبر الدالة \\(g\\) المعرفة على المجال \\([0;+\\infty[\\) كما يلي: \\(g(x)=f(x)-x\\).\\nأ. بيّن أن \\(\\displaystyle\\lim_{x\\to+\\infty}g(x)=-\\infty\\).",
+      "solution": {
+        "strategy": "نقارن نمو f(x) اللوغاريتمي مع الحد الخطي x.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "إعادة كتابة f",
+            "explanation": "عند +∞:",
+            "result": "\\[f(x)=\\ln x+\\ln\\left(\\sqrt{9+\\frac1{x^2}}+3\\right)\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "كتابة g",
+            "explanation": "إذن:",
+            "result": "\\[g(x)=\\ln x-x+\\ln\\left(\\sqrt{9+\\frac1{x^2}}+3\\right)\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "النهاية",
+            "explanation": "لدينا \\(\\ln x-x\\to-\\infty\\)، بينما الحد اللوغاريتمي الثاني يقترب من \\(\\ln6\\).",
+            "result": "\\[\\boxed{\\lim_{x\\to+\\infty}g(x)=-\\infty}\\]"
+          }
+        ],
+        "final_answer": "\\[\\boxed{\\lim_{x\\to+\\infty}g(x)=-\\infty}\\]",
+        "verification": "مطابق للتصحيح النموذجي.",
+        "common_mistakes": [
+          "الاعتقاد أن ln(x) وx لهما نفس سرعة النمو."
+        ],
+        "hints": [
+          "استعمل أن ln(x)-x→-∞."
+        ],
+        "introduction": "نقارن نمو f(x) اللوغاريتمي مع الحد الخطي x.",
+        "summary": "\\[\\boxed{\\lim_{x\\to+\\infty}g(x)=-\\infty}\\]",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2020_s02_der_ex04_q2b",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "ب. بيّن أنه من أجل كل عدد حقيقي \\(x\\) من \\([0;+\\infty[\\): \\[g'(x)=\\frac{-9x^2+8}{\\left(\\sqrt{9x^2+1}\\right)\\left(3+\\sqrt{9x^2+1}\\right)}.\\]",
+      "solution": {
+        "strategy": "نحسب g'=f'-1 ثم نوحد العبارة باستعمال المرافق.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب المشتقة",
+            "explanation": "بما أن \\(g(x)=f(x)-x\\).",
+            "result": "\\[g'(x)=\\frac3{\\sqrt{9x^2+1}}-1\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "توحيد المقام",
+            "explanation": "نضع \\(A=\\sqrt{9x^2+1}\\).",
+            "result": "\\[g'(x)=\\frac{3-A}{A}\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "استعمال المرافق",
+            "explanation": "نضرب البسط والمقام في \\(3+A\\).",
+            "result": "\\[g'(x)=\\frac{9-A^2}{A(3+A)}\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "التعويض",
+            "explanation": "بما أن \\(A^2=9x^2+1\\).",
+            "result": "\\[\\boxed{g'(x)=\\frac{-9x^2+8}{\\left(\\sqrt{9x^2+1}\\right)\\left(3+\\sqrt{9x^2+1}\\right)}}\\]"
+          }
+        ],
+        "final_answer": "\\[\\boxed{g'(x)=\\frac{-9x^2+8}{\\left(\\sqrt{9x^2+1}\\right)\\left(3+\\sqrt{9x^2+1}\\right)}}\\]",
+        "verification": "مطابق للتصحيح النموذجي.",
+        "common_mistakes": [],
+        "hints": [
+          "ابدأ من g'=3/√(9x²+1)-1 ثم استعمل المرافق."
+        ],
+        "introduction": "نحسب g'=f'-1 ثم نوحد العبارة باستعمال المرافق.",
+        "summary": "\\[\\boxed{g'(x)=\\frac{-9x^2+8}{\\left(\\sqrt{9x^2+1}\\right)\\left(3+\\sqrt{9x^2+1}\\right)}}\\]",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2020_s02_der_ex04_q2c",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "جـ. ادرس اتجاه تغير الدالة \\(g\\) على المجال \\([0;+\\infty[\\) ثم شكل جدول تغيراتها. \\(\\left(g\\left(\\frac{2\\sqrt2}{3}\\right)\\approx0.8\\right)\\).",
+      "solution": {
+        "strategy": "مقام g' موجب تماما، لذلك ندرس فقط إشارة -9x²+8.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "إشارة البسط",
+            "explanation": "ينعدم البسط عندما \\(9x^2=8\\). وبما أن x≥0:",
+            "result": "\\[x=\\frac{2\\sqrt2}{3}\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "إشارة g'",
+            "explanation": "إذن:",
+            "result": "\\[g'(x)>0\\text{ على }\\left[0,\\frac{2\\sqrt2}{3}\\right[,\\quad g'(x)<0\\text{ بعده}\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "اتجاه التغير",
+            "explanation": "g متزايدة حتى \\(2\\sqrt2/3\\) ثم متناقصة بعدها.",
+            "result": "\\[g(0)=0,\\qquad g\\left(\\frac{2\\sqrt2}{3}\\right)\\approx0.82\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "النهاية",
+            "explanation": "من السؤال السابق:",
+            "result": "\\[\\lim_{x\\to+\\infty}g(x)=-\\infty\\]"
+          }
+        ],
+        "final_answer": "\\[\\boxed{g\\text{ متزايدة على }\\left[0,\\frac{2\\sqrt2}{3}\\right]\\text{ ثم متناقصة على }\\left[\\frac{2\\sqrt2}{3},+\\infty\\right[}\\]",
+        "verification": "مطابق للتصحيح النموذجي.",
+        "common_mistakes": [
+          "نسيان أن المجال يفرض x≥0 عند حل -9x²+8=0."
+        ],
+        "hints": [
+          "المقام موجب، لذا تكفي إشارة 8-9x²."
+        ],
+        "introduction": "مقام g' موجب تماما، لذلك ندرس فقط إشارة -9x²+8.",
+        "summary": "\\[\\boxed{g\\text{ متزايدة على }\\left[0,\\frac{2\\sqrt2}{3}\\right]\\text{ ثم متناقصة على }\\left[\\frac{2\\sqrt2}{3},+\\infty\\right[}\\]",
+        "answer_style": "explain_then_calculate_then_conclude",
+        "variation_table": {
+          "type": "variation_table",
+          "title": "جدول تغيرات الدالة g",
+          "function_name": "g(x)",
+          "derivative_name": "g'(x)",
+          "domain": "[0;+\\infty[",
+          "x_values": [
+            "0",
+            "\\frac{2\\sqrt2}{3}",
+            "+\\infty"
+          ],
+          "derivative_signs": [
+            "+",
+            "0",
+            "-"
+          ],
+          "function": {
+            "branches": [
+              {
+                "id": "g_inc",
+                "start_x": "0",
+                "end_x": "\\frac{2\\sqrt2}{3}",
+                "start_value": "0",
+                "end_value": "g(2\\sqrt2/3)\\approx0.82",
+                "direction": "up"
+              },
+              {
+                "id": "g_dec",
+                "start_x": "\\frac{2\\sqrt2}{3}",
+                "end_x": "+\\infty",
+                "start_value": "g(2\\sqrt2/3)\\approx0.82",
+                "end_value": "-\\infty",
+                "direction": "down"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "2020_s02_der_ex04_q3a",
+      "display_order": 7,
+      "content_type": "question",
+      "text": "3) أ. بيّن أن المعادلة \\(g(x)=0\\) تقبل حلا وحيدا \\(\\alpha\\) في المجال \\(\\left[\\frac{2\\sqrt2}{3};+\\infty\\right[\\) ثم تحقق أن: \\(2.83<\\alpha<2.84\\).",
+      "solution": {
+        "strategy": "نستعمل استمرارية g ورتابتها على الجزء المتناقص، ثم نحصر الجذر.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "القيمة عند بداية المجال",
+            "explanation": "حسب السؤال السابق:",
+            "result": "\\[g\\left(\\frac{2\\sqrt2}{3}\\right)\\approx0.82>0\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "النهاية والرتابة",
+            "explanation": "g متناقصة تماما على \\([2\\sqrt2/3,+\\infty[\\) ونهايتها -∞.",
+            "result": "\\[\\lim_{x\\to+\\infty}g(x)=-\\infty\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الوجود والوحدانية",
+            "explanation": "بمبرهنة القيم المتوسطة والرتابة يوجد جذر وحيد α.",
+            "result": "\\[\\exists!\\alpha\\in\\left[\\frac{2\\sqrt2}{3},+\\infty\\right[:g(\\alpha)=0\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "الحصر العددي",
+            "explanation": "نحسب:",
+            "result": "\\[g(2.83)\\approx0.00549>0,\\qquad g(2.84)\\approx-0.00101<0\\]"
+          },
+          {
+            "step_number": 5,
+            "title": "النتيجة",
+            "explanation": "إذن:",
+            "result": "\\[\\boxed{2.83<\\alpha<2.84}\\]"
+          }
+        ],
+        "final_answer": "\\[\\boxed{\\exists!\\alpha:g(\\alpha)=0,\\qquad 2.83<\\alpha<2.84}\\]",
+        "verification": "مطابق للتصحيح النموذجي.",
+        "common_mistakes": [
+          "إثبات وجود الجذر دون ذكر أن g متناقصة تماما لإثبات الوحدانية."
+        ],
+        "hints": [
+          "استعمل قيمة g عند النقطة العظمى والنهاية -∞."
+        ],
+        "introduction": "نستعمل استمرارية g ورتابتها على الجزء المتناقص، ثم نحصر الجذر.",
+        "summary": "\\[\\boxed{\\exists!\\alpha:g(\\alpha)=0,\\qquad 2.83<\\alpha<2.84}\\]",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2020_s02_der_ex04_q3b",
+      "display_order": 8,
+      "content_type": "question",
+      "text": "ب. استنتج إشارة \\(g(x)\\) على \\([0;+\\infty[\\).",
+      "solution": {
+        "strategy": "نعتمد على g(0)=0، وعلى كون g موجبة بعد 0 حتى الجذر α ثم سالبة بعده.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "عند الصفر",
+            "explanation": "لدينا:",
+            "result": "\\[g(0)=f(0)-0=0\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "بين 0 وα",
+            "explanation": "ترتفع g أولا ثم تنخفض، ولا تعود إلى الصفر إلا عند α.",
+            "result": "\\[g(x)>0\\quad\\text{إذا }0<x<\\alpha\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "بعد α",
+            "explanation": "بما أنها متناقصة بعد النقطة الحرجة وتقطع المحور عند α.",
+            "result": "\\[g(x)<0\\quad\\text{إذا }x>\\alpha\\]"
+          }
+        ],
+        "final_answer": "\\[\\boxed{g(0)=0,\\quad g(x)>0\\text{ على }]0,\\alpha[,\\quad g(\\alpha)=0,\\quad g(x)<0\\text{ على }]\\alpha,+\\infty[}\\]",
+        "verification": "مطابق للتصحيح النموذجي.",
+        "common_mistakes": [],
+        "hints": [
+          "تذكر أن g=f-x."
+        ],
+        "introduction": "نعتمد على g(0)=0، وعلى كون g موجبة بعد 0 حتى الجذر α ثم سالبة بعده.",
+        "summary": "\\[\\boxed{g(0)=0,\\quad g(x)>0\\text{ على }]0,\\alpha[,\\quad g(\\alpha)=0,\\quad g(x)<0\\text{ على }]\\alpha,+\\infty[}\\]",
+        "answer_style": "explain_then_calculate_then_conclude",
+        "sign_table": {
+          "type": "sign_table",
+          "title": "جدول إشارة الدالة g",
+          "domain": "[0;+\\infty[",
+          "x_values": [
+            "0",
+            "\\alpha",
+            "+\\infty"
+          ],
+          "rows": [
+            {
+              "function": "g(x)",
+              "signs": [
+                "0",
+                "+",
+                "0",
+                "-"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "2020_s02_der_ex04_q3c",
+      "display_order": 9,
+      "content_type": "question",
+      "text": "جـ. حدد الوضع النسبي للمستقيم \\((\\Delta)\\) ذي المعادلة \\(y=x\\) والمنحنى \\((C_f)\\) على \\([0;+\\infty[\\).",
+      "solution": {
+        "strategy": "الفرق بين ترتيب C_f وترتيب Δ هو g(x)=f(x)-x، لذلك نستعمل جدول إشارة g.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الفرق",
+            "explanation": "لدينا:",
+            "result": "\\[f(x)-x=g(x)\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "على ]0,α[",
+            "explanation": "هناك g(x)>0.",
+            "result": "\\[(C_f)\\text{ فوق }(\\Delta)\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "على ]α,+∞[",
+            "explanation": "هناك g(x)<0.",
+            "result": "\\[(C_f)\\text{ تحت }(\\Delta)\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "نقطتا التقاطع",
+            "explanation": "ينعدم الفرق عند x=0 وعند x=α.",
+            "result": "\\[(C_f)\\cap(\\Delta)=\\{(0,0),(\\alpha,\\alpha)\\}\\]"
+          }
+        ],
+        "final_answer": "\\[(C_f)\\text{ فوق }(\\Delta)\\text{ على }]0,\\alpha[\\text{ وتحته على }]\\alpha,+\\infty[\\]",
+        "verification": "مطابق للتصحيح النموذجي.",
+        "common_mistakes": [],
+        "hints": [
+          "إشارة f(x)-x تحدد الوضع النسبي مباشرة."
+        ],
+        "introduction": "الفرق بين ترتيب C_f وترتيب Δ هو g(x)=f(x)-x، لذلك نستعمل جدول إشارة g.",
+        "summary": "\\[(C_f)\\text{ فوق }(\\Delta)\\text{ على }]0,\\alpha[\\text{ وتحته على }]\\alpha,+\\infty[\\]",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2020_s02_der_ex04_q4a",
+      "display_order": 10,
+      "content_type": "question",
+      "text": "4) نعتبر الدالة \\(k\\) المعرفة على \\(]0;+\\infty[\\) بـ: \\(k(x)=\\ln(6x)\\) وليكن \\((\\gamma)\\) منحناها البياني في المعلم السابق.\\nأ. بيّن أن \\((\\gamma)\\) هو صورة منحنى الدالة: \\(x\\mapsto\\ln x\\) بتحويل نقطي بسيط يطلب تعيينه.",
+      "solution": {
+        "strategy": "نفكك ln(6x) باستعمال خاصية اللوغاريتم.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تفكيك k",
+            "explanation": "من أجل x>0:",
+            "result": "\\[k(x)=\\ln6+\\ln x\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "التفسير الهندسي",
+            "explanation": "إضافة الثابت ln6 إلى كل ترتيب تعني انسحابا رأسيا.",
+            "result": "\\[\\boxed{\\vec u=(0,\\ln6)}\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "النتيجة",
+            "explanation": "إذن γ هو صورة منحنى y=ln x بالانسحاب ذي الشعاع السابق.",
+            "result": "\\[\\boxed{\\gamma=\\tau_{(0,\\ln6)}(C_{\\ln})}\\]"
+          }
+        ],
+        "final_answer": "\\[\\boxed{(\\gamma)\\text{ صورة منحنى }y=\\ln x\\text{ بالانسحاب ذي الشعاع }(0,\\ln6)}\\]",
+        "verification": "مطابق للتصحيح النموذجي.",
+        "common_mistakes": [
+          "اعتبار التحويل أفقيا بدل كونه انسحابا رأسيا."
+        ],
+        "hints": [
+          "استعمل ln(6x)=ln6+lnx."
+        ],
+        "introduction": "نفكك ln(6x) باستعمال خاصية اللوغاريتم.",
+        "summary": "\\[\\boxed{(\\gamma)\\text{ صورة منحنى }y=\\ln x\\text{ بالانسحاب ذي الشعاع }(0,\\ln6)}\\]",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2020_s02_der_ex04_q4b",
+      "display_order": 11,
+      "content_type": "question",
+      "text": "ب. احسب \\[\\lim_{x\\to+\\infty}[f(x)-k(x)]\\] ثم فسر النتيجة بيانيا.",
+      "solution": {
+        "strategy": "نعيد كتابة f عند x>0 بشكل يفصل ln x ثم نقارنها بـ k(x)=ln x+ln6.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "إعادة كتابة f",
+            "explanation": "من أجل x>0:",
+            "result": "\\[f(x)=\\ln x+\\ln\\left(\\sqrt{9+\\frac1{x^2}}+3\\right)\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "طرح k",
+            "explanation": "بما أن \\(k(x)=\\ln x+\\ln6\\).",
+            "result": "\\[f(x)-k(x)=\\ln\\left(\\frac{\\sqrt{9+1/x^2}+3}{6}\\right)\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "النهاية",
+            "explanation": "الكسر داخل اللوغاريتم يقترب من 1.",
+            "result": "\\[\\boxed{\\lim_{x\\to+\\infty}[f(x)-k(x)]=0}\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "التفسير البياني",
+            "explanation": "الفرق بين ترتيبي المنحنيين يميل إلى الصفر.",
+            "result": "\\[\\boxed{(\\gamma)\\text{ منحنى مقارب لـ }(C_f)\\text{ بجوار }+\\infty}\\]"
+          }
+        ],
+        "final_answer": "\\[\\boxed{\\lim_{x\\to+\\infty}[f(x)-k(x)]=0}\\]\\nإذن \\((\\gamma)\\) منحنى مقارب لـ\\((C_f)\\) بجوار \\(+\\infty\\).",
+        "verification": "مطابق للتصحيح النموذجي.",
+        "common_mistakes": [],
+        "hints": [
+          "اجعل f وk في صورة ln x + ثابت متغير."
+        ],
+        "introduction": "نعيد كتابة f عند x>0 بشكل يفصل ln x ثم نقارنها بـ k(x)=ln x+ln6.",
+        "summary": "\\[\\boxed{\\lim_{x\\to+\\infty}[f(x)-k(x)]=0}\\]\\nإذن \\((\\gamma)\\) منحنى مقارب لـ\\((C_f)\\) بجوار \\(+\\infty\\).",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2020_s02_der_ex04_q5a",
+      "display_order": 12,
+      "content_type": "question",
+      "text": "5) أ. بيّن أن الدالة \\(f\\) فردية.",
+      "solution": {
+        "strategy": "نحسب f(-x) ونستعمل جداء المقدارين المترافقين.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "كتابة f(-x)",
+            "explanation": "لدينا:",
+            "result": "\\[f(-x)=\\ln\\left(\\sqrt{9x^2+1}-3x\\right)\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "هوية المرافق",
+            "explanation": "نلاحظ أن:",
+            "result": "\\[(\\sqrt{9x^2+1}-3x)(\\sqrt{9x^2+1}+3x)=1\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الاستنتاج",
+            "explanation": "إذن المقدار الأول هو مقلوب المقدار الموجود في f(x).",
+            "result": "\\[f(-x)=\\ln\\frac1{\\sqrt{9x^2+1}+3x}=-f(x)\\]"
+          }
+        ],
+        "final_answer": "\\[\\boxed{f(-x)=-f(x)}\\]\\nإذن \\(\\boxed{f\\text{ فردية}}\\).",
+        "verification": "مطابق للتصحيح النموذجي.",
+        "common_mistakes": [
+          "نسيان أن ln(1/A)=-ln(A)."
+        ],
+        "hints": [
+          "اضرب المقدارين المترافقين."
+        ],
+        "introduction": "نحسب f(-x) ونستعمل جداء المقدارين المترافقين.",
+        "summary": "\\[\\boxed{f(-x)=-f(x)}\\]\\nإذن \\(\\boxed{f\\text{ فردية}}\\).",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2020_s02_der_ex04_q5b",
+      "display_order": 13,
+      "content_type": "question",
+      "text": "ب. أنشئ كلا من \\((\\Delta)\\)، \\((\\gamma)\\) و \\((C_f)\\) على المجال \\([0;+\\infty[\\) ثم استنتج إنشاء المنحنى \\((C_f)\\) على \\(\\mathbb{R}\\).",
+      "solution": {
+        "strategy": "نجمع جميع النتائج السابقة ثم نستعمل فردية f لبناء الفرع السالب.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "رسم Δ",
+            "explanation": "المستقيم يمر بالمبدأ ومعامل توجيهه 1.",
+            "result": "\\[(\\Delta):y=x\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "رسم γ",
+            "explanation": "γ هو منحنى اللوغاريتم منقولا رأسيا بمقدار ln6.",
+            "result": "\\[(\\gamma):y=\\ln(6x),\\quad x>0\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "رسم C_f على [0,+∞[",
+            "explanation": "C_f متزايد، يمر بـO، يكون فوق Δ قبل α وتحته بعد α، ويقترب من γ عند +∞.",
+            "result": "\\[\\alpha\\approx2.8384\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "استنتاج الفرع السالب",
+            "explanation": "بما أن f فردية، فإن C_f يقبل O مركز تناظر.",
+            "result": "\\[\\boxed{C_f\\text{ متناظر مركزيا بالنسبة إلى }O}\\]"
+          },
+          {
+            "step_number": 5,
+            "title": "الرسم",
+            "explanation": "تم تضمين الرسم الكامل بصيغة SVG داخل JSON.",
+            "result": "انظر graph_data."
+          }
+        ],
+        "final_answer": "تم رسم \\((\\Delta)\\)، \\((\\gamma)\\) و\\((C_f)\\)، ثم استنتاج الفرع السالب بتناظر مركزي مركزه \\(O\\).",
+        "verification": "الرسم يحترم الوضع النسبي، نقطة التقاطع \\((\\alpha,\\alpha)\\)، والمنحنى المقارب γ كما في التصحيح النموذجي.",
+        "common_mistakes": [],
+        "hints": [
+          "ابدأ بـΔ وγ ثم ارسم C_f على الجهة الموجبة، وبعدها اعكسه بتناظر مركزي حول O."
+        ],
+        "introduction": "نجمع جميع النتائج السابقة ثم نستعمل فردية f لبناء الفرع السالب.",
+        "summary": "تم رسم \\((\\Delta)\\)، \\((\\gamma)\\) و\\((C_f)\\)، ثم استنتاج الفرع السالب بتناظر مركزي مركزه \\(O\\).",
+        "answer_style": "explain_then_calculate_then_conclude",
+        "graph_data": {
+          "id": "2020_s02_der_ex04_graph",
+          "type": "svg",
+          "usage": "solution",
+          "title": "رسم (Δ) و(γ) و(C_f)",
+          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 980 650\" width=\"980\" height=\"650\" role=\"img\" aria-label=\"Cf Delta gamma\"><rect width=\"980\" height=\"650\" fill=\"white\"/><defs><clipPath id=\"plot\"><rect x=\"75\" y=\"45\" width=\"865\" height=\"555\"/></clipPath></defs><line x1=\"88.95\" y1=\"45\" x2=\"88.95\" y2=\"600\" stroke=\"#e5e7eb\" stroke-width=\"1\"/><text x=\"88.95\" y=\"400.09\" text-anchor=\"middle\" font-size=\"12\" fill=\"#4b5563\">-6</text><line x1=\"158.71\" y1=\"45\" x2=\"158.71\" y2=\"600\" stroke=\"#e5e7eb\" stroke-width=\"1\"/><text x=\"158.71\" y=\"400.09\" text-anchor=\"middle\" font-size=\"12\" fill=\"#4b5563\">-5</text><line x1=\"228.47\" y1=\"45\" x2=\"228.47\" y2=\"600\" stroke=\"#e5e7eb\" stroke-width=\"1\"/><text x=\"228.47\" y=\"400.09\" text-anchor=\"middle\" font-size=\"12\" fill=\"#4b5563\">-4</text><line x1=\"298.23\" y1=\"45\" x2=\"298.23\" y2=\"600\" stroke=\"#e5e7eb\" stroke-width=\"1\"/><text x=\"298.23\" y=\"400.09\" text-anchor=\"middle\" font-size=\"12\" fill=\"#4b5563\">-3</text><line x1=\"367.98\" y1=\"45\" x2=\"367.98\" y2=\"600\" stroke=\"#e5e7eb\" stroke-width=\"1\"/><text x=\"367.98\" y=\"400.09\" text-anchor=\"middle\" font-size=\"12\" fill=\"#4b5563\">-2</text><line x1=\"437.74\" y1=\"45\" x2=\"437.74\" y2=\"600\" stroke=\"#e5e7eb\" stroke-width=\"1\"/><text x=\"437.74\" y=\"400.09\" text-anchor=\"middle\" font-size=\"12\" fill=\"#4b5563\">-1</text><line x1=\"507.50\" y1=\"45\" x2=\"507.50\" y2=\"600\" stroke=\"#e5e7eb\" stroke-width=\"1\"/><line x1=\"577.26\" y1=\"45\" x2=\"577.26\" y2=\"600\" stroke=\"#e5e7eb\" stroke-width=\"1\"/><text x=\"577.26\" y=\"400.09\" text-anchor=\"middle\" font-size=\"12\" fill=\"#4b5563\">1</text><line x1=\"647.02\" y1=\"45\" x2=\"647.02\" y2=\"600\" stroke=\"#e5e7eb\" stroke-width=\"1\"/><text x=\"647.02\" y=\"400.09\" text-anchor=\"middle\" font-size=\"12\" fill=\"#4b5563\">2</text><line x1=\"716.77\" y1=\"45\" x2=\"716.77\" y2=\"600\" stroke=\"#e5e7eb\" stroke-width=\"1\"/><text x=\"716.77\" y=\"400.09\" text-anchor=\"middle\" font-size=\"12\" fill=\"#4b5563\">3</text><line x1=\"786.53\" y1=\"45\" x2=\"786.53\" y2=\"600\" stroke=\"#e5e7eb\" stroke-width=\"1\"/><text x=\"786.53\" y=\"400.09\" text-anchor=\"middle\" font-size=\"12\" fill=\"#4b5563\">4</text><line x1=\"856.29\" y1=\"45\" x2=\"856.29\" y2=\"600\" stroke=\"#e5e7eb\" stroke-width=\"1\"/><text x=\"856.29\" y=\"400.09\" text-anchor=\"middle\" font-size=\"12\" fill=\"#4b5563\">5</text><line x1=\"926.05\" y1=\"45\" x2=\"926.05\" y2=\"600\" stroke=\"#e5e7eb\" stroke-width=\"1\"/><text x=\"926.05\" y=\"400.09\" text-anchor=\"middle\" font-size=\"12\" fill=\"#4b5563\">6</text><line x1=\"75\" y1=\"589.53\" x2=\"940\" y2=\"589.53\" stroke=\"#e5e7eb\" stroke-width=\"1\"/><text x=\"498.50\" y=\"593.53\" text-anchor=\"end\" font-size=\"12\" fill=\"#4b5563\">-4</text><line x1=\"75\" y1=\"537.17\" x2=\"940\" y2=\"537.17\" stroke=\"#e5e7eb\" stroke-width=\"1\"/><text x=\"498.50\" y=\"541.17\" text-anchor=\"end\" font-size=\"12\" fill=\"#4b5563\">-3</text><line x1=\"75\" y1=\"484.81\" x2=\"940\" y2=\"484.81\" stroke=\"#e5e7eb\" stroke-width=\"1\"/><text x=\"498.50\" y=\"488.81\" text-anchor=\"end\" font-size=\"12\" fill=\"#4b5563\">-2</text><line x1=\"75\" y1=\"432.45\" x2=\"940\" y2=\"432.45\" stroke=\"#e5e7eb\" stroke-width=\"1\"/><text x=\"498.50\" y=\"436.45\" text-anchor=\"end\" font-size=\"12\" fill=\"#4b5563\">-1</text><line x1=\"75\" y1=\"380.09\" x2=\"940\" y2=\"380.09\" stroke=\"#e5e7eb\" stroke-width=\"1\"/><line x1=\"75\" y1=\"327.74\" x2=\"940\" y2=\"327.74\" stroke=\"#e5e7eb\" stroke-width=\"1\"/><text x=\"498.50\" y=\"331.74\" text-anchor=\"end\" font-size=\"12\" fill=\"#4b5563\">1</text><line x1=\"75\" y1=\"275.38\" x2=\"940\" y2=\"275.38\" stroke=\"#e5e7eb\" stroke-width=\"1\"/><text x=\"498.50\" y=\"279.38\" text-anchor=\"end\" font-size=\"12\" fill=\"#4b5563\">2</text><line x1=\"75\" y1=\"223.02\" x2=\"940\" y2=\"223.02\" stroke=\"#e5e7eb\" stroke-width=\"1\"/><text x=\"498.50\" y=\"227.02\" text-anchor=\"end\" font-size=\"12\" fill=\"#4b5563\">3</text><line x1=\"75\" y1=\"170.66\" x2=\"940\" y2=\"170.66\" stroke=\"#e5e7eb\" stroke-width=\"1\"/><text x=\"498.50\" y=\"174.66\" text-anchor=\"end\" font-size=\"12\" fill=\"#4b5563\">4</text><line x1=\"75\" y1=\"118.30\" x2=\"940\" y2=\"118.30\" stroke=\"#e5e7eb\" stroke-width=\"1\"/><text x=\"498.50\" y=\"122.30\" text-anchor=\"end\" font-size=\"12\" fill=\"#4b5563\">5</text><line x1=\"75\" y1=\"65.94\" x2=\"940\" y2=\"65.94\" stroke=\"#e5e7eb\" stroke-width=\"1\"/><text x=\"498.50\" y=\"69.94\" text-anchor=\"end\" font-size=\"12\" fill=\"#4b5563\">6</text><line x1=\"75\" y1=\"380.09\" x2=\"940\" y2=\"380.09\" stroke=\"#111827\" stroke-width=\"2\"/><line x1=\"507.50\" y1=\"600\" x2=\"507.50\" y2=\"45\" stroke=\"#111827\" stroke-width=\"2\"/><text x=\"928\" y=\"370.09\" font-size=\"16\">x</text><text x=\"517.50\" y=\"63\" font-size=\"16\">y</text><path d=\"M75.00,704.72 L940.00,55.47\" fill=\"none\" stroke=\"#6b7280\" stroke-width=\"2.2\" stroke-dasharray=\"9 6\" clip-path=\"url(#plot)\"/><path d=\"M75.00,569.48 L76.24,569.33 L77.47,569.18 L78.71,569.03 L79.94,568.88 L81.18,568.72 L82.41,568.57 L83.65,568.42 L84.89,568.27 L86.12,568.11 L87.36,567.96 L88.59,567.81 L89.83,567.65 L91.06,567.50 L92.30,567.34 L93.54,567.19 L94.77,567.03 L96.01,566.87 L97.24,566.72 L98.48,566.56 L99.71,566.40 L100.95,566.24 L102.19,566.08 L103.42,565.92 L104.66,565.76 L105.89,565.60 L107.13,565.44 L108.36,565.28 L109.60,565.12 L110.84,564.96 L112.07,564.79 L113.31,564.63 L114.54,564.46 L115.78,564.30 L117.01,564.13 L118.25,563.97 L119.49,563.80 L120.72,563.64 L121.96,563.47 L123.19,563.30 L124.43,563.13 L125.66,562.96 L126.90,562.79 L128.14,562.62 L129.37,562.45 L130.61,562.28 L131.84,562.11 L133.08,561.94 L134.31,561.77 L135.55,561.59 L136.79,561.42 L138.02,561.24 L139.26,561.07 L140.49,560.89 L141.73,560.72 L142.96,560.54 L144.20,560.36 L145.44,560.19 L146.67,560.01 L147.91,559.83 L149.14,559.65 L150.38,559.47 L151.61,559.29 L152.85,559.10 L154.09,558.92 L155.32,558.74 L156.56,558.56 L157.79,558.37 L159.03,558.19 L160.26,558.00 L161.50,557.81 L162.74,557.63 L163.97,557.44 L165.21,557.25 L166.44,557.06 L167.68,556.87 L168.91,556.68 L170.15,556.49 L171.39,556.30 L172.62,556.11 L173.86,555.91 L175.09,555.72 L176.33,555.53 L177.56,555.33 L178.80,555.14 L180.04,554.94 L181.27,554.74 L182.51,554.54 L183.74,554.34 L184.98,554.14 L186.21,553.94 L187.45,553.74 L188.69,553.54 L189.92,553.34 L191.16,553.13 L192.39,552.93 L193.63,552.72 L194.86,552.52 L196.10,552.31 L197.34,552.10 L198.57,551.90 L199.81,551.69 L201.04,551.48 L202.28,551.27 L203.51,551.05 L204.75,550.84 L205.99,550.63 L207.22,550.41 L208.46,550.20 L209.69,549.98 L210.93,549.76 L212.16,549.55 L213.40,549.33 L214.64,549.11 L215.87,548.89 L217.11,548.67 L218.34,548.44 L219.58,548.22 L220.81,548.00 L222.05,547.77 L223.29,547.54 L224.52,547.32 L225.76,547.09 L226.99,546.86 L228.23,546.63 L229.46,546.40 L230.70,546.16 L231.94,545.93 L233.17,545.70 L234.41,545.46 L235.64,545.22 L236.88,544.99 L238.11,544.75 L239.35,544.51 L240.59,544.27 L241.82,544.02 L243.06,543.78 L244.29,543.54 L245.53,543.29 L246.76,543.05 L248.00,542.80 L249.24,542.55 L250.47,542.30 L251.71,542.05 L252.94,541.79 L254.18,541.54 L255.41,541.29 L256.65,541.03 L257.89,540.77 L259.12,540.51 L260.36,540.25 L261.59,539.99 L262.83,539.73 L264.06,539.47 L265.30,539.20 L266.54,538.93 L267.77,538.67 L269.01,538.40 L270.24,538.13 L271.48,537.85 L272.71,537.58 L273.95,537.31 L275.19,537.03 L276.42,536.75 L277.66,536.47 L278.89,536.19 L280.13,535.91 L281.36,535.62 L282.60,535.34 L283.84,535.05 L285.07,534.76 L286.31,534.47 L287.54,534.18 L288.78,533.89 L290.01,533.59 L291.25,533.30 L292.49,533.00 L293.72,532.70 L294.96,532.40 L296.19,532.09 L297.43,531.79 L298.66,531.48 L299.90,531.17 L301.14,530.86 L302.37,530.55 L303.61,530.24 L304.84,529.92 L306.08,529.60 L307.31,529.28 L308.55,528.96 L309.79,528.63 L311.02,528.31 L312.26,527.98 L313.49,527.65 L314.73,527.32 L315.96,526.98 L317.20,526.65 L318.44,526.31 L319.67,525.97 L320.91,525.63 L322.14,525.28 L323.38,524.93 L324.61,524.58 L325.85,524.23 L327.09,523.88 L328.32,523.52 L329.56,523.16 L330.79,522.80 L332.03,522.43 L333.26,522.07 L334.50,521.70 L335.74,521.33 L336.97,520.95 L338.21,520.57 L339.44,520.19 L340.68,519.81 L341.91,519.43 L343.15,519.04 L344.39,518.65 L345.62,518.25 L346.86,517.86 L348.09,517.46 L349.33,517.05 L350.56,516.65 L351.80,516.24 L353.04,515.82 L354.27,515.41 L355.51,514.99 L356.74,514.57 L357.98,514.14 L359.21,513.71 L360.45,513.28 L361.69,512.84 L362.92,512.40 L364.16,511.96 L365.39,511.51 L366.63,511.06 L367.86,510.60 L369.10,510.15 L370.34,509.68 L371.57,509.22 L372.81,508.74 L374.04,508.27 L375.28,507.79 L376.51,507.30 L377.75,506.82 L378.99,506.32 L380.22,505.83 L381.46,505.32 L382.69,504.82 L383.93,504.30 L385.16,503.79 L386.40,503.26 L387.64,502.74 L388.87,502.20 L390.11,501.67 L391.34,501.12 L392.58,500.57 L393.81,500.02 L395.05,499.46 L396.29,498.89 L397.52,498.32 L398.76,497.74 L399.99,497.16 L401.23,496.56 L402.46,495.97 L403.70,495.36 L404.94,494.75 L406.17,494.13 L407.41,493.51 L408.64,492.87 L409.88,492.23 L411.11,491.58 L412.35,490.93 L413.59,490.26 L414.82,489.59 L416.06,488.91 L417.29,488.22 L418.53,487.52 L419.76,486.81 L421.00,486.09 L422.24,485.37 L423.47,484.63 L424.71,483.88 L425.94,483.12 L427.18,482.35 L428.41,481.58 L429.65,480.79 L430.89,479.98 L432.12,479.17 L433.36,478.34 L434.59,477.50 L435.83,476.65 L437.06,475.79 L438.30,474.91 L439.54,474.01 L440.77,473.11 L442.01,472.18 L443.24,471.24 L444.48,470.29 L445.71,469.32 L446.95,468.33 L448.19,467.32 L449.42,466.30 L450.66,465.25 L451.89,464.19 L453.13,463.11 L454.36,462.00 L455.60,460.87 L456.84,459.73 L458.07,458.55 L459.31,457.36 L460.54,456.13 L461.78,454.89 L463.01,453.61 L464.25,452.31 L465.49,450.98 L466.72,449.61 L467.96,448.22 L469.19,446.79 L470.43,445.33 L471.66,443.83 L472.90,442.30 L474.14,440.73 L475.37,439.12 L476.61,437.47 L477.84,435.77 L479.08,434.03 L480.31,432.25 L481.55,430.41 L482.79,428.53 L484.02,426.60 L485.26,424.62 L486.49,422.58 L487.73,420.49 L488.96,418.34 L490.20,416.13 L491.44,413.87 L492.67,411.56 L493.91,409.18 L495.14,406.75 L496.38,404.27 L497.61,401.73 L498.85,399.15 L500.09,396.52 L501.32,393.85 L502.56,391.14 L503.79,388.41 L505.03,385.65 L506.26,382.88 L507.50,380.09 L508.74,377.31 L509.97,374.54 L511.21,371.78 L512.44,369.05 L513.68,366.34 L514.91,363.67 L516.15,361.04 L517.39,358.46 L518.62,355.92 L519.86,353.44 L521.09,351.01 L522.33,348.63 L523.56,346.31 L524.80,344.05 L526.04,341.85 L527.27,339.70 L528.51,337.61 L529.74,335.57 L530.98,333.59 L532.21,331.66 L533.45,329.77 L534.69,327.94 L535.92,326.16 L537.16,324.42 L538.39,322.72 L539.63,321.07 L540.86,319.46 L542.10,317.89 L543.34,316.35 L544.57,314.86 L545.81,313.40 L547.04,311.97 L548.28,310.58 L549.51,309.21 L550.75,307.88 L551.99,306.58 L553.22,305.30 L554.46,304.05 L555.69,302.83 L556.93,301.64 L558.16,300.46 L559.40,299.31 L560.64,298.19 L561.87,297.08 L563.11,296.00 L564.34,294.94 L565.58,293.89 L566.81,292.87 L568.05,291.86 L569.29,290.87 L570.52,289.90 L571.76,288.95 L572.99,288.01 L574.23,287.08 L575.46,286.18 L576.70,285.28 L577.94,284.40 L579.17,283.54 L580.41,282.69 L581.64,281.85 L582.88,281.02 L584.11,280.21 L585.35,279.40 L586.59,278.61 L587.82,277.83 L589.06,277.07 L590.29,276.31 L591.53,275.56 L592.76,274.82 L594.00,274.10 L595.24,273.38 L596.47,272.67 L597.71,271.97 L598.94,271.28 L600.18,270.60 L601.41,269.93 L602.65,269.26 L603.89,268.61 L605.12,267.96 L606.36,267.32 L607.59,266.68 L608.83,266.06 L610.06,265.44 L611.30,264.83 L612.54,264.22 L613.77,263.62 L615.01,263.03 L616.24,262.45 L617.48,261.87 L618.71,261.30 L619.95,260.73 L621.19,260.17 L622.42,259.61 L623.66,259.07 L624.89,258.52 L626.13,257.98 L627.36,257.45 L628.60,256.92 L629.84,256.40 L631.07,255.89 L632.31,255.37 L633.54,254.87 L634.78,254.36 L636.01,253.87 L637.25,253.37 L638.49,252.88 L639.72,252.40 L640.96,251.92 L642.19,251.44 L643.43,250.97 L644.66,250.51 L645.90,250.04 L647.14,249.58 L648.37,249.13 L649.61,248.68 L650.84,248.23 L652.08,247.79 L653.31,247.35 L654.55,246.91 L655.79,246.48 L657.02,246.05 L658.26,245.62 L659.49,245.20 L660.73,244.78 L661.96,244.37 L663.20,243.95 L664.44,243.54 L665.67,243.14 L666.91,242.73 L668.14,242.33 L669.38,241.94 L670.61,241.54 L671.85,241.15 L673.09,240.76 L674.32,240.38 L675.56,239.99 L676.79,239.61 L678.03,239.24 L679.26,238.86 L680.50,238.49 L681.74,238.12 L682.97,237.75 L684.21,237.39 L685.44,237.03 L686.68,236.67 L687.91,236.31 L689.15,235.96 L690.39,235.61 L691.62,235.26 L692.86,234.91 L694.09,234.56 L695.33,234.22 L696.56,233.88 L697.80,233.54 L699.04,233.20 L700.27,232.87 L701.51,232.54 L702.74,232.21 L703.98,231.88 L705.21,231.55 L706.45,231.23 L707.69,230.91 L708.92,230.59 L710.16,230.27 L711.39,229.95 L712.63,229.64 L713.86,229.33 L715.10,229.02 L716.34,228.71 L717.57,228.40 L718.81,228.09 L720.04,227.79 L721.28,227.49 L722.51,227.19 L723.75,226.89 L724.99,226.59 L726.22,226.30 L727.46,226.01 L728.69,225.71 L729.93,225.42 L731.16,225.14 L732.40,224.85 L733.64,224.56 L734.87,224.28 L736.11,224.00 L737.34,223.72 L738.58,223.44 L739.81,223.16 L741.05,222.88 L742.29,222.61 L743.52,222.33 L744.76,222.06 L745.99,221.79 L747.23,221.52 L748.46,221.25 L749.70,220.99 L750.94,220.72 L752.17,220.46 L753.41,220.20 L754.64,219.94 L755.88,219.68 L757.11,219.42 L758.35,219.16 L759.59,218.90 L760.82,218.65 L762.06,218.39 L763.29,218.14 L764.53,217.89 L765.76,217.64 L767.00,217.39 L768.24,217.14 L769.47,216.90 L770.71,216.65 L771.94,216.41 L773.18,216.16 L774.41,215.92 L775.65,215.68 L776.89,215.44 L778.12,215.20 L779.36,214.96 L780.59,214.73 L781.83,214.49 L783.06,214.26 L784.30,214.02 L785.54,213.79 L786.77,213.56 L788.01,213.33 L789.24,213.10 L790.48,212.87 L791.71,212.65 L792.95,212.42 L794.19,212.19 L795.42,211.97 L796.66,211.75 L797.89,211.52 L799.13,211.30 L800.36,211.08 L801.60,210.86 L802.84,210.64 L804.07,210.42 L805.31,210.21 L806.54,209.99 L807.78,209.78 L809.01,209.56 L810.25,209.35 L811.49,209.14 L812.72,208.92 L813.96,208.71 L815.19,208.50 L816.43,208.29 L817.66,208.08 L818.90,207.88 L820.14,207.67 L821.37,207.46 L822.61,207.26 L823.84,207.05 L825.08,206.85 L826.31,206.65 L827.55,206.45 L828.79,206.25 L830.02,206.04 L831.26,205.84 L832.49,205.65 L833.73,205.45 L834.96,205.25 L836.20,205.05 L837.44,204.86 L838.67,204.66 L839.91,204.47 L841.14,204.27 L842.38,204.08 L843.61,203.89 L844.85,203.70 L846.09,203.51 L847.32,203.32 L848.56,203.13 L849.79,202.94 L851.03,202.75 L852.26,202.56 L853.50,202.37 L854.74,202.19 L855.97,202.00 L857.21,201.82 L858.44,201.63 L859.68,201.45 L860.91,201.27 L862.15,201.08 L863.39,200.90 L864.62,200.72 L865.86,200.54 L867.09,200.36 L868.33,200.18 L869.56,200.00 L870.80,199.83 L872.04,199.65 L873.27,199.47 L874.51,199.29 L875.74,199.12 L876.98,198.94 L878.21,198.77 L879.45,198.60 L880.69,198.42 L881.92,198.25 L883.16,198.08 L884.39,197.91 L885.63,197.73 L886.86,197.56 L888.10,197.39 L889.34,197.22 L890.57,197.06 L891.81,196.89 L893.04,196.72 L894.28,196.55 L895.51,196.39 L896.75,196.22 L897.99,196.05 L899.22,195.89 L900.46,195.72 L901.69,195.56 L902.93,195.40 L904.16,195.23 L905.40,195.07 L906.64,194.91 L907.87,194.75 L909.11,194.59 L910.34,194.43 L911.58,194.27 L912.81,194.11 L914.05,193.95 L915.29,193.79 L916.52,193.63 L917.76,193.47 L918.99,193.32 L920.23,193.16 L921.46,193.00 L922.70,192.85 L923.94,192.69 L925.17,192.54 L926.41,192.38 L927.64,192.23 L928.88,192.07 L930.11,191.92 L931.35,191.77 L932.59,191.62 L933.82,191.46 L935.06,191.31 L936.29,191.16 L937.53,191.01 L938.76,190.86 L940.00,190.71\" fill=\"none\" stroke=\"#111827\" stroke-width=\"3.1\" clip-path=\"url(#plot)\"/><path d=\"M508.90,491.11 L509.51,471.96 L510.13,457.98 L510.74,446.95 L511.36,437.84 L511.97,430.09 L512.59,423.34 L513.21,417.36 L513.82,411.99 L514.44,407.13 L515.05,402.67 L515.67,398.57 L516.29,394.76 L516.90,391.22 L517.52,387.89 L518.13,384.77 L518.75,381.82 L519.36,379.03 L519.98,376.38 L520.60,373.86 L521.21,371.45 L521.83,369.15 L522.44,366.95 L523.06,364.84 L523.68,362.80 L524.29,360.85 L524.91,358.96 L525.52,357.14 L526.14,355.38 L526.76,353.68 L527.37,352.03 L527.99,350.43 L528.60,348.88 L529.22,347.38 L529.83,345.91 L530.45,344.49 L531.07,343.10 L531.68,341.75 L532.30,340.43 L532.91,339.15 L533.53,337.90 L534.15,336.67 L534.76,335.47 L535.38,334.30 L535.99,333.16 L536.61,332.04 L537.22,330.94 L537.84,329.87 L538.46,328.82 L539.07,327.79 L539.69,326.78 L540.30,325.78 L540.92,324.81 L541.54,323.85 L542.15,322.91 L542.77,321.99 L543.38,321.09 L544.00,320.20 L544.62,319.32 L545.23,318.46 L545.85,317.61 L546.46,316.78 L547.08,315.95 L547.69,315.15 L548.31,314.35 L548.93,313.57 L549.54,312.79 L550.16,312.03 L550.77,311.28 L551.39,310.54 L552.01,309.81 L552.62,309.09 L553.24,308.38 L553.85,307.68 L554.47,306.99 L555.08,306.31 L555.70,305.64 L556.32,304.97 L556.93,304.31 L557.55,303.67 L558.16,303.03 L558.78,302.39 L559.40,301.77 L560.01,301.15 L560.63,300.54 L561.24,299.94 L561.86,299.34 L562.48,298.75 L563.09,298.17 L563.71,297.59 L564.32,297.02 L564.94,296.45 L565.55,295.90 L566.17,295.34 L566.79,294.80 L567.40,294.26 L568.02,293.72 L568.63,293.19 L569.25,292.67 L569.87,292.15 L570.48,291.63 L571.10,291.12 L571.71,290.62 L572.33,290.12 L572.95,289.62 L573.56,289.13 L574.18,288.65 L574.79,288.16 L575.41,287.69 L576.02,287.21 L576.64,286.75 L577.26,286.28 L577.87,285.82 L578.49,285.37 L579.10,284.91 L579.72,284.46 L580.34,284.02 L580.95,283.58 L581.57,283.14 L582.18,282.71 L582.80,282.28 L583.41,281.85 L584.03,281.43 L584.65,281.01 L585.26,280.59 L585.88,280.18 L586.49,279.77 L587.11,279.36 L587.73,278.96 L588.34,278.56 L588.96,278.16 L589.57,277.77 L590.19,277.38 L590.81,276.99 L591.42,276.60 L592.04,276.22 L592.65,275.84 L593.27,275.46 L593.88,275.09 L594.50,274.72 L595.12,274.35 L595.73,273.98 L596.35,273.62 L596.96,273.25 L597.58,272.89 L598.20,272.54 L598.81,272.18 L599.43,271.83 L600.04,271.48 L600.66,271.13 L601.27,270.79 L601.89,270.45 L602.51,270.11 L603.12,269.77 L603.74,269.43 L604.35,269.10 L604.97,268.77 L605.59,268.44 L606.20,268.11 L606.82,267.78 L607.43,267.46 L608.05,267.14 L608.67,266.82 L609.28,266.50 L609.90,266.18 L610.51,265.87 L611.13,265.56 L611.74,265.25 L612.36,264.94 L612.98,264.63 L613.59,264.33 L614.21,264.02 L614.82,263.72 L615.44,263.42 L616.06,263.13 L616.67,262.83 L617.29,262.54 L617.90,262.24 L618.52,261.95 L619.13,261.66 L619.75,261.37 L620.37,261.09 L620.98,260.80 L621.60,260.52 L622.21,260.24 L622.83,259.96 L623.45,259.68 L624.06,259.40 L624.68,259.12 L625.29,258.85 L625.91,258.58 L626.53,258.31 L627.14,258.04 L627.76,257.77 L628.37,257.50 L628.99,257.23 L629.60,256.97 L630.22,256.70 L630.84,256.44 L631.45,256.18 L632.07,255.92 L632.68,255.66 L633.30,255.41 L633.92,255.15 L634.53,254.90 L635.15,254.64 L635.76,254.39 L636.38,254.14 L636.99,253.89 L637.61,253.64 L638.23,253.40 L638.84,253.15 L639.46,252.90 L640.07,252.66 L640.69,252.42 L641.31,252.18 L641.92,251.94 L642.54,251.70 L643.15,251.46 L643.77,251.22 L644.39,250.99 L645.00,250.75 L645.62,250.52 L646.23,250.28 L646.85,250.05 L647.46,249.82 L648.08,249.59 L648.70,249.36 L649.31,249.13 L649.93,248.91 L650.54,248.68 L651.16,248.46 L651.78,248.23 L652.39,248.01 L653.01,247.79 L653.62,247.57 L654.24,247.35 L654.85,247.13 L655.47,246.91 L656.09,246.69 L656.70,246.47 L657.32,246.26 L657.93,246.04 L658.55,245.83 L659.17,245.62 L659.78,245.40 L660.40,245.19 L661.01,244.98 L661.63,244.77 L662.25,244.56 L662.86,244.36 L663.48,244.15 L664.09,243.94 L664.71,243.74 L665.32,243.53 L665.94,243.33 L666.56,243.13 L667.17,242.92 L667.79,242.72 L668.40,242.52 L669.02,242.32 L669.64,242.12 L670.25,241.92 L670.87,241.73 L671.48,241.53 L672.10,241.33 L672.72,241.14 L673.33,240.94 L673.95,240.75 L674.56,240.55 L675.18,240.36 L675.79,240.17 L676.41,239.98 L677.03,239.79 L677.64,239.60 L678.26,239.41 L678.87,239.22 L679.49,239.03 L680.11,238.85 L680.72,238.66 L681.34,238.47 L681.95,238.29 L682.57,238.10 L683.18,237.92 L683.80,237.74 L684.42,237.55 L685.03,237.37 L685.65,237.19 L686.26,237.01 L686.88,236.83 L687.50,236.65 L688.11,236.47 L688.73,236.29 L689.34,236.12 L689.96,235.94 L690.58,235.76 L691.19,235.59 L691.81,235.41 L692.42,235.24 L693.04,235.06 L693.65,234.89 L694.27,234.72 L694.89,234.54 L695.50,234.37 L696.12,234.20 L696.73,234.03 L697.35,233.86 L697.97,233.69 L698.58,233.52 L699.20,233.35 L699.81,233.18 L700.43,233.02 L701.04,232.85 L701.66,232.68 L702.28,232.52 L702.89,232.35 L703.51,232.19 L704.12,232.02 L704.74,231.86 L705.36,231.70 L705.97,231.53 L706.59,231.37 L707.20,231.21 L707.82,231.05 L708.44,230.89 L709.05,230.73 L709.67,230.57 L710.28,230.41 L710.90,230.25 L711.51,230.09 L712.13,229.93 L712.75,229.78 L713.36,229.62 L713.98,229.46 L714.59,229.31 L715.21,229.15 L715.83,229.00 L716.44,228.84 L717.06,228.69 L717.67,228.53 L718.29,228.38 L718.90,228.23 L719.52,228.08 L720.14,227.92 L720.75,227.77 L721.37,227.62 L721.98,227.47 L722.60,227.32 L723.22,227.17 L723.83,227.02 L724.45,226.87 L725.06,226.72 L725.68,226.58 L726.30,226.43 L726.91,226.28 L727.53,226.14 L728.14,225.99 L728.76,225.84 L729.37,225.70 L729.99,225.55 L730.61,225.41 L731.22,225.26 L731.84,225.12 L732.45,224.98 L733.07,224.83 L733.69,224.69 L734.30,224.55 L734.92,224.41 L735.53,224.26 L736.15,224.12 L736.76,223.98 L737.38,223.84 L738.00,223.70 L738.61,223.56 L739.23,223.42 L739.84,223.28 L740.46,223.14 L741.08,223.01 L741.69,222.87 L742.31,222.73 L742.92,222.59 L743.54,222.46 L744.16,222.32 L744.77,222.18 L745.39,222.05 L746.00,221.91 L746.62,221.78 L747.23,221.64 L747.85,221.51 L748.47,221.38 L749.08,221.24 L749.70,221.11 L750.31,220.98 L750.93,220.84 L751.55,220.71 L752.16,220.58 L752.78,220.45 L753.39,220.32 L754.01,220.18 L754.62,220.05 L755.24,219.92 L755.86,219.79 L756.47,219.66 L757.09,219.53 L757.70,219.41 L758.32,219.28 L758.94,219.15 L759.55,219.02 L760.17,218.89 L760.78,218.77 L761.40,218.64 L762.02,218.51 L762.63,218.38 L763.25,218.26 L763.86,218.13 L764.48,218.01 L765.09,217.88 L765.71,217.76 L766.33,217.63 L766.94,217.51 L767.56,217.38 L768.17,217.26 L768.79,217.14 L769.41,217.01 L770.02,216.89 L770.64,216.77 L771.25,216.64 L771.87,216.52 L772.48,216.40 L773.10,216.28 L773.72,216.16 L774.33,216.04 L774.95,215.92 L775.56,215.80 L776.18,215.68 L776.80,215.56 L777.41,215.44 L778.03,215.32 L778.64,215.20 L779.26,215.08 L779.88,214.96 L780.49,214.84 L781.11,214.72 L781.72,214.61 L782.34,214.49 L782.95,214.37 L783.57,214.25 L784.19,214.14 L784.80,214.02 L785.42,213.91 L786.03,213.79 L786.65,213.67 L787.27,213.56 L787.88,213.44 L788.50,213.33 L789.11,213.21 L789.73,213.10 L790.35,212.99 L790.96,212.87 L791.58,212.76 L792.19,212.64 L792.81,212.53 L793.42,212.42 L794.04,212.31 L794.66,212.19 L795.27,212.08 L795.89,211.97 L796.50,211.86 L797.12,211.75 L797.74,211.64 L798.35,211.52 L798.97,211.41 L799.58,211.30 L800.20,211.19 L800.81,211.08 L801.43,210.97 L802.05,210.86 L802.66,210.75 L803.28,210.64 L803.89,210.54 L804.51,210.43 L805.13,210.32 L805.74,210.21 L806.36,210.10 L806.97,209.99 L807.59,209.89 L808.21,209.78 L808.82,209.67 L809.44,209.57 L810.05,209.46 L810.67,209.35 L811.28,209.25 L811.90,209.14 L812.52,209.03 L813.13,208.93 L813.75,208.82 L814.36,208.72 L814.98,208.61 L815.60,208.51 L816.21,208.40 L816.83,208.30 L817.44,208.20 L818.06,208.09 L818.67,207.99 L819.29,207.88 L819.91,207.78 L820.52,207.68 L821.14,207.57 L821.75,207.47 L822.37,207.37 L822.99,207.27 L823.60,207.17 L824.22,207.06 L824.83,206.96 L825.45,206.86 L826.07,206.76 L826.68,206.66 L827.30,206.56 L827.91,206.46 L828.53,206.36 L829.14,206.26 L829.76,206.15 L830.38,206.05 L830.99,205.96 L831.61,205.86 L832.22,205.76 L832.84,205.66 L833.46,205.56 L834.07,205.46 L834.69,205.36 L835.30,205.26 L835.92,205.16 L836.53,205.07 L837.15,204.97 L837.77,204.87 L838.38,204.77 L839.00,204.68 L839.61,204.58 L840.23,204.48 L840.85,204.38 L841.46,204.29 L842.08,204.19 L842.69,204.09 L843.31,204.00 L843.93,203.90 L844.54,203.81 L845.16,203.71 L845.77,203.62 L846.39,203.52 L847.00,203.43 L847.62,203.33 L848.24,203.24 L848.85,203.14 L849.47,203.05 L850.08,202.95 L850.70,202.86 L851.32,202.76 L851.93,202.67 L852.55,202.58 L853.16,202.48 L853.78,202.39 L854.39,202.30 L855.01,202.21 L855.63,202.11 L856.24,202.02 L856.86,201.93 L857.47,201.84 L858.09,201.74 L858.71,201.65 L859.32,201.56 L859.94,201.47 L860.55,201.38 L861.17,201.29 L861.79,201.19 L862.40,201.10 L863.02,201.01 L863.63,200.92 L864.25,200.83 L864.86,200.74 L865.48,200.65 L866.10,200.56 L866.71,200.47 L867.33,200.38 L867.94,200.29 L868.56,200.20 L869.18,200.11 L869.79,200.02 L870.41,199.94 L871.02,199.85 L871.64,199.76 L872.25,199.67 L872.87,199.58 L873.49,199.49 L874.10,199.40 L874.72,199.32 L875.33,199.23 L875.95,199.14 L876.57,199.05 L877.18,198.97 L877.80,198.88 L878.41,198.79 L879.03,198.71 L879.65,198.62 L880.26,198.53 L880.88,198.45 L881.49,198.36 L882.11,198.27 L882.72,198.19 L883.34,198.10 L883.96,198.02 L884.57,197.93 L885.19,197.85 L885.80,197.76 L886.42,197.67 L887.04,197.59 L887.65,197.50 L888.27,197.42 L888.88,197.34 L889.50,197.25 L890.12,197.17 L890.73,197.08 L891.35,197.00 L891.96,196.91 L892.58,196.83 L893.19,196.75 L893.81,196.66 L894.43,196.58 L895.04,196.50 L895.66,196.41 L896.27,196.33 L896.89,196.25 L897.51,196.16 L898.12,196.08 L898.74,196.00 L899.35,195.92 L899.97,195.84 L900.58,195.75 L901.20,195.67 L901.82,195.59 L902.43,195.51 L903.05,195.43 L903.66,195.34 L904.28,195.26 L904.90,195.18 L905.51,195.10 L906.13,195.02 L906.74,194.94 L907.36,194.86 L907.98,194.78 L908.59,194.70 L909.21,194.62 L909.82,194.54 L910.44,194.46 L911.05,194.38 L911.67,194.30 L912.29,194.22 L912.90,194.14 L913.52,194.06 L914.13,193.98 L914.75,193.90 L915.37,193.82 L915.98,193.74 L916.60,193.66 L917.21,193.58 L917.83,193.51 L918.44,193.43 L919.06,193.35 L919.68,193.27 L920.29,193.19 L920.91,193.11 L921.52,193.04 L922.14,192.96 L922.76,192.88 L923.37,192.80 L923.99,192.73 L924.60,192.65 L925.22,192.57 L925.84,192.49 L926.45,192.42 L927.07,192.34 L927.68,192.26 L928.30,192.19 L928.91,192.11 L929.53,192.03 L930.15,191.96 L930.76,191.88 L931.38,191.80 L931.99,191.73 L932.61,191.65 L933.23,191.58 L933.84,191.50 L934.46,191.43 L935.07,191.35 L935.69,191.27 L936.30,191.20 L936.92,191.12 L937.54,191.05 L938.15,190.97 L938.77,190.90 L939.38,190.82 L940.00,190.75\" fill=\"none\" stroke=\"#4b5563\" stroke-width=\"2.2\" clip-path=\"url(#plot)\"/><circle cx=\"507.50\" cy=\"380.09\" r=\"4.2\" fill=\"#111827\"/><text x=\"515.50\" y=\"370.09\" font-size=\"13\">O</text><circle cx=\"705.50\" cy=\"231.48\" r=\"4.2\" fill=\"#111827\"/><text x=\"713.50\" y=\"221.48\" font-size=\"13\">A(α,α)</text><circle cx=\"573.27\" cy=\"287.80\" r=\"4.2\" fill=\"#111827\"/><text x=\"581.27\" y=\"277.80\" font-size=\"13\">M</text><text x=\"856.29\" y=\"108.30\" font-size=\"16\">Δ</text><text x=\"814.44\" y=\"194.63\" font-size=\"18\" font-style=\"italic\">C<tspan baseline-shift=\"sub\" font-size=\"13\">f</tspan></text><text x=\"772.58\" y=\"238.38\" font-size=\"16\">γ</text></svg>",
+          "x_domain": [
+            -6.2,
+            6.2
+          ],
+          "y_domain": [
+            -4.2,
+            6.4
+          ],
+          "curves": [
+            {
+              "id": "cf",
+              "label": "C_f",
+              "expression": "f(x)=ln(sqrt(9x^2+1)+3x)"
+            },
+            {
+              "id": "delta",
+              "label": "Δ",
+              "expression": "y=x"
+            },
+            {
+              "id": "gamma",
+              "label": "γ",
+              "expression": "y=ln(6x), x>0"
+            }
+          ],
+          "important_points": [
+            {
+              "label": "O",
+              "x": 0,
+              "y": 0
+            },
+            {
+              "label": "A",
+              "x": 2.838446380048026,
+              "y": 2.838446380048026
+            },
+            {
+              "label": "M",
+              "x": 0.9428090415820635,
+              "y": 1.762747174039086
+            }
+          ],
+          "notes": [
+            "C_f فوق Δ على ]0,α[ وتحته على ]α,+∞[.",
+            "γ منحنى مقارب لـ C_f بجوار +∞.",
+            "يستنتج الفرع السالب لـ C_f بتناظر مركزي مركزه O لأن f فردية."
+          ]
+        }
+      }
+    }
+  ],
+  "source_reference": {
+    "file": "2020(20260908-183025).pdf",
+    "statement_pages": [
+      4
+    ],
+    "solution_pages": [
+      9,
+      10
+    ],
+    "source_faithful_statement": true,
+    "statement_transcription": "تم الحفاظ على جميع الأسئلة الظاهرة في الصورة من 1 إلى 5، مع تحويل الرموز الرياضية إلى LaTeX فقط.",
+    "solution_reviewed_against_source": true,
+    "points_note": "07 نقاط كما في المصدر. التمرين لا يحتوي على سؤال تكامل أو دالة أصلية."
+  },
+  "display": {
+    "layout": "question_by_question",
+    "show_statement_first": true,
+    "show_statement_figures": true,
+    "show_solution_after_click": true,
+    "show_solution_figures": true
+  },
+  "review_status": {
+    "statement_compared_with_original_pdf": true,
+    "questions_compared_with_original_pdf": true,
+    "source_figures_checked": true,
+    "solution_checked_against_correction": true,
+    "latex_normalized_only": true,
+    "react_ready": true
+  },
+  "given_data": {
+    "f": "ln(sqrt(9x^2+1)+3x)",
+    "domain_f": "R",
+    "f_derivative": "3/sqrt(9x^2+1)",
+    "g": "f(x)-x",
+    "g_domain": "[0,+infinity)",
+    "g_critical_x": "2sqrt(2)/3",
+    "g_critical_value_approx": 0.8199381324570226,
+    "alpha_interval": [
+      2.83,
+      2.84
+    ],
+    "alpha_approximation": 2.838446380048026,
+    "delta": "y=x",
+    "k": "ln(6x)",
+    "gamma_translation_vector": [
+      0,
+      "ln(6)"
+    ]
+  },
+  "solution_pedagogy": {
+    "style": "guided_step_by_step",
+    "audience": "3AS_bac_student",
+    "principles": [
+      "حل مفصل خطوة بخطوة.",
+      "إضافة جدول تغيرات f وg وجدول إشارة g.",
+      "إضافة رسم SVG مدمج للمنحنيات Δ وγ وC_f.",
+      "مراجعة النتائج مع التصحيح النموذجي.",
+      "الحفاظ على نص الأسئلة دون إضافة أسئلة جديدة."
+    ]
+  },
+  "subject_number": 2
+}

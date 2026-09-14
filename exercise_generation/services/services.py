@@ -8,7 +8,10 @@ from django.db import transaction
 from course.models import Axis
 from exercise_generation.models import GeneratedExercise
 from exercise_generation.services.ai_generator import ExerciseAIGenerator
-from exercise_generation.services.bac_reference_builder import get_axis_bac_references
+from exercise_generation.services.bac_reference_builder import (
+    collect_allowed_documents,
+    get_axis_bac_references,
+)
 from exercise_generation.services.context_builder import build_compact_lesson_context
 from exercise_generation.services.exceptions import (
     AxisNotFoundError,
@@ -68,12 +71,21 @@ class ExerciseGenerationService:
                 )
 
             used_reference_ids.extend(reference_ids)
+            subject_kind, _ = self._subject_info(axis)
+            allowed_documents = collect_allowed_documents(references)
+            if subject_kind == "natural_sciences" and not allowed_documents:
+                raise NoBacReferenceQuestionsError(
+                    "مراجع البكالوريا موجودة، لكن لا توجد وثيقة statement قابلة لإعادة الاستعمال. "
+                    "تأكد من حفظ figures داخل محتوى التمرين ومن أن "
+                    "usage_policy.can_appear_in_generated_statement=true."
+                )
             result = self._generate_valid_exercise(
                 axis=axis,
                 lesson_context=lesson_context,
                 references=references,
                 previous_titles=previous_titles,
                 exercise_number=exercise_number,
+                allowed_documents=allowed_documents,
             )
 
             normalized = result["exercise"]
@@ -108,6 +120,7 @@ class ExerciseGenerationService:
         references: list[dict[str, Any]],
         previous_titles: list[str],
         exercise_number: int,
+        allowed_documents: list[dict[str, Any]],
     ) -> dict[str, Any]:
         last_error: Exception | None = None
 
@@ -124,8 +137,9 @@ class ExerciseGenerationService:
                 previous_titles=previous_titles,
                 exercise_number=exercise_number,
                 compact_mode=compact_mode,
-                force_graph=axis_requires_graph(axis),
+                force_graph=(subject_kind == "math" and axis_requires_graph(axis)),
                 previous_error=str(last_error or ""),
+                allowed_documents=allowed_documents,
             )
 
             try:
@@ -134,11 +148,16 @@ class ExerciseGenerationService:
                     subject_kind=subject_kind,
                     max_output_tokens=3200 if compact_mode else 3800,
                 )
-                graph_ready = ensure_graph_payload(
-                    generated.exercise,
-                    axis=axis,
+                graph_ready = (
+                    ensure_graph_payload(generated.exercise, axis=axis)
+                    if subject_kind == "math"
+                    else {**generated.exercise, "requires_graph": False, "graph_spec": {}, "graph_data": {}}
                 )
-                validated = validate_bac_like_exercise(graph_ready)
+                validated = validate_bac_like_exercise(
+                    graph_ready,
+                    subject_kind=subject_kind,
+                    allowed_documents=allowed_documents,
+                )
                 return {
                     "exercise": validated,
                     "model_name": generated.model,
@@ -218,6 +237,8 @@ class ExerciseGenerationService:
         name = str(getattr(subject, "name", "") or "").strip()
         code = str(getattr(subject, "code", "") or "").strip()
         source = f"{code} {name}".lower()
+        if any(token in source for token in ("science", "sciences", "svt", "طبيعة", "علوم")):
+            return "natural_sciences", name or "علوم الطبيعة والحياة"
         if any(token in source for token in ("phys", "physics", "فيزياء")):
             return "physics", name or "الفيزياء"
         return "math", name or "الرياضيات"

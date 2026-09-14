@@ -1,0 +1,273 @@
+{
+  "schema_version": "3.0-bac-pedagogical-verified",
+  "language": "ar",
+  "direction": "rtl",
+  "branch": {
+    "code": "math",
+    "name": "شعبة رياضيات"
+  },
+  "branch_code": "math",
+  "branches": [
+    {
+      "code": "math",
+      "name": "شعبة رياضيات"
+    }
+  ],
+  "chapter_code": "limits_continuity",
+  "year": 2008,
+  "exercise_number": 4,
+  "source_page": 1,
+  "source_reference": "بكالوريا 2008 — شعبة رياضيات — التمرين الرابع، من الملف المرفق.",
+  "title": "بكالوريا 2008 — شعبة رياضيات — التمرين الرابع — النهايات",
+  "axis_tags": [
+    "limits_continuity"
+  ],
+  "statement": "نعتبر الدالة \\(f\\) المعرفة على المجال \\([1,+\\infty[\\) بالعبارة:\n\\[\nf(x)=3+\\sqrt{x-1}.\n\\]",
+  "statement_graph_data": null,
+  "questions": [
+    {
+      "id": "2008_math_limit_difference_quotient_at_1",
+      "text": "احسب:\n\\[\n\\lim_{x\\to1^+}\\frac{f(x)-f(1)}{x-1}.\n\\]",
+      "axis_tags": [
+        "limits_continuity"
+      ],
+      "solution": {
+        "strategy": "نحسب أولًا \\(f(1)\\)، ثم نعوض في العبارة. بعد التبسيط نحصل على نهاية بسيطة من الشكل \\(1/\\sqrt{x-1}\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "نحسب f(1)",
+            "explanation": "نعوض \\(x=1\\) في عبارة الدالة.",
+            "latex": "f(1)=3+\\sqrt{1-1}=3",
+            "why": "نحتاج قيمة \\(f(1)\\) داخل البسط.",
+            "student_tip": "ابدأ دائمًا بحساب القيمة الموجودة داخل فرق الدالة."
+          },
+          {
+            "step_number": 2,
+            "title": "نعوض في الكسر",
+            "explanation": "نعوض \\(f(x)\\) و\\(f(1)\\).",
+            "latex": "\\frac{f(x)-f(1)}{x-1}=\\frac{3+\\sqrt{x-1}-3}{x-1}=\\frac{\\sqrt{x-1}}{x-1}",
+            "why": "اختزلنا العدد 3 من البسط.",
+            "student_tip": "بسّط العبارة قبل حساب النهاية."
+          },
+          {
+            "step_number": 3,
+            "title": "نلاحظ حالة عدم التعيين قبل التبسيط",
+            "explanation": "عندما \\(x\\to1^+\\)، فإن البسط \\(\\sqrt{x-1}\\to0\\) والمقام \\(x-1\\to0\\)، أي يظهر الشكل \\(0/0\\).",
+            "latex": "\\frac{0}{0}",
+            "why": "هذه حالة عدم تعيين ويجب رفعها قبل إعطاء النتيجة.",
+            "student_tip": "إذا ظهر \\(0/0\\)، اذكر صراحة أنها حالة عدم تعيين."
+          },
+          {
+            "step_number": 4,
+            "title": "نرفع حالة عدم التعيين",
+            "explanation": "بما أن \\(x>1\\) أثناء الاقتراب من \\(1\\) داخل المجال، فإن \\(x-1>0\\)، ولدينا \\(x-1=(\\sqrt{x-1})^2\\).",
+            "latex": "\\frac{\\sqrt{x-1}}{x-1}=\\frac{1}{\\sqrt{x-1}}",
+            "why": "تم اختزال عامل \\(\\sqrt{x-1}\\).",
+            "student_tip": "هذه أبسط طريقة هنا، ولا نحتاج إلى المرافق."
+          },
+          {
+            "step_number": 5,
+            "title": "نحسب النهاية",
+            "explanation": "عندما \\(x\\to1^+\\)، فإن \\(x-1\\to0^+\\)، ومن ثم \\(\\sqrt{x-1}\\to0^+\\).",
+            "latex": "\\lim_{x\\to1^+}\\frac{1}{\\sqrt{x-1}}=+\\infty",
+            "why": "مقلوب عدد موجب يقترب من الصفر يتجه إلى \\(+\\infty\\).",
+            "student_tip": "انتبه إلى جهة الاقتراب: المجال يبدأ من 1، لذلك نقترب من اليمين."
+          },
+          {
+            "step_number": 6,
+            "title": "النتيجة النهائية",
+            "explanation": "إذن:",
+            "latex": "\\boxed{\\lim_{x\\to1^+}\\frac{f(x)-f(1)}{x-1}=+\\infty}",
+            "why": "تم رفع حالة عدم التعيين وحساب النهاية.",
+            "student_tip": "هذه النتيجة تعني هندسيًا وجود نصف مماس عمودي عند النقطة ذات الفاصلة 1."
+          }
+        ],
+        "final_answer": "\\[\n\\boxed{\\lim_{x\\to1^+}\\frac{f(x)-f(1)}{x-1}=+\\infty}.\n\\]",
+        "verification": "بعد التبسيط يصبح الكسر \\(1/\\sqrt{x-1}\\)، ونهايته عند \\(1^+\\) هي \\(+\\infty\\).",
+        "common_mistakes": [
+          "نسيان أن الاقتراب من 1 يكون من اليمين فقط.",
+          "عدم ذكر أن الشكل 0/0 حالة عدم تعيين.",
+          "عدم تبسيط الكسر قبل حساب النهاية."
+        ],
+        "hints": [
+          "احسب f(1) أولًا.",
+          "استعمل x-1=(√(x-1))².",
+          "بعد التبسيط احسب نهاية 1/√(x-1)."
+        ],
+        "graph_data": null,
+        "table_data": null,
+        "solution_style": "حل مفصل ومبسط جدًا مع ذكر حالة عدم التعيين ورفعها خطوة بخطوة.",
+        "methodology": {
+          "goal": "حساب النهاية المطلوبة عند x=1.",
+          "method": "حساب f(1)، تبسيط الكسر، ثم رفع حالة 0/0.",
+          "why_this_method": "لأن العبارة تختزل مباشرة باستعمال الجذر.",
+          "used_theorem": "قواعد النهايات وحالة عدم التعيين 0/0.",
+          "bac_template": [
+            "نحسب f(1).",
+            "نعوض ونبسط.",
+            "نذكر حالة عدم التعيين.",
+            "نرفعها.",
+            "نحسب النهاية."
+          ],
+          "formal_writing": [
+            "نكتب قيمة f(1).",
+            "نبسط الكسر.",
+            "نحسب النهاية.",
+            "نكتب الاستنتاج."
+          ]
+        },
+        "formal_writing": [
+          "نحسب f(1).",
+          "نذكر حالة 0/0.",
+          "نبسط.",
+          "نحسب النهاية.",
+          "نكتب النتيجة."
+        ],
+        "react_display": {
+          "show_strategy": true,
+          "show_steps": true,
+          "show_final_answer": true,
+          "show_graph": false,
+          "show_table": false,
+          "graph_key": "graph_data",
+          "table_key": "table_data",
+          "math_renderer": "better-react-mathjax"
+        },
+        "pedagogical_detail": {
+          "level": "مبسط جدًا",
+          "show_intermediate_calculations": true,
+          "explain_rule_before_use": true,
+          "state_final_conclusion": true
+        },
+        "display_order": [
+          "strategy",
+          "steps",
+          "final_answer",
+          "verification"
+        ],
+        "validation": {
+          "final_answer_checked": true,
+          "mathematical_consistency_checked": true
+        },
+        "main_idea": "تظهر حالة 0/0، ثم يختزل الكسر إلى 1/√(x-1).",
+        "detailed_explanation": "تم الاحتفاظ بعبارة الدالة في statement فقط، والسؤال يحتوي المطلوب دون تكرار تعريف الدالة.",
+        "answer_style": "idea_then_steps_then_conclusion"
+      },
+      "display_order": 1,
+      "content_type": "question"
+    },
+    {
+      "id": "2008_math_limit_for_variation_table",
+      "text": "لحساب القيمة اللازمة لإتمام جدول تغيرات الدالة، احسب:\n\\[\n\\lim_{x\\to+\\infty}f(x).\n\\]",
+      "axis_tags": [
+        "limits_continuity"
+      ],
+      "solution": {
+        "strategy": "نحسب نهاية كل جزء من عبارة الدالة عند \\(+\\infty\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "نهاية ما داخل الجذر",
+            "explanation": "عندما \\(x\\to+\\infty\\)، فإن \\(x-1\\to+\\infty\\).",
+            "latex": "\\lim_{x\\to+\\infty}(x-1)=+\\infty",
+            "why": "طرح 1 لا يغير السلوك عند +∞.",
+            "student_tip": "ابدأ من داخل الجذر."
+          },
+          {
+            "step_number": 2,
+            "title": "نهاية الجذر",
+            "explanation": "الجذر التربيعي لكمية تتجه إلى +∞ يتجه أيضًا إلى +∞.",
+            "latex": "\\lim_{x\\to+\\infty}\\sqrt{x-1}=+\\infty",
+            "why": "دالة الجذر متزايدة على مجالها.",
+            "student_tip": "لا توجد حالة عدم تعيين هنا."
+          },
+          {
+            "step_number": 3,
+            "title": "نستنتج نهاية f",
+            "explanation": "نضيف العدد الثابت 3.",
+            "latex": "\\lim_{x\\to+\\infty}f(x)=3+\\lim_{x\\to+\\infty}\\sqrt{x-1}=+\\infty",
+            "why": "إضافة عدد ثابت إلى +∞ لا تغير النهاية.",
+            "student_tip": "هذه القيمة توضع في نهاية جدول التغيرات عند +∞."
+          }
+        ],
+        "final_answer": "\\[\n\\boxed{\\lim_{x\\to+\\infty}f(x)=+\\infty}.\n\\]",
+        "verification": "الدالة f(x)=3+√(x-1) تزداد دون حد عندما x يزداد دون حد.",
+        "common_mistakes": [
+          "البحث عن حالة عدم تعيين رغم عدم وجودها.",
+          "نسيان أن √(x-1) يتجه إلى +∞."
+        ],
+        "hints": [
+          "احسب نهاية x-1 أولًا.",
+          "ثم نهاية الجذر."
+        ],
+        "graph_data": null,
+        "table_data": null,
+        "solution_style": "حل مفصل ومبسط جدًا.",
+        "methodology": {
+          "goal": "حساب نهاية f عند +∞ اللازمة لجدول التغيرات.",
+          "method": "استعمال تركيب دالة الجذر مع x-1.",
+          "why_this_method": "لأن العبارة مباشرة ولا تحتوي حالة عدم تعيين.",
+          "used_theorem": "قواعد النهايات ودالة الجذر.",
+          "bac_template": [
+            "نحسب نهاية داخل الجذر.",
+            "نحسب نهاية الجذر.",
+            "نضيف العدد الثابت.",
+            "نستنتج."
+          ],
+          "formal_writing": [
+            "نكتب النهايات الجزئية.",
+            "نستنتج نهاية f."
+          ]
+        },
+        "formal_writing": [
+          "نحسب نهاية x-1.",
+          "نحسب نهاية √(x-1).",
+          "نكتب النتيجة."
+        ],
+        "react_display": {
+          "show_strategy": true,
+          "show_steps": true,
+          "show_final_answer": true,
+          "show_graph": false,
+          "show_table": false,
+          "graph_key": "graph_data",
+          "table_key": "table_data",
+          "math_renderer": "better-react-mathjax"
+        },
+        "pedagogical_detail": {
+          "level": "مبسط جدًا",
+          "show_intermediate_calculations": true,
+          "explain_rule_before_use": true,
+          "state_final_conclusion": true
+        },
+        "display_order": [
+          "strategy",
+          "steps",
+          "final_answer",
+          "verification"
+        ],
+        "validation": {
+          "final_answer_checked": true,
+          "mathematical_consistency_checked": true
+        },
+        "main_idea": "لا توجد حالة عدم تعيين؛ √(x-1)→+∞ مباشرة.",
+        "detailed_explanation": "أُدرجت هذه النهاية لأنها لازمة لإتمام جدول تغيرات الدالة في التمرين.",
+        "answer_style": "idea_then_steps_then_conclusion"
+      },
+      "display_order": 2,
+      "content_type": "question"
+    }
+  ],
+  "content_separation": {
+    "statement": "تعريف الدالة ومجالها يكتبان مرة واحدة فقط.",
+    "questions": "تحتوي فقط على مطالب النهايات دون تكرار تعريف الدالة.",
+    "solution": "شرح مفصل وخطوات مبسطة، مع التصريح بحالة عدم التعيين إن وجدت."
+  },
+  "review_status": {
+    "function_definition_not_repeated_in_questions": true,
+    "chapter_code_checked": true,
+    "exercise_kept_as_single_file": true,
+    "mathematical_results_rechecked": true
+  }
+}

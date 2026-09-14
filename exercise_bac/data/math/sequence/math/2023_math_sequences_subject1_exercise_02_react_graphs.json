@@ -1,0 +1,456 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "graph_schema_version": "1.0-react-json",
+  "version": "4.2-2023-math-sequences-subject1-ex02-react-graphs",
+  "session": "ordinary",
+  "year": 2023,
+  "chapter_code": "sequences",
+  "chapter_title": "المتتاليات العددية",
+  "axis_tags": [
+    "sequence_graphical_representation",
+    "geometric_sequences",
+    "limits_convergence_divergence",
+    "sequence_sums"
+  ],
+  "branches": [
+    {
+      "code": "math",
+      "name": "شعبة رياضيات"
+    }
+  ],
+  "exercise_number": 2,
+  "subject_number": 1,
+  "source_page": 1,
+  "source_pages": [
+    1,
+    2
+  ],
+  "solution_source_pages": [
+    6,
+    7
+  ],
+  "title": "التمرين الثاني — بكالوريا الجزائر 2023 — الموضوع الأول — شعبة رياضيات — المتتاليات",
+  "statement": "1) \\(f\\) الدالة المعرفة على \\([0;+\\infty[\\) بـ:\n\\[\nf(x)=\\frac{x+4}{x+1}\n\\]\n\\((C_f)\\) تمثيلها البياني في المستوي المنسوب إلى المعلم المتعامد والمتجانس \\((O;\\vec{i},\\vec{j})\\)، \\((D)\\) المستقيم ذو المعادلة \\(y=x\\).\n\\((u_n)\\) المتتالية العددية المعرفة بـ:\n\\[\nu_0=0 \\quad،\\quad u_{n+1}=f(u_n) \\text{ ومن أجل كل عدد طبيعي } n.\n\\]",
+  "statement_graphs": [
+    {
+      "id": "2023_s1_sequences_ex02_function_plot",
+      "type": "function_plot",
+      "render_mode": "json",
+      "capture": false,
+      "direction": "ltr",
+      "canvas": {
+        "width": 900,
+        "height": 650,
+        "padding": 28
+      },
+      "viewport": {
+        "x_min": -1.0,
+        "x_max": 5.2,
+        "y_min": -1.0,
+        "y_max": 5.2,
+        "x_tick": 1,
+        "y_tick": 1,
+        "equal_scale": true
+      },
+      "axes": {
+        "show": true,
+        "x_label": "x",
+        "y_label": "y",
+        "grid": true
+      },
+      "curves": [
+        {
+          "id": "curve_cf",
+          "kind": "function",
+          "label": "(C_f)",
+          "formula": "(x + 4)/(x + 1)",
+          "latex_formula": "f(x)=\\frac{x+4}{x+1}",
+          "domain": [
+            0,
+            5
+          ]
+        },
+        {
+          "id": "line_d",
+          "kind": "line",
+          "label": "(D)",
+          "formula": "x",
+          "latex_formula": "y=x",
+          "domain": [
+            -1,
+            5.2
+          ]
+        }
+      ],
+      "special_points": [
+        {
+          "id": "curve_at_zero",
+          "x": 0,
+          "y": 4,
+          "label": "(0,4)"
+        },
+        {
+          "id": "fixed_point",
+          "x": 2,
+          "y": 2,
+          "label": "(2,2)",
+          "note": "نقطة تقاطع (C_f) مع (D)"
+        }
+      ],
+      "react_renderer": {
+        "component": "FunctionPlotRenderer",
+        "source": "curves_special_points"
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "2023_s1_sequences_ex02_q1a",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "أ) أعد رسم الشكل على ورقة الإجابة ثم مثل على حامل محور الفواصل الحدود \\(u_0\\)، \\(u_1\\)، \\(u_2\\) و \\(u_3\\) ( دون حسابها مبرزا خطوط التمثيل ).",
+      "axis_tags": [
+        "sequence_graphical_representation"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل طريقة السلم بين المنحنى \\((C_f)\\) والمستقيم \\((D):y=x\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التمثيل البياني",
+            "explanation": "نبدأ من \\(u_0=0\\) على محور الفواصل، نصعد عموديا إلى المنحنى \\((C_f)\\)، ثم نتحرك أفقيا إلى المستقيم \\((D)\\)، ونكرر العملية للحصول على \\(u_1\\)، \\(u_2\\) و \\(u_3\\)."
+          }
+        ],
+        "solution_graphs": [
+          {
+            "id": "2023_s1_sequences_ex02_cobweb",
+            "type": "sequence_cobweb",
+            "render_mode": "json",
+            "capture": false,
+            "direction": "ltr",
+            "canvas": {
+              "width": 900,
+              "height": 650,
+              "padding": 28
+            },
+            "viewport": {
+              "x_min": -0.25,
+              "x_max": 4.5,
+              "y_min": -0.25,
+              "y_max": 4.5,
+              "x_tick": 0.5,
+              "y_tick": 0.5,
+              "equal_scale": true
+            },
+            "axes": {
+              "show": true,
+              "x_label": "x",
+              "y_label": "y",
+              "grid": true
+            },
+            "curves": [
+              {
+                "id": "curve_cf",
+                "kind": "function",
+                "label": "(C_f)",
+                "formula": "(x + 4)/(x + 1)",
+                "latex_formula": "f(x)=\\frac{x+4}{x+1}",
+                "domain": [
+                  0,
+                  4.5
+                ]
+              },
+              {
+                "id": "line_d",
+                "kind": "line",
+                "label": "(D)",
+                "formula": "x",
+                "latex_formula": "y=x",
+                "domain": [
+                  0,
+                  4.5
+                ]
+              }
+            ],
+            "sequence": {
+              "recurrence": "u_(n+1)=(u_n+4)/(u_n+1)",
+              "latex_recurrence": "u_{n+1}=\\frac{u_n+4}{u_n+1}",
+              "values": [
+                {
+                  "n": 0,
+                  "value": 0.0,
+                  "latex": "u_0=0"
+                },
+                {
+                  "n": 1,
+                  "value": 4.0,
+                  "latex": "u_1=4"
+                },
+                {
+                  "n": 2,
+                  "value": 1.6,
+                  "latex": "u_2=\\frac85"
+                },
+                {
+                  "n": 3,
+                  "value": 2.1538461538461537,
+                  "latex": "u_3=\\frac{28}{13}"
+                }
+              ]
+            },
+            "segments": [
+              {
+                "from": [
+                  0.0,
+                  0
+                ],
+                "to": [
+                  0.0,
+                  4.0
+                ],
+                "role": "vertical_to_curve"
+              },
+              {
+                "from": [
+                  0.0,
+                  4.0
+                ],
+                "to": [
+                  4.0,
+                  4.0
+                ],
+                "role": "horizontal_to_y_equals_x"
+              },
+              {
+                "from": [
+                  4.0,
+                  4.0
+                ],
+                "to": [
+                  4.0,
+                  1.6
+                ],
+                "role": "vertical_to_curve"
+              },
+              {
+                "from": [
+                  4.0,
+                  1.6
+                ],
+                "to": [
+                  1.6,
+                  1.6
+                ],
+                "role": "horizontal_to_y_equals_x"
+              },
+              {
+                "from": [
+                  1.6,
+                  1.6
+                ],
+                "to": [
+                  1.6,
+                  2.1538461538461537
+                ],
+                "role": "vertical_to_curve"
+              },
+              {
+                "from": [
+                  1.6,
+                  2.1538461538461537
+                ],
+                "to": [
+                  2.1538461538461537,
+                  2.1538461538461537
+                ],
+                "role": "horizontal_to_y_equals_x"
+              }
+            ],
+            "x_axis_markers": [
+              {
+                "x": 0.0,
+                "label": "u₀"
+              },
+              {
+                "x": 4.0,
+                "label": "u₁"
+              },
+              {
+                "x": 1.6,
+                "label": "u₂"
+              },
+              {
+                "x": 2.1538461538461537,
+                "label": "u₃"
+              },
+              {
+                "x": 2.0,
+                "label": "2"
+              }
+            ],
+            "react_renderer": {
+              "component": "SequenceCobwebRenderer",
+              "source": "curves_sequence_segments"
+            }
+          }
+        ],
+        "final_answer": "تمثيل الحدود موجود داخل `solution_graphs` كبيانات JSON قابلة للعرض مباشرة في React."
+      }
+    },
+    {
+      "id": "2023_s1_sequences_ex02_q1b",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "ب) ضع تخمينا حول اتجاه تغير المتتالية \\((u_n)\\) وتقاربها.",
+      "axis_tags": [
+        "sequence_graphical_representation",
+        "limits_convergence_divergence"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نقرأ سلوك الحدود من التمثيل البياني.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التخمين",
+            "explanation": "من الرسم نلاحظ أن الحدود تتناوب حول العدد \\(2\\)، لذلك المتتالية ليست رتيبة، وتبدو متقاربة."
+          }
+        ],
+        "final_answer": "التخمين: المتتالية \\((u_n)\\) ليست رتيبة ومتقاربة."
+      }
+    },
+    {
+      "id": "2023_s1_sequences_ex02_q2a",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "2) \\((v_n)\\) المتتالية العددية المعرفة على \\(\\mathbb N\\) بـ:\n\\[\nv_n=\\frac{u_n-2}{u_n+2}.\n\\]\nأ) بين أن المتتالية \\((v_n)\\) هندسية أساسها \\(-\\frac13\\) يطلب تعيين حدها الأول \\(v_0\\).",
+      "axis_tags": [
+        "geometric_sequences"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب \\(v_{n+1}\\) باستعمال علاقة الرجوع لـ \\(u_n\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب vₙ₊₁",
+            "explanation": "\\[\nv_{n+1}=\\frac{u_{n+1}-2}{u_{n+1}+2}\n=\\frac{\\frac{u_n+4}{u_n+1}-2}{\\frac{u_n+4}{u_n+1}+2}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "التبسيط",
+            "explanation": "\\[\nu_{n+1}-2=\\frac{2-u_n}{u_n+1}\n=-\\frac{u_n-2}{u_n+1},\n\\]\n\\[\nu_{n+1}+2=\\frac{3(u_n+2)}{u_n+1}.\n\\]\nإذن:\n\\[\nv_{n+1}=-\\frac13\\frac{u_n-2}{u_n+2}\n=-\\frac13v_n.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الحد الأول",
+            "explanation": "\\[\nv_0=\\frac{u_0-2}{u_0+2}=\\frac{-2}{2}=-1.\n\\]"
+          }
+        ],
+        "final_answer": "\\[(v_n)\\text{ هندسية أساسها }q=-\\frac13\\text{ وحدها الأول }v_0=-1.\\]"
+      }
+    },
+    {
+      "id": "2023_s1_sequences_ex02_q2b",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "ب) عين عبارة الحد العام \\(v_n\\) بدلالة \\(n\\) ثم استنتج أنه: من أجل كل عدد طبيعي \\(n\\)،\n\\[\nu_n=-2+\\frac{4}{1+\\left(-\\frac13\\right)^n}.\n\\]",
+      "axis_tags": [
+        "geometric_sequences",
+        "sequence_definition_notation_methods"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نكتب الحد العام للمتتالية الهندسية ثم نستخرج \\(u_n\\) من تعريف \\(v_n\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "عبارة vₙ",
+            "explanation": "\\[\nv_n=v_0q^n=-\\left(-\\frac13\\right)^n.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "استخراج uₙ",
+            "explanation": "من:\n\\[\nv_n=\\frac{u_n-2}{u_n+2},\n\\]\nنجد:\n\\[\nu_n=\\frac{2(1+v_n)}{1-v_n}.\n\\]\nوبتعويض \\(v_n=-\\left(-\\frac13\\right)^n\\):\n\\[\nu_n=\\frac{2\\left[1-\\left(-\\frac13\\right)^n\\right]}{1+\\left(-\\frac13\\right)^n}\n=-2+\\frac{4}{1+\\left(-\\frac13\\right)^n}.\n\\]"
+          }
+        ],
+        "final_answer": "\\[v_n=-\\left(-\\frac13\\right)^n,\\qquad u_n=-2+\\frac{4}{1+\\left(-\\frac13\\right)^n}.\\]"
+      }
+    },
+    {
+      "id": "2023_s1_sequences_ex02_q2c",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "جـ) احسب \\(\\displaystyle\\lim_{n\\to+\\infty}u_n\\).",
+      "axis_tags": [
+        "limits_convergence_divergence"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل العبارة الصريحة لـ \\(u_n\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "النهاية",
+            "explanation": "بما أن:\n\\[\n\\left(-\\frac13\\right)^n\\to0,\n\\]\nفإن:\n\\[\nu_n=-2+\\frac{4}{1+\\left(-\\frac13\\right)^n}\\to-2+4=2.\n\\]"
+          }
+        ],
+        "final_answer": "\\[\\boxed{\\lim_{n\\to+\\infty}u_n=2}.\\]"
+      }
+    },
+    {
+      "id": "2023_s1_sequences_ex02_q3",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "3) نضع: من أجل كل عدد طبيعي \\(n\\)،\n\\[\nS_n=v_0+v_1+\\cdots+v_n\n\\]\nو\n\\[\nT_n=\\frac1{u_0+2}+\\frac1{u_1+2}+\\cdots+\\frac1{u_n+2}.\n\\]\nاحسب \\(S_n\\) بدلالة \\(n\\) ثم بين أنه: من أجل كل عدد طبيعي \\(n\\)،\n\\[\nT_n=\\frac1{16}\\left[4n+7+\\left(-\\frac13\\right)^n\\right].\n\\]",
+      "axis_tags": [
+        "sequence_sums",
+        "geometric_sequences"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب أولا مجموع المتتالية الهندسية \\((v_n)\\)، ثم نربط \\(1/(u_n+2)\\) بـ \\(v_n\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب Sₙ",
+            "explanation": "بما أن \\(v_0=-1\\) و\\(q=-\\frac13\\)، فإن:\n\\[\nS_n=v_0\\frac{1-q^{n+1}}{1-q}\n=-\\frac34\\left[1-\\left(-\\frac13\\right)^{n+1}\\right].\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "الربط بين Tₙ وSₙ",
+            "explanation": "من:\n\\[\nv_n=\\frac{u_n-2}{u_n+2},\n\\]\nنجد:\n\\[\n1-v_n=\\frac{4}{u_n+2},\n\\]\nأي:\n\\[\n\\frac1{u_n+2}=\\frac{1-v_n}{4}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب Tₙ",
+            "explanation": "\\[\nT_n=\\frac14\\sum_{k=0}^{n}(1-v_k)\n=\\frac14\\left[(n+1)-S_n\\right].\n\\]\nوبتعويض عبارة \\(S_n\\):\n\\[\nT_n=\\frac14\\left[n+1+\\frac34\\left(1-\\left(-\\frac13\\right)^{n+1}\\right)\\right].\n\\]\nوبالتبسيط:\n\\[\nT_n=\\frac1{16}\\left[4n+7+\\left(-\\frac13\\right)^n\\right].\n\\]"
+          }
+        ],
+        "final_answer": "\\[S_n=-\\frac34\\left[1-\\left(-\\frac13\\right)^{n+1}\\right],\\]\n\\[\\boxed{T_n=\\frac1{16}\\left[4n+7+\\left(-\\frac13\\right)^n\\right]}.\\]"
+      }
+    }
+  ],
+  "rendering_contract": {
+    "no_capture": true,
+    "external_image_required": false,
+    "external_svg_required": false,
+    "graph_source": "inline_json",
+    "supported_graph_types": [
+      "function_plot",
+      "sequence_cobweb"
+    ],
+    "react_note": "لا يوجد Capture ولا صورة خارجية ولا SVG. الرسم الموجود في نص بكالوريا 2023 أعيد بناؤه داخل JSON كـ function_plot، وتمثيل u0,u1,u2,u3 موجود كـ sequence_cobweb."
+  },
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2023(9).pdf",
+    "statement_figure_policy": "لا Capture. الشكل أعيد بناؤه داخل JSON.",
+    "solution_figure_policy": "تمثيل حدود المتتالية أعيد بناؤه داخل JSON.",
+    "renderer": "FunctionPlotRenderer + SequenceCobwebRenderer"
+  }
+}

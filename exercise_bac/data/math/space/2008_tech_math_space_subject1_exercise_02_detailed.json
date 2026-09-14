@@ -1,0 +1,241 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2008-tech-math-space-subject1-ex02-detailed",
+  "session": "ordinary",
+  "year": 2008,
+  "chapter_code": "space_geometry",
+  "chapter_title": "الهندسة في الفضاء",
+  "axis_tags": [
+    "space_parametric_line_plane",
+    "space_dot_product_orthogonality",
+    "space_cartesian_plane_normal_vector",
+    "space_relative_positions_intersections",
+    "space_projections_distances"
+  ],
+  "branches": [
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "exercise_number": 2,
+  "subject_number": 1,
+  "source_page": 1,
+  "source_pages": [
+    1,
+    2
+  ],
+  "solution_source_pages": [
+    5,
+    6
+  ],
+  "title": "التمرين 2 — بكالوريا الجزائر 2008 — الموضوع الأول — شعبة تقني رياضي",
+  "statement": "نعتبر الفضاء منسوبا إلى معلم متعامد ومتجانس \\((O;\\vec{i},\\vec{j},\\vec{k})\\). \\(A(1,2,2)\\)، \\(B(3,2,1)\\)، \\(C(1,3,3)\\) نقط من هذا الفضاء.",
+  "statement_graphs": [],
+  "questions": [
+    {
+      "id": "2008_s1_space_ex02_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1/ برهن أن النقط \\(A\\)، \\(B\\)، \\(C\\) تعين مستو يطلب تعيين معادلته الديكارتية.",
+      "axis_tags": [
+        "space_cartesian_plane_normal_vector"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نثبت أولا أن النقط الثلاث غير مستقيمية باستعمال الشعاعين \\(\\overrightarrow{AB}\\) و\\(\\overrightarrow{AC}\\)، ثم نبحث عن شعاع ناظم للمستوي ونكتب معادلته الديكارتية.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب الشعاعين AB و AC",
+            "explanation": "لدينا:\\n\\[\\overrightarrow{AB}=B-A=(3-1,\\,2-2,\\,1-2)=(2,0,-1).\\]\\nوكذلك:\\n\\[\\overrightarrow{AC}=C-A=(1-1,\\,3-2,\\,3-2)=(0,1,1).\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "إثبات أن النقط A و B و C تعين مستويا",
+            "explanation": "الشعاعان \\(\\overrightarrow{AB}=(2,0,-1)\\) و\\(\\overrightarrow{AC}=(0,1,1)\\) غير متناسبين، وبالتالي فهما غير مرتبطين خطيا. إذن النقط \\(A,B,C\\) غير مستقيمية، ومن ثم فهي تعين مستويا وحيدا."
+          },
+          {
+            "step_number": 3,
+            "title": "تعيين شعاع ناظم للمستوي",
+            "explanation": "نأخذ الشعاع:\\n\\[\\vec n=(1,-2,2).\\]\\nنتحقق أنه عمودي على شعاعي المستوي:\\n\\[\\vec n\\cdot\\overrightarrow{AB}=1\\times2+(-2)\\times0+2\\times(-1)=0,\\]\\n\\[\\vec n\\cdot\\overrightarrow{AC}=1\\times0+(-2)\\times1+2\\times1=0.\\]\\nإذن \\(\\vec n\\) شعاع ناظم للمستوي \\((ABC)\\)."
+          },
+          {
+            "step_number": 4,
+            "title": "كتابة المعادلة الديكارتية",
+            "explanation": "بما أن المستوي يمر بالنقطة \\(A(1,2,2)\\) وله شعاع ناظم \\(\\vec n=(1,-2,2)\\)، فإن معادلته تكتب:\\n\\[1(x-1)-2(y-2)+2(z-2)=0.\\]\\nبالتبسيط:\\n\\[x-1-2y+4+2z-4=0,\\]\\nومن ثم:\\n\\[x-2y+2z-1=0.\\]"
+          }
+        ],
+        "final_answer": "المستوي \\((ABC)\\) معادلته الديكارتية هي: \\(x-2y+2z-1=0\\)."
+      }
+    },
+    {
+      "id": "2008_s1_space_ex02_q2",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2/ نعتبر المستويين \\((P_1)\\) و\\((P_2)\\) المعرفين بمعادلتيهما الديكارتيتين:\\n\\[(P_1):\\ x-2y+2z-1=0\\]\\n\\[(P_2):\\ x-3y+2z+2=0\\]\\nبين أن \\((P_1)\\) و\\((P_2)\\) يتقاطعان وفق مستقيم \\((\\Delta)\\).",
+      "axis_tags": [
+        "space_relative_positions_intersections",
+        "space_cartesian_plane_normal_vector"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نقارن شعاعي الناظم للمستويين. إذا لم يكونا متوازيين فإن المستويين غير متوازيين، وبالتالي يتقاطعان وفق مستقيم.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تعيين شعاعي الناظم",
+            "explanation": "من معادلتي المستويين نستخرج:\\n\\[\\vec n_1=(1,-2,2),\\qquad \\vec n_2=(1,-3,2).\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "فحص التوازي",
+            "explanation": "لو كان الشعاعان متوازيين لوجد عدد حقيقي \\(\\lambda\\) بحيث \\(\\vec n_2=\\lambda\\vec n_1\\). لكن من المركبة الأولى نحصل على \\(\\lambda=1\\)، بينما المركبة الثانية تعطي \\(-3\\neq-2\\). إذن \\(\\vec n_1\\) و\\(\\vec n_2\\) غير متوازيين."
+          },
+          {
+            "step_number": 3,
+            "title": "الاستنتاج",
+            "explanation": "بما أن شعاعي الناظم غير متوازيين، فإن المستويين \\((P_1)\\) و\\((P_2)\\) غير متوازيين، وبالتالي يتقاطعان وفق مستقيم نرمز له بـ \\((\\Delta)\\)."
+          }
+        ],
+        "final_answer": "المستويان \\((P_1)\\) و\\((P_2)\\) يتقاطعان وفق مستقيم \\((\\Delta)\\)."
+      }
+    },
+    {
+      "id": "2008_s1_space_ex02_q3",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "3/ بين أن النقطة \\(C\\) تنتمي إلى المستقيم \\((\\Delta)\\).",
+      "axis_tags": [
+        "space_relative_positions_intersections"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "بما أن \\((\\Delta)\\) هو تقاطع \\((P_1)\\) و\\((P_2)\\)، يكفي إثبات أن \\(C\\) تنتمي إلى المستويين معا.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التحقق من انتماء C إلى P1",
+            "explanation": "نعوض إحداثيات \\(C(1,3,3)\\) في معادلة \\((P_1)\\):\\n\\[1-2\\times3+2\\times3-1=1-6+6-1=0.\\]\\nإذن \\(C\\in(P_1)\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "التحقق من انتماء C إلى P2",
+            "explanation": "نعوض إحداثيات \\(C(1,3,3)\\) في معادلة \\((P_2)\\):\\n\\[1-3\\times3+2\\times3+2=1-9+6+2=0.\\]\\nإذن \\(C\\in(P_2)\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "الاستنتاج",
+            "explanation": "بما أن \\(C\\) نقطة مشتركة بين \\((P_1)\\) و\\((P_2)\\)، فإنها تنتمي إلى مستقيم تقاطعهما:\\n\\[C\\in(\\Delta).\\]"
+          }
+        ],
+        "final_answer": "\\(C\\in(\\Delta)\\)."
+      }
+    },
+    {
+      "id": "2008_s1_space_ex02_q4",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "4/ بين أن الشعاع \\(\\vec u(2,0,-1)\\) هو أحد أشعة توجيه المستقيم \\((\\Delta)\\).",
+      "axis_tags": [
+        "space_dot_product_orthogonality",
+        "space_relative_positions_intersections"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نثبت أن \\(\\vec u\\) عمودي على شعاعي الناظم للمستويين، فيكون موازيا لمستقيم تقاطعهما.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الجداء السلمي مع n1",
+            "explanation": "\\[\\vec u\\cdot\\vec n_1=2\\times1+0\\times(-2)+(-1)\\times2=0.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "الجداء السلمي مع n2",
+            "explanation": "\\[\\vec u\\cdot\\vec n_2=2\\times1+0\\times(-3)+(-1)\\times2=0.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الاستنتاج",
+            "explanation": "إذن \\(\\vec u\\) عمودي على \\(\\vec n_1\\) و\\(\\vec n_2\\)، وبالتالي فهو شعاع توجيه للمستقيم \\((\\Delta)\\)."
+          }
+        ],
+        "final_answer": "\\(\\vec u=(2,0,-1)\\) شعاع توجيه للمستقيم \\((\\Delta)\\)."
+      }
+    },
+    {
+      "id": "2008_s1_space_ex02_q5",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "5/ استنتج أن التمثيل الوسيطي للمستقيم \\((\\Delta)\\) هو الجملة:\\n\\[\\begin{cases}x=2k+1\\\\y=3\\\\z=-k+3\\end{cases}\\]\\nحيث \\(k\\in\\mathbb{R}\\).",
+      "axis_tags": [
+        "space_parametric_line_plane"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل النقطة \\(C(1,3,3)\\) المنتمية إلى \\((\\Delta)\\) وشعاع التوجيه \\(\\vec u=(2,0,-1)\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "قاعدة التمثيل الوسيطي",
+            "explanation": "إذا مر مستقيم بالنقطة \\(C(x_C,y_C,z_C)\\) وكان له شعاع توجيه \\((a,b,c)\\)، فإن:\\n\\[\\begin{cases}x=x_C+ka\\\\y=y_C+kb\\\\z=z_C+kc\\end{cases}\\qquad k\\in\\mathbb R.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "التعويض",
+            "explanation": "بالتعويض بـ \\(C(1,3,3)\\) و\\(\\vec u=(2,0,-1)\\):\\n\\[\\begin{cases}x=1+2k\\\\y=3\\\\z=3-k\\end{cases}\\]"
+          }
+        ],
+        "final_answer": "\\(\\Delta:\\ \\begin{cases}x=2k+1\\\\y=3\\\\z=-k+3\\end{cases},\\ k\\in\\mathbb R\\)."
+      }
+    },
+    {
+      "id": "2008_s1_space_ex02_q6",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "6/ لتكن \\(M\\) نقطة من المستقيم \\((\\Delta)\\)، أوجد قيمة الوسيط \\(k\\) حتى يكون الشعاعان \\(\\overrightarrow{AM}\\) و\\(\\vec u\\) متعامدين، ثم استنتج المسافة بين النقطة \\(A\\) والمستقيم \\((\\Delta)\\).",
+      "axis_tags": [
+        "space_dot_product_orthogonality",
+        "space_projections_distances"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نكتب \\(M\\) بدلالة \\(k\\)، ثم نفرض \\(\\overrightarrow{AM}\\cdot\\vec u=0\\). بعد إيجاد \\(k\\)، تكون \\(M\\) المسقط العمودي لـ \\(A\\) على \\((\\Delta)\\)، والمسافة هي \\(AM\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "إحداثيات M",
+            "explanation": "\\[M(2k+1,3,-k+3).\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب AM",
+            "explanation": "\\[\\overrightarrow{AM}=(2k,1,1-k).\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "شرط التعامد",
+            "explanation": "\\[(2k,1,1-k)\\cdot(2,0,-1)=0\\]\\n\\[4k-(1-k)=0\\Rightarrow5k-1=0\\Rightarrow k=\\frac15.\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "حساب المسافة",
+            "explanation": "عند \\(k=\\frac15\\):\\n\\[\\overrightarrow{AM}=\\left(\\frac25,1,\\frac45\\right).\\]\\nإذن:\\n\\[d(A,\\Delta)=AM=\\sqrt{\\frac4{25}+1+\\frac{16}{25}}=\\sqrt{\\frac{45}{25}}=\\frac{3\\sqrt5}{5}.\\]"
+          }
+        ],
+        "final_answer": "\\(k=\\frac15\\)، و\\(d(A,\\Delta)=\\frac{3\\sqrt5}{5}\\)."
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2008(3).pdf",
+    "statement_figure_policy": "لا يوجد شكل إلزامي في نص هذا التمرين.",
+    "solution_figure_policy": "الحل مستقل عن أي رسم.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  }
+}

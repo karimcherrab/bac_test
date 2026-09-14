@@ -1,0 +1,167 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2017-exceptional-science-space-subject1-ex02-detailed",
+  "session": "exceptional",
+  "year": 2017,
+  "chapter_code": "space_geometry",
+  "chapter_title": "الهندسة في الفضاء",
+  "axis_tags": [
+    "space_collinearity_coplanarity",
+    "space_cartesian_plane_normal_vector",
+    "space_parametric_plane",
+    "space_relative_positions_intersections",
+    "space_parametric_line"
+  ],
+  "branches": [
+    {
+      "code": "science",
+      "name": "شعبة علوم تجريبية"
+    }
+  ],
+  "exercise_number": 2,
+  "subject_number": 1,
+  "source_page": 1,
+  "source_pages": [
+    1
+  ],
+  "solution_source_pages": [
+    5,
+    6
+  ],
+  "title": "التمرين الثاني — بكالوريا الجزائر 2017 الاستثنائية — الموضوع الأول — شعبة علوم تجريبية",
+  "statement": "الفضاء منسوب إلى المعلم المتعامد المتجانس \\((O;\\vec{i},\\vec{j},\\vec{k})\\). نعتبر النقط \\(A(1;1;-1)\\)، \\(B(2;-1;-1)\\) و \\(C(4;-4;-2)\\)، والمستوى \\((P)\\) ذا المعادلة الديكارتية:\n\\[x-2y+2z-3=0.\\]",
+  "questions": [
+    {
+      "id": "2017_exc_s1_space_ex02_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) بين أن النقط \\(A\\)، \\(B\\) و \\(C\\) تعين مستويا.",
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب شعاعين من نفس المبدأ، ثم نتحقق أنهما غير مرتبطين خطيا.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب الشعاع AB",
+            "explanation": "\\[\\overrightarrow{AB}=B-A=(2-1,-1-1,-1-(-1))=(1,-2,0).\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب الشعاع AC",
+            "explanation": "\\[\\overrightarrow{AC}=C-A=(4-1,-4-1,-2-(-1))=(3,-5,-1).\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "اختبار الارتباط الخطي",
+            "explanation": "لو كان الشعاعان مرتبطين خطيا لوجد عدد حقيقي \\(\\lambda\\) بحيث:\n\\[(3,-5,-1)=\\lambda(1,-2,0).\\]\nلكن المركبة الثالثة لمضاعفات \\((1,-2,0)\\) تساوي دائما \\(0\\)، بينما المركبة الثالثة لـ\\(\\overrightarrow{AC}\\) تساوي \\(-1\\). إذن الشعاعان غير مرتبطين خطيا."
+          }
+        ],
+        "final_answer": "النقط \\(A\\)، \\(B\\) و \\(C\\) ليست في استقامية، ومنه فهي تعين مستويا \\((ABC)\\)."
+      }
+    },
+    {
+      "id": "2017_exc_s1_space_ex02_q2",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2) بين أن المستويين \\((P)\\) و \\((ABC)\\) غير متوازيين.",
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نأخذ شعاعا ناظميا لـ(P)، ثم نتحقق أنه ليس عموديا على أحد شعاعي المستوى (ABC). لو كان المستويان متوازيين لكان شعاع ناظم P ناظما أيضا لـABC.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "شعاع ناظمي للمستوى P",
+            "explanation": "من المعادلة:\n\\[x-2y+2z-3=0\\]\nنأخذ:\n\\[\\vec n_P=(1,-2,2).\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "اختبار العمودية مع AB",
+            "explanation": "\\[\\vec n_P\\cdot\\overrightarrow{AB}=(1,-2,2)\\cdot(1,-2,0)=1+4+0=5\\ne0.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الاستنتاج",
+            "explanation": "إذن \\(\\vec n_P\\) ليس ناظميا للمستوى \\((ABC)\\)، وبالتالي لا يمكن أن يكون المستويان \\((P)\\) و\\((ABC)\\) متوازيين."
+          }
+        ],
+        "final_answer": "\\[(P)\\not\\parallel(ABC).\\]"
+      }
+    },
+    {
+      "id": "2017_exc_s1_space_ex02_q3",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "3) تحقق أن الجملة:\n\\[\\begin{cases}x=-2+\\alpha-3\\beta\\\\y=6-2\\alpha+5\\beta\\\\z=\\beta\\end{cases}\\quad;(\\alpha\\in\\mathbb R,\\beta\\in\\mathbb R)\\]\nتمثيل وسيطي للمستوى \\((ABC)\\).",
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نتحقق أن الجملة تعطي النقاط A وB وC، ثم نستخرج شعاعين توجيه غير مرتبطين خطيا.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الحصول على النقطة A",
+            "explanation": "حتى نحصل على \\(A(1,1,-1)\\)، نأخذ \\(\\beta=-1\\). تصبح:\n\\[x=1+\\alpha,\\qquad y=1-2\\alpha.\\]\nبوضع \\(\\alpha=0\\) نحصل على \\(A(1,1,-1)\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "الحصول على النقطة B",
+            "explanation": "نأخذ \\(\\beta=-1\\) و\\(\\alpha=1\\):\n\\[x=-2+1+3=2,\\quad y=6-2-5=-1,\\quad z=-1.\\]\nإذن نحصل على \\(B(2,-1,-1)\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "الحصول على النقطة C",
+            "explanation": "نأخذ \\(\\beta=-2\\) و\\(\\alpha=0\\):\n\\[x=-2+6=4,\\quad y=6-10=-4,\\quad z=-2.\\]\nإذن نحصل على \\(C(4,-4,-2)\\)."
+          },
+          {
+            "step_number": 4,
+            "title": "التفسير الهندسي",
+            "explanation": "يمكن كتابة الجملة على الشكل:\n\\[(x,y,z)=(-2,6,0)+\\alpha(1,-2,0)+\\beta(-3,5,1).\\]\nوشعاعا التوجيه \\((1,-2,0)\\) و\\((-3,5,1)\\) غير مرتبطين خطيا، لذلك الجملة تمثل مستوى. وبما أنه يمر بالنقط غير المستقيمية \\(A,B,C\\)، فهو المستوى \\((ABC)\\)."
+          }
+        ],
+        "final_answer": "الجملة المعطاة تمثيل وسيطي للمستوى \\((ABC)\\)."
+      }
+    },
+    {
+      "id": "2017_exc_s1_space_ex02_q4",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "4) جد تمثيلا وسيطيا لـ \\((\\Delta)\\) مستقيم تقاطع المستويين \\((P)\\) و \\((ABC)\\).",
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نعوض التمثيل الوسيطي للمستوى (ABC) في معادلة المستوى (P)، فنحصل على علاقة بين α وβ، ثم نحتفظ بوسيط واحد.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التعويض في معادلة P",
+            "explanation": "نعوض:\n\\[x=-2+\\alpha-3\\beta,\\quad y=6-2\\alpha+5\\beta,\\quad z=\\beta\\]\nفي:\n\\[x-2y+2z-3=0.\\]\nفنحصل على:\n\\[(-2+\\alpha-3\\beta)-2(6-2\\alpha+5\\beta)+2\\beta-3=0.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "تبسيط العلاقة",
+            "explanation": "بالتبسيط:\n\\[5\\alpha-11\\beta-17=0.\\]\nإذن:\n\\[\\alpha=\\frac{11}{5}\\beta+\\frac{17}{5}.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "تعويض α",
+            "explanation": "نعوض في إحداثيات نقطة من \\((ABC)\\):\n\\[x=-2+\\frac{11}{5}\\beta+\\frac{17}{5}-3\\beta=\\frac75-\\frac45\\beta,\\]\n\\[y=6-2\\left(\\frac{11}{5}\\beta+\\frac{17}{5}\\right)+5\\beta=-\\frac45+\\frac35\\beta,\\]\n\\[z=\\beta.\\]"
+          }
+        ],
+        "final_answer": "\\[(\\Delta):\\begin{cases}x=\\frac75-\\frac45\\beta\\\\y=-\\frac45+\\frac35\\beta\\\\z=\\beta\\end{cases},\\qquad \\beta\\in\\mathbb R.\\]"
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2017_2(3).pdf",
+    "statement_page": 1,
+    "correction_pages": [
+      5,
+      6
+    ],
+    "statement_figure_policy": "لا يوجد شكل لازم في نص التمرين.",
+    "solution_figure_policy": "لا يحتاج الحل إلى رسم.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  }
+}

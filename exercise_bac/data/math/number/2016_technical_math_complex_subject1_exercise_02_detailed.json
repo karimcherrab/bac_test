@@ -1,0 +1,250 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "session": "ordinary",
+  "year": 2016,
+  "chapter_code": "complex_numbers",
+  "chapter_title": "الأعداد المركبة",
+  "branches": [
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "version": "4.2-2016-technical-math-complex-subject1-ex02",
+  "subject_number": 1,
+  "exercise_number": 2,
+  "source_page": 2,
+  "source_pages": [
+    2
+  ],
+  "solution_source_pages": [
+    7
+  ],
+  "title": "التمرين الثاني — بكالوريا الجزائر 2016 — الموضوع الأول — شعبة تقني رياضي",
+  "axis_tags": [
+    "complex_quadratic_equation",
+    "complex_exponential_form",
+    "complex_powers",
+    "complex_rotation",
+    "complex_centroid"
+  ],
+  "statement": "",
+  "questions": [
+    {
+      "id": "2016_tm_s1_complex_ex02_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) حل في مجموعة الأعداد المركبة \\(\\mathbb{C}\\) المعادلة: \\(9z^2-6\\sqrt3\\,z+4=0\\).",
+      "axis_tags": [
+        "complex_quadratic_equation"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب المميز، ثم نستخرج جذريه في مجموعة الأعداد المركبة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "نحسب المميز",
+            "explanation": "لدينا:\n\\[\n\\Delta=(-6\\sqrt3)^2-4\\times9\\times4.\n\\]\nإذن:\n\\[\n\\Delta=108-144=-36=(6i)^2.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "نحسب الحلين",
+            "explanation": "إذن:\n\\[\nz=\\frac{6\\sqrt3\\pm6i}{18}.\n\\]\nوبالتبسيط:\n\\[\nz_1=\\frac{\\sqrt3}{3}+\\frac13 i,\n\\qquad\nz_2=\\frac{\\sqrt3}{3}-\\frac13 i.\n\\]"
+          }
+        ],
+        "final_answer": "\\(z_1=\\frac{\\sqrt3}{3}+\\frac13i\\)، و\\(z_2=\\frac{\\sqrt3}{3}-\\frac13i\\)."
+      }
+    },
+    {
+      "id": "2016_tm_s1_complex_ex02_q2a",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2) في المستوى المنسوب إلى المعلم المتعامد والمتجانس \\((O;\\vec u,\\vec v)\\)، لتكن النقطتين \\(A\\) و \\(B\\) لاحقتاهما على الترتيب: \\(z_A=\\frac{\\sqrt3}{3}+\\frac13 i\\) و \\(z_B=\\overline{z_A}\\).\nأ- اكتب كلا من \\(z_A\\) و \\(z_B\\) على الشكل الأسي.",
+      "axis_tags": [
+        "complex_exponential_form"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب طويلة كل عدد ثم نحدد عمدة له.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "طويلة zA",
+            "explanation": "\\[\n|z_A|=\\sqrt{\\left(\\frac{\\sqrt3}{3}\\right)^2+\\left(\\frac13\\right)^2}\n=\\sqrt{\\frac13+\\frac19}\n=\\sqrt{\\frac49}=\\frac23.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "عمدة zA",
+            "explanation": "لدينا:\n\\[\n\\cos\\theta=\\frac{\\frac{\\sqrt3}{3}}{\\frac23}=\\frac{\\sqrt3}{2},\n\\qquad\n\\sin\\theta=\\frac{\\frac13}{\\frac23}=\\frac12.\n\\]\nإذن يمكن أخذ:\n\\[\n\\theta=\\frac{\\pi}{6}.\n\\]\nومن ثم:\n\\[\nz_A=\\frac23e^{i\\pi/6}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الشكل الأسي لـ zB",
+            "explanation": "بما أن:\n\\[\nz_B=\\overline{z_A},\n\\]\nفإن عمدة \\(z_B\\) هي عكس عمدة \\(z_A\\)، وبالتالي:\n\\[\nz_B=\\frac23e^{-i\\pi/6}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(z_A=\\frac23e^{i\\pi/6}\\)، و\\(z_B=\\frac23e^{-i\\pi/6}\\)."
+      }
+    },
+    {
+      "id": "2016_tm_s1_complex_ex02_q2b",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "ب- بين أن: \\(\\left(\\frac{z_A}{z_B}\\right)^{2016}+\\left(\\frac{z_A}{z_B}\\right)^{1437}=0\\).",
+      "axis_tags": [
+        "complex_powers"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب أولا النسبة \\(z_A/z_B\\) على الشكل الأسي، ثم نرفعها إلى القوتين المطلوبتين.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب النسبة",
+            "explanation": "\\[\n\\frac{z_A}{z_B}\n=\\frac{\\frac23e^{i\\pi/6}}{\\frac23e^{-i\\pi/6}}\n=e^{i\\pi/3}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "القوة 2016",
+            "explanation": "\\[\n\\left(\\frac{z_A}{z_B}\\right)^{2016}\n=e^{i\\frac{2016\\pi}{3}}\n=e^{i672\\pi}=1.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "القوة 1437",
+            "explanation": "\\[\n\\left(\\frac{z_A}{z_B}\\right)^{1437}\n=e^{i\\frac{1437\\pi}{3}}\n=e^{i479\\pi}=-1.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "الجمع",
+            "explanation": "إذن:\n\\[\n1+(-1)=0.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\left(\\frac{z_A}{z_B}\\right)^{2016}+\\left(\\frac{z_A}{z_B}\\right)^{1437}=0\\)."
+      }
+    },
+    {
+      "id": "2016_tm_s1_complex_ex02_q2c",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "جـ- عين قيم العدد الطبيعي \\(n\\) بحيث يكون \\(\\left(\\frac{z_A}{z_B}\\right)^n\\) عددا حقيقيا.",
+      "axis_tags": [
+        "complex_powers"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "العدد على الشكل الأسي يكون حقيقيا عندما تكون عمدته مضاعفا صحيحا لـ\\(\\pi\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "كتابة القوة",
+            "explanation": "لدينا:\n\\[\n\\left(\\frac{z_A}{z_B}\\right)^n=e^{in\\pi/3}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "شرط العدد الحقيقي",
+            "explanation": "حتى يكون العدد حقيقيا يجب أن يوجد \\(k\\in\\mathbb Z\\) بحيث:\n\\[\n\\frac{n\\pi}{3}=k\\pi.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "استخراج n",
+            "explanation": "منها:\n\\[\nn=3k.\n\\]\nوبما أن \\(n\\) طبيعي، نأخذ \\(k\\in\\mathbb N\\)."
+          }
+        ],
+        "final_answer": "\\(n=3k\\) حيث \\(k\\in\\mathbb N\\)."
+      }
+    },
+    {
+      "id": "2016_tm_s1_complex_ex02_q3a",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "3) \\(f\\) التحويل النقطي الذي يرفق بكل نقطة \\(M\\) لاحقتها \\(z\\) النقطة \\(M'\\) لاحقتها \\(z'\\) حيث: \\(z'=\\left(\\frac{z_A}{z_B}\\right)z\\).\nأ- عين طبيعة التحويل النقطي \\(f\\) وعناصره المميزة.",
+      "axis_tags": [
+        "complex_rotation"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نعوض النسبة بشكلها الأسي ونقارن بالصيغة المركبة للدوران.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تعويض النسبة",
+            "explanation": "وجدنا أن:\n\\[\n\\frac{z_A}{z_B}=e^{i\\pi/3}.\n\\]\nإذن:\n\\[\nz'=e^{i\\pi/3}z.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "التعرف على التحويل",
+            "explanation": "الصيغة:\n\\[\nz'-0=e^{i\\theta}(z-0)\n\\]\nتمثل دورانا مركزه \\(O\\) وزاويته \\(\\theta\\). هنا:\n\\[\n\\theta=\\frac{\\pi}{3}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(f\\) دوران مركزه \\(O\\) وزاويته \\(\\frac{\\pi}{3}\\)."
+      }
+    },
+    {
+      "id": "2016_tm_s1_complex_ex02_q3b",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "ب- احسب \\(z_C\\) لاحقة النقطة \\(C\\) صورة النقطة \\(A\\) بالتحويل \\(f\\).",
+      "axis_tags": [
+        "complex_rotation"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نعوض \\(z=z_A\\) في عبارة التحويل.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التعويض",
+            "explanation": "\\[\nz_C=e^{i\\pi/3}z_A.\n\\]\nوبما أن:\n\\[\nz_A=\\frac23e^{i\\pi/6},\n\\]\nفإن:\n\\[\nz_C=\\frac23e^{i(\\pi/3+\\pi/6)}\n=\\frac23e^{i\\pi/2}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "الشكل الجبري",
+            "explanation": "\\[\ne^{i\\pi/2}=i,\n\\]\nإذن:\n\\[\nz_C=\\frac23i.\n\\]"
+          }
+        ],
+        "final_answer": "\\(z_C=\\frac23i\\)."
+      }
+    },
+    {
+      "id": "2016_tm_s1_complex_ex02_q3c",
+      "display_order": 7,
+      "content_type": "question",
+      "text": "جـ- عين \\(z_D\\) لاحقة النقطة \\(D\\) حتى تكون \\(O\\) مركز ثقل الرباعي \\(ABCD\\).",
+      "axis_tags": [
+        "complex_centroid"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "إذا كان O مركز ثقل الرباعي فإن متوسط لواحق رؤوسه يساوي 0.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "كتابة شرط مركز الثقل",
+            "explanation": "\\[\n\\frac{z_A+z_B+z_C+z_D}{4}=0.\n\\]\nإذن:\n\\[\nz_A+z_B+z_C+z_D=0.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب مجموع اللواحق المعروفة",
+            "explanation": "\\[\nz_A+z_B\n=\\left(\\frac{\\sqrt3}{3}+\\frac13i\\right)\n+\\left(\\frac{\\sqrt3}{3}-\\frac13i\\right)\n=\\frac{2\\sqrt3}{3}.\n\\]\nكما أن:\n\\[\nz_C=\\frac23i.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب zD",
+            "explanation": "\\[\nz_D=-\\left(\\frac{2\\sqrt3}{3}+\\frac23i\\right)\n=-\\frac{2\\sqrt3}{3}-\\frac23i.\n\\]"
+          }
+        ],
+        "final_answer": "\\(z_D=-\\frac{2\\sqrt3}{3}-\\frac23i\\)."
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_official_correction": true,
+    "source_pdf": "2016(1).pdf",
+    "statement_page": 2,
+    "correction_page": 7
+  }
+}

@@ -1,0 +1,865 @@
+{
+  "schema_version": "2.0",
+  "subject": {
+    "code": "math",
+    "title": "الرياضيات"
+  },
+  "branch": {
+    "code": "science",
+    "title": "علوم تجريبية"
+  },
+  "chapter": {
+    "code": "sequences",
+    "title": "المتتاليات العددية"
+  },
+  "axis": {
+    "tag": "seq_definition_notation_methods",
+    "title": "المتتالية العددية: المفهوم، الترميز وطرق التعريف"
+  },
+  "source_summary": {
+    "lesson_files_count": 1,
+    "bac_files_count": 1,
+    "years_covered": [
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "notes": [
+      "ملف البكالوريا يغطي صفحات موسومة من 2008 إلى 2026، مع صفحتين إضافيتين موسومتين 2016_2 و2017_2 ضمن نفس التجميع.",
+      "تم حصر BAC Ideas في الأسئلة التي تختبر مباشرة مهارات هذا المحور؛ أسئلة الرتابة والحصر والنهايات والمتتاليات الحسابية والهندسية والمجاميع عوملت كمحتوى خارج حدود المحور الحالي.",
+      "لم يظهر في ملفات BAC المرسلة سؤال مستقل مباشر يختبر الفرق بين الدليل والرتبة أو اكتمال تعريف العلاقة التراجعية أو الحساب المباشر لحد معين من حد عام بوصفه الفكرة الأساسية للسؤال."
+    ]
+  },
+  "lesson_scope": {
+    "learning_outcomes": [
+      "يشرح التلميذ المتتالية باعتبارها دالة تربط كل دليل طبيعي بعدد حقيقي واحد.",
+      "يقرأ الرموز \\(u_n\\)، \\((u_n)\\) و\\((u_n)_{n\\ge n_0}\\) قراءة صحيحة.",
+      "يميّز بين دليل الحد ورتبته، ويحدد الرتبة عندما لا يبدأ الترقيم من الصفر.",
+      "يحسب حدود متتالية معرفة بحد عام مباشر.",
+      "يحسب الحدود الأولى لمتتالية معرفة بعلاقة تراجعية.",
+      "يحدد هل المعطيات كافية لتعريف متتالية تراجعية أم لا."
+    ],
+    "concepts": [
+      "المتتالية العددية كدالة معرفة على جزء من \\(\\mathbb{N}\\).",
+      "الحد \\(u_n\\) والمتتالية \\((u_n)\\).",
+      "الدليل والرتبة.",
+      "دليل البداية \\(n_0\\).",
+      "التعريف بحد عام مباشر \\(u_n=f(n)\\).",
+      "التعريف بعلاقة تراجعية من الرتبة الأولى.",
+      "التعريف بعلاقة تراجعية من الرتبة الثانية كما ورد في الدرس.",
+      "كفاية المعطيات الابتدائية ومجال صحة التعريف."
+    ],
+    "methods": [
+      "حساب رتبة \\(u_n\\) بالعلاقة \\(n-n_0+1\\).",
+      "حساب حد من حد عام بتحديد الدليل ثم التعويض ثم إجراء العمليات.",
+      "حساب حدود من علاقة تراجعية بتحديد البداية واختيار قيمة \\(n\\) المناسبة ثم الحساب المتتابع.",
+      "التحقق من وجود عدد كاف من الحدود الابتدائية ومن مجال صحة العلاقة."
+    ],
+    "prerequisites": [
+      "معرفة مجموعة الأعداد الطبيعية \\(\\mathbb{N}\\).",
+      "القدرة على التعويض في عبارة جبرية بسيطة.",
+      "إجراء العمليات الأساسية على الأعداد الحقيقية."
+    ],
+    "excluded_topics": [
+      "اتجاه تغير المتتالية.",
+      "الحصر والبرهان بالتراجع بوصفهما موضوع دراسة مستقل.",
+      "تقارب المتتالية وحساب النهايات.",
+      "المتتاليات الحسابية والهندسية وخصائصها.",
+      "المتتاليات المساعدة لتحويل علاقة رجعية إلى بنية معروفة، إلا عندما يكون حساب حدودها مجرد سياق لقياس الحساب التراجعي.",
+      "حساب المجاميع والجداءات.",
+      "التمثيل البياني للمتتاليات التراجعية كمهارة مستقلة."
+    ]
+  },
+  "skills": [
+    {
+      "skill_code": "SEQ_CONCEPT_NOTATION",
+      "title": "فهم مفهوم المتتالية وقراءة ترميزها",
+      "description": "يفهم المتتالية كدالة من جزء من الأعداد الطبيعية إلى الأعداد الحقيقية، ويميّز بين اسم المتتالية وحد واحد والمتتالية كاملة.",
+      "order": 1,
+      "importance": "core",
+      "prerequisites": [
+        "معرفة مجموعة الأعداد الطبيعية \\(\\mathbb{N}\\)."
+      ],
+      "ideas": [
+        {
+          "idea_code": "SEQ_CONCEPT_FUNCTION",
+          "title": "فهم المتتالية كدالة",
+          "description": "يربط كل دليل مسموح به بقيمة حقيقية واحدة فقط.",
+          "difficulty": "easy",
+          "generation_guidance": {
+            "must_test": [
+              "تمييز دور الدليل ودور قيمة الحد."
+            ],
+            "may_vary": [
+              "رمز المتتالية",
+              "قيم الأدلة والحدود."
+            ],
+            "must_not_change": [
+              "لكل دليل مسموح به صورة واحدة فقط في المتتالية."
+            ],
+            "forbidden_concepts": [
+              "اتجاه التغير",
+              "النهايات",
+              "المتتاليات الحسابية والهندسية."
+            ]
+          }
+        },
+        {
+          "idea_code": "SEQ_NOTATION_TERM_SEQUENCE",
+          "title": "التمييز بين الحد والمتتالية",
+          "description": "يميّز بين \\(u_n\\) كحد واحد و\\((u_n)\\) كمتتالية كاملة، ويفهم معنى \\((u_n)_{n\\ge n_0}\\).",
+          "difficulty": "easy",
+          "generation_guidance": {
+            "must_test": [
+              "قراءة الرموز وتمييز الحد المفرد عن المتتالية كاملة."
+            ],
+            "may_vary": [
+              "الحرف المستعمل للمتتالية",
+              "قيمة دليل البداية."
+            ],
+            "must_not_change": [
+              "الفرق الدلالي بين \\(u_n\\) و\\((u_n)\\)."
+            ],
+            "forbidden_concepts": [
+              "اتجاه التغير",
+              "النهايات"
+            ]
+          }
+        }
+      ],
+      "common_errors": [
+        {
+          "code": "SEQ_ERR_TERM_AS_SEQUENCE",
+          "description": "اعتبار \\(u_n\\) هو المتتالية كلها بدل حد واحد.",
+          "severity": "medium",
+          "related_skill_idea_codes": [
+            "SEQ_NOTATION_TERM_SEQUENCE"
+          ]
+        },
+        {
+          "code": "SEQ_ERR_INDEX_AS_POWER",
+          "description": "قراءة العدد السفلي في \\(u_n\\) على أنه أس بدل دليل.",
+          "severity": "medium",
+          "related_skill_idea_codes": [
+            "SEQ_NOTATION_TERM_SEQUENCE"
+          ]
+        }
+      ],
+      "mastery_requirements": {
+        "required_idea_codes": [
+          "SEQ_CONCEPT_FUNCTION",
+          "SEQ_NOTATION_TERM_SEQUENCE"
+        ],
+        "minimum_successful_ideas": 2,
+        "notes": "المفهوم والترميز أساس لبقية مهارات المحور."
+      }
+    },
+    {
+      "skill_code": "SEQ_INDEX_RANK",
+      "title": "التمييز بين الدليل والرتبة",
+      "description": "يحدد دليل الحد ورتبته انطلاقًا من أول دليل للمتتالية، خصوصًا عندما لا تبدأ من \\(u_0\\) أو \\(u_1\\).",
+      "order": 2,
+      "importance": "core",
+      "prerequisites": [
+        "SEQ_CONCEPT_NOTATION"
+      ],
+      "ideas": [
+        {
+          "idea_code": "SEQ_INDEX_IDENTIFY",
+          "title": "تحديد دليل الحد",
+          "description": "يقرأ الدليل المكتوب أسفل رمز المتتالية ويحدد أول دليل مسموح به.",
+          "difficulty": "easy",
+          "generation_guidance": {
+            "must_test": [
+              "تحديد دليل حد معطى وأول دليل للمتتالية."
+            ],
+            "may_vary": [
+              "قيمة الدليل",
+              "دليل البداية."
+            ],
+            "must_not_change": [
+              "الدليل هو العدد السفلي في رمز الحد."
+            ],
+            "forbidden_concepts": [
+              "اتجاه التغير",
+              "النهايات"
+            ]
+          }
+        },
+        {
+          "idea_code": "SEQ_RANK_FROM_START",
+          "title": "حساب رتبة حد انطلاقًا من أول دليل",
+          "description": "يستعمل العلاقة: رتبة \\(u_n\\) هي \\(n-n_0+1\\) عندما يكون أول حد \\(u_{n_0}\\).",
+          "difficulty": "medium",
+          "generation_guidance": {
+            "must_test": [
+              "التمييز بين قيمة الدليل وموقع الحد في الترتيب."
+            ],
+            "may_vary": [
+              "دليل البداية \\(n_0\\)",
+              "الدليل المطلوب."
+            ],
+            "must_not_change": [
+              "حساب الرتبة بالنسبة إلى أول حد المعطى."
+            ],
+            "forbidden_concepts": [
+              "اتجاه التغير",
+              "النهايات"
+            ]
+          }
+        }
+      ],
+      "common_errors": [
+        {
+          "code": "SEQ_ERR_INDEX_EQUALS_RANK",
+          "description": "اعتبار الدليل مساويًا للرتبة دائمًا دون مراعاة دليل البداية.",
+          "severity": "high",
+          "related_skill_idea_codes": [
+            "SEQ_RANK_FROM_START"
+          ]
+        }
+      ],
+      "mastery_requirements": {
+        "required_idea_codes": [
+          "SEQ_INDEX_IDENTIFY",
+          "SEQ_RANK_FROM_START"
+        ],
+        "minimum_successful_ideas": 2,
+        "notes": "يجب إثبات القدرة خصوصًا عندما لا يبدأ الترقيم من الصفر أو الواحد."
+      }
+    },
+    {
+      "skill_code": "SEQ_DEFINITION_METHOD",
+      "title": "تمييز طريقة تعريف المتتالية",
+      "description": "يميّز بين التعريف بحد عام مباشر والتعريف بعلاقة تراجعية ويحدد المعطيات اللازمة لكل طريقة.",
+      "order": 3,
+      "importance": "core",
+      "prerequisites": [
+        "SEQ_CONCEPT_NOTATION"
+      ],
+      "ideas": [
+        {
+          "idea_code": "SEQ_DEF_EXPLICIT_IDENTIFY",
+          "title": "تمييز التعريف بحد عام مباشر",
+          "description": "يتعرف على الصيغة \\(u_n=f(n)\\) التي تسمح بحساب الحد مباشرة من دليله.",
+          "difficulty": "easy",
+          "generation_guidance": {
+            "must_test": [
+              "تمييز أن الحد يعتمد مباشرة على \\(n\\)."
+            ],
+            "may_vary": [
+              "شكل العبارة الجبرية",
+              "دليل البداية."
+            ],
+            "must_not_change": [
+              "إمكانية الوصول إلى الحد مباشرة من دليله دون حدود سابقة."
+            ],
+            "forbidden_concepts": [
+              "اتجاه التغير",
+              "النهايات"
+            ]
+          }
+        },
+        {
+          "idea_code": "SEQ_DEF_RECURSIVE_IDENTIFY",
+          "title": "تمييز التعريف التراجعي",
+          "description": "يتعرف على علاقة تربط حدًا بحد أو حدود سابقة مثل \\(u_{n+1}=f(u_n)\\) أو \\(u_{n+2}=F(u_{n+1},u_n)\\).",
+          "difficulty": "easy",
+          "generation_guidance": {
+            "must_test": [
+              "تمييز اعتماد الحد الجديد على حدود سابقة."
+            ],
+            "may_vary": [
+              "رتبة العلاقة المدعومة في الدرس",
+              "شكل الدالة في العلاقة."
+            ],
+            "must_not_change": [
+              "وجود اعتماد تراجعي بين الحدود."
+            ],
+            "forbidden_concepts": [
+              "اتجاه التغير",
+              "النهايات"
+            ]
+          }
+        }
+      ],
+      "common_errors": [
+        {
+          "code": "SEQ_ERR_RECURSIVE_AS_EXPLICIT",
+          "description": "اعتبار كل صيغة يظهر فيها \\(u_n\\) حدًا عامًا مباشرًا دون فحص طرفي العلاقة.",
+          "severity": "high",
+          "related_skill_idea_codes": [
+            "SEQ_DEF_EXPLICIT_IDENTIFY",
+            "SEQ_DEF_RECURSIVE_IDENTIFY"
+          ]
+        }
+      ],
+      "mastery_requirements": {
+        "required_idea_codes": [
+          "SEQ_DEF_EXPLICIT_IDENTIFY",
+          "SEQ_DEF_RECURSIVE_IDENTIFY"
+        ],
+        "minimum_successful_ideas": 2,
+        "notes": "يجب التمييز الصحيح بين طريقتي التعريف قبل اختيار طريقة الحساب."
+      }
+    },
+    {
+      "skill_code": "SEQ_EXPLICIT_CALC",
+      "title": "حساب حدود متتالية معرفة بحد عام",
+      "description": "يحسب حدًا مطلوبًا بالتعويض المباشر عن دليله في عبارة الحد العام مع مراعاة مجال التعريف وترتيب العمليات.",
+      "order": 4,
+      "importance": "core",
+      "prerequisites": [
+        "SEQ_DEFINITION_METHOD",
+        "القدرة على التعويض في عبارة جبرية بسيطة.",
+        "إجراء العمليات الأساسية على الأعداد الحقيقية."
+      ],
+      "ideas": [
+        {
+          "idea_code": "SEQ_EXPL_DOMAIN_CHECK",
+          "title": "التحقق من مجال الأدلة قبل التعويض",
+          "description": "يتأكد أن الدليل المطلوب ينتمي إلى مجال تعريف المتتالية قبل حساب الحد.",
+          "difficulty": "medium",
+          "generation_guidance": {
+            "must_test": [
+              "صلاحية الدليل المطلوب بالنسبة إلى مجال التعريف."
+            ],
+            "may_vary": [
+              "دليل البداية",
+              "وجود مقام كما في أمثلة الدرس."
+            ],
+            "must_not_change": [
+              "فحص المجال قبل التعويض."
+            ],
+            "forbidden_concepts": [
+              "نهايات الدوال",
+              "دراسة الرتابة"
+            ]
+          }
+        },
+        {
+          "idea_code": "SEQ_EXPL_SUBSTITUTE_INDEX",
+          "title": "التعويض بالدليل المطلوب",
+          "description": "لحساب \\(u_p\\) من \\(u_n=f(n)\\) يعوض \\(n=p\\) مباشرة.",
+          "difficulty": "easy",
+          "generation_guidance": {
+            "must_test": [
+              "اختيار قيمة الدليل الصحيحة والتعويض بها."
+            ],
+            "may_vary": [
+              "الدليل المطلوب",
+              "العبارة الجبرية ضمن مستوى الدرس."
+            ],
+            "must_not_change": [
+              "التعويض المباشر عن \\(n\\) بالدليل المطلوب."
+            ],
+            "forbidden_concepts": [
+              "اتجاه التغير",
+              "النهايات"
+            ]
+          }
+        },
+        {
+          "idea_code": "SEQ_EXPL_EVALUATE",
+          "title": "تنفيذ الحساب الجبري وكتابة الحد",
+          "description": "ينفذ العمليات بالترتيب الصحيح ويكتب النتيجة بترميز الحد المناسب.",
+          "difficulty": "easy",
+          "generation_guidance": {
+            "must_test": [
+              "إتمام الحساب بعد التعويض وكتابة \\(u_p\\) بصورة صحيحة."
+            ],
+            "may_vary": [
+              "الأعداد والمعاملات",
+              "وجود قوى أو كسر بسيط كما في الدرس."
+            ],
+            "must_not_change": [
+              "ترتيب العمليات وصحة ترميز الحد."
+            ],
+            "forbidden_concepts": [
+              "تقنيات جبرية غير لازمة للحساب المباشر"
+            ]
+          }
+        }
+      ],
+      "common_errors": [
+        {
+          "code": "SEQ_ERR_EXPLICIT_DOMAIN",
+          "description": "التعويض بدليل غير مسموح به، مثل حساب \\(v_0\\) عندما تكون الصيغة \\(v_n=2/n\\).",
+          "severity": "high",
+          "related_skill_idea_codes": [
+            "SEQ_EXPL_DOMAIN_CHECK"
+          ]
+        },
+        {
+          "code": "SEQ_ERR_EXPLICIT_OPERATIONS",
+          "description": "إهمال الأقواس أو ترتيب العمليات عند التعويض.",
+          "severity": "medium",
+          "related_skill_idea_codes": [
+            "SEQ_EXPL_SUBSTITUTE_INDEX",
+            "SEQ_EXPL_EVALUATE"
+          ]
+        }
+      ],
+      "mastery_requirements": {
+        "required_idea_codes": [
+          "SEQ_EXPL_DOMAIN_CHECK",
+          "SEQ_EXPL_SUBSTITUTE_INDEX",
+          "SEQ_EXPL_EVALUATE"
+        ],
+        "minimum_successful_ideas": 3,
+        "notes": "إتقان الحساب المباشر يشمل اختيار دليل صالح ثم التعويض والحساب الصحيح."
+      }
+    },
+    {
+      "skill_code": "SEQ_RECURSIVE_CALC",
+      "title": "حساب حدود متتالية معرفة بعلاقة تراجعية",
+      "description": "ينطلق من الحد أو الحدود الابتدائية ويختار قيمة الدليل الصحيحة ثم يحسب الحدود المتتالية بالترتيب.",
+      "order": 5,
+      "importance": "core",
+      "prerequisites": [
+        "SEQ_DEFINITION_METHOD",
+        "إجراء العمليات الأساسية على الأعداد الحقيقية."
+      ],
+      "ideas": [
+        {
+          "idea_code": "SEQ_REC_INITIAL_TERMS",
+          "title": "تحديد الحد أو الحدود الابتدائية",
+          "description": "يحدد نقطة البداية اللازمة للعلاقة التراجعية، وحدًا واحدًا للرتبة الأولى وحدين للرتبة الثانية كما ورد في الدرس.",
+          "difficulty": "easy",
+          "generation_guidance": {
+            "must_test": [
+              "تحديد المعطيات الابتدائية اللازمة للبدء."
+            ],
+            "may_vary": [
+              "دليل البداية",
+              "رتبة العلاقة بين الأولى والثانية المدعومتين في الدرس."
+            ],
+            "must_not_change": [
+              "وجود نقطة بداية كافية قبل الحساب."
+            ],
+            "forbidden_concepts": [
+              "حل العلاقات التراجعية بصيغة عامة"
+            ]
+          }
+        },
+        {
+          "idea_code": "SEQ_REC_INDEX_SHIFT",
+          "title": "اختيار قيمة n المناسبة للحد التالي",
+          "description": "يفهم أن حساب \\(u_p\\) من علاقة من شكل \\(u_{n+1}\\) يتطلب اختيار \\(n=p-1\\).",
+          "difficulty": "medium",
+          "generation_guidance": {
+            "must_test": [
+              "مطابقة دليل الطرف الأيسر مع الحد المطلوب."
+            ],
+            "may_vary": [
+              "دليل البداية",
+              "الحد المطلوب."
+            ],
+            "must_not_change": [
+              "الإزاحة الصحيحة بين \\(n\\) و\\(n+1\\)."
+            ],
+            "forbidden_concepts": [
+              "اتجاه التغير",
+              "النهايات"
+            ]
+          }
+        },
+        {
+          "idea_code": "SEQ_REC_SUCCESSIVE",
+          "title": "الحساب المتتابع للحدود",
+          "description": "يحسب كل حد باستعمال الحد أو الحدود السابقة المعروفة ويكرر العملية بالترتيب دون القفز.",
+          "difficulty": "medium",
+          "generation_guidance": {
+            "must_test": [
+              "تطبيق العلاقة بالتتابع من المعطيات الابتدائية إلى الحد المطلوب."
+            ],
+            "may_vary": [
+              "الأعداد والمعاملات",
+              "عدد الخطوات القصير",
+              "شكل العلاقة من الرتبة الأولى أو الثانية كما في الدرس."
+            ],
+            "must_not_change": [
+              "الاعتماد على الحدود السابقة وحفظ ترتيب الحساب."
+            ],
+            "forbidden_concepts": [
+              "اشتقاق حد عام",
+              "اتجاه التغير",
+              "النهايات"
+            ]
+          }
+        },
+        {
+          "idea_code": "SEQ_REC_COMPLETENESS",
+          "title": "التحقق من اكتمال التعريف التراجعي",
+          "description": "يقرر هل العلاقة التراجعية مرفقة بعدد كاف من الحدود الابتدائية ومجال صحة يسمح ببدء الحساب.",
+          "difficulty": "medium",
+          "generation_guidance": {
+            "must_test": [
+              "هل المعطيات كافية لتحديد المتتالية والبدء في الحساب؟"
+            ],
+            "may_vary": [
+              "رتبة العلاقة",
+              "عدد الحدود الابتدائية المعطاة."
+            ],
+            "must_not_change": [
+              "الحاجة إلى نقطة أو نقاط بداية مناسبة للعلاقة."
+            ],
+            "forbidden_concepts": [
+              "إضافة شروط غير واردة في المحور"
+            ]
+          }
+        }
+      ],
+      "common_errors": [
+        {
+          "code": "SEQ_ERR_REC_WRONG_INDEX",
+          "description": "لحساب \\(u_1\\) من \\(u_{n+1}=f(u_n)\\) يضع \\(n=1\\) بدل \\(n=0\\).",
+          "severity": "high",
+          "related_skill_idea_codes": [
+            "SEQ_REC_INDEX_SHIFT"
+          ]
+        },
+        {
+          "code": "SEQ_ERR_REC_MISSING_INITIAL",
+          "description": "اعتبار العلاقة التراجعية وحدها تعريفًا كاملًا رغم غياب الحد الابتدائي اللازم.",
+          "severity": "high",
+          "related_skill_idea_codes": [
+            "SEQ_REC_INITIAL_TERMS",
+            "SEQ_REC_COMPLETENESS"
+          ]
+        },
+        {
+          "code": "SEQ_ERR_REC_SKIP",
+          "description": "محاولة القفز إلى حد لاحق دون حساب الحدود السابقة اللازمة في التعريف التراجعي.",
+          "severity": "medium",
+          "related_skill_idea_codes": [
+            "SEQ_REC_SUCCESSIVE"
+          ]
+        }
+      ],
+      "mastery_requirements": {
+        "required_idea_codes": [
+          "SEQ_REC_INITIAL_TERMS",
+          "SEQ_REC_INDEX_SHIFT",
+          "SEQ_REC_SUCCESSIVE",
+          "SEQ_REC_COMPLETENESS"
+        ],
+        "minimum_successful_ideas": 4,
+        "notes": "لأن المحور يركز صراحة على الحساب التراجعي الصحيح وعلى كفاية المعطيات الابتدائية."
+      }
+    }
+  ],
+  "bac_ideas": [
+    {
+      "idea_code": "SEQ_BAC_01",
+      "title": "حساب حدود أولى بالتتابع من تعريف تراجعي",
+      "description": "توظيف الحد أو الحدود الابتدائية والعلاقة التراجعية لحساب حدود أولى مطلوبة، وهو نمط ظهر صراحة في مواضيع البكالوريا المرسلة.",
+      "bac_priority": "critical",
+      "frequency_level": "high",
+      "occurrence_count": 8,
+      "years": [
+        2009,
+        2015,
+        2017,
+        2018,
+        2020,
+        2024,
+        2025,
+        2026
+      ],
+      "last_seen_year": 2026,
+      "skill_refs": [
+        {
+          "skill_code": "SEQ_RECURSIVE_CALC",
+          "skill_idea_codes": [
+            "SEQ_REC_INITIAL_TERMS",
+            "SEQ_REC_INDEX_SHIFT",
+            "SEQ_REC_SUCCESSIVE"
+          ],
+          "role": "primary"
+        }
+      ],
+      "prerequisites": [
+        "SEQ_DEFINITION_METHOD"
+      ],
+      "external_prerequisites": [],
+      "difficulty_range": {
+        "min": 1,
+        "max": 2
+      },
+      "variants": [
+        {
+          "variant_code": "SEQ_BAC_01_V01",
+          "title": "علاقة تراجعية من الرتبة الأولى",
+          "description": "حساب حد أو عدة حدود أولى عندما يعتمد \\(u_{n+1}\\) على \\(u_n\\) ومعطيات السؤال.",
+          "years": [
+            2015,
+            2017,
+            2018,
+            2020,
+            2024,
+            2025,
+            2026
+          ],
+          "occurrence_count": 7,
+          "difficulty": 1,
+          "skill_idea_codes": [
+            "SEQ_REC_INITIAL_TERMS",
+            "SEQ_REC_INDEX_SHIFT",
+            "SEQ_REC_SUCCESSIVE"
+          ],
+          "distinguishing_feature": "كل حد جديد يحتاج حدًا سابقًا واحدًا مع حد ابتدائي واحد."
+        },
+        {
+          "variant_code": "SEQ_BAC_01_V02",
+          "title": "علاقة تراجعية من الرتبة الثانية داخل حساب حدود مساعدة",
+          "description": "استعمال حدين ابتدائيين وعلاقة من شكل \\(u_{n+2}=F(u_{n+1},u_n)\\) للوصول إلى حدود لازمة لحساب متتالية مساعدة.",
+          "years": [
+            2009
+          ],
+          "occurrence_count": 1,
+          "difficulty": 2,
+          "skill_idea_codes": [
+            "SEQ_REC_INITIAL_TERMS",
+            "SEQ_REC_INDEX_SHIFT",
+            "SEQ_REC_SUCCESSIVE"
+          ],
+          "distinguishing_feature": "الحساب يحتاج حدين سابقين، وقد يظهر ضمن حساب حدود متتالية مساعدة."
+        }
+      ],
+      "common_errors": [
+        {
+          "code": "SEQ_BAC_REC_START_WRONG",
+          "description": "بدء التعويض بقيمة دليل لا تنتج الحد الأول المطلوب.",
+          "severity": "high",
+          "related_skill_idea_codes": [
+            "SEQ_REC_INDEX_SHIFT"
+          ]
+        },
+        {
+          "code": "SEQ_BAC_REC_CHAIN_BREAK",
+          "description": "عدم استعمال نتيجة الحد السابق في الخطوة التالية عند حساب عدة حدود متتالية.",
+          "severity": "high",
+          "related_skill_idea_codes": [
+            "SEQ_REC_SUCCESSIVE"
+          ]
+        }
+      ],
+      "bac_occurrences": [
+        {
+          "year": 2009,
+          "branch": "science",
+          "exercise": "1",
+          "question": "1",
+          "variant_code": "SEQ_BAC_01_V02",
+          "summary": "حساب \\(v_0\\) و\\(v_1\\) للمتتالية \\(v_n=u_{n+1}-u_n\\)، مع استعمال حدود \\(u_n\\) المعرفة بعلاقة تراجعية من الرتبة الثانية.",
+          "skill_idea_codes": [
+            "SEQ_REC_INITIAL_TERMS",
+            "SEQ_REC_INDEX_SHIFT",
+            "SEQ_REC_SUCCESSIVE"
+          ]
+        },
+        {
+          "year": 2015,
+          "branch": "science",
+          "exercise": "3",
+          "question": "1",
+          "variant_code": "SEQ_BAC_01_V01",
+          "summary": "حساب الحدود \\(u_1,u_2,u_3\\) انطلاقًا من \\(u_0\\) وعلاقة تراجعية من الرتبة الأولى.",
+          "skill_idea_codes": [
+            "SEQ_REC_INITIAL_TERMS",
+            "SEQ_REC_INDEX_SHIFT",
+            "SEQ_REC_SUCCESSIVE"
+          ]
+        },
+        {
+          "year": 2017,
+          "branch": "science",
+          "exercise": "1",
+          "question": "1",
+          "variant_code": "SEQ_BAC_01_V01",
+          "summary": "حساب \\(u_1\\) و\\(v_1\\) لمتتاليتين معرفتين كلتاهما بحد ابتدائي وعلاقة تراجعية من الرتبة الأولى.",
+          "skill_idea_codes": [
+            "SEQ_REC_INITIAL_TERMS",
+            "SEQ_REC_INDEX_SHIFT",
+            "SEQ_REC_SUCCESSIVE"
+          ]
+        },
+        {
+          "year": 2018,
+          "branch": "science",
+          "exercise": "1",
+          "question": "1",
+          "variant_code": "SEQ_BAC_01_V01",
+          "summary": "حساب \\(u_1,u_2,u_3\\) بالتتابع من علاقة تراجعية تعتمد على \\(n\\) و\\(u_n\\).",
+          "skill_idea_codes": [
+            "SEQ_REC_INITIAL_TERMS",
+            "SEQ_REC_INDEX_SHIFT",
+            "SEQ_REC_SUCCESSIVE"
+          ]
+        },
+        {
+          "year": 2020,
+          "branch": "science",
+          "exercise": "3",
+          "question": "1",
+          "variant_code": "SEQ_BAC_01_V01",
+          "summary": "حساب \\(u_1\\) و\\(u_2\\) من \\(u_0\\) وعلاقة تراجعية من الرتبة الأولى ثم استعمالهما لتخمين اتجاه التغير.",
+          "skill_idea_codes": [
+            "SEQ_REC_INITIAL_TERMS",
+            "SEQ_REC_INDEX_SHIFT",
+            "SEQ_REC_SUCCESSIVE"
+          ]
+        },
+        {
+          "year": 2024,
+          "branch": "science",
+          "exercise": "3",
+          "question": "1",
+          "variant_code": "SEQ_BAC_01_V01",
+          "summary": "حساب \\(u_1,u_2,u_3\\) من \\(u_0\\) وعلاقة تراجعية كسرية من الرتبة الأولى.",
+          "skill_idea_codes": [
+            "SEQ_REC_INITIAL_TERMS",
+            "SEQ_REC_INDEX_SHIFT",
+            "SEQ_REC_SUCCESSIVE"
+          ]
+        },
+        {
+          "year": 2025,
+          "branch": "science",
+          "exercise": "3",
+          "question": "2-a",
+          "variant_code": "SEQ_BAC_01_V01",
+          "summary": "حساب \\(u_1\\) و\\(u_2\\) من \\(u_0\\) والعلاقة \\(u_{n+1}=f(u_n)\\) ثم تخمين اتجاه التغير.",
+          "skill_idea_codes": [
+            "SEQ_REC_INITIAL_TERMS",
+            "SEQ_REC_INDEX_SHIFT",
+            "SEQ_REC_SUCCESSIVE"
+          ]
+        },
+        {
+          "year": 2026,
+          "branch": "science",
+          "exercise": "3",
+          "question": "2-a",
+          "variant_code": "SEQ_BAC_01_V01",
+          "summary": "حساب \\(u_1\\) و\\(u_2\\) من \\(u_0\\) والعلاقة \\(u_{n+1}=f(u_n)\\) ثم تخمين اتجاه التغير.",
+          "skill_idea_codes": [
+            "SEQ_REC_INITIAL_TERMS",
+            "SEQ_REC_INDEX_SHIFT",
+            "SEQ_REC_SUCCESSIVE"
+          ]
+        }
+      ],
+      "mastery_requirements": {
+        "must_cover_variants": [
+          "SEQ_BAC_01_V01",
+          "SEQ_BAC_01_V02"
+        ],
+        "minimum_successful_variants": 2,
+        "requires_bac_style_question": true,
+        "required_skill_idea_codes": [
+          "SEQ_REC_INITIAL_TERMS",
+          "SEQ_REC_INDEX_SHIFT",
+          "SEQ_REC_SUCCESSIVE"
+        ],
+        "notes": "الـVariant من الرتبة الثانية ظهر مرة واحدة فقط، لكنه مختلف بنيويًا وموجود فعليًا في المصادر؛ لذلك يبقى مطلوب التغطية إذا أريد إتقان جميع الـVariants المدعومة."
+      },
+      "generation_guidance": {
+        "allowed_structures": [
+          "إعطاء حد ابتدائي وعلاقة من الرتبة الأولى ثم طلب حدود أولى متتالية.",
+          "إعطاء حدين ابتدائيين وعلاقة من الرتبة الثانية ثم طلب حدود لازمة لحساب كمية أو متتالية مساعدة، كما في ظهور 2009."
+        ],
+        "must_test": [
+          "تحديد نقطة البداية الصحيحة.",
+          "مطابقة قيمة \\(n\\) مع الحد المطلوب.",
+          "الحساب المتتابع الصحيح."
+        ],
+        "may_vary": [
+          "القيم العددية والمعاملات.",
+          "عدد الحدود الأولى المطلوبة.",
+          "شكل العلاقة ضمن البنى التي ظهرت في المصادر."
+        ],
+        "must_not_change": [
+          "أن تكون الحدود المطلوبة قابلة للحساب من المعطيات الابتدائية بالعلاقة التراجعية نفسها.",
+          "جوهر الحساب المتتابع من حدود سابقة."
+        ],
+        "forbidden_concepts": [
+          "اتجاه التغير كمهارة مستهدفة.",
+          "النهايات.",
+          "إثبات الحصر بالتراجع.",
+          "تحويل المتتالية إلى حسابية أو هندسية كهدف للسؤال.",
+          "المجاميع والجداءات."
+        ]
+      }
+    }
+  ],
+  "coverage_summary": {
+    "total_skills": 5,
+    "total_skill_ideas": 13,
+    "total_bac_ideas": 1,
+    "total_variants": 2,
+    "critical_bac_ideas": [
+      "SEQ_BAC_01"
+    ],
+    "high_priority_bac_ideas": [],
+    "skills_covered_by_bac": [
+      "SEQ_RECURSIVE_CALC"
+    ],
+    "skills_not_seen_in_bac": [
+      "SEQ_CONCEPT_NOTATION",
+      "SEQ_INDEX_RANK",
+      "SEQ_DEFINITION_METHOD",
+      "SEQ_EXPLICIT_CALC"
+    ],
+    "skill_ideas_not_seen_in_bac": [
+      "SEQ_CONCEPT_FUNCTION",
+      "SEQ_NOTATION_TERM_SEQUENCE",
+      "SEQ_INDEX_IDENTIFY",
+      "SEQ_RANK_FROM_START",
+      "SEQ_DEF_EXPLICIT_IDENTIFY",
+      "SEQ_DEF_RECURSIVE_IDENTIFY",
+      "SEQ_EXPL_DOMAIN_CHECK",
+      "SEQ_EXPL_SUBSTITUTE_INDEX",
+      "SEQ_EXPL_EVALUATE",
+      "SEQ_REC_COMPLETENESS"
+    ],
+    "years_covered": [
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025,
+      2026
+    ]
+  }
+}

@@ -1,0 +1,202 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "graph_schema_version": "1.0-react-json",
+  "version": "4.2-2008-math-sequences-subject2-ex02-react-ready",
+  "session": "ordinary",
+  "year": 2008,
+  "chapter_code": "sequences",
+  "chapter_title": "المتتاليات العددية",
+  "axis_tags": [
+    "sequence_definition_notation_methods",
+    "mathematical_induction",
+    "geometric_sequences",
+    "limits_convergence_divergence"
+  ],
+  "branches": [
+    {
+      "code": "math",
+      "name": "شعبة رياضيات"
+    }
+  ],
+  "exercise_number": 2,
+  "subject_number": 2,
+  "source_page": 3,
+  "source_pages": [
+    3
+  ],
+  "solution_source_pages": [
+    8
+  ],
+  "title": "التمرين 2 — بكالوريا الجزائر 2008 — الموضوع الثاني — شعبة رياضيات — المتتاليات",
+  "statement": "\\((U_n)\\) المتتالية المعرفة بحدها الأول \\(U_0=2\\) و من أجل كل عدد طبيعي \\(n\\) : \\[U_{n+1}=\\frac{2}{3}U_n+1.\\]",
+  "questions": [
+    {
+      "id": "2008_s2_sequences_ex02_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1- احسب \\(U_1\\) و \\(U_2\\) و \\(U_3\\).",
+      "axis_tags": [
+        "sequence_definition_notation_methods"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نعوض بالتتابع في علاقة الرجوع.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب U₁",
+            "explanation": "\\[\nU_1=\\frac23U_0+1=\\frac23\\times2+1=\\frac73.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب U₂",
+            "explanation": "\\[\nU_2=\\frac23U_1+1=\\frac23\\times\\frac73+1=\\frac{23}{9}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب U₃",
+            "explanation": "\\[\nU_3=\\frac23U_2+1=\\frac23\\times\\frac{23}{9}+1=\\frac{73}{27}.\n\\]"
+          }
+        ],
+        "final_answer": "\\[U_1=\\frac73,\\qquad U_2=\\frac{23}{9},\\qquad U_3=\\frac{73}{27}.\\]"
+      }
+    },
+    {
+      "id": "2008_s2_sequences_ex02_q2a",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2- \\((V_n)\\) المتتالية العددية المعرفة من أجل كل عدد طبيعي \\(n\\) بـ : \\[V_n=U_n+\\left(\\frac23\\right)^n.\\]\n- برهن بالتراجع أن \\((V_n)\\) متتالية ثابتة.",
+      "axis_tags": [
+        "mathematical_induction"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نثبت بالتراجع أن \\(V_n=3\\) لكل عدد طبيعي \\(n\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التحقق من أجل n=0",
+            "explanation": "\\[\nV_0=U_0+\\left(\\frac23\\right)^0=2+1=3.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "فرضية التراجع",
+            "explanation": "نفترض أنه من أجل عدد طبيعي \\(n\\) لدينا \\(V_n=3\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "الانتقال من n إلى n+1",
+            "explanation": "\\[\nV_{n+1}=U_{n+1}+\\left(\\frac23\\right)^{n+1}\n=\\frac23U_n+1+\\left(\\frac23\\right)^{n+1}\n=\\frac23\\left[U_n+\\left(\\frac23\\right)^n\\right]+1\n=\\frac23V_n+1.\n\\]\nوباستعمال فرضية التراجع:\n\\[\nV_{n+1}=\\frac23\\times3+1=3.\n\\]"
+          }
+        ],
+        "final_answer": "\\[V_n=3\\quad \\text{لكل }n\\in\\mathbb N.\\]"
+      }
+    },
+    {
+      "id": "2008_s2_sequences_ex02_q2b",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "- استنتج عبارة \\(U_n\\) بدلالة \\(n\\).",
+      "axis_tags": [
+        "sequence_definition_notation_methods"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل أن \\(V_n=3\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التعويض",
+            "explanation": "\\[\nV_n=U_n+\\left(\\frac23\\right)^n=3.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "استخراج Uₙ",
+            "explanation": "\\[\nU_n=3-\\left(\\frac23\\right)^n.\n\\]"
+          }
+        ],
+        "final_answer": "\\[U_n=3-\\left(\\frac23\\right)^n.\\]"
+      }
+    },
+    {
+      "id": "2008_s2_sequences_ex02_q2c",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "- احسب \\(\\displaystyle\\lim_{n\\to+\\infty}U_n\\).",
+      "axis_tags": [
+        "limits_convergence_divergence"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل العبارة الصريحة لـ Uₙ ونهاية متتالية هندسية أساسها بين -1 و1.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "نهاية الحد الهندسي",
+            "explanation": "بما أن:\n\\[\n0<\\frac23<1,\n\\]\nفإن:\n\\[\n\\left(\\frac23\\right)^n\\longrightarrow0.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "النهاية",
+            "explanation": "\\[\nU_n=3-\\left(\\frac23\\right)^n\\longrightarrow3.\n\\]"
+          }
+        ],
+        "final_answer": "\\[\\lim_{n\\to+\\infty}U_n=3.\\]"
+      }
+    },
+    {
+      "id": "2008_s2_sequences_ex02_q3",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "3- \\((W_n)\\) المتتالية العددية المعرفة من أجل كل عدد طبيعي \\(n\\) بـ : \\[W_n=\\frac23n-\\left(\\frac23\\right)^n.\\]\n- احسب المجموع \\(S\\) حيث : \\[S=W_0+W_1+W_2+\\cdots+W_n.\\]",
+      "axis_tags": [
+        "geometric_sequences"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نفصل المجموع إلى مجموع حسابي ومجموع هندسي.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تفكيك المجموع",
+            "explanation": "\\[\nS=\\frac23(0+1+2+\\cdots+n)-\\left[1+\\frac23+\\left(\\frac23\\right)^2+\\cdots+\\left(\\frac23\\right)^n\\right].\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "مجموع الأعداد من 0 إلى n",
+            "explanation": "\\[\n\\frac23(0+1+\\cdots+n)=\\frac23\\times\\frac{n(n+1)}2=\\frac{n(n+1)}3.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "المجموع الهندسي",
+            "explanation": "\\[\n1+\\frac23+\\cdots+\\left(\\frac23\\right)^n=\\frac{1-\\left(\\frac23\\right)^{n+1}}{1-\\frac23}=3\\left[1-\\left(\\frac23\\right)^{n+1}\\right].\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "النتيجة",
+            "explanation": "\\[\nS=\\frac{n(n+1)}3+3\\left(\\frac23\\right)^{n+1}-3.\n\\]"
+          }
+        ],
+        "final_answer": "\\[S=\\frac{n(n+1)}3+3\\left(\\frac23\\right)^{n+1}-3.\\]"
+      }
+    }
+  ],
+  "rendering_contract": {
+    "no_capture": true,
+    "external_image_required": false,
+    "external_svg_required": false,
+    "graph_source": "inline_json",
+    "supported_graph_types": [],
+    "react_note": "هذا التمرين لا يحتاج رسما. جميع الصيغ تعرض مباشرة بـ MathJax أو KaTeX."
+  },
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2008(20260826-134924).pdf",
+    "statement_figure_policy": "لا يوجد رسم في نص التمرين.",
+    "solution_figure_policy": "لا Capture ولا صورة خارجية.",
+    "renderer": "MathJax/KaTeX + standard content renderer"
+  }
+}

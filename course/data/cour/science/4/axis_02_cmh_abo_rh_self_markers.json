@@ -1,0 +1,416 @@
+{
+  "tag": "cmh_abo_rh_self_markers",
+  "title": "مؤشرات الذات CMH والزمر الدموية ABO وRh",
+  "order": 2,
+  "is_active": true,
+  "branches": ["science"],
+  "content": {
+    "language": "ar",
+    "direction": "rtl",
+    "chapter_code": "immune_defense",
+    "chapter_title": "دور البروتينات في الدفاع عن الذات",
+    "axis_tag": "cmh_abo_rh_self_markers",
+    "estimated_minutes": 55,
+    "difficulty": "medium",
+    "lesson_goal": "أن يحدد التلميذ أهم مؤشرات الذات، ويفسر منشأها الوراثي، ويربط تنوع CMH بالتوافق النسيجي، ومؤشرات ABO وRh بالتوافق في نقل كريات الدم الحمراء.",
+    "prerequisites": [
+      "معرفة أن الغشاء الهيولي يحمل جزيئات محددة للذات.",
+      "التمييز بين المستضد والجسم المضاد.",
+      "معرفة الأليل والنمط الوراثي والنمط الظاهري والسيادة وتساوي السيادة."
+    ],
+    "learning_outcomes": [
+      "يعرف CMH وعلاقته بجزيئات HLA عند الإنسان.",
+      "يقارن بنية وتوزع CMH I وCMH II.",
+      "يربط تعدد أليلات CMH والتعبير المشترك للأليلات بتفرد الهوية البيولوجية.",
+      "يحسب نسبة توافق CMH انطلاقا من عدد الأليلات المتطابقة.",
+      "يحدد الزمرة ABO من نتائج الارتصاص.",
+      "يربط المستضدات A وB بالأجسام المضادة البلازمية الموافقة.",
+      "يستنتج الأنماط الوراثية الممكنة للزمر A وB وAB وO.",
+      "يميز Rh موجب عن Rh سالب اعتمادا على وجود المستضد D.",
+      "يفسر عدم توافق نقل كريات الدم الحمراء دون الخلط بين مؤشرات CMH ومؤشرات الزمر الدموية."
+    ],
+    "learning_path": [
+      {
+        "id": "step_1",
+        "type": "problem",
+        "component": "DiscoveryQuestion",
+        "title": "هل توجد بطاقة هوية واحدة لكل خلايا الجسم؟",
+        "content": {
+          "question": "يعتمد نجاح الطعم على توافق نسيجي، بينما يعتمد نقل كريات الدم الحمراء على الزمرة الدموية. لماذا لا نستعمل المؤشر نفسه في الحالتين؟",
+          "teacher": "سنفصل بين نظامين: جزيئات HLA المرتبطة بتوافق الأنسجة، ومؤشرات ABO وRh الخاصة بكريات الدم الحمراء.",
+          "action": {"label": "اكتشف النظامين", "next_step": "step_2"}
+        },
+        "display_order": 1
+      },
+      {
+        "id": "step_2",
+        "type": "short_explanation",
+        "component": "ShortExplanation",
+        "title": "الخريطة قبل التفاصيل",
+        "content": {
+          "blocks": [
+            {"title": "CMH", "text": "معقد من المورثات يشرف على تركيب جزيئات غشائية محددة للذات؛ تسمى هذه الجزيئات HLA عند الإنسان."},
+            {"title": "ABO", "text": "نظام يحدد وجود المستضد A أو B أو كليهما أو غيابهما على سطح كريات الدم الحمراء."},
+            {"title": "Rh", "text": "نظام نركز فيه على المستضد D: وجوده يعني Rh+ وغيابه يعني Rh−."}
+          ],
+          "memory_tip": "الطعم: فكّر في HLA. كريات الدم الحمراء: فكّر في ABO وRh.",
+          "attention": "كريات الدم الحمراء الناضجة عديمة النواة ولا تحمل جزيئات CMH؛ لذلك لها مؤشرات هوية دموية خاصة."
+        },
+        "display_order": 2
+      },
+      {
+        "id": "step_3",
+        "type": "real_evidence",
+        "component": "RealEvidenceGallery",
+        "title": "CMH I وCMH II: تشابه في الطبيعة واختلاف في البنية والتوزع",
+        "content": {
+          "intro": "اقرأ الشكل (أ) من الوثيقة 6، ثم قارن الصنفين من حيث السلاسل وموقعهما على الخلايا.",
+          "figures": [{
+            "src": "/science/immune-defense/axis-02/cmh_structure_genetic_origin.png",
+            "alt": "وثيقة توضح بنية CMH I وCMH II ومنشأهما الوراثي وتنوعهما",
+            "caption": "CMH I وCMH II جزيئتان غشائيتان غليكوبروتينيتان تختلفان في السلاسل المكونة وفي توزعهما الخلوي.",
+            "source_label": "الوثيقة 6 - الصفحة 5 من ملف الذات واللاذات"
+          }],
+          "guided_reading": [
+            {"label": "CMH I", "text": "يتكون من سلسلة α طويلة عابرة للغشاء مرتبطة بسلسلة β2m أقصر، ويوجد على معظم خلايا العضوية ذات النواة."},
+            {"label": "CMH II", "text": "يتكون من سلسلتين α وβ عابرتين للغشاء، ويوجد أساسا على بعض الخلايا المناعية العارضة للمستضد، ومنها الخلايا B."},
+            {"label": "نقطة مشتركة", "text": "كلا الصنفين جزيئات غشائية غليكوبروتينية ويمكنهما تثبيت ببتيد في موقع نوعي."},
+            {"label": "الفكرة الوظيفية", "text": "اختلاف التوزع يرتبط باختلاف دور كل صنف في عرض الببتيدات للخلايا المناعية، ويُفصل ذلك لاحقا."}
+          ],
+          "takeaway": "لا تخلط بين رقم الصنف ومكانه: CMH I واسع الانتشار على الخلايا ذات النواة، وCMH II محدود أساسا ببعض الخلايا المناعية."
+        },
+        "display_order": 3
+      },
+      {
+        "id": "step_4",
+        "type": "real_evidence",
+        "component": "RealEvidenceGallery",
+        "title": "لماذا تكاد هوية HLA تكون خاصة بكل فرد؟",
+        "content": {
+          "intro": "استعمل الشكلين (ب) و(ج) من الوثيقة 6 لتتبع المورثات من الصبغيات إلى الجزيئات الظاهرة على سطح الخلية.",
+          "figures": [{
+            "src": "/science/immune-defense/axis-02/cmh_structure_genetic_origin.png",
+            "alt": "منشأ وراثي لجزيئات CMH وتعبير أليلات الأم والأب",
+            "caption": "توجد مورثات CMH الأساسية في عدة مواضع، ولكل موضع أليلات كثيرة، وتُعبّر الأليلات الموروثة من الوالدين معا.",
+            "source_label": "الوثيقة 6 - الشكلان ب وج - الصفحة 5"
+          }],
+          "guided_reading": [
+            {"label": "التعدد الأليلي", "text": "لكل مورثة من مورثات CMH عدد كبير من الأليلات الممكنة داخل الجماعة البشرية."},
+            {"label": "التعبير المشترك", "text": "الأليلات الموروثة من الأب ومن الأم تُعبّر معا؛ فلا يخفي أليل أحد الوالدين أليل الآخر."},
+            {"label": "النتيجة", "text": "اجتماع عدة مورثات متعددة الأليلات مع التعبير المشترك يولد عددا هائلا من التركيبات الممكنة لجزيئات HLA."},
+            {"label": "علاقة ذلك بالطعم", "text": "كلما زاد التشابه بين مؤشرات HLA لدى المعطي والمستقبل ارتفعت درجة التوافق النسيجي وقل خطر رفض الطعم، مع بقاء عوامل مناعية وطبية أخرى."}
+          ],
+          "takeaway": "تنوع HLA ذو منشأ وراثي، وهو أساس تفرد الهوية النسيجية وصعوبة إيجاد معط متوافق تماما."
+        },
+        "display_order": 4
+      },
+      {
+        "id": "step_5",
+        "type": "real_evidence",
+        "component": "RealEvidenceGallery",
+        "title": "كيف نحسب نسبة التوافق النسيجي؟",
+        "content": {
+          "intro": "في وثيقة التقويم نقارن الأليلات نفسها في المواضع المدروسة، ثم نحول عدد المتطابق منها إلى نسبة مئوية.",
+          "figures": [{
+            "src": "/science/immune-defense/axis-02/cmh_compatibility_exercise.png",
+            "alt": "تقويم يقارن أنماط CMH للوالدين ويطلب أنماط الأبناء ونسبة التوافق",
+            "caption": "يُختار النمط الأكثر تشابها ثم تحسب نسبة الأليلات المتطابقة من مجموع الأليلات المقارَنة.",
+            "source_label": "تقويم CMH - الصفحة 11"
+          }],
+          "guided_reading": [
+            {"label": "الخطوة 1", "text": "حدد المواضع الوراثية التي ستقارنها، ولا تقارن أسماء من مواضع مختلفة."},
+            {"label": "الخطوة 2", "text": "عدّ الأليلات المتطابقة بين النمطين في المواضع نفسها."},
+            {"label": "الخطوة 3", "text": "طبق: نسبة التوافق = عدد الأليلات المتطابقة ÷ العدد الكلي للأليلات المقارَنة × 100."},
+            {"label": "مثال الوثيقة", "text": "إذا تطابقت 4 أليلات من أصل 6 فإن النسبة تساوي 4 ÷ 6 × 100 ≈ 66.7%."}
+          ],
+          "takeaway": "المقام تحدده الوثيقة وعدد الأليلات المقارَنة؛ ليس دائما 6."
+        },
+        "display_order": 5
+      },
+      {
+        "id": "step_6",
+        "type": "real_evidence",
+        "component": "RealEvidenceGallery",
+        "title": "الارتصاص يكشف المستضد الموجود على الكرية",
+        "content": {
+          "intro": "توضع قطرات من دم الشخص مع أمصال اختبار تحتوي مضادات معلومة. ظهور الارتصاص يعني وجود المستضد الموافق على الكريات.",
+          "figures": [{
+            "src": "/science/immune-defense/axis-02/abo_agglutination_table.png",
+            "alt": "جدول اختبار الزمر باستعمال مضاد A ومضاد B وجدول الأجسام المضادة البلازمية",
+            "caption": "الارتصاص مع Anti-A يكشف المستضد A، والارتصاص مع Anti-B يكشف المستضد B.",
+            "source_label": "الوثيقة 7 - الصفحة 7"
+          }],
+          "guided_reading": [
+            {"label": "ارتصاص مع Anti-A فقط", "text": "الكريات تحمل A؛ الزمرة A."},
+            {"label": "ارتصاص مع Anti-B فقط", "text": "الكريات تحمل B؛ الزمرة B."},
+            {"label": "ارتصاص مع الاثنين", "text": "الكريات تحمل A وB؛ الزمرة AB."},
+            {"label": "غياب الارتصاص مع الاثنين", "text": "لا تحمل الكريات A ولا B؛ الزمرة O."}
+          ],
+          "takeaway": "لا تحفظ لون البقعة؛ اسأل: مع أي مصل حدث الارتصاص؟ ثم سمّ المستضد الموجود."
+        },
+        "display_order": 6
+      },
+      {
+        "id": "step_7",
+        "type": "comparison",
+        "component": "VisualComparison",
+        "title": "مستضدات الكريات والأجسام المضادة في البلازما",
+        "content": {
+          "columns": [
+            {"title": "A", "items": ["على الكريات: A", "في البلازما: Anti-B", "الأنماط الممكنة: AA أو AO"]},
+            {"title": "B", "items": ["على الكريات: B", "في البلازما: Anti-A", "الأنماط الممكنة: BB أو BO"]},
+            {"title": "AB", "items": ["على الكريات: A وB", "في البلازما: لا Anti-A ولا Anti-B", "النمط: AB"]},
+            {"title": "O", "items": ["على الكريات: لا A ولا B", "في البلازما: Anti-A وAnti-B", "النمط: OO"]}
+          ],
+          "memory_tip": "لا يصنع الشخص طبيعيا جسما مضادا ضد مستضد ABO الموجود على كرياته.",
+          "attention": "هذا الجدول يخص نظام ABO. لا تضف Anti-D طبيعيا إلى بلازما Rh−."
+        },
+        "display_order": 7
+      },
+      {
+        "id": "step_8",
+        "type": "real_evidence",
+        "component": "RealEvidenceGallery",
+        "title": "كيف ينشأ اختلاف A وB وO وراثيا؟",
+        "content": {
+          "intro": "توضح الوثيقتان 8 و9 أن اختلاف الزمر يرتبط باختلاف البنية السكرية النهائية للمؤشر وباختلاف نشاط الإنزيم المشفر وراثيا.",
+          "figures": [
+            {"src": "/science/immune-defense/axis-02/abo_membrane_markers.png", "alt": "بنيات المؤشرات H وA وB على كريات الدم الحمراء", "caption": "تشترك المؤشرات في قاعدة H وتختلف الإضافة السكرية الطرفية.", "source_label": "الوثيقة 8 - الصفحة 7"},
+            {"src": "/science/immune-defense/axis-02/abo_genetic_origin.png", "alt": "مسار وراثي وإنزيمي لتشكل مؤشرات ABO", "caption": "الأليل A يشفر إنزيما وظيفيا يركب A، والأليل B يشفر إنزيما يركب B، والأليل O لا يضيف السكر الطرفي في النموذج.", "source_label": "الوثيقة 9 - الصفحة 8"}
+          ],
+          "guided_reading": [
+            {"label": "A وB", "text": "الأليلان A وB متساويا السيادة؛ في النمط AB يعمل الإنزيمان ويظهر المؤشران معا."},
+            {"label": "O", "text": "الأليل O متنح ويقابل في الوثيقة إنزيما غير وظيفي، لذلك تبقى البنية H دون إضافة A أو B."},
+            {"label": "من الوراثة إلى الصفة", "text": "الأليل يحدد طبيعة الإنزيم، والإنزيم يحدد السكر المضاف، والسكر الطرفي يحدد المؤشر الغشائي، والمؤشر يحدد الزمرة."}
+          ],
+          "takeaway": "النمط الوراثي لا يصنع الزمرة مباشرة؛ تأثيره يمر عبر إنزيم يركب المؤشر الغشائي."
+        },
+        "display_order": 8
+      },
+      {
+        "id": "step_9",
+        "type": "real_evidence",
+        "component": "RealEvidenceGallery",
+        "title": "عامل Rh: المستضد D هو الفاصل",
+        "content": {
+          "intro": "قارن كريات شخصين لهما زمرة ABO متشابهة لكن يختلفان في وجود المستضد D.",
+          "figures": [{
+            "src": "/science/immune-defense/axis-02/rh_d_antigen_genetics.png",
+            "alt": "مقارنة كرية Rh موجب تحمل D وكرية Rh سالب لا تحمله مع موضع مورثة Rh",
+            "caption": "وجود المستضد D على سطح الكرية يعني Rh+، وغيابه يعني Rh−.",
+            "source_label": "الوثيقة 10 - الصفحة 8"
+          }],
+          "guided_reading": [
+            {"label": "Rh+", "text": "يحمل سطح الكريات المستضد D؛ وفي نموذج الدرس قد يكون النمط الوراثي موجبًا متماثلا أو غير متماثل."},
+            {"label": "Rh−", "text": "لا يحمل سطح الكريات المستضد D؛ ويقابل النمط المتنحي المتماثل في نموذج الدرس."},
+            {"label": "تنبيه مناعي", "text": "الفرد Rh− لا يملك Anti-D طبيعيا مثل أجسام ABO المضادة، لكنه قد ينتجه بعد التعرض لكريات تحمل D."}
+          ],
+          "takeaway": "نحدد ABO بالمستضدين A وB، ونضيف إشارة Rh اعتمادا على D؛ مثال: A+ أو O−."
+        },
+        "display_order": 9
+      },
+      {
+        "id": "step_10",
+        "type": "key_rule",
+        "component": "KeyRuleCard",
+        "title": "كيف نفسر عدم توافق نقل الدم؟",
+        "content": {
+          "rule": "في نقل كريات الدم الحمراء، يجب ألا تحمل كريات المعطي مستضدا يتعرف عليه جسم مضاد موجود في بلازما المستقبل؛ وإلا ترتبط الأجسام المضادة بالكريات وقد يحدث ارتصاص وتخرب للكريات.",
+          "simple_flow": "مستضد على كرية المعطي + جسم مضاد موافق عند المستقبل → ارتباط نوعي → ارتصاص → عدم توافق",
+          "do_not_confuse": [
+            "نقارن مستضدات كريات المعطي بأجسام مضادة المستقبل عند تحليل نقل كريات الدم الحمراء.",
+            "قواعد نقل البلازما تختلف عن قواعد نقل كريات الدم الحمراء.",
+            "O ليس خاليا من جميع المستضدات الغشائية؛ المقصود غياب A وB.",
+            "Rh− لا يعني وجود Anti-D طبيعي.",
+            "في الواقع الطبي لا يكفي جدول نظري؛ تُجرى اختبارات التوافق المخبري قبل النقل."
+          ],
+          "memory_tip": "الخطر حين يجد الجسم المضاد هدفه على كرية المعطي."
+        },
+        "display_order": 10
+      },
+      {
+        "id": "step_11",
+        "type": "bac_method",
+        "component": "BacMethodCard",
+        "title": "منهجية تمارين CMH والزمر الدموية",
+        "content": {
+          "skill": "استخراج المؤشر، ربطه بالنمط الوراثي، ثم تفسير التوافق.",
+          "method": [
+            "في CMH: قارن المواضع نفسها، عد الأليلات المتطابقة، ثم احسب النسبة بالمقام الذي توفره الوثيقة.",
+            "في اختبار الزمرة: حدد مصل الاختبار الذي أحدث ارتصاصا، ثم استنتج المستضد والزمرة.",
+            "في الوراثة: اكتب كل الأنماط الممكنة؛ A قد تكون AA أو AO، وB قد تكون BB أو BO.",
+            "في النقل: اذكر مستضد كريات المعطي والجسم المضاد الموافق عند المستقبل، ثم استنتج التوافق أو عدمه.",
+            "في Rh: ابحث عن D، ولا تفترض وجود Anti-D قبل التحسيس."
+          ],
+          "bac_sentence": "يحدث عدم التوافق لأن كريات المعطي تحمل المستضد (...) بينما تحتوي بلازما المستقبل الجسم المضاد الموافق (...)، فيرتبطان نوعيا مؤديين إلى ارتصاص الكريات.",
+          "common_mistakes": [
+            "عكس مستضدات الكريات مع الأجسام المضادة البلازمية.",
+            "اعتبار A وB سيادة تامة بدلا من تساوي السيادة.",
+            "اعتبار O أليلا سائدا أو اعتبار AB نمطين ممكنين.",
+            "استعمال CMH لتحديد زمرة كرية حمراء.",
+            "حساب نسبة CMH من غير تحديد العدد الكلي المقارن."
+          ]
+        },
+        "display_order": 11
+      },
+      {
+        "id": "step_12",
+        "type": "final_visual_map",
+        "component": "InteractiveSummaryMap",
+        "title": "الخريطة الجامعة لمؤشرات الذات",
+        "content": {
+          "map": [
+            {"node": "CMH/HLA", "leads_to": "هوية نسيجية وتوافق الطعوم"},
+            {"node": "CMH I", "leads_to": "معظم الخلايا ذات النواة"},
+            {"node": "CMH II", "leads_to": "بعض الخلايا المناعية العارضة"},
+            {"node": "ABO", "leads_to": "A وB على كريات الدم + أجسام مضادة بلازمية"},
+            {"node": "Rh", "leads_to": "وجود D أو غيابه"},
+            {"node": "المنشأ الوراثي", "leads_to": "أليلات → بروتين/إنزيم → مؤشر غشائي → نمط ظاهري"}
+          ],
+          "memory_tip": "HLA للأنسجة، A وB وD لكريات الدم الحمراء.",
+          "next_axis_bridge": "بعد معرفة مؤشرات الذات، ننتقل إلى كيفية تعرف الخلايا المناعية نوعيا على المستضدات وتحفيز اللمفاويات."
+        },
+        "display_order": 12
+      },
+      {
+        "id": "step_13",
+        "type": "quiz",
+        "component": "FinalQuiz",
+        "title": "اختبار نهاية المحور",
+        "content": {
+          "questions": [
+            {"id": "q1", "question": "أين يوجد CMH I أساسا؟", "choices": ["على معظم خلايا العضوية ذات النواة", "على كريات الدم الحمراء فقط", "في بلازما الدم"], "correct_answer": "على معظم خلايا العضوية ذات النواة", "explanation": "كريات الدم الحمراء الناضجة لا تحمل CMH."},
+            {"id": "q2", "question": "حدث ارتصاص مع Anti-A ولم يحدث مع Anti-B. ما الزمرة؟", "choices": ["A", "B", "AB", "O"], "correct_answer": "A", "explanation": "الارتصاص مع Anti-A يكشف المستضد A."},
+            {"id": "q3", "question": "ما الأنماط الوراثية الممكنة للزمرة B؟", "choices": ["BB أو BO", "AA أو AO", "AB فقط", "OO فقط"], "correct_answer": "BB أو BO", "explanation": "B سائد على O ومتساوي السيادة مع A."},
+            {"id": "q4", "question": "ما الذي يجعل الكرية Rh+؟", "choices": ["وجود المستضد D", "وجود Anti-D طبيعيا", "غياب A وB"], "correct_answer": "وجود المستضد D", "explanation": "وجود D هو معيار Rh موجب."},
+            {"id": "q5", "question": "تطابقت 6 أليلات من أصل 8 مدروسة في CMH. ما النسبة؟", "choices": ["75%", "60%", "80%"], "correct_answer": "75%", "explanation": "6 ÷ 8 × 100 = 75%."},
+            {"id": "q6", "question": "لماذا قد يكون نقل كريات B إلى مستقبل A غير متوافق؟", "choices": ["لأن بلازما A تحتوي Anti-B الذي يتعرف على B", "لأن A يحمل Anti-A على كرياته", "لأن CMH II غائب"], "correct_answer": "لأن بلازما A تحتوي Anti-B الذي يتعرف على B", "explanation": "يلتقي مستضد B على كريات المعطي مع Anti-B عند المستقبل."}
+          ],
+          "mastery_threshold": 5
+        },
+        "display_order": 13
+      }
+    ],
+    "document_bank": [
+      {
+        "document_id": "immune_axis02_doc01_cmh",
+        "file_name": "cmh_structure_genetic_origin.png",
+        "src": "/science/immune-defense/axis-02/cmh_structure_genetic_origin.png",
+        "document_type": "composite_structure_genetics_document",
+        "source": {"kind": "lesson_pdf", "file": "الذات واللاذات 2025(1).pdf", "page": 5, "figure": "الوثيقة (6)"},
+        "skills": ["compare_cmh_classes", "link_genes_to_hla", "infer_individual_diversity"],
+        "scientific_entities": ["CMH I", "CMH II", "HLA", "α", "β", "β2m", "الصبغي 6"],
+        "pedagogical_roles": ["lesson_evidence", "axis_exercise", "ai_axis_exercise", "bac_similar"],
+        "difficulty": 3,
+        "interpretation_scope": "تسمح بمقارنة الصنفين وربط جزيئات HLA بمورثات متعددة الأليلات والتعبير المشترك.",
+        "safe_claims": ["CMH I أوسع توزعا من CMH II.", "الأليلات الموروثة من الوالدين معبر عنها معا."],
+        "forbidden_inferences": ["القول إن CMH I يوجد على الكريات الحمراء الناضجة.", "اعتبار CMH وHLA جزيئين مستقلين عند الإنسان."],
+        "ai_generation": {"allowed": true, "allowed_question_types": ["compare", "label", "infer_genetic_origin", "justify_diversity"], "max_documents_with": 2}
+      },
+      {
+        "document_id": "immune_axis02_doc02_cmh_compatibility",
+        "file_name": "cmh_compatibility_exercise.png",
+        "src": "/science/immune-defense/axis-02/cmh_compatibility_exercise.png",
+        "document_type": "genotype_compatibility_evaluation",
+        "source": {"kind": "lesson_pdf", "file": "الذات واللاذات 2025(1).pdf", "page": 11, "role": "تقويم CMH"},
+        "skills": ["generate_offspring_haplotypes", "count_matching_alleles", "calculate_percentage"],
+        "scientific_entities": ["نمط وراثي", "أليل HLA", "توافق نسيجي"],
+        "pedagogical_roles": ["lesson_evaluation", "axis_exercise", "ai_axis_exercise", "bac_similar"],
+        "difficulty": 4,
+        "interpretation_scope": "تدرب على مقارنة الأليلات وحساب نسبة داخل مجموعة المواضع المعطاة في الوثيقة.",
+        "safe_claims": ["النسبة تحسب من الأليلات المتطابقة على العدد الكلي المقارن.", "4 من 6 تساوي نحو 66.7%."],
+        "forbidden_inferences": ["اعتبار النسبة وحدها ضمانا لنجاح الطعم.", "استعمال مقام 6 في كل تمرين."],
+        "ai_generation": {"allowed": true, "allowed_question_types": ["calculate", "rank_compatibility", "justify"], "max_documents_with": 1}
+      },
+      {
+        "document_id": "immune_axis02_doc03_abo_test",
+        "file_name": "abo_agglutination_table.png",
+        "src": "/science/immune-defense/axis-02/abo_agglutination_table.png",
+        "document_type": "agglutination_results_and_antibody_table",
+        "source": {"kind": "lesson_pdf", "file": "الذات واللاذات 2025(1).pdf", "page": 7, "figure": "الوثيقة (7)"},
+        "skills": ["read_agglutination", "identify_abo_group", "map_antigens_antibodies"],
+        "scientific_entities": ["Anti-A", "Anti-B", "A", "B", "AB", "O", "ارتصاص"],
+        "pedagogical_roles": ["lesson_evidence", "axis_exercise", "ai_axis_exercise", "bac_similar"],
+        "difficulty": 2,
+        "interpretation_scope": "تحدد زمرة ABO ومضاداتها البلازمية الطبيعية.",
+        "safe_claims": ["الارتصاص مع Anti-A يدل على وجود A.", "زمرة O لا تحمل A أو B وتحوي البلازما Anti-A وAnti-B."],
+        "forbidden_inferences": ["اعتبار O خالية من كل المستضدات.", "إضافة Anti-D الطبيعي إلى جدول ABO."],
+        "ai_generation": {"allowed": true, "allowed_question_types": ["identify", "complete_table", "explain_agglutination"], "max_documents_with": 2}
+      },
+      {
+        "document_id": "immune_axis02_doc04_abo_markers",
+        "file_name": "abo_membrane_markers.png",
+        "src": "/science/immune-defense/axis-02/abo_membrane_markers.png",
+        "document_type": "comparative_molecular_models",
+        "source": {"kind": "lesson_pdf", "file": "الذات واللاذات 2025(1).pdf", "page": 7, "figure": "الوثيقة (8)"},
+        "skills": ["compare_terminal_sugars", "relate_structure_to_blood_group"],
+        "scientific_entities": ["المؤشر H", "المؤشر A", "المؤشر B", "غليكوبروتين"],
+        "pedagogical_roles": ["lesson_evidence", "axis_exercise", "ai_axis_exercise"],
+        "difficulty": 3,
+        "interpretation_scope": "تبين الاختلاف البنيوي للمؤشرات ABO في نموذج الدرس.",
+        "safe_claims": ["A وB يختلفان في السكر الطرفي.", "O يبقي المؤشر H دون إضافة A أو B."],
+        "forbidden_inferences": ["اعتبار المؤشر H غائبا عن زمرة O.", "اعتبار الرسم مقياسا حقيقيا للجزيئات."],
+        "ai_generation": {"allowed": true, "allowed_question_types": ["compare", "identify_terminal_difference", "infer_group"], "max_documents_with": 2}
+      },
+      {
+        "document_id": "immune_axis02_doc05_abo_genetics",
+        "file_name": "abo_genetic_origin.png",
+        "src": "/science/immune-defense/axis-02/abo_genetic_origin.png",
+        "document_type": "gene_enzyme_marker_pathway",
+        "source": {"kind": "lesson_pdf", "file": "الذات واللاذات 2025(1).pdf", "page": 8, "figure": "الوثيقة (9)"},
+        "skills": ["link_allele_enzyme_antigen", "infer_genotype", "apply_codominance"],
+        "scientific_entities": ["أليل A", "أليل B", "أليل O", "Transferase A", "Transferase B"],
+        "pedagogical_roles": ["lesson_evidence", "axis_exercise", "ai_axis_exercise", "bac_similar"],
+        "difficulty": 3,
+        "interpretation_scope": "تربط الأليلات بالنشاط الإنزيمي ثم بالمؤشر والنمط الظاهري.",
+        "safe_claims": ["A وB متساويا السيادة.", "O متنح في نظام ABO المدرسي."],
+        "forbidden_inferences": ["اعتبار الأليل نفسه إنزيما.", "القول إن النمط A يملك نمطا وراثيا واحدا فقط."],
+        "ai_generation": {"allowed": true, "allowed_question_types": ["trace_pathway", "infer_genotype", "predict_phenotype"], "max_documents_with": 2}
+      },
+      {
+        "document_id": "immune_axis02_doc06_rh",
+        "file_name": "rh_d_antigen_genetics.png",
+        "src": "/science/immune-defense/axis-02/rh_d_antigen_genetics.png",
+        "document_type": "rh_antigen_comparison",
+        "source": {"kind": "lesson_pdf", "file": "الذات واللاذات 2025(1).pdf", "page": 8, "figure": "الوثيقة (10)"},
+        "skills": ["identify_d_antigen", "distinguish_rh_phenotypes", "infer_simple_genotype"],
+        "scientific_entities": ["المستضد D", "Rh+", "Rh−"],
+        "pedagogical_roles": ["lesson_evidence", "axis_exercise", "ai_axis_exercise"],
+        "difficulty": 2,
+        "interpretation_scope": "تميز Rh+ وRh− حسب وجود D وتربطهما بالنموذج الوراثي المبسط المعتمد في الدرس.",
+        "safe_claims": ["Rh+ يحمل D.", "Rh− لا يحمل D."],
+        "forbidden_inferences": ["القول إن Rh− يحمل Anti-D طبيعيا.", "الخلط بين D والمستضدين A وB."],
+        "ai_generation": {"allowed": true, "allowed_question_types": ["identify", "compare", "infer_simple_genotype"], "max_documents_with": 2}
+      }
+    ],
+    "presentation": {
+      "hook": "كيف يمكن لمؤشرات صغيرة على سطح الخلية أن تقرر مصير طعم أو كيس دم؟",
+      "promise": "ستفهم نظام HLA للأنسجة ونظامي ABO وRh للدم، ثم تتقن الحساب والتحديد والتفسير.",
+      "rhythm": ["افصل النظامين", "قارن", "اربط بالوراثة", "احسب", "اختبر الارتصاص", "فسر النقل", "لخص"],
+      "mode": "evidence_story_learning",
+      "student_first": true,
+      "reveal_teacher_after_think": true,
+      "max_text_lines_per_card": 6,
+      "avoid_repetition": true,
+      "show_progress_as_journey": true
+    },
+    "scientific_quality_control": {
+      "version": "1.0",
+      "rules": [
+        "استعمل HLA لتسمية جزيئات CMH عند الإنسان، ولا تقدمهما كنظامين منفصلين.",
+        "CMH I يوجد على معظم الخلايا ذات النواة، ولا يوجد على كريات الدم الحمراء الناضجة.",
+        "CMH II يوجد أساسا على الخلايا العارضة للمستضد، ولا يعمم على كل خلايا الجسم.",
+        "نسبة توافق CMH = المتطابق ÷ الكلي المقارن × 100، والمقام تحدده الوثيقة.",
+        "زيادة توافق HLA تقلل خطر الرفض لكنها لا تضمن وحدها نجاح الطعم.",
+        "الارتصاص مع مصل اختبار يعني وجود المستضد الموافق على الكريات.",
+        "A وB متساويا السيادة، وO متنح؛ A = AA أو AO، B = BB أو BO، AB = AB، O = OO.",
+        "في نقل كريات الدم الحمراء قارن مستضدات المعطي بأجسام مضادة المستقبل.",
+        "Anti-A وAnti-B في نظام ABO طبيعيان وفق النموذج الدراسي، أما Anti-D فلا يوجد طبيعيا عند Rh− وقد يظهر بعد التحسيس.",
+        "لا تقدم O− بوصفه متبرعا عاما دون تقييد؛ التوافق الطبي الفعلي يتطلب اختبارات مخبرية ويراعي أنظمة أخرى.",
+        "قواعد نقل البلازما تختلف عن قواعد نقل كريات الدم الحمراء.",
+        "التفاصيل الجزيئية الدقيقة لنظام Rh أكثر تعقيدا من نموذج أليل موجب/سالب؛ استخدم النموذج المدرسي عندما يكون هو المعطى."
+      ]
+    },
+    "curriculum_goal": "تحديد أهم مؤشرات الذات ذات المنشأ الوراثي، وشرح دور جزيئات HLA في التوافق النسيجي ودور مؤشرات ABO وRh في تحديد الزمر والتوافق الدموي."
+  }
+}

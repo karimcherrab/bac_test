@@ -1,0 +1,222 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "session": "ordinary",
+  "year": 2018,
+  "chapter_code": "sequences",
+  "chapter_title": "المتتاليات العددية",
+  "branches": [
+    {
+      "code": "science",
+      "name": "شعبة علوم تجريبية"
+    }
+  ],
+  "source_pdf": "2018(6).pdf",
+  "comparison_source": "bac_sequence_scientifique(20260823-104203).pdf",
+  "source_verification": {
+    "statement_checked_against_original_bac": true,
+    "solution_checked_against_official_correction": true,
+    "solution_style": "حل مفصل ومبسط بخطوات صغيرة، مع إظهار الحسابات الوسيطة التي اختصرها التصحيح الرسمي.",
+    "statement_policy": "نص الأسئلة منقول من موضوع البكالوريا دون إضافة معطيات جديدة.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  },
+  "version": "4.2-2018-science-sequences-subject2-ex01",
+  "exercise_number": 1,
+  "subject_number": 2,
+  "points": 4,
+  "source_page": 3,
+  "source_pages": [
+    3
+  ],
+  "solution_source_pages": [
+    9
+  ],
+  "title": "التمرين الأول — بكالوريا الجزائر 2018 — الموضوع الثاني — شعبة علوم تجريبية",
+  "statement": "متتالية عددية \\((u_n)\\) معرفة كما يلي: \\(u_0=0\\)، ومن أجل كل عدد طبيعي \\(n\\): \\(u_{n+1}=u_n+\\ln\\left(\\frac{2n+3}{2n+1}\\right)\\).",
+  "statement_graphs": [],
+  "axis_tags": [
+    "recursive_sequence",
+    "sequence_terms",
+    "sequence_monotonicity",
+    "induction_exponential_identity",
+    "explicit_sequence_formula",
+    "sequence_limit",
+    "logarithmic_sum",
+    "arithmetic_sum"
+  ],
+  "questions": [
+    {
+      "id": "2018_s2_ex01_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) احسب كلا من \\(u_1\\)، \\(u_2\\) و \\(u_3\\).",
+      "axis_tags": [
+        "sequence_terms"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل علاقة الرجوع بالتتابع، مع خاصية \\(\\ln a+\\ln b=\\ln(ab)\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب u_1",
+            "explanation": "عند \\(n=0\\):\n\\[\nu_1=u_0+\\ln\\left(\\frac3{1}\\right)\n=0+\\ln3.\n\\]\nإذن:\n\\[\n\\boxed{u_1=\\ln3}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب u_2",
+            "explanation": "عند \\(n=1\\):\n\\[\nu_2=u_1+\\ln\\left(\\frac5{3}\\right).\n\\]\nوبالتعويض عن \\(u_1\\):\n\\[\nu_2=\\ln3+\\ln\\left(\\frac53\\right)\n=\\ln\\left(3\\times\\frac53\\right)\n=\\ln5.\n\\]\nإذن:\n\\[\n\\boxed{u_2=\\ln5}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب u_3",
+            "explanation": "عند \\(n=2\\):\n\\[\nu_3=u_2+\\ln\\left(\\frac7{5}\\right).\n\\]\nوبالتعويض:\n\\[\nu_3=\\ln5+\\ln\\left(\\frac75\\right)\n=\\ln7.\n\\]\nإذن:\n\\[\n\\boxed{u_3=\\ln7}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{u_1=\\ln3,\\quad u_2=\\ln5,\\quad u_3=\\ln7}\\)."
+      }
+    },
+    {
+      "id": "2018_s2_ex01_q2",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2) بين أنه من أجل كل عدد طبيعي \\(n\\): \\(\\frac{2n+3}{2n+1}>1\\)، ثم استنتج اتجاه تغير المتتالية \\((u_n)\\).",
+      "axis_tags": [
+        "sequence_monotonicity"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نقارن البسط بالمقام، ثم ندرس إشارة الفرق \\(u_{n+1}-u_n\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "مقارنة البسط والمقام",
+            "explanation": "لكل \\(n\\in\\mathbb N\\):\n\\[\n2n+3>2n+1.\n\\]\nكما أن:\n\\[\n2n+1>0.\n\\]\nإذن بالقسمة على عدد موجب:\n\\[\n\\boxed{\\frac{2n+3}{2n+1}>1}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "إشارة اللوغاريتم",
+            "explanation": "بما أن:\n\\[\n\\frac{2n+3}{2n+1}>1,\n\\]\nفإن:\n\\[\n\\ln\\left(\\frac{2n+3}{2n+1}\\right)>0.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "دراسة الفرق",
+            "explanation": "من علاقة الرجوع:\n\\[\nu_{n+1}-u_n=\\ln\\left(\\frac{2n+3}{2n+1}\\right)>0.\n\\]\nإذن:\n\\[\nu_{n+1}>u_n.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "الاستنتاج",
+            "explanation": "المتتالية \\((u_n)\\) متزايدة تماما."
+          }
+        ],
+        "final_answer": "\\(\\boxed{(u_n)\\text{ متزايدة تماما}}\\)."
+      }
+    },
+    {
+      "id": "2018_s2_ex01_q3a",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "3) \\((v_n)\\) متتالية عددية معرفة من أجل كل عدد طبيعي \\(n\\) بـ: \\(v_n=2n+1\\). أ) برهن بالتراجع أنه من أجل كل عدد طبيعي \\(n\\): \\(e^{u_n}=v_n\\).",
+      "axis_tags": [
+        "induction_exponential_identity"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نبرهن الخاصية \\(e^{u_n}=v_n\\) بالتراجع.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التحقق عند n=0",
+            "explanation": "لدينا:\n\\[\nu_0=0,\n\\]\nإذن:\n\\[\ne^{u_0}=e^0=1.\n\\]\nومن جهة أخرى:\n\\[\nv_0=2\\times0+1=1.\n\\]\nإذن:\n\\[\ne^{u_0}=v_0.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "فرضية التراجع",
+            "explanation": "نفترض أنه عند رتبة طبيعية \\(n\\):\n\\[\ne^{u_n}=v_n=2n+1.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الانتقال إلى n+1",
+            "explanation": "لدينا:\n\\[\nu_{n+1}=u_n+\\ln\\left(\\frac{2n+3}{2n+1}\\right).\n\\]\nإذن:\n\\[\ne^{u_{n+1}}\n=e^{u_n}e^{\\ln((2n+3)/(2n+1))}.\n\\]\nوباستعمال فرضية التراجع:\n\\[\ne^{u_{n+1}}\n=(2n+1)\\times\\frac{2n+3}{2n+1}\n=2n+3.\n\\]\nلكن:\n\\[\nv_{n+1}=2(n+1)+1=2n+3.\n\\]\nإذن:\n\\[\ne^{u_{n+1}}=v_{n+1}.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "الخلاصة",
+            "explanation": "بالتراجع:\n\\[\n\\boxed{e^{u_n}=v_n\\quad\\forall n\\in\\mathbb N}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{e^{u_n}=v_n=2n+1}\\)."
+      }
+    },
+    {
+      "id": "2018_s2_ex01_q3b",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "ب) استنتج عبارة الحد العام للمتتالية \\((u_n)\\) بدلالة \\(n\\)، ثم احسب \\(\\lim_{n\\to+\\infty}u_n\\).",
+      "axis_tags": [
+        "explicit_sequence_formula",
+        "sequence_limit"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل العلاقة \\(e^{u_n}=2n+1\\)، ثم نطبق اللوغاريتم.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "استخراج u_n",
+            "explanation": "لدينا:\n\\[\ne^{u_n}=2n+1.\n\\]\nوبأخذ اللوغاريتم النيبيري للطرفين:\n\\[\nu_n=\\ln(2n+1).\n\\]\nإذن:\n\\[\n\\boxed{u_n=\\ln(2n+1)}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب النهاية",
+            "explanation": "عندما \\(n\\to+\\infty\\):\n\\[\n2n+1\\to+\\infty.\n\\]\nوبالتالي:\n\\[\n\\ln(2n+1)\\to+\\infty.\n\\]\nإذن:\n\\[\n\\boxed{\\lim_{n\\to+\\infty}u_n=+\\infty}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{u_n=\\ln(2n+1)}\\)، و \\(\\boxed{\\lim u_n=+\\infty}\\)."
+      }
+    },
+    {
+      "id": "2018_s2_ex01_q4",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "4) احسب المجموعين \\(S_n\\) و \\(T\\) حيث: \\(S_n=\\ln\\left(\\frac{v_1}{v_0}\\right)+\\ln\\left(\\frac{v_2}{v_1}\\right)+\\cdots+\\ln\\left(\\frac{v_n}{v_{n-1}}\\right)\\)، و \\(T=e^{u_{1439}}+e^{u_{1440}}+\\cdots+e^{u_{2018}}\\).",
+      "axis_tags": [
+        "logarithmic_sum",
+        "arithmetic_sum"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "في \\(S_n\\) نستعمل جمع اللوغاريتمات ليظهر اختزال متتالٍ. وفي \\(T\\) نستعمل \\(e^{u_k}=v_k=2k+1\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب S_n",
+            "explanation": "باستعمال خاصية:\n\\[\n\\ln a+\\ln b=\\ln(ab),\n\\]\nنحصل على:\n\\[\nS_n=\\ln\\left(\\frac{v_1}{v_0}\\times\\frac{v_2}{v_1}\\times\\cdots\\times\\frac{v_n}{v_{n-1}}\\right).\n\\]\nتختزل جميع الحدود الوسطية، فيبقى:\n\\[\nS_n=\\ln\\left(\\frac{v_n}{v_0}\\right).\n\\]\nوبما أن \\(v_0=1\\):\n\\[\nS_n=\\ln(v_n)=\\ln(2n+1).\n\\]\nومن السؤال السابق:\n\\[\n\\boxed{S_n=u_n=\\ln(2n+1)}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "تحويل حدود T",
+            "explanation": "من العلاقة المثبتة:\n\\[\ne^{u_k}=v_k=2k+1.\n\\]\nإذن:\n\\[\nT=v_{1439}+v_{1440}+\\cdots+v_{2018}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "تحديد عدد الحدود",
+            "explanation": "عدد الحدود هو:\n\\[\n2018-1439+1=580.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "حساب الحدين الطرفيين",
+            "explanation": "لدينا:\n\\[\nv_{1439}=2\\times1439+1=2879,\n\\]\nو\n\\[\nv_{2018}=2\\times2018+1=4037.\n\\]"
+          },
+          {
+            "step_number": 5,
+            "title": "حساب المجموع الحسابي",
+            "explanation": "المتتالية \\((v_n)\\) حسابية أساسها \\(2\\)، لذلك مجموع الحدود من \\(v_{1439}\\) إلى \\(v_{2018}\\) هو:\n\\[\nT=580\\times\\frac{2879+4037}{2}.\n\\]\nنحسب:\n\\[\n2879+4037=6916,\n\\]\nومن ثم:\n\\[\nT=580\\times3458=2005640.\n\\]\nإذن:\n\\[\n\\boxed{T=2005640}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{S_n=\\ln(2n+1)=u_n}\\)، و \\(\\boxed{T=2005640}\\)."
+      }
+    }
+  ]
+}

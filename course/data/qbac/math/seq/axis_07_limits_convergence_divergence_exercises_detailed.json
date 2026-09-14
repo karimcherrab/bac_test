@@ -1,0 +1,1166 @@
+{
+  "version": 3,
+  "language": "ar",
+  "direction": "rtl",
+  "subject_code": "math",
+  "chapter_code": "sequences",
+  "tag": "seq_limits_convergence_divergence",
+  "title": "نهاية المتتالية والتقارب والتباعد — تمارين تدريبية متدرجة مع حلول مفصلة",
+  "source_axis_file": "axis_07_limits_convergence_divergence_simple(1).json",
+  "reference_bac_file": "question_bac_05_sequence_limits_10_exercises_ACADEMY_FINAL_V2.json",
+  "question_count": 13,
+  "selection_policy": {
+    "minimum_requested": 10,
+    "maximum_requested": 15,
+    "final_question_count": 13,
+    "policy": "تمارين تدريبية جديدة خاصة بالمحور فقط، مرتبة من السهل إلى الصعب، وتغطي مهارات الدرس وأفكار البكالوريا المرجعية دون نسخ الأسئلة الأصلية.",
+    "covered_skills": [
+      "النهايات المباشرة",
+      "كثيرات الحدود والحد الغالب",
+      "كسور كثيرات الحدود",
+      "التقارب والتباعد",
+      "التذبذب",
+      "نهاية q^n",
+      "مبرهنة الحصر",
+      "مبرهنة التقارب الرتيب",
+      "تعيين نهاية متتالية تراجعية",
+      "التقارب حسب وسيط",
+      "مقارنة النمو",
+      "المتتالية المساعدة والنهاية"
+    ]
+  },
+  "questions": [
+    {
+      "id": "axis07_limits_practice_01",
+      "year": null,
+      "source_file": null,
+      "source_page": null,
+      "exercise": "axis07_practice_01",
+      "number": "1",
+      "text": "لتكن \\((u_n)\\) معرفة بـ \\(u_n=5+\\frac{3}{n+1}\\). احسب \\(\\lim_{n\\to+\\infty}u_n\\)، ثم حدد هل المتتالية متقاربة أم متباعدة.",
+      "context": "نهاية مباشرة باستعمال نهاية المقلوب.",
+      "tag": "seq_limits_convergence_divergence",
+      "axis": "نهاية المتتالية والتقارب والتباعد",
+      "secondary_tags": [],
+      "skill": "نهاية مباشرة",
+      "difficulty": "easy",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمرين تدريبي جديد منشأ خصيصًا للمحور، مستوحى من المهارات وأنماط الأفكار الموجودة في ملف الدرس وملف البكالوريا دون نسخ نص تمرين بكالوريا.",
+      "solution": {
+        "strategy": "نحسب نهاية الجزء المتغير ثم نضيف العدد الثابت.",
+        "detailed_explanation": "عندما تكبر n فإن المقام n+1 يكبر دون حد، وبالتالي مقلوبه يقترب من الصفر.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "نهاية الكسر",
+            "goal": "إثبات أن الكسر يؤول إلى الصفر",
+            "rule_used": "مقلوب كمية تؤول إلى +∞",
+            "explanation": "ندرس المقام أولًا.",
+            "calculation_lines": [
+              "\\[n+1\\to+\\infty.\\]",
+              "\\[\\frac{3}{n+1}\\to0.\\]"
+            ],
+            "conclusion": "\\(\\frac3{n+1}\\to0\\)"
+          },
+          {
+            "order": 2,
+            "title": "نهاية المتتالية",
+            "goal": "حساب النهاية",
+            "rule_used": "قواعد العمليات على النهايات",
+            "explanation": "نضيف النهاية إلى العدد الثابت.",
+            "calculation_lines": [
+              "\\[u_n=5+\\frac3{n+1}.\\]",
+              "\\[u_n\\to5+0=5.\\]"
+            ],
+            "conclusion": "\\(\\boxed{\\lim u_n=5}\\)"
+          },
+          {
+            "order": 3,
+            "title": "طبيعة المتتالية",
+            "goal": "تحديد التقارب",
+            "rule_used": "تعريف التقارب",
+            "explanation": "النهاية 5 عدد حقيقي.",
+            "calculation_lines": [
+              "\\[\\lim u_n=5\\in\\mathbb R.\\]"
+            ],
+            "conclusion": "المتتالية متقاربة نحو 5."
+          }
+        ],
+        "final_answer": "\\(\\boxed{\\lim u_n=5}\\)، والمتتالية متقاربة نحو \\(5\\).",
+        "verification": "لرتب كبيرة يصبح الحد قريبًا جدًا من 5.",
+        "common_mistakes": [
+          {
+            "mistake": "القول إن النهاية 0.",
+            "correction": "الجزء الكسري فقط يؤول إلى 0، أما المتتالية فتؤول إلى 5."
+          }
+        ],
+        "hints": [
+          "ابدأ بالكسر.",
+          "تذكر أن \\(1/n\\to0\\)."
+        ],
+        "alternative_method": "",
+        "is_complete": true,
+        "method": [
+          "نهاية الكسر",
+          "نهاية المجموع",
+          "تحديد طبيعة المتتالية"
+        ],
+        "understanding_check": [
+          "ما شكل المتتالية الذي سمح باختيار هذه الطريقة؟",
+          "ما قاعدة النهاية أو مبرهنة التقارب المستعملة؟",
+          "كيف نتحقق من أن النتيجة النهائية منسجمة مع المعطيات؟"
+        ],
+        "academic_writing_tip": "اكتب القاعدة المستعملة أولًا، ثم الحساب في أسطر منفصلة، ثم اختم بقيمة النهاية وحدد هل المتتالية متقاربة أم متباعدة."
+      }
+    },
+    {
+      "id": "axis07_limits_practice_02",
+      "year": null,
+      "source_file": null,
+      "source_page": null,
+      "exercise": "axis07_practice_02",
+      "number": "2",
+      "text": "لتكن \\(u_n=4n^3-7n^2+2\\). احسب نهاية \\((u_n)\\) عند \\(+\\infty\\)، ثم حدد طبيعتها.",
+      "context": "تطبيق قاعدة الحد الغالب في كثير حدود.",
+      "tag": "seq_limits_convergence_divergence",
+      "axis": "نهاية المتتالية والتقارب والتباعد",
+      "secondary_tags": [],
+      "skill": "الحد الغالب",
+      "difficulty": "easy",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمرين تدريبي جديد منشأ خصيصًا للمحور، مستوحى من المهارات وأنماط الأفكار الموجودة في ملف الدرس وملف البكالوريا دون نسخ نص تمرين بكالوريا.",
+      "solution": {
+        "strategy": "نبحث عن الحد ذي أكبر درجة.",
+        "detailed_explanation": "في كثير الحدود يحدد الحد الأعلى درجة السلوك عند اللانهاية.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "تحديد الحد الغالب",
+            "goal": "تحديد أقوى حد",
+            "rule_used": "الحد ذو أكبر درجة",
+            "explanation": "أكبر قوة هي n^3.",
+            "calculation_lines": [
+              "\\[u_n=4n^3-7n^2+2.\\]",
+              "الحد الغالب هو \\(4n^3\\)."
+            ],
+            "conclusion": "\\(4n^3\\) هو الحد الغالب."
+          },
+          {
+            "order": 2,
+            "title": "حساب النهاية",
+            "goal": "استنتاج النهاية",
+            "rule_used": "نهاية كثير حدود",
+            "explanation": "المعامل الرئيسي موجب.",
+            "calculation_lines": [
+              "\\[4n^3\\to+\\infty.\\]",
+              "\\[u_n\\to+\\infty.\\]"
+            ],
+            "conclusion": "\\(\\boxed{\\lim u_n=+\\infty}\\)"
+          },
+          {
+            "order": 3,
+            "title": "الطبيعة",
+            "goal": "تحديد التقارب أو التباعد",
+            "rule_used": "تعريف التقارب",
+            "explanation": "+∞ ليست عددًا حقيقيًا.",
+            "calculation_lines": [
+              "\\[u_n\\to+\\infty.\\]"
+            ],
+            "conclusion": "المتتالية متباعدة."
+          }
+        ],
+        "final_answer": "\\(\\boxed{u_n\\to+\\infty}\\)، ومنه \\((u_n)\\) متباعدة.",
+        "verification": "إشارة الحد الغالب موجبة ودرجته فردية عند +∞.",
+        "common_mistakes": [
+          {
+            "mistake": "محاولة جمع +∞ و-∞ مباشرة.",
+            "correction": "نستعمل الحد الغالب لتجنب الشكل غير المحدد."
+          }
+        ],
+        "hints": [
+          "حدد أكبر درجة.",
+          "راقب إشارة معاملها."
+        ],
+        "alternative_method": "",
+        "is_complete": true,
+        "method": [
+          "تحديد الحد الغالب",
+          "حساب النهاية",
+          "تحديد التباعد"
+        ],
+        "understanding_check": [
+          "ما شكل المتتالية الذي سمح باختيار هذه الطريقة؟",
+          "ما قاعدة النهاية أو مبرهنة التقارب المستعملة؟",
+          "كيف نتحقق من أن النتيجة النهائية منسجمة مع المعطيات؟"
+        ],
+        "academic_writing_tip": "اكتب القاعدة المستعملة أولًا، ثم الحساب في أسطر منفصلة، ثم اختم بقيمة النهاية وحدد هل المتتالية متقاربة أم متباعدة."
+      }
+    },
+    {
+      "id": "axis07_limits_practice_03",
+      "year": null,
+      "source_file": null,
+      "source_page": null,
+      "exercise": "axis07_practice_03",
+      "number": "3",
+      "text": "لتكن \\(u_n=\\frac{3n^2-2n+1}{n^2+5n-4}\\). احسب نهايتها وبيّن أنها متقاربة.",
+      "context": "كسر كثيرتي حدود من الدرجة نفسها.",
+      "tag": "seq_limits_convergence_divergence",
+      "axis": "نهاية المتتالية والتقارب والتباعد",
+      "secondary_tags": [],
+      "skill": "نهاية كسر كثيرات حدود",
+      "difficulty": "easy",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمرين تدريبي جديد منشأ خصيصًا للمحور، مستوحى من المهارات وأنماط الأفكار الموجودة في ملف الدرس وملف البكالوريا دون نسخ نص تمرين بكالوريا.",
+      "solution": {
+        "strategy": "نقسم البسط والمقام على n^2.",
+        "detailed_explanation": "عندما تتساوى الدرجتان تكون النهاية نسبة معاملي الحدين الرئيسيين.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "القسمة على n²",
+            "goal": "تحويل العبارة",
+            "rule_used": "قواعد الكسور",
+            "explanation": "نقسم كل حد على n².",
+            "calculation_lines": [
+              "\\[u_n=\\frac{3-\\frac2n+\\frac1{n^2}}{1+\\frac5n-\\frac4{n^2}}.\\]"
+            ],
+            "conclusion": "تحولت العبارة إلى نهايات أساسية."
+          },
+          {
+            "order": 2,
+            "title": "النهاية",
+            "goal": "التعويض بالنهايات",
+            "rule_used": "قواعد العمليات",
+            "explanation": "كل من 1/n و1/n² يؤول إلى صفر.",
+            "calculation_lines": [
+              "\\[\\frac1n\\to0,\\quad\\frac1{n^2}\\to0.\\]",
+              "\\[u_n\\to\\frac{3}{1}=3.\\]"
+            ],
+            "conclusion": "\\(\\boxed{\\lim u_n=3}\\)"
+          },
+          {
+            "order": 3,
+            "title": "التقارب",
+            "goal": "تفسير النتيجة",
+            "rule_used": "تعريف التقارب",
+            "explanation": "3 عدد حقيقي.",
+            "calculation_lines": [
+              "\\[3\\in\\mathbb R.\\]"
+            ],
+            "conclusion": "المتتالية متقاربة نحو 3."
+          }
+        ],
+        "final_answer": "\\(\\boxed{\\lim u_n=3}\\)، وبالتالي المتتالية متقاربة.",
+        "verification": "نسبة المعاملين الرئيسيين هي 3/1=3.",
+        "common_mistakes": [
+          {
+            "mistake": "اعتبار \\(\\infty/\\infty=1\\).",
+            "correction": "هذا شكل غير معين؛ يجب تحويل الكسر."
+          }
+        ],
+        "hints": [
+          "قارن درجتي البسط والمقام.",
+          "اقسم على n²."
+        ],
+        "alternative_method": "",
+        "is_complete": true,
+        "method": [
+          "تحويل الكسر",
+          "حساب النهاية",
+          "إثبات التقارب"
+        ],
+        "understanding_check": [
+          "ما شكل المتتالية الذي سمح باختيار هذه الطريقة؟",
+          "ما قاعدة النهاية أو مبرهنة التقارب المستعملة؟",
+          "كيف نتحقق من أن النتيجة النهائية منسجمة مع المعطيات؟"
+        ],
+        "academic_writing_tip": "اكتب القاعدة المستعملة أولًا، ثم الحساب في أسطر منفصلة، ثم اختم بقيمة النهاية وحدد هل المتتالية متقاربة أم متباعدة."
+      }
+    },
+    {
+      "id": "axis07_limits_practice_04",
+      "year": null,
+      "source_file": null,
+      "source_page": null,
+      "exercise": "axis07_practice_04",
+      "number": "4",
+      "text": "لتكن \\(u_n=\\frac{2n+1}{n^2+3}\\). احسب النهاية وحدد طبيعة المتتالية.",
+      "context": "درجة البسط أصغر من درجة المقام.",
+      "tag": "seq_limits_convergence_divergence",
+      "axis": "نهاية المتتالية والتقارب والتباعد",
+      "secondary_tags": [],
+      "skill": "مقارنة الدرجات",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمرين تدريبي جديد منشأ خصيصًا للمحور، مستوحى من المهارات وأنماط الأفكار الموجودة في ملف الدرس وملف البكالوريا دون نسخ نص تمرين بكالوريا.",
+      "solution": {
+        "strategy": "نقسم على n²، وهي أكبر قوة في المقام.",
+        "detailed_explanation": "بعد القسمة يصبح البسط كله مؤولًا إلى الصفر والمقام إلى 1.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "تحويل الكسر",
+            "goal": "إظهار النهايات الأساسية",
+            "rule_used": "القسمة على أكبر قوة",
+            "explanation": "نقسم على n².",
+            "calculation_lines": [
+              "\\[u_n=\\frac{\\frac2n+\\frac1{n^2}}{1+\\frac3{n^2}}.\\]"
+            ],
+            "conclusion": "صيغة مناسبة للنهاية."
+          },
+          {
+            "order": 2,
+            "title": "الحساب",
+            "goal": "حساب النهاية",
+            "rule_used": "قواعد العمليات",
+            "explanation": "البسط يؤول إلى صفر والمقام إلى 1.",
+            "calculation_lines": [
+              "\\[\\frac2n+\\frac1{n^2}\\to0.\\]",
+              "\\[1+\\frac3{n^2}\\to1.\\]",
+              "\\[u_n\\to0.\\]"
+            ],
+            "conclusion": "\\(\\boxed{\\lim u_n=0}\\)"
+          },
+          {
+            "order": 3,
+            "title": "الطبيعة",
+            "goal": "تحديد التقارب",
+            "rule_used": "تعريف التقارب",
+            "explanation": "الصفر عدد حقيقي.",
+            "calculation_lines": [
+              "\\[0\\in\\mathbb R.\\]"
+            ],
+            "conclusion": "متقاربة نحو 0."
+          }
+        ],
+        "final_answer": "\\(\\boxed{\\lim u_n=0}\\)، والمتتالية متقاربة.",
+        "verification": "درجة البسط 1 ودرجة المقام 2، وهذا يوافق النتيجة 0.",
+        "common_mistakes": [
+          {
+            "mistake": "القسمة على n فقط.",
+            "correction": "الأفضل القسمة على أكبر قوة، وهي n²."
+          }
+        ],
+        "hints": [
+          "درجة المقام أكبر.",
+          "اقسم على n²."
+        ],
+        "alternative_method": "",
+        "is_complete": true,
+        "method": [
+          "مقارنة الدرجات",
+          "القسمة",
+          "التقارب"
+        ],
+        "understanding_check": [
+          "ما شكل المتتالية الذي سمح باختيار هذه الطريقة؟",
+          "ما قاعدة النهاية أو مبرهنة التقارب المستعملة؟",
+          "كيف نتحقق من أن النتيجة النهائية منسجمة مع المعطيات؟"
+        ],
+        "academic_writing_tip": "اكتب القاعدة المستعملة أولًا، ثم الحساب في أسطر منفصلة، ثم اختم بقيمة النهاية وحدد هل المتتالية متقاربة أم متباعدة."
+      }
+    },
+    {
+      "id": "axis07_limits_practice_05",
+      "year": null,
+      "source_file": null,
+      "source_page": null,
+      "exercise": "axis07_practice_05",
+      "number": "5",
+      "text": "لتكن \\(u_n=(-1)^n\\). هل المتتالية متقاربة؟ علل جوابك.",
+      "context": "تمييز التذبذب عن التباعد نحو اللانهاية.",
+      "tag": "seq_limits_convergence_divergence",
+      "axis": "نهاية المتتالية والتقارب والتباعد",
+      "secondary_tags": [],
+      "skill": "التذبذب والتباعد",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمرين تدريبي جديد منشأ خصيصًا للمحور، مستوحى من المهارات وأنماط الأفكار الموجودة في ملف الدرس وملف البكالوريا دون نسخ نص تمرين بكالوريا.",
+      "solution": {
+        "strategy": "نقارن الحدود ذات الرتب الزوجية والفردية.",
+        "detailed_explanation": "إذا كانت للمتتالية نهاية واحدة فيجب أن تقترب كل حدودها الفرعية من القيمة نفسها.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "الرتب الزوجية",
+            "goal": "دراسة جزء من الحدود",
+            "rule_used": "قوى -1",
+            "explanation": "عند n=2k تكون القوة زوجية.",
+            "calculation_lines": [
+              "\\[u_{2k}=(-1)^{2k}=1.\\]"
+            ],
+            "conclusion": "الحدود الزوجية تساوي 1."
+          },
+          {
+            "order": 2,
+            "title": "الرتب الفردية",
+            "goal": "دراسة الجزء الآخر",
+            "rule_used": "قوى -1",
+            "explanation": "عند n=2k+1 تكون القوة فردية.",
+            "calculation_lines": [
+              "\\[u_{2k+1}=(-1)^{2k+1}=-1.\\]"
+            ],
+            "conclusion": "الحدود الفردية تساوي -1."
+          },
+          {
+            "order": 3,
+            "title": "النتيجة",
+            "goal": "نفي وجود نهاية",
+            "rule_used": "اختلاف سلوكين",
+            "explanation": "لا يمكن الاقتراب من عدد واحد مع استمرار التناوب.",
+            "calculation_lines": [
+              "\\[1\\ne-1.\\]"
+            ],
+            "conclusion": "لا توجد نهاية؛ المتتالية متباعدة."
+          }
+        ],
+        "final_answer": "\\(\\boxed{(u_n)\\text{ متباعدة لأنها تتذبذب بين }1\\text{ و}-1}\\).",
+        "verification": "القيم لا تستقر مهما كبرت الرتبة.",
+        "common_mistakes": [
+          {
+            "mistake": "القول إنها متقاربة لأنها محدودة.",
+            "correction": "التحديد وحده لا يكفي لإثبات التقارب."
+          }
+        ],
+        "hints": [
+          "اكتب حدود الرتب الزوجية والفردية."
+        ],
+        "alternative_method": "",
+        "is_complete": true,
+        "method": [
+          "الرتب الزوجية",
+          "الرتب الفردية",
+          "نفي التقارب"
+        ],
+        "understanding_check": [
+          "ما شكل المتتالية الذي سمح باختيار هذه الطريقة؟",
+          "ما قاعدة النهاية أو مبرهنة التقارب المستعملة؟",
+          "كيف نتحقق من أن النتيجة النهائية منسجمة مع المعطيات؟"
+        ],
+        "academic_writing_tip": "اكتب القاعدة المستعملة أولًا، ثم الحساب في أسطر منفصلة، ثم اختم بقيمة النهاية وحدد هل المتتالية متقاربة أم متباعدة."
+      }
+    },
+    {
+      "id": "axis07_limits_practice_06",
+      "year": null,
+      "source_file": null,
+      "source_page": null,
+      "exercise": "axis07_practice_06",
+      "number": "6",
+      "text": "لتكن \\(u_n=2+\\frac{\\sin n}{n}\\) لكل \\(n\\ge1\\). باستعمال مبرهنة الحصر، احسب \\(\\lim u_n\\).",
+      "context": "حصر جزء متذبذب بين حدين لهما النهاية نفسها.",
+      "tag": "seq_limits_convergence_divergence",
+      "axis": "نهاية المتتالية والتقارب والتباعد",
+      "secondary_tags": [],
+      "skill": "مبرهنة الحصر",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمرين تدريبي جديد منشأ خصيصًا للمحور، مستوحى من المهارات وأنماط الأفكار الموجودة في ملف الدرس وملف البكالوريا دون نسخ نص تمرين بكالوريا.",
+      "solution": {
+        "strategy": "نبدأ من -1≤sin n≤1 ثم نقسم على n ونضيف 2.",
+        "detailed_explanation": "لا نحتاج إلى معرفة نهاية sin n؛ نسيطر على الجزء المتذبذب بالحصر.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "حصر الجيب",
+            "goal": "بناء حصر مناسب",
+            "rule_used": "\\(-1\\le\\sin n\\le1\\)",
+            "explanation": "بما أن n موجب يمكن القسمة دون تغيير اتجاه المتراجحات.",
+            "calculation_lines": [
+              "\\[-1\\le\\sin n\\le1.\\]",
+              "\\[-\\frac1n\\le\\frac{\\sin n}{n}\\le\\frac1n.\\]"
+            ],
+            "conclusion": "حصر الجزء المتذبذب."
+          },
+          {
+            "order": 2,
+            "title": "إضافة 2",
+            "goal": "حصر u_n",
+            "rule_used": "خواص المتراجحات",
+            "explanation": "نضيف 2 إلى الأطراف.",
+            "calculation_lines": [
+              "\\[2-\\frac1n\\le u_n\\le2+\\frac1n.\\]"
+            ],
+            "conclusion": "u_n محصورة بين متتاليتين."
+          },
+          {
+            "order": 3,
+            "title": "تطبيق الحصر",
+            "goal": "حساب النهاية",
+            "rule_used": "مبرهنة الحصر",
+            "explanation": "الطرفان يؤولان إلى 2.",
+            "calculation_lines": [
+              "\\[2-\\frac1n\\to2,\\qquad2+\\frac1n\\to2.\\]",
+              "\\[u_n\\to2.\\]"
+            ],
+            "conclusion": "\\(\\boxed{\\lim u_n=2}\\)"
+          }
+        ],
+        "final_answer": "\\(\\boxed{\\lim_{n\\to+\\infty}u_n=2}\\)، وبالتالي \\((u_n)\\) متقاربة.",
+        "verification": "الفرق \\(|u_n-2|\\le1/n\\to0\\).",
+        "common_mistakes": [
+          {
+            "mistake": "البحث عن نهاية \\(\\sin n\\).",
+            "correction": "\\(\\sin n\\) متذبذبة؛ نستعمل الحصر بدلًا من ذلك."
+          }
+        ],
+        "hints": [
+          "ابدأ من \\(-1\\le\\sin n\\le1\\).",
+          "اجعل الحصر حول العدد 2."
+        ],
+        "alternative_method": "",
+        "is_complete": true,
+        "method": [
+          "بناء الحصر",
+          "نهاية الطرفين",
+          "تطبيق المبرهنة"
+        ],
+        "understanding_check": [
+          "ما شكل المتتالية الذي سمح باختيار هذه الطريقة؟",
+          "ما قاعدة النهاية أو مبرهنة التقارب المستعملة؟",
+          "كيف نتحقق من أن النتيجة النهائية منسجمة مع المعطيات؟"
+        ],
+        "academic_writing_tip": "اكتب القاعدة المستعملة أولًا، ثم الحساب في أسطر منفصلة، ثم اختم بقيمة النهاية وحدد هل المتتالية متقاربة أم متباعدة."
+      }
+    },
+    {
+      "id": "axis07_limits_practice_07",
+      "year": null,
+      "source_file": null,
+      "source_page": null,
+      "exercise": "axis07_practice_07",
+      "number": "7",
+      "text": "لتكن \\(u_n=7-3\\left(\\frac25\\right)^n\\). احسب النهاية، ثم حدد هل المتتالية متقاربة أم متباعدة.",
+      "context": "استعمال نهاية قوة أساسها بين -1 و1.",
+      "tag": "seq_limits_convergence_divergence",
+      "axis": "نهاية المتتالية والتقارب والتباعد",
+      "secondary_tags": [],
+      "skill": "نهاية هندسية داخل عبارة",
+      "difficulty": "medium",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمرين تدريبي جديد منشأ خصيصًا للمحور، مستوحى من المهارات وأنماط الأفكار الموجودة في ملف الدرس وملف البكالوريا دون نسخ نص تمرين بكالوريا.",
+      "solution": {
+        "strategy": "ندرس القوة أولًا ثم نعوض.",
+        "detailed_explanation": "الأساس 2/5 قيمته المطلقة أصغر من 1، لذلك قوته تؤول إلى الصفر.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "نهاية القوة",
+            "goal": "حساب الجزء المتغير",
+            "rule_used": "نهاية q^n",
+            "explanation": "نفحص قيمة الأساس.",
+            "calculation_lines": [
+              "\\[\\left|\\frac25\\right|<1.\\]",
+              "\\[\\left(\\frac25\\right)^n\\to0.\\]"
+            ],
+            "conclusion": "القوة تؤول إلى 0."
+          },
+          {
+            "order": 2,
+            "title": "نهاية u_n",
+            "goal": "التعويض",
+            "rule_used": "قواعد العمليات",
+            "explanation": "نضرب في -3 ثم نضيف 7.",
+            "calculation_lines": [
+              "\\[-3\\left(\\frac25\\right)^n\\to0.\\]",
+              "\\[u_n\\to7.\\]"
+            ],
+            "conclusion": "\\(\\boxed{\\lim u_n=7}\\)"
+          },
+          {
+            "order": 3,
+            "title": "الطبيعة",
+            "goal": "التقارب",
+            "rule_used": "تعريف التقارب",
+            "explanation": "7 عدد حقيقي.",
+            "calculation_lines": [
+              "\\[7\\in\\mathbb R.\\]"
+            ],
+            "conclusion": "متقاربة نحو 7."
+          }
+        ],
+        "final_answer": "\\(\\boxed{\\lim u_n=7}\\)، والمتتالية متقاربة نحو 7.",
+        "verification": "الحد المصحح يتناقص في القيمة المطلقة نحو الصفر.",
+        "common_mistakes": [
+          {
+            "mistake": "القول إن القوة تؤول إلى +∞.",
+            "correction": "الأساس بين 0 و1، لذلك القوة تؤول إلى 0."
+          }
+        ],
+        "hints": [
+          "افحص \\(|q|\\)."
+        ],
+        "alternative_method": "",
+        "is_complete": true,
+        "method": [
+          "نهاية القوة",
+          "العمليات على النهايات",
+          "التقارب"
+        ],
+        "understanding_check": [
+          "ما شكل المتتالية الذي سمح باختيار هذه الطريقة؟",
+          "ما قاعدة النهاية أو مبرهنة التقارب المستعملة؟",
+          "كيف نتحقق من أن النتيجة النهائية منسجمة مع المعطيات؟"
+        ],
+        "academic_writing_tip": "اكتب القاعدة المستعملة أولًا، ثم الحساب في أسطر منفصلة، ثم اختم بقيمة النهاية وحدد هل المتتالية متقاربة أم متباعدة."
+      }
+    },
+    {
+      "id": "axis07_limits_practice_08",
+      "year": null,
+      "source_file": null,
+      "source_page": null,
+      "exercise": "axis07_practice_08",
+      "number": "8",
+      "text": "نعلم أن \\((u_n)\\) متزايدة وأن \\(u_n\\le5\\) لكل \\(n\\). أثبت أن \\((u_n)\\) متقاربة. وإذا كانت تحقق \\(u_{n+1}=\\frac{u_n+5}{2}\\)، عين نهايتها.",
+      "context": "تطبيق مبرهنة التقارب الرتيب ثم معادلة النهاية.",
+      "tag": "seq_limits_convergence_divergence",
+      "axis": "نهاية المتتالية والتقارب والتباعد",
+      "secondary_tags": [],
+      "skill": "التقارب الرتيب",
+      "difficulty": "hard",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمرين تدريبي جديد منشأ خصيصًا للمحور، مستوحى من المهارات وأنماط الأفكار الموجودة في ملف الدرس وملف البكالوريا دون نسخ نص تمرين بكالوريا.",
+      "solution": {
+        "strategy": "نثبت وجود النهاية أولًا بالرتابة والتحديد، ثم نمر إلى النهاية في العلاقة.",
+        "detailed_explanation": "حل معادلة النهاية قبل إثبات التقارب لا يكفي.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "إثبات التقارب",
+            "goal": "إثبات وجود نهاية",
+            "rule_used": "مبرهنة التقارب الرتيب",
+            "explanation": "المتتالية متزايدة ومحدودة من الأعلى.",
+            "calculation_lines": [
+              "\\[(u_n)\\text{ متزايدة}.\\]",
+              "\\[u_n\\le5.\\]"
+            ],
+            "conclusion": "إذن \\((u_n)\\) متقاربة."
+          },
+          {
+            "order": 2,
+            "title": "تسمية النهاية",
+            "goal": "تهيئة المرور إلى النهاية",
+            "rule_used": "تعريف التقارب",
+            "explanation": "نرمز للنهاية بـℓ.",
+            "calculation_lines": [
+              "\\[u_n\\to\\ell\\quad\\text{و}\\quad u_{n+1}\\to\\ell.\\]"
+            ],
+            "conclusion": "توجد نهاية حقيقية ℓ."
+          },
+          {
+            "order": 3,
+            "title": "معادلة النهاية",
+            "goal": "إيجاد ℓ",
+            "rule_used": "المرور إلى النهاية",
+            "explanation": "نمر إلى النهاية في العلاقة.",
+            "calculation_lines": [
+              "\\[\\ell=\\frac{\\ell+5}{2}.\\]",
+              "\\[2\\ell=\\ell+5.\\]",
+              "\\[\\ell=5.\\]"
+            ],
+            "conclusion": "\\(\\boxed{\\ell=5}\\)"
+          }
+        ],
+        "final_answer": "\\(\\boxed{(u_n)\\text{ متقاربة و }\\lim u_n=5}\\).",
+        "verification": "القيمة 5 تحقق \\(5=(5+5)/2\\).",
+        "common_mistakes": [
+          {
+            "mistake": "حل \\(\\ell=(\\ell+5)/2\\) مباشرة.",
+            "correction": "يجب أولًا إثبات أن النهاية موجودة."
+          },
+          {
+            "mistake": "القول متزايدة إذن متقاربة.",
+            "correction": "يلزم أيضًا أن تكون محدودة من الأعلى."
+          }
+        ],
+        "hints": [
+          "اذكر الرتابة والتحديد معًا.",
+          "بعد إثبات التقارب سم النهاية ℓ."
+        ],
+        "alternative_method": "",
+        "is_complete": true,
+        "method": [
+          "إثبات التقارب",
+          "معادلة النهاية",
+          "تحديد النهاية"
+        ],
+        "understanding_check": [
+          "ما شكل المتتالية الذي سمح باختيار هذه الطريقة؟",
+          "ما قاعدة النهاية أو مبرهنة التقارب المستعملة؟",
+          "كيف نتحقق من أن النتيجة النهائية منسجمة مع المعطيات؟"
+        ],
+        "academic_writing_tip": "اكتب القاعدة المستعملة أولًا، ثم الحساب في أسطر منفصلة، ثم اختم بقيمة النهاية وحدد هل المتتالية متقاربة أم متباعدة."
+      }
+    },
+    {
+      "id": "axis07_limits_practice_09",
+      "year": null,
+      "source_file": null,
+      "source_page": null,
+      "exercise": "axis07_practice_09",
+      "number": "9",
+      "text": "لتكن \\((u_n)\\) معرفة بـ \\(u_0=1\\) و\\(u_{n+1}=\\sqrt{3u_n+4}\\). نفترض أنه قد ثبت أن \\((u_n)\\) متزايدة وأن \\(u_n<4\\) لكل \\(n\\). أثبت تقاربها ثم عين نهايتها.",
+      "context": "متتالية تراجعية جذرية مع اختيار الحل الموافق للحصر.",
+      "tag": "seq_limits_convergence_divergence",
+      "axis": "نهاية المتتالية والتقارب والتباعد",
+      "secondary_tags": [],
+      "skill": "متتالية تراجعية",
+      "difficulty": "hard",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمرين تدريبي جديد منشأ خصيصًا للمحور، مستوحى من المهارات وأنماط الأفكار الموجودة في ملف الدرس وملف البكالوريا دون نسخ نص تمرين بكالوريا.",
+      "solution": {
+        "strategy": "نستعمل التقارب الرتيب ثم نحل معادلة النهاية ونختار الحل الموافق للحدود.",
+        "detailed_explanation": "المعطيات توفر مباشرة شرطي مبرهنة التقارب الرتيب.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "التقارب",
+            "goal": "إثبات وجود النهاية",
+            "rule_used": "مبرهنة التقارب الرتيب",
+            "explanation": "متزايدة ومحدودة من الأعلى بالعدد 4.",
+            "calculation_lines": [
+              "\\[(u_n)\\text{ متزايدة}.\\]",
+              "\\[u_n<4.\\]"
+            ],
+            "conclusion": "إذن المتتالية متقاربة."
+          },
+          {
+            "order": 2,
+            "title": "معادلة النهاية",
+            "goal": "استخراج القيم الممكنة",
+            "rule_used": "استمرارية الجذر",
+            "explanation": "نسمي النهاية ℓ.",
+            "calculation_lines": [
+              "\\[\\ell=\\sqrt{3\\ell+4}.\\]",
+              "\\[\\ell^2=3\\ell+4.\\]",
+              "\\[\\ell^2-3\\ell-4=0.\\]",
+              "\\[(\\ell-4)(\\ell+1)=0.\\]"
+            ],
+            "conclusion": "\\(\\ell=4\\) أو \\(\\ell=-1\\)."
+          },
+          {
+            "order": 3,
+            "title": "اختيار الحل",
+            "goal": "اختيار النهاية الصحيحة",
+            "rule_used": "الحصر وإشارة الجذر",
+            "explanation": "حدود المتتالية موجبة، والنهاية لا يمكن أن تكون -1.",
+            "calculation_lines": [
+              "\\[u_n>0\\Rightarrow\\ell\\ge0.\\]",
+              "إذن \\(\\ell=4\\)."
+            ],
+            "conclusion": "\\(\\boxed{\\lim u_n=4}\\)"
+          }
+        ],
+        "final_answer": "\\(\\boxed{\\lim_{n\\to+\\infty}u_n=4}\\).",
+        "verification": "4 تحقق \\(4=\\sqrt{3\\times4+4}=4\\).",
+        "common_mistakes": [
+          {
+            "mistake": "الاحتفاظ بالحل -1.",
+            "correction": "الجذر يجعل الحدود غير سالبة، لذلك نرفض -1."
+          },
+          {
+            "mistake": "عدم إثبات التقارب.",
+            "correction": "معادلة النقاط الثابتة وحدها لا تثبت وجود النهاية."
+          }
+        ],
+        "hints": [
+          "ابدأ بمبرهنة التقارب الرتيب.",
+          "بعد التربيع استعمل إشارة الحدود."
+        ],
+        "alternative_method": "",
+        "is_complete": true,
+        "method": [
+          "إثبات التقارب",
+          "حل معادلة النهاية",
+          "اختيار الحل"
+        ],
+        "understanding_check": [
+          "ما شكل المتتالية الذي سمح باختيار هذه الطريقة؟",
+          "ما قاعدة النهاية أو مبرهنة التقارب المستعملة؟",
+          "كيف نتحقق من أن النتيجة النهائية منسجمة مع المعطيات؟"
+        ],
+        "academic_writing_tip": "اكتب القاعدة المستعملة أولًا، ثم الحساب في أسطر منفصلة، ثم اختم بقيمة النهاية وحدد هل المتتالية متقاربة أم متباعدة."
+      }
+    },
+    {
+      "id": "axis07_limits_practice_10",
+      "year": null,
+      "source_file": null,
+      "source_page": null,
+      "exercise": "axis07_practice_10",
+      "number": "10",
+      "text": "لتكن \\((u_n)\\) متتالية تحقق لكل \\(n\\): \\(0\\le4-u_n\\le3\\left(\\frac34\\right)^n\\). استنتج نهاية \\((u_n)\\).",
+      "context": "حصر الفرق بين المتتالية والقيمة المرشحة للنهاية.",
+      "tag": "seq_limits_convergence_divergence",
+      "axis": "نهاية المتتالية والتقارب والتباعد",
+      "secondary_tags": [],
+      "skill": "الحصر والنهاية",
+      "difficulty": "hard",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمرين تدريبي جديد منشأ خصيصًا للمحور، مستوحى من المهارات وأنماط الأفكار الموجودة في ملف الدرس وملف البكالوريا دون نسخ نص تمرين بكالوريا.",
+      "solution": {
+        "strategy": "نحسب نهاية الحد الأعلى ثم نطبق الحصر على 4-u_n.",
+        "detailed_explanation": "المتراجحة لا تحصر u_n حول الصفر، بل تحصر الفرق بينها وبين 4.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "نهاية الحد الأعلى",
+            "goal": "إثبات أنه يؤول للصفر",
+            "rule_used": "نهاية متتالية هندسية",
+            "explanation": "الأساس 3/4 بين 0 و1.",
+            "calculation_lines": [
+              "\\[0<\\frac34<1.\\]",
+              "\\[3\\left(\\frac34\\right)^n\\to0.\\]"
+            ],
+            "conclusion": "الحد الأعلى يؤول إلى 0."
+          },
+          {
+            "order": 2,
+            "title": "الحصر",
+            "goal": "نهاية الفرق",
+            "rule_used": "مبرهنة الحصر",
+            "explanation": "الطرفان لهما النهاية نفسها.",
+            "calculation_lines": [
+              "\\[0\\le4-u_n\\le3\\left(\\frac34\\right)^n.\\]",
+              "\\[4-u_n\\to0.\\]"
+            ],
+            "conclusion": "\\(4-u_n\\to0\\)"
+          },
+          {
+            "order": 3,
+            "title": "نهاية u_n",
+            "goal": "الرجوع للمتتالية",
+            "rule_used": "قواعد العمليات",
+            "explanation": "نكتب u_n=4-(4-u_n).",
+            "calculation_lines": [
+              "\\[u_n=4-(4-u_n).\\]",
+              "\\[u_n\\to4.\\]"
+            ],
+            "conclusion": "\\(\\boxed{\\lim u_n=4}\\)"
+          }
+        ],
+        "final_answer": "\\(\\boxed{\\lim u_n=4}\\)، وبالتالي المتتالية متقاربة نحو 4.",
+        "verification": "المسافة بين u_n و4 محصورة بكمية تؤول إلى الصفر.",
+        "common_mistakes": [
+          {
+            "mistake": "استنتاج \\(u_n\\to0\\).",
+            "correction": "الذي يؤول إلى 0 هو \\(4-u_n\\)، لا \\(u_n\\)."
+          }
+        ],
+        "hints": [
+          "حدد الكمية المحصورة بدقة.",
+          "بعد الحصر ارجع إلى u_n."
+        ],
+        "alternative_method": "",
+        "is_complete": true,
+        "method": [
+          "نهاية الحد الأعلى",
+          "الحصر",
+          "استخراج النهاية"
+        ],
+        "understanding_check": [
+          "ما شكل المتتالية الذي سمح باختيار هذه الطريقة؟",
+          "ما قاعدة النهاية أو مبرهنة التقارب المستعملة؟",
+          "كيف نتحقق من أن النتيجة النهائية منسجمة مع المعطيات؟"
+        ],
+        "academic_writing_tip": "اكتب القاعدة المستعملة أولًا، ثم الحساب في أسطر منفصلة، ثم اختم بقيمة النهاية وحدد هل المتتالية متقاربة أم متباعدة."
+      }
+    },
+    {
+      "id": "axis07_limits_practice_11",
+      "year": null,
+      "source_file": null,
+      "source_page": null,
+      "exercise": "axis07_practice_11",
+      "number": "11",
+      "text": "ليكن \\(a>0\\) و\\(a\\ne1\\). نعتبر \\(u_n=2+a^n\\). عين قيم \\(a\\) التي تكون من أجلها \\((u_n)\\) متقاربة، ثم أعط نهايتها في هذه الحالة.",
+      "context": "دراسة التقارب حسب وسيط موجب.",
+      "tag": "seq_limits_convergence_divergence",
+      "axis": "نهاية المتتالية والتقارب والتباعد",
+      "secondary_tags": [],
+      "skill": "تقارب حسب وسيط",
+      "difficulty": "hard",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمرين تدريبي جديد منشأ خصيصًا للمحور، مستوحى من المهارات وأنماط الأفكار الموجودة في ملف الدرس وملف البكالوريا دون نسخ نص تمرين بكالوريا.",
+      "solution": {
+        "strategy": "ندرس سلوك a^n حسب قيمة a.",
+        "detailed_explanation": "بما أن a موجب، تنقسم الدراسة إلى 0<a<1 وa>1، مع استبعاد a=1.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "الحالة الأولى",
+            "goal": "دراسة 0<a<1",
+            "rule_used": "نهاية q^n",
+            "explanation": "إذا كانت القيمة المطلقة للأساس أصغر من 1 فإن القوة تؤول للصفر.",
+            "calculation_lines": [
+              "\\[0<a<1\\Rightarrow a^n\\to0.\\]",
+              "\\[u_n=2+a^n\\to2.\\]"
+            ],
+            "conclusion": "متقاربة نحو 2."
+          },
+          {
+            "order": 2,
+            "title": "الحالة الثانية",
+            "goal": "دراسة a>1",
+            "rule_used": "نهاية q^n",
+            "explanation": "القوة تكبر دون حد.",
+            "calculation_lines": [
+              "\\[a>1\\Rightarrow a^n\\to+\\infty.\\]",
+              "\\[u_n\\to+\\infty.\\]"
+            ],
+            "conclusion": "متباعدة."
+          },
+          {
+            "order": 3,
+            "title": "النتيجة",
+            "goal": "تحديد مجموعة القيم",
+            "rule_used": "جمع الحالات",
+            "explanation": "a=1 مستبعدة أصلًا.",
+            "calculation_lines": [
+              "\\[(u_n)\\text{ متقاربة إذا وفقط إذا }0<a<1.\\]"
+            ],
+            "conclusion": "\\(\\boxed{0<a<1}\\)"
+          }
+        ],
+        "final_answer": "\\(\\boxed{(u_n)\\text{ متقاربة فقط من أجل }0<a<1،\\quad \\lim u_n=2}\\).",
+        "verification": "مثلًا عند a=1/2 يصبح الحد المصحح صغيرًا جدًا.",
+        "common_mistakes": [
+          {
+            "mistake": "القول إن كل a>0 يعطي تقاربًا.",
+            "correction": "إذا كان a>1 فإن a^n تتجه إلى +∞."
+          }
+        ],
+        "hints": [
+          "قسم الحالات حول العدد 1.",
+          "التقارب يحتاج a^n→0."
+        ],
+        "alternative_method": "",
+        "is_complete": true,
+        "method": [
+          "دراسة الحالات",
+          "التقارب",
+          "النهاية"
+        ],
+        "understanding_check": [
+          "ما شكل المتتالية الذي سمح باختيار هذه الطريقة؟",
+          "ما قاعدة النهاية أو مبرهنة التقارب المستعملة؟",
+          "كيف نتحقق من أن النتيجة النهائية منسجمة مع المعطيات؟"
+        ],
+        "academic_writing_tip": "اكتب القاعدة المستعملة أولًا، ثم الحساب في أسطر منفصلة، ثم اختم بقيمة النهاية وحدد هل المتتالية متقاربة أم متباعدة."
+      }
+    },
+    {
+      "id": "axis07_limits_practice_12",
+      "year": null,
+      "source_file": null,
+      "source_page": null,
+      "exercise": "axis07_practice_12",
+      "number": "12",
+      "text": "لتكن \\(u_n=\\frac{n^2+1}{2^n}\\) لكل \\(n\\ge1\\). نعلم أن \\(\\frac{n^2}{2^n}\\to0\\). استنتج نهاية \\((u_n)\\) وحدد طبيعتها.",
+      "context": "مقارنة نمو كثير حدود بمتتالية هندسية/أسية.",
+      "tag": "seq_limits_convergence_divergence",
+      "axis": "نهاية المتتالية والتقارب والتباعد",
+      "secondary_tags": [],
+      "skill": "مقارنة النمو",
+      "difficulty": "hard",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمرين تدريبي جديد منشأ خصيصًا للمحور، مستوحى من المهارات وأنماط الأفكار الموجودة في ملف الدرس وملف البكالوريا دون نسخ نص تمرين بكالوريا.",
+      "solution": {
+        "strategy": "نفصل الكسر إلى جزأين ثم نستعمل النتيجة المعطاة.",
+        "detailed_explanation": "المقام الأسي ينمو أسرع من كثير الحدود، والجزء الثاني 1/2^n يؤول أيضًا إلى صفر.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "تفكيك العبارة",
+            "goal": "فصل الحدين",
+            "rule_used": "خواص الكسور",
+            "explanation": "نقسم البسط على المقام حدًا حدًا.",
+            "calculation_lines": [
+              "\\[u_n=\\frac{n^2}{2^n}+\\frac1{2^n}.\\]"
+            ],
+            "conclusion": "عبارة مجموع نهايتين."
+          },
+          {
+            "order": 2,
+            "title": "نهاية الجزأين",
+            "goal": "حساب كل نهاية",
+            "rule_used": "المعطى ونهاية متتالية هندسية",
+            "explanation": "الأولى معطاة والثانية أساسها 1/2.",
+            "calculation_lines": [
+              "\\[\\frac{n^2}{2^n}\\to0.\\]",
+              "\\[\\frac1{2^n}=\\left(\\frac12\\right)^n\\to0.\\]"
+            ],
+            "conclusion": "كلا الجزأين يؤولان إلى 0."
+          },
+          {
+            "order": 3,
+            "title": "النتيجة",
+            "goal": "حساب النهاية",
+            "rule_used": "نهاية مجموع",
+            "explanation": "نجمع النهايتين.",
+            "calculation_lines": [
+              "\\[u_n\\to0+0=0.\\]"
+            ],
+            "conclusion": "\\(\\boxed{\\lim u_n=0}\\)"
+          }
+        ],
+        "final_answer": "\\(\\boxed{\\lim u_n=0}\\)، وبالتالي المتتالية متقاربة نحو الصفر.",
+        "verification": "كل حد في التفكيك غير سالب ويؤول إلى الصفر.",
+        "common_mistakes": [
+          {
+            "mistake": "القول إن n² و2^n كلاهما إلى +∞ فلا يمكن الحساب.",
+            "correction": "المعطى يحسم مقارنة النمو ويعطي \\(n^2/2^n\\to0\\)."
+          }
+        ],
+        "hints": [
+          "فكك البسط.",
+          "استعمل النتيجة المعطاة ثم نهاية (1/2)^n."
+        ],
+        "alternative_method": "",
+        "is_complete": true,
+        "method": [
+          "تفكيك الكسر",
+          "نهايات النمو",
+          "التقارب"
+        ],
+        "understanding_check": [
+          "ما شكل المتتالية الذي سمح باختيار هذه الطريقة؟",
+          "ما قاعدة النهاية أو مبرهنة التقارب المستعملة؟",
+          "كيف نتحقق من أن النتيجة النهائية منسجمة مع المعطيات؟"
+        ],
+        "academic_writing_tip": "اكتب القاعدة المستعملة أولًا، ثم الحساب في أسطر منفصلة، ثم اختم بقيمة النهاية وحدد هل المتتالية متقاربة أم متباعدة."
+      }
+    },
+    {
+      "id": "axis07_limits_practice_13",
+      "year": null,
+      "source_file": null,
+      "source_page": null,
+      "exercise": "axis07_practice_13",
+      "number": "13",
+      "text": "لتكن \\((u_n)\\) معرفة بـ \\(u_0=2\\) و\\(u_{n+1}=\\frac12u_n+3\\). نضع \\(v_n=u_n-6\\). (1) أثبت أن \\((v_n)\\) هندسية. (2) اكتب \\(u_n\\) بدلالة \\(n\\). (3) احسب النهاية وحدد طبيعة \\((u_n)\\).",
+      "context": "تمرين مركب: متتالية مساعدة ثم حد عام ثم نهاية.",
+      "tag": "seq_limits_convergence_divergence",
+      "axis": "نهاية المتتالية والتقارب والتباعد",
+      "secondary_tags": [],
+      "skill": "متتالية مساعدة والنهاية",
+      "difficulty": "hard",
+      "is_standalone": true,
+      "depends_on": [],
+      "images": [],
+      "original_text_note": "تمرين تدريبي جديد منشأ خصيصًا للمحور، مستوحى من المهارات وأنماط الأفكار الموجودة في ملف الدرس وملف البكالوريا دون نسخ نص تمرين بكالوريا.",
+      "solution": {
+        "strategy": "نحوّل العلاقة إلى هندسية باستعمال v_n، ثم نكتب الحد العام ونحسب النهاية.",
+        "detailed_explanation": "طرح 6 يلغي الحد الثابت ويجعل العلاقة أبسط.",
+        "steps": [
+          {
+            "order": 1,
+            "title": "إثبات الهندسية",
+            "goal": "إظهار v_{n+1}=1/2 v_n",
+            "rule_used": "تعريف المتتالية الهندسية",
+            "explanation": "نعوض العلاقة داخل v_{n+1}.",
+            "calculation_lines": [
+              "\\[v_{n+1}=u_{n+1}-6.\\]",
+              "\\[v_{n+1}=\\frac12u_n+3-6.\\]",
+              "\\[v_{n+1}=\\frac12(u_n-6)=\\frac12v_n.\\]"
+            ],
+            "conclusion": "\\((v_n)\\) هندسية أساسها \\(1/2\\)."
+          },
+          {
+            "order": 2,
+            "title": "الحد العام",
+            "goal": "إيجاد v_n ثم u_n",
+            "rule_used": "الحد العام للهندسية",
+            "explanation": "نحسب v_0 أولًا.",
+            "calculation_lines": [
+              "\\[v_0=2-6=-4.\\]",
+              "\\[v_n=-4\\left(\\frac12\\right)^n.\\]",
+              "\\[u_n=v_n+6=6-4\\left(\\frac12\\right)^n.\\]"
+            ],
+            "conclusion": "\\(u_n=6-4(1/2)^n\\)"
+          },
+          {
+            "order": 3,
+            "title": "النهاية",
+            "goal": "حساب نهاية u_n",
+            "rule_used": "نهاية q^n",
+            "explanation": "الأساس 1/2 أصغر من 1 في القيمة المطلقة.",
+            "calculation_lines": [
+              "\\[\\left(\\frac12\\right)^n\\to0.\\]",
+              "\\[u_n\\to6.\\]"
+            ],
+            "conclusion": "\\(\\boxed{\\lim u_n=6}\\)"
+          },
+          {
+            "order": 4,
+            "title": "الطبيعة",
+            "goal": "تفسير النهاية",
+            "rule_used": "تعريف التقارب",
+            "explanation": "النهاية عدد حقيقي.",
+            "calculation_lines": [
+              "\\[6\\in\\mathbb R.\\]"
+            ],
+            "conclusion": "المتتالية متقاربة نحو 6."
+          }
+        ],
+        "final_answer": "\\(\\boxed{v_n=-4(1/2)^n,\\quad u_n=6-4(1/2)^n,\\quad \\lim u_n=6}\\).",
+        "verification": "عند n=0 تعطي الصيغة u_0=2، كما أن 6 تحقق معادلة النقطة الثابتة.",
+        "common_mistakes": [
+          {
+            "mistake": "الرجوع الخاطئ من v_n إلى u_n.",
+            "correction": "من v_n=u_n-6 نحصل على u_n=v_n+6."
+          },
+          {
+            "mistake": "نسيان فحص أساس الهندسية.",
+            "correction": "\\(|1/2|<1\\) هو سبب اختفاء الحد الهندسي."
+          }
+        ],
+        "hints": [
+          "ابدأ بـv_{n+1}.",
+          "احسب v_0.",
+          "بعد إيجاد u_n افحص نهاية القوة."
+        ],
+        "alternative_method": "",
+        "is_complete": true,
+        "method": [
+          "إثبات الهندسية",
+          "الحد العام",
+          "النهاية",
+          "التقارب"
+        ],
+        "understanding_check": [
+          "ما شكل المتتالية الذي سمح باختيار هذه الطريقة؟",
+          "ما قاعدة النهاية أو مبرهنة التقارب المستعملة؟",
+          "كيف نتحقق من أن النتيجة النهائية منسجمة مع المعطيات؟"
+        ],
+        "academic_writing_tip": "اكتب القاعدة المستعملة أولًا، ثم الحساب في أسطر منفصلة، ثم اختم بقيمة النهاية وحدد هل المتتالية متقاربة أم متباعدة."
+      }
+    }
+  ]
+}

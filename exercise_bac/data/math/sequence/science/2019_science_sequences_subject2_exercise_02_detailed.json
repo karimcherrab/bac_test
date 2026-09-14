@@ -1,0 +1,284 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "session": "ordinary",
+  "year": 2019,
+  "chapter_code": "sequences",
+  "chapter_title": "المتتاليات العددية",
+  "branches": [
+    {
+      "code": "science",
+      "name": "شعبة علوم تجريبية"
+    }
+  ],
+  "source_pdf": "2019(4).pdf",
+  "comparison_source": "bac_sequence_scientifique(20260823-104446).pdf",
+  "source_verification": {
+    "statement_checked_against_original_bac": true,
+    "solution_checked_against_official_correction": true,
+    "solution_style": "حل مفصل ومبسط بخطوات صغيرة، مع الحفاظ على نص السؤال والنتائج الرسمية.",
+    "statement_policy": "نص التمرين والأسئلة منقول من موضوع البكالوريا دون إضافة معطيات جديدة."
+  },
+  "version": "4.2-2019-science-sequences-subject2-ex02",
+  "exercise_number": 2,
+  "subject_number": 2,
+  "points": 4,
+  "source_page": 3,
+  "source_pages": [
+    3
+  ],
+  "solution_source_pages": [
+    8
+  ],
+  "title": "التمرين الثاني — بكالوريا الجزائر 2019 — الموضوع الثاني — شعبة علوم تجريبية",
+  "statement": "\\(f\\) الدالة المعرفة على المجال \\([4;7[\\) بـ: \\(f(x)=\\sqrt{x+2}+4\\).",
+  "statement_graphs": [],
+  "questions": [
+    {
+      "id": "2019_s2_ex02_q1a",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) أ) بين أن الدالة \\(f\\) متزايدة تماما على المجال \\([4;7[\\).",
+      "axis_tags": [
+        "function_monotonicity"
+      ],
+      "solution": {
+        "strategy": "نحسب مشتقة \\(f\\) ونحدد إشارتها.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب المشتقة",
+            "explanation": "لدينا:\n\\[\nf(x)=\\sqrt{x+2}+4.\n\\]\nإذن:\n\\[\nf'(x)=\\frac1{2\\sqrt{x+2}}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "إشارة المشتقة",
+            "explanation": "لكل \\(x\\in[4,7[\\):\n\\[\nx+2>0,\n\\]\nومن ثم:\n\\[\nf'(x)>0.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الاستنتاج",
+            "explanation": "إذن \\(f\\) متزايدة تماما على \\([4;7[\\)."
+          }
+        ],
+        "final_answer": "\\(\\boxed{f\\text{ متزايدة تماما على }[4;7[}\\)."
+      }
+    },
+    {
+      "id": "2019_s2_ex02_q1b",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "ب) استنتج أنه: من أجل كل عدد حقيقي \\(x\\) من المجال \\([4;7[\\) فإن \\(f(x)\\in[4;7[\\).",
+      "axis_tags": [
+        "invariant_interval"
+      ],
+      "solution": {
+        "strategy": "نحصر \\(f(x)\\) عندما \\(4\\le x<7\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الحصر من الأسفل",
+            "explanation": "بما أن \\(x\\ge4\\):\n\\[\n\\sqrt{x+2}\\ge0,\n\\]\nوبالتالي:\n\\[\nf(x)=\\sqrt{x+2}+4\\ge4.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "الحصر من الأعلى",
+            "explanation": "بما أن \\(x<7\\):\n\\[\nx+2<9.\n\\]\nوبأخذ الجذر:\n\\[\n\\sqrt{x+2}<3.\n\\]\nإذن:\n\\[\nf(x)<3+4=7.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "النتيجة",
+            "explanation": "إذن:\n\\[\n4\\le f(x)<7,\n\\]\nأي:\n\\[\n\\boxed{f(x)\\in[4;7[}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{f([4;7[)\\subset[4;7[}\\)."
+      }
+    },
+    {
+      "id": "2019_s2_ex02_q2",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "2) برهن أنه: من أجل كل عدد حقيقي \\(x\\) من المجال \\([4;7[\\) فإن \\(f(x)-x=\\frac{-x^2+9x-14}{x-4+\\sqrt{x+2}}\\). ثم استنتج أنه: من أجل كل عدد حقيقي \\(x\\) من المجال \\([4;7[\\) فإن \\(f(x)-x>0\\).",
+      "axis_tags": [
+        "algebraic_transformation",
+        "function_sign"
+      ],
+      "solution": {
+        "strategy": "نكتب \\(f(x)-x\\) ثم نستعمل المرافق.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "كتابة الفرق",
+            "explanation": "\\[\nf(x)-x=\\sqrt{x+2}+4-x\n=\\sqrt{x+2}-(x-4).\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "الضرب في المرافق",
+            "explanation": "نضرب ونقسم في:\n\\[\n\\sqrt{x+2}+x-4.\n\\]\nفنحصل على:\n\\[\nf(x)-x\n=\\frac{(x+2)-(x-4)^2}{x-4+\\sqrt{x+2}}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "تبسيط البسط",
+            "explanation": "\\[\n(x+2)-(x-4)^2\n=x+2-(x^2-8x+16)\n=-x^2+9x-14.\n\\]\nإذن:\n\\[\n\\boxed{f(x)-x=\\frac{-x^2+9x-14}{x-4+\\sqrt{x+2}}}.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "تحليل البسط",
+            "explanation": "\\[\n-x^2+9x-14=(7-x)(x-2).\n\\]\nوعلى \\([4,7[\\):\n\\[\n7-x>0,\\qquad x-2>0.\n\\]\nإذن البسط موجب."
+          },
+          {
+            "step_number": 5,
+            "title": "إشارة المقام",
+            "explanation": "على \\([4,7[\\):\n\\[\nx-4\\ge0,\n\\qquad\n\\sqrt{x+2}>0.\n\\]\nإذن المقام موجب."
+          },
+          {
+            "step_number": 6,
+            "title": "الاستنتاج",
+            "explanation": "إذن:\n\\[\n\\boxed{f(x)-x>0\\text{ على }[4;7[}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{f(x)-x=\\frac{-x^2+9x-14}{x-4+\\sqrt{x+2}}>0}\\)."
+      }
+    },
+    {
+      "id": "2019_s2_ex02_q3a",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "3) \\((u_n)\\) المتتالية العددية المعرفة بـ: \\(u_0=4\\)، ومن أجل كل عدد طبيعي \\(n\\): \\(u_{n+1}=f(u_n)\\). أ) برهن بالتراجع أنه: من أجل كل عدد طبيعي \\(n\\)، \\(4\\le u_n<7\\).",
+      "axis_tags": [
+        "recursive_sequence",
+        "induction_bounds"
+      ],
+      "solution": {
+        "strategy": "نستعمل استقرار المجال \\([4,7[\\) بالدالة \\(f\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التحقق عند n=0",
+            "explanation": "لدينا:\n\\[\nu_0=4.\n\\]\nإذن:\n\\[\n4\\le u_0<7.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "فرضية التراجع",
+            "explanation": "نفترض:\n\\[\n4\\le u_n<7.\n\\]\nأي أن \\(u_n\\in[4,7[\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "الانتقال",
+            "explanation": "من السؤال 1-ب:\n\\[\nx\\in[4,7[\\Rightarrow f(x)\\in[4,7[.\n\\]\nإذن:\n\\[\nu_{n+1}=f(u_n)\\in[4,7[.\n\\]\nأي:\n\\[\n4\\le u_{n+1}<7.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "الخلاصة",
+            "explanation": "بالتراجع:\n\\[\n\\boxed{4\\le u_n<7\\quad\\forall n\\in\\mathbb N}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{4\\le u_n<7}\\) لكل \\(n\\)."
+      }
+    },
+    {
+      "id": "2019_s2_ex02_q3b",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "ب) استنتج اتجاه تغير المتتالية \\((u_n)\\) ثم بين أنها متقاربة.",
+      "axis_tags": [
+        "sequence_monotonicity",
+        "sequence_convergence"
+      ],
+      "solution": {
+        "strategy": "نستعمل نتيجة السؤال 2 مع \\(x=u_n\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "إشارة الفرق",
+            "explanation": "بما أن \\(u_n\\in[4,7[\\)، فمن السؤال 2:\n\\[\nf(u_n)-u_n>0.\n\\]\nلكن:\n\\[\nu_{n+1}=f(u_n).\n\\]\nإذن:\n\\[\nu_{n+1}-u_n>0.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "اتجاه التغير",
+            "explanation": "إذن \\((u_n)\\) متزايدة تماما."
+          },
+          {
+            "step_number": 3,
+            "title": "التقارب",
+            "explanation": "ومن السؤال السابق:\n\\[\nu_n<7.\n\\]\nإذن المتتالية محدودة من الأعلى بالعدد \\(7\\). وكل متتالية متزايدة ومحدودة من الأعلى متقاربة."
+          }
+        ],
+        "final_answer": "\\(\\boxed{(u_n)\\text{ متزايدة تماما ومتقاربة}}\\)."
+      }
+    },
+    {
+      "id": "2019_s2_ex02_q4a",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "4) أ) بين أنه: من أجل كل عدد طبيعي \\(n\\)، \\(7-u_{n+1}<\\frac14(7-u_n)\\).",
+      "axis_tags": [
+        "recursive_inequality"
+      ],
+      "solution": {
+        "strategy": "نحوّل \\(7-u_{n+1}\\) باستعمال المرافق ثم نحصر العامل.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "كتابة الفرق",
+            "explanation": "\\[\n7-u_{n+1}\n=7-(\\sqrt{u_n+2}+4)\n=3-\\sqrt{u_n+2}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "استعمال المرافق",
+            "explanation": "\\[\n3-\\sqrt{u_n+2}\n=\\frac{9-(u_n+2)}{3+\\sqrt{u_n+2}}\n=\\frac{7-u_n}{3+\\sqrt{u_n+2}}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حصر المقام",
+            "explanation": "بما أن \\(u_n\\ge4\\):\n\\[\n\\sqrt{u_n+2}\\ge\\sqrt6>1.\n\\]\nإذن:\n\\[\n3+\\sqrt{u_n+2}>4.\n\\]\nومن ثم:\n\\[\n\\frac1{3+\\sqrt{u_n+2}}<\\frac14.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "النتيجة",
+            "explanation": "وبما أن \\(7-u_n>0\\):\n\\[\n\\boxed{7-u_{n+1}<\\frac14(7-u_n)}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{7-u_{n+1}<\\frac14(7-u_n)}\\)."
+      }
+    },
+    {
+      "id": "2019_s2_ex02_q4b",
+      "display_order": 7,
+      "content_type": "question",
+      "text": "ب) استنتج أنه: من أجل كل عدد طبيعي \\(n\\)، \\(0<7-u_n<3\\left(\\frac14\\right)^n\\)، ثم احسب نهاية المتتالية \\((u_n)\\).",
+      "axis_tags": [
+        "comparison_sequence",
+        "squeeze_theorem",
+        "sequence_limit"
+      ],
+      "solution": {
+        "strategy": "نكرر المتراجحة السابقة ثم نستعمل مبرهنة الحصر.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "إشارة 7-u_n",
+            "explanation": "من \\(u_n<7\\) نحصل على:\n\\[\n7-u_n>0.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "تكرار المتراجحة",
+            "explanation": "من السؤال السابق:\n\\[\n7-u_{n+1}<\\frac14(7-u_n).\n\\]\nوبالتكرار:\n\\[\n7-u_n<\\left(\\frac14\\right)^n(7-u_0).\n\\]\nوبما أن \\(u_0=4\\):\n\\[\n7-u_0=3.\n\\]\nإذن:\n\\[\n7-u_n<3\\left(\\frac14\\right)^n.\n\\]\nوعليه نحصل على الحصر المطلوب للرتب الموجبة، ومع الرتبة \\(0\\) تكون القيمة \\(7-u_0=3\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "النهاية",
+            "explanation": "بما أن:\n\\[\n3\\left(\\frac14\\right)^n\\to0,\n\\]\nومن:\n\\[\n0<7-u_n\\le 3\\left(\\frac14\\right)^n\n\\]\nنستنتج حسب مبرهنة الحصر:\n\\[\n7-u_n\\to0.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "النتيجة النهائية",
+            "explanation": "إذن:\n\\[\n\\boxed{u_n\\to7}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{\\lim_{n\\to+\\infty}u_n=7}\\)."
+      }
+    }
+  ]
+}

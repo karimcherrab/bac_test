@@ -1,0 +1,203 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2013-science-space-subject1-ex01-detailed",
+  "session": "ordinary",
+  "year": 2013,
+  "chapter_code": "space_geometry",
+  "chapter_title": "الهندسة في الفضاء",
+  "axis_tags": [
+    "space_parametric_line",
+    "space_line_plane_inclusion",
+    "space_skew_lines",
+    "space_distances",
+    "space_triangle_geometry",
+    "space_areas_volumes"
+  ],
+  "branches": [
+    {
+      "code": "science",
+      "name": "شعبة علوم تجريبية"
+    }
+  ],
+  "exercise_number": 1,
+  "subject_number": 1,
+  "source_page": 1,
+  "source_pages": [
+    1
+  ],
+  "solution_source_pages": [
+    5
+  ],
+  "title": "التمرين الأول — بكالوريا الجزائر 2013 — الموضوع الأول — شعبة علوم تجريبية",
+  "statement": "نعتبر في الفضاء المنسوب إلى المعلم المتعامد المتجانس \\((O;\\vec{i},\\vec{j},\\vec{k})\\) النقط:\n\\[A(-1;1;3),\\;B(1;0;-1),\\;C(2;-1;1),\\;D(2;0;-1)\\]\nو المستوى \\((P)\\) ذا المعادلة:\n\\[2y+z+1=0.\\]\nليكن \\((\\Delta)\\) المستقيم الذي تمثيله الوسيطي له:\n\\[\\begin{cases}x=-1\\\\y=2+\\beta\\\\z=1-2\\beta\\end{cases}\\]\nحيث \\(\\beta\\) وسيط حقيقي.",
+  "questions": [
+    {
+      "id": "2013_s1_space_ex01_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) اكتب تمثيلا وسيطيا للمستقيم \\((BC)\\)، ثم تحقق أن المستقيم \\((BC)\\) محتوى في المستوى \\((P)\\).",
+      "axis_tags": [
+        "space_parametric_line",
+        "space_line_plane_inclusion"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل النقطة B وشعاع التوجيه BC لكتابة التمثيل الوسيطي، ثم نعوض إحداثيات نقطة عامة منه في معادلة المستوى.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب شعاع التوجيه BC",
+            "explanation": "\\[\\overrightarrow{BC}=C-B=(2-1,-1-0,1-(-1))=(1,-1,2).\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "كتابة التمثيل الوسيطي",
+            "explanation": "يمر المستقيم \\((BC)\\) بالنقطة \\(B(1,0,-1)\\) وله شعاع توجيه \\((1,-1,2)\\)، إذن:\n\\[\\begin{cases}x=1+t\\\\y=-t\\\\z=-1+2t\\end{cases}\\qquad t\\in\\mathbb R.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "التحقق من الاحتواء في P",
+            "explanation": "نعوض في معادلة \\((P)\\):\n\\[2y+z+1=2(-t)+(-1+2t)+1=0.\\]\nوهذا صحيح من أجل كل \\(t\\in\\mathbb R\\)."
+          }
+        ],
+        "final_answer": "\\[(BC):\\begin{cases}x=1+t\\\\y=-t\\\\z=-1+2t\\end{cases},\\ t\\in\\mathbb R,\\qquad (BC)\\subset(P).\\]"
+      }
+    },
+    {
+      "id": "2013_s1_space_ex01_q2",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2) بين أن المستقيمين \\((\\Delta)\\) و \\((BC)\\) ليسا من نفس المستوى.",
+      "axis_tags": [
+        "space_skew_lines"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نثبت أولا أنهما غير متوازيين، ثم نثبت أنهما غير متقاطعين. عندئذ يكونان متخالفين، أي ليسا من نفس المستوى.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "مقارنة شعاعي التوجيه",
+            "explanation": "شعاع توجيه \\((BC)\\) هو:\n\\[\\vec u_{BC}=(1,-1,2).\\]\nوشعاع توجيه \\((\\Delta)\\) هو:\n\\[\\vec u_\\Delta=(0,1,-2).\\]\nوهما غير مرتبطين خطيا، إذن المستقيمان غير متوازيين."
+          },
+          {
+            "step_number": 2,
+            "title": "اختبار التقاطع",
+            "explanation": "إذا تقاطع المستقيمان وجب أن توجد قيمتان \\(t,\\beta\\) تحققان:\n\\[\\begin{cases}1+t=-1\\\\-t=2+\\beta\\\\-1+2t=1-2\\beta\\end{cases}\\]\nمن المعادلة الأولى:\n\\[t=-2.\\]\nومن الثانية:\n\\[2=2+\\beta\\Rightarrow\\beta=0.\\]\nلكن المعادلة الثالثة تصبح:\n\\[-1+2(-2)=-5\\ne1.\\]\nإذن لا يوجد تقاطع."
+          },
+          {
+            "step_number": 3,
+            "title": "الاستنتاج",
+            "explanation": "المستقيمان غير متوازيين وغير متقاطعين، لذلك هما مستقيمان متخالفان، ومنه لا ينتميان إلى مستوى واحد."
+          }
+        ],
+        "final_answer": "المستقيمان \\((\\Delta)\\) و \\((BC)\\) ليسا من نفس المستوى."
+      }
+    },
+    {
+      "id": "2013_s1_space_ex01_q3a",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "3) أ) احسب المسافة بين النقطة \\(A\\) و المستوى \\((P)\\).",
+      "axis_tags": [
+        "space_distances"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نطبق صيغة المسافة من نقطة إلى مستوى ديكارتي.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تحديد معاملات المستوى",
+            "explanation": "\\[(P):0x+2y+z+1=0.\\]\nإذن \\(a=0,b=2,c=1,d=1\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "تطبيق الصيغة",
+            "explanation": "بالنسبة إلى \\(A(-1,1,3)\\):\n\\[d(A,(P))=\\frac{|0(-1)+2(1)+3+1|}{\\sqrt{0^2+2^2+1^2}}=\\frac6{\\sqrt5}.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "ترشيد المقام",
+            "explanation": "\\[\\frac6{\\sqrt5}=\\frac{6\\sqrt5}{5}.\\]"
+          }
+        ],
+        "final_answer": "\\[d(A,(P))=\\frac{6\\sqrt5}{5}.\\]"
+      }
+    },
+    {
+      "id": "2013_s1_space_ex01_q3b",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "ب) بين أن \\(D\\) نقطة من \\((P)\\)، و أن المثلث \\(BCD\\) قائم.",
+      "axis_tags": [
+        "space_relative_positions_intersections",
+        "space_triangle_geometry"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نبدأ بالتحقق من انتماء D إلى P، ثم نحسب مربعات أطوال أضلاع المثلث BCD ونستعمل عكس فيثاغورس.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التحقق من انتماء D إلى P",
+            "explanation": "بالنسبة إلى \\(D(2,0,-1)\\):\n\\[2(0)+(-1)+1=0.\\]\nإذن:\n\\[D\\in(P).\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب مربعات الأطوال",
+            "explanation": "\\[BD^2=(2-1)^2+(0-0)^2+(-1+1)^2=1.\\]\n\\[CD^2=(2-2)^2+(0+1)^2+(-1-1)^2=1+4=5.\\]\n\\[BC^2=(2-1)^2+(-1-0)^2+(1+1)^2=1+1+4=6.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "استعمال عكس فيثاغورس",
+            "explanation": "لدينا:\n\\[BD^2+CD^2=1+5=6=BC^2.\\]\nإذن المثلث \\(BCD\\) قائم في \\(D\\)."
+          }
+        ],
+        "final_answer": "\\[D\\in(P)\\] والمثلث \\(BCD\\) قائم في \\(D\\)."
+      }
+    },
+    {
+      "id": "2013_s1_space_ex01_q4",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "4) بين أن \\(ABCD\\) رباعي وجوه، ثم احسب حجمه.",
+      "axis_tags": [
+        "space_areas_volumes",
+        "space_relative_positions_intersections"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نثبت أن B,C,D تحدد مستوى P وأن A لا تنتمي إليه، ثم نعتبر BCD قاعدة للرباعي ونستعمل المسافة من A إلى P ارتفاعا.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "إثبات أن ABCD رباعي وجوه",
+            "explanation": "النقط \\(B,C,D\\) تنتمي إلى \\((P)\\)، والمثلث \\(BCD\\) قائم، إذن هذه النقط غير مستقيمية وتحدد المستوى \\((P)\\).\nومن السؤال السابق:\n\\[d(A,(P))=\\frac{6\\sqrt5}{5}>0.\\]\nإذن \\(A\\notin(P)\\)، وبالتالي النقط الأربع ليست في مستوى واحد، ومنه \\(ABCD\\) رباعي وجوه."
+          },
+          {
+            "step_number": 2,
+            "title": "حساب مساحة القاعدة BCD",
+            "explanation": "بما أن \\(BCD\\) قائم في \\(D\\):\n\\[S_{BCD}=\\frac12\\,BD\\times CD=\\frac12\\times1\\times\\sqrt5=\\frac{\\sqrt5}{2}.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب الحجم",
+            "explanation": "ارتفاع رباعي الوجوه بالنسبة إلى القاعدة \\(BCD\\) هو:\n\\[h=d(A,(P))=\\frac{6\\sqrt5}{5}.\\]\nإذن:\n\\[V=\\frac13S_{BCD}h=\\frac13\\times\\frac{\\sqrt5}{2}\\times\\frac{6\\sqrt5}{5}=1.\\]"
+          }
+        ],
+        "final_answer": "\\[V_{ABCD}=1\\] وحدة حجم."
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2013.pdf",
+    "statement_figure_policy": "لا يوجد شكل لازم في نص التمرين.",
+    "solution_figure_policy": "لا يحتاج الحل إلى رسم.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  }
+}

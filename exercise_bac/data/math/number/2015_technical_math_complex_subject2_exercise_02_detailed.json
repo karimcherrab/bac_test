@@ -1,0 +1,247 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "session": "ordinary",
+  "year": 2015,
+  "chapter_code": "complex_numbers",
+  "chapter_title": "الأعداد المركبة",
+  "branches": [
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "version": "4.2-2015-technical-math-complex-subject2-ex02",
+  "subject_number": 2,
+  "exercise_number": 2,
+  "source_page": 3,
+  "source_pages": [
+    3
+  ],
+  "solution_source_pages": [
+    8
+  ],
+  "title": "التمرين الثاني — بكالوريا الجزائر 2015 — الموضوع الثاني — شعبة تقني رياضي",
+  "axis_tags": [
+    "complex_parametric_quadratic",
+    "complex_exponential_form",
+    "complex_direct_similarity",
+    "complex_translation",
+    "complex_geometric_locus"
+  ],
+  "statement": "",
+  "questions": [
+    {
+      "id": "2015_tm_s2_complex_ex02_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) حل في \\(\\mathbb{C}\\) مجموعة الأعداد المركبة، المعادلة ذات المجهول \\(z\\) التالية: \\(z^2-4(\\sin\\theta)z+4=0\\) ... \\((I)\\)، حيث \\(\\theta\\) وسيط حقيقي.",
+      "axis_tags": [
+        "complex_parametric_quadratic"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب المميز بدلالة \\(\\theta\\)، ثم نستخرج جذريه ونكتب الحلين.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب المميز",
+            "explanation": "\\[\n\\Delta=16\\sin^2\\theta-16=16(\\sin^2\\theta-1).\n\\]\nوباستعمال:\n\\[\n\\sin^2\\theta-1=-\\cos^2\\theta,\n\\]\nنحصل على:\n\\[\n\\Delta=-16\\cos^2\\theta=(4i\\cos\\theta)^2.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب الحلين",
+            "explanation": "إذن:\n\\[\nz=\\frac{4\\sin\\theta\\pm4i\\cos\\theta}{2}.\n\\]\nومنها:\n\\[\nz'=2\\sin\\theta+2i\\cos\\theta,\n\\qquad\nz''=2\\sin\\theta-2i\\cos\\theta.\n\\]"
+          }
+        ],
+        "final_answer": "\\(z'=2\\sin\\theta+2i\\cos\\theta\\)، و\\(z''=2\\sin\\theta-2i\\cos\\theta\\)."
+      }
+    },
+    {
+      "id": "2015_tm_s2_complex_ex02_q2",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2) من أجل \\(\\theta=\\frac{\\pi}{3}\\) نرمز إلى حلي المعادلة \\((I)\\) بـ \\(z_1\\) و \\(z_2\\). اكتب \\(z_1\\) و \\(z_2\\) على الشكل الأسي.",
+      "axis_tags": [
+        "complex_exponential_form"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نعوض \\(\\theta=\\pi/3\\) ثم نحول الحلين إلى الشكل الأسي.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التعويض",
+            "explanation": "\\[\n\\sin\\frac{\\pi}{3}=\\frac{\\sqrt3}{2},\n\\qquad\n\\cos\\frac{\\pi}{3}=\\frac12.\n\\]\nإذن الحلول:\n\\[\n\\sqrt3+i,\n\\qquad\n\\sqrt3-i.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "الشكل الأسي",
+            "explanation": "كلا العددين طويلته \\(2\\). إذن:\n\\[\nz_1=\\sqrt3+i=2e^{i\\pi/6},\n\\]\nو:\n\\[\nz_2=\\sqrt3-i=2e^{-i\\pi/6}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(z_1=2e^{i\\pi/6}\\)، و\\(z_2=2e^{-i\\pi/6}\\)."
+      }
+    },
+    {
+      "id": "2015_tm_s2_complex_ex02_q3a",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "3) نعتبر في المستوى المنسوب إلى المعلم المتعامد والمتجانس \\((O;\\vec u,\\vec v)\\) النقط \\(A\\)، \\(B\\)، \\(C\\) التي لواحقها على الترتيب: \\(z_A=\\sqrt3+i\\)، \\(z_B=\\sqrt3-i\\) و \\(z_C=3\\sqrt3+i\\).\nأ) اكتب العدد المركب \\(\\frac{z_C-z_A}{z_B-z_A}\\) على الشكل الجبري، ثم على الشكل الأسي، واستنتج طبيعة المثلث \\(ABC\\).",
+      "axis_tags": [
+        "complex_exponential_form",
+        "complex_geometry"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب النسبة. الطويلة تعطي نسبة \\(AC/AB\\)، والعمدة تعطي الزاوية بين الشعاعين.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب الفروق",
+            "explanation": "\\[\nz_C-z_A=(3\\sqrt3+i)-(\\sqrt3+i)=2\\sqrt3,\n\\]\nو:\n\\[\nz_B-z_A=(\\sqrt3-i)-(\\sqrt3+i)=-2i.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "الشكل الجبري",
+            "explanation": "\\[\n\\frac{z_C-z_A}{z_B-z_A}=\frac{2\\sqrt3}{-2i}=i\\sqrt3.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الشكل الأسي",
+            "explanation": "طويلة \\(i\\sqrt3\\) هي \\(\\sqrt3\\)، وعمدة له \\(\\frac{\\pi}{2}\\). إذن:\n\\[\ni\\sqrt3=\\sqrt3e^{i\\pi/2}.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "طبيعة المثلث",
+            "explanation": "العمدة \\(\\frac{\\pi}{2}\\) تعني:\n\\[\nAB\\perp AC.\n\\]\nإذن المثلث \\(ABC\\) قائم في \\(A\\)."
+          }
+        ],
+        "final_answer": "\\(\\frac{z_C-z_A}{z_B-z_A}=i\\sqrt3=\\sqrt3e^{i\\pi/2}\\)، والمثلث \\(ABC\\) قائم في \\(A\\)."
+      }
+    },
+    {
+      "id": "2015_tm_s2_complex_ex02_q3b",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "ب) استنتج أن النقطة \\(C\\) هي صورة النقطة \\(B\\) بالتشابه المباشر \\(S\\) الذي مركزه \\(A\\) ويطلب تعيين نسبته وزاويته.",
+      "axis_tags": [
+        "complex_direct_similarity"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل العلاقة المحسوبة بين \\(z_C-z_A\\) و\\(z_B-z_A\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "كتابة العلاقة",
+            "explanation": "من السؤال السابق:\n\\[\n\\frac{z_C-z_A}{z_B-z_A}=\\sqrt3e^{i\\pi/2}.\n\\]\nإذن:\n\\[\nz_C-z_A=\\sqrt3e^{i\\pi/2}(z_B-z_A).\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "تحديد العناصر",
+            "explanation": "هذه هي صيغة تشابه مباشر مركزه \\(A\\)، نسبته:\n\\[\nk=\\sqrt3,\n\\]\nوزاويته:\n\\[\n\\theta=\\frac{\\pi}{2}.\n\\]"
+          }
+        ],
+        "final_answer": "التشابه \\(S\\) مركزه \\(A\\)، نسبته \\(\\sqrt3\\)، وزاويته \\(\\frac{\\pi}{2}\\)."
+      }
+    },
+    {
+      "id": "2015_tm_s2_complex_ex02_q3c",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "ج) عين لاحقة النقطة \\(D\\) صورة النقطة \\(B\\) بالانسحاب \\(t\\) الذي شعاعه \\(\\overrightarrow{AC}\\)، ثم حدد طبيعة الرباعي \\(ABDC\\).",
+      "axis_tags": [
+        "complex_translation",
+        "complex_geometry"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "في الانسحاب ذي الشعاع \\(\\overrightarrow{AC}\\)، لدينا \\(z_D-z_B=z_C-z_A\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب zD",
+            "explanation": "\\[\nz_D=z_B+z_C-z_A.\n\\]\nنعوض:\n\\[\nz_D=(\\sqrt3-i)+(3\\sqrt3+i)-(\\sqrt3+i)=3\\sqrt3-i.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "تحديد طبيعة الرباعي",
+            "explanation": "بما أن \\(D\\) صورة \\(B\\) بترجمة شعاعها \\(\\overrightarrow{AC}\\)، فإن:\n\\[\n\\overrightarrow{BD}=\\overrightarrow{AC}.\n\\]\nإذن \\(ABDC\\) متوازي أضلاع. ومن السؤال السابق، \\(ABC\\) قائم في \\(A\\)، أي:\n\\[\nAB\\perp AC.\n\\]\nإذن متوازي الأضلاع \\(ABDC\\) له زاوية قائمة، فهو مستطيل."
+          }
+        ],
+        "final_answer": "\\(z_D=3\\sqrt3-i\\)، والرباعي \\(ABDC\\) مستطيل."
+      }
+    },
+    {
+      "id": "2015_tm_s2_complex_ex02_q4a",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "4) أ) عين \\((\\Gamma_1)\\) مجموعة النقط \\(M\\) ذات اللاحقة \\(z\\) حيث: \\(\\frac{z-z_C}{z-z_B}\\) تخيلي صرف مع \\(z\\ne z_B\\).",
+      "axis_tags": [
+        "complex_geometric_locus"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "كون النسبة تخيلية صرفة يعني أن فرق الحجتين يساوي \\(\\frac{\\pi}{2}\\) بترديد \\(\\pi\\)، أي أن الزاوية \\(BMC\\) قائمة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التفسير بالحجج",
+            "explanation": "إذا كانت:\n\\[\n\\frac{z-z_C}{z-z_B}\n\\]\nتخيلية صرفة، فإن:\n\\[\n\\arg\\left(\\frac{z-z_C}{z-z_B}\\right)=\\frac{\\pi}{2}\\ [\\pi].\n\\]\nوهذا يعني:\n\\[\n(\\overrightarrow{MB},\\overrightarrow{MC})=\\frac{\\pi}{2}\\ [\\pi].\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "التفسير الهندسي",
+            "explanation": "إذن:\n\\[\nMB\\perp MC.\n\\]\nومجموعة النقط التي ترى القطعة \\([BC]\\) تحت زاوية قائمة هي الدائرة ذات القطر \\([BC]\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "الاستثناء",
+            "explanation": "بما أن \\(z\\ne z_B\\)، فإن النقطة \\(B\\) مستثناة من المجموعة."
+          }
+        ],
+        "final_answer": "\\((\\Gamma_1)\\) هي الدائرة ذات القطر \\([BC]\\) باستثناء النقطة \\(B\\)."
+      }
+    },
+    {
+      "id": "2015_tm_s2_complex_ex02_q4b",
+      "display_order": 7,
+      "content_type": "question",
+      "text": "ب) عين \\((\\Gamma_2)\\) مجموعة النقط \\(M\\) ذات اللاحقة \\(z\\) حيث: \\(\\frac{z-z_C}{z-z_B}\\) حقيقيا مع \\(z\\ne z_B\\).",
+      "axis_tags": [
+        "complex_geometric_locus"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "كون النسبة حقيقية يعني أن الشعاعين \\(MB\\) و\\(MC\\) لهما نفس الاتجاه أو اتجاهان متعاكسان، أي أن B وM وC على استقامة واحدة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التفسير بالحجج",
+            "explanation": "إذا كانت:\n\\[\n\\frac{z-z_C}{z-z_B}\n\\]\nحقيقية، فإن:\n\\[\n\\arg\\left(\\frac{z-z_C}{z-z_B}\\right)=0\\ [\\pi].\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "الاستنتاج الهندسي",
+            "explanation": "إذن الشعاعان \\(\\overrightarrow{MB}\\) و\\(\\overrightarrow{MC}\\) متوازيان، أي أن النقط \\(B,M,C\\) على استقامة واحدة."
+          },
+          {
+            "step_number": 3,
+            "title": "المجموعة",
+            "explanation": "إذن \\((\\Gamma_2)\\) هو المستقيم \\((BC)\\) مع استثناء \\(B\\) لأن \\(z\\ne z_B\\)."
+          }
+        ],
+        "final_answer": "\\((\\Gamma_2)=(BC)\\setminus\\{B\\}\\)."
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2015(1).pdf",
+    "statement_page": 3,
+    "correction_page": 8
+  }
+}

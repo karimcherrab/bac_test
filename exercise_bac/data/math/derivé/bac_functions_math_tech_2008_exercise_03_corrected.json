@@ -1,0 +1,549 @@
+{
+  "schema_version": "2.9-bac-final-corrected",
+  "language": "ar",
+  "direction": "rtl",
+  "branch": {
+    "code": "math_tech",
+    "name": "شعبة تقني رياضي"
+  },
+  "branch_code": "math_tech",
+  "branches": [
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "chapter_code": "derivatives",
+  "year": 2008,
+  "exercise_number": 3,
+  "source_page": 1,
+  "source_reference": "النص منقول من ملف fonctions_math_tech.pdf المرفق، الصفحة 1.",
+  "title": "التمرين الثالث (07 نقاط)",
+  "axis_tags": [
+    "derivative_rules",
+    "derivative_sign_variation",
+    "extrema_variation_table",
+    "function_curve_construction"
+  ],
+  "statement": "نعتبر الدالة العددية f المعرفة على المجال [0,2] بالعبارة:\n\\[f(x)=\\frac{2x+3}{x+2}.\\]\n1) أ- ادرس تغيرات الدالة f على المجال [0,2].\nب- أنشئ المنحنى (C) الممثل للدالة f في معلم متعامد ومتجانس (الوحدة على المحورين 4 cm).\nج- برهن أنه إذا كان x∈[0,2] فإن f(x)∈[0,2].",
+  "statement_graph_data": null,
+  "questions": [
+    {
+      "id": "2008_ex3_q1a",
+      "text": "ادرس تغيرات الدالة f على المجال [0,2].",
+      "axis_tags": [
+        "derivative_rules",
+        "derivative_sign_variation",
+        "extrema_variation_table"
+      ],
+      "solution": {
+        "strategy": "نحسب المشتقة ثم ندرس إشارتها على المجال [0,2].",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب المشتقة",
+            "explanation": "نطبق قاعدة مشتقة خارج القسمة.",
+            "latex": "f'(x)=\\frac{2(x+2)-(2x+3)}{(x+2)^2}=\\frac1{(x+2)^2}"
+          },
+          {
+            "step_number": 2,
+            "title": "دراسة الإشارة",
+            "explanation": "على [0,2] لدينا x+2>0، وبالتالي (x+2)^2>0، ومنه f'(x)>0."
+          },
+          {
+            "step_number": 3,
+            "title": "استنتاج اتجاه التغير",
+            "explanation": "بما أن المشتقة موجبة تمامًا، فالدالة f متزايدة تمامًا على [0,2]."
+          },
+          {
+            "step_number": 4,
+            "title": "حساب قيم الطرفين",
+            "explanation": "نحسب القيمتين اللتين تحددان جدول التغيرات.",
+            "latex": "f(0)=\\frac32,\\qquad f(2)=\\frac74"
+          }
+        ],
+        "final_answer": "الدالة f متزايدة تمامًا على [0,2]، وتتغير من \\(\frac32\\) إلى \\(\frac74\\).",
+        "verification": "نتحقق أن \\(\frac32<\frac74\\)، وهذا يوافق كون f متزايدة.",
+        "common_mistakes": [
+          "نسيان تربيع المقام عند اشتقاق خارج القسمة."
+        ],
+        "hints": [
+          "بعد حساب المشتقة يكفي تحديد إشارة المقام."
+        ],
+        "graph_data": null,
+        "table_data": {
+          "table_type": "variation_table",
+          "title": "جدول تغيرات الدالة f",
+          "direction": "ltr",
+          "function_name": "f",
+          "derivative_name": "f'(x)",
+          "domain": "[0,2]",
+          "x_values": [
+            "0",
+            "2"
+          ],
+          "derivative": {
+            "interval_signs": [
+              "+"
+            ],
+            "critical_values": {}
+          },
+          "function": {
+            "branches": [
+              {
+                "id": "b1",
+                "interval": "[0,2]",
+                "start_x": "0",
+                "end_x": "2",
+                "start_value": "3/2",
+                "end_value": "7/4",
+                "direction": "up"
+              }
+            ]
+          },
+          "discontinuities": [],
+          "settings": {
+            "responsive": true,
+            "math_renderer": "better-react-mathjax",
+            "render_mode": "branch_based",
+            "show_double_separator": false,
+            "do_not_connect_across_discontinuity": true
+          }
+        }
+      },
+      "display_order": 1,
+      "content_type": "question"
+    },
+    {
+      "id": "2008_ex3_q1b",
+      "text": "أنشئ المنحنى (C) الممثل للدالة f في معلم متعامد ومتجانس، حيث الوحدة 4 cm على المحورين.",
+      "axis_tags": [
+        "function_curve_construction",
+        "function_concept_graph_reading"
+      ],
+      "solution": {
+        "strategy": "نستعمل جدول التغيرات ونحسب نقاطًا سهلة ثم نرسم المنحنى على المجال المطلوب فقط.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "النقاط الأساسية",
+            "explanation": "نحسب ثلاث نقاط سهلة تكفي لتوجيه الرسم.",
+            "latex": "f(0)=\\frac32,\\qquad f(1)=\\frac53,\\qquad f(2)=\\frac74"
+          },
+          {
+            "step_number": 2,
+            "title": "شكل المنحنى",
+            "explanation": "من السؤال السابق f متزايدة على [0,2]، لذلك نصل بين النقاط بمنحنى أملس متزايد."
+          },
+          {
+            "step_number": 3,
+            "title": "احترام المقياس والمجال",
+            "explanation": "نستعمل الوحدة 4 cm على المحورين، ولا نرسم المنحنى خارج [0,2]."
+          }
+        ],
+        "final_answer": "يمر (C) بالنقط \\((0,\frac32)\\)، \\((1,\frac53)\\)، \\((2,\frac74)\\)، وهو متزايد على [0,2].",
+        "verification": "القيم المرسومة كلها توافق جدول التغيرات.",
+        "common_mistakes": [],
+        "hints": [
+          "ابدأ بالنقط ذات الفواصل 0 و1 و2."
+        ],
+        "graph_data": {
+          "graph_type": "function_graph",
+          "title": "منحنى الدالة f على [0,2]",
+          "x_label": "x",
+          "y_label": "y",
+          "x_domain": [
+            -0.2,
+            2.2
+          ],
+          "y_domain": [
+            0,
+            2.2
+          ],
+          "series": [
+            {
+              "id": "f",
+              "type": "line",
+              "label": "C_f",
+              "data": [
+                {
+                  "x": 0.0,
+                  "y": 1.5
+                },
+                {
+                  "x": 0.05,
+                  "y": 1.5122
+                },
+                {
+                  "x": 0.1,
+                  "y": 1.5238
+                },
+                {
+                  "x": 0.15,
+                  "y": 1.5349
+                },
+                {
+                  "x": 0.2,
+                  "y": 1.5455
+                },
+                {
+                  "x": 0.25,
+                  "y": 1.5556
+                },
+                {
+                  "x": 0.3,
+                  "y": 1.5652
+                },
+                {
+                  "x": 0.35,
+                  "y": 1.5745
+                },
+                {
+                  "x": 0.4,
+                  "y": 1.5833
+                },
+                {
+                  "x": 0.45,
+                  "y": 1.5918
+                },
+                {
+                  "x": 0.5,
+                  "y": 1.6
+                },
+                {
+                  "x": 0.55,
+                  "y": 1.6078
+                },
+                {
+                  "x": 0.6,
+                  "y": 1.6154
+                },
+                {
+                  "x": 0.65,
+                  "y": 1.6226
+                },
+                {
+                  "x": 0.7,
+                  "y": 1.6296
+                },
+                {
+                  "x": 0.75,
+                  "y": 1.6364
+                },
+                {
+                  "x": 0.8,
+                  "y": 1.6429
+                },
+                {
+                  "x": 0.85,
+                  "y": 1.6491
+                },
+                {
+                  "x": 0.9,
+                  "y": 1.6552
+                },
+                {
+                  "x": 0.95,
+                  "y": 1.661
+                },
+                {
+                  "x": 1.0,
+                  "y": 1.6667
+                },
+                {
+                  "x": 1.05,
+                  "y": 1.6721
+                },
+                {
+                  "x": 1.1,
+                  "y": 1.6774
+                },
+                {
+                  "x": 1.15,
+                  "y": 1.6825
+                },
+                {
+                  "x": 1.2,
+                  "y": 1.6875
+                },
+                {
+                  "x": 1.25,
+                  "y": 1.6923
+                },
+                {
+                  "x": 1.3,
+                  "y": 1.697
+                },
+                {
+                  "x": 1.35,
+                  "y": 1.7015
+                },
+                {
+                  "x": 1.4,
+                  "y": 1.7059
+                },
+                {
+                  "x": 1.45,
+                  "y": 1.7101
+                },
+                {
+                  "x": 1.5,
+                  "y": 1.7143
+                },
+                {
+                  "x": 1.55,
+                  "y": 1.7183
+                },
+                {
+                  "x": 1.6,
+                  "y": 1.7222
+                },
+                {
+                  "x": 1.65,
+                  "y": 1.726
+                },
+                {
+                  "x": 1.7,
+                  "y": 1.7297
+                },
+                {
+                  "x": 1.75,
+                  "y": 1.7333
+                },
+                {
+                  "x": 1.8,
+                  "y": 1.7368
+                },
+                {
+                  "x": 1.85,
+                  "y": 1.7403
+                },
+                {
+                  "x": 1.9,
+                  "y": 1.7436
+                },
+                {
+                  "x": 1.95,
+                  "y": 1.7468
+                },
+                {
+                  "x": 2.0,
+                  "y": 1.75
+                }
+              ],
+              "role": "curve",
+              "expression": "(2x+3)/(x+2)"
+            },
+            {
+              "id": "y0",
+              "type": "line",
+              "label": "محور الفواصل",
+              "data": [
+                {
+                  "x": 0.0,
+                  "y": 0
+                },
+                {
+                  "x": 0.1,
+                  "y": 0
+                },
+                {
+                  "x": 0.2,
+                  "y": 0
+                },
+                {
+                  "x": 0.3,
+                  "y": 0
+                },
+                {
+                  "x": 0.4,
+                  "y": 0
+                },
+                {
+                  "x": 0.5,
+                  "y": 0
+                },
+                {
+                  "x": 0.6,
+                  "y": 0
+                },
+                {
+                  "x": 0.7,
+                  "y": 0
+                },
+                {
+                  "x": 0.8,
+                  "y": 0
+                },
+                {
+                  "x": 0.9,
+                  "y": 0
+                },
+                {
+                  "x": 1.0,
+                  "y": 0
+                },
+                {
+                  "x": 1.1,
+                  "y": 0
+                },
+                {
+                  "x": 1.2,
+                  "y": 0
+                },
+                {
+                  "x": 1.3,
+                  "y": 0
+                },
+                {
+                  "x": 1.4,
+                  "y": 0
+                },
+                {
+                  "x": 1.5,
+                  "y": 0
+                },
+                {
+                  "x": 1.6,
+                  "y": 0
+                },
+                {
+                  "x": 1.7,
+                  "y": 0
+                },
+                {
+                  "x": 1.8,
+                  "y": 0
+                },
+                {
+                  "x": 1.9,
+                  "y": 0
+                },
+                {
+                  "x": 2.0,
+                  "y": 0
+                }
+              ],
+              "role": "axis",
+              "expression": "0"
+            }
+          ],
+          "construction_lines": [],
+          "axis_markers": [],
+          "construction": null,
+          "annotations": [],
+          "settings": {
+            "show_grid": true,
+            "show_axes": true,
+            "show_legend": true,
+            "show_tooltip": true,
+            "show_points": false,
+            "connect_nulls": false,
+            "responsive": true,
+            "x_tick_step": 1,
+            "y_tick_step": 1
+          },
+          "caption": "",
+          "react_rendering": {
+            "recommended_library": "recharts",
+            "component_hint": "ResponsiveContainer + ComposedChart",
+            "data_source": "series[].data",
+            "series_type_mapping": {
+              "line": "Line",
+              "polyline": "Line",
+              "scatter": "Scatter"
+            },
+            "rtl_labels": true,
+            "math_labels": "MathJax"
+          }
+        },
+        "table_data": null
+      },
+      "display_order": 2,
+      "content_type": "question"
+    },
+    {
+      "id": "2008_ex3_q1c",
+      "text": "برهن أنه إذا كان x∈[0,2] فإن f(x)∈[0,2].",
+      "axis_tags": [
+        "derivative_sign_variation",
+        "extrema_variation_table"
+      ],
+      "solution": {
+        "strategy": "نستغل كون f متزايدة على [0,2] للحصول على حصر قيمها.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "استعمال التزايد",
+            "explanation": "لكل x∈[0,2]، وبما أن f متزايدة، فإن f(0)≤f(x)≤f(2)."
+          },
+          {
+            "step_number": 2,
+            "title": "تعويض قيم الطرفين",
+            "explanation": "نعوض القيم المحسوبة سابقًا.",
+            "latex": "\\frac32\\le f(x)\\le\\frac74"
+          },
+          {
+            "step_number": 3,
+            "title": "المقارنة مع المجال [0,2]",
+            "explanation": "لدينا 0≤3/2 و7/4≤2، إذن المجال [3/2,7/4] محتوى في [0,2]."
+          }
+        ],
+        "final_answer": "لكل \\(x\\in[0,2]\\): \\(f(x)\\in[\frac32,\frac74]\\subset[0,2]\\).",
+        "verification": "الحصر أدق من المطلوب، وبالتالي يثبت النتيجة مباشرة.",
+        "common_mistakes": [
+          "الاكتفاء بقول إن f متزايدة دون كتابة حصر القيم."
+        ],
+        "hints": [
+          "استعمل f(0)≤f(x)≤f(2)."
+        ],
+        "graph_data": null,
+        "table_data": null
+      },
+      "display_order": 3,
+      "content_type": "question"
+    }
+  ],
+  "content_separation": {
+    "statement": "statement",
+    "questions": "questions[]",
+    "statement_graph_data": "statement_graph_data",
+    "solution.graph_data": "questions[].solution.graph_data",
+    "solution.table_data": "questions[].solution.table_data"
+  },
+  "statement_sections": [],
+  "review_status": {
+    "compared_with_original_pdf": true,
+    "source_page_checked": true,
+    "statement_questions_separated": true,
+    "solutions_expanded_for_beginner": true,
+    "graphs_checked": true,
+    "axis_classification_checked": true,
+    "react_graph_structure_checked": true,
+    "all_graph_series_have_data_arrays": true,
+    "tables_normalized_for_react": true,
+    "compared_with_official_solution": false,
+    "final_answers_verified": true,
+    "explanations_rewritten_in_detail": true,
+    "statement_rewritten_cleanly": true,
+    "all_variation_tables_rebuilt": true,
+    "all_sign_tables_rebuilt": true,
+    "final_json_validation": true
+  },
+  "source_text_policy": {
+    "statement": "منقول مع تنظيف رموز الطباعة فقط دون تغيير المعنى.",
+    "questions": "منقولة مع ترقيم واضح دون تغيير المطلوب.",
+    "added_content": "الحلول والجداول وبيانات الرسم أضيفت لعرضها في React."
+  },
+  "version": "2.9-bac-final-corrected",
+  "react_display": {
+    "statement_component": "ExerciseStatement",
+    "question_component": "ExerciseQuestion",
+    "solution_component": "ExerciseSolution",
+    "graph_component": "FunctionGraph",
+    "table_component": "MathTable",
+    "graph_schema": "series[].data[{x,y}]",
+    "supports_rtl": true,
+    "supports_mathjax": true
+  }
+}

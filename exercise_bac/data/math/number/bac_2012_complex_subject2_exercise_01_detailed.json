@@ -1,0 +1,346 @@
+{
+  "schema_version": "4.5-bac-source",
+  "version": "4.2-2012-complex-subject2-ex01",
+  "language": "ar",
+  "direction": "rtl",
+  "year": 2012,
+  "session": "ordinary",
+  "chapter_code": "complex_numbers",
+  "chapter_title": "complex_numbers",
+  "exercise_number": 1,
+  "source_pages": [
+    3
+  ],
+  "solution_source_pages": [
+    7
+  ],
+  "branches": [
+    {
+      "code": "math",
+      "name": "شعبة الرياضيات"
+    }
+  ],
+  "title": "التمرين الأول — بكالوريا الجزائر 2012 — الموضوع الثاني — الأعداد المركبة",
+  "axis_tags": [
+    "complex_equations",
+    "circle_complex_plane",
+    "rotation",
+    "equilateral_triangle",
+    "homothety",
+    "direct_similarity",
+    "image_of_circle"
+  ],
+  "statement": "التمرين الأول: (04 نقاط)\n\n1) حل في مجموعة الأعداد المركبة \\(\\mathbb{C}\\) المعادلة ذات المجهول \\(z\\) التالية:\n\\[\n(z^2+4)(z^2-2\\sqrt3\\,z+4)=0.\n\\]\n\n2) نعتبر في المستوي المركب المنسوب إلى المعلم المتعامد والمتجانس \\((O;\\vec{u},\\vec{v})\\)، النقط \\(A\\)، \\(B\\)، \\(C\\) و\\(D\\) التي لواحقها على الترتيب:\n\\[\nz_A=\\sqrt3+i,\\qquad z_B=\\overline{z_A},\\qquad z_C=-2i,\\qquad z_D=\\overline{z_C}.\n\\]\n\n- بين أن النقط \\(A\\)، \\(B\\)، \\(C\\) و\\(D\\) تنتمي إلى دائرة \\((\\gamma)\\) يطلب تعيين مركزها ونصف قطرها، ثم أنشئ النقط \\(A\\)، \\(B\\)، \\(C\\) و\\(D\\).\n\n3) نرمز بـ \\(z_E\\) إلى لاحقة النقطة \\(E\\) نظيرة النقطة \\(B\\) بالنسبة إلى المبدأ \\(O\\).\n\nأ- بين أن:\n\\[\n\\frac{z_A-z_C}{z_E-z_C}=e^{\\,i(-\\pi/3)}.\n\\]\n\nب- بين أن النقطة \\(A\\) هي صورة النقطة \\(E\\) بدوران \\(R\\) مركزه \\(C\\) يطلب تعيين زاويته.\n\nج- استنتج طبيعة المثلث \\(AEC\\).\n\nد- \\(H\\) هو التحاكي الذي مركزه \\(O\\) ونسبته \\(2\\).\n\n- عين طبيعة التحويل \\(R\\circ H\\) وعناصره المميزة، ثم استنتج صورة الدائرة \\((\\gamma)\\) بالتحويل \\(R\\circ H\\).",
+  "figures": [],
+  "questions": [
+    {
+      "id": "2012_complex_s2_ex01_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) حل في \\(\\mathbb{C}\\):\n\\[\n(z^2+4)(z^2-2\\sqrt3\\,z+4)=0.\n\\]",
+      "solution": {
+        "strategy": "الجداء يساوي صفرا إذا كان أحد العاملين صفرا، فنحل المعادلتين على حدة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حل العامل الأول",
+            "explanation": "\\[\nz^2+4=0\\Longleftrightarrow z^2=-4.\n\\]\nإذن:\n\\[\nz=2i\\quad\\text{أو}\\quad z=-2i.\n\\]",
+            "result": "\\(z=\\pm2i\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "حل العامل الثاني",
+            "explanation": "نحل:\n\\[\nz^2-2\\sqrt3\\,z+4=0.\n\\]\nالمميز:\n\\[\n\\Delta=(2\\sqrt3)^2-16=12-16=-4.\n\\]\nإذن:\n\\[\nz=\\frac{2\\sqrt3\\pm2i}{2}\n=\\sqrt3\\pm i.\n\\]",
+            "result": "\\(z=\\sqrt3\\pm i\\)."
+          }
+        ],
+        "final_answer": "\\[\n\\boxed{z\\in\\{2i,-2i,\\sqrt3+i,\\sqrt3-i\\}}.\n\\]",
+        "verification": "الحلول الأربعة مطابقة لعناصر الإجابة النموذجية في الصفحة 7.",
+        "common_mistakes": [
+          "نسيان أن الجداء المعدوم يعطي حالتين.",
+          "خطأ في مميز العامل الثاني."
+        ],
+        "hints": [
+          "حل كل عامل على حدة."
+        ],
+        "introduction": "نفك المسألة إلى معادلتين من الدرجة الثانية.",
+        "summary": "الحلول هي \\(\\pm2i\\) و\\(\\sqrt3\\pm i\\).",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2012_complex_s2_ex01_q2",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2) بين أن النقط \\(A\\)، \\(B\\)، \\(C\\) و\\(D\\) تنتمي إلى دائرة \\((\\gamma)\\) يطلب تعيين مركزها ونصف قطرها، ثم أنشئ النقط \\(A\\)، \\(B\\)، \\(C\\) و\\(D\\).",
+      "solution": {
+        "strategy": "نحسب معيار كل لاحقة؛ إذا كانت المعايير متساوية فإن النقط تقع على دائرة مركزها \\(O\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تحديد اللواحق",
+            "explanation": "\\[\nz_A=\\sqrt3+i,\\quad\nz_B=\\sqrt3-i,\\quad\nz_C=-2i,\\quad\nz_D=2i.\n\\]",
+            "result": "اللواحق الأربع محددة."
+          },
+          {
+            "step_number": 2,
+            "title": "حساب المسافات إلى O",
+            "explanation": "\\[\nOA=|z_A|=\\sqrt{3+1}=2,\n\\]\nوكذلك:\n\\[\nOB=2,\\qquad OC=|-2i|=2,\\qquad OD=|2i|=2.\n\\]",
+            "result": "\\(OA=OB=OC=OD=2\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "تعيين الدائرة",
+            "explanation": "بما أن النقط الأربع تبعد المسافة نفسها \\(2\\) عن \\(O\\)، فإنها تنتمي إلى الدائرة:\n\\[\n(\\gamma): |z|=2.\n\\]\nمركزها \\(O\\) ونصف قطرها \\(2\\).",
+            "result": "المركز \\(O\\)، نصف القطر \\(2\\)."
+          },
+          {
+            "step_number": 4,
+            "title": "معطيات الإنشاء",
+            "explanation": "إحداثيات النقط هي:\n\\[\nA(\\sqrt3,1),\\quad B(\\sqrt3,-1),\\quad C(0,-2),\\quad D(0,2).\n\\]\nنرسم الدائرة مركزها \\(O\\) ونصف قطرها \\(2\\)، ثم نضع هذه النقط عليها.",
+            "result": "تم تحديد مواضع النقط للإنشاء."
+          }
+        ],
+        "final_answer": "\\[\\boxed{(\\gamma)\\text{ مركزها }O\\text{ ونصف قطرها }2}\\]",
+        "verification": "مطابق للتصحيح النموذجي في الصفحة 7.",
+        "common_mistakes": [
+          "البحث عن مركز جديد رغم أن المعايير الأربعة متساوية.",
+          "الخلط بين \\(z_C=-2i\\) و\\(z_D=2i\\)."
+        ],
+        "hints": [
+          "احسب \\(|z_A|,|z_B|,|z_C|,|z_D|\\)."
+        ],
+        "introduction": "المعيار يعطي مباشرة المسافة إلى المبدأ.",
+        "summary": "النقط الأربع على دائرة مركزها \\(O\\) ونصف قطرها \\(2\\).",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2012_complex_s2_ex01_q3",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "3) أ- إذا كانت \\(E\\) نظيرة \\(B\\) بالنسبة إلى \\(O\\)، بين أن:\n\\[\n\\frac{z_A-z_C}{z_E-z_C}=e^{\\,i(-\\pi/3)}.\n\\]",
+      "solution": {
+        "strategy": "نحدد أولا لاحقة \\(E\\)، ثم نحسب الخارج ونحوّله إلى الشكل الأسي.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب لاحقة E",
+            "explanation": "بما أن \\(E\\) نظيرة \\(B\\) بالنسبة إلى \\(O\\):\n\\[\nz_E=-z_B.\n\\]\nولأن:\n\\[\nz_B=\\sqrt3-i,\n\\]\nفإن:\n\\[\nz_E=-\\sqrt3+i.\n\\]",
+            "result": "\\(z_E=-\\sqrt3+i\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "حساب الفرقين",
+            "explanation": "\\[\nz_A-z_C=(\\sqrt3+i)-(-2i)=\\sqrt3+3i,\n\\]\nو:\n\\[\nz_E-z_C=(-\\sqrt3+i)-(-2i)=-\\sqrt3+3i.\n\\]",
+            "result": "تم حساب البسط والمقام."
+          },
+          {
+            "step_number": 3,
+            "title": "حساب الخارج",
+            "explanation": "\\[\n\\frac{\\sqrt3+3i}{-\\sqrt3+3i}.\n\\]\nنضرب في مرافق المقام:\n\\[\n\\frac{(\\sqrt3+3i)(-\\sqrt3-3i)}\n{(-\\sqrt3)^2+3^2}\n=\n\\frac{6-6\\sqrt3\\,i}{12}\n=\n\\frac12-\\frac{\\sqrt3}{2}i.\n\\]",
+            "result": "\\(\\frac12-\\frac{\\sqrt3}{2}i\\)."
+          },
+          {
+            "step_number": 4,
+            "title": "الكتابة الأسية",
+            "explanation": "\\[\n\\frac12-\\frac{\\sqrt3}{2}i\n=\\cos\\left(-\\frac{\\pi}{3}\\right)\n+i\\sin\\left(-\\frac{\\pi}{3}\\right)\n=e^{-i\\pi/3}.\n\\]",
+            "result": "\\(e^{i(-\\pi/3)}\\)."
+          }
+        ],
+        "final_answer": "\\[\\boxed{\\frac{z_A-z_C}{z_E-z_C}=e^{\\,i(-\\pi/3)}}\\]",
+        "verification": "مطابق تماما لعناصر الإجابة النموذجية.",
+        "common_mistakes": [
+          "نسيان أن نظير \\(B\\) بالنسبة إلى \\(O\\) لاحقته \\(-z_B\\)."
+        ],
+        "hints": [
+          "ابدأ بـ \\(z_E=-z_B\\)."
+        ],
+        "introduction": "الخارج المركب سيعطينا في السؤال التالي زاوية دوران ونسبة أطوال.",
+        "summary": "الخارج معياره \\(1\\) وعمدته \\(-\\pi/3\\).",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2012_complex_s2_ex01_q4",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "3) ب- بين أن النقطة \\(A\\) هي صورة النقطة \\(E\\) بدوران \\(R\\) مركزه \\(C\\) يطلب تعيين زاويته.",
+      "solution": {
+        "strategy": "نفسر العلاقة المركبة السابقة: معيار الخارج \\(1\\) وعمدته \\(-\\pi/3\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "استعمال النتيجة السابقة",
+            "explanation": "لدينا:\n\\[\n\\frac{z_A-z_C}{z_E-z_C}=e^{-i\\pi/3}.\n\\]\nأي:\n\\[\nz_A-z_C=e^{-i\\pi/3}(z_E-z_C).\n\\]",
+            "result": "العلاقة هي صيغة دوران مركزه \\(C\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "تحديد الزاوية",
+            "explanation": "معامل الضرب معياره:\n\\[\n|e^{-i\\pi/3}|=1\n\\]\nوعمدته:\n\\[\n-\\frac{\\pi}{3}.\n\\]\nإذن التحويل دوران مركزه \\(C\\) وزاويته \\(-\\frac{\\pi}{3}\\).",
+            "result": "\\(\\theta=-\\pi/3\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "الاستنتاج",
+            "explanation": "بما أن العلاقة تربط \\(z_E\\) بـ \\(z_A\\)، فإن:\n\\[\nR(E)=A.\n\\]",
+            "result": "\\(A\\) صورة \\(E\\)."
+          }
+        ],
+        "final_answer": "\\[\\boxed{R\\text{ دوران مركزه }C\\text{ وزاويته }-\\frac{\\pi}{3},\\quad R(E)=A}\\]",
+        "verification": "مطابق للتصحيح النموذجي.",
+        "common_mistakes": [
+          "اعتبار الزاوية \\(+\\pi/3\\) بدل \\(-\\pi/3\\)."
+        ],
+        "hints": [
+          "قارن مع \\(z'-\\omega=e^{i\theta}(z-\\omega)\\)."
+        ],
+        "introduction": "العلاقة السابقة مكتوبة بالفعل على صيغة دوران.",
+        "summary": "الدوران مركزه \\(C\\) وزاويته \\(-\\pi/3\\).",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2012_complex_s2_ex01_q5",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "3) ج- استنتج طبيعة المثلث \\(AEC\\).",
+      "solution": {
+        "strategy": "الدوران يحافظ على المسافات، وزاويته المطلقة \\(60^\\circ\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تساوي المسافتين",
+            "explanation": "بما أن \\(A=R(E)\\) والدوران مركزه \\(C\\)، فإنه يحافظ على المسافة إلى المركز:\n\\[\nCA=CE.\n\\]",
+            "result": "\\(CA=CE\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "الزاوية عند C",
+            "explanation": "زاوية الدوران هي:\n\\[\n-\\frac{\\pi}{3}.\n\\]\nإذن الزاوية غير الموجهة:\n\\[\n\\widehat{ECA}=\\frac{\\pi}{3}=60^\\circ.\n\\]",
+            "result": "\\(\\widehat{ECA}=60^\\circ\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "الاستنتاج",
+            "explanation": "المثلث \\(AEC\\) متقايس الساقين في \\(C\\) وزاوية رأسه \\(60^\\circ\\)، لذلك زاويتاه الأخريان تساويان أيضا \\(60^\\circ\\). ومنه هو متقايس الأضلاع.",
+            "result": "\\(AEC\\) متقايس الأضلاع."
+          }
+        ],
+        "final_answer": "\\[\\boxed{AEC\\text{ مثلث متقايس الأضلاع}}\\]",
+        "verification": "مطابق للتصحيح النموذجي.",
+        "common_mistakes": [
+          "الاكتفاء بالقول إنه متقايس الساقين."
+        ],
+        "hints": [
+          "استعمل \\(CA=CE\\) والزاوية \\(60^\\circ\\)."
+        ],
+        "introduction": "خصائص الدوران تكفي دون حساب أطوال جديدة.",
+        "summary": "المثلث \\(AEC\\) متقايس الأضلاع.",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2012_complex_s2_ex01_q6",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "3) د- \\(H\\) هو التحاكي الذي مركزه \\(O\\) ونسبته \\(2\\). عين طبيعة التحويل \\(R\\circ H\\) وعناصره المميزة، ثم استنتج صورة الدائرة \\((\\gamma)\\) بالتحويل \\(R\\circ H\\).",
+      "solution": {
+        "strategy": "نكتب \\(H\\) و\\(R\\) مركبيا ثم نركبهما. من معامل \\(z\\) نحدد النسبة والزاوية، ومن النقطة الثابتة نحدد المركز. بعد ذلك نطبق التشابه على الدائرة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "كتابة H",
+            "explanation": "التحاكي \\(H\\) مركزه \\(O\\) ونسبته \\(2\\)، لذلك:\n\\[\nH:\\quad z_1=2z.\n\\]",
+            "result": "\\(z_1=2z\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "كتابة R",
+            "explanation": "الدوران \\(R\\) مركزه \\(C\\) حيث \\(z_C=-2i\\)، وزاويته \\(-\\pi/3\\):\n\\[\nz'-z_C=e^{-i\\pi/3}(z_1-z_C).\n\\]\nإذن بعد التعويض بـ \\(z_1=2z\\):\n\\[\nz'+2i=e^{-i\\pi/3}(2z+2i).\n\\]",
+            "result": "تم تركيب التحويلين."
+          },
+          {
+            "step_number": 3,
+            "title": "تحديد الطبيعة والنسبة والزاوية",
+            "explanation": "معامل \\(z\\) هو:\n\\[\n2e^{-i\\pi/3}.\n\\]\nإذن \\(R\\circ H\\) تشابه مباشر نسبته:\n\\[\nk=2\n\\]\nوزاويته:\n\\[\n\\theta=-\\frac{\\pi}{3}.\n\\]",
+            "result": "تشابه مباشر نسبته \\(2\\) وزاويته \\(-\\pi/3\\)."
+          },
+          {
+            "step_number": 4,
+            "title": "تحديد مركز التشابه",
+            "explanation": "مركز التشابه هو النقطة الثابتة \\(\\omega\\). نضع \\(z'=z=\\omega\\):\n\\[\n\\omega+2i=e^{-i\\pi/3}(2\\omega+2i).\n\\]\nوباستعمال:\n\\[\ne^{-i\\pi/3}=\\frac12-\\frac{\\sqrt3}{2}i\n\\]\nثم التبسيط نحصل على:\n\\[\n\\omega=-\\frac{\\sqrt3}{3}-i.\n\\]\nإذن مركز التشابه هو:\n\\[\n\\omega\\left(-\\frac{\\sqrt3}{3},-1\\right).\n\\]",
+            "result": "\\(\\omega=-\\frac{\\sqrt3}{3}-i\\)."
+          },
+          {
+            "step_number": 5,
+            "title": "صورة مركز الدائرة",
+            "explanation": "الدائرة \\((\\gamma)\\) مركزها \\(O\\). صورة مركزها هي:\n\\[\n\\Omega=(R\\circ H)(O).\n\\]\nوبما أن \\(H(O)=O\\)، فإن:\n\\[\n\\Omega=R(O).\n\\]\nنحسب:\n\\[\nz_\\Omega-z_C=e^{-i\\pi/3}(0-z_C)\n=e^{-i\\pi/3}(2i).\n\\]\nفنجد:\n\\[\nz_\\Omega=\\sqrt3-i.\n\\]\nإذن:\n\\[\n\\Omega(\\sqrt3,-1).\n\\]",
+            "result": "\\(\\Omega(\\sqrt3,-1)\\)."
+          },
+          {
+            "step_number": 6,
+            "title": "صورة نصف القطر",
+            "explanation": "التشابه ذو النسبة \\(2\\) يضرب الأطوال في \\(2\\). نصف قطر \\((\\gamma)\\) هو \\(2\\)، لذلك نصف قطر الدائرة الصورة:\n\\[\nr'=2\\times2=4.\n\\]",
+            "result": "نصف القطر الجديد \\(4\\)."
+          },
+          {
+            "step_number": 7,
+            "title": "الاستنتاج",
+            "explanation": "صورة الدائرة \\((\\gamma)\\) هي دائرة \\((\\gamma')\\) مركزها:\n\\[\n\\Omega(\\sqrt3,-1)\n\\]\nونصف قطرها:\n\\[\n4.\n\\]",
+            "result": "تم تحديد الدائرة الصورة."
+          }
+        ],
+        "final_answer": "\\[\n\\boxed{R\\circ H\\text{ تشابه مباشر مركزه }\\omega\\left(-\\frac{\\sqrt3}{3},-1\\right),\n\\text{ نسبته }2,\\text{ وزاويته }-\\frac{\\pi}{3}}\n\\]\nوصورة \\((\\gamma)\\) هي:\n\\[\n\\boxed{(\\gamma')\\text{ مركزها }\\Omega(\\sqrt3,-1)\\text{ ونصف قطرها }4}.\n\\]",
+        "verification": "جميع العناصر مطابقة للتصحيح النموذجي في الصفحة 7.",
+        "common_mistakes": [
+          "اعتبار مركز التشابه هو \\(O\\) أو \\(C\\).",
+          "نسيان ضرب نصف قطر الدائرة في نسبة التشابه."
+        ],
+        "hints": [
+          "لإيجاد المركز حل معادلة النقطة الثابتة.",
+          "صورة مركز الدائرة هي صورة \\(O\\)، ونصف القطر يضرب في \\(2\\)."
+        ],
+        "introduction": "تركيب دوران مع تحاكي موجب يعطي تشابها مباشرا.",
+        "summary": "التشابه نسبته \\(2\\)، زاويته \\(-\\pi/3\\)، مركزه \\((-√3/3,-1)\\)، وصورة الدائرة نصف قطرها \\(4\\).",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    }
+  ],
+  "source_reference": {
+    "file": "2012(5).pdf",
+    "statement_pages": [
+      3
+    ],
+    "solution_pages": [
+      7
+    ],
+    "source_faithful_statement": true,
+    "solution_reviewed_against_source": true
+  },
+  "display": {
+    "layout": "question_by_question",
+    "show_statement_first": true,
+    "show_statement_figures": true,
+    "show_solution_after_click": true,
+    "show_solution_figures": true
+  },
+  "review_status": {
+    "statement_compared_with_original_pdf": true,
+    "questions_compared_with_original_pdf": true,
+    "source_figures_checked": true,
+    "solution_checked_against_correction": true,
+    "latex_normalized_only": true,
+    "react_ready": true
+  },
+  "given_data": {
+    "z_A": "√3+i",
+    "z_B": "conjugate(z_A)",
+    "z_C": "-2i",
+    "z_D": "conjugate(z_C)",
+    "H_ratio": 2,
+    "R_center": "C",
+    "R_angle": "-π/3"
+  }
+}

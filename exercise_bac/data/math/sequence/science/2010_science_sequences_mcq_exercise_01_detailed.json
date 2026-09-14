@@ -1,0 +1,142 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2010-science-sequences-mcq-ex01",
+  "session": "ordinary",
+  "year": 2010,
+  "chapter_code": "sequences",
+  "chapter_title": "المتتاليات العددية",
+  "axis_tags": [
+    "recurrence_sequence",
+    "auxiliary_geometric_sequence",
+    "sequence_limit",
+    "geometric_sum",
+    "multiple_choice"
+  ],
+  "branches": [
+    {
+      "code": "science",
+      "name": "شعبة علوم تجريبية"
+    }
+  ],
+  "exercise_number": 1,
+  "source_page": 3,
+  "source_pages": [
+    3
+  ],
+  "solution_source_pages": [],
+  "title": "تمرين المتتاليات — بكالوريا الجزائر 2010 — شعبة علوم تجريبية",
+  "statement": "\\((u_n)\\) المتتالية العددية المعرفة بـ: \\(u_0=-1\\) و من أجل كل عدد طبيعي \\(n\\)، \\(u_{n+1}=3u_n+1\\). المتتالية العددية \\((v_n)\\) المعرفة من أجل كل عدد طبيعي \\(n\\) بـ: \\(v_n=u_n+\\frac12\\). في كل حالة من الحالات الثلاث الآتية اقترحت ثلاث إجابات، إجابة واحدة فقط منها صحيحة، حددها مع التعليل.",
+  "questions": [
+    {
+      "id": "2010_sequences_mcq_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1. المتتالية \\((v_n)\\): أ- حسابية، ب- هندسية، ج- لا حسابية ولا هندسية.",
+      "axis_tags": [
+        "auxiliary_geometric_sequence",
+        "multiple_choice"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب \\(v_{n+1}\\) ونحاول كتابته على صورة \\(qv_n\\) أو \\(v_n+r\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب v_{n+1}",
+            "explanation": "من التعريف:\n\\[\nv_{n+1}=u_{n+1}+\\frac12.\n\\]\nوبما أن \\(u_{n+1}=3u_n+1\\):\n\\[\nv_{n+1}=3u_n+1+\\frac12\n=3u_n+\\frac32.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "إظهار العلاقة الهندسية",
+            "explanation": "نكتب:\n\\[\n3u_n+\\frac32=3\\left(u_n+\\frac12\\right)=3v_n.\n\\]\nإذن:\n\\[\nv_{n+1}=3v_n.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "اختيار الإجابة",
+            "explanation": "إذن \\((v_n)\\) متتالية هندسية أساسها \\(3\\). وبالتالي الاختيار الصحيح هو: **ب- هندسية**."
+          }
+        ],
+        "final_answer": "الإجابة الصحيحة: ب- هندسية، وأساسها \\(3\\)."
+      }
+    },
+    {
+      "id": "2010_sequences_mcq_q2",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2. نهاية المتتالية \\((u_n)\\) هي: أ- \\(+\\infty\\)، ب- \\(-\\frac12\\)، ج- \\(-\\infty\\).",
+      "axis_tags": [
+        "sequence_limit",
+        "multiple_choice"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل المتتالية المساعدة \\(v_n\\) لأنها هندسية، ثم نعود إلى \\(u_n=v_n-\\frac12\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب v0",
+            "explanation": "لدينا:\n\\[\nv_0=u_0+\\frac12=-1+\\frac12=-\\frac12.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "كتابة v_n",
+            "explanation": "بما أن \\((v_n)\\) هندسية أساسها \\(3\\):\n\\[\nv_n=v_0\\,3^n=-\\frac12\\,3^n.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "استخراج u_n",
+            "explanation": "من \\(v_n=u_n+\\frac12\\):\n\\[\nu_n=v_n-\\frac12\n=-\\frac12\\,3^n-\\frac12.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "حساب النهاية",
+            "explanation": "عندما \\(n\\to+\\infty\\)، لدينا \\(3^n\\to+\\infty\\)، وبالتالي:\n\\[\n-\\frac12\\,3^n-\\frac12\\to-\\infty.\n\\]\nإذن الاختيار الصحيح هو **ج**."
+          }
+        ],
+        "final_answer": "الإجابة الصحيحة: ج- \\(-\\infty\\)."
+      }
+    },
+    {
+      "id": "2010_sequences_mcq_q3",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "3. نضع من أجل كل عدد طبيعي \\(n\\): \\(S_n=-\\frac12\\left[1+e^{\\ln3}+e^{2\\ln3}+e^{3\\ln3}+\\ldots+e^{n\\ln3}\\right]\\).",
+      "axis_tags": [
+        "geometric_sum",
+        "multiple_choice"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل الخاصية \\(e^{k\\ln3}=3^k\\)، ثم نحول التعبير إلى مجموع هندسي.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تبسيط الحدود الأسية",
+            "explanation": "نعلم أن:\n\\[\ne^{k\\ln3}=3^k.\n\\]\nإذن:\n\\[\nS_n=-\\frac12\\left(1+3+3^2+\\cdots+3^n\\right).\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب المجموع الهندسي",
+            "explanation": "لدينا:\n\\[\n1+3+3^2+\\cdots+3^n=\\frac{3^{n+1}-1}{3-1}=\\frac{3^{n+1}-1}{2}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "التبسيط النهائي",
+            "explanation": "إذن:\n\\[\nS_n=-\\frac12\\times\\frac{3^{n+1}-1}{2}\n=\\frac{1-3^{n+1}}{4}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(S_n=\\frac{1-3^{n+1}}{4}\\)."
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": false,
+    "source_pdf": "bac_sequence_scientifique(4).pdf",
+    "statement_figure_policy": "إذا كان الشكل موجوداً في نص البكالوريا يوضع في statement_graphs. إذا كان السؤال يطلب رسم شكل فلا يظهر الجواب قبل السؤال بل يوضع داخل الحل.",
+    "solution_figure_policy": "تضاف الرسومات اللازمة في خطوات الحل فقط.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  }
+}

@@ -1,0 +1,514 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "graph_schema_version": "1.0-react-json",
+  "version": "4.2-2024-math-probability-subject2-ex01-react-tree",
+  "session": "ordinary",
+  "year": 2024,
+  "chapter_code": "probability",
+  "chapter_title": "الاحتمالات",
+  "axis_tags": [
+    "probability_tree_total_probability",
+    "conditional_probability",
+    "probability_language_probability_law",
+    "random_variable_probability_distribution_expectation"
+  ],
+  "branches": [
+    {
+      "code": "math",
+      "name": "شعبة رياضيات"
+    }
+  ],
+  "exercise_number": 1,
+  "subject_number": 2,
+  "source_page": 4,
+  "source_pages": [
+    4
+  ],
+  "solution_source_pages": [
+    10
+  ],
+  "title": "التمرين الأول — بكالوريا الجزائر 2024 — الموضوع الثاني — شعبة رياضيات — الاحتمالات",
+  "statement": "يحتوي صندوق \\(U_1\\) على 7 كريات منها: 3 كريات بيضاء و 4 كريات حمراء ويحتوي صندوق \\(U_2\\) على 7 كريات منها: كريتان بيضاوان و 5 كريات حمراء (جميع الكريات متماثلة ولا نفرق بينها باللمس)\nنلقي نردا متوازنا أوجهه مرقمة من 1 إلى 6 ونسجل الرقم الظاهر على الوجه العلوي.\n– إذا ظهر رقم مضاعف للعدد 3، نسحب عشوائيا من الصندوق \\(U_1\\) كريتين على التوالي دون إرجاع.\n– في الحالات الأخرى، نسحب عشوائيا من الصندوق \\(U_2\\) كريتين على التوالي دون إرجاع.\nنعتبر الحوادث الآتية:\n\\(M\\): « ظهور رقم مضاعف للعدد 3 »\n\\(A\\): « الحصول على كريتين بيضاوين »\n\\(B\\): « الحصول على كريتين حمراوين »\n\\(C\\): « الحصول على كريتين من لونين مختلفين »",
+  "questions": [
+    {
+      "id": "2024_s2_probability_ex01_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) انقل وأملأ شجرة الاحتمالات المقابلة.",
+      "axis_tags": [
+        "probability_tree_total_probability"
+      ],
+      "statement_graphs": [
+        {
+          "id": "2024_s2_probability_ex01_tree_statement",
+          "type": "probability_tree",
+          "render_mode": "json",
+          "capture": false,
+          "title": "شجرة الاحتمالات",
+          "direction": "ltr",
+          "canvas": {
+            "width": 860,
+            "height": 600,
+            "padding": 24
+          },
+          "style": {
+            "node_radius": 5,
+            "edge_width": 2,
+            "label_font_size": 18,
+            "probability_font_size": 17,
+            "show_arrow_heads": false
+          },
+          "nodes": [
+            {
+              "id": "root",
+              "kind": "root",
+              "x": 70,
+              "y": 300,
+              "label": ""
+            },
+            {
+              "id": "m",
+              "kind": "branch",
+              "x": 320,
+              "y": 150,
+              "label": "M"
+            },
+            {
+              "id": "not_m",
+              "kind": "branch",
+              "x": 320,
+              "y": 450,
+              "label": "M̄"
+            },
+            {
+              "id": "m_a",
+              "kind": "event",
+              "x": 720,
+              "y": 70,
+              "label": "A"
+            },
+            {
+              "id": "m_b",
+              "kind": "event",
+              "x": 720,
+              "y": 150,
+              "label": "B"
+            },
+            {
+              "id": "m_c",
+              "kind": "event",
+              "x": 720,
+              "y": 230,
+              "label": "C"
+            },
+            {
+              "id": "not_m_a",
+              "kind": "event",
+              "x": 720,
+              "y": 370,
+              "label": "A"
+            },
+            {
+              "id": "not_m_b",
+              "kind": "event",
+              "x": 720,
+              "y": 450,
+              "label": "B"
+            },
+            {
+              "id": "not_m_c",
+              "kind": "event",
+              "x": 720,
+              "y": 530,
+              "label": "C"
+            }
+          ],
+          "edges": [
+            {
+              "id": "e_root_m",
+              "from": "root",
+              "to": "m",
+              "probability": null,
+              "latex_probability": null,
+              "display_if_missing": "",
+              "is_given_in_statement": false
+            },
+            {
+              "id": "e_root_not_m",
+              "from": "root",
+              "to": "not_m",
+              "probability": null,
+              "latex_probability": null,
+              "display_if_missing": "",
+              "is_given_in_statement": false
+            },
+            {
+              "id": "e_m_a",
+              "from": "m",
+              "to": "m_a",
+              "probability": null,
+              "latex_probability": null,
+              "display_if_missing": "",
+              "is_given_in_statement": false
+            },
+            {
+              "id": "e_m_b",
+              "from": "m",
+              "to": "m_b",
+              "probability": null,
+              "latex_probability": null,
+              "display_if_missing": "",
+              "is_given_in_statement": false
+            },
+            {
+              "id": "e_m_c",
+              "from": "m",
+              "to": "m_c",
+              "probability": null,
+              "latex_probability": null,
+              "display_if_missing": "",
+              "is_given_in_statement": false
+            },
+            {
+              "id": "e_not_m_a",
+              "from": "not_m",
+              "to": "not_m_a",
+              "probability": null,
+              "latex_probability": null,
+              "display_if_missing": "",
+              "is_given_in_statement": false
+            },
+            {
+              "id": "e_not_m_b",
+              "from": "not_m",
+              "to": "not_m_b",
+              "probability": null,
+              "latex_probability": null,
+              "display_if_missing": "",
+              "is_given_in_statement": false
+            },
+            {
+              "id": "e_not_m_c",
+              "from": "not_m",
+              "to": "not_m_c",
+              "probability": null,
+              "latex_probability": null,
+              "display_if_missing": "",
+              "is_given_in_statement": false
+            }
+          ],
+          "react_renderer": {
+            "component": "ProbabilityTreeRenderer",
+            "source": "nodes_edges",
+            "probability_field": "latex_probability",
+            "fallback_probability_field": "probability",
+            "missing_probability_field": "display_if_missing"
+          }
+        }
+      ],
+      "solution": {
+        "strategy": "نحسب احتمال M ثم احتمالات A وB وC حسب الصندوق الذي نسحب منه.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "احتمال M ومتممه",
+            "explanation": "مضاعفا 3 بين الأعداد من 1 إلى 6 هما 3 و6:\n\\[\nP(M)=\\frac26=\\frac13,\\qquad P(\\overline M)=\\frac23.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "فروع M — الصندوق U₁",
+            "explanation": "\\[\nP(A|M)=\\frac37\\times\\frac26=\\frac17,\n\\]\n\\[\nP(B|M)=\\frac47\\times\\frac36=\\frac27,\n\\]\n\\[\nP(C|M)=1-\\frac17-\\frac27=\\frac47.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "فروع M̄ — الصندوق U₂",
+            "explanation": "\\[\nP(A|\\overline M)=\\frac27\\times\\frac16=\\frac1{21},\n\\]\n\\[\nP(B|\\overline M)=\\frac57\\times\\frac46=\\frac{10}{21},\n\\]\n\\[\nP(C|\\overline M)=1-\\frac1{21}-\\frac{10}{21}=\\frac{10}{21}.\n\\]"
+          }
+        ],
+        "solution_graphs": [
+          {
+            "id": "2024_s2_probability_ex01_tree_solution",
+            "type": "probability_tree",
+            "render_mode": "json",
+            "capture": false,
+            "title": "شجرة الاحتمالات المكتملة",
+            "direction": "ltr",
+            "canvas": {
+              "width": 860,
+              "height": 600,
+              "padding": 24
+            },
+            "style": {
+              "node_radius": 5,
+              "edge_width": 2,
+              "label_font_size": 18,
+              "probability_font_size": 17,
+              "show_arrow_heads": false
+            },
+            "nodes": [
+              {
+                "id": "root",
+                "kind": "root",
+                "x": 70,
+                "y": 300,
+                "label": ""
+              },
+              {
+                "id": "m",
+                "kind": "branch",
+                "x": 320,
+                "y": 150,
+                "label": "M"
+              },
+              {
+                "id": "not_m",
+                "kind": "branch",
+                "x": 320,
+                "y": 450,
+                "label": "M̄"
+              },
+              {
+                "id": "m_a",
+                "kind": "event",
+                "x": 720,
+                "y": 70,
+                "label": "A"
+              },
+              {
+                "id": "m_b",
+                "kind": "event",
+                "x": 720,
+                "y": 150,
+                "label": "B"
+              },
+              {
+                "id": "m_c",
+                "kind": "event",
+                "x": 720,
+                "y": 230,
+                "label": "C"
+              },
+              {
+                "id": "not_m_a",
+                "kind": "event",
+                "x": 720,
+                "y": 370,
+                "label": "A"
+              },
+              {
+                "id": "not_m_b",
+                "kind": "event",
+                "x": 720,
+                "y": 450,
+                "label": "B"
+              },
+              {
+                "id": "not_m_c",
+                "kind": "event",
+                "x": 720,
+                "y": 530,
+                "label": "C"
+              }
+            ],
+            "edges": [
+              {
+                "id": "e_root_m",
+                "from": "root",
+                "to": "m",
+                "probability": "1/3",
+                "latex_probability": "\\frac{1}{3}",
+                "display_if_missing": "",
+                "is_given_in_statement": false
+              },
+              {
+                "id": "e_root_not_m",
+                "from": "root",
+                "to": "not_m",
+                "probability": "2/3",
+                "latex_probability": "\\frac{2}{3}",
+                "display_if_missing": "",
+                "is_given_in_statement": false
+              },
+              {
+                "id": "e_m_a",
+                "from": "m",
+                "to": "m_a",
+                "probability": "1/7",
+                "latex_probability": "\\frac{1}{7}",
+                "display_if_missing": "",
+                "is_given_in_statement": false
+              },
+              {
+                "id": "e_m_b",
+                "from": "m",
+                "to": "m_b",
+                "probability": "2/7",
+                "latex_probability": "\\frac{2}{7}",
+                "display_if_missing": "",
+                "is_given_in_statement": false
+              },
+              {
+                "id": "e_m_c",
+                "from": "m",
+                "to": "m_c",
+                "probability": "4/7",
+                "latex_probability": "\\frac{4}{7}",
+                "display_if_missing": "",
+                "is_given_in_statement": false
+              },
+              {
+                "id": "e_not_m_a",
+                "from": "not_m",
+                "to": "not_m_a",
+                "probability": "1/21",
+                "latex_probability": "\\frac{1}{21}",
+                "display_if_missing": "",
+                "is_given_in_statement": false
+              },
+              {
+                "id": "e_not_m_b",
+                "from": "not_m",
+                "to": "not_m_b",
+                "probability": "10/21",
+                "latex_probability": "\\frac{10}{21}",
+                "display_if_missing": "",
+                "is_given_in_statement": false
+              },
+              {
+                "id": "e_not_m_c",
+                "from": "not_m",
+                "to": "not_m_c",
+                "probability": "10/21",
+                "latex_probability": "\\frac{10}{21}",
+                "display_if_missing": "",
+                "is_given_in_statement": false
+              }
+            ],
+            "react_renderer": {
+              "component": "ProbabilityTreeRenderer",
+              "source": "nodes_edges",
+              "probability_field": "latex_probability",
+              "fallback_probability_field": "probability",
+              "missing_probability_field": "display_if_missing"
+            }
+          }
+        ],
+        "final_answer": "\\[P(M)=\\frac13,\\quad P(\\overline M)=\\frac23.\\]\n\\[P(A|M)=\\frac17,\\ P(B|M)=\\frac27,\\ P(C|M)=\\frac47.\\]\n\\[P(A|\\overline M)=\\frac1{21},\\ P(B|\\overline M)=\\frac{10}{21},\\ P(C|\\overline M)=\\frac{10}{21}.\\]"
+      }
+    },
+    {
+      "id": "2024_s2_probability_ex01_q2",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2) نعتبر الحادثتين \\(G\\): « الحصول على كريتين من نفس اللون »، \\(H\\): « الحصول على كرية حمراء على الأقل »\n– بين أن: \\(P(G)=\\frac{31}{63}\\) ثم احسب \\(P(H)\\).",
+      "axis_tags": [
+        "probability_tree_total_probability",
+        "probability_language_probability_law"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "G تعني A أو B، أما H فمتممتها الحصول على كريتين بيضاوين.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب P(G|M)",
+            "explanation": "\\[P(G|M)=\\frac17+\\frac27=\\frac37.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب P(G|M̄)",
+            "explanation": "\\[P(G|\\overline M)=\\frac1{21}+\\frac{10}{21}=\\frac{11}{21}.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب P(G)",
+            "explanation": "\\[\nP(G)=\\frac13\\times\\frac37+\\frac23\\times\\frac{11}{21}=\\frac{31}{63}.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "حساب P(H)",
+            "explanation": "متممة H هي A:\n\\[\nP(A)=\\frac13\\times\\frac17+\\frac23\\times\\frac1{21}=\\frac5{63}.\n\\]\n\\[\nP(H)=1-P(A)=\\frac{58}{63}.\n\\]"
+          }
+        ],
+        "final_answer": "\\[P(G)=\\frac{31}{63},\\qquad P(H)=\\frac{58}{63}.\\]"
+      }
+    },
+    {
+      "id": "2024_s2_probability_ex01_q3",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "3) احسب \\(P_G(M)\\) احتمال ظهور رقم مضاعف للعدد 3 علما أن الكريتين المسحوبتين من نفس اللون.",
+      "axis_tags": [
+        "conditional_probability"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نطبق تعريف الاحتمال الشرطي.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب P(G∩M)",
+            "explanation": "\\[\nP(G\\cap M)=P(M)P(G|M)=\\frac13\\times\\frac37=\\frac17.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب P_G(M)",
+            "explanation": "\\[\nP_G(M)=\\frac{P(G\\cap M)}{P(G)}=\\frac{\\frac17}{\\frac{31}{63}}=\\frac9{31}.\n\\]"
+          }
+        ],
+        "final_answer": "\\[P_G(M)=\\frac9{31}.\\]"
+      }
+    },
+    {
+      "id": "2024_s2_probability_ex01_q4",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "4) \\(X\\) المتغير العشوائي الذي يرفق بكل عملية سحب لكريتين عدد الألوان المتحصل عليها.\n– عين قانون احتمال المتغير العشوائي \\(X\\) ثم احسب الأمل الرياضياتي \\(E(63X+1350)\\).",
+      "axis_tags": [
+        "random_variable_probability_distribution_expectation"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "عدد الألوان يساوي 1 إذا كانت الكريتان من نفس اللون، و2 إذا كانتا من لونين مختلفين.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "قيم X",
+            "explanation": "\\[X\\in\\{1,2\\}.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "قانون الاحتمال",
+            "explanation": "\\[\nP(X=1)=P(G)=\\frac{31}{63},\n\\qquad P(X=2)=1-\\frac{31}{63}=\\frac{32}{63}.\n\\]\n\\[\n\\begin{array}{c|cc}\nx_i&1&2\\\\\\hline\nP(X=x_i)&\\frac{31}{63}&\\frac{32}{63}\n\\end{array}\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب الأمل",
+            "explanation": "\\[\nE(X)=1\\times\\frac{31}{63}+2\\times\\frac{32}{63}=\\frac{95}{63}.\n\\]\n\\[\nE(63X+1350)=63E(X)+1350=95+1350=1445.\n\\]"
+          }
+        ],
+        "final_answer": "\\[\n\\begin{array}{c|cc}\nx_i&1&2\\\\\\hline\nP(X=x_i)&\\frac{31}{63}&\\frac{32}{63}\n\\end{array}\n\\]\n\\[E(63X+1350)=1445.\\]"
+      }
+    }
+  ],
+  "rendering_contract": {
+    "no_capture": true,
+    "external_image_required": false,
+    "external_svg_required": false,
+    "graph_source": "inline_json",
+    "supported_graph_types": [
+      "probability_tree"
+    ],
+    "react_note": "الشجرة موجودة بالكامل داخل JSON. ارسم كل edge من إحداثيات node[from] إلى node[to]. اعرض latex_probability في نسخة الحل. لا يوجد أي image path أو SVG خارجي."
+  },
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2024(8).pdf",
+    "statement_figure_policy": "لا Capture. شجرة الاحتمالات معاد بناؤها داخل JSON.",
+    "solution_figure_policy": "الشجرة المكتملة موجودة داخل solution_graphs كبيانات JSON.",
+    "renderer": "ProbabilityTreeRenderer(nodes + edges)"
+  }
+}

@@ -1,0 +1,416 @@
+{
+  "schema_version": "3.0-bac-pedagogical-verified",
+  "language": "ar",
+  "direction": "rtl",
+  "branch": {
+    "code": "science",
+    "name": "شعبة علوم تجريبية"
+  },
+  "branch_code": "science",
+  "branches": [
+    {
+      "code": "science",
+      "name": "شعبة علوم تجريبية"
+    }
+  ],
+  "chapter_code": "limits_continuity",
+  "year": 2014,
+  "exercise_number": 4,
+  "source_page": 5,
+  "source_reference": "بكالوريا 2014 — التمرين الرابع، من ملف الدوال المرفق.",
+  "title": "تمارين النهايات — بكالوريا 2014",
+  "axis_tags": [
+    "limits_continuity"
+  ],
+  "statement": "لتكن الدالة العددية \\(g\\) المعرفة على \\(\\mathbb{R}\\) كما يلي:\n\\[\ng(x)=2x^3-4x^2+7x-4.\n\\]\n\nولتكن الدالة العددية \\(f\\) المعرفة على \\(\\mathbb{R}\\) كما يلي:\n\\[\nf(x)=\\frac{x^3-2x+1}{2x^2-2x+1}.\n\\]",
+  "statement_graph_data": null,
+  "questions": [
+    {
+      "id": "2014_limits_g",
+      "text": "احسب:\n\\[\n\\lim_{x\\to-\\infty}g(x)\n\\qquad\\text{و}\\qquad\n\\lim_{x\\to+\\infty}g(x).\n\\]",
+      "axis_tags": [
+        "limits_continuity"
+      ],
+      "solution": {
+        "strategy": "نبدأ بدراسة شكل النهاية كما هو. عند \\(+\\infty\\) يظهر الشكل \\(+\\infty-\\infty\\)، وهو حالة عدم تعيين، لذلك لا نجمع النهايات مباشرة. نخرج \\(x^3\\) عاملًا مشتركًا، ثم نحسب النهاية بعد إزالة حالة عدم التعيين. نستعمل نفس الكتابة عند \\(-\\infty\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "نكتب الدالة كما وردت في الموضوع",
+            "explanation": "الدالة معرفة على \\(\\mathbb{R}\\) بـ:",
+            "latex": "g(x)=2x^3-4x^2+7x-4",
+            "why": "نحافظ على عبارة الدالة الأصلية قبل بدء الحساب.",
+            "student_tip": "تأكد دائمًا من نقل الدالة كما هي قبل الحساب."
+          },
+          {
+            "step_number": 2,
+            "title": "النهاية عند +∞: نحدد الشكل",
+            "explanation": "عندما \\(x\\to+\\infty\\): لدينا \\(2x^3\\to+\\infty\\) و\\(-4x^2\\to-\\infty\\). لذلك يظهر جمع بين \\(+\\infty\\) و\\(-\\infty\\).",
+            "latex": "2x^3-4x^2+7x-4\\;\\longrightarrow\\;+\\infty-\\infty+\\infty-4",
+            "why": "الشكل \\(+\\infty-\\infty\\) حالة عدم تعيين، فلا يجوز إعطاء النتيجة مباشرة.",
+            "student_tip": "إذا ظهر \\(\\infty-\\infty\\)، اكتب: حالة عدم تعيين."
+          },
+          {
+            "step_number": 3,
+            "title": "نزيل حالة عدم التعيين",
+            "explanation": "نخرج أعلى قوة، وهي \\(x^3\\)، عاملًا مشتركًا.",
+            "latex": "g(x)=x^3\\left(2-\\frac4x+\\frac7{x^2}-\\frac4{x^3}\\right)",
+            "why": "بهذه الكتابة تتحول النهاية إلى جداء نهايتين واضحتين.",
+            "student_tip": "في كثيرات الحدود عند اللانهاية، إخراج أعلى قوة طريقة آمنة وواضحة."
+          },
+          {
+            "step_number": 4,
+            "title": "نحسب نهاية ما داخل القوس",
+            "explanation": "عند \\(+\\infty\\)، فإن \\(\\frac1x\\to0\\)، \\(\\frac1{x^2}\\to0\\)، و\\(\\frac1{x^3}\\to0\\).",
+            "latex": "\\lim_{x\\to+\\infty}\\left(2-\\frac4x+\\frac7{x^2}-\\frac4{x^3}\\right)=2",
+            "why": "كل الكسور التي مقاماتها قوى من x تتجه إلى الصفر.",
+            "student_tip": "بعد إخراج أعلى قوة تصبح النهاية سهلة."
+          },
+          {
+            "step_number": 5,
+            "title": "نستنتج النهاية عند +∞",
+            "explanation": "لدينا \\(x^3\\to+\\infty\\) والقوس يتجه إلى \\(2>0\\).",
+            "latex": "\\lim_{x\\to+\\infty}g(x)=(+\\infty)\\times2=+\\infty",
+            "why": "تمت إزالة حالة عدم التعيين وأصبح الجداء محدد الإشارة.",
+            "student_tip": "النتيجة النهائية: \\(+\\infty\\)."
+          },
+          {
+            "step_number": 6,
+            "title": "النهاية عند -∞",
+            "explanation": "نستعمل نفس الكتابة المفككة. عند \\(-\\infty\\)، الكسور \\(1/x\\)، \\(1/x^2\\)، \\(1/x^3\\) تتجه كلها إلى الصفر، لذلك القوس يتجه إلى 2.",
+            "latex": "g(x)=x^3\\left(2-\\frac4x+\\frac7{x^2}-\\frac4{x^3}\\right)",
+            "why": "هذه الكتابة صالحة عند جهتي اللانهاية.",
+            "student_tip": "لا نحتاج إلى طريقة جديدة للنهاية الثانية."
+          },
+          {
+            "step_number": 7,
+            "title": "نستنتج النهاية عند -∞",
+            "explanation": "عندما \\(x\\to-\\infty\\)، فإن \\(x^3\\to-\\infty\\)، بينما القوس يتجه إلى \\(2>0\\).",
+            "latex": "\\lim_{x\\to-\\infty}g(x)=(-\\infty)\\times2=-\\infty",
+            "why": "جداء كمية سالبة غير محدودة في عدد موجب يعطي \\(-\\infty\\).",
+            "student_tip": "انتبه: \\(x^3\\) يحافظ على إشارة x لأنه أس فردي."
+          }
+        ],
+        "final_answer": "\\[\n\\boxed{\\lim_{x\\to-\\infty}g(x)=-\\infty}\n\\qquad\\text{و}\\qquad\n\\boxed{\\lim_{x\\to+\\infty}g(x)=+\\infty}\n\\]",
+        "verification": "مطابق للتصحيح الرسمي لبكالوريا 2014: \\(\\lim_{x\\to-\\infty}g(x)=-\\infty\\) و\\(\\lim_{x\\to+\\infty}g(x)=+\\infty\\).",
+        "common_mistakes": [
+          "اعتبار \\(+\\infty-\\infty\\) نتيجة قابلة للحساب مباشرة، مع أنها حالة عدم تعيين.",
+          "نسيان إخراج أعلى قوة \\(x^3\\) لحل حالة عدم التعيين.",
+          "الخطأ في إشارة \\(x^3\\) عند \\(-\\infty\\)."
+        ],
+        "hints": [
+          "عند \\(+\\infty\\)، لاحظ ظهور \\(+\\infty-\\infty\\).",
+          "أخرج \\(x^3\\) عاملًا مشتركًا.",
+          "احسب نهاية ما داخل القوس أولًا."
+        ],
+        "graph_data": null,
+        "table_data": null,
+        "solution_style": "حل مفصل ومبسط: فكرة واضحة، ثم خطوات قصيرة، ثم نتيجة نهائية قابلة للكتابة في ورقة البكالوريا.",
+        "methodology": {
+          "goal": "حساب نهايتي g عند ±∞ مع معالجة حالة عدم التعيين عند +∞.",
+          "method": "التعرف على حالة عدم التعيين ثم إخراج x^3 عاملًا مشتركًا.",
+          "why_this_method": "لأن الحساب حدًا بحد عند +∞ يعطي الشكل غير المعين ∞-∞، وإخراج أعلى قوة يزيل هذا الإشكال.",
+          "used_theorem": "قواعد النهايات وإخراج الحد ذي أعلى درجة عاملًا مشتركًا.",
+          "bac_template": [],
+          "formal_writing": [
+            "نحدد الحد ذي أعلى درجة.",
+            "نحسب سلوكه عند اللانهاية.",
+            "نستنتج نهاية كثيرة الحدود."
+          ]
+        },
+        "formal_writing": [
+          "نكتب النهاية.",
+          "نحدد الحد المسيطر.",
+          "نكتب النتيجة."
+        ],
+        "react_display": {
+          "show_strategy": true,
+          "show_steps": true,
+          "show_final_answer": true,
+          "show_graph": false,
+          "show_table": false,
+          "graph_key": "graph_data",
+          "table_key": "table_data",
+          "math_renderer": "better-react-mathjax"
+        },
+        "official_answer_check": {
+          "checked": true,
+          "reference": "التصحيح المرفق لبكالوريا 2014.",
+          "final_result_matches_reference": true,
+          "note": "تمت مطابقة النتيجتين مع الحل الرسمي."
+        },
+        "pedagogical_detail": {
+          "level": "مبسط جدًا",
+          "show_intermediate_calculations": true,
+          "explain_rule_before_use": true,
+          "state_final_conclusion": true
+        },
+        "display_order": [
+          "strategy",
+          "steps",
+          "final_answer",
+          "verification"
+        ],
+        "validation": {
+          "checked_against_official_solution": true,
+          "final_answer_checked": true,
+          "mathematical_consistency_checked": true
+        },
+        "main_idea": "عند +∞ تظهر حالة عدم تعيين ∞-∞؛ نزيلها بإخراج x^3 عاملًا مشتركًا.",
+        "detailed_explanation": "الدالة g هي بالضبط \\(2x^3-4x^2+7x-4\\). عند +∞ لا يجوز جمع نهايات الحدود مباشرة لأن الشكل هو +∞-∞. نكتب g على شكل x^3 مضروبًا في قوس نهايته 2، ثم نستنتج النهايتين.",
+        "answer_style": "idea_then_steps_then_conclusion"
+      },
+      "display_order": 1,
+      "content_type": "question"
+    },
+    {
+      "id": "2014_limits_f",
+      "text": "لتكن الدالة العددية \\(f\\) المعرفة على \\(\\mathbb{R}\\) كما يلي:\n\\[\nf(x)=\\frac{x^3-2x+1}{2x^2-2x+1}.\n\\]\nاحسب:\n\\[\n\\lim_{x\\to-\\infty}f(x)\n\\qquad\\text{و}\\qquad\n\\lim_{x\\to+\\infty}f(x).\n\\]",
+      "axis_tags": [
+        "limits_continuity"
+      ],
+      "solution": {
+        "strategy": "نبدأ بالتعويض في سلوك البسط والمقام عند اللانهاية. يظهر الشكل \\(\\infty/\\infty\\)، وهو حالة عدم تعيين، ثم نزيله بالقسمة على أعلى قوة مناسبة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "نفحص الشكل عند اللانهاية",
+            "explanation": "البسط والمقام كلاهما يتجهان في القيمة المطلقة إلى اللانهاية.",
+            "latex": "\\frac{x^3-2x+1}{2x^2-2x+1}\\longrightarrow\\frac{\\infty}{\\infty}",
+            "why": "هذا شكل غير معين.",
+            "student_tip": "عندما ترى \\(\\infty/\\infty\\)، قل صراحة: حالة عدم تعيين."
+          },
+          {
+            "step_number": 2,
+            "title": "نزيل حالة عدم التعيين",
+            "explanation": "نقسم البسط والمقام على \\(x^2\\)، وهي أكبر قوة في المقام.",
+            "latex": "f(x)=\\frac{x-\\frac{2}{x}+\\frac{1}{x^2}}{2-\\frac{2}{x}+\\frac{1}{x^2}}",
+            "why": "بهذا التحويل تختفي حالة \\(\\infty/\\infty\\) وتصبح النهايات واضحة.",
+            "student_tip": "في دالة ناطقة، القسمة على أعلى قوة في المقام طريقة سهلة وواضحة."
+          },
+          {
+            "step_number": 3,
+            "title": "عند +∞",
+            "explanation": "الحدود \\(1/x\\) و\\(1/x^2\\) تتجه إلى 0.",
+            "latex": "f(x)\\sim\\frac{x}{2}",
+            "why": "المقام يتجه إلى 2 والبسط يتصرف مثل x.",
+            "student_tip": "بعد إزالة حالة عدم التعيين، انظر إلى الحدود التي تبقى."
+          },
+          {
+            "step_number": 4,
+            "title": "نستنتج النهاية عند +∞",
+            "explanation": "بما أن \\(x/2\\to+\\infty\\)، فإن f(x) تتجه إلى +∞.",
+            "latex": "\\boxed{\\lim_{x\\to+\\infty}f(x)=+\\infty}",
+            "why": "تم حل حالة عدم التعيين.",
+            "student_tip": "لا تكتب النتيجة قبل إظهار كيف أزلت \\(\\infty/\\infty\\)."
+          },
+          {
+            "step_number": 5,
+            "title": "عند -∞",
+            "explanation": "نستعمل نفس الكتابة؛ هذه المرة x/2 يتجه إلى -∞.",
+            "latex": "\\boxed{\\lim_{x\\to-\\infty}f(x)=-\\infty}",
+            "why": "المقام يتجه إلى 2 والبسط يتصرف مثل x.",
+            "student_tip": "الطريقة نفسها في الجهتين؛ الذي يتغير هو إشارة x."
+          }
+        ],
+        "final_answer": "\\[\n\\boxed{\\lim_{x\\to-\\infty}f(x)=-\\infty}\n\\qquad\\text{و}\\qquad\n\\boxed{\\lim_{x\\to+\\infty}f(x)=+\\infty}.\n\\]",
+        "verification": "النتيجتان مطابقتان للتصحيح المرفق لبكالوريا 2014.",
+        "common_mistakes": [
+          "القول إن النهاية نسبة معاملي أعلى درجتين فقط رغم اختلاف الدرجتين.",
+          "نسيان أن درجة البسط أكبر من درجة المقام."
+        ],
+        "hints": [
+          "قارن \\(x^3\\) مع \\(2x^2\\)."
+        ],
+        "graph_data": null,
+        "table_data": null,
+        "solution_style": "حل مفصل ومبسط: فكرة واضحة، ثم خطوات قصيرة، ثم نتيجة نهائية قابلة للكتابة في ورقة البكالوريا.",
+        "methodology": {
+          "goal": "حساب نهايتي الدالة f عند ±∞.",
+          "method": "مقارنة الحدود ذات أعلى درجة في البسط والمقام.",
+          "why_this_method": "لأن f دالة ناطقة.",
+          "used_theorem": "قواعد نهايات الدوال الناطقة.",
+          "bac_template": [],
+          "formal_writing": [
+            "نحدد الحدود ذات أعلى درجة.",
+            "نبسط السلوك عند اللانهاية.",
+            "نستنتج النهايتين."
+          ]
+        },
+        "formal_writing": [
+          "نكتب النهاية.",
+          "نقارن أعلى الدرجات.",
+          "نكتب النتيجة."
+        ],
+        "react_display": {
+          "show_strategy": true,
+          "show_steps": true,
+          "show_final_answer": true,
+          "show_graph": false,
+          "show_table": false,
+          "graph_key": "graph_data",
+          "table_key": "table_data",
+          "math_renderer": "better-react-mathjax"
+        },
+        "official_answer_check": {
+          "checked": true,
+          "reference": "التصحيح المرفق لبكالوريا 2014.",
+          "final_result_matches_reference": true,
+          "note": "تمت مطابقة النتيجتين مع الحل الرسمي."
+        },
+        "pedagogical_detail": {
+          "level": "مبسط جدًا",
+          "show_intermediate_calculations": true,
+          "explain_rule_before_use": true,
+          "state_final_conclusion": true
+        },
+        "display_order": [
+          "strategy",
+          "steps",
+          "final_answer",
+          "verification"
+        ],
+        "validation": {
+          "checked_against_official_solution": true,
+          "final_answer_checked": true,
+          "mathematical_consistency_checked": true
+        },
+        "main_idea": "مقارنة أعلى درجة في البسط وأعلى درجة في المقام.",
+        "detailed_explanation": "هنا توجد حالة عدم تعيين من الشكل ∞/∞. تم حلها بالقسمة على x^2، ثم حساب النهاية بعد التبسيط.",
+        "answer_style": "idea_then_steps_then_conclusion"
+      },
+      "display_order": 2,
+      "content_type": "question"
+    },
+    {
+      "id": "2014_limits_asymptote",
+      "text": "بعد إثبات أنه من أجل كل \\(x\\in\\mathbb{R}\\):\n\\[\nf(x)=\\frac12(x+1)+\\frac{1-3x}{2(2x^2-2x+1)},\n\\]\nاحسب النهايتين اللازمتين لاستنتاج وجود المستقيم المقارب المائل:\n\\[\n\\lim_{x\\to-\\infty}\\left[f(x)-\\frac12(x+1)\\right]\n\\qquad\\text{و}\\qquad\n\\lim_{x\\to+\\infty}\\left[f(x)-\\frac12(x+1)\\right].\n\\]",
+      "axis_tags": [
+        "limits_continuity"
+      ],
+      "solution": {
+        "strategy": "نستعمل الكتابة المعطاة للفرق. عند اللانهاية يظهر شكل \\(\\infty/\\infty\\)، لذلك نذكر أنه حالة عدم تعيين ثم نقسم على أعلى قوة في المقام.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "نكتب الفرق",
+            "explanation": "من العلاقة المعطاة في السؤال نحصل على:",
+            "latex": "f(x)-\\frac12(x+1)=\\frac{1-3x}{2(2x^2-2x+1)}",
+            "why": "هذه هي العبارة التي يجب حساب نهايتها.",
+            "student_tip": "استعمل العلاقة التي أثبتها السؤال السابق بدل إعادة الحساب من البداية."
+          },
+          {
+            "step_number": 2,
+            "title": "نحدد حالة عدم التعيين",
+            "explanation": "عند \\(x\\to\\pm\\infty\\)، البسط يتجه في القيمة المطلقة إلى ∞ والمقام أيضًا إلى ∞.",
+            "latex": "\\frac{1-3x}{2(2x^2-2x+1)}\\longrightarrow\\frac{\\infty}{\\infty}",
+            "why": "هذا شكل غير معين.",
+            "student_tip": "اكتب بوضوح: لدينا حالة عدم تعيين \\(\\infty/\\infty\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "نزيل حالة عدم التعيين",
+            "explanation": "نقسم البسط والمقام على \\(x^2\\).",
+            "latex": "\\frac{\\frac1{x^2}-\\frac3x}{2\\left(2-\\frac2x+\\frac1{x^2}\\right)}",
+            "why": "بعد القسمة تصبح كل الحدود التي فيها 1/x أو 1/x^2 متجهة إلى 0.",
+            "student_tip": "اختيار x^2 مناسب لأن المقام من الدرجة الثانية."
+          },
+          {
+            "step_number": 4,
+            "title": "النهاية عند +∞",
+            "explanation": "كل الحدود في البسط تتجه إلى 0، والمقام يتجه إلى 4.",
+            "latex": "\\boxed{\\lim_{x\\to+\\infty}\\left[f(x)-\\frac12(x+1)\\right]=0}",
+            "why": "0 على 4 يساوي 0.",
+            "student_tip": "بعد إزالة حالة عدم التعيين تصبح النهاية عادية."
+          },
+          {
+            "step_number": 5,
+            "title": "النهاية عند -∞",
+            "explanation": "نفس القسمة تعطي النتيجة نفسها لأن 1/x و1/x^2 يتجهان إلى 0.",
+            "latex": "\\boxed{\\lim_{x\\to-\\infty}\\left[f(x)-\\frac12(x+1)\\right]=0}",
+            "why": "المقام يتجه إلى 4 والبسط إلى 0.",
+            "student_tip": "في الجهتين النتيجة 0."
+          }
+        ],
+        "final_answer": "\\[\n\\boxed{\\lim_{x\\to-\\infty}\\left[f(x)-\\frac12(x+1)\\right]=0}\n\\qquad\\text{و}\\qquad\n\\boxed{\\lim_{x\\to+\\infty}\\left[f(x)-\\frac12(x+1)\\right]=0}.\n\\]",
+        "verification": "النتيجتان ظاهرتان في التصحيح الرسمي لبكالوريا 2014 عند استنتاج المقارب المائل.",
+        "common_mistakes": [
+          "حساب نهاية f نفسها بدل نهاية الفرق.",
+          "نسيان العامل \\(1/2\\) في العبارة الخطية."
+        ],
+        "hints": [
+          "استعمل مباشرة الكتابة المثبتة في السؤال السابق.",
+          "قارن درجتي البسط والمقام في الكسر المتبقي."
+        ],
+        "graph_data": null,
+        "table_data": null,
+        "solution_style": "حل مفصل ومبسط: فكرة واضحة، ثم خطوات قصيرة، ثم نتيجة نهائية قابلة للكتابة في ورقة البكالوريا.",
+        "methodology": {
+          "goal": "حساب النهايتين اللازمتين لإثبات وجود المقارب المائل.",
+          "method": "طرح العبارة الخطية واستعمال نهاية دالة ناطقة درجتها في المقام أكبر.",
+          "why_this_method": "لأن معيار المقارب المائل يعتمد على نهاية الفرق.",
+          "used_theorem": "معيار المستقيم المقارب المائل.",
+          "bac_template": [],
+          "formal_writing": [
+            "نكتب الفرق.",
+            "نحسب نهايته عند -∞ و+∞.",
+            "نستنتج أن الفرق يتجه إلى الصفر."
+          ]
+        },
+        "formal_writing": [
+          "نكتب العلاقة المثبتة.",
+          "نحسب النهاية.",
+          "نكتب النتيجة."
+        ],
+        "react_display": {
+          "show_strategy": true,
+          "show_steps": true,
+          "show_final_answer": true,
+          "show_graph": false,
+          "show_table": false,
+          "graph_key": "graph_data",
+          "table_key": "table_data",
+          "math_renderer": "better-react-mathjax"
+        },
+        "official_answer_check": {
+          "checked": true,
+          "reference": "التصحيح المرفق لبكالوريا 2014.",
+          "final_result_matches_reference": true,
+          "note": "تمت مطابقة النهايتين مع الحل الرسمي."
+        },
+        "pedagogical_detail": {
+          "level": "مبسط جدًا",
+          "show_intermediate_calculations": true,
+          "explain_rule_before_use": true,
+          "state_final_conclusion": true
+        },
+        "display_order": [
+          "strategy",
+          "steps",
+          "final_answer",
+          "verification"
+        ],
+        "validation": {
+          "checked_against_official_solution": true,
+          "final_answer_checked": true,
+          "mathematical_consistency_checked": true
+        },
+        "main_idea": "نهاية الفرق بين f والعبارة الخطية تساوي 0 عند ±∞.",
+        "detailed_explanation": "في نهاية الفرق توجد حالة عدم تعيين ∞/∞. تم حلها بالقسمة على x^2 ثم التعويض في الحدود الجديدة.",
+        "answer_style": "idea_then_steps_then_conclusion"
+      },
+      "display_order": 3,
+      "content_type": "question"
+    }
+  ],
+  "solution_guideline": {
+    "indeterminate_form_policy": "إذا ظهرت حالة عدم تعيين مثل 0/0 أو ∞/∞، يجب ذكرها صراحة ثم إزالتها بخطوات واضحة قبل إعطاء النتيجة.",
+    "pedagogy": "شرح بسيط جدًا، خطوة واحدة في كل سطر، مع توضيح سبب كل خطوة."
+  },
+  "review_status_2014_g": {
+    "checked_against_original_subject_page_5": true,
+    "checked_against_official_correction_page_6": true,
+    "function_verified": "g(x)=2x^3-4x^2+7x-4",
+    "indeterminate_form_explicitly_handled": true
+  }
+}

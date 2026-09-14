@@ -1,0 +1,242 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2012-science-sequences-subject1-ex01",
+  "session": "ordinary",
+  "year": 2012,
+  "chapter_code": "sequences",
+  "chapter_title": "المتتاليات العددية",
+  "axis_tags": [
+    "recursive_sequence",
+    "graphical_sequence",
+    "induction_bounds",
+    "sequence_monotonicity",
+    "sequence_convergence",
+    "sequence_limit"
+  ],
+  "branches": [
+    {
+      "code": "science",
+      "name": "شعبة علوم تجريبية"
+    }
+  ],
+  "exercise_number": 1,
+  "subject_number": 1,
+  "source_page": 1,
+  "source_pages": [
+    1
+  ],
+  "solution_source_pages": [
+    5
+  ],
+  "title": "التمرين الأول — بكالوريا الجزائر 2012 — الموضوع الأول — شعبة علوم تجريبية",
+  "statement": "نعتبر المتتالية العددية \\((u_n)\\) المعرفة بحدها الأول \\(u_0=1\\) و من أجل كل عدد طبيعي \\(n\\): \\(u_{n+1}=\\sqrt{2u_n+3}\\).",
+  "statement_graphs": [
+    {
+      "id": "2012_s1_ex01_original_graph",
+      "type": "svg",
+      "title": "التمثيل البياني للدالة h والمستقيم Δ",
+      "description": "الشكل المرافق للسؤال: المنحنى (C) للدالة h(x)=√(2x+3) والمستقيم (Δ) ذو المعادلة y=x.",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 620 430\">\n  <rect width=\"620\" height=\"430\" fill=\"white\"/>\n  <g stroke=\"#d7d7d7\" stroke-width=\"1\">\n    <path d=\"M40 30V390 M80 30V390 M120 30V390 M160 30V390 M200 30V390 M240 30V390 M280 30V390 M320 30V390 M360 30V390 M400 30V390 M440 30V390 M480 30V390 M520 30V390 M560 30V390\"/>\n    <path d=\"M40 390H580 M40 350H580 M40 310H580 M40 270H580 M40 230H580 M40 190H580 M40 150H580 M40 110H580 M40 70H580 M40 30H580\"/>\n  </g>\n  <g stroke=\"black\" stroke-width=\"2\">\n    <path d=\"M40 350H590\"/>\n    <path d=\"M200 405V20\"/>\n  </g>\n  <g stroke=\"black\" stroke-width=\"2\" stroke-dasharray=\"7 5\">\n    <path d=\"M120 430L580 -30\"/>\n  </g>\n  <path d=\"M80 350 C95 315,120 285,160 255 C215 216,285 180,360 150 C430 123,505 99,580 80\"\n        fill=\"none\" stroke=\"black\" stroke-width=\"3\"/>\n  <g font-family=\"Arial\" font-size=\"18\" fill=\"black\">\n    <text x=\"585\" y=\"370\">x</text><text x=\"210\" y=\"25\">y</text>\n    <text x=\"450\" y=\"112\">(C)</text><text x=\"470\" y=\"78\">(Δ)</text>\n    <text x=\"72\" y=\"373\">-3</text><text x=\"112\" y=\"373\">-2</text><text x=\"152\" y=\"373\">-1</text>\n    <text x=\"235\" y=\"373\">1</text><text x=\"275\" y=\"373\">2</text><text x=\"315\" y=\"373\">3</text>\n    <text x=\"355\" y=\"373\">4</text><text x=\"180\" y=\"313\">1</text><text x=\"180\" y=\"273\">2</text>\n    <text x=\"180\" y=\"233\">3</text><text x=\"180\" y=\"193\">4</text>\n  </g>\n</svg>"
+    }
+  ],
+  "questions": [
+    {
+      "id": "2012_s1_sequences_ex01_q1a",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) لتكن \\(h\\) الدالة المعرفة على المجال \\(\\left[-\\frac32;+\\infty\\right[\\) كما يلي: \\(h(x)=\\sqrt{2x+3}\\)، و \\((C)\\) تمثيلها البياني و \\((\\Delta)\\) المستقيم ذو معادلة \\(y=x\\) في المستوى المنسوب إلى معلم متعامد ومتجانس. أ- أعد رسم الشكل المقابل على ورقة الإجابة ثم مثل على محور الفواصل الحدود \\(u_0,u_1,u_2,u_3\\) (دون حسابها و موضحا خطوط الإنشاء).",
+      "axis_tags": [
+        "graphical_sequence"
+      ],
+      "statement_graphs": [
+        "2012_s1_ex01_original_graph"
+      ],
+      "solution": {
+        "strategy": "نستعمل العلاقة \\(u_{n+1}=h(u_n)\\). ننطلق من \\(u_0=1\\) على محور الفواصل، نصعد عموديا إلى المنحنى \\((C)\\)، ثم ننتقل أفقيا إلى المستقيم \\(y=x\\)، ونكرر العملية.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تحديد u₀",
+            "explanation": "نضع \\(u_0=1\\) على محور الفواصل."
+          },
+          {
+            "step_number": 2,
+            "title": "إنشاء u₁",
+            "explanation": "من النقطة ذات الفاصلة \\(u_0\\)، نرسم خطا عموديا حتى المنحنى \\((C)\\). ترتيبة نقطة التقاطع هي \\(h(u_0)=u_1\\). ننقل هذه القيمة إلى محور الفواصل باستعمال المستقيم \\(y=x\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "إنشاء u₂ ثم u₃",
+            "explanation": "نعيد نفس العملية انطلاقا من \\(u_1\\) للحصول على \\(u_2\\)، ثم انطلاقا من \\(u_2\\) للحصول على \\(u_3\\)."
+          },
+          {
+            "step_number": 4,
+            "title": "قراءة الشكل",
+            "explanation": "تظهر الحدود متزايدة وتقترب تدريجيا من فاصلة نقطة تقاطع \\((C)\\) مع \\((\\Delta)\\)، وهي \\(3\\)."
+          }
+        ],
+        "final_answer": "تمثل الحدود بيانيا بطريقة «السلم» بين المنحنى \\((C)\\) والمستقيم \\(y=x\\)، ابتداء من \\(u_0=1\\)."
+      }
+    },
+    {
+      "id": "2012_s1_sequences_ex01_q1b",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "ب- ضع تخمينا حول اتجاه تغير \\((u_n)\\) و تقاربها.",
+      "axis_tags": [
+        "graphical_sequence",
+        "sequence_monotonicity",
+        "sequence_convergence"
+      ],
+      "statement_graphs": [
+        "2012_s1_ex01_original_graph"
+      ],
+      "solution": {
+        "strategy": "نعتمد فقط على القراءة البيانية المطلوبة في هذا السؤال.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "اتجاه التغير",
+            "explanation": "من الإنشاء البياني نلاحظ أن كل حد يقع إلى يمين الحد السابق، لذلك نتوقع أن \\((u_n)\\) متزايدة."
+          },
+          {
+            "step_number": 2,
+            "title": "التقارب",
+            "explanation": "تقترب القيم من نقطة تقاطع المنحنى \\((C)\\) مع المستقيم \\(y=x\\)، وفاصلتها الموجبة هي \\(3\\)."
+          }
+        ],
+        "final_answer": "التخمين: \\((u_n)\\) متزايدة ومتقاربة نحو \\(3\\)."
+      }
+    },
+    {
+      "id": "2012_s1_sequences_ex01_q2",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "2) برهن بالتراجع أنه من أجل كل عدد طبيعي \\(n\\): \\(0<u_n<3\\).",
+      "axis_tags": [
+        "induction_bounds"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نبرهن الخاصية \\(P(n): 0<u_n<3\\) بالتراجع.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التحقق عند n=0",
+            "explanation": "لدينا \\(u_0=1\\)، ومن الواضح أن:\n\\[\n0<1<3.\n\\]\nإذن الخاصية صحيحة عند \\(n=0\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "فرضية التراجع",
+            "explanation": "نفترض أنه من أجل رتبة طبيعية \\(n\\):\n\\[\n0<u_n<3.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "إثبات الحد السفلي",
+            "explanation": "بما أن \\(u_n>0\\)، فإن:\n\\[\n2u_n+3>3>0.\n\\]\nومن ثم:\n\\[\nu_{n+1}=\\sqrt{2u_n+3}>0.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "إثبات الحد العلوي",
+            "explanation": "من \\(u_n<3\\) نحصل على:\n\\[\n2u_n+3<9.\n\\]\nوبما أن الطرفين موجبان:\n\\[\n\\sqrt{2u_n+3}<3.\n\\]\nأي:\n\\[\nu_{n+1}<3.\n\\]"
+          },
+          {
+            "step_number": 5,
+            "title": "الخلاصة",
+            "explanation": "إذن \\(0<u_{n+1}<3\\). وبمبدأ التراجع:\n\\[\n\\boxed{0<u_n<3\\quad\\forall n\\in\\mathbb N}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(0<u_n<3\\) من أجل كل \\(n\\in\\mathbb N\\)."
+      }
+    },
+    {
+      "id": "2012_s1_sequences_ex01_q3a",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "3) أ- ادرس اتجاه تغير المتتالية \\((u_n)\\).",
+      "axis_tags": [
+        "sequence_monotonicity"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "ندرس إشارة \\(u_{n+1}-u_n\\). بما أن \\(0<u_n<3\\)، يمكننا استعمال المرافق.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب الفرق",
+            "explanation": "\\[\nu_{n+1}-u_n=\\sqrt{2u_n+3}-u_n.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "الضرب في المرافق",
+            "explanation": "\\[\nu_{n+1}-u_n\n=\\frac{2u_n+3-u_n^2}{\\sqrt{2u_n+3}+u_n}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "تحليل البسط",
+            "explanation": "\\[\n2u_n+3-u_n^2=(3-u_n)(u_n+1).\n\\]\nإذن:\n\\[\nu_{n+1}-u_n\n=\\frac{(3-u_n)(u_n+1)}{\\sqrt{2u_n+3}+u_n}.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "دراسة الإشارة",
+            "explanation": "لدينا \\(0<u_n<3\\)، وبالتالي \\(3-u_n>0\\)، و\\(u_n+1>0\\)، كما أن المقام موجب. إذن:\n\\[\nu_{n+1}-u_n>0.\n\\]"
+          }
+        ],
+        "final_answer": "المتتالية \\((u_n)\\) متزايدة تماما."
+      }
+    },
+    {
+      "id": "2012_s1_sequences_ex01_q3b",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "ب- استنتج أن المتتالية \\((u_n)\\) متقاربة، ثم احسب \\(\\lim_{n\\to+\\infty}u_n\\).",
+      "axis_tags": [
+        "sequence_convergence",
+        "sequence_limit"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "المتتالية متزايدة ومحدودة من الأعلى، إذن متقاربة. بعد ذلك نفرض أن نهايتها \\(\\ell\\) ونمر إلى النهاية في علاقة الرجوع.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "إثبات التقارب",
+            "explanation": "أثبتنا أن \\((u_n)\\) متزايدة، ومن السؤال السابق لدينا \\(u_n<3\\). إذن هي متزايدة ومحدودة من الأعلى، وبالتالي متقاربة."
+          },
+          {
+            "step_number": 2,
+            "title": "فرض النهاية",
+            "explanation": "نضع:\n\\[\n\\lim_{n\\to+\\infty}u_n=\\ell.\n\\]\nوبما أن \\(u_n>0\\)، فإن \\(\\ell\\ge0\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "المرور إلى النهاية",
+            "explanation": "من:\n\\[\nu_{n+1}=\\sqrt{2u_n+3}\n\\]\nنحصل على:\n\\[\n\\ell=\\sqrt{2\\ell+3}.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "حل معادلة النهاية",
+            "explanation": "بالتربيع:\n\\[\n\\ell^2=2\\ell+3\n\\]\nأي:\n\\[\n\\ell^2-2\\ell-3=0\n\\]\nومنها:\n\\[\n(\\ell-3)(\\ell+1)=0.\n\\]\nإذن \\(\\ell=3\\) أو \\(\\ell=-1\\)."
+          },
+          {
+            "step_number": 5,
+            "title": "اختيار الحل المقبول",
+            "explanation": "بما أن \\(\\ell\\ge0\\)، نرفض \\(-1\\) ونحتفظ بـ:\n\\[\n\\ell=3.\n\\]"
+          }
+        ],
+        "final_answer": "\\((u_n)\\) متقاربة و \\(\\boxed{\\lim_{n\\to+\\infty}u_n=3}\\)."
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2012(4).pdf",
+    "comparison_source": "bac_sequence_scientifique(6).pdf",
+    "statement_figure_policy": "الشكل الموجود في نص البكالوريا أدرج ضمن statement_graphs، ولا تضاف إلى نص السؤال معطيات غير موجودة في الأصل.",
+    "solution_figure_policy": "الإنشاءات أو التوضيحات الإضافية توضع في الحل فقط.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  }
+}

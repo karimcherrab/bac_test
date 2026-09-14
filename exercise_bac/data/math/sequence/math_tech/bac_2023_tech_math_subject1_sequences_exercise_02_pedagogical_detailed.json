@@ -1,0 +1,298 @@
+{
+  "schema_version": "4.5-bac-source",
+  "language": "ar",
+  "direction": "rtl",
+  "year": 2023,
+  "chapter_code": "sequences",
+  "chapter_title": "sequences",
+  "branches": [
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "figures": [],
+  "display": {
+    "layout": "question_by_question",
+    "show_statement_first": true,
+    "show_statement_figures": true,
+    "show_solution_after_click": true,
+    "show_solution_figures": true
+  },
+  "review_status": {
+    "statement_compared_with_original_pdf": true,
+    "questions_compared_with_original_pdf": true,
+    "source_figures_checked": true,
+    "solution_checked_against_correction": true,
+    "latex_normalized_only": true,
+    "react_ready": true
+  },
+  "version": "4.2-2023-tech-math-subject1-sequences-ex02",
+  "session": "ordinary",
+  "exercise_number": 2,
+  "points": 4,
+  "source_pages": [
+    1
+  ],
+  "solution_source_pages": [
+    5
+  ],
+  "title": "التمرين الثاني — بكالوريا الجزائر 2023 — متتالية تراجعية ومتتالية هندسية ومجاميع",
+  "axis_tags": [
+    "recursive_sequence",
+    "mathematical_induction",
+    "sequence_monotonicity",
+    "geometric_sequence",
+    "explicit_formula",
+    "sequence_limit",
+    "geometric_sum"
+  ],
+  "statement": "التمرين الثاني: (04 نقاط)\n\n\\((u_n)\\) المتتالية العددية المعرفة بـ:\n\\[\nu_0=1\n\\]\nومن أجل كل عدد طبيعي \\(n\\):\n\\[\nu_{n+1}=\\frac23u_n+1.\n\\]\n\n1) برهن بالتراجع أنه من أجل كل عدد طبيعي \\(n\\):\n\\[\nu_n<3.\n\\]\n\n2) بين أن \\((u_n)\\) متزايدة تماما.\n\n3) \\((v_n)\\) المتتالية العددية المعرفة على \\(\\mathbb N\\) بـ:\n\\[\nv_n=u_n-3.\n\\]\n\nأ) بين أن المتتالية \\((v_n)\\) هندسية أساسها:\n\\[\n\\frac23\n\\]\nيطلب تعيين حدها الأول \\(v_0\\).\n\nب) عين عبارة الحد العام \\(v_n\\) بدلالة \\(n\\) ثم استنتج أنه من أجل كل عدد طبيعي \\(n\\):\n\\[\nu_n=-2\\left(\\frac23\\right)^n+3.\n\\]\n\nج) احسب:\n\\[\n\\lim_{n\\to+\\infty}u_n.\n\\]\n\n4) نضع من أجل كل عدد طبيعي \\(n\\):\n\\[\nS_n=v_0+v_1+\\cdots+v_n\n\\]\nو:\n\\[\nT_n=u_0+u_1+\\cdots+u_n.\n\\]\n\nاحسب \\(S_n\\) بدلالة \\(n\\) ثم بين أنه من أجل كل عدد طبيعي \\(n\\):\n\\[\nT_n=3n-3+4\\left(\\frac23\\right)^n.\n\\]",
+  "questions": [
+    {
+      "id": "2023_tech_math_s1_ex02_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) برهن بالتراجع أنه من أجل كل عدد طبيعي \\(n\\): \\(u_n<3\\).",
+      "solution": {
+        "introduction": "نثبت أن كل حدود المتتالية تبقى أصغر من 3 باستعمال البرهان بالتراجع.",
+        "strategy": "نتحقق من البداية عند n=0 ثم نثبت انتقال الخاصية إلى n+1.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التحقق عند n=0",
+            "explanation": "لدينا:\n\\[u_0=1<3.\\]",
+            "result": "الخاصية صحيحة عند \\(n=0\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "فرضية التراجع",
+            "explanation": "نفترض أنه من أجل عدد طبيعي \\(n\\):\n\\[u_n<3.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الانتقال إلى n+1",
+            "explanation": "من فرضية التراجع:\n\\[\\frac23u_n<\\frac23\\times3=2.\\]\nبإضافة 1:\n\\[\\frac23u_n+1<3.\\]\nلكن:\n\\[u_{n+1}=\\frac23u_n+1.\\]\nإذن:",
+            "result": "\\[u_{n+1}<3.\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "الخلاصة",
+            "explanation": "حسب مبدأ التراجع:\n\\[u_n<3\\]\nلكل \\(n\\in\\mathbb N\\)."
+          }
+        ],
+        "final_answer": "\\(\\boxed{u_n<3\\text{ لكل }n\\in\\mathbb N}\\).",
+        "verification": "تمت مراجعة الحل مع الإجابة النموذجية الرسمية لبكالوريا 2023، الموضوع الأول، التمرين الثاني.",
+        "common_mistakes": [
+          "نسيان إضافة 1 بعد ضرب المتراجحة في 2/3."
+        ],
+        "hints": [
+          "استعمل مباشرة العلاقة u_{n+1}=2u_n/3+1."
+        ],
+        "summary": "الحد 3 يبقى حدا أعلى لجميع حدود المتتالية.",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2023_tech_math_s1_ex02_q2",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2) بين أن \\((u_n)\\) متزايدة تماما.",
+      "solution": {
+        "introduction": "ندرس الفرق بين حدين متتاليين.",
+        "strategy": "نحسب \\(u_{n+1}-u_n\\) ثم نستعمل الحصر السابق \\(u_n<3\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب الفرق",
+            "explanation": "\\[u_{n+1}-u_n=\\frac23u_n+1-u_n=1-\\frac13u_n.\\]\nأي:\n\\[u_{n+1}-u_n=\\frac{3-u_n}{3}.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "إشارة الفرق",
+            "explanation": "من السؤال السابق:\n\\[u_n<3\\Rightarrow 3-u_n>0.\\]\nإذن:",
+            "result": "\\[u_{n+1}-u_n>0.\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{(u_n)\\text{ متزايدة تماما}}\\).",
+        "verification": "تمت مراجعة الحل مع الإجابة النموذجية الرسمية لبكالوريا 2023، الموضوع الأول، التمرين الثاني.",
+        "common_mistakes": [
+          "الخطأ في تبسيط u_{n+1}-u_n."
+        ],
+        "hints": [
+          "استعمل u_n<3."
+        ],
+        "summary": "الفرق موجب لكل n، لذلك المتتالية متزايدة تماما.",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2023_tech_math_s1_ex02_q3a",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "3-أ) بين أن المتتالية \\((v_n)\\) هندسية أساسها \\(\\frac23\\) يطلب تعيين حدها الأول \\(v_0\\).",
+      "solution": {
+        "introduction": "نحسب \\(v_{n+1}\\) باستعمال تعريف \\(v_n\\).",
+        "strategy": "نعوض u_{n+1} ثم نكتب النتيجة بدلالة v_n.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب vₙ₊₁",
+            "explanation": "\\[v_{n+1}=u_{n+1}-3=\\frac23u_n+1-3.\\]\nإذن:\n\\[v_{n+1}=\\frac23u_n-2=\\frac23(u_n-3).\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "استخراج العلاقة",
+            "explanation": "بما أن \\(v_n=u_n-3\\)، نحصل على:\n\\[v_{n+1}=\\frac23v_n.\\]",
+            "result": "\\((v_n)\\) هندسية أساسها \\(2/3\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "حساب v₀",
+            "explanation": "\\[v_0=u_0-3=1-3=-2.\\]",
+            "result": "\\(v_0=-2\\)."
+          }
+        ],
+        "final_answer": "\\(\\boxed{v_{n+1}=\\frac23v_n},\\quad\\boxed{v_0=-2}\\).",
+        "verification": "تمت مراجعة الحل مع الإجابة النموذجية الرسمية لبكالوريا 2023، الموضوع الأول، التمرين الثاني.",
+        "common_mistakes": [
+          "نسيان أن v_n=u_n-3."
+        ],
+        "hints": [
+          "حاول استخراج العامل 2/3."
+        ],
+        "summary": "وجدنا نسبة ثابتة تساوي 2/3 وحدا أول يساوي -2.",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2023_tech_math_s1_ex02_q3b",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "3-ب) عين عبارة الحد العام \\(v_n\\) بدلالة \\(n\\) ثم استنتج أنه من أجل كل عدد طبيعي \\(n\\): \\(u_n=-2(\\frac23)^n+3\\).",
+      "solution": {
+        "introduction": "بعد معرفة أن v_n هندسية، نستعمل صيغة حدها العام.",
+        "strategy": "نكتب v_n ثم نرجع إلى u_n من العلاقة v_n=u_n-3.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "عبارة vₙ",
+            "explanation": "بما أن \\(v_0=-2\\) والأساس \\(\\frac23\\):\n\\[v_n=v_0\\left(\\frac23\\right)^n=-2\\left(\\frac23\\right)^n.\\]",
+            "result": "\\(v_n=-2(2/3)^n\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "استخراج uₙ",
+            "explanation": "من \\(v_n=u_n-3\\):\n\\[u_n=v_n+3.\\]\nإذن:\n\\[u_n=-2\\left(\\frac23\\right)^n+3.\\]",
+            "result": "العبارة المطلوبة."
+          }
+        ],
+        "final_answer": "\\(\\boxed{v_n=-2(\\frac23)^n},\\quad\\boxed{u_n=-2(\\frac23)^n+3}\\).",
+        "verification": "تمت مراجعة الحل مع الإجابة النموذجية الرسمية لبكالوريا 2023، الموضوع الأول، التمرين الثاني.",
+        "common_mistakes": [
+          "استعمال الأس n-1 رغم أن البداية من v₀."
+        ],
+        "hints": [
+          "استعمل v_n=v_0q^n."
+        ],
+        "summary": "الحد العام لـv_n يعطي مباشرة الحد العام لـu_n.",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2023_tech_math_s1_ex02_q3c",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "3-ج) احسب \\(\\lim_{n\\to+\\infty}u_n\\).",
+      "solution": {
+        "introduction": "نستعمل العبارة الصريحة لـu_n.",
+        "strategy": "بما أن 0<2/3<1 فإن قوتها تؤول إلى الصفر.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "نهاية الجزء الهندسي",
+            "explanation": "\\[\\left(\\frac23\\right)^n\\to0.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "نهاية uₙ",
+            "explanation": "\\[u_n=-2\\left(\\frac23\\right)^n+3\\to3.\\]",
+            "result": "\\(\\lim u_n=3\\)."
+          }
+        ],
+        "final_answer": "\\(\\boxed{\\lim_{n\\to+\\infty}u_n=3}\\).",
+        "verification": "تمت مراجعة الحل مع الإجابة النموذجية الرسمية لبكالوريا 2023، الموضوع الأول، التمرين الثاني.",
+        "common_mistakes": [],
+        "hints": [
+          "استعمل 0<2/3<1."
+        ],
+        "summary": "الجزء الهندسي يختفي وتبقى القيمة 3.",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2023_tech_math_s1_ex02_q4",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "4) نضع \\(S_n=v_0+v_1+\\cdots+v_n\\) و \\(T_n=u_0+u_1+\\cdots+u_n\\). احسب \\(S_n\\) بدلالة \\(n\\) ثم بين أنه \\(T_n=3n-3+4(\\frac23)^n\\).",
+      "solution": {
+        "introduction": "نحسب أولا مجموع v_n الهندسي، ثم نستعمل العلاقة u_k=v_k+3.",
+        "strategy": "نفصل مجموع T_n إلى S_n ومجموع ثابت.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب Sₙ",
+            "explanation": "\\[S_n=v_0\\frac{1-q^{n+1}}{1-q}\\]\nحيث \\(v_0=-2\\) و\\(q=\\frac23\\). إذن:\n\\[S_n=-2\\frac{1-(2/3)^{n+1}}{1-2/3}=-6\\left[1-\\left(\\frac23\\right)^{n+1}\\right].\\]",
+            "result": "\\(S_n=-6[1-(2/3)^{n+1}]\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "ربط Tₙ بـ Sₙ",
+            "explanation": "بما أن \\(u_k=v_k+3\\):\n\\[T_n=\\sum_{k=0}^{n}u_k=\\sum_{k=0}^{n}v_k+3(n+1)=S_n+3(n+1).\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "التبسيط",
+            "explanation": "\\[T_n=-6\\left[1-\\left(\\frac23\\right)^{n+1}\\right]+3n+3.\\]\nإذن:\n\\[T_n=3n-3+6\\left(\\frac23\\right)^{n+1}.\\]\nوبما أن:\n\\[6\\left(\\frac23\\right)^{n+1}=4\\left(\\frac23\\right)^n,\\]\nفنحصل على:",
+            "result": "\\[T_n=3n-3+4\\left(\\frac23\\right)^n.\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{S_n=-6[1-(\\frac23)^{n+1}]}\\), \\(\\boxed{T_n=3n-3+4(\\frac23)^n}\\).",
+        "verification": "تمت مراجعة الحل مع الإجابة النموذجية الرسمية لبكالوريا 2023، الموضوع الأول، التمرين الثاني.",
+        "common_mistakes": [
+          "نسيان أن عدد الحدود من 0 إلى n هو n+1."
+        ],
+        "hints": [
+          "استعمل u_k=v_k+3."
+        ],
+        "summary": "نحسب المجموع الهندسي ثم نضيف 3 مكررة n+1 مرة.",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    }
+  ],
+  "source_reference": {
+    "file": "2023(3).pdf",
+    "statement_pages": [
+      1
+    ],
+    "solution_pages": [
+      5
+    ],
+    "source_faithful_statement": true,
+    "solution_reviewed_against_source": true
+  },
+  "given_data": {
+    "u0": "1",
+    "recurrence": "u_{n+1}=2/3*u_n+1",
+    "upper_bound": "3",
+    "monotonicity": "strictly_increasing",
+    "v_n": "u_n-3",
+    "v0": "-2",
+    "ratio_v": "2/3",
+    "explicit_v": "-2*(2/3)^n",
+    "explicit_u": "-2*(2/3)^n+3",
+    "limit_u": "3",
+    "S_n": "-6*(1-(2/3)^(n+1))",
+    "T_n": "3n-3+4*(2/3)^n"
+  }
+}

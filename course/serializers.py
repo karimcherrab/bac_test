@@ -1167,3 +1167,24 @@ class QuestionSimpleSolutionResponseSerializer(serializers.Serializer):
         required=False,
         allow_null=True,
     )
+
+
+
+
+class ChapterSerializer(serializers.ModelSerializer):
+    subject_name = serializers.CharField(
+        source="subject.name",
+        read_only=True
+    )
+
+    class Meta:
+        model = Chapter
+        fields = [
+            "id",
+            "subject",
+            "subject_name",
+            "code",
+            "title",
+            "order",
+            "is_active",
+        ]

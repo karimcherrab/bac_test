@@ -1,0 +1,235 @@
+{
+  "schema_version": "4.5-bac-source",
+  "version": "4.2-2013-tech-math-sequences-ex03",
+  "language": "ar",
+  "direction": "rtl",
+  "year": 2013,
+  "session": " ordinary",
+  "chapter_code": "sequences",
+  "chapter_title": "sequences",
+  "exercise_number": 3,
+  "points": 4,
+  "source_pages": [
+    2
+  ],
+  "solution_source_pages": [
+    6
+  ],
+  "branches": [
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "title": "التمرين الثالث — بكالوريا الجزائر 2013 — متتالية معرفة بالتراجع ومتتالية هندسية ومجموع وجداء",
+  "axis_tags": [
+    "recursive_sequence",
+    "geometric_sequence",
+    "general_term",
+    "logarithm",
+    "geometric_sum",
+    "sequence_product",
+    "sequence_limit"
+  ],
+  "statement": "التمرين الثالث: (04 نقاط)\n\n\\((u_n)\\) المتتالية العددية المعرفة كما يلي:\n\\[\nu_0=e^2\n\\]\nومن أجل كل عدد طبيعي غير معدوم \\(n\\):\n\\[\nu_n=\\sqrt{\\frac{u_{n-1}}{e}}.\n\\]\n\n\\((v_n)\\) المتتالية العددية المعرفة على \\(\\mathbb N\\) كما يلي:\n\\[\nv_n=\\frac12\\ln u_n+\\frac12.\n\\]\n\n1) بين أن \\((v_n)\\) متتالية هندسية أساسها \\(\\frac12\\)، ثم احسب حدها الأول.\n\n2) اكتب \\(v_n\\) بدلالة \\(n\\)، ثم استنتج عبارة \\(u_n\\) بدلالة \\(n\\).\n\n3) احسب بدلالة \\(n\\) المجموع \\(S_n\\) حيث:\n\\[\nS_n=v_0+v_1+\\cdots+v_n\n\\]\nثم احسب:\n\\[\n\\lim_{n\\to+\\infty}S_n.\n\\]\n\n4) احسب بدلالة \\(n\\) الجداء \\(P_n\\) حيث:\n\\[\nP_n=u_0\\times u_1\\times\\cdots\\times u_n\n\\]\nثم احسب:\n\\[\n\\lim_{n\\to+\\infty}P_n.\n\\]",
+  "figures": [],
+  "questions": [
+    {
+      "id": "2013_tech_math_ex03_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) بين أن \\((v_n)\\) متتالية هندسية أساسها \\(\\frac12\\)، ثم احسب حدها الأول.",
+      "solution": {
+        "introduction": "نربط \\(v_n\\) بـ\\(v_{n-1}\\) باستعمال العلاقة التي تعرف \\(u_n\\).",
+        "strategy": "نأخذ اللوغاريتم في علاقة \\(u_n\\)، ثم نعوض داخل تعريف \\(v_n\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "أخذ اللوغاريتم",
+            "explanation": "لدينا:\n\\[u_n=\\sqrt{\\frac{u_{n-1}}e}.\\]\nإذن:\n\\[\\ln u_n=\\frac12\\ln\\left(\\frac{u_{n-1}}e\\right)=\\frac12(\\ln u_{n-1}-1).\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب v_n",
+            "explanation": "بالتعويض في:\n\\[v_n=\\frac12\\ln u_n+\\frac12,\\]\nنجد:\n\\[v_n=\\frac14\\ln u_{n-1}-\\frac14+\\frac12=\\frac14\\ln u_{n-1}+\\frac14.\\]\nلكن:\n\\[v_{n-1}=\\frac12\\ln u_{n-1}+\\frac12.\\]\nإذن:\n\\[v_n=\\frac12v_{n-1}.\\]",
+            "result": "\\((v_n)\\) هندسية أساسها \\(\\frac12\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "حساب الحد الأول",
+            "explanation": "بما أن \\(u_0=e^2\\)، فإن:\n\\[v_0=\\frac12\\ln(e^2)+\\frac12=\\frac12\\cdot2+\\frac12=\\frac32.\\]",
+            "result": "\\(v_0=\\frac32\\)."
+          }
+        ],
+        "final_answer": "\\(\\boxed{v_n=\\frac12v_{n-1}}\\) و\\(\\boxed{v_0=\\frac32}\\).",
+        "verification": "تمت مراجعة الحل مع الإجابة النموذجية الرسمية لبكالوريا 2013، الموضوع الأول، التمرين الثالث.",
+        "common_mistakes": [
+          "نسيان أن \\(\\ln(e)=1\\).",
+          "الخلط بين \\(\\sqrt a\\) و\\(a^2\\) عند أخذ اللوغاريتم."
+        ],
+        "hints": [
+          "ابدأ من \\(\\ln u_n\\)."
+        ],
+        "summary": "وجدنا أن النسبة ثابتة وتساوي 1/2، لذا المتتالية هندسية.",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2013_tech_math_ex03_q2",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2) اكتب \\(v_n\\) بدلالة \\(n\\)، ثم استنتج عبارة \\(u_n\\) بدلالة \\(n\\).",
+      "solution": {
+        "introduction": "بعد معرفة أن \\((v_n)\\) هندسية، نستعمل صيغة حدها العام، ثم نرجع إلى تعريف \\(v_n\\).",
+        "strategy": "نحسب \\(v_n\\) ثم نعزل \\(\\ln u_n\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "عبارة v_n",
+            "explanation": "بما أن \\((v_n)\\) هندسية أساسها \\(\\frac12\\) وحدها الأول \\(v_0=\\frac32\\)، فإن:\n\\[v_n=v_0\\left(\\frac12\\right)^n=\\frac32\\left(\\frac12\\right)^n.\\]\nويمكن كتابتها أيضا:\n\\[v_n=3\\left(\\frac12\\right)^{n+1}.\\]",
+            "result": "\\(v_n=3\\left(\\frac12\\right)^{n+1}\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "استخراج ln(u_n)",
+            "explanation": "من تعريف \\(v_n\\):\n\\[v_n=\\frac12\\ln u_n+\\frac12.\\]\nإذن:\n\\[\\ln u_n=2v_n-1.\\]\nوبالتعويض:\n\\[\\ln u_n=2\\times3\\left(\\frac12\\right)^{n+1}-1=3\\left(\\frac12\\right)^n-1.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "استخراج u_n",
+            "explanation": "بتطبيق الدالة الأسية:\n\\[u_n=e^{\\,3\\left(\\frac12\\right)^n-1}.\\]",
+            "result": "\\(u_n=e^{3(1/2)^n-1}\\)."
+          }
+        ],
+        "final_answer": "\\(\\boxed{v_n=3\\left(\\frac12\\right)^{n+1}}\\) و\\(\\boxed{u_n=e^{3\\left(\\frac12\\right)^n-1}}\\).",
+        "verification": "تمت مراجعة الحل مع الإجابة النموذجية الرسمية لبكالوريا 2013، الموضوع الأول، التمرين الثالث.",
+        "common_mistakes": [
+          "نسيان طرح 1 عند عزل \\(\\ln u_n\\)."
+        ],
+        "hints": [
+          "استعمل \\(v_n=v_0q^n\\)."
+        ],
+        "summary": "أولا حسبنا الحد العام لـv_n، ثم حولناه إلى عبارة صريحة لـu_n.",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2013_tech_math_ex03_q3",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "3) احسب بدلالة \\(n\\) المجموع \\(S_n=v_0+v_1+\\cdots+v_n\\)، ثم احسب \\(\\lim_{n\\to+\\infty}S_n\\).",
+      "solution": {
+        "introduction": "المجموع هو مجموع حدود متتالية هندسية.",
+        "strategy": "نطبق قانون مجموع أول \\(n+1\\) حد من متتالية هندسية.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تطبيق قانون المجموع",
+            "explanation": "لدينا \\(v_0=\\frac32\\) والأساس \\(q=\\frac12\\). إذن:\n\\[S_n=v_0\\frac{1-q^{n+1}}{1-q}.\\]\nومن ثم:\n\\[S_n=\\frac32\\cdot\\frac{1-\\left(\\frac12\\right)^{n+1}}{1-\\frac12}.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "التبسيط",
+            "explanation": "بما أن \\(1-\\frac12=\\frac12\\)، نجد:\n\\[S_n=3\\left(1-\\frac1{2^{n+1}}\\right).\\]",
+            "result": "\\(S_n=3(1-2^{-n-1})\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "حساب النهاية",
+            "explanation": "عندما \\(n\\to+\\infty\\)، فإن:\n\\[\\frac1{2^{n+1}}\\to0.\\]\nإذن:\n\\[\\lim_{n\\to+\\infty}S_n=3.\\]",
+            "result": "\\(\\lim S_n=3\\)."
+          }
+        ],
+        "final_answer": "\\(\\boxed{S_n=3\\left(1-\\frac1{2^{n+1}}\\right)}\\) و\\(\\boxed{\\lim_{n\\to+\\infty}S_n=3}\\).",
+        "verification": "تمت مراجعة الحل مع الإجابة النموذجية الرسمية لبكالوريا 2013، الموضوع الأول، التمرين الثالث.",
+        "common_mistakes": [
+          "نسيان أن المجموع يحتوي على n+1 حدا."
+        ],
+        "hints": [
+          "استعمل مجموع متتالية هندسية ابتداء من v₀."
+        ],
+        "summary": "مجموع الحدود الهندسية يعطي مباشرة S_n، ومنه النهاية تساوي 3.",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2013_tech_math_ex03_q4",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "4) احسب بدلالة \\(n\\) الجداء \\(P_n=u_0\\times u_1\\times\\cdots\\times u_n\\)، ثم احسب \\(\\lim_{n\\to+\\infty}P_n\\).",
+      "solution": {
+        "introduction": "لأن حدود \\(u_n\\) أسية، أبسط طريقة لحساب الجداء هي جمع الأسس.",
+        "strategy": "نكتب كل \\(u_k\\) على شكل أس للعدد e ثم نجمع الأسس من 0 إلى n.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "كتابة الجداء",
+            "explanation": "لدينا:\n\\[u_k=e^{3\\left(\\frac12\\right)^k-1}.\\]\nإذن:\n\\[P_n=\\prod_{k=0}^{n}e^{3(1/2)^k-1}=e^{\\sum_{k=0}^{n}\\left(3(1/2)^k-1\\right)}.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب مجموع الأسس",
+            "explanation": "نحسب:\n\\[\\sum_{k=0}^{n}3\\left(\\frac12\\right)^k=3\\cdot\\frac{1-(1/2)^{n+1}}{1-1/2}=6\\left(1-\\frac1{2^{n+1}}\\right).\\]\nكما أن:\n\\[\\sum_{k=0}^{n}1=n+1.\\]\nإذن:\n\\[P_n=e^{6\\left(1-\\frac1{2^{n+1}}\\right)-(n+1)}.\\]",
+            "result": "\\(P_n=e^{6(1-2^{-n-1})-(n+1)}\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "حساب النهاية",
+            "explanation": "عندما \\(n\\to+\\infty\\)، فإن:\n\\[6\\left(1-\\frac1{2^{n+1}}\\right)-(n+1)\\to-\\infty.\\]\nإذن:\n\\[P_n=e^{\\text{أس يذهب إلى }-\\infty}\\to0.\\]",
+            "result": "\\(\\lim_{n\\to+\\infty}P_n=0\\)."
+          }
+        ],
+        "final_answer": "\\(\\boxed{P_n=e^{6\\left(1-\\frac1{2^{n+1}}\\right)-(n+1)}}\\) و\\(\\boxed{\\lim_{n\\to+\\infty}P_n=0}\\).",
+        "verification": "تمت مراجعة الحل مع الإجابة النموذجية الرسمية لبكالوريا 2013، الموضوع الأول، التمرين الثالث.",
+        "common_mistakes": [
+          "نسيان أن عدد الحدود من u₀ إلى u_n هو n+1.",
+          "ضرب الأسس بدل جمعها في جداء قوى العدد e."
+        ],
+        "hints": [
+          "استعمل \\(e^a e^b=e^{a+b}\\)."
+        ],
+        "summary": "حوّلنا الجداء إلى أس واحد ثم حسبنا نهاية الأس.",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    }
+  ],
+  "source_reference": {
+    "file": "2013(5).pdf",
+    "statement_pages": [
+      2
+    ],
+    "solution_pages": [
+      6
+    ],
+    "source_faithful_statement": true,
+    "solution_reviewed_against_source": true
+  },
+  "display": {
+    "layout": "question_by_question",
+    "show_statement_first": true,
+    "show_statement_figures": true,
+    "show_solution_after_click": true,
+    "show_solution_figures": true
+  },
+  "review_status": {
+    "statement_compared_with_original_pdf": true,
+    "questions_compared_with_original_pdf": true,
+    "source_figures_checked": true,
+    "solution_checked_against_correction": true,
+    "latex_normalized_only": true,
+    "react_ready": true
+  },
+  "given_data": {
+    "u0": "e^2",
+    "recurrence": "u_n=sqrt(u_{n-1}/e)",
+    "v_n": "1/2 ln(u_n)+1/2",
+    "v0": "3/2",
+    "ratio_v": "1/2",
+    "explicit_v": "3*(1/2)^(n+1)",
+    "explicit_u": "e^(3*(1/2)^n-1)",
+    "S_n": "3*(1-1/2^(n+1))",
+    "limit_S_n": "3",
+    "P_n": "e^(6*(1-1/2^(n+1))-(n+1))",
+    "limit_P_n": "0"
+  }
+}

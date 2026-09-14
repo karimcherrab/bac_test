@@ -1,0 +1,569 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "graph_schema_version": "1.0-react-json",
+  "version": "4.2-2014-math-sequences-subject2-ex02-react-graphs",
+  "session": "ordinary",
+  "year": 2014,
+  "chapter_code": "sequences",
+  "chapter_title": "المتتاليات العددية",
+  "axis_tags": [
+    "sequence_graphical_representation",
+    "sequence_monotonicity",
+    "mathematical_induction",
+    "bounded_sequence",
+    "limits_convergence_divergence"
+  ],
+  "branches": [
+    {
+      "code": "math",
+      "name": "شعبة رياضيات"
+    }
+  ],
+  "exercise_number": 2,
+  "subject_number": 2,
+  "source_page": 3,
+  "source_pages": [
+    3
+  ],
+  "solution_source_pages": [
+    7,
+    8
+  ],
+  "title": "التمرين الثاني — بكالوريا الجزائر 2014 — الموضوع الثاني — شعبة رياضيات — المتتاليات",
+  "statement": "الدالة العددية \\(f\\) معرفة على \\([0;+\\infty[\\) كما يلي:\n\\[\nf(x)=\\frac{2x^2}{x+4}.\n\\]\n\\((C_f)\\) المنحنى الممثل للدالة \\(f\\) في المستوى المنسوب إلى المعلم المتعامد المتجانس \\((O;\\vec i,\\vec j)\\) كما هو مبين في الشكل أدناه.",
+  "questions": [
+    {
+      "id": "2014_s2_sequences_ex02_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) بين أن الدالة \\(f\\) متزايدة تماما.",
+      "axis_tags": [
+        "sequence_graphical_representation"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب مشتقة الدالة ثم ندرس إشارتها على المجال.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب المشتقة",
+            "explanation": "\\[\nf'(x)=\\frac{(4x)(x+4)-2x^2}{(x+4)^2}=\\frac{2x(x+8)}{(x+4)^2}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "إشارة المشتقة",
+            "explanation": "على \\([0,+\\infty[\\) لدينا \\(x\\ge0\\)، \\(x+8>0\\) و\\((x+4)^2>0\\)، إذن:\n\\[\nf'(x)\\ge0.\n\\]\nوتكون موجبة من أجل \\(x>0\\)."
+          }
+        ],
+        "final_answer": "إذن الدالة \\(f\\) متزايدة تماما على \\([0,+\\infty[\\)."
+      }
+    },
+    {
+      "id": "2014_s2_sequences_ex02_q2a",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2) \\((U_n)\\) المتتالية العددية المعرفة بـ \\(U_0=3\\) و من أجل كل عدد طبيعي \\(n\\): \\(U_{n+1}=f(U_n)\\).\n\\((\\Delta)\\) المستقيم الذي معادلته \\(y=x\\).\nأ) باستعمال المنحنى \\((C_f)\\) والمستقيم \\((\\Delta)\\) مثل، على حامل محور الفواصل، الحدود: \\(U_0\\)، \\(U_1\\)، \\(U_2\\)، \\(U_3\\) و \\(U_4\\) دون حسابها.",
+      "axis_tags": [
+        "sequence_graphical_representation"
+      ],
+      "statement_graphs": [
+        {
+          "id": "2014_s2_sequences_ex02_function_plot",
+          "type": "function_plot",
+          "render_mode": "json",
+          "capture": false,
+          "direction": "ltr",
+          "canvas": {
+            "width": 900,
+            "height": 620,
+            "padding": 28
+          },
+          "viewport": {
+            "x_min": 0,
+            "x_max": 4.6,
+            "y_min": 0,
+            "y_max": 4.6,
+            "x_tick": 0.5,
+            "y_tick": 0.5,
+            "equal_scale": true
+          },
+          "axes": {
+            "show": true,
+            "x_label": "x",
+            "y_label": "y",
+            "grid": true
+          },
+          "curves": [
+            {
+              "id": "curve_cf",
+              "kind": "function",
+              "label": "(C_f)",
+              "formula": "2*x*x/(x+4)",
+              "latex_formula": "f(x)=\\frac{2x^2}{x+4}",
+              "domain": [
+                0,
+                4.6
+              ]
+            },
+            {
+              "id": "line_delta",
+              "kind": "line",
+              "label": "(Δ)",
+              "formula": "x",
+              "latex_formula": "y=x",
+              "domain": [
+                0,
+                4.6
+              ]
+            }
+          ],
+          "special_points": [
+            {
+              "id": "origin",
+              "x": 0,
+              "y": 0,
+              "label": "O"
+            },
+            {
+              "id": "u0_on_curve",
+              "x": 3,
+              "y": 2.5714285714285716,
+              "label": "(3,18/7)",
+              "note": "f(3)=18/7"
+            }
+          ],
+          "react_renderer": {
+            "component": "FunctionPlotRenderer",
+            "source": "curves_special_points"
+          }
+        }
+      ],
+      "solution": {
+        "strategy": "نستعمل طريقة السلم بين المنحنى \\((C_f)\\) والمستقيم \\((\\Delta)\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "طريقة التمثيل",
+            "explanation": "نبدأ من \\(U_0=3\\) على محور الفواصل، نصعد عموديا حتى المنحنى \\((C_f)\\)، ثم نتحرك أفقيا حتى المستقيم \\((\\Delta)\\)، ونكرر العملية للحصول على الحدود التالية."
+          }
+        ],
+        "solution_graphs": [
+          {
+            "id": "2014_s2_sequences_ex02_cobweb",
+            "type": "sequence_cobweb",
+            "render_mode": "json",
+            "capture": false,
+            "direction": "ltr",
+            "canvas": {
+              "width": 900,
+              "height": 620,
+              "padding": 28
+            },
+            "viewport": {
+              "x_min": 0,
+              "x_max": 3.4,
+              "y_min": 0,
+              "y_max": 3.4,
+              "x_tick": 0.5,
+              "y_tick": 0.5,
+              "equal_scale": true
+            },
+            "axes": {
+              "show": true,
+              "x_label": "x",
+              "y_label": "y",
+              "grid": true
+            },
+            "curves": [
+              {
+                "id": "curve_cf",
+                "kind": "function",
+                "label": "(C_f)",
+                "formula": "2*x*x/(x+4)",
+                "latex_formula": "f(x)=\\frac{2x^2}{x+4}",
+                "domain": [
+                  0,
+                  3.4
+                ]
+              },
+              {
+                "id": "line_delta",
+                "kind": "line",
+                "label": "(Δ)",
+                "formula": "x",
+                "latex_formula": "y=x",
+                "domain": [
+                  0,
+                  3.4
+                ]
+              }
+            ],
+            "sequence": {
+              "recurrence": "u_(n+1)=2*u_n^2/(u_n+4)",
+              "latex_recurrence": "U_{n+1}=\\frac{2U_n^2}{U_n+4}",
+              "values": [
+                {
+                  "n": 0,
+                  "value": 3.0,
+                  "latex": "U_0=3"
+                },
+                {
+                  "n": 1,
+                  "value": 2.5714285714285716,
+                  "latex": "U_1=\\frac{18}{7}"
+                },
+                {
+                  "n": 2,
+                  "value": 2.0124223602484475,
+                  "latex": "U_2=\\frac{324}{161}"
+                },
+                {
+                  "n": 3,
+                  "value": 1.3471587700836716,
+                  "latex": "U_3\\approx1.344"
+                },
+                {
+                  "n": 4,
+                  "value": 0.6788041387388811,
+                  "latex": "U_4\\approx0.678"
+                }
+              ]
+            },
+            "segments": [
+              {
+                "from": [
+                  3.0,
+                  0
+                ],
+                "to": [
+                  3.0,
+                  2.5714285714285716
+                ],
+                "role": "vertical_to_curve"
+              },
+              {
+                "from": [
+                  3.0,
+                  2.5714285714285716
+                ],
+                "to": [
+                  2.5714285714285716,
+                  2.5714285714285716
+                ],
+                "role": "horizontal_to_y_equals_x"
+              },
+              {
+                "from": [
+                  2.5714285714285716,
+                  2.5714285714285716
+                ],
+                "to": [
+                  2.5714285714285716,
+                  2.0124223602484475
+                ],
+                "role": "vertical_to_curve"
+              },
+              {
+                "from": [
+                  2.5714285714285716,
+                  2.0124223602484475
+                ],
+                "to": [
+                  2.0124223602484475,
+                  2.0124223602484475
+                ],
+                "role": "horizontal_to_y_equals_x"
+              },
+              {
+                "from": [
+                  2.0124223602484475,
+                  2.0124223602484475
+                ],
+                "to": [
+                  2.0124223602484475,
+                  1.3471587700836716
+                ],
+                "role": "vertical_to_curve"
+              },
+              {
+                "from": [
+                  2.0124223602484475,
+                  1.3471587700836716
+                ],
+                "to": [
+                  1.3471587700836716,
+                  1.3471587700836716
+                ],
+                "role": "horizontal_to_y_equals_x"
+              },
+              {
+                "from": [
+                  1.3471587700836716,
+                  1.3471587700836716
+                ],
+                "to": [
+                  1.3471587700836716,
+                  0.6788041387388811
+                ],
+                "role": "vertical_to_curve"
+              },
+              {
+                "from": [
+                  1.3471587700836716,
+                  0.6788041387388811
+                ],
+                "to": [
+                  0.6788041387388811,
+                  0.6788041387388811
+                ],
+                "role": "horizontal_to_y_equals_x"
+              }
+            ],
+            "x_axis_markers": [
+              {
+                "x": 3.0,
+                "label": "U_0"
+              },
+              {
+                "x": 2.5714285714285716,
+                "label": "U_1"
+              },
+              {
+                "x": 2.0124223602484475,
+                "label": "U_2"
+              },
+              {
+                "x": 1.3471587700836716,
+                "label": "U_3"
+              },
+              {
+                "x": 0.6788041387388811,
+                "label": "U_4"
+              }
+            ],
+            "react_renderer": {
+              "component": "SequenceCobwebRenderer",
+              "source": "curves_sequence_segments"
+            }
+          }
+        ],
+        "final_answer": "تمثيل \\(U_0,U_1,U_2,U_3,U_4\\) موجود داخل `solution_graphs` كبيانات JSON قابلة للرسم في React."
+      }
+    },
+    {
+      "id": "2014_s2_sequences_ex02_q2b",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "ب) ضع تخمينا حول اتجاه تغير المتتالية \\((U_n)\\) وتقاربها.",
+      "axis_tags": [
+        "sequence_graphical_representation",
+        "sequence_monotonicity",
+        "limits_convergence_divergence"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نقرأ اتجاه الحدود من التمثيل البياني.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التخمين",
+            "explanation": "من الرسم نلاحظ أن الحدود تتحرك نحو اليسار باتجاه الصفر، لذلك نتوقع أن المتتالية متناقصة ومتقاربة نحو \\(0\\)."
+          }
+        ],
+        "final_answer": "التخمين: \\((U_n)\\) متناقصة ومتقاربة نحو \\(0\\)."
+      }
+    },
+    {
+      "id": "2014_s2_sequences_ex02_q3a",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "3) أ) برهن بالتراجع أنه من أجل كل عدد طبيعي \\(n\\): \\(0\\le U_n\\le3\\).",
+      "axis_tags": [
+        "mathematical_induction",
+        "bounded_sequence"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل أن \\(f\\) متزايدة تماما، ثم نحصر \\(f(U_n)\\) بين \\(f(0)\\) و\\(f(3)\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التحقق عند n=0",
+            "explanation": "\\[U_0=3\\Rightarrow 0\\le U_0\\le3.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "فرضية التراجع",
+            "explanation": "نفترض أنه من أجل عدد طبيعي \\(n\\): \\(0\\le U_n\\le3\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "الانتقال إلى n+1",
+            "explanation": "بما أن \\(f\\) متزايدة:\n\\[\nf(0)\\le f(U_n)\\le f(3).\n\\]\nأي:\n\\[\n0\\le U_{n+1}\\le\\frac{18}{7}<3.\n\\]\nإذن:\n\\[\n0\\le U_{n+1}\\le3.\n\\]"
+          }
+        ],
+        "final_answer": "\\[0\\le U_n\\le3\\quad\\forall n\\in\\mathbb N.\\]"
+      }
+    },
+    {
+      "id": "2014_s2_sequences_ex02_q3b",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "ب) بين أن المتتالية \\((U_n)\\) متناقصة.",
+      "axis_tags": [
+        "sequence_monotonicity",
+        "bounded_sequence"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب الفرق \\(U_{n+1}-U_n\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب الفرق",
+            "explanation": "\\[\nU_{n+1}-U_n=\\frac{2U_n^2}{U_n+4}-U_n=\\frac{U_n(U_n-4)}{U_n+4}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "الإشارة",
+            "explanation": "بما أن \\(0<U_n\\le3\\)، فإن \\(U_n-4<0\\) و\\(U_n+4>0\\)، ومنه:\n\\[\nU_{n+1}-U_n<0.\n\\]"
+          }
+        ],
+        "final_answer": "إذن المتتالية \\((U_n)\\) متناقصة تماما."
+      }
+    },
+    {
+      "id": "2014_s2_sequences_ex02_q3c",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "ج) استنتج أن \\((U_n)\\) متقاربة.",
+      "axis_tags": [
+        "sequence_monotonicity",
+        "bounded_sequence",
+        "limits_convergence_divergence"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل مبرهنة تقارب المتتالية الرتيبة المحدودة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الاستنتاج",
+            "explanation": "المتتالية \\((U_n)\\) متناقصة ومحدودة من الأسفل بالعدد \\(0\\)، إذن فهي متقاربة."
+          }
+        ],
+        "final_answer": "المتتالية \\((U_n)\\) متقاربة."
+      }
+    },
+    {
+      "id": "2014_s2_sequences_ex02_q4a",
+      "display_order": 7,
+      "content_type": "question",
+      "text": "4) أ) ادرس إشارة العدد \\(7U_{n+1}-6U_n\\) واستنتج أنه من أجل كل عدد طبيعي \\(n\\):\n\\[\n0\\le U_{n+1}\\le\\frac67U_n.\n\\]",
+      "axis_tags": [
+        "limits_convergence_divergence"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نعوض علاقة الرجوع ثم نستعمل الحصر \\(0\\le U_n\\le3\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب 7Uₙ₊₁−6Uₙ",
+            "explanation": "\\[\n7U_{n+1}-6U_n=7\\frac{2U_n^2}{U_n+4}-6U_n\n=\\frac{8U_n(U_n-3)}{U_n+4}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "الإشارة",
+            "explanation": "بما أن \\(0\\le U_n\\le3\\)، فإن:\n\\[\n8U_n(U_n-3)\\le0,\n\\]\nو\\(U_n+4>0\\)، إذن:\n\\[\n7U_{n+1}-6U_n\\le0.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "النتيجة",
+            "explanation": "\\[\nU_{n+1}\\le\\frac67U_n.\n\\]\nومع \\(U_{n+1}\\ge0\\) نحصل على:\n\\[\n0\\le U_{n+1}\\le\\frac67U_n.\n\\]"
+          }
+        ],
+        "final_answer": "\\[0\\le U_{n+1}\\le\\frac67U_n.\\]"
+      }
+    },
+    {
+      "id": "2014_s2_sequences_ex02_q4b",
+      "display_order": 8,
+      "content_type": "question",
+      "text": "ب) برهن بالتراجع أنه من أجل كل عدد طبيعي \\(n\\):\n\\[\n0\\le U_n\\le3\\left(\\frac67\\right)^n.\n\\]",
+      "axis_tags": [
+        "mathematical_induction",
+        "limits_convergence_divergence"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل المتراجحة السابقة في خطوة التراجع.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التحقق عند n=0",
+            "explanation": "\\[\n0\\le U_0=3=3\\left(\\frac67\\right)^0.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "فرضية التراجع",
+            "explanation": "نفترض:\n\\[\n0\\le U_n\\le3\\left(\\frac67\\right)^n.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الانتقال إلى n+1",
+            "explanation": "من السؤال السابق:\n\\[\n0\\le U_{n+1}\\le\\frac67U_n.\n\\]\nإذن:\n\\[\n0\\le U_{n+1}\\le\\frac67\\times3\\left(\\frac67\\right)^n=3\\left(\\frac67\\right)^{n+1}.\n\\]"
+          }
+        ],
+        "final_answer": "\\[0\\le U_n\\le3\\left(\\frac67\\right)^n\\quad\\forall n\\in\\mathbb N.\\]"
+      }
+    },
+    {
+      "id": "2014_s2_sequences_ex02_q4c",
+      "display_order": 9,
+      "content_type": "question",
+      "text": "ج) احسب نهاية المتتالية \\((U_n)\\) عندما يؤول \\(n\\) إلى \\(+\\infty\\).",
+      "axis_tags": [
+        "limits_convergence_divergence"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل الحصر والمتتالية الهندسية \\((6/7)^n\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "نهاية الحد العلوي",
+            "explanation": "بما أن:\n\\[\n0<\\frac67<1,\n\\]\nفإن:\n\\[\n\\left(\\frac67\\right)^n\\longrightarrow0.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "مبرهنة الحصر",
+            "explanation": "ولدينا:\n\\[\n0\\le U_n\\le3\\left(\\frac67\\right)^n.\n\\]\nإذن حسب مبرهنة الحصر:\n\\[\nU_n\\longrightarrow0.\n\\]"
+          }
+        ],
+        "final_answer": "\\[\\boxed{\\lim_{n\\to+\\infty}U_n=0}.\\]"
+      }
+    }
+  ],
+  "rendering_contract": {
+    "no_capture": true,
+    "external_image_required": false,
+    "external_svg_required": false,
+    "graph_source": "inline_json",
+    "supported_graph_types": [
+      "function_plot",
+      "sequence_cobweb"
+    ],
+    "react_note": "لا يوجد Capture ولا SVG خارجي. الرسم الموجود في نص التمرين أعيد بناؤه من curves داخل statement_graphs، وتمثيل U0 إلى U4 موجود داخل solution_graphs كـ sequence_cobweb."
+  },
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2014(20260826-234727).pdf",
+    "statement_figure_policy": "لا Capture. منحنى الدالة والمستقيم y=x معاد بناؤهما داخل JSON.",
+    "solution_figure_policy": "تمثيل الحدود U0,U1,U2,U3,U4 معاد بناؤه كـ cobweb داخل JSON.",
+    "renderer": "FunctionPlotRenderer + SequenceCobwebRenderer"
+  }
+}

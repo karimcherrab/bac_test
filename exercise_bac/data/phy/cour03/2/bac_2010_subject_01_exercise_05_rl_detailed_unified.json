@@ -1,0 +1,302 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "5.0-physics-bac-unified",
+  "version": "4.2-2010-subject01-exercise05-rl-react-compatible-inline-svg-detailed-unified-detailed-kvl",
+  "session": "ordinary",
+  "year": 2010,
+  "subject_number": 1,
+  "part": null,
+  "chapter_code": "electrical_phenomena_evolution",
+  "chapter_title": "تطور دراسة ظواهر كهربائية",
+  "axis_tags": [
+    "inductor_fundamental_relations",
+    "rl_current_establishment_differential_equation",
+    "rl_time_constant_graphical_analysis"
+  ],
+  "branches": [
+    {
+      "code": "math",
+      "name": "شعبة رياضيات"
+    },
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "exercise_number": 5,
+  "source_page": 4,
+  "source_pages": [
+    4,
+    5
+  ],
+  "solution_source_pages": [
+    15
+  ],
+  "title": "التمرين الخامس — بكالوريا الجزائر 2010 — الموضوع الأول — شعبة رياضيات وتقني رياضي",
+  "statement": "التمرين الخامس: (03 نقاط)\nتتكون دارة كهربائية من العناصر التالية مربوطة على التسلسل:\nوشيعة ذاتيتها L ومقاومتها r، ناقل أومي مقاومته R=17,5Ω، مولد ذو توتر كهربائي ثابت E=6,00V، قاطعة كهربائية K (الشكل-3).\nنغلق القاطعة في اللحظة t=0.\nسمحت برمجية للإعلام الآلي بمتابعة تطور شدة التيار الكهربائي المار في الدارة مع مرور الزمن ومشاهدة البيان: i=f(t) (الشكل-4).",
+  "statement_figures": [
+    {
+      "id": "2010_s01_ex05_rl_circuit",
+      "type": "svg",
+      "usage": "statement",
+      "placement": "statement",
+      "title": "الشكل-3",
+      "description": "دارة RL تسلسلية بمولد E وناقل أومي R ووشيعة حقيقية (L,r) وقاطعة K.",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 900 350\" role=\"img\" aria-label=\"الشكل-3 دارة RL\">\n<rect width=\"900\" height=\"350\" fill=\"white\"/>\n<defs><marker id=\"arrE\" markerWidth=\"10\" markerHeight=\"10\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L0,6 L9,3 z\" fill=\"#111827\"/></marker></defs>\n<g fill=\"none\" stroke=\"#111827\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n <line x1=\"120\" y1=\"85\" x2=\"350\" y2=\"85\"/>\n <line x1=\"500\" y1=\"85\" x2=\"720\" y2=\"85\"/>\n <line x1=\"720\" y1=\"85\" x2=\"720\" y2=\"125\"/>\n <circle cx=\"720\" cy=\"138\" r=\"5\" fill=\"#111827\"/>\n <circle cx=\"720\" cy=\"205\" r=\"5\" fill=\"#111827\"/>\n <line x1=\"720\" y1=\"205\" x2=\"720\" y2=\"260\"/>\n <line x1=\"720\" y1=\"260\" x2=\"605\" y2=\"260\"/>\n <path d=\"M605 260\n c-12 -24 -24 -24 -36 0 c-12 24 -24 24 -36 0 c-12 -24 -24 -24 -36 0 c-12 24 -24 24 -36 0 c-12 -24 -24 -24 -36 0 c-12 24 -24 24 -36 0\"/>\n <line x1=\"389\" y1=\"260\" x2=\"330\" y2=\"260\"/>\n <rect x=\"195\" y=\"240\" width=\"135\" height=\"40\"/>\n <line x1=\"195\" y1=\"260\" x2=\"120\" y2=\"260\"/>\n <line x1=\"120\" y1=\"260\" x2=\"120\" y2=\"85\"/>\n <line x1=\"720\" y1=\"138\" x2=\"685\" y2=\"190\"/>\n</g>\n<circle cx=\"425\" cy=\"85\" r=\"40\" fill=\"white\" stroke=\"#111827\" stroke-width=\"4\"/>\n<line x1=\"385\" y1=\"45\" x2=\"470\" y2=\"45\" stroke=\"#111827\" stroke-width=\"3\" marker-end=\"url(#arrE)\"/>\n<text x=\"428\" y=\"32\" text-anchor=\"middle\" font-family=\"DejaVu Sans,Arial\" font-size=\"25\">E</text>\n<text x=\"745\" y=\"180\" font-family=\"DejaVu Sans,Arial\" font-size=\"25\">K</text>\n<text x=\"760\" y=\"224\" font-family=\"DejaVu Sans,Arial\" font-size=\"25\">A</text>\n<text x=\"378\" y=\"228\" font-family=\"DejaVu Sans,Arial\" font-size=\"25\">B</text>\n<text x=\"102\" y=\"285\" font-family=\"DejaVu Sans,Arial\" font-size=\"25\">C</text>\n<text x=\"262\" y=\"226\" text-anchor=\"middle\" font-family=\"DejaVu Sans,Arial\" font-size=\"25\">R</text>\n<text x=\"500\" y=\"222\" text-anchor=\"middle\" font-family=\"DejaVu Sans,Arial\" font-size=\"25\">L , r</text>\n<text x=\"450\" y=\"330\" text-anchor=\"middle\" font-family=\"DejaVu Sans,Arial\" font-size=\"22\" direction=\"rtl\">الشكل-3</text>\n</svg>",
+      "render_mode": "inline",
+      "responsive": true
+    },
+    {
+      "id": "2010_s01_ex05_i_curve",
+      "type": "svg",
+      "usage": "statement",
+      "placement": "statement",
+      "title": "الشكل-4",
+      "description": "البيان i=f(t) المستعمل لاستخراج I0 وτ.",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 650 390\" role=\"img\" aria-label=\"الشكل-4 منحنى شدة التيار i=f(t)\">\n<rect width=\"650\" height=\"390\" fill=\"white\"/>\n<defs><marker id=\"axis\" markerWidth=\"10\" markerHeight=\"10\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L0,6 L9,3 z\" fill=\"#111827\"/></marker></defs>\n<g stroke=\"#d1d5db\" stroke-width=\"1\">\n <line x1=\"90.0\" y1=\"70\" x2=\"90.0\" y2=\"330\" /><line x1=\"135.0\" y1=\"70\" x2=\"135.0\" y2=\"330\" /><line x1=\"180.0\" y1=\"70\" x2=\"180.0\" y2=\"330\" /><line x1=\"225.0\" y1=\"70\" x2=\"225.0\" y2=\"330\" /><line x1=\"270.0\" y1=\"70\" x2=\"270.0\" y2=\"330\" /><line x1=\"315.0\" y1=\"70\" x2=\"315.0\" y2=\"330\" /><line x1=\"360.0\" y1=\"70\" x2=\"360.0\" y2=\"330\" /><line x1=\"405.0\" y1=\"70\" x2=\"405.0\" y2=\"330\" /><line x1=\"450.0\" y1=\"70\" x2=\"450.0\" y2=\"330\" /><line x1=\"495.0\" y1=\"70\" x2=\"495.0\" y2=\"330\" /><line x1=\"540.0\" y1=\"70\" x2=\"540.0\" y2=\"330\" />\n <line x1=\"90\" y1=\"282.5\" x2=\"575\" y2=\"282.5\" /><line x1=\"90\" y1=\"235.0\" x2=\"575\" y2=\"235.0\" /><line x1=\"90\" y1=\"187.5\" x2=\"575\" y2=\"187.5\" /><line x1=\"90\" y1=\"140.0\" x2=\"575\" y2=\"140.0\" /><line x1=\"90\" y1=\"102.0\" x2=\"575\" y2=\"102.0\" />\n</g>\n<line x1=\"90\" y1=\"330\" x2=\"595\" y2=\"330\" stroke=\"#111827\" stroke-width=\"3\" marker-end=\"url(#axis)\"/>\n<line x1=\"90\" y1=\"330\" x2=\"90\" y2=\"50\" stroke=\"#111827\" stroke-width=\"3\" marker-end=\"url(#axis)\"/>\n<polyline points=\"90.0,330.0 93.0,322.5 96.0,315.3 99.0,308.3 102.0,301.5 105.0,295.0 108.0,288.7 111.0,282.6 114.0,276.6 117.0,270.9 120.0,265.4 123.0,260.0 126.0,254.8 129.0,249.8 132.0,245.0 135.0,240.3 138.0,235.8 141.0,231.4 144.0,227.1 147.0,223.0 150.0,219.1 153.0,215.2 156.0,211.5 159.0,207.9 162.0,204.4 165.0,201.1 168.0,197.8 171.0,194.7 174.0,191.7 177.0,188.7 180.0,185.9 183.0,183.1 186.0,180.5 189.0,177.9 192.0,175.4 195.0,173.0 198.0,170.7 201.0,168.4 204.0,166.2 207.0,164.1 210.0,162.1 213.0,160.1 216.0,158.2 219.0,156.4 222.0,154.6 225.0,152.9 228.0,151.2 231.0,149.6 234.0,148.0 237.0,146.5 240.0,145.1 243.0,143.7 246.0,142.3 249.0,141.0 252.0,139.7 255.0,138.5 258.0,137.3 261.0,136.1 264.0,135.0 267.0,133.9 270.0,132.9 273.0,131.8 276.0,130.9 279.0,129.9 282.0,129.0 285.0,128.1 288.0,127.3 291.0,126.4 294.0,125.6 297.0,124.9 300.0,124.1 303.0,123.4 306.0,122.7 309.0,122.0 312.0,121.3 315.0,120.7 318.0,120.1 321.0,119.5 324.0,118.9 327.0,118.4 330.0,117.8 333.0,117.3 336.0,116.8 339.0,116.3 342.0,115.9 345.0,115.4 348.0,115.0 351.0,114.5 354.0,114.1 357.0,113.7 360.0,113.4 363.0,113.0 366.0,112.6 369.0,112.3 372.0,111.9 375.0,111.6 378.0,111.3 381.0,111.0 384.0,110.7 387.0,110.4 390.0,110.1 393.0,109.9 396.0,109.6 399.0,109.4 402.0,109.1 405.0,108.9 408.0,108.7 411.0,108.4 414.0,108.2 417.0,108.0 420.0,107.8 423.0,107.6 426.0,107.5 429.0,107.3 432.0,107.1 435.0,106.9 438.0,106.8 441.0,106.6 444.0,106.5 447.0,106.3 450.0,106.2 453.0,106.0 456.0,105.9 459.0,105.8 462.0,105.7 465.0,105.5 468.0,105.4 471.0,105.3 474.0,105.2 477.0,105.1 480.0,105.0 483.0,104.9 486.0,104.8 489.0,104.7 492.0,104.6 495.0,104.5 498.0,104.4 501.0,104.4 504.0,104.3 507.0,104.2 510.0,104.1 513.0,104.1 516.0,104.0 519.0,103.9 522.0,103.9 525.0,103.8 528.0,103.8 531.0,103.7 534.0,103.6 537.0,103.6 540.0,103.5\" fill=\"none\" stroke=\"#111827\" stroke-width=\"4\"/>\n<line x1=\"90\" y1=\"102.0\" x2=\"570\" y2=\"102.0\" stroke=\"#6b7280\" stroke-width=\"2\" stroke-dasharray=\"8 7\"/>\n<text x=\"28\" y=\"55\" font-family=\"DejaVu Sans,Arial\" font-size=\"24\">i(A)</text>\n<text x=\"540\" y=\"365\" font-family=\"DejaVu Sans,Arial\" font-size=\"24\">t(ms)</text>\n<text x=\"50\" y=\"288.5\" font-family=\"DejaVu Sans,Arial\" font-size=\"20\">0.05</text>\n<text x=\"165.0\" y=\"360\" font-family=\"DejaVu Sans,Arial\" font-size=\"20\">10</text>\n</svg>",
+      "render_mode": "inline",
+      "responsive": true
+    }
+  ],
+  "statement_tables": [
+    {
+      "id": "2010_s01_ex05_tau_L_table",
+      "title": "جدول القياسات",
+      "headers": [
+        "τ(ms)",
+        "4",
+        "8",
+        "12",
+        "20"
+      ],
+      "rows": [
+        [
+          "L(H)",
+          "0,1",
+          "0,2",
+          "0,3",
+          "0,5"
+        ]
+      ]
+    }
+  ],
+  "question_groups": [],
+  "questions": [
+    {
+      "id": "2010_s01_ex05_q1",
+      "display_order": 1,
+      "label": "1",
+      "group_id": null,
+      "content_type": "question",
+      "text": "1. بالاعتماد على البيان:\nأ- استنتج قيم كل من شدة التيار الكهربائي في النظام الدائم، قيمة ثابت الزمن τ للدارة.\nب- احسب كل من المقاومة r والذاتية L للوشيعة.",
+      "axis_tags": [
+        "rl_time_constant_graphical_analysis",
+        "inductor_fundamental_relations"
+      ],
+      "figures": [],
+      "tables": [],
+      "solution": {
+        "strategy": "نحل السؤال بطريقة بسيطة ومفهومة خطوة بخطوة: نقرأ I0 وτ من البيان، ثم نستعمل حالة النظام الدائم E=(R+r)I0 والعلاقة τ=L/(R+r).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "1-أ — قراءة I₀",
+            "explanation": "القيمة النهائية للمنحنى هي شدة التيار في النظام الدائم: \\[\\boxed{I_0\\approx0,24\\,A}.\\]",
+            "calculation": "",
+            "result": "",
+            "figures": [],
+            "tables": []
+          },
+          {
+            "step_number": 2,
+            "title": "قراءة τ",
+            "explanation": "من البيان نحصل على: \\[\\boxed{\\tau\\approx10\\,ms}.\\]",
+            "calculation": "",
+            "result": "",
+            "figures": [],
+            "tables": []
+          },
+          {
+            "step_number": 3,
+            "title": "1-ب — حساب r",
+            "explanation": "في النظام الدائم \\(di/dt=0\\)، لذلك: \\[E=(R+r)I_0.\\] ومنه: \\[r=\\frac{E}{I_0}-R=\\frac{6}{0,24}-17,5=25-17,5=\\boxed{7,5\\,\\Omega}.\\]",
+            "calculation": "",
+            "result": "",
+            "figures": [],
+            "tables": []
+          },
+          {
+            "step_number": 4,
+            "title": "حساب L",
+            "explanation": "بما أن: \\[\\tau=\\frac{L}{R+r},\\] فإن: \\[L=\\tau(R+r)=10\\times10^{-3}\\times25=\\boxed{0,25\\,H}.\\]",
+            "calculation": "",
+            "result": "",
+            "figures": [],
+            "tables": []
+          }
+        ],
+        "final_answer": "\\(I_0\\approx0,24A\\)، \\(\\tau\\approx10ms\\)، \\(r=7,5\\Omega\\)، \\(L\\approx0,25H\\).",
+        "verification": "التحقق: نراجع الوحدات والإشارة ونقارن النتيجة بالسلوك الفيزيائي المتوقع أو بالبيان التجريبي.",
+        "hints": [
+          "استخرج المعطيات من النص أو البيان قبل بدء الحساب.",
+          "اكتب العلاقة الفيزيائية الحرفية قبل التعويض العددي."
+        ],
+        "common_mistakes": [
+          "التعويض العددي قبل كتابة العلاقة الحرفية.",
+          "نسيان تحويل الوحدات أو قراءة قيمة غير صحيحة من البيان."
+        ]
+      }
+    },
+    {
+      "id": "2010_s01_ex05_q2",
+      "display_order": 2,
+      "label": "2",
+      "group_id": null,
+      "content_type": "question",
+      "text": "2. في النظام الانتقالي:\nأ/ بتطبيق قانون التوترات أثبت أن: di/dt + i/τ = I_0/τ حيث I_0 شدة التيار في النظام الدائم.\nب/ بين أن حل المعادلة هو من الشكل: i=I_0(1-e^(-t/τ)).",
+      "axis_tags": [
+        "rl_current_establishment_differential_equation"
+      ],
+      "figures": [],
+      "tables": [],
+      "solution": {
+        "strategy": "نحل السؤال بطريقة بسيطة ومفهومة خطوة بخطوة: نبدأ من قانون جمع التوترات في الدارة RL، ثم نعوض تعريف I0 وτ. بعدها نشتق الحل المقترح ونتحقق منه.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "2-أ — قانون جمع التوترات",
+            "explanation": "قبل كتابة المعادلة نثبت جهة التيار واتجاهات التوترات على الدارة المرسومة. بعد ذلك نطبق قانون جمع التوترات على الحلقة المختارة، ثم نعوض بعلاقات العناصر. لدينا: \\[E=(R+r)i+L\\frac{di}{dt}.\\]",
+            "calculation": "",
+            "result": "",
+            "figures": [
+              {
+                "id": "2010_s01_ex05_q2_kvl_oriented_circuit",
+                "type": "svg",
+                "usage": "solution",
+                "placement": "solution",
+                "title": "دارة RL مع أسهم التوترات والتيار",
+                "description": "رسم تعليمي مضاف إلى خطوة تطبيق قانون جمع التوترات لتوضيح جهة التيار واتجاهات التوترات المرجعية قبل كتابة المعادلة.",
+                "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 980 450\" role=\"img\" aria-label=\"الدارة مع أسهم التوترات والتيار\">\n<rect width=\"100%\" height=\"100%\" fill=\"white\"/>\n\n<defs>\n  <marker id=\"arr\" markerWidth=\"10\" markerHeight=\"10\" refX=\"8\" refY=\"5\" orient=\"auto\">\n    <path d=\"M0,0 L10,5 L0,10 z\" fill=\"#111827\"/>\n  </marker>\n</defs>\n<text x=\"490\" y=\"34\" text-anchor=\"middle\" font-size=\"25\" font-family=\"DejaVu Sans,Arial,sans-serif\" font-weight=\"700\">الدارة مع أسهم التوترات والتيار</text>\n\n<text x=\"490\" y=\"66\" text-anchor=\"middle\" font-size=\"19\" font-family=\"DejaVu Sans,Arial,sans-serif\">دارة RL — اتجاه التيار والتوترات المرجعية</text>\n<line x1=\"135\" y1=\"120\" x2=\"135\" y2=\"320\" stroke=\"#111827\" stroke-width=\"4\"/>\n<line x1=\"171\" y1=\"140\" x2=\"171\" y2=\"300\" stroke=\"#111827\" stroke-width=\"8\"/>\n<text x=\"102\" y=\"222\" font-size=\"28\" font-family=\"DejaVu Sans,Arial,sans-serif\">E</text>\n<path d=\"M171 140 H300\" stroke=\"#111827\" stroke-width=\"4\"/>\n<rect x=\"300\" y=\"112\" width=\"165\" height=\"56\" fill=\"white\" stroke=\"#111827\" stroke-width=\"4\"/>\n<text x=\"383\" y=\"148\" text-anchor=\"middle\" font-size=\"27\" font-family=\"DejaVu Sans,Arial,sans-serif\">R</text>\n<path d=\"M465 140 H520 c18 -38 36 -38 54 0 c18 38 36 38 54 0 c18 -38 36 -38 54 0\" stroke=\"#111827\" stroke-width=\"4\" fill=\"none\"/>\n<path d=\"M682 140 H765 V320 H135\" stroke=\"#111827\" stroke-width=\"4\" fill=\"none\"/>\n<text x=\"602\" y=\"90\" text-anchor=\"middle\" font-size=\"25\" font-family=\"DejaVu Sans,Arial,sans-serif\">(L,r)</text>\n<line x1=\"215\" y1=\"78\" x2=\"735\" y2=\"78\" stroke=\"#111827\" stroke-width=\"3\" marker-end=\"url(#arr)\"/>\n<text x=\"475\" y=\"61\" text-anchor=\"middle\" font-size=\"24\" font-family=\"DejaVu Sans,Arial,sans-serif\">i</text>\n<line x1=\"310\" y1=\"220\" x2=\"455\" y2=\"220\" stroke=\"#111827\" stroke-width=\"3\" marker-end=\"url(#arr)\"/>\n<text x=\"383\" y=\"207\" text-anchor=\"middle\" font-size=\"23\" font-family=\"DejaVu Sans,Arial,sans-serif\">u_R</text>\n<line x1=\"525\" y1=\"220\" x2=\"675\" y2=\"220\" stroke=\"#111827\" stroke-width=\"3\" marker-end=\"url(#arr)\"/>\n<text x=\"600\" y=\"207\" text-anchor=\"middle\" font-size=\"23\" font-family=\"DejaVu Sans,Arial,sans-serif\">u_b</text>\n<line x1=\"95\" y1=\"310\" x2=\"95\" y2=\"145\" stroke=\"#111827\" stroke-width=\"3\" marker-end=\"url(#arr)\"/>\n<text x=\"70\" y=\"230\" font-size=\"23\" font-family=\"DejaVu Sans,Arial,sans-serif\">E</text>\n<text x=\"490\" y=\"390\" text-anchor=\"middle\" font-size=\"21\" font-family=\"DejaVu Sans,Arial,sans-serif\">قانون جمع التوترات: E = u_R + u_b</text>\n\n</svg>",
+                "render_mode": "inline",
+                "responsive": true
+              }
+            ],
+            "tables": []
+          },
+          {
+            "step_number": 2,
+            "title": "إدخال I₀ وτ",
+            "explanation": "نعرف: \\[I_0=\\frac{E}{R+r},\\qquad \\tau=\\frac{L}{R+r}.\\] بقسمة المعادلة على L: \\[\\frac{di}{dt}+\\frac{R+r}{L}i=\\frac{E}{L}.\\] أي: \\[\\boxed{\\frac{di}{dt}+\\frac{i}{\\tau}=\\frac{I_0}{\\tau}}.\\]",
+            "calculation": "",
+            "result": "",
+            "figures": [],
+            "tables": []
+          },
+          {
+            "step_number": 3,
+            "title": "2-ب — التحقق من الحل",
+            "explanation": "نأخذ: \\[i=I_0(1-e^{-t/\\tau}).\\] إذن: \\[\\frac{di}{dt}=\\frac{I_0}{\\tau}e^{-t/\\tau}.\\] بالتعويض: \\[\\frac{I_0}{\\tau}e^{-t/\\tau}+\\frac{I_0}{\\tau}(1-e^{-t/\\tau})=\\frac{I_0}{\\tau}.\\] إذن الحل المقترح صحيح.",
+            "calculation": "",
+            "result": "",
+            "figures": [],
+            "tables": []
+          }
+        ],
+        "final_answer": "\\(\\boxed{di/dt+i/\\tau=I_0/\\tau}\\)، وحلها \\(\\boxed{i=I_0(1-e^{-t/\\tau})}\\).",
+        "verification": "التحقق: نراجع الإشارات والوحدات، ونتأكد أن النتيجة منسجمة مع اتجاهات التوترات المرسومة ومع السلوك الفيزيائي للدارة.",
+        "hints": [
+          "ابدأ برسم الدارة وتثبيت جهة التيار واتجاهات التوترات قبل تطبيق قانون جمع التوترات.",
+          "اكتب العلاقة الحرفية أولا، ثم عوض بعلاقات العناصر ورتب المعادلة خطوة بخطوة."
+        ],
+        "common_mistakes": [
+          "الخطأ في إشارة أحد التوترات بسبب عدم تحديد اتجاه السهم المرجعي على الدارة.",
+          "الانتقال مباشرة إلى النتيجة النهائية دون كتابة قانون جمع التوترات ثم علاقات العناصر."
+        ]
+      }
+    },
+    {
+      "id": "2010_s01_ex05_q3",
+      "display_order": 3,
+      "label": "3",
+      "group_id": null,
+      "content_type": "question",
+      "text": "3. نغير الآن قيمة الذاتية L للوشيعة وبمعالجة المعطيات ببرمجية إعلام آلي نسجل قيم τ ثابت الزمن للدارة لنتحصل على جدول القياسات التالي:\nτ(ms): 4 | 8 | 12 | 20\nL(H): 0,1 | 0,2 | 0,3 | 0,5\nأ/ ارسم البيان: L=h(τ).\nب/ اكتب معادلة البيان.\nج/ استنتج قيمة مقاومة الوشيعة r، هل تتوافق هذه القيمة مع القيمة المحسوبة في السؤال 1-ب؟",
+      "axis_tags": [
+        "rl_time_constant_graphical_analysis"
+      ],
+      "figures": [],
+      "tables": [],
+      "solution": {
+        "strategy": "نحل السؤال بطريقة بسيطة ومفهومة خطوة بخطوة: نمثل L بدلالة τ فنحصل على مستقيم يمر بالمبدأ. ميله يساوي R+r لأن L=(R+r)τ.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "3-أ — الرسم",
+            "explanation": "النقاط (4ms,0,1H)، (8ms,0,2H)، (12ms,0,3H)، (20ms,0,5H) مصطفة على مستقيم يمر بالمبدأ.",
+            "calculation": "",
+            "result": "",
+            "figures": [
+              {
+                "id": "2010_s01_ex05_L_tau_curve",
+                "type": "svg",
+                "usage": "solution",
+                "placement": "solution",
+                "title": "البيان L=h(τ)",
+                "description": "تمثيل خطي يمر بالمبدأ لجدول تغير L بدلالة τ.",
+                "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 650 390\" role=\"img\" aria-label=\"البيان L=h(tau)\">\n<rect width=\"650\" height=\"390\" fill=\"white\"/>\n<defs><marker id=\"axis\" markerWidth=\"10\" markerHeight=\"10\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L0,6 L9,3 z\" fill=\"#111827\"/></marker></defs>\n<line x1=\"90\" y1=\"330\" x2=\"590\" y2=\"330\" stroke=\"#111827\" stroke-width=\"3\" marker-end=\"url(#axis)\"/>\n<line x1=\"90\" y1=\"330\" x2=\"90\" y2=\"45\" stroke=\"#111827\" stroke-width=\"3\" marker-end=\"url(#axis)\"/>\n<line x1=\"90\" y1=\"330\" x2=\"530\" y2=\"80.0\" stroke=\"#111827\" stroke-width=\"3\"/>\n<circle cx=\"178.0\" cy=\"280.0\" r=\"5\" fill=\"#111827\"/><circle cx=\"266.0\" cy=\"230.0\" r=\"5\" fill=\"#111827\"/><circle cx=\"354.0\" cy=\"180.0\" r=\"5\" fill=\"#111827\"/><circle cx=\"530.0\" cy=\"80.0\" r=\"5\" fill=\"#111827\"/>\n<text x=\"28\" y=\"55\" font-family=\"DejaVu Sans,Arial\" font-size=\"24\">L(H)</text>\n<text x=\"520\" y=\"365\" font-family=\"DejaVu Sans,Arial\" font-size=\"24\">τ(ms)</text>\n<text x=\"250\" y=\"115\" font-family=\"DejaVu Sans,Arial\" font-size=\"22\">L = 0.025 τ(ms)</text>\n</svg>",
+                "render_mode": "inline",
+                "responsive": true
+              }
+            ],
+            "tables": []
+          },
+          {
+            "step_number": 2,
+            "title": "3-ب — معادلة البيان",
+            "explanation": "ميل المستقيم: \\[a=\\frac{0,1}{4\\times10^{-3}}=25\\,\\Omega.\\] لذلك إذا كانت τ بالثانية: \\[\\boxed{L=25\\tau}.\\] وإذا كانت τ بالميلي ثانية: \\[L=0,025\\tau_{(ms)}.\\]",
+            "calculation": "",
+            "result": "",
+            "figures": [],
+            "tables": []
+          },
+          {
+            "step_number": 3,
+            "title": "3-ج — استنتاج r",
+            "explanation": "من العلاقة النظرية: \\[L=(R+r)\\tau.\\] إذن: \\[R+r=25\\Rightarrow r=25-17,5=\\boxed{7,5\\,\\Omega}.\\] وهي نفس القيمة المحسوبة في السؤال 1-ب.",
+            "calculation": "",
+            "result": "",
+            "figures": [],
+            "tables": []
+          }
+        ],
+        "final_answer": "البيان مستقيم يمر بالمبدأ، \\(L=25\\tau\\) إذا كانت τ بالثانية، ومنه \\(r=7,5\\Omega\\)، وهي متوافقة مع السؤال 1-ب.",
+        "verification": "التحقق: نراجع الوحدات والإشارة ونقارن النتيجة بالسلوك الفيزيائي المتوقع أو بالبيان التجريبي.",
+        "hints": [
+          "استخرج المعطيات من النص أو البيان قبل بدء الحساب.",
+          "اكتب العلاقة الفيزيائية الحرفية قبل التعويض العددي."
+        ],
+        "common_mistakes": [
+          "التعويض العددي قبل كتابة العلاقة الحرفية.",
+          "نسيان تحويل الوحدات أو قراءة قيمة غير صحيحة من البيان."
+        ]
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2010(20260911-090133).pdf",
+    "statement_figure_policy": "الدارة ومنحنى i=f(t) أعيدا كـ SVG داخل JSON.",
+    "solution_figure_policy": "البيان L=h(τ) أعيد كـ SVG داخل الحل.",
+    "source_page_numbering": "نص التمرين في الصفحتين 4 و5 من PDF، والتصحيح النموذجي في الصفحة 15.",
+    "transcription_policy": "تم الحفاظ على نص الأسئلة والمعطيات كما في المصدر، مع استعمال LaTeX للرموز الرياضية.",
+    "correction_notes": [
+      "تم توحيد الملف إلى schema 5.0، وتحويل graph_data إلى figures، وتبسيط بنية الحل، وإضافة رسم دارة موجه عند تطبيق قانون جمع التوترات."
+    ],
+    "unified_schema": true,
+    "legacy_graph_data_removed": true,
+    "detailed_solution_reviewed": true,
+    "kvl_solution_circuits_added": true
+  }
+}

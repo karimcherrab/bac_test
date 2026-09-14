@@ -1,0 +1,230 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2011-math-space-subject1-ex02-detailed",
+  "session": "ordinary",
+  "year": 2011,
+  "chapter_code": "space_geometry",
+  "chapter_title": "الهندسة في الفضاء",
+  "axis_tags": [
+    "space_parametric_line_plane",
+    "space_cartesian_plane_normal_vector",
+    "space_dot_product_orthogonality",
+    "space_distances_projections",
+    "space_relative_positions_intersections"
+  ],
+  "branches": [
+    {
+      "code": "math",
+      "name": "شعبة رياضيات"
+    }
+  ],
+  "exercise_number": 2,
+  "subject_number": 1,
+  "source_page": 1,
+  "source_pages": [
+    1
+  ],
+  "solution_source_pages": [
+    5
+  ],
+  "title": "التمرين الثاني — بكالوريا الجزائر 2011 — الموضوع الأول — شعبة رياضيات",
+  "statement": "الفضاء منسوب إلى المعلم المتعامد المتجانس \\((O;\\vec{i},\\vec{j},\\vec{k})\\).",
+  "questions": [
+    {
+      "id": "2011_s1_space_ex02_q1a",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1/ نعتبر النقط \\(A(1;0;2)\\)، \\(B(1;1;4)\\)، \\(C(-1;1;1)\\).\nأ/ أثبت أن النقط \\(A\\) و \\(B\\) و \\(C\\) تعين مستويا.",
+      "axis_tags": [
+        "space_parametric_line_plane"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب الشعاعين \\(\\overrightarrow{AB}\\) و\\(\\overrightarrow{AC}\\)، ثم نتحقق أنهما غير متوازيين.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب الشعاعين",
+            "explanation": "\\[\\overrightarrow{AB}=B-A=(0,1,2),\\qquad \\overrightarrow{AC}=C-A=(-2,1,-1).\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "التحقق من عدم التوازي",
+            "explanation": "الشعاعان \\(\\overrightarrow{AB}=(0,1,2)\\) و\\(\\overrightarrow{AC}=(-2,1,-1)\\) غير متناسبين، وبالتالي فهما غير متوازيين."
+          },
+          {
+            "step_number": 3,
+            "title": "الاستنتاج",
+            "explanation": "بما أن \\(\\overrightarrow{AB}\\) و\\(\\overrightarrow{AC}\\) غير متوازيين، فإن النقط \\(A\\)، \\(B\\)، \\(C\\) غير مستقيمية، ومنه فهي تعين مستويا."
+          }
+        ],
+        "final_answer": "النقط \\(A\\)، \\(B\\)، \\(C\\) تعين مستويا."
+      }
+    },
+    {
+      "id": "2011_s1_space_ex02_q1b",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "ب/ بين أن الشعاع \\(\\vec n(3;4;-2)\\) عمودي على كل من الشعاعين \\(\\overrightarrow{AB}\\) و \\(\\overrightarrow{AC}\\) ثم استنتج معادلة ديكارتية للمستوي \\((ABC)\\).",
+      "axis_tags": [
+        "space_dot_product_orthogonality",
+        "space_cartesian_plane_normal_vector"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نتحقق بالجداء السلمي أن \\(\\vec n\\) عمودي على شعاعين غير متوازيين من المستوى، فيكون شعاعا ناظما له، ثم نستعمل نقطة من المستوى لكتابة معادلته.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التعامد مع AB",
+            "explanation": "\\[\\vec n\\cdot\\overrightarrow{AB}=3\\times0+4\\times1+(-2)\\times2=0.\\]\nإذن \\(\\vec n\\perp\\overrightarrow{AB}\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "التعامد مع AC",
+            "explanation": "\\[\\vec n\\cdot\\overrightarrow{AC}=3\\times(-2)+4\\times1+(-2)\\times(-1)=0.\\]\nإذن \\(\\vec n\\perp\\overrightarrow{AC}\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "استخراج معادلة المستوى",
+            "explanation": "إذن \\(\\vec n=(3,4,-2)\\) شعاع ناظم للمستوى \\((ABC)\\)، فمعادلته من الشكل:\n\\[3x+4y-2z+d=0.\\]\nوباستعمال \\(A(1,0,2)\\):\n\\[3-4+d=0\\Rightarrow d=1.\\]"
+          }
+        ],
+        "final_answer": "\\[(ABC):3x+4y-2z+1=0.\\]"
+      }
+    },
+    {
+      "id": "2011_s1_space_ex02_q2a",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "2/ نعتبر المستويين \\((P_1)\\) و \\((P_2)\\) حيث: \\((P_1):3x+4y-2z+1=0\\) و \\((P_2):2x-2y-z-1=0\\).\nأ/ بين أن المستويين \\((P_1)\\) و \\((P_2)\\) متعامدان.",
+      "axis_tags": [
+        "space_dot_product_orthogonality",
+        "space_cartesian_plane_normal_vector"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نأخذ شعاعا ناظما لكل مستوى، ثم نحسب جداءهما السلمي.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تحديد الشعاعين الناظمين",
+            "explanation": "\\[\\vec n_1=(3,4,-2),\\qquad \\vec n_2=(2,-2,-1).\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب الجداء السلمي",
+            "explanation": "\\[\\vec n_1\\cdot\\vec n_2=3\\times2+4\\times(-2)+(-2)\\times(-1)=6-8+2=0.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الاستنتاج",
+            "explanation": "بما أن شعاعي الناظم متعامدان، فإن المستويين متعامدان."
+          }
+        ],
+        "final_answer": "\\[(P_1)\\perp(P_2).\\]"
+      }
+    },
+    {
+      "id": "2011_s1_space_ex02_q2b",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "ب/ عين تمثيلا وسيطيا للمستقيم \\((\\Delta)\\) تقاطع المستويين \\((P_1)\\) و \\((P_2)\\).",
+      "axis_tags": [
+        "space_parametric_line_plane",
+        "space_relative_positions_intersections"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحل معادلتي المستويين معا، ونختار \\(z=t\\) وسيطا حرا.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حل نظام التقاطع",
+            "explanation": "لدينا:\n\\[\\begin{cases}3x+4y-2z+1=0\\\\2x-2y-z-1=0\\end{cases}\\]\nنضع \\(z=t\\). من المعادلة الثانية:\n\\[x-y=\\frac{t+1}{2}.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "تعيين x و y بدلالة t",
+            "explanation": "بحل المعادلتين نحصل على:\n\\[x=\\frac{4}{7}t+\\frac{1}{7},\\qquad y=\\frac{1}{14}t-\\frac{5}{14}.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "كتابة التمثيل الوسيطي",
+            "explanation": "\\[(\\Delta):\\begin{cases}x=\\frac{4}{7}t+\\frac{1}{7}\\\\y=\\frac{1}{14}t-\\frac{5}{14}\\\\z=t\\end{cases}\\quad ;\\ t\\in\\mathbb{R}.\\]"
+          }
+        ],
+        "final_answer": "\\[(\\Delta):\\begin{cases}x=\\frac{4}{7}t+\\frac{1}{7}\\\\y=\\frac{1}{14}t-\\frac{5}{14}\\\\z=t\\end{cases}\\quad ;\\ t\\in\\mathbb{R}.\\]"
+      }
+    },
+    {
+      "id": "2011_s1_space_ex02_q2c",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "ج/ تحقق أن النقطة \\(O(0;0;0)\\) لا تنتمي إلى \\((\\Delta)\\).",
+      "axis_tags": [
+        "space_parametric_line_plane",
+        "space_relative_positions_intersections"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نختبر هل توجد قيمة واحدة للوسيط تجعل الإحداثيات الثلاثة مساوية للصفر.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "استعمال الإحداثي z",
+            "explanation": "إذا كانت \\(O\\in(\\Delta)\\)، فمن \\(z=t=0\\) نحصل على \\(t=0\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "التحقق من x و y",
+            "explanation": "عند \\(t=0\\):\n\\[x=\\frac17\\neq0,\\qquad y=-\\frac{5}{14}\\neq0.\\]\nإذن النقطة \\(O\\) لا تحقق التمثيل الوسيطي للمستقيم."
+          }
+        ],
+        "final_answer": "\\[O\\notin(\\Delta).\\]"
+      }
+    },
+    {
+      "id": "2011_s1_space_ex02_q2d",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "د/ احسب المسافتين \\(d(O;(P_1))\\) و \\(d(O;(P_2))\\) و استنتج المسافة \\(d(O;(\\Delta))\\).",
+      "axis_tags": [
+        "space_distances_projections",
+        "space_relative_positions_intersections"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نطبق صيغة المسافة من نقطة إلى مستوى، ثم نستعمل تعامد المستويين لحساب المسافة إلى مستقيم تقاطعهما.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "المسافة إلى P1",
+            "explanation": "\\[d(O;(P_1))=\\frac{|1|}{\\sqrt{3^2+4^2+(-2)^2}}=\\frac{1}{\\sqrt{29}}=\\frac{\\sqrt{29}}{29}.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "المسافة إلى P2",
+            "explanation": "\\[d(O;(P_2))=\\frac{|-1|}{\\sqrt{2^2+(-2)^2+(-1)^2}}=\\frac13.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "المسافة إلى Δ",
+            "explanation": "بما أن \\((P_1)\\perp(P_2)\\) و\\((\\Delta)=(P_1)\\cap(P_2)\\)، فإن:\n\\[d(O;(\\Delta))^2=d(O;(P_1))^2+d(O;(P_2))^2.\\]\nإذن:\n\\[d(O;(\\Delta))=\\sqrt{\\frac1{29}+\\frac19}=\\sqrt{\\frac{38}{261}}.\\]"
+          }
+        ],
+        "final_answer": "\\[d(O;(P_1))=\\frac{\\sqrt{29}}{29},\\qquad d(O;(P_2))=\\frac13,\\qquad d(O;(\\Delta))=\\sqrt{\\frac{38}{261}}.\\]"
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2011(20260826-121647).pdf",
+    "statement_figure_policy": "لا يوجد شكل هندسي إلزامي في نص التمرين.",
+    "solution_figure_policy": "الحل مستقل عن أي رسم.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  }
+}

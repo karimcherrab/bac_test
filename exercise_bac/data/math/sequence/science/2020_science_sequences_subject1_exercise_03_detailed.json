@@ -1,0 +1,191 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "session": "ordinary",
+  "year": 2020,
+  "chapter_code": "sequences",
+  "chapter_title": "المتتاليات العددية",
+  "branches": [
+    {
+      "code": "science",
+      "name": "شعبة علوم تجريبية"
+    }
+  ],
+  "source_pdf": "2020(2).pdf",
+  "comparison_source": "bac_sequence_scientifique(20260823-104740).pdf",
+  "source_verification": {
+    "statement_checked_against_original_bac": true,
+    "solution_checked_against_official_correction": true,
+    "solution_style": "حل مفصل ومبسط بخطوات صغيرة، مع إظهار الحسابات الوسيطة التي اختصرها التصحيح الرسمي.",
+    "statement_policy": "نص التمرين والأسئلة منقول من موضوع البكالوريا دون إضافة معطيات جديدة."
+  },
+  "version": "4.2-2020-science-sequences-subject1-ex03",
+  "exercise_number": 3,
+  "subject_number": 1,
+  "points": 5,
+  "source_page": 2,
+  "source_pages": [
+    2
+  ],
+  "solution_source_pages": [
+    5,
+    6
+  ],
+  "title": "التمرين الثالث — بكالوريا الجزائر 2020 — الموضوع الأول — شعبة علوم تجريبية",
+  "statement": "المتتالية العددية \\((u_n)\\) معرفة بـ: \\(u_0=\\alpha\\) (\\(\\alpha\\) عدد حقيقي)، ومن أجل كل عدد طبيعي \\(n\\): \\(u_{n+1}=\\frac34u_n-1\\).",
+  "statement_graphs": [],
+  "questions": [
+    {
+      "id": "2020_s1_ex03_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) نفرض أن \\(\\alpha=-4\\). برهن بالتراجع أنه من أجل كل عدد طبيعي \\(n\\): \\(u_n=-4\\).",
+      "axis_tags": [
+        "induction",
+        "constant_sequence"
+      ],
+      "solution": {
+        "strategy": "نبرهن بالتراجع أن جميع حدود المتتالية تساوي \\(-4\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التحقق عند n=0",
+            "explanation": "بما أن \\(\\alpha=-4\\)، فإن:\n\\[\nu_0=\\alpha=-4.\n\\]\nإذن الخاصية صحيحة عند الرتبة \\(0\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "فرضية التراجع",
+            "explanation": "نفترض أنه عند رتبة طبيعية \\(n\\):\n\\[\nu_n=-4.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الانتقال إلى n+1",
+            "explanation": "من علاقة الرجوع:\n\\[\nu_{n+1}=\\frac34u_n-1.\n\\]\nوباستعمال فرضية التراجع:\n\\[\nu_{n+1}=\\frac34(-4)-1=-3-1=-4.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "الخلاصة",
+            "explanation": "إذن بالتراجع:\n\\[\n\\boxed{u_n=-4\\quad\\forall n\\in\\mathbb N}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{u_n=-4\\text{ لكل }n\\in\\mathbb N}\\)."
+      }
+    },
+    {
+      "id": "2020_s1_ex03_q2a",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2) نفرض أن \\(\\alpha\\ne-4\\). نعتبر المتتالية العددية \\((v_n)\\) المعرفة على مجموعة الأعداد الطبيعية \\(\\mathbb N\\) بـ: \\(v_n=u_n+4\\). أ) أثبت أن المتتالية \\((v_n)\\) هندسية أساسها \\(\\frac34\\).",
+      "axis_tags": [
+        "auxiliary_sequence",
+        "geometric_sequence"
+      ],
+      "solution": {
+        "strategy": "نحسب \\(v_{n+1}\\) بدلالة \\(v_n\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "كتابة v_{n+1}",
+            "explanation": "لدينا:\n\\[\nv_{n+1}=u_{n+1}+4.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "استعمال علاقة الرجوع",
+            "explanation": "\\[\nv_{n+1}=\\frac34u_n-1+4\n=\\frac34u_n+3.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "استخراج العامل المشترك",
+            "explanation": "نكتب:\n\\[\n3=\\frac34\\times4.\n\\]\nإذن:\n\\[\nv_{n+1}=\\frac34(u_n+4)=\\frac34v_n.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "الاستنتاج",
+            "explanation": "إذن \\((v_n)\\) متتالية هندسية أساسها:\n\\[\n\\boxed{q=\\frac34}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{(v_n)\\text{ هندسية أساسها }\\frac34}\\)."
+      }
+    },
+    {
+      "id": "2020_s1_ex03_q2b",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "ب) اكتب عبارة الحد العام \\(u_n\\) بدلالة \\(n\\) و \\(\\alpha\\)، ثم بين أن المتتالية \\((u_n)\\) متقاربة.",
+      "axis_tags": [
+        "geometric_sequence_general_term",
+        "explicit_sequence_formula",
+        "sequence_convergence"
+      ],
+      "solution": {
+        "strategy": "نكتب أولا الحد العام لـ\\(v_n\\)، ثم نستخرج منه \\(u_n\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب v_0",
+            "explanation": "لدينا:\n\\[\nv_0=u_0+4=\\alpha+4.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "كتابة v_n",
+            "explanation": "بما أن \\((v_n)\\) هندسية أساسها \\(\\frac34\\):\n\\[\nv_n=v_0\\left(\\frac34\\right)^n.\n\\]\nإذن:\n\\[\n\\boxed{v_n=(\\alpha+4)\\left(\\frac34\\right)^n}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "استخراج u_n",
+            "explanation": "من \\(v_n=u_n+4\\):\n\\[\nu_n=v_n-4.\n\\]\nإذن:\n\\[\n\\boxed{u_n=(\\alpha+4)\\left(\\frac34\\right)^n-4}.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "إثبات التقارب",
+            "explanation": "بما أن:\n\\[\n0<\\frac34<1,\n\\]\nفإن:\n\\[\n\\left(\\frac34\\right)^n\\to0.\n\\]\nومن ثم:\n\\[\nu_n\\to-4.\n\\]\nإذن \\((u_n)\\) متقاربة."
+          }
+        ],
+        "final_answer": "\\(\\boxed{u_n=(\\alpha+4)(\\frac34)^n-4}\\)، و \\(\\boxed{\\lim u_n=-4}\\)."
+      }
+    },
+    {
+      "id": "2020_s1_ex03_q2c",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "جـ) نضع من أجل كل عدد طبيعي \\(n\\): \\(S_n=u_0+u_1+u_2+\\cdots+u_n\\). احسب \\(S_n\\) بدلالة \\(n\\) و \\(\\alpha\\) ثم احسب \\(\\lim_{n\\to+\\infty}S_n\\).",
+      "axis_tags": [
+        "sequence_sum",
+        "geometric_sum",
+        "sequence_limit"
+      ],
+      "solution": {
+        "strategy": "نعوض العبارة الصريحة لـ\\(u_k\\)، ثم نفصل مجموعا هندسيا عن مجموع ثابت.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تعويض u_k",
+            "explanation": "لدينا:\n\\[\nu_k=(\\alpha+4)\\left(\\frac34\\right)^k-4.\n\\]\nإذن:\n\\[\nS_n=\\sum_{k=0}^{n}\\left[(\\alpha+4)\\left(\\frac34\\right)^k-4\\right].\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "فصل المجموعين",
+            "explanation": "\\[\nS_n=(\\alpha+4)\\sum_{k=0}^{n}\\left(\\frac34\\right)^k-4(n+1).\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب المجموع الهندسي",
+            "explanation": "\\[\n\\sum_{k=0}^{n}\\left(\\frac34\\right)^k\n=\\frac{1-(\\frac34)^{n+1}}{1-\\frac34}\n=4\\left[1-\\left(\\frac34\\right)^{n+1}\\right].\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "العبارة النهائية",
+            "explanation": "إذن:\n\\[\n\\boxed{S_n=4(\\alpha+4)\\left[1-\\left(\\frac34\\right)^{n+1}\\right]-4(n+1)}.\n\\]"
+          },
+          {
+            "step_number": 5,
+            "title": "حساب النهاية",
+            "explanation": "عندما \\(n\\to+\\infty\\):\n\\[\n\\left(\\frac34\\right)^{n+1}\\to0,\n\\]\nبينما:\n\\[\n-4(n+1)\\to-\\infty.\n\\]\nإذن:\n\\[\n\\boxed{\\lim_{n\\to+\\infty}S_n=-\\infty}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{S_n=4(\\alpha+4)[1-(\\frac34)^{n+1}]-4(n+1)}\\)، و \\(\\boxed{\\lim S_n=-\\infty}\\)."
+      }
+    }
+  ]
+}

@@ -1,0 +1,264 @@
+{
+  "schema_version": "3.0-bac-pedagogical-verified",
+  "language": "ar",
+  "direction": "rtl",
+  "branch": {
+    "code": "math",
+    "name": "شعبة رياضيات"
+  },
+  "branch_code": "math",
+  "branches": [
+    {
+      "code": "math",
+      "name": "شعبة رياضيات"
+    }
+  ],
+  "chapter_code": "limits_continuity",
+  "year": 2009,
+  "exercise_number": 4,
+  "source_page": 2,
+  "source_reference": "بكالوريا 2009 — شعبة رياضيات — التمرين الرابع (7 نقاط)، من الملف المرفق.",
+  "title": "بكالوريا 2009 — شعبة رياضيات — التمرين الرابع — النهايات",
+  "axis_tags": [
+    "limits_continuity"
+  ],
+  "statement": "الدالة العددية \\(f\\) المعرفة على المجال \\(]-1,+\\infty[\\) كما يأتي:\n\\[\nf(x)=x-\\frac{2}{\\sqrt{x+1}}.\n\\]",
+  "statement_graph_data": null,
+  "questions": [
+    {
+      "id": "2009_math_limits_variation",
+      "text": "احسب النهايات اللازمة لدراسة تغيرات الدالة \\(f\\):\n\\[\n\\lim_{x\\to-1^+}f(x)\n\\qquad\\text{و}\\qquad\n\\lim_{x\\to+\\infty}f(x).\n\\]",
+      "axis_tags": [
+        "limits_continuity"
+      ],
+      "solution": {
+        "strategy": "نحسب النهاية عند كل طرف من مجال التعريف على حدة. عند \\(-1^+\\) ندرس الجذر والمقام، وعند \\(+\\infty\\) نحسب نهاية الحد \\(2/\\sqrt{x+1}\\) أولًا.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "النهاية عند -1 من اليمين: ما داخل الجذر",
+            "explanation": "لأن مجال الدالة هو \\(]-1,+\\infty[\\)، فإن الاقتراب من \\(-1\\) يكون من اليمين فقط.",
+            "latex": "x\\to-1^+\\quad\\Longrightarrow\\quadx+1\\to0^+\\quad\\Longrightarrow\\quad\\sqrt{x+1}\\to0^+",
+            "why": "الجذر معرف لأن \\(x+1>0\\) داخل مجال الدالة.",
+            "student_tip": "انتبه إلى جهة الاقتراب: نكتب دائمًا \\(-1^+\\) هنا."
+          },
+          {
+            "step_number": 2,
+            "title": "نهاية الكسر عند -1 من اليمين",
+            "explanation": "البسط ثابت موجب والمقام موجب ويقترب من الصفر.",
+            "latex": "\\lim_{x\\to-1^+}\\frac{2}{\\sqrt{x+1}}=+\\infty",
+            "why": "لدينا عدد موجب على كمية موجبة تقترب من الصفر.",
+            "student_tip": "هذه ليست حالة عدم تعيين؛ الشكل هو \\(2/0^+\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "نستنتج نهاية f عند -1 من اليمين",
+            "explanation": "لدينا \\(x\\to-1\\) بينما \\(2/\\sqrt{x+1}\\to+\\infty\\)، وهو مطروح في عبارة الدالة.",
+            "latex": "\\lim_{x\\to-1^+}\\left(x-\\frac{2}{\\sqrt{x+1}}\\right)=-\\infty",
+            "why": "الحد السالب غير المحدود هو الذي يحدد النهاية.",
+            "student_tip": "الإشارة السالبة أمام الكسر مهمة جدًا."
+          },
+          {
+            "step_number": 4,
+            "title": "النهاية عند +∞: نهاية الكسر",
+            "explanation": "عندما \\(x\\to+\\infty\\)، فإن \\(x+1\\to+\\infty\\) ومن ثم \\(\\sqrt{x+1}\\to+\\infty\\).",
+            "latex": "\\lim_{x\\to+\\infty}\\frac{2}{\\sqrt{x+1}}=0",
+            "why": "ثابت على كمية تتجه إلى +∞ تكون نهايته 0.",
+            "student_tip": "لا توجد حالة عدم تعيين في هذا الكسر."
+          },
+          {
+            "step_number": 5,
+            "title": "نستنتج نهاية f عند +∞",
+            "explanation": "لدينا \\(x\\to+\\infty\\) والكسر يتجه إلى الصفر.",
+            "latex": "\\lim_{x\\to+\\infty}\\left(x-\\frac{2}{\\sqrt{x+1}}\\right)=+\\infty",
+            "why": "طرح كمية تتجه إلى 0 من x لا يغير سلوكه عند +∞.",
+            "student_tip": "بعد حساب نهاية الكسر تصبح نهاية f مباشرة."
+          }
+        ],
+        "final_answer": "\\[\n\\boxed{\\lim_{x\\to-1^+}f(x)=-\\infty}\n\\qquad\\text{و}\\qquad\n\\boxed{\\lim_{x\\to+\\infty}f(x)=+\\infty}.\n\\]",
+        "verification": "عند \\(-1^+\\) يقترب المقام من \\(0^+\\) فيتجه الحد المطروح إلى \\(+\\infty\\)، وعند \\(+\\infty\\) يتجه هذا الحد إلى 0.",
+        "common_mistakes": [
+          "حساب النهاية عند -1 من الجهتين رغم أن الدالة معرفة فقط عندما x>-1.",
+          "نسيان الإشارة السالبة أمام 2/√(x+1).",
+          "اعتبار 2/0⁺ حالة عدم تعيين؛ وهي ليست كذلك."
+        ],
+        "hints": [
+          "عند -1⁺ ابدأ بدراسة √(x+1).",
+          "عند +∞ احسب نهاية 2/√(x+1) أولًا."
+        ],
+        "graph_data": null,
+        "table_data": null,
+        "solution_style": "حل مفصل ومبسط جدًا مع تحديد الإشارات وعدم اختراع حالة عدم تعيين.",
+        "methodology": {
+          "goal": "حساب نهايتي f عند طرفي مجال تعريفها.",
+          "method": "دراسة الجذر والكسر أولًا ثم استنتاج نهاية f.",
+          "why_this_method": "لأن عبارة f تتكون من x وعبارة جذرية بسيطة.",
+          "used_theorem": "قواعد النهايات ودالة الجذر.",
+          "bac_template": [
+            "نحدد جهة الاقتراب.",
+            "نحسب نهاية الجذر.",
+            "نحسب نهاية الكسر.",
+            "نستنتج نهاية f."
+          ],
+          "formal_writing": [
+            "نحسب النهايات الجزئية.",
+            "نراعي الإشارة.",
+            "نكتب النتيجة."
+          ]
+        },
+        "formal_writing": [
+          "نحدد جهة الاقتراب.",
+          "نحسب نهاية الكسر.",
+          "نستنتج نهاية الدالة."
+        ],
+        "react_display": {
+          "show_strategy": true,
+          "show_steps": true,
+          "show_final_answer": true,
+          "show_graph": false,
+          "show_table": false,
+          "graph_key": "graph_data",
+          "table_key": "table_data",
+          "math_renderer": "better-react-mathjax"
+        },
+        "pedagogical_detail": {
+          "level": "مبسط جدًا",
+          "show_intermediate_calculations": true,
+          "explain_rule_before_use": true,
+          "state_final_conclusion": true
+        },
+        "display_order": [
+          "strategy",
+          "steps",
+          "final_answer",
+          "verification"
+        ],
+        "validation": {
+          "final_answer_checked": true,
+          "mathematical_consistency_checked": true
+        },
+        "main_idea": "عند -1⁺ الكسر يتجه إلى +∞ فيكون f→-∞، وعند +∞ الكسر يتجه إلى 0 فيكون f→+∞.",
+        "detailed_explanation": "هاتان النهايتان لازمتان لدراسة تغيرات الدالة على مجالها.",
+        "answer_style": "idea_then_steps_then_conclusion"
+      },
+      "display_order": 1,
+      "content_type": "question"
+    },
+    {
+      "id": "2009_math_limit_asymptote_x",
+      "text": "لإثبات أن المستقيم \\((D)\\) الذي معادلته \\(y=x\\) مقارب للمنحنى \\((C_f)\\)، احسب:\n\\[\n\\lim_{x\\to+\\infty}\\left[f(x)-x\\right].\n\\]",
+      "axis_tags": [
+        "limits_continuity"
+      ],
+      "solution": {
+        "strategy": "نحسب الفرق \\(f(x)-x\\) أولًا. هنا لا نحتاج إلى معالجة الشكل \\(+\\infty-+\\infty\\) مباشرة، لأن التبسيط يلغي الحد x فورًا.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "نكتب الفرق ونبسطه",
+            "explanation": "نعوض عبارة f ثم نختزل x مع -x.",
+            "latex": "f(x)-x=x-\\frac{2}{\\sqrt{x+1}}-x=-\\frac{2}{\\sqrt{x+1}}",
+            "why": "التبسيط يزيل مباشرة الشكل غير المناسب الناتج عن طرح حدين غير محدودين.",
+            "student_tip": "في أسئلة المقارب، بسّط f(x)-معادلة المستقيم قبل حساب النهاية."
+          },
+          {
+            "step_number": 2,
+            "title": "نحسب النهاية",
+            "explanation": "عندما \\(x\\to+\\infty\\)، فإن \\(\\sqrt{x+1}\\to+\\infty\\).",
+            "latex": "\\lim_{x\\to+\\infty}\\left[f(x)-x\\right]=\\lim_{x\\to+\\infty}\\left(-\\frac{2}{\\sqrt{x+1}}\\right)=0",
+            "why": "ثابت على كمية تتجه إلى +∞ تكون نهايته 0.",
+            "student_tip": "وصول الفرق إلى 0 هو ما يثبت وجود المقارب."
+          },
+          {
+            "step_number": 3,
+            "title": "النتيجة النهائية",
+            "explanation": "إذن الفرق بين f(x) وx يتجه إلى الصفر عند +∞.",
+            "latex": "\\boxed{\\lim_{x\\to+\\infty}[f(x)-x]=0}",
+            "why": "ومن ثم يكون المستقيم y=x مقاربًا للمنحنى عند +∞.",
+            "student_tip": "قاعدة المقارب: إذا كان f(x)-(ax+b)→0، فإن y=ax+b مقارب."
+          }
+        ],
+        "final_answer": "\\[\n\\boxed{\\lim_{x\\to+\\infty}\\left[f(x)-x\\right]=0}.\n\\]",
+        "verification": "لدينا مباشرة f(x)-x=-2/√(x+1)، ونهاية هذه العبارة هي 0.",
+        "common_mistakes": [
+          "محاولة حساب +∞-+∞ دون تبسيط الفرق.",
+          "نسيان الإشارة السالبة في الفرق.",
+          "القول إن المقارب y=x عند -1؛ المقارب y=x مرتبط هنا بـ +∞."
+        ],
+        "hints": [
+          "اكتب f(x)-x.",
+          "اختزل x.",
+          "احسب نهاية -2/√(x+1)."
+        ],
+        "graph_data": null,
+        "table_data": null,
+        "solution_style": "حل مفصل ومباشر مناسب لتلميذ البكالوريا.",
+        "methodology": {
+          "goal": "حساب النهاية اللازمة لإثبات المقارب y=x.",
+          "method": "تبسيط الفرق f(x)-x ثم حساب نهايته.",
+          "why_this_method": "لأن معيار المقارب يعتمد على نهاية الفرق.",
+          "used_theorem": "معيار المستقيم المقارب.",
+          "bac_template": [
+            "نكتب الفرق.",
+            "نبسطه.",
+            "نحسب النهاية.",
+            "نستنتج."
+          ],
+          "formal_writing": [
+            "نكتب f(x)-x.",
+            "نحسب النهاية.",
+            "نستنتج المقارب."
+          ]
+        },
+        "formal_writing": [
+          "نبسط الفرق.",
+          "نحسب النهاية.",
+          "نكتب النتيجة."
+        ],
+        "react_display": {
+          "show_strategy": true,
+          "show_steps": true,
+          "show_final_answer": true,
+          "show_graph": false,
+          "show_table": false,
+          "graph_key": "graph_data",
+          "table_key": "table_data",
+          "math_renderer": "better-react-mathjax"
+        },
+        "pedagogical_detail": {
+          "level": "مبسط جدًا",
+          "show_intermediate_calculations": true,
+          "explain_rule_before_use": true,
+          "state_final_conclusion": true
+        },
+        "display_order": [
+          "strategy",
+          "steps",
+          "final_answer",
+          "verification"
+        ],
+        "validation": {
+          "final_answer_checked": true,
+          "mathematical_consistency_checked": true
+        },
+        "main_idea": "نبسط f(x)-x إلى -2/√(x+1)، ونهايته 0.",
+        "detailed_explanation": "هذه النهاية هي اللازمة مباشرة لسؤال إثبات أن y=x مستقيم مقارب.",
+        "answer_style": "idea_then_steps_then_conclusion"
+      },
+      "display_order": 2,
+      "content_type": "question"
+    }
+  ],
+  "content_separation": {
+    "statement": "تعريف الدالة ومجالها يكتبان مرة واحدة فقط.",
+    "questions": "تحتوي فقط على مطالب النهايات دون تكرار تعريف الدالة.",
+    "solution": "حل بسيط ومفصل مع شرح الإشارات وحالات عدم التعيين عند وجودها."
+  },
+  "review_status": {
+    "function_definition_not_repeated_in_questions": true,
+    "chapter_code_checked": true,
+    "exercise_kept_as_single_file": true,
+    "mathematical_results_rechecked": true,
+    "source_image_rechecked": true
+  }
+}

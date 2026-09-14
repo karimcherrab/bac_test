@@ -1,0 +1,175 @@
+{
+  "schema_version": "3.0-bac-pedagogical-verified",
+  "language": "ar",
+  "direction": "rtl",
+  "branch": {
+    "code": "math_tech",
+    "name": "شعبة تقني رياضي"
+  },
+  "branch_code": "math_tech",
+  "branches": [
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "chapter_code": "limits_continuity",
+  "year": 2008,
+  "exercise_number": 4,
+  "source_page": 1,
+  "source_reference": "بكالوريا 2008 — شعبة تقني رياضي — التمرين الرابع، من ملف fonctions_math_tech.pdf.",
+  "title": "بكالوريا 2008 — تقني رياضي — نهايات عند أطراف مجال التعريف",
+  "axis_tags": [
+    "limits_continuity"
+  ],
+  "statement": "الدالة العددية \\(f\\) المعرفة على \\(]-2,+\\infty[\\) كما يأتي:\n\\[\nf(x)=\\frac{x^2+5}{x+2}.\n\\]",
+  "statement_graph_data": null,
+  "questions": [
+    {
+      "id": "2008_tech_limits_domain",
+      "text": "احسب نهايات الدالة \\(f\\) عند أطراف مجموعة التعريف:\n\\[\n\\lim_{x\\to-2^+}f(x)\n\\qquad\\text{و}\\qquad\n\\lim_{x\\to+\\infty}f(x).\n\\]",
+      "axis_tags": [
+        "limits_continuity"
+      ],
+      "solution": {
+        "strategy": "نحسب كل نهاية على حدة. عند \\(-2^+\\) ندرس إشارة البسط والمقام. وعند \\(+\\infty\\) يظهر الشكل \\(\\infty/\\infty\\)، وهو حالة عدم تعيين، فنزيلها بقسمة البسط والمقام على \\(x\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "النهاية عند -2 من اليمين: البسط",
+            "explanation": "نعوض في البسط لأنه كثيرة حدود.",
+            "latex": "\\lim_{x\\to-2^+}(x^2+5)=(-2)^2+5=9",
+            "why": "البسط يقترب من عدد موجب غير منعدم.",
+            "student_tip": "ابدأ دائمًا بحساب نهاية البسط ونهاية المقام كل واحدة على حدة."
+          },
+          {
+            "step_number": 2,
+            "title": "النهاية عند -2 من اليمين: المقام",
+            "explanation": "عندما يقترب \\(x\\) من \\(-2\\) من اليمين، يكون \\(x+2\\) موجبًا وقريبًا جدًا من الصفر.",
+            "latex": "\\lim_{x\\to-2^+}(x+2)=0^+",
+            "why": "جهة الاقتراب تحدد إشارة المقام.",
+            "student_tip": "الرمز \\(-2^+\\) يعني قيمًا أكبر قليلًا من \\(-2\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "هل توجد حالة عدم تعيين؟",
+            "explanation": "لدينا عدد موجب غير منعدم على صفر موجب، أي \\(9/0^+\\). هذه ليست حالة عدم تعيين.",
+            "latex": "\\frac{9}{0^+}=+\\infty",
+            "why": "حالات عدم التعيين تكون مثل \\(0/0\\) أو \\(\\infty/\\infty\\)، أما هنا فالبسط يقترب من 9.",
+            "student_tip": "لا تقل «حالة عدم تعيين» إلا إذا ظهر أحد الأشكال غير المعينة المعروفة."
+          },
+          {
+            "step_number": 4,
+            "title": "نستنتج النهاية الأولى",
+            "explanation": "إذن الدالة تكبر دون حد عندما نقترب من \\(-2\\) من اليمين.",
+            "latex": "\\boxed{\\lim_{x\\to-2^+}f(x)=+\\infty}",
+            "why": "البسط موجب والمقام موجب ويقترب من الصفر.",
+            "student_tip": "هذه النتيجة تعني أن \\(x=-2\\) مستقيم مقارب عمودي."
+          },
+          {
+            "step_number": 5,
+            "title": "النهاية عند +∞: نحدد الشكل",
+            "explanation": "عند \\(+\\infty\\)، البسط يتجه إلى \\(+\\infty\\) والمقام أيضًا إلى \\(+\\infty\\).",
+            "latex": "\\frac{x^2+5}{x+2}\\longrightarrow\\frac{+\\infty}{+\\infty}",
+            "why": "هذا هو الشكل \\(\\infty/\\infty\\)، وهو حالة عدم تعيين.",
+            "student_tip": "عندما ترى \\(\\infty/\\infty\\)، اذكر صراحة أنها حالة عدم تعيين."
+          },
+          {
+            "step_number": 6,
+            "title": "نزيل حالة عدم التعيين",
+            "explanation": "نقسم البسط والمقام على \\(x\\).",
+            "latex": "f(x)=\\frac{x^2+5}{x+2}=\\frac{x+\\frac5x}{1+\\frac2x}",
+            "why": "بعد القسمة تصبح الحدود التي تحتوي على \\(1/x\\) متجهة إلى الصفر.",
+            "student_tip": "في دالة ناطقة، قسمة البسط والمقام على قوة مناسبة من \\(x\\) طريقة بسيطة لرفع حالة عدم التعيين."
+          },
+          {
+            "step_number": 7,
+            "title": "نحسب النهاية بعد التبسيط",
+            "explanation": "عندما \\(x\\to+\\infty\\)، فإن \\(5/x\\to0\\) و\\(2/x\\to0\\)، بينما \\(x\\to+\\infty\\).",
+            "latex": "\\lim_{x\\to+\\infty}\\frac{x+\\frac5x}{1+\\frac2x}=\\frac{+\\infty+0}{1+0}=+\\infty",
+            "why": "تم رفع حالة عدم التعيين.",
+            "student_tip": "بعد التبسيط لا يبقى شكل غير معين."
+          },
+          {
+            "step_number": 8,
+            "title": "نستنتج النهاية الثانية",
+            "explanation": "إذن:",
+            "latex": "\\boxed{\\lim_{x\\to+\\infty}f(x)=+\\infty}",
+            "why": "النهاية المحسوبة بعد رفع حالة عدم التعيين موجبة غير محدودة.",
+            "student_tip": "اكتب النتيجة النهائية في سطر مستقل."
+          }
+        ],
+        "final_answer": "\\[\n\\boxed{\\lim_{x\\to-2^+}f(x)=+\\infty}\n\\qquad\\text{و}\\qquad\n\\boxed{\\lim_{x\\to+\\infty}f(x)=+\\infty}.\n\\]",
+        "verification": "النتيجتان منسجمتان مع مجال تعريف الدالة ومع سلوك الدالة الناطقة عند طرفي المجال.",
+        "common_mistakes": [
+          "نسيان أن الاقتراب من -2 يكون من اليمين فقط لأن المجال هو ]-2,+∞[.",
+          "اعتبار 9/0^+ حالة عدم تعيين، وهي ليست كذلك.",
+          "إعطاء نتيجة مباشرة للشكل ∞/∞ دون رفع حالة عدم التعيين."
+        ],
+        "hints": [
+          "عند -2: احسب نهاية البسط والمقام مع الإشارة.",
+          "عند +∞: ستظهر حالة عدم تعيين ∞/∞.",
+          "اقسم البسط والمقام على x."
+        ],
+        "graph_data": null,
+        "table_data": null,
+        "solution_style": "حل مفصل ومبسط جدًا: تحديد الشكل، ذكر حالة عدم التعيين إن وجدت، ثم رفعها بخطوات قصيرة، وأخيرًا النتيجة.",
+        "methodology": {
+          "goal": "حساب نهايات f عند أطراف مجموعة التعريف.",
+          "method": "دراسة البسط والمقام عند -2، ثم رفع حالة ∞/∞ عند +∞ بالقسمة على x.",
+          "why_this_method": "لأنها طريقة مباشرة وواضحة ومناسبة لتلميذ البكالوريا.",
+          "used_theorem": "قواعد النهايات للدوال الناطقة.",
+          "bac_template": [
+            "نحسب نهاية البسط والمقام.",
+            "نحدد إن كان الشكل معينًا أو غير معين.",
+            "إذا كانت هناك حالة عدم تعيين نرفعها.",
+            "نكتب النتيجة النهائية."
+          ],
+          "formal_writing": [
+            "نكتب النهاية.",
+            "نحدد شكلها.",
+            "نرفع حالة عدم التعيين إن وجدت.",
+            "نستنتج."
+          ]
+        },
+        "formal_writing": [
+          "نحسب نهاية البسط والمقام.",
+          "نذكر حالة عدم التعيين إن ظهرت.",
+          "نقوم بالتبسيط المناسب.",
+          "نكتب النتيجة النهائية."
+        ],
+        "react_display": {
+          "show_strategy": true,
+          "show_steps": true,
+          "show_final_answer": true,
+          "show_graph": false,
+          "show_table": false,
+          "graph_key": "graph_data",
+          "table_key": "table_data",
+          "math_renderer": "better-react-mathjax"
+        },
+        "pedagogical_detail": {
+          "level": "مبسط جدًا",
+          "show_intermediate_calculations": true,
+          "explain_rule_before_use": true,
+          "state_final_conclusion": true
+        },
+        "display_order": [
+          "strategy",
+          "steps",
+          "final_answer",
+          "verification"
+        ],
+        "validation": {
+          "final_answer_checked": true,
+          "mathematical_consistency_checked": true
+        },
+        "main_idea": "عند -2 لا توجد حالة عدم تعيين، وعند +∞ توجد حالة ∞/∞ فنرفعها بالقسمة على x.",
+        "detailed_explanation": "تم استخراج فقط النهايات المطلوبة في السؤال (أ) من التمرين الرابع لسنة 2008 شعبة تقني رياضي.",
+        "answer_style": "idea_then_steps_then_conclusion"
+      },
+      "display_order": 1,
+      "content_type": "question"
+    }
+  ]
+}

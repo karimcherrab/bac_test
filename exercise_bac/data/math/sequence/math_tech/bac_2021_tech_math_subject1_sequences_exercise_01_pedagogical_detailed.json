@@ -1,0 +1,316 @@
+{
+  "schema_version": "4.5-bac-source",
+  "version": "4.2-2021-tech-math-subject1-sequences-ex01",
+  "language": "ar",
+  "direction": "rtl",
+  "year": 2021,
+  "session": "ordinary",
+  "chapter_code": "sequences",
+  "chapter_title": "sequences",
+  "exercise_number": 1,
+  "points": 4,
+  "source_pages": [
+    1
+  ],
+  "solution_source_pages": [
+    5
+  ],
+  "branches": [
+    {
+      "code": "math_tech",
+      "name": "شعبة تقني رياضي"
+    }
+  ],
+  "title": "التمرين الأول — بكالوريا الجزائر 2021 — متتالية تراجعية ومتتالية هندسية ومجموع",
+  "axis_tags": [
+    "recursive_sequence",
+    "mathematical_induction",
+    "bounded_sequence",
+    "sequence_monotonicity",
+    "sequence_convergence",
+    "geometric_sequence",
+    "explicit_formula",
+    "sequence_limit",
+    "geometric_sum"
+  ],
+  "statement": "التمرين الأول: (04 نقاط)\n\nالمتتالية العددية \\((u_n)\\) معرفة بحدها الأول \\(u_0\\) حيث:\n\\[\nu_0=3\n\\]\nومن أجل كل عدد طبيعي \\(n\\):\n\\[\nu_{n+1}=\\frac79u_n+1.\n\\]\n\n1) أ. برهن بالتراجع أنه من أجل كل عدد طبيعي \\(n\\):\n\\[\nu_n<\\frac92.\n\\]\n\nب. بين أن المتتالية \\((u_n)\\) متزايدة تماما ثم استنتج أنها متقاربة.\n\n2) المتتالية العددية \\((v_n)\\) معرفة على \\(\\mathbb N\\) بـ:\n\\[\nv_n=\\frac13u_n-\\frac32.\n\\]\n\nأ. بين أن المتتالية \\((v_n)\\) هندسية أساسها \\(\\frac79\\)، ثم احسب حدها الأول.\n\nب. اكتب عبارة الحد العام \\(v_n\\) بدلالة \\(n\\).\n\nج. استنتج أنه من أجل كل عدد طبيعي \\(n\\):\n\\[\nu_n=-\\frac32\\left(\\frac79\\right)^n+\\frac92\n\\]\nثم احسب:\n\\[\n\\lim_{n\\to+\\infty}u_n.\n\\]\n\n3) احسب بدلالة العدد الطبيعي \\(n\\) المجموع \\(S_n\\) حيث:\n\\[\nS_n=\\frac13u_0+\\frac13u_1+\\cdots+\\frac13u_n.\n\\]",
+  "figures": [],
+  "questions": [
+    {
+      "id": "2021_tech_math_s1_ex01_q1a",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1-أ) برهن بالتراجع أنه من أجل كل عدد طبيعي \\(n\\): \\(u_n<\\frac92\\).",
+      "solution": {
+        "introduction": "نثبت الحصر الأعلى باستعمال البرهان بالتراجع.",
+        "strategy": "نتحقق عند \\(n=0\\)، ثم نفترض \\(u_n<9/2\\) ونستعمل العلاقة التراجعية.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التحقق عند n=0",
+            "explanation": "لدينا:\n\\[u_0=3<\\frac92.\\]",
+            "result": "الخاصية صحيحة عند \\(n=0\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "فرضية التراجع",
+            "explanation": "نفترض أنه من أجل عدد طبيعي \\(n\\):\n\\[u_n<\\frac92.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الانتقال إلى n+1",
+            "explanation": "من فرضية التراجع:\n\\[\\frac79u_n<\\frac79\\cdot\\frac92=\\frac72.\\]\nبإضافة 1 للطرفين:\n\\[\\frac79u_n+1<\\frac72+1=\\frac92.\\]\nلكن:\n\\[u_{n+1}=\\frac79u_n+1.\\]\nإذن:",
+            "result": "\\[u_{n+1}<\\frac92.\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "الخلاصة",
+            "explanation": "حسب مبدأ التراجع:\n\\[u_n<\\frac92\\]\nلكل \\(n\\in\\mathbb N\\)."
+          }
+        ],
+        "final_answer": "\\(\\boxed{u_n<\\frac92\\text{ لكل }n\\in\\mathbb N}\\).",
+        "verification": "تمت مراجعة الحل مع الإجابة النموذجية الرسمية لبكالوريا 2021، الموضوع الأول، التمرين الأول.",
+        "common_mistakes": [
+          "نسيان إضافة 1 بعد ضرب فرضية التراجع في 7/9."
+        ],
+        "hints": [
+          "استعمل مباشرة العلاقة u_{n+1}=7u_n/9+1."
+        ],
+        "summary": "الحد 9/2 ثابت بالنسبة للعلاقة التراجعية، ولذلك تبقى كل الحدود أصغر منه.",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2021_tech_math_s1_ex01_q1b",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "1-ب) بين أن المتتالية \\((u_n)\\) متزايدة تماما ثم استنتج أنها متقاربة.",
+      "solution": {
+        "introduction": "ندرس الفرق بين حدين متتاليين ثم نستعمل الحصر السابق.",
+        "strategy": "نحسب \\(u_{n+1}-u_n\\) ونستعمل \\(u_n<9/2\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب الفرق",
+            "explanation": "\\[u_{n+1}-u_n=\\frac79u_n+1-u_n=1-\\frac29u_n.\\]\nأي:\n\\[u_{n+1}-u_n=\\frac{9-2u_n}{9}.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "إشارة الفرق",
+            "explanation": "من السؤال السابق:\n\\[u_n<\\frac92\\Rightarrow 2u_n<9\\Rightarrow 9-2u_n>0.\\]\nإذن:",
+            "result": "\\[u_{n+1}-u_n>0.\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "اتجاه التغير",
+            "explanation": "إذن المتتالية \\((u_n)\\) متزايدة تماما."
+          },
+          {
+            "step_number": 4,
+            "title": "التقارب",
+            "explanation": "لدينا \\((u_n)\\) متزايدة تماما ومحدودة من الأعلى بالعدد \\(\\frac92\\). وكل متتالية متزايدة ومحدودة من الأعلى متقاربة.",
+            "result": "\\((u_n)\\) متقاربة."
+          }
+        ],
+        "final_answer": "\\(\\boxed{(u_n)\\text{ متزايدة تماما ومحدودة من الأعلى بـ }\\frac92\\Rightarrow\\text{ متقاربة}}\\).",
+        "verification": "تمت مراجعة الحل مع الإجابة النموذجية الرسمية لبكالوريا 2021، الموضوع الأول، التمرين الأول.",
+        "common_mistakes": [
+          "إثبات التزايد دون استعمال الحصر لإثبات التقارب."
+        ],
+        "hints": [
+          "احسب u_{n+1}-u_n."
+        ],
+        "summary": "الفرق موجب، والمتتالية محدودة من الأعلى، إذن هي متقاربة.",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2021_tech_math_s1_ex01_q2a",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "2-أ) بين أن المتتالية \\((v_n)\\) هندسية أساسها \\(\\frac79\\)، ثم احسب حدها الأول.",
+      "solution": {
+        "introduction": "نحسب \\(v_{n+1}\\) بدلالة \\(v_n\\).",
+        "strategy": "نعوض العلاقة التراجعية لـu_n داخل تعريف v_{n+1}.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب v_{n+1}",
+            "explanation": "\\[v_{n+1}=\\frac13u_{n+1}-\\frac32.\\]\nوبالتعويض:\n\\[v_{n+1}=\\frac13\\left(\\frac79u_n+1\\right)-\\frac32\\]\n\\[=\\frac7{27}u_n+\\frac13-\\frac32\\]\n\\[=\\frac7{27}u_n-\\frac76.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "استخراج العامل 7/9",
+            "explanation": "\\[\\frac7{27}u_n-\\frac76=\\frac79\\left(\\frac13u_n-\\frac32\\right).\\]\nإذن:\n\\[v_{n+1}=\\frac79v_n.\\]",
+            "result": "\\((v_n)\\) هندسية أساسها \\(\\frac79\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "حساب v₀",
+            "explanation": "\\[v_0=\\frac13u_0-\\frac32=\\frac13\\cdot3-\\frac32=1-\\frac32=-\\frac12.\\]",
+            "result": "\\(v_0=-\\frac12\\)."
+          }
+        ],
+        "final_answer": "\\(\\boxed{v_{n+1}=\\frac79v_n}\\) و\\(\\boxed{v_0=-\\frac12}\\).",
+        "verification": "تمت مراجعة الحل مع الإجابة النموذجية الرسمية لبكالوريا 2021، الموضوع الأول، التمرين الأول.",
+        "common_mistakes": [
+          "الخطأ في حساب 1/3 - 3/2."
+        ],
+        "hints": [
+          "حاول كتابة v_{n+1} على شكل (7/9)×v_n."
+        ],
+        "summary": "النسبة ثابتة وتساوي 7/9، والحد الأول -1/2.",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2021_tech_math_s1_ex01_q2b",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "2-ب) اكتب عبارة الحد العام \\(v_n\\) بدلالة \\(n\\).",
+      "solution": {
+        "introduction": "نستعمل صيغة الحد العام لمتتالية هندسية.",
+        "strategy": "بما أن الحد الأول v₀ معلوم والأساس معلوم، نطبق v_n=v₀q^n.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تطبيق القانون",
+            "explanation": "لدينا:\n\\[v_0=-\\frac12,\\qquad q=\\frac79.\\]\nإذن:\n\\[v_n=v_0q^n.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "النتيجة",
+            "explanation": "\\[v_n=-\\frac12\\left(\\frac79\\right)^n.\\]",
+            "result": "\\(v_n=-\\frac12(7/9)^n\\)."
+          }
+        ],
+        "final_answer": "\\(\\boxed{v_n=-\\frac12\\left(\\frac79\\right)^n}\\).",
+        "verification": "تمت مراجعة الحل مع الإجابة النموذجية الرسمية لبكالوريا 2021، الموضوع الأول، التمرين الأول.",
+        "common_mistakes": [
+          "استعمال q^{n-1} رغم أن البداية من v₀."
+        ],
+        "hints": [
+          "استعمل v_n=v₀q^n."
+        ],
+        "summary": "الحد العام يتبع مباشرة من كون v_n هندسية.",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2021_tech_math_s1_ex01_q2c",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "2-ج) استنتج أنه من أجل كل عدد طبيعي \\(n\\): \\(u_n=-\\frac32(\\frac79)^n+\\frac92\\)، ثم احسب \\(\\lim_{n\\to+\\infty}u_n\\).",
+      "solution": {
+        "introduction": "نستعمل العلاقة بين u_n وv_n.",
+        "strategy": "نعزل u_n من تعريف v_n ثم نعوض عبارة v_n.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "عزل u_n",
+            "explanation": "من:\n\\[v_n=\\frac13u_n-\\frac32\\]\nنحصل على:\n\\[\\frac13u_n=v_n+\\frac32\\]\nومن ثم:\n\\[u_n=3v_n+\\frac92.\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "التعويض بعبارة v_n",
+            "explanation": "\\[u_n=3\\left[-\\frac12\\left(\\frac79\\right)^n\\right]+\\frac92\\]\n\\[=-\\frac32\\left(\\frac79\\right)^n+\\frac92.\\]",
+            "result": "العبارة المطلوبة."
+          },
+          {
+            "step_number": 3,
+            "title": "حساب النهاية",
+            "explanation": "بما أن:\n\\[0<\\frac79<1,\\]\nفإن:\n\\[\\left(\\frac79\\right)^n\\to0.\\]\nإذن:",
+            "result": "\\[\\lim_{n\\to+\\infty}u_n=\\frac92.\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{u_n=-\\frac32(\\frac79)^n+\\frac92}\\) و\\(\\boxed{\\lim u_n=\\frac92}\\).",
+        "verification": "تمت مراجعة الحل مع الإجابة النموذجية الرسمية لبكالوريا 2021، الموضوع الأول، التمرين الأول.",
+        "common_mistakes": [
+          "نسيان ضرب v_n في 3 عند الرجوع إلى u_n."
+        ],
+        "hints": [
+          "من v_n=1/3u_n-3/2 استخرج u_n."
+        ],
+        "summary": "الصيغة الصريحة تؤكد أن u_n تتقارب إلى 9/2.",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    },
+    {
+      "id": "2021_tech_math_s1_ex01_q3",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "3) احسب بدلالة العدد الطبيعي \\(n\\) المجموع \\(S_n=\\frac13u_0+\\frac13u_1+\\cdots+\\frac13u_n\\).",
+      "solution": {
+        "introduction": "نستعمل العلاقة \\(\\frac13u_k=v_k+\\frac32\\).",
+        "strategy": "نفصل المجموع إلى مجموع هندسي ومجموع ثابت.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "إعادة كتابة حدود المجموع",
+            "explanation": "من تعريف \\(v_k\\):\n\\[\\frac13u_k=v_k+\\frac32.\\]\nإذن:\n\\[S_n=(v_0+v_1+\\cdots+v_n)+\\frac32(n+1).\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب مجموع v_k",
+            "explanation": "لدينا:\n\\[v_k=-\\frac12\\left(\\frac79\\right)^k.\\]\nإذن:\n\\[\\sum_{k=0}^{n}v_k=-\\frac12\\frac{1-(7/9)^{n+1}}{1-7/9}.\\]\nوبما أن:\n\\[1-\\frac79=\\frac29,\\]\nفنجد:\n\\[\\sum_{k=0}^{n}v_k=-\\frac94\\left(1-\\left(\\frac79\\right)^{n+1}\\right).\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "النتيجة",
+            "explanation": "إذن:\n\\[S_n=\\frac94\\left[\\left(\\frac79\\right)^{n+1}-1\\right]+\\frac32(n+1).\\]",
+            "result": "هذه هي عبارة S_n بدلالة n."
+          }
+        ],
+        "final_answer": "\\(\\boxed{S_n=\\frac94\\left[\\left(\\frac79\\right)^{n+1}-1\\right]+\\frac32(n+1)}\\).",
+        "verification": "تمت مراجعة الحل مع الإجابة النموذجية الرسمية لبكالوريا 2021، الموضوع الأول، التمرين الأول.",
+        "common_mistakes": [
+          "نسيان أن مجموع الثابت 3/2 من k=0 إلى n يساوي 3/2(n+1)."
+        ],
+        "hints": [
+          "اكتب (1/3)u_k=v_k+3/2."
+        ],
+        "summary": "S_n يساوي مجموع v_k الهندسي زائد 3/2 مكررة n+1 مرة.",
+        "answer_style": "explain_then_calculate_then_conclude"
+      }
+    }
+  ],
+  "source_reference": {
+    "file": "2021(2).pdf",
+    "statement_pages": [
+      1
+    ],
+    "solution_pages": [
+      5
+    ],
+    "source_faithful_statement": true,
+    "solution_reviewed_against_source": true
+  },
+  "display": {
+    "layout": "question_by_question",
+    "show_statement_first": true,
+    "show_statement_figures": true,
+    "show_solution_after_click": true,
+    "show_solution_figures": true
+  },
+  "review_status": {
+    "statement_compared_with_original_pdf": true,
+    "questions_compared_with_original_pdf": true,
+    "source_figures_checked": true,
+    "solution_checked_against_correction": true,
+    "latex_normalized_only": true,
+    "react_ready": true
+  },
+  "given_data": {
+    "u0": "3",
+    "recurrence": "u_{n+1}=7/9*u_n+1",
+    "upper_bound": "9/2",
+    "monotonicity": "strictly_increasing",
+    "v_n": "u_n/3-3/2",
+    "v0": "-1/2",
+    "ratio_v": "7/9",
+    "explicit_v": "-1/2*(7/9)^n",
+    "explicit_u": "-3/2*(7/9)^n+9/2",
+    "limit_u": "9/2",
+    "S_n": "9/4*((7/9)^(n+1)-1)+3/2*(n+1)"
+  }
+}

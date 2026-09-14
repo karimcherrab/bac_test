@@ -1,0 +1,249 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2008-science-sequences-subject1-ex03",
+  "session": "ordinary",
+  "year": 2008,
+  "chapter_code": "sequences",
+  "chapter_title": "المتتاليات العددية",
+  "axis_tags": [
+    "sequence_defined_by_function",
+    "invariant_interval",
+    "monotonic_sequence",
+    "sequence_convergence",
+    "explicit_sequence_formula",
+    "sequence_limit"
+  ],
+  "branches": [
+    {
+      "code": "science",
+      "name": "شعبة علوم تجريبية"
+    }
+  ],
+  "exercise_number": 3,
+  "subject_number": 1,
+  "source_page": 4,
+  "source_pages": [
+    4
+  ],
+  "solution_source_pages": [
+    6
+  ],
+  "title": "التمرين الثالث — بكالوريا الجزائر 2008 — الموضوع الأول — شعبة علوم تجريبية",
+  "statement": "نعتبر الدالة \\(f\\) المعرفة على المجال \\(I=[1,2]\\) بالعبارة: \\(f(x)=\\frac{x+2}{-x+4}\\).",
+  "questions": [
+    {
+      "id": "2008_s1_sequences_ex03_q1a",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) أ- بين أن الدالة \\(f\\) متزايدة تماما على \\(I\\).",
+      "axis_tags": [
+        "function_monotonicity"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب مشتقة الدالة ثم ندرس إشارتها على المجال \\(I=[1,2]\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب المشتقة",
+            "explanation": "لدينا \\(f(x)=\\frac{x+2}{4-x}\\). باستعمال مشتقة خارج دالتين:\n\\[\nf'(x)=\\frac{1(4-x)-(x+2)(-1)}{(4-x)^2}\n=\\frac{4-x+x+2}{(4-x)^2}\n=\\frac{6}{(4-x)^2}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "دراسة الإشارة",
+            "explanation": "لكل \\(x\\in[1,2]\\) لدينا \\((4-x)^2>0\\)، وبالتالي:\n\\[\nf'(x)=\\frac{6}{(4-x)^2}>0.\n\\]\nإذن مشتقة \\(f\\) موجبة تمامًا على \\(I\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "الاستنتاج",
+            "explanation": "بما أن \\(f'(x)>0\\) على \\(I\\)، فإن الدالة \\(f\\) متزايدة تمامًا على \\(I\\)."
+          }
+        ],
+        "final_answer": "الدالة \\(f\\) متزايدة تمامًا على \\(I=[1,2]\\)."
+      }
+    },
+    {
+      "id": "2008_s1_sequences_ex03_q1b",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "ب- بين أنه من أجل كل عدد حقيقي \\(x\\) من المجال \\(I\\)، \\(f(x)\\) ينتمي إلى \\(I\\).",
+      "axis_tags": [
+        "invariant_interval"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "بما أن \\(f\\) متزايدة على \\([1,2]\\)، نحصر \\(f(x)\\) بين \\(f(1)\\) و\\(f(2)\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "استعمال تزايد الدالة",
+            "explanation": "إذا كان \\(x\\in[1,2]\\)، وبما أن \\(f\\) متزايدة على هذا المجال، فإن:\n\\[\nf(1)\\le f(x)\\le f(2).\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب صورتي طرفي المجال",
+            "explanation": "نحسب:\n\\[\nf(1)=\\frac{1+2}{-1+4}=1,\n\\qquad\nf(2)=\\frac{2+2}{-2+4}=2.\n\\]\nإذن:\n\\[\n1\\le f(x)\\le 2.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الاستنتاج",
+            "explanation": "العلاقة \\(1\\le f(x)\\le 2\\) تعني مباشرة أن \\(f(x)\\in[1,2]=I\\)."
+          }
+        ],
+        "final_answer": "لكل \\(x\\in I\\)، لدينا \\(f(x)\\in I\\)."
+      }
+    },
+    {
+      "id": "2008_s1_sequences_ex03_q2a",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "2) هي المتتالية العددية \\((u_n)\\) المعرفة على \\(N\\) كما يأتي: \\(u_0=\\frac{3}{2}\\) و \\(u_{n+1}=f(u_n)\\). أ- برهن بالتراجع أنه من أجل كل عدد طبيعي \\(n\\)، \\(u_n\\) ينتمي إلى \\(I\\).",
+      "axis_tags": [
+        "sequence_induction",
+        "invariant_interval"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نبرهن بالتراجع أن كل حد من حدود المتتالية يبقى داخل المجال \\(I\\)، باستعمال النتيجة السابقة \\(f(I)\\subset I\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التحقق عند البداية",
+            "explanation": "لدينا:\n\\[\nu_0=\\frac32.\n\\]\nوبما أن \\(1\\le\\frac32\\le2\\)، فإن \\(u_0\\in I\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "فرضية التراجع",
+            "explanation": "نفترض أنه من أجل رتبة طبيعية \\(n\\) لدينا \\(u_n\\in I\\)."
+          },
+          {
+            "step_number": 3,
+            "title": "خطوة الانتقال",
+            "explanation": "من السؤال السابق، لكل \\(x\\in I\\) لدينا \\(f(x)\\in I\\). وبما أن \\(u_n\\in I\\)، فإن:\n\\[\nf(u_n)\\in I.\n\\]\nلكن \\(u_{n+1}=f(u_n)\\)، إذن \\(u_{n+1}\\in I\\)."
+          },
+          {
+            "step_number": 4,
+            "title": "الخلاصة",
+            "explanation": "إذن بالتراجع:\n\\[\n\\forall n\\in\\mathbb N,\\quad u_n\\in I=[1,2].\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\forall n\\in\\mathbb N,\\ u_n\\in[1,2]\\)."
+      }
+    },
+    {
+      "id": "2008_s1_sequences_ex03_q2b",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "ب- ادرس اتجاه تغير المتتالية \\((u_n)\\)، ثم استنتج أنها متقاربة.",
+      "axis_tags": [
+        "monotonic_sequence",
+        "sequence_convergence"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب الفرق \\(u_{n+1}-u_n\\)، ثم نحدد إشارته باستعمال \\(u_n\\in[1,2]\\). بعد ذلك نستعمل مبرهنة المتتالية الرتيبة والمحدودة.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "حساب الفرق",
+            "explanation": "لدينا:\n\\[\nu_{n+1}-u_n=f(u_n)-u_n\n=\\frac{u_n+2}{4-u_n}-u_n.\n\\]\nنوحد المقام:\n\\[\nu_{n+1}-u_n\n=\\frac{u_n+2-u_n(4-u_n)}{4-u_n}\n=\\frac{u_n^2-3u_n+2}{4-u_n}.\n\\]\nوبالتحليل:\n\\[\nu_{n+1}-u_n=\\frac{(u_n-1)(u_n-2)}{4-u_n}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "دراسة إشارة الفرق",
+            "explanation": "نعلم أن \\(u_n\\in[1,2]\\). لذلك:\n\\[\nu_n-1\\ge0,\\qquad u_n-2\\le0,\n\\]\nومن ثم \\((u_n-1)(u_n-2)\\le0\\). كما أن:\n\\[\n4-u_n\\ge2>0.\n\\]\nإذن:\n\\[\nu_{n+1}-u_n\\le0.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "اتجاه التغير",
+            "explanation": "بما أن \\(u_{n+1}-u_n\\le0\\) لكل \\(n\\)، فإن المتتالية \\((u_n)\\) متناقصة."
+          },
+          {
+            "step_number": 4,
+            "title": "التقارب",
+            "explanation": "من السؤال السابق \\(u_n\\in[1,2]\\)، وبالتالي \\(u_n\\ge1\\). إذن المتتالية متناقصة ومحدودة من الأسفل، ولذلك فهي متقاربة."
+          }
+        ],
+        "final_answer": "المتتالية \\((u_n)\\) متناقصة ومحدودة من الأسفل بـ \\(1\\)، وبالتالي فهي متقاربة."
+      }
+    },
+    {
+      "id": "2008_s1_sequences_ex03_q3a",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "3) أ) برهن بالتراجع أنه من أجل كل عدد طبيعي \\(n\\): \\(u_n=1+\\frac{1}{\\left(\\frac{3}{2}\\right)^n+1}\\).",
+      "axis_tags": [
+        "explicit_sequence_formula",
+        "sequence_induction"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نتحقق من صحة العبارة عند \\(n=0\\)، ثم نفترضها صحيحة عند \\(n\\) ونستعمل علاقة الرجوع لإثباتها عند \\(n+1\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "التحقق عند n=0",
+            "explanation": "الطرف الأيمن يعطي:\n\\[\n1+\\frac{1}{\\left(\\frac32\\right)^0+1}\n=1+\\frac{1}{2}=\\frac32=u_0.\n\\]\nإذن الخاصية صحيحة عند \\(n=0\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "فرضية التراجع",
+            "explanation": "نفترض أنه عند رتبة \\(n\\):\n\\[\nu_n=1+\\frac{1}{\\left(\\frac32\\right)^n+1}.\n\\]\nنضع للتبسيط \\(a=\\left(\\frac32\\right)^n\\)، فيصبح:\n\\[\nu_n=1+\\frac1{a+1}=\\frac{a+2}{a+1}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب u_{n+1}",
+            "explanation": "باستعمال \\(u_{n+1}=f(u_n)=\\frac{u_n+2}{4-u_n}\\):\n\\[\nu_{n+1}\n=\\frac{\\frac{a+2}{a+1}+2}{4-\\frac{a+2}{a+1}}\n=\\frac{3a+4}{3a+2}.\n\\]\nومن جهة أخرى:\n\\[\n1+\\frac{1}{\\left(\\frac32\\right)^{n+1}+1}\n=1+\\frac{1}{\\frac32a+1}\n=1+\\frac{2}{3a+2}\n=\\frac{3a+4}{3a+2}.\n\\]\nإذن الصيغتان متساويتان."
+          },
+          {
+            "step_number": 4,
+            "title": "الخلاصة",
+            "explanation": "بالتراجع نحصل على:\n\\[\n\\forall n\\in\\mathbb N,\\quad\nu_n=1+\\frac{1}{\\left(\\frac32\\right)^n+1}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(u_n=1+\\frac{1}{\\left(\\frac32\\right)^n+1}\\) لكل \\(n\\in\\mathbb N\\)."
+      }
+    },
+    {
+      "id": "2008_s1_sequences_ex03_q3b",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "ب) عين النهاية: \\(\\lim_{n\\to+\\infty}u_n\\).",
+      "axis_tags": [
+        "sequence_limit"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل العبارة الصريحة لـ \\(u_n\\) ونحسب نهاية الحد الذي يحتوي على \\(\\left(\\frac32\\right)^n\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "نهاية القوة",
+            "explanation": "بما أن \\(\\frac32>1\\)، فإن:\n\\[\n\\left(\\frac32\\right)^n\\longrightarrow +\\infty.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "نهاية الكسر",
+            "explanation": "إذن:\n\\[\n\\frac{1}{\\left(\\frac32\\right)^n+1}\\longrightarrow0.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "النهاية المطلوبة",
+            "explanation": "ومن العبارة:\n\\[\nu_n=1+\\frac{1}{\\left(\\frac32\\right)^n+1},\n\\]\nنحصل على:\n\\[\n\\boxed{\\lim_{n\\to+\\infty}u_n=1}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\displaystyle \\lim_{n\\to+\\infty}u_n=1\\)."
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2008(5).pdf",
+    "statement_figure_policy": "إذا كان الشكل موجوداً في نص البكالوريا يوضع في statement_graphs. إذا كان السؤال يطلب رسم شكل فلا يظهر الجواب قبل السؤال بل يوضع داخل الحل.",
+    "solution_figure_policy": "تضاف الرسومات اللازمة في خطوات الحل فقط، مع الحفاظ على معنى الشكل الأصلي أو شكل التصحيح.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  }
+}

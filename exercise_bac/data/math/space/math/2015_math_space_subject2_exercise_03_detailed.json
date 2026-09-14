@@ -1,0 +1,286 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "version": "4.2-2015-math-space-subject2-ex03-detailed",
+  "session": "ordinary",
+  "year": 2015,
+  "chapter_code": "space_geometry",
+  "chapter_title": "الهندسة في الفضاء",
+  "axis_tags": [
+    "space_parametric_line_plane",
+    "space_relative_positions_intersections",
+    "space_cartesian_plane_normal_vector",
+    "space_distances_projections",
+    "space_barycenter"
+  ],
+  "branches": [
+    {
+      "code": "math",
+      "name": "شعبة رياضيات"
+    }
+  ],
+  "exercise_number": 3,
+  "subject_number": 2,
+  "source_page": 5,
+  "source_pages": [
+    5
+  ],
+  "solution_source_pages": [
+    10
+  ],
+  "title": "التمرين الثالث — بكالوريا الجزائر 2015 — الموضوع الثاني — شعبة رياضيات",
+  "statement": "الفضاء منسوب إلى المعلم المتعامد المتجانس \\((O;\\vec{i},\\vec{j},\\vec{k})\\).\nنعتبر النقطتين \\(A(2;0;0)\\) و \\(B(-1;-5;-1)\\).\n\\((\\Delta_1)\\) المستقيم الذي يشمل النقطة \\(A\\) و \\(\\vec u(-1;2;-1)\\) شعاع توجيه له.\n\\((\\Delta_2)\\) المستقيم المعرف بالتمثيل الوسيطي التالي:\n\\[\n\\begin{cases}\nx=-3-3t\\\\\ny=2+2t\\\\\nz=7+3t\n\\end{cases}\n\\quad (t\\in\\mathbb R).\n\\]\n\\((d)\\) المستقيم الذي يشمل النقطة \\(B\\) و \\(\\vec v(2;5;3)\\) شعاع توجيه له.",
+  "questions": [
+    {
+      "id": "2015_s2_space_ex03_q1",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "1) بين أن المستقيمين \\((\\Delta_1)\\) و \\((\\Delta_2)\\) يتقاطعان في النقطة \\(C\\) يطلب تعيين إحداثياتها.",
+      "axis_tags": [
+        "space_parametric_line_plane",
+        "space_relative_positions_intersections"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نكتب تمثيلا وسيطيا لـΔ1 ثم نحل مع تمثيل Δ2.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تمثيل Δ1",
+            "explanation": "\\[\n(\\Delta_1):\\begin{cases}\nx=2-s\\\\\ny=2s\\\\\nz=-s\n\\end{cases}\n\\quad ;\\ s\\in\\mathbb R.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حل نظام التقاطع",
+            "explanation": "بمساواة الإحداثيات مع \\((\\Delta_2)\\) نجد:\n\\[\ns=-1,\\qquad t=-2.\\]\nومن ثم:\n\\[\nC(3,-2,1).\n\\]"
+          }
+        ],
+        "final_answer": "\\[(\\Delta_1)\\cap(\\Delta_2)=\\{C(3;-2;1)\\}.\\]"
+      }
+    },
+    {
+      "id": "2015_s2_space_ex03_q2",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "2) بين أن المستقيمين \\((\\Delta_1)\\) و \\((d)\\) ليسا من نفس المستوي.",
+      "axis_tags": [
+        "space_relative_positions_intersections"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نثبت أنهما غير متوازيين وغير متقاطعين.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "عدم التوازي",
+            "explanation": "شعاعا التوجيه هما:\n\\[\n\\vec u=(-1,2,-1),\\qquad \\vec v=(2,5,3).\n\\]\nوهما غير متناسبين."
+          },
+          {
+            "step_number": 2,
+            "title": "عدم التقاطع",
+            "explanation": "لو تقاطعا لوجد \\(s,r\\) بحيث:\n\\[\n(2-s,2s,-s)=(-1+2r,-5+5r,-1+3r).\n\\]\nمن المعادلتين الأولى والثالثة نجد \\(s=7\\) و\\(r=-2\\)، لكن المعادلة الثانية لا تتحقق."
+          }
+        ],
+        "final_answer": "المستقيمان \\((\\Delta_1)\\) و\\((d)\\) متخالفان، ومنه ليسا من نفس المستوي."
+      }
+    },
+    {
+      "id": "2015_s2_space_ex03_q3a",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "3) أ) اكتب تمثيلا وسيطيا للمستوي \\((\\mathcal P)\\) الذي يشمل المستقيمين \\((\\Delta_1)\\) و \\((\\Delta_2)\\).",
+      "axis_tags": [
+        "space_parametric_line_plane"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل نقطة التقاطع C وشعاعي توجيه المستقيمين.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "شعاعا توجيه المستوى",
+            "explanation": "\\[\n\\vec u=(-1,2,-1),\\qquad \\vec w=(-3,2,3).\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "التمثيل الوسيطي",
+            "explanation": "\\[\n(\\mathcal P):\\begin{cases}\nx=3-\\alpha-3\\beta\\\\\ny=-2+2\\alpha+2\\beta\\\\\nz=1-\\alpha+3\\beta\n\\end{cases}\n\\quad ;\\ (\\alpha,\\beta)\\in\\mathbb R^2.\n\\]"
+          }
+        ],
+        "final_answer": "\\[(\\mathcal P):\\begin{cases}x=3-\\alpha-3\\beta\\\\y=-2+2\\alpha+2\\beta\\\\z=1-\\alpha+3\\beta\\end{cases},\\quad (\\alpha,\\beta)\\in\\mathbb R^2.\\]"
+      }
+    },
+    {
+      "id": "2015_s2_space_ex03_q3b",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "ب) استنتج أن \\(4x+3y+2z-8=0\\) هي معادلة ديكارتية للمستوي \\((\\mathcal P)\\).",
+      "axis_tags": [
+        "space_cartesian_plane_normal_vector"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نبحث عن شعاع ناظم عمودي على شعاعي توجيه المستوى ثم نستعمل النقطة C.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "شعاع ناظم",
+            "explanation": "نأخذ \\(\\vec n=(4,3,2)\\). نتحقق:\n\\[\n\\vec n\\cdot(-1,2,-1)=0,\n\\qquad\n\\vec n\\cdot(-3,2,3)=0.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "المعادلة",
+            "explanation": "المعادلة من الشكل \\(4x+3y+2z+d=0\\). وبما أن \\(C(3,-2,1)\\in(\\mathcal P)\\):\n\\[\n12-6+2+d=0\\Rightarrow d=-8.\n\\]"
+          }
+        ],
+        "final_answer": "\\[(\\mathcal P):4x+3y+2z-8=0.\\]"
+      }
+    },
+    {
+      "id": "2015_s2_space_ex03_q3c",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "ج) تحقق من أن النقطة \\(C\\) هي المسقط العمودي للنقطة \\(B\\) على المستوي \\((\\mathcal P)\\).",
+      "axis_tags": [
+        "space_distances_projections"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نتحقق أن C تنتمي إلى P وأن BC مواز للشعاع الناظم للمستوى.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الانتماء",
+            "explanation": "\\[C(3,-2,1)\\in(\\mathcal P).\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "التعامد",
+            "explanation": "\\[\n\\overrightarrow{BC}=C-B=(4,3,2),\n\\]\nوهو شعاع ناظم للمستوى \\((\\mathcal P)\\)، إذن \\(BC\\perp(\\mathcal P)\\)."
+          }
+        ],
+        "final_answer": "\\(C\\) هو المسقط العمودي للنقطة \\(B\\) على \\((\\mathcal P)\\)."
+      }
+    },
+    {
+      "id": "2015_s2_space_ex03_q4a",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "4) أ) بين أنه توجد نقطة وحيدة \\(I\\) من المستقيم \\((d)\\) وتوجد نقطة وحيدة \\(D\\) من المستقيم \\((\\Delta_2)\\) حيث تكون النقط \\(A\\)، \\(I\\) و \\(D\\) في استقامية؛ يطلب تعيين إحداثيات النقطتين \\(I\\) و \\(D\\).",
+      "axis_tags": [
+        "space_parametric_line_plane",
+        "space_relative_positions_intersections"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نكتب I وD بدلالة وسيطي المستقيمين، ثم نفرض أن I تنتمي إلى المستقيم AD.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "إحداثيات I وD",
+            "explanation": "\\[\nI=(-1+2r,-5+5r,-1+3r),\n\\]\n\\[\nD=(-3-3t,2+2t,7+3t).\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "شرط الاستقامية",
+            "explanation": "نكتب \\(I=A+\\lambda(D-A)\\). بحل النظام الناتج نحصل على:\n\\[\nr=1,\\qquad t=-1,\\qquad \\lambda=\\frac12.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "الإحداثيات",
+            "explanation": "\\[\nI(1,0,2),\\qquad D(0,0,4).\n\\]"
+          }
+        ],
+        "final_answer": "\\[I(1;0;2),\\qquad D(0;0;4).\\]"
+      }
+    },
+    {
+      "id": "2015_s2_space_ex03_q4b",
+      "display_order": 7,
+      "content_type": "question",
+      "text": "ب) بين أن \\(I\\) هي منتصف القطعة \\([AD]\\).",
+      "axis_tags": [
+        "space_barycenter"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب إحداثيات منتصف A وD ونقارنها بإحداثيات I.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "منتصف AD",
+            "explanation": "\\[\n\\left(\\frac{2+0}{2},\\frac{0+0}{2},\\frac{0+4}{2}\\right)=(1,0,2)=I.\n\\]"
+          }
+        ],
+        "final_answer": "\\(I\\) منتصف القطعة \\([AD]\\)."
+      }
+    },
+    {
+      "id": "2015_s2_space_ex03_q5a",
+      "display_order": 8,
+      "content_type": "question",
+      "text": "5) النقطة \\(K\\) مرجح الجملة المثقلة \\(\\{(B;1),(I;2)\\}\\) والنقطة \\(G\\) المسقط العمودي للنقطة \\(K\\) على المستوي \\((\\mathcal P)\\).\nأ) بين أن النقطة \\(G\\) هي مرجح النقط \\(A\\)، \\(C\\) و \\(D\\) المرفقة بمعاملات يطلب تعيينها.",
+      "axis_tags": [
+        "space_barycenter",
+        "space_distances_projections"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نستعمل تشابه المثلثين داخل المثلث BIC ثم نعوض I بكونها منتصف AD.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "موضع K على BI",
+            "explanation": "بما أن \\(K\\) مرجح \\(\\{(B;1),(I;2)\\}\\)، فإن:\n\\[\nK=\\frac{B+2I}{3},\n\\]\nومن ثم \\(K\\in(BI)\\) و\\(IK=\\frac13 IB\\)."
+          },
+          {
+            "step_number": 2,
+            "title": "استعمال الإسقاط",
+            "explanation": "لأن \\(C\\) هو المسقط العمودي لـ\\(B\\) على \\((\\mathcal P)\\)، و\\(G\\) هو المسقط العمودي لـ\\(K\\) على \\((\\mathcal P)\\)، فإن:\n\\[\nKG\\parallel BC.\n\\]\nفي المثلث \\(BIC\\)، حسب طالس:\n\\[\n\\frac{IG}{IC}=\\frac{IK}{IB}=\\frac13.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "مرجح I وC",
+            "explanation": "إذن:\n\\[\nG=\\frac{2I+C}{3}.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "تعويض I",
+            "explanation": "بما أن \\(I\\) منتصف \\([AD]\\)، فإن \\(2I=A+D\\). لذلك:\n\\[\nG=\\frac{A+C+D}{3}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(G\\) مرجح الجملة \\(\\{(A;1),(C;1),(D;1)\\}\\)."
+      }
+    },
+    {
+      "id": "2015_s2_space_ex03_q5b",
+      "display_order": 9,
+      "content_type": "question",
+      "text": "ب) استنتج إحداثيات النقطة \\(G\\).",
+      "axis_tags": [
+        "space_barycenter"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب المتوسط الحسابي لإحداثيات A وC وD.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "الحساب",
+            "explanation": "\\[\nG=\\frac{A+C+D}{3}\n=\\left(\\frac{2+3+0}{3},\\frac{0-2+0}{3},\\frac{0+1+4}{3}\\right).\n\\]"
+          }
+        ],
+        "final_answer": "\\[G\\left(\\frac53;-\\frac23;\\frac53\\right).\\]"
+      }
+    }
+  ],
+  "source_verification": {
+    "statement_checked_against_pdf": true,
+    "solution_checked_against_correction": true,
+    "source_pdf": "2015(10).pdf",
+    "statement_figure_policy": "لا يوجد شكل هندسي إلزامي في نص التمرين.",
+    "solution_figure_policy": "الحل مستقل عن أي رسم.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  }
+}

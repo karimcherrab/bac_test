@@ -1,0 +1,274 @@
+{
+  "language": "ar",
+  "direction": "rtl",
+  "schema_version": "4.2-bac-source-faithful",
+  "session": "exceptional",
+  "year": 2017,
+  "year_variant": "2017_2",
+  "chapter_code": "sequences",
+  "chapter_title": "المتتاليات العددية",
+  "branches": [
+    {
+      "code": "science",
+      "name": "شعبة علوم تجريبية"
+    }
+  ],
+  "source_pdf": "2017_2(4).pdf",
+  "comparison_source": "bac_sequence_scientifique(20260823-103915).pdf",
+  "source_verification": {
+    "statement_checked_against_original_bac": true,
+    "solution_checked_against_official_correction": true,
+    "solution_style": "حل مفصل ومبسط بخطوات صغيرة، مع إظهار الحسابات الوسيطة التي اختصرها التصحيح الرسمي.",
+    "statement_policy": "نص الأسئلة منقول من موضوع البكالوريا الاستثنائية دون إضافة معطيات جديدة.",
+    "renderer": "GraphRenderer(svg + coordinate + legacy physics)"
+  },
+  "version": "4.2-2017_2-science-sequences-subject2-ex02",
+  "exercise_number": 2,
+  "subject_number": 2,
+  "points": 4,
+  "source_page": 3,
+  "source_pages": [
+    3
+  ],
+  "solution_source_pages": [
+    8
+  ],
+  "title": "التمرين الثاني — بكالوريا الجزائر 2017 الدورة الاستثنائية — الموضوع الثاني — شعبة علوم تجريبية",
+  "statement": "نعتبر الدالة \\(f\\) المعرفة على \\([0;+\\infty[\\) كما يلي: \\(f(x)=\\frac{3x+1}{x+3}\\)، و\\((C_f)\\) تمثيلها البياني في المستوى المنسوب إلى المعلم المتعامد والمتجانس \\((O;\\vec i,\\vec j)\\)، والمستقيم \\((\\Delta)\\) ذا المعادلة \\(y=x\\). \\(\\alpha\\) عدد حقيقي موجب، والمتتالية العددية \\((u_n)\\) المعرفة على \\(\\mathbb N\\) بحدها الأول \\(u_0=\\alpha\\)، ومن أجل كل عدد طبيعي \\(n\\): \\(u_{n+1}=f(u_n)\\).",
+  "statement_graphs": [
+    {
+      "id": "2017_2_s2_ex02_source_graph",
+      "type": "source_figure",
+      "source_page": 3,
+      "description": "الشكل المرافق للتمرين: المنحنى (Cf) للدالة f(x)=(3x+1)/(x+3) والمستقيم (Δ): y=x."
+    }
+  ],
+  "axis_tags": [
+    "fixed_point",
+    "constant_sequence",
+    "graphical_sequence",
+    "graphical_conjecture",
+    "auxiliary_geometric_sequence",
+    "explicit_sequence_formula",
+    "sequence_limit",
+    "geometric_sum",
+    "transformed_sum"
+  ],
+  "questions": [
+    {
+      "id": "2017_2_s2_ex02_I",
+      "display_order": 1,
+      "content_type": "question",
+      "text": "I) عين قيمة \\(\\alpha\\) حتى تكون \\((u_n)\\) متتالية ثابتة.",
+      "axis_tags": [
+        "fixed_point",
+        "constant_sequence"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "لكي تكون المتتالية ثابتة يجب أن يكون حدها الأول نقطة ثابتة للدالة \\(f\\)، أي \\(f(\\alpha)=\\alpha\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "كتابة شرط الثبات",
+            "explanation": "إذا كانت المتتالية ثابتة ابتداء من \\(u_0=\\alpha\\)، فيجب أن يكون:\n\\[\nu_1=u_0.\n\\]\nأي:\n\\[\nf(\\alpha)=\\alpha.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حل المعادلة",
+            "explanation": "\\[\n\\frac{3\\alpha+1}{\\alpha+3}=\\alpha.\n\\]\nوبما أن \\(\\alpha>0\\) فإن \\(\\alpha+3>0\\)، لذا نضرب في المقام:\n\\[\n3\\alpha+1=\\alpha(\\alpha+3).\n\\]\nأي:\n\\[\n3\\alpha+1=\\alpha^2+3\\alpha.\n\\]\nومن ثم:\n\\[\n\\alpha^2=1.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "اختيار القيمة المقبولة",
+            "explanation": "حلول \\(\\alpha^2=1\\) هي:\n\\[\n\\alpha=1\\quad\\text{أو}\\quad\\alpha=-1.\n\\]\nلكن \\(\\alpha\\) موجب، إذن:\n\\[\n\\boxed{\\alpha=1}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{\\alpha=1}\\)."
+      }
+    },
+    {
+      "id": "2017_2_s2_ex02_II1a",
+      "display_order": 2,
+      "content_type": "question",
+      "text": "II) نضع في كل ما يلي \\(\\alpha=5\\). 1) أ) انقل الشكل المقابل ثم مثل على حامل محور الفواصل الحدود \\(u_0,u_1,u_2,u_3\\) (دون حساب الحدود).",
+      "axis_tags": [
+        "graphical_sequence"
+      ],
+      "statement_graphs": [
+        "2017_2_s2_ex02_source_graph"
+      ],
+      "solution": {
+        "strategy": "نستعمل علاقة الرجوع \\(u_{n+1}=f(u_n)\\) وطريقة السلم بين المنحنى \\((C_f)\\) والمستقيم \\(y=x\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "وضع u_0",
+            "explanation": "بما أن \\(\\alpha=5\\)، فإن:\n\\[\nu_0=5.\n\\]\nنضع العدد \\(5\\) على محور الفواصل."
+          },
+          {
+            "step_number": 2,
+            "title": "إنشاء u_1",
+            "explanation": "من الفاصلة \\(u_0\\)، نصعد عموديا حتى المنحنى \\((C_f)\\). ترتيبة نقطة التقاطع هي \\(f(u_0)=u_1\\). ثم نتحرك أفقيا حتى المستقيم \\((\\Delta):y=x\\) لننقل هذه القيمة إلى محور الفواصل."
+          },
+          {
+            "step_number": 3,
+            "title": "إنشاء u_2 وu_3",
+            "explanation": "نكرر نفس العملية انطلاقا من \\(u_1\\) للحصول على \\(u_2\\)، ثم انطلاقا من \\(u_2\\) للحصول على \\(u_3\\)."
+          }
+        ],
+        "final_answer": "تمثل الحدود \\(u_0,u_1,u_2,u_3\\) بيانيا بطريقة السلم بين \\((C_f)\\) و\\((\\Delta)\\)."
+      }
+    },
+    {
+      "id": "2017_2_s2_ex02_II1b",
+      "display_order": 3,
+      "content_type": "question",
+      "text": "ب) ضع تخمينا حول اتجاه تغير المتتالية \\((u_n)\\) وتقاربها.",
+      "axis_tags": [
+        "graphical_conjecture"
+      ],
+      "statement_graphs": [
+        "2017_2_s2_ex02_source_graph"
+      ],
+      "solution": {
+        "strategy": "نستنتج التخمين مباشرة من الإنشاء البياني المطلوب.",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "اتجاه التغير",
+            "explanation": "من الشكل تبدأ الحدود من \\(u_0=5\\)، ثم تتحرك تدريجيا نحو اليسار؛ لذلك نتخمن أن \\((u_n)\\) متناقصة تماما."
+          },
+          {
+            "step_number": 2,
+            "title": "التقارب",
+            "explanation": "السلم البياني يقترب من نقطة تقاطع المنحنى \\((C_f)\\) مع المستقيم \\(y=x\\). وقد وجدنا في الجزء الأول أن النقطة الثابتة الموجبة هي \\(1\\). إذن نتخمن أن:\n\\[\nu_n\\to1.\n\\]"
+          }
+        ],
+        "final_answer": "التخمين: \\(\\boxed{(u_n)\\text{ متناقصة تماما ومتقاربة نحو }1}\\)."
+      }
+    },
+    {
+      "id": "2017_2_s2_ex02_II2a",
+      "display_order": 4,
+      "content_type": "question",
+      "text": "2) نعتبر المتتالية \\((v_n)\\) المعرفة على \\(\\mathbb N\\) بـ: \\(v_n=\\frac{u_n-1}{u_n+1}\\). أ) برهن أن المتتالية \\((v_n)\\) هندسية أساسها \\(\\frac12\\) يطلب تعيين حدها الأول.",
+      "axis_tags": [
+        "auxiliary_geometric_sequence",
+        "geometric_sequence"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب \\(v_{n+1}\\) انطلاقا من \\(u_{n+1}=\\frac{3u_n+1}{u_n+3}\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "كتابة v_{n+1}",
+            "explanation": "\\[\nv_{n+1}=\\frac{u_{n+1}-1}{u_{n+1}+1}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب u_{n+1}-1",
+            "explanation": "\\[\nu_{n+1}-1\n=\\frac{3u_n+1}{u_n+3}-1\n=\\frac{3u_n+1-u_n-3}{u_n+3}\n=\\frac{2(u_n-1)}{u_n+3}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "حساب u_{n+1}+1",
+            "explanation": "\\[\nu_{n+1}+1\n=\\frac{3u_n+1}{u_n+3}+1\n=\\frac{3u_n+1+u_n+3}{u_n+3}\n=\\frac{4(u_n+1)}{u_n+3}.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "إظهار العلاقة الهندسية",
+            "explanation": "إذن:\n\\[\nv_{n+1}\n=\\frac{\\frac{2(u_n-1)}{u_n+3}}{\\frac{4(u_n+1)}{u_n+3}}\n=\\frac12\\frac{u_n-1}{u_n+1}\n=\\frac12v_n.\n\\]\nإذن \\((v_n)\\) هندسية أساسها:\n\\[\nq=\\frac12.\n\\]"
+          },
+          {
+            "step_number": 5,
+            "title": "حساب الحد الأول",
+            "explanation": "بما أن \\(u_0=5\\):\n\\[\nv_0=\\frac{5-1}{5+1}\n=\\frac46\n=\\frac23.\n\\]"
+          }
+        ],
+        "final_answer": "\\((v_n)\\) هندسية أساسها \\(\\boxed{\\frac12}\\)، وحدها الأول \\(\\boxed{v_0=\\frac23}\\)."
+      }
+    },
+    {
+      "id": "2017_2_s2_ex02_II2b",
+      "display_order": 5,
+      "content_type": "question",
+      "text": "ب) عبر بدلالة \\(n\\) عن \\(v_n\\) و \\(u_n\\) ثم احسب \\(\\lim_{n\\to+\\infty}u_n\\).",
+      "axis_tags": [
+        "geometric_sequence_general_term",
+        "explicit_sequence_formula",
+        "sequence_limit"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نكتب أولا الحد العام لـ\\(v_n\\)، ثم نحل تعريف \\(v_n\\) بالنسبة إلى \\(u_n\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "كتابة v_n",
+            "explanation": "بما أن \\((v_n)\\) هندسية، حدها الأول \\(\\frac23\\) وأساسها \\(\\frac12\\):\n\\[\n\\boxed{v_n=\\frac23\\left(\\frac12\\right)^n}.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "استخراج u_n من تعريف v_n",
+            "explanation": "من:\n\\[\nv_n=\\frac{u_n-1}{u_n+1}\n\\]\nنحصل على:\n\\[\nv_n(u_n+1)=u_n-1.\n\\]\nأي:\n\\[\nv_nu_n+v_n=u_n-1.\n\\]\nومن ثم:\n\\[\nu_n(1-v_n)=1+v_n.\n\\]\nإذن:\n\\[\nu_n=\\frac{1+v_n}{1-v_n}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "تعويض v_n",
+            "explanation": "بالتعويض:\n\\[\nu_n=\frac{1+\\frac23(\\frac12)^n}{1-\\frac23(\\frac12)^n}.\n\\]\nوبضرب البسط والمقام في \\(3\\):\n\\[\n\\boxed{u_n=\\frac{3+2(\\frac12)^n}{3-2(\\frac12)^n}}.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "حساب النهاية",
+            "explanation": "بما أن:\n\\[\n\\left(\\frac12\\right)^n\\to0,\n\\]\nفإن:\n\\[\n\\lim_{n\\to+\\infty}u_n\n=\\frac{3+0}{3-0}=1.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{v_n=\\frac23(\\frac12)^n}\\)، \\(\\boxed{u_n=\\frac{3+2(\\frac12)^n}{3-2(\\frac12)^n}}\\)، و \\(\\boxed{\\lim u_n=1}\\)."
+      }
+    },
+    {
+      "id": "2017_2_s2_ex02_II3",
+      "display_order": 6,
+      "content_type": "question",
+      "text": "3) احسب بدلالة \\(n\\) المجموع \\(S_n\\) حيث: \\(S_n=v_n+v_{n+1}+\\cdots+v_{n+2016}\\)، ثم استنتج بدلالة \\(n\\) المجموع \\(S'_n\\) حيث: \\(S'_n=\\frac1{u_n+1}+\\frac1{u_{n+1}+1}+\\frac1{u_{n+2}+1}+\\cdots+\\frac1{u_{n+2016}+1}\\).",
+      "axis_tags": [
+        "geometric_sum",
+        "transformed_sum"
+      ],
+      "statement_graphs": [],
+      "solution": {
+        "strategy": "نحسب أولا مجموع 2017 حدًا متتاليا من المتتالية الهندسية \\((v_n)\\)، ثم نحول \\(\\frac1{u_k+1}\\) بدلالة \\(v_k\\).",
+        "steps": [
+          {
+            "step_number": 1,
+            "title": "تحديد عدد حدود S_n",
+            "explanation": "المجموع يبدأ من \\(v_n\\) وينتهي عند \\(v_{n+2016}\\)، لذلك عدد الحدود هو:\n\\[\n(n+2016)-n+1=2017.\n\\]"
+          },
+          {
+            "step_number": 2,
+            "title": "حساب S_n",
+            "explanation": "بما أن أساس المتتالية \\(q=\\frac12\\):\n\\[\nS_n=v_n\\frac{1-(\\frac12)^{2017}}{1-\\frac12}.\n\\]\nأي:\n\\[\nS_n=2v_n\\left[1-\\left(\\frac12\\right)^{2017}\\right].\n\\]\nوبالتعويض عن \\(v_n\\):\n\\[\nS_n=2\\times\\frac23\\left(\\frac12\\right)^n\n\\left[1-\\left(\\frac12\\right)^{2017}\\right].\n\\]\nإذن:\n\\[\n\\boxed{S_n=\\frac43\\left(\\frac12\\right)^n\n\\left[1-\\left(\\frac12\\right)^{2017}\\right]}.\n\\]"
+          },
+          {
+            "step_number": 3,
+            "title": "ربط 1/(u_k+1) بـ v_k",
+            "explanation": "من تعريف \\(v_k\\):\n\\[\nv_k=\\frac{u_k-1}{u_k+1}.\n\\]\nنكتب:\n\\[\nu_k-1=(u_k+1)-2.\n\\]\nإذن:\n\\[\nv_k=1-\\frac2{u_k+1}.\n\\]\nومن ثم:\n\\[\n\\frac1{u_k+1}=\\frac{1-v_k}{2}.\n\\]"
+          },
+          {
+            "step_number": 4,
+            "title": "حساب S'_n",
+            "explanation": "إذن:\n\\[\nS'_n=\\sum_{k=n}^{n+2016}\\frac1{u_k+1}\n=\\frac12\\sum_{k=n}^{n+2016}(1-v_k).\n\\]\nوبما أن عدد الحدود \\(2017\\):\n\\[\nS'_n=\\frac12(2017-S_n).\n\\]\nأي أيضا كما في التصحيح:\n\\[\n\\boxed{S'_n=-\\frac12(S_n-2017)}.\n\\]"
+          },
+          {
+            "step_number": 5,
+            "title": "العبارة الصريحة لـ S'_n",
+            "explanation": "بالتعويض عن \\(S_n\\):\n\\[\n\\boxed{S'_n=\\frac{2017}{2}\n-\\frac23\\left(\\frac12\\right)^n\n\\left[1-\\left(\\frac12\\right)^{2017}\\right]}.\n\\]"
+          }
+        ],
+        "final_answer": "\\(\\boxed{S_n=\\frac43(\\frac12)^n[1-(\\frac12)^{2017}]}\\)، و \\(\\boxed{S'_n=\\frac12(2017-S_n)}\\)."
+      }
+    }
+  ]
+}
